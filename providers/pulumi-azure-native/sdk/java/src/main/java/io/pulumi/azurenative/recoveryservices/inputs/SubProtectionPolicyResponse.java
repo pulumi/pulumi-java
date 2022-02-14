@@ -17,16 +17,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Sub-protection policy which includes schedule and retention
- */
 public final class SubProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubProtectionPolicyResponse Empty = new SubProtectionPolicyResponse();
 
-    /**
-     * Type of backup policy type
-     */
     @InputImport(name="policyType")
     private final @Nullable String policyType;
 
@@ -34,9 +28,6 @@ public final class SubProtectionPolicyResponse extends io.pulumi.resources.Invok
         return this.policyType == null ? Optional.empty() : Optional.ofNullable(this.policyType);
     }
 
-    /**
-     * Retention policy with the details on backup copy retention ranges.
-     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
@@ -44,9 +35,6 @@ public final class SubProtectionPolicyResponse extends io.pulumi.resources.Invok
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
-    /**
-     * Backup schedule specified as part of backup policy.
-     */
     @InputImport(name="schedulePolicy")
     private final @Nullable Object schedulePolicy;
 

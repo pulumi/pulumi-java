@@ -41,1493 +41,231 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Application gateway resource.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create Application Gateway
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var applicationGateway = new AzureNative.Network.ApplicationGateway("applicationGateway", new AzureNative.Network.ApplicationGatewayArgs
-        {
-            ApplicationGatewayName = "appgw",
-            BackendAddressPools = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayBackendAddressPoolArgs
-                {
-                    BackendAddresses = 
-                    {
-                        new AzureNative.Network.Inputs.ApplicationGatewayBackendAddressArgs
-                        {
-                            IpAddress = "10.0.1.1",
-                        },
-                        new AzureNative.Network.Inputs.ApplicationGatewayBackendAddressArgs
-                        {
-                            IpAddress = "10.0.1.2",
-                        },
-                    },
-                    Name = "appgwpool",
-                },
-            },
-            BackendHttpSettingsCollection = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayBackendHttpSettingsArgs
-                {
-                    CookieBasedAffinity = "Disabled",
-                    Name = "appgwbhs",
-                    Port = 80,
-                    Protocol = "Http",
-                    RequestTimeout = 30,
-                },
-            },
-            FrontendIPConfigurations = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayFrontendIPConfigurationArgs
-                {
-                    Name = "appgwfip",
-                    PublicIPAddress = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
-                    },
-                },
-            },
-            FrontendPorts = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayFrontendPortArgs
-                {
-                    Name = "appgwfp",
-                    Port = 443,
-                },
-                new AzureNative.Network.Inputs.ApplicationGatewayFrontendPortArgs
-                {
-                    Name = "appgwfp80",
-                    Port = 80,
-                },
-            },
-            GatewayIPConfigurations = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayIPConfigurationArgs
-                {
-                    Name = "appgwipc",
-                    Subnet = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
-                    },
-                },
-            },
-            HttpListeners = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayHttpListenerArgs
-                {
-                    FrontendIPConfiguration = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
-                    },
-                    FrontendPort = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
-                    },
-                    Name = "appgwhl",
-                    Protocol = "Https",
-                    RequireServerNameIndication = false,
-                    SslCertificate = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
-                    },
-                    SslProfile = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
-                    },
-                },
-                new AzureNative.Network.Inputs.ApplicationGatewayHttpListenerArgs
-                {
-                    FrontendIPConfiguration = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
-                    },
-                    FrontendPort = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
-                    },
-                    Name = "appgwhttplistener",
-                    Protocol = "Http",
-                },
-            },
-            Identity = new AzureNative.Network.Inputs.ManagedServiceIdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1",  },
-                },
-            },
-            Location = "eastus",
-            RequestRoutingRules = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayRequestRoutingRuleArgs
-                {
-                    BackendAddressPool = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-                    },
-                    BackendHttpSettings = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-                    },
-                    HttpListener = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
-                    },
-                    Name = "appgwrule",
-                    Priority = 10,
-                    RewriteRuleSet = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-                    },
-                    RuleType = "Basic",
-                },
-                new AzureNative.Network.Inputs.ApplicationGatewayRequestRoutingRuleArgs
-                {
-                    HttpListener = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
-                    },
-                    Name = "appgwPathBasedRule",
-                    Priority = 20,
-                    RuleType = "PathBasedRouting",
-                    UrlPathMap = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
-                    },
-                },
-            },
-            ResourceGroupName = "rg1",
-            RewriteRuleSets = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayRewriteRuleSetArgs
-                {
-                    Name = "rewriteRuleSet1",
-                    RewriteRules = 
-                    {
-                        new AzureNative.Network.Inputs.ApplicationGatewayRewriteRuleArgs
-                        {
-                            ActionSet = new AzureNative.Network.Inputs.ApplicationGatewayRewriteRuleActionSetArgs
-                            {
-                                RequestHeaderConfigurations = 
-                                {
-                                    new AzureNative.Network.Inputs.ApplicationGatewayHeaderConfigurationArgs
-                                    {
-                                        HeaderName = "X-Forwarded-For",
-                                        HeaderValue = "{var_add_x_forwarded_for_proxy}",
-                                    },
-                                },
-                                ResponseHeaderConfigurations = 
-                                {
-                                    new AzureNative.Network.Inputs.ApplicationGatewayHeaderConfigurationArgs
-                                    {
-                                        HeaderName = "Strict-Transport-Security",
-                                        HeaderValue = "max-age=31536000",
-                                    },
-                                },
-                                UrlConfiguration = new AzureNative.Network.Inputs.ApplicationGatewayUrlConfigurationArgs
-                                {
-                                    ModifiedPath = "/abc",
-                                },
-                            },
-                            Conditions = 
-                            {
-                                new AzureNative.Network.Inputs.ApplicationGatewayRewriteRuleConditionArgs
-                                {
-                                    IgnoreCase = true,
-                                    Negate = false,
-                                    Pattern = "^Bearer",
-                                    Variable = "http_req_Authorization",
-                                },
-                            },
-                            Name = "Set X-Forwarded-For",
-                            RuleSequence = 102,
-                        },
-                    },
-                },
-            },
-            Sku = new AzureNative.Network.Inputs.ApplicationGatewaySkuArgs
-            {
-                Capacity = 3,
-                Name = "Standard_v2",
-                Tier = "Standard_v2",
-            },
-            SslCertificates = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewaySslCertificateArgs
-                {
-                    Data = "****",
-                    Name = "sslcert",
-                    Password = "****",
-                },
-                new AzureNative.Network.Inputs.ApplicationGatewaySslCertificateArgs
-                {
-                    KeyVaultSecretId = "https://kv/secret",
-                    Name = "sslcert2",
-                },
-            },
-            SslProfiles = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewaySslProfileArgs
-                {
-                    ClientAuthConfiguration = new AzureNative.Network.Inputs.ApplicationGatewayClientAuthConfigurationArgs
-                    {
-                        VerifyClientCertIssuerDN = true,
-                    },
-                    Name = "sslProfile1",
-                    SslPolicy = new AzureNative.Network.Inputs.ApplicationGatewaySslPolicyArgs
-                    {
-                        CipherSuites = 
-                        {
-                            "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256",
-                        },
-                        MinProtocolVersion = "TLSv1_1",
-                        PolicyType = "Custom",
-                    },
-                    TrustedClientCertificates = 
-                    {
-                        new AzureNative.Network.Inputs.SubResourceArgs
-                        {
-                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
-                        },
-                    },
-                },
-            },
-            TrustedClientCertificates = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayTrustedClientCertificateArgs
-                {
-                    Data = "****",
-                    Name = "clientcert",
-                },
-            },
-            TrustedRootCertificates = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayTrustedRootCertificateArgs
-                {
-                    Data = "****",
-                    Name = "rootcert",
-                },
-                new AzureNative.Network.Inputs.ApplicationGatewayTrustedRootCertificateArgs
-                {
-                    KeyVaultSecretId = "https://kv/secret",
-                    Name = "rootcert1",
-                },
-            },
-            UrlPathMaps = 
-            {
-                new AzureNative.Network.Inputs.ApplicationGatewayUrlPathMapArgs
-                {
-                    DefaultBackendAddressPool = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-                    },
-                    DefaultBackendHttpSettings = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-                    },
-                    DefaultRewriteRuleSet = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-                    },
-                    Name = "pathMap1",
-                    PathRules = 
-                    {
-                        new AzureNative.Network.Inputs.ApplicationGatewayPathRuleArgs
-                        {
-                            BackendAddressPool = new AzureNative.Network.Inputs.SubResourceArgs
-                            {
-                                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-                            },
-                            BackendHttpSettings = new AzureNative.Network.Inputs.SubResourceArgs
-                            {
-                                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-                            },
-                            Name = "apiPaths",
-                            Paths = 
-                            {
-                                "/api",
-                                "/v1/api",
-                            },
-                            RewriteRuleSet = new AzureNative.Network.Inputs.SubResourceArgs
-                            {
-                                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-                            },
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewApplicationGateway(ctx, "applicationGateway", &network.ApplicationGatewayArgs{
-			ApplicationGatewayName: pulumi.String("appgw"),
-			BackendAddressPools: []network.ApplicationGatewayBackendAddressPoolArgs{
-				&network.ApplicationGatewayBackendAddressPoolArgs{
-					BackendAddresses: network.ApplicationGatewayBackendAddressArray{
-						&network.ApplicationGatewayBackendAddressArgs{
-							IpAddress: pulumi.String("10.0.1.1"),
-						},
-						&network.ApplicationGatewayBackendAddressArgs{
-							IpAddress: pulumi.String("10.0.1.2"),
-						},
-					},
-					Name: pulumi.String("appgwpool"),
-				},
-			},
-			BackendHttpSettingsCollection: []network.ApplicationGatewayBackendHttpSettingsArgs{
-				&network.ApplicationGatewayBackendHttpSettingsArgs{
-					CookieBasedAffinity: pulumi.String("Disabled"),
-					Name:                pulumi.String("appgwbhs"),
-					Port:                pulumi.Int(80),
-					Protocol:            pulumi.String("Http"),
-					RequestTimeout:      pulumi.Int(30),
-				},
-			},
-			FrontendIPConfigurations: []network.ApplicationGatewayFrontendIPConfigurationArgs{
-				&network.ApplicationGatewayFrontendIPConfigurationArgs{
-					Name: pulumi.String("appgwfip"),
-					PublicIPAddress: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip"),
-					},
-				},
-			},
-			FrontendPorts: []network.ApplicationGatewayFrontendPortArgs{
-				&network.ApplicationGatewayFrontendPortArgs{
-					Name: pulumi.String("appgwfp"),
-					Port: pulumi.Int(443),
-				},
-				&network.ApplicationGatewayFrontendPortArgs{
-					Name: pulumi.String("appgwfp80"),
-					Port: pulumi.Int(80),
-				},
-			},
-			GatewayIPConfigurations: []network.ApplicationGatewayIPConfigurationArgs{
-				&network.ApplicationGatewayIPConfigurationArgs{
-					Name: pulumi.String("appgwipc"),
-					Subnet: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet"),
-					},
-				},
-			},
-			HttpListeners: []network.ApplicationGatewayHttpListenerArgs{
-				&network.ApplicationGatewayHttpListenerArgs{
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip"),
-					},
-					FrontendPort: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp"),
-					},
-					Name:                        pulumi.String("appgwhl"),
-					Protocol:                    pulumi.String("Https"),
-					RequireServerNameIndication: pulumi.Bool(false),
-					SslCertificate: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert"),
-					},
-					SslProfile: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1"),
-					},
-				},
-				&network.ApplicationGatewayHttpListenerArgs{
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip"),
-					},
-					FrontendPort: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80"),
-					},
-					Name:     pulumi.String("appgwhttplistener"),
-					Protocol: pulumi.String("Http"),
-				},
-			},
-			Identity: &network.ManagedServiceIdentityArgs{
-				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
-				},
-			},
-			Location: pulumi.String("eastus"),
-			RequestRoutingRules: []network.ApplicationGatewayRequestRoutingRuleArgs{
-				&network.ApplicationGatewayRequestRoutingRuleArgs{
-					BackendAddressPool: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool"),
-					},
-					BackendHttpSettings: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs"),
-					},
-					HttpListener: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl"),
-					},
-					Name:     pulumi.String("appgwrule"),
-					Priority: pulumi.Int(10),
-					RewriteRuleSet: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1"),
-					},
-					RuleType: pulumi.String("Basic"),
-				},
-				&network.ApplicationGatewayRequestRoutingRuleArgs{
-					HttpListener: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener"),
-					},
-					Name:     pulumi.String("appgwPathBasedRule"),
-					Priority: pulumi.Int(20),
-					RuleType: pulumi.String("PathBasedRouting"),
-					UrlPathMap: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			RewriteRuleSets: []network.ApplicationGatewayRewriteRuleSetArgs{
-				&network.ApplicationGatewayRewriteRuleSetArgs{
-					Name: pulumi.String("rewriteRuleSet1"),
-					RewriteRules: network.ApplicationGatewayRewriteRuleArray{
-						&network.ApplicationGatewayRewriteRuleArgs{
-							ActionSet: &network.ApplicationGatewayRewriteRuleActionSetArgs{
-								RequestHeaderConfigurations: network.ApplicationGatewayHeaderConfigurationArray{
-									&network.ApplicationGatewayHeaderConfigurationArgs{
-										HeaderName:  pulumi.String("X-Forwarded-For"),
-										HeaderValue: pulumi.String("{var_add_x_forwarded_for_proxy}"),
-									},
-								},
-								ResponseHeaderConfigurations: network.ApplicationGatewayHeaderConfigurationArray{
-									&network.ApplicationGatewayHeaderConfigurationArgs{
-										HeaderName:  pulumi.String("Strict-Transport-Security"),
-										HeaderValue: pulumi.String("max-age=31536000"),
-									},
-								},
-								UrlConfiguration: &network.ApplicationGatewayUrlConfigurationArgs{
-									ModifiedPath: pulumi.String("/abc"),
-								},
-							},
-							Conditions: network.ApplicationGatewayRewriteRuleConditionArray{
-								&network.ApplicationGatewayRewriteRuleConditionArgs{
-									IgnoreCase: pulumi.Bool(true),
-									Negate:     pulumi.Bool(false),
-									Pattern:    pulumi.String("^Bearer"),
-									Variable:   pulumi.String("http_req_Authorization"),
-								},
-							},
-							Name:         pulumi.String("Set X-Forwarded-For"),
-							RuleSequence: pulumi.Int(102),
-						},
-					},
-				},
-			},
-			Sku: &network.ApplicationGatewaySkuArgs{
-				Capacity: pulumi.Int(3),
-				Name:     pulumi.String("Standard_v2"),
-				Tier:     pulumi.String("Standard_v2"),
-			},
-			SslCertificates: []network.ApplicationGatewaySslCertificateArgs{
-				&network.ApplicationGatewaySslCertificateArgs{
-					Data:     pulumi.String("****"),
-					Name:     pulumi.String("sslcert"),
-					Password: pulumi.String("****"),
-				},
-				&network.ApplicationGatewaySslCertificateArgs{
-					KeyVaultSecretId: pulumi.String("https://kv/secret"),
-					Name:             pulumi.String("sslcert2"),
-				},
-			},
-			SslProfiles: []network.ApplicationGatewaySslProfileArgs{
-				&network.ApplicationGatewaySslProfileArgs{
-					ClientAuthConfiguration: &network.ApplicationGatewayClientAuthConfigurationArgs{
-						VerifyClientCertIssuerDN: pulumi.Bool(true),
-					},
-					Name: pulumi.String("sslProfile1"),
-					SslPolicy: &network.ApplicationGatewaySslPolicyArgs{
-						CipherSuites: pulumi.StringArray{
-							pulumi.String("TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"),
-						},
-						MinProtocolVersion: pulumi.String("TLSv1_1"),
-						PolicyType:         pulumi.String("Custom"),
-					},
-					TrustedClientCertificates: network.SubResourceArray{
-						&network.SubResourceArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert"),
-						},
-					},
-				},
-			},
-			TrustedClientCertificates: []network.ApplicationGatewayTrustedClientCertificateArgs{
-				&network.ApplicationGatewayTrustedClientCertificateArgs{
-					Data: pulumi.String("****"),
-					Name: pulumi.String("clientcert"),
-				},
-			},
-			TrustedRootCertificates: []network.ApplicationGatewayTrustedRootCertificateArgs{
-				&network.ApplicationGatewayTrustedRootCertificateArgs{
-					Data: pulumi.String("****"),
-					Name: pulumi.String("rootcert"),
-				},
-				&network.ApplicationGatewayTrustedRootCertificateArgs{
-					KeyVaultSecretId: pulumi.String("https://kv/secret"),
-					Name:             pulumi.String("rootcert1"),
-				},
-			},
-			UrlPathMaps: []network.ApplicationGatewayUrlPathMapArgs{
-				&network.ApplicationGatewayUrlPathMapArgs{
-					DefaultBackendAddressPool: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool"),
-					},
-					DefaultBackendHttpSettings: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs"),
-					},
-					DefaultRewriteRuleSet: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1"),
-					},
-					Name: pulumi.String("pathMap1"),
-					PathRules: network.ApplicationGatewayPathRuleArray{
-						&network.ApplicationGatewayPathRuleArgs{
-							BackendAddressPool: &network.SubResourceArgs{
-								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool"),
-							},
-							BackendHttpSettings: &network.SubResourceArgs{
-								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs"),
-							},
-							Name: pulumi.String("apiPaths"),
-							Paths: pulumi.StringArray{
-								pulumi.String("/api"),
-								pulumi.String("/v1/api"),
-							},
-							RewriteRuleSet: &network.SubResourceArgs{
-								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1"),
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const applicationGateway = new azure_native.network.ApplicationGateway("applicationGateway", {
-    applicationGatewayName: "appgw",
-    backendAddressPools: [{
-        backendAddresses: [
-            {
-                ipAddress: "10.0.1.1",
-            },
-            {
-                ipAddress: "10.0.1.2",
-            },
-        ],
-        name: "appgwpool",
-    }],
-    backendHttpSettingsCollection: [{
-        cookieBasedAffinity: "Disabled",
-        name: "appgwbhs",
-        port: 80,
-        protocol: "Http",
-        requestTimeout: 30,
-    }],
-    frontendIPConfigurations: [{
-        name: "appgwfip",
-        publicIPAddress: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
-        },
-    }],
-    frontendPorts: [
-        {
-            name: "appgwfp",
-            port: 443,
-        },
-        {
-            name: "appgwfp80",
-            port: 80,
-        },
-    ],
-    gatewayIPConfigurations: [{
-        name: "appgwipc",
-        subnet: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
-        },
-    }],
-    httpListeners: [
-        {
-            frontendIPConfiguration: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
-            },
-            frontendPort: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
-            },
-            name: "appgwhl",
-            protocol: "Https",
-            requireServerNameIndication: false,
-            sslCertificate: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
-            },
-            sslProfile: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
-            },
-        },
-        {
-            frontendIPConfiguration: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
-            },
-            frontendPort: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
-            },
-            name: "appgwhttplistener",
-            protocol: "Http",
-        },
-    ],
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
-        },
-    },
-    location: "eastus",
-    requestRoutingRules: [
-        {
-            backendAddressPool: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-            },
-            backendHttpSettings: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-            },
-            httpListener: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
-            },
-            name: "appgwrule",
-            priority: 10,
-            rewriteRuleSet: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-            },
-            ruleType: "Basic",
-        },
-        {
-            httpListener: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
-            },
-            name: "appgwPathBasedRule",
-            priority: 20,
-            ruleType: "PathBasedRouting",
-            urlPathMap: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
-            },
-        },
-    ],
-    resourceGroupName: "rg1",
-    rewriteRuleSets: [{
-        name: "rewriteRuleSet1",
-        rewriteRules: [{
-            actionSet: {
-                requestHeaderConfigurations: [{
-                    headerName: "X-Forwarded-For",
-                    headerValue: "{var_add_x_forwarded_for_proxy}",
-                }],
-                responseHeaderConfigurations: [{
-                    headerName: "Strict-Transport-Security",
-                    headerValue: "max-age=31536000",
-                }],
-                urlConfiguration: {
-                    modifiedPath: "/abc",
-                },
-            },
-            conditions: [{
-                ignoreCase: true,
-                negate: false,
-                pattern: "^Bearer",
-                variable: "http_req_Authorization",
-            }],
-            name: "Set X-Forwarded-For",
-            ruleSequence: 102,
-        }],
-    }],
-    sku: {
-        capacity: 3,
-        name: "Standard_v2",
-        tier: "Standard_v2",
-    },
-    sslCertificates: [
-        {
-            data: "****",
-            name: "sslcert",
-            password: "****",
-        },
-        {
-            keyVaultSecretId: "https://kv/secret",
-            name: "sslcert2",
-        },
-    ],
-    sslProfiles: [{
-        clientAuthConfiguration: {
-            verifyClientCertIssuerDN: true,
-        },
-        name: "sslProfile1",
-        sslPolicy: {
-            cipherSuites: ["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"],
-            minProtocolVersion: "TLSv1_1",
-            policyType: "Custom",
-        },
-        trustedClientCertificates: [{
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
-        }],
-    }],
-    trustedClientCertificates: [{
-        data: "****",
-        name: "clientcert",
-    }],
-    trustedRootCertificates: [
-        {
-            data: "****",
-            name: "rootcert",
-        },
-        {
-            keyVaultSecretId: "https://kv/secret",
-            name: "rootcert1",
-        },
-    ],
-    urlPathMaps: [{
-        defaultBackendAddressPool: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-        },
-        defaultBackendHttpSettings: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-        },
-        defaultRewriteRuleSet: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-        },
-        name: "pathMap1",
-        pathRules: [{
-            backendAddressPool: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-            },
-            backendHttpSettings: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-            },
-            name: "apiPaths",
-            paths: [
-                "/api",
-                "/v1/api",
-            ],
-            rewriteRuleSet: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-            },
-        }],
-    }],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-application_gateway = azure_native.network.ApplicationGateway("applicationGateway",
-    application_gateway_name="appgw",
-    backend_address_pools=[azure_native.network.ApplicationGatewayBackendAddressPoolArgs(
-        backend_addresses=[
-            azure_native.network.ApplicationGatewayBackendAddressArgs(
-                ip_address="10.0.1.1",
-            ),
-            azure_native.network.ApplicationGatewayBackendAddressArgs(
-                ip_address="10.0.1.2",
-            ),
-        ],
-        name="appgwpool",
-    )],
-    backend_http_settings_collection=[azure_native.network.ApplicationGatewayBackendHttpSettingsArgs(
-        cookie_based_affinity="Disabled",
-        name="appgwbhs",
-        port=80,
-        protocol="Http",
-        request_timeout=30,
-    )],
-    frontend_ip_configurations=[azure_native.network.ApplicationGatewayFrontendIPConfigurationArgs(
-        name="appgwfip",
-        public_ip_address=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip",
-        ),
-    )],
-    frontend_ports=[
-        azure_native.network.ApplicationGatewayFrontendPortArgs(
-            name="appgwfp",
-            port=443,
-        ),
-        azure_native.network.ApplicationGatewayFrontendPortArgs(
-            name="appgwfp80",
-            port=80,
-        ),
-    ],
-    gateway_ip_configurations=[azure_native.network.ApplicationGatewayIPConfigurationArgs(
-        name="appgwipc",
-        subnet=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet",
-        ),
-    )],
-    http_listeners=[
-        azure_native.network.ApplicationGatewayHttpListenerArgs(
-            frontend_ip_configuration=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
-            ),
-            frontend_port=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp",
-            ),
-            name="appgwhl",
-            protocol="Https",
-            require_server_name_indication=False,
-            ssl_certificate=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert",
-            ),
-            ssl_profile=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1",
-            ),
-        ),
-        azure_native.network.ApplicationGatewayHttpListenerArgs(
-            frontend_ip_configuration=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip",
-            ),
-            frontend_port=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80",
-            ),
-            name="appgwhttplistener",
-            protocol="Http",
-        ),
-    ],
-    identity=azure_native.network.ManagedServiceIdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
-        },
-    ),
-    location="eastus",
-    request_routing_rules=[
-        azure_native.network.ApplicationGatewayRequestRoutingRuleArgs(
-            backend_address_pool=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-            ),
-            backend_http_settings=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-            ),
-            http_listener=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl",
-            ),
-            name="appgwrule",
-            priority=10,
-            rewrite_rule_set=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-            ),
-            rule_type="Basic",
-        ),
-        azure_native.network.ApplicationGatewayRequestRoutingRuleArgs(
-            http_listener=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener",
-            ),
-            name="appgwPathBasedRule",
-            priority=20,
-            rule_type="PathBasedRouting",
-            url_path_map=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1",
-            ),
-        ),
-    ],
-    resource_group_name="rg1",
-    rewrite_rule_sets=[azure_native.network.ApplicationGatewayRewriteRuleSetArgs(
-        name="rewriteRuleSet1",
-        rewrite_rules=[azure_native.network.ApplicationGatewayRewriteRuleArgs(
-            action_set=azure_native.network.ApplicationGatewayRewriteRuleActionSetArgs(
-                request_header_configurations=[azure_native.network.ApplicationGatewayHeaderConfigurationArgs(
-                    header_name="X-Forwarded-For",
-                    header_value="{var_add_x_forwarded_for_proxy}",
-                )],
-                response_header_configurations=[azure_native.network.ApplicationGatewayHeaderConfigurationArgs(
-                    header_name="Strict-Transport-Security",
-                    header_value="max-age=31536000",
-                )],
-                url_configuration=azure_native.network.ApplicationGatewayUrlConfigurationArgs(
-                    modified_path="/abc",
-                ),
-            ),
-            conditions=[azure_native.network.ApplicationGatewayRewriteRuleConditionArgs(
-                ignore_case=True,
-                negate=False,
-                pattern="^Bearer",
-                variable="http_req_Authorization",
-            )],
-            name="Set X-Forwarded-For",
-            rule_sequence=102,
-        )],
-    )],
-    sku=azure_native.network.ApplicationGatewaySkuArgs(
-        capacity=3,
-        name="Standard_v2",
-        tier="Standard_v2",
-    ),
-    ssl_certificates=[
-        azure_native.network.ApplicationGatewaySslCertificateArgs(
-            data="****",
-            name="sslcert",
-            password="****",
-        ),
-        azure_native.network.ApplicationGatewaySslCertificateArgs(
-            key_vault_secret_id="https://kv/secret",
-            name="sslcert2",
-        ),
-    ],
-    ssl_profiles=[azure_native.network.ApplicationGatewaySslProfileArgs(
-        client_auth_configuration=azure_native.network.ApplicationGatewayClientAuthConfigurationArgs(
-            verify_client_cert_issuer_dn=True,
-        ),
-        name="sslProfile1",
-        ssl_policy=azure_native.network.ApplicationGatewaySslPolicyArgs(
-            cipher_suites=["TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"],
-            min_protocol_version="TLSv1_1",
-            policy_type="Custom",
-        ),
-        trusted_client_certificates=[azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert",
-        )],
-    )],
-    trusted_client_certificates=[azure_native.network.ApplicationGatewayTrustedClientCertificateArgs(
-        data="****",
-        name="clientcert",
-    )],
-    trusted_root_certificates=[
-        azure_native.network.ApplicationGatewayTrustedRootCertificateArgs(
-            data="****",
-            name="rootcert",
-        ),
-        azure_native.network.ApplicationGatewayTrustedRootCertificateArgs(
-            key_vault_secret_id="https://kv/secret",
-            name="rootcert1",
-        ),
-    ],
-    url_path_maps=[azure_native.network.ApplicationGatewayUrlPathMapArgs(
-        default_backend_address_pool=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-        ),
-        default_backend_http_settings=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-        ),
-        default_rewrite_rule_set=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-        ),
-        name="pathMap1",
-        path_rules=[azure_native.network.ApplicationGatewayPathRuleArgs(
-            backend_address_pool=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool",
-            ),
-            backend_http_settings=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs",
-            ),
-            name="apiPaths",
-            paths=[
-                "/api",
-                "/v1/api",
-            ],
-            rewrite_rule_set=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1",
-            ),
-        )],
-    )])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:ApplicationGateway appgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw 
-```
-
- */
 @ResourceType(type="azure-native:network:ApplicationGateway")
 public class ApplicationGateway extends io.pulumi.resources.CustomResource {
-    /**
-     * Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="authenticationCertificates", type=List.class, parameters={ApplicationGatewayAuthenticationCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayAuthenticationCertificateResponse>> authenticationCertificates;
 
-    /**
-     * @return Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayAuthenticationCertificateResponse>> getAuthenticationCertificates() {
         return this.authenticationCertificates;
     }
-    /**
-     * Autoscale Configuration.
-     */
     @OutputExport(name="autoscaleConfiguration", type=ApplicationGatewayAutoscaleConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewayAutoscaleConfigurationResponse> autoscaleConfiguration;
 
-    /**
-     * @return Autoscale Configuration.
-     */
     public Output</* @Nullable */ ApplicationGatewayAutoscaleConfigurationResponse> getAutoscaleConfiguration() {
         return this.autoscaleConfiguration;
     }
-    /**
-     * Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="backendAddressPools", type=List.class, parameters={ApplicationGatewayBackendAddressPoolResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayBackendAddressPoolResponse>> backendAddressPools;
 
-    /**
-     * @return Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayBackendAddressPoolResponse>> getBackendAddressPools() {
         return this.backendAddressPools;
     }
-    /**
-     * Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="backendHttpSettingsCollection", type=List.class, parameters={ApplicationGatewayBackendHttpSettingsResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayBackendHttpSettingsResponse>> backendHttpSettingsCollection;
 
-    /**
-     * @return Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayBackendHttpSettingsResponse>> getBackendHttpSettingsCollection() {
         return this.backendHttpSettingsCollection;
     }
-    /**
-     * Custom error configurations of the application gateway resource.
-     */
     @OutputExport(name="customErrorConfigurations", type=List.class, parameters={ApplicationGatewayCustomErrorResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations;
 
-    /**
-     * @return Custom error configurations of the application gateway resource.
-     */
     public Output</* @Nullable */ List<ApplicationGatewayCustomErrorResponse>> getCustomErrorConfigurations() {
         return this.customErrorConfigurations;
     }
-    /**
-     * Whether FIPS is enabled on the application gateway resource.
-     */
     @OutputExport(name="enableFips", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFips;
 
-    /**
-     * @return Whether FIPS is enabled on the application gateway resource.
-     */
     public Output</* @Nullable */ Boolean> getEnableFips() {
         return this.enableFips;
     }
-    /**
-     * Whether HTTP2 is enabled on the application gateway resource.
-     */
     @OutputExport(name="enableHttp2", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHttp2;
 
-    /**
-     * @return Whether HTTP2 is enabled on the application gateway resource.
-     */
     public Output</* @Nullable */ Boolean> getEnableHttp2() {
         return this.enableHttp2;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Reference to the FirewallPolicy resource.
-     */
     @OutputExport(name="firewallPolicy", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> firewallPolicy;
 
-    /**
-     * @return Reference to the FirewallPolicy resource.
-     */
     public Output</* @Nullable */ SubResourceResponse> getFirewallPolicy() {
         return this.firewallPolicy;
     }
-    /**
-     * If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
-     */
     @OutputExport(name="forceFirewallPolicyAssociation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceFirewallPolicyAssociation;
 
-    /**
-     * @return If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
-     */
     public Output</* @Nullable */ Boolean> getForceFirewallPolicyAssociation() {
         return this.forceFirewallPolicyAssociation;
     }
-    /**
-     * Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="frontendIPConfigurations", type=List.class, parameters={ApplicationGatewayFrontendIPConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayFrontendIPConfigurationResponse>> frontendIPConfigurations;
 
-    /**
-     * @return Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayFrontendIPConfigurationResponse>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
-    /**
-     * Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="frontendPorts", type=List.class, parameters={ApplicationGatewayFrontendPortResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayFrontendPortResponse>> frontendPorts;
 
-    /**
-     * @return Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayFrontendPortResponse>> getFrontendPorts() {
         return this.frontendPorts;
     }
-    /**
-     * Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="gatewayIPConfigurations", type=List.class, parameters={ApplicationGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> gatewayIPConfigurations;
 
-    /**
-     * @return Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> getGatewayIPConfigurations() {
         return this.gatewayIPConfigurations;
     }
-    /**
-     * Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="httpListeners", type=List.class, parameters={ApplicationGatewayHttpListenerResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayHttpListenerResponse>> httpListeners;
 
-    /**
-     * @return Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayHttpListenerResponse>> getHttpListeners() {
         return this.httpListeners;
     }
-    /**
-     * The identity of the application gateway, if configured.
-     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
-    /**
-     * @return The identity of the application gateway, if configured.
-     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Operational state of the application gateway resource.
-     */
     @OutputExport(name="operationalState", type=String.class, parameters={})
     private Output<String> operationalState;
 
-    /**
-     * @return Operational state of the application gateway resource.
-     */
     public Output<String> getOperationalState() {
         return this.operationalState;
     }
-    /**
-     * Private Endpoint connections on application gateway.
-     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ApplicationGatewayPrivateEndpointConnectionResponse.class})
     private Output<List<ApplicationGatewayPrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    /**
-     * @return Private Endpoint connections on application gateway.
-     */
     public Output<List<ApplicationGatewayPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    /**
-     * PrivateLink configurations on application gateway.
-     */
     @OutputExport(name="privateLinkConfigurations", type=List.class, parameters={ApplicationGatewayPrivateLinkConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayPrivateLinkConfigurationResponse>> privateLinkConfigurations;
 
-    /**
-     * @return PrivateLink configurations on application gateway.
-     */
     public Output</* @Nullable */ List<ApplicationGatewayPrivateLinkConfigurationResponse>> getPrivateLinkConfigurations() {
         return this.privateLinkConfigurations;
     }
-    /**
-     * Probes of the application gateway resource.
-     */
     @OutputExport(name="probes", type=List.class, parameters={ApplicationGatewayProbeResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayProbeResponse>> probes;
 
-    /**
-     * @return Probes of the application gateway resource.
-     */
     public Output</* @Nullable */ List<ApplicationGatewayProbeResponse>> getProbes() {
         return this.probes;
     }
-    /**
-     * The provisioning state of the application gateway resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the application gateway resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="redirectConfigurations", type=List.class, parameters={ApplicationGatewayRedirectConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayRedirectConfigurationResponse>> redirectConfigurations;
 
-    /**
-     * @return Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayRedirectConfigurationResponse>> getRedirectConfigurations() {
         return this.redirectConfigurations;
     }
-    /**
-     * Request routing rules of the application gateway resource.
-     */
     @OutputExport(name="requestRoutingRules", type=List.class, parameters={ApplicationGatewayRequestRoutingRuleResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayRequestRoutingRuleResponse>> requestRoutingRules;
 
-    /**
-     * @return Request routing rules of the application gateway resource.
-     */
     public Output</* @Nullable */ List<ApplicationGatewayRequestRoutingRuleResponse>> getRequestRoutingRules() {
         return this.requestRoutingRules;
     }
-    /**
-     * The resource GUID property of the application gateway resource.
-     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
-    /**
-     * @return The resource GUID property of the application gateway resource.
-     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
-    /**
-     * Rewrite rules for the application gateway resource.
-     */
     @OutputExport(name="rewriteRuleSets", type=List.class, parameters={ApplicationGatewayRewriteRuleSetResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayRewriteRuleSetResponse>> rewriteRuleSets;
 
-    /**
-     * @return Rewrite rules for the application gateway resource.
-     */
     public Output</* @Nullable */ List<ApplicationGatewayRewriteRuleSetResponse>> getRewriteRuleSets() {
         return this.rewriteRuleSets;
     }
-    /**
-     * SKU of the application gateway resource.
-     */
     @OutputExport(name="sku", type=ApplicationGatewaySkuResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewaySkuResponse> sku;
 
-    /**
-     * @return SKU of the application gateway resource.
-     */
     public Output</* @Nullable */ ApplicationGatewaySkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="sslCertificates", type=List.class, parameters={ApplicationGatewaySslCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewaySslCertificateResponse>> sslCertificates;
 
-    /**
-     * @return SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewaySslCertificateResponse>> getSslCertificates() {
         return this.sslCertificates;
     }
-    /**
-     * SSL policy of the application gateway resource.
-     */
     @OutputExport(name="sslPolicy", type=ApplicationGatewaySslPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewaySslPolicyResponse> sslPolicy;
 
-    /**
-     * @return SSL policy of the application gateway resource.
-     */
     public Output</* @Nullable */ ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return this.sslPolicy;
     }
-    /**
-     * SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="sslProfiles", type=List.class, parameters={ApplicationGatewaySslProfileResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewaySslProfileResponse>> sslProfiles;
 
-    /**
-     * @return SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewaySslProfileResponse>> getSslProfiles() {
         return this.sslProfiles;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="trustedClientCertificates", type=List.class, parameters={ApplicationGatewayTrustedClientCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayTrustedClientCertificateResponse>> trustedClientCertificates;
 
-    /**
-     * @return Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayTrustedClientCertificateResponse>> getTrustedClientCertificates() {
         return this.trustedClientCertificates;
     }
-    /**
-     * Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="trustedRootCertificates", type=List.class, parameters={ApplicationGatewayTrustedRootCertificateResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayTrustedRootCertificateResponse>> trustedRootCertificates;
 
-    /**
-     * @return Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayTrustedRootCertificateResponse>> getTrustedRootCertificates() {
         return this.trustedRootCertificates;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     @OutputExport(name="urlPathMaps", type=List.class, parameters={ApplicationGatewayUrlPathMapResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayUrlPathMapResponse>> urlPathMaps;
 
-    /**
-     * @return URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
-     */
     public Output</* @Nullable */ List<ApplicationGatewayUrlPathMapResponse>> getUrlPathMaps() {
         return this.urlPathMaps;
     }
-    /**
-     * Web application firewall configuration.
-     */
     @OutputExport(name="webApplicationFirewallConfiguration", type=ApplicationGatewayWebApplicationFirewallConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationGatewayWebApplicationFirewallConfigurationResponse> webApplicationFirewallConfiguration;
 
-    /**
-     * @return Web application firewall configuration.
-     */
     public Output</* @Nullable */ ApplicationGatewayWebApplicationFirewallConfigurationResponse> getWebApplicationFirewallConfiguration() {
         return this.webApplicationFirewallConfiguration;
     }
-    /**
-     * A list of availability zones denoting where the resource needs to come from.
-     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
-    /**
-     * @return A list of availability zones denoting where the resource needs to come from.
-     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ApplicationGateway(String name, ApplicationGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ApplicationGateway", name, args == null ? ApplicationGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -1584,14 +322,6 @@ public class ApplicationGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ApplicationGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationGateway(name, id, options);
     }

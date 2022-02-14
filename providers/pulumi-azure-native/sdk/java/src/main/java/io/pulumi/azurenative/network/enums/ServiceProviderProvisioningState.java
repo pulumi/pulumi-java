@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The ServiceProviderProvisioningState state of the resource.
- */
     @EnumType
     public enum ServiceProviderProvisioningState {
-/**
- * 
- */
         NotProvisioned("NotProvisioned"),
-/**
- * 
- */
         Provisioning("Provisioning"),
-/**
- * 
- */
         Provisioned("Provisioned"),
-/**
- * 
- */
         Deprovisioning("Deprovisioning");
 
         private final String value;

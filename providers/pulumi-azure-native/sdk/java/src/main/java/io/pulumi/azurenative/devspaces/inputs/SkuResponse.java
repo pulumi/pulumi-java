@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Model representing SKU for Azure Dev Spaces Controller.
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * The name of the SKU for Azure Dev Spaces Controller.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +21,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The tier of the SKU for Azure Dev Spaces Controller.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

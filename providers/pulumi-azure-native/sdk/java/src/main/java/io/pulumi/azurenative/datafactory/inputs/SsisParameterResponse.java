@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Ssis parameter.
- */
 public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisParameterResponse Empty = new SsisParameterResponse();
 
-    /**
-     * Parameter type.
-     */
     @InputImport(name="dataType")
     private final @Nullable String dataType;
 
@@ -29,9 +23,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
-    /**
-     * Default value of parameter.
-     */
     @InputImport(name="defaultValue")
     private final @Nullable String defaultValue;
 
@@ -39,9 +30,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
-    /**
-     * Parameter description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -49,9 +37,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Design default value of parameter.
-     */
     @InputImport(name="designDefaultValue")
     private final @Nullable String designDefaultValue;
 
@@ -59,9 +44,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.designDefaultValue == null ? Optional.empty() : Optional.ofNullable(this.designDefaultValue);
     }
 
-    /**
-     * Parameter id.
-     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -69,9 +51,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Parameter name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -79,9 +58,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Whether parameter is required.
-     */
     @InputImport(name="required")
     private final @Nullable Boolean required;
 
@@ -89,9 +65,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
     }
 
-    /**
-     * Whether parameter is sensitive.
-     */
     @InputImport(name="sensitive")
     private final @Nullable Boolean sensitive;
 
@@ -99,9 +72,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.sensitive == null ? Optional.empty() : Optional.ofNullable(this.sensitive);
     }
 
-    /**
-     * Default sensitive value of parameter.
-     */
     @InputImport(name="sensitiveDefaultValue")
     private final @Nullable String sensitiveDefaultValue;
 
@@ -109,9 +79,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.sensitiveDefaultValue == null ? Optional.empty() : Optional.ofNullable(this.sensitiveDefaultValue);
     }
 
-    /**
-     * Parameter value set.
-     */
     @InputImport(name="valueSet")
     private final @Nullable Boolean valueSet;
 
@@ -119,9 +86,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.valueSet == null ? Optional.empty() : Optional.ofNullable(this.valueSet);
     }
 
-    /**
-     * Parameter value type.
-     */
     @InputImport(name="valueType")
     private final @Nullable String valueType;
 
@@ -129,9 +93,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
         return this.valueType == null ? Optional.empty() : Optional.ofNullable(this.valueType);
     }
 
-    /**
-     * Parameter reference variable.
-     */
     @InputImport(name="variable")
     private final @Nullable String variable;
 

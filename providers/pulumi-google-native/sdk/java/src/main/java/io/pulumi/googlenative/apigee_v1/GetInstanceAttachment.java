@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceAttachment {
-/**
- * Gets an attachment. **Note:** Not supported for Apigee hybrid.
- */
     public static CompletableFuture<GetInstanceAttachmentResult> invokeAsync(GetInstanceAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getInstanceAttachment", TypeShape.of(GetInstanceAttachmentResult.class), args == null ? GetInstanceAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Image registry credential.
- */
 public final class ImageRegistryCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageRegistryCredentialResponse Empty = new ImageRegistryCredentialResponse();
 
-    /**
-     * The password for the private registry.
-     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -27,9 +21,6 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
-    /**
-     * The Docker image registry server without a protocol such as "http" and "https".
-     */
     @InputImport(name="server", required=true)
     private final String server;
 
@@ -37,9 +28,6 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
         return this.server;
     }
 
-    /**
-     * The username for the private registry.
-     */
     @InputImport(name="username", required=true)
     private final String username;
 

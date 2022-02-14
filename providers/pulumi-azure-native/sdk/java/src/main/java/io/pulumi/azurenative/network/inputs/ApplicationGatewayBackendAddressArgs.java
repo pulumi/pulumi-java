@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Backend address of an application gateway.
- */
 public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayBackendAddressArgs Empty = new ApplicationGatewayBackendAddressArgs();
 
-    /**
-     * Fully qualified domain name (FQDN).
-     */
     @InputImport(name="fqdn")
     private final @Nullable Input<String> fqdn;
 
@@ -27,9 +21,6 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
         return this.fqdn == null ? Input.empty() : this.fqdn;
     }
 
-    /**
-     * IP address.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 

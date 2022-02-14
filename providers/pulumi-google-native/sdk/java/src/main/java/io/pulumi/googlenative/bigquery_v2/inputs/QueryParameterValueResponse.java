@@ -10,16 +10,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class QueryParameterValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueryParameterValueResponse Empty = new QueryParameterValueResponse();
 
-    /**
-     * [Optional] The array values, if this is an array type.
-     */
     @InputImport(name="arrayValues", required=true)
     private final List<QueryParameterValueResponse> arrayValues;
 
@@ -27,9 +21,6 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
         return this.arrayValues;
     }
 
-    /**
-     * [Optional] The struct field values, in order of the struct type's declaration.
-     */
     @InputImport(name="structValues", required=true)
     private final Map<String,String> structValues;
 
@@ -37,9 +28,6 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
         return this.structValues;
     }
 
-    /**
-     * [Optional] The value of this value, if a simple scalar type.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserAssignedIdentityPropertyResponse {
-/**
- * Get the client id for the user assigned identity
- */
     private final String clientId;
-/**
- * Get the principal id for the user assigned identity
- */
     private final String principalId;
 
     @OutputCustomType.Constructor({"clientId","principalId"})
@@ -26,15 +20,9 @@ public final class UserAssignedIdentityPropertyResponse {
         this.principalId = Objects.requireNonNull(principalId);
     }
 
-/**
- * Get the client id for the user assigned identity
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * Get the principal id for the user assigned identity
- */
     public String getPrincipalId() {
         return this.principalId;
     }

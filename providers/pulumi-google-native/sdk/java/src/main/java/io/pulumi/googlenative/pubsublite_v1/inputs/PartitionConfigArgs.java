@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The settings for a topic's partitions.
- */
 public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PartitionConfigArgs Empty = new PartitionConfigArgs();
 
-    /**
-     * The capacity configuration.
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<CapacityArgs> capacity;
 
@@ -28,9 +22,6 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
-     */
     @InputImport(name="count")
     private final @Nullable Input<String> count;
 

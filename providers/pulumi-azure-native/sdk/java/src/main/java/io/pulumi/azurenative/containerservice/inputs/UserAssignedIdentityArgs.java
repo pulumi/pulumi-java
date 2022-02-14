@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class UserAssignedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserAssignedIdentityArgs Empty = new UserAssignedIdentityArgs();
 
-    /**
-     * The client id of the user assigned identity.
-     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -27,9 +21,6 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
-    /**
-     * The object id of the user assigned identity.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -37,9 +28,6 @@ public final class UserAssignedIdentityArgs extends io.pulumi.resources.Resource
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
-    /**
-     * The resource id of the user assigned identity.
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

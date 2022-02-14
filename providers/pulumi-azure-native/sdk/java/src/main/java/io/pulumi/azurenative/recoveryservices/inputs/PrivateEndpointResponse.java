@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The Private Endpoint network resource that is linked to the Private Endpoint connection.
- */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointResponse Empty = new PrivateEndpointResponse();
 
-    /**
-     * Gets or sets id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 

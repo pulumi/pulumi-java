@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LinuxConfigurationResponse {
-/**
- * Specifies the ssh key configuration for a Linux OS.
- */
     private final @Nullable SshConfigurationResponse ssh;
 
     @OutputCustomType.Constructor({"ssh"})
@@ -21,9 +18,6 @@ public final class LinuxConfigurationResponse {
         this.ssh = ssh;
     }
 
-/**
- * Specifies the ssh key configuration for a Linux OS.
- */
     public Optional<SshConfigurationResponse> getSsh() {
         return Optional.ofNullable(this.ssh);
     }

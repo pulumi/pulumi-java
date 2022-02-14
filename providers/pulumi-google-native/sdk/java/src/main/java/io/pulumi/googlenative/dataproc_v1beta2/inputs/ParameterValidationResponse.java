@@ -9,16 +9,10 @@ import io.pulumi.googlenative.dataproc_v1beta2.inputs.ValueValidationResponse;
 import java.util.Objects;
 
 
-/**
- * Configuration for parameter validation.
- */
 public final class ParameterValidationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterValidationResponse Empty = new ParameterValidationResponse();
 
-    /**
-     * Validation based on regular expressions.
-     */
     @InputImport(name="regex", required=true)
     private final RegexValidationResponse regex;
 
@@ -26,9 +20,6 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
         return this.regex;
     }
 
-    /**
-     * Validation based on a list of allowed values.
-     */
     @InputImport(name="values", required=true)
     private final ValueValidationResponse values;
 

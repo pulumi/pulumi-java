@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EtwEventConfigurationResponse {
-/**
- * 
- */
     private final @Nullable String filter;
-/**
- * 
- */
     private final Integer id;
-/**
- * 
- */
     private final String name;
 
     @OutputCustomType.Constructor({"filter","id","name"})
@@ -35,21 +26,12 @@ public final class EtwEventConfigurationResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * 
- */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
-/**
- * 
- */
     public Integer getId() {
         return this.id;
     }
-/**
- * 
- */
     public String getName() {
         return this.name;
     }

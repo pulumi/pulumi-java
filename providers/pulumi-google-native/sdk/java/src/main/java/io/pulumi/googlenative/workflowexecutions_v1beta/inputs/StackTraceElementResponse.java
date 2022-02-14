@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A single stack element (frame) where an error occurred.
- */
 public final class StackTraceElementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StackTraceElementResponse Empty = new StackTraceElementResponse();
 
-    /**
-     * The source position information of the stack trace element.
-     */
     @InputImport(name="position", required=true)
     private final PositionResponse position;
 
@@ -26,9 +20,6 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
         return this.position;
     }
 
-    /**
-     * The routine where the error occurred.
-     */
     @InputImport(name="routine", required=true)
     private final String routine;
 
@@ -36,9 +27,6 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
         return this.routine;
     }
 
-    /**
-     * The step the error occurred at.
-     */
     @InputImport(name="step", required=true)
     private final String step;
 

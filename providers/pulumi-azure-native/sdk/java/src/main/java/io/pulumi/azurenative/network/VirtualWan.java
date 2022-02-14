@@ -17,267 +17,81 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * VirtualWAN Resource.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### VirtualWANCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualWan = new AzureNative.Network.VirtualWan("virtualWan", new AzureNative.Network.VirtualWanArgs
-        {
-            DisableVpnEncryption = false,
-            Location = "West US",
-            ResourceGroupName = "rg1",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            Type = "Basic",
-            VirtualWANName = "wan1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewVirtualWan(ctx, "virtualWan", &network.VirtualWanArgs{
-			DisableVpnEncryption: pulumi.Bool(false),
-			Location:             pulumi.String("West US"),
-			ResourceGroupName:    pulumi.String("rg1"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			Type:           pulumi.String("Basic"),
-			VirtualWANName: pulumi.String("wan1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const virtualWan = new azure_native.network.VirtualWan("virtualWan", {
-    disableVpnEncryption: false,
-    location: "West US",
-    resourceGroupName: "rg1",
-    tags: {
-        key1: "value1",
-    },
-    type: "Basic",
-    virtualWANName: "wan1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-virtual_wan = azure_native.network.VirtualWan("virtualWan",
-    disable_vpn_encryption=False,
-    location="West US",
-    resource_group_name="rg1",
-    tags={
-        "key1": "value1",
-    },
-    type="Basic",
-    virtual_wan_name="wan1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:VirtualWan wan1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1 
-```
-
- */
 @ResourceType(type="azure-native:network:VirtualWan")
 public class VirtualWan extends io.pulumi.resources.CustomResource {
-    /**
-     * True if branch to branch traffic is allowed.
-     */
     @OutputExport(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBranchToBranchTraffic;
 
-    /**
-     * @return True if branch to branch traffic is allowed.
-     */
     public Output</* @Nullable */ Boolean> getAllowBranchToBranchTraffic() {
         return this.allowBranchToBranchTraffic;
     }
-    /**
-     * True if Vnet to Vnet traffic is allowed.
-     */
     @OutputExport(name="allowVnetToVnetTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVnetToVnetTraffic;
 
-    /**
-     * @return True if Vnet to Vnet traffic is allowed.
-     */
     public Output</* @Nullable */ Boolean> getAllowVnetToVnetTraffic() {
         return this.allowVnetToVnetTraffic;
     }
-    /**
-     * Vpn encryption to be disabled or not.
-     */
     @OutputExport(name="disableVpnEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableVpnEncryption;
 
-    /**
-     * @return Vpn encryption to be disabled or not.
-     */
     public Output</* @Nullable */ Boolean> getDisableVpnEncryption() {
         return this.disableVpnEncryption;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The office local breakout category.
-     */
     @OutputExport(name="office365LocalBreakoutCategory", type=String.class, parameters={})
     private Output<String> office365LocalBreakoutCategory;
 
-    /**
-     * @return The office local breakout category.
-     */
     public Output<String> getOffice365LocalBreakoutCategory() {
         return this.office365LocalBreakoutCategory;
     }
-    /**
-     * The provisioning state of the virtual WAN resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the virtual WAN resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * List of VirtualHubs in the VirtualWAN.
-     */
     @OutputExport(name="virtualHubs", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualHubs;
 
-    /**
-     * @return List of VirtualHubs in the VirtualWAN.
-     */
     public Output<List<SubResourceResponse>> getVirtualHubs() {
         return this.virtualHubs;
     }
-    /**
-     * List of VpnSites in the VirtualWAN.
-     */
     @OutputExport(name="vpnSites", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> vpnSites;
 
-    /**
-     * @return List of VpnSites in the VirtualWAN.
-     */
     public Output<List<SubResourceResponse>> getVpnSites() {
         return this.vpnSites;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public VirtualWan(String name, VirtualWanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualWan", name, args == null ? VirtualWanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -320,14 +134,6 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static VirtualWan get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualWan(name, id, options);
     }

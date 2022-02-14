@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
- */
     @EnumType
     public enum RemoteLoginPortPublicAccess {
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled"),
-/**
- * 
- */
         NotSpecified("NotSpecified");
 
         private final String value;

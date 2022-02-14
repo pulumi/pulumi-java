@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A machine reference with a hint of the machine's name and operating system.
- */
 public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineReferenceWithHintsArgs Empty = new MachineReferenceWithHintsArgs();
 
-    /**
-     * Resource URI.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -26,10 +20,6 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
         return this.id;
     }
 
-    /**
-     * Specifies the sub-class of the reference.
-Expected value is 'ref:machinewithhints'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 

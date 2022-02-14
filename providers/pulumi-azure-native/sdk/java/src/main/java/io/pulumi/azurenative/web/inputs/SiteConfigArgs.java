@@ -33,16 +33,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration of an App Service app.
- */
 public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteConfigArgs Empty = new SiteConfigArgs();
 
-    /**
-     * Flag to use Managed Identity Creds for ACR pull
-     */
     @InputImport(name="acrUseManagedIdentityCreds")
     private final @Nullable Input<Boolean> acrUseManagedIdentityCreds;
 
@@ -50,9 +44,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.acrUseManagedIdentityCreds == null ? Input.empty() : this.acrUseManagedIdentityCreds;
     }
 
-    /**
-     * If using user managed identity, the user managed identity ClientId
-     */
     @InputImport(name="acrUserManagedIdentityID")
     private final @Nullable Input<String> acrUserManagedIdentityID;
 
@@ -60,9 +51,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.acrUserManagedIdentityID == null ? Input.empty() : this.acrUserManagedIdentityID;
     }
 
-    /**
-     * <code>true</code> if Always On is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="alwaysOn")
     private final @Nullable Input<Boolean> alwaysOn;
 
@@ -70,9 +58,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.alwaysOn == null ? Input.empty() : this.alwaysOn;
     }
 
-    /**
-     * Information about the formal API definition for the app.
-     */
     @InputImport(name="apiDefinition")
     private final @Nullable Input<ApiDefinitionInfoArgs> apiDefinition;
 
@@ -80,9 +65,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiDefinition == null ? Input.empty() : this.apiDefinition;
     }
 
-    /**
-     * Azure API management settings linked to the app.
-     */
     @InputImport(name="apiManagementConfig")
     private final @Nullable Input<ApiManagementConfigArgs> apiManagementConfig;
 
@@ -90,9 +72,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiManagementConfig == null ? Input.empty() : this.apiManagementConfig;
     }
 
-    /**
-     * App command line to launch.
-     */
     @InputImport(name="appCommandLine")
     private final @Nullable Input<String> appCommandLine;
 
@@ -100,9 +79,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.appCommandLine == null ? Input.empty() : this.appCommandLine;
     }
 
-    /**
-     * Application settings.
-     */
     @InputImport(name="appSettings")
     private final @Nullable Input<List<NameValuePairArgs>> appSettings;
 
@@ -110,9 +86,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.appSettings == null ? Input.empty() : this.appSettings;
     }
 
-    /**
-     * <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="autoHealEnabled")
     private final @Nullable Input<Boolean> autoHealEnabled;
 
@@ -120,9 +93,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoHealEnabled == null ? Input.empty() : this.autoHealEnabled;
     }
 
-    /**
-     * Auto Heal rules.
-     */
     @InputImport(name="autoHealRules")
     private final @Nullable Input<AutoHealRulesArgs> autoHealRules;
 
@@ -130,9 +100,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoHealRules == null ? Input.empty() : this.autoHealRules;
     }
 
-    /**
-     * Auto-swap slot name.
-     */
     @InputImport(name="autoSwapSlotName")
     private final @Nullable Input<String> autoSwapSlotName;
 
@@ -140,9 +107,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoSwapSlotName == null ? Input.empty() : this.autoSwapSlotName;
     }
 
-    /**
-     * List of Azure Storage Accounts.
-     */
     @InputImport(name="azureStorageAccounts")
     private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts;
 
@@ -150,9 +114,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureStorageAccounts == null ? Input.empty() : this.azureStorageAccounts;
     }
 
-    /**
-     * Connection strings.
-     */
     @InputImport(name="connectionStrings")
     private final @Nullable Input<List<ConnStringInfoArgs>> connectionStrings;
 
@@ -160,9 +121,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionStrings == null ? Input.empty() : this.connectionStrings;
     }
 
-    /**
-     * Cross-Origin Resource Sharing (CORS) settings.
-     */
     @InputImport(name="cors")
     private final @Nullable Input<CorsSettingsArgs> cors;
 
@@ -170,9 +128,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.cors == null ? Input.empty() : this.cors;
     }
 
-    /**
-     * Default documents.
-     */
     @InputImport(name="defaultDocuments")
     private final @Nullable Input<List<String>> defaultDocuments;
 
@@ -180,9 +135,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultDocuments == null ? Input.empty() : this.defaultDocuments;
     }
 
-    /**
-     * <code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="detailedErrorLoggingEnabled")
     private final @Nullable Input<Boolean> detailedErrorLoggingEnabled;
 
@@ -190,9 +142,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.detailedErrorLoggingEnabled == null ? Input.empty() : this.detailedErrorLoggingEnabled;
     }
 
-    /**
-     * Document root.
-     */
     @InputImport(name="documentRoot")
     private final @Nullable Input<String> documentRoot;
 
@@ -200,9 +149,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.documentRoot == null ? Input.empty() : this.documentRoot;
     }
 
-    /**
-     * This is work around for polymorphic types.
-     */
     @InputImport(name="experiments")
     private final @Nullable Input<ExperimentsArgs> experiments;
 
@@ -210,9 +156,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.experiments == null ? Input.empty() : this.experiments;
     }
 
-    /**
-     * State of FTP / FTPS service
-     */
     @InputImport(name="ftpsState")
     private final @Nullable Input<Either<String,FtpsState>> ftpsState;
 
@@ -220,10 +163,6 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.ftpsState == null ? Input.empty() : this.ftpsState;
     }
 
-    /**
-     * Maximum number of workers that a site can scale out to.
-This setting only applies to the Consumption and Elastic Premium Plans
-     */
     @InputImport(name="functionAppScaleLimit")
     private final @Nullable Input<Integer> functionAppScaleLimit;
 
@@ -231,11 +170,6 @@ This setting only applies to the Consumption and Elastic Premium Plans
         return this.functionAppScaleLimit == null ? Input.empty() : this.functionAppScaleLimit;
     }
 
-    /**
-     * Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
-the ScaleController will not monitor event sources directly, but will instead call to the
-runtime to get scale status.
-     */
     @InputImport(name="functionsRuntimeScaleMonitoringEnabled")
     private final @Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled;
 
@@ -243,9 +177,6 @@ runtime to get scale status.
         return this.functionsRuntimeScaleMonitoringEnabled == null ? Input.empty() : this.functionsRuntimeScaleMonitoringEnabled;
     }
 
-    /**
-     * Handler mappings.
-     */
     @InputImport(name="handlerMappings")
     private final @Nullable Input<List<HandlerMappingArgs>> handlerMappings;
 
@@ -253,9 +184,6 @@ runtime to get scale status.
         return this.handlerMappings == null ? Input.empty() : this.handlerMappings;
     }
 
-    /**
-     * Health check path
-     */
     @InputImport(name="healthCheckPath")
     private final @Nullable Input<String> healthCheckPath;
 
@@ -263,9 +191,6 @@ runtime to get scale status.
         return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
     }
 
-    /**
-     * Http20Enabled: configures a web site to allow clients to connect over http2.0
-     */
     @InputImport(name="http20Enabled")
     private final @Nullable Input<Boolean> http20Enabled;
 
@@ -273,9 +198,6 @@ runtime to get scale status.
         return this.http20Enabled == null ? Input.empty() : this.http20Enabled;
     }
 
-    /**
-     * <code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="httpLoggingEnabled")
     private final @Nullable Input<Boolean> httpLoggingEnabled;
 
@@ -283,9 +205,6 @@ runtime to get scale status.
         return this.httpLoggingEnabled == null ? Input.empty() : this.httpLoggingEnabled;
     }
 
-    /**
-     * IP security restrictions for main.
-     */
     @InputImport(name="ipSecurityRestrictions")
     private final @Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions;
 
@@ -293,9 +212,6 @@ runtime to get scale status.
         return this.ipSecurityRestrictions == null ? Input.empty() : this.ipSecurityRestrictions;
     }
 
-    /**
-     * Java container.
-     */
     @InputImport(name="javaContainer")
     private final @Nullable Input<String> javaContainer;
 
@@ -303,9 +219,6 @@ runtime to get scale status.
         return this.javaContainer == null ? Input.empty() : this.javaContainer;
     }
 
-    /**
-     * Java container version.
-     */
     @InputImport(name="javaContainerVersion")
     private final @Nullable Input<String> javaContainerVersion;
 
@@ -313,9 +226,6 @@ runtime to get scale status.
         return this.javaContainerVersion == null ? Input.empty() : this.javaContainerVersion;
     }
 
-    /**
-     * Java version.
-     */
     @InputImport(name="javaVersion")
     private final @Nullable Input<String> javaVersion;
 
@@ -323,9 +233,6 @@ runtime to get scale status.
         return this.javaVersion == null ? Input.empty() : this.javaVersion;
     }
 
-    /**
-     * Identity to use for Key Vault Reference authentication.
-     */
     @InputImport(name="keyVaultReferenceIdentity")
     private final @Nullable Input<String> keyVaultReferenceIdentity;
 
@@ -333,9 +240,6 @@ runtime to get scale status.
         return this.keyVaultReferenceIdentity == null ? Input.empty() : this.keyVaultReferenceIdentity;
     }
 
-    /**
-     * Site limits.
-     */
     @InputImport(name="limits")
     private final @Nullable Input<SiteLimitsArgs> limits;
 
@@ -343,9 +247,6 @@ runtime to get scale status.
         return this.limits == null ? Input.empty() : this.limits;
     }
 
-    /**
-     * Linux App Framework and version
-     */
     @InputImport(name="linuxFxVersion")
     private final @Nullable Input<String> linuxFxVersion;
 
@@ -353,9 +254,6 @@ runtime to get scale status.
         return this.linuxFxVersion == null ? Input.empty() : this.linuxFxVersion;
     }
 
-    /**
-     * Site load balancing.
-     */
     @InputImport(name="loadBalancing")
     private final @Nullable Input<SiteLoadBalancing> loadBalancing;
 
@@ -363,9 +261,6 @@ runtime to get scale status.
         return this.loadBalancing == null ? Input.empty() : this.loadBalancing;
     }
 
-    /**
-     * <code>true</code> to enable local MySQL; otherwise, <code>false</code>.
-     */
     @InputImport(name="localMySqlEnabled")
     private final @Nullable Input<Boolean> localMySqlEnabled;
 
@@ -373,9 +268,6 @@ runtime to get scale status.
         return this.localMySqlEnabled == null ? Input.empty() : this.localMySqlEnabled;
     }
 
-    /**
-     * HTTP logs directory size limit.
-     */
     @InputImport(name="logsDirectorySizeLimit")
     private final @Nullable Input<Integer> logsDirectorySizeLimit;
 
@@ -383,9 +275,6 @@ runtime to get scale status.
         return this.logsDirectorySizeLimit == null ? Input.empty() : this.logsDirectorySizeLimit;
     }
 
-    /**
-     * Managed pipeline mode.
-     */
     @InputImport(name="managedPipelineMode")
     private final @Nullable Input<ManagedPipelineMode> managedPipelineMode;
 
@@ -393,9 +282,6 @@ runtime to get scale status.
         return this.managedPipelineMode == null ? Input.empty() : this.managedPipelineMode;
     }
 
-    /**
-     * Managed Service Identity Id
-     */
     @InputImport(name="managedServiceIdentityId")
     private final @Nullable Input<Integer> managedServiceIdentityId;
 
@@ -403,9 +289,6 @@ runtime to get scale status.
         return this.managedServiceIdentityId == null ? Input.empty() : this.managedServiceIdentityId;
     }
 
-    /**
-     * MinTlsVersion: configures the minimum version of TLS required for SSL requests
-     */
     @InputImport(name="minTlsVersion")
     private final @Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion;
 
@@ -413,10 +296,6 @@ runtime to get scale status.
         return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
     }
 
-    /**
-     * Number of minimum instance count for a site
-This setting only applies to the Elastic Plans
-     */
     @InputImport(name="minimumElasticInstanceCount")
     private final @Nullable Input<Integer> minimumElasticInstanceCount;
 
@@ -424,9 +303,6 @@ This setting only applies to the Elastic Plans
         return this.minimumElasticInstanceCount == null ? Input.empty() : this.minimumElasticInstanceCount;
     }
 
-    /**
-     * .NET Framework version.
-     */
     @InputImport(name="netFrameworkVersion")
     private final @Nullable Input<String> netFrameworkVersion;
 
@@ -434,9 +310,6 @@ This setting only applies to the Elastic Plans
         return this.netFrameworkVersion == null ? Input.empty() : this.netFrameworkVersion;
     }
 
-    /**
-     * Version of Node.js.
-     */
     @InputImport(name="nodeVersion")
     private final @Nullable Input<String> nodeVersion;
 
@@ -444,9 +317,6 @@ This setting only applies to the Elastic Plans
         return this.nodeVersion == null ? Input.empty() : this.nodeVersion;
     }
 
-    /**
-     * Number of workers.
-     */
     @InputImport(name="numberOfWorkers")
     private final @Nullable Input<Integer> numberOfWorkers;
 
@@ -454,9 +324,6 @@ This setting only applies to the Elastic Plans
         return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
     }
 
-    /**
-     * Version of PHP.
-     */
     @InputImport(name="phpVersion")
     private final @Nullable Input<String> phpVersion;
 
@@ -464,9 +331,6 @@ This setting only applies to the Elastic Plans
         return this.phpVersion == null ? Input.empty() : this.phpVersion;
     }
 
-    /**
-     * Version of PowerShell.
-     */
     @InputImport(name="powerShellVersion")
     private final @Nullable Input<String> powerShellVersion;
 
@@ -474,10 +338,6 @@ This setting only applies to the Elastic Plans
         return this.powerShellVersion == null ? Input.empty() : this.powerShellVersion;
     }
 
-    /**
-     * Number of preWarmed instances.
-This setting only applies to the Consumption and Elastic Plans
-     */
     @InputImport(name="preWarmedInstanceCount")
     private final @Nullable Input<Integer> preWarmedInstanceCount;
 
@@ -485,9 +345,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.preWarmedInstanceCount == null ? Input.empty() : this.preWarmedInstanceCount;
     }
 
-    /**
-     * Property to allow or block all public traffic.
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<String> publicNetworkAccess;
 
@@ -495,9 +352,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * Publishing user name.
-     */
     @InputImport(name="publishingUsername")
     private final @Nullable Input<String> publishingUsername;
 
@@ -505,9 +359,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.publishingUsername == null ? Input.empty() : this.publishingUsername;
     }
 
-    /**
-     * Push endpoint settings.
-     */
     @InputImport(name="push")
     private final @Nullable Input<PushSettingsArgs> push;
 
@@ -515,9 +366,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.push == null ? Input.empty() : this.push;
     }
 
-    /**
-     * Version of Python.
-     */
     @InputImport(name="pythonVersion")
     private final @Nullable Input<String> pythonVersion;
 
@@ -525,9 +373,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
     }
 
-    /**
-     * <code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="remoteDebuggingEnabled")
     private final @Nullable Input<Boolean> remoteDebuggingEnabled;
 
@@ -535,9 +380,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.remoteDebuggingEnabled == null ? Input.empty() : this.remoteDebuggingEnabled;
     }
 
-    /**
-     * Remote debugging version.
-     */
     @InputImport(name="remoteDebuggingVersion")
     private final @Nullable Input<String> remoteDebuggingVersion;
 
@@ -545,9 +387,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.remoteDebuggingVersion == null ? Input.empty() : this.remoteDebuggingVersion;
     }
 
-    /**
-     * <code>true</code> if request tracing is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="requestTracingEnabled")
     private final @Nullable Input<Boolean> requestTracingEnabled;
 
@@ -555,9 +394,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.requestTracingEnabled == null ? Input.empty() : this.requestTracingEnabled;
     }
 
-    /**
-     * Request tracing expiration time.
-     */
     @InputImport(name="requestTracingExpirationTime")
     private final @Nullable Input<String> requestTracingExpirationTime;
 
@@ -565,9 +401,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.requestTracingExpirationTime == null ? Input.empty() : this.requestTracingExpirationTime;
     }
 
-    /**
-     * IP security restrictions for scm.
-     */
     @InputImport(name="scmIpSecurityRestrictions")
     private final @Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions;
 
@@ -575,9 +408,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.scmIpSecurityRestrictions == null ? Input.empty() : this.scmIpSecurityRestrictions;
     }
 
-    /**
-     * IP security restrictions for scm to use main.
-     */
     @InputImport(name="scmIpSecurityRestrictionsUseMain")
     private final @Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain;
 
@@ -585,9 +415,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.scmIpSecurityRestrictionsUseMain == null ? Input.empty() : this.scmIpSecurityRestrictionsUseMain;
     }
 
-    /**
-     * ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
-     */
     @InputImport(name="scmMinTlsVersion")
     private final @Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion;
 
@@ -595,9 +422,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.scmMinTlsVersion == null ? Input.empty() : this.scmMinTlsVersion;
     }
 
-    /**
-     * SCM type.
-     */
     @InputImport(name="scmType")
     private final @Nullable Input<Either<String,ScmType>> scmType;
 
@@ -605,9 +429,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.scmType == null ? Input.empty() : this.scmType;
     }
 
-    /**
-     * Tracing options.
-     */
     @InputImport(name="tracingOptions")
     private final @Nullable Input<String> tracingOptions;
 
@@ -615,9 +436,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.tracingOptions == null ? Input.empty() : this.tracingOptions;
     }
 
-    /**
-     * <code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.
-     */
     @InputImport(name="use32BitWorkerProcess")
     private final @Nullable Input<Boolean> use32BitWorkerProcess;
 
@@ -625,9 +443,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.use32BitWorkerProcess == null ? Input.empty() : this.use32BitWorkerProcess;
     }
 
-    /**
-     * Virtual applications.
-     */
     @InputImport(name="virtualApplications")
     private final @Nullable Input<List<VirtualApplicationArgs>> virtualApplications;
 
@@ -635,9 +450,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.virtualApplications == null ? Input.empty() : this.virtualApplications;
     }
 
-    /**
-     * Virtual Network name.
-     */
     @InputImport(name="vnetName")
     private final @Nullable Input<String> vnetName;
 
@@ -645,9 +457,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.vnetName == null ? Input.empty() : this.vnetName;
     }
 
-    /**
-     * The number of private ports assigned to this app. These will be assigned dynamically on runtime.
-     */
     @InputImport(name="vnetPrivatePortsCount")
     private final @Nullable Input<Integer> vnetPrivatePortsCount;
 
@@ -655,9 +464,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.vnetPrivatePortsCount == null ? Input.empty() : this.vnetPrivatePortsCount;
     }
 
-    /**
-     * Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.
-     */
     @InputImport(name="vnetRouteAllEnabled")
     private final @Nullable Input<Boolean> vnetRouteAllEnabled;
 
@@ -665,9 +471,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.vnetRouteAllEnabled == null ? Input.empty() : this.vnetRouteAllEnabled;
     }
 
-    /**
-     * <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="webSocketsEnabled")
     private final @Nullable Input<Boolean> webSocketsEnabled;
 
@@ -675,9 +478,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.webSocketsEnabled == null ? Input.empty() : this.webSocketsEnabled;
     }
 
-    /**
-     * Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
-     */
     @InputImport(name="websiteTimeZone")
     private final @Nullable Input<String> websiteTimeZone;
 
@@ -685,9 +485,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.websiteTimeZone == null ? Input.empty() : this.websiteTimeZone;
     }
 
-    /**
-     * Xenon App Framework and version
-     */
     @InputImport(name="windowsFxVersion")
     private final @Nullable Input<String> windowsFxVersion;
 
@@ -695,9 +492,6 @@ This setting only applies to the Consumption and Elastic Plans
         return this.windowsFxVersion == null ? Input.empty() : this.windowsFxVersion;
     }
 
-    /**
-     * Explicit Managed Service Identity Id
-     */
     @InputImport(name="xManagedServiceIdentityId")
     private final @Nullable Input<Integer> xManagedServiceIdentityId;
 

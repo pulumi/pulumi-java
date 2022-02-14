@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The account SKU.
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * Gets or sets the SKU capacity.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Gets or sets the SKU family.
-     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -38,9 +29,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
-    /**
-     * Gets or sets the SKU name of the account.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

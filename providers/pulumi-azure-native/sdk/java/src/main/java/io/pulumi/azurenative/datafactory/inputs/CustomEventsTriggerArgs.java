@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger that runs every time a custom event is received.
- */
 public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomEventsTriggerArgs Empty = new CustomEventsTriggerArgs();
 
-    /**
-     * List of tags that can be used for describing the trigger.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -30,9 +24,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Trigger description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The list of event types that cause this trigger to fire.
-     */
     @InputImport(name="events", required=true)
     private final Input<List<Object>> events;
 
@@ -50,9 +38,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.events;
     }
 
-    /**
-     * Pipelines that need to be started.
-     */
     @InputImport(name="pipelines")
     private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
@@ -60,9 +45,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.pipelines == null ? Input.empty() : this.pipelines;
     }
 
-    /**
-     * The ARM resource ID of the Azure Event Grid Topic.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -70,9 +52,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.scope;
     }
 
-    /**
-     * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
-     */
     @InputImport(name="subjectBeginsWith")
     private final @Nullable Input<String> subjectBeginsWith;
 
@@ -80,9 +59,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.subjectBeginsWith == null ? Input.empty() : this.subjectBeginsWith;
     }
 
-    /**
-     * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
-     */
     @InputImport(name="subjectEndsWith")
     private final @Nullable Input<String> subjectEndsWith;
 
@@ -90,10 +66,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
         return this.subjectEndsWith == null ? Input.empty() : this.subjectEndsWith;
     }
 
-    /**
-     * Trigger type.
-Expected value is 'CustomEventsTrigger'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

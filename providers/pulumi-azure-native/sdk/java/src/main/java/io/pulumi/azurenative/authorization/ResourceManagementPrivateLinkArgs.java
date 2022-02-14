@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceManagementPrivateLinkArgs Empty = new ResourceManagementPrivateLinkArgs();
 
-    /**
-     * the region to create private link association.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -27,9 +21,6 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group the template will be deployed to. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource management private link.
-     */
     @InputImport(name="rmplName")
     private final @Nullable Input<String> rmplName;
 

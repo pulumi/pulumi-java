@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the managed identities for an Azure resource.
- */
 public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIdentityResponse Empty = new ManagedIdentityResponse();
 
-    /**
-     * The principal id of the managed identity. This property will only be provided for a system assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -29,9 +23,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
         return this.principalId;
     }
 
-    /**
-     * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -39,9 +30,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
         return this.tenantId;
     }
 
-    /**
-     * The type of managed identity for the resource.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -49,11 +37,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
-'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 

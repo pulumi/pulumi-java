@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the parameters for the Url Signing action.
- */
 public final class UrlSigningActionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UrlSigningActionParametersResponse Empty = new UrlSigningActionParametersResponse();
 
-    /**
-     * Algorithm to use for URL signing
-     */
     @InputImport(name="algorithm")
     private final @Nullable String algorithm;
 
@@ -29,9 +23,6 @@ public final class UrlSigningActionParametersResponse extends io.pulumi.resource
         return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -39,9 +30,6 @@ public final class UrlSigningActionParametersResponse extends io.pulumi.resource
         return this.odataType;
     }
 
-    /**
-     * Defines which query string parameters in the url to be considered for expires, key id etc. 
-     */
     @InputImport(name="parameterNameOverride")
     private final @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementGroup {
-/**
- * The management group details.
-API Version: 2020-05-01.
- *
- * The management group details.
- */
     public static CompletableFuture<GetManagementGroupResult> invokeAsync(GetManagementGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getManagementGroup", TypeShape.of(GetManagementGroupResult.class), args == null ? GetManagementGroupArgs.Empty : args, Utilities.withVersion(options));
     }

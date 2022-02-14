@@ -15,73 +15,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SaasResourceResponseProperties {
-/**
- * Whether the SaaS subscription will auto renew upon term end.
- */
     private final @Nullable Boolean autoRenew;
-/**
- * The created date of this resource.
- */
     private final String created;
-/**
- * Whether the current term is a Free Trial term
- */
     private final @Nullable Boolean isFreeTrial;
-/**
- * The last modifier date if this resource.
- */
     private final @Nullable String lastModified;
-/**
- * The offer id.
- */
     private final @Nullable String offerId;
-/**
- * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
- */
     private final @Nullable Map<String,String> paymentChannelMetadata;
-/**
- * The Payment channel for the SaasSubscription.
- */
     private final @Nullable String paymentChannelType;
-/**
- * The publisher id.
- */
     private final @Nullable String publisherId;
-/**
- * The environment in the publisher side for this resource.
- */
     private final @Nullable String publisherTestEnvironment;
-/**
- * The seat count.
- */
     private final @Nullable Double quantity;
-/**
- * The SaaS resource name.
- */
     private final @Nullable String saasResourceName;
-/**
- * The saas session id used for dev service migration request.
- */
     private final @Nullable String saasSessionId;
-/**
- * The saas subscription id used for tenant to subscription level migration request.
- */
     private final @Nullable String saasSubscriptionId;
-/**
- * The plan id.
- */
     private final @Nullable String skuId;
-/**
- * The SaaS Subscription Status.
- */
     private final @Nullable String status;
-/**
- * The current Term object.
- */
     private final @Nullable SaasPropertiesResponseTerm term;
-/**
- * The current Term id.
- */
     private final @Nullable String termId;
 
     @OutputCustomType.Constructor({"autoRenew","created","isFreeTrial","lastModified","offerId","paymentChannelMetadata","paymentChannelType","publisherId","publisherTestEnvironment","quantity","saasResourceName","saasSessionId","saasSubscriptionId","skuId","status","term","termId"})
@@ -122,105 +71,54 @@ public final class SaasResourceResponseProperties {
         this.termId = termId;
     }
 
-/**
- * Whether the SaaS subscription will auto renew upon term end.
- */
     public Optional<Boolean> getAutoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
-/**
- * The created date of this resource.
- */
     public String getCreated() {
         return this.created;
     }
-/**
- * Whether the current term is a Free Trial term
- */
     public Optional<Boolean> getIsFreeTrial() {
         return Optional.ofNullable(this.isFreeTrial);
     }
-/**
- * The last modifier date if this resource.
- */
     public Optional<String> getLastModified() {
         return Optional.ofNullable(this.lastModified);
     }
-/**
- * The offer id.
- */
     public Optional<String> getOfferId() {
         return Optional.ofNullable(this.offerId);
     }
-/**
- * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
- */
     public Map<String,String> getPaymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Map.of() : this.paymentChannelMetadata;
     }
-/**
- * The Payment channel for the SaasSubscription.
- */
     public Optional<String> getPaymentChannelType() {
         return Optional.ofNullable(this.paymentChannelType);
     }
-/**
- * The publisher id.
- */
     public Optional<String> getPublisherId() {
         return Optional.ofNullable(this.publisherId);
     }
-/**
- * The environment in the publisher side for this resource.
- */
     public Optional<String> getPublisherTestEnvironment() {
         return Optional.ofNullable(this.publisherTestEnvironment);
     }
-/**
- * The seat count.
- */
     public Optional<Double> getQuantity() {
         return Optional.ofNullable(this.quantity);
     }
-/**
- * The SaaS resource name.
- */
     public Optional<String> getSaasResourceName() {
         return Optional.ofNullable(this.saasResourceName);
     }
-/**
- * The saas session id used for dev service migration request.
- */
     public Optional<String> getSaasSessionId() {
         return Optional.ofNullable(this.saasSessionId);
     }
-/**
- * The saas subscription id used for tenant to subscription level migration request.
- */
     public Optional<String> getSaasSubscriptionId() {
         return Optional.ofNullable(this.saasSubscriptionId);
     }
-/**
- * The plan id.
- */
     public Optional<String> getSkuId() {
         return Optional.ofNullable(this.skuId);
     }
-/**
- * The SaaS Subscription Status.
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
-/**
- * The current Term object.
- */
     public Optional<SaasPropertiesResponseTerm> getTerm() {
         return Optional.ofNullable(this.term);
     }
-/**
- * The current Term id.
- */
     public Optional<String> getTermId() {
         return Optional.ofNullable(this.termId);
     }

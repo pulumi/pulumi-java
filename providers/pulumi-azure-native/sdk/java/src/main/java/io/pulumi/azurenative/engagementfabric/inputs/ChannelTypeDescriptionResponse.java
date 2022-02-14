@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * EngagementFabric channel description
- */
 public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ChannelTypeDescriptionResponse Empty = new ChannelTypeDescriptionResponse();
 
-    /**
-     * Text description for the channel
-     */
     @InputImport(name="channelDescription")
     private final @Nullable String channelDescription;
 
@@ -28,9 +22,6 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
         return this.channelDescription == null ? Optional.empty() : Optional.ofNullable(this.channelDescription);
     }
 
-    /**
-     * All the available functions for the channel
-     */
     @InputImport(name="channelFunctions")
     private final @Nullable List<String> channelFunctions;
 
@@ -38,9 +29,6 @@ public final class ChannelTypeDescriptionResponse extends io.pulumi.resources.In
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
 
-    /**
-     * Channel type
-     */
     @InputImport(name="channelType")
     private final @Nullable String channelType;
 

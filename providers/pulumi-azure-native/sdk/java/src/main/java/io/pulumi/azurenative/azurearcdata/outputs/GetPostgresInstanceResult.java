@@ -16,41 +16,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPostgresInstanceResult {
-/**
- * The extendedLocation of the resource.
- */
     private final @Nullable ExtendedLocationResponse extendedLocation;
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * null
- */
     private final PostgresInstancePropertiesResponse properties;
-/**
- * Resource sku.
- */
     private final @Nullable PostgresInstanceSkuResponse sku;
-/**
- * Read only system data
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"extendedLocation","id","location","name","properties","sku","systemData","tags","type"})
@@ -75,57 +48,30 @@ public final class GetPostgresInstanceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The extendedLocation of the resource.
- */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * null
- */
     public PostgresInstancePropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * Resource sku.
- */
     public Optional<PostgresInstanceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * Read only system data
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     public String getType() {
         return this.type;
     }

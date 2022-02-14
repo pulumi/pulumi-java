@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ErrorResponse {
-/**
- * Detailed error codes and messages.
- */
     private final GoogleRpcStatusResponse details;
-/**
- * The times the error occurred.
- */
     private final List<String> timestamps;
 
     @OutputCustomType.Constructor({"details","timestamps"})
@@ -28,15 +22,9 @@ public final class GooglePrivacyDlpV2ErrorResponse {
         this.timestamps = Objects.requireNonNull(timestamps);
     }
 
-/**
- * Detailed error codes and messages.
- */
     public GoogleRpcStatusResponse getDetails() {
         return this.details;
     }
-/**
- * The times the error occurred.
- */
     public List<String> getTimestamps() {
         return this.timestamps;
     }

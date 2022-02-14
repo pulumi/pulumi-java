@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Avro write settings.
- */
 public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AvroWriteSettingsArgs Empty = new AvroWriteSettingsArgs();
 
-    /**
-     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileNamePrefix")
     private final @Nullable Input<Object> fileNamePrefix;
 
@@ -28,9 +22,6 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.fileNamePrefix == null ? Input.empty() : this.fileNamePrefix;
     }
 
-    /**
-     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxRowsPerFile")
     private final @Nullable Input<Object> maxRowsPerFile;
 
@@ -38,9 +29,6 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.maxRowsPerFile == null ? Input.empty() : this.maxRowsPerFile;
     }
 
-    /**
-     * Top level record name in write result, which is required in AVRO spec.
-     */
     @InputImport(name="recordName")
     private final @Nullable Input<String> recordName;
 
@@ -48,9 +36,6 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.recordName == null ? Input.empty() : this.recordName;
     }
 
-    /**
-     * Record namespace in the write result.
-     */
     @InputImport(name="recordNamespace")
     private final @Nullable Input<String> recordNamespace;
 
@@ -58,10 +43,6 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.recordNamespace == null ? Input.empty() : this.recordNamespace;
     }
 
-    /**
-     * The write setting type.
-Expected value is 'AvroWriteSettings'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

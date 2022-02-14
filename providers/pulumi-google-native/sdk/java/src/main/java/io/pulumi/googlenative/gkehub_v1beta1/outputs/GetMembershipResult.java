@@ -13,57 +13,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetMembershipResult {
-/**
- * Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
- */
     private final AuthorityResponse authority;
-/**
- * When the Membership was created.
- */
     private final String createTime;
-/**
- * When the Membership was deleted.
- */
     private final String deleteTime;
-/**
- * Optional. Description of this membership, limited to 63 characters. Must match the regex: `a-zA-Z0-9*`
- */
     private final String description;
-/**
- * Optional. Endpoint information to reach this member.
- */
     private final MembershipEndpointResponse endpoint;
-/**
- * Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. For GKE clusters, external_id is managed by the Hub API and updates will be ignored. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
- */
     private final String externalId;
-/**
- * Optional. The infrastructure type this Membership is running on.
- */
     private final String infrastructureType;
-/**
- * Optional. GCP labels for this membership.
- */
     private final Map<String,String> labels;
-/**
- * For clusters using Connect, the timestamp of the most recent connection established with Google Cloud. This time is updated every several minutes, not continuously. For clusters that do not use GKE Connect, or that have never connected successfully, this field will be unset.
- */
     private final String lastConnectionTime;
-/**
- * The full, unique name of this Membership resource in the format `projects/*{@literal /}locations/*{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
- */
     private final String name;
-/**
- * State of the Membership resource.
- */
     private final MembershipStateResponse state;
-/**
- * Google-generated UUID for this resource. This is unique across all Membership resources. If a Membership resource is deleted and another resource with the same name is created, it gets a different unique_id.
- */
     private final String uniqueId;
-/**
- * When the Membership was last updated.
- */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"authority","createTime","deleteTime","description","endpoint","externalId","infrastructureType","labels","lastConnectionTime","name","state","uniqueId","updateTime"})
@@ -96,81 +57,42 @@ public final class GetMembershipResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
-/**
- * Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
- */
     public AuthorityResponse getAuthority() {
         return this.authority;
     }
-/**
- * When the Membership was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * When the Membership was deleted.
- */
     public String getDeleteTime() {
         return this.deleteTime;
     }
-/**
- * Optional. Description of this membership, limited to 63 characters. Must match the regex: `a-zA-Z0-9*`
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Optional. Endpoint information to reach this member.
- */
     public MembershipEndpointResponse getEndpoint() {
         return this.endpoint;
     }
-/**
- * Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. For GKE clusters, external_id is managed by the Hub API and updates will be ignored. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
- */
     public String getExternalId() {
         return this.externalId;
     }
-/**
- * Optional. The infrastructure type this Membership is running on.
- */
     public String getInfrastructureType() {
         return this.infrastructureType;
     }
-/**
- * Optional. GCP labels for this membership.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * For clusters using Connect, the timestamp of the most recent connection established with Google Cloud. This time is updated every several minutes, not continuously. For clusters that do not use GKE Connect, or that have never connected successfully, this field will be unset.
- */
     public String getLastConnectionTime() {
         return this.lastConnectionTime;
     }
-/**
- * The full, unique name of this Membership resource in the format `projects/*{@literal /}locations/*{@literal /}memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
- */
     public String getName() {
         return this.name;
     }
-/**
- * State of the Membership resource.
- */
     public MembershipStateResponse getState() {
         return this.state;
     }
-/**
- * Google-generated UUID for this resource. This is unique across all Membership resources. If a Membership resource is deleted and another resource with the same name is created, it gets a different unique_id.
- */
     public String getUniqueId() {
         return this.uniqueId;
     }
-/**
- * When the Membership was last updated.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }

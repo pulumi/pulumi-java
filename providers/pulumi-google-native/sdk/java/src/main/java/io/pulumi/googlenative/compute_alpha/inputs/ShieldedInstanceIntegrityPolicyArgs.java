@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The policy describes the baseline against which Instance boot integrity is measured.
- */
 public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShieldedInstanceIntegrityPolicyArgs Empty = new ShieldedInstanceIntegrityPolicyArgs();
 
-    /**
-     * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
-     */
     @InputImport(name="updateAutoLearnPolicy")
     private final @Nullable Input<Boolean> updateAutoLearnPolicy;
 

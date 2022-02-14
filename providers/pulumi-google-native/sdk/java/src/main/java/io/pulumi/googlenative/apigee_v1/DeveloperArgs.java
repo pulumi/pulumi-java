@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeveloperArgs Empty = new DeveloperArgs();
 
-    /**
-     * Access type.
-     */
     @InputImport(name="accessType")
     private final @Nullable Input<String> accessType;
 
@@ -29,9 +23,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessType == null ? Input.empty() : this.accessType;
     }
 
-    /**
-     * Developer app family.
-     */
     @InputImport(name="appFamily")
     private final @Nullable Input<String> appFamily;
 
@@ -39,9 +30,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.appFamily == null ? Input.empty() : this.appFamily;
     }
 
-    /**
-     * List of apps associated with the developer.
-     */
     @InputImport(name="apps")
     private final @Nullable Input<List<String>> apps;
 
@@ -49,9 +37,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.apps == null ? Input.empty() : this.apps;
     }
 
-    /**
-     * Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
-     */
     @InputImport(name="attributes")
     private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
@@ -59,9 +44,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
-    /**
-     * List of companies associated with the developer.
-     */
     @InputImport(name="companies")
     private final @Nullable Input<List<String>> companies;
 
@@ -69,9 +51,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.companies == null ? Input.empty() : this.companies;
     }
 
-    /**
-     * ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
-     */
     @InputImport(name="developerId")
     private final @Nullable Input<String> developerId;
 
@@ -79,9 +58,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.developerId == null ? Input.empty() : this.developerId;
     }
 
-    /**
-     * Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
-     */
     @InputImport(name="email", required=true)
     private final Input<String> email;
 
@@ -89,9 +65,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.email;
     }
 
-    /**
-     * First name of the developer.
-     */
     @InputImport(name="firstName", required=true)
     private final Input<String> firstName;
 
@@ -99,9 +72,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstName;
     }
 
-    /**
-     * Last name of the developer.
-     */
     @InputImport(name="lastName", required=true)
     private final Input<String> lastName;
 
@@ -109,9 +79,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -119,9 +86,6 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * User name of the developer. Not used by Apigee hybrid.
-     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

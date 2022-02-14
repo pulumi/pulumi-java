@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalUserOperationBatchStatus {
-/**
- * Status Details of the long running operation for an environment
-API Version: 2018-10-15.
- *
- * Status Details of the long running operation for an environment
- */
     public static CompletableFuture<GetGlobalUserOperationBatchStatusResult> invokeAsync(GetGlobalUserOperationBatchStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserOperationBatchStatus", TypeShape.of(GetGlobalUserOperationBatchStatusResult.class), args == null ? GetGlobalUserOperationBatchStatusArgs.Empty : args, Utilities.withVersion(options));
     }

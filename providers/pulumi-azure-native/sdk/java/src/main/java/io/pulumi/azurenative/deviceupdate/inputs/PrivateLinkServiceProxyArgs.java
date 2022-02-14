@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Private link service proxy details.
- */
 public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceProxyArgs Empty = new PrivateLinkServiceProxyArgs();
 
-    /**
-     * Group connectivity information.
-     */
     @InputImport(name="groupConnectivityInformation")
     private final @Nullable Input<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
@@ -30,9 +24,6 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
         return this.groupConnectivityInformation == null ? Input.empty() : this.groupConnectivityInformation;
     }
 
-    /**
-     * NRP resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -40,9 +31,6 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Remote private link service connection state
-     */
     @InputImport(name="remotePrivateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 

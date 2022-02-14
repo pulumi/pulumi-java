@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An InstanceSchedulePolicy specifies when and how frequent certain operations are performed on the instance.
- */
 public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyResponse Empty = new ResourcePolicyInstanceSchedulePolicyResponse();
 
-    /**
-     * The expiration time of the schedule. The timestamp is an RFC3339 string.
-     */
     @InputImport(name="expirationTime", required=true)
     private final String expirationTime;
 
@@ -26,9 +20,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
         return this.expirationTime;
     }
 
-    /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -36,9 +27,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
         return this.startTime;
     }
 
-    /**
-     * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-     */
     @InputImport(name="timeZone", required=true)
     private final String timeZone;
 
@@ -46,9 +34,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
         return this.timeZone;
     }
 
-    /**
-     * Specifies the schedule for starting instances.
-     */
     @InputImport(name="vmStartSchedule", required=true)
     private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
 
@@ -56,9 +41,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
         return this.vmStartSchedule;
     }
 
-    /**
-     * Specifies the schedule for stopping instances.
-     */
     @InputImport(name="vmStopSchedule", required=true)
     private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
 

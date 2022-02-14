@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Kubernetes node IP configuration
- */
 public final class KubernetesIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesIPConfigurationResponse Empty = new KubernetesIPConfigurationResponse();
 
-    /**
-     * IP address of the Kubernetes node.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -27,9 +21,6 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
-    /**
-     * Port of the Kubernetes node.
-     */
     @InputImport(name="port", required=true)
     private final String port;
 

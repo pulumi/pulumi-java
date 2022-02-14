@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of a encoded task step.
- */
 public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncodedTaskStepArgs Empty = new EncodedTaskStepArgs();
 
-    /**
-     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     */
     @InputImport(name="contextAccessToken")
     private final @Nullable Input<String> contextAccessToken;
 
@@ -29,9 +23,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
         return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
     }
 
-    /**
-     * The URL(absolute or relative) of the source context for the task step.
-     */
     @InputImport(name="contextPath")
     private final @Nullable Input<String> contextPath;
 
@@ -39,9 +30,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
         return this.contextPath == null ? Input.empty() : this.contextPath;
     }
 
-    /**
-     * Base64 encoded value of the template/definition file content.
-     */
     @InputImport(name="encodedTaskContent", required=true)
     private final Input<String> encodedTaskContent;
 
@@ -49,9 +37,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
         return this.encodedTaskContent;
     }
 
-    /**
-     * Base64 encoded value of the parameters/values file content.
-     */
     @InputImport(name="encodedValuesContent")
     private final @Nullable Input<String> encodedValuesContent;
 
@@ -59,10 +44,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
         return this.encodedValuesContent == null ? Input.empty() : this.encodedValuesContent;
     }
 
-    /**
-     * The type of the step.
-Expected value is 'EncodedTask'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -70,9 +51,6 @@ Expected value is 'EncodedTask'.
         return this.type;
     }
 
-    /**
-     * The collection of overridable values that can be passed when running a task.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<SetValueArgs>> values;
 

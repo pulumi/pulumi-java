@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerCollectorArgs Empty = new ServerCollectorArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -28,9 +22,6 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
-    /**
-     * Name of the Azure Migrate project.
-     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -38,9 +29,6 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.projectName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<CollectorPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the Azure Resource Group that project is part of.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Unique name of a Server collector within a project.
-     */
     @InputImport(name="serverCollectorName")
     private final @Nullable Input<String> serverCollectorName;
 

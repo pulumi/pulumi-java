@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataMaskingPolicyArgs Empty = new DataMaskingPolicyArgs();
 
-    /**
-     * The name of the database for which the data masking rule applies.
-     */
     @InputImport(name="dataMaskingPolicyName")
     private final @Nullable Input<String> dataMaskingPolicyName;
 
@@ -28,9 +22,6 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.dataMaskingPolicyName == null ? Input.empty() : this.dataMaskingPolicyName;
     }
 
-    /**
-     * The state of the data masking policy.
-     */
     @InputImport(name="dataMaskingState", required=true)
     private final Input<DataMaskingState> dataMaskingState;
 
@@ -38,9 +29,6 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.dataMaskingState;
     }
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -48,9 +36,6 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.databaseName;
     }
 
-    /**
-     * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
-     */
     @InputImport(name="exemptPrincipals")
     private final @Nullable Input<String> exemptPrincipals;
 
@@ -58,9 +43,6 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.exemptPrincipals == null ? Input.empty() : this.exemptPrincipals;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +50,6 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

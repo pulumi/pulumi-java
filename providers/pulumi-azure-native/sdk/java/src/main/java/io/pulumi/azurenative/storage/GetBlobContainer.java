@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainer {
-/**
- * Properties of the blob container, including Id, resource name, resource type, Etag.
-API Version: 2021-02-01.
- *
- * Properties of the blob container, including Id, resource name, resource type, Etag.
- */
     public static CompletableFuture<GetBlobContainerResult> invokeAsync(GetBlobContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainer", TypeShape.of(GetBlobContainerResult.class), args == null ? GetBlobContainerArgs.Empty : args, Utilities.withVersion(options));
     }

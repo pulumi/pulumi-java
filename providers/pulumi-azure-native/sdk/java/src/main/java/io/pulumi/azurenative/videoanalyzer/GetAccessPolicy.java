@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPolicy {
-/**
- * Policy that determines how a video can be accessed.
-API Version: 2021-05-01-preview.
- *
- * Policy that determines how a video can be accessed.
- */
     public static CompletableFuture<GetAccessPolicyResult> invokeAsync(GetAccessPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getAccessPolicy", TypeShape.of(GetAccessPolicyResult.class), args == null ? GetAccessPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

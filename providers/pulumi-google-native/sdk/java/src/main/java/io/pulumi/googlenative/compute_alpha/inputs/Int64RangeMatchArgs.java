@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * HttpRouteRuleMatch criteria for field values that must stay within the specified integer range.
- */
 public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Int64RangeMatchArgs Empty = new Int64RangeMatchArgs();
 
-    /**
-     * The end of the range (exclusive) in signed long integer format.
-     */
     @InputImport(name="rangeEnd")
     private final @Nullable Input<String> rangeEnd;
 
@@ -27,9 +21,6 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.rangeEnd == null ? Input.empty() : this.rangeEnd;
     }
 
-    /**
-     * The start of the range (inclusive) in signed long integer format.
-     */
     @InputImport(name="rangeStart")
     private final @Nullable Input<String> rangeStart;
 

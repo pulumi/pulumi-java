@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Rich Business Messaging (RBM) text response with suggestions.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs();
 
-    /**
-     * Optional. One or more suggestions to show to the user.
-     */
     @InputImport(name="rbmSuggestion")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
         return this.rbmSuggestion == null ? Input.empty() : this.rbmSuggestion;
     }
 
-    /**
-     * Text sent and displayed to the user.
-     */
     @InputImport(name="text", required=true)
     private final Input<String> text;
 

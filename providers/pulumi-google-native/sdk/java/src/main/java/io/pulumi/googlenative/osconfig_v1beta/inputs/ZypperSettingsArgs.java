@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Zypper patching is performed by running `zypper patch`. See also https://en.opensuse.org/SDB:Zypper_manual.
- */
 public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ZypperSettingsArgs Empty = new ZypperSettingsArgs();
 
-    /**
-     * Install only patches with these categories. Common categories include security, recommended, and feature.
-     */
     @InputImport(name="categories")
     private final @Nullable Input<List<String>> categories;
 
@@ -29,9 +23,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.categories == null ? Input.empty() : this.categories;
     }
 
-    /**
-     * List of patches to exclude from update.
-     */
     @InputImport(name="excludes")
     private final @Nullable Input<List<String>> excludes;
 
@@ -39,9 +30,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.excludes == null ? Input.empty() : this.excludes;
     }
 
-    /**
-     * An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.
-     */
     @InputImport(name="exclusivePatches")
     private final @Nullable Input<List<String>> exclusivePatches;
 
@@ -49,9 +37,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
     }
 
-    /**
-     * Install only patches with these severities. Common severities include critical, important, moderate, and low.
-     */
     @InputImport(name="severities")
     private final @Nullable Input<List<String>> severities;
 
@@ -59,9 +44,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.severities == null ? Input.empty() : this.severities;
     }
 
-    /**
-     * Adds the `--with-optional` flag to `zypper patch`.
-     */
     @InputImport(name="withOptional")
     private final @Nullable Input<Boolean> withOptional;
 
@@ -69,9 +51,6 @@ public final class ZypperSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.withOptional == null ? Input.empty() : this.withOptional;
     }
 
-    /**
-     * Adds the `--with-update` flag, to `zypper patch`.
-     */
     @InputImport(name="withUpdate")
     private final @Nullable Input<Boolean> withUpdate;
 

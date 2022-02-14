@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The failover deployment model.
- */
     @EnumType
     public enum FailoverDeploymentModel {
-/**
- * 
- */
         NotApplicable("NotApplicable"),
-/**
- * 
- */
         Classic("Classic"),
-/**
- * 
- */
         ResourceManager("ResourceManager");
 
         private final String value;

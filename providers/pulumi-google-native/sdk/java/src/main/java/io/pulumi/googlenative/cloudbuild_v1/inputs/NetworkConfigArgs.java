@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the network configuration for the pool.
- */
 public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 
-    /**
-     * Option to configure network egress for the workers.
-     */
     @InputImport(name="egressOption")
     private final @Nullable Input<NetworkConfigEgressOption> egressOption;
 
@@ -28,9 +22,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.egressOption == null ? Input.empty() : this.egressOption;
     }
 
-    /**
-     * Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
-     */
     @InputImport(name="peeredNetwork", required=true)
     private final Input<String> peeredNetwork;
 

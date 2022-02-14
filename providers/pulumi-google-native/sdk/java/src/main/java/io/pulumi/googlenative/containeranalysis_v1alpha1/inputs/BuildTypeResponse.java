@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Note holding the version of the provider's builder and the signature of the provenance message in linked BuildDetails.
- */
 public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildTypeResponse Empty = new BuildTypeResponse();
 
-    /**
-     * Version of the builder which produced this Note.
-     */
     @InputImport(name="builderVersion", required=true)
     private final String builderVersion;
 
@@ -26,9 +20,6 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.builderVersion;
     }
 
-    /**
-     * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
-     */
     @InputImport(name="signature", required=true)
     private final BuildSignatureResponse signature;
 

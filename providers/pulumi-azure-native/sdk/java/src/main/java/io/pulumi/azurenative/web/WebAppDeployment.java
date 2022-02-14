@@ -16,171 +16,81 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * User credentials used for publishing activity.
-API Version: 2020-12-01.
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:web:WebAppDeployment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/deployments/{id} 
-```
-
- */
 @ResourceType(type="azure-native:web:WebAppDeployment")
 public class WebAppDeployment extends io.pulumi.resources.CustomResource {
-    /**
-     * True if deployment is currently active, false if completed and null if not started.
-     */
     @OutputExport(name="active", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> active;
 
-    /**
-     * @return True if deployment is currently active, false if completed and null if not started.
-     */
     public Output</* @Nullable */ Boolean> getActive() {
         return this.active;
     }
-    /**
-     * Who authored the deployment.
-     */
     @OutputExport(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
-    /**
-     * @return Who authored the deployment.
-     */
     public Output</* @Nullable */ String> getAuthor() {
         return this.author;
     }
-    /**
-     * Author email.
-     */
     @OutputExport(name="authorEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorEmail;
 
-    /**
-     * @return Author email.
-     */
     public Output</* @Nullable */ String> getAuthorEmail() {
         return this.authorEmail;
     }
-    /**
-     * Who performed the deployment.
-     */
     @OutputExport(name="deployer", type=String.class, parameters={})
     private Output</* @Nullable */ String> deployer;
 
-    /**
-     * @return Who performed the deployment.
-     */
     public Output</* @Nullable */ String> getDeployer() {
         return this.deployer;
     }
-    /**
-     * Details on deployment.
-     */
     @OutputExport(name="details", type=String.class, parameters={})
     private Output</* @Nullable */ String> details;
 
-    /**
-     * @return Details on deployment.
-     */
     public Output</* @Nullable */ String> getDetails() {
         return this.details;
     }
-    /**
-     * End time.
-     */
     @OutputExport(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
-    /**
-     * @return End time.
-     */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
-    /**
-     * Kind of resource.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Kind of resource.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Details about deployment status.
-     */
     @OutputExport(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
-    /**
-     * @return Details about deployment status.
-     */
     public Output</* @Nullable */ String> getMessage() {
         return this.message;
     }
-    /**
-     * Resource Name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource Name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Start time.
-     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
-    /**
-     * @return Start time.
-     */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
-    /**
-     * Deployment status.
-     */
     @OutputExport(name="status", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> status;
 
-    /**
-     * @return Deployment status.
-     */
     public Output</* @Nullable */ Integer> getStatus() {
         return this.status;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public WebAppDeployment(String name, WebAppDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppDeployment", name, args == null ? WebAppDeploymentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -211,14 +121,6 @@ public class WebAppDeployment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static WebAppDeployment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppDeployment(name, id, options);
     }

@@ -15,102 +15,51 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a cluster within an instance. Note that exactly one of Cluster.serve_nodes and Cluster.cluster_config.cluster_autoscaling_config can be set. If serve_nodes is set to non-zero, then the cluster is manually scaled. If cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is enabled.
- */
 @ResourceType(type="google-native:bigtableadmin/v2:Cluster")
 public class Cluster extends io.pulumi.resources.CustomResource {
-    /**
-     * Configuration for this cluster.
-     */
     @OutputExport(name="clusterConfig", type=ClusterConfigResponse.class, parameters={})
     private Output<ClusterConfigResponse> clusterConfig;
 
-    /**
-     * @return Configuration for this cluster.
-     */
     public Output<ClusterConfigResponse> getClusterConfig() {
         return this.clusterConfig;
     }
-    /**
-     * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
-     */
     @OutputExport(name="defaultStorageType", type=String.class, parameters={})
     private Output<String> defaultStorageType;
 
-    /**
-     * @return Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
-     */
     public Output<String> getDefaultStorageType() {
         return this.defaultStorageType;
     }
-    /**
-     * Immutable. The encryption configuration for CMEK-protected clusters.
-     */
     @OutputExport(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
-    /**
-     * @return Immutable. The encryption configuration for CMEK-protected clusters.
-     */
     public Output<EncryptionConfigResponse> getEncryptionConfig() {
         return this.encryptionConfig;
     }
-    /**
-     * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
-     */
     @OutputExport(name="serveNodes", type=Integer.class, parameters={})
     private Output<Integer> serveNodes;
 
-    /**
-     * @return The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
-     */
     public Output<Integer> getServeNodes() {
         return this.serveNodes;
     }
-    /**
-     * The current state of the cluster.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return The current state of the cluster.
-     */
     public Output<String> getState() {
         return this.state;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:bigtableadmin/v2:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -126,14 +75,6 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Cluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cluster(name, id, options);
     }

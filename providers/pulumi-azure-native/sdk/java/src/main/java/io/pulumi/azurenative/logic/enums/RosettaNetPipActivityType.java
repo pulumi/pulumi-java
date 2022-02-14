@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The RosettaNet ProcessConfiguration activity type.
- */
     @EnumType
     public enum RosettaNetPipActivityType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         InformationDistribution("InformationDistribution"),
-/**
- * 
- */
         BusinessTransaction("BusinessTransaction"),
-/**
- * 
- */
         Notification("Notification"),
-/**
- * 
- */
         QueryResponse("QueryResponse"),
-/**
- * 
- */
         RequestConfirm("RequestConfirm"),
-/**
- * 
- */
         RequestResponse("RequestResponse");
 
         private final String value;

@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTemplateResult {
-/**
- * The template metadata describing the template name, available parameters, etc.
- */
     private final TemplateMetadataResponse metadata;
-/**
- * Describes the runtime metadata with SDKInfo and available parameters.
- */
     private final RuntimeMetadataResponse runtimeMetadata;
-/**
- * The status of the get template request. Any problems with the request will be indicated in the error_details.
- */
     private final StatusResponse status;
-/**
- * Template Type.
- */
     private final String templateType;
 
     @OutputCustomType.Constructor({"metadata","runtimeMetadata","status","templateType"})
@@ -41,27 +29,15 @@ public final class GetTemplateResult {
         this.templateType = Objects.requireNonNull(templateType);
     }
 
-/**
- * The template metadata describing the template name, available parameters, etc.
- */
     public TemplateMetadataResponse getMetadata() {
         return this.metadata;
     }
-/**
- * Describes the runtime metadata with SDKInfo and available parameters.
- */
     public RuntimeMetadataResponse getRuntimeMetadata() {
         return this.runtimeMetadata;
     }
-/**
- * The status of the get template request. Any problems with the request will be indicated in the error_details.
- */
     public StatusResponse getStatus() {
         return this.status;
     }
-/**
- * Template Type.
- */
     public String getTemplateType() {
         return this.templateType;
     }

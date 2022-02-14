@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMediaGraph {
-/**
- * The Media Graph.
-API Version: 2020-02-01-preview.
- *
- * The Media Graph.
- */
     public static CompletableFuture<GetMediaGraphResult> invokeAsync(GetMediaGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getMediaGraph", TypeShape.of(GetMediaGraphResult.class), args == null ? GetMediaGraphArgs.Empty : args, Utilities.withVersion(options));
     }

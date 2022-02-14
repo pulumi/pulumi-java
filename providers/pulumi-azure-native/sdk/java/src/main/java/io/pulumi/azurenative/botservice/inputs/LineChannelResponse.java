@@ -11,17 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Line channel definition
- */
 public final class LineChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LineChannelResponse Empty = new LineChannelResponse();
 
-    /**
-     * The channel name
-Expected value is 'LineChannel'.
-     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -29,9 +22,6 @@ Expected value is 'LineChannel'.
         return this.channelName;
     }
 
-    /**
-     * Entity Tag of the resource
-     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -39,9 +29,6 @@ Expected value is 'LineChannel'.
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -49,9 +36,6 @@ Expected value is 'LineChannel'.
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * The set of properties specific to line channel resource
-     */
     @InputImport(name="properties")
     private final @Nullable LineChannelPropertiesResponse properties;
 
@@ -59,9 +43,6 @@ Expected value is 'LineChannel'.
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
-    /**
-     * Provisioning state of the resource
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

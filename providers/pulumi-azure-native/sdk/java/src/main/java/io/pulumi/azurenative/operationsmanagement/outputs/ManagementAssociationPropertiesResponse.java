@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagementAssociationPropertiesResponse {
-/**
- * The applicationId of the appliance for this association.
- */
     private final String applicationId;
 
     @OutputCustomType.Constructor({"applicationId"})
@@ -19,9 +16,6 @@ public final class ManagementAssociationPropertiesResponse {
         this.applicationId = Objects.requireNonNull(applicationId);
     }
 
-/**
- * The applicationId of the appliance for this association.
- */
     public String getApplicationId() {
         return this.applicationId;
     }

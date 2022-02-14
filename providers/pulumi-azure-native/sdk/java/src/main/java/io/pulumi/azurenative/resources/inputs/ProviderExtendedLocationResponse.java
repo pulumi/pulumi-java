@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The provider extended location. 
- */
 public final class ProviderExtendedLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProviderExtendedLocationResponse Empty = new ProviderExtendedLocationResponse();
 
-    /**
-     * The extended locations for the azure location.
-     */
     @InputImport(name="extendedLocations")
     private final @Nullable List<String> extendedLocations;
 
@@ -28,9 +22,6 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
 
-    /**
-     * The azure location.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -38,9 +29,6 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * The extended location type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

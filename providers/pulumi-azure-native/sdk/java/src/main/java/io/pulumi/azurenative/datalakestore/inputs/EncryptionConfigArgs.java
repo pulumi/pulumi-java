@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The encryption configuration for the account.
- */
 public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 
-    /**
-     * The Key Vault information for connecting to user managed encryption keys.
-     */
     @InputImport(name="keyVaultMetaInfo")
     private final @Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
@@ -28,9 +22,6 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.keyVaultMetaInfo == null ? Input.empty() : this.keyVaultMetaInfo;
     }
 
-    /**
-     * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
-     */
     @InputImport(name="type", required=true)
     private final Input<EncryptionConfigType> type;
 

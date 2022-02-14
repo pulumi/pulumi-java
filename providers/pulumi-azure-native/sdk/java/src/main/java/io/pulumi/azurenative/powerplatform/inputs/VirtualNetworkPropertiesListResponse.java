@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A list of private link resources
- */
 public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkPropertiesListResponse Empty = new VirtualNetworkPropertiesListResponse();
 
-    /**
-     * Next page link if any.
-     */
     @InputImport(name="nextLink")
     private final @Nullable String nextLink;
 
@@ -29,9 +23,6 @@ public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resour
         return this.nextLink == null ? Optional.empty() : Optional.ofNullable(this.nextLink);
     }
 
-    /**
-     * Array of virtual networks.
-     */
     @InputImport(name="value")
     private final @Nullable List<VirtualNetworkPropertiesResponse> value;
 

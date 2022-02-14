@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Definition of a container image for starting a notebook instance with the environment installed in a container.
- */
 public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerImageResponse Empty = new ContainerImageResponse();
 
-    /**
-     * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
-     */
     @InputImport(name="repository", required=true)
     private final String repository;
 
@@ -25,9 +19,6 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
         return this.repository;
     }
 
-    /**
-     * The tag of the container image. If not specified, this defaults to the latest tag.
-     */
     @InputImport(name="tag", required=true)
     private final String tag;
 

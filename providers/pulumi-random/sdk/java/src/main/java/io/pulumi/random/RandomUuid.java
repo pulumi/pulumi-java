@@ -15,128 +15,21 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The resource `random.RandomUuid` generates random uuid string that is intended to be used as unique identifiers for other resources.
-
-This resource uses [hashicorp/go-uuid](https://github.com/hashicorp/go-uuid) to generate a UUID-formatted string for use with services needed a unique string identifier.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-import * as random from "@pulumi/random";
-
-const testRandomUuid = new random.RandomUuid("test", {});
-const testResourceGroup = new azure.core.ResourceGroup("test", {
-    location: "Central US",
-});
-```
-```python
-import pulumi
-import pulumi_azure as azure
-import pulumi_random as random
-
-test_random_uuid = random.RandomUuid("testRandomUuid")
-test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="Central US")
-```
-```csharp
-using Pulumi;
-using Azure = Pulumi.Azure;
-using Random = Pulumi.Random;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var testRandomUuid = new Random.RandomUuid("testRandomUuid", new Random.RandomUuidArgs
-        {
-        });
-        var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
-        {
-            Location = "Central US",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := random.NewRandomUuid(ctx, "testRandomUuid", nil)
-		if err != nil {
-			return err
-		}
-		_, err = core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("Central US"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-# Random UUID's can be imported. This can be used to replace a config # value with a value interpolated from the random provider without # experiencing diffs.
-
-```sh
- $ pulumi import random:index/randomUuid:RandomUuid main aabbccdd-eeff-0011-2233-445566778899
-```
-
- 
- */
 @ResourceType(type="random:index/randomUuid:RandomUuid")
 public class RandomUuid extends io.pulumi.resources.CustomResource {
-    /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
-    /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     public Output</* @Nullable */ Map<String,Object>> getKeepers() {
         return this.keepers;
     }
-    /**
-     * The generated uuid presented in string format.
-
-     */
     @OutputExport(name="result", type=String.class, parameters={})
     private Output<String> result;
 
-    /**
-     * @return The generated uuid presented in string format.
-
-     */
     public Output<String> getResult() {
         return this.result;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public RandomUuid(String name, @Nullable RandomUuidArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomUuid:RandomUuid", name, args == null ? RandomUuidArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -152,15 +45,6 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param state
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static RandomUuid get(String name, Input<String> id, @Nullable RandomUuidState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomUuid(name, id, state, options);
     }

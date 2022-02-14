@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The content trust policy for a container registry.
- */
 public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrustPolicyResponse Empty = new TrustPolicyResponse();
 
-    /**
-     * The value that indicates whether the policy is enabled or not.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -27,9 +21,6 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * The type of trust policy.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
- */
 public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QuobyteVolumeSourceArgs Empty = new QuobyteVolumeSourceArgs();
 
-    /**
-     * Group to map volume access to Default is no group
-     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -28,9 +22,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.group == null ? Input.empty() : this.group;
     }
 
-    /**
-     * ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -38,9 +29,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
-    /**
-     * Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
-     */
     @InputImport(name="registry", required=true)
     private final Input<String> registry;
 
@@ -48,9 +36,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.registry;
     }
 
-    /**
-     * Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
-     */
     @InputImport(name="tenant")
     private final @Nullable Input<String> tenant;
 
@@ -58,9 +43,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.tenant == null ? Input.empty() : this.tenant;
     }
 
-    /**
-     * User to map volume access to Defaults to serivceaccount user
-     */
     @InputImport(name="user")
     private final @Nullable Input<String> user;
 
@@ -68,9 +50,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
         return this.user == null ? Input.empty() : this.user;
     }
 
-    /**
-     * Volume is a string that references an already created Quobyte volume by name.
-     */
     @InputImport(name="volume", required=true)
     private final Input<String> volume;
 

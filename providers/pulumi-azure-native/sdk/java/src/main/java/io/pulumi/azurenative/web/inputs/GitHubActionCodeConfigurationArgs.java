@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The GitHub action code configuration.
- */
 public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitHubActionCodeConfigurationArgs Empty = new GitHubActionCodeConfigurationArgs();
 
-    /**
-     * Runtime stack is used to determine the workflow file content for code base apps.
-     */
     @InputImport(name="runtimeStack")
     private final @Nullable Input<String> runtimeStack;
 
@@ -27,9 +21,6 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
         return this.runtimeStack == null ? Input.empty() : this.runtimeStack;
     }
 
-    /**
-     * Runtime version is used to determine what build version to set in the workflow file.
-     */
     @InputImport(name="runtimeVersion")
     private final @Nullable Input<String> runtimeVersion;
 

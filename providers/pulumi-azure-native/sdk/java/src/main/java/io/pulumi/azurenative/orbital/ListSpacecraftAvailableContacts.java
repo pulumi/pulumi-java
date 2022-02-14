@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSpacecraftAvailableContacts {
-/**
- * Response for the ListAvailableContacts API service call.
-API Version: 2021-04-04-preview.
- *
- * Response for the ListAvailableContacts API service call.
- */
     public static CompletableFuture<ListSpacecraftAvailableContactsResult> invokeAsync(ListSpacecraftAvailableContactsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:orbital:listSpacecraftAvailableContacts", TypeShape.of(ListSpacecraftAvailableContactsResult.class), args == null ? ListSpacecraftAvailableContactsArgs.Empty : args, Utilities.withVersion(options));
     }

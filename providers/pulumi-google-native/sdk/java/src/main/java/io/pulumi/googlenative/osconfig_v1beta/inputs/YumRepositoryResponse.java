@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents a single Yum package repository. This repository is added to a repo file that is stored at `/etc/yum.repos.d/google_osconfig.repo`.
- */
 public final class YumRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final YumRepositoryResponse Empty = new YumRepositoryResponse();
 
-    /**
-     * The location of the repository directory.
-     */
     @InputImport(name="baseUrl", required=true)
     private final String baseUrl;
 
@@ -26,9 +20,6 @@ public final class YumRepositoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.baseUrl;
     }
 
-    /**
-     * The display name of the repository.
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -36,9 +27,6 @@ public final class YumRepositoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.displayName;
     }
 
-    /**
-     * URIs of GPG keys.
-     */
     @InputImport(name="gpgKeys", required=true)
     private final List<String> gpgKeys;
 

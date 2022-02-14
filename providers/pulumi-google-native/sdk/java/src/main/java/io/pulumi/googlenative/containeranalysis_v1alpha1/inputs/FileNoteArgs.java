@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * FileNote represents an SPDX File Information section: https://spdx.github.io/spdx-spec/4-file-information/
- */
 public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileNoteArgs Empty = new FileNoteArgs();
 
-    /**
-     * Provide a unique identifier to match analysis information on each specific file in a package
-     */
     @InputImport(name="checksum")
     private final @Nullable Input<List<String>> checksum;
 
@@ -29,9 +23,6 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.checksum == null ? Input.empty() : this.checksum;
     }
 
-    /**
-     * This field provides information about the type of file identified
-     */
     @InputImport(name="fileType")
     private final @Nullable Input<FileNoteFileType> fileType;
 
@@ -39,9 +30,6 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileType == null ? Input.empty() : this.fileType;
     }
 
-    /**
-     * Identify the full path and filename that corresponds to the file information in this section
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

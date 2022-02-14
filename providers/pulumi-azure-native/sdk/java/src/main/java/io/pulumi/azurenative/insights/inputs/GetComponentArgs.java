@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetComponentArgs Empty = new GetComponentArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

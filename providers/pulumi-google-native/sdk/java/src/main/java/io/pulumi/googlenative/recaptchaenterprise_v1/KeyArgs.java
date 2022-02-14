@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
-    /**
-     * Settings for keys that can be used by Android apps.
-     */
     @InputImport(name="androidSettings")
     private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
@@ -33,9 +27,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidSettings == null ? Input.empty() : this.androidSettings;
     }
 
-    /**
-     * The timestamp corresponding to the creation of this Key.
-     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -43,9 +34,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
-    /**
-     * Human-readable display name of this key. Modifiable by user.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -53,9 +41,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Settings for keys that can be used by iOS apps.
-     */
     @InputImport(name="iosSettings")
     private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
@@ -63,9 +48,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosSettings == null ? Input.empty() : this.iosSettings;
     }
 
-    /**
-     * See Creating and managing labels.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -73,9 +55,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * The resource name for the Key in the format "projects/{project}/keys/{key}".
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -83,9 +62,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -93,9 +69,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Options for user acceptance testing.
-     */
     @InputImport(name="testingOptions")
     private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
@@ -103,9 +76,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.testingOptions == null ? Input.empty() : this.testingOptions;
     }
 
-    /**
-     * Settings for WAF
-     */
     @InputImport(name="wafSettings")
     private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
@@ -113,9 +83,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.wafSettings == null ? Input.empty() : this.wafSettings;
     }
 
-    /**
-     * Settings for keys that can be used by websites.
-     */
     @InputImport(name="webSettings")
     private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 

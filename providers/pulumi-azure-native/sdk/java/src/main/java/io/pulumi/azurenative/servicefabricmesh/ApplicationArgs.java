@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
-    /**
-     * The identity of the application.
-     */
     @InputImport(name="applicationResourceName")
     private final @Nullable Input<String> applicationResourceName;
 
@@ -31,9 +25,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationResourceName == null ? Input.empty() : this.applicationResourceName;
     }
 
-    /**
-     * Internal - used by Visual Studio to setup the debugging session on the local development environment.
-     */
     @InputImport(name="debugParams")
     private final @Nullable Input<String> debugParams;
 
@@ -41,9 +32,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.debugParams == null ? Input.empty() : this.debugParams;
     }
 
-    /**
-     * User readable description of the application.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -51,9 +39,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Describes the diagnostics definition and usage for an application resource.
-     */
     @InputImport(name="diagnostics")
     private final @Nullable Input<DiagnosticsDescriptionArgs> diagnostics;
 
@@ -61,9 +46,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -71,9 +53,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Azure resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -81,9 +60,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-     */
     @InputImport(name="services")
     private final @Nullable Input<List<ServiceResourceDescriptionArgs>> services;
 
@@ -91,9 +67,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.services == null ? Input.empty() : this.services;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

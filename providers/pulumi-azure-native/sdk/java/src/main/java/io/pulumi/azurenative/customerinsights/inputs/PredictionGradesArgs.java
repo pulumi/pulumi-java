@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The definition of a prediction grade.
- */
 public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PredictionGradesArgs Empty = new PredictionGradesArgs();
 
-    /**
-     * Name of the grade.
-     */
     @InputImport(name="gradeName")
     private final @Nullable Input<String> gradeName;
 
@@ -28,9 +22,6 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
         return this.gradeName == null ? Input.empty() : this.gradeName;
     }
 
-    /**
-     * Maximum score threshold.
-     */
     @InputImport(name="maxScoreThreshold")
     private final @Nullable Input<Integer> maxScoreThreshold;
 
@@ -38,9 +29,6 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
         return this.maxScoreThreshold == null ? Input.empty() : this.maxScoreThreshold;
     }
 
-    /**
-     * Minimum score threshold.
-     */
     @InputImport(name="minScoreThreshold")
     private final @Nullable Input<Integer> minScoreThreshold;
 

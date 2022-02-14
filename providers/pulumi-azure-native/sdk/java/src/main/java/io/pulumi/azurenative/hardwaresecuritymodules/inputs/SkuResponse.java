@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of the dedicated HSM
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * SKU of the dedicated HSM
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

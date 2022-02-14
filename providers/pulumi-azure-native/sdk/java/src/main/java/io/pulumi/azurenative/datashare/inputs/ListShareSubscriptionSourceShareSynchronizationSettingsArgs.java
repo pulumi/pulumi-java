@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListShareSubscriptionSourceShareSynchronizationSettingsArgs Empty = new ListShareSubscriptionSourceShareSynchronizationSettingsArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -27,9 +21,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
         return this.accountName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the shareSubscription.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 
@@ -47,9 +35,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
         return this.shareSubscriptionName;
     }
 
-    /**
-     * Continuation token
-     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

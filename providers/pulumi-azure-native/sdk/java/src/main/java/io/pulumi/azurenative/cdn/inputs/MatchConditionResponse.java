@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Define match conditions
- */
 public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MatchConditionResponse Empty = new MatchConditionResponse();
 
-    /**
-     * List of possible match values.
-     */
     @InputImport(name="matchValue", required=true)
     private final List<String> matchValue;
 
@@ -29,9 +23,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.matchValue;
     }
 
-    /**
-     * Match variable to compare against.
-     */
     @InputImport(name="matchVariable", required=true)
     private final String matchVariable;
 
@@ -39,9 +30,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.matchVariable;
     }
 
-    /**
-     * Describes if the result of this condition should be negated.
-     */
     @InputImport(name="negateCondition")
     private final @Nullable Boolean negateCondition;
 
@@ -49,9 +37,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
-    /**
-     * Describes operator to be matched
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -59,9 +44,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.operator;
     }
 
-    /**
-     * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
-     */
     @InputImport(name="selector")
     private final @Nullable String selector;
 
@@ -69,9 +51,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
-    /**
-     * List of transforms.
-     */
     @InputImport(name="transforms")
     private final @Nullable List<String> transforms;
 

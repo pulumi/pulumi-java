@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TokenCertificateResponse {
-/**
- * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
- */
     private final @Nullable String encodedPemCertificate;
-/**
- * The expiry datetime of the certificate.
- */
     private final @Nullable String expiry;
-/**
- * 
- */
     private final @Nullable String name;
-/**
- * The thumbprint of the certificate.
- */
     private final @Nullable String thumbprint;
 
     @OutputCustomType.Constructor({"encodedPemCertificate","expiry","name","thumbprint"})
@@ -40,27 +28,15 @@ public final class TokenCertificateResponse {
         this.thumbprint = thumbprint;
     }
 
-/**
- * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
- */
     public Optional<String> getEncodedPemCertificate() {
         return Optional.ofNullable(this.encodedPemCertificate);
     }
-/**
- * The expiry datetime of the certificate.
- */
     public Optional<String> getExpiry() {
         return Optional.ofNullable(this.expiry);
     }
-/**
- * 
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The thumbprint of the certificate.
- */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

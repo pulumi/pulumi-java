@@ -13,25 +13,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2StorageConfigResponse {
-/**
- * BigQuery options.
- */
     private final GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
-/**
- * Google Cloud Storage options.
- */
     private final GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
-/**
- * Google Cloud Datastore options.
- */
     private final GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
-/**
- * Hybrid inspection options.
- */
     private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
-/**
- * 
- */
     private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 
     @OutputCustomType.Constructor({"bigQueryOptions","cloudStorageOptions","datastoreOptions","hybridOptions","timespanConfig"})
@@ -48,33 +33,18 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
         this.timespanConfig = Objects.requireNonNull(timespanConfig);
     }
 
-/**
- * BigQuery options.
- */
     public GooglePrivacyDlpV2BigQueryOptionsResponse getBigQueryOptions() {
         return this.bigQueryOptions;
     }
-/**
- * Google Cloud Storage options.
- */
     public GooglePrivacyDlpV2CloudStorageOptionsResponse getCloudStorageOptions() {
         return this.cloudStorageOptions;
     }
-/**
- * Google Cloud Datastore options.
- */
     public GooglePrivacyDlpV2DatastoreOptionsResponse getDatastoreOptions() {
         return this.datastoreOptions;
     }
-/**
- * Hybrid inspection options.
- */
     public GooglePrivacyDlpV2HybridOptionsResponse getHybridOptions() {
         return this.hybridOptions;
     }
-/**
- * 
- */
     public GooglePrivacyDlpV2TimespanConfigResponse getTimespanConfig() {
         return this.timespanConfig;
     }

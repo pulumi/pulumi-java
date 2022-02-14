@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
-/**
- * The optimization goal of the metric.
- */
     private final String goal;
-/**
- * The name of the metric.
- */
     private final String metric;
 
     @OutputCustomType.Constructor({"goal","metric"})
@@ -26,15 +20,9 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
         this.metric = Objects.requireNonNull(metric);
     }
 
-/**
- * The optimization goal of the metric.
- */
     public String getGoal() {
         return this.goal;
     }
-/**
- * The name of the metric.
- */
     public String getMetric() {
         return this.metric;
     }

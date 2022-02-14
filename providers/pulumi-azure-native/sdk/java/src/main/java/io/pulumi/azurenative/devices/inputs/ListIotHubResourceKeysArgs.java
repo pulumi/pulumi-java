@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListIotHubResourceKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIotHubResourceKeysArgs Empty = new ListIotHubResourceKeysArgs();
 
-    /**
-     * The name of the resource group that contains the IoT hub.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class ListIotHubResourceKeysArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the IoT hub.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

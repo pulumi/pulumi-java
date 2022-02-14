@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HardwareProfileResponse {
-/**
- * The size of the VM
- */
     private final @Nullable String vmSize;
 
     @OutputCustomType.Constructor({"vmSize"})
@@ -21,9 +18,6 @@ public final class HardwareProfileResponse {
         this.vmSize = vmSize;
     }
 
-/**
- * The size of the VM
- */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }

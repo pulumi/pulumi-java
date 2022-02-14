@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSiteExtension {
-/**
- * Site Extension Information.
-API Version: 2020-12-01.
- *
- * Site Extension Information.
- */
     public static CompletableFuture<GetWebAppSiteExtensionResult> invokeAsync(GetWebAppSiteExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSiteExtension", TypeShape.of(GetWebAppSiteExtensionResult.class), args == null ? GetWebAppSiteExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

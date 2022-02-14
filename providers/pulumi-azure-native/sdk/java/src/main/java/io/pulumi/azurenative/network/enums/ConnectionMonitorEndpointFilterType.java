@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The behavior of the endpoint filter. Currently only 'Include' is supported.
- */
     @EnumType
     public enum ConnectionMonitorEndpointFilterType {
-/**
- * 
- */
         Include("Include");
 
         private final String value;

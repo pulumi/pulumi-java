@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="clusterId", required=true)
     private final String clusterId;
 
@@ -27,9 +21,6 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

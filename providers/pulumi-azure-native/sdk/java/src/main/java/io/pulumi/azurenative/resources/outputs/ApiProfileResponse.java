@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiProfileResponse {
-/**
- * The API version.
- */
     private final String apiVersion;
-/**
- * The profile version.
- */
     private final String profileVersion;
 
     @OutputCustomType.Constructor({"apiVersion","profileVersion"})
@@ -26,15 +20,9 @@ public final class ApiProfileResponse {
         this.profileVersion = Objects.requireNonNull(profileVersion);
     }
 
-/**
- * The API version.
- */
     public String getApiVersion() {
         return this.apiVersion;
     }
-/**
- * The profile version.
- */
     public String getProfileVersion() {
         return this.profileVersion;
     }

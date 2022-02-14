@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetExtension {
-/**
- * Describes a Virtual Machine Scale Set Extension.
-API Version: 2021-03-01.
- *
- * Describes a Virtual Machine Scale Set Extension.
- */
     public static CompletableFuture<GetVirtualMachineScaleSetExtensionResult> invokeAsync(GetVirtualMachineScaleSetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetExtension", TypeShape.of(GetVirtualMachineScaleSetExtensionResult.class), args == null ? GetVirtualMachineScaleSetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

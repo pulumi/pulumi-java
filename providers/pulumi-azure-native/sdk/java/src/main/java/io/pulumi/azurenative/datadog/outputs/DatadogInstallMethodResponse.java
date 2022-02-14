@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatadogInstallMethodResponse {
-/**
- * The installer version.
- */
     private final @Nullable String installerVersion;
-/**
- * The tool.
- */
     private final @Nullable String tool;
-/**
- * The tool version.
- */
     private final @Nullable String toolVersion;
 
     @OutputCustomType.Constructor({"installerVersion","tool","toolVersion"})
@@ -34,21 +25,12 @@ public final class DatadogInstallMethodResponse {
         this.toolVersion = toolVersion;
     }
 
-/**
- * The installer version.
- */
     public Optional<String> getInstallerVersion() {
         return Optional.ofNullable(this.installerVersion);
     }
-/**
- * The tool.
- */
     public Optional<String> getTool() {
         return Optional.ofNullable(this.tool);
     }
-/**
- * The tool version.
- */
     public Optional<String> getToolVersion() {
         return Optional.ofNullable(this.toolVersion);
     }

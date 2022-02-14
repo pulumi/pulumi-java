@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BreakOutCategoryPoliciesResponse {
-/**
- * Flag to control breakout of o365 allow category.
- */
     private final @Nullable Boolean allow;
-/**
- * Flag to control breakout of o365 default category.
- */
     private final @Nullable Boolean $default;
-/**
- * Flag to control breakout of o365 optimize category.
- */
     private final @Nullable Boolean optimize;
 
     @OutputCustomType.Constructor({"allow","$default","optimize"})
@@ -34,21 +25,12 @@ public final class BreakOutCategoryPoliciesResponse {
         this.optimize = optimize;
     }
 
-/**
- * Flag to control breakout of o365 allow category.
- */
     public Optional<Boolean> getAllow() {
         return Optional.ofNullable(this.allow);
     }
-/**
- * Flag to control breakout of o365 default category.
- */
     public Optional<Boolean> get$default() {
         return Optional.ofNullable(this.$default);
     }
-/**
- * Flag to control breakout of o365 optimize category.
- */
     public Optional<Boolean> getOptimize() {
         return Optional.ofNullable(this.optimize);
     }

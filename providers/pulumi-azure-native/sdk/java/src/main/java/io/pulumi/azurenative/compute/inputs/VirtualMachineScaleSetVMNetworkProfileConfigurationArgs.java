@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a virtual machine scale set VM network profile.
- */
 public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetVMNetworkProfileConfigurationArgs Empty = new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs();
 
-    /**
-     * The list of network configurations.
-     */
     @InputImport(name="networkInterfaceConfigurations")
     private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 

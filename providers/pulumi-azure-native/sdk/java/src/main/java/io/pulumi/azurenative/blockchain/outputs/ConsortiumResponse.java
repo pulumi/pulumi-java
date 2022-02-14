@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConsortiumResponse {
-/**
- * Gets or sets the blockchain member name.
- */
     private final @Nullable String name;
-/**
- * Gets or sets the protocol for the consortium.
- */
     private final @Nullable String protocol;
 
     @OutputCustomType.Constructor({"name","protocol"})
@@ -28,15 +22,9 @@ public final class ConsortiumResponse {
         this.protocol = protocol;
     }
 
-/**
- * Gets or sets the blockchain member name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Gets or sets the protocol for the consortium.
- */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

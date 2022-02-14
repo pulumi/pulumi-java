@@ -21,761 +21,111 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The Log Search Rule resource.
-API Version: 2018-04-16.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or Update rule - AlertingAction
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var scheduledQueryRule = new AzureNative.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNative.Insights.ScheduledQueryRuleArgs
-        {
-            Action = new AzureNative.Insights.Inputs.AlertingActionArgs
-            {
-                AznsAction = new AzureNative.Insights.Inputs.AzNsActionGroupArgs
-                {
-                    ActionGroup = {},
-                    CustomWebhookPayload = "{}",
-                    EmailSubject = "Email Header",
-                },
-                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-                Severity = "1",
-                Trigger = new AzureNative.Insights.Inputs.TriggerConditionArgs
-                {
-                    MetricTrigger = new AzureNative.Insights.Inputs.LogMetricTriggerArgs
-                    {
-                        MetricColumn = "Computer",
-                        MetricTriggerType = "Consecutive",
-                        Threshold = 5,
-                        ThresholdOperator = "GreaterThan",
-                    },
-                    Threshold = 3,
-                    ThresholdOperator = "GreaterThan",
-                },
-            },
-            Description = "log alert description",
-            Enabled = "true",
-            Location = "eastus",
-            ResourceGroupName = "Rac46PostSwapRG",
-            RuleName = "logalertfoo",
-            Schedule = new AzureNative.Insights.Inputs.ScheduleArgs
-            {
-                FrequencyInMinutes = 15,
-                TimeWindowInMinutes = 15,
-            },
-            Source = new AzureNative.Insights.Inputs.SourceArgs
-            {
-                DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-                Query = "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-                QueryType = "ResultCount",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
-			Action: insights.AlertingAction{
-				AznsAction: insights.AzNsActionGroup{
-					ActionGroup:          []interface{}{},
-					CustomWebhookPayload: "{}",
-					EmailSubject:         "Email Header",
-				},
-				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-				Severity:  "1",
-				Trigger: insights.TriggerCondition{
-					MetricTrigger: insights.LogMetricTrigger{
-						MetricColumn:      "Computer",
-						MetricTriggerType: "Consecutive",
-						Threshold:         5,
-						ThresholdOperator: "GreaterThan",
-					},
-					Threshold:         3,
-					ThresholdOperator: "GreaterThan",
-				},
-			},
-			Description:       pulumi.String("log alert description"),
-			Enabled:           pulumi.String("true"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
-			RuleName:          pulumi.String("logalertfoo"),
-			Schedule: &insights.ScheduleArgs{
-				FrequencyInMinutes:  pulumi.Int(15),
-				TimeWindowInMinutes: pulumi.Int(15),
-			},
-			Source: &insights.SourceArgs{
-				DataSourceId: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace"),
-				Query:        pulumi.String("Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)"),
-				QueryType:    pulumi.String("ResultCount"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("scheduledQueryRule", {
-    action: {
-        aznsAction: {
-            actionGroup: [],
-            customWebhookPayload: "{}",
-            emailSubject: "Email Header",
-        },
-        odataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        severity: "1",
-        trigger: {
-            metricTrigger: {
-                metricColumn: "Computer",
-                metricTriggerType: "Consecutive",
-                threshold: 5,
-                thresholdOperator: "GreaterThan",
-            },
-            threshold: 3,
-            thresholdOperator: "GreaterThan",
-        },
-    },
-    description: "log alert description",
-    enabled: "true",
-    location: "eastus",
-    resourceGroupName: "Rac46PostSwapRG",
-    ruleName: "logalertfoo",
-    schedule: {
-        frequencyInMinutes: 15,
-        timeWindowInMinutes: 15,
-    },
-    source: {
-        dataSourceId: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-        query: "Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-        queryType: "ResultCount",
-    },
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryRule",
-    action=azure_native.insights.AlertingActionArgs(
-        azns_action=azure_native.insights.AzNsActionGroupArgs(
-            action_group=[],
-            custom_webhook_payload="{}",
-            email_subject="Email Header",
-        ),
-        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        severity="1",
-        trigger=azure_native.insights.TriggerConditionArgs(
-            metric_trigger=azure_native.insights.LogMetricTriggerArgs(
-                metric_column="Computer",
-                metric_trigger_type="Consecutive",
-                threshold=5,
-                threshold_operator="GreaterThan",
-            ),
-            threshold=3,
-            threshold_operator="GreaterThan",
-        ),
-    ),
-    description="log alert description",
-    enabled="true",
-    location="eastus",
-    resource_group_name="Rac46PostSwapRG",
-    rule_name="logalertfoo",
-    schedule=azure_native.insights.ScheduleArgs(
-        frequency_in_minutes=15,
-        time_window_in_minutes=15,
-    ),
-    source=azure_native.insights.SourceArgs(
-        data_source_id="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-        query="Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)",
-        query_type="ResultCount",
-    ),
-    tags={})
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create or Update rule - AlertingAction with Cross-Resource
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var scheduledQueryRule = new AzureNative.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNative.Insights.ScheduledQueryRuleArgs
-        {
-            Action = new AzureNative.Insights.Inputs.AlertingActionArgs
-            {
-                AznsAction = new AzureNative.Insights.Inputs.AzNsActionGroupArgs
-                {
-                    ActionGroup = 
-                    {
-                        "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
-                    },
-                    EmailSubject = "Cross Resource Mail!!",
-                },
-                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-                Severity = "3",
-                Trigger = new AzureNative.Insights.Inputs.TriggerConditionArgs
-                {
-                    Threshold = 5000,
-                    ThresholdOperator = "GreaterThan",
-                },
-            },
-            Description = "Sample Cross Resource alert",
-            Enabled = "true",
-            Location = "eastus",
-            ResourceGroupName = "Rac46PostSwapRG",
-            RuleName = "SampleCrossResourceAlert",
-            Schedule = new AzureNative.Insights.Inputs.ScheduleArgs
-            {
-                FrequencyInMinutes = 60,
-                TimeWindowInMinutes = 60,
-            },
-            Source = new AzureNative.Insights.Inputs.SourceArgs
-            {
-                AuthorizedResources = 
-                {
-                    "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-                    "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-                },
-                DataSourceId = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-                Query = "union requests, workspace(\"sampleWorkspace\").Update",
-                QueryType = "ResultCount",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
-			Action: insights.AlertingAction{
-				AznsAction: insights.AzNsActionGroup{
-					ActionGroup: []string{
-						"/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag",
-					},
-					EmailSubject: "Cross Resource Mail!!",
-				},
-				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-				Severity:  "3",
-				Trigger: insights.TriggerCondition{
-					Threshold:         5000,
-					ThresholdOperator: "GreaterThan",
-				},
-			},
-			Description:       pulumi.String("Sample Cross Resource alert"),
-			Enabled:           pulumi.String("true"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
-			RuleName:          pulumi.String("SampleCrossResourceAlert"),
-			Schedule: &insights.ScheduleArgs{
-				FrequencyInMinutes:  pulumi.Int(60),
-				TimeWindowInMinutes: pulumi.Int(60),
-			},
-			Source: &insights.SourceArgs{
-				AuthorizedResources: pulumi.StringArray{
-					pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace"),
-					pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI"),
-				},
-				DataSourceId: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI"),
-				Query:        pulumi.String("union requests, workspace(\"sampleWorkspace\").Update"),
-				QueryType:    pulumi.String("ResultCount"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("scheduledQueryRule", {
-    action: {
-        aznsAction: {
-            actionGroup: ["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
-            emailSubject: "Cross Resource Mail!!",
-        },
-        odataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        severity: "3",
-        trigger: {
-            threshold: 5000,
-            thresholdOperator: "GreaterThan",
-        },
-    },
-    description: "Sample Cross Resource alert",
-    enabled: "true",
-    location: "eastus",
-    resourceGroupName: "Rac46PostSwapRG",
-    ruleName: "SampleCrossResourceAlert",
-    schedule: {
-        frequencyInMinutes: 60,
-        timeWindowInMinutes: 60,
-    },
-    source: {
-        authorizedResources: [
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        ],
-        dataSourceId: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        query: "union requests, workspace(\"sampleWorkspace\").Update",
-        queryType: "ResultCount",
-    },
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryRule",
-    action=azure_native.insights.AlertingActionArgs(
-        azns_action=azure_native.insights.AzNsActionGroupArgs(
-            action_group=["/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag"],
-            email_subject="Cross Resource Mail!!",
-        ),
-        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction",
-        severity="3",
-        trigger=azure_native.insights.TriggerConditionArgs(
-            threshold=5000,
-            threshold_operator="GreaterThan",
-        ),
-    ),
-    description="Sample Cross Resource alert",
-    enabled="true",
-    location="eastus",
-    resource_group_name="Rac46PostSwapRG",
-    rule_name="SampleCrossResourceAlert",
-    schedule=azure_native.insights.ScheduleArgs(
-        frequency_in_minutes=60,
-        time_window_in_minutes=60,
-    ),
-    source=azure_native.insights.SourceArgs(
-        authorized_resources=[
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace",
-            "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        ],
-        data_source_id="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI",
-        query="union requests, workspace(\"sampleWorkspace\").Update",
-        query_type="ResultCount",
-    ),
-    tags={})
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create or Update rule - LogToMetricAction
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var scheduledQueryRule = new AzureNative.Insights.ScheduledQueryRule("scheduledQueryRule", new AzureNative.Insights.ScheduledQueryRuleArgs
-        {
-            Action = new AzureNative.Insights.Inputs.LogToMetricActionArgs
-            {
-                Criteria = 
-                {
-                    new AzureNative.Insights.Inputs.CriteriaArgs
-                    {
-                        Dimensions = {},
-                        MetricName = "Average_% Idle Time",
-                    },
-                },
-                OdataType = "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-            },
-            Description = "log to metric description",
-            Enabled = "true",
-            Location = "West Europe",
-            ResourceGroupName = "alertsweu",
-            RuleName = "logtometricfoo",
-            Source = new AzureNative.Insights.Inputs.SourceArgs
-            {
-                DataSourceId = "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewScheduledQueryRule(ctx, "scheduledQueryRule", &insights.ScheduledQueryRuleArgs{
-			Action: insights.LogToMetricAction{
-				Criteria: []insights.Criteria{
-					insights.Criteria{
-						Dimensions: []insights.Dimension{},
-						MetricName: fmt.Sprintf("%v%v%v", "Average_", "%", " Idle Time"),
-					},
-				},
-				OdataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-			},
-			Description:       pulumi.String("log to metric description"),
-			Enabled:           pulumi.String("true"),
-			Location:          pulumi.String("West Europe"),
-			ResourceGroupName: pulumi.String("alertsweu"),
-			RuleName:          pulumi.String("logtometricfoo"),
-			Source: &insights.SourceArgs{
-				DataSourceId: pulumi.String("/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("scheduledQueryRule", {
-    action: {
-        criteria: [{
-            dimensions: [],
-            metricName: `Average_% Idle Time`,
-        }],
-        odataType: "Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-    },
-    description: "log to metric description",
-    enabled: "true",
-    location: "West Europe",
-    resourceGroupName: "alertsweu",
-    ruleName: "logtometricfoo",
-    source: {
-        dataSourceId: "/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-    },
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryRule",
-    action=azure_native.insights.LogToMetricActionArgs(
-        criteria=[azure_native.insights.CriteriaArgs(
-            dimensions=[],
-            metric_name="Average_% Idle Time",
-        )],
-        odata_type="Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction",
-    ),
-    description="log to metric description",
-    enabled="true",
-    location="West Europe",
-    resource_group_name="alertsweu",
-    rule_name="logtometricfoo",
-    source=azure_native.insights.SourceArgs(
-        data_source_id="/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu",
-    ),
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:ScheduledQueryRule logtometricfoo /subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/microsoft.insights/scheduledqueryrules/logtometricfoo 
-```
-
- */
 @ResourceType(type="azure-native:insights:ScheduledQueryRule")
 public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
-    /**
-     * Action needs to be taken on rule execution.
-     */
     @OutputExport(name="action", type=Either.class, parameters={AlertingActionResponse.class, LogToMetricActionResponse.class})
     private Output<Either<AlertingActionResponse,LogToMetricActionResponse>> action;
 
-    /**
-     * @return Action needs to be taken on rule execution.
-     */
     public Output<Either<AlertingActionResponse,LogToMetricActionResponse>> getAction() {
         return this.action;
     }
-    /**
-     * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
-     */
     @OutputExport(name="autoMitigate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoMitigate;
 
-    /**
-     * @return The flag that indicates whether the alert should be automatically resolved or not. The default is false.
-     */
     public Output</* @Nullable */ Boolean> getAutoMitigate() {
         return this.autoMitigate;
     }
-    /**
-     * The api-version used when creating this alert rule
-     */
     @OutputExport(name="createdWithApiVersion", type=String.class, parameters={})
     private Output<String> createdWithApiVersion;
 
-    /**
-     * @return The api-version used when creating this alert rule
-     */
     public Output<String> getCreatedWithApiVersion() {
         return this.createdWithApiVersion;
     }
-    /**
-     * The description of the Log Search rule.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description of the Log Search rule.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The display name of the alert rule
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The display name of the alert rule
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
-     */
     @OutputExport(name="enabled", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabled;
 
-    /**
-     * @return The flag which indicates whether the Log Search rule is enabled. Value should be true or false
-     */
     public Output</* @Nullable */ String> getEnabled() {
         return this.enabled;
     }
-    /**
-     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * True if alert rule is legacy Log Analytic rule
-     */
     @OutputExport(name="isLegacyLogAnalyticsRule", type=Boolean.class, parameters={})
     private Output<Boolean> isLegacyLogAnalyticsRule;
 
-    /**
-     * @return True if alert rule is legacy Log Analytic rule
-     */
     public Output<Boolean> getIsLegacyLogAnalyticsRule() {
         return this.isLegacyLogAnalyticsRule;
     }
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Last time the rule was updated in IS08601 format.
-     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
-    /**
-     * @return Last time the rule was updated in IS08601 format.
-     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state of the scheduled query rule
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the scheduled query rule
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
-     */
     @OutputExport(name="schedule", type=ScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ScheduleResponse> schedule;
 
-    /**
-     * @return Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
-     */
     public Output</* @Nullable */ ScheduleResponse> getSchedule() {
         return this.schedule;
     }
-    /**
-     * Data Source against which rule will Query Data
-     */
     @OutputExport(name="source", type=SourceResponse.class, parameters={})
     private Output<SourceResponse> source;
 
-    /**
-     * @return Data Source against which rule will Query Data
-     */
     public Output<SourceResponse> getSource() {
         return this.source;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ScheduledQueryRule(String name, ScheduledQueryRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ScheduledQueryRule", name, args == null ? ScheduledQueryRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -797,14 +147,6 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ScheduledQueryRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScheduledQueryRule(name, id, options);
     }

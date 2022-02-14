@@ -12,18 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DistributedNodesInfoResponse {
-/**
- * Error Details if the Status is non-success.
- */
     private final @Nullable ErrorDetailResponse errorDetail;
-/**
- * Name of the node under a distributed container.
- */
     private final @Nullable String nodeName;
-/**
- * Status of this Node.
-Failed | Succeeded
- */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"errorDetail","nodeName","status"})
@@ -36,22 +26,12 @@ Failed | Succeeded
         this.status = status;
     }
 
-/**
- * Error Details if the Status is non-success.
- */
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
-/**
- * Name of the node under a distributed container.
- */
     public Optional<String> getNodeName() {
         return Optional.ofNullable(this.nodeName);
     }
-/**
- * Status of this Node.
-Failed | Succeeded
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

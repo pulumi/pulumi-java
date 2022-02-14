@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse {
-/**
- * The type of the feature that enabled for fulfillment.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The type of the feature that enabled for fulfillment.
- */
     public String getType() {
         return this.type;
     }

@@ -17,193 +17,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An Azure Cosmos DB MongoDB database.
-API Version: 2021-03-15.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CosmosDBMongoDBDatabaseCreateUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mongoDBResourceMongoDBDatabase = new AzureNative.DocumentDB.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", new AzureNative.DocumentDB.MongoDBResourceMongoDBDatabaseArgs
-        {
-            AccountName = "ddb1",
-            DatabaseName = "databaseName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureNative.DocumentDB.Inputs.MongoDBDatabaseResourceArgs
-            {
-                Id = "databaseName",
-            },
-            ResourceGroupName = "rg1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewMongoDBResourceMongoDBDatabase(ctx, "mongoDBResourceMongoDBDatabase", &documentdb.MongoDBResourceMongoDBDatabaseArgs{
-			AccountName:  pulumi.String("ddb1"),
-			DatabaseName: pulumi.String("databaseName"),
-			Location:     pulumi.String("West US"),
-			Options:      nil,
-			Resource: &documentdb.MongoDBDatabaseResourceArgs{
-				Id: pulumi.String("databaseName"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const mongoDBResourceMongoDBDatabase = new azure_native.documentdb.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase", {
-    accountName: "ddb1",
-    databaseName: "databaseName",
-    location: "West US",
-    options: {},
-    resource: {
-        id: "databaseName",
-    },
-    resourceGroupName: "rg1",
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-mongo_db_resource_mongo_db_database = azure_native.documentdb.MongoDBResourceMongoDBDatabase("mongoDBResourceMongoDBDatabase",
-    account_name="ddb1",
-    database_name="databaseName",
-    location="West US",
-    options=azure_native.documentdb.CreateUpdateOptionsArgs(),
-    resource=azure_native.documentdb.MongoDBDatabaseResourceArgs(
-        id="databaseName",
-    ),
-    resource_group_name="rg1",
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:documentdb:MongoDBResourceMongoDBDatabase databaseName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/mongodbDatabases/databaseName 
-```
-
- */
 @ResourceType(type="azure-native:documentdb:MongoDBResourceMongoDBDatabase")
 public class MongoDBResourceMongoDBDatabase extends io.pulumi.resources.CustomResource {
-    /**
-     * The location of the resource group to which the resource belongs.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource group to which the resource belongs.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the ARM resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the ARM resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="options", type=MongoDBDatabaseGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ MongoDBDatabaseGetPropertiesResponseOptions> options;
 
     public Output</* @Nullable */ MongoDBDatabaseGetPropertiesResponseOptions> getOptions() {
         return this.options;
     }
-    /**
-     * 
-     */
     @OutputExport(name="resource", type=MongoDBDatabaseGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ MongoDBDatabaseGetPropertiesResponseResource> resource;
 
     public Output</* @Nullable */ MongoDBDatabaseGetPropertiesResponseResource> getResource() {
         return this.resource;
     }
-    /**
-     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of Azure resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of Azure resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public MongoDBResourceMongoDBDatabase(String name, MongoDBResourceMongoDBDatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:MongoDBResourceMongoDBDatabase", name, args == null ? MongoDBResourceMongoDBDatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -242,14 +94,6 @@ public class MongoDBResourceMongoDBDatabase extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static MongoDBResourceMongoDBDatabase get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MongoDBResourceMongoDBDatabase(name, id, options);
     }

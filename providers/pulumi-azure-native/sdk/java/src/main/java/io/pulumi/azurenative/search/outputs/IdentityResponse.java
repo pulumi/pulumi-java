@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityResponse {
-/**
- * The principal ID of resource identity.
- */
     private final String principalId;
-/**
- * The tenant ID of resource.
- */
     private final String tenantId;
-/**
- * The identity type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -32,21 +23,12 @@ public final class IdentityResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The principal ID of resource identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant ID of resource.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The identity type.
- */
     public String getType() {
         return this.type;
     }

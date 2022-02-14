@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse {
-/**
- * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
- */
     private final String followupIntentName;
-/**
- * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
- */
     private final String parentFollowupIntentName;
 
     @OutputCustomType.Constructor({"followupIntentName","parentFollowupIntentName"})
@@ -26,15 +20,9 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
         this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
     }
 
-/**
- * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
- */
     public String getFollowupIntentName() {
         return this.followupIntentName;
     }
-/**
- * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
- */
     public String getParentFollowupIntentName() {
         return this.parentFollowupIntentName;
     }

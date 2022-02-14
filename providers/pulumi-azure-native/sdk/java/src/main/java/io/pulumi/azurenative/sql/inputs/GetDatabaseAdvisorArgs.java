@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatabaseAdvisorArgs Empty = new GetDatabaseAdvisorArgs();
 
-    /**
-     * The name of the Database Advisor.
-     */
     @InputImport(name="advisorName", required=true)
     private final String advisorName;
 
@@ -25,9 +19,6 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
         return this.advisorName;
     }
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -35,9 +26,6 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
         return this.databaseName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetDatabaseAdvisorArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

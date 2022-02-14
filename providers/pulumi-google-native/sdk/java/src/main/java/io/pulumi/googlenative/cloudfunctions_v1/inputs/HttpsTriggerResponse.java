@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes HttpsTrigger, could be used to connect web hooks to function.
- */
 public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpsTriggerResponse Empty = new HttpsTriggerResponse();
 
-    /**
-     * The security level for the function.
-     */
     @InputImport(name="securityLevel", required=true)
     private final String securityLevel;
 
@@ -25,9 +19,6 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.securityLevel;
     }
 
-    /**
-     * The deployed url for the function.
-     */
     @InputImport(name="url", required=true)
     private final String url;
 

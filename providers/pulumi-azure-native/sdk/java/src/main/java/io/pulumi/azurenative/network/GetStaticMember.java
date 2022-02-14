@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticMember {
-/**
- * StaticMember Item.
-API Version: 2021-05-01-preview.
- *
- * StaticMember Item.
- */
     public static CompletableFuture<GetStaticMemberResult> invokeAsync(GetStaticMemberArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getStaticMember", TypeShape.of(GetStaticMemberResult.class), args == null ? GetStaticMemberArgs.Empty : args, Utilities.withVersion(options));
     }

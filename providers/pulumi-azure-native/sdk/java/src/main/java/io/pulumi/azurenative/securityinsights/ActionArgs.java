@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActionArgs Empty = new ActionArgs();
 
-    /**
-     * Action ID
-     */
     @InputImport(name="actionId")
     private final @Nullable Input<String> actionId;
 
@@ -27,9 +21,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.actionId == null ? Input.empty() : this.actionId;
     }
 
-    /**
-     * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-     */
     @InputImport(name="logicAppResourceId", required=true)
     private final Input<String> logicAppResourceId;
 
@@ -37,9 +28,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.logicAppResourceId;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Alert rule ID
-     */
     @InputImport(name="ruleId", required=true)
     private final Input<String> ruleId;
 
@@ -57,9 +42,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleId;
     }
 
-    /**
-     * Logic App Callback URL for this specific workflow.
-     */
     @InputImport(name="triggerUri", required=true)
     private final Input<String> triggerUri;
 
@@ -67,9 +49,6 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.triggerUri;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

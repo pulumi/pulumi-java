@@ -22,16 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BigDataPoolArgs Empty = new BigDataPoolArgs();
 
-    /**
-     * Auto-pausing properties
-     */
     @InputImport(name="autoPause")
     private final @Nullable Input<AutoPausePropertiesArgs> autoPause;
 
@@ -39,9 +33,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoPause == null ? Input.empty() : this.autoPause;
     }
 
-    /**
-     * Auto-scaling properties
-     */
     @InputImport(name="autoScale")
     private final @Nullable Input<AutoScalePropertiesArgs> autoScale;
 
@@ -49,9 +40,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoScale == null ? Input.empty() : this.autoScale;
     }
 
-    /**
-     * Big Data pool name
-     */
     @InputImport(name="bigDataPoolName")
     private final @Nullable Input<String> bigDataPoolName;
 
@@ -59,9 +47,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.bigDataPoolName == null ? Input.empty() : this.bigDataPoolName;
     }
 
-    /**
-     * The cache size
-     */
     @InputImport(name="cacheSize")
     private final @Nullable Input<Integer> cacheSize;
 
@@ -69,9 +54,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheSize == null ? Input.empty() : this.cacheSize;
     }
 
-    /**
-     * The time when the Big Data pool was created.
-     */
     @InputImport(name="creationDate")
     private final @Nullable Input<String> creationDate;
 
@@ -79,9 +61,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.creationDate == null ? Input.empty() : this.creationDate;
     }
 
-    /**
-     * List of custom libraries/packages associated with the spark pool.
-     */
     @InputImport(name="customLibraries")
     private final @Nullable Input<List<LibraryInfoArgs>> customLibraries;
 
@@ -89,9 +68,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.customLibraries == null ? Input.empty() : this.customLibraries;
     }
 
-    /**
-     * The default folder where Spark logs will be written.
-     */
     @InputImport(name="defaultSparkLogFolder")
     private final @Nullable Input<String> defaultSparkLogFolder;
 
@@ -99,9 +75,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultSparkLogFolder == null ? Input.empty() : this.defaultSparkLogFolder;
     }
 
-    /**
-     * Dynamic Executor Allocation
-     */
     @InputImport(name="dynamicExecutorAllocation")
     private final @Nullable Input<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
 
@@ -109,9 +82,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.dynamicExecutorAllocation == null ? Input.empty() : this.dynamicExecutorAllocation;
     }
 
-    /**
-     * Whether to stop any running jobs in the Big Data pool
-     */
     @InputImport(name="force")
     private final @Nullable Input<Boolean> force;
 
@@ -119,9 +89,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.force == null ? Input.empty() : this.force;
     }
 
-    /**
-     * Whether compute isolation is required or not.
-     */
     @InputImport(name="isComputeIsolationEnabled")
     private final @Nullable Input<Boolean> isComputeIsolationEnabled;
 
@@ -129,9 +96,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.isComputeIsolationEnabled == null ? Input.empty() : this.isComputeIsolationEnabled;
     }
 
-    /**
-     * Library version requirements
-     */
     @InputImport(name="libraryRequirements")
     private final @Nullable Input<LibraryRequirementsArgs> libraryRequirements;
 
@@ -139,9 +103,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.libraryRequirements == null ? Input.empty() : this.libraryRequirements;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -149,9 +110,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The number of nodes in the Big Data pool.
-     */
     @InputImport(name="nodeCount")
     private final @Nullable Input<Integer> nodeCount;
 
@@ -159,9 +117,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
     }
 
-    /**
-     * The level of compute power that each node in the Big Data pool has.
-     */
     @InputImport(name="nodeSize")
     private final @Nullable Input<Either<String,NodeSize>> nodeSize;
 
@@ -169,9 +124,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeSize == null ? Input.empty() : this.nodeSize;
     }
 
-    /**
-     * The kind of nodes that the Big Data pool provides.
-     */
     @InputImport(name="nodeSizeFamily")
     private final @Nullable Input<Either<String,NodeSizeFamily>> nodeSizeFamily;
 
@@ -179,9 +131,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeSizeFamily == null ? Input.empty() : this.nodeSizeFamily;
     }
 
-    /**
-     * The state of the Big Data pool.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -189,9 +138,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -199,9 +145,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Whether session level packages enabled.
-     */
     @InputImport(name="sessionLevelPackagesEnabled")
     private final @Nullable Input<Boolean> sessionLevelPackagesEnabled;
 
@@ -209,9 +152,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionLevelPackagesEnabled == null ? Input.empty() : this.sessionLevelPackagesEnabled;
     }
 
-    /**
-     * Spark configuration file to specify additional properties
-     */
     @InputImport(name="sparkConfigProperties")
     private final @Nullable Input<LibraryRequirementsArgs> sparkConfigProperties;
 
@@ -219,9 +159,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkConfigProperties == null ? Input.empty() : this.sparkConfigProperties;
     }
 
-    /**
-     * The Spark events folder
-     */
     @InputImport(name="sparkEventsFolder")
     private final @Nullable Input<String> sparkEventsFolder;
 
@@ -229,9 +166,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkEventsFolder == null ? Input.empty() : this.sparkEventsFolder;
     }
 
-    /**
-     * The Apache Spark version.
-     */
     @InputImport(name="sparkVersion")
     private final @Nullable Input<String> sparkVersion;
 
@@ -239,9 +173,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkVersion == null ? Input.empty() : this.sparkVersion;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -249,9 +180,6 @@ public final class BigDataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

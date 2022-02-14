@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPredictionModelStatusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPredictionModelStatusArgs Empty = new GetPredictionModelStatusArgs();
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -25,9 +19,6 @@ public final class GetPredictionModelStatusArgs extends io.pulumi.resources.Invo
         return this.hubName;
     }
 
-    /**
-     * The name of the Prediction.
-     */
     @InputImport(name="predictionName", required=true)
     private final String predictionName;
 
@@ -35,9 +26,6 @@ public final class GetPredictionModelStatusArgs extends io.pulumi.resources.Invo
         return this.predictionName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

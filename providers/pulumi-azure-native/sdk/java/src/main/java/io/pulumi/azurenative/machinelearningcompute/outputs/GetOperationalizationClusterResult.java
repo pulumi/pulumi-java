@@ -19,69 +19,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOperationalizationClusterResult {
-/**
- * AppInsights configuration.
- */
     private final @Nullable AppInsightsPropertiesResponse appInsights;
-/**
- * The cluster type.
- */
     private final String clusterType;
-/**
- * Container Registry properties.
- */
     private final @Nullable ContainerRegistryPropertiesResponse containerRegistry;
-/**
- * Parameters for the Azure Container Service cluster.
- */
     private final @Nullable AcsClusterPropertiesResponse containerService;
-/**
- * The date and time when the cluster was created.
- */
     private final String createdOn;
-/**
- * The description of the cluster.
- */
     private final @Nullable String description;
-/**
- * Contains global configuration for the web services in the cluster.
- */
     private final @Nullable GlobalServiceConfigurationResponse globalServiceConfiguration;
-/**
- * Specifies the resource ID.
- */
     private final String id;
-/**
- * Specifies the location of the resource.
- */
     private final String location;
-/**
- * The date and time when the cluster was last modified.
- */
     private final String modifiedOn;
-/**
- * Specifies the name of the resource.
- */
     private final String name;
-/**
- * List of provisioning errors reported by the resource provider.
- */
     private final List<ErrorResponseWrapperResponse> provisioningErrors;
-/**
- * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
- */
     private final String provisioningState;
-/**
- * Storage Account properties.
- */
     private final @Nullable StorageAccountPropertiesResponse storageAccount;
-/**
- * Contains resource tags defined as key/value pairs.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Specifies the type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"appInsights","clusterType","containerRegistry","containerService","createdOn","description","globalServiceConfiguration","id","location","modifiedOn","name","provisioningErrors","provisioningState","storageAccount","tags","type"})
@@ -120,99 +72,51 @@ public final class GetOperationalizationClusterResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * AppInsights configuration.
- */
     public Optional<AppInsightsPropertiesResponse> getAppInsights() {
         return Optional.ofNullable(this.appInsights);
     }
-/**
- * The cluster type.
- */
     public String getClusterType() {
         return this.clusterType;
     }
-/**
- * Container Registry properties.
- */
     public Optional<ContainerRegistryPropertiesResponse> getContainerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
-/**
- * Parameters for the Azure Container Service cluster.
- */
     public Optional<AcsClusterPropertiesResponse> getContainerService() {
         return Optional.ofNullable(this.containerService);
     }
-/**
- * The date and time when the cluster was created.
- */
     public String getCreatedOn() {
         return this.createdOn;
     }
-/**
- * The description of the cluster.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Contains global configuration for the web services in the cluster.
- */
     public Optional<GlobalServiceConfigurationResponse> getGlobalServiceConfiguration() {
         return Optional.ofNullable(this.globalServiceConfiguration);
     }
-/**
- * Specifies the resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Specifies the location of the resource.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The date and time when the cluster was last modified.
- */
     public String getModifiedOn() {
         return this.modifiedOn;
     }
-/**
- * Specifies the name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * List of provisioning errors reported by the resource provider.
- */
     public List<ErrorResponseWrapperResponse> getProvisioningErrors() {
         return this.provisioningErrors;
     }
-/**
- * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Storage Account properties.
- */
     public Optional<StorageAccountPropertiesResponse> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
-/**
- * Contains resource tags defined as key/value pairs.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Specifies the type of the resource.
- */
     public String getType() {
         return this.type;
     }

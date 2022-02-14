@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
-    /**
-     * Name of the resource group
-     */
     @InputImport(name="groupName", required=true)
     private final Input<String> groupName;
 
@@ -29,9 +23,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupName;
     }
 
-    /**
-     * The resource kind. Only 'vm' (the default) is supported.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -39,9 +30,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The public key of the service, used to encrypt secrets sent to the service
-     */
     @InputImport(name="publicKey")
     private final @Nullable Input<String> publicKey;
 
@@ -59,9 +44,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicKey == null ? Input.empty() : this.publicKey;
     }
 
-    /**
-     * Name of the service
-     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -69,9 +51,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
-    /**
-     * Service SKU
-     */
     @InputImport(name="sku")
     private final @Nullable Input<ServiceSkuArgs> sku;
 
@@ -79,9 +58,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -89,9 +65,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
-     */
     @InputImport(name="virtualSubnetId", required=true)
     private final Input<String> virtualSubnetId;
 

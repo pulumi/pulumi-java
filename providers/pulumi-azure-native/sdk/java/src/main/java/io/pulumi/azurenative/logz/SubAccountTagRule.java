@@ -16,154 +16,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Capture logs and metrics of Azure resources based on ARM tags.
-API Version: 2020-10-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### SubAccountTagRules_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var subAccountTagRule = new AzureNative.Logz.SubAccountTagRule("subAccountTagRule", new AzureNative.Logz.SubAccountTagRuleArgs
-        {
-            MonitorName = "myMonitor",
-            ResourceGroupName = "myResourceGroup",
-            RuleSetName = "default",
-            SubAccountName = "SubAccount1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	logz "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logz"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logz.NewSubAccountTagRule(ctx, "subAccountTagRule", &logz.SubAccountTagRuleArgs{
-			MonitorName:       pulumi.String("myMonitor"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			RuleSetName:       pulumi.String("default"),
-			SubAccountName:    pulumi.String("SubAccount1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const subAccountTagRule = new azure_native.logz.SubAccountTagRule("subAccountTagRule", {
-    monitorName: "myMonitor",
-    resourceGroupName: "myResourceGroup",
-    ruleSetName: "default",
-    subAccountName: "SubAccount1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sub_account_tag_rule = azure_native.logz.SubAccountTagRule("subAccountTagRule",
-    monitor_name="myMonitor",
-    resource_group_name="myResourceGroup",
-    rule_set_name="default",
-    sub_account_name="SubAccount1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:logz:SubAccountTagRule default /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Logz/monitors/myMonitor/accounts/SubAccount1/tagRules/default 
-```
-
- */
 @ResourceType(type="azure-native:logz:SubAccountTagRule")
 public class SubAccountTagRule extends io.pulumi.resources.CustomResource {
-    /**
-     * Name of the rule set.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the rule set.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Definition of the properties for a TagRules resource.
-     */
     @OutputExport(name="properties", type=MonitoringTagRulesPropertiesResponse.class, parameters={})
     private Output<MonitoringTagRulesPropertiesResponse> properties;
 
-    /**
-     * @return Definition of the properties for a TagRules resource.
-     */
     public Output<MonitoringTagRulesPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * The system metadata relating to this resource
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata relating to this resource
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the rule set.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the rule set.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SubAccountTagRule(String name, SubAccountTagRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logz:SubAccountTagRule", name, args == null ? SubAccountTagRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -184,14 +63,6 @@ public class SubAccountTagRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SubAccountTagRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubAccountTagRule(name, id, options);
     }

@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCloudLinkResult {
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Identifier of the other private cloud participating in the link.
- */
     private final @Nullable String linkedCloud;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The state of the cloud link.
- */
     private final String status;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","linkedCloud","name","status","type"})
@@ -46,33 +31,18 @@ public final class GetCloudLinkResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Identifier of the other private cloud participating in the link.
- */
     public Optional<String> getLinkedCloud() {
         return Optional.ofNullable(this.linkedCloud);
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The state of the cloud link.
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

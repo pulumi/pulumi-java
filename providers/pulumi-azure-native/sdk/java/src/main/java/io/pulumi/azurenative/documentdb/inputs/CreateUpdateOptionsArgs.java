@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
- */
 public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateUpdateOptionsArgs Empty = new CreateUpdateOptionsArgs();
 
-    /**
-     * Specifies the Autoscale settings.
-     */
     @InputImport(name="autoscaleSettings")
     private final @Nullable Input<AutoscaleSettingsArgs> autoscaleSettings;
 
@@ -28,9 +22,6 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
         return this.autoscaleSettings == null ? Input.empty() : this.autoscaleSettings;
     }
 
-    /**
-     * Request Units per second. For example, "throughput": 10000.
-     */
     @InputImport(name="throughput")
     private final @Nullable Input<Integer> throughput;
 

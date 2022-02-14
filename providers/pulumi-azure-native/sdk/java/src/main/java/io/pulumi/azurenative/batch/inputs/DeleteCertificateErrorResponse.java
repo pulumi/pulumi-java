@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An error response from the Batch service.
- */
 public final class DeleteCertificateErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeleteCertificateErrorResponse Empty = new DeleteCertificateErrorResponse();
 
-    /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -28,9 +22,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
         return this.code;
     }
 
-    /**
-     * A list of additional details about the error.
-     */
     @InputImport(name="details")
     private final @Nullable List<DeleteCertificateErrorResponse> details;
 
@@ -38,9 +29,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
         return this.details == null ? List.of() : this.details;
     }
 
-    /**
-     * A message describing the error, intended to be suitable for display in a user interface.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -48,9 +36,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
         return this.message;
     }
 
-    /**
-     * The target of the particular error. For example, the name of the property in error.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represent a parameter with constrains and metadata.
- */
 public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterDefinitionArgs Empty = new ParameterDefinitionArgs();
 
-    /**
-     * Array of allowed values for this parameter.
-     */
     @InputImport(name="allowedValues")
     private final @Nullable Input<List<Object>> allowedValues;
 
@@ -31,9 +25,6 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
     }
 
-    /**
-     * Default Value for this parameter.
-     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<Object> defaultValue;
 
@@ -41,9 +32,6 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
-    /**
-     * Description of this parameter/resourceGroup.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -51,9 +39,6 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * DisplayName of this parameter/resourceGroup.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -61,9 +46,6 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
-     */
     @InputImport(name="strongType")
     private final @Nullable Input<String> strongType;
 
@@ -71,9 +53,6 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.strongType == null ? Input.empty() : this.strongType;
     }
 
-    /**
-     * Allowed data types for Resource Manager template parameters.
-     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,TemplateParameterType>> type;
 

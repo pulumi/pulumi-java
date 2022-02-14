@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The key vault reference.
- */
 public final class KeyVaultKeyReferenceResponseKeyVault extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultKeyReferenceResponseKeyVault Empty = new KeyVaultKeyReferenceResponseKeyVault();
 
-    /**
-     * The resource id.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -27,9 +21,6 @@ public final class KeyVaultKeyReferenceResponseKeyVault extends io.pulumi.resour
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,9 +28,6 @@ public final class KeyVaultKeyReferenceResponseKeyVault extends io.pulumi.resour
         return this.name;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

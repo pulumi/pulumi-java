@@ -12,22 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseProjectSummaryResponse {
-/**
- * Gets or sets the extended summary.
- */
     private final @Nullable Map<String,String> extendedSummary;
-/**
- * Gets the Instance type.
-Expected value is 'Databases'.
- */
     private final String instanceType;
-/**
- * Gets or sets the time when summary was last refreshed.
- */
     private final @Nullable String lastSummaryRefreshedTime;
-/**
- * Gets or sets the state of refresh summary.
- */
     private final @Nullable String refreshSummaryState;
 
     @OutputCustomType.Constructor({"extendedSummary","instanceType","lastSummaryRefreshedTime","refreshSummaryState"})
@@ -42,28 +29,15 @@ Expected value is 'Databases'.
         this.refreshSummaryState = refreshSummaryState;
     }
 
-/**
- * Gets or sets the extended summary.
- */
     public Map<String,String> getExtendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
-/**
- * Gets the Instance type.
-Expected value is 'Databases'.
- */
     public String getInstanceType() {
         return this.instanceType;
     }
-/**
- * Gets or sets the time when summary was last refreshed.
- */
     public Optional<String> getLastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
-/**
- * Gets or sets the state of refresh summary.
- */
     public Optional<String> getRefreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -35,9 +26,6 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
         return this.serviceName;
     }
 
-    /**
-     * Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
-     */
     @InputImport(name="sid", required=true)
     private final String sid;
 

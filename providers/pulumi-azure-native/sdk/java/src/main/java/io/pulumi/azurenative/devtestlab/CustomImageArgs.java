@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomImageArgs Empty = new CustomImageArgs();
 
-    /**
-     * The author of the custom image.
-     */
     @InputImport(name="author")
     private final @Nullable Input<String> author;
 
@@ -34,9 +28,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.author == null ? Input.empty() : this.author;
     }
 
-    /**
-     * Storage information about the plan related to this custom image
-     */
     @InputImport(name="customImagePlan")
     private final @Nullable Input<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
@@ -44,9 +35,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.customImagePlan == null ? Input.empty() : this.customImagePlan;
     }
 
-    /**
-     * Storage information about the data disks present in the custom image
-     */
     @InputImport(name="dataDiskStorageInfo")
     private final @Nullable Input<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
@@ -54,9 +42,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDiskStorageInfo == null ? Input.empty() : this.dataDiskStorageInfo;
     }
 
-    /**
-     * The description of the custom image.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -64,9 +49,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
-     */
     @InputImport(name="isPlanAuthorized")
     private final @Nullable Input<Boolean> isPlanAuthorized;
 
@@ -74,9 +56,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.isPlanAuthorized == null ? Input.empty() : this.isPlanAuthorized;
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -84,9 +63,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -94,9 +70,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The Managed Image Id backing the custom image.
-     */
     @InputImport(name="managedImageId")
     private final @Nullable Input<String> managedImageId;
 
@@ -104,9 +77,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedImageId == null ? Input.empty() : this.managedImageId;
     }
 
-    /**
-     * The Managed Snapshot Id backing the custom image.
-     */
     @InputImport(name="managedSnapshotId")
     private final @Nullable Input<String> managedSnapshotId;
 
@@ -114,9 +84,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedSnapshotId == null ? Input.empty() : this.managedSnapshotId;
     }
 
-    /**
-     * The name of the custom image.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -124,9 +91,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -134,9 +98,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -144,9 +105,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The VHD from which the image is to be created.
-     */
     @InputImport(name="vhd")
     private final @Nullable Input<CustomImagePropertiesCustomArgs> vhd;
 
@@ -154,9 +112,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.vhd == null ? Input.empty() : this.vhd;
     }
 
-    /**
-     * The virtual machine from which the image is to be created.
-     */
     @InputImport(name="vm")
     private final @Nullable Input<CustomImagePropertiesFromVmArgs> vm;
 

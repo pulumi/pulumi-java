@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MonitoringConfigResponse {
-/**
- * Monitoring components configuration
- */
     private final MonitoringComponentConfigResponse componentConfig;
 
     @OutputCustomType.Constructor({"componentConfig"})
@@ -19,9 +16,6 @@ public final class MonitoringConfigResponse {
         this.componentConfig = Objects.requireNonNull(componentConfig);
     }
 
-/**
- * Monitoring components configuration
- */
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubIpConfigurationArgs Empty = new VirtualHubIpConfigurationArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,9 +25,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the ipconfig.
-     */
     @InputImport(name="ipConfigName")
     private final @Nullable Input<String> ipConfigName;
 
@@ -41,9 +32,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.ipConfigName == null ? Input.empty() : this.ipConfigName;
     }
 
-    /**
-     * Name of the Ip Configuration.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,9 +39,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The private IP address of the IP configuration.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -61,9 +46,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
-    /**
-     * The private IP address allocation method.
-     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -71,9 +53,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
-    /**
-     * The reference to the public IP resource.
-     */
     @InputImport(name="publicIPAddress")
     private final @Nullable Input<PublicIPAddressArgs> publicIPAddress;
 
@@ -81,9 +60,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
     }
 
-    /**
-     * The resource group name of the VirtualHub.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -91,9 +67,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * The reference to the subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetArgs> subnet;
 
@@ -101,9 +74,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
-    /**
-     * The name of the VirtualHub.
-     */
     @InputImport(name="virtualHubName", required=true)
     private final Input<String> virtualHubName;
 

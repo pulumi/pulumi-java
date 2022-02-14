@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The bucket's versioning configuration.
- */
 public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketVersioningArgs Empty = new BucketVersioningArgs();
 
-    /**
-     * While set to true, versioning is fully enabled for this bucket.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

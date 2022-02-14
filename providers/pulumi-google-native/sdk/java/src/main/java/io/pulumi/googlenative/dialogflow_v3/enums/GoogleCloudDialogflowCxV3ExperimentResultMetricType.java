@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
- */
     @EnumType
     public enum GoogleCloudDialogflowCxV3ExperimentResultMetricType {
-/**
- * Metric unspecified.
- */
         MetricUnspecified("METRIC_UNSPECIFIED"),
-/**
- * Percentage of contained sessions without user calling back in 24 hours.
- */
         ContainedSessionNoCallbackRate("CONTAINED_SESSION_NO_CALLBACK_RATE"),
-/**
- * Percentage of sessions that were handed to a human agent.
- */
         LiveAgentHandoffRate("LIVE_AGENT_HANDOFF_RATE"),
-/**
- * Percentage of sessions with the same user calling back.
- */
         CallbackSessionRate("CALLBACK_SESSION_RATE"),
-/**
- * Percentage of sessions where user hung up.
- */
         AbandonedSessionRate("ABANDONED_SESSION_RATE"),
-/**
- * Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.
- */
         SessionEndRate("SESSION_END_RATE");
 
         private final String value;

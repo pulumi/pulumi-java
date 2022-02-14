@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * DEPRECATED.
- */
 public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RollbackConfigArgs Empty = new RollbackConfigArgs();
 
-    /**
-     * The revision to rollback to. If set to 0, rollback to the last revision.
-     */
     @InputImport(name="revision")
     private final @Nullable Input<Integer> revision;
 

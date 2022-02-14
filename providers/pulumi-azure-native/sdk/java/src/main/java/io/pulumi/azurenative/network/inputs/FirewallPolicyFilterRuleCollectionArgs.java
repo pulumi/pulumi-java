@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Firewall Policy Filter Rule Collection.
- */
 public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyFilterRuleCollectionArgs Empty = new FirewallPolicyFilterRuleCollectionArgs();
 
-    /**
-     * The action type of a Filter rule collection.
-     */
     @InputImport(name="action")
     private final @Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action;
 
@@ -34,9 +28,6 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
         return this.action == null ? Input.empty() : this.action;
     }
 
-    /**
-     * The name of the rule collection.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,9 +35,6 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Priority of the Firewall Policy Rule Collection resource.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -54,10 +42,6 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * The type of the rule collection.
-Expected value is 'FirewallPolicyFilterRuleCollection'.
-     */
     @InputImport(name="ruleCollectionType", required=true)
     private final Input<String> ruleCollectionType;
 
@@ -65,9 +49,6 @@ Expected value is 'FirewallPolicyFilterRuleCollection'.
         return this.ruleCollectionType;
     }
 
-    /**
-     * List of rules included in a rule collection.
-     */
     @InputImport(name="rules")
     private final @Nullable Input<List<Object>> rules;
 

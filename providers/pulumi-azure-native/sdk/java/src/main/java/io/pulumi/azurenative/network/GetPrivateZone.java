@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateZone {
-/**
- * Describes a Private DNS zone.
-API Version: 2020-06-01.
- *
- * Describes a Private DNS zone.
- */
     public static CompletableFuture<GetPrivateZoneResult> invokeAsync(GetPrivateZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateZone", TypeShape.of(GetPrivateZoneResult.class), args == null ? GetPrivateZoneArgs.Empty : args, Utilities.withVersion(options));
     }

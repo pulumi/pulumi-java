@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse Empty = new ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse();
 
-    /**
-     * The private link service connection description.
-     */
     @InputImport(name="actionsRequired", required=true)
     private final String actionsRequired;
 
@@ -25,9 +19,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
         return this.actionsRequired;
     }
 
-    /**
-     * The private link service connection description.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -35,9 +26,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
         return this.description;
     }
 
-    /**
-     * The private link service connection status.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

@@ -19,58 +19,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JiraLinkedServiceResponse {
-/**
- * List of tags that can be used for describing the linked service.
- */
     private final @Nullable List<Object> annotations;
-/**
- * The integration runtime reference.
- */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-/**
- * Linked service description.
- */
     private final @Nullable String description;
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encryptedCredential;
-/**
- * The IP address or host name of the Jira service. (e.g. jira.example.com)
- */
     private final Object host;
-/**
- * Parameters for linked service.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * The password corresponding to the user name that you provided in the username field.
- */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-/**
- * The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.
- */
     private final @Nullable Object port;
-/**
- * Type of linked service.
-Expected value is 'Jira'.
- */
     private final String type;
-/**
- * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
- */
     private final @Nullable Object useEncryptedEndpoints;
-/**
- * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
- */
     private final @Nullable Object useHostVerification;
-/**
- * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
- */
     private final @Nullable Object usePeerVerification;
-/**
- * The user name that you use to access Jira Service.
- */
     private final Object username;
 
     @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","host","parameters","password","port","type","useEncryptedEndpoints","useHostVerification","usePeerVerification","username"})
@@ -103,82 +63,42 @@ Expected value is 'Jira'.
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * List of tags that can be used for describing the linked service.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * The integration runtime reference.
- */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
-/**
- * Linked service description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
-/**
- * The IP address or host name of the Jira service. (e.g. jira.example.com)
- */
     public Object getHost() {
         return this.host;
     }
-/**
- * Parameters for linked service.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * The password corresponding to the user name that you provided in the username field.
- */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.
- */
     public Optional<Object> getPort() {
         return Optional.ofNullable(this.port);
     }
-/**
- * Type of linked service.
-Expected value is 'Jira'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
- */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
-/**
- * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
- */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
-/**
- * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
- */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
-/**
- * The user name that you use to access Jira Service.
- */
     public Object getUsername() {
         return this.username;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserSettings {
-/**
- * Response to get user settings
-API Version: 2018-10-01.
- *
- * Response to get user settings
- */
     public static CompletableFuture<GetUserSettingsResult> invokeAsync(GetUserSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettings", TypeShape.of(GetUserSettingsResult.class), args == null ? GetUserSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

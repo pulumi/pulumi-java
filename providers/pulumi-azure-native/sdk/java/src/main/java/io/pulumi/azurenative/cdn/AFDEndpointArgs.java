@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AFDEndpointArgs Empty = new AFDEndpointArgs();
 
-    /**
-     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,EnabledState>> enabledState;
 
@@ -31,9 +25,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
-    /**
-     * Name of the endpoint under the profile which is unique globally.
-     */
     @InputImport(name="endpointName")
     private final @Nullable Input<String> endpointName;
 
@@ -41,9 +32,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointName == null ? Input.empty() : this.endpointName;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,9 +39,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
-     */
     @InputImport(name="originResponseTimeoutSeconds")
     private final @Nullable Input<Integer> originResponseTimeoutSeconds;
 
@@ -61,9 +46,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.originResponseTimeoutSeconds == null ? Input.empty() : this.originResponseTimeoutSeconds;
     }
 
-    /**
-     * Name of the CDN profile which is unique within the resource group.
-     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -71,9 +53,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -81,9 +60,6 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

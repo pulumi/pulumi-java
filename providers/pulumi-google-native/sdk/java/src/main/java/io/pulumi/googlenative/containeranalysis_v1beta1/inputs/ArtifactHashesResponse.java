@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines a hash object for use in Materials and Products.
- */
 public final class ArtifactHashesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArtifactHashesResponse Empty = new ArtifactHashesResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="sha256", required=true)
     private final String sha256;
 

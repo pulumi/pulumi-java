@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of a NotificationHub BaiduCredential.
- */
 public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BaiduCredentialResponse Empty = new BaiduCredentialResponse();
 
-    /**
-     * Baidu Api Key.
-     */
     @InputImport(name="baiduApiKey")
     private final @Nullable String baiduApiKey;
 
@@ -27,9 +21,6 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
         return this.baiduApiKey == null ? Optional.empty() : Optional.ofNullable(this.baiduApiKey);
     }
 
-    /**
-     * Baidu Endpoint.
-     */
     @InputImport(name="baiduEndPoint")
     private final @Nullable String baiduEndPoint;
 
@@ -37,9 +28,6 @@ public final class BaiduCredentialResponse extends io.pulumi.resources.InvokeArg
         return this.baiduEndPoint == null ? Optional.empty() : Optional.ofNullable(this.baiduEndPoint);
     }
 
-    /**
-     * Baidu Secret Key
-     */
     @InputImport(name="baiduSecretKey")
     private final @Nullable String baiduSecretKey;
 

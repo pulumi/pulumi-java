@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Virtual NIC model
- */
 public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNicArgs Empty = new VirtualNicArgs();
 
-    /**
-     * guest OS customization for nic
-     */
     @InputImport(name="customization")
     private final @Nullable Input<GuestOSNICCustomizationArgs> customization;
 
@@ -32,9 +26,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
         return this.customization == null ? Input.empty() : this.customization;
     }
 
-    /**
-     * NIC ip address
-     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<String>> ipAddresses;
 
@@ -42,9 +33,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
     }
 
-    /**
-     * NIC MAC address
-     */
     @InputImport(name="macAddress")
     private final @Nullable Input<String> macAddress;
 
@@ -52,9 +40,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
         return this.macAddress == null ? Input.empty() : this.macAddress;
     }
 
-    /**
-     * Virtual Network
-     */
     @InputImport(name="network", required=true)
     private final Input<VirtualNetworkArgs> network;
 
@@ -62,9 +47,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
         return this.network;
     }
 
-    /**
-     * NIC type
-     */
     @InputImport(name="nicType", required=true)
     private final Input<NICType> nicType;
 
@@ -72,9 +54,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
         return this.nicType;
     }
 
-    /**
-     * Is NIC powered on/off on boot
-     */
     @InputImport(name="powerOnBoot")
     private final @Nullable Input<Boolean> powerOnBoot;
 
@@ -82,9 +61,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
         return this.powerOnBoot == null ? Input.empty() : this.powerOnBoot;
     }
 
-    /**
-     * NIC id
-     */
     @InputImport(name="virtualNicId")
     private final @Nullable Input<String> virtualNicId;
 

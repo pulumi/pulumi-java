@@ -13,17 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OverrideTaskStepPropertiesResponse Empty = new OverrideTaskStepPropertiesResponse();
 
-    /**
-     * Gets or sets the collection of override arguments to be used when
-executing a build step.
-     */
     @InputImport(name="arguments")
     private final @Nullable List<ArgumentResponse> arguments;
 
@@ -31,9 +24,6 @@ executing a build step.
         return this.arguments == null ? List.of() : this.arguments;
     }
 
-    /**
-     * The source context against which run has to be queued.
-     */
     @InputImport(name="contextPath")
     private final @Nullable String contextPath;
 
@@ -41,9 +31,6 @@ executing a build step.
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
-    /**
-     * The file against which run has to be queued.
-     */
     @InputImport(name="file")
     private final @Nullable String file;
 
@@ -51,9 +38,6 @@ executing a build step.
         return this.file == null ? Optional.empty() : Optional.ofNullable(this.file);
     }
 
-    /**
-     * The name of the target build stage for the docker build.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -61,9 +45,6 @@ executing a build step.
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
-    /**
-     * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
-     */
     @InputImport(name="updateTriggerToken")
     private final @Nullable String updateTriggerToken;
 
@@ -71,9 +52,6 @@ executing a build step.
         return this.updateTriggerToken == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerToken);
     }
 
-    /**
-     * The collection of overridable values that can be passed when running a Task.
-     */
     @InputImport(name="values")
     private final @Nullable List<SetValueResponse> values;
 

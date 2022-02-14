@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryAnalysisValidationResultResponse {
-/**
- * List of queries executed and it's execution results in source and target
- */
     private final QueryExecutionResultResponse queryResults;
-/**
- * Errors that are part of the execution
- */
     private final ValidationErrorResponse validationErrors;
 
     @OutputCustomType.Constructor({"queryResults","validationErrors"})
@@ -27,15 +21,9 @@ public final class QueryAnalysisValidationResultResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
-/**
- * List of queries executed and it's execution results in source and target
- */
     public QueryExecutionResultResponse getQueryResults() {
         return this.queryResults;
     }
-/**
- * Errors that are part of the execution
- */
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
     }

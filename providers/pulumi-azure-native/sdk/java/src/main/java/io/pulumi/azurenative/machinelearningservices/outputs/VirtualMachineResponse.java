@@ -15,38 +15,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineResponse {
-/**
- * Location for the underlying compute
- */
     private final @Nullable String computeLocation;
-/**
- * The type of compute
-Expected value is 'VirtualMachine'.
- */
     private final String computeType;
-/**
- * The description of the Machine Learning compute.
- */
     private final @Nullable String description;
-/**
- * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
- */
     private final Boolean isAttachedCompute;
-/**
- * 
- */
     private final @Nullable VirtualMachineResponseProperties properties;
-/**
- * Errors during provisioning
- */
     private final List<MachineLearningServiceErrorResponse> provisioningErrors;
-/**
- * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
- */
     private final String provisioningState;
-/**
- * ARM resource id of the underlying compute
- */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"computeLocation","computeType","description","isAttachedCompute","properties","provisioningErrors","provisioningState","resourceId"})
@@ -69,52 +44,27 @@ Expected value is 'VirtualMachine'.
         this.resourceId = resourceId;
     }
 
-/**
- * Location for the underlying compute
- */
     public Optional<String> getComputeLocation() {
         return Optional.ofNullable(this.computeLocation);
     }
-/**
- * The type of compute
-Expected value is 'VirtualMachine'.
- */
     public String getComputeType() {
         return this.computeType;
     }
-/**
- * The description of the Machine Learning compute.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
- */
     public Boolean getIsAttachedCompute() {
         return this.isAttachedCompute;
     }
-/**
- * 
- */
     public Optional<VirtualMachineResponseProperties> getProperties() {
         return Optional.ofNullable(this.properties);
     }
-/**
- * Errors during provisioning
- */
     public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
         return this.provisioningErrors;
     }
-/**
- * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * ARM resource id of the underlying compute
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

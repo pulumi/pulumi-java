@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DailyRetentionScheduleResponse {
-/**
- * Retention duration of retention Policy.
- */
     private final @Nullable RetentionDurationResponse retentionDuration;
-/**
- * Retention times of retention policy.
- */
     private final @Nullable List<String> retentionTimes;
 
     @OutputCustomType.Constructor({"retentionDuration","retentionTimes"})
@@ -30,15 +24,9 @@ public final class DailyRetentionScheduleResponse {
         this.retentionTimes = retentionTimes;
     }
 
-/**
- * Retention duration of retention Policy.
- */
     public Optional<RetentionDurationResponse> getRetentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
-/**
- * Retention times of retention policy.
- */
     public List<String> getRetentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }

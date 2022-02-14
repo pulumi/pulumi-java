@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An SOA record.
- */
 public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoaRecordArgs Empty = new SoaRecordArgs();
 
-    /**
-     * The email contact for this SOA record.
-     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -28,9 +22,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.email == null ? Input.empty() : this.email;
     }
 
-    /**
-     * The expire time for this SOA record.
-     */
     @InputImport(name="expireTime")
     private final @Nullable Input<Double> expireTime;
 
@@ -38,9 +29,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
-    /**
-     * The domain name of the authoritative name server for this SOA record.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -48,9 +36,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
-     */
     @InputImport(name="minimumTtl")
     private final @Nullable Input<Double> minimumTtl;
 
@@ -58,9 +43,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimumTtl == null ? Input.empty() : this.minimumTtl;
     }
 
-    /**
-     * The refresh value for this SOA record.
-     */
     @InputImport(name="refreshTime")
     private final @Nullable Input<Double> refreshTime;
 
@@ -68,9 +50,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.refreshTime == null ? Input.empty() : this.refreshTime;
     }
 
-    /**
-     * The retry time for this SOA record.
-     */
     @InputImport(name="retryTime")
     private final @Nullable Input<Double> retryTime;
 
@@ -78,9 +57,6 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.retryTime == null ? Input.empty() : this.retryTime;
     }
 
-    /**
-     * The serial number for this SOA record.
-     */
     @InputImport(name="serialNumber")
     private final @Nullable Input<Double> serialNumber;
 

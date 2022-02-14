@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceManagedResourcesSettingsArgs Empty = new ServiceManagedResourcesSettingsArgs();
 
-    /**
-     * The settings for the service managed cosmosdb account.
-     */
     @InputImport(name="cosmosDb")
     private final @Nullable Input<CosmosDbSettingsArgs> cosmosDb;
 

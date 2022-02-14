@@ -14,26 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ControlActivityResponse {
-/**
- * Activity depends on condition.
- */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-/**
- * Activity description.
- */
     private final @Nullable String description;
-/**
- * Activity name.
- */
     private final String name;
-/**
- * Type of activity.
-Expected value is 'Container'.
- */
     private final String type;
-/**
- * Activity user properties.
- */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"dependsOn","description","name","type","userProperties"})
@@ -50,34 +34,18 @@ Expected value is 'Container'.
         this.userProperties = userProperties;
     }
 
-/**
- * Activity depends on condition.
- */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Activity description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Activity name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Type of activity.
-Expected value is 'Container'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Activity user properties.
- */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * SandboxConfig contains configurations of the sandbox to use for the node.
- */
 public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SandboxConfigResponse Empty = new SandboxConfigResponse();
 
-    /**
-     * Type of the sandbox to use for the node (e.g. 'gvisor')
-     */
     @InputImport(name="sandboxType", required=true)
     private final String sandboxType;
 
@@ -25,9 +19,6 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.sandboxType;
     }
 
-    /**
-     * Type of the sandbox to use for the node.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

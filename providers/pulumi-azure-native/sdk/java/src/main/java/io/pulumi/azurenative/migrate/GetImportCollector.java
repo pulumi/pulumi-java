@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImportCollector {
-/**
- * 
-API Version: 2019-10-01.
- */
     public static CompletableFuture<GetImportCollectorResult> invokeAsync(GetImportCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getImportCollector", TypeShape.of(GetImportCollectorResult.class), args == null ? GetImportCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

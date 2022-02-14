@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementGroupNetworkManagerConnectionArgs Empty = new GetManagementGroupNetworkManagerConnectionArgs();
 
-    /**
-     * The management group Id which uniquely identify the Microsoft Azure management group.
-     */
     @InputImport(name="managementGroupId", required=true)
     private final String managementGroupId;
 
@@ -25,9 +19,6 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
         return this.managementGroupId;
     }
 
-    /**
-     * Name for the network manager connection.
-     */
     @InputImport(name="networkManagerConnectionName", required=true)
     private final String networkManagerConnectionName;
 

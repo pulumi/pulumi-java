@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TargetIpFilterRuleResponse {
-/**
- * The desired action for requests captured by this rule.
- */
     private final String action;
-/**
- * The name of the IP filter rule.
- */
     private final String filterName;
-/**
- * A string that contains the IP address range in CIDR notation for the rule.
- */
     private final String ipMask;
-/**
- * Target for requests captured by this rule.
- */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"action","filterName","ipMask","target"})
@@ -40,27 +28,15 @@ public final class TargetIpFilterRuleResponse {
         this.target = target;
     }
 
-/**
- * The desired action for requests captured by this rule.
- */
     public String getAction() {
         return this.action;
     }
-/**
- * The name of the IP filter rule.
- */
     public String getFilterName() {
         return this.filterName;
     }
-/**
- * A string that contains the IP address range in CIDR notation for the rule.
- */
     public String getIpMask() {
         return this.ipMask;
     }
-/**
- * Target for requests captured by this rule.
- */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

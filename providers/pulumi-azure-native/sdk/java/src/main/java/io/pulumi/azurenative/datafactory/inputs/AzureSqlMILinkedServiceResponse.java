@@ -20,16 +20,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure SQL Managed Instance linked service.
- */
 public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSqlMILinkedServiceResponse Empty = new AzureSqlMILinkedServiceResponse();
 
-    /**
-     * Sql always encrypted properties.
-     */
     @InputImport(name="alwaysEncryptedSettings")
     private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
 
@@ -37,9 +31,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.alwaysEncryptedSettings == null ? Optional.empty() : Optional.ofNullable(this.alwaysEncryptedSettings);
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -47,9 +38,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="azureCloudType")
     private final @Nullable Object azureCloudType;
 
@@ -57,9 +45,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -67,9 +52,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString", required=true)
     private final Object connectionString;
 
@@ -77,9 +59,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.connectionString;
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -87,9 +66,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -97,9 +73,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -107,9 +80,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -117,9 +87,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The Azure key vault secret reference of password in connection string.
-     */
     @InputImport(name="password")
     private final @Nullable AzureKeyVaultSecretReferenceResponse password;
 
@@ -127,9 +94,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
-    /**
-     * The ID of the service principal used to authenticate against Azure SQL Managed Instance. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -137,9 +101,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
-    /**
-     * The key of the service principal used to authenticate against Azure SQL Managed Instance.
-     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -147,9 +108,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenant")
     private final @Nullable Object tenant;
 
@@ -157,10 +115,6 @@ public final class AzureSqlMILinkedServiceResponse extends io.pulumi.resources.I
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureSqlMI'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

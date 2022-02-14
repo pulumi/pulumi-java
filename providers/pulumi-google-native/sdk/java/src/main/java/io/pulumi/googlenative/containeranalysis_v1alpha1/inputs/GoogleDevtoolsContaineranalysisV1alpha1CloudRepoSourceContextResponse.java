@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A CloudRepoSourceContext denotes a particular revision in a Google Cloud Source Repo.
- */
 public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse Empty = new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse();
 
-    /**
-     * An alias, which may be a branch or tag.
-     */
     @InputImport(name="aliasContext", required=true)
     private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
@@ -27,9 +21,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
         return this.aliasContext;
     }
 
-    /**
-     * The ID of the repo.
-     */
     @InputImport(name="repoId", required=true)
     private final GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
 
@@ -37,9 +28,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
         return this.repoId;
     }
 
-    /**
-     * A revision ID.
-     */
     @InputImport(name="revisionId", required=true)
     private final String revisionId;
 

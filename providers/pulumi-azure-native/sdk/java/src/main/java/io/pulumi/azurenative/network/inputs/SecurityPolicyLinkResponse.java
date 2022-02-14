@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the Resource ID for a Security Policy.
- */
 public final class SecurityPolicyLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyLinkResponse Empty = new SecurityPolicyLinkResponse();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -10,16 +10,10 @@ import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigResponse;
 import java.util.Objects;
 
 
-/**
- * Configurations for a source while processing a Search or Suggest request.
- */
 public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceConfigResponse Empty = new SourceConfigResponse();
 
-    /**
-     * The crowding configuration for the source.
-     */
     @InputImport(name="crowdingConfig", required=true)
     private final SourceCrowdingConfigResponse crowdingConfig;
 
@@ -27,9 +21,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.crowdingConfig;
     }
 
-    /**
-     * The scoring configuration for the source.
-     */
     @InputImport(name="scoringConfig", required=true)
     private final SourceScoringConfigResponse scoringConfig;
 
@@ -37,9 +28,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.scoringConfig;
     }
 
-    /**
-     * The source for which this configuration is to be used.
-     */
     @InputImport(name="source", required=true)
     private final SourceResponse source;
 

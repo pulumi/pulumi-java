@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Model that represents the Experiment properties model.
- */
 public final class ExperimentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExperimentPropertiesArgs Empty = new ExperimentPropertiesArgs();
 
-    /**
-     * List of selectors.
-     */
     @InputImport(name="selectors", required=true)
     private final Input<List<SelectorArgs>> selectors;
 
@@ -30,9 +24,6 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
         return this.selectors;
     }
 
-    /**
-     * A boolean value that indicates if experiment should be started on creation or not.
-     */
     @InputImport(name="startOnCreation")
     private final @Nullable Input<Boolean> startOnCreation;
 
@@ -40,9 +31,6 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
         return this.startOnCreation == null ? Input.empty() : this.startOnCreation;
     }
 
-    /**
-     * List of steps.
-     */
     @InputImport(name="steps", required=true)
     private final Input<List<StepArgs>> steps;
 

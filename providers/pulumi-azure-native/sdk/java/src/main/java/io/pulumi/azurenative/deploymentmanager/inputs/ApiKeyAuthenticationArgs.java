@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * ApiKey authentication gives a name and a value that can be included in either the request header or query parameters.
- */
 public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiKeyAuthenticationArgs Empty = new ApiKeyAuthenticationArgs();
 
-    /**
-     * The location of the authentication key/value pair in the request.
-     */
     @InputImport(name="in", required=true)
     private final Input<RestAuthLocation> in;
 
@@ -27,9 +21,6 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
         return this.in;
     }
 
-    /**
-     * The key name of the authentication key/value pair.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -37,10 +28,6 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
         return this.name;
     }
 
-    /**
-     * The authentication type.
-Expected value is 'ApiKey'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -48,9 +35,6 @@ Expected value is 'ApiKey'.
         return this.type;
     }
 
-    /**
-     * The value of the authentication key/value pair.
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

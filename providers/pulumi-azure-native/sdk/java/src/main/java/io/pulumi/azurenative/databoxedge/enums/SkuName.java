@@ -8,94 +8,28 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SKU name.
- */
     @EnumType
     public enum SkuName {
-/**
- * 
- */
         Gateway("Gateway"),
-/**
- * 
- */
         Edge("Edge"),
-/**
- * 
- */
         TEA_1Node("TEA_1Node"),
-/**
- * 
- */
         TEA_1Node_UPS("TEA_1Node_UPS"),
-/**
- * 
- */
         TEA_1Node_Heater("TEA_1Node_Heater"),
-/**
- * 
- */
         TEA_1Node_UPS_Heater("TEA_1Node_UPS_Heater"),
-/**
- * 
- */
         TEA_4Node_Heater("TEA_4Node_Heater"),
-/**
- * 
- */
         TEA_4Node_UPS_Heater("TEA_4Node_UPS_Heater"),
-/**
- * 
- */
         TMA("TMA"),
-/**
- * 
- */
         TDC("TDC"),
-/**
- * 
- */
         TCA_Small("TCA_Small"),
-/**
- * 
- */
         GPU("GPU"),
-/**
- * 
- */
         TCA_Large("TCA_Large"),
-/**
- * 
- */
         EdgeP_Base("EdgeP_Base"),
-/**
- * 
- */
         EdgeP_High("EdgeP_High"),
-/**
- * 
- */
         EdgePR_Base("EdgePR_Base"),
-/**
- * 
- */
         EdgePR_Base_UPS("EdgePR_Base_UPS"),
-/**
- * 
- */
         EdgeMR_Mini("EdgeMR_Mini"),
-/**
- * 
- */
         RCA_Small("RCA_Small"),
-/**
- * 
- */
         RCA_Large("RCA_Large"),
-/**
- * 
- */
         RDC("RDC");
 
         private final String value;

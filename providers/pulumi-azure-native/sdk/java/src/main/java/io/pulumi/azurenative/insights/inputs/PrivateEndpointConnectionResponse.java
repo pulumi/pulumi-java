@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A private endpoint connection
- */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
-    /**
-     * Azure resource Id
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,9 +23,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
-    /**
-     * Azure resource name
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -39,9 +30,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
-    /**
-     * Private endpoint which the connection belongs to.
-     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
@@ -49,9 +37,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
-    /**
-     * Connection state of the private endpoint connection.
-     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
@@ -59,9 +44,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
-    /**
-     * State of the private endpoint connection.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -69,9 +51,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
-    /**
-     * Azure resource type
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

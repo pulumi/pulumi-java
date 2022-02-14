@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetArtifactSourceArgs Empty = new GetArtifactSourceArgs();
 
-    /**
-     * The name of the artifact source.
-     */
     @InputImport(name="artifactSourceName", required=true)
     private final String artifactSourceName;
 
@@ -25,9 +19,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
         return this.artifactSourceName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

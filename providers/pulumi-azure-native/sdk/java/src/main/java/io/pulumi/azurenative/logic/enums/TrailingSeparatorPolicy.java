@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The trailing separator policy.
- */
     @EnumType
     public enum TrailingSeparatorPolicy {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         NotAllowed("NotAllowed"),
-/**
- * 
- */
         Optional("Optional"),
-/**
- * 
- */
         Mandatory("Mandatory");
 
         private final String value;

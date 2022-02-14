@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The mode of client authentication.
- */
     @EnumType
     public enum AuthenticationMethod {
-/**
- * 
- */
         Token("Token"),
-/**
- * 
- */
         AAD("AAD");
 
         private final String value;

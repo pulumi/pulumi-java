@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Format of message.
- */
     @EnumType
     public enum GoogleCloudDialogflowV2NotificationConfigMessageFormat {
-/**
- * If it is unspecified, PROTO will be used.
- */
         MessageFormatUnspecified("MESSAGE_FORMAT_UNSPECIFIED"),
-/**
- * Pub/Sub message will be serialized proto.
- */
         Proto("PROTO"),
-/**
- * Pub/Sub message will be json.
- */
         Json("JSON");
 
         private final String value;

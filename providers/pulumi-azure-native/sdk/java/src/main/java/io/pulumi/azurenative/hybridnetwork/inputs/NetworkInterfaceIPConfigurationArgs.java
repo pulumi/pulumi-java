@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Network interface IP configuration properties.
- */
 public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceIPConfigurationArgs Empty = new NetworkInterfaceIPConfigurationArgs();
 
-    /**
-     * The list of DNS servers IP addresses.
-     */
     @InputImport(name="dnsServers")
     private final @Nullable Input<List<String>> dnsServers;
 
@@ -31,9 +25,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
     }
 
-    /**
-     * The value of the gateway.
-     */
     @InputImport(name="gateway")
     private final @Nullable Input<String> gateway;
 
@@ -41,9 +32,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
         return this.gateway == null ? Input.empty() : this.gateway;
     }
 
-    /**
-     * The value of the IP address.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -51,9 +39,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * IP address allocation method.
-     */
     @InputImport(name="ipAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> ipAllocationMethod;
 
@@ -61,9 +46,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
         return this.ipAllocationMethod == null ? Input.empty() : this.ipAllocationMethod;
     }
 
-    /**
-     * IP address version.
-     */
     @InputImport(name="ipVersion")
     private final @Nullable Input<Either<String,IPVersion>> ipVersion;
 
@@ -71,9 +53,6 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
         return this.ipVersion == null ? Input.empty() : this.ipVersion;
     }
 
-    /**
-     * The value of the subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<String> subnet;
 

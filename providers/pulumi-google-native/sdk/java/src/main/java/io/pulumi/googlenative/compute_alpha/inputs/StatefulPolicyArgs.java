@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatefulPolicyArgs Empty = new StatefulPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="preservedState")
     private final @Nullable Input<StatefulPolicyPreservedStateArgs> preservedState;
 

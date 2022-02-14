@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamingLocatorArgs Empty = new StreamingLocatorArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.accountName;
     }
 
-    /**
-     * Alternative Media ID of this Streaming Locator
-     */
     @InputImport(name="alternativeMediaId")
     private final @Nullable Input<String> alternativeMediaId;
 
@@ -39,9 +30,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.alternativeMediaId == null ? Input.empty() : this.alternativeMediaId;
     }
 
-    /**
-     * Asset Name
-     */
     @InputImport(name="assetName", required=true)
     private final Input<String> assetName;
 
@@ -49,9 +37,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.assetName;
     }
 
-    /**
-     * The ContentKeys used by this Streaming Locator.
-     */
     @InputImport(name="contentKeys")
     private final @Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys;
 
@@ -59,9 +44,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.contentKeys == null ? Input.empty() : this.contentKeys;
     }
 
-    /**
-     * Name of the default ContentKeyPolicy used by this Streaming Locator.
-     */
     @InputImport(name="defaultContentKeyPolicyName")
     private final @Nullable Input<String> defaultContentKeyPolicyName;
 
@@ -69,9 +51,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.defaultContentKeyPolicyName == null ? Input.empty() : this.defaultContentKeyPolicyName;
     }
 
-    /**
-     * The end time of the Streaming Locator.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -79,9 +58,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * A list of asset or account filters which apply to this streaming locator
-     */
     @InputImport(name="filters")
     private final @Nullable Input<List<String>> filters;
 
@@ -89,9 +65,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.filters == null ? Input.empty() : this.filters;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -99,9 +72,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The start time of the Streaming Locator.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -109,9 +79,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * The StreamingLocatorId of the Streaming Locator.
-     */
     @InputImport(name="streamingLocatorId")
     private final @Nullable Input<String> streamingLocatorId;
 
@@ -119,9 +86,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.streamingLocatorId == null ? Input.empty() : this.streamingLocatorId;
     }
 
-    /**
-     * The Streaming Locator name.
-     */
     @InputImport(name="streamingLocatorName")
     private final @Nullable Input<String> streamingLocatorName;
 
@@ -129,9 +93,6 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
         return this.streamingLocatorName == null ? Input.empty() : this.streamingLocatorName;
     }
 
-    /**
-     * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
-     */
     @InputImport(name="streamingPolicyName", required=true)
     private final Input<String> streamingPolicyName;
 

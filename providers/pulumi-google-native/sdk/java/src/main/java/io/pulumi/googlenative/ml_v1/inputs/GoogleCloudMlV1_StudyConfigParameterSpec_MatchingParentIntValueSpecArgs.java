@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents the spec to match integer values from parent parameter.
- */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs();
 
-    /**
-     * Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpokeArgs Empty = new SpokeArgs();
 
-    /**
-     * The time when the Spoke was created.
-     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -30,9 +24,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
-    /**
-     * Short description of the spoke resource
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The resource URL of the hub resource that the spoke is attached to
-     */
     @InputImport(name="hub")
     private final @Nullable Input<String> hub;
 
@@ -50,9 +38,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.hub == null ? Input.empty() : this.hub;
     }
 
-    /**
-     * User-defined labels.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -60,9 +45,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * The URIs of linked interconnect attachment resources
-     */
     @InputImport(name="linkedInterconnectAttachments")
     private final @Nullable Input<List<String>> linkedInterconnectAttachments;
 
@@ -70,9 +52,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedInterconnectAttachments == null ? Input.empty() : this.linkedInterconnectAttachments;
     }
 
-    /**
-     * The URIs of linked Router appliance resources
-     */
     @InputImport(name="linkedRouterApplianceInstances")
     private final @Nullable Input<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances;
 
@@ -80,9 +59,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedRouterApplianceInstances == null ? Input.empty() : this.linkedRouterApplianceInstances;
     }
 
-    /**
-     * The URIs of linked VPN tunnel resources
-     */
     @InputImport(name="linkedVpnTunnels")
     private final @Nullable Input<List<String>> linkedVpnTunnels;
 
@@ -90,9 +66,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedVpnTunnels == null ? Input.empty() : this.linkedVpnTunnels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -100,9 +73,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Immutable. The name of a Spoke resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -110,9 +80,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -120,9 +87,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -130,9 +94,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="spokeId")
     private final @Nullable Input<String> spokeId;
 
@@ -140,9 +101,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
         return this.spokeId == null ? Input.empty() : this.spokeId;
     }
 
-    /**
-     * The time when the Spoke was updated.
-     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

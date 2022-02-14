@@ -15,26 +15,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LongTermRetentionPolicyResponse {
-/**
- * Daily retention schedule of the protection policy.
- */
     private final @Nullable DailyRetentionScheduleResponse dailySchedule;
-/**
- * Monthly retention schedule of the protection policy.
- */
     private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'LongTermRetentionPolicy'.
- */
     private final String retentionPolicyType;
-/**
- * Weekly retention schedule of the protection policy.
- */
     private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
-/**
- * Yearly retention schedule of the protection policy.
- */
     private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
     @OutputCustomType.Constructor({"dailySchedule","monthlySchedule","retentionPolicyType","weeklySchedule","yearlySchedule"})
@@ -51,34 +35,18 @@ Expected value is 'LongTermRetentionPolicy'.
         this.yearlySchedule = yearlySchedule;
     }
 
-/**
- * Daily retention schedule of the protection policy.
- */
     public Optional<DailyRetentionScheduleResponse> getDailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
-/**
- * Monthly retention schedule of the protection policy.
- */
     public Optional<MonthlyRetentionScheduleResponse> getMonthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'LongTermRetentionPolicy'.
- */
     public String getRetentionPolicyType() {
         return this.retentionPolicyType;
     }
-/**
- * Weekly retention schedule of the protection policy.
- */
     public Optional<WeeklyRetentionScheduleResponse> getWeeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
-/**
- * Yearly retention schedule of the protection policy.
- */
     public Optional<YearlyRetentionScheduleResponse> getYearlySchedule() {
         return Optional.ofNullable(this.yearlySchedule);
     }

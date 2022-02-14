@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Security related configuration, including encryption, Kerberos, etc.
- */
 public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityConfigArgs Empty = new SecurityConfigArgs();
 
-    /**
-     * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
-     */
     @InputImport(name="identityConfig")
     private final @Nullable Input<IdentityConfigArgs> identityConfig;
 
@@ -28,9 +22,6 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityConfig == null ? Input.empty() : this.identityConfig;
     }
 
-    /**
-     * Optional. Kerberos related configuration.
-     */
     @InputImport(name="kerberosConfig")
     private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
 

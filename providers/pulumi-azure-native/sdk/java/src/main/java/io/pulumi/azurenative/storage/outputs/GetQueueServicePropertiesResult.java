@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetQueueServicePropertiesResult {
-/**
- * Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
- */
     private final @Nullable CorsRulesResponse cors;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"cors","id","name","type"})
@@ -41,27 +29,15 @@ public final class GetQueueServicePropertiesResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
- */
     public Optional<CorsRulesResponse> getCors() {
         return Optional.ofNullable(this.cors);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

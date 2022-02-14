@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Connection draining allows open connections to a backend server to be active for a specified time after the backend server got removed from the configuration.
- */
 public final class ApplicationGatewayConnectionDrainingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayConnectionDrainingResponse Empty = new ApplicationGatewayConnectionDrainingResponse();
 
-    /**
-     * The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
-     */
     @InputImport(name="drainTimeoutInSec", required=true)
     private final Integer drainTimeoutInSec;
 
@@ -26,9 +20,6 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
         return this.drainTimeoutInSec;
     }
 
-    /**
-     * Whether connection draining is enabled or not.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

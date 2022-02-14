@@ -15,16 +15,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A resource that manages a system package.
- */
 public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourcePackageResourceResponse Empty = new OSPolicyResourcePackageResourceResponse();
 
-    /**
-     * A package managed by Apt.
-     */
     @InputImport(name="apt", required=true)
     private final OSPolicyResourcePackageResourceAPTResponse apt;
 
@@ -32,9 +26,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.apt;
     }
 
-    /**
-     * A deb package file.
-     */
     @InputImport(name="deb", required=true)
     private final OSPolicyResourcePackageResourceDebResponse deb;
 
@@ -42,9 +33,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.deb;
     }
 
-    /**
-     * The desired state the agent should maintain for this package.
-     */
     @InputImport(name="desiredState", required=true)
     private final String desiredState;
 
@@ -52,9 +40,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.desiredState;
     }
 
-    /**
-     * A package managed by GooGet.
-     */
     @InputImport(name="googet", required=true)
     private final OSPolicyResourcePackageResourceGooGetResponse googet;
 
@@ -62,9 +47,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.googet;
     }
 
-    /**
-     * An MSI package.
-     */
     @InputImport(name="msi", required=true)
     private final OSPolicyResourcePackageResourceMSIResponse msi;
 
@@ -72,9 +54,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.msi;
     }
 
-    /**
-     * An rpm package file.
-     */
     @InputImport(name="rpm", required=true)
     private final OSPolicyResourcePackageResourceRPMResponse rpm;
 
@@ -82,9 +61,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.rpm;
     }
 
-    /**
-     * A package managed by YUM.
-     */
     @InputImport(name="yum", required=true)
     private final OSPolicyResourcePackageResourceYUMResponse yum;
 
@@ -92,9 +68,6 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
         return this.yum;
     }
 
-    /**
-     * A package managed by Zypper.
-     */
     @InputImport(name="zypper", required=true)
     private final OSPolicyResourcePackageResourceZypperResponse zypper;
 

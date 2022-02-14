@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
- */
 public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicScalingArgs Empty = new BasicScalingArgs();
 
-    /**
-     * Duration of time after the last request that an instance must wait before the instance is shut down.
-     */
     @InputImport(name="idleTimeout")
     private final @Nullable Input<String> idleTimeout;
 
@@ -28,9 +22,6 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
     }
 
-    /**
-     * Maximum number of instances to create for this version.
-     */
     @InputImport(name="maxInstances")
     private final @Nullable Input<Integer> maxInstances;
 

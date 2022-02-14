@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The configuration for the parser. It determines how the server parses the messages.
- */
 public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParserConfigResponse Empty = new ParserConfigResponse();
 
-    /**
-     * Determines whether messages with no header are allowed.
-     */
     @InputImport(name="allowNullHeader", required=true)
     private final Boolean allowNullHeader;
 
@@ -27,9 +21,6 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowNullHeader;
     }
 
-    /**
-     * Schemas used to parse messages in this store, if schematized parsing is desired.
-     */
     @InputImport(name="schema", required=true)
     private final SchemaPackageResponse schema;
 
@@ -37,9 +28,6 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.schema;
     }
 
-    /**
-     * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
-     */
     @InputImport(name="segmentTerminator", required=true)
     private final String segmentTerminator;
 
@@ -47,9 +35,6 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.segmentTerminator;
     }
 
-    /**
-     * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

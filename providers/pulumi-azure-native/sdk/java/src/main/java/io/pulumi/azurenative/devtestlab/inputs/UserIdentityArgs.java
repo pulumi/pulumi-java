@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity attributes of a lab user.
- */
 public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserIdentityArgs Empty = new UserIdentityArgs();
 
-    /**
-     * Set to the app Id of the client JWT making the request.
-     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -27,9 +21,6 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
-    /**
-     * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -37,9 +28,6 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
-    /**
-     * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -47,9 +35,6 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * Set to the principal name / UPN of the client JWT making the request.
-     */
     @InputImport(name="principalName")
     private final @Nullable Input<String> principalName;
 
@@ -57,9 +42,6 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalName == null ? Input.empty() : this.principalName;
     }
 
-    /**
-     * Set to the tenant ID of the client JWT making the request.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

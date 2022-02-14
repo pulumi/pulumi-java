@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Windows Update represents the metadata about the update for the Windows operating system. The fields in this message come from the Windows Update API documented at https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
- */
 public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsUpdateArgs Empty = new WindowsUpdateArgs();
 
-    /**
-     * The list of categories to which the update belongs.
-     */
     @InputImport(name="categories")
     private final @Nullable Input<List<CategoryArgs>> categories;
 
@@ -30,9 +24,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
         return this.categories == null ? Input.empty() : this.categories;
     }
 
-    /**
-     * The localized description of the update.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Required - The unique identifier for the update.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -50,9 +38,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The Microsoft Knowledge Base article IDs that are associated with the update.
-     */
     @InputImport(name="kbArticleIds")
     private final @Nullable Input<List<String>> kbArticleIds;
 
@@ -60,9 +45,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
         return this.kbArticleIds == null ? Input.empty() : this.kbArticleIds;
     }
 
-    /**
-     * The last published timestamp of the update.
-     */
     @InputImport(name="lastPublishedTimestamp")
     private final @Nullable Input<String> lastPublishedTimestamp;
 
@@ -70,9 +52,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastPublishedTimestamp == null ? Input.empty() : this.lastPublishedTimestamp;
     }
 
-    /**
-     * The hyperlink to the support information for the update.
-     */
     @InputImport(name="supportUrl")
     private final @Nullable Input<String> supportUrl;
 
@@ -80,9 +59,6 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
         return this.supportUrl == null ? Input.empty() : this.supportUrl;
     }
 
-    /**
-     * The localized title of the update.
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

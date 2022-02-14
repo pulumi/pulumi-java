@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents the SKU name and Azure pricing tier for PowerBI Dedicated capacity resource.
- */
 public final class CapacitySkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapacitySkuResponse Empty = new CapacitySkuResponse();
 
-    /**
-     * The capacity of the SKU.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class CapacitySkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Name of the SKU level.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,9 +29,6 @@ public final class CapacitySkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The name of the Azure pricing tier to which the SKU applies.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

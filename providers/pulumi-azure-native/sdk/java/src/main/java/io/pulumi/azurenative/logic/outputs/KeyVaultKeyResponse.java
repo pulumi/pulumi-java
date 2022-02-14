@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyVaultKeyResponse {
-/**
- * The key attributes.
- */
     private final @Nullable KeyVaultKeyResponseAttributes attributes;
-/**
- * The key id.
- */
     private final @Nullable String kid;
 
     @OutputCustomType.Constructor({"attributes","kid"})
@@ -29,15 +23,9 @@ public final class KeyVaultKeyResponse {
         this.kid = kid;
     }
 
-/**
- * The key attributes.
- */
     public Optional<KeyVaultKeyResponseAttributes> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
-/**
- * The key id.
- */
     public Optional<String> getKid() {
         return Optional.ofNullable(this.kid);
     }

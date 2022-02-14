@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListAppServicePlanHybridConnectionKeysArgs Empty = new ListAppServicePlanHybridConnectionKeysArgs();
 
-    /**
-     * Name of the App Service plan.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
         return this.name;
     }
 
-    /**
-     * The name of the Service Bus namespace.
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -35,9 +26,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
         return this.namespaceName;
     }
 
-    /**
-     * The name of the Service Bus relay.
-     */
     @InputImport(name="relayName", required=true)
     private final String relayName;
 
@@ -45,9 +33,6 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
         return this.relayName;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

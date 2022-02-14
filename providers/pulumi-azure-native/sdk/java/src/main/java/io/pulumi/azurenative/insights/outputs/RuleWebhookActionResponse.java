@@ -12,18 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuleWebhookActionResponse {
-/**
- * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
- */
     private final String odataType;
-/**
- * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
- */
     private final @Nullable Map<String,String> properties;
-/**
- * the service uri to Post the notification when the alert activates or resolves.
- */
     private final @Nullable String serviceUri;
 
     @OutputCustomType.Constructor({"odataType","properties","serviceUri"})
@@ -36,22 +26,12 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'
         this.serviceUri = serviceUri;
     }
 
-/**
- * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
- */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * the service uri to Post the notification when the alert activates or resolves.
- */
     public Optional<String> getServiceUri() {
         return Optional.ofNullable(this.serviceUri);
     }

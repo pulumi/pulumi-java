@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A container instance.
- */
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 
-    /**
-     * The commands to execute within the container instance in exec form.
-     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -33,9 +27,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.command == null ? Input.empty() : this.command;
     }
 
-    /**
-     * The environment variables to set in the container instance.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
@@ -43,9 +34,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
-    /**
-     * The name of the image used to create the container instance.
-     */
     @InputImport(name="image", required=true)
     private final Input<String> image;
 
@@ -53,9 +41,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.image;
     }
 
-    /**
-     * The liveness probe.
-     */
     @InputImport(name="livenessProbe")
     private final @Nullable Input<ContainerProbeArgs> livenessProbe;
 
@@ -63,9 +48,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
     }
 
-    /**
-     * The user-provided name of the container instance.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -73,9 +55,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The exposed ports on the container instance.
-     */
     @InputImport(name="ports")
     private final @Nullable Input<List<ContainerPortArgs>> ports;
 
@@ -83,9 +62,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.ports == null ? Input.empty() : this.ports;
     }
 
-    /**
-     * The readiness probe.
-     */
     @InputImport(name="readinessProbe")
     private final @Nullable Input<ContainerProbeArgs> readinessProbe;
 
@@ -93,9 +69,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
     }
 
-    /**
-     * The resource requirements of the container instance.
-     */
     @InputImport(name="resources", required=true)
     private final Input<ResourceRequirementsArgs> resources;
 
@@ -103,9 +76,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resources;
     }
 
-    /**
-     * The volume mounts available to the container instance.
-     */
     @InputImport(name="volumeMounts")
     private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 

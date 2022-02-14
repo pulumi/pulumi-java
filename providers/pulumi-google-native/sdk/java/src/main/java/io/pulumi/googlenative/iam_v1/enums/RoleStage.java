@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
- */
     @EnumType
     public enum RoleStage {
-/**
- * The user has indicated this role is currently in an Alpha phase. If this launch stage is selected, the `stage` field will not be included when requesting the definition for a given role.
- */
         Alpha("ALPHA"),
-/**
- * The user has indicated this role is currently in a Beta phase.
- */
         Beta("BETA"),
-/**
- * The user has indicated this role is generally available.
- */
         Ga("GA"),
-/**
- * The user has indicated this role is being deprecated.
- */
         Deprecated("DEPRECATED"),
-/**
- * This role is disabled and will not contribute permissions to any principals it is granted to in policies.
- */
         Disabled("DISABLED"),
-/**
- * The user has indicated this role is currently in an EAP phase.
- */
         Eap("EAP");
 
         private final String value;

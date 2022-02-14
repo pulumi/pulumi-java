@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ToolResultsStepResponse {
-/**
- * A tool results execution ID.
- */
     private final String executionId;
-/**
- * A tool results history ID.
- */
     private final String historyId;
-/**
- * The cloud project that owns the tool results step.
- */
     private final String project;
-/**
- * A tool results step ID.
- */
     private final String stepId;
 
     @OutputCustomType.Constructor({"executionId","historyId","project","stepId"})
@@ -38,27 +26,15 @@ public final class ToolResultsStepResponse {
         this.stepId = Objects.requireNonNull(stepId);
     }
 
-/**
- * A tool results execution ID.
- */
     public String getExecutionId() {
         return this.executionId;
     }
-/**
- * A tool results history ID.
- */
     public String getHistoryId() {
         return this.historyId;
     }
-/**
- * The cloud project that owns the tool results step.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * A tool results step ID.
- */
     public String getStepId() {
         return this.stepId;
     }

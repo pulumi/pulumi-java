@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * JIT approver definition.
- */
 public final class JitApproverDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitApproverDefinitionArgs Empty = new JitApproverDefinitionArgs();
 
-    /**
-     * The approver display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,9 +23,6 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The approver service principal Id.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -39,9 +30,6 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
         return this.id;
     }
 
-    /**
-     * The approver type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,JitApproverType>> type;
 

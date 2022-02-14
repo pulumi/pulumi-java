@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Function activity.
- */
 public final class AzureFunctionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFunctionActivityResponse Empty = new AzureFunctionActivityResponse();
 
-    /**
-     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-     */
     @InputImport(name="body")
     private final @Nullable Object body;
 
@@ -33,9 +27,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -43,9 +34,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -53,9 +41,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="functionName", required=true)
     private final Object functionName;
 
@@ -63,9 +48,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.functionName;
     }
 
-    /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="headers")
     private final @Nullable Object headers;
 
@@ -73,9 +55,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.headers == null ? Optional.empty() : Optional.ofNullable(this.headers);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -83,9 +62,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
-    /**
-     * Rest API method for target endpoint.
-     */
     @InputImport(name="method", required=true)
     private final String method;
 
@@ -93,9 +69,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.method;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -103,9 +76,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -113,10 +83,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
-    /**
-     * Type of activity.
-Expected value is 'AzureFunctionActivity'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -124,9 +90,6 @@ Expected value is 'AzureFunctionActivity'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerRegistryCredentialsResponse {
-/**
- * The ACR login server name. User name is the first part of the FQDN.
- */
     private final String loginServer;
-/**
- * The ACR primary password.
- */
     private final String password;
-/**
- * The ACR secondary password.
- */
     private final String password2;
-/**
- * The ACR login username.
- */
     private final String username;
 
     @OutputCustomType.Constructor({"loginServer","password","password2","username"})
@@ -38,27 +26,15 @@ public final class ContainerRegistryCredentialsResponse {
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * The ACR login server name. User name is the first part of the FQDN.
- */
     public String getLoginServer() {
         return this.loginServer;
     }
-/**
- * The ACR primary password.
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * The ACR secondary password.
- */
     public String getPassword2() {
         return this.password2;
     }
-/**
- * The ACR login username.
- */
     public String getUsername() {
         return this.username;
     }

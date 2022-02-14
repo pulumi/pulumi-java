@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.
- */
     @EnumType
     public enum EntropyMode {
-/**
- * Context Adaptive Binary Arithmetic Coder (CABAC) entropy encoding.
- */
         Cabac("Cabac"),
-/**
- * Context Adaptive Variable Length Coder (CAVLC) entropy encoding.
- */
         Cavlc("Cavlc");
 
         private final String value;

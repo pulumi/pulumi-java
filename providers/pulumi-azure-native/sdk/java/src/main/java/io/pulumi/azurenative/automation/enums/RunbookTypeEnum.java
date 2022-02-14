@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the type of the runbook.
- */
     @EnumType
     public enum RunbookTypeEnum {
-/**
- * 
- */
         Script("Script"),
-/**
- * 
- */
         Graph("Graph"),
-/**
- * 
- */
         PowerShellWorkflow("PowerShellWorkflow"),
-/**
- * 
- */
         PowerShell("PowerShell"),
-/**
- * 
- */
         GraphPowerShellWorkflow("GraphPowerShellWorkflow"),
-/**
- * 
- */
         GraphPowerShell("GraphPowerShell");
 
         private final String value;

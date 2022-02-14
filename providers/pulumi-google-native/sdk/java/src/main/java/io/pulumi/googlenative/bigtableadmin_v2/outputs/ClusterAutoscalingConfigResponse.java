@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterAutoscalingConfigResponse {
-/**
- * Autoscaling limits for this cluster.
- */
     private final AutoscalingLimitsResponse autoscalingLimits;
-/**
- * Autoscaling targets for this cluster.
- */
     private final AutoscalingTargetsResponse autoscalingTargets;
 
     @OutputCustomType.Constructor({"autoscalingLimits","autoscalingTargets"})
@@ -27,15 +21,9 @@ public final class ClusterAutoscalingConfigResponse {
         this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
     }
 
-/**
- * Autoscaling limits for this cluster.
- */
     public AutoscalingLimitsResponse getAutoscalingLimits() {
         return this.autoscalingLimits;
     }
-/**
- * Autoscaling targets for this cluster.
- */
     public AutoscalingTargetsResponse getAutoscalingTargets() {
         return this.autoscalingTargets;
     }

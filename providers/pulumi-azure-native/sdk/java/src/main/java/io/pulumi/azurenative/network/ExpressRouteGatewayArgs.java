@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteGatewayArgs Empty = new ExpressRouteGatewayArgs();
 
-    /**
-     * Configuration for auto scaling.
-     */
     @InputImport(name="autoScaleConfiguration")
     private final @Nullable Input<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration;
 
@@ -30,9 +24,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
         return this.autoScaleConfiguration == null ? Input.empty() : this.autoScaleConfiguration;
     }
 
-    /**
-     * The name of the ExpressRoute gateway.
-     */
     @InputImport(name="expressRouteGatewayName")
     private final @Nullable Input<String> expressRouteGatewayName;
 
@@ -40,9 +31,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
         return this.expressRouteGatewayName == null ? Input.empty() : this.expressRouteGatewayName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -50,9 +38,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,9 +45,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,9 +52,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -80,9 +59,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
-     */
     @InputImport(name="virtualHub", required=true)
     private final Input<VirtualHubIdArgs> virtualHub;
 

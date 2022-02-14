@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates whether audit logs are enabled on the connected registry.
- */
     @EnumType
     public enum AuditLogStatus {
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

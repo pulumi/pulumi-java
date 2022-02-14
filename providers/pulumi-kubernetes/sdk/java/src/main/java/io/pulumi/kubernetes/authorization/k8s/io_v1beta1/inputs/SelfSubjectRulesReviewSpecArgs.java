@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SelfSubjectRulesReviewSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SelfSubjectRulesReviewSpecArgs Empty = new SelfSubjectRulesReviewSpecArgs();
 
-    /**
-     * Namespace to evaluate rules for. Required.
-     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 

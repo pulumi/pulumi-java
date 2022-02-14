@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A RRSetRoutingPolicy represents ResourceRecordSet data that is returned dynamically with the response varying based on configured properties such as geolocation or by weighted random selection.
- */
 public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RRSetRoutingPolicyResponse Empty = new RRSetRoutingPolicyResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="geo", required=true)
     private final RRSetRoutingPolicyGeoPolicyResponse geo;
 
@@ -27,9 +21,6 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
         return this.geo;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="geoPolicy", required=true)
     private final RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
 
@@ -37,9 +28,6 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
         return this.geoPolicy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -47,9 +35,6 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
         return this.kind;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="wrr", required=true)
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
@@ -57,9 +42,6 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
         return this.wrr;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="wrrPolicy", required=true)
     private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 

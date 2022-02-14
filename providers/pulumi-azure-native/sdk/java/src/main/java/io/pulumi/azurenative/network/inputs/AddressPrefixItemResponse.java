@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Address prefix item.
- */
 public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AddressPrefixItemResponse Empty = new AddressPrefixItemResponse();
 
-    /**
-     * Address prefix.
-     */
     @InputImport(name="addressPrefix")
     private final @Nullable String addressPrefix;
 
@@ -27,9 +21,6 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
-    /**
-     * Address prefix type.
-     */
     @InputImport(name="addressPrefixType")
     private final @Nullable String addressPrefixType;
 

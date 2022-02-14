@@ -16,86 +16,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EffectiveDefaultSecurityAdminRuleResponse {
-/**
- * Indicates the access allowed for this particular rule
- */
     private final String access;
-/**
- * A description of the security admin configuration.
- */
     private final @Nullable String configurationDescription;
-/**
- * A display name of the security admin configuration.
- */
     private final @Nullable String configurationDisplayName;
-/**
- * A description for this rule. Restricted to 140 chars.
- */
     private final String description;
-/**
- * The destination port ranges.
- */
     private final List<String> destinationPortRanges;
-/**
- * The destination address prefixes. CIDR or destination IP ranges.
- */
     private final List<AddressPrefixItemResponse> destinations;
-/**
- * Indicates if the traffic matched against the rule in inbound or outbound.
- */
     private final String direction;
-/**
- * A friendly name for the rule.
- */
     private final String displayName;
-/**
- * Default rule flag.
- */
     private final @Nullable String flag;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Whether the rule is custom or default.
-Expected value is 'Default'.
- */
     private final String kind;
-/**
- * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
- */
     private final Integer priority;
-/**
- * Network protocol this rule applies to.
- */
     private final String protocol;
-/**
- * The provisioning state of the resource.
- */
     private final String provisioningState;
-/**
- * Groups for rule collection
- */
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
-/**
- * A description of the rule collection.
- */
     private final @Nullable String ruleCollectionDescription;
-/**
- * A display name of the rule collection.
- */
     private final @Nullable String ruleCollectionDisplayName;
-/**
- * Effective configuration groups.
- */
     private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
-/**
- * The source port ranges.
- */
     private final List<String> sourcePortRanges;
-/**
- * The CIDR or source IP ranges.
- */
     private final List<AddressPrefixItemResponse> sources;
 
     @OutputCustomType.Constructor({"access","configurationDescription","configurationDisplayName","description","destinationPortRanges","destinations","direction","displayName","flag","id","kind","priority","protocol","provisioningState","ruleCollectionAppliesToGroups","ruleCollectionDescription","ruleCollectionDisplayName","ruleGroups","sourcePortRanges","sources"})
@@ -142,124 +81,63 @@ Expected value is 'Default'.
         this.sources = Objects.requireNonNull(sources);
     }
 
-/**
- * Indicates the access allowed for this particular rule
- */
     public String getAccess() {
         return this.access;
     }
-/**
- * A description of the security admin configuration.
- */
     public Optional<String> getConfigurationDescription() {
         return Optional.ofNullable(this.configurationDescription);
     }
-/**
- * A display name of the security admin configuration.
- */
     public Optional<String> getConfigurationDisplayName() {
         return Optional.ofNullable(this.configurationDisplayName);
     }
-/**
- * A description for this rule. Restricted to 140 chars.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The destination port ranges.
- */
     public List<String> getDestinationPortRanges() {
         return this.destinationPortRanges;
     }
-/**
- * The destination address prefixes. CIDR or destination IP ranges.
- */
     public List<AddressPrefixItemResponse> getDestinations() {
         return this.destinations;
     }
-/**
- * Indicates if the traffic matched against the rule in inbound or outbound.
- */
     public String getDirection() {
         return this.direction;
     }
-/**
- * A friendly name for the rule.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Default rule flag.
- */
     public Optional<String> getFlag() {
         return Optional.ofNullable(this.flag);
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Whether the rule is custom or default.
-Expected value is 'Default'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
- */
     public Integer getPriority() {
         return this.priority;
     }
-/**
- * Network protocol this rule applies to.
- */
     public String getProtocol() {
         return this.protocol;
     }
-/**
- * The provisioning state of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Groups for rule collection
- */
     public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
-/**
- * A description of the rule collection.
- */
     public Optional<String> getRuleCollectionDescription() {
         return Optional.ofNullable(this.ruleCollectionDescription);
     }
-/**
- * A display name of the rule collection.
- */
     public Optional<String> getRuleCollectionDisplayName() {
         return Optional.ofNullable(this.ruleCollectionDisplayName);
     }
-/**
- * Effective configuration groups.
- */
     public List<ConfigurationGroupResponse> getRuleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
-/**
- * The source port ranges.
- */
     public List<String> getSourcePortRanges() {
         return this.sourcePortRanges;
     }
-/**
- * The CIDR or source IP ranges.
- */
     public List<AddressPrefixItemResponse> getSources() {
         return this.sources;
     }

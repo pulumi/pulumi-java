@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenShiftManagedClusterAuthProfileResponse {
-/**
- * Type of authentication profile to use.
- */
     private final @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;
 
     @OutputCustomType.Constructor({"identityProviders"})
@@ -21,9 +18,6 @@ public final class OpenShiftManagedClusterAuthProfileResponse {
         this.identityProviders = identityProviders;
     }
 
-/**
- * Type of authentication profile to use.
- */
     public List<OpenShiftManagedClusterIdentityProviderResponse> getIdentityProviders() {
         return this.identityProviders == null ? List.of() : this.identityProviders;
     }

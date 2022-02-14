@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The event for a webhook.
- */
 public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventResponse Empty = new EventResponse();
 
-    /**
-     * The event request message sent to the service URI.
-     */
     @InputImport(name="eventRequestMessage")
     private final @Nullable EventRequestMessageResponse eventRequestMessage;
 
@@ -29,9 +23,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
         return this.eventRequestMessage == null ? Optional.empty() : Optional.ofNullable(this.eventRequestMessage);
     }
 
-    /**
-     * The event response message received from the service URI.
-     */
     @InputImport(name="eventResponseMessage")
     private final @Nullable EventResponseMessageResponse eventResponseMessage;
 
@@ -39,9 +30,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
         return this.eventResponseMessage == null ? Optional.empty() : Optional.ofNullable(this.eventResponseMessage);
     }
 
-    /**
-     * The event ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

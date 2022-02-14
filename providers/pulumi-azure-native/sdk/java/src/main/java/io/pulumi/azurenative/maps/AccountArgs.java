@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * The name of the Maps Account.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,9 +30,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the Azure Resource Group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The SKU of this account.
-     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -59,9 +44,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
-    /**
-     * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

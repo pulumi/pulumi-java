@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB Cassandra table cluster key
- */
 public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterKeyResponse Empty = new ClusterKeyResponse();
 
-    /**
-     * Name of the Cosmos DB Cassandra table cluster key
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
-     */
     @InputImport(name="orderBy")
     private final @Nullable String orderBy;
 

@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoadBalancerIngress {
-/**
- * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
- */
     private final @Nullable String hostname;
-/**
- * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
- */
     private final @Nullable String ip;
-/**
- * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
- */
     private final @Nullable List<PortStatus> ports;
 
     @OutputCustomType.Constructor({"hostname","ip","ports"})
@@ -36,21 +27,12 @@ public final class LoadBalancerIngress {
         this.ports = ports;
     }
 
-/**
- * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
- */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
-/**
- * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
- */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
-/**
- * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
- */
     public List<PortStatus> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }

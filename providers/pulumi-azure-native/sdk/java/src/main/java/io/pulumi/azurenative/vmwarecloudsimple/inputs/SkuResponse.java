@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The purchase SKU for CloudSimple paid resources
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * The capacity of the SKU
-     */
     @InputImport(name="capacity")
     private final @Nullable String capacity;
 
@@ -27,9 +21,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -37,9 +28,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * If the service has different generations of hardware, for the same SKU, then that can be captured here
-     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -47,9 +35,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
-    /**
-     * The name of the SKU for VMWare CloudSimple Node
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -57,9 +42,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The tier of the SKU
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

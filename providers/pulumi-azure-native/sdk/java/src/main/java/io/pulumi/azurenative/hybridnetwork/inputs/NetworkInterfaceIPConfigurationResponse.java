@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Network interface IP configuration properties.
- */
 public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceIPConfigurationResponse Empty = new NetworkInterfaceIPConfigurationResponse();
 
-    /**
-     * The list of DNS servers IP addresses.
-     */
     @InputImport(name="dnsServers")
     private final @Nullable List<String> dnsServers;
 
@@ -28,9 +22,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
-    /**
-     * The value of the gateway.
-     */
     @InputImport(name="gateway")
     private final @Nullable String gateway;
 
@@ -38,9 +29,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
         return this.gateway == null ? Optional.empty() : Optional.ofNullable(this.gateway);
     }
 
-    /**
-     * The value of the IP address.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -48,9 +36,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
-    /**
-     * IP address allocation method.
-     */
     @InputImport(name="ipAllocationMethod")
     private final @Nullable String ipAllocationMethod;
 
@@ -58,9 +43,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
         return this.ipAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.ipAllocationMethod);
     }
 
-    /**
-     * IP address version.
-     */
     @InputImport(name="ipVersion")
     private final @Nullable String ipVersion;
 
@@ -68,9 +50,6 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
         return this.ipVersion == null ? Optional.empty() : Optional.ofNullable(this.ipVersion);
     }
 
-    /**
-     * The value of the subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable String subnet;
 

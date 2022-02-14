@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Build properties for the static site.
- */
 public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticSiteBuildPropertiesResponse Empty = new StaticSiteBuildPropertiesResponse();
 
-    /**
-     * A custom command to run during deployment of the Azure Functions API application.
-     */
     @InputImport(name="apiBuildCommand")
     private final @Nullable String apiBuildCommand;
 
@@ -28,9 +22,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.apiBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.apiBuildCommand);
     }
 
-    /**
-     * The path to the api code within the repository.
-     */
     @InputImport(name="apiLocation")
     private final @Nullable String apiLocation;
 
@@ -38,9 +29,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.apiLocation == null ? Optional.empty() : Optional.ofNullable(this.apiLocation);
     }
 
-    /**
-     * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
-     */
     @InputImport(name="appArtifactLocation")
     private final @Nullable String appArtifactLocation;
 
@@ -48,9 +36,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.appArtifactLocation == null ? Optional.empty() : Optional.ofNullable(this.appArtifactLocation);
     }
 
-    /**
-     * A custom command to run during deployment of the static content application.
-     */
     @InputImport(name="appBuildCommand")
     private final @Nullable String appBuildCommand;
 
@@ -58,9 +43,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.appBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.appBuildCommand);
     }
 
-    /**
-     * The path to the app code within the repository.
-     */
     @InputImport(name="appLocation")
     private final @Nullable String appLocation;
 
@@ -68,9 +50,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.appLocation == null ? Optional.empty() : Optional.ofNullable(this.appLocation);
     }
 
-    /**
-     * Github Action secret name override.
-     */
     @InputImport(name="githubActionSecretNameOverride")
     private final @Nullable String githubActionSecretNameOverride;
 
@@ -78,9 +57,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.githubActionSecretNameOverride == null ? Optional.empty() : Optional.ofNullable(this.githubActionSecretNameOverride);
     }
 
-    /**
-     * The output path of the app after building.
-     */
     @InputImport(name="outputLocation")
     private final @Nullable String outputLocation;
 
@@ -88,9 +64,6 @@ public final class StaticSiteBuildPropertiesResponse extends io.pulumi.resources
         return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
     }
 
-    /**
-     * Skip Github Action workflow generation.
-     */
     @InputImport(name="skipGithubActionWorkflowGeneration")
     private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 

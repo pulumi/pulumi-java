@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum CVSSScope {
-/**
- * 
- */
         ScopeUnspecified("SCOPE_UNSPECIFIED"),
-/**
- * 
- */
         ScopeUnchanged("SCOPE_UNCHANGED"),
-/**
- * 
- */
         ScopeChanged("SCOPE_CHANGED");
 
         private final String value;

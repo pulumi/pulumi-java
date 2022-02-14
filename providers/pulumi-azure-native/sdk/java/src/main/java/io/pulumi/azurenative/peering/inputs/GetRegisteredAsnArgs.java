@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegisteredAsnArgs Empty = new GetRegisteredAsnArgs();
 
-    /**
-     * The name of the peering.
-     */
     @InputImport(name="peeringName", required=true)
     private final String peeringName;
 
@@ -25,9 +19,6 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
         return this.peeringName;
     }
 
-    /**
-     * The name of the registered ASN.
-     */
     @InputImport(name="registeredAsnName", required=true)
     private final String registeredAsnName;
 
@@ -35,9 +26,6 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
         return this.registeredAsnName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Enumerates the possible value of keySource for Encryption
- */
     @EnumType
     public enum KeySource {
-/**
- * 
- */
         Microsoft_CognitiveServices("Microsoft.CognitiveServices"),
-/**
- * 
- */
         Microsoft_KeyVault("Microsoft.KeyVault");
 
         private final String value;

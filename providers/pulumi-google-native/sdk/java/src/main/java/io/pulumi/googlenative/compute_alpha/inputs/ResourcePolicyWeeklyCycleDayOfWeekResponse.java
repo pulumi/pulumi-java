@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyWeeklyCycleDayOfWeekResponse Empty = new ResourcePolicyWeeklyCycleDayOfWeekResponse();
 
-    /**
-     * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
-     */
     @InputImport(name="day", required=true)
     private final String day;
 
@@ -25,9 +19,6 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.
         return this.day;
     }
 
-    /**
-     * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
-     */
     @InputImport(name="duration", required=true)
     private final String duration;
 
@@ -35,9 +26,6 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends io.pulumi.
         return this.duration;
     }
 
-    /**
-     * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

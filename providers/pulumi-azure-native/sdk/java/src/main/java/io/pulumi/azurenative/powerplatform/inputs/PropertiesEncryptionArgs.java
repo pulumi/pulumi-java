@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The encryption settings for a configuration store.
- */
 public final class PropertiesEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PropertiesEncryptionArgs Empty = new PropertiesEncryptionArgs();
 
-    /**
-     * Key vault properties.
-     */
     @InputImport(name="keyVault")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVault;
 
@@ -30,9 +24,6 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
         return this.keyVault == null ? Input.empty() : this.keyVault;
     }
 
-    /**
-     * The state of onboarding, which only appears in the response.
-     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,State>> state;
 

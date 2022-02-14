@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HcxEnterpriseSiteArgs Empty = new HcxEnterpriseSiteArgs();
 
-    /**
-     * Name of the HCX Enterprise Site in the private cloud
-     */
     @InputImport(name="hcxEnterpriseSiteName")
     private final @Nullable Input<String> hcxEnterpriseSiteName;
 
@@ -27,9 +21,6 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
         return this.hcxEnterpriseSiteName == null ? Input.empty() : this.hcxEnterpriseSiteName;
     }
 
-    /**
-     * The name of the private cloud.
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -37,9 +28,6 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJitNetworkAccessPolicyArgs Empty = new GetJitNetworkAccessPolicyArgs();
 
-    /**
-     * The location where ASC stores the data of the subscription. can be retrieved from Get locations
-     */
     @InputImport(name="ascLocation", required=true)
     private final String ascLocation;
 
@@ -25,9 +19,6 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
         return this.ascLocation;
     }
 
-    /**
-     * Name of a Just-in-Time access configuration policy.
-     */
     @InputImport(name="jitNetworkAccessPolicyName", required=true)
     private final String jitNetworkAccessPolicyName;
 
@@ -35,9 +26,6 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
         return this.jitNetworkAccessPolicyName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

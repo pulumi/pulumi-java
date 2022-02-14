@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StepResponse {
-/**
- * List of branches.
- */
     private final List<BranchResponse> branches;
-/**
- * String of the step name.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"branches","name"})
@@ -28,15 +22,9 @@ public final class StepResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * List of branches.
- */
     public List<BranchResponse> getBranches() {
         return this.branches;
     }
-/**
- * String of the step name.
- */
     public String getName() {
         return this.name;
     }

@@ -14,22 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureRetentionRuleResponse {
-/**
- * 
- */
     private final @Nullable Boolean isDefault;
-/**
- * 
- */
     private final List<SourceLifeCycleResponse> lifecycles;
-/**
- * 
- */
     private final String name;
-/**
- * 
-Expected value is 'AzureRetentionRule'.
- */
     private final String objectType;
 
     @OutputCustomType.Constructor({"isDefault","lifecycles","name","objectType"})
@@ -44,28 +31,15 @@ Expected value is 'AzureRetentionRule'.
         this.objectType = Objects.requireNonNull(objectType);
     }
 
-/**
- * 
- */
     public Optional<Boolean> getIsDefault() {
         return Optional.ofNullable(this.isDefault);
     }
-/**
- * 
- */
     public List<SourceLifeCycleResponse> getLifecycles() {
         return this.lifecycles;
     }
-/**
- * 
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
-Expected value is 'AzureRetentionRule'.
- */
     public String getObjectType() {
         return this.objectType;
     }

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStep {
-/**
- * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
- */
     public static CompletableFuture<GetStepResult> invokeAsync(GetStepArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getStep", TypeShape.of(GetStepResult.class), args == null ? GetStepArgs.Empty : args, Utilities.withVersion(options));
     }

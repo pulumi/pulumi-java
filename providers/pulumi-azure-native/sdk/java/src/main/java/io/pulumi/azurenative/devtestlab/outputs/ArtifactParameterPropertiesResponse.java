@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ArtifactParameterPropertiesResponse {
-/**
- * The name of the artifact parameter.
- */
     private final @Nullable String name;
-/**
- * The value of the artifact parameter.
- */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -28,15 +22,9 @@ public final class ArtifactParameterPropertiesResponse {
         this.value = value;
     }
 
-/**
- * The name of the artifact parameter.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The value of the artifact parameter.
- */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

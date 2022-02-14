@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a selector for extracting and matching an MSH field to a value.
- */
 public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VersionSourceArgs Empty = new VersionSourceArgs();
 
-    /**
-     * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
-     */
     @InputImport(name="mshField")
     private final @Nullable Input<String> mshField;
 
@@ -27,9 +21,6 @@ public final class VersionSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.mshField == null ? Input.empty() : this.mshField;
     }
 
-    /**
-     * The value to match with the field. For example, "My Application Name" or "2.3".
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

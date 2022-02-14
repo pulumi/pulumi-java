@@ -16,188 +16,39 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Deployment information.
-API Version: 2021-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a deployment that will deploy a templateSpec with the given resourceId
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var deploymentAtSubscriptionScope = new AzureNative.Resources.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope", new AzureNative.Resources.DeploymentAtSubscriptionScopeArgs
-        {
-            DeploymentName = "my-deployment",
-            Location = "eastus",
-            Properties = new AzureNative.Resources.Inputs.DeploymentPropertiesArgs
-            {
-                Mode = "Incremental",
-                Parameters = ,
-                TemplateLink = new AzureNative.Resources.Inputs.TemplateLinkArgs
-                {
-                    Id = "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewDeploymentAtSubscriptionScope(ctx, "deploymentAtSubscriptionScope", &resources.DeploymentAtSubscriptionScopeArgs{
-			DeploymentName: pulumi.String("my-deployment"),
-			Location:       pulumi.String("eastus"),
-			Properties: &resources.DeploymentPropertiesArgs{
-				Mode:       "Incremental",
-				Parameters: nil,
-				TemplateLink: &resources.TemplateLinkArgs{
-					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const deploymentAtSubscriptionScope = new azure_native.resources.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope", {
-    deploymentName: "my-deployment",
-    location: "eastus",
-    properties: {
-        mode: "Incremental",
-        parameters: {},
-        templateLink: {
-            id: "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
-        },
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-deployment_at_subscription_scope = azure_native.resources.DeploymentAtSubscriptionScope("deploymentAtSubscriptionScope",
-    deployment_name="my-deployment",
-    location="eastus",
-    properties=azure_native.resources.DeploymentPropertiesArgs(
-        mode="Incremental",
-        parameters={},
-        template_link=azure_native.resources.TemplateLinkArgs(
-            id="/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/my-resource-group/providers/Microsoft.Resources/TemplateSpecs/TemplateSpec-Name/versions/v1",
-        ),
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:resources:DeploymentAtSubscriptionScope my-deployment /subscriptions/00000000-0000-0000-0000-000000000001/providers/Microsoft.Resources/deployments/my-deployment 
-```
-
- */
 @ResourceType(type="azure-native:resources:DeploymentAtSubscriptionScope")
 public class DeploymentAtSubscriptionScope extends io.pulumi.resources.CustomResource {
-    /**
-     * the location of the deployment.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return the location of the deployment.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the deployment.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the deployment.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Deployment properties.
-     */
     @OutputExport(name="properties", type=DeploymentPropertiesExtendedResponse.class, parameters={})
     private Output<DeploymentPropertiesExtendedResponse> properties;
 
-    /**
-     * @return Deployment properties.
-     */
     public Output<DeploymentPropertiesExtendedResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Deployment tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Deployment tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the deployment.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the deployment.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DeploymentAtSubscriptionScope(String name, DeploymentAtSubscriptionScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:DeploymentAtSubscriptionScope", name, args == null ? DeploymentAtSubscriptionScopeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -227,14 +78,6 @@ public class DeploymentAtSubscriptionScope extends io.pulumi.resources.CustomRes
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DeploymentAtSubscriptionScope get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeploymentAtSubscriptionScope(name, id, options);
     }

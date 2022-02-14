@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The application gateway private link ip configuration.
- */
 public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayPrivateLinkIpConfigurationResponse Empty = new ApplicationGatewayPrivateLinkIpConfigurationResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,9 +23,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -39,9 +30,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of application gateway private link ip configuration.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -49,9 +37,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Whether the ip configuration is primary or not.
-     */
     @InputImport(name="primary")
     private final @Nullable Boolean primary;
 
@@ -59,9 +44,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
-    /**
-     * The private IP address of the IP configuration.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -69,9 +51,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
-    /**
-     * The private IP address allocation method.
-     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable String privateIPAllocationMethod;
 
@@ -79,9 +58,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
-    /**
-     * The provisioning state of the application gateway private link IP configuration.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -89,9 +65,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.provisioningState;
     }
 
-    /**
-     * Reference to the subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable SubResourceResponse subnet;
 
@@ -99,9 +72,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

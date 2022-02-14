@@ -11,17 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The resource requirements for the container (cpu and memory).
- */
 public final class ContainerResourceRequirementsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerResourceRequirementsResponse Empty = new ContainerResourceRequirementsResponse();
 
-    /**
-     * The minimum amount of CPU cores to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="cpu")
     private final @Nullable Double cpu;
 
@@ -29,10 +22,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
-    /**
-     * The maximum amount of CPU cores allowed to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="cpuLimit")
     private final @Nullable Double cpuLimit;
 
@@ -40,9 +29,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.cpuLimit == null ? Optional.empty() : Optional.ofNullable(this.cpuLimit);
     }
 
-    /**
-     * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-     */
     @InputImport(name="fpga")
     private final @Nullable Integer fpga;
 
@@ -50,9 +36,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.fpga == null ? Optional.empty() : Optional.ofNullable(this.fpga);
     }
 
-    /**
-     * The number of GPU cores in the container.
-     */
     @InputImport(name="gpu")
     private final @Nullable Integer gpu;
 
@@ -60,10 +43,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
     }
 
-    /**
-     * The minimum amount of memory (in GB) to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="memoryInGB")
     private final @Nullable Double memoryInGB;
 
@@ -71,10 +50,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
     }
 
-    /**
-     * The maximum amount of memory (in GB) allowed to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="memoryInGBLimit")
     private final @Nullable Double memoryInGBLimit;
 

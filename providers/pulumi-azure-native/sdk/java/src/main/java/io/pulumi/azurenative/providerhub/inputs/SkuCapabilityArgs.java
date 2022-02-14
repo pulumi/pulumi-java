@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SkuCapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuCapabilityArgs Empty = new SkuCapabilityArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class SkuCapabilityArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

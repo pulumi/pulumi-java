@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum InboundEndpointProtocol {
-/**
- * Use TCP for the endpoint.
- */
         TCP("TCP"),
-/**
- * Use UDP for the endpoint.
- */
         UDP("UDP");
 
         private final String value;

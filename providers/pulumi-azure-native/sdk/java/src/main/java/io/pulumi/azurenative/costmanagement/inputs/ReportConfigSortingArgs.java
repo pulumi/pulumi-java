@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The order by expression to be used in the report.
- */
 public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportConfigSortingArgs Empty = new ReportConfigSortingArgs();
 
-    /**
-     * Direction of sort.
-     */
     @InputImport(name="direction")
     private final @Nullable Input<String> direction;
 
@@ -27,9 +21,6 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
         return this.direction == null ? Input.empty() : this.direction;
     }
 
-    /**
-     * The name of the column to sort.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

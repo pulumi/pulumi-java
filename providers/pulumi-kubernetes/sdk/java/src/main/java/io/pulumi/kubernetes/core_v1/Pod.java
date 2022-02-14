@@ -15,313 +15,39 @@ import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
-
-This resource waits until its status is ready before registering success
-for create/update, and populating output properties from the current state of the resource.
-The following conditions are used to determine whether the resource creation has
-succeeded or failed:
-
-1. The Pod is scheduled ("PodScheduled"" '.status.condition' is true).
-2. The Pod is initialized ("Initialized" '.status.condition' is true).
-3. The Pod is ready ("Ready" '.status.condition' is true) and the '.status.phase' is
-   set to "Running".
-Or (for Jobs): The Pod succeeded ('.status.phase' set to "Succeeded").
-
-If the Pod has not reached a Ready state after 10 minutes, it will
-time out and mark the resource update as Failed. You can override the default timeout value
-by setting the 'customTimeouts' option on the resource.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a Pod with auto-naming
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as kubernetes from "@pulumi/kubernetes";
-
-const nginxPod = new kubernetes.core.v1.Pod("nginxPod", {
-    spec: {
-        containers: [{
-            name: "nginx",
-            image: "nginx:1.14.2",
-            ports: [{
-                containerPort: 80,
-            }],
-        }],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_kubernetes as kubernetes
-
-nginx_pod = kubernetes.core.v1.Pod(
-    "nginxPod",
-    spec=kubernetes.core.v1.PodSpecArgs(
-        containers=[kubernetes.core.v1.ContainerArgs(
-            name="nginx",
-            image="nginx:1.14.2",
-            ports=[kubernetes.core.v1.ContainerPortArgs(
-                container_port=80,
-            )],
-        )],
-    ))
-```
-```csharp
-using Pulumi;
-using Kubernetes = Pulumi.Kubernetes;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var nginxPod = new Kubernetes.Core.V1.Pod("nginxPod", new Kubernetes.Types.Inputs.Core.V1.PodArgs
-        {
-            Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
-            {
-                Containers = 
-                {
-                    new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
-                    {
-                        Name = "nginx",
-                        Image = "nginx:1.14.2",
-                        Ports = 
-                        {
-                            new Kubernetes.Types.Inputs.Core.V1.ContainerPortArgs
-                            {
-                                ContainerPort = 80,
-                            },
-                        },
-                    },
-                },
-            },
-        });
-    }
-}
-```
-```go
-package main
-
-import (
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := corev1.NewPod(ctx, "nginxPod", &corev1.PodArgs{
-			Spec: &corev1.PodSpecArgs{
-				Containers: corev1.ContainerArray{
-					&corev1.ContainerArgs{
-						Name:  pulumi.String("nginx"),
-						Image: pulumi.String("nginx:1.14.2"),
-						Ports: corev1.ContainerPortArray{
-							&corev1.ContainerPortArgs{
-								ContainerPort: pulumi.Int(80),
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{{% example %}}
-### Create a Pod with a user-specified name
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as kubernetes from "@pulumi/kubernetes";
-
-const nginxPod = new kubernetes.core.v1.Pod("nginxPod", {
-    metadata: {
-        name: "nginx",
-    },
-    spec: {
-        containers: [{
-            name: "nginx",
-            image: "nginx:1.14.2",
-            ports: [{
-                containerPort: 80,
-            }],
-        }],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_kubernetes as kubernetes
-
-nginx_pod = kubernetes.core.v1.Pod(
-    "nginxPod",
-    metadata=kubernetes.meta.v1.ObjectMetaArgs(
-        name="nginx",
-    ),
-    spec=kubernetes.core.v1.PodSpecArgs(
-        containers=[kubernetes.core.v1.ContainerArgs(
-            name="nginx",
-            image="nginx:1.14.2",
-            ports=[kubernetes.core.v1.ContainerPortArgs(
-                container_port=80,
-            )],
-        )],
-    ))
-```
-```csharp
-using Pulumi;
-using Kubernetes = Pulumi.Kubernetes;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var nginxPod = new Kubernetes.Core.V1.Pod("nginxPod", new Kubernetes.Types.Inputs.Core.V1.PodArgs
-        {
-            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
-            {
-                Name = "nginx",
-            },
-            Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
-            {
-                Containers = 
-                {
-                    new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
-                    {
-                        Name = "nginx",
-                        Image = "nginx:1.14.2",
-                        Ports = 
-                        {
-                            new Kubernetes.Types.Inputs.Core.V1.ContainerPortArgs
-                            {
-                                ContainerPort = 80,
-                            },
-                        },
-                    },
-                },
-            },
-        });
-    }
-}
-```
-```go
-package main
-
-import (
-	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := corev1.NewPod(ctx, "nginxPod", &corev1.PodArgs{
-			Metadata: &metav1.ObjectMetaArgs{
-				Name: pulumi.String("nginx"),
-			},
-			Spec: &corev1.PodSpecArgs{
-				Containers: corev1.ContainerArray{
-					&corev1.ContainerArgs{
-						Name:  pulumi.String("nginx"),
-						Image: pulumi.String("nginx:1.14.2"),
-						Ports: corev1.ContainerPortArray{
-							&corev1.ContainerPortArgs{
-								ContainerPort: pulumi.Int(80),
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{% /examples %}}
-
- */
 @ResourceType(type="kubernetes:core/v1:Pod")
 public class Pod extends io.pulumi.resources.CustomResource {
-    /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
-    /**
-     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
-    /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
-    /**
-     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
-    /**
-     * Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     @OutputExport(name="spec", type=PodSpec.class, parameters={})
     private Output</* @Nullable */ PodSpec> spec;
 
-    /**
-     * @return Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     public Output</* @Nullable */ PodSpec> getSpec() {
         return this.spec;
     }
-    /**
-     * Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     @OutputExport(name="status", type=PodStatus.class, parameters={})
     private Output</* @Nullable */ PodStatus> status;
 
-    /**
-     * @return Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     public Output</* @Nullable */ PodStatus> getStatus() {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Pod(String name, @Nullable PodArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:core/v1:Pod", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -345,14 +71,6 @@ public class Pod extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Pod get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Pod(name, id, options);
     }

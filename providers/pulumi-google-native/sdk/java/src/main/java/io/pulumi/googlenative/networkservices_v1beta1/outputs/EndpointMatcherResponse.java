@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndpointMatcherResponse {
-/**
- * The matcher is based on node metadata presented by xDS clients.
- */
     private final MetadataLabelMatcherResponse metadataLabelMatcher;
 
     @OutputCustomType.Constructor({"metadataLabelMatcher"})
@@ -19,9 +16,6 @@ public final class EndpointMatcherResponse {
         this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
     }
 
-/**
- * The matcher is based on node metadata presented by xDS clients.
- */
     public MetadataLabelMatcherResponse getMetadataLabelMatcher() {
         return this.metadataLabelMatcher;
     }

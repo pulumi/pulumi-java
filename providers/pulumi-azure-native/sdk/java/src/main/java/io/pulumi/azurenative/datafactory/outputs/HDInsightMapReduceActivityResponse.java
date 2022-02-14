@@ -18,66 +18,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HDInsightMapReduceActivityResponse {
-/**
- * User specified arguments to HDInsightActivity.
- */
     private final @Nullable List<Object> arguments;
-/**
- * Class name. Type: string (or Expression with resultType string).
- */
     private final Object className;
-/**
- * Allows user to specify defines for the MapReduce job request.
- */
     private final @Nullable Map<String,Object> defines;
-/**
- * Activity depends on condition.
- */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-/**
- * Activity description.
- */
     private final @Nullable String description;
-/**
- * Debug info option.
- */
     private final @Nullable String getDebugInfo;
-/**
- * Jar path. Type: string (or Expression with resultType string).
- */
     private final Object jarFilePath;
-/**
- * Jar libs.
- */
     private final @Nullable List<Object> jarLibs;
-/**
- * Jar linked service reference.
- */
     private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
-/**
- * Linked service reference.
- */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-/**
- * Activity name.
- */
     private final String name;
-/**
- * Activity policy.
- */
     private final @Nullable ActivityPolicyResponse policy;
-/**
- * Storage linked service references.
- */
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
-/**
- * Type of activity.
-Expected value is 'HDInsightMapReduce'.
- */
     private final String type;
-/**
- * Activity user properties.
- */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"arguments","className","defines","dependsOn","description","getDebugInfo","jarFilePath","jarLibs","jarLinkedService","linkedServiceName","name","policy","storageLinkedServices","type","userProperties"})
@@ -114,94 +68,48 @@ Expected value is 'HDInsightMapReduce'.
         this.userProperties = userProperties;
     }
 
-/**
- * User specified arguments to HDInsightActivity.
- */
     public List<Object> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
-/**
- * Class name. Type: string (or Expression with resultType string).
- */
     public Object getClassName() {
         return this.className;
     }
-/**
- * Allows user to specify defines for the MapReduce job request.
- */
     public Map<String,Object> getDefines() {
         return this.defines == null ? Map.of() : this.defines;
     }
-/**
- * Activity depends on condition.
- */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Activity description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Debug info option.
- */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
-/**
- * Jar path. Type: string (or Expression with resultType string).
- */
     public Object getJarFilePath() {
         return this.jarFilePath;
     }
-/**
- * Jar libs.
- */
     public List<Object> getJarLibs() {
         return this.jarLibs == null ? List.of() : this.jarLibs;
     }
-/**
- * Jar linked service reference.
- */
     public Optional<LinkedServiceReferenceResponse> getJarLinkedService() {
         return Optional.ofNullable(this.jarLinkedService);
     }
-/**
- * Linked service reference.
- */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
-/**
- * Activity name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Activity policy.
- */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
-/**
- * Storage linked service references.
- */
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
-/**
- * Type of activity.
-Expected value is 'HDInsightMapReduce'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Activity user properties.
- */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

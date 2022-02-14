@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PackageInfoOccurrence represents an SPDX Package Information section: https://spdx.github.io/spdx-spec/3-package-information/
- */
 public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageInfoOccurrenceArgs Empty = new PackageInfoOccurrenceArgs();
 
-    /**
-     * A place for the SPDX file creator to record any general comments about the package being described
-     */
     @InputImport(name="comment")
     private final @Nullable Input<String> comment;
 
@@ -28,9 +22,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
         return this.comment == null ? Input.empty() : this.comment;
     }
 
-    /**
-     * Provide the actual file name of the package, or path of the directory being treated as a package
-     */
     @InputImport(name="filename")
     private final @Nullable Input<String> filename;
 
@@ -38,9 +29,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
         return this.filename == null ? Input.empty() : this.filename;
     }
 
-    /**
-     * Uniquely identify any element in an SPDX document which may be referenced by other elements
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -48,9 +36,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * package or alternative values, if the governing license cannot be determined
-     */
     @InputImport(name="licenseConcluded")
     private final @Nullable Input<LicenseArgs> licenseConcluded;
 
@@ -58,9 +43,6 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
         return this.licenseConcluded == null ? Input.empty() : this.licenseConcluded;
     }
 
-    /**
-     * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
-     */
     @InputImport(name="sourceInfo")
     private final @Nullable Input<String> sourceInfo;
 

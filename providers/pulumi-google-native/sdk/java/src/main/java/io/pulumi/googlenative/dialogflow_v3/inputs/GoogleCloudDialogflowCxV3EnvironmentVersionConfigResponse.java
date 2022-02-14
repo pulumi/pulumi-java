@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for the version.
- */
 public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse Empty = new GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse();
 
-    /**
-     * Format: projects//locations//agents//flows//versions/.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

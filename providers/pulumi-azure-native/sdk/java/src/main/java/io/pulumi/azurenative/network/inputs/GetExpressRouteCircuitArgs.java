@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetExpressRouteCircuitArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExpressRouteCircuitArgs Empty = new GetExpressRouteCircuitArgs();
 
-    /**
-     * The name of express route circuit.
-     */
     @InputImport(name="circuitName", required=true)
     private final String circuitName;
 
@@ -25,9 +19,6 @@ public final class GetExpressRouteCircuitArgs extends io.pulumi.resources.Invoke
         return this.circuitName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

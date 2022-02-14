@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTagResult {
-/**
- * Tag name.
- */
     private final String displayName;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"displayName","id","name","type"})
@@ -38,27 +26,15 @@ public final class GetTagResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Tag name.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }

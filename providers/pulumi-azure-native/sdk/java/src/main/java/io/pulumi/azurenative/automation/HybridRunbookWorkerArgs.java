@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HybridRunbookWorkerArgs Empty = new HybridRunbookWorkerArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -27,9 +21,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
         return this.automationAccountName;
     }
 
-    /**
-     * The hybrid runbook worker group name
-     */
     @InputImport(name="hybridRunbookWorkerGroupName", required=true)
     private final Input<String> hybridRunbookWorkerGroupName;
 
@@ -37,9 +28,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
         return this.hybridRunbookWorkerGroupName;
     }
 
-    /**
-     * The hybrid runbook worker id
-     */
     @InputImport(name="hybridRunbookWorkerId")
     private final @Nullable Input<String> hybridRunbookWorkerId;
 
@@ -47,9 +35,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
         return this.hybridRunbookWorkerId == null ? Input.empty() : this.hybridRunbookWorkerId;
     }
 
-    /**
-     * Gets or sets the name of the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,9 +42,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * Azure Resource Manager Id for a virtual machine.
-     */
     @InputImport(name="vmResourceId")
     private final @Nullable Input<String> vmResourceId;
 

@@ -12,22 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabasesSolutionSummaryResponse {
-/**
- * Gets or sets the count of database instances assessed.
- */
     private final @Nullable Integer databaseInstancesAssessedCount;
-/**
- * Gets or sets the count of databases assessed.
- */
     private final @Nullable Integer databasesAssessedCount;
-/**
- * Gets the Instance type.
-Expected value is 'Databases'.
- */
     private final String instanceType;
-/**
- * Gets or sets the count of databases ready for migration.
- */
     private final @Nullable Integer migrationReadyCount;
 
     @OutputCustomType.Constructor({"databaseInstancesAssessedCount","databasesAssessedCount","instanceType","migrationReadyCount"})
@@ -42,28 +29,15 @@ Expected value is 'Databases'.
         this.migrationReadyCount = migrationReadyCount;
     }
 
-/**
- * Gets or sets the count of database instances assessed.
- */
     public Optional<Integer> getDatabaseInstancesAssessedCount() {
         return Optional.ofNullable(this.databaseInstancesAssessedCount);
     }
-/**
- * Gets or sets the count of databases assessed.
- */
     public Optional<Integer> getDatabasesAssessedCount() {
         return Optional.ofNullable(this.databasesAssessedCount);
     }
-/**
- * Gets the Instance type.
-Expected value is 'Databases'.
- */
     public String getInstanceType() {
         return this.instanceType;
     }
-/**
- * Gets or sets the count of databases ready for migration.
- */
     public Optional<Integer> getMigrationReadyCount() {
         return Optional.ofNullable(this.migrationReadyCount);
     }

@@ -10,41 +10,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OnPremisesConfigurationResponse {
-/**
- * PEM representation of the trusted CA's x509 certificate.
- */
     private final String caCertificate;
-/**
- * PEM representation of the replica's x509 certificate.
- */
     private final String clientCertificate;
-/**
- * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
- */
     private final String clientKey;
-/**
- * The dump file to create the Cloud SQL replica.
- */
     private final String dumpFilePath;
-/**
- * The host and port of the on-premises instance in host:port format
- */
     private final String hostPort;
-/**
- * This is always `sql#onPremisesConfiguration`.
- */
     private final String kind;
-/**
- * The password for connecting to on-premises instance.
- */
     private final String password;
-/**
- * The reference to Cloud SQL instance if the source is Cloud SQL.
- */
     private final InstanceReferenceResponse sourceInstance;
-/**
- * The username for connecting to on-premises instance.
- */
     private final String username;
 
     @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","dumpFilePath","hostPort","kind","password","sourceInstance","username"})
@@ -69,57 +42,30 @@ public final class OnPremisesConfigurationResponse {
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * PEM representation of the trusted CA's x509 certificate.
- */
     public String getCaCertificate() {
         return this.caCertificate;
     }
-/**
- * PEM representation of the replica's x509 certificate.
- */
     public String getClientCertificate() {
         return this.clientCertificate;
     }
-/**
- * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
- */
     public String getClientKey() {
         return this.clientKey;
     }
-/**
- * The dump file to create the Cloud SQL replica.
- */
     public String getDumpFilePath() {
         return this.dumpFilePath;
     }
-/**
- * The host and port of the on-premises instance in host:port format
- */
     public String getHostPort() {
         return this.hostPort;
     }
-/**
- * This is always `sql#onPremisesConfiguration`.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The password for connecting to on-premises instance.
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * The reference to Cloud SQL instance if the source is Cloud SQL.
- */
     public InstanceReferenceResponse getSourceInstance() {
         return this.sourceInstance;
     }
-/**
- * The username for connecting to on-premises instance.
- */
     public String getUsername() {
         return this.username;
     }

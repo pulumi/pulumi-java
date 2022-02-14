@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Defines how often to run the search and the time interval.
- */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleResponse Empty = new ScheduleResponse();
 
-    /**
-     * frequency (in minutes) at which rule condition should be evaluated.
-     */
     @InputImport(name="frequencyInMinutes", required=true)
     private final Integer frequencyInMinutes;
 
@@ -25,9 +19,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.frequencyInMinutes;
     }
 
-    /**
-     * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
-     */
     @InputImport(name="timeWindowInMinutes", required=true)
     private final Integer timeWindowInMinutes;
 

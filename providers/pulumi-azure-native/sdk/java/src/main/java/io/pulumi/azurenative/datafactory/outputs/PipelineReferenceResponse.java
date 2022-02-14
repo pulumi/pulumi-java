@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineReferenceResponse {
-/**
- * Reference name.
- */
     private final @Nullable String name;
-/**
- * Reference pipeline name.
- */
     private final String referenceName;
-/**
- * Pipeline reference type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"name","referenceName","type"})
@@ -34,21 +25,12 @@ public final class PipelineReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Reference name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Reference pipeline name.
- */
     public String getReferenceName() {
         return this.referenceName;
     }
-/**
- * Pipeline reference type.
- */
     public String getType() {
         return this.type;
     }

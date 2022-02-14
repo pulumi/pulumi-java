@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Common Vulnerability Scoring System version 3. For details, see https://www.first.org/cvss/specification-document
- */
 public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
 
     public static final CVSSv3Args Empty = new CVSSv3Args();
 
-    /**
-     * 
-     */
     @InputImport(name="attackComplexity")
     private final @Nullable Input<CVSSv3AttackComplexity> attackComplexity;
 
@@ -35,9 +29,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.attackComplexity == null ? Input.empty() : this.attackComplexity;
     }
 
-    /**
-     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
-     */
     @InputImport(name="attackVector")
     private final @Nullable Input<CVSSv3AttackVector> attackVector;
 
@@ -45,9 +36,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.attackVector == null ? Input.empty() : this.attackVector;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="availabilityImpact")
     private final @Nullable Input<CVSSv3AvailabilityImpact> availabilityImpact;
 
@@ -55,9 +43,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.availabilityImpact == null ? Input.empty() : this.availabilityImpact;
     }
 
-    /**
-     * The base score is a function of the base metric scores.
-     */
     @InputImport(name="baseScore")
     private final @Nullable Input<Double> baseScore;
 
@@ -65,9 +50,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.baseScore == null ? Input.empty() : this.baseScore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="confidentialityImpact")
     private final @Nullable Input<CVSSv3ConfidentialityImpact> confidentialityImpact;
 
@@ -75,9 +57,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.confidentialityImpact == null ? Input.empty() : this.confidentialityImpact;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="exploitabilityScore")
     private final @Nullable Input<Double> exploitabilityScore;
 
@@ -85,9 +64,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.exploitabilityScore == null ? Input.empty() : this.exploitabilityScore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="impactScore")
     private final @Nullable Input<Double> impactScore;
 
@@ -95,9 +71,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.impactScore == null ? Input.empty() : this.impactScore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="integrityImpact")
     private final @Nullable Input<CVSSv3IntegrityImpact> integrityImpact;
 
@@ -105,9 +78,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.integrityImpact == null ? Input.empty() : this.integrityImpact;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="privilegesRequired")
     private final @Nullable Input<CVSSv3PrivilegesRequired> privilegesRequired;
 
@@ -115,9 +85,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.privilegesRequired == null ? Input.empty() : this.privilegesRequired;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scope")
     private final @Nullable Input<CVSSv3Scope> scope;
 
@@ -125,9 +92,6 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="userInteraction")
     private final @Nullable Input<CVSSv3UserInteraction> userInteraction;
 

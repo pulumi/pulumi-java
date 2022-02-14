@@ -15,142 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Content type contract details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateContentTypeContentItem
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var contentItem = new AzureNative.ApiManagement.ContentItem("contentItem", new AzureNative.ApiManagement.ContentItemArgs
-        {
-            ContentItemId = "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
-            ContentTypeId = "page",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewContentItem(ctx, "contentItem", &apimanagement.ContentItemArgs{
-			ContentItemId:     pulumi.String("4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8"),
-			ContentTypeId:     pulumi.String("page"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const contentItem = new azure_native.apimanagement.ContentItem("contentItem", {
-    contentItemId: "4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
-    contentTypeId: "page",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-content_item = azure_native.apimanagement.ContentItem("contentItem",
-    content_item_id="4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8",
-    content_type_id="page",
-    resource_group_name="rg1",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:ContentItem 4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8 /contentTypes/page/contentItems/4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:ContentItem")
 public class ContentItem extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of the content item.
-     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
-    /**
-     * @return Properties of the content item.
-     */
     public Output<Object> getProperties() {
         return this.properties;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ContentItem(String name, ContentItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ContentItem", name, args == null ? ContentItemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -174,14 +59,6 @@ public class ContentItem extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ContentItem get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ContentItem(name, id, options);
     }

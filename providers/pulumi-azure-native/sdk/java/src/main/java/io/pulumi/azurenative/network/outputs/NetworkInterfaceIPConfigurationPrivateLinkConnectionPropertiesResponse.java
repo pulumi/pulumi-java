@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse {
-/**
- * List of FQDNs for current private link connection.
- */
     private final List<String> fqdns;
-/**
- * The group ID for current private link connection.
- */
     private final String groupId;
-/**
- * The required member name for current private link connection.
- */
     private final String requiredMemberName;
 
     @OutputCustomType.Constructor({"fqdns","groupId","requiredMemberName"})
@@ -33,21 +24,12 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
         this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
     }
 
-/**
- * List of FQDNs for current private link connection.
- */
     public List<String> getFqdns() {
         return this.fqdns;
     }
-/**
- * The group ID for current private link connection.
- */
     public String getGroupId() {
         return this.groupId;
     }
-/**
- * The required member name for current private link connection.
- */
     public String getRequiredMemberName() {
         return this.requiredMemberName;
     }

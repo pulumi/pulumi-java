@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ThrottlingRuleResponse {
-/**
- * 
- */
     private final String action;
-/**
- * 
- */
     private final List<ThrottlingMetricResponse> metrics;
-/**
- * 
- */
     private final @Nullable List<String> requiredFeatures;
 
     @OutputCustomType.Constructor({"action","metrics","requiredFeatures"})
@@ -35,21 +26,12 @@ public final class ThrottlingRuleResponse {
         this.requiredFeatures = requiredFeatures;
     }
 
-/**
- * 
- */
     public String getAction() {
         return this.action;
     }
-/**
- * 
- */
     public List<ThrottlingMetricResponse> getMetrics() {
         return this.metrics;
     }
-/**
- * 
- */
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }

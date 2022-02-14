@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents configurations for a test case.
- */
 public final class GoogleCloudDialogflowCxV3TestConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3TestConfigResponse Empty = new GoogleCloudDialogflowCxV3TestConfigResponse();
 
-    /**
-     * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
-     */
     @InputImport(name="flow", required=true)
     private final String flow;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends io.pulumi
         return this.flow;
     }
 
-    /**
-     * Session parameters to be compared when calculating differences.
-     */
     @InputImport(name="trackingParameters", required=true)
     private final List<String> trackingParameters;
 

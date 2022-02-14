@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetProcessorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProcessorArgs Empty = new GetProcessorArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetProcessorArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="processorId", required=true)
     private final String processorId;
 
@@ -37,9 +28,6 @@ public final class GetProcessorArgs extends io.pulumi.resources.InvokeArgs {
         return this.processorId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListDatastoreSecretsResult {
-/**
- * Credential type used to authentication with storage.
- */
     private final String secretsType;
 
     @OutputCustomType.Constructor({"secretsType"})
@@ -19,9 +16,6 @@ public final class ListDatastoreSecretsResult {
         this.secretsType = Objects.requireNonNull(secretsType);
     }
 
-/**
- * Credential type used to authentication with storage.
- */
     public String getSecretsType() {
         return this.secretsType;
     }

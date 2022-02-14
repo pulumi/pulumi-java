@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZonePeeringConfigResponse Empty = new ManagedZonePeeringConfigResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -26,9 +20,6 @@ public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.
         return this.kind;
     }
 
-    /**
-     * The network with which to peer.
-     */
     @InputImport(name="targetNetwork", required=true)
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 

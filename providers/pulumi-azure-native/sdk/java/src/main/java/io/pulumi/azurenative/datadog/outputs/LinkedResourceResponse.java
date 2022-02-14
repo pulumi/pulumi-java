@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LinkedResourceResponse {
-/**
- * The ARM id of the linked resource.
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -21,9 +18,6 @@ public final class LinkedResourceResponse {
         this.id = id;
     }
 
-/**
- * The ARM id of the linked resource.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

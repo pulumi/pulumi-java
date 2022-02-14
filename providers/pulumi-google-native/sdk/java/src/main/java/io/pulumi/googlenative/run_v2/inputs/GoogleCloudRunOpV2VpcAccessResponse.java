@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * VPC Access settings. For more information on creating a VPC Connector, visit https://cloud.google.com/vpc/docs/configure-serverless-vpc-access For information on how to configure Cloud Run with an existing VPC Connector, visit https://cloud.google.com/run/docs/configuring/connecting-vpc
- */
 public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunOpV2VpcAccessResponse Empty = new GoogleCloudRunOpV2VpcAccessResponse();
 
-    /**
-     * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
-     */
     @InputImport(name="connector", required=true)
     private final String connector;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resourc
         return this.connector;
     }
 
-    /**
-     * Traffic VPC egress settings.
-     */
     @InputImport(name="egress", required=true)
     private final String egress;
 

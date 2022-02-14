@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a reference to a service endpoint.
- */
 public final class EndpointRefResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointRefResponse Empty = new EndpointRefResponse();
 
-    /**
-     * Name of the endpoint.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Error definition.
- */
 public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorDefinitionResponse Empty = new ErrorDefinitionResponse();
 
-    /**
-     * Additional scenario specific error details.
-     */
     @InputImport(name="additionalInfo", required=true)
     private final List<TypedErrorInfoResponse> additionalInfo;
 
@@ -27,9 +21,6 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.additionalInfo;
     }
 
-    /**
-     * Service specific error code which serves as the substatus for the HTTP error code.
-     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -37,9 +28,6 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.code;
     }
 
-    /**
-     * Internal error details.
-     */
     @InputImport(name="details", required=true)
     private final List<ErrorDefinitionResponse> details;
 
@@ -47,9 +35,6 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.details;
     }
 
-    /**
-     * Description of the error.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -57,9 +42,6 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.message;
     }
 
-    /**
-     * The target of the error.
-     */
     @InputImport(name="target", required=true)
     private final String target;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudTieringDatePolicyStatusResponse {
-/**
- * Last updated timestamp
- */
     private final String lastUpdatedTimestamp;
-/**
- * Most recent access time of tiered files
- */
     private final String tieredFilesMostRecentAccessTimestamp;
 
     @OutputCustomType.Constructor({"lastUpdatedTimestamp","tieredFilesMostRecentAccessTimestamp"})
@@ -26,15 +20,9 @@ public final class CloudTieringDatePolicyStatusResponse {
         this.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull(tieredFilesMostRecentAccessTimestamp);
     }
 
-/**
- * Last updated timestamp
- */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
-/**
- * Most recent access time of tiered files
- */
     public String getTieredFilesMostRecentAccessTimestamp() {
         return this.tieredFilesMostRecentAccessTimestamp;
     }

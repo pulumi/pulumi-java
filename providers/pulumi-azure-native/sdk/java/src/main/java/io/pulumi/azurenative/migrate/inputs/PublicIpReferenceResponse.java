@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines reference to a public IP.
- */
 public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PublicIpReferenceResponse Empty = new PublicIpReferenceResponse();
 
-    /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
-     */
     @InputImport(name="sourceArmResourceId", required=true)
     private final String sourceArmResourceId;
 

@@ -18,386 +18,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
-API Version: 2020-07-13-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a GitHub pipeline to deploy a sample ASP.Net application to Azure web-app
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipeline = new AzureNative.DevOps.Pipeline("pipeline", new AzureNative.DevOps.PipelineArgs
-        {
-            BootstrapConfiguration = new AzureNative.DevOps.Inputs.BootstrapConfigurationArgs
-            {
-                Template = new AzureNative.DevOps.Inputs.PipelineTemplateArgs
-                {
-                    Id = "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-                    Parameters = 
-                    {
-                        { "appInsightLocation", "South India" },
-                        { "appServicePlan", "S1 Standard" },
-                        { "azureAuth", "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}" },
-                        { "location", "South India" },
-                        { "resourceGroup", "myAspNetWebAppPipeline-rg" },
-                        { "subscriptionId", "{subscriptionId}" },
-                        { "webAppName", "myAspNetWebApp" },
-                    },
-                },
-            },
-            PipelineName = "myAspNetWebAppPipeline",
-            PipelineType = "githubWorkflow",
-            ResourceGroupName = "myAspNetWebAppPipeline-rg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	devops "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devops"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devops.NewPipeline(ctx, "pipeline", &devops.PipelineArgs{
-			BootstrapConfiguration: &devops.BootstrapConfigurationArgs{
-				Template: &devops.PipelineTemplateArgs{
-					Id: pulumi.String("ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp"),
-					Parameters: pulumi.StringMap{
-						"appInsightLocation": pulumi.String("South India"),
-						"appServicePlan":     pulumi.String("S1 Standard"),
-						"azureAuth":          pulumi.String("{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}"),
-						"location":           pulumi.String("South India"),
-						"resourceGroup":      pulumi.String("myAspNetWebAppPipeline-rg"),
-						"subscriptionId":     pulumi.String("{subscriptionId}"),
-						"webAppName":         pulumi.String("myAspNetWebApp"),
-					},
-				},
-			},
-			PipelineName:      pulumi.String("myAspNetWebAppPipeline"),
-			PipelineType:      pulumi.String("githubWorkflow"),
-			ResourceGroupName: pulumi.String("myAspNetWebAppPipeline-rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const pipeline = new azure_native.devops.Pipeline("pipeline", {
-    bootstrapConfiguration: {
-        template: {
-            id: "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-            parameters: {
-                appInsightLocation: "South India",
-                appServicePlan: "S1 Standard",
-                azureAuth: "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
-                location: "South India",
-                resourceGroup: "myAspNetWebAppPipeline-rg",
-                subscriptionId: "{subscriptionId}",
-                webAppName: "myAspNetWebApp",
-            },
-        },
-    },
-    pipelineName: "myAspNetWebAppPipeline",
-    pipelineType: "githubWorkflow",
-    resourceGroupName: "myAspNetWebAppPipeline-rg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-pipeline = azure_native.devops.Pipeline("pipeline",
-    bootstrap_configuration=azure_native.devops.BootstrapConfigurationArgs(
-        template=azure_native.devops.PipelineTemplateArgs(
-            id="ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-            parameters={
-                "appInsightLocation": "South India",
-                "appServicePlan": "S1 Standard",
-                "azureAuth": "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
-                "location": "South India",
-                "resourceGroup": "myAspNetWebAppPipeline-rg",
-                "subscriptionId": "{subscriptionId}",
-                "webAppName": "myAspNetWebApp",
-            },
-        ),
-    ),
-    pipeline_name="myAspNetWebAppPipeline",
-    pipeline_type="githubWorkflow",
-    resource_group_name="myAspNetWebAppPipeline-rg")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create an Azure pipeline to deploy a sample ASP.Net application to Azure web-app
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipeline = new AzureNative.DevOps.Pipeline("pipeline", new AzureNative.DevOps.PipelineArgs
-        {
-            BootstrapConfiguration = new AzureNative.DevOps.Inputs.BootstrapConfigurationArgs
-            {
-                Template = new AzureNative.DevOps.Inputs.PipelineTemplateArgs
-                {
-                    Id = "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-                    Parameters = 
-                    {
-                        { "appInsightLocation", "South India" },
-                        { "appServicePlan", "S1 Standard" },
-                        { "azureAuth", "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}" },
-                        { "location", "South India" },
-                        { "resourceGroup", "myAspNetWebAppPipeline-rg" },
-                        { "subscriptionId", "{subscriptionId}" },
-                        { "webAppName", "myAspNetWebApp" },
-                    },
-                },
-            },
-            PipelineName = "myAspNetWebAppPipeline",
-            PipelineType = "azurePipeline",
-            ResourceGroupName = "myAspNetWebAppPipeline-rg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	devops "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devops"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devops.NewPipeline(ctx, "pipeline", &devops.PipelineArgs{
-			BootstrapConfiguration: &devops.BootstrapConfigurationArgs{
-				Template: &devops.PipelineTemplateArgs{
-					Id: pulumi.String("ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp"),
-					Parameters: pulumi.StringMap{
-						"appInsightLocation": pulumi.String("South India"),
-						"appServicePlan":     pulumi.String("S1 Standard"),
-						"azureAuth":          pulumi.String("{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}"),
-						"location":           pulumi.String("South India"),
-						"resourceGroup":      pulumi.String("myAspNetWebAppPipeline-rg"),
-						"subscriptionId":     pulumi.String("{subscriptionId}"),
-						"webAppName":         pulumi.String("myAspNetWebApp"),
-					},
-				},
-			},
-			PipelineName:      pulumi.String("myAspNetWebAppPipeline"),
-			PipelineType:      pulumi.String("azurePipeline"),
-			ResourceGroupName: pulumi.String("myAspNetWebAppPipeline-rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const pipeline = new azure_native.devops.Pipeline("pipeline", {
-    bootstrapConfiguration: {
-        template: {
-            id: "ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-            parameters: {
-                appInsightLocation: "South India",
-                appServicePlan: "S1 Standard",
-                azureAuth: "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
-                location: "South India",
-                resourceGroup: "myAspNetWebAppPipeline-rg",
-                subscriptionId: "{subscriptionId}",
-                webAppName: "myAspNetWebApp",
-            },
-        },
-    },
-    pipelineName: "myAspNetWebAppPipeline",
-    pipelineType: "azurePipeline",
-    resourceGroupName: "myAspNetWebAppPipeline-rg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-pipeline = azure_native.devops.Pipeline("pipeline",
-    bootstrap_configuration=azure_native.devops.BootstrapConfigurationArgs(
-        template=azure_native.devops.PipelineTemplateArgs(
-            id="ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp",
-            parameters={
-                "appInsightLocation": "South India",
-                "appServicePlan": "S1 Standard",
-                "azureAuth": "{\"scheme\":\"ServicePrincipal\",\"parameters\":{\"tenantid\":\"{subscriptionTenantId}\",\"objectid\":\"{appObjectId}\",\"serviceprincipalid\":\"{appId}\",\"serviceprincipalkey\":\"{appSecret}\"}}",
-                "location": "South India",
-                "resourceGroup": "myAspNetWebAppPipeline-rg",
-                "subscriptionId": "{subscriptionId}",
-                "webAppName": "myAspNetWebApp",
-            },
-        ),
-    ),
-    pipeline_name="myAspNetWebAppPipeline",
-    pipeline_type="azurePipeline",
-    resource_group_name="myAspNetWebAppPipeline-rg")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:devops:Pipeline myAspNetWebAppPipeline /subscriptions/{subscriptionId}/resourceGroups/myAspNetWebAppPipeline-rg/providers/Microsoft.DevOps/pipelines/myAspNetWebAppPipeline 
-```
-
- */
 @ResourceType(type="azure-native:devops:Pipeline")
 public class Pipeline extends io.pulumi.resources.CustomResource {
-    /**
-     * Configuration used to bootstrap the Pipeline.
-     */
     @OutputExport(name="bootstrapConfiguration", type=BootstrapConfigurationResponse.class, parameters={})
     private Output<BootstrapConfigurationResponse> bootstrapConfiguration;
 
-    /**
-     * @return Configuration used to bootstrap the Pipeline.
-     */
     public Output<BootstrapConfigurationResponse> getBootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
-    /**
-     * Resource Location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource Location
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource Name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource Name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Unique identifier of the Pipeline
-     */
     @OutputExport(name="pipelineId", type=Integer.class, parameters={})
     private Output<Integer> pipelineId;
 
-    /**
-     * @return Unique identifier of the Pipeline
-     */
     public Output<Integer> getPipelineId() {
         return this.pipelineId;
     }
-    /**
-     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-     */
     @OutputExport(name="pipelineType", type=String.class, parameters={})
     private Output<String> pipelineType;
 
-    /**
-     * @return Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-     */
     public Output<String> getPipelineType() {
         return this.pipelineType;
     }
-    /**
-     * The system metadata pertaining to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata pertaining to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource Tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource Tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource Type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource Type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Pipeline(String name, PipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devops:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -417,14 +88,6 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Pipeline get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Pipeline(name, id, options);
     }

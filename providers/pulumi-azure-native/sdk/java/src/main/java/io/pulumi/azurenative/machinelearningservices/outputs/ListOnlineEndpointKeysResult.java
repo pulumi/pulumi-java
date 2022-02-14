@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListOnlineEndpointKeysResult {
-/**
- * The primary key.
- */
     private final @Nullable String primaryKey;
-/**
- * The secondary key.
- */
     private final @Nullable String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
@@ -28,15 +22,9 @@ public final class ListOnlineEndpointKeysResult {
         this.secondaryKey = secondaryKey;
     }
 
-/**
- * The primary key.
- */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
-/**
- * The secondary key.
- */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

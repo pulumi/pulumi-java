@@ -8,70 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
- */
     @EnumType
     public enum PkixPublicKeySignatureAlgorithm {
-/**
- * Not specified.
- */
         SignatureAlgorithmUnspecified("SIGNATURE_ALGORITHM_UNSPECIFIED"),
-/**
- * RSASSA-PSS 2048 bit key with a SHA256 digest.
- */
         RsaPss2048Sha256("RSA_PSS_2048_SHA256"),
-/**
- * RSASSA-PSS 3072 bit key with a SHA256 digest.
- */
         RsaPss3072Sha256("RSA_PSS_3072_SHA256"),
-/**
- * RSASSA-PSS 4096 bit key with a SHA256 digest.
- */
         RsaPss4096Sha256("RSA_PSS_4096_SHA256"),
-/**
- * RSASSA-PSS 4096 bit key with a SHA512 digest.
- */
         RsaPss4096Sha512("RSA_PSS_4096_SHA512"),
-/**
- * RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.
- */
         RsaSignPkcs12048Sha256("RSA_SIGN_PKCS1_2048_SHA256"),
-/**
- * RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.
- */
         RsaSignPkcs13072Sha256("RSA_SIGN_PKCS1_3072_SHA256"),
-/**
- * RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.
- */
         RsaSignPkcs14096Sha256("RSA_SIGN_PKCS1_4096_SHA256"),
-/**
- * RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA512 digest.
- */
         RsaSignPkcs14096Sha512("RSA_SIGN_PKCS1_4096_SHA512"),
-/**
- * ECDSA on the NIST P-256 curve with a SHA256 digest.
- */
         EcdsaP256Sha256("ECDSA_P256_SHA256"),
-/**
- * ECDSA on the NIST P-256 curve with a SHA256 digest.
- */
         EcSignP256Sha256("EC_SIGN_P256_SHA256"),
-/**
- * ECDSA on the NIST P-384 curve with a SHA384 digest.
- */
         EcdsaP384Sha384("ECDSA_P384_SHA384"),
-/**
- * ECDSA on the NIST P-384 curve with a SHA384 digest.
- */
         EcSignP384Sha384("EC_SIGN_P384_SHA384"),
-/**
- * ECDSA on the NIST P-521 curve with a SHA512 digest.
- */
         EcdsaP521Sha512("ECDSA_P521_SHA512"),
-/**
- * ECDSA on the NIST P-521 curve with a SHA512 digest.
- */
         EcSignP521Sha512("EC_SIGN_P521_SHA512");
 
         private final String value;

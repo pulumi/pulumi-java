@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Cloud Logging configurations for publicly visible zones.
- */
 public final class ManagedZoneCloudLoggingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZoneCloudLoggingConfigResponse Empty = new ManagedZoneCloudLoggingConfigResponse();
 
-    /**
-     * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
-     */
     @InputImport(name="enableLogging", required=true)
     private final Boolean enableLogging;
 
@@ -26,9 +20,6 @@ public final class ManagedZoneCloudLoggingConfigResponse extends io.pulumi.resou
         return this.enableLogging;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

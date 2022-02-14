@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The assembly properties definition.
- */
 public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssemblyPropertiesArgs Empty = new AssemblyPropertiesArgs();
 
-    /**
-     * The assembly culture.
-     */
     @InputImport(name="assemblyCulture")
     private final @Nullable Input<String> assemblyCulture;
 
@@ -29,9 +23,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.assemblyCulture == null ? Input.empty() : this.assemblyCulture;
     }
 
-    /**
-     * The assembly name.
-     */
     @InputImport(name="assemblyName", required=true)
     private final Input<String> assemblyName;
 
@@ -39,9 +30,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.assemblyName;
     }
 
-    /**
-     * The assembly public key token.
-     */
     @InputImport(name="assemblyPublicKeyToken")
     private final @Nullable Input<String> assemblyPublicKeyToken;
 
@@ -49,9 +37,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.assemblyPublicKeyToken == null ? Input.empty() : this.assemblyPublicKeyToken;
     }
 
-    /**
-     * The assembly version.
-     */
     @InputImport(name="assemblyVersion")
     private final @Nullable Input<String> assemblyVersion;
 
@@ -59,9 +44,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.assemblyVersion == null ? Input.empty() : this.assemblyVersion;
     }
 
-    /**
-     * The artifact changed time.
-     */
     @InputImport(name="changedTime")
     private final @Nullable Input<String> changedTime;
 
@@ -69,9 +51,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.changedTime == null ? Input.empty() : this.changedTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="content")
     private final @Nullable Input<Object> content;
 
@@ -79,9 +58,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The content link.
-     */
     @InputImport(name="contentLink")
     private final @Nullable Input<ContentLinkArgs> contentLink;
 
@@ -89,9 +65,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.contentLink == null ? Input.empty() : this.contentLink;
     }
 
-    /**
-     * The content type.
-     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -99,9 +72,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
-    /**
-     * The artifact creation time.
-     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -109,9 +79,6 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 

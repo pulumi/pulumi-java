@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkEndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkEndpointGroupArgs Empty = new NetworkEndpointGroupArgs();
 
-    /**
-     * Metadata defined as annotations on the network endpoint group.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -33,9 +27,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
-     */
     @InputImport(name="appEngine")
     private final @Nullable Input<NetworkEndpointGroupAppEngineArgs> appEngine;
 
@@ -43,9 +34,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.appEngine == null ? Input.empty() : this.appEngine;
     }
 
-    /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
-     */
     @InputImport(name="cloudFunction")
     private final @Nullable Input<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
@@ -53,9 +41,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
     }
 
-    /**
-     * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
-     */
     @InputImport(name="cloudRun")
     private final @Nullable Input<NetworkEndpointGroupCloudRunArgs> cloudRun;
 
@@ -63,9 +48,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.cloudRun == null ? Input.empty() : this.cloudRun;
     }
 
-    /**
-     * The default port used if the port number is not specified in the network endpoint.
-     */
     @InputImport(name="defaultPort")
     private final @Nullable Input<Integer> defaultPort;
 
@@ -73,9 +55,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.defaultPort == null ? Input.empty() : this.defaultPort;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -83,9 +62,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -93,9 +69,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
-     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -103,9 +76,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.network == null ? Input.empty() : this.network;
     }
 
-    /**
-     * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
-     */
     @InputImport(name="networkEndpointType")
     private final @Nullable Input<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
 
@@ -113,9 +83,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -123,9 +90,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
-     */
     @InputImport(name="pscTargetService")
     private final @Nullable Input<String> pscTargetService;
 
@@ -133,9 +97,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.pscTargetService == null ? Input.empty() : this.pscTargetService;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -143,9 +104,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
-     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -153,9 +111,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

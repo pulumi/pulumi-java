@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs Empty = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs();
 
-    /**
-     * The number of seconds to wait for a readiness signal during initialization before timing out.
-     */
     @InputImport(name="timeoutSec")
     private final @Nullable Input<Integer> timeoutSec;
 

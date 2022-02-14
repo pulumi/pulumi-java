@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A network endpoint over which a TPU worker can be reached.
- */
 public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkEndpointResponse Empty = new NetworkEndpointResponse();
 
-    /**
-     * The IP address of this network endpoint.
-     */
     @InputImport(name="ipAddress", required=true)
     private final String ipAddress;
 
@@ -26,9 +20,6 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.ipAddress;
     }
 
-    /**
-     * The port of this network endpoint.
-     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

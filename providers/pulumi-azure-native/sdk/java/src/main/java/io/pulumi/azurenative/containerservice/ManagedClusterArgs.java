@@ -30,16 +30,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterArgs Empty = new ManagedClusterArgs();
 
-    /**
-     * Profile of Azure Active Directory configuration.
-     */
     @InputImport(name="aadProfile")
     private final @Nullable Input<ManagedClusterAADProfileArgs> aadProfile;
 
@@ -47,9 +41,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.aadProfile == null ? Input.empty() : this.aadProfile;
     }
 
-    /**
-     * Profile of managed cluster add-on.
-     */
     @InputImport(name="addonProfiles")
     private final @Nullable Input<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
 
@@ -57,9 +48,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonProfiles == null ? Input.empty() : this.addonProfiles;
     }
 
-    /**
-     * Properties of the agent pool.
-     */
     @InputImport(name="agentPoolProfiles")
     private final @Nullable Input<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
@@ -67,9 +55,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentPoolProfiles == null ? Input.empty() : this.agentPoolProfiles;
     }
 
-    /**
-     * Access profile for managed cluster API server.
-     */
     @InputImport(name="apiServerAccessProfile")
     private final @Nullable Input<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
 
@@ -77,9 +62,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiServerAccessProfile == null ? Input.empty() : this.apiServerAccessProfile;
     }
 
-    /**
-     * Parameters to be applied to the cluster-autoscaler when enabled
-     */
     @InputImport(name="autoScalerProfile")
     private final @Nullable Input<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
 
@@ -87,9 +69,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoScalerProfile == null ? Input.empty() : this.autoScalerProfile;
     }
 
-    /**
-     * Profile of auto upgrade configuration.
-     */
     @InputImport(name="autoUpgradeProfile")
     private final @Nullable Input<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
 
@@ -97,9 +76,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpgradeProfile == null ? Input.empty() : this.autoUpgradeProfile;
     }
 
-    /**
-     * If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
-     */
     @InputImport(name="disableLocalAccounts")
     private final @Nullable Input<Boolean> disableLocalAccounts;
 
@@ -107,9 +83,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableLocalAccounts == null ? Input.empty() : this.disableLocalAccounts;
     }
 
-    /**
-     * ResourceId of the disk encryption set to use for enabling encryption at rest.
-     */
     @InputImport(name="diskEncryptionSetID")
     private final @Nullable Input<String> diskEncryptionSetID;
 
@@ -117,9 +90,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionSetID == null ? Input.empty() : this.diskEncryptionSetID;
     }
 
-    /**
-     * DNS prefix specified when creating the managed cluster.
-     */
     @InputImport(name="dnsPrefix")
     private final @Nullable Input<String> dnsPrefix;
 
@@ -127,9 +97,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsPrefix == null ? Input.empty() : this.dnsPrefix;
     }
 
-    /**
-     * (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
-     */
     @InputImport(name="enablePodSecurityPolicy")
     private final @Nullable Input<Boolean> enablePodSecurityPolicy;
 
@@ -137,9 +104,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enablePodSecurityPolicy == null ? Input.empty() : this.enablePodSecurityPolicy;
     }
 
-    /**
-     * Whether to enable Kubernetes Role-Based Access Control.
-     */
     @InputImport(name="enableRBAC")
     private final @Nullable Input<Boolean> enableRBAC;
 
@@ -147,9 +111,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableRBAC == null ? Input.empty() : this.enableRBAC;
     }
 
-    /**
-     * The extended location of the Virtual Machine.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -157,9 +118,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * FQDN subdomain specified when creating private cluster with custom private dns zone.
-     */
     @InputImport(name="fqdnSubdomain")
     private final @Nullable Input<String> fqdnSubdomain;
 
@@ -167,9 +125,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.fqdnSubdomain == null ? Input.empty() : this.fqdnSubdomain;
     }
 
-    /**
-     * Configurations for provisioning the cluster with HTTP proxy servers.
-     */
     @InputImport(name="httpProxyConfig")
     private final @Nullable Input<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
 
@@ -177,9 +132,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpProxyConfig == null ? Input.empty() : this.httpProxyConfig;
     }
 
-    /**
-     * The identity of the managed cluster, if configured.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedClusterIdentityArgs> identity;
 
@@ -187,9 +139,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Identities associated with the cluster.
-     */
     @InputImport(name="identityProfile")
     private final @Nullable Input<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
 
@@ -197,9 +146,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityProfile == null ? Input.empty() : this.identityProfile;
     }
 
-    /**
-     * Version of Kubernetes specified when creating the managed cluster.
-     */
     @InputImport(name="kubernetesVersion")
     private final @Nullable Input<String> kubernetesVersion;
 
@@ -207,9 +153,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.kubernetesVersion == null ? Input.empty() : this.kubernetesVersion;
     }
 
-    /**
-     * Profile for Linux VMs in the container service cluster.
-     */
     @InputImport(name="linuxProfile")
     private final @Nullable Input<ContainerServiceLinuxProfileArgs> linuxProfile;
 
@@ -217,9 +160,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.linuxProfile == null ? Input.empty() : this.linuxProfile;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -227,9 +167,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Profile of network configuration.
-     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<ContainerServiceNetworkProfileArgs> networkProfile;
 
@@ -237,9 +174,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
     }
 
-    /**
-     * Name of the resource group containing agent pool nodes.
-     */
     @InputImport(name="nodeResourceGroup")
     private final @Nullable Input<String> nodeResourceGroup;
 
@@ -247,9 +181,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeResourceGroup == null ? Input.empty() : this.nodeResourceGroup;
     }
 
-    /**
-     * Profile of managed cluster pod identity.
-     */
     @InputImport(name="podIdentityProfile")
     private final @Nullable Input<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
 
@@ -257,9 +188,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.podIdentityProfile == null ? Input.empty() : this.podIdentityProfile;
     }
 
-    /**
-     * Private link resources associated with the cluster.
-     */
     @InputImport(name="privateLinkResources")
     private final @Nullable Input<List<PrivateLinkResourceArgs>> privateLinkResources;
 
@@ -267,9 +195,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateLinkResources == null ? Input.empty() : this.privateLinkResources;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -277,9 +202,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the managed cluster resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -287,9 +209,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
-     */
     @InputImport(name="servicePrincipalProfile")
     private final @Nullable Input<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
 
@@ -297,9 +216,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.servicePrincipalProfile == null ? Input.empty() : this.servicePrincipalProfile;
     }
 
-    /**
-     * The managed cluster SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<ManagedClusterSKUArgs> sku;
 
@@ -307,9 +223,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -317,9 +230,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Profile for Windows VMs in the container service cluster.
-     */
     @InputImport(name="windowsProfile")
     private final @Nullable Input<ManagedClusterWindowsProfileArgs> windowsProfile;
 

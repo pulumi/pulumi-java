@@ -31,16 +31,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Filter for the Event Channel.
- */
 public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventChannelFilterArgs Empty = new EventChannelFilterArgs();
 
-    /**
-     * An array of advanced filters that are used for filtering event channels.
-     */
     @InputImport(name="advancedFilters")
     private final @Nullable Input<List<Object>> advancedFilters;
 
@@ -48,9 +42,6 @@ public final class EventChannelFilterArgs extends io.pulumi.resources.ResourceAr
         return this.advancedFilters == null ? Input.empty() : this.advancedFilters;
     }
 
-    /**
-     * Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
-     */
     @InputImport(name="enableAdvancedFilteringOnArrays")
     private final @Nullable Input<Boolean> enableAdvancedFilteringOnArrays;
 

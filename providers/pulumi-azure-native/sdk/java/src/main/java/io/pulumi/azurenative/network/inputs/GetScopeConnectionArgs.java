@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetScopeConnectionArgs Empty = new GetScopeConnectionArgs();
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -25,9 +19,6 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Name for the cross-tenant connection.
-     */
     @InputImport(name="scopeConnectionName", required=true)
     private final String scopeConnectionName;
 

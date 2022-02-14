@@ -16,251 +16,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * 
-API Version: 2019-04-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ControllersCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var controller = new AzureNative.DevSpaces.Controller("controller", new AzureNative.DevSpaces.ControllerArgs
-        {
-            Location = "eastus",
-            Name = "myControllerResource",
-            ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNative.DevSpaces.Inputs.SkuArgs
-            {
-                Name = "S1",
-                Tier = "Standard",
-            },
-            Tags = ,
-            TargetContainerHostCredentialsBase64 = "QmFzZTY0IEVuY29kZWQgVmFsdWUK",
-            TargetContainerHostResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	devspaces "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devspaces"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devspaces.NewController(ctx, "controller", &devspaces.ControllerArgs{
-			Location:          pulumi.String("eastus"),
-			Name:              pulumi.String("myControllerResource"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &devspaces.SkuArgs{
-				Name: pulumi.String("S1"),
-				Tier: pulumi.String("Standard"),
-			},
-			Tags:                                 nil,
-			TargetContainerHostCredentialsBase64: pulumi.String("QmFzZTY0IEVuY29kZWQgVmFsdWUK"),
-			TargetContainerHostResourceId:        pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const controller = new azure_native.devspaces.Controller("controller", {
-    location: "eastus",
-    name: "myControllerResource",
-    resourceGroupName: "myResourceGroup",
-    sku: {
-        name: "S1",
-        tier: "Standard",
-    },
-    tags: {},
-    targetContainerHostCredentialsBase64: "QmFzZTY0IEVuY29kZWQgVmFsdWUK",
-    targetContainerHostResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-controller = azure_native.devspaces.Controller("controller",
-    location="eastus",
-    name="myControllerResource",
-    resource_group_name="myResourceGroup",
-    sku=azure_native.devspaces.SkuArgs(
-        name="S1",
-        tier="Standard",
-    ),
-    tags={},
-    target_container_host_credentials_base64="QmFzZTY0IEVuY29kZWQgVmFsdWUK",
-    target_container_host_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerService/managedClusters/myCluster")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:devspaces:Controller myControllerResource /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DevSpaces/controllers/myControllerResource 
-```
-
- */
 @ResourceType(type="azure-native:devspaces:Controller")
 public class Controller extends io.pulumi.resources.CustomResource {
-    /**
-     * DNS name for accessing DataPlane services
-     */
     @OutputExport(name="dataPlaneFqdn", type=String.class, parameters={})
     private Output<String> dataPlaneFqdn;
 
-    /**
-     * @return DNS name for accessing DataPlane services
-     */
     public Output<String> getDataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
-    /**
-     * DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
-     */
     @OutputExport(name="hostSuffix", type=String.class, parameters={})
     private Output<String> hostSuffix;
 
-    /**
-     * @return DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
-     */
     public Output<String> getHostSuffix() {
         return this.hostSuffix;
     }
-    /**
-     * Region where the Azure resource is located.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Region where the Azure resource is located.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state of the Azure Dev Spaces Controller.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the Azure Dev Spaces Controller.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Model representing SKU for Azure Dev Spaces Controller.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
-    /**
-     * @return Model representing SKU for Azure Dev Spaces Controller.
-     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Tags for the Azure resource.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Tags for the Azure resource.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * DNS of the target container host's API server
-     */
     @OutputExport(name="targetContainerHostApiServerFqdn", type=String.class, parameters={})
     private Output<String> targetContainerHostApiServerFqdn;
 
-    /**
-     * @return DNS of the target container host's API server
-     */
     public Output<String> getTargetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
-    /**
-     * Resource ID of the target container host
-     */
     @OutputExport(name="targetContainerHostResourceId", type=String.class, parameters={})
     private Output<String> targetContainerHostResourceId;
 
-    /**
-     * @return Resource ID of the target container host
-     */
     public Output<String> getTargetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Controller(String name, ControllerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devspaces:Controller", name, args == null ? ControllerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -279,14 +97,6 @@ public class Controller extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Controller get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Controller(name, id, options);
     }

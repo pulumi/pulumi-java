@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseDumpResponse {
-/**
- * The type of the database.
- */
     private final String databaseType;
-/**
- * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
- */
     private final String gcsUri;
-/**
- * The name of the source database.
- */
     private final String sourceDatabase;
-/**
- * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"databaseType","gcsUri","sourceDatabase","type"})
@@ -38,27 +26,15 @@ public final class DatabaseDumpResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The type of the database.
- */
     public String getDatabaseType() {
         return this.databaseType;
     }
-/**
- * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
- */
     public String getGcsUri() {
         return this.gcsUri;
     }
-/**
- * The name of the source database.
- */
     public String getSourceDatabase() {
         return this.sourceDatabase;
     }
-/**
- * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
- */
     public String getType() {
         return this.type;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateAtlaseArgs Empty = new PrivateAtlaseArgs();
 
-    /**
-     * The name of the Maps Account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -28,9 +22,6 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the Private Atlas instance.
-     */
     @InputImport(name="privateAtlasName")
     private final @Nullable Input<String> privateAtlasName;
 
@@ -48,9 +36,6 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateAtlasName == null ? Input.empty() : this.privateAtlasName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

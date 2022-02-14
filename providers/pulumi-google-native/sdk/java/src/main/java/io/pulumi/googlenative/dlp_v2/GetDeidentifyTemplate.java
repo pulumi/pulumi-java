@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeidentifyTemplate {
-/**
- * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
- */
     public static CompletableFuture<GetDeidentifyTemplateResult> invokeAsync(GetDeidentifyTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getDeidentifyTemplate", TypeShape.of(GetDeidentifyTemplateResult.class), args == null ? GetDeidentifyTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

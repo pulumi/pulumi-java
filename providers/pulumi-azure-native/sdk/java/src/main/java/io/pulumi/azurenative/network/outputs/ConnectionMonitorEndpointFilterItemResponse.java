@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionMonitorEndpointFilterItemResponse {
-/**
- * The address of the filter item.
- */
     private final @Nullable String address;
-/**
- * The type of item included in the filter. Currently only 'AgentAddress' is supported.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"address","type"})
@@ -28,15 +22,9 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
         this.type = type;
     }
 
-/**
- * The address of the filter item.
- */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
-/**
- * The type of item included in the filter. Currently only 'AgentAddress' is supported.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

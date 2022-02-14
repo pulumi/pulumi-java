@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch {
-/**
- * 
- */
         DoNotRetroactivelyApply("DO_NOT_RETROACTIVELY_APPLY"),
-/**
- * 
- */
         RetroactivelyApply("RETROACTIVELY_APPLY"),
-/**
- * 
- */
         UnspecifiedOnPolicySwitch("UNSPECIFIED_ON_POLICY_SWITCH");
 
         private final String value;

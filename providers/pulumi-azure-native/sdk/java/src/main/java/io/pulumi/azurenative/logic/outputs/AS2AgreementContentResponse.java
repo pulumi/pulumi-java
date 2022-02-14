@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AS2AgreementContentResponse {
-/**
- * The AS2 one-way receive agreement.
- */
     private final AS2OneWayAgreementResponse receiveAgreement;
-/**
- * The AS2 one-way send agreement.
- */
     private final AS2OneWayAgreementResponse sendAgreement;
 
     @OutputCustomType.Constructor({"receiveAgreement","sendAgreement"})
@@ -26,15 +20,9 @@ public final class AS2AgreementContentResponse {
         this.sendAgreement = Objects.requireNonNull(sendAgreement);
     }
 
-/**
- * The AS2 one-way receive agreement.
- */
     public AS2OneWayAgreementResponse getReceiveAgreement() {
         return this.receiveAgreement;
     }
-/**
- * The AS2 one-way send agreement.
- */
     public AS2OneWayAgreementResponse getSendAgreement() {
         return this.sendAgreement;
     }

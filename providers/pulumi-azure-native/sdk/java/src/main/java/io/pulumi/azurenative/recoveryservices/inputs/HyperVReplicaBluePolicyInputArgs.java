@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * HyperV Replica Blue policy input.
- */
 public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HyperVReplicaBluePolicyInputArgs Empty = new HyperVReplicaBluePolicyInputArgs();
 
-    /**
-     * A value indicating the authentication type.
-     */
     @InputImport(name="allowedAuthenticationType")
     private final @Nullable Input<Integer> allowedAuthenticationType;
 
@@ -28,9 +22,6 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
         return this.allowedAuthenticationType == null ? Input.empty() : this.allowedAuthenticationType;
     }
 
-    /**
-     * A value indicating the application consistent frequency.
-     */
     @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
     private final @Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours;
 
@@ -38,9 +29,6 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Input.empty() : this.applicationConsistentSnapshotFrequencyInHours;
     }
 
-    /**
-     * A value indicating whether compression has to be enabled.
-     */
     @InputImport(name="compression")
     private final @Nullable Input<String> compression;
 
@@ -48,9 +36,6 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
         return this.compression == null ? Input.empty() : this.compression;
     }
 
-    /**
-     * A value indicating whether IR is online.
-     */
     @InputImport(name="initialReplicationMethod")
     private final @Nullable Input<String> initialReplicationMethod;
 
@@ -58,10 +43,6 @@ public final class HyperVReplicaBluePolicyInputArgs extends io.pulumi.resources.
         return this.initialReplicationMethod == null ? Input.empty() : this.initialReplicationMethod;
     }
 
-    /**
-     * The class type.
-Expected value is 'HyperVReplica2012R2'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -69,9 +50,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * A value indicating the offline IR export path.
-     */
     @InputImport(name="offlineReplicationExportPath")
     private final @Nullable Input<String> offlineReplicationExportPath;
 
@@ -79,9 +57,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.offlineReplicationExportPath == null ? Input.empty() : this.offlineReplicationExportPath;
     }
 
-    /**
-     * A value indicating the offline IR import path.
-     */
     @InputImport(name="offlineReplicationImportPath")
     private final @Nullable Input<String> offlineReplicationImportPath;
 
@@ -89,9 +64,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.offlineReplicationImportPath == null ? Input.empty() : this.offlineReplicationImportPath;
     }
 
-    /**
-     * A value indicating the online IR start time.
-     */
     @InputImport(name="onlineReplicationStartTime")
     private final @Nullable Input<String> onlineReplicationStartTime;
 
@@ -99,9 +71,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.onlineReplicationStartTime == null ? Input.empty() : this.onlineReplicationStartTime;
     }
 
-    /**
-     * A value indicating the number of recovery points.
-     */
     @InputImport(name="recoveryPoints")
     private final @Nullable Input<Integer> recoveryPoints;
 
@@ -109,9 +78,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.recoveryPoints == null ? Input.empty() : this.recoveryPoints;
     }
 
-    /**
-     * A value indicating whether the VM has to be auto deleted.
-     */
     @InputImport(name="replicaDeletion")
     private final @Nullable Input<String> replicaDeletion;
 
@@ -119,9 +85,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.replicaDeletion == null ? Input.empty() : this.replicaDeletion;
     }
 
-    /**
-     * A value indicating the replication interval.
-     */
     @InputImport(name="replicationFrequencyInSeconds")
     private final @Nullable Input<Integer> replicationFrequencyInSeconds;
 
@@ -129,9 +92,6 @@ Expected value is 'HyperVReplica2012R2'.
         return this.replicationFrequencyInSeconds == null ? Input.empty() : this.replicationFrequencyInSeconds;
     }
 
-    /**
-     * A value indicating the recovery HTTPS port.
-     */
     @InputImport(name="replicationPort")
     private final @Nullable Input<Integer> replicationPort;
 

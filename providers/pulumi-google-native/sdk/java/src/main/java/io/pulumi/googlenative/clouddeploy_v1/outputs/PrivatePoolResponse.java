@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivatePoolResponse {
-/**
- * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
- */
     private final String artifactStorage;
-/**
- * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
- */
     private final String serviceAccount;
-/**
- * Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
- */
     private final String workerPool;
 
     @OutputCustomType.Constructor({"artifactStorage","serviceAccount","workerPool"})
@@ -32,21 +23,12 @@ public final class PrivatePoolResponse {
         this.workerPool = Objects.requireNonNull(workerPool);
     }
 
-/**
- * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
- */
     public String getArtifactStorage() {
         return this.artifactStorage;
     }
-/**
- * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
- */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
-/**
- * Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
- */
     public String getWorkerPool() {
         return this.workerPool;
     }

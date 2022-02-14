@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComplianceOccurrenceResponse {
-/**
- * The reason for non compliance of these files.
- */
     private final String nonComplianceReason;
-/**
- * A list of files which are violating compliance checks.
- */
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
     @OutputCustomType.Constructor({"nonComplianceReason","nonCompliantFiles"})
@@ -28,15 +22,9 @@ public final class ComplianceOccurrenceResponse {
         this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
     }
 
-/**
- * The reason for non compliance of these files.
- */
     public String getNonComplianceReason() {
         return this.nonComplianceReason;
     }
-/**
- * A list of files which are violating compliance checks.
- */
     public List<NonCompliantFileResponse> getNonCompliantFiles() {
         return this.nonCompliantFiles;
     }

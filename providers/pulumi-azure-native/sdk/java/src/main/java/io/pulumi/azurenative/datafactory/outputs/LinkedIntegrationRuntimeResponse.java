@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LinkedIntegrationRuntimeResponse {
-/**
- * The creating time of the linked integration runtime.
- */
     private final String createTime;
-/**
- * The location of the data factory for which the linked integration runtime belong to.
- */
     private final String dataFactoryLocation;
-/**
- * The name of the data factory for which the linked integration runtime belong to.
- */
     private final String dataFactoryName;
-/**
- * The name of the linked integration runtime.
- */
     private final String name;
-/**
- * The subscription ID for which the linked integration runtime belong to.
- */
     private final String subscriptionId;
 
     @OutputCustomType.Constructor({"createTime","dataFactoryLocation","dataFactoryName","name","subscriptionId"})
@@ -44,33 +29,18 @@ public final class LinkedIntegrationRuntimeResponse {
         this.subscriptionId = Objects.requireNonNull(subscriptionId);
     }
 
-/**
- * The creating time of the linked integration runtime.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * The location of the data factory for which the linked integration runtime belong to.
- */
     public String getDataFactoryLocation() {
         return this.dataFactoryLocation;
     }
-/**
- * The name of the data factory for which the linked integration runtime belong to.
- */
     public String getDataFactoryName() {
         return this.dataFactoryName;
     }
-/**
- * The name of the linked integration runtime.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The subscription ID for which the linked integration runtime belong to.
- */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }

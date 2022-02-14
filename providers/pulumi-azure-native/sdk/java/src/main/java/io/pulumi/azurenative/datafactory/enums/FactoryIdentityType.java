@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The identity type.
- */
     @EnumType
     public enum FactoryIdentityType {
-/**
- * 
- */
         SystemAssigned("SystemAssigned"),
-/**
- * 
- */
         UserAssigned("UserAssigned"),
-/**
- * 
- */
         SystemAssigned_UserAssigned("SystemAssigned,UserAssigned");
 
         private final String value;

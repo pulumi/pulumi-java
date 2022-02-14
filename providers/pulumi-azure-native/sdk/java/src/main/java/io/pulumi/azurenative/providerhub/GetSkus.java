@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSkus {
-/**
- * 
-API Version: 2020-11-20.
- */
     public static CompletableFuture<GetSkusResult> invokeAsync(GetSkusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkus", TypeShape.of(GetSkusResult.class), args == null ? GetSkusArgs.Empty : args, Utilities.withVersion(options));
     }

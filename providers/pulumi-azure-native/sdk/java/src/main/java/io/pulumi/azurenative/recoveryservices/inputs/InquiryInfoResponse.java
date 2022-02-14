@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Details about inquired protectable items under a given container.
- */
 public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InquiryInfoResponse Empty = new InquiryInfoResponse();
 
-    /**
-     * Error Details if the Status is non-success.
-     */
     @InputImport(name="errorDetail")
     private final @Nullable ErrorDetailResponse errorDetail;
 
@@ -30,10 +24,6 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
     }
 
-    /**
-     * Inquiry Details which will have workload specific details.
-For e.g. - For SQL and oracle this will contain different details.
-     */
     @InputImport(name="inquiryDetails")
     private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
 
@@ -41,10 +31,6 @@ For e.g. - For SQL and oracle this will contain different details.
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
     }
 
-    /**
-     * Inquiry Status for this container such as
-InProgress | Failed | Succeeded
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

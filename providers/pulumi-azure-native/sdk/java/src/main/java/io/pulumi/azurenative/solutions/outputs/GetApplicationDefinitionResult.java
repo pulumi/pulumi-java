@@ -23,89 +23,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApplicationDefinitionResult {
-/**
- * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
- */
     private final @Nullable List<ApplicationDefinitionArtifactResponse> artifacts;
-/**
- * The managed application provider authorizations.
- */
     private final @Nullable List<ApplicationAuthorizationResponse> authorizations;
-/**
- * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
- */
     private final @Nullable Object createUiDefinition;
-/**
- * The managed application deployment policy.
- */
     private final @Nullable ApplicationDeploymentPolicyResponse deploymentPolicy;
-/**
- * The managed application definition description.
- */
     private final @Nullable String description;
-/**
- * The managed application definition display name.
- */
     private final @Nullable String displayName;
-/**
- * Resource ID
- */
     private final String id;
-/**
- * A value indicating whether the package is enabled or not.
- */
     private final @Nullable Boolean isEnabled;
-/**
- * Resource location
- */
     private final @Nullable String location;
-/**
- * The managed application lock level.
- */
     private final String lockLevel;
-/**
- * The managed application locking policy.
- */
     private final @Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy;
-/**
- * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
- */
     private final @Nullable Object mainTemplate;
-/**
- * ID of the resource that manages this resource.
- */
     private final @Nullable String managedBy;
-/**
- * The managed application management policy that determines publisher's access to the managed resource group.
- */
     private final @Nullable ApplicationManagementPolicyResponse managementPolicy;
-/**
- * Resource name
- */
     private final String name;
-/**
- * The managed application notification policy.
- */
     private final @Nullable ApplicationNotificationPolicyResponse notificationPolicy;
-/**
- * The managed application definition package file Uri. Use this element
- */
     private final @Nullable String packageFileUri;
-/**
- * The managed application provider policies.
- */
     private final @Nullable List<ApplicationPolicyResponse> policies;
-/**
- * The SKU of the resource.
- */
     private final @Nullable SkuResponse sku;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"artifacts","authorizations","createUiDefinition","deploymentPolicy","description","displayName","id","isEnabled","location","lockLevel","lockingPolicy","mainTemplate","managedBy","managementPolicy","name","notificationPolicy","packageFileUri","policies","sku","tags","type"})
@@ -154,129 +91,66 @@ public final class GetApplicationDefinitionResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
- */
     public List<ApplicationDefinitionArtifactResponse> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
-/**
- * The managed application provider authorizations.
- */
     public List<ApplicationAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
-/**
- * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
- */
     public Optional<Object> getCreateUiDefinition() {
         return Optional.ofNullable(this.createUiDefinition);
     }
-/**
- * The managed application deployment policy.
- */
     public Optional<ApplicationDeploymentPolicyResponse> getDeploymentPolicy() {
         return Optional.ofNullable(this.deploymentPolicy);
     }
-/**
- * The managed application definition description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The managed application definition display name.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * Resource ID
- */
     public String getId() {
         return this.id;
     }
-/**
- * A value indicating whether the package is enabled or not.
- */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
-/**
- * Resource location
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The managed application lock level.
- */
     public String getLockLevel() {
         return this.lockLevel;
     }
-/**
- * The managed application locking policy.
- */
     public Optional<ApplicationPackageLockingPolicyDefinitionResponse> getLockingPolicy() {
         return Optional.ofNullable(this.lockingPolicy);
     }
-/**
- * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
- */
     public Optional<Object> getMainTemplate() {
         return Optional.ofNullable(this.mainTemplate);
     }
-/**
- * ID of the resource that manages this resource.
- */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
-/**
- * The managed application management policy that determines publisher's access to the managed resource group.
- */
     public Optional<ApplicationManagementPolicyResponse> getManagementPolicy() {
         return Optional.ofNullable(this.managementPolicy);
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * The managed application notification policy.
- */
     public Optional<ApplicationNotificationPolicyResponse> getNotificationPolicy() {
         return Optional.ofNullable(this.notificationPolicy);
     }
-/**
- * The managed application definition package file Uri. Use this element
- */
     public Optional<String> getPackageFileUri() {
         return Optional.ofNullable(this.packageFileUri);
     }
-/**
- * The managed application provider policies.
- */
     public List<ApplicationPolicyResponse> getPolicies() {
         return this.policies == null ? List.of() : this.policies;
     }
-/**
- * The SKU of the resource.
- */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

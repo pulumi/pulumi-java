@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. Format of the output data files, defaults to JSON.
- */
     @EnumType
     public enum GoogleCloudMlV1__PredictionInputOutputDataFormat {
-/**
- * Unspecified format.
- */
         DataFormatUnspecified("DATA_FORMAT_UNSPECIFIED"),
-/**
- * Each line of the file is a JSON dictionary representing one record.
- */
         Json("JSON"),
-/**
- * Deprecated. Use JSON instead.
- */
         Text("TEXT"),
-/**
- * The source file is a TFRecord file. Currently available only for input data.
- */
         TfRecord("TF_RECORD"),
-/**
- * The source file is a GZIP-compressed TFRecord file. Currently available only for input data.
- */
         TfRecordGzip("TF_RECORD_GZIP"),
-/**
- * Values are comma-separated rows, with keys in a separate file. Currently available only for output data.
- */
         Csv("CSV");
 
         private final String value;

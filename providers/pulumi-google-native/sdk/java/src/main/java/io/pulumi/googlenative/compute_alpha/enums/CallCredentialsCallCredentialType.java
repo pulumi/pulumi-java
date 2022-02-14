@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following: - GCE_VM: The local GCE VM service account credentials are used to access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
- */
     @EnumType
     public enum CallCredentialsCallCredentialType {
-/**
- * Custom authenticator credentials are used to access the SDS server.
- */
         FromPlugin("FROM_PLUGIN"),
-/**
- * The local GCE VM service account credentials are used to access the SDS server.
- */
         GceVm("GCE_VM"),
-/**
- * 
- */
         Invalid("INVALID");
 
         private final String value;

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The private endpoint connection of an IotHub
- */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
-    /**
-     * The resource identifier.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,9 +20,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
-    /**
-     * The resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,9 +27,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
-    /**
-     * The properties of a private endpoint connection
-     */
     @InputImport(name="properties", required=true)
     private final PrivateEndpointConnectionPropertiesResponse properties;
 
@@ -46,9 +34,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.properties;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

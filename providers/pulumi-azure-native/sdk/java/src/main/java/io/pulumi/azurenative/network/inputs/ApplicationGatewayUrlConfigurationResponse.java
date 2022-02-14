@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Url configuration of the Actions set in Application Gateway.
- */
 public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayUrlConfigurationResponse Empty = new ApplicationGatewayUrlConfigurationResponse();
 
-    /**
-     * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
-     */
     @InputImport(name="modifiedPath")
     private final @Nullable String modifiedPath;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
         return this.modifiedPath == null ? Optional.empty() : Optional.ofNullable(this.modifiedPath);
     }
 
-    /**
-     * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
-     */
     @InputImport(name="modifiedQueryString")
     private final @Nullable String modifiedQueryString;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewayUrlConfigurationResponse extends io.pulumi.
         return this.modifiedQueryString == null ? Optional.empty() : Optional.ofNullable(this.modifiedQueryString);
     }
 
-    /**
-     * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
-     */
     @InputImport(name="reroute")
     private final @Nullable Boolean reroute;
 

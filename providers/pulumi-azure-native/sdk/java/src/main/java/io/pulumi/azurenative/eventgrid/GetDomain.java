@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * EventGrid Domain.
-API Version: 2020-06-01.
- *
- * EventGrid Domain.
- */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

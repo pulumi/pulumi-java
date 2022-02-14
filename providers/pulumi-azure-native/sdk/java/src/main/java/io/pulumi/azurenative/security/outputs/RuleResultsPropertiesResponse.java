@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuleResultsPropertiesResponse {
-/**
- * Expected results in the baseline.
- */
     private final @Nullable List<List<String>> results;
 
     @OutputCustomType.Constructor({"results"})
@@ -21,9 +18,6 @@ public final class RuleResultsPropertiesResponse {
         this.results = results;
     }
 
-/**
- * Expected results in the baseline.
- */
     public List<List<String>> getResults() {
         return this.results == null ? List.of() : this.results;
     }

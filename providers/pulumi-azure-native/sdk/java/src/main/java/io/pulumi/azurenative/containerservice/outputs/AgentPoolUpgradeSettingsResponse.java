@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AgentPoolUpgradeSettingsResponse {
-/**
- * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
- */
     private final @Nullable String maxSurge;
 
     @OutputCustomType.Constructor({"maxSurge"})
@@ -21,9 +18,6 @@ public final class AgentPoolUpgradeSettingsResponse {
         this.maxSurge = maxSurge;
     }
 
-/**
- * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
- */
     public Optional<String> getMaxSurge() {
         return Optional.ofNullable(this.maxSurge);
     }

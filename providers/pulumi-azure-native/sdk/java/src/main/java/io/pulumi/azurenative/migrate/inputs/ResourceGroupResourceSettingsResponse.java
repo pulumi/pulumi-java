@@ -8,17 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the resource group resource settings.
- */
 public final class ResourceGroupResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceGroupResourceSettingsResponse Empty = new ResourceGroupResourceSettingsResponse();
 
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'resourceGroups'.
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -26,9 +19,6 @@ Expected value is 'resourceGroups'.
         return this.resourceType;
     }
 
-    /**
-     * Gets or sets the target Resource name.
-     */
     @InputImport(name="targetResourceName", required=true)
     private final String targetResourceName;
 

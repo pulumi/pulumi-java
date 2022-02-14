@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * AADProfile specifies attributes for Azure Active Directory integration.
- */
 public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterAADProfileResponse Empty = new ManagedClusterAADProfileResponse();
 
-    /**
-     * AAD group object IDs that will have admin role of the cluster.
-     */
     @InputImport(name="adminGroupObjectIDs")
     private final @Nullable List<String> adminGroupObjectIDs;
 
@@ -29,9 +23,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
         return this.adminGroupObjectIDs == null ? List.of() : this.adminGroupObjectIDs;
     }
 
-    /**
-     * The client AAD application ID.
-     */
     @InputImport(name="clientAppID")
     private final @Nullable String clientAppID;
 
@@ -39,9 +30,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
         return this.clientAppID == null ? Optional.empty() : Optional.ofNullable(this.clientAppID);
     }
 
-    /**
-     * Whether to enable Azure RBAC for Kubernetes authorization.
-     */
     @InputImport(name="enableAzureRBAC")
     private final @Nullable Boolean enableAzureRBAC;
 
@@ -49,9 +37,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
         return this.enableAzureRBAC == null ? Optional.empty() : Optional.ofNullable(this.enableAzureRBAC);
     }
 
-    /**
-     * Whether to enable managed AAD.
-     */
     @InputImport(name="managed")
     private final @Nullable Boolean managed;
 
@@ -59,9 +44,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
         return this.managed == null ? Optional.empty() : Optional.ofNullable(this.managed);
     }
 
-    /**
-     * The server AAD application ID.
-     */
     @InputImport(name="serverAppID")
     private final @Nullable String serverAppID;
 
@@ -69,9 +51,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
         return this.serverAppID == null ? Optional.empty() : Optional.ofNullable(this.serverAppID);
     }
 
-    /**
-     * The server AAD application secret.
-     */
     @InputImport(name="serverAppSecret")
     private final @Nullable String serverAppSecret;
 
@@ -79,9 +58,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
         return this.serverAppSecret == null ? Optional.empty() : Optional.ofNullable(this.serverAppSecret);
     }
 
-    /**
-     * The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
-     */
     @InputImport(name="tenantID")
     private final @Nullable String tenantID;
 

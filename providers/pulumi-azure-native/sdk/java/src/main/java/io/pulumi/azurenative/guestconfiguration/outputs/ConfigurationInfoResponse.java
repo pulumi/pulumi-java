@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConfigurationInfoResponse {
-/**
- * Name of the configuration.
- */
     private final String name;
-/**
- * Version of the configuration.
- */
     private final String version;
 
     @OutputCustomType.Constructor({"name","version"})
@@ -26,15 +20,9 @@ public final class ConfigurationInfoResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * Name of the configuration.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Version of the configuration.
- */
     public String getVersion() {
         return this.version;
     }

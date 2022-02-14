@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Kind of the endpoint for the data connection
- */
     @EnumType
     public enum DataConnectionKind {
-/**
- * 
- */
         EventHub("EventHub"),
-/**
- * 
- */
         EventGrid("EventGrid"),
-/**
- * 
- */
         IotHub("IotHub");
 
         private final String value;

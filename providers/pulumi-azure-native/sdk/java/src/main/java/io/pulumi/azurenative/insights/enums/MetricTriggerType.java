@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Metric Trigger Type - 'Consecutive' or 'Total'
- */
     @EnumType
     public enum MetricTriggerType {
-/**
- * 
- */
         Consecutive("Consecutive"),
-/**
- * 
- */
         Total("Total");
 
         private final String value;

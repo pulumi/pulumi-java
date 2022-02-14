@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Storage format used for the file represented by the share.
- */
     @EnumType
     public enum AzureContainerDataFormat {
-/**
- * 
- */
         BlockBlob("BlockBlob"),
-/**
- * 
- */
         PageBlob("PageBlob"),
-/**
- * 
- */
         AzureFile("AzureFile");
 
         private final String value;

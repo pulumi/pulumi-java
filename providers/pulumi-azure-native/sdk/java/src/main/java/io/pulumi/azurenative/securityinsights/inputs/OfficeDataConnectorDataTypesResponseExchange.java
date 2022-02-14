@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Exchange data type connection.
- */
 public final class OfficeDataConnectorDataTypesResponseExchange extends io.pulumi.resources.InvokeArgs {
 
     public static final OfficeDataConnectorDataTypesResponseExchange Empty = new OfficeDataConnectorDataTypesResponseExchange();
 
-    /**
-     * Describe whether this data type connection is enabled or not.
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMonitorUserRoles {
-/**
- * Response for list of user's role for Logz.io account.
-API Version: 2020-10-01.
- *
- * Response for list of user's role for Logz.io account.
- */
     public static CompletableFuture<ListMonitorUserRolesResult> invokeAsync(ListMonitorUserRolesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorUserRoles", TypeShape.of(ListMonitorUserRolesResult.class), args == null ? ListMonitorUserRolesArgs.Empty : args, Utilities.withVersion(options));
     }

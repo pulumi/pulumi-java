@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
- */
 public final class EncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionPropertiesArgs Empty = new EncryptionPropertiesArgs();
 
-    /**
-     * Type of the key source.
-     */
     @InputImport(name="keySource")
     private final @Nullable Input<KeySource> keySource;
 
@@ -28,9 +22,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
         return this.keySource == null ? Input.empty() : this.keySource;
     }
 
-    /**
-     * Additional details when using Microsoft.KeyVault
-     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 

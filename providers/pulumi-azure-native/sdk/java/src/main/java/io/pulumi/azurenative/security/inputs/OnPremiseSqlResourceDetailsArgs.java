@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Details of the On Premise Sql resource that was assessed
- */
 public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OnPremiseSqlResourceDetailsArgs Empty = new OnPremiseSqlResourceDetailsArgs();
 
-    /**
-     * The Sql database name installed on the machine
-     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -26,9 +20,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
         return this.databaseName;
     }
 
-    /**
-     * The name of the machine
-     */
     @InputImport(name="machineName", required=true)
     private final Input<String> machineName;
 
@@ -36,9 +27,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
         return this.machineName;
     }
 
-    /**
-     * The Sql server name installed on the machine
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -46,10 +34,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
         return this.serverName;
     }
 
-    /**
-     * The platform where the assessed resource resides
-Expected value is 'OnPremiseSql'.
-     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 
@@ -57,9 +41,6 @@ Expected value is 'OnPremiseSql'.
         return this.source;
     }
 
-    /**
-     * The oms agent Id installed on the machine
-     */
     @InputImport(name="sourceComputerId", required=true)
     private final Input<String> sourceComputerId;
 
@@ -67,9 +48,6 @@ Expected value is 'OnPremiseSql'.
         return this.sourceComputerId;
     }
 
-    /**
-     * The unique Id of the machine
-     */
     @InputImport(name="vmuuid", required=true)
     private final Input<String> vmuuid;
 
@@ -77,9 +55,6 @@ Expected value is 'OnPremiseSql'.
         return this.vmuuid;
     }
 
-    /**
-     * Azure resource Id of the workspace the machine is attached to
-     */
     @InputImport(name="workspaceId", required=true)
     private final Input<String> workspaceId;
 

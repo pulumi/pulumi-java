@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the DirectLine Speech channel.
- */
 public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DirectLineSpeechChannelPropertiesResponse Empty = new DirectLineSpeechChannelPropertiesResponse();
 
-    /**
-     * The cognitive service region with this channel registration.
-     */
     @InputImport(name="cognitiveServiceRegion", required=true)
     private final String cognitiveServiceRegion;
 
@@ -28,9 +22,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
         return this.cognitiveServiceRegion;
     }
 
-    /**
-     * The cognitive service subscription key to use with this channel registration.
-     */
     @InputImport(name="cognitiveServiceSubscriptionKey", required=true)
     private final String cognitiveServiceSubscriptionKey;
 
@@ -38,9 +29,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
         return this.cognitiveServiceSubscriptionKey;
     }
 
-    /**
-     * Custom voice deployment id (optional).
-     */
     @InputImport(name="customSpeechModelId")
     private final @Nullable String customSpeechModelId;
 
@@ -48,9 +36,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
         return this.customSpeechModelId == null ? Optional.empty() : Optional.ofNullable(this.customSpeechModelId);
     }
 
-    /**
-     * Custom speech model id (optional).
-     */
     @InputImport(name="customVoiceDeploymentId")
     private final @Nullable String customVoiceDeploymentId;
 
@@ -58,9 +43,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
         return this.customVoiceDeploymentId == null ? Optional.empty() : Optional.ofNullable(this.customVoiceDeploymentId);
     }
 
-    /**
-     * Make this a default bot for chosen cognitive service account.
-     */
     @InputImport(name="isDefaultBotForCogSvcAccount")
     private final @Nullable Boolean isDefaultBotForCogSvcAccount;
 
@@ -68,9 +50,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
         return this.isDefaultBotForCogSvcAccount == null ? Optional.empty() : Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
 
-    /**
-     * Whether this channel is enabled or not.
-     */
     @InputImport(name="isEnabled")
     private final @Nullable Boolean isEnabled;
 

@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionMonitorSourceResponse {
-/**
- * The source port used by connection monitor.
- */
     private final @Nullable Integer port;
-/**
- * The ID of the resource used as the source by connection monitor.
- */
     private final String resourceId;
 
     @OutputCustomType.Constructor({"port","resourceId"})
@@ -29,15 +23,9 @@ public final class ConnectionMonitorSourceResponse {
         this.resourceId = Objects.requireNonNull(resourceId);
     }
 
-/**
- * The source port used by connection monitor.
- */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
-/**
- * The ID of the resource used as the source by connection monitor.
- */
     public String getResourceId() {
         return this.resourceId;
     }

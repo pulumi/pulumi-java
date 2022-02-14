@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceNamespaceIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- */
     public static CompletableFuture<GetInstanceNamespaceIamPolicyResult> invokeAsync(GetInstanceNamespaceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datafusion/v1beta1:getInstanceNamespaceIamPolicy", TypeShape.of(GetInstanceNamespaceIamPolicyResult.class), args == null ? GetInstanceNamespaceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

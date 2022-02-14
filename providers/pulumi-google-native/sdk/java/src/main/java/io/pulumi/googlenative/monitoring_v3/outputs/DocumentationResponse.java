@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DocumentationResponse {
-/**
- * The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
- */
     private final String content;
-/**
- * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
- */
     private final String mimeType;
 
     @OutputCustomType.Constructor({"content","mimeType"})
@@ -26,15 +20,9 @@ public final class DocumentationResponse {
         this.mimeType = Objects.requireNonNull(mimeType);
     }
 
-/**
- * The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
- */
     public String getContent() {
         return this.content;
     }
-/**
- * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
- */
     public String getMimeType() {
         return this.mimeType;
     }

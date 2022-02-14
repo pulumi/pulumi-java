@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
- */
     @EnumType
     public enum ComponentNames {
-/**
- * 
- */
         MicrosoftWindowsShellSetup("Microsoft-Windows-Shell-Setup");
 
         private final String value;

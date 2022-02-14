@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A2A enable protection input.
- */
 public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final A2AEnableProtectionInputArgs Empty = new A2AEnableProtectionInputArgs();
 
-    /**
-     * The recovery disk encryption information.
-     */
     @InputImport(name="diskEncryptionInfo")
     private final @Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
@@ -31,9 +25,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
         return this.diskEncryptionInfo == null ? Input.empty() : this.diskEncryptionInfo;
     }
 
-    /**
-     * The fabric specific object Id of the virtual machine.
-     */
     @InputImport(name="fabricObjectId")
     private final @Nullable Input<String> fabricObjectId;
 
@@ -41,10 +32,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
         return this.fabricObjectId == null ? Input.empty() : this.fabricObjectId;
     }
 
-    /**
-     * The class type.
-Expected value is 'A2A'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -52,9 +39,6 @@ Expected value is 'A2A'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The multi vm group name.
-     */
     @InputImport(name="multiVmGroupName")
     private final @Nullable Input<String> multiVmGroupName;
 
@@ -62,9 +46,6 @@ Expected value is 'A2A'.
         return this.multiVmGroupName == null ? Input.empty() : this.multiVmGroupName;
     }
 
-    /**
-     * The recovery availability set Id.
-     */
     @InputImport(name="recoveryAvailabilitySetId")
     private final @Nullable Input<String> recoveryAvailabilitySetId;
 
@@ -72,9 +53,6 @@ Expected value is 'A2A'.
         return this.recoveryAvailabilitySetId == null ? Input.empty() : this.recoveryAvailabilitySetId;
     }
 
-    /**
-     * The recovery availability zone.
-     */
     @InputImport(name="recoveryAvailabilityZone")
     private final @Nullable Input<String> recoveryAvailabilityZone;
 
@@ -82,9 +60,6 @@ Expected value is 'A2A'.
         return this.recoveryAvailabilityZone == null ? Input.empty() : this.recoveryAvailabilityZone;
     }
 
-    /**
-     * The recovery Azure virtual network ARM id.
-     */
     @InputImport(name="recoveryAzureNetworkId")
     private final @Nullable Input<String> recoveryAzureNetworkId;
 
@@ -92,9 +67,6 @@ Expected value is 'A2A'.
         return this.recoveryAzureNetworkId == null ? Input.empty() : this.recoveryAzureNetworkId;
     }
 
-    /**
-     * The boot diagnostic storage account.
-     */
     @InputImport(name="recoveryBootDiagStorageAccountId")
     private final @Nullable Input<String> recoveryBootDiagStorageAccountId;
 
@@ -102,9 +74,6 @@ Expected value is 'A2A'.
         return this.recoveryBootDiagStorageAccountId == null ? Input.empty() : this.recoveryBootDiagStorageAccountId;
     }
 
-    /**
-     * The recovery cloud service Id. Valid for V1 scenarios.
-     */
     @InputImport(name="recoveryCloudServiceId")
     private final @Nullable Input<String> recoveryCloudServiceId;
 
@@ -112,9 +81,6 @@ Expected value is 'A2A'.
         return this.recoveryCloudServiceId == null ? Input.empty() : this.recoveryCloudServiceId;
     }
 
-    /**
-     * The recovery container Id.
-     */
     @InputImport(name="recoveryContainerId")
     private final @Nullable Input<String> recoveryContainerId;
 
@@ -122,9 +88,6 @@ Expected value is 'A2A'.
         return this.recoveryContainerId == null ? Input.empty() : this.recoveryContainerId;
     }
 
-    /**
-     * The recovery proximity placement group Id.
-     */
     @InputImport(name="recoveryProximityPlacementGroupId")
     private final @Nullable Input<String> recoveryProximityPlacementGroupId;
 
@@ -132,9 +95,6 @@ Expected value is 'A2A'.
         return this.recoveryProximityPlacementGroupId == null ? Input.empty() : this.recoveryProximityPlacementGroupId;
     }
 
-    /**
-     * The recovery resource group Id. Valid for V2 scenarios.
-     */
     @InputImport(name="recoveryResourceGroupId")
     private final @Nullable Input<String> recoveryResourceGroupId;
 
@@ -142,9 +102,6 @@ Expected value is 'A2A'.
         return this.recoveryResourceGroupId == null ? Input.empty() : this.recoveryResourceGroupId;
     }
 
-    /**
-     * The recovery subnet name.
-     */
     @InputImport(name="recoverySubnetName")
     private final @Nullable Input<String> recoverySubnetName;
 
@@ -152,9 +109,6 @@ Expected value is 'A2A'.
         return this.recoverySubnetName == null ? Input.empty() : this.recoverySubnetName;
     }
 
-    /**
-     * The list of vm disk details.
-     */
     @InputImport(name="vmDisks")
     private final @Nullable Input<List<A2AVmDiskInputDetailsArgs>> vmDisks;
 
@@ -162,9 +116,6 @@ Expected value is 'A2A'.
         return this.vmDisks == null ? Input.empty() : this.vmDisks;
     }
 
-    /**
-     * The list of vm managed disk details.
-     */
     @InputImport(name="vmManagedDisks")
     private final @Nullable Input<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
 

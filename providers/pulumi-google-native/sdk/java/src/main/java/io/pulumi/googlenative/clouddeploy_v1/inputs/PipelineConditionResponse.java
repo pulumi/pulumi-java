@@ -9,16 +9,10 @@ import io.pulumi.googlenative.clouddeploy_v1.inputs.TargetsPresentConditionRespo
 import java.util.Objects;
 
 
-/**
- * PipelineCondition contains all conditions relevant to a Delivery Pipeline.
- */
 public final class PipelineConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineConditionResponse Empty = new PipelineConditionResponse();
 
-    /**
-     * Details around the Pipeline's overall status.
-     */
     @InputImport(name="pipelineReadyCondition", required=true)
     private final PipelineReadyConditionResponse pipelineReadyCondition;
 
@@ -26,9 +20,6 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
         return this.pipelineReadyCondition;
     }
 
-    /**
-     * Detalis around targets enumerated in the pipeline.
-     */
     @InputImport(name="targetsPresentCondition", required=true)
     private final TargetsPresentConditionResponse targetsPresentCondition;
 

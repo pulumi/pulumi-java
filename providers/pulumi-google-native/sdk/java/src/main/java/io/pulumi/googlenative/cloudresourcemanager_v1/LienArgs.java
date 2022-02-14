@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LienArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LienArgs Empty = new LienArgs();
 
-    /**
-     * The creation time of this Lien.
-     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -28,9 +22,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
-    /**
-     * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
-     */
     @InputImport(name="origin")
     private final @Nullable Input<String> origin;
 
@@ -48,9 +36,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.origin == null ? Input.empty() : this.origin;
     }
 
-    /**
-     * A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens are supported. Example: `projects/1234`
-     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -58,9 +43,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
-    /**
-     * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -68,9 +50,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
-    /**
-     * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
-     */
     @InputImport(name="restrictions")
     private final @Nullable Input<List<String>> restrictions;
 

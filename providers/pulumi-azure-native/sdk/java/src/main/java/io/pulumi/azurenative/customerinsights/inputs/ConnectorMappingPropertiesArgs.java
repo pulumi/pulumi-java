@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The connector mapping properties.
- */
 public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorMappingPropertiesArgs Empty = new ConnectorMappingPropertiesArgs();
 
-    /**
-     * The availability of mapping property.
-     */
     @InputImport(name="availability", required=true)
     private final Input<ConnectorMappingAvailabilityArgs> availability;
 
@@ -34,9 +28,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.availability;
     }
 
-    /**
-     * The operation after import is done.
-     */
     @InputImport(name="completeOperation", required=true)
     private final Input<ConnectorMappingCompleteOperationArgs> completeOperation;
 
@@ -44,9 +35,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.completeOperation;
     }
 
-    /**
-     * The error management setting for the mapping.
-     */
     @InputImport(name="errorManagement", required=true)
     private final Input<ConnectorMappingErrorManagementArgs> errorManagement;
 
@@ -54,9 +42,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.errorManagement;
     }
 
-    /**
-     * The file filter for the mapping.
-     */
     @InputImport(name="fileFilter")
     private final @Nullable Input<String> fileFilter;
 
@@ -64,9 +49,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.fileFilter == null ? Input.empty() : this.fileFilter;
     }
 
-    /**
-     * The folder path for the mapping.
-     */
     @InputImport(name="folderPath")
     private final @Nullable Input<String> folderPath;
 
@@ -74,9 +56,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
-    /**
-     * The format of mapping property.
-     */
     @InputImport(name="format", required=true)
     private final Input<ConnectorMappingFormatArgs> format;
 
@@ -84,9 +63,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.format;
     }
 
-    /**
-     * If the file contains a header or not.
-     */
     @InputImport(name="hasHeader")
     private final @Nullable Input<Boolean> hasHeader;
 
@@ -94,9 +70,6 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
         return this.hasHeader == null ? Input.empty() : this.hasHeader;
     }
 
-    /**
-     * Ingestion mapping information at property level.
-     */
     @InputImport(name="structure", required=true)
     private final Input<List<ConnectorMappingStructureArgs>> structure;
 

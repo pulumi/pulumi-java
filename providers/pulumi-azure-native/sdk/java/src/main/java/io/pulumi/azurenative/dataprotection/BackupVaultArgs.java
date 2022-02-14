@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupVaultArgs Empty = new BackupVaultArgs();
 
-    /**
-     * Optional ETag.
-     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -29,9 +23,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
-    /**
-     * Input Managed Identity Details
-     */
     @InputImport(name="identity")
     private final @Nullable Input<DppIdentityDetailsArgs> identity;
 
@@ -39,9 +30,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * BackupVaultResource properties
-     */
     @InputImport(name="properties", required=true)
     private final Input<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
 
@@ -59,9 +44,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * The name of the resource group where the backup vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -79,9 +58,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the backup vault.
-     */
     @InputImport(name="vaultName")
     private final @Nullable Input<String> vaultName;
 

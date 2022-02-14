@@ -16,312 +16,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Workload group operations for a data warehouse
-API Version: 2020-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a workload group with all properties specified.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workloadGroup = new AzureNative.Sql.WorkloadGroup("workloadGroup", new AzureNative.Sql.WorkloadGroupArgs
-        {
-            DatabaseName = "testdb",
-            Importance = "normal",
-            MaxResourcePercent = 100,
-            MaxResourcePercentPerRequest = 3,
-            MinResourcePercent = 0,
-            MinResourcePercentPerRequest = 3,
-            QueryExecutionTimeout = 0,
-            ResourceGroupName = "Default-SQL-SouthEastAsia",
-            ServerName = "testsvr",
-            WorkloadGroupName = "smallrc",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewWorkloadGroup(ctx, "workloadGroup", &sql.WorkloadGroupArgs{
-			DatabaseName:                 pulumi.String("testdb"),
-			Importance:                   pulumi.String("normal"),
-			MaxResourcePercent:           pulumi.Int(100),
-			MaxResourcePercentPerRequest: pulumi.Float64(3),
-			MinResourcePercent:           pulumi.Int(0),
-			MinResourcePercentPerRequest: pulumi.Float64(3),
-			QueryExecutionTimeout:        pulumi.Int(0),
-			ResourceGroupName:            pulumi.String("Default-SQL-SouthEastAsia"),
-			ServerName:                   pulumi.String("testsvr"),
-			WorkloadGroupName:            pulumi.String("smallrc"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const workloadGroup = new azure_native.sql.WorkloadGroup("workloadGroup", {
-    databaseName: "testdb",
-    importance: "normal",
-    maxResourcePercent: 100,
-    maxResourcePercentPerRequest: 3,
-    minResourcePercent: 0,
-    minResourcePercentPerRequest: 3,
-    queryExecutionTimeout: 0,
-    resourceGroupName: "Default-SQL-SouthEastAsia",
-    serverName: "testsvr",
-    workloadGroupName: "smallrc",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-workload_group = azure_native.sql.WorkloadGroup("workloadGroup",
-    database_name="testdb",
-    importance="normal",
-    max_resource_percent=100,
-    max_resource_percent_per_request=3,
-    min_resource_percent=0,
-    min_resource_percent_per_request=3,
-    query_execution_timeout=0,
-    resource_group_name="Default-SQL-SouthEastAsia",
-    server_name="testsvr",
-    workload_group_name="smallrc")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create a workload group with the required properties specified.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workloadGroup = new AzureNative.Sql.WorkloadGroup("workloadGroup", new AzureNative.Sql.WorkloadGroupArgs
-        {
-            DatabaseName = "testdb",
-            MaxResourcePercent = 100,
-            MinResourcePercent = 0,
-            MinResourcePercentPerRequest = 3,
-            ResourceGroupName = "Default-SQL-SouthEastAsia",
-            ServerName = "testsvr",
-            WorkloadGroupName = "smallrc",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewWorkloadGroup(ctx, "workloadGroup", &sql.WorkloadGroupArgs{
-			DatabaseName:                 pulumi.String("testdb"),
-			MaxResourcePercent:           pulumi.Int(100),
-			MinResourcePercent:           pulumi.Int(0),
-			MinResourcePercentPerRequest: pulumi.Float64(3),
-			ResourceGroupName:            pulumi.String("Default-SQL-SouthEastAsia"),
-			ServerName:                   pulumi.String("testsvr"),
-			WorkloadGroupName:            pulumi.String("smallrc"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const workloadGroup = new azure_native.sql.WorkloadGroup("workloadGroup", {
-    databaseName: "testdb",
-    maxResourcePercent: 100,
-    minResourcePercent: 0,
-    minResourcePercentPerRequest: 3,
-    resourceGroupName: "Default-SQL-SouthEastAsia",
-    serverName: "testsvr",
-    workloadGroupName: "smallrc",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-workload_group = azure_native.sql.WorkloadGroup("workloadGroup",
-    database_name="testdb",
-    max_resource_percent=100,
-    min_resource_percent=0,
-    min_resource_percent_per_request=3,
-    resource_group_name="Default-SQL-SouthEastAsia",
-    server_name="testsvr",
-    workload_group_name="smallrc")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:WorkloadGroup smallrc /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb/workloadGroups/smallrc 
-```
-
- */
 @ResourceType(type="azure-native:sql:WorkloadGroup")
 public class WorkloadGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * The workload group importance level.
-     */
     @OutputExport(name="importance", type=String.class, parameters={})
     private Output</* @Nullable */ String> importance;
 
-    /**
-     * @return The workload group importance level.
-     */
     public Output</* @Nullable */ String> getImportance() {
         return this.importance;
     }
-    /**
-     * The workload group cap percentage resource.
-     */
     @OutputExport(name="maxResourcePercent", type=Integer.class, parameters={})
     private Output<Integer> maxResourcePercent;
 
-    /**
-     * @return The workload group cap percentage resource.
-     */
     public Output<Integer> getMaxResourcePercent() {
         return this.maxResourcePercent;
     }
-    /**
-     * The workload group request maximum grant percentage.
-     */
     @OutputExport(name="maxResourcePercentPerRequest", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxResourcePercentPerRequest;
 
-    /**
-     * @return The workload group request maximum grant percentage.
-     */
     public Output</* @Nullable */ Double> getMaxResourcePercentPerRequest() {
         return this.maxResourcePercentPerRequest;
     }
-    /**
-     * The workload group minimum percentage resource.
-     */
     @OutputExport(name="minResourcePercent", type=Integer.class, parameters={})
     private Output<Integer> minResourcePercent;
 
-    /**
-     * @return The workload group minimum percentage resource.
-     */
     public Output<Integer> getMinResourcePercent() {
         return this.minResourcePercent;
     }
-    /**
-     * The workload group request minimum grant percentage.
-     */
     @OutputExport(name="minResourcePercentPerRequest", type=Double.class, parameters={})
     private Output<Double> minResourcePercentPerRequest;
 
-    /**
-     * @return The workload group request minimum grant percentage.
-     */
     public Output<Double> getMinResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The workload group query execution timeout.
-     */
     @OutputExport(name="queryExecutionTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queryExecutionTimeout;
 
-    /**
-     * @return The workload group query execution timeout.
-     */
     public Output</* @Nullable */ Integer> getQueryExecutionTimeout() {
         return this.queryExecutionTimeout;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public WorkloadGroup(String name, WorkloadGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:WorkloadGroup", name, args == null ? WorkloadGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -346,14 +91,6 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static WorkloadGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkloadGroup(name, id, options);
     }

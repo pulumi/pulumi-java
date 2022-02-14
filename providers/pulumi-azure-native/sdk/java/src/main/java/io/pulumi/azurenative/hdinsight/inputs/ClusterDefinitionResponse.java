@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The cluster definition.
- */
 public final class ClusterDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterDefinitionResponse Empty = new ClusterDefinitionResponse();
 
-    /**
-     * The link to the blueprint.
-     */
     @InputImport(name="blueprint")
     private final @Nullable String blueprint;
 
@@ -29,9 +23,6 @@ public final class ClusterDefinitionResponse extends io.pulumi.resources.InvokeA
         return this.blueprint == null ? Optional.empty() : Optional.ofNullable(this.blueprint);
     }
 
-    /**
-     * The versions of different services in the cluster.
-     */
     @InputImport(name="componentVersion")
     private final @Nullable Map<String,String> componentVersion;
 
@@ -39,9 +30,6 @@ public final class ClusterDefinitionResponse extends io.pulumi.resources.InvokeA
         return this.componentVersion == null ? Map.of() : this.componentVersion;
     }
 
-    /**
-     * The cluster configurations.
-     */
     @InputImport(name="configurations")
     private final @Nullable Object configurations;
 
@@ -49,9 +37,6 @@ public final class ClusterDefinitionResponse extends io.pulumi.resources.InvokeA
         return this.configurations == null ? Optional.empty() : Optional.ofNullable(this.configurations);
     }
 
-    /**
-     * The type of cluster.
-     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 

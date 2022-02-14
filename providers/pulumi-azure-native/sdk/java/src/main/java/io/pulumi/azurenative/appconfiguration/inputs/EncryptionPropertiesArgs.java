@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The encryption settings for a configuration store.
- */
 public final class EncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionPropertiesArgs Empty = new EncryptionPropertiesArgs();
 
-    /**
-     * Key vault properties.
-     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 

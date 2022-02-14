@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * IP configuration profile child resource.
- */
 public final class IPConfigurationProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPConfigurationProfileResponse Empty = new IPConfigurationProfileResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -28,9 +22,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,9 +29,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the resource. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the IP configuration profile resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -58,9 +43,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
         return this.provisioningState;
     }
 
-    /**
-     * The reference to the subnet resource to create a container network interface ip configuration.
-     */
     @InputImport(name="subnet")
     private final @Nullable SubnetResponse subnet;
 
@@ -68,9 +50,6 @@ public final class IPConfigurationProfileResponse extends io.pulumi.resources.In
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
-    /**
-     * Sub Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

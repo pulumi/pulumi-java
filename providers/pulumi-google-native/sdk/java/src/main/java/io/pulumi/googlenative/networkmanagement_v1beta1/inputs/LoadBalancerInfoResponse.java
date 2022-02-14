@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * For display only. Metadata associated with a load balancer.
- */
 public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerInfoResponse Empty = new LoadBalancerInfoResponse();
 
-    /**
-     * Type of load balancer's backend configuration.
-     */
     @InputImport(name="backendType", required=true)
     private final String backendType;
 
@@ -27,9 +21,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
         return this.backendType;
     }
 
-    /**
-     * Backend configuration URI.
-     */
     @InputImport(name="backendUri", required=true)
     private final String backendUri;
 
@@ -37,9 +28,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
         return this.backendUri;
     }
 
-    /**
-     * Information for the loadbalancer backends.
-     */
     @InputImport(name="backends", required=true)
     private final List<LoadBalancerBackendResponse> backends;
 
@@ -47,9 +35,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
         return this.backends;
     }
 
-    /**
-     * URI of the health check for the load balancer.
-     */
     @InputImport(name="healthCheckUri", required=true)
     private final String healthCheckUri;
 
@@ -57,9 +42,6 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
         return this.healthCheckUri;
     }
 
-    /**
-     * Type of the load balancer.
-     */
     @InputImport(name="loadBalancerType", required=true)
     private final String loadBalancerType;
 

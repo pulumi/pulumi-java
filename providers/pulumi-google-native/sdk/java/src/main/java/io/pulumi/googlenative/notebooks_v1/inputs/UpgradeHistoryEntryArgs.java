@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The entry of VM image upgrade history.
- */
 public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UpgradeHistoryEntryArgs Empty = new UpgradeHistoryEntryArgs();
 
-    /**
-     * Action. Rolloback or Upgrade.
-     */
     @InputImport(name="action")
     private final @Nullable Input<UpgradeHistoryEntryAction> action;
 
@@ -29,9 +23,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.action == null ? Input.empty() : this.action;
     }
 
-    /**
-     * The container image before this instance upgrade.
-     */
     @InputImport(name="containerImage")
     private final @Nullable Input<String> containerImage;
 
@@ -39,9 +30,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.containerImage == null ? Input.empty() : this.containerImage;
     }
 
-    /**
-     * The time that this instance upgrade history entry is created.
-     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -49,9 +37,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
-    /**
-     * The framework of this notebook instance.
-     */
     @InputImport(name="framework")
     private final @Nullable Input<String> framework;
 
@@ -59,9 +44,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.framework == null ? Input.empty() : this.framework;
     }
 
-    /**
-     * The snapshot of the boot disk of this notebook instance before upgrade.
-     */
     @InputImport(name="snapshot")
     private final @Nullable Input<String> snapshot;
 
@@ -69,9 +51,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.snapshot == null ? Input.empty() : this.snapshot;
     }
 
-    /**
-     * The state of this instance upgrade history entry.
-     */
     @InputImport(name="state")
     private final @Nullable Input<UpgradeHistoryEntryState> state;
 
@@ -79,9 +58,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.state == null ? Input.empty() : this.state;
     }
 
-    /**
-     * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
-     */
     @InputImport(name="targetImage")
     private final @Nullable Input<String> targetImage;
 
@@ -89,9 +65,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.targetImage == null ? Input.empty() : this.targetImage;
     }
 
-    /**
-     * Target VM Version, like m63.
-     */
     @InputImport(name="targetVersion")
     private final @Nullable Input<String> targetVersion;
 
@@ -99,9 +72,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.targetVersion == null ? Input.empty() : this.targetVersion;
     }
 
-    /**
-     * The version of the notebook instance before this upgrade.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -109,9 +79,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
         return this.version == null ? Input.empty() : this.version;
     }
 
-    /**
-     * The VM image before this instance upgrade.
-     */
     @InputImport(name="vmImage")
     private final @Nullable Input<String> vmImage;
 

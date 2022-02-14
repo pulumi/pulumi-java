@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkGatewayNatRuleArgs Empty = new VirtualNetworkGatewayNatRuleArgs();
 
-    /**
-     * The private IP address external mapping for NAT.
-     */
     @InputImport(name="externalMappings")
     private final @Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings;
 
@@ -32,9 +26,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.externalMappings == null ? Input.empty() : this.externalMappings;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -42,9 +33,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The private IP address internal mapping for NAT.
-     */
     @InputImport(name="internalMappings")
     private final @Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings;
 
@@ -52,9 +40,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.internalMappings == null ? Input.empty() : this.internalMappings;
     }
 
-    /**
-     * The IP Configuration ID this NAT rule applies to.
-     */
     @InputImport(name="ipConfigurationId")
     private final @Nullable Input<String> ipConfigurationId;
 
@@ -62,9 +47,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.ipConfigurationId == null ? Input.empty() : this.ipConfigurationId;
     }
 
-    /**
-     * The Source NAT direction of a VPN NAT.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,VpnNatRuleMode>> mode;
 
@@ -72,9 +54,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.mode == null ? Input.empty() : this.mode;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,9 +61,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the nat rule.
-     */
     @InputImport(name="natRuleName")
     private final @Nullable Input<String> natRuleName;
 
@@ -92,9 +68,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.natRuleName == null ? Input.empty() : this.natRuleName;
     }
 
-    /**
-     * The resource group name of the Virtual Network Gateway.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -102,9 +75,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * The type of NAT rule for VPN NAT.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,VpnNatRuleType>> type;
 
@@ -112,9 +82,6 @@ public final class VirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The name of the gateway.
-     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final Input<String> virtualNetworkGatewayName;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGuestConfigurationAssignment {
-/**
- * Guest configuration assignment is an association between a machine and guest configuration.
-API Version: 2020-06-25.
- *
- * Guest configuration assignment is an association between a machine and guest configuration.
- */
     public static CompletableFuture<GetGuestConfigurationAssignmentResult> invokeAsync(GetGuestConfigurationAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args == null ? GetGuestConfigurationAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

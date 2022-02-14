@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServicePrincipalPropertiesResponse {
-/**
- * The service principal client ID
- */
     private final String clientId;
-/**
- * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
- */
     private final String secret;
 
     @OutputCustomType.Constructor({"clientId","secret"})
@@ -26,15 +20,9 @@ public final class ServicePrincipalPropertiesResponse {
         this.secret = Objects.requireNonNull(secret);
     }
 
-/**
- * The service principal client ID
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
- */
     public String getSecret() {
         return this.secret;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSignalRPrivateEndpointConnection {
-/**
- * A private endpoint connection to SignalR resource
-API Version: 2020-05-01.
- *
- * A private endpoint connection to SignalR resource
- */
     public static CompletableFuture<GetSignalRPrivateEndpointConnectionResult> invokeAsync(GetSignalRPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRPrivateEndpointConnection", TypeShape.of(GetSignalRPrivateEndpointConnectionResult.class), args == null ? GetSignalRPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

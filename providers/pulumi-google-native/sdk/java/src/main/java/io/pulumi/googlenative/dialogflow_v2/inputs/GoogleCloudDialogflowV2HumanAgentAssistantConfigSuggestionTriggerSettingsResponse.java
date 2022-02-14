@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Settings of suggestion trigger.
- */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse();
 
-    /**
-     * Do not trigger if last utterance is small talk.
-     */
     @InputImport(name="noSmalltalk", required=true)
     private final Boolean noSmalltalk;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
         return this.noSmalltalk;
     }
 
-    /**
-     * Only trigger suggestion if participant role of last utterance is END_USER.
-     */
     @InputImport(name="onlyEndUser", required=true)
     private final Boolean onlyEndUser;
 

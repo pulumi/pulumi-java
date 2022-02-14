@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum NetworkConfigModesItem {
-/**
- * Internet protocol not set.
- */
         AddressModeUnspecified("ADDRESS_MODE_UNSPECIFIED"),
-/**
- * Use the IPv4 internet protocol.
- */
         ModeIpv4("MODE_IPV4");
 
         private final String value;

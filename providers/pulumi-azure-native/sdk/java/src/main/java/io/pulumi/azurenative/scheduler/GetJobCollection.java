@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobCollection {
-/**
- * 
-API Version: 2016-03-01.
- */
     public static CompletableFuture<GetJobCollectionResult> invokeAsync(GetJobCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:scheduler:getJobCollection", TypeShape.of(GetJobCollectionResult.class), args == null ? GetJobCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

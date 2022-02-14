@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the Human Agent Assist to connect to a conversation.
- */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs();
 
-    /**
-     * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
-     */
     @InputImport(name="endUserSuggestionConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
         return this.endUserSuggestionConfig == null ? Input.empty() : this.endUserSuggestionConfig;
     }
 
-    /**
-     * Configuration for agent assistance of human agent participant.
-     */
     @InputImport(name="humanAgentSuggestionConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
         return this.humanAgentSuggestionConfig == null ? Input.empty() : this.humanAgentSuggestionConfig;
     }
 
-    /**
-     * Configuration for message analysis.
-     */
     @InputImport(name="messageAnalysisConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
 
@@ -49,9 +37,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs extends 
         return this.messageAnalysisConfig == null ? Input.empty() : this.messageAnalysisConfig;
     }
 
-    /**
-     * Pub/Sub topic on which to publish new agent assistant events.
-     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
 

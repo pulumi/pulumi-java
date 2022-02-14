@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The details of a management group used during creation.
- */
 public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateManagementGroupDetailsArgs Empty = new CreateManagementGroupDetailsArgs();
 
-    /**
-     * (Optional) The ID of the parent management group used during creation.
-     */
     @InputImport(name="parent")
     private final @Nullable Input<CreateParentGroupInfoArgs> parent;
 

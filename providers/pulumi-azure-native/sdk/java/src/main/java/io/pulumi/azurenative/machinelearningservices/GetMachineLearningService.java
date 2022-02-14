@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ACIService, AKSService, EndpointVariant. */
 public class GetMachineLearningService {
-/**
- * Machine Learning service object wrapped into ARM resource envelope.
-API Version: 2021-01-01.
- *
- * Machine Learning service object wrapped into ARM resource envelope.
- */
     public static CompletableFuture<GetMachineLearningServiceResult> invokeAsync(GetMachineLearningServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningService", TypeShape.of(GetMachineLearningServiceResult.class), args == null ? GetMachineLearningServiceArgs.Empty : args, Utilities.withVersion(options));
     }

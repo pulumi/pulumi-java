@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Radius Server Settings.
- */
 public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RadiusServerArgs Empty = new RadiusServerArgs();
 
-    /**
-     * The address of this radius server.
-     */
     @InputImport(name="radiusServerAddress", required=true)
     private final Input<String> radiusServerAddress;
 
@@ -28,9 +22,6 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.radiusServerAddress;
     }
 
-    /**
-     * The initial score assigned to this radius server.
-     */
     @InputImport(name="radiusServerScore")
     private final @Nullable Input<Double> radiusServerScore;
 
@@ -38,9 +29,6 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.radiusServerScore == null ? Input.empty() : this.radiusServerScore;
     }
 
-    /**
-     * The secret used for this radius server.
-     */
     @InputImport(name="radiusServerSecret")
     private final @Nullable Input<String> radiusServerSecret;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegisteredAsnArgs Empty = new RegisteredAsnArgs();
 
-    /**
-     * The customer's ASN from which traffic originates.
-     */
     @InputImport(name="asn")
     private final @Nullable Input<Integer> asn;
 
@@ -28,9 +22,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.asn == null ? Input.empty() : this.asn;
     }
 
-    /**
-     * The name of the peering.
-     */
     @InputImport(name="peeringName", required=true)
     private final Input<String> peeringName;
 
@@ -38,9 +29,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringName;
     }
 
-    /**
-     * The name of the ASN.
-     */
     @InputImport(name="registeredAsnName")
     private final @Nullable Input<String> registeredAsnName;
 
@@ -48,9 +36,6 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.registeredAsnName == null ? Input.empty() : this.registeredAsnName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

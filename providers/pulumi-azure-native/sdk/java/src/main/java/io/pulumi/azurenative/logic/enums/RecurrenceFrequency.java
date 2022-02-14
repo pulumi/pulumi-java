@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The frequency.
- */
     @EnumType
     public enum RecurrenceFrequency {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Second("Second"),
-/**
- * 
- */
         Minute("Minute"),
-/**
- * 
- */
         Hour("Hour"),
-/**
- * 
- */
         Day("Day"),
-/**
- * 
- */
         Week("Week"),
-/**
- * 
- */
         Month("Month"),
-/**
- * 
- */
         Year("Year");
 
         private final String value;

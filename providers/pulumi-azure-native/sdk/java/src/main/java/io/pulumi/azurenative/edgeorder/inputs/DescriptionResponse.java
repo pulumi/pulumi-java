@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Description related properties of a product system.
- */
 public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DescriptionResponse Empty = new DescriptionResponse();
 
-    /**
-     * Attributes for the product system.
-     */
     @InputImport(name="attributes", required=true)
     private final List<String> attributes;
 
@@ -27,9 +21,6 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.attributes;
     }
 
-    /**
-     * Type of description.
-     */
     @InputImport(name="descriptionType", required=true)
     private final String descriptionType;
 
@@ -37,9 +28,6 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.descriptionType;
     }
 
-    /**
-     * Keywords for the product system.
-     */
     @InputImport(name="keywords", required=true)
     private final List<String> keywords;
 
@@ -47,9 +35,6 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keywords;
     }
 
-    /**
-     * Links for the product system.
-     */
     @InputImport(name="links", required=true)
     private final List<LinkResponse> links;
 
@@ -57,9 +42,6 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.links;
     }
 
-    /**
-     * Long description of the product system.
-     */
     @InputImport(name="longDescription", required=true)
     private final String longDescription;
 
@@ -67,9 +49,6 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.longDescription;
     }
 
-    /**
-     * Short description of the product system.
-     */
     @InputImport(name="shortDescription", required=true)
     private final String shortDescription;
 

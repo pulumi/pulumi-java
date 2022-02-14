@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppDeployment {
-/**
- * User credentials used for publishing activity.
-API Version: 2020-12-01.
- *
- * User credentials used for publishing activity.
- */
     public static CompletableFuture<GetWebAppDeploymentResult> invokeAsync(GetWebAppDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDeployment", TypeShape.of(GetWebAppDeploymentResult.class), args == null ? GetWebAppDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

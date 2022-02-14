@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The kind of onboarding for the subscription
- */
     @EnumType
     public enum OnboardingKind {
-/**
- * 
- */
         Default("Default"),
-/**
- * 
- */
         MigratedToAzure("MigratedToAzure"),
-/**
- * 
- */
         Evaluation("Evaluation"),
-/**
- * 
- */
         Purchased("Purchased");
 
         private final String value;

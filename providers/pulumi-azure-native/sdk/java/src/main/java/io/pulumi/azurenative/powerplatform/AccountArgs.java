@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * Name of the account.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -28,9 +22,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * The description of the account.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,9 +29,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,9 +36,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

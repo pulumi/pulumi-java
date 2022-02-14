@@ -14,110 +14,15 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Cloud shell console
-API Version: 2018-10-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PutConsole
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var consoleWithLocation = new AzureNative.Portal.ConsoleWithLocation("consoleWithLocation", new AzureNative.Portal.ConsoleWithLocationArgs
-        {
-            ConsoleName = "default",
-            Location = "eastus",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := portal.NewConsoleWithLocation(ctx, "consoleWithLocation", &portal.ConsoleWithLocationArgs{
-			ConsoleName: pulumi.String("default"),
-			Location:    pulumi.String("eastus"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const consoleWithLocation = new azure_native.portal.ConsoleWithLocation("consoleWithLocation", {
-    consoleName: "default",
-    location: "eastus",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-console_with_location = azure_native.portal.ConsoleWithLocation("consoleWithLocation",
-    console_name="default",
-    location="eastus")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:portal:ConsoleWithLocation myresource1 /providers/Microsoft.Portal/locations/{location}/consoles/{consoleName} 
-```
-
- */
 @ResourceType(type="azure-native:portal:ConsoleWithLocation")
 public class ConsoleWithLocation extends io.pulumi.resources.CustomResource {
-    /**
-     * Cloud shell console properties.
-     */
     @OutputExport(name="properties", type=ConsolePropertiesResponse.class, parameters={})
     private Output<ConsolePropertiesResponse> properties;
 
-    /**
-     * @return Cloud shell console properties.
-     */
     public Output<ConsolePropertiesResponse> getProperties() {
         return this.properties;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ConsoleWithLocation(String name, ConsoleWithLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:portal:ConsoleWithLocation", name, args == null ? ConsoleWithLocationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -136,14 +41,6 @@ public class ConsoleWithLocation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ConsoleWithLocation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConsoleWithLocation(name, id, options);
     }

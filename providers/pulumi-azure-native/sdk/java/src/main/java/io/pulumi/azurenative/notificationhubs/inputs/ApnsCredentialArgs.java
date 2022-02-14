@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of a NotificationHub ApnsCredential.
- */
 public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApnsCredentialArgs Empty = new ApnsCredentialArgs();
 
-    /**
-     * The APNS certificate. Specify if using Certificate Authentication Mode.
-     */
     @InputImport(name="apnsCertificate")
     private final @Nullable Input<String> apnsCertificate;
 
@@ -27,9 +21,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.apnsCertificate == null ? Input.empty() : this.apnsCertificate;
     }
 
-    /**
-     * The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
-     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -37,9 +28,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
-    /**
-     * The name of the application or BundleId. Specify if using Token Authentication Mode.
-     */
     @InputImport(name="appName")
     private final @Nullable Input<String> appName;
 
@@ -47,9 +35,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.appName == null ? Input.empty() : this.appName;
     }
 
-    /**
-     * The APNS certificate password if it exists.
-     */
     @InputImport(name="certificateKey")
     private final @Nullable Input<String> certificateKey;
 
@@ -57,9 +42,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateKey == null ? Input.empty() : this.certificateKey;
     }
 
-    /**
-     * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.
-     */
     @InputImport(name="endpoint")
     private final @Nullable Input<String> endpoint;
 
@@ -67,9 +49,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
-    /**
-     * A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
-     */
     @InputImport(name="keyId")
     private final @Nullable Input<String> keyId;
 
@@ -77,9 +56,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyId == null ? Input.empty() : this.keyId;
     }
 
-    /**
-     * The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 
@@ -87,9 +63,6 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
     }
 
-    /**
-     * Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
-     */
     @InputImport(name="token")
     private final @Nullable Input<String> token;
 

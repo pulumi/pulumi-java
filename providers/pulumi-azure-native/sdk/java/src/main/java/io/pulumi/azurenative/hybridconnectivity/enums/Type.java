@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of endpoint.
- */
     @EnumType
     public enum Type {
-/**
- * 
- */
         $Default("default"),
-/**
- * 
- */
         Custom("custom");
 
         private final String value;

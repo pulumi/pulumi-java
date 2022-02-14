@@ -12,45 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetHybridRunbookWorkerResult {
-/**
- * Fully qualified resource Id for the resource
- */
     private final String id;
-/**
- * Gets or sets the assigned machine IP address.
- */
     private final @Nullable String ip;
-/**
- * Last Heartbeat from the Worker
- */
     private final @Nullable String lastSeenDateTime;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Gets or sets the registration time of the worker machine.
- */
     private final @Nullable String registeredDateTime;
-/**
- * Resource system metadata.
- */
     private final SystemDataResponse systemData;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * Azure Resource Manager Id for a virtual machine.
- */
     private final @Nullable String vmResourceId;
-/**
- * Name of the HybridWorker.
- */
     private final @Nullable String workerName;
-/**
- * Type of the HybridWorker.
- */
     private final @Nullable String workerType;
 
     @OutputCustomType.Constructor({"id","ip","lastSeenDateTime","name","registeredDateTime","systemData","type","vmResourceId","workerName","workerType"})
@@ -77,63 +47,33 @@ public final class GetHybridRunbookWorkerResult {
         this.workerType = workerType;
     }
 
-/**
- * Fully qualified resource Id for the resource
- */
     public String getId() {
         return this.id;
     }
-/**
- * Gets or sets the assigned machine IP address.
- */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
-/**
- * Last Heartbeat from the Worker
- */
     public Optional<String> getLastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Gets or sets the registration time of the worker machine.
- */
     public Optional<String> getRegisteredDateTime() {
         return Optional.ofNullable(this.registeredDateTime);
     }
-/**
- * Resource system metadata.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Azure Resource Manager Id for a virtual machine.
- */
     public Optional<String> getVmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
-/**
- * Name of the HybridWorker.
- */
     public Optional<String> getWorkerName() {
         return Optional.ofNullable(this.workerName);
     }
-/**
- * Type of the HybridWorker.
- */
     public Optional<String> getWorkerType() {
         return Optional.ofNullable(this.workerType);
     }

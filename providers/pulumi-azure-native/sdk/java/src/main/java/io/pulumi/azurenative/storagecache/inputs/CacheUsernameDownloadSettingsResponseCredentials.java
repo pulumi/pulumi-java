@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * When present, these are the credentials for the secure LDAP connection.
- */
 public final class CacheUsernameDownloadSettingsResponseCredentials extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheUsernameDownloadSettingsResponseCredentials Empty = new CacheUsernameDownloadSettingsResponseCredentials();
 
-    /**
-     * The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
-     */
     @InputImport(name="bindDn")
     private final @Nullable String bindDn;
 
@@ -27,9 +21,6 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends io.p
         return this.bindDn == null ? Optional.empty() : Optional.ofNullable(this.bindDn);
     }
 
-    /**
-     * The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.
-     */
     @InputImport(name="bindPassword")
     private final @Nullable String bindPassword;
 

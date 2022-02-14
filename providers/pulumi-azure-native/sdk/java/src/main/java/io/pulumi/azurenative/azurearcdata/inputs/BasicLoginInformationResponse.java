@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Username and password for basic login authentication.
- */
 public final class BasicLoginInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BasicLoginInformationResponse Empty = new BasicLoginInformationResponse();
 
-    /**
-     * Login username.
-     */
     @InputImport(name="username")
     private final @Nullable String username;
 

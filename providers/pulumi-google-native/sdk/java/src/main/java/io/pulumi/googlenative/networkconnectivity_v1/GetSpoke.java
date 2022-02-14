@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpoke {
-/**
- * Gets details about the specified spoke.
- */
     public static CompletableFuture<GetSpokeResult> invokeAsync(GetSpokeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getSpoke", TypeShape.of(GetSpokeResult.class), args == null ? GetSpokeArgs.Empty : args, Utilities.withVersion(options));
     }

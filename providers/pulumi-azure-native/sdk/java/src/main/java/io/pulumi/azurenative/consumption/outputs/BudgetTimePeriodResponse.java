@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BudgetTimePeriodResponse {
-/**
- * The end date for the budget. If not provided, we default this to 10 years from the start date.
- */
     private final @Nullable String endDate;
-/**
- * The start date for the budget.
- */
     private final String startDate;
 
     @OutputCustomType.Constructor({"endDate","startDate"})
@@ -28,15 +22,9 @@ public final class BudgetTimePeriodResponse {
         this.startDate = Objects.requireNonNull(startDate);
     }
 
-/**
- * The end date for the budget. If not provided, we default this to 10 years from the start date.
- */
     public Optional<String> getEndDate() {
         return Optional.ofNullable(this.endDate);
     }
-/**
- * The start date for the budget.
- */
     public String getStartDate() {
         return this.startDate;
     }

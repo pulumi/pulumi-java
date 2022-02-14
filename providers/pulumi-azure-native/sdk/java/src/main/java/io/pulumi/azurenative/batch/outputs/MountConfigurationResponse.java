@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MountConfigurationResponse {
-/**
- * This property is mutually exclusive with all other properties.
- */
     private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
-/**
- * This property is mutually exclusive with all other properties.
- */
     private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
-/**
- * This property is mutually exclusive with all other properties.
- */
     private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
-/**
- * This property is mutually exclusive with all other properties.
- */
     private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
     @OutputCustomType.Constructor({"azureBlobFileSystemConfiguration","azureFileShareConfiguration","cifsMountConfiguration","nfsMountConfiguration"})
@@ -43,27 +31,15 @@ public final class MountConfigurationResponse {
         this.nfsMountConfiguration = nfsMountConfiguration;
     }
 
-/**
- * This property is mutually exclusive with all other properties.
- */
     public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
         return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
-/**
- * This property is mutually exclusive with all other properties.
- */
     public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
         return Optional.ofNullable(this.azureFileShareConfiguration);
     }
-/**
- * This property is mutually exclusive with all other properties.
- */
     public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
         return Optional.ofNullable(this.cifsMountConfiguration);
     }
-/**
- * This property is mutually exclusive with all other properties.
- */
     public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {
         return Optional.ofNullable(this.nfsMountConfiguration);
     }

@@ -15,606 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A SQL DB table data set.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### DataSets_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlDBTableDataSet = new AzureNative.DataShare.SqlDBTableDataSet("sqlDBTableDataSet", new AzureNative.DataShare.SqlDBTableDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewSqlDBTableDataSet(ctx, "sqlDBTableDataSet", &datashare.SqlDBTableDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlDBTableDataSet = new azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_db_table_data_set = azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_KustoCluster_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlDBTableDataSet = new AzureNative.DataShare.SqlDBTableDataSet("sqlDBTableDataSet", new AzureNative.DataShare.SqlDBTableDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewSqlDBTableDataSet(ctx, "sqlDBTableDataSet", &datashare.SqlDBTableDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlDBTableDataSet = new azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_db_table_data_set = azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_KustoDatabase_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlDBTableDataSet = new AzureNative.DataShare.SqlDBTableDataSet("sqlDBTableDataSet", new AzureNative.DataShare.SqlDBTableDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewSqlDBTableDataSet(ctx, "sqlDBTableDataSet", &datashare.SqlDBTableDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlDBTableDataSet = new azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_db_table_data_set = azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_SqlDBTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlDBTableDataSet = new AzureNative.DataShare.SqlDBTableDataSet("sqlDBTableDataSet", new AzureNative.DataShare.SqlDBTableDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            DatabaseName = "SqlDB1",
-            Kind = "SqlDBTable",
-            ResourceGroupName = "SampleResourceGroup",
-            SchemaName = "dbo",
-            ShareName = "Share1",
-            SqlServerResourceId = "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1",
-            TableName = "Table1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewSqlDBTableDataSet(ctx, "sqlDBTableDataSet", &datashare.SqlDBTableDataSetArgs{
-			AccountName:         pulumi.String("Account1"),
-			DataSetName:         pulumi.String("Dataset1"),
-			DatabaseName:        pulumi.String("SqlDB1"),
-			Kind:                pulumi.String("SqlDBTable"),
-			ResourceGroupName:   pulumi.String("SampleResourceGroup"),
-			SchemaName:          pulumi.String("dbo"),
-			ShareName:           pulumi.String("Share1"),
-			SqlServerResourceId: pulumi.String("/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1"),
-			TableName:           pulumi.String("Table1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlDBTableDataSet = new azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    databaseName: "SqlDB1",
-    kind: "SqlDBTable",
-    resourceGroupName: "SampleResourceGroup",
-    schemaName: "dbo",
-    shareName: "Share1",
-    sqlServerResourceId: "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1",
-    tableName: "Table1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_db_table_data_set = azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    database_name="SqlDB1",
-    kind="SqlDBTable",
-    resource_group_name="SampleResourceGroup",
-    schema_name="dbo",
-    share_name="Share1",
-    sql_server_resource_id="/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1",
-    table_name="Table1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_SqlDWTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlDBTableDataSet = new AzureNative.DataShare.SqlDBTableDataSet("sqlDBTableDataSet", new AzureNative.DataShare.SqlDBTableDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewSqlDBTableDataSet(ctx, "sqlDBTableDataSet", &datashare.SqlDBTableDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlDBTableDataSet = new azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_db_table_data_set = azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_SynapseWorkspaceSqlPoolTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlDBTableDataSet = new AzureNative.DataShare.SqlDBTableDataSet("sqlDBTableDataSet", new AzureNative.DataShare.SqlDBTableDataSetArgs
-        {
-            AccountName = "sourceAccount",
-            DataSetName = "dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewSqlDBTableDataSet(ctx, "sqlDBTableDataSet", &datashare.SqlDBTableDataSetArgs{
-			AccountName:       pulumi.String("sourceAccount"),
-			DataSetName:       pulumi.String("dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlDBTableDataSet = new azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet", {
-    accountName: "sourceAccount",
-    dataSetName: "dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_db_table_data_set = azure_native.datashare.SqlDBTableDataSet("sqlDBTableDataSet",
-    account_name="sourceAccount",
-    data_set_name="dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="share1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datashare:SqlDBTableDataSet dataset1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/sourceAccount/shares/share1/dataSets/dataset1 
-```
-
- */
 @ResourceType(type="azure-native:datashare:SqlDBTableDataSet")
 public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
-    /**
-     * Unique id for identifying a data set resource
-     */
     @OutputExport(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
-    /**
-     * @return Unique id for identifying a data set resource
-     */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
-    /**
-     * Database name of the source data set
-     */
     @OutputExport(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
-    /**
-     * @return Database name of the source data set
-     */
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
-    /**
-     * Kind of data set.
-Expected value is 'SqlDBTable'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Kind of data set.
-Expected value is 'SqlDBTable'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Name of the azure resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the azure resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Schema of the table. Default value is dbo.
-     */
     @OutputExport(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
-    /**
-     * @return Schema of the table. Default value is dbo.
-     */
     public Output<String> getSchemaName() {
         return this.schemaName;
     }
-    /**
-     * Resource id of SQL server
-     */
     @OutputExport(name="sqlServerResourceId", type=String.class, parameters={})
     private Output<String> sqlServerResourceId;
 
-    /**
-     * @return Resource id of SQL server
-     */
     public Output<String> getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
-    /**
-     * System Data of the Azure resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return System Data of the Azure resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * SQL DB table name.
-     */
     @OutputExport(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
-    /**
-     * @return SQL DB table name.
-     */
     public Output<String> getTableName() {
         return this.tableName;
     }
-    /**
-     * Type of the azure resource
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the azure resource
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SqlDBTableDataSet(String name, SqlDBTableDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:SqlDBTableDataSet", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -644,14 +101,6 @@ Expected value is 'SqlDBTable'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SqlDBTableDataSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlDBTableDataSet(name, id, options);
     }

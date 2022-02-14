@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A pointer to an Azure Action Group.
- */
 public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActionGroupArgs Empty = new ActionGroupArgs();
 
-    /**
-     * The resource ID of the Action Group. This cannot be null or empty.
-     */
     @InputImport(name="actionGroupId", required=true)
     private final Input<String> actionGroupId;
 
@@ -28,9 +22,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.actionGroupId;
     }
 
-    /**
-     * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
-     */
     @InputImport(name="webhookProperties")
     private final @Nullable Input<Map<String,String>> webhookProperties;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRealmArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRealmArgs Empty = new GetRealmArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetRealmArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRealmArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="realmId", required=true)
     private final String realmId;
 

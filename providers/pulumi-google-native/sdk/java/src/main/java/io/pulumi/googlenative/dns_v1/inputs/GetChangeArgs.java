@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetChangeArgs Empty = new GetChangeArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="changeId", required=true)
     private final String changeId;
 
@@ -27,9 +21,6 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
         return this.changeId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="clientOperationId")
     private final @Nullable String clientOperationId;
 
@@ -37,9 +28,6 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="managedZone", required=true)
     private final String managedZone;
 
@@ -47,9 +35,6 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
         return this.managedZone;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

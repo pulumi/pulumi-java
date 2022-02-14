@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExportExecutionListResultResponse {
-/**
- * A list of export executions.
- */
     private final List<ExportExecutionResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -20,9 +17,6 @@ public final class ExportExecutionListResultResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * A list of export executions.
- */
     public List<ExportExecutionResponse> getValue() {
         return this.value;
     }

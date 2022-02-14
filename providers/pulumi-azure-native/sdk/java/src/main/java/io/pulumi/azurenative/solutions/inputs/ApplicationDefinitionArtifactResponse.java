@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Application definition artifact.
- */
 public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationDefinitionArtifactResponse Empty = new ApplicationDefinitionArtifactResponse();
 
-    /**
-     * The managed application definition artifact name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
         return this.name;
     }
 
-    /**
-     * The managed application definition artifact type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -35,9 +26,6 @@ public final class ApplicationDefinitionArtifactResponse extends io.pulumi.resou
         return this.type;
     }
 
-    /**
-     * The managed application definition artifact blob uri.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

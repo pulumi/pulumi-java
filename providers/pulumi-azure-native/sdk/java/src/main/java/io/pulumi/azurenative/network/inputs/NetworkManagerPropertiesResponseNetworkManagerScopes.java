@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Scope of Network Manager.
- */
 public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkManagerPropertiesResponseNetworkManagerScopes Empty = new NetworkManagerPropertiesResponseNetworkManagerScopes();
 
-    /**
-     * List of management groups.
-     */
     @InputImport(name="managementGroups")
     private final @Nullable List<String> managementGroups;
 
@@ -28,9 +22,6 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes extends 
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
 
-    /**
-     * List of subscriptions.
-     */
     @InputImport(name="subscriptions")
     private final @Nullable List<String> subscriptions;
 

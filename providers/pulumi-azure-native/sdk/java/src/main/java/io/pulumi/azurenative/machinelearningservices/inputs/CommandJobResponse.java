@@ -24,16 +24,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Command job definition.
- */
 public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommandJobResponse Empty = new CommandJobResponse();
 
-    /**
-     * ARM resource ID of the code asset.
-     */
     @InputImport(name="codeId")
     private final @Nullable String codeId;
 
@@ -41,9 +35,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
     }
 
-    /**
-     * The command to execute on startup of the job. eg. "python train.py"
-     */
     @InputImport(name="command", required=true)
     private final String command;
 
@@ -51,9 +42,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.command;
     }
 
-    /**
-     * Compute binding for the job.
-     */
     @InputImport(name="compute", required=true)
     private final ComputeConfigurationResponse compute;
 
@@ -61,9 +49,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.compute;
     }
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -71,9 +56,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-     */
     @InputImport(name="distribution")
     private final @Nullable Object distribution;
 
@@ -81,9 +63,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.distribution == null ? null : this.distribution;
     }
 
-    /**
-     * The ARM resource ID of the Environment specification for the job.
-     */
     @InputImport(name="environmentId")
     private final @Nullable String environmentId;
 
@@ -91,9 +70,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
     }
 
-    /**
-     * Environment variables included in the job.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable Map<String,String> environmentVariables;
 
@@ -101,9 +77,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
-    /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-     */
     @InputImport(name="experimentName")
     private final @Nullable String experimentName;
 
@@ -111,10 +84,6 @@ public final class CommandJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
     }
 
-    /**
-     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
-Defaults to AmlToken if null.
-     */
     @InputImport(name="identity")
     private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
@@ -122,9 +91,6 @@ Defaults to AmlToken if null.
         return this.identity == null ? null : this.identity;
     }
 
-    /**
-     * Mapping of input data bindings used in the job.
-     */
     @InputImport(name="inputDataBindings")
     private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
@@ -132,10 +98,6 @@ Defaults to AmlToken if null.
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
 
-    /**
-     * List of JobEndpoints.
-For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
-     */
     @InputImport(name="interactionEndpoints", required=true)
     private final Map<String,JobEndpointResponse> interactionEndpoints;
 
@@ -143,10 +105,6 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
         return this.interactionEndpoints;
     }
 
-    /**
-     * Enum to determine the type of job.
-Expected value is 'Command'.
-     */
     @InputImport(name="jobType", required=true)
     private final String jobType;
 
@@ -154,9 +112,6 @@ Expected value is 'Command'.
         return this.jobType;
     }
 
-    /**
-     * Location of the job output logs and artifacts.
-     */
     @InputImport(name="output", required=true)
     private final JobOutputResponse output;
 
@@ -164,9 +119,6 @@ Expected value is 'Command'.
         return this.output;
     }
 
-    /**
-     * Mapping of output data bindings used in the job.
-     */
     @InputImport(name="outputDataBindings")
     private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
@@ -174,9 +126,6 @@ Expected value is 'Command'.
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
 
-    /**
-     * Input parameters.
-     */
     @InputImport(name="parameters", required=true)
     private final Object parameters;
 
@@ -184,10 +133,6 @@ Expected value is 'Command'.
         return this.parameters;
     }
 
-    /**
-     * Job priority for scheduling policy. Only applies to AMLCompute.
-Private preview feature and only available to users on the allow list.
-     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -195,9 +140,6 @@ Private preview feature and only available to users on the allow list.
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -205,9 +147,6 @@ Private preview feature and only available to users on the allow list.
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * Specifies the job provisioning state.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -215,9 +154,6 @@ Private preview feature and only available to users on the allow list.
         return this.provisioningState;
     }
 
-    /**
-     * Status of the job.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -225,9 +161,6 @@ Private preview feature and only available to users on the allow list.
         return this.status;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -235,9 +168,6 @@ Private preview feature and only available to users on the allow list.
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
-     */
     @InputImport(name="timeout")
     private final @Nullable String timeout;
 

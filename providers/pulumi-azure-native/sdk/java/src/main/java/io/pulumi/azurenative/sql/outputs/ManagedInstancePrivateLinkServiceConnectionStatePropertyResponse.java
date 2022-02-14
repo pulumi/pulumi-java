@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse {
-/**
- * The private link service connection description.
- */
     private final String actionsRequired;
-/**
- * The private link service connection description.
- */
     private final String description;
-/**
- * The private link service connection status.
- */
     private final String status;
 
     @OutputCustomType.Constructor({"actionsRequired","description","status"})
@@ -32,21 +23,12 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * The private link service connection description.
- */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
-/**
- * The private link service connection description.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The private link service connection status.
- */
     public String getStatus() {
         return this.status;
     }

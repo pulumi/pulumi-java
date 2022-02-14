@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLivePipelineArgs Empty = new GetLivePipelineArgs();
 
-    /**
-     * The Azure Video Analyzer account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * Live pipeline unique identifier.
-     */
     @InputImport(name="livePipelineName", required=true)
     private final String livePipelineName;
 
@@ -35,9 +26,6 @@ public final class GetLivePipelineArgs extends io.pulumi.resources.InvokeArgs {
         return this.livePipelineName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateCloud {
-/**
- * A private cloud resource
-API Version: 2020-03-20.
- *
- * A private cloud resource
- */
     public static CompletableFuture<GetPrivateCloudResult> invokeAsync(GetPrivateCloudArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPrivateCloud", TypeShape.of(GetPrivateCloudResult.class), args == null ? GetPrivateCloudArgs.Empty : args, Utilities.withVersion(options));
     }

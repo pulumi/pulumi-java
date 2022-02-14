@@ -11,16 +11,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * A `DeliveryPipeline` resource in the Google Cloud Deploy API. A `DeliveryPipeline` defines a pipeline through which a Skaffold configuration can progress.
- */
 public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryPipelineResponse Empty = new DeliveryPipelineResponse();
 
-    /**
-     * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
-     */
     @InputImport(name="annotations", required=true)
     private final Map<String,String> annotations;
 
@@ -28,9 +22,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.annotations;
     }
 
-    /**
-     * Information around the state of the Delivery Pipeline.
-     */
     @InputImport(name="condition", required=true)
     private final PipelineConditionResponse condition;
 
@@ -38,9 +29,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.condition;
     }
 
-    /**
-     * Time at which the pipeline was created.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -48,9 +36,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.createTime;
     }
 
-    /**
-     * Description of the `DeliveryPipeline`. Max length is 255 characters.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -58,9 +43,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.description;
     }
 
-    /**
-     * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -68,9 +50,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.etag;
     }
 
-    /**
-     * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
-     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -78,9 +57,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.labels;
     }
 
-    /**
-     * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -88,9 +64,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
-    /**
-     * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
-     */
     @InputImport(name="serialPipeline", required=true)
     private final SerialPipelineResponse serialPipeline;
 
@@ -98,9 +71,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.serialPipeline;
     }
 
-    /**
-     * Unique identifier of the `DeliveryPipeline`.
-     */
     @InputImport(name="uid", required=true)
     private final String uid;
 
@@ -108,9 +78,6 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
         return this.uid;
     }
 
-    /**
-     * Most recent time at which the pipeline was updated.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

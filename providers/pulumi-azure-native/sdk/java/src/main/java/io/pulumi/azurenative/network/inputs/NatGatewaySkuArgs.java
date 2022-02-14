@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of nat gateway.
- */
 public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NatGatewaySkuArgs Empty = new NatGatewaySkuArgs();
 
-    /**
-     * Name of Nat Gateway SKU.
-     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,NatGatewaySkuName>> name;
 

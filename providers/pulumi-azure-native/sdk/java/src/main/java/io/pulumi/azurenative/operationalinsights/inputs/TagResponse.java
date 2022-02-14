@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A tag of a saved search.
- */
 public final class TagResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TagResponse Empty = new TagResponse();
 
-    /**
-     * The tag name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class TagResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The tag value.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

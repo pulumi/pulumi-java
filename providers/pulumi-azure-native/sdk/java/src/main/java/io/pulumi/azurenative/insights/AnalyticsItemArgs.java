@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalyticsItemArgs Empty = new AnalyticsItemArgs();
 
-    /**
-     * The content of this item
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -32,9 +26,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * Internally assigned unique id of the item definition.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -42,9 +33,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The user-defined name of the item.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,9 +40,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Flag indicating whether or not to force save an item. This allows overriding an item if it already exists.
-     */
     @InputImport(name="overrideItem")
     private final @Nullable Input<Boolean> overrideItem;
 
@@ -62,9 +47,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.overrideItem == null ? Input.empty() : this.overrideItem;
     }
 
-    /**
-     * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
@@ -72,9 +54,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,9 +61,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -92,9 +68,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName;
     }
 
-    /**
-     * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     */
     @InputImport(name="scope")
     private final @Nullable Input<Either<String,ItemScope>> scope;
 
@@ -102,9 +75,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
-    /**
-     * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     */
     @InputImport(name="scopePath", required=true)
     private final Input<String> scopePath;
 
@@ -112,9 +82,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopePath;
     }
 
-    /**
-     * Enum indicating the type of the Analytics item.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ItemType>> type;
 

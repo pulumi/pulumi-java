@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeRegistrationPropertiesResponseResourceMovePolicy Empty = new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy();
 
-    /**
-     * 
-     */
     @InputImport(name="crossResourceGroupMoveEnabled")
     private final @Nullable Boolean crossResourceGroupMoveEnabled;
 
@@ -27,9 +21,6 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
         return this.crossResourceGroupMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossResourceGroupMoveEnabled);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="crossSubscriptionMoveEnabled")
     private final @Nullable Boolean crossSubscriptionMoveEnabled;
 
@@ -37,9 +28,6 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
         return this.crossSubscriptionMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossSubscriptionMoveEnabled);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="validationRequired")
     private final @Nullable Boolean validationRequired;
 

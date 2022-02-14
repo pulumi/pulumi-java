@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListSubAccountMonitoredResourcesResult {
-/**
- * Link to the next set of results, if any.
- */
     private final @Nullable String nextLink;
-/**
- * Results of a list operation.
- */
     private final @Nullable List<MonitoredResourceResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -30,15 +24,9 @@ public final class ListSubAccountMonitoredResourcesResult {
         this.value = value;
     }
 
-/**
- * Link to the next set of results, if any.
- */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
-/**
- * Results of a list operation.
- */
     public List<MonitoredResourceResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

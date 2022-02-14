@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceControlArgs Empty = new SourceControlArgs();
 
-    /**
-     * The auto async of the source control. Default is false.
-     */
     @InputImport(name="autoSync")
     private final @Nullable Input<Boolean> autoSync;
 
@@ -31,9 +25,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoSync == null ? Input.empty() : this.autoSync;
     }
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -41,9 +32,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * The repo branch of the source control. Include branch as empty string for VsoTfvc.
-     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -51,9 +39,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.branch == null ? Input.empty() : this.branch;
     }
 
-    /**
-     * The user description of the source control.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -61,9 +46,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The folder path of the source control. Path must be relative.
-     */
     @InputImport(name="folderPath")
     private final @Nullable Input<String> folderPath;
 
@@ -71,9 +53,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
-    /**
-     * The auto publish of the source control. Default is true.
-     */
     @InputImport(name="publishRunbook")
     private final @Nullable Input<Boolean> publishRunbook;
 
@@ -81,9 +60,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.publishRunbook == null ? Input.empty() : this.publishRunbook;
     }
 
-    /**
-     * The repo url of the source control.
-     */
     @InputImport(name="repoUrl")
     private final @Nullable Input<String> repoUrl;
 
@@ -91,9 +67,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.repoUrl == null ? Input.empty() : this.repoUrl;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -101,9 +74,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The authorization token for the repo of the source control.
-     */
     @InputImport(name="securityToken")
     private final @Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
@@ -111,9 +81,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityToken == null ? Input.empty() : this.securityToken;
     }
 
-    /**
-     * The source control name.
-     */
     @InputImport(name="sourceControlName")
     private final @Nullable Input<String> sourceControlName;
 
@@ -121,9 +88,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceControlName == null ? Input.empty() : this.sourceControlName;
     }
 
-    /**
-     * The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
-     */
     @InputImport(name="sourceType")
     private final @Nullable Input<Either<String,SourceType>> sourceType;
 

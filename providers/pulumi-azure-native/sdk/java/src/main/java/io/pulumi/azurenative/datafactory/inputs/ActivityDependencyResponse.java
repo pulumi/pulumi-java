@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Activity dependency information.
- */
 public final class ActivityDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActivityDependencyResponse Empty = new ActivityDependencyResponse();
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="activity", required=true)
     private final String activity;
 
@@ -26,9 +20,6 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
         return this.activity;
     }
 
-    /**
-     * Match-Condition for the dependency.
-     */
     @InputImport(name="dependencyConditions", required=true)
     private final List<String> dependencyConditions;
 

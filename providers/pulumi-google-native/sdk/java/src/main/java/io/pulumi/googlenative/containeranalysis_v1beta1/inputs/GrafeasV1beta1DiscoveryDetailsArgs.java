@@ -9,16 +9,10 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DiscoveredArgs;
 import java.util.Objects;
 
 
-/**
- * Details of a discovery occurrence.
- */
 public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrafeasV1beta1DiscoveryDetailsArgs Empty = new GrafeasV1beta1DiscoveryDetailsArgs();
 
-    /**
-     * Analysis status for the discovered resource.
-     */
     @InputImport(name="discovered", required=true)
     private final Input<DiscoveredArgs> discovered;
 

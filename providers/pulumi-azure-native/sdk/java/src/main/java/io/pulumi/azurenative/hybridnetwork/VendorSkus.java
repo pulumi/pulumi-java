@@ -17,538 +17,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Sku sub resource.
-API Version: 2020-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update the sku of vendor resource
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var vendorSkus = new AzureNative.HybridNetwork.VendorSkus("vendorSkus", new AzureNative.HybridNetwork.VendorSkusArgs
-        {
-            DeploymentMode = "PrivateEdgeZone",
-            ManagedApplicationTemplate = ,
-            NetworkFunctionTemplate = new AzureNative.HybridNetwork.Inputs.NetworkFunctionTemplateArgs
-            {
-                NetworkFunctionRoleConfigurations = 
-                {
-                    new AzureNative.HybridNetwork.Inputs.NetworkFunctionRoleConfigurationArgs
-                    {
-                        CustomProfile = new AzureNative.HybridNetwork.Inputs.CustomProfileArgs
-                        {
-                            MetadataConfigurationPath = "/var/logs/network.cfg",
-                        },
-                        NetworkInterfaces = 
-                        {
-                            new AzureNative.HybridNetwork.Inputs.NetworkInterfaceArgs
-                            {
-                                IpConfigurations = 
-                                {
-                                    new AzureNative.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
-                                    {
-                                        Gateway = "",
-                                        IpAddress = "",
-                                        IpAllocationMethod = "Dynamic",
-                                        IpVersion = "IPv4",
-                                        Subnet = "",
-                                    },
-                                },
-                                MacAddress = "",
-                                NetworkInterfaceName = "nic1",
-                                VmSwitchType = "Wan",
-                            },
-                            new AzureNative.HybridNetwork.Inputs.NetworkInterfaceArgs
-                            {
-                                IpConfigurations = 
-                                {
-                                    new AzureNative.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
-                                    {
-                                        Gateway = "",
-                                        IpAddress = "",
-                                        IpAllocationMethod = "Dynamic",
-                                        IpVersion = "IPv4",
-                                        Subnet = "",
-                                    },
-                                },
-                                MacAddress = "",
-                                NetworkInterfaceName = "nic2",
-                                VmSwitchType = "Management",
-                            },
-                        },
-                        OsProfile = new AzureNative.HybridNetwork.Inputs.OsProfileArgs
-                        {
-                            AdminUsername = "dummyuser",
-                            CustomData = "base-64 encoded string of custom data",
-                            LinuxConfiguration = new AzureNative.HybridNetwork.Inputs.LinuxConfigurationArgs
-                            {
-                                Ssh = new AzureNative.HybridNetwork.Inputs.SshConfigurationArgs
-                                {
-                                    PublicKeys = 
-                                    {
-                                        new AzureNative.HybridNetwork.Inputs.SshPublicKeyArgs
-                                        {
-                                            KeyData = "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
-                                            Path = "home/user/.ssh/authorized_keys",
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                        RoleName = "test",
-                        RoleType = "VirtualMachine",
-                        StorageProfile = new AzureNative.HybridNetwork.Inputs.StorageProfileArgs
-                        {
-                            DataDisks = 
-                            {
-                                new AzureNative.HybridNetwork.Inputs.DataDiskArgs
-                                {
-                                    CreateOption = "Empty",
-                                    DiskSizeGB = 10,
-                                    Name = "DataDisk1",
-                                },
-                            },
-                            ImageReference = new AzureNative.HybridNetwork.Inputs.ImageReferenceArgs
-                            {
-                                Offer = "UbuntuServer",
-                                Publisher = "Canonical",
-                                Sku = "18.04-LTS",
-                                Version = "18.04.201804262",
-                            },
-                            OsDisk = new AzureNative.HybridNetwork.Inputs.OsDiskArgs
-                            {
-                                DiskSizeGB = 30,
-                                Name = "vhdName",
-                                OsType = "Linux",
-                                Vhd = new AzureNative.HybridNetwork.Inputs.VirtualHardDiskArgs
-                                {
-                                    Uri = "https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
-                                },
-                            },
-                        },
-                        VirtualMachineSize = "Standard_D3_v2",
-                    },
-                },
-            },
-            Preview = true,
-            SkuName = "TestSku",
-            VendorName = "TestVendor",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hybridnetwork.NewVendorSkus(ctx, "vendorSkus", &hybridnetwork.VendorSkusArgs{
-			DeploymentMode:             pulumi.String("PrivateEdgeZone"),
-			ManagedApplicationTemplate: nil,
-			NetworkFunctionTemplate: &hybridnetwork.NetworkFunctionTemplateArgs{
-				NetworkFunctionRoleConfigurations: hybridnetwork.NetworkFunctionRoleConfigurationArray{
-					&hybridnetwork.NetworkFunctionRoleConfigurationArgs{
-						CustomProfile: &hybridnetwork.CustomProfileArgs{
-							MetadataConfigurationPath: pulumi.String("/var/logs/network.cfg"),
-						},
-						NetworkInterfaces: hybridnetwork.NetworkInterfaceArray{
-							&hybridnetwork.NetworkInterfaceArgs{
-								IpConfigurations: hybridnetwork.NetworkInterfaceIPConfigurationArray{
-									&hybridnetwork.NetworkInterfaceIPConfigurationArgs{
-										Gateway:            pulumi.String(""),
-										IpAddress:          pulumi.String(""),
-										IpAllocationMethod: pulumi.String("Dynamic"),
-										IpVersion:          pulumi.String("IPv4"),
-										Subnet:             pulumi.String(""),
-									},
-								},
-								MacAddress:           pulumi.String(""),
-								NetworkInterfaceName: pulumi.String("nic1"),
-								VmSwitchType:         pulumi.String("Wan"),
-							},
-							&hybridnetwork.NetworkInterfaceArgs{
-								IpConfigurations: hybridnetwork.NetworkInterfaceIPConfigurationArray{
-									&hybridnetwork.NetworkInterfaceIPConfigurationArgs{
-										Gateway:            pulumi.String(""),
-										IpAddress:          pulumi.String(""),
-										IpAllocationMethod: pulumi.String("Dynamic"),
-										IpVersion:          pulumi.String("IPv4"),
-										Subnet:             pulumi.String(""),
-									},
-								},
-								MacAddress:           pulumi.String(""),
-								NetworkInterfaceName: pulumi.String("nic2"),
-								VmSwitchType:         pulumi.String("Management"),
-							},
-						},
-						OsProfile: &hybridnetwork.OsProfileArgs{
-							AdminUsername: pulumi.String("dummyuser"),
-							CustomData:    pulumi.String("base-64 encoded string of custom data"),
-							LinuxConfiguration: &hybridnetwork.LinuxConfigurationArgs{
-								Ssh: &hybridnetwork.SshConfigurationArgs{
-									PublicKeys: hybridnetwork.SshPublicKeyArray{
-										&hybridnetwork.SshPublicKeyArgs{
-											KeyData: pulumi.String("ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH"),
-											Path:    pulumi.String("home/user/.ssh/authorized_keys"),
-										},
-									},
-								},
-							},
-						},
-						RoleName: pulumi.String("test"),
-						RoleType: pulumi.String("VirtualMachine"),
-						StorageProfile: &hybridnetwork.StorageProfileArgs{
-							DataDisks: hybridnetwork.DataDiskArray{
-								&hybridnetwork.DataDiskArgs{
-									CreateOption: pulumi.String("Empty"),
-									DiskSizeGB:   pulumi.Int(10),
-									Name:         pulumi.String("DataDisk1"),
-								},
-							},
-							ImageReference: &hybridnetwork.ImageReferenceArgs{
-								Offer:     pulumi.String("UbuntuServer"),
-								Publisher: pulumi.String("Canonical"),
-								Sku:       pulumi.String("18.04-LTS"),
-								Version:   pulumi.String("18.04.201804262"),
-							},
-							OsDisk: &hybridnetwork.OsDiskArgs{
-								DiskSizeGB: pulumi.Int(30),
-								Name:       pulumi.String("vhdName"),
-								OsType:     pulumi.String("Linux"),
-								Vhd: &hybridnetwork.VirtualHardDiskArgs{
-									Uri: pulumi.String(fmt.Sprintf("%v%v%v", "https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw", "%", "3D")),
-								},
-							},
-						},
-						VirtualMachineSize: pulumi.String("Standard_D3_v2"),
-					},
-				},
-			},
-			Preview:    pulumi.Bool(true),
-			SkuName:    pulumi.String("TestSku"),
-			VendorName: pulumi.String("TestVendor"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const vendorSkus = new azure_native.hybridnetwork.VendorSkus("vendorSkus", {
-    deploymentMode: "PrivateEdgeZone",
-    managedApplicationTemplate: {},
-    networkFunctionTemplate: {
-        networkFunctionRoleConfigurations: [{
-            customProfile: {
-                metadataConfigurationPath: "/var/logs/network.cfg",
-            },
-            networkInterfaces: [
-                {
-                    ipConfigurations: [{
-                        gateway: "",
-                        ipAddress: "",
-                        ipAllocationMethod: "Dynamic",
-                        ipVersion: "IPv4",
-                        subnet: "",
-                    }],
-                    macAddress: "",
-                    networkInterfaceName: "nic1",
-                    vmSwitchType: "Wan",
-                },
-                {
-                    ipConfigurations: [{
-                        gateway: "",
-                        ipAddress: "",
-                        ipAllocationMethod: "Dynamic",
-                        ipVersion: "IPv4",
-                        subnet: "",
-                    }],
-                    macAddress: "",
-                    networkInterfaceName: "nic2",
-                    vmSwitchType: "Management",
-                },
-            ],
-            osProfile: {
-                adminUsername: "dummyuser",
-                customData: "base-64 encoded string of custom data",
-                linuxConfiguration: {
-                    ssh: {
-                        publicKeys: [{
-                            keyData: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
-                            path: "home/user/.ssh/authorized_keys",
-                        }],
-                    },
-                },
-            },
-            roleName: "test",
-            roleType: "VirtualMachine",
-            storageProfile: {
-                dataDisks: [{
-                    createOption: "Empty",
-                    diskSizeGB: 10,
-                    name: "DataDisk1",
-                }],
-                imageReference: {
-                    offer: "UbuntuServer",
-                    publisher: "Canonical",
-                    sku: "18.04-LTS",
-                    version: "18.04.201804262",
-                },
-                osDisk: {
-                    diskSizeGB: 30,
-                    name: "vhdName",
-                    osType: "Linux",
-                    vhd: {
-                        uri: `https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D`,
-                    },
-                },
-            },
-            virtualMachineSize: "Standard_D3_v2",
-        }],
-    },
-    preview: true,
-    skuName: "TestSku",
-    vendorName: "TestVendor",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-vendor_skus = azure_native.hybridnetwork.VendorSkus("vendorSkus",
-    deployment_mode="PrivateEdgeZone",
-    managed_application_template={},
-    network_function_template=azure_native.hybridnetwork.NetworkFunctionTemplateArgs(
-        network_function_role_configurations=[azure_native.hybridnetwork.NetworkFunctionRoleConfigurationArgs(
-            custom_profile=azure_native.hybridnetwork.CustomProfileArgs(
-                metadata_configuration_path="/var/logs/network.cfg",
-            ),
-            network_interfaces=[
-                azure_native.hybridnetwork.NetworkInterfaceArgs(
-                    ip_configurations=[azure_native.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
-                        gateway="",
-                        ip_address="",
-                        ip_allocation_method="Dynamic",
-                        ip_version="IPv4",
-                        subnet="",
-                    )],
-                    mac_address="",
-                    network_interface_name="nic1",
-                    vm_switch_type="Wan",
-                ),
-                azure_native.hybridnetwork.NetworkInterfaceArgs(
-                    ip_configurations=[azure_native.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
-                        gateway="",
-                        ip_address="",
-                        ip_allocation_method="Dynamic",
-                        ip_version="IPv4",
-                        subnet="",
-                    )],
-                    mac_address="",
-                    network_interface_name="nic2",
-                    vm_switch_type="Management",
-                ),
-            ],
-            os_profile=azure_native.hybridnetwork.OsProfileArgs(
-                admin_username="dummyuser",
-                custom_data="base-64 encoded string of custom data",
-                linux_configuration=azure_native.hybridnetwork.LinuxConfigurationArgs(
-                    ssh=azure_native.hybridnetwork.SshConfigurationArgs(
-                        public_keys=[azure_native.hybridnetwork.SshPublicKeyArgs(
-                            key_data="ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH",
-                            path="home/user/.ssh/authorized_keys",
-                        )],
-                    ),
-                ),
-            ),
-            role_name="test",
-            role_type="VirtualMachine",
-            storage_profile=azure_native.hybridnetwork.StorageProfileArgs(
-                data_disks=[azure_native.hybridnetwork.DataDiskArgs(
-                    create_option="Empty",
-                    disk_size_gb=10,
-                    name="DataDisk1",
-                )],
-                image_reference=azure_native.hybridnetwork.ImageReferenceArgs(
-                    offer="UbuntuServer",
-                    publisher="Canonical",
-                    sku="18.04-LTS",
-                    version="18.04.201804262",
-                ),
-                os_disk=azure_native.hybridnetwork.OsDiskArgs(
-                    disk_size_gb=30,
-                    name="vhdName",
-                    os_type="Linux",
-                    vhd=azure_native.hybridnetwork.VirtualHardDiskArgs(
-                        uri="https://contoso.net/link/vnd.vhd?sp=rl&st=2020-10-08T20:38:19Z&se=2020-12-09T19:38:00Z&sv=2019-12-12&sr=b&sig=7BM2f4yOw%3D",
-                    ),
-                ),
-            ),
-            virtual_machine_size="Standard_D3_v2",
-        )],
-    ),
-    preview=True,
-    sku_name="TestSku",
-    vendor_name="TestVendor")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:hybridnetwork:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
-```
-
- */
 @ResourceType(type="azure-native:hybridnetwork:VendorSkus")
 public class VendorSkus extends io.pulumi.resources.CustomResource {
-    /**
-     * The sku deployment mode.
-     */
     @OutputExport(name="deploymentMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentMode;
 
-    /**
-     * @return The sku deployment mode.
-     */
     public Output</* @Nullable */ String> getDeploymentMode() {
         return this.deploymentMode;
     }
-    /**
-     * The parameters for the managed application to be supplied by the vendor.
-     */
     @OutputExport(name="managedApplicationParameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationParameters;
 
-    /**
-     * @return The parameters for the managed application to be supplied by the vendor.
-     */
     public Output</* @Nullable */ Object> getManagedApplicationParameters() {
         return this.managedApplicationParameters;
     }
-    /**
-     * The template for the managed application deployment.
-     */
     @OutputExport(name="managedApplicationTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationTemplate;
 
-    /**
-     * @return The template for the managed application deployment.
-     */
     public Output</* @Nullable */ Object> getManagedApplicationTemplate() {
         return this.managedApplicationTemplate;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The template definition of the network function.
-     */
     @OutputExport(name="networkFunctionTemplate", type=NetworkFunctionTemplateResponse.class, parameters={})
     private Output</* @Nullable */ NetworkFunctionTemplateResponse> networkFunctionTemplate;
 
-    /**
-     * @return The template definition of the network function.
-     */
     public Output</* @Nullable */ NetworkFunctionTemplateResponse> getNetworkFunctionTemplate() {
         return this.networkFunctionTemplate;
     }
-    /**
-     * Indicates if the vendor sku is in preview mode.
-     */
     @OutputExport(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
-    /**
-     * @return Indicates if the vendor sku is in preview mode.
-     */
     public Output</* @Nullable */ Boolean> getPreview() {
         return this.preview;
     }
-    /**
-     * The provisioning state of the vendor sku sub resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the vendor sku sub resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The sku type.
-     */
     @OutputExport(name="skuType", type=String.class, parameters={})
     private Output</* @Nullable */ String> skuType;
 
-    /**
-     * @return The sku type.
-     */
     public Output</* @Nullable */ String> getSkuType() {
         return this.skuType;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public VendorSkus(String name, VendorSkusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridnetwork:VendorSkus", name, args == null ? VendorSkusArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -568,14 +93,6 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static VendorSkus get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VendorSkus(name, id, options);
     }

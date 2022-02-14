@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Properties for expected token claims.
- */
 public final class TokenClaimArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenClaimArgs Empty = new TokenClaimArgs();
 
-    /**
-     * Name of the claim which must be present on the token.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class TokenClaimArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Expected value of the claim to be present on the token.
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

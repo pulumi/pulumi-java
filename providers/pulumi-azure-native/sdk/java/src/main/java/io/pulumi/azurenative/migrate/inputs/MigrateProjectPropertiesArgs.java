@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class for migrate project properties.
- */
 public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateProjectPropertiesArgs Empty = new MigrateProjectPropertiesArgs();
 
-    /**
-     * Provisioning state of the migrate project.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -30,9 +24,6 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * Gets or sets the list of tools registered with the migrate project.
-     */
     @InputImport(name="registeredTools")
     private final @Nullable Input<List<String>> registeredTools;
 

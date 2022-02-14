@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedNetworkGroupArgs Empty = new GetManagedNetworkGroupArgs();
 
-    /**
-     * The name of the Managed Network Group.
-     */
     @InputImport(name="managedNetworkGroupName", required=true)
     private final String managedNetworkGroupName;
 
@@ -25,9 +19,6 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
         return this.managedNetworkGroupName;
     }
 
-    /**
-     * The name of the Managed Network.
-     */
     @InputImport(name="managedNetworkName", required=true)
     private final String managedNetworkName;
 
@@ -35,9 +26,6 @@ public final class GetManagedNetworkGroupArgs extends io.pulumi.resources.Invoke
         return this.managedNetworkName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyEncryptionKeyResponse {
-/**
- * Managed identity properties used for key encryption.
- */
     private final @Nullable IdentityPropertiesResponse identityProperties;
-/**
- * Type of encryption key used for key encryption.
- */
     private final String kekType;
-/**
- * Key encryption key. It is required in case of Customer managed KekType.
- */
     private final @Nullable String kekUrl;
-/**
- * Kek vault resource id. It is required in case of Customer managed KekType.
- */
     private final @Nullable String kekVaultResourceID;
 
     @OutputCustomType.Constructor({"identityProperties","kekType","kekUrl","kekVaultResourceID"})
@@ -41,27 +29,15 @@ public final class KeyEncryptionKeyResponse {
         this.kekVaultResourceID = kekVaultResourceID;
     }
 
-/**
- * Managed identity properties used for key encryption.
- */
     public Optional<IdentityPropertiesResponse> getIdentityProperties() {
         return Optional.ofNullable(this.identityProperties);
     }
-/**
- * Type of encryption key used for key encryption.
- */
     public String getKekType() {
         return this.kekType;
     }
-/**
- * Key encryption key. It is required in case of Customer managed KekType.
- */
     public Optional<String> getKekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
-/**
- * Kek vault resource id. It is required in case of Customer managed KekType.
- */
     public Optional<String> getKekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }

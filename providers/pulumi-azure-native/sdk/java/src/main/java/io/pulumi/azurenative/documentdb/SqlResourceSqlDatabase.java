@@ -17,193 +17,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An Azure Cosmos DB SQL database.
-API Version: 2021-03-15.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CosmosDBSqlDatabaseCreateUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlResourceSqlDatabase = new AzureNative.DocumentDB.SqlResourceSqlDatabase("sqlResourceSqlDatabase", new AzureNative.DocumentDB.SqlResourceSqlDatabaseArgs
-        {
-            AccountName = "ddb1",
-            DatabaseName = "databaseName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureNative.DocumentDB.Inputs.SqlDatabaseResourceArgs
-            {
-                Id = "databaseName",
-            },
-            ResourceGroupName = "rg1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewSqlResourceSqlDatabase(ctx, "sqlResourceSqlDatabase", &documentdb.SqlResourceSqlDatabaseArgs{
-			AccountName:  pulumi.String("ddb1"),
-			DatabaseName: pulumi.String("databaseName"),
-			Location:     pulumi.String("West US"),
-			Options:      nil,
-			Resource: &documentdb.SqlDatabaseResourceArgs{
-				Id: pulumi.String("databaseName"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabase("sqlResourceSqlDatabase", {
-    accountName: "ddb1",
-    databaseName: "databaseName",
-    location: "West US",
-    options: {},
-    resource: {
-        id: "databaseName",
-    },
-    resourceGroupName: "rg1",
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_resource_sql_database = azure_native.documentdb.SqlResourceSqlDatabase("sqlResourceSqlDatabase",
-    account_name="ddb1",
-    database_name="databaseName",
-    location="West US",
-    options=azure_native.documentdb.CreateUpdateOptionsArgs(),
-    resource=azure_native.documentdb.SqlDatabaseResourceArgs(
-        id="databaseName",
-    ),
-    resource_group_name="rg1",
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:documentdb:SqlResourceSqlDatabase databaseName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName 
-```
-
- */
 @ResourceType(type="azure-native:documentdb:SqlResourceSqlDatabase")
 public class SqlResourceSqlDatabase extends io.pulumi.resources.CustomResource {
-    /**
-     * The location of the resource group to which the resource belongs.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource group to which the resource belongs.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the ARM resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the ARM resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="options", type=SqlDatabaseGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ SqlDatabaseGetPropertiesResponseOptions> options;
 
     public Output</* @Nullable */ SqlDatabaseGetPropertiesResponseOptions> getOptions() {
         return this.options;
     }
-    /**
-     * 
-     */
     @OutputExport(name="resource", type=SqlDatabaseGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ SqlDatabaseGetPropertiesResponseResource> resource;
 
     public Output</* @Nullable */ SqlDatabaseGetPropertiesResponseResource> getResource() {
         return this.resource;
     }
-    /**
-     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of Azure resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of Azure resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SqlResourceSqlDatabase(String name, SqlResourceSqlDatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:SqlResourceSqlDatabase", name, args == null ? SqlResourceSqlDatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -242,14 +94,6 @@ public class SqlResourceSqlDatabase extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SqlResourceSqlDatabase get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlResourceSqlDatabase(name, id, options);
     }

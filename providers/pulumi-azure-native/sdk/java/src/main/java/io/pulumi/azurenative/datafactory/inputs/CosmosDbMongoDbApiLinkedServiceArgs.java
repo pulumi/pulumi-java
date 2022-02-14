@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Linked service for CosmosDB (MongoDB API) data source.
- */
 public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CosmosDbMongoDbApiLinkedServiceArgs Empty = new CosmosDbMongoDbApiLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -32,9 +26,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -42,9 +33,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString", required=true)
     private final Input<Object> connectionString;
 
@@ -52,9 +40,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.connectionString;
     }
 
-    /**
-     * The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="database", required=true)
     private final Input<Object> database;
 
@@ -62,9 +47,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.database;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,9 +54,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="isServerVersionAbove32")
     private final @Nullable Input<Object> isServerVersionAbove32;
 
@@ -82,9 +61,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.isServerVersionAbove32 == null ? Input.empty() : this.isServerVersionAbove32;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -92,10 +68,6 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'CosmosDbMongoDbApi'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

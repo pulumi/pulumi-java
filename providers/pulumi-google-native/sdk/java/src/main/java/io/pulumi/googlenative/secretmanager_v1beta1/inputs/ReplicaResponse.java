@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a Replica for this Secret.
- */
 public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicaResponse Empty = new ReplicaResponse();
 
-    /**
-     * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 

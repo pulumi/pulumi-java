@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
-    /**
-     * Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.
-     */
     @InputImport(name="keyAlgorithm")
     private final @Nullable Input<KeyKeyAlgorithm> keyAlgorithm;
 
@@ -29,9 +23,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyAlgorithm == null ? Input.empty() : this.keyAlgorithm;
     }
 
-    /**
-     * The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.
-     */
     @InputImport(name="privateKeyType")
     private final @Nullable Input<KeyPrivateKeyType> privateKeyType;
 
@@ -39,9 +30,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateKeyType == null ? Input.empty() : this.privateKeyType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -49,9 +37,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceAccountId", required=true)
     private final Input<String> serviceAccountId;
 

@@ -9,21 +9,8 @@ import io.pulumi.random.ProviderArgs;
 import io.pulumi.random.Utilities;
 import javax.annotation.Nullable;
 
-/**
- * The provider type for the random package. By default, resources use package-wide configuration
-settings, however an explicit `Provider` instance may be created and passed during resource
-construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
-
- */
 @ResourceType(type="pulumi:providers:random")
 public class Provider extends io.pulumi.resources.ProviderResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }

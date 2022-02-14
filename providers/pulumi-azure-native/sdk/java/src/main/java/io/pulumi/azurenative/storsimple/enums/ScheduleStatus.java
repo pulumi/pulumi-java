@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The schedule status.
- */
     @EnumType
     public enum ScheduleStatus {
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

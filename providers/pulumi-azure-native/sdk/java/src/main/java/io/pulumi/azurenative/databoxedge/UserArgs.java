@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserArgs Empty = new UserArgs();
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -30,9 +24,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
-    /**
-     * The password details.
-     */
     @InputImport(name="encryptedPassword")
     private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
@@ -40,9 +31,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptedPassword == null ? Input.empty() : this.encryptedPassword;
     }
 
-    /**
-     * The user name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,9 +38,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Type of the user.
-     */
     @InputImport(name="userType", required=true)
     private final Input<Either<String,UserType>> userType;
 

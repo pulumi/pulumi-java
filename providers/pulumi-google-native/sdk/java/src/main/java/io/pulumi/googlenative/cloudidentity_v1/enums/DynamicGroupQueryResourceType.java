@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Resource type for the Dynamic Group Query
- */
     @EnumType
     public enum DynamicGroupQueryResourceType {
-/**
- * Default value (not valid)
- */
         ResourceTypeUnspecified("RESOURCE_TYPE_UNSPECIFIED"),
-/**
- * For queries on User
- */
         User("USER");
 
         private final String value;

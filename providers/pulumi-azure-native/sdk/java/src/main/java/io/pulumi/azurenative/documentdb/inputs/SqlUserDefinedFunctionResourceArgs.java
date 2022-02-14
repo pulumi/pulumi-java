@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB SQL userDefinedFunction resource object
- */
 public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlUserDefinedFunctionResourceArgs Empty = new SqlUserDefinedFunctionResourceArgs();
 
-    /**
-     * Body of the User Defined Function
-     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -27,9 +21,6 @@ public final class SqlUserDefinedFunctionResourceArgs extends io.pulumi.resource
         return this.body == null ? Input.empty() : this.body;
     }
 
-    /**
-     * Name of the Cosmos DB SQL userDefinedFunction
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

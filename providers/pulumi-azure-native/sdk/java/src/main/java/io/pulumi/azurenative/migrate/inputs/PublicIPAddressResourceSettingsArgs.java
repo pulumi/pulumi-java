@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the public IP address resource settings.
- */
 public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicIPAddressResourceSettingsArgs Empty = new PublicIPAddressResourceSettingsArgs();
 
-    /**
-     * Gets or sets the domain name label.
-     */
     @InputImport(name="domainNameLabel")
     private final @Nullable Input<String> domainNameLabel;
 
@@ -27,9 +21,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
         return this.domainNameLabel == null ? Input.empty() : this.domainNameLabel;
     }
 
-    /**
-     * Gets or sets the fully qualified domain name.
-     */
     @InputImport(name="fqdn")
     private final @Nullable Input<String> fqdn;
 
@@ -37,9 +28,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
         return this.fqdn == null ? Input.empty() : this.fqdn;
     }
 
-    /**
-     * Gets or sets public IP allocation method.
-     */
     @InputImport(name="publicIpAllocationMethod")
     private final @Nullable Input<String> publicIpAllocationMethod;
 
@@ -47,10 +35,6 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
         return this.publicIpAllocationMethod == null ? Input.empty() : this.publicIpAllocationMethod;
     }
 
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Network/publicIPAddresses'.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -58,9 +42,6 @@ Expected value is 'Microsoft.Network/publicIPAddresses'.
         return this.resourceType;
     }
 
-    /**
-     * Gets or sets public IP sku.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -68,9 +49,6 @@ Expected value is 'Microsoft.Network/publicIPAddresses'.
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Gets or sets the target Resource name.
-     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 
@@ -78,9 +56,6 @@ Expected value is 'Microsoft.Network/publicIPAddresses'.
         return this.targetResourceName;
     }
 
-    /**
-     * Gets or sets public IP zones.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<String> zones;
 

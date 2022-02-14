@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNetworkProfileResponse {
-/**
- * The ID of the virtual network.
- */
     private final @Nullable String id;
-/**
- * The name of the subnet.
- */
     private final @Nullable String subnet;
 
     @OutputCustomType.Constructor({"id","subnet"})
@@ -28,15 +22,9 @@ public final class VirtualNetworkProfileResponse {
         this.subnet = subnet;
     }
 
-/**
- * The ID of the virtual network.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * The name of the subnet.
- */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

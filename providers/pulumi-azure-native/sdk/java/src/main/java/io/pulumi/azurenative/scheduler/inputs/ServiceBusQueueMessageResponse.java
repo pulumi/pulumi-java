@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceBusQueueMessageResponse Empty = new ServiceBusQueueMessageResponse();
 
-    /**
-     * Gets or sets the Service Bus authentication.
-     */
     @InputImport(name="authentication")
     private final @Nullable ServiceBusAuthenticationResponse authentication;
 
@@ -30,9 +24,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
-    /**
-     * Gets or sets the brokered message properties.
-     */
     @InputImport(name="brokeredMessageProperties")
     private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
 
@@ -40,9 +31,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
         return this.brokeredMessageProperties == null ? Optional.empty() : Optional.ofNullable(this.brokeredMessageProperties);
     }
 
-    /**
-     * Gets or sets the custom message properties.
-     */
     @InputImport(name="customMessageProperties")
     private final @Nullable Map<String,String> customMessageProperties;
 
@@ -50,9 +38,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
         return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
     }
 
-    /**
-     * Gets or sets the message.
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -60,9 +45,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Gets or sets the namespace.
-     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 
@@ -70,9 +52,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
-    /**
-     * Gets or sets the queue name.
-     */
     @InputImport(name="queueName")
     private final @Nullable String queueName;
 
@@ -80,9 +59,6 @@ public final class ServiceBusQueueMessageResponse extends io.pulumi.resources.In
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
     }
 
-    /**
-     * Gets or sets the transport type.
-     */
     @InputImport(name="transportType")
     private final @Nullable String transportType;
 

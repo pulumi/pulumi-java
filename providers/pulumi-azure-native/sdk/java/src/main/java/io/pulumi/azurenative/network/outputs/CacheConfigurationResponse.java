@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CacheConfigurationResponse {
-/**
- * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
- */
     private final @Nullable String cacheDuration;
-/**
- * Whether to use dynamic compression for cached content
- */
     private final @Nullable String dynamicCompression;
-/**
- * Treatment of URL query terms when forming the cache key.
- */
     private final @Nullable String queryParameterStripDirective;
-/**
- * query parameters to include or exclude (comma separated).
- */
     private final @Nullable String queryParameters;
 
     @OutputCustomType.Constructor({"cacheDuration","dynamicCompression","queryParameterStripDirective","queryParameters"})
@@ -40,27 +28,15 @@ public final class CacheConfigurationResponse {
         this.queryParameters = queryParameters;
     }
 
-/**
- * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
- */
     public Optional<String> getCacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
-/**
- * Whether to use dynamic compression for cached content
- */
     public Optional<String> getDynamicCompression() {
         return Optional.ofNullable(this.dynamicCompression);
     }
-/**
- * Treatment of URL query terms when forming the cache key.
- */
     public Optional<String> getQueryParameterStripDirective() {
         return Optional.ofNullable(this.queryParameterStripDirective);
     }
-/**
- * query parameters to include or exclude (comma separated).
- */
     public Optional<String> getQueryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }

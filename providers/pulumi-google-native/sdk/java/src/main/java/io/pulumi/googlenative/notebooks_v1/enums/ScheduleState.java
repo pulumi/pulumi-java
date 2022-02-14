@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum ScheduleState {
-/**
- * Unspecified state.
- */
         StateUnspecified("STATE_UNSPECIFIED"),
-/**
- * The job is executing normally.
- */
         Enabled("ENABLED"),
-/**
- * The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.
- */
         Paused("PAUSED"),
-/**
- * The job is disabled by the system due to error. The user cannot directly set a job to be disabled.
- */
         Disabled("DISABLED"),
-/**
- * The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.
- */
         UpdateFailed("UPDATE_FAILED"),
-/**
- * The schedule resource is being created.
- */
         Initializing("INITIALIZING"),
-/**
- * The schedule resource is being deleted.
- */
         Deleting("DELETING");
 
         private final String value;

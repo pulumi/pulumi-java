@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Private Connectivity
- */
 public final class PrivateConnectivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateConnectivityResponse Empty = new PrivateConnectivityResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="privateConnectionName", required=true)
     private final String privateConnectionName;
 

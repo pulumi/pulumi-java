@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the job action type.
- */
     @EnumType
     public enum JobActionType {
-/**
- * 
- */
         Http("Http"),
-/**
- * 
- */
         Https("Https"),
-/**
- * 
- */
         StorageQueue("StorageQueue"),
-/**
- * 
- */
         ServiceBusQueue("ServiceBusQueue"),
-/**
- * 
- */
         ServiceBusTopic("ServiceBusTopic");
 
         private final String value;

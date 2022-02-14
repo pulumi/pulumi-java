@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a resource Id to source Key Vault.
- */
 public final class KeyVaultKeyReferenceResponseSourceVault extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultKeyReferenceResponseSourceVault Empty = new KeyVaultKeyReferenceResponseSourceVault();
 
-    /**
-     * Resource Id.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

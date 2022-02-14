@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ActivityDependencyResponse {
-/**
- * Activity name.
- */
     private final String activity;
-/**
- * Match-Condition for the dependency.
- */
     private final List<String> dependencyConditions;
 
     @OutputCustomType.Constructor({"activity","dependencyConditions"})
@@ -27,15 +21,9 @@ public final class ActivityDependencyResponse {
         this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
     }
 
-/**
- * Activity name.
- */
     public String getActivity() {
         return this.activity;
     }
-/**
- * Match-Condition for the dependency.
- */
     public List<String> getDependencyConditions() {
         return this.dependencyConditions;
     }

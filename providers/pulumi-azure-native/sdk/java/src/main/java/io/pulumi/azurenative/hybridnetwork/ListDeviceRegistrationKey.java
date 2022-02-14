@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDeviceRegistrationKey {
-/**
- * The device registration key.
-API Version: 2020-01-01-preview.
- *
- * The device registration key.
- */
     public static CompletableFuture<ListDeviceRegistrationKeyResult> invokeAsync(ListDeviceRegistrationKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listDeviceRegistrationKey", TypeShape.of(ListDeviceRegistrationKeyResult.class), args == null ? ListDeviceRegistrationKeyArgs.Empty : args, Utilities.withVersion(options));
     }

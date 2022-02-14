@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The outbound (egress) routing method.
- */
     @EnumType
     public enum OutboundType {
-/**
- * 
- */
         LoadBalancer("loadBalancer"),
-/**
- * 
- */
         UserDefinedRouting("userDefinedRouting");
 
         private final String value;

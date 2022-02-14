@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the Security policy to create.
- */
     @EnumType
     public enum SecurityPolicyType {
-/**
- * 
- */
         WebApplicationFirewall("WebApplicationFirewall");
 
         private final String value;

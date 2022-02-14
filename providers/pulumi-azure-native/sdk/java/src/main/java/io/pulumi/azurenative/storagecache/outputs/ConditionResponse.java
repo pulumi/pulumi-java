@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConditionResponse {
-/**
- * The issue requiring attention.
- */
     private final String message;
-/**
- * The time when the condition was raised.
- */
     private final String timestamp;
 
     @OutputCustomType.Constructor({"message","timestamp"})
@@ -26,15 +20,9 @@ public final class ConditionResponse {
         this.timestamp = Objects.requireNonNull(timestamp);
     }
 
-/**
- * The issue requiring attention.
- */
     public String getMessage() {
         return this.message;
     }
-/**
- * The time when the condition was raised.
- */
     public String getTimestamp() {
         return this.timestamp;
     }

@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Sample input data for the service's input(s).
- */
 public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExampleRequestResponse Empty = new ExampleRequestResponse();
 
-    /**
-     * Sample input data for the web service's global parameters
-     */
     @InputImport(name="globalParameters")
     private final @Nullable Map<String,Object> globalParameters;
 
@@ -30,9 +24,6 @@ public final class ExampleRequestResponse extends io.pulumi.resources.InvokeArgs
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
 
-    /**
-     * Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
-     */
     @InputImport(name="inputs")
     private final @Nullable Map<String,List<List<Object>>> inputs;
 

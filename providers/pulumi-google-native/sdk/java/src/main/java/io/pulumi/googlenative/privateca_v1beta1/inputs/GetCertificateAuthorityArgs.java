@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetCertificateAuthorityArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCertificateAuthorityArgs Empty = new GetCertificateAuthorityArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="certificateAuthorityId", required=true)
     private final String certificateAuthorityId;
 
@@ -27,9 +21,6 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
         return this.certificateAuthorityId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

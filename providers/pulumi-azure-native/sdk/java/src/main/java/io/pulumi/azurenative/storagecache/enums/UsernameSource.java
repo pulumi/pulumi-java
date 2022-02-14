@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * This setting determines how the cache gets username and group names for clients.
- */
     @EnumType
     public enum UsernameSource {
-/**
- * 
- */
         AD("AD"),
-/**
- * 
- */
         LDAP("LDAP"),
-/**
- * 
- */
         File("File"),
-/**
- * 
- */
         None("None");
 
         private final String value;

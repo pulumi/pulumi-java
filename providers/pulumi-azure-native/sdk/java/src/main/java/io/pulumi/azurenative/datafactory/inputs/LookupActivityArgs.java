@@ -112,16 +112,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Lookup activity.
- */
 public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LookupActivityArgs Empty = new LookupActivityArgs();
 
-    /**
-     * Lookup activity dataset reference.
-     */
     @InputImport(name="dataset", required=true)
     private final Input<DatasetReferenceArgs> dataset;
 
@@ -129,9 +123,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataset;
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -139,9 +130,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -149,9 +137,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="firstRowOnly")
     private final @Nullable Input<Object> firstRowOnly;
 
@@ -159,9 +144,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstRowOnly == null ? Input.empty() : this.firstRowOnly;
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -169,9 +151,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -179,9 +158,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -189,9 +165,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.policy == null ? Input.empty() : this.policy;
     }
 
-    /**
-     * Dataset-specific source properties, same as copy activity source.
-     */
     @InputImport(name="source", required=true)
     private final Input<Object> source;
 
@@ -199,10 +172,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.source;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'Lookup'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -210,9 +179,6 @@ Expected value is 'Lookup'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

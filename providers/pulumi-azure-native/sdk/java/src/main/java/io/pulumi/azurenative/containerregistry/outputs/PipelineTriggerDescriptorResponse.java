@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineTriggerDescriptorResponse {
-/**
- * The source trigger that caused the pipeline run.
- */
     private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
     @OutputCustomType.Constructor({"sourceTrigger"})
@@ -21,9 +18,6 @@ public final class PipelineTriggerDescriptorResponse {
         this.sourceTrigger = sourceTrigger;
     }
 
-/**
- * The source trigger that caused the pipeline run.
- */
     public Optional<PipelineSourceTriggerDescriptorResponse> getSourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }

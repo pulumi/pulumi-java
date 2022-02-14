@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutopilotResponse {
-/**
- * Enable Autopilot
- */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -19,9 +16,6 @@ public final class AutopilotResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
-/**
- * Enable Autopilot
- */
     public Boolean getEnabled() {
         return this.enabled;
     }

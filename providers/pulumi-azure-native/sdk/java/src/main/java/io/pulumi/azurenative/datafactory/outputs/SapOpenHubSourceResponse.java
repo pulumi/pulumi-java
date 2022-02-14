@@ -12,50 +12,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SapOpenHubSourceResponse {
-/**
- * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
- */
     private final @Nullable Object additionalColumns;
-/**
- * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
- */
     private final @Nullable Object baseRequestId;
-/**
- * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object customRfcReadTableFunctionModule;
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object disableMetricsCollection;
-/**
- * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object excludeLastRequest;
-/**
- * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object maxConcurrentConnections;
-/**
- * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object queryTimeout;
-/**
- * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object sapDataColumnDelimiter;
-/**
- * Source retry count. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object sourceRetryCount;
-/**
- * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object sourceRetryWait;
-/**
- * Copy source type.
-Expected value is 'SapOpenHubSource'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalColumns","baseRequestId","customRfcReadTableFunctionModule","disableMetricsCollection","excludeLastRequest","maxConcurrentConnections","queryTimeout","sapDataColumnDelimiter","sourceRetryCount","sourceRetryWait","type"})
@@ -84,70 +50,36 @@ Expected value is 'SapOpenHubSource'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
- */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
-/**
- * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
- */
     public Optional<Object> getBaseRequestId() {
         return Optional.ofNullable(this.baseRequestId);
     }
-/**
- * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getCustomRfcReadTableFunctionModule() {
         return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
-/**
- * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getExcludeLastRequest() {
         return Optional.ofNullable(this.excludeLastRequest);
     }
-/**
- * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
-/**
- * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
-/**
- * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getSapDataColumnDelimiter() {
         return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
-/**
- * Source retry count. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
-/**
- * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
-/**
- * Copy source type.
-Expected value is 'SapOpenHubSource'.
- */
     public String getType() {
         return this.type;
     }

@@ -17,16 +17,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * HDInsight MapReduce activity type.
- */
 public final class HDInsightMapReduceActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HDInsightMapReduceActivityResponse Empty = new HDInsightMapReduceActivityResponse();
 
-    /**
-     * User specified arguments to HDInsightActivity.
-     */
     @InputImport(name="arguments")
     private final @Nullable List<Object> arguments;
 
@@ -34,9 +28,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.arguments == null ? List.of() : this.arguments;
     }
 
-    /**
-     * Class name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="className", required=true)
     private final Object className;
 
@@ -44,9 +35,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.className;
     }
 
-    /**
-     * Allows user to specify defines for the MapReduce job request.
-     */
     @InputImport(name="defines")
     private final @Nullable Map<String,Object> defines;
 
@@ -54,9 +42,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.defines == null ? Map.of() : this.defines;
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -64,9 +49,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -74,9 +56,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Debug info option.
-     */
     @InputImport(name="getDebugInfo")
     private final @Nullable String getDebugInfo;
 
@@ -84,9 +63,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
-    /**
-     * Jar path. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="jarFilePath", required=true)
     private final Object jarFilePath;
 
@@ -94,9 +70,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.jarFilePath;
     }
 
-    /**
-     * Jar libs.
-     */
     @InputImport(name="jarLibs")
     private final @Nullable List<Object> jarLibs;
 
@@ -104,9 +77,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.jarLibs == null ? List.of() : this.jarLibs;
     }
 
-    /**
-     * Jar linked service reference.
-     */
     @InputImport(name="jarLinkedService")
     private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
 
@@ -114,9 +84,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.jarLinkedService == null ? Optional.empty() : Optional.ofNullable(this.jarLinkedService);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -124,9 +91,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -134,9 +98,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -144,9 +105,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
-    /**
-     * Storage linked service references.
-     */
     @InputImport(name="storageLinkedServices")
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
@@ -154,10 +112,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'HDInsightMapReduce'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -165,9 +119,6 @@ Expected value is 'HDInsightMapReduce'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SKU Family of the managed HSM Pool
- */
     @EnumType
     public enum ManagedHsmSkuFamily {
-/**
- * 
- */
         B("B");
 
         private final String value;

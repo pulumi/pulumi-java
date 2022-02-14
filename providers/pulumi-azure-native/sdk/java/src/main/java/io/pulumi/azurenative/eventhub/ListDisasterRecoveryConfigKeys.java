@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDisasterRecoveryConfigKeys {
-/**
- * Namespace/EventHub Connection String
-API Version: 2017-04-01.
- *
- * Namespace/EventHub Connection String
- */
     public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> invokeAsync(ListDisasterRecoveryConfigKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:listDisasterRecoveryConfigKeys", TypeShape.of(ListDisasterRecoveryConfigKeysResult.class), args == null ? ListDisasterRecoveryConfigKeysArgs.Empty : args, Utilities.withVersion(options));
     }

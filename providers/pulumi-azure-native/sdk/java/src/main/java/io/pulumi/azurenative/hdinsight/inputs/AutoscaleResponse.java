@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The autoscale request parameters
- */
 public final class AutoscaleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscaleResponse Empty = new AutoscaleResponse();
 
-    /**
-     * Parameters for load-based autoscale
-     */
     @InputImport(name="capacity")
     private final @Nullable AutoscaleCapacityResponse capacity;
 
@@ -28,9 +22,6 @@ public final class AutoscaleResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Parameters for schedule-based autoscale
-     */
     @InputImport(name="recurrence")
     private final @Nullable AutoscaleRecurrenceResponse recurrence;
 

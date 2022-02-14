@@ -12,61 +12,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPolicyResult {
-/**
- * The creation date of the policy.
- */
     private final String createdDate;
-/**
- * The description of the policy.
- */
     private final @Nullable String description;
-/**
- * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
- */
     private final @Nullable String evaluatorType;
-/**
- * The fact data of the policy.
- */
     private final @Nullable String factData;
-/**
- * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
- */
     private final @Nullable String factName;
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The provisioning status of the resource.
- */
     private final String provisioningState;
-/**
- * The status of the policy.
- */
     private final @Nullable String status;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
- */
     private final @Nullable String threshold;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     private final String uniqueIdentifier;
 
     @OutputCustomType.Constructor({"createdDate","description","evaluatorType","factData","factName","id","location","name","provisioningState","status","tags","threshold","type","uniqueIdentifier"})
@@ -101,87 +59,45 @@ public final class GetPolicyResult {
         this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
     }
 
-/**
- * The creation date of the policy.
- */
     public String getCreatedDate() {
         return this.createdDate;
     }
-/**
- * The description of the policy.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
- */
     public Optional<String> getEvaluatorType() {
         return Optional.ofNullable(this.evaluatorType);
     }
-/**
- * The fact data of the policy.
- */
     public Optional<String> getFactData() {
         return Optional.ofNullable(this.factData);
     }
-/**
- * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
- */
     public Optional<String> getFactName() {
         return Optional.ofNullable(this.factName);
     }
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning status of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The status of the policy.
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
- */
     public Optional<String> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }

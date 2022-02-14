@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Data flow flowlet
- */
 public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowletArgs Empty = new FlowletArgs();
 
-    /**
-     * List of tags that can be used for describing the data flow.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -33,9 +27,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The description of the data flow.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,9 +34,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     */
     @InputImport(name="folder")
     private final @Nullable Input<DataFlowFolderArgs> folder;
 
@@ -53,9 +41,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
-    /**
-     * Flowlet script.
-     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 
@@ -63,9 +48,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.script == null ? Input.empty() : this.script;
     }
 
-    /**
-     * Flowlet script lines.
-     */
     @InputImport(name="scriptLines")
     private final @Nullable Input<List<String>> scriptLines;
 
@@ -73,9 +55,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptLines == null ? Input.empty() : this.scriptLines;
     }
 
-    /**
-     * List of sinks in Flowlet.
-     */
     @InputImport(name="sinks")
     private final @Nullable Input<List<DataFlowSinkArgs>> sinks;
 
@@ -83,9 +62,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinks == null ? Input.empty() : this.sinks;
     }
 
-    /**
-     * List of sources in Flowlet.
-     */
     @InputImport(name="sources")
     private final @Nullable Input<List<DataFlowSourceArgs>> sources;
 
@@ -93,9 +69,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.sources == null ? Input.empty() : this.sources;
     }
 
-    /**
-     * List of transformations in Flowlet.
-     */
     @InputImport(name="transformations")
     private final @Nullable Input<List<TransformationArgs>> transformations;
 
@@ -103,10 +76,6 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
         return this.transformations == null ? Input.empty() : this.transformations;
     }
 
-    /**
-     * Type of data flow.
-Expected value is 'Flowlet'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

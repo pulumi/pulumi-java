@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
- */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint {
-/**
- * Unspecified
- */
         UrlTypeHintUnspecified("URL_TYPE_HINT_UNSPECIFIED"),
-/**
- * Url would be an amp action
- */
         AmpAction("AMP_ACTION"),
-/**
- * URL that points directly to AMP content, or to a canonical URL which refers to AMP content via .
- */
         AmpContent("AMP_CONTENT");
 
         private final String value;

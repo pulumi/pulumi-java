@@ -22,672 +22,93 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Defines web application firewall policy.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates specific policy
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policy = new AzureNative.Network.Policy("policy", new AzureNative.Network.PolicyArgs
-        {
-            CustomRules = new AzureNative.Network.Inputs.CustomRuleListArgs
-            {
-                Rules = 
-                {
-                    new AzureNative.Network.Inputs.CustomRuleArgs
-                    {
-                        Action = "Block",
-                        MatchConditions = 
-                        {
-                            new AzureNative.Network.Inputs.FrontDoorMatchConditionArgs
-                            {
-                                MatchValue = 
-                                {
-                                    "192.168.1.0/24",
-                                    "10.0.0.0/24",
-                                },
-                                MatchVariable = "RemoteAddr",
-                                Operator = "IPMatch",
-                            },
-                        },
-                        Name = "Rule1",
-                        Priority = 1,
-                        RateLimitThreshold = 1000,
-                        RuleType = "RateLimitRule",
-                    },
-                    new AzureNative.Network.Inputs.CustomRuleArgs
-                    {
-                        Action = "Block",
-                        MatchConditions = 
-                        {
-                            new AzureNative.Network.Inputs.FrontDoorMatchConditionArgs
-                            {
-                                MatchValue = 
-                                {
-                                    "CH",
-                                },
-                                MatchVariable = "RemoteAddr",
-                                Operator = "GeoMatch",
-                            },
-                            new AzureNative.Network.Inputs.FrontDoorMatchConditionArgs
-                            {
-                                MatchValue = 
-                                {
-                                    "windows",
-                                },
-                                MatchVariable = "RequestHeader",
-                                Operator = "Contains",
-                                Selector = "UserAgent",
-                                Transforms = 
-                                {
-                                    "Lowercase",
-                                },
-                            },
-                        },
-                        Name = "Rule2",
-                        Priority = 2,
-                        RuleType = "MatchRule",
-                    },
-                },
-            },
-            ManagedRules = new AzureNative.Network.Inputs.ManagedRuleSetListArgs
-            {
-                ManagedRuleSets = 
-                {
-                    new AzureNative.Network.Inputs.FrontDoorManagedRuleSetArgs
-                    {
-                        Exclusions = 
-                        {
-                            new AzureNative.Network.Inputs.ManagedRuleExclusionArgs
-                            {
-                                MatchVariable = "RequestHeaderNames",
-                                Selector = "User-Agent",
-                                SelectorMatchOperator = "Equals",
-                            },
-                        },
-                        RuleGroupOverrides = 
-                        {
-                            new AzureNative.Network.Inputs.FrontDoorManagedRuleGroupOverrideArgs
-                            {
-                                Exclusions = 
-                                {
-                                    new AzureNative.Network.Inputs.ManagedRuleExclusionArgs
-                                    {
-                                        MatchVariable = "RequestCookieNames",
-                                        Selector = "token",
-                                        SelectorMatchOperator = "StartsWith",
-                                    },
-                                },
-                                RuleGroupName = "SQLI",
-                                Rules = 
-                                {
-                                    new AzureNative.Network.Inputs.FrontDoorManagedRuleOverrideArgs
-                                    {
-                                        Action = "Redirect",
-                                        EnabledState = "Enabled",
-                                        Exclusions = 
-                                        {
-                                            new AzureNative.Network.Inputs.ManagedRuleExclusionArgs
-                                            {
-                                                MatchVariable = "QueryStringArgNames",
-                                                Selector = "query",
-                                                SelectorMatchOperator = "Equals",
-                                            },
-                                        },
-                                        RuleId = "942100",
-                                    },
-                                    new AzureNative.Network.Inputs.FrontDoorManagedRuleOverrideArgs
-                                    {
-                                        EnabledState = "Disabled",
-                                        RuleId = "942110",
-                                    },
-                                },
-                            },
-                        },
-                        RuleSetAction = "Block",
-                        RuleSetType = "DefaultRuleSet",
-                        RuleSetVersion = "1.0",
-                    },
-                },
-            },
-            PolicyName = "Policy1",
-            PolicySettings = new AzureNative.Network.Inputs.FrontDoorPolicySettingsArgs
-            {
-                CustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
-                CustomBlockResponseStatusCode = 499,
-                EnabledState = "Enabled",
-                Mode = "Prevention",
-                RedirectUrl = "http://www.bing.com",
-                RequestBodyCheck = "Disabled",
-            },
-            ResourceGroupName = "rg1",
-            Sku = new AzureNative.Network.Inputs.SkuArgs
-            {
-                Name = "Classic_AzureFrontDoor",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPolicy(ctx, "policy", &network.PolicyArgs{
-			CustomRules: &network.CustomRuleListArgs{
-				Rules: network.CustomRuleArray{
-					&network.CustomRuleArgs{
-						Action: pulumi.String("Block"),
-						MatchConditions: network.FrontDoorMatchConditionArray{
-							&network.FrontDoorMatchConditionArgs{
-								MatchValue: pulumi.StringArray{
-									pulumi.String("192.168.1.0/24"),
-									pulumi.String("10.0.0.0/24"),
-								},
-								MatchVariable: pulumi.String("RemoteAddr"),
-								Operator:      pulumi.String("IPMatch"),
-							},
-						},
-						Name:               pulumi.String("Rule1"),
-						Priority:           pulumi.Int(1),
-						RateLimitThreshold: pulumi.Int(1000),
-						RuleType:           pulumi.String("RateLimitRule"),
-					},
-					&network.CustomRuleArgs{
-						Action: pulumi.String("Block"),
-						MatchConditions: network.FrontDoorMatchConditionArray{
-							&network.FrontDoorMatchConditionArgs{
-								MatchValue: pulumi.StringArray{
-									pulumi.String("CH"),
-								},
-								MatchVariable: pulumi.String("RemoteAddr"),
-								Operator:      pulumi.String("GeoMatch"),
-							},
-							&network.FrontDoorMatchConditionArgs{
-								MatchValue: pulumi.StringArray{
-									pulumi.String("windows"),
-								},
-								MatchVariable: pulumi.String("RequestHeader"),
-								Operator:      pulumi.String("Contains"),
-								Selector:      pulumi.String("UserAgent"),
-								Transforms: pulumi.StringArray{
-									pulumi.String("Lowercase"),
-								},
-							},
-						},
-						Name:     pulumi.String("Rule2"),
-						Priority: pulumi.Int(2),
-						RuleType: pulumi.String("MatchRule"),
-					},
-				},
-			},
-			ManagedRules: &network.ManagedRuleSetListArgs{
-				ManagedRuleSets: network.FrontDoorManagedRuleSetArray{
-					&network.FrontDoorManagedRuleSetArgs{
-						Exclusions: network.ManagedRuleExclusionArray{
-							&network.ManagedRuleExclusionArgs{
-								MatchVariable:         pulumi.String("RequestHeaderNames"),
-								Selector:              pulumi.String("User-Agent"),
-								SelectorMatchOperator: pulumi.String("Equals"),
-							},
-						},
-						RuleGroupOverrides: network.FrontDoorManagedRuleGroupOverrideArray{
-							&network.FrontDoorManagedRuleGroupOverrideArgs{
-								Exclusions: network.ManagedRuleExclusionArray{
-									&network.ManagedRuleExclusionArgs{
-										MatchVariable:         pulumi.String("RequestCookieNames"),
-										Selector:              pulumi.String("token"),
-										SelectorMatchOperator: pulumi.String("StartsWith"),
-									},
-								},
-								RuleGroupName: pulumi.String("SQLI"),
-								Rules: network.FrontDoorManagedRuleOverrideArray{
-									&network.FrontDoorManagedRuleOverrideArgs{
-										Action:       pulumi.String("Redirect"),
-										EnabledState: pulumi.String("Enabled"),
-										Exclusions: network.ManagedRuleExclusionArray{
-											&network.ManagedRuleExclusionArgs{
-												MatchVariable:         pulumi.String("QueryStringArgNames"),
-												Selector:              pulumi.String("query"),
-												SelectorMatchOperator: pulumi.String("Equals"),
-											},
-										},
-										RuleId: pulumi.String("942100"),
-									},
-									&network.FrontDoorManagedRuleOverrideArgs{
-										EnabledState: pulumi.String("Disabled"),
-										RuleId:       pulumi.String("942110"),
-									},
-								},
-							},
-						},
-						RuleSetAction:  pulumi.String("Block"),
-						RuleSetType:    pulumi.String("DefaultRuleSet"),
-						RuleSetVersion: pulumi.String("1.0"),
-					},
-				},
-			},
-			PolicyName: pulumi.String("Policy1"),
-			PolicySettings: &network.FrontDoorPolicySettingsArgs{
-				CustomBlockResponseBody:       pulumi.String("PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg=="),
-				CustomBlockResponseStatusCode: pulumi.Int(499),
-				EnabledState:                  pulumi.String("Enabled"),
-				Mode:                          pulumi.String("Prevention"),
-				RedirectUrl:                   pulumi.String("http://www.bing.com"),
-				RequestBodyCheck:              pulumi.String("Disabled"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Sku: &network.SkuArgs{
-				Name: pulumi.String("Classic_AzureFrontDoor"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policy = new azure_native.network.Policy("policy", {
-    customRules: {
-        rules: [
-            {
-                action: "Block",
-                matchConditions: [{
-                    matchValue: [
-                        "192.168.1.0/24",
-                        "10.0.0.0/24",
-                    ],
-                    matchVariable: "RemoteAddr",
-                    operator: "IPMatch",
-                }],
-                name: "Rule1",
-                priority: 1,
-                rateLimitThreshold: 1000,
-                ruleType: "RateLimitRule",
-            },
-            {
-                action: "Block",
-                matchConditions: [
-                    {
-                        matchValue: ["CH"],
-                        matchVariable: "RemoteAddr",
-                        operator: "GeoMatch",
-                    },
-                    {
-                        matchValue: ["windows"],
-                        matchVariable: "RequestHeader",
-                        operator: "Contains",
-                        selector: "UserAgent",
-                        transforms: ["Lowercase"],
-                    },
-                ],
-                name: "Rule2",
-                priority: 2,
-                ruleType: "MatchRule",
-            },
-        ],
-    },
-    managedRules: {
-        managedRuleSets: [{
-            exclusions: [{
-                matchVariable: "RequestHeaderNames",
-                selector: "User-Agent",
-                selectorMatchOperator: "Equals",
-            }],
-            ruleGroupOverrides: [{
-                exclusions: [{
-                    matchVariable: "RequestCookieNames",
-                    selector: "token",
-                    selectorMatchOperator: "StartsWith",
-                }],
-                ruleGroupName: "SQLI",
-                rules: [
-                    {
-                        action: "Redirect",
-                        enabledState: "Enabled",
-                        exclusions: [{
-                            matchVariable: "QueryStringArgNames",
-                            selector: "query",
-                            selectorMatchOperator: "Equals",
-                        }],
-                        ruleId: "942100",
-                    },
-                    {
-                        enabledState: "Disabled",
-                        ruleId: "942110",
-                    },
-                ],
-            }],
-            ruleSetAction: "Block",
-            ruleSetType: "DefaultRuleSet",
-            ruleSetVersion: "1.0",
-        }],
-    },
-    policyName: "Policy1",
-    policySettings: {
-        customBlockResponseBody: "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
-        customBlockResponseStatusCode: 499,
-        enabledState: "Enabled",
-        mode: "Prevention",
-        redirectUrl: "http://www.bing.com",
-        requestBodyCheck: "Disabled",
-    },
-    resourceGroupName: "rg1",
-    sku: {
-        name: "Classic_AzureFrontDoor",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy = azure_native.network.Policy("policy",
-    custom_rules=azure_native.network.CustomRuleListArgs(
-        rules=[
-            azure_native.network.CustomRuleArgs(
-                action="Block",
-                match_conditions=[azure_native.network.FrontDoorMatchConditionArgs(
-                    match_value=[
-                        "192.168.1.0/24",
-                        "10.0.0.0/24",
-                    ],
-                    match_variable="RemoteAddr",
-                    operator="IPMatch",
-                )],
-                name="Rule1",
-                priority=1,
-                rate_limit_threshold=1000,
-                rule_type="RateLimitRule",
-            ),
-            azure_native.network.CustomRuleArgs(
-                action="Block",
-                match_conditions=[
-                    azure_native.network.FrontDoorMatchConditionArgs(
-                        match_value=["CH"],
-                        match_variable="RemoteAddr",
-                        operator="GeoMatch",
-                    ),
-                    azure_native.network.FrontDoorMatchConditionArgs(
-                        match_value=["windows"],
-                        match_variable="RequestHeader",
-                        operator="Contains",
-                        selector="UserAgent",
-                        transforms=["Lowercase"],
-                    ),
-                ],
-                name="Rule2",
-                priority=2,
-                rule_type="MatchRule",
-            ),
-        ],
-    ),
-    managed_rules=azure_native.network.ManagedRuleSetListArgs(
-        managed_rule_sets=[azure_native.network.FrontDoorManagedRuleSetArgs(
-            exclusions=[azure_native.network.ManagedRuleExclusionArgs(
-                match_variable="RequestHeaderNames",
-                selector="User-Agent",
-                selector_match_operator="Equals",
-            )],
-            rule_group_overrides=[azure_native.network.FrontDoorManagedRuleGroupOverrideArgs(
-                exclusions=[azure_native.network.ManagedRuleExclusionArgs(
-                    match_variable="RequestCookieNames",
-                    selector="token",
-                    selector_match_operator="StartsWith",
-                )],
-                rule_group_name="SQLI",
-                rules=[
-                    azure_native.network.FrontDoorManagedRuleOverrideArgs(
-                        action="Redirect",
-                        enabled_state="Enabled",
-                        exclusions=[azure_native.network.ManagedRuleExclusionArgs(
-                            match_variable="QueryStringArgNames",
-                            selector="query",
-                            selector_match_operator="Equals",
-                        )],
-                        rule_id="942100",
-                    ),
-                    azure_native.network.FrontDoorManagedRuleOverrideArgs(
-                        enabled_state="Disabled",
-                        rule_id="942110",
-                    ),
-                ],
-            )],
-            rule_set_action="Block",
-            rule_set_type="DefaultRuleSet",
-            rule_set_version="1.0",
-        )],
-    ),
-    policy_name="Policy1",
-    policy_settings=azure_native.network.FrontDoorPolicySettingsArgs(
-        custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
-        custom_block_response_status_code=499,
-        enabled_state="Enabled",
-        mode="Prevention",
-        redirect_url="http://www.bing.com",
-        request_body_check="Disabled",
-    ),
-    resource_group_name="rg1",
-    sku=azure_native.network.SkuArgs(
-        name="Classic_AzureFrontDoor",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:Policy Policy1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/Policy1 
-```
-
- */
 @ResourceType(type="azure-native:network:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {
-    /**
-     * Describes custom rules inside the policy.
-     */
     @OutputExport(name="customRules", type=CustomRuleListResponse.class, parameters={})
     private Output</* @Nullable */ CustomRuleListResponse> customRules;
 
-    /**
-     * @return Describes custom rules inside the policy.
-     */
     public Output</* @Nullable */ CustomRuleListResponse> getCustomRules() {
         return this.customRules;
     }
-    /**
-     * Gets a unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Gets a unique read-only string that changes whenever the resource is updated.
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * Describes Frontend Endpoints associated with this Web Application Firewall policy.
-     */
     @OutputExport(name="frontendEndpointLinks", type=List.class, parameters={FrontendEndpointLinkResponse.class})
     private Output<List<FrontendEndpointLinkResponse>> frontendEndpointLinks;
 
-    /**
-     * @return Describes Frontend Endpoints associated with this Web Application Firewall policy.
-     */
     public Output<List<FrontendEndpointLinkResponse>> getFrontendEndpointLinks() {
         return this.frontendEndpointLinks;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Describes managed rules inside the policy.
-     */
     @OutputExport(name="managedRules", type=ManagedRuleSetListResponse.class, parameters={})
     private Output</* @Nullable */ ManagedRuleSetListResponse> managedRules;
 
-    /**
-     * @return Describes managed rules inside the policy.
-     */
     public Output</* @Nullable */ ManagedRuleSetListResponse> getManagedRules() {
         return this.managedRules;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Describes settings for the policy.
-     */
     @OutputExport(name="policySettings", type=FrontDoorPolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ FrontDoorPolicySettingsResponse> policySettings;
 
-    /**
-     * @return Describes settings for the policy.
-     */
     public Output</* @Nullable */ FrontDoorPolicySettingsResponse> getPolicySettings() {
         return this.policySettings;
     }
-    /**
-     * Provisioning state of the policy.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the policy.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * 
-     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     public Output<String> getResourceState() {
         return this.resourceState;
     }
-    /**
-     * Describes Routing Rules associated with this Web Application Firewall policy.
-     */
     @OutputExport(name="routingRuleLinks", type=List.class, parameters={RoutingRuleLinkResponse.class})
     private Output<List<RoutingRuleLinkResponse>> routingRuleLinks;
 
-    /**
-     * @return Describes Routing Rules associated with this Web Application Firewall policy.
-     */
     public Output<List<RoutingRuleLinkResponse>> getRoutingRuleLinks() {
         return this.routingRuleLinks;
     }
-    /**
-     * Describes Security Policy associated with this Web Application Firewall policy.
-     */
     @OutputExport(name="securityPolicyLinks", type=List.class, parameters={SecurityPolicyLinkResponse.class})
     private Output<List<SecurityPolicyLinkResponse>> securityPolicyLinks;
 
-    /**
-     * @return Describes Security Policy associated with this Web Application Firewall policy.
-     */
     public Output<List<SecurityPolicyLinkResponse>> getSecurityPolicyLinks() {
         return this.securityPolicyLinks;
     }
-    /**
-     * The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Policy(String name, PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -709,14 +130,6 @@ public class Policy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Policy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Policy(name, id, options);
     }

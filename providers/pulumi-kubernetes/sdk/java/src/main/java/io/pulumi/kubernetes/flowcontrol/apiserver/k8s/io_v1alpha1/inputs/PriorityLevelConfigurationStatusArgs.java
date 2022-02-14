@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PriorityLevelConfigurationStatus represents the current state of a "request-priority".
- */
 public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PriorityLevelConfigurationStatusArgs Empty = new PriorityLevelConfigurationStatusArgs();
 
-    /**
-     * `conditions` is the current state of "request-priority".
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions;
 

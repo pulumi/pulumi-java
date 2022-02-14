@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ValueResponse {
-/**
- * 
- */
     private final Boolean booleanValue;
-/**
- * 
- */
     private final DateResponse dateValue;
-/**
- * 
- */
     private final Double doubleValue;
-/**
- * 
- */
     private final String integerValue;
-/**
- * 
- */
     private final String stringValue;
-/**
- * 
- */
     private final String timestampValue;
 
     @OutputCustomType.Constructor({"booleanValue","dateValue","doubleValue","integerValue","stringValue","timestampValue"})
@@ -53,39 +35,21 @@ public final class ValueResponse {
         this.timestampValue = Objects.requireNonNull(timestampValue);
     }
 
-/**
- * 
- */
     public Boolean getBooleanValue() {
         return this.booleanValue;
     }
-/**
- * 
- */
     public DateResponse getDateValue() {
         return this.dateValue;
     }
-/**
- * 
- */
     public Double getDoubleValue() {
         return this.doubleValue;
     }
-/**
- * 
- */
     public String getIntegerValue() {
         return this.integerValue;
     }
-/**
- * 
- */
     public String getStringValue() {
         return this.stringValue;
     }
-/**
- * 
- */
     public String getTimestampValue() {
         return this.timestampValue;
     }

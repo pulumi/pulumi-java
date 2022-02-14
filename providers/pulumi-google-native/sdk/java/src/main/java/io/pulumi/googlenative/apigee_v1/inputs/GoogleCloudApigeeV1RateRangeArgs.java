@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * API call volume range and the fees charged when the total number of API calls is within the range.
- */
 public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1RateRangeArgs Empty = new GoogleCloudApigeeV1RateRangeArgs();
 
-    /**
-     * Ending value of the range. Set to 0 or `null` for the last range of values.
-     */
     @InputImport(name="end")
     private final @Nullable Input<String> end;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
         return this.end == null ? Input.empty() : this.end;
     }
 
-    /**
-     * Fee to charge when total number of API calls falls within this range.
-     */
     @InputImport(name="fee")
     private final @Nullable Input<GoogleTypeMoneyArgs> fee;
 
@@ -38,9 +29,6 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
         return this.fee == null ? Input.empty() : this.fee;
     }
 
-    /**
-     * Starting value of the range. Set to 0 or `null` for the initial range of values.
-     */
     @InputImport(name="start")
     private final @Nullable Input<String> start;
 

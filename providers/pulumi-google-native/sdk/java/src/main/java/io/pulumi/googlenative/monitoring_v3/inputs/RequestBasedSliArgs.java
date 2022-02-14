@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Service Level Indicators for which atomic units of service are counted directly.
- */
 public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RequestBasedSliArgs Empty = new RequestBasedSliArgs();
 
-    /**
-     * distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
-     */
     @InputImport(name="distributionCut")
     private final @Nullable Input<DistributionCutArgs> distributionCut;
 
@@ -28,9 +22,6 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
         return this.distributionCut == null ? Input.empty() : this.distributionCut;
     }
 
-    /**
-     * good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
-     */
     @InputImport(name="goodTotalRatio")
     private final @Nullable Input<TimeSeriesRatioArgs> goodTotalRatio;
 

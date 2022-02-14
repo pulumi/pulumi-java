@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum CVSSUserInteraction {
-/**
- * 
- */
         UserInteractionUnspecified("USER_INTERACTION_UNSPECIFIED"),
-/**
- * 
- */
         UserInteractionNone("USER_INTERACTION_NONE"),
-/**
- * 
- */
         UserInteractionRequired("USER_INTERACTION_REQUIRED");
 
         private final String value;

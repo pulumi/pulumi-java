@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSynchronizations {
-/**
- * List response for get ShareSynchronization.
-API Version: 2020-09-01.
- *
- * List response for get ShareSynchronization.
- */
     public static CompletableFuture<ListShareSynchronizationsResult> invokeAsync(ListShareSynchronizationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSynchronizations", TypeShape.of(ListShareSynchronizationsResult.class), args == null ? ListShareSynchronizationsArgs.Empty : args, Utilities.withVersion(options));
     }

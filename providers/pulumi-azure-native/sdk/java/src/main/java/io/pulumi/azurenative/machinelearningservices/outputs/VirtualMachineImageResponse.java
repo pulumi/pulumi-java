@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualMachineImageResponse {
-/**
- * Virtual Machine image path
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class VirtualMachineImageResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * Virtual Machine image path
- */
     public String getId() {
         return this.id;
     }

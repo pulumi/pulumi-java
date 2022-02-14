@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportPipelineArgs Empty = new ExportPipelineArgs();
 
-    /**
-     * The name of the export pipeline.
-     */
     @InputImport(name="exportPipelineName")
     private final @Nullable Input<String> exportPipelineName;
 
@@ -32,9 +26,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.exportPipelineName == null ? Input.empty() : this.exportPipelineName;
     }
 
-    /**
-     * The identity of the export pipeline.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityPropertiesArgs> identity;
 
@@ -42,9 +33,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The location of the export pipeline.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,9 +40,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The list of all options configured for the pipeline.
-     */
     @InputImport(name="options")
     private final @Nullable Input<List<Either<String,PipelineOptions>>> options;
 
@@ -62,9 +47,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -72,9 +54,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,9 +61,6 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The target properties of the export pipeline.
-     */
     @InputImport(name="target", required=true)
     private final Input<ExportPipelineTargetPropertiesArgs> target;
 

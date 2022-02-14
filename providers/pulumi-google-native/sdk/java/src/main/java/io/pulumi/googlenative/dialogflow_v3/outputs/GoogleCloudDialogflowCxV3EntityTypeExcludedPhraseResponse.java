@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
-/**
- * The word or phrase to be excluded.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The word or phrase to be excluded.
- */
     public String getValue() {
         return this.value;
     }

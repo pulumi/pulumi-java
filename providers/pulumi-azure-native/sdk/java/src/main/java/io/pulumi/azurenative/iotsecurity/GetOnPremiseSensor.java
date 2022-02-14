@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnPremiseSensor {
-/**
- * On-premise IoT sensor
-API Version: 2021-02-01-preview.
- *
- * On-premise IoT sensor
- */
     public static CompletableFuture<GetOnPremiseSensorResult> invokeAsync(GetOnPremiseSensorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getOnPremiseSensor", TypeShape.of(GetOnPremiseSensorResult.class), args == null ? GetOnPremiseSensorArgs.Empty : args, Utilities.withVersion(options));
     }

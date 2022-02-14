@@ -18,46 +18,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabricksSparkPythonActivityResponse {
-/**
- * Activity depends on condition.
- */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-/**
- * Activity description.
- */
     private final @Nullable String description;
-/**
- * A list of libraries to be installed on the cluster that will execute the job.
- */
     private final @Nullable List<Map<String,Object>> libraries;
-/**
- * Linked service reference.
- */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-/**
- * Activity name.
- */
     private final String name;
-/**
- * Command line parameters that will be passed to the Python file.
- */
     private final @Nullable List<Object> parameters;
-/**
- * Activity policy.
- */
     private final @Nullable ActivityPolicyResponse policy;
-/**
- * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
- */
     private final Object pythonFile;
-/**
- * Type of activity.
-Expected value is 'DatabricksSparkPython'.
- */
     private final String type;
-/**
- * Activity user properties.
- */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"dependsOn","description","libraries","linkedServiceName","name","parameters","policy","pythonFile","type","userProperties"})
@@ -84,64 +53,33 @@ Expected value is 'DatabricksSparkPython'.
         this.userProperties = userProperties;
     }
 
-/**
- * Activity depends on condition.
- */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Activity description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * A list of libraries to be installed on the cluster that will execute the job.
- */
     public List<Map<String,Object>> getLibraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
-/**
- * Linked service reference.
- */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
-/**
- * Activity name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Command line parameters that will be passed to the Python file.
- */
     public List<Object> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
-/**
- * Activity policy.
- */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
-/**
- * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
- */
     public Object getPythonFile() {
         return this.pythonFile;
     }
-/**
- * Type of activity.
-Expected value is 'DatabricksSparkPython'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Activity user properties.
- */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

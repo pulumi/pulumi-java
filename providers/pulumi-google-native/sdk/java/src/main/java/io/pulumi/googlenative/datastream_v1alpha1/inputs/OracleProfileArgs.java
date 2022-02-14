@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Oracle database profile.
- */
 public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleProfileArgs Empty = new OracleProfileArgs();
 
-    /**
-     * Connection string attributes
-     */
     @InputImport(name="connectionAttributes")
     private final @Nullable Input<Map<String,String>> connectionAttributes;
 
@@ -29,9 +23,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionAttributes == null ? Input.empty() : this.connectionAttributes;
     }
 
-    /**
-     * Database for the Oracle connection.
-     */
     @InputImport(name="databaseService", required=true)
     private final Input<String> databaseService;
 
@@ -39,9 +30,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseService;
     }
 
-    /**
-     * Hostname for the Oracle connection.
-     */
     @InputImport(name="hostname", required=true)
     private final Input<String> hostname;
 
@@ -49,9 +37,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostname;
     }
 
-    /**
-     * Password for the Oracle connection.
-     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -59,9 +44,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.password;
     }
 
-    /**
-     * Port for the Oracle connection, default value is 1521.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -69,9 +51,6 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * Username for the Oracle connection.
-     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDocumentArgs Empty = new GetDocumentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="documentId", required=true)
     private final String documentId;
 
@@ -27,9 +21,6 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
         return this.documentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="knowledgeBaseId", required=true)
     private final String knowledgeBaseId;
 
@@ -37,9 +28,6 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
         return this.knowledgeBaseId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

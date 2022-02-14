@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DriveBitLockerKeyResponse {
-/**
- * BitLocker recovery key or password
- */
     private final @Nullable String bitLockerKey;
-/**
- * Drive ID
- */
     private final @Nullable String driveId;
 
     @OutputCustomType.Constructor({"bitLockerKey","driveId"})
@@ -28,15 +22,9 @@ public final class DriveBitLockerKeyResponse {
         this.driveId = driveId;
     }
 
-/**
- * BitLocker recovery key or password
- */
     public Optional<String> getBitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
-/**
- * Drive ID
- */
     public Optional<String> getDriveId() {
         return Optional.ofNullable(this.driveId);
     }

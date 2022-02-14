@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JitNetworkAccessPolicyVirtualMachineResponse Empty = new JitNetworkAccessPolicyVirtualMachineResponse();
 
-    /**
-     * Resource ID of the virtual machine that is linked to this policy
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,9 +23,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
         return this.id;
     }
 
-    /**
-     * Port configurations for the virtual machine
-     */
     @InputImport(name="ports", required=true)
     private final List<JitNetworkAccessPortRuleResponse> ports;
 
@@ -39,9 +30,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
         return this.ports;
     }
 
-    /**
-     * Public IP address of the Azure Firewall that is linked to this policy, if applicable
-     */
     @InputImport(name="publicIpAddress")
     private final @Nullable String publicIpAddress;
 

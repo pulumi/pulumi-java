@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Profile for Windows VMs in the container service cluster.
- */
 public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterWindowsProfileResponse Empty = new ManagedClusterWindowsProfileResponse();
 
-    /**
-     * Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
-     */
     @InputImport(name="adminPassword")
     private final @Nullable String adminPassword;
 
@@ -28,9 +22,6 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
         return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
     }
 
-    /**
-     * Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
-     */
     @InputImport(name="adminUsername", required=true)
     private final String adminUsername;
 
@@ -38,9 +29,6 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
         return this.adminUsername;
     }
 
-    /**
-     * Whether to enable CSI proxy.
-     */
     @InputImport(name="enableCSIProxy")
     private final @Nullable Boolean enableCSIProxy;
 
@@ -48,9 +36,6 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
         return this.enableCSIProxy == null ? Optional.empty() : Optional.ofNullable(this.enableCSIProxy);
     }
 
-    /**
-     * The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.
-     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 

@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1DatastoreConfigResponse {
-/**
- * Name of the Cloud Storage bucket. Required for `gcs` target_type.
- */
     private final String bucketName;
-/**
- * BigQuery dataset name Required for `bigquery` target_type.
- */
     private final String datasetName;
-/**
- * Path of Cloud Storage bucket Required for `gcs` target_type.
- */
     private final String path;
-/**
- * GCP project in which the datastore exists
- */
     private final String project;
-/**
- * Prefix of BigQuery table Required for `bigquery` target_type.
- */
     private final String tablePrefix;
 
     @OutputCustomType.Constructor({"bucketName","datasetName","path","project","tablePrefix"})
@@ -44,33 +29,18 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
         this.tablePrefix = Objects.requireNonNull(tablePrefix);
     }
 
-/**
- * Name of the Cloud Storage bucket. Required for `gcs` target_type.
- */
     public String getBucketName() {
         return this.bucketName;
     }
-/**
- * BigQuery dataset name Required for `bigquery` target_type.
- */
     public String getDatasetName() {
         return this.datasetName;
     }
-/**
- * Path of Cloud Storage bucket Required for `gcs` target_type.
- */
     public String getPath() {
         return this.path;
     }
-/**
- * GCP project in which the datastore exists
- */
     public String getProject() {
         return this.project;
     }
-/**
- * Prefix of BigQuery table Required for `bigquery` target_type.
- */
     public String getTablePrefix() {
         return this.tablePrefix;
     }

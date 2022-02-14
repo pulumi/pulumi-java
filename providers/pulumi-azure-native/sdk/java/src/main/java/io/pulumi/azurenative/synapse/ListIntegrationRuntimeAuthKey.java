@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationRuntimeAuthKey {
-/**
- * The integration runtime authentication keys.
-API Version: 2021-03-01.
- *
- * The integration runtime authentication keys.
- */
     public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> invokeAsync(ListIntegrationRuntimeAuthKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listIntegrationRuntimeAuthKey", TypeShape.of(ListIntegrationRuntimeAuthKeyResult.class), args == null ? ListIntegrationRuntimeAuthKeyArgs.Empty : args, Utilities.withVersion(options));
     }

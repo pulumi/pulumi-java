@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A DataFactory compute.
- */
 public final class DataFactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataFactoryArgs Empty = new DataFactoryArgs();
 
-    /**
-     * Location for the underlying compute
-     */
     @InputImport(name="computeLocation")
     private final @Nullable Input<String> computeLocation;
 
@@ -27,10 +21,6 @@ public final class DataFactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeLocation == null ? Input.empty() : this.computeLocation;
     }
 
-    /**
-     * The type of compute
-Expected value is 'DataFactory'.
-     */
     @InputImport(name="computeType", required=true)
     private final Input<String> computeType;
 
@@ -38,9 +28,6 @@ Expected value is 'DataFactory'.
         return this.computeType;
     }
 
-    /**
-     * The description of the Machine Learning compute.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -48,9 +35,6 @@ Expected value is 'DataFactory'.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * ARM resource id of the underlying compute
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

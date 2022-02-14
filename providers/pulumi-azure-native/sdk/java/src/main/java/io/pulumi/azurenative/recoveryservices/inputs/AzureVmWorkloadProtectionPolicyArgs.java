@@ -17,17 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure VM (Mercury) workload-specific backup policy.
- */
 public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureVmWorkloadProtectionPolicyArgs Empty = new AzureVmWorkloadProtectionPolicyArgs();
 
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureWorkload'.
-     */
     @InputImport(name="backupManagementType", required=true)
     private final Input<String> backupManagementType;
 
@@ -35,9 +28,6 @@ Expected value is 'AzureWorkload'.
         return this.backupManagementType;
     }
 
-    /**
-     * Fix the policy inconsistency
-     */
     @InputImport(name="makePolicyConsistent")
     private final @Nullable Input<Boolean> makePolicyConsistent;
 
@@ -45,9 +35,6 @@ Expected value is 'AzureWorkload'.
         return this.makePolicyConsistent == null ? Input.empty() : this.makePolicyConsistent;
     }
 
-    /**
-     * Number of items associated with this policy.
-     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Input<Integer> protectedItemsCount;
 
@@ -55,9 +42,6 @@ Expected value is 'AzureWorkload'.
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
     }
 
-    /**
-     * Common settings for the backup management
-     */
     @InputImport(name="settings")
     private final @Nullable Input<SettingsArgs> settings;
 
@@ -65,9 +49,6 @@ Expected value is 'AzureWorkload'.
         return this.settings == null ? Input.empty() : this.settings;
     }
 
-    /**
-     * List of sub-protection policies which includes schedule and retention
-     */
     @InputImport(name="subProtectionPolicy")
     private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
@@ -75,9 +56,6 @@ Expected value is 'AzureWorkload'.
         return this.subProtectionPolicy == null ? Input.empty() : this.subProtectionPolicy;
     }
 
-    /**
-     * Type of workload for the backup management
-     */
     @InputImport(name="workLoadType")
     private final @Nullable Input<Either<String,WorkloadType>> workLoadType;
 

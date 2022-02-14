@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A reference to a related private endpoint connection.
- */
 public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionReferenceResponse Empty = new PrivateEndpointConnectionReferenceResponse();
 
-    /**
-     * The resource ID.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,9 +23,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
         return this.id;
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -39,9 +30,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
         return this.name;
     }
 
-    /**
-     * The resource of private endpoint.
-     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -49,9 +37,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -59,9 +44,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
         return this.privateLinkServiceConnectionState;
     }
 
-    /**
-     * The provisioning status of the private endpoint connection.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -69,9 +51,6 @@ public final class PrivateEndpointConnectionReferenceResponse extends io.pulumi.
         return this.provisioningState;
     }
 
-    /**
-     * The type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

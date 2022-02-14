@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateEndpointResponse {
-/**
- * The ARM identifier for Private Endpoint
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class PrivateEndpointResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * The ARM identifier for Private Endpoint
- */
     public String getId() {
         return this.id;
     }

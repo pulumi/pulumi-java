@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Workspace features.
- */
 public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceFeaturesResponse Empty = new WorkspaceFeaturesResponse();
 
-    /**
-     * Dedicated LA cluster resourceId that is linked to the workspaces.
-     */
     @InputImport(name="clusterResourceId")
     private final @Nullable String clusterResourceId;
 
@@ -28,9 +22,6 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
         return this.clusterResourceId == null ? Optional.empty() : Optional.ofNullable(this.clusterResourceId);
     }
 
-    /**
-     * Disable Non-AAD based Auth.
-     */
     @InputImport(name="disableLocalAuth")
     private final @Nullable Boolean disableLocalAuth;
 
@@ -38,9 +29,6 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
     }
 
-    /**
-     * Flag that indicate if data should be exported.
-     */
     @InputImport(name="enableDataExport")
     private final @Nullable Boolean enableDataExport;
 
@@ -48,9 +36,6 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
         return this.enableDataExport == null ? Optional.empty() : Optional.ofNullable(this.enableDataExport);
     }
 
-    /**
-     * Flag that indicate which permission to use - resource or workspace or both.
-     */
     @InputImport(name="enableLogAccessUsingOnlyResourcePermissions")
     private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
 
@@ -58,9 +43,6 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
         return this.enableLogAccessUsingOnlyResourcePermissions == null ? Optional.empty() : Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
 
-    /**
-     * Flag that describes if we want to remove the data after 30 days.
-     */
     @InputImport(name="immediatePurgeDataOn30Days")
     private final @Nullable Boolean immediatePurgeDataOn30Days;
 

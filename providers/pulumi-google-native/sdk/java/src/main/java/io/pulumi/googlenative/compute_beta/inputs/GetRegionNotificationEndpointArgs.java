@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionNotificationEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionNotificationEndpointArgs Empty = new GetRegionNotificationEndpointArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="notificationEndpoint", required=true)
     private final String notificationEndpoint;
 
@@ -27,9 +21,6 @@ public final class GetRegionNotificationEndpointArgs extends io.pulumi.resources
         return this.notificationEndpoint;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionNotificationEndpointArgs extends io.pulumi.resources
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeploymentIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- */
     public static CompletableFuture<GetDeploymentIamPolicyResult> invokeAsync(GetDeploymentIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/v2:getDeploymentIamPolicy", TypeShape.of(GetDeploymentIamPolicyResult.class), args == null ? GetDeploymentIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,76 +13,39 @@ import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyRuleLocalDataRes
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new Response Policy Rule.
-Auto-naming is currently not supported for this resource.
- */
 @ResourceType(type="google-native:dns/v1beta2:ResponsePolicyRule")
 public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
-    /**
-     * Answer this query with a behavior rather than DNS data.
-     */
     @OutputExport(name="behavior", type=String.class, parameters={})
     private Output<String> behavior;
 
-    /**
-     * @return Answer this query with a behavior rather than DNS data.
-     */
     public Output<String> getBehavior() {
         return this.behavior;
     }
-    /**
-     * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
-     */
     @OutputExport(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
-    /**
-     * @return The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
-     */
     public Output<String> getDnsName() {
         return this.dnsName;
     }
-    /**
-     * 
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
-     */
     @OutputExport(name="localData", type=ResponsePolicyRuleLocalDataResponse.class, parameters={})
     private Output<ResponsePolicyRuleLocalDataResponse> localData;
 
-    /**
-     * @return Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
-     */
     public Output<ResponsePolicyRuleLocalDataResponse> getLocalData() {
         return this.localData;
     }
-    /**
-     * An identifier for this rule. Must be unique with the ResponsePolicy.
-     */
     @OutputExport(name="ruleName", type=String.class, parameters={})
     private Output<String> ruleName;
 
-    /**
-     * @return An identifier for this rule. Must be unique with the ResponsePolicy.
-     */
     public Output<String> getRuleName() {
         return this.ruleName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ResponsePolicyRule(String name, ResponsePolicyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dns/v1beta2:ResponsePolicyRule", name, args == null ? ResponsePolicyRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -98,14 +61,6 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ResponsePolicyRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResponsePolicyRule(name, id, options);
     }

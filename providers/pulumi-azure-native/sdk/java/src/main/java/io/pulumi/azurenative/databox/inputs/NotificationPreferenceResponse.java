@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Notification preference for a job stage.
- */
 public final class NotificationPreferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationPreferenceResponse Empty = new NotificationPreferenceResponse();
 
-    /**
-     * Notification is required or not.
-     */
     @InputImport(name="sendNotification", required=true)
     private final Boolean sendNotification;
 
@@ -26,9 +20,6 @@ public final class NotificationPreferenceResponse extends io.pulumi.resources.In
         return this.sendNotification;
     }
 
-    /**
-     * Name of the stage.
-     */
     @InputImport(name="stageName", required=true)
     private final String stageName;
 

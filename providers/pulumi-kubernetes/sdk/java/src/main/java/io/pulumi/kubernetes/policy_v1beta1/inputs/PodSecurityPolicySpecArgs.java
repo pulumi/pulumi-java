@@ -22,16 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PodSecurityPolicySpec defines the policy enforced.
- */
 public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodSecurityPolicySpecArgs Empty = new PodSecurityPolicySpecArgs();
 
-    /**
-     * allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
-     */
     @InputImport(name="allowPrivilegeEscalation")
     private final @Nullable Input<Boolean> allowPrivilegeEscalation;
 
@@ -39,9 +33,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
         return this.allowPrivilegeEscalation == null ? Input.empty() : this.allowPrivilegeEscalation;
     }
 
-    /**
-     * AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
-     */
     @InputImport(name="allowedCSIDrivers")
     private final @Nullable Input<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
 
@@ -49,9 +40,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
         return this.allowedCSIDrivers == null ? Input.empty() : this.allowedCSIDrivers;
     }
 
-    /**
-     * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
-     */
     @InputImport(name="allowedCapabilities")
     private final @Nullable Input<List<String>> allowedCapabilities;
 
@@ -59,9 +47,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
         return this.allowedCapabilities == null ? Input.empty() : this.allowedCapabilities;
     }
 
-    /**
-     * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
-     */
     @InputImport(name="allowedFlexVolumes")
     private final @Nullable Input<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
 
@@ -69,9 +54,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
         return this.allowedFlexVolumes == null ? Input.empty() : this.allowedFlexVolumes;
     }
 
-    /**
-     * allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
-     */
     @InputImport(name="allowedHostPaths")
     private final @Nullable Input<List<AllowedHostPathArgs>> allowedHostPaths;
 
@@ -79,9 +61,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
         return this.allowedHostPaths == null ? Input.empty() : this.allowedHostPaths;
     }
 
-    /**
-     * AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
-     */
     @InputImport(name="allowedProcMountTypes")
     private final @Nullable Input<List<String>> allowedProcMountTypes;
 
@@ -89,11 +68,6 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
         return this.allowedProcMountTypes == null ? Input.empty() : this.allowedProcMountTypes;
     }
 
-    /**
-     * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
-
-Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar", "foo.baz", etc.
-     */
     @InputImport(name="allowedUnsafeSysctls")
     private final @Nullable Input<List<String>> allowedUnsafeSysctls;
 
@@ -101,9 +75,6 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
         return this.allowedUnsafeSysctls == null ? Input.empty() : this.allowedUnsafeSysctls;
     }
 
-    /**
-     * defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
-     */
     @InputImport(name="defaultAddCapabilities")
     private final @Nullable Input<List<String>> defaultAddCapabilities;
 
@@ -111,9 +82,6 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
         return this.defaultAddCapabilities == null ? Input.empty() : this.defaultAddCapabilities;
     }
 
-    /**
-     * defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
-     */
     @InputImport(name="defaultAllowPrivilegeEscalation")
     private final @Nullable Input<Boolean> defaultAllowPrivilegeEscalation;
 
@@ -121,11 +89,6 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
         return this.defaultAllowPrivilegeEscalation == null ? Input.empty() : this.defaultAllowPrivilegeEscalation;
     }
 
-    /**
-     * forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
-
-Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "foo.bar", "foo.baz", etc.
-     */
     @InputImport(name="forbiddenSysctls")
     private final @Nullable Input<List<String>> forbiddenSysctls;
 
@@ -133,9 +96,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.forbiddenSysctls == null ? Input.empty() : this.forbiddenSysctls;
     }
 
-    /**
-     * fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
-     */
     @InputImport(name="fsGroup", required=true)
     private final Input<FSGroupStrategyOptionsArgs> fsGroup;
 
@@ -143,9 +103,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.fsGroup;
     }
 
-    /**
-     * hostIPC determines if the policy allows the use of HostIPC in the pod spec.
-     */
     @InputImport(name="hostIPC")
     private final @Nullable Input<Boolean> hostIPC;
 
@@ -153,9 +110,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.hostIPC == null ? Input.empty() : this.hostIPC;
     }
 
-    /**
-     * hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
-     */
     @InputImport(name="hostNetwork")
     private final @Nullable Input<Boolean> hostNetwork;
 
@@ -163,9 +117,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.hostNetwork == null ? Input.empty() : this.hostNetwork;
     }
 
-    /**
-     * hostPID determines if the policy allows the use of HostPID in the pod spec.
-     */
     @InputImport(name="hostPID")
     private final @Nullable Input<Boolean> hostPID;
 
@@ -173,9 +124,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.hostPID == null ? Input.empty() : this.hostPID;
     }
 
-    /**
-     * hostPorts determines which host port ranges are allowed to be exposed.
-     */
     @InputImport(name="hostPorts")
     private final @Nullable Input<List<HostPortRangeArgs>> hostPorts;
 
@@ -183,9 +131,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.hostPorts == null ? Input.empty() : this.hostPorts;
     }
 
-    /**
-     * privileged determines if a pod can request to be run as privileged.
-     */
     @InputImport(name="privileged")
     private final @Nullable Input<Boolean> privileged;
 
@@ -193,9 +138,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.privileged == null ? Input.empty() : this.privileged;
     }
 
-    /**
-     * readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
-     */
     @InputImport(name="readOnlyRootFilesystem")
     private final @Nullable Input<Boolean> readOnlyRootFilesystem;
 
@@ -203,9 +145,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.readOnlyRootFilesystem == null ? Input.empty() : this.readOnlyRootFilesystem;
     }
 
-    /**
-     * requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
-     */
     @InputImport(name="requiredDropCapabilities")
     private final @Nullable Input<List<String>> requiredDropCapabilities;
 
@@ -213,9 +152,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.requiredDropCapabilities == null ? Input.empty() : this.requiredDropCapabilities;
     }
 
-    /**
-     * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
-     */
     @InputImport(name="runAsGroup")
     private final @Nullable Input<RunAsGroupStrategyOptionsArgs> runAsGroup;
 
@@ -223,9 +159,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.runAsGroup == null ? Input.empty() : this.runAsGroup;
     }
 
-    /**
-     * runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
-     */
     @InputImport(name="runAsUser", required=true)
     private final Input<RunAsUserStrategyOptionsArgs> runAsUser;
 
@@ -233,9 +166,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.runAsUser;
     }
 
-    /**
-     * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
-     */
     @InputImport(name="runtimeClass")
     private final @Nullable Input<RuntimeClassStrategyOptionsArgs> runtimeClass;
 
@@ -243,9 +173,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.runtimeClass == null ? Input.empty() : this.runtimeClass;
     }
 
-    /**
-     * seLinux is the strategy that will dictate the allowable labels that may be set.
-     */
     @InputImport(name="seLinux", required=true)
     private final Input<SELinuxStrategyOptionsArgs> seLinux;
 
@@ -253,9 +180,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.seLinux;
     }
 
-    /**
-     * supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
-     */
     @InputImport(name="supplementalGroups", required=true)
     private final Input<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
 
@@ -263,9 +187,6 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
         return this.supplementalGroups;
     }
 
-    /**
-     * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
-     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<String>> volumes;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ThrottlingInformationResponse {
-/**
- * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
- */
     private final @Nullable String duration;
 
     @OutputCustomType.Constructor({"duration"})
@@ -21,9 +18,6 @@ public final class ThrottlingInformationResponse {
         this.duration = duration;
     }
 
-/**
- * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
- */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }

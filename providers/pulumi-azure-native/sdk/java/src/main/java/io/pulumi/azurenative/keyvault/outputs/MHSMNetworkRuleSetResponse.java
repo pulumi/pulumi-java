@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MHSMNetworkRuleSetResponse {
-/**
- * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
- */
     private final @Nullable String bypass;
-/**
- * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
- */
     private final @Nullable String defaultAction;
-/**
- * The list of IP address rules.
- */
     private final @Nullable List<MHSMIPRuleResponse> ipRules;
-/**
- * The list of virtual network rules.
- */
     private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
     @OutputCustomType.Constructor({"bypass","defaultAction","ipRules","virtualNetworkRules"})
@@ -43,27 +31,15 @@ public final class MHSMNetworkRuleSetResponse {
         this.virtualNetworkRules = virtualNetworkRules;
     }
 
-/**
- * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
- */
     public Optional<String> getBypass() {
         return Optional.ofNullable(this.bypass);
     }
-/**
- * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
- */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
-/**
- * The list of IP address rules.
- */
     public List<MHSMIPRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
-/**
- * The list of virtual network rules.
- */
     public List<MHSMVirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

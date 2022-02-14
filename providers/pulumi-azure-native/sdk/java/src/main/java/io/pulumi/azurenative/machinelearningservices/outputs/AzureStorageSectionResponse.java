@@ -14,65 +14,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureStorageSectionResponse {
-/**
- *  Storage Account Key (Deprecated).
- */
     private final @Nullable String accountKey;
-/**
- * Storage Account Name.
- */
     private final @Nullable String accountName;
-/**
- * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
- */
     private final @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
-/**
- *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
- */
     private final @Nullable Integer blobCacheTimeout;
-/**
- * 
- */
     private final @Nullable ClientCredentialsResponse clientCredentials;
-/**
- * The storage container name.
- */
     private final @Nullable String containerName;
-/**
- * The credential.
- */
     private final @Nullable String credential;
-/**
- *  The credential type.
- */
     private final @Nullable String credentialType;
-/**
- * The host of the container.
- */
     private final @Nullable String endpoint;
-/**
- * Indicate if we are using SAS token or Account Key (Deprecated).
- */
     private final @Nullable Boolean isSas;
-/**
- * The protocol to use. Defaults to https.
- */
     private final @Nullable String protocol;
-/**
- * Resource Group.
- */
     private final @Nullable String resourceGroup;
-/**
- *  SAS Token for the container (Deprecated).
- */
     private final @Nullable String sasToken;
-/**
- * Indicates which identity to use to authenticate service data access to customer's storage.
- */
     private final @Nullable String serviceDataAccessAuthIdentity;
-/**
- * Subscription ID.
- */
     private final @Nullable String subscriptionId;
 
     @OutputCustomType.Constructor({"accountKey","accountName","areWorkspaceManagedIdentitiesAllowed","blobCacheTimeout","clientCredentials","containerName","credential","credentialType","endpoint","isSas","protocol","resourceGroup","sasToken","serviceDataAccessAuthIdentity","subscriptionId"})
@@ -109,93 +64,48 @@ public final class AzureStorageSectionResponse {
         this.subscriptionId = subscriptionId;
     }
 
-/**
- *  Storage Account Key (Deprecated).
- */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
-/**
- * Storage Account Name.
- */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
-/**
- * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
- */
     public Optional<Boolean> getAreWorkspaceManagedIdentitiesAllowed() {
         return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
-/**
- *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
- */
     public Optional<Integer> getBlobCacheTimeout() {
         return Optional.ofNullable(this.blobCacheTimeout);
     }
-/**
- * 
- */
     public Optional<ClientCredentialsResponse> getClientCredentials() {
         return Optional.ofNullable(this.clientCredentials);
     }
-/**
- * The storage container name.
- */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
-/**
- * The credential.
- */
     public Optional<String> getCredential() {
         return Optional.ofNullable(this.credential);
     }
-/**
- *  The credential type.
- */
     public Optional<String> getCredentialType() {
         return Optional.ofNullable(this.credentialType);
     }
-/**
- * The host of the container.
- */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
-/**
- * Indicate if we are using SAS token or Account Key (Deprecated).
- */
     public Optional<Boolean> getIsSas() {
         return Optional.ofNullable(this.isSas);
     }
-/**
- * The protocol to use. Defaults to https.
- */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
-/**
- * Resource Group.
- */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
-/**
- *  SAS Token for the container (Deprecated).
- */
     public Optional<String> getSasToken() {
         return Optional.ofNullable(this.sasToken);
     }
-/**
- * Indicates which identity to use to authenticate service data access to customer's storage.
- */
     public Optional<String> getServiceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
-/**
- * Subscription ID.
- */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Information about the SKU of the IoT Central application.
- */
 public final class AppSkuInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppSkuInfoResponse Empty = new AppSkuInfoResponse();
 
-    /**
-     * The name of the SKU.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Holds Customer subscription details. Clients can display available products to unregistered customers by explicitly passing subscription details
- */
 public final class CustomerSubscriptionDetails extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomerSubscriptionDetails Empty = new CustomerSubscriptionDetails();
 
-    /**
-     * Location placement Id of a subscription
-     */
     @InputImport(name="locationPlacementId")
     private final @Nullable String locationPlacementId;
 
@@ -29,9 +23,6 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
         return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
     }
 
-    /**
-     * Quota ID of a subscription
-     */
     @InputImport(name="quotaId", required=true)
     private final String quotaId;
 
@@ -39,9 +30,6 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
         return this.quotaId;
     }
 
-    /**
-     * List of registered feature flags for subscription
-     */
     @InputImport(name="registeredFeatures")
     private final @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
 

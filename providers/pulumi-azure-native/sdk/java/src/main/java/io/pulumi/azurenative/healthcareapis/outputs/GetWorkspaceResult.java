@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkspaceResult {
-/**
- * An etag associated with the resource, used for optimistic concurrency when editing it.
- */
     private final @Nullable String etag;
-/**
- * The resource identifier.
- */
     private final String id;
-/**
- * The resource location.
- */
     private final @Nullable String location;
-/**
- * The resource name.
- */
     private final String name;
-/**
- * Workspaces resource specific properties.
- */
     private final WorkspaceResponseProperties properties;
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","properties","systemData","tags","type"})
@@ -67,51 +43,27 @@ public final class GetWorkspaceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * An etag associated with the resource, used for optimistic concurrency when editing it.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * The resource identifier.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Workspaces resource specific properties.
- */
     public WorkspaceResponseProperties getProperties() {
         return this.properties;
     }
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The resource type.
- */
     public String getType() {
         return this.type;
     }

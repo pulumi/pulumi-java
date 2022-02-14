@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The price information of a Product.
- */
 public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaPriceInfoArgs Empty = new GoogleCloudRetailV2alphaPriceInfoArgs();
 
-    /**
-     * The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
-     */
     @InputImport(name="cost")
     private final @Nullable Input<Double> cost;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
         return this.cost == null ? Input.empty() : this.cost;
     }
 
-    /**
-     * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
-     */
     @InputImport(name="currencyCode")
     private final @Nullable Input<String> currencyCode;
 
@@ -38,9 +29,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
     }
 
-    /**
-     * Price of the product without any discount. If zero, by default set to be the price.
-     */
     @InputImport(name="originalPrice")
     private final @Nullable Input<Double> originalPrice;
 
@@ -48,9 +36,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
         return this.originalPrice == null ? Input.empty() : this.originalPrice;
     }
 
-    /**
-     * Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.price](https://schema.org/price).
-     */
     @InputImport(name="price")
     private final @Nullable Input<Double> price;
 
@@ -58,9 +43,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
         return this.price == null ? Input.empty() : this.price;
     }
 
-    /**
-     * The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.
-     */
     @InputImport(name="priceEffectiveTime")
     private final @Nullable Input<String> priceEffectiveTime;
 
@@ -68,9 +50,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
         return this.priceEffectiveTime == null ? Input.empty() : this.priceEffectiveTime;
     }
 
-    /**
-     * The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.
-     */
     @InputImport(name="priceExpireTime")
     private final @Nullable Input<String> priceExpireTime;
 

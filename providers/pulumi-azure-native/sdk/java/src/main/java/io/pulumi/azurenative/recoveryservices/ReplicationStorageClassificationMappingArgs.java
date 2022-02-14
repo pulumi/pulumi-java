@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ReplicationStorageClassificationMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationStorageClassificationMappingArgs Empty = new ReplicationStorageClassificationMappingArgs();
 
-    /**
-     * Fabric name.
-     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -28,9 +22,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
         return this.fabricName;
     }
 
-    /**
-     * Storage mapping input properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<StorageMappingInputPropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -58,9 +43,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
         return this.resourceName;
     }
 
-    /**
-     * Storage classification mapping name.
-     */
     @InputImport(name="storageClassificationMappingName")
     private final @Nullable Input<String> storageClassificationMappingName;
 
@@ -68,9 +50,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
         return this.storageClassificationMappingName == null ? Input.empty() : this.storageClassificationMappingName;
     }
 
-    /**
-     * Storage classification name.
-     */
     @InputImport(name="storageClassificationName", required=true)
     private final Input<String> storageClassificationName;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An object containing information about the effective user and authenticated principal responsible for an action.
- */
 public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActorArgs Empty = new ActorArgs();
 
-    /**
-     * The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -27,9 +21,6 @@ public final class ActorArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The email address of the actor. If not provided, it is inferred from credentials supplied during case creation. If the authenticated principal does not have an email address, one must be provided. When a name is provided, an email must also be provided. This will be obfuscated if the user is a Google Support agent.
-     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 

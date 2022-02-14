@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationAccountAssemblyArgs Empty = new IntegrationAccountAssemblyArgs();
 
-    /**
-     * The assembly artifact name.
-     */
     @InputImport(name="assemblyArtifactName")
     private final @Nullable Input<String> assemblyArtifactName;
 
@@ -29,9 +23,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
         return this.assemblyArtifactName == null ? Input.empty() : this.assemblyArtifactName;
     }
 
-    /**
-     * The integration account name.
-     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -39,9 +30,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
         return this.integrationAccountName;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The assembly properties.
-     */
     @InputImport(name="properties", required=true)
     private final Input<AssemblyPropertiesArgs> properties;
 
@@ -59,9 +44,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
         return this.properties;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

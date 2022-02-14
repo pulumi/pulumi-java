@@ -11,29 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OSDetailsResponse {
-/**
- * The OS Major Version.
- */
     private final @Nullable String oSMajorVersion;
-/**
- * The OS Minor Version.
- */
     private final @Nullable String oSMinorVersion;
-/**
- * The OS Version.
- */
     private final @Nullable String oSVersion;
-/**
- * The OSEdition.
- */
     private final @Nullable String osEdition;
-/**
- * VM Disk details.
- */
     private final @Nullable String osType;
-/**
- * Product type.
- */
     private final @Nullable String productType;
 
     @OutputCustomType.Constructor({"oSMajorVersion","oSMinorVersion","oSVersion","osEdition","osType","productType"})
@@ -52,39 +34,21 @@ public final class OSDetailsResponse {
         this.productType = productType;
     }
 
-/**
- * The OS Major Version.
- */
     public Optional<String> getOSMajorVersion() {
         return Optional.ofNullable(this.oSMajorVersion);
     }
-/**
- * The OS Minor Version.
- */
     public Optional<String> getOSMinorVersion() {
         return Optional.ofNullable(this.oSMinorVersion);
     }
-/**
- * The OS Version.
- */
     public Optional<String> getOSVersion() {
         return Optional.ofNullable(this.oSVersion);
     }
-/**
- * The OSEdition.
- */
     public Optional<String> getOsEdition() {
         return Optional.ofNullable(this.osEdition);
     }
-/**
- * VM Disk details.
- */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
-/**
- * Product type.
- */
     public Optional<String> getProductType() {
         return Optional.ofNullable(this.productType);
     }

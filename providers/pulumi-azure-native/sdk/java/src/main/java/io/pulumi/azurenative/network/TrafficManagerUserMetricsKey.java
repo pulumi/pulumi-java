@@ -14,124 +14,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Class representing Traffic Manager User Metrics.
-API Version: 2018-08-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### TrafficManagerUserMetricsKeys-PUT
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var trafficManagerUserMetricsKey = new AzureNative.Network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", new AzureNative.Network.TrafficManagerUserMetricsKeyArgs
-        {
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewTrafficManagerUserMetricsKey(ctx, "trafficManagerUserMetricsKey", nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const trafficManagerUserMetricsKey = new azure_native.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey", {});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-traffic_manager_user_metrics_key = azure_native.network.TrafficManagerUserMetricsKey("trafficManagerUserMetricsKey")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:TrafficManagerUserMetricsKey default /providers/Microsoft.Network/trafficManagerUserMetricsKeys/default 
-```
-
- */
 @ResourceType(type="azure-native:network:TrafficManagerUserMetricsKey")
 public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomResource {
-    /**
-     * The key returned by the User Metrics operation.
-     */
     @OutputExport(name="key", type=String.class, parameters={})
     private Output</* @Nullable */ String> key;
 
-    /**
-     * @return The key returned by the User Metrics operation.
-     */
     public Output</* @Nullable */ String> getKey() {
         return this.key;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
-    /**
-     * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public TrafficManagerUserMetricsKey(String name, @Nullable TrafficManagerUserMetricsKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:TrafficManagerUserMetricsKey", name, args == null ? TrafficManagerUserMetricsKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -151,14 +54,6 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static TrafficManagerUserMetricsKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TrafficManagerUserMetricsKey(name, id, options);
     }

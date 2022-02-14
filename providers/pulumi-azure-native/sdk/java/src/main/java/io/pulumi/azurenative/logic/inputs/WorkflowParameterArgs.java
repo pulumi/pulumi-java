@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The workflow parameters.
- */
 public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkflowParameterArgs Empty = new WorkflowParameterArgs();
 
-    /**
-     * The description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -40,9 +31,6 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ParameterType>> type;
 
@@ -50,9 +38,6 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The value.
-     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 

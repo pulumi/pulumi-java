@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Represents preferences for sending email notifications for transfer run events.
- */
 public final class EmailPreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EmailPreferencesResponse Empty = new EmailPreferencesResponse();
 
-    /**
-     * If true, email notifications will be sent on transfer run failures.
-     */
     @InputImport(name="enableFailureEmail", required=true)
     private final Boolean enableFailureEmail;
 

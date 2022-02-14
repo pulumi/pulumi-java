@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the target.
- */
     @EnumType
     public enum PipelineRunTargetType {
-/**
- * 
- */
         AzureStorageBlob("AzureStorageBlob");
 
         private final String value;

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyAlternativeNameServerConfigArgs Empty = new PolicyAlternativeNameServerConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -29,9 +23,6 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
-     */
     @InputImport(name="targetNameServers")
     private final @Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 

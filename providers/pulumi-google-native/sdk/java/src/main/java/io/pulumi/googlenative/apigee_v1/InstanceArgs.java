@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
-    /**
-     * Optional. Description of the instance.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only. Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
-     */
     @InputImport(name="diskEncryptionKeyName")
     private final @Nullable Input<String> diskEncryptionKeyName;
 
@@ -38,9 +29,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionKeyName == null ? Input.empty() : this.diskEncryptionKeyName;
     }
 
-    /**
-     * Optional. Display name for the instance.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -48,9 +36,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used for the Apigee instance creation. This optional range, if provided, should be freely available as part of larger named range the customer has allocated to the Service Networking peering. If this is not provided, Apigee will automatically request for any available /22 CIDR block from Service Networking. The customer should use this CIDR block for configuring their firewall needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22, e.f.g.h/28"
-     */
     @InputImport(name="ipRange")
     private final @Nullable Input<String> ipRange;
 
@@ -58,9 +43,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipRange == null ? Input.empty() : this.ipRange;
     }
 
-    /**
-     * Compute Engine location where the instance resides.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,9 +50,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Resource ID of the instance. Values must match the regular expression `^a-z{0,30}[a-z\d]$`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -78,9 +57,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -88,9 +64,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.
-     */
     @InputImport(name="peeringCidrRange")
     private final @Nullable Input<InstancePeeringCidrRange> peeringCidrRange;
 

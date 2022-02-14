@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualApplianceNicPropertiesResponse {
-/**
- * NIC name.
- */
     private final String name;
-/**
- * Private IP address.
- */
     private final String privateIpAddress;
-/**
- * Public IP address.
- */
     private final String publicIpAddress;
 
     @OutputCustomType.Constructor({"name","privateIpAddress","publicIpAddress"})
@@ -32,21 +23,12 @@ public final class VirtualApplianceNicPropertiesResponse {
         this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
     }
 
-/**
- * NIC name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Private IP address.
- */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
-/**
- * Public IP address.
- */
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }

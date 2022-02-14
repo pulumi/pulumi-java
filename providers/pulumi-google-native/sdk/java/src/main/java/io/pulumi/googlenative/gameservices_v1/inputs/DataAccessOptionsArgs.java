@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Write a Data Access (Gin) log
- */
 public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataAccessOptionsArgs Empty = new DataAccessOptionsArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="logMode")
     private final @Nullable Input<DataAccessOptionsLogMode> logMode;
 

@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB indexing policy
- */
 public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexingPolicyArgs Empty = new IndexingPolicyArgs();
 
-    /**
-     * Indicates if the indexing policy is automatic
-     */
     @InputImport(name="automatic")
     private final @Nullable Input<Boolean> automatic;
 
@@ -35,9 +29,6 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.automatic == null ? Input.empty() : this.automatic;
     }
 
-    /**
-     * List of composite path list
-     */
     @InputImport(name="compositeIndexes")
     private final @Nullable Input<List<List<CompositePathArgs>>> compositeIndexes;
 
@@ -45,9 +36,6 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.compositeIndexes == null ? Input.empty() : this.compositeIndexes;
     }
 
-    /**
-     * List of paths to exclude from indexing
-     */
     @InputImport(name="excludedPaths")
     private final @Nullable Input<List<ExcludedPathArgs>> excludedPaths;
 
@@ -55,9 +43,6 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.excludedPaths == null ? Input.empty() : this.excludedPaths;
     }
 
-    /**
-     * List of paths to include in the indexing
-     */
     @InputImport(name="includedPaths")
     private final @Nullable Input<List<IncludedPathArgs>> includedPaths;
 
@@ -65,9 +50,6 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.includedPaths == null ? Input.empty() : this.includedPaths;
     }
 
-    /**
-     * Indicates the indexing mode.
-     */
     @InputImport(name="indexingMode")
     private final @Nullable Input<Either<String,IndexingMode>> indexingMode;
 
@@ -75,9 +57,6 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.indexingMode == null ? Input.empty() : this.indexingMode;
     }
 
-    /**
-     * List of spatial specifics
-     */
     @InputImport(name="spatialIndexes")
     private final @Nullable Input<List<SpatialSpecArgs>> spatialIndexes;
 

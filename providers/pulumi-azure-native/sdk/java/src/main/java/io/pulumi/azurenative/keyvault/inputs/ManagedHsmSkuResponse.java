@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * SKU details
- */
 public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedHsmSkuResponse Empty = new ManagedHsmSkuResponse();
 
-    /**
-     * SKU Family of the managed HSM Pool
-     */
     @InputImport(name="family", required=true)
     private final String family;
 
@@ -25,9 +19,6 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
         return this.family;
     }
 
-    /**
-     * SKU of the managed HSM Pool
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceGroup {
-/**
- * Resource group information.
-API Version: 2019-05-01.
- *
- * Resource group information.
- */
     public static CompletableFuture<GetResourceGroupResult> invokeAsync(GetResourceGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args == null ? GetResourceGroupArgs.Empty : args, Utilities.withVersion(options));
     }

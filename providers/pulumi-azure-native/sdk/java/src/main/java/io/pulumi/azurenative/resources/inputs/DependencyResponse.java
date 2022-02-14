@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Deployment dependency information.
- */
 public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DependencyResponse Empty = new DependencyResponse();
 
-    /**
-     * The list of dependencies.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<BasicDependencyResponse> dependsOn;
 
@@ -29,9 +23,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * The ID of the dependency.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -39,9 +30,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The dependency resource name.
-     */
     @InputImport(name="resourceName")
     private final @Nullable String resourceName;
 
@@ -49,9 +37,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
-    /**
-     * The dependency resource type.
-     */
     @InputImport(name="resourceType")
     private final @Nullable String resourceType;
 

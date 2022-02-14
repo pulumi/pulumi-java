@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Denoise preprocessing configuration.
- */
 public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DenoiseArgs Empty = new DenoiseArgs();
 
-    /**
-     * Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
-     */
     @InputImport(name="strength")
     private final @Nullable Input<Double> strength;
 
@@ -28,9 +22,6 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
         return this.strength == null ? Input.empty() : this.strength;
     }
 
-    /**
-     * Set the denoiser mode. The default is `standard`. Supported denoiser modes: - `standard` - `grain`
-     */
     @InputImport(name="tune")
     private final @Nullable Input<String> tune;
 

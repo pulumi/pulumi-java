@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
-    /**
-     * Name of the cluster in the private cloud
-     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -29,9 +23,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
-    /**
-     * The cluster size
-     */
     @InputImport(name="clusterSize", required=true)
     private final Input<Integer> clusterSize;
 
@@ -39,9 +30,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterSize;
     }
 
-    /**
-     * The name of the private cloud.
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -49,9 +37,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The cluster SKU
-     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 

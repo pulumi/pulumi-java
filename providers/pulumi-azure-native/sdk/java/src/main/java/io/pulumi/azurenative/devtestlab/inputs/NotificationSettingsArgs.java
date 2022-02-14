@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Notification settings for a schedule.
- */
 public final class NotificationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationSettingsArgs Empty = new NotificationSettingsArgs();
 
-    /**
-     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     */
     @InputImport(name="emailRecipient")
     private final @Nullable Input<String> emailRecipient;
 
@@ -30,9 +24,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.emailRecipient == null ? Input.empty() : this.emailRecipient;
     }
 
-    /**
-     * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     */
     @InputImport(name="notificationLocale")
     private final @Nullable Input<String> notificationLocale;
 
@@ -40,9 +31,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.notificationLocale == null ? Input.empty() : this.notificationLocale;
     }
 
-    /**
-     * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
-     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,EnableStatus>> status;
 
@@ -50,9 +38,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * Time in minutes before event at which notification will be sent.
-     */
     @InputImport(name="timeInMinutes")
     private final @Nullable Input<Integer> timeInMinutes;
 
@@ -60,9 +45,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.timeInMinutes == null ? Input.empty() : this.timeInMinutes;
     }
 
-    /**
-     * The webhook URL to which the notification will be sent.
-     */
     @InputImport(name="webhookUrl")
     private final @Nullable Input<String> webhookUrl;
 

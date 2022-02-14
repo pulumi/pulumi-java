@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * For display only. Metadata associated with a Compute Engine network.
- */
 public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInfoResponse Empty = new NetworkInfoResponse();
 
-    /**
-     * Name of a Compute Engine network.
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -25,9 +19,6 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
-    /**
-     * The IP range that matches the test.
-     */
     @InputImport(name="matchedIpRange", required=true)
     private final String matchedIpRange;
 
@@ -35,9 +26,6 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.matchedIpRange;
     }
 
-    /**
-     * URI of a Compute Engine network.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

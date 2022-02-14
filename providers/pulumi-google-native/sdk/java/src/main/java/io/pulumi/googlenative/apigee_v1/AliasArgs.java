@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AliasArgs Empty = new AliasArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="alias")
     private final @Nullable Input<String> alias;
 
@@ -29,9 +23,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.alias == null ? Input.empty() : this.alias;
     }
 
-    /**
-     * The HTTP Content-Type header value specifying the content type of the body.
-     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -39,9 +30,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
-    /**
-     * The HTTP request/response body as raw binary.
-     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -49,9 +37,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -59,9 +44,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
-    /**
-     * Application specific response metadata. Must be set in the first response for streaming APIs.
-     */
     @InputImport(name="extensions")
     private final @Nullable Input<List<Map<String,String>>> extensions;
 
@@ -69,9 +51,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="format", required=true)
     private final Input<String> format;
 
@@ -79,9 +58,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.format;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="ignoreExpiryValidation")
     private final @Nullable Input<String> ignoreExpiryValidation;
 
@@ -89,9 +65,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreExpiryValidation == null ? Input.empty() : this.ignoreExpiryValidation;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="ignoreNewlineValidation")
     private final @Nullable Input<String> ignoreNewlineValidation;
 
@@ -99,9 +72,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreNewlineValidation == null ? Input.empty() : this.ignoreNewlineValidation;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="keystoreId", required=true)
     private final Input<String> keystoreId;
 
@@ -109,9 +79,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.keystoreId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

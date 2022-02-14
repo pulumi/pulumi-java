@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AdhocBasedTriggerContextResponse {
-/**
- * Type of the specific object - used for deserializing
-Expected value is 'AdhocBasedTriggerContext'.
- */
     private final String objectType;
-/**
- * Tagging Criteria containing retention tag for adhoc backup.
- */
     private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
     @OutputCustomType.Constructor({"objectType","taggingCriteria"})
@@ -28,16 +21,9 @@ Expected value is 'AdhocBasedTriggerContext'.
         this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
     }
 
-/**
- * Type of the specific object - used for deserializing
-Expected value is 'AdhocBasedTriggerContext'.
- */
     public String getObjectType() {
         return this.objectType;
     }
-/**
- * Tagging Criteria containing retention tag for adhoc backup.
- */
     public AdhocBasedTaggingCriteriaResponse getTaggingCriteria() {
         return this.taggingCriteria;
     }

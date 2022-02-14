@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegionAutoscalerArgs Empty = new RegionAutoscalerArgs();
 
-    /**
-     * The configuration parameters for the autoscaling algorithm. You can define one or more signals for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.
-     */
     @InputImport(name="autoscalingPolicy")
     private final @Nullable Input<AutoscalingPolicyArgs> autoscalingPolicy;
 
@@ -28,9 +22,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,9 +29,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,9 +43,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -68,9 +50,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
         return this.region;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -78,9 +57,6 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * URL of the managed instance group that this autoscaler will scale. This field is required when creating an autoscaler.
-     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

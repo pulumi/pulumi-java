@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
- */
 public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketWebsiteResponse Empty = new BucketWebsiteResponse();
 
-    /**
-     * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
-     */
     @InputImport(name="mainPageSuffix", required=true)
     private final String mainPageSuffix;
 
@@ -25,9 +19,6 @@ public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs 
         return this.mainPageSuffix;
     }
 
-    /**
-     * If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
-     */
     @InputImport(name="notFoundPage", required=true)
     private final String notFoundPage;
 

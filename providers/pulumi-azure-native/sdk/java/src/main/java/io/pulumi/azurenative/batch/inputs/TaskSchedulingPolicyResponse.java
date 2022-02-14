@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TaskSchedulingPolicyResponse Empty = new TaskSchedulingPolicyResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="nodeFillType", required=true)
     private final String nodeFillType;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A snapshot schedule.
- */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
-    /**
-     * A crontab-like specification that the schedule uses to take snapshots.
-     */
     @InputImport(name="crontabSpec")
     private final @Nullable Input<String> crontabSpec;
 
@@ -28,9 +22,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.crontabSpec == null ? Input.empty() : this.crontabSpec;
     }
 
-    /**
-     * A list of snapshot names created in this schedule.
-     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -38,9 +29,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
-    /**
-     * The maximum number of snapshots to retain in this schedule.
-     */
     @InputImport(name="retentionCount")
     private final @Nullable Input<Integer> retentionCount;
 

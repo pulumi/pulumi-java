@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Tier of Firewall Policy.
- */
     @EnumType
     public enum FirewallPolicySkuTier {
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium");
 
         private final String value;

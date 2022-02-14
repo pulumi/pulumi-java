@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Image registry that contains the base image.
- */
 public final class ModelDockerSectionResponseResponseBaseImageRegistry extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelDockerSectionResponseResponseBaseImageRegistry Empty = new ModelDockerSectionResponseResponseBaseImageRegistry();
 
-    /**
-     * 
-     */
     @InputImport(name="address")
     private final @Nullable String address;
 

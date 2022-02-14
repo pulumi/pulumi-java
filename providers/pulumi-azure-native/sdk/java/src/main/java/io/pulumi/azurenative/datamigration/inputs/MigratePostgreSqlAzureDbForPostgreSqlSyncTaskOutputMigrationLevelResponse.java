@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse();
 
-    /**
-     * Migration end time
-     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -25,9 +19,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
         return this.endedOn;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -35,10 +26,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
         return this.id;
     }
 
-    /**
-     * Result type
-Expected value is 'MigrationLevelOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -46,9 +33,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.resultType;
     }
 
-    /**
-     * Source server name
-     */
     @InputImport(name="sourceServer", required=true)
     private final String sourceServer;
 
@@ -56,9 +40,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.sourceServer;
     }
 
-    /**
-     * Source server version
-     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -66,9 +47,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.sourceServerVersion;
     }
 
-    /**
-     * Migration start time
-     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -76,9 +54,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.startedOn;
     }
 
-    /**
-     * Target server name
-     */
     @InputImport(name="targetServer", required=true)
     private final String targetServer;
 
@@ -86,9 +61,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.targetServer;
     }
 
-    /**
-     * Target server version
-     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

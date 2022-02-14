@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * matchRule criteria for request header matches.
- */
 public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpHeaderMatchArgs Empty = new HttpHeaderMatchArgs();
 
-    /**
-     * The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     */
     @InputImport(name="exactMatch")
     private final @Nullable Input<String> exactMatch;
 
@@ -29,9 +23,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
     }
 
-    /**
-     * The name of the HTTP header to match. For matching against the HTTP request's authority, use a headerMatch with the header name ":authority". For matching a request's method, use the headerName ":method". When the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true, only non-binary user-specified custom metadata and the `content-type` header are supported. The following transport-level headers cannot be used in header matching rules: `:authority`, `:method`, `:path`, `:scheme`, `user-agent`, `accept-encoding`, `content-encoding`, `grpc-accept-encoding`, `grpc-encoding`, `grpc-previous-rpc-attempts`, `grpc-tags-bin`, `grpc-timeout` and `grpc-trace-bin`.
-     */
     @InputImport(name="headerName")
     private final @Nullable Input<String> headerName;
 
@@ -39,9 +30,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.headerName == null ? Input.empty() : this.headerName;
     }
 
-    /**
-     * If set to false, the headerMatch is considered a match if the preceding match criteria are met. If set to true, the headerMatch is considered a match if the preceding match criteria are NOT met. The default setting is false. 
-     */
     @InputImport(name="invertMatch")
     private final @Nullable Input<Boolean> invertMatch;
 
@@ -49,9 +37,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.invertMatch == null ? Input.empty() : this.invertMatch;
     }
 
-    /**
-     * The value of the header must start with the contents of prefixMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     */
     @InputImport(name="prefixMatch")
     private final @Nullable Input<String> prefixMatch;
 
@@ -59,9 +44,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
     }
 
-    /**
-     * A header with the contents of headerName must exist. The match takes place whether or not the request's header has a value. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     */
     @InputImport(name="presentMatch")
     private final @Nullable Input<Boolean> presentMatch;
 
@@ -69,9 +51,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
     }
 
-    /**
-     * The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0] - -3 will match. - 0 will not match. - 0.25 will not match. - -3someString will not match. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. rangeMatch is not supported for load balancers that have loadBalancingScheme set to EXTERNAL.
-     */
     @InputImport(name="rangeMatch")
     private final @Nullable Input<Int64RangeMatchArgs> rangeMatch;
 
@@ -79,9 +58,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.rangeMatch == null ? Input.empty() : this.rangeMatch;
     }
 
-    /**
-     * The value of the header must match the regular expression specified in regexMatch. For more information about regular expression syntax, see Syntax. For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set. regexMatch only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-     */
     @InputImport(name="regexMatch")
     private final @Nullable Input<String> regexMatch;
 
@@ -89,9 +65,6 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
     }
 
-    /**
-     * The value of the header must end with the contents of suffixMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-     */
     @InputImport(name="suffixMatch")
     private final @Nullable Input<String> suffixMatch;
 

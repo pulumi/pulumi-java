@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionConfigurationResponse {
-/**
- * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
- */
     private final @Nullable CMKIdentityDefinitionResponse identity;
-/**
- * The name of the key in Azure Key Vault to use as Customer Managed Key.
- */
     private final String keyName;
-/**
- * The version of the key used for CMK. If not provided, latest version will be used.
- */
     private final @Nullable String keyVersion;
-/**
- * The url of the Azure Key Vault used for CMK.
- */
     private final String vaultBaseUrl;
 
     @OutputCustomType.Constructor({"identity","keyName","keyVersion","vaultBaseUrl"})
@@ -41,27 +29,15 @@ public final class EncryptionConfigurationResponse {
         this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
     }
 
-/**
- * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
- */
     public Optional<CMKIdentityDefinitionResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * The name of the key in Azure Key Vault to use as Customer Managed Key.
- */
     public String getKeyName() {
         return this.keyName;
     }
-/**
- * The version of the key used for CMK. If not provided, latest version will be used.
- */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
-/**
- * The url of the Azure Key Vault used for CMK.
- */
     public String getVaultBaseUrl() {
         return this.vaultBaseUrl;
     }

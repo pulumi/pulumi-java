@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The details for accessing the encryption keys in Key Vault.
- */
 public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultPropertiesArgs Empty = new KeyVaultPropertiesArgs();
 
-    /**
-     * The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
-     */
     @InputImport(name="keyIdentifier", required=true)
     private final Input<String> keyIdentifier;
 

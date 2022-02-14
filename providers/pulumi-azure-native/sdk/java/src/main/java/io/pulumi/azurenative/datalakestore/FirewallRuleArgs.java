@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallRuleArgs Empty = new FirewallRuleArgs();
 
-    /**
-     * The name of the Data Lake Store account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     */
     @InputImport(name="endIpAddress", required=true)
     private final Input<String> endIpAddress;
 
@@ -37,9 +28,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.endIpAddress;
     }
 
-    /**
-     * The name of the firewall rule to create or update.
-     */
     @InputImport(name="firewallRuleName")
     private final @Nullable Input<String> firewallRuleName;
 
@@ -47,9 +35,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
     }
 
-    /**
-     * The name of the Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     */
     @InputImport(name="startIpAddress", required=true)
     private final Input<String> startIpAddress;
 

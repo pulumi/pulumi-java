@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A custom pattern is used for defining custom HTTP verb.
- */
 public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomHttpPatternResponse Empty = new CustomHttpPatternResponse();
 
-    /**
-     * The name of this custom HTTP verb.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -25,9 +19,6 @@ public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeA
         return this.kind;
     }
 
-    /**
-     * The path matched by this custom verb.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 

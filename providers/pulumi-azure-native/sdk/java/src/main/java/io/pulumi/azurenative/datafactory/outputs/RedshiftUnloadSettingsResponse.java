@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RedshiftUnloadSettingsResponse {
-/**
- * The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
- */
     private final Object bucketName;
-/**
- * The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
- */
     private final LinkedServiceReferenceResponse s3LinkedServiceName;
 
     @OutputCustomType.Constructor({"bucketName","s3LinkedServiceName"})
@@ -27,15 +21,9 @@ public final class RedshiftUnloadSettingsResponse {
         this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
     }
 
-/**
- * The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
- */
     public Object getBucketName() {
         return this.bucketName;
     }
-/**
- * The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
- */
     public LinkedServiceReferenceResponse getS3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }

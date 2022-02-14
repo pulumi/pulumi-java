@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * StatusCondition describes why a cluster or a node pool has a certain status (e.g., ERROR or DEGRADED).
- */
 public final class StatusConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatusConditionResponse Empty = new StatusConditionResponse();
 
-    /**
-     * Canonical code of the condition.
-     */
     @InputImport(name="canonicalCode", required=true)
     private final String canonicalCode;
 
@@ -25,9 +19,6 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
         return this.canonicalCode;
     }
 
-    /**
-     * Human-friendly representation of the condition
-     */
     @InputImport(name="message", required=true)
     private final String message;
 

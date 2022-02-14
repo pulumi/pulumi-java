@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkspaceArgs Empty = new GetWorkspaceArgs();
 
-    /**
-     * The name of the resource group that contains the service instance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of workspace resource.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

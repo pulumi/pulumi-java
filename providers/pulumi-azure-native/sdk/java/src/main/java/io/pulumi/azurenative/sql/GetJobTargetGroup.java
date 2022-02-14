@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTargetGroup {
-/**
- * A group of job targets.
-API Version: 2020-11-01-preview.
- *
- * A group of job targets.
- */
     public static CompletableFuture<GetJobTargetGroupResult> invokeAsync(GetJobTargetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobTargetGroup", TypeShape.of(GetJobTargetGroupResult.class), args == null ? GetJobTargetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

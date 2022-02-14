@@ -17,465 +17,93 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The integration account RosettaNet process configuration.
-API Version: 2016-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update an RosettaNetProcessConfiguration
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var rosettaNetProcessConfiguration = new AzureNative.Logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", new AzureNative.Logic.RosettaNetProcessConfigurationArgs
-        {
-            ActivitySettings = new AzureNative.Logic.Inputs.RosettaNetPipActivitySettingsArgs
-            {
-                AcknowledgmentOfReceiptSettings = new AzureNative.Logic.Inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs
-                {
-                    IsNonRepudiationRequired = false,
-                    TimeToAcknowledgeInSeconds = 600,
-                },
-                ActivityBehavior = new AzureNative.Logic.Inputs.RosettaNetPipActivityBehaviorArgs
-                {
-                    ActionType = "DoubleAction",
-                    IsAuthorizationRequired = false,
-                    IsSecuredTransportRequired = false,
-                    NonRepudiationOfOriginAndContent = false,
-                    PersistentConfidentialityScope = "None",
-                    ResponseType = "Async",
-                    RetryCount = 2,
-                    TimeToPerformInSeconds = 7200,
-                },
-                ActivityType = "RequestResponse",
-            },
-            Description = "Test description",
-            InitiatorRoleSettings = new AzureNative.Logic.Inputs.RosettaNetPipRoleSettingsArgs
-            {
-                Action = "Purchase Order Request",
-                BusinessDocument = new AzureNative.Logic.Inputs.RosettaNetPipBusinessDocumentArgs
-                {
-                    Description = "A request to accept a purchase order for fulfillment..",
-                    Name = "Purchase Order Request",
-                    Version = "V02.02.00",
-                },
-                Description = "This partner role creates a demand for a product or service.",
-                Role = "Buyer",
-                RoleType = "Functional",
-                Service = "Buyer Service",
-                ServiceClassification = "Business Service",
-            },
-            IntegrationAccountName = "testia123",
-            ProcessCode = "3A4",
-            ProcessName = "Request Purchase Order",
-            ProcessVersion = "V02.02.00",
-            ResourceGroupName = "testrg123",
-            ResponderRoleSettings = new AzureNative.Logic.Inputs.RosettaNetPipRoleSettingsArgs
-            {
-                Action = "Purchase Order Confirmation Action",
-                BusinessDocument = new AzureNative.Logic.Inputs.RosettaNetPipBusinessDocumentArgs
-                {
-                    Description = "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-                    Name = "Purchase Order Confirmation",
-                    Version = "V02.02.00",
-                },
-                Description = "An organization that sells products to partners in the supply chain.",
-                Role = "Seller",
-                RoleType = "Organizational",
-                Service = "Seller Service",
-                ServiceClassification = "Business Service",
-            },
-            RosettaNetProcessConfigurationName = "3A4",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewRosettaNetProcessConfiguration(ctx, "rosettaNetProcessConfiguration", &logic.RosettaNetProcessConfigurationArgs{
-			ActivitySettings: &logic.RosettaNetPipActivitySettingsArgs{
-				AcknowledgmentOfReceiptSettings: &logic.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs{
-					IsNonRepudiationRequired:   pulumi.Bool(false),
-					TimeToAcknowledgeInSeconds: pulumi.Int(600),
-				},
-				ActivityBehavior: &logic.RosettaNetPipActivityBehaviorArgs{
-					ActionType:                       "DoubleAction",
-					IsAuthorizationRequired:          pulumi.Bool(false),
-					IsSecuredTransportRequired:       pulumi.Bool(false),
-					NonRepudiationOfOriginAndContent: pulumi.Bool(false),
-					PersistentConfidentialityScope:   "None",
-					ResponseType:                     "Async",
-					RetryCount:                       pulumi.Int(2),
-					TimeToPerformInSeconds:           pulumi.Int(7200),
-				},
-				ActivityType: "RequestResponse",
-			},
-			Description: pulumi.String("Test description"),
-			InitiatorRoleSettings: &logic.RosettaNetPipRoleSettingsArgs{
-				Action: pulumi.String("Purchase Order Request"),
-				BusinessDocument: &logic.RosettaNetPipBusinessDocumentArgs{
-					Description: pulumi.String("A request to accept a purchase order for fulfillment.."),
-					Name:        pulumi.String("Purchase Order Request"),
-					Version:     pulumi.String("V02.02.00"),
-				},
-				Description:           pulumi.String("This partner role creates a demand for a product or service."),
-				Role:                  pulumi.String("Buyer"),
-				RoleType:              "Functional",
-				Service:               pulumi.String("Buyer Service"),
-				ServiceClassification: pulumi.String("Business Service"),
-			},
-			IntegrationAccountName: pulumi.String("testia123"),
-			ProcessCode:            pulumi.String("3A4"),
-			ProcessName:            pulumi.String("Request Purchase Order"),
-			ProcessVersion:         pulumi.String("V02.02.00"),
-			ResourceGroupName:      pulumi.String("testrg123"),
-			ResponderRoleSettings: &logic.RosettaNetPipRoleSettingsArgs{
-				Action: pulumi.String("Purchase Order Confirmation Action"),
-				BusinessDocument: &logic.RosettaNetPipBusinessDocumentArgs{
-					Description: pulumi.String("Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending."),
-					Name:        pulumi.String("Purchase Order Confirmation"),
-					Version:     pulumi.String("V02.02.00"),
-				},
-				Description:           pulumi.String("An organization that sells products to partners in the supply chain."),
-				Role:                  pulumi.String("Seller"),
-				RoleType:              "Organizational",
-				Service:               pulumi.String("Seller Service"),
-				ServiceClassification: pulumi.String("Business Service"),
-			},
-			RosettaNetProcessConfigurationName: pulumi.String("3A4"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const rosettaNetProcessConfiguration = new azure_native.logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration", {
-    activitySettings: {
-        acknowledgmentOfReceiptSettings: {
-            isNonRepudiationRequired: false,
-            timeToAcknowledgeInSeconds: 600,
-        },
-        activityBehavior: {
-            actionType: "DoubleAction",
-            isAuthorizationRequired: false,
-            isSecuredTransportRequired: false,
-            nonRepudiationOfOriginAndContent: false,
-            persistentConfidentialityScope: "None",
-            responseType: "Async",
-            retryCount: 2,
-            timeToPerformInSeconds: 7200,
-        },
-        activityType: "RequestResponse",
-    },
-    description: "Test description",
-    initiatorRoleSettings: {
-        action: "Purchase Order Request",
-        businessDocument: {
-            description: "A request to accept a purchase order for fulfillment..",
-            name: "Purchase Order Request",
-            version: "V02.02.00",
-        },
-        description: "This partner role creates a demand for a product or service.",
-        role: "Buyer",
-        roleType: "Functional",
-        service: "Buyer Service",
-        serviceClassification: "Business Service",
-    },
-    integrationAccountName: "testia123",
-    processCode: "3A4",
-    processName: "Request Purchase Order",
-    processVersion: "V02.02.00",
-    resourceGroupName: "testrg123",
-    responderRoleSettings: {
-        action: "Purchase Order Confirmation Action",
-        businessDocument: {
-            description: "Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-            name: "Purchase Order Confirmation",
-            version: "V02.02.00",
-        },
-        description: "An organization that sells products to partners in the supply chain.",
-        role: "Seller",
-        roleType: "Organizational",
-        service: "Seller Service",
-        serviceClassification: "Business Service",
-    },
-    rosettaNetProcessConfigurationName: "3A4",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-rosetta_net_process_configuration = azure_native.logic.RosettaNetProcessConfiguration("rosettaNetProcessConfiguration",
-    activity_settings=azure_native.logic.RosettaNetPipActivitySettingsArgs(
-        acknowledgment_of_receipt_settings=azure_native.logic.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs(
-            is_non_repudiation_required=False,
-            time_to_acknowledge_in_seconds=600,
-        ),
-        activity_behavior=azure_native.logic.RosettaNetPipActivityBehaviorArgs(
-            action_type="DoubleAction",
-            is_authorization_required=False,
-            is_secured_transport_required=False,
-            non_repudiation_of_origin_and_content=False,
-            persistent_confidentiality_scope="None",
-            response_type="Async",
-            retry_count=2,
-            time_to_perform_in_seconds=7200,
-        ),
-        activity_type="RequestResponse",
-    ),
-    description="Test description",
-    initiator_role_settings=azure_native.logic.RosettaNetPipRoleSettingsArgs(
-        action="Purchase Order Request",
-        business_document=azure_native.logic.RosettaNetPipBusinessDocumentArgs(
-            description="A request to accept a purchase order for fulfillment..",
-            name="Purchase Order Request",
-            version="V02.02.00",
-        ),
-        description="This partner role creates a demand for a product or service.",
-        role="Buyer",
-        role_type="Functional",
-        service="Buyer Service",
-        service_classification="Business Service",
-    ),
-    integration_account_name="testia123",
-    process_code="3A4",
-    process_name="Request Purchase Order",
-    process_version="V02.02.00",
-    resource_group_name="testrg123",
-    responder_role_settings=azure_native.logic.RosettaNetPipRoleSettingsArgs(
-        action="Purchase Order Confirmation Action",
-        business_document=azure_native.logic.RosettaNetPipBusinessDocumentArgs(
-            description="Formally confirms the status of line item(s) in a Purchase Order. A Purchase Order line item may have one of the following states: accepted, rejected, or pending.",
-            name="Purchase Order Confirmation",
-            version="V02.02.00",
-        ),
-        description="An organization that sells products to partners in the supply chain.",
-        role="Seller",
-        role_type="Organizational",
-        service="Seller Service",
-        service_classification="Business Service",
-    ),
-    rosetta_net_process_configuration_name="3A4")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:logic:RosettaNetProcessConfiguration 3A4 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/rosettaNetProcessConfigurations/3A4 
-```
-
- */
 @ResourceType(type="azure-native:logic:RosettaNetProcessConfiguration")
 public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomResource {
-    /**
-     * The RosettaNet process configuration activity settings.
-     */
     @OutputExport(name="activitySettings", type=RosettaNetPipActivitySettingsResponse.class, parameters={})
     private Output<RosettaNetPipActivitySettingsResponse> activitySettings;
 
-    /**
-     * @return The RosettaNet process configuration activity settings.
-     */
     public Output<RosettaNetPipActivitySettingsResponse> getActivitySettings() {
         return this.activitySettings;
     }
-    /**
-     * The changed time.
-     */
     @OutputExport(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
-    /**
-     * @return The changed time.
-     */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
-    /**
-     * The created time.
-     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    /**
-     * @return The created time.
-     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    /**
-     * The integration account RosettaNet ProcessConfiguration properties.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The integration account RosettaNet ProcessConfiguration properties.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The RosettaNet initiator role settings.
-     */
     @OutputExport(name="initiatorRoleSettings", type=RosettaNetPipRoleSettingsResponse.class, parameters={})
     private Output<RosettaNetPipRoleSettingsResponse> initiatorRoleSettings;
 
-    /**
-     * @return The RosettaNet initiator role settings.
-     */
     public Output<RosettaNetPipRoleSettingsResponse> getInitiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The metadata.
-     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
-    /**
-     * @return The metadata.
-     */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
-    /**
-     * Gets the resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Gets the resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The integration account RosettaNet process code.
-     */
     @OutputExport(name="processCode", type=String.class, parameters={})
     private Output<String> processCode;
 
-    /**
-     * @return The integration account RosettaNet process code.
-     */
     public Output<String> getProcessCode() {
         return this.processCode;
     }
-    /**
-     * The integration account RosettaNet process name.
-     */
     @OutputExport(name="processName", type=String.class, parameters={})
     private Output<String> processName;
 
-    /**
-     * @return The integration account RosettaNet process name.
-     */
     public Output<String> getProcessName() {
         return this.processName;
     }
-    /**
-     * The integration account RosettaNet process version.
-     */
     @OutputExport(name="processVersion", type=String.class, parameters={})
     private Output<String> processVersion;
 
-    /**
-     * @return The integration account RosettaNet process version.
-     */
     public Output<String> getProcessVersion() {
         return this.processVersion;
     }
-    /**
-     * The RosettaNet responder role settings.
-     */
     @OutputExport(name="responderRoleSettings", type=RosettaNetPipRoleSettingsResponse.class, parameters={})
     private Output<RosettaNetPipRoleSettingsResponse> responderRoleSettings;
 
-    /**
-     * @return The RosettaNet responder role settings.
-     */
     public Output<RosettaNetPipRoleSettingsResponse> getResponderRoleSettings() {
         return this.responderRoleSettings;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Gets the resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Gets the resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public RosettaNetProcessConfiguration(String name, RosettaNetProcessConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:RosettaNetProcessConfiguration", name, args == null ? RosettaNetProcessConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -494,14 +122,6 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static RosettaNetProcessConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RosettaNetProcessConfiguration(name, id, options);
     }

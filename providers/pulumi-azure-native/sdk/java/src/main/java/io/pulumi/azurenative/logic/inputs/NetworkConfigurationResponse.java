@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The network configuration.
- */
 public final class NetworkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkConfigurationResponse Empty = new NetworkConfigurationResponse();
 
-    /**
-     * The access endpoint.
-     */
     @InputImport(name="accessEndpoint")
     private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
 
@@ -30,9 +24,6 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
         return this.accessEndpoint == null ? Optional.empty() : Optional.ofNullable(this.accessEndpoint);
     }
 
-    /**
-     * The subnets.
-     */
     @InputImport(name="subnets")
     private final @Nullable List<ResourceReferenceResponse> subnets;
 
@@ -40,9 +31,6 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
         return this.subnets == null ? List.of() : this.subnets;
     }
 
-    /**
-     * Gets the virtual network address space.
-     */
     @InputImport(name="virtualNetworkAddressSpace")
     private final @Nullable String virtualNetworkAddressSpace;
 

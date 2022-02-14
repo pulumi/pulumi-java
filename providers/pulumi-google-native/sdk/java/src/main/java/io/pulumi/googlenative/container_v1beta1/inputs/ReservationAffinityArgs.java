@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) is the configuration of desired reservation which instances could take capacity from.
- */
 public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationAffinityArgs Empty = new ReservationAffinityArgs();
 
-    /**
-     * Corresponds to the type of reservation consumption.
-     */
     @InputImport(name="consumeReservationType")
     private final @Nullable Input<ReservationAffinityConsumeReservationType> consumeReservationType;
 
@@ -29,9 +23,6 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
         return this.consumeReservationType == null ? Input.empty() : this.consumeReservationType;
     }
 
-    /**
-     * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -39,9 +30,6 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * Corresponds to the label value(s) of reservation resource(s).
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

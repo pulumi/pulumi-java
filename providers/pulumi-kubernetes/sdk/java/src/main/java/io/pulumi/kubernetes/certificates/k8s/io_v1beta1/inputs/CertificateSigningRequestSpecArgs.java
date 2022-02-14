@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This information is immutable after the request is created. Only the Request and Usages fields can be set on creation, other fields are derived by Kubernetes and cannot be modified by users.
- */
 public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateSigningRequestSpecArgs Empty = new CertificateSigningRequestSpecArgs();
 
-    /**
-     * Extra information about the requesting user. See user.Info interface for details.
-     */
     @InputImport(name="extra")
     private final @Nullable Input<Map<String,List<String>>> extra;
 
@@ -29,9 +23,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
         return this.extra == null ? Input.empty() : this.extra;
     }
 
-    /**
-     * Group information about the requesting user. See user.Info interface for details.
-     */
     @InputImport(name="groups")
     private final @Nullable Input<List<String>> groups;
 
@@ -39,9 +30,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
         return this.groups == null ? Input.empty() : this.groups;
     }
 
-    /**
-     * Base64-encoded PKCS#10 CSR data
-     */
     @InputImport(name="request", required=true)
     private final Input<String> request;
 
@@ -49,15 +37,6 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
         return this.request;
     }
 
-    /**
-     * Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
- 1. If it's a kubelet client certificate, it is assigned
-    "kubernetes.io/kube-apiserver-client-kubelet".
- 2. If it's a kubelet serving certificate, it is assigned
-    "kubernetes.io/kubelet-serving".
- 3. Otherwise, it is assigned "kubernetes.io/legacy-unknown".
-Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
-     */
     @InputImport(name="signerName")
     private final @Nullable Input<String> signerName;
 
@@ -65,9 +44,6 @@ Distribution of trust for signers happens out of band. You can select on this fi
         return this.signerName == null ? Input.empty() : this.signerName;
     }
 
-    /**
-     * UID information about the requesting user. See user.Info interface for details.
-     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 
@@ -75,10 +51,6 @@ Distribution of trust for signers happens out of band. You can select on this fi
         return this.uid == null ? Input.empty() : this.uid;
     }
 
-    /**
-     * allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
-     https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-     */
     @InputImport(name="usages")
     private final @Nullable Input<List<String>> usages;
 
@@ -86,9 +58,6 @@ Distribution of trust for signers happens out of band. You can select on this fi
         return this.usages == null ? Input.empty() : this.usages;
     }
 
-    /**
-     * Information about the requesting user. See user.Info interface for details.
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

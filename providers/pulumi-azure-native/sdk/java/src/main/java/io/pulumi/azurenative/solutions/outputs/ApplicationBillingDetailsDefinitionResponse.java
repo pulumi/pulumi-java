@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationBillingDetailsDefinitionResponse {
-/**
- * The managed application resource usage Id.
- */
     private final @Nullable String resourceUsageId;
 
     @OutputCustomType.Constructor({"resourceUsageId"})
@@ -21,9 +18,6 @@ public final class ApplicationBillingDetailsDefinitionResponse {
         this.resourceUsageId = resourceUsageId;
     }
 
-/**
- * The managed application resource usage Id.
- */
     public Optional<String> getResourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VNetPeeringArgs Empty = new VNetPeeringArgs();
 
-    /**
-     * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
-     */
     @InputImport(name="allowForwardedTraffic")
     private final @Nullable Input<Boolean> allowForwardedTraffic;
 
@@ -31,9 +25,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowForwardedTraffic == null ? Input.empty() : this.allowForwardedTraffic;
     }
 
-    /**
-     * If gateway links can be used in remote virtual networking to link to this virtual network.
-     */
     @InputImport(name="allowGatewayTransit")
     private final @Nullable Input<Boolean> allowGatewayTransit;
 
@@ -41,9 +32,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowGatewayTransit == null ? Input.empty() : this.allowGatewayTransit;
     }
 
-    /**
-     * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
-     */
     @InputImport(name="allowVirtualNetworkAccess")
     private final @Nullable Input<Boolean> allowVirtualNetworkAccess;
 
@@ -51,9 +39,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowVirtualNetworkAccess == null ? Input.empty() : this.allowVirtualNetworkAccess;
     }
 
-    /**
-     * The reference to the databricks virtual network address space.
-     */
     @InputImport(name="databricksAddressSpace")
     private final @Nullable Input<AddressSpaceArgs> databricksAddressSpace;
 
@@ -61,9 +46,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.databricksAddressSpace == null ? Input.empty() : this.databricksAddressSpace;
     }
 
-    /**
-     *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
-     */
     @InputImport(name="databricksVirtualNetwork")
     private final @Nullable Input<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
 
@@ -71,9 +53,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.databricksVirtualNetwork == null ? Input.empty() : this.databricksVirtualNetwork;
     }
 
-    /**
-     * The name of the workspace vNet peering.
-     */
     @InputImport(name="peeringName")
     private final @Nullable Input<String> peeringName;
 
@@ -81,9 +60,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringName == null ? Input.empty() : this.peeringName;
     }
 
-    /**
-     * The reference to the remote virtual network address space.
-     */
     @InputImport(name="remoteAddressSpace")
     private final @Nullable Input<AddressSpaceArgs> remoteAddressSpace;
 
@@ -91,9 +67,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.remoteAddressSpace == null ? Input.empty() : this.remoteAddressSpace;
     }
 
-    /**
-     *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
-     */
     @InputImport(name="remoteVirtualNetwork", required=true)
     private final Input<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
 
@@ -101,9 +74,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.remoteVirtualNetwork;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -111,9 +81,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
-     */
     @InputImport(name="useRemoteGateways")
     private final @Nullable Input<Boolean> useRemoteGateways;
 
@@ -121,9 +88,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
         return this.useRemoteGateways == null ? Input.empty() : this.useRemoteGateways;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

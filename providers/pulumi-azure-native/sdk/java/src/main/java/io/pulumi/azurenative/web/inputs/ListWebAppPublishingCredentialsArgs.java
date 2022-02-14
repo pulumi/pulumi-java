@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListWebAppPublishingCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppPublishingCredentialsArgs Empty = new ListWebAppPublishingCredentialsArgs();
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ListWebAppPublishingCredentialsArgs extends io.pulumi.resourc
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

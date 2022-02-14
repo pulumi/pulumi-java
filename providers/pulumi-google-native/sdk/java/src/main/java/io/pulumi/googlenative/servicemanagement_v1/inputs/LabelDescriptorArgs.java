@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A description of a label.
- */
 public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelDescriptorArgs Empty = new LabelDescriptorArgs();
 
-    /**
-     * A human-readable description for the label.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The label key.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -38,9 +29,6 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * The type of data that can be assigned to the label.
-     */
     @InputImport(name="valueType")
     private final @Nullable Input<LabelDescriptorValueType> valueType;
 

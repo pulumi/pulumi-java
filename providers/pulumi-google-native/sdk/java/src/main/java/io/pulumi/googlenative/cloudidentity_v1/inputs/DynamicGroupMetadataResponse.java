@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Dynamic group metadata like queries and status.
- */
 public final class DynamicGroupMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DynamicGroupMetadataResponse Empty = new DynamicGroupMetadataResponse();
 
-    /**
-     * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
-     */
     @InputImport(name="queries", required=true)
     private final List<DynamicGroupQueryResponse> queries;
 
@@ -27,9 +21,6 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
         return this.queries;
     }
 
-    /**
-     * Status of the dynamic group.
-     */
     @InputImport(name="status", required=true)
     private final DynamicGroupStatusResponse status;
 

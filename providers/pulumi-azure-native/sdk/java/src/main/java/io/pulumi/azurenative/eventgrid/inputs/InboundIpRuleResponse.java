@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InboundIpRuleResponse Empty = new InboundIpRuleResponse();
 
-    /**
-     * Action to perform based on the match or no match of the IpMask.
-     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -27,9 +21,6 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
-    /**
-     * IP Address in CIDR notation e.g., 10.0.0.0/8.
-     */
     @InputImport(name="ipMask")
     private final @Nullable String ipMask;
 

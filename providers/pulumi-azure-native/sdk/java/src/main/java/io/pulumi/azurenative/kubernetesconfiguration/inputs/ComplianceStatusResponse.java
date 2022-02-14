@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Compliance Status details
- */
 public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComplianceStatusResponse Empty = new ComplianceStatusResponse();
 
-    /**
-     * The compliance state of the configuration.
-     */
     @InputImport(name="complianceState", required=true)
     private final String complianceState;
 
@@ -27,9 +21,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
         return this.complianceState;
     }
 
-    /**
-     * Datetime the configuration was last applied.
-     */
     @InputImport(name="lastConfigApplied")
     private final @Nullable String lastConfigApplied;
 
@@ -37,9 +28,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
         return this.lastConfigApplied == null ? Optional.empty() : Optional.ofNullable(this.lastConfigApplied);
     }
 
-    /**
-     * Message from when the configuration was applied.
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -47,9 +35,6 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Level of the message.
-     */
     @InputImport(name="messageLevel")
     private final @Nullable String messageLevel;
 

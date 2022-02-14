@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LicenseArgs Empty = new LicenseArgs();
 
-    /**
-     * An optional textual description of the resource; provided by the client when the resource is created.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,9 +23,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,9 +30,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -49,9 +37,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -59,9 +44,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="resourceRequirements")
     private final @Nullable Input<LicenseResourceRequirementsArgs> resourceRequirements;
 
@@ -69,9 +51,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceRequirements == null ? Input.empty() : this.resourceRequirements;
     }
 
-    /**
-     * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
-     */
     @InputImport(name="transferable")
     private final @Nullable Input<Boolean> transferable;
 

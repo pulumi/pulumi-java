@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlPoolArgs Empty = new SqlPoolArgs();
 
-    /**
-     * Collation mode
-     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -33,17 +27,6 @@ public final class SqlPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
-    /**
-     * Specifies the mode of sql pool creation.
-
-Default: regular sql pool creation.
-
-PointInTimeRestore: Creates a sql pool by restoring a point in time backup of an existing sql pool. sourceDatabaseId must be specified as the resource ID of the existing sql pool, and restorePointInTime must be specified.
-
-Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
-
-Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -51,9 +34,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
-    /**
-     * Date the SQL pool was created
-     */
     @InputImport(name="creationDate")
     private final @Nullable Input<String> creationDate;
 
@@ -61,9 +41,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.creationDate == null ? Input.empty() : this.creationDate;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -71,9 +48,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Maximum size in bytes
-     */
     @InputImport(name="maxSizeBytes")
     private final @Nullable Input<Double> maxSizeBytes;
 
@@ -81,9 +55,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
     }
 
-    /**
-     * Resource state
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -91,9 +62,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * Backup database to restore from
-     */
     @InputImport(name="recoverableDatabaseId")
     private final @Nullable Input<String> recoverableDatabaseId;
 
@@ -101,9 +69,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -111,9 +76,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.resourceGroupName;
     }
 
-    /**
-     * Snapshot time to restore
-     */
     @InputImport(name="restorePointInTime")
     private final @Nullable Input<String> restorePointInTime;
 
@@ -121,9 +83,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
     }
 
-    /**
-     * SQL pool SKU
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -131,9 +90,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Source database to create from
-     */
     @InputImport(name="sourceDatabaseId")
     private final @Nullable Input<String> sourceDatabaseId;
 
@@ -141,9 +97,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
     }
 
-    /**
-     * SQL pool name
-     */
     @InputImport(name="sqlPoolName")
     private final @Nullable Input<String> sqlPoolName;
 
@@ -151,9 +104,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.sqlPoolName == null ? Input.empty() : this.sqlPoolName;
     }
 
-    /**
-     * Resource status
-     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -161,9 +111,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * The storage account type used to store backups for this sql pool.
-     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
@@ -171,9 +118,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -181,9 +125,6 @@ Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. Source
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

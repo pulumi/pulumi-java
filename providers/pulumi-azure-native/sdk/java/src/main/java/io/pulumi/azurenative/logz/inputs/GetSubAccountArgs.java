@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubAccountArgs Empty = new GetSubAccountArgs();
 
-    /**
-     * Monitor resource name
-     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -25,9 +19,6 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
         return this.monitorName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Sub Account resource name
-     */
     @InputImport(name="subAccountName", required=true)
     private final String subAccountName;
 

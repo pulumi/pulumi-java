@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LoggingRuleResponseHiddenPropertyPaths extends io.pulumi.resources.InvokeArgs {
 
     public static final LoggingRuleResponseHiddenPropertyPaths Empty = new LoggingRuleResponseHiddenPropertyPaths();
 
-    /**
-     * 
-     */
     @InputImport(name="hiddenPathsOnRequest")
     private final @Nullable List<String> hiddenPathsOnRequest;
 
@@ -28,9 +22,6 @@ public final class LoggingRuleResponseHiddenPropertyPaths extends io.pulumi.reso
         return this.hiddenPathsOnRequest == null ? List.of() : this.hiddenPathsOnRequest;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="hiddenPathsOnResponse")
     private final @Nullable List<String> hiddenPathsOnResponse;
 

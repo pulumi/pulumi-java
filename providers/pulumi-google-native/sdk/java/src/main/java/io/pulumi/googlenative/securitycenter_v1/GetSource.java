@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSource {
-/**
- * Gets a source.
- */
     public static CompletableFuture<GetSourceResult> invokeAsync(GetSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getSource", TypeShape.of(GetSourceResult.class), args == null ? GetSourceArgs.Empty : args, Utilities.withVersion(options));
     }

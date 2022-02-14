@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class BiEngineStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BiEngineStatisticsResponse Empty = new BiEngineStatisticsResponse();
 
-    /**
-     * Specifies which mode of BI Engine acceleration was performed (if any).
-     */
     @InputImport(name="biEngineMode", required=true)
     private final String biEngineMode;
 
@@ -27,9 +21,6 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
         return this.biEngineMode;
     }
 
-    /**
-     * In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
-     */
     @InputImport(name="biEngineReasons", required=true)
     private final List<BiEngineReasonResponse> biEngineReasons;
 

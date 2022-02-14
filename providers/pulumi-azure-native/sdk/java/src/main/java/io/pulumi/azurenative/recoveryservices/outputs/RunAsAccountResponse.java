@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RunAsAccountResponse {
-/**
- * The CS RunAs account Id.
- */
     private final @Nullable String accountId;
-/**
- * The CS RunAs account name.
- */
     private final @Nullable String accountName;
 
     @OutputCustomType.Constructor({"accountId","accountName"})
@@ -28,15 +22,9 @@ public final class RunAsAccountResponse {
         this.accountName = accountName;
     }
 
-/**
- * The CS RunAs account Id.
- */
     public Optional<String> getAccountId() {
         return Optional.ofNullable(this.accountId);
     }
-/**
- * The CS RunAs account name.
- */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }

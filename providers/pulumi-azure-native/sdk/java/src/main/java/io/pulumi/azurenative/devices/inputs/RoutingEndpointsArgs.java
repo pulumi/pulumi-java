@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
- */
 public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutingEndpointsArgs Empty = new RoutingEndpointsArgs();
 
-    /**
-     * The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
-     */
     @InputImport(name="eventHubs")
     private final @Nullable Input<List<RoutingEventHubPropertiesArgs>> eventHubs;
 
@@ -31,9 +25,6 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
         return this.eventHubs == null ? Input.empty() : this.eventHubs;
     }
 
-    /**
-     * The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
-     */
     @InputImport(name="serviceBusQueues")
     private final @Nullable Input<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
 
@@ -41,9 +32,6 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
         return this.serviceBusQueues == null ? Input.empty() : this.serviceBusQueues;
     }
 
-    /**
-     * The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
-     */
     @InputImport(name="serviceBusTopics")
     private final @Nullable Input<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
 
@@ -51,9 +39,6 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
         return this.serviceBusTopics == null ? Input.empty() : this.serviceBusTopics;
     }
 
-    /**
-     * The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
-     */
     @InputImport(name="storageContainers")
     private final @Nullable Input<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 

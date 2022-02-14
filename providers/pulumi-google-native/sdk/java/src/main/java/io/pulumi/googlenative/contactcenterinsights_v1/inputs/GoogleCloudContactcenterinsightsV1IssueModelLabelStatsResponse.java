@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Aggregated statistics about an issue model.
- */
 public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse Empty = new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse();
 
-    /**
-     * Number of conversations the issue model has analyzed at this point in time.
-     */
     @InputImport(name="analyzedConversationsCount", required=true)
     private final String analyzedConversationsCount;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
         return this.analyzedConversationsCount;
     }
 
-    /**
-     * Statistics on each issue. Key is the issue's resource name.
-     */
     @InputImport(name="issueStats", required=true)
     private final Map<String,String> issueStats;
 
@@ -36,9 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
         return this.issueStats;
     }
 
-    /**
-     * Number of analyzed conversations for which no issue was applicable at this point in time.
-     */
     @InputImport(name="unclassifiedConversationsCount", required=true)
     private final String unclassifiedConversationsCount;
 

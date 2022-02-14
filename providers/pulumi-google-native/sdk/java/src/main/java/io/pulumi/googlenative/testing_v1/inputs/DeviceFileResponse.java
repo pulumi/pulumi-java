@@ -9,16 +9,10 @@ import io.pulumi.googlenative.testing_v1.inputs.RegularFileResponse;
 import java.util.Objects;
 
 
-/**
- * A single device file description.
- */
 public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeviceFileResponse Empty = new DeviceFileResponse();
 
-    /**
-     * A reference to an opaque binary blob file.
-     */
     @InputImport(name="obbFile", required=true)
     private final ObbFileResponse obbFile;
 
@@ -26,9 +20,6 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
         return this.obbFile;
     }
 
-    /**
-     * A reference to a regular file.
-     */
     @InputImport(name="regularFile", required=true)
     private final RegularFileResponse regularFile;
 

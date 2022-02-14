@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetOrganizationMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOrganizationMuteConfigArgs Empty = new GetOrganizationMuteConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="muteConfigId", required=true)
     private final String muteConfigId;
 
@@ -25,9 +19,6 @@ public final class GetOrganizationMuteConfigArgs extends io.pulumi.resources.Inv
         return this.muteConfigId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

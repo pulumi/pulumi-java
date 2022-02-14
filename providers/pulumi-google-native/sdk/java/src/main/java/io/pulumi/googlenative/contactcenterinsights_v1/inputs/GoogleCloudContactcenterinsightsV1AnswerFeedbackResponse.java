@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The feedback that the customer has about a certain answer in the conversation.
- */
 public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse Empty = new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse();
 
-    /**
-     * Indicates whether an answer or item was clicked by the human agent.
-     */
     @InputImport(name="clicked", required=true)
     private final Boolean clicked;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
         return this.clicked;
     }
 
-    /**
-     * The correctness level of an answer.
-     */
     @InputImport(name="correctnessLevel", required=true)
     private final String correctnessLevel;
 
@@ -36,9 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
         return this.correctnessLevel;
     }
 
-    /**
-     * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
-     */
     @InputImport(name="displayed", required=true)
     private final Boolean displayed;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEventHubAuthorizationRuleArgs Empty = new GetEventHubAuthorizationRuleArgs();
 
-    /**
-     * The authorization rule name.
-     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -25,9 +19,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
         return this.authorizationRuleName;
     }
 
-    /**
-     * The Event Hub name
-     */
     @InputImport(name="eventHubName", required=true)
     private final String eventHubName;
 
@@ -35,9 +26,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
         return this.eventHubName;
     }
 
-    /**
-     * The Namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -45,9 +33,6 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
         return this.namespaceName;
     }
 
-    /**
-     * Name of the resource group within the azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

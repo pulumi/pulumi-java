@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="datasourceId", required=true)
     private final String datasourceId;
 
@@ -27,9 +21,6 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasourceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="debugOptionsEnableDebugging")
     private final @Nullable String debugOptionsEnableDebugging;
 

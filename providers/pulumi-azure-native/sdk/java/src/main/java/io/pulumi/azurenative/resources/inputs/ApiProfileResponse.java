@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiProfileResponse Empty = new ApiProfileResponse();
 
-    /**
-     * The API version.
-     */
     @InputImport(name="apiVersion", required=true)
     private final String apiVersion;
 
@@ -25,9 +19,6 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.apiVersion;
     }
 
-    /**
-     * The profile version.
-     */
     @InputImport(name="profileVersion", required=true)
     private final String profileVersion;
 

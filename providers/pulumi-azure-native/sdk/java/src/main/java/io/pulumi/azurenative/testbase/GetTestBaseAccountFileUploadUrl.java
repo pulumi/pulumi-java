@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestBaseAccountFileUploadUrl {
-/**
- * The URL response
-API Version: 2020-12-16-preview.
- *
- * The URL response
- */
     public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> invokeAsync(GetTestBaseAccountFileUploadUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccountFileUploadUrl", TypeShape.of(GetTestBaseAccountFileUploadUrlResult.class), args == null ? GetTestBaseAccountFileUploadUrlArgs.Empty : args, Utilities.withVersion(options));
     }

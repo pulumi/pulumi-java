@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommitmentPlanArgs Empty = new CommitmentPlanArgs();
 
-    /**
-     * The name of Cognitive Services account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -28,9 +22,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the commitmentPlan associated with the Cognitive Services Account
-     */
     @InputImport(name="commitmentPlanName")
     private final @Nullable Input<String> commitmentPlanName;
 
@@ -38,9 +29,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.commitmentPlanName == null ? Input.empty() : this.commitmentPlanName;
     }
 
-    /**
-     * Properties of Cognitive Services account commitment plan.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<CommitmentPlanPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

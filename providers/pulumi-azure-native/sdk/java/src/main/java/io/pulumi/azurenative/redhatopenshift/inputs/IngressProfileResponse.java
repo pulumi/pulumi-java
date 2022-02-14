@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * IngressProfile represents an ingress profile.
- */
 public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IngressProfileResponse Empty = new IngressProfileResponse();
 
-    /**
-     * The IP of the ingress (immutable).
-     */
     @InputImport(name="ip")
     private final @Nullable String ip;
 
@@ -27,9 +21,6 @@ public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
-    /**
-     * The ingress profile name.  Must be "default" (immutable).
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,9 +28,6 @@ public final class IngressProfileResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Ingress visibility (immutable).
-     */
     @InputImport(name="visibility")
     private final @Nullable String visibility;
 

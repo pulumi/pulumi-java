@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceTypeExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeExtensionResponse Empty = new ResourceTypeExtensionResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="endpointUri")
     private final @Nullable String endpointUri;
 
@@ -28,9 +22,6 @@ public final class ResourceTypeExtensionResponse extends io.pulumi.resources.Inv
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="extensionCategories")
     private final @Nullable List<String> extensionCategories;
 
@@ -38,9 +29,6 @@ public final class ResourceTypeExtensionResponse extends io.pulumi.resources.Inv
         return this.extensionCategories == null ? List.of() : this.extensionCategories;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="timeout")
     private final @Nullable String timeout;
 

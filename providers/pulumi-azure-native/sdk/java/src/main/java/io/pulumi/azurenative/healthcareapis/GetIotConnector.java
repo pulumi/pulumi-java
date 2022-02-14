@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotConnector {
-/**
- * IoT Connector definition.
-API Version: 2021-06-01-preview.
- *
- * IoT Connector definition.
- */
     public static CompletableFuture<GetIotConnectorResult> invokeAsync(GetIotConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getIotConnector", TypeShape.of(GetIotConnectorResult.class), args == null ? GetIotConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

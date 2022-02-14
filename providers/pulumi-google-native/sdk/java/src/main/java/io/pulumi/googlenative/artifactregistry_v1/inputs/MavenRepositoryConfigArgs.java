@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.
- */
 public final class MavenRepositoryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MavenRepositoryConfigArgs Empty = new MavenRepositoryConfigArgs();
 
-    /**
-     * The repository with this flag will allow publishing the same snapshot versions.
-     */
     @InputImport(name="allowSnapshotOverwrites")
     private final @Nullable Input<Boolean> allowSnapshotOverwrites;
 
@@ -28,9 +22,6 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
         return this.allowSnapshotOverwrites == null ? Input.empty() : this.allowSnapshotOverwrites;
     }
 
-    /**
-     * Version policy defines the versions that the registry will accept.
-     */
     @InputImport(name="versionPolicy")
     private final @Nullable Input<MavenRepositoryConfigVersionPolicy> versionPolicy;
 

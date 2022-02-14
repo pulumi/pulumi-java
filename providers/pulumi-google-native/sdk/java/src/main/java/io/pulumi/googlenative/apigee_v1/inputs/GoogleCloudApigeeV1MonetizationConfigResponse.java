@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Configuration for the Monetization add-on.
- */
 public final class GoogleCloudApigeeV1MonetizationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1MonetizationConfigResponse Empty = new GoogleCloudApigeeV1MonetizationConfigResponse();
 
-    /**
-     * Flag that specifies whether the Monetization add-on is enabled.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

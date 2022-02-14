@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CustomResourceSubresources defines the status and scale subresources for CustomResources.
- */
 public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceSubresourcesArgs Empty = new CustomResourceSubresourcesArgs();
 
-    /**
-     * scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
-     */
     @InputImport(name="scale")
     private final @Nullable Input<CustomResourceSubresourceScaleArgs> scale;
 
@@ -28,9 +22,6 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
         return this.scale == null ? Input.empty() : this.scale;
     }
 
-    /**
-     * status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.
-     */
     @InputImport(name="status")
     private final @Nullable Input<JsonElement> status;
 

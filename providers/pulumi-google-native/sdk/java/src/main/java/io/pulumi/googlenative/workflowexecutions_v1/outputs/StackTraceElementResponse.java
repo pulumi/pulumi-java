@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StackTraceElementResponse {
-/**
- * The source position information of the stack trace element.
- */
     private final PositionResponse position;
-/**
- * The routine where the error occurred.
- */
     private final String routine;
-/**
- * The step the error occurred at.
- */
     private final String step;
 
     @OutputCustomType.Constructor({"position","routine","step"})
@@ -33,21 +24,12 @@ public final class StackTraceElementResponse {
         this.step = Objects.requireNonNull(step);
     }
 
-/**
- * The source position information of the stack trace element.
- */
     public PositionResponse getPosition() {
         return this.position;
     }
-/**
- * The routine where the error occurred.
- */
     public String getRoutine() {
         return this.routine;
     }
-/**
- * The step the error occurred at.
- */
     public String getStep() {
         return this.step;
     }

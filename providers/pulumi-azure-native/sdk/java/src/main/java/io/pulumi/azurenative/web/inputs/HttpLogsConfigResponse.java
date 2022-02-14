@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Http logs configuration.
- */
 public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpLogsConfigResponse Empty = new HttpLogsConfigResponse();
 
-    /**
-     * Http logs to azure blob storage configuration.
-     */
     @InputImport(name="azureBlobStorage")
     private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
 
@@ -28,9 +22,6 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
     }
 
-    /**
-     * Http logs to file system configuration.
-     */
     @InputImport(name="fileSystem")
     private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Auxiliary services configuration for a workload.
- */
 public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeripheralsConfigArgs Empty = new PeripheralsConfigArgs();
 
-    /**
-     * Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
-     */
     @InputImport(name="metastoreService")
     private final @Nullable Input<String> metastoreService;
 
@@ -28,9 +22,6 @@ public final class PeripheralsConfigArgs extends io.pulumi.resources.ResourceArg
         return this.metastoreService == null ? Input.empty() : this.metastoreService;
     }
 
-    /**
-     * Optional. The Spark History Server configuration for the workload.
-     */
     @InputImport(name="sparkHistoryServerConfig")
     private final @Nullable Input<SparkHistoryServerConfigArgs> sparkHistoryServerConfig;
 

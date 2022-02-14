@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
- */
     @EnumType
     public enum GooglePrivacyDlpV2CustomInfoTypeExclusionType {
-/**
- * A finding of this custom info type will not be excluded from results.
- */
         ExclusionTypeUnspecified("EXCLUSION_TYPE_UNSPECIFIED"),
-/**
- * A finding of this custom info type will be excluded from final results, but can still affect rule execution.
- */
         ExclusionTypeExclude("EXCLUSION_TYPE_EXCLUDE");
 
         private final String value;

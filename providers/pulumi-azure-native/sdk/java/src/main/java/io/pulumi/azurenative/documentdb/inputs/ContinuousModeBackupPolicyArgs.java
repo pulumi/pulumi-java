@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The object representing continuous mode backup policy.
- */
 public final class ContinuousModeBackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContinuousModeBackupPolicyArgs Empty = new ContinuousModeBackupPolicyArgs();
 
-    /**
-     * Describes the mode of backups.
-Expected value is 'Continuous'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

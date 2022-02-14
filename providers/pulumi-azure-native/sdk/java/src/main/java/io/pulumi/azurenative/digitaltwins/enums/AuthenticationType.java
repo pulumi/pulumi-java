@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the authentication type being used for connecting to the endpoint.
- */
     @EnumType
     public enum AuthenticationType {
-/**
- * 
- */
         KeyBased("KeyBased"),
-/**
- * 
- */
         IdentityBased("IdentityBased");
 
         private final String value;

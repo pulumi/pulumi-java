@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Description about the errors happen while performing migration validation
- */
 public final class SchemaComparisonValidationResultTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchemaComparisonValidationResultTypeResponse Empty = new SchemaComparisonValidationResultTypeResponse();
 
-    /**
-     * Name of the object that has the difference
-     */
     @InputImport(name="objectName", required=true)
     private final String objectName;
 
@@ -25,9 +19,6 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
         return this.objectName;
     }
 
-    /**
-     * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
-     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -35,9 +26,6 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
         return this.objectType;
     }
 
-    /**
-     * Update action type with respect to target
-     */
     @InputImport(name="updateAction", required=true)
     private final String updateAction;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs();
 
-    /**
-     * Must be specified if type is `CATEGORICAL`. The list of possible categories.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

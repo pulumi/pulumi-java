@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class PasswordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PasswordResponse Empty = new PasswordResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class PasswordResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

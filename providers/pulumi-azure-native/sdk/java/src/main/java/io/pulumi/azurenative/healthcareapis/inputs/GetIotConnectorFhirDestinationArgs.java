@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIotConnectorFhirDestinationArgs Empty = new GetIotConnectorFhirDestinationArgs();
 
-    /**
-     * The name of IoT Connector FHIR destination resource.
-     */
     @InputImport(name="fhirDestinationName", required=true)
     private final String fhirDestinationName;
 
@@ -25,9 +19,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
         return this.fhirDestinationName;
     }
 
-    /**
-     * The name of IoT Connector resource.
-     */
     @InputImport(name="iotConnectorName", required=true)
     private final String iotConnectorName;
 
@@ -35,9 +26,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
         return this.iotConnectorName;
     }
 
-    /**
-     * The name of the resource group that contains the service instance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of workspace resource.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

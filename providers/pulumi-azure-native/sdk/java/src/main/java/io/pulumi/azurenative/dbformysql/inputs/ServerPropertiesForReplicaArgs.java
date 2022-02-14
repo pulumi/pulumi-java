@@ -17,17 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties to create a new replica.
- */
 public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerPropertiesForReplicaArgs Empty = new ServerPropertiesForReplicaArgs();
 
-    /**
-     * The mode to create a new server.
-Expected value is 'Replica'.
-     */
     @InputImport(name="createMode", required=true)
     private final Input<String> createMode;
 
@@ -35,9 +28,6 @@ Expected value is 'Replica'.
         return this.createMode;
     }
 
-    /**
-     * Status showing whether the server enabled infrastructure encryption.
-     */
     @InputImport(name="infrastructureEncryption")
     private final @Nullable Input<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
@@ -45,9 +35,6 @@ Expected value is 'Replica'.
         return this.infrastructureEncryption == null ? Input.empty() : this.infrastructureEncryption;
     }
 
-    /**
-     * Enforce a minimal Tls version for the server.
-     */
     @InputImport(name="minimalTlsVersion")
     private final @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
@@ -55,9 +42,6 @@ Expected value is 'Replica'.
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
     }
 
-    /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
@@ -65,9 +49,6 @@ Expected value is 'Replica'.
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * The master server id to create replica from.
-     */
     @InputImport(name="sourceServerId", required=true)
     private final Input<String> sourceServerId;
 
@@ -75,9 +56,6 @@ Expected value is 'Replica'.
         return this.sourceServerId;
     }
 
-    /**
-     * Enable ssl enforcement or not when connect to server.
-     */
     @InputImport(name="sslEnforcement")
     private final @Nullable Input<SslEnforcementEnum> sslEnforcement;
 
@@ -85,9 +63,6 @@ Expected value is 'Replica'.
         return this.sslEnforcement == null ? Input.empty() : this.sslEnforcement;
     }
 
-    /**
-     * Storage profile of a server.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<StorageProfileArgs> storageProfile;
 
@@ -95,9 +70,6 @@ Expected value is 'Replica'.
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
-    /**
-     * Server version.
-     */
     @InputImport(name="version")
     private final @Nullable Input<Either<String,ServerVersion>> version;
 

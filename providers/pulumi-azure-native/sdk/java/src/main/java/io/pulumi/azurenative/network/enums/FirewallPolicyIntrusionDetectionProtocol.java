@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The rule bypass protocol.
- */
     @EnumType
     public enum FirewallPolicyIntrusionDetectionProtocol {
-/**
- * 
- */
         TCP("TCP"),
-/**
- * 
- */
         UDP("UDP"),
-/**
- * 
- */
         ICMP("ICMP"),
-/**
- * 
- */
         ANY("ANY");
 
         private final String value;

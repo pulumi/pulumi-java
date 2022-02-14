@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompositeFilterArgs Empty = new CompositeFilterArgs();
 
-    /**
-     * The logic operator of the sub filter.
-     */
     @InputImport(name="logicOperator")
     private final @Nullable Input<CompositeFilterLogicOperator> logicOperator;
 
@@ -29,9 +23,6 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
         return this.logicOperator == null ? Input.empty() : this.logicOperator;
     }
 
-    /**
-     * Sub filters.
-     */
     @InputImport(name="subFilters")
     private final @Nullable Input<List<FilterArgs>> subFilters;
 

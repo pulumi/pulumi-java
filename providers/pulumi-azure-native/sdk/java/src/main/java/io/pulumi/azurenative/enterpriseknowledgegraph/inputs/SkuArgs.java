@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The SKU of the EnterpriseKnowledgeGraph service account.
- */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
-    /**
-     * The sku name
-     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuName>> name;
 

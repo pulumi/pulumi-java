@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Fields specific for BigQuery routines.
- */
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse Empty = new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse();
 
-    /**
-     * Paths of the imported libraries.
-     */
     @InputImport(name="importedLibraries", required=true)
     private final List<String> importedLibraries;
 

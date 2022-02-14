@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountKeyResponse {
-/**
- * Creation time of the key, in round trip date format.
- */
     private final String creationTime;
-/**
- * Name of the key.
- */
     private final String keyName;
-/**
- * Permissions for the key -- read-only or full permissions.
- */
     private final String permissions;
-/**
- * Base 64-encoded value of the key.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"creationTime","keyName","permissions","value"})
@@ -38,27 +26,15 @@ public final class StorageAccountKeyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * Creation time of the key, in round trip date format.
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * Name of the key.
- */
     public String getKeyName() {
         return this.keyName;
     }
-/**
- * Permissions for the key -- read-only or full permissions.
- */
     public String getPermissions() {
         return this.permissions;
     }
-/**
- * Base 64-encoded value of the key.
- */
     public String getValue() {
         return this.value;
     }

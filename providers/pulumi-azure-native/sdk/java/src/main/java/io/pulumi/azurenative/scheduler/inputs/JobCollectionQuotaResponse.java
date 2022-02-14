@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobCollectionQuotaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobCollectionQuotaResponse Empty = new JobCollectionQuotaResponse();
 
-    /**
-     * Gets or set the maximum job count.
-     */
     @InputImport(name="maxJobCount")
     private final @Nullable Integer maxJobCount;
 
@@ -28,9 +22,6 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
         return this.maxJobCount == null ? Optional.empty() : Optional.ofNullable(this.maxJobCount);
     }
 
-    /**
-     * Gets or sets the maximum job occurrence.
-     */
     @InputImport(name="maxJobOccurrence")
     private final @Nullable Integer maxJobOccurrence;
 
@@ -38,9 +29,6 @@ public final class JobCollectionQuotaResponse extends io.pulumi.resources.Invoke
         return this.maxJobOccurrence == null ? Optional.empty() : Optional.ofNullable(this.maxJobOccurrence);
     }
 
-    /**
-     * Gets or set the maximum recurrence.
-     */
     @InputImport(name="maxRecurrence")
     private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
 

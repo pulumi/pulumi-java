@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRatePlanArgs Empty = new GetRatePlanArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="apiproductId", required=true)
     private final String apiproductId;
 
@@ -25,9 +19,6 @@ public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiproductId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -35,9 +26,6 @@ public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="rateplanId", required=true)
     private final String rateplanId;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The set of data plane operations permitted through this Role Definition.
- */
 public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivilegeArgs Empty = new PrivilegeArgs();
 
-    /**
-     * An array of actions that are allowed.
-     */
     @InputImport(name="actions")
     private final @Nullable Input<List<String>> actions;
 
@@ -29,9 +23,6 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
-    /**
-     * An Azure Cosmos DB Mongo DB Resource.
-     */
     @InputImport(name="resource")
     private final @Nullable Input<PrivilegeResourceArgs> resource;
 

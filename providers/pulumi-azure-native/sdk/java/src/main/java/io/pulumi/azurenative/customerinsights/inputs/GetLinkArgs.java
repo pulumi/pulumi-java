@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLinkArgs Empty = new GetLinkArgs();
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -25,9 +19,6 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
-    /**
-     * The name of the link.
-     */
     @InputImport(name="linkName", required=true)
     private final String linkName;
 
@@ -35,9 +26,6 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
         return this.linkName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

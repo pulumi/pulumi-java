@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppSitePushSettings {
-/**
- * Push settings for the App.
-API Version: 2020-12-01.
- *
- * Push settings for the App.
- */
     public static CompletableFuture<ListWebAppSitePushSettingsResult> invokeAsync(ListWebAppSitePushSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettings", TypeShape.of(ListWebAppSitePushSettingsResult.class), args == null ? ListWebAppSitePushSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

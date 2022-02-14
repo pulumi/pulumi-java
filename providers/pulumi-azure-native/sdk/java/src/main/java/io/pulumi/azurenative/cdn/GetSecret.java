@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecret {
-/**
- * Friendly Secret name mapping to the any Secret or secret related information.
-API Version: 2020-09-01.
- *
- * Friendly Secret name mapping to the any Secret or secret related information.
- */
     public static CompletableFuture<GetSecretResult> invokeAsync(GetSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getSecret", TypeShape.of(GetSecretResult.class), args == null ? GetSecretArgs.Empty : args, Utilities.withVersion(options));
     }

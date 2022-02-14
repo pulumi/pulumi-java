@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specify the write behavior when upserting documents into Azure Search Index.
- */
     @EnumType
     public enum AzureSearchIndexWriteBehaviorType {
-/**
- * 
- */
         Merge("Merge"),
-/**
- * 
- */
         Upload("Upload");
 
         private final String value;

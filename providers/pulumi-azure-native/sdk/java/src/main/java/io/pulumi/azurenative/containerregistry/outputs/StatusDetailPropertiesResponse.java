@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StatusDetailPropertiesResponse {
-/**
- * The code of the status.
- */
     private final String code;
-/**
- * The correlation ID of the status.
- */
     private final String correlationId;
-/**
- * The description of the status.
- */
     private final String description;
-/**
- * The timestamp of the status.
- */
     private final String timestamp;
-/**
- * The component of the connected registry corresponding to the status.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"code","correlationId","description","timestamp","type"})
@@ -44,33 +29,18 @@ public final class StatusDetailPropertiesResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The code of the status.
- */
     public String getCode() {
         return this.code;
     }
-/**
- * The correlation ID of the status.
- */
     public String getCorrelationId() {
         return this.correlationId;
     }
-/**
- * The description of the status.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The timestamp of the status.
- */
     public String getTimestamp() {
         return this.timestamp;
     }
-/**
- * The component of the connected registry corresponding to the status.
- */
     public String getType() {
         return this.type;
     }

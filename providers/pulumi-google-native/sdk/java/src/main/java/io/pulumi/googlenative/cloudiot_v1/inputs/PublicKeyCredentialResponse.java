@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A public key format and data.
- */
 public final class PublicKeyCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PublicKeyCredentialResponse Empty = new PublicKeyCredentialResponse();
 
-    /**
-     * The format of the key.
-     */
     @InputImport(name="format", required=true)
     private final String format;
 
@@ -25,9 +19,6 @@ public final class PublicKeyCredentialResponse extends io.pulumi.resources.Invok
         return this.format;
     }
 
-    /**
-     * The key data.
-     */
     @InputImport(name="key", required=true)
     private final String key;
 

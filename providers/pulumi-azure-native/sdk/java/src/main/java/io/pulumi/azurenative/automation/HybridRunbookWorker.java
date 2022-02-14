@@ -15,218 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Definition of hybrid runbook worker.
-API Version: 2021-06-22.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a V2 hybrid runbook worker
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var hybridRunbookWorker = new AzureNative.Automation.HybridRunbookWorker("hybridRunbookWorker", new AzureNative.Automation.HybridRunbookWorkerArgs
-        {
-            AutomationAccountName = "testaccount",
-            HybridRunbookWorkerGroupName = "TestHybridGroup",
-            HybridRunbookWorkerId = "c010ad12-ef14-4a2a-aa9e-ef22c4745ddd",
-            ResourceGroupName = "rg",
-            VmResourceId = "/subscriptions/vmsubid/resourceGroups/vmrg/providers/Microsoft.Compute/virtualMachines/vmname",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewHybridRunbookWorker(ctx, "hybridRunbookWorker", &automation.HybridRunbookWorkerArgs{
-			AutomationAccountName:        pulumi.String("testaccount"),
-			HybridRunbookWorkerGroupName: pulumi.String("TestHybridGroup"),
-			HybridRunbookWorkerId:        pulumi.String("c010ad12-ef14-4a2a-aa9e-ef22c4745ddd"),
-			ResourceGroupName:            pulumi.String("rg"),
-			VmResourceId:                 pulumi.String("/subscriptions/vmsubid/resourceGroups/vmrg/providers/Microsoft.Compute/virtualMachines/vmname"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const hybridRunbookWorker = new azure_native.automation.HybridRunbookWorker("hybridRunbookWorker", {
-    automationAccountName: "testaccount",
-    hybridRunbookWorkerGroupName: "TestHybridGroup",
-    hybridRunbookWorkerId: "c010ad12-ef14-4a2a-aa9e-ef22c4745ddd",
-    resourceGroupName: "rg",
-    vmResourceId: "/subscriptions/vmsubid/resourceGroups/vmrg/providers/Microsoft.Compute/virtualMachines/vmname",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-hybrid_runbook_worker = azure_native.automation.HybridRunbookWorker("hybridRunbookWorker",
-    automation_account_name="testaccount",
-    hybrid_runbook_worker_group_name="TestHybridGroup",
-    hybrid_runbook_worker_id="c010ad12-ef14-4a2a-aa9e-ef22c4745ddd",
-    resource_group_name="rg",
-    vm_resource_id="/subscriptions/vmsubid/resourceGroups/vmrg/providers/Microsoft.Compute/virtualMachines/vmname")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:HybridRunbookWorker c010ad12-ef14-4a2a-aa9e-ef22c4745ddd /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/testaccount/hybridRunbookWorkerGroups/TestHybridGroup/hybridRunbookWorkers/c010ad12-ef14-4a2a-aa9e-ef22c4745ddd 
-```
-
- */
 @ResourceType(type="azure-native:automation:HybridRunbookWorker")
 public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
-    /**
-     * Gets or sets the assigned machine IP address.
-     */
     @OutputExport(name="ip", type=String.class, parameters={})
     private Output</* @Nullable */ String> ip;
 
-    /**
-     * @return Gets or sets the assigned machine IP address.
-     */
     public Output</* @Nullable */ String> getIp() {
         return this.ip;
     }
-    /**
-     * Last Heartbeat from the Worker
-     */
     @OutputExport(name="lastSeenDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastSeenDateTime;
 
-    /**
-     * @return Last Heartbeat from the Worker
-     */
     public Output</* @Nullable */ String> getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Gets or sets the registration time of the worker machine.
-     */
     @OutputExport(name="registeredDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> registeredDateTime;
 
-    /**
-     * @return Gets or sets the registration time of the worker machine.
-     */
     public Output</* @Nullable */ String> getRegisteredDateTime() {
         return this.registeredDateTime;
     }
-    /**
-     * Resource system metadata.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Resource system metadata.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Azure Resource Manager Id for a virtual machine.
-     */
     @OutputExport(name="vmResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmResourceId;
 
-    /**
-     * @return Azure Resource Manager Id for a virtual machine.
-     */
     public Output</* @Nullable */ String> getVmResourceId() {
         return this.vmResourceId;
     }
-    /**
-     * Name of the HybridWorker.
-     */
     @OutputExport(name="workerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerName;
 
-    /**
-     * @return Name of the HybridWorker.
-     */
     public Output</* @Nullable */ String> getWorkerName() {
         return this.workerName;
     }
-    /**
-     * Type of the HybridWorker.
-     */
     @OutputExport(name="workerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerType;
 
-    /**
-     * @return Type of the HybridWorker.
-     */
     public Output</* @Nullable */ String> getWorkerType() {
         return this.workerType;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public HybridRunbookWorker(String name, HybridRunbookWorkerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:HybridRunbookWorker", name, args == null ? HybridRunbookWorkerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -245,14 +90,6 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static HybridRunbookWorker get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HybridRunbookWorker(name, id, options);
     }

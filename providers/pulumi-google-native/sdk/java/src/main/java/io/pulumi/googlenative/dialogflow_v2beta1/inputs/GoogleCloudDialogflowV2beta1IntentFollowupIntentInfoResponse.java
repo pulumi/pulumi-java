@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a single followup intent in the chain.
- */
 public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse Empty = new GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse();
 
-    /**
-     * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
-     */
     @InputImport(name="followupIntentName", required=true)
     private final String followupIntentName;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
         return this.followupIntentName;
     }
 
-    /**
-     * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
-     */
     @InputImport(name="parentFollowupIntentName", required=true)
     private final String parentFollowupIntentName;
 

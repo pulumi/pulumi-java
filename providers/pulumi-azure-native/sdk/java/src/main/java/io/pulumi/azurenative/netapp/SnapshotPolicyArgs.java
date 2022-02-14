@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotPolicyArgs Empty = new SnapshotPolicyArgs();
 
-    /**
-     * The name of the NetApp account
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -33,9 +27,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * Schedule for daily snapshots
-     */
     @InputImport(name="dailySchedule")
     private final @Nullable Input<DailyScheduleArgs> dailySchedule;
 
@@ -43,9 +34,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
     }
 
-    /**
-     * The property to decide policy is enabled or not
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -53,9 +41,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Schedule for hourly snapshots
-     */
     @InputImport(name="hourlySchedule")
     private final @Nullable Input<HourlyScheduleArgs> hourlySchedule;
 
@@ -63,9 +48,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -73,9 +55,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Schedule for monthly snapshots
-     */
     @InputImport(name="monthlySchedule")
     private final @Nullable Input<MonthlyScheduleArgs> monthlySchedule;
 
@@ -83,9 +62,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.monthlySchedule == null ? Input.empty() : this.monthlySchedule;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,9 +69,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the snapshot policy
-     */
     @InputImport(name="snapshotPolicyName")
     private final @Nullable Input<String> snapshotPolicyName;
 
@@ -103,9 +76,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotPolicyName == null ? Input.empty() : this.snapshotPolicyName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -113,9 +83,6 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Schedule for weekly snapshots
-     */
     @InputImport(name="weeklySchedule")
     private final @Nullable Input<WeeklyScheduleArgs> weeklySchedule;
 

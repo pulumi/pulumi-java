@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetAttestorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAttestorArgs Empty = new GetAttestorArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="attestorId", required=true)
     private final String attestorId;
 
@@ -27,9 +21,6 @@ public final class GetAttestorArgs extends io.pulumi.resources.InvokeArgs {
         return this.attestorId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

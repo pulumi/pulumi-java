@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration options for the Config Connector add-on.
- */
 public final class ConfigConnectorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigConnectorConfigArgs Empty = new ConfigConnectorConfigArgs();
 
-    /**
-     * Whether Cloud Connector is enabled for this cluster.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

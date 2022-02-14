@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the provisioned Event Hub-compatible endpoint used by the IoT hub.
- */
 public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventHubPropertiesArgs Empty = new EventHubPropertiesArgs();
 
-    /**
-     * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
-     */
     @InputImport(name="partitionCount")
     private final @Nullable Input<Integer> partitionCount;
 
@@ -28,9 +22,6 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
     }
 
-    /**
-     * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
-     */
     @InputImport(name="retentionTimeInDays")
     private final @Nullable Input<Double> retentionTimeInDays;
 

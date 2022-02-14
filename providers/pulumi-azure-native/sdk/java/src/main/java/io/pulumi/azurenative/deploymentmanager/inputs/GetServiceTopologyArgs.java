@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetServiceTopologyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceTopologyArgs Empty = new GetServiceTopologyArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetServiceTopologyArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the service topology .
-     */
     @InputImport(name="serviceTopologyName", required=true)
     private final String serviceTopologyName;
 

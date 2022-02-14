@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The Defender for Servers AWS offering configurations
- */
 public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefenderForServersAwsOfferingArgs Empty = new DefenderForServersAwsOfferingArgs();
 
-    /**
-     * The ARC autoprovisioning configuration
-     */
     @InputImport(name="arcAutoProvisioning")
     private final @Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
@@ -29,9 +23,6 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
         return this.arcAutoProvisioning == null ? Input.empty() : this.arcAutoProvisioning;
     }
 
-    /**
-     * The Defender for servers connection configuration
-     */
     @InputImport(name="defenderForServers")
     private final @Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
@@ -39,10 +30,6 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
         return this.defenderForServers == null ? Input.empty() : this.defenderForServers;
     }
 
-    /**
-     * The type of the security offering.
-Expected value is 'DefenderForServersAWS'.
-     */
     @InputImport(name="offeringType", required=true)
     private final Input<String> offeringType;
 

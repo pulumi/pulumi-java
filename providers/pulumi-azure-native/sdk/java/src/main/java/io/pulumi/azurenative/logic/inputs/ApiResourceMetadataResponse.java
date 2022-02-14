@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The api resource metadata.
- */
 public final class ApiResourceMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiResourceMetadataResponse Empty = new ApiResourceMetadataResponse();
 
-    /**
-     * The api type.
-     */
     @InputImport(name="apiType")
     private final @Nullable String apiType;
 
@@ -30,9 +24,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.apiType == null ? Optional.empty() : Optional.ofNullable(this.apiType);
     }
 
-    /**
-     * The brand color.
-     */
     @InputImport(name="brandColor")
     private final @Nullable String brandColor;
 
@@ -40,9 +31,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
     }
 
-    /**
-     * The connection type.
-     */
     @InputImport(name="connectionType")
     private final @Nullable String connectionType;
 
@@ -50,9 +38,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.connectionType == null ? Optional.empty() : Optional.ofNullable(this.connectionType);
     }
 
-    /**
-     * The connector deployment parameters metadata.
-     */
     @InputImport(name="deploymentParameters")
     private final @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
 
@@ -60,9 +45,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.deploymentParameters == null ? Optional.empty() : Optional.ofNullable(this.deploymentParameters);
     }
 
-    /**
-     * The hide key.
-     */
     @InputImport(name="hideKey")
     private final @Nullable String hideKey;
 
@@ -70,9 +52,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.hideKey == null ? Optional.empty() : Optional.ofNullable(this.hideKey);
     }
 
-    /**
-     * The provisioning state.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -80,9 +59,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * The source.
-     */
     @InputImport(name="source")
     private final @Nullable String source;
 
@@ -90,9 +66,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
-    /**
-     * The tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -100,9 +73,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * The WSDL import method.
-     */
     @InputImport(name="wsdlImportMethod")
     private final @Nullable String wsdlImportMethod;
 
@@ -110,9 +80,6 @@ public final class ApiResourceMetadataResponse extends io.pulumi.resources.Invok
         return this.wsdlImportMethod == null ? Optional.empty() : Optional.ofNullable(this.wsdlImportMethod);
     }
 
-    /**
-     * The WSDL service.
-     */
     @InputImport(name="wsdlService")
     private final @Nullable WsdlServiceResponse wsdlService;
 

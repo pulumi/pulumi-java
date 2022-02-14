@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Error describes why the execution was abnormally terminated.
- */
 public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorResponse Empty = new ErrorResponse();
 
-    /**
-     * Human-readable stack trace string.
-     */
     @InputImport(name="context", required=true)
     private final String context;
 
@@ -26,9 +20,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.context;
     }
 
-    /**
-     * Error message and data returned represented as a JSON string.
-     */
     @InputImport(name="payload", required=true)
     private final String payload;
 
@@ -36,9 +27,6 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.payload;
     }
 
-    /**
-     * Stack trace with detailed information of where error was generated.
-     */
     @InputImport(name="stackTrace", required=true)
     private final StackTraceResponse stackTrace;
 

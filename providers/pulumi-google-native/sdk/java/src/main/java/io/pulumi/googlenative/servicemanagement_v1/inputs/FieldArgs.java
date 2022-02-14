@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A single field of a message type.
- */
 public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FieldArgs Empty = new FieldArgs();
 
-    /**
-     * The field cardinality.
-     */
     @InputImport(name="cardinality")
     private final @Nullable Input<FieldCardinality> cardinality;
 
@@ -33,9 +27,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.cardinality == null ? Input.empty() : this.cardinality;
     }
 
-    /**
-     * The string value of the default value of this field. Proto2 syntax only.
-     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<String> defaultValue;
 
@@ -43,9 +34,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
-    /**
-     * The field JSON name.
-     */
     @InputImport(name="jsonName")
     private final @Nullable Input<String> jsonName;
 
@@ -53,9 +41,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.jsonName == null ? Input.empty() : this.jsonName;
     }
 
-    /**
-     * The field type.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<FieldKind> kind;
 
@@ -63,9 +48,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The field name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -73,9 +55,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The field number.
-     */
     @InputImport(name="number")
     private final @Nullable Input<Integer> number;
 
@@ -83,9 +62,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.number == null ? Input.empty() : this.number;
     }
 
-    /**
-     * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
-     */
     @InputImport(name="oneofIndex")
     private final @Nullable Input<Integer> oneofIndex;
 
@@ -93,9 +69,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.oneofIndex == null ? Input.empty() : this.oneofIndex;
     }
 
-    /**
-     * The protocol buffer options.
-     */
     @InputImport(name="options")
     private final @Nullable Input<List<OptionArgs>> options;
 
@@ -103,9 +76,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
-    /**
-     * Whether to use alternative packed wire representation.
-     */
     @InputImport(name="packed")
     private final @Nullable Input<Boolean> packed;
 
@@ -113,9 +83,6 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.packed == null ? Input.empty() : this.packed;
     }
 
-    /**
-     * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
-     */
     @InputImport(name="typeUrl")
     private final @Nullable Input<String> typeUrl;
 

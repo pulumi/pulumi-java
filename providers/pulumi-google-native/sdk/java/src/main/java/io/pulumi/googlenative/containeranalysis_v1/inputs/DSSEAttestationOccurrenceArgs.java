@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Deprecated. Prefer to use a regular Occurrence, and populate the Envelope at the top level of the Occurrence.
- */
 public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DSSEAttestationOccurrenceArgs Empty = new DSSEAttestationOccurrenceArgs();
 
-    /**
-     * If doing something security critical, make sure to verify the signatures in this metadata.
-     */
     @InputImport(name="envelope")
     private final @Nullable Input<EnvelopeArgs> envelope;
 
@@ -28,9 +22,6 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
         return this.envelope == null ? Input.empty() : this.envelope;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="statement")
     private final @Nullable Input<InTotoStatementArgs> statement;
 

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MTLSPolicyResponse {
-/**
- *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
- */
     private final List<ValidationCAResponse> clientValidationCa;
 
     @OutputCustomType.Constructor({"clientValidationCa"})
@@ -20,9 +17,6 @@ public final class MTLSPolicyResponse {
         this.clientValidationCa = Objects.requireNonNull(clientValidationCa);
     }
 
-/**
- *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
- */
     public List<ValidationCAResponse> getClientValidationCa() {
         return this.clientValidationCa;
     }

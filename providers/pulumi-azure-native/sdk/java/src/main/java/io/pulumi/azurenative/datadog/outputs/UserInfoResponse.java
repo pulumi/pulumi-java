@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserInfoResponse {
-/**
- * Email of the user used by Datadog for contacting them if needed
- */
     private final @Nullable String emailAddress;
-/**
- * Name of the user
- */
     private final @Nullable String name;
-/**
- * Phone number of the user used by Datadog for contacting them if needed
- */
     private final @Nullable String phoneNumber;
 
     @OutputCustomType.Constructor({"emailAddress","name","phoneNumber"})
@@ -34,21 +25,12 @@ public final class UserInfoResponse {
         this.phoneNumber = phoneNumber;
     }
 
-/**
- * Email of the user used by Datadog for contacting them if needed
- */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
-/**
- * Name of the user
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Phone number of the user used by Datadog for contacting them if needed
- */
     public Optional<String> getPhoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }

@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse {
-/**
- * List of values allowed at this resource.
- */
     private final List<String> allowedValues;
-/**
- * List of values denied at this resource.
- */
     private final List<String> deniedValues;
 
     @OutputCustomType.Constructor({"allowedValues","deniedValues"})
@@ -27,15 +21,9 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
         this.deniedValues = Objects.requireNonNull(deniedValues);
     }
 
-/**
- * List of values allowed at this resource.
- */
     public List<String> getAllowedValues() {
         return this.allowedValues;
     }
-/**
- * List of values denied at this resource.
- */
     public List<String> getDeniedValues() {
         return this.deniedValues;
     }

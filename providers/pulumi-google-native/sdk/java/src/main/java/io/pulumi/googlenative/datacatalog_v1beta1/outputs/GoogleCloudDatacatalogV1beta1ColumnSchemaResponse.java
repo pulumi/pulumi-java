@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
-/**
- * Name of the column.
- */
     private final String column;
-/**
- * Optional. Description of the column. Default value is an empty string.
- */
     private final String description;
-/**
- * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
- */
     private final String mode;
-/**
- * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
- */
     private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
-/**
- * Type of the column.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"column","description","mode","subcolumns","type"})
@@ -45,33 +30,18 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Name of the column.
- */
     public String getColumn() {
         return this.column;
     }
-/**
- * Optional. Description of the column. Default value is an empty string.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
- */
     public String getMode() {
         return this.mode;
     }
-/**
- * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
- */
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> getSubcolumns() {
         return this.subcolumns;
     }
-/**
- * Type of the column.
- */
     public String getType() {
         return this.type;
     }

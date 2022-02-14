@@ -16,142 +16,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Storage resource payload.
-API Version: 2021-09-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Storages_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storage = new AzureNative.AppPlatform.Storage("storage", new AzureNative.AppPlatform.StorageArgs
-        {
-            Properties = new AzureNative.AppPlatform.Inputs.StorageAccountArgs
-            {
-                AccountKey = "account-key-of-storage-account",
-                AccountName = "storage-account-name",
-                StorageType = "StorageAccount",
-            },
-            ResourceGroupName = "myResourceGroup",
-            ServiceName = "myservice",
-            StorageName = "mystorage",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storage = new azure_native.appplatform.Storage("storage", {
-    properties: {
-        accountKey: "account-key-of-storage-account",
-        accountName: "storage-account-name",
-        storageType: "StorageAccount",
-    },
-    resourceGroupName: "myResourceGroup",
-    serviceName: "myservice",
-    storageName: "mystorage",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage = azure_native.appplatform.Storage("storage",
-    properties={
-        "accountKey": "account-key-of-storage-account",
-        "accountName": "storage-account-name",
-        "storageType": "StorageAccount",
-    },
-    resource_group_name="myResourceGroup",
-    service_name="myservice",
-    storage_name="mystorage")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:appplatform:Storage mystorage /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/storages/mystorage 
-```
-
- */
 @ResourceType(type="azure-native:appplatform:Storage")
 public class Storage extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of the storage resource payload.
-     */
     @OutputExport(name="properties", type=StorageAccountResponse.class, parameters={})
     private Output<StorageAccountResponse> properties;
 
-    /**
-     * @return Properties of the storage resource payload.
-     */
     public Output<StorageAccountResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Storage(String name, StorageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:Storage", name, args == null ? StorageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -171,14 +62,6 @@ public class Storage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Storage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Storage(name, id, options);
     }

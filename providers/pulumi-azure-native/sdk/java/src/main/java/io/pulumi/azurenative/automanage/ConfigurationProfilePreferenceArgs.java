@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationProfilePreferenceArgs Empty = new ConfigurationProfilePreferenceArgs();
 
-    /**
-     * Name of the configuration profile preference.
-     */
     @InputImport(name="configurationProfilePreferenceName")
     private final @Nullable Input<String> configurationProfilePreferenceName;
 
@@ -29,9 +23,6 @@ public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resource
         return this.configurationProfilePreferenceName == null ? Input.empty() : this.configurationProfilePreferenceName;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,9 +30,6 @@ public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resource
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Properties of the configuration profile preference.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<ConfigurationProfilePreferencePropertiesArgs> properties;
 
@@ -49,9 +37,6 @@ public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

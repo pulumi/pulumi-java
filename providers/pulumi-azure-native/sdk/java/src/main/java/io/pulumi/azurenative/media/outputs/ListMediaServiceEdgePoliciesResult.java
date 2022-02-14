@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListMediaServiceEdgePoliciesResult {
-/**
- * 
- */
     private final @Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy;
 
     @OutputCustomType.Constructor({"usageDataCollectionPolicy"})
@@ -21,9 +18,6 @@ public final class ListMediaServiceEdgePoliciesResult {
         this.usageDataCollectionPolicy = usageDataCollectionPolicy;
     }
 
-/**
- * 
- */
     public Optional<EdgeUsageDataCollectionPolicyResponse> getUsageDataCollectionPolicy() {
         return Optional.ofNullable(this.usageDataCollectionPolicy);
     }

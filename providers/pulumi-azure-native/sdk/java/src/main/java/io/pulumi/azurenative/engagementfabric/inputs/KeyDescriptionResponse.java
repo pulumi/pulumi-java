@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The description of the EngagementFabric account key
- */
 public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyDescriptionResponse Empty = new KeyDescriptionResponse();
 
-    /**
-     * The name of the key
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * The rank of the key
-     */
     @InputImport(name="rank", required=true)
     private final String rank;
 
@@ -35,9 +26,6 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
         return this.rank;
     }
 
-    /**
-     * The value of the key
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

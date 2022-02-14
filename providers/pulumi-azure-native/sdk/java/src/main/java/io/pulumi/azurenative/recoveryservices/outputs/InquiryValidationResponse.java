@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InquiryValidationResponse {
-/**
- * Error Additional Detail in case the status is non-success.
- */
     private final String additionalDetail;
-/**
- * Error Detail in case the status is non-success.
- */
     private final @Nullable ErrorDetailResponse errorDetail;
-/**
- * Status for the Inquiry Validation.
- */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"additionalDetail","errorDetail","status"})
@@ -35,21 +26,12 @@ public final class InquiryValidationResponse {
         this.status = status;
     }
 
-/**
- * Error Additional Detail in case the status is non-success.
- */
     public String getAdditionalDetail() {
         return this.additionalDetail;
     }
-/**
- * Error Detail in case the status is non-success.
- */
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
-/**
- * Status for the Inquiry Validation.
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

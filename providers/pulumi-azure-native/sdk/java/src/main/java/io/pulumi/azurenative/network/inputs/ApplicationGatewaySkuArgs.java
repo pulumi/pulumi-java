@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of an application gateway.
- */
 public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewaySkuArgs Empty = new ApplicationGatewaySkuArgs();
 
-    /**
-     * Capacity (instance count) of an application gateway.
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -31,9 +25,6 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * Name of an application gateway SKU.
-     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,ApplicationGatewaySkuName>> name;
 
@@ -41,9 +32,6 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Tier of an application gateway.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,ApplicationGatewayTier>> tier;
 

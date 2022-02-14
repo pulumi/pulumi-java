@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB MongoDB collection index key
- */
 public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MongoIndexArgs Empty = new MongoIndexArgs();
 
-    /**
-     * Cosmos DB MongoDB collection index keys
-     */
     @InputImport(name="key")
     private final @Nullable Input<MongoIndexKeysArgs> key;
 
@@ -28,9 +22,6 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * Cosmos DB MongoDB collection index key options
-     */
     @InputImport(name="options")
     private final @Nullable Input<MongoIndexOptionsArgs> options;
 

@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * the operation associated with the notification and its value must be "scale"
- */
     @EnumType
     public enum OperationType {
-/**
- * 
- */
         Scale("Scale");
 
         private final String value;

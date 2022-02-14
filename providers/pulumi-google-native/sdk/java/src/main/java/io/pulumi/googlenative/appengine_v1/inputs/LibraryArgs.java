@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Third-party Python runtime library that is required by the application.
- */
 public final class LibraryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LibraryArgs Empty = new LibraryArgs();
 
-    /**
-     * Name of the library. Example: "django".
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class LibraryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Version of the library to select, or "latest".
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

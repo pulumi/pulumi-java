@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A custom error rule.
- */
 public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomErrorRuleArgs Empty = new CustomErrorRuleArgs();
 
-    /**
-     * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
-     */
     @InputImport(name="isErrorType")
     private final @Nullable Input<Boolean> isErrorType;
 
@@ -28,9 +22,6 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.isErrorType == null ? Input.empty() : this.isErrorType;
     }
 
-    /**
-     * Selects messages to which this rule applies. Refer to selector for syntax details.
-     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 

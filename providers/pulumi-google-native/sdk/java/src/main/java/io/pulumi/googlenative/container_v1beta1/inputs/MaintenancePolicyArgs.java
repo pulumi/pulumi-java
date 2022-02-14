@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MaintenancePolicy defines the maintenance policy to be used for the cluster.
- */
 public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaintenancePolicyArgs Empty = new MaintenancePolicyArgs();
 
-    /**
-     * A hash identifying the version of this policy, so that updates to fields of the policy won't accidentally undo intermediate changes (and so that users of the API unaware of some fields won't accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
-     */
     @InputImport(name="resourceVersion")
     private final @Nullable Input<String> resourceVersion;
 
@@ -28,9 +22,6 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
     }
 
-    /**
-     * Specifies the maintenance window in which maintenance may be performed.
-     */
     @InputImport(name="window")
     private final @Nullable Input<MaintenanceWindowArgs> window;
 

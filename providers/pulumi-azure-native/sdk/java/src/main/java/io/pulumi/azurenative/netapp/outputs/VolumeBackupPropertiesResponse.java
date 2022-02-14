@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VolumeBackupPropertiesResponse {
-/**
- * Backup Enabled
- */
     private final @Nullable Boolean backupEnabled;
-/**
- * Backup Policy Resource ID
- */
     private final @Nullable String backupPolicyId;
-/**
- * Policy Enforced
- */
     private final @Nullable Boolean policyEnforced;
-/**
- * Vault Resource ID
- */
     private final @Nullable String vaultId;
 
     @OutputCustomType.Constructor({"backupEnabled","backupPolicyId","policyEnforced","vaultId"})
@@ -41,27 +29,15 @@ public final class VolumeBackupPropertiesResponse {
         this.vaultId = vaultId;
     }
 
-/**
- * Backup Enabled
- */
     public Optional<Boolean> getBackupEnabled() {
         return Optional.ofNullable(this.backupEnabled);
     }
-/**
- * Backup Policy Resource ID
- */
     public Optional<String> getBackupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
-/**
- * Policy Enforced
- */
     public Optional<Boolean> getPolicyEnforced() {
         return Optional.ofNullable(this.policyEnforced);
     }
-/**
- * Vault Resource ID
- */
     public Optional<String> getVaultId() {
         return Optional.ofNullable(this.vaultId);
     }

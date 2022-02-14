@@ -6,9 +6,6 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 import java.util.Objects;
 
 
-/**
- * Replace each matching finding with the name of the info_type.
- */
 public final class GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs Empty = new GooglePrivacyDlpV2ReplaceWithInfoTypeConfigArgs();

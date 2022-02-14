@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateLinkServiceConnectionStateResponse {
-/**
- * Actions required for a private endpoint connection
- */
     private final @Nullable String actionRequired;
-/**
- * The description for the current state of a private endpoint connection
- */
     private final @Nullable String description;
-/**
- * The status of a private endpoint connection
- */
     private final String status;
 
     @OutputCustomType.Constructor({"actionRequired","description","status"})
@@ -34,21 +25,12 @@ public final class PrivateLinkServiceConnectionStateResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * Actions required for a private endpoint connection
- */
     public Optional<String> getActionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
-/**
- * The description for the current state of a private endpoint connection
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The status of a private endpoint connection
- */
     public String getStatus() {
         return this.status;
     }

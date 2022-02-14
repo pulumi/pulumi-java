@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Database instance backup configuration.
- */
 public final class BackupConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupConfigurationResponse Empty = new BackupConfigurationResponse();
 
-    /**
-     * Backup retention settings.
-     */
     @InputImport(name="backupRetentionSettings", required=true)
     private final BackupRetentionSettingsResponse backupRetentionSettings;
 
@@ -28,9 +22,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.backupRetentionSettings;
     }
 
-    /**
-     * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
-     */
     @InputImport(name="binaryLogEnabled", required=true)
     private final Boolean binaryLogEnabled;
 
@@ -38,9 +29,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.binaryLogEnabled;
     }
 
-    /**
-     * Whether this configuration is enabled.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -48,9 +36,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.enabled;
     }
 
-    /**
-     * This is always `sql#backupConfiguration`.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -58,9 +43,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.kind;
     }
 
-    /**
-     * Location of the backup
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -68,9 +50,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.location;
     }
 
-    /**
-     * (Postgres only) Whether point in time recovery is enabled.
-     */
     @InputImport(name="pointInTimeRecoveryEnabled", required=true)
     private final Boolean pointInTimeRecoveryEnabled;
 
@@ -78,9 +57,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.pointInTimeRecoveryEnabled;
     }
 
-    /**
-     * Reserved for future use.
-     */
     @InputImport(name="replicationLogArchivingEnabled", required=true)
     private final Boolean replicationLogArchivingEnabled;
 
@@ -88,9 +64,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.replicationLogArchivingEnabled;
     }
 
-    /**
-     * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -98,9 +71,6 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
         return this.startTime;
     }
 
-    /**
-     * The number of days of transaction logs we retain for point in time restore, from 1-7.
-     */
     @InputImport(name="transactionLogRetentionDays", required=true)
     private final Integer transactionLogRetentionDays;
 

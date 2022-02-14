@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadIdentityPool {
-/**
- * Gets an individual WorkloadIdentityPool.
- */
     public static CompletableFuture<GetWorkloadIdentityPoolResult> invokeAsync(GetWorkloadIdentityPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args == null ? GetWorkloadIdentityPoolArgs.Empty : args, Utilities.withVersion(options));
     }

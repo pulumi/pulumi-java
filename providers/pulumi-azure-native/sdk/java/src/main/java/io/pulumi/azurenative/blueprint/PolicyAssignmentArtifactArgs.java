@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyAssignmentArtifactArgs Empty = new PolicyAssignmentArtifactArgs();
 
-    /**
-     * Name of the blueprint artifact.
-     */
     @InputImport(name="artifactName")
     private final @Nullable Input<String> artifactName;
 
@@ -30,9 +24,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
         return this.artifactName == null ? Input.empty() : this.artifactName;
     }
 
-    /**
-     * Name of the blueprint definition.
-     */
     @InputImport(name="blueprintName", required=true)
     private final Input<String> blueprintName;
 
@@ -40,9 +31,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
         return this.blueprintName;
     }
 
-    /**
-     * Artifacts which need to be deployed before the specified artifact.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<String>> dependsOn;
 
@@ -50,9 +38,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Multi-line explain this resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -60,9 +45,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * One-liner string explain this resource.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -70,10 +52,6 @@ public final class PolicyAssignmentArtifactArgs extends io.pulumi.resources.Reso
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Specifies the kind of blueprint artifact.
-Expected value is 'policyAssignment'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -81,9 +59,6 @@ Expected value is 'policyAssignment'.
         return this.kind;
     }
 
-    /**
-     * Parameter values for the policy definition.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<Map<String,ParameterValueArgs>> parameters;
 
@@ -91,9 +66,6 @@ Expected value is 'policyAssignment'.
         return this.parameters;
     }
 
-    /**
-     * Azure resource ID of the policy definition.
-     */
     @InputImport(name="policyDefinitionId", required=true)
     private final Input<String> policyDefinitionId;
 
@@ -101,9 +73,6 @@ Expected value is 'policyAssignment'.
         return this.policyDefinitionId;
     }
 
-    /**
-     * Name of the resource group placeholder to which the policy will be assigned.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -111,9 +80,6 @@ Expected value is 'policyAssignment'.
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
-    /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     */
     @InputImport(name="resourceScope", required=true)
     private final Input<String> resourceScope;
 

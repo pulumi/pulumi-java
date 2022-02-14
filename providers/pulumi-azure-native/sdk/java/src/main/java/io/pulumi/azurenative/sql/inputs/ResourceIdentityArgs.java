@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Active Directory identity configuration for a resource.
- */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
-    /**
-     * The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IdentityType>> type;
 
@@ -31,9 +25,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The resource ids of the user assigned identities to use
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

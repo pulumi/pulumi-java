@@ -14,29 +14,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNamespaceNetworkRuleSetResult {
-/**
- * Default Action for Network Rule Set
- */
     private final @Nullable String defaultAction;
-/**
- * Resource Id
- */
     private final String id;
-/**
- * List of IpRules
- */
     private final @Nullable List<NWRuleSetIpRulesResponse> ipRules;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Resource type
- */
     private final String type;
-/**
- * List VirtualNetwork Rules
- */
     private final @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules;
 
     @OutputCustomType.Constructor({"defaultAction","id","ipRules","name","type","virtualNetworkRules"})
@@ -55,39 +37,21 @@ public final class GetNamespaceNetworkRuleSetResult {
         this.virtualNetworkRules = virtualNetworkRules;
     }
 
-/**
- * Default Action for Network Rule Set
- */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * List of IpRules
- */
     public List<NWRuleSetIpRulesResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }
-/**
- * List VirtualNetwork Rules
- */
     public List<NWRuleSetVirtualNetworkRulesResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

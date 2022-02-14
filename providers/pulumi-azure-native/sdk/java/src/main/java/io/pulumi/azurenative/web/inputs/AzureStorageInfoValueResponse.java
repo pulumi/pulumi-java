@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Files or Blob Storage access information value for dictionary storage.
- */
 public final class AzureStorageInfoValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureStorageInfoValueResponse Empty = new AzureStorageInfoValueResponse();
 
-    /**
-     * Access key for the storage account.
-     */
     @InputImport(name="accessKey")
     private final @Nullable String accessKey;
 
@@ -27,9 +21,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
         return this.accessKey == null ? Optional.empty() : Optional.ofNullable(this.accessKey);
     }
 
-    /**
-     * Name of the storage account.
-     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 
@@ -37,9 +28,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
-    /**
-     * Path to mount the storage within the site's runtime environment.
-     */
     @InputImport(name="mountPath")
     private final @Nullable String mountPath;
 
@@ -47,9 +35,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
     }
 
-    /**
-     * Name of the file share (container name, for Blob storage).
-     */
     @InputImport(name="shareName")
     private final @Nullable String shareName;
 
@@ -57,9 +42,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
         return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
     }
 
-    /**
-     * State of the storage account.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -67,9 +49,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
         return this.state;
     }
 
-    /**
-     * Type of storage.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

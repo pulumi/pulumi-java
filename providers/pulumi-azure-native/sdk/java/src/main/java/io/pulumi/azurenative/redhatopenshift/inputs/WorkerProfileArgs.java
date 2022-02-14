@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * WorkerProfile represents a worker profile.
- */
 public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkerProfileArgs Empty = new WorkerProfileArgs();
 
-    /**
-     * The number of worker VMs.  Must be between 3 and 20 (immutable).
-     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -28,9 +22,6 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
-    /**
-     * The disk size of the worker VMs.  Must be 128 or greater (immutable).
-     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -38,9 +29,6 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
-    /**
-     * The worker profile name.  Must be "worker" (immutable).
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The Azure resource ID of the worker subnet (immutable).
-     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -58,9 +43,6 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
-    /**
-     * The size of the worker VMs (immutable).
-     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

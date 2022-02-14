@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The X12 validation override settings.
- */
 public final class X12ValidationOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12ValidationOverrideResponse Empty = new X12ValidationOverrideResponse();
 
-    /**
-     * The value indicating whether to allow leading and trailing spaces and zeroes.
-     */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
     private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
@@ -26,9 +20,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
-    /**
-     * The message id on which the validation settings has to be applied.
-     */
     @InputImport(name="messageId", required=true)
     private final String messageId;
 
@@ -36,9 +27,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
         return this.messageId;
     }
 
-    /**
-     * The trailing separator policy.
-     */
     @InputImport(name="trailingSeparatorPolicy", required=true)
     private final String trailingSeparatorPolicy;
 
@@ -46,9 +34,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
         return this.trailingSeparatorPolicy;
     }
 
-    /**
-     * The value indicating whether to trim leading and trailing spaces and zeroes.
-     */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
     private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
@@ -56,9 +41,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
-    /**
-     * The value indicating whether to validate character Set.
-     */
     @InputImport(name="validateCharacterSet", required=true)
     private final Boolean validateCharacterSet;
 
@@ -66,9 +48,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
         return this.validateCharacterSet;
     }
 
-    /**
-     * The value indicating whether to validate EDI types.
-     */
     @InputImport(name="validateEDITypes", required=true)
     private final Boolean validateEDITypes;
 
@@ -76,9 +55,6 @@ public final class X12ValidationOverrideResponse extends io.pulumi.resources.Inv
         return this.validateEDITypes;
     }
 
-    /**
-     * The value indicating whether to validate XSD types.
-     */
     @InputImport(name="validateXSDTypes", required=true)
     private final Boolean validateXSDTypes;
 

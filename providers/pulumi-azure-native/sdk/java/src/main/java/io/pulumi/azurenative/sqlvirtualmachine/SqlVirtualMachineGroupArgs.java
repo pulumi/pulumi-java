@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlVirtualMachineGroupArgs Empty = new SqlVirtualMachineGroupArgs();
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,9 +25,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -41,9 +32,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
-     */
     @InputImport(name="sqlImageOffer")
     private final @Nullable Input<String> sqlImageOffer;
 
@@ -51,9 +39,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
         return this.sqlImageOffer == null ? Input.empty() : this.sqlImageOffer;
     }
 
-    /**
-     * SQL image sku.
-     */
     @InputImport(name="sqlImageSku")
     private final @Nullable Input<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
@@ -61,9 +46,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
         return this.sqlImageSku == null ? Input.empty() : this.sqlImageSku;
     }
 
-    /**
-     * Name of the SQL virtual machine group.
-     */
     @InputImport(name="sqlVirtualMachineGroupName")
     private final @Nullable Input<String> sqlVirtualMachineGroupName;
 
@@ -71,9 +53,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
         return this.sqlVirtualMachineGroupName == null ? Input.empty() : this.sqlVirtualMachineGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -81,9 +60,6 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Cluster Active Directory domain profile.
-     */
     @InputImport(name="wsfcDomainProfile")
     private final @Nullable Input<WsfcDomainProfileArgs> wsfcDomainProfile;
 

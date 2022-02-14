@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on information about the ApiOperation intended to be performed on the target resource of the request. The request must satisfy what is defined in `operations` AND `resources` in order to match.
- */
 public final class IngressToResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IngressToResponse Empty = new IngressToResponse();
 
-    /**
-     * A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
-     */
     @InputImport(name="operations", required=true)
     private final List<ApiOperationResponse> operations;
 
@@ -27,9 +21,6 @@ public final class IngressToResponse extends io.pulumi.resources.InvokeArgs {
         return this.operations;
     }
 
-    /**
-     * A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
-     */
     @InputImport(name="resources", required=true)
     private final List<String> resources;
 

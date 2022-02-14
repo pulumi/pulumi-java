@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * User Assigned Identity
- */
 public final class UserAssignedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserAssignedIdentityResponse Empty = new UserAssignedIdentityResponse();
 
-    /**
-     * The clientId(aka appId) of the user assigned identity.
-     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -25,9 +19,6 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
         return this.clientId;
     }
 
-    /**
-     * The principal ID of the user assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -35,9 +26,6 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
         return this.principalId;
     }
 
-    /**
-     * The tenant ID of the user assigned identity.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 

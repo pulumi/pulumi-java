@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AssessmentLinksResponse {
-/**
- * Link to assessment in Azure Portal
- */
     private final String azurePortalUri;
 
     @OutputCustomType.Constructor({"azurePortalUri"})
@@ -19,9 +16,6 @@ public final class AssessmentLinksResponse {
         this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
     }
 
-/**
- * Link to assessment in Azure Portal
- */
     public String getAzurePortalUri() {
         return this.azurePortalUri;
     }

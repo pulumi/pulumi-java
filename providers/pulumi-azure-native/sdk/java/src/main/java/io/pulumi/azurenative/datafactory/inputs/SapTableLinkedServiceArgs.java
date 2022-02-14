@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SAP Table Linked Service.
- */
 public final class SapTableLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SapTableLinkedServiceArgs Empty = new SapTableLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-     */
     @InputImport(name="clientId")
     private final @Nullable Input<Object> clientId;
 
@@ -45,9 +36,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -55,9 +43,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,9 +50,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -75,9 +57,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="language")
     private final @Nullable Input<Object> language;
 
@@ -85,9 +64,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.language == null ? Input.empty() : this.language;
     }
 
-    /**
-     * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="logonGroup")
     private final @Nullable Input<Object> logonGroup;
 
@@ -95,9 +71,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.logonGroup == null ? Input.empty() : this.logonGroup;
     }
 
-    /**
-     * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="messageServer")
     private final @Nullable Input<Object> messageServer;
 
@@ -105,9 +78,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.messageServer == null ? Input.empty() : this.messageServer;
     }
 
-    /**
-     * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="messageServerService")
     private final @Nullable Input<Object> messageServerService;
 
@@ -115,9 +85,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.messageServerService == null ? Input.empty() : this.messageServerService;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -125,9 +92,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password to access the SAP server where the table is located.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -135,9 +99,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="server")
     private final @Nullable Input<Object> server;
 
@@ -145,9 +106,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.server == null ? Input.empty() : this.server;
     }
 
-    /**
-     * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sncLibraryPath")
     private final @Nullable Input<Object> sncLibraryPath;
 
@@ -155,9 +113,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.sncLibraryPath == null ? Input.empty() : this.sncLibraryPath;
     }
 
-    /**
-     * SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sncMode")
     private final @Nullable Input<Object> sncMode;
 
@@ -165,9 +120,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.sncMode == null ? Input.empty() : this.sncMode;
     }
 
-    /**
-     * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sncMyName")
     private final @Nullable Input<Object> sncMyName;
 
@@ -175,9 +127,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.sncMyName == null ? Input.empty() : this.sncMyName;
     }
 
-    /**
-     * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sncPartnerName")
     private final @Nullable Input<Object> sncPartnerName;
 
@@ -185,9 +134,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.sncPartnerName == null ? Input.empty() : this.sncPartnerName;
     }
 
-    /**
-     * SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sncQop")
     private final @Nullable Input<Object> sncQop;
 
@@ -195,9 +141,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.sncQop == null ? Input.empty() : this.sncQop;
     }
 
-    /**
-     * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="systemId")
     private final @Nullable Input<Object> systemId;
 
@@ -205,9 +148,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.systemId == null ? Input.empty() : this.systemId;
     }
 
-    /**
-     * System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
-     */
     @InputImport(name="systemNumber")
     private final @Nullable Input<Object> systemNumber;
 
@@ -215,10 +155,6 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.systemNumber == null ? Input.empty() : this.systemNumber;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'SapTable'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -226,9 +162,6 @@ Expected value is 'SapTable'.
         return this.type;
     }
 
-    /**
-     * Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userName")
     private final @Nullable Input<Object> userName;
 

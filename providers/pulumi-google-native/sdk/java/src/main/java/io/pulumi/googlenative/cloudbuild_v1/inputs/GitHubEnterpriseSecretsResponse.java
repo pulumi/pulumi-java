@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * GitHubEnterpriseSecrets represents the names of all necessary secrets in Secret Manager for a GitHub Enterprise server. Format is: projects//secrets/.
- */
 public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GitHubEnterpriseSecretsResponse Empty = new GitHubEnterpriseSecretsResponse();
 
-    /**
-     * The resource name for the OAuth client ID secret in Secret Manager.
-     */
     @InputImport(name="oauthClientIdName", required=true)
     private final String oauthClientIdName;
 
@@ -25,9 +19,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.oauthClientIdName;
     }
 
-    /**
-     * The resource name for the OAuth client ID secret version in Secret Manager.
-     */
     @InputImport(name="oauthClientIdVersionName", required=true)
     private final String oauthClientIdVersionName;
 
@@ -35,9 +26,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.oauthClientIdVersionName;
     }
 
-    /**
-     * The resource name for the OAuth secret in Secret Manager.
-     */
     @InputImport(name="oauthSecretName", required=true)
     private final String oauthSecretName;
 
@@ -45,9 +33,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.oauthSecretName;
     }
 
-    /**
-     * The resource name for the OAuth secret secret version in Secret Manager.
-     */
     @InputImport(name="oauthSecretVersionName", required=true)
     private final String oauthSecretVersionName;
 
@@ -55,9 +40,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.oauthSecretVersionName;
     }
 
-    /**
-     * The resource name for the private key secret.
-     */
     @InputImport(name="privateKeyName", required=true)
     private final String privateKeyName;
 
@@ -65,9 +47,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.privateKeyName;
     }
 
-    /**
-     * The resource name for the private key secret version.
-     */
     @InputImport(name="privateKeyVersionName", required=true)
     private final String privateKeyVersionName;
 
@@ -75,9 +54,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.privateKeyVersionName;
     }
 
-    /**
-     * The resource name for the webhook secret in Secret Manager.
-     */
     @InputImport(name="webhookSecretName", required=true)
     private final String webhookSecretName;
 
@@ -85,9 +61,6 @@ public final class GitHubEnterpriseSecretsResponse extends io.pulumi.resources.I
         return this.webhookSecretName;
     }
 
-    /**
-     * The resource name for the webhook secret secret version in Secret Manager.
-     */
     @InputImport(name="webhookSecretVersionName", required=true)
     private final String webhookSecretVersionName;
 

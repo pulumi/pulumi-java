@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSubscriptionFeatureRegistrationResult {
-/**
- * Azure resource Id.
- */
     private final String id;
-/**
- * Azure resource name.
- */
     private final String name;
-/**
- * 
- */
     private final SubscriptionFeatureRegistrationResponseProperties properties;
-/**
- * Azure resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -39,27 +27,15 @@ public final class GetSubscriptionFeatureRegistrationResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Azure resource Id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Azure resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
- */
     public SubscriptionFeatureRegistrationResponseProperties getProperties() {
         return this.properties;
     }
-/**
- * Azure resource type.
- */
     public String getType() {
         return this.type;
     }

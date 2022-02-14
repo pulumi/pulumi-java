@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the OS Disk.
- */
 public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSDiskDetailsResponse Empty = new OSDiskDetailsResponse();
 
-    /**
-     * The type of the OS on the VM.
-     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -27,9 +21,6 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
-    /**
-     * The id of the disk containing the OS.
-     */
     @InputImport(name="osVhdId")
     private final @Nullable String osVhdId;
 
@@ -37,9 +28,6 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
         return this.osVhdId == null ? Optional.empty() : Optional.ofNullable(this.osVhdId);
     }
 
-    /**
-     * The OS disk VHD name.
-     */
     @InputImport(name="vhdName")
     private final @Nullable String vhdName;
 

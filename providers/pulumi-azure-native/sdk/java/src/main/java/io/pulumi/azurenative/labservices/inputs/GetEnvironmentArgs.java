@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEnvironmentArgs Empty = new GetEnvironmentArgs();
 
-    /**
-     * The name of the environment.
-     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -27,9 +21,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentName;
     }
 
-    /**
-     * The name of the environment Setting.
-     */
     @InputImport(name="environmentSettingName", required=true)
     private final String environmentSettingName;
 
@@ -37,9 +28,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentSettingName;
     }
 
-    /**
-     * Specify the $expand query. Example: 'properties($expand=networkInterface)'
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -47,9 +35,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the lab Account.
-     */
     @InputImport(name="labAccountName", required=true)
     private final String labAccountName;
 
@@ -57,9 +42,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.labAccountName;
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -67,9 +49,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.labName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Class representing the servers solution summary.
- */
 public final class ServersSolutionSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServersSolutionSummaryResponse Empty = new ServersSolutionSummaryResponse();
 
-    /**
-     * Gets or sets the count of servers assessed.
-     */
     @InputImport(name="assessedCount")
     private final @Nullable Integer assessedCount;
 
@@ -28,9 +22,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
         return this.assessedCount == null ? Optional.empty() : Optional.ofNullable(this.assessedCount);
     }
 
-    /**
-     * Gets or sets the count of servers discovered.
-     */
     @InputImport(name="discoveredCount")
     private final @Nullable Integer discoveredCount;
 
@@ -38,10 +29,6 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
         return this.discoveredCount == null ? Optional.empty() : Optional.ofNullable(this.discoveredCount);
     }
 
-    /**
-     * Gets the Instance type.
-Expected value is 'Servers'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -49,9 +36,6 @@ Expected value is 'Servers'.
         return this.instanceType;
     }
 
-    /**
-     * Gets or sets the count of servers migrated.
-     */
     @InputImport(name="migratedCount")
     private final @Nullable Integer migratedCount;
 
@@ -59,9 +43,6 @@ Expected value is 'Servers'.
         return this.migratedCount == null ? Optional.empty() : Optional.ofNullable(this.migratedCount);
     }
 
-    /**
-     * Gets or sets the count of servers being replicated.
-     */
     @InputImport(name="replicatingCount")
     private final @Nullable Integer replicatingCount;
 
@@ -69,9 +50,6 @@ Expected value is 'Servers'.
         return this.replicatingCount == null ? Optional.empty() : Optional.ofNullable(this.replicatingCount);
     }
 
-    /**
-     * Gets or sets the count of servers test migrated.
-     */
     @InputImport(name="testMigratedCount")
     private final @Nullable Integer testMigratedCount;
 

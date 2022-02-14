@@ -12,34 +12,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HyperVReplicaAzurePolicyDetailsResponse {
-/**
- * The active storage account Id.
- */
     private final @Nullable String activeStorageAccountId;
-/**
- * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
- */
     private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
-/**
- * A value indicating whether encryption is enabled for virtual machines in this cloud.
- */
     private final @Nullable String encryption;
-/**
- * Gets the class type. Overridden in derived classes.
-Expected value is 'HyperVReplicaAzure'.
- */
     private final String instanceType;
-/**
- * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
- */
     private final @Nullable String onlineReplicationStartTime;
-/**
- * The duration (in hours) to which point the recovery history needs to be maintained.
- */
     private final @Nullable Integer recoveryPointHistoryDurationInHours;
-/**
- * The replication interval.
- */
     private final @Nullable Integer replicationInterval;
 
     @OutputCustomType.Constructor({"activeStorageAccountId","applicationConsistentSnapshotFrequencyInHours","encryption","instanceType","onlineReplicationStartTime","recoveryPointHistoryDurationInHours","replicationInterval"})
@@ -60,46 +38,24 @@ Expected value is 'HyperVReplicaAzure'.
         this.replicationInterval = replicationInterval;
     }
 
-/**
- * The active storage account Id.
- */
     public Optional<String> getActiveStorageAccountId() {
         return Optional.ofNullable(this.activeStorageAccountId);
     }
-/**
- * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
- */
     public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
-/**
- * A value indicating whether encryption is enabled for virtual machines in this cloud.
- */
     public Optional<String> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
-/**
- * Gets the class type. Overridden in derived classes.
-Expected value is 'HyperVReplicaAzure'.
- */
     public String getInstanceType() {
         return this.instanceType;
     }
-/**
- * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
- */
     public Optional<String> getOnlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
-/**
- * The duration (in hours) to which point the recovery history needs to be maintained.
- */
     public Optional<Integer> getRecoveryPointHistoryDurationInHours() {
         return Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
-/**
- * The replication interval.
- */
     public Optional<Integer> getReplicationInterval() {
         return Optional.ofNullable(this.replicationInterval);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListScheduleApplicableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListScheduleApplicableArgs Empty = new ListScheduleApplicableArgs();
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -25,9 +19,6 @@ public final class ListScheduleApplicableArgs extends io.pulumi.resources.Invoke
         return this.labName;
     }
 
-    /**
-     * The name of the schedule.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class ListScheduleApplicableArgs extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

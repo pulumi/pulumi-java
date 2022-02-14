@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
- */
     @EnumType
     public enum GooglePrivacyDlpV2InspectConfigMinLikelihood {
-/**
- * Default value; same as POSSIBLE.
- */
         LikelihoodUnspecified("LIKELIHOOD_UNSPECIFIED"),
-/**
- * Few matching elements.
- */
         VeryUnlikely("VERY_UNLIKELY"),
-/**
- * 
- */
         Unlikely("UNLIKELY"),
-/**
- * Some matching elements.
- */
         Possible("POSSIBLE"),
-/**
- * 
- */
         Likely("LIKELY"),
-/**
- * Many matching elements.
- */
         VeryLikely("VERY_LIKELY");
 
         private final String value;

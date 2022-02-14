@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="configId", required=true)
     private final String configId;
 
@@ -27,9 +21,6 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.configId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -37,9 +28,6 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.serviceName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="view")
     private final @Nullable String view;
 

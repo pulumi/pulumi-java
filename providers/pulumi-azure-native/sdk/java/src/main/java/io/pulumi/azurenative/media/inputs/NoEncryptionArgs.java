@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class for NoEncryption scheme
- */
 public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NoEncryptionArgs Empty = new NoEncryptionArgs();
 
-    /**
-     * Representing supported protocols
-     */
     @InputImport(name="enabledProtocols")
     private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
 

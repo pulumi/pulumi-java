@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutomationRule {
-/**
- * Represents an automation rule.
-API Version: 2019-01-01-preview.
- *
- * Represents an automation rule.
- */
     public static CompletableFuture<GetAutomationRuleResult> invokeAsync(GetAutomationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAutomationRule", TypeShape.of(GetAutomationRuleResult.class), args == null ? GetAutomationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

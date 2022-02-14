@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The batch release criteria.
- */
 public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BatchReleaseCriteriaArgs Empty = new BatchReleaseCriteriaArgs();
 
-    /**
-     * The batch size in bytes.
-     */
     @InputImport(name="batchSize")
     private final @Nullable Input<Integer> batchSize;
 
@@ -28,9 +22,6 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
         return this.batchSize == null ? Input.empty() : this.batchSize;
     }
 
-    /**
-     * The message count.
-     */
     @InputImport(name="messageCount")
     private final @Nullable Input<Integer> messageCount;
 
@@ -38,9 +29,6 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
         return this.messageCount == null ? Input.empty() : this.messageCount;
     }
 
-    /**
-     * The recurrence.
-     */
     @InputImport(name="recurrence")
     private final @Nullable Input<WorkflowTriggerRecurrenceArgs> recurrence;
 

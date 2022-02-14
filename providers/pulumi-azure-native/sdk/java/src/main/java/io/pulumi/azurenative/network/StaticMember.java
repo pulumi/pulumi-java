@@ -15,170 +15,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * StaticMember Item.
-API Version: 2021-05-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### StaticMemberPut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var staticMember = new AzureNative.Network.StaticMember("staticMember", new AzureNative.Network.StaticMemberArgs
-        {
-            NetworkGroupName = "testNetworkGroup",
-            NetworkManagerName = "testNetworkManager",
-            ResourceGroupName = "rg1",
-            ResourceId = "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
-            StaticMemberName = "testStaticMember",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewStaticMember(ctx, "staticMember", &network.StaticMemberArgs{
-			NetworkGroupName:   pulumi.String("testNetworkGroup"),
-			NetworkManagerName: pulumi.String("testNetworkManager"),
-			ResourceGroupName:  pulumi.String("rg1"),
-			ResourceId:         pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1"),
-			StaticMemberName:   pulumi.String("testStaticMember"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const staticMember = new azure_native.network.StaticMember("staticMember", {
-    networkGroupName: "testNetworkGroup",
-    networkManagerName: "testNetworkManager",
-    resourceGroupName: "rg1",
-    resourceId: "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
-    staticMemberName: "testStaticMember",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-static_member = azure_native.network.StaticMember("staticMember",
-    network_group_name="testNetworkGroup",
-    network_manager_name="testNetworkManager",
-    resource_group_name="rg1",
-    resource_id="/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
-    static_member_name="testStaticMember")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:StaticMember testStaticMember /subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testNetworkGroup/staticMembers/testStaticMember 
-```
-
- */
 @ResourceType(type="azure-native:network:StaticMember")
 public class StaticMember extends io.pulumi.resources.CustomResource {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Resource Id.
-     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
-    /**
-     * @return Resource Id.
-     */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
-    /**
-     * The system metadata related to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata related to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StaticMember(String name, StaticMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:StaticMember", name, args == null ? StaticMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -197,14 +66,6 @@ public class StaticMember extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StaticMember get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StaticMember(name, id, options);
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of preferred application group type, default to Desktop Application Group
- */
     @EnumType
     public enum PreferredAppGroupType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Desktop("Desktop"),
-/**
- * 
- */
         RailApplications("RailApplications");
 
         private final String value;

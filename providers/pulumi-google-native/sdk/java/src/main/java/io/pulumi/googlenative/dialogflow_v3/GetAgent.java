@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAgent {
-/**
- * Retrieves the specified agent.
- */
     public static CompletableFuture<GetAgentResult> invokeAsync(GetAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getAgent", TypeShape.of(GetAgentResult.class), args == null ? GetAgentArgs.Empty : args, Utilities.withVersion(options));
     }

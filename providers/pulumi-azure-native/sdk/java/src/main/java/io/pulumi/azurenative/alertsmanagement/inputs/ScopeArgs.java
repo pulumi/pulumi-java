@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Target scope for a given action rule. By default scope will be the subscription. User can also provide list of resource groups or list of resources from the scope subscription as well.
- */
 public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeArgs Empty = new ScopeArgs();
 
-    /**
-     * type of target scope
-     */
     @InputImport(name="scopeType")
     private final @Nullable Input<Either<String,ScopeType>> scopeType;
 
@@ -30,9 +24,6 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopeType == null ? Input.empty() : this.scopeType;
     }
 
-    /**
-     * list of ARM IDs of the given scope type which will be the target of the given action rule.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

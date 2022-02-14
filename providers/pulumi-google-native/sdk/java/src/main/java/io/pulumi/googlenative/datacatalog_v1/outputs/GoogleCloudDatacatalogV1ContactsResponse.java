@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1ContactsResponse {
-/**
- * The list of contact people for the entry.
- */
     private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
     @OutputCustomType.Constructor({"people"})
@@ -20,9 +17,6 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
         this.people = Objects.requireNonNull(people);
     }
 
-/**
- * The list of contact people for the entry.
- */
     public List<GoogleCloudDatacatalogV1ContactsPersonResponse> getPeople() {
         return this.people;
     }

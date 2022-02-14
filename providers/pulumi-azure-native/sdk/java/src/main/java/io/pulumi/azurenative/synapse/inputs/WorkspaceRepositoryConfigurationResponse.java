@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Git integration settings
- */
 public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceRepositoryConfigurationResponse Empty = new WorkspaceRepositoryConfigurationResponse();
 
-    /**
-     * Account name
-     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 
@@ -27,9 +21,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
-    /**
-     * Collaboration branch
-     */
     @InputImport(name="collaborationBranch")
     private final @Nullable String collaborationBranch;
 
@@ -37,9 +28,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.collaborationBranch == null ? Optional.empty() : Optional.ofNullable(this.collaborationBranch);
     }
 
-    /**
-     * GitHub Enterprise host name. For example: https://github.mydomain.com
-     */
     @InputImport(name="hostName")
     private final @Nullable String hostName;
 
@@ -47,9 +35,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
-    /**
-     * The last commit ID
-     */
     @InputImport(name="lastCommitId")
     private final @Nullable String lastCommitId;
 
@@ -57,9 +42,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
     }
 
-    /**
-     * VSTS project name
-     */
     @InputImport(name="projectName")
     private final @Nullable String projectName;
 
@@ -67,9 +49,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.projectName == null ? Optional.empty() : Optional.ofNullable(this.projectName);
     }
 
-    /**
-     * Repository name
-     */
     @InputImport(name="repositoryName")
     private final @Nullable String repositoryName;
 
@@ -77,9 +56,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
     }
 
-    /**
-     * Root folder to use in the repository
-     */
     @InputImport(name="rootFolder")
     private final @Nullable String rootFolder;
 
@@ -87,9 +63,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.rootFolder == null ? Optional.empty() : Optional.ofNullable(this.rootFolder);
     }
 
-    /**
-     * The VSTS tenant ID
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -97,9 +70,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
-    /**
-     * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

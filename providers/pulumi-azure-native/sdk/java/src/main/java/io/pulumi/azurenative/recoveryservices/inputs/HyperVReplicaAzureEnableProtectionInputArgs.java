@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure specific enable protection input.
- */
 public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HyperVReplicaAzureEnableProtectionInputArgs Empty = new HyperVReplicaAzureEnableProtectionInputArgs();
 
-    /**
-     * The list of VHD IDs of disks to be protected.
-     */
     @InputImport(name="disksToInclude")
     private final @Nullable Input<List<String>> disksToInclude;
 
@@ -28,9 +22,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
     }
 
-    /**
-     * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
-     */
     @InputImport(name="enableRdpOnTargetOption")
     private final @Nullable Input<String> enableRdpOnTargetOption;
 
@@ -38,9 +29,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
         return this.enableRdpOnTargetOption == null ? Input.empty() : this.enableRdpOnTargetOption;
     }
 
-    /**
-     * The Hyper-V host Vm Id.
-     */
     @InputImport(name="hvHostVmId")
     private final @Nullable Input<String> hvHostVmId;
 
@@ -48,10 +36,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
         return this.hvHostVmId == null ? Input.empty() : this.hvHostVmId;
     }
 
-    /**
-     * The class type.
-Expected value is 'HyperVReplicaAzure'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -59,9 +43,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The storage account to be used for logging during replication.
-     */
     @InputImport(name="logStorageAccountId")
     private final @Nullable Input<String> logStorageAccountId;
 
@@ -69,9 +50,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.logStorageAccountId == null ? Input.empty() : this.logStorageAccountId;
     }
 
-    /**
-     * The OS type associated with vm.
-     */
     @InputImport(name="osType")
     private final @Nullable Input<String> osType;
 
@@ -79,9 +57,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.osType == null ? Input.empty() : this.osType;
     }
 
-    /**
-     * The availability set ARM Id.
-     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable Input<String> targetAvailabilitySetId;
 
@@ -89,9 +64,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
     }
 
-    /**
-     * The target availability zone.
-     */
     @InputImport(name="targetAvailabilityZone")
     private final @Nullable Input<String> targetAvailabilityZone;
 
@@ -99,9 +71,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
     }
 
-    /**
-     * The selected target Azure network Id.
-     */
     @InputImport(name="targetAzureNetworkId")
     private final @Nullable Input<String> targetAzureNetworkId;
 
@@ -109,9 +78,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAzureNetworkId == null ? Input.empty() : this.targetAzureNetworkId;
     }
 
-    /**
-     * The selected target Azure subnet Id.
-     */
     @InputImport(name="targetAzureSubnetId")
     private final @Nullable Input<String> targetAzureSubnetId;
 
@@ -119,9 +85,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAzureSubnetId == null ? Input.empty() : this.targetAzureSubnetId;
     }
 
-    /**
-     * The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
-     */
     @InputImport(name="targetAzureV1ResourceGroupId")
     private final @Nullable Input<String> targetAzureV1ResourceGroupId;
 
@@ -129,9 +92,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAzureV1ResourceGroupId == null ? Input.empty() : this.targetAzureV1ResourceGroupId;
     }
 
-    /**
-     * The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
-     */
     @InputImport(name="targetAzureV2ResourceGroupId")
     private final @Nullable Input<String> targetAzureV2ResourceGroupId;
 
@@ -139,9 +99,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAzureV2ResourceGroupId == null ? Input.empty() : this.targetAzureV2ResourceGroupId;
     }
 
-    /**
-     * The target azure Vm Name.
-     */
     @InputImport(name="targetAzureVmName")
     private final @Nullable Input<String> targetAzureVmName;
 
@@ -149,9 +106,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetAzureVmName == null ? Input.empty() : this.targetAzureVmName;
     }
 
-    /**
-     * The proximity placement group ARM Id.
-     */
     @InputImport(name="targetProximityPlacementGroupId")
     private final @Nullable Input<String> targetProximityPlacementGroupId;
 
@@ -159,9 +113,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetProximityPlacementGroupId == null ? Input.empty() : this.targetProximityPlacementGroupId;
     }
 
-    /**
-     * The storage account name.
-     */
     @InputImport(name="targetStorageAccountId")
     private final @Nullable Input<String> targetStorageAccountId;
 
@@ -169,9 +120,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetStorageAccountId == null ? Input.empty() : this.targetStorageAccountId;
     }
 
-    /**
-     * The target VM size.
-     */
     @InputImport(name="targetVmSize")
     private final @Nullable Input<String> targetVmSize;
 
@@ -179,9 +127,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
     }
 
-    /**
-     * A value indicating whether managed disks should be used during failover.
-     */
     @InputImport(name="useManagedDisks")
     private final @Nullable Input<String> useManagedDisks;
 
@@ -189,9 +134,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.useManagedDisks == null ? Input.empty() : this.useManagedDisks;
     }
 
-    /**
-     * The OS disk VHD id associated with vm.
-     */
     @InputImport(name="vhdId")
     private final @Nullable Input<String> vhdId;
 
@@ -199,9 +141,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.vhdId == null ? Input.empty() : this.vhdId;
     }
 
-    /**
-     * The Vm Name.
-     */
     @InputImport(name="vmName")
     private final @Nullable Input<String> vmName;
 

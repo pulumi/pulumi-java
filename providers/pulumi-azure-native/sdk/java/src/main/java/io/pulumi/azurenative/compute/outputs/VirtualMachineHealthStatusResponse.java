@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualMachineHealthStatusResponse {
-/**
- * The health status information for the VM.
- */
     private final InstanceViewStatusResponse status;
 
     @OutputCustomType.Constructor({"status"})
@@ -19,9 +16,6 @@ public final class VirtualMachineHealthStatusResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * The health status information for the VM.
- */
     public InstanceViewStatusResponse getStatus() {
         return this.status;
     }

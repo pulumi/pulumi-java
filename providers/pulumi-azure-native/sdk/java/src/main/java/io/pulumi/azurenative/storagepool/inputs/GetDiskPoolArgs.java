@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDiskPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDiskPoolArgs Empty = new GetDiskPoolArgs();
 
-    /**
-     * The name of the Disk pool.
-     */
     @InputImport(name="diskPoolName", required=true)
     private final String diskPoolName;
 
@@ -25,9 +19,6 @@ public final class GetDiskPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.diskPoolName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

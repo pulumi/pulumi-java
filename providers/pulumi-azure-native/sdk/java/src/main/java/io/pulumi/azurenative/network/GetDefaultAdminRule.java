@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultAdminRule {
-/**
- * Network default admin rule.
-API Version: 2021-02-01-preview.
- *
- * Network default admin rule.
- */
     public static CompletableFuture<GetDefaultAdminRuleResult> invokeAsync(GetDefaultAdminRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDefaultAdminRule", TypeShape.of(GetDefaultAdminRuleResult.class), args == null ? GetDefaultAdminRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Ssis project.
- */
 public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisProjectResponse Empty = new SsisProjectResponse();
 
-    /**
-     * Metadata description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -31,9 +25,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Environment reference in project
-     */
     @InputImport(name="environmentRefs")
     private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
 
@@ -41,9 +32,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.environmentRefs == null ? List.of() : this.environmentRefs;
     }
 
-    /**
-     * Folder id which contains project.
-     */
     @InputImport(name="folderId")
     private final @Nullable Double folderId;
 
@@ -51,9 +39,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
     }
 
-    /**
-     * Metadata id.
-     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -61,9 +46,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Metadata name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -71,9 +53,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Parameters in project
-     */
     @InputImport(name="parameters")
     private final @Nullable List<SsisParameterResponse> parameters;
 
@@ -81,10 +60,6 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
-    /**
-     * The type of SSIS object metadata.
-Expected value is 'Project'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -92,9 +67,6 @@ Expected value is 'Project'.
         return this.type;
     }
 
-    /**
-     * Project version.
-     */
     @InputImport(name="version")
     private final @Nullable Double version;
 

@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A unit of data that is returned by the DNS servers.
- */
 public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceRecordSetResponse Empty = new ResourceRecordSetResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -28,9 +22,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
         return this.kind;
     }
 
-    /**
-     * For example, www.example.com.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,9 +29,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
-    /**
-     * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
-     */
     @InputImport(name="routingPolicy", required=true)
     private final RRSetRoutingPolicyResponse routingPolicy;
 
@@ -48,9 +36,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
         return this.routingPolicy;
     }
 
-    /**
-     * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
-     */
     @InputImport(name="rrdatas", required=true)
     private final List<String> rrdatas;
 
@@ -58,9 +43,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
         return this.rrdatas;
     }
 
-    /**
-     * As defined in RFC 4034 (section 3.2).
-     */
     @InputImport(name="signatureRrdatas", required=true)
     private final List<String> signatureRrdatas;
 
@@ -68,9 +50,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
         return this.signatureRrdatas;
     }
 
-    /**
-     * Number of seconds that this ResourceRecordSet can be cached by resolvers.
-     */
     @InputImport(name="ttl", required=true)
     private final Integer ttl;
 
@@ -78,9 +57,6 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
         return this.ttl;
     }
 
-    /**
-     * The identifier of a supported record type. See the list of Supported DNS record types.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

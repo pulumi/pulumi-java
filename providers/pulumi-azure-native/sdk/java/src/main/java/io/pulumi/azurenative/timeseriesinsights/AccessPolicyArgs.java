@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyArgs Empty = new AccessPolicyArgs();
 
-    /**
-     * Name of the access policy.
-     */
     @InputImport(name="accessPolicyName")
     private final @Nullable Input<String> accessPolicyName;
 
@@ -30,9 +24,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPolicyName == null ? Input.empty() : this.accessPolicyName;
     }
 
-    /**
-     * An description of the access policy.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The name of the Time Series Insights environment associated with the specified resource group.
-     */
     @InputImport(name="environmentName", required=true)
     private final Input<String> environmentName;
 
@@ -50,9 +38,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentName;
     }
 
-    /**
-     * The objectId of the principal in Azure Active Directory.
-     */
     @InputImport(name="principalObjectId")
     private final @Nullable Input<String> principalObjectId;
 
@@ -60,9 +45,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalObjectId == null ? Input.empty() : this.principalObjectId;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,9 +52,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The list of roles the principal is assigned on the environment.
-     */
     @InputImport(name="roles")
     private final @Nullable Input<List<Either<String,AccessPolicyRole>>> roles;
 

@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PersistenceResponse {
-/**
- * Sets whether AOF is enabled.
- */
     private final @Nullable Boolean aofEnabled;
-/**
- * Sets the frequency at which data is written to disk.
- */
     private final @Nullable String aofFrequency;
-/**
- * Sets whether RDB is enabled.
- */
     private final @Nullable Boolean rdbEnabled;
-/**
- * Sets the frequency at which a snapshot of the database is created.
- */
     private final @Nullable String rdbFrequency;
 
     @OutputCustomType.Constructor({"aofEnabled","aofFrequency","rdbEnabled","rdbFrequency"})
@@ -41,27 +29,15 @@ public final class PersistenceResponse {
         this.rdbFrequency = rdbFrequency;
     }
 
-/**
- * Sets whether AOF is enabled.
- */
     public Optional<Boolean> getAofEnabled() {
         return Optional.ofNullable(this.aofEnabled);
     }
-/**
- * Sets the frequency at which data is written to disk.
- */
     public Optional<String> getAofFrequency() {
         return Optional.ofNullable(this.aofFrequency);
     }
-/**
- * Sets whether RDB is enabled.
- */
     public Optional<Boolean> getRdbEnabled() {
         return Optional.ofNullable(this.rdbEnabled);
     }
-/**
- * Sets the frequency at which a snapshot of the database is created.
- */
     public Optional<String> getRdbFrequency() {
         return Optional.ofNullable(this.rdbFrequency);
     }

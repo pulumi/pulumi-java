@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The disk type.
- */
     @EnumType
     public enum DiskAccountType {
-/**
- * 
- */
         Standard_LRS("Standard_LRS"),
-/**
- * 
- */
         Premium_LRS("Premium_LRS"),
-/**
- * 
- */
         StandardSSD_LRS("StandardSSD_LRS");
 
         private final String value;

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a cloud service IP Configuration
- */
 public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerFrontendIPConfigurationPropertiesArgs Empty = new LoadBalancerFrontendIPConfigurationPropertiesArgs();
 
-    /**
-     * The virtual network private IP address of the IP configuration.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -28,9 +22,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
-    /**
-     * The reference to the public ip address resource.
-     */
     @InputImport(name="publicIPAddress")
     private final @Nullable Input<SubResourceArgs> publicIPAddress;
 
@@ -38,9 +29,6 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends io.
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
     }
 
-    /**
-     * The reference to the virtual network subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubResourceArgs> subnet;
 

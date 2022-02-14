@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobRecurrenceResponse Empty = new JobRecurrenceResponse();
 
-    /**
-     * Gets or sets the maximum number of times that the job should run.
-     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -29,9 +23,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
-    /**
-     * Gets or sets the time at which the job will complete.
-     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -39,9 +30,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
-    /**
-     * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
-     */
     @InputImport(name="frequency")
     private final @Nullable String frequency;
 
@@ -49,9 +37,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
-    /**
-     * Gets or sets the interval between retries.
-     */
     @InputImport(name="interval")
     private final @Nullable Integer interval;
 
@@ -59,9 +44,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="schedule")
     private final @Nullable JobRecurrenceScheduleResponse schedule;
 

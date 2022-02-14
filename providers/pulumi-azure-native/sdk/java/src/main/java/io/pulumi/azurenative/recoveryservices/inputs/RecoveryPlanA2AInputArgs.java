@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Recovery plan A2A input.
- */
 public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecoveryPlanA2AInputArgs Empty = new RecoveryPlanA2AInputArgs();
 
-    /**
-     * Gets the Instance type.
-Expected value is 'A2A'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -28,9 +21,6 @@ Expected value is 'A2A'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The primary zone.
-     */
     @InputImport(name="primaryZone")
     private final @Nullable Input<String> primaryZone;
 
@@ -38,9 +28,6 @@ Expected value is 'A2A'.
         return this.primaryZone == null ? Input.empty() : this.primaryZone;
     }
 
-    /**
-     * The recovery zone.
-     */
     @InputImport(name="recoveryZone")
     private final @Nullable Input<String> recoveryZone;
 

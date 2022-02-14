@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadTest {
-/**
- * LoadTest details
-API Version: 2021-12-01-preview.
- *
- * LoadTest details
- */
     public static CompletableFuture<GetLoadTestResult> invokeAsync(GetLoadTestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:loadtestservice:getLoadTest", TypeShape.of(GetLoadTestResult.class), args == null ? GetLoadTestArgs.Empty : args, Utilities.withVersion(options));
     }

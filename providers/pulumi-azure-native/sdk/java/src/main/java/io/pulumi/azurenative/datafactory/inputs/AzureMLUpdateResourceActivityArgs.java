@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure ML Update Resource management activity.
- */
 public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMLUpdateResourceActivityArgs Empty = new AzureMLUpdateResourceActivityArgs();
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -33,9 +27,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,9 +34,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -53,9 +41,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -63,9 +48,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -73,9 +55,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.policy == null ? Input.empty() : this.policy;
     }
 
-    /**
-     * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
-     */
     @InputImport(name="trainedModelFilePath", required=true)
     private final Input<Object> trainedModelFilePath;
 
@@ -83,9 +62,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.trainedModelFilePath;
     }
 
-    /**
-     * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
-     */
     @InputImport(name="trainedModelLinkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> trainedModelLinkedServiceName;
 
@@ -93,9 +69,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.trainedModelLinkedServiceName;
     }
 
-    /**
-     * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="trainedModelName", required=true)
     private final Input<Object> trainedModelName;
 
@@ -103,10 +76,6 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
         return this.trainedModelName;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'AzureMLUpdateResource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -114,9 +83,6 @@ Expected value is 'AzureMLUpdateResource'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

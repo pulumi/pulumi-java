@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Metadata for a BigQuery connector used by the job.
- */
 public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BigQueryIODetailsArgs Empty = new BigQueryIODetailsArgs();
 
-    /**
-     * Dataset accessed in the connection.
-     */
     @InputImport(name="dataset")
     private final @Nullable Input<String> dataset;
 
@@ -27,9 +21,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
-    /**
-     * Project accessed in the connection.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -37,9 +28,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Query used to access data in the connection.
-     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 
@@ -47,9 +35,6 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
         return this.query == null ? Input.empty() : this.query;
     }
 
-    /**
-     * Table accessed in the connection.
-     */
     @InputImport(name="table")
     private final @Nullable Input<String> table;
 

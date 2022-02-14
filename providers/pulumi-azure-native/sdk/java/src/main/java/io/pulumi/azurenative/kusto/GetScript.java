@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScript {
-/**
- * Class representing a database script.
-API Version: 2021-01-01.
- *
- * Class representing a database script.
- */
     public static CompletableFuture<GetScriptResult> invokeAsync(GetScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getScript", TypeShape.of(GetScriptResult.class), args == null ? GetScriptArgs.Empty : args, Utilities.withVersion(options));
     }

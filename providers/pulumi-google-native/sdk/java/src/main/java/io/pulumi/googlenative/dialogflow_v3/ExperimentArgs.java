@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentId", required=true)
     private final Input<String> agentId;
 
@@ -34,9 +28,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
-    /**
-     * Creation time of this experiment.
-     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -44,9 +35,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
-    /**
-     * The definition of the experiment.
-     */
     @InputImport(name="definition")
     private final @Nullable Input<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition;
 
@@ -54,9 +42,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition == null ? Input.empty() : this.definition;
     }
 
-    /**
-     * The human-readable description of the experiment.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -64,9 +49,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -74,9 +56,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * End time of this experiment.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -84,9 +63,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -94,9 +70,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
-    /**
-     * Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
-     */
     @InputImport(name="experimentLength")
     private final @Nullable Input<String> experimentLength;
 
@@ -104,9 +77,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.experimentLength == null ? Input.empty() : this.experimentLength;
     }
 
-    /**
-     * Last update time of this experiment.
-     */
     @InputImport(name="lastUpdateTime")
     private final @Nullable Input<String> lastUpdateTime;
 
@@ -114,9 +84,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -124,9 +91,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -134,9 +98,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -144,9 +105,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Inference result of the experiment.
-     */
     @InputImport(name="result")
     private final @Nullable Input<GoogleCloudDialogflowCxV3ExperimentResultArgs> result;
 
@@ -154,9 +112,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.result == null ? Input.empty() : this.result;
     }
 
-    /**
-     * The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
-     */
     @InputImport(name="rolloutConfig")
     private final @Nullable Input<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig;
 
@@ -164,9 +119,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.rolloutConfig == null ? Input.empty() : this.rolloutConfig;
     }
 
-    /**
-     * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
-     */
     @InputImport(name="rolloutFailureReason")
     private final @Nullable Input<String> rolloutFailureReason;
 
@@ -174,9 +126,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.rolloutFailureReason == null ? Input.empty() : this.rolloutFailureReason;
     }
 
-    /**
-     * State of the auto rollout process.
-     */
     @InputImport(name="rolloutState")
     private final @Nullable Input<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState;
 
@@ -184,9 +133,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.rolloutState == null ? Input.empty() : this.rolloutState;
     }
 
-    /**
-     * Start time of this experiment.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -194,9 +140,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
-     */
     @InputImport(name="state")
     private final @Nullable Input<ExperimentState> state;
 
@@ -204,9 +147,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
-    /**
-     * The history of updates to the experiment variants.
-     */
     @InputImport(name="variantsHistory")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory;
 

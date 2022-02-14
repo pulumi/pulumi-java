@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional information of the container.
- */
 public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MabContainerExtendedInfoResponse Empty = new MabContainerExtendedInfoResponse();
 
-    /**
-     * Type of backup items associated with this container.
-     */
     @InputImport(name="backupItemType")
     private final @Nullable String backupItemType;
 
@@ -28,9 +22,6 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
         return this.backupItemType == null ? Optional.empty() : Optional.ofNullable(this.backupItemType);
     }
 
-    /**
-     * List of backup items associated with this container.
-     */
     @InputImport(name="backupItems")
     private final @Nullable List<String> backupItems;
 
@@ -38,9 +29,6 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
         return this.backupItems == null ? List.of() : this.backupItems;
     }
 
-    /**
-     * Latest backup status of this container.
-     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable String lastBackupStatus;
 
@@ -48,9 +36,6 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
     }
 
-    /**
-     * Time stamp when this container was refreshed.
-     */
     @InputImport(name="lastRefreshedAt")
     private final @Nullable String lastRefreshedAt;
 
@@ -58,9 +43,6 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
     }
 
-    /**
-     * Backup policy associated with this container.
-     */
     @InputImport(name="policyName")
     private final @Nullable String policyName;
 

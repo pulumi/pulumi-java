@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScaleResponse {
-/**
- * Optional. Maximum number of container replicas. Defaults to 10 if not set.
- */
     private final @Nullable Integer maxReplicas;
-/**
- * Optional. Minimum number of container replicas.
- */
     private final @Nullable Integer minReplicas;
-/**
- * Scaling rules.
- */
     private final @Nullable List<ScaleRuleResponse> rules;
 
     @OutputCustomType.Constructor({"maxReplicas","minReplicas","rules"})
@@ -36,21 +27,12 @@ public final class ScaleResponse {
         this.rules = rules;
     }
 
-/**
- * Optional. Maximum number of container replicas. Defaults to 10 if not set.
- */
     public Optional<Integer> getMaxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
-/**
- * Optional. Minimum number of container replicas.
- */
     public Optional<Integer> getMinReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
-/**
- * Scaling rules.
- */
     public List<ScaleRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

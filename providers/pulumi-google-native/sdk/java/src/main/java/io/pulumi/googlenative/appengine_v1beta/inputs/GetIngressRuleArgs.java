@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetIngressRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIngressRuleArgs Empty = new GetIngressRuleArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -25,9 +19,6 @@ public final class GetIngressRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.appId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="ingressRuleId", required=true)
     private final String ingressRuleId;
 

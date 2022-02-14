@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for a single version.
- */
 public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretVersionResponse Empty = new SecretVersionResponse();
 
-    /**
-     * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as '/etc/secrets' and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -25,9 +19,6 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
         return this.path;
     }
 
-    /**
-     * Version of the secret (version number or the string 'latest'). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

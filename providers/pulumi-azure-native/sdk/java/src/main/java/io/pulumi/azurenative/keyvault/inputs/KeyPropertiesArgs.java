@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the key.
- */
 public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyPropertiesArgs Empty = new KeyPropertiesArgs();
 
-    /**
-     * The attributes of the key.
-     */
     @InputImport(name="attributes")
     private final @Nullable Input<KeyAttributesArgs> attributes;
 
@@ -34,9 +28,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
-    /**
-     * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
-     */
     @InputImport(name="curveName")
     private final @Nullable Input<Either<String,JsonWebKeyCurveName>> curveName;
 
@@ -44,9 +35,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.curveName == null ? Input.empty() : this.curveName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="keyOps")
     private final @Nullable Input<List<Either<String,JsonWebKeyOperation>>> keyOps;
 
@@ -54,9 +42,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyOps == null ? Input.empty() : this.keyOps;
     }
 
-    /**
-     * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
-     */
     @InputImport(name="keySize")
     private final @Nullable Input<Integer> keySize;
 
@@ -64,9 +49,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.keySize == null ? Input.empty() : this.keySize;
     }
 
-    /**
-     * The type of the key. For valid values, see JsonWebKeyType.
-     */
     @InputImport(name="kty")
     private final @Nullable Input<Either<String,JsonWebKeyType>> kty;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VMExtensionArgs Empty = new VMExtensionArgs();
 
-    /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -30,9 +24,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -40,9 +31,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. 
-     */
     @InputImport(name="protectedSettings")
     private final @Nullable Input<Object> protectedSettings;
 
@@ -50,9 +38,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
     }
 
-    /**
-     * Collection of extension names after which this extension needs to be provisioned.
-     */
     @InputImport(name="provisionAfterExtensions")
     private final @Nullable Input<List<String>> provisionAfterExtensions;
 
@@ -60,9 +45,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisionAfterExtensions == null ? Input.empty() : this.provisionAfterExtensions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="publisher", required=true)
     private final Input<String> publisher;
 
@@ -70,9 +52,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisher;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="settings")
     private final @Nullable Input<Object> settings;
 
@@ -80,9 +59,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.settings == null ? Input.empty() : this.settings;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -90,9 +66,6 @@ public final class VMExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable Input<String> typeHandlerVersion;
 

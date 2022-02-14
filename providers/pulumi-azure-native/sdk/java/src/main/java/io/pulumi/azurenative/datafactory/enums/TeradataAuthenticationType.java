@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * AuthenticationType to be used for connection.
- */
     @EnumType
     public enum TeradataAuthenticationType {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Windows("Windows");
 
         private final String value;

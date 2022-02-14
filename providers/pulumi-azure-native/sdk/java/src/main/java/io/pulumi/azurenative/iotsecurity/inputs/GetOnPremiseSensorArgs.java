@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetOnPremiseSensorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOnPremiseSensorArgs Empty = new GetOnPremiseSensorArgs();
 
-    /**
-     * Name of the on-premise IoT sensor
-     */
     @InputImport(name="onPremiseSensorName", required=true)
     private final String onPremiseSensorName;
 

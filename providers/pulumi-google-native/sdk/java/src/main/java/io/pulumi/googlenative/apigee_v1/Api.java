@@ -15,78 +15,39 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Creates an API proxy. The API proxy created will not be accessible at runtime until it is deployed to an environment. Create a new API proxy by setting the `name` query parameter to the name of the API proxy. Import an API proxy configuration bundle stored in zip format on your local machine to your organization by doing the following: * Set the `name` query parameter to the name of the API proxy. * Set the `action` query parameter to `import`. * Set the `Content-Type` header to `multipart/form-data`. * Pass as a file the name of API proxy configuration bundle stored in zip format on your local machine using the `file` form field. **Note**: To validate the API proxy configuration bundle only without importing it, set the `action` query parameter to `validate`. When importing an API proxy configuration bundle, if the API proxy does not exist, it will be created. If the API proxy exists, then a new revision is created. Invalid API proxy configurations are rejected, and a list of validation errors is returned to the client.
- */
 @ResourceType(type="google-native:apigee/v1:Api")
 public class Api extends io.pulumi.resources.CustomResource {
-    /**
-     * User labels applied to this API Proxy.
-     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
-    /**
-     * @return User labels applied to this API Proxy.
-     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
-    /**
-     * The id of the most recently created revision for this api proxy.
-     */
     @OutputExport(name="latestRevisionId", type=String.class, parameters={})
     private Output<String> latestRevisionId;
 
-    /**
-     * @return The id of the most recently created revision for this api proxy.
-     */
     public Output<String> getLatestRevisionId() {
         return this.latestRevisionId;
     }
-    /**
-     * Metadata describing the API proxy.
-     */
     @OutputExport(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData;
 
-    /**
-     * @return Metadata describing the API proxy.
-     */
     public Output<GoogleCloudApigeeV1EntityMetadataResponse> getMetaData() {
         return this.metaData;
     }
-    /**
-     * Name of the API proxy.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the API proxy.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of revisons defined for the API proxy.
-     */
     @OutputExport(name="revision", type=List.class, parameters={String.class})
     private Output<List<String>> revision;
 
-    /**
-     * @return List of revisons defined for the API proxy.
-     */
     public Output<List<String>> getRevision() {
         return this.revision;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Api(String name, ApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -102,14 +63,6 @@ public class Api extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Api get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Api(name, id, options);
     }

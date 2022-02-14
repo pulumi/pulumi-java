@@ -31,475 +31,237 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Deploys code and resource files to a new version.
-Auto-naming is currently not supported for this resource.
- */
 @ResourceType(type="google-native:appengine/v1beta:Version")
 public class Version extends io.pulumi.resources.CustomResource {
-    /**
-     * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="apiConfig", type=ApiConfigHandlerResponse.class, parameters={})
     private Output<ApiConfigHandlerResponse> apiConfig;
 
-    /**
-     * @return Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
-     */
     public Output<ApiConfigHandlerResponse> getApiConfig() {
         return this.apiConfig;
     }
-    /**
-     * app_engine_apis allows second generation runtimes to access the App Engine APIs.
-     */
     @OutputExport(name="appEngineApis", type=Boolean.class, parameters={})
     private Output<Boolean> appEngineApis;
 
-    /**
-     * @return app_engine_apis allows second generation runtimes to access the App Engine APIs.
-     */
     public Output<Boolean> getAppEngineApis() {
         return this.appEngineApis;
     }
-    /**
-     * Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
-     */
     @OutputExport(name="automaticScaling", type=AutomaticScalingResponse.class, parameters={})
     private Output<AutomaticScalingResponse> automaticScaling;
 
-    /**
-     * @return Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
-     */
     public Output<AutomaticScalingResponse> getAutomaticScaling() {
         return this.automaticScaling;
     }
-    /**
-     * A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
-     */
     @OutputExport(name="basicScaling", type=BasicScalingResponse.class, parameters={})
     private Output<BasicScalingResponse> basicScaling;
 
-    /**
-     * @return A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
-     */
     public Output<BasicScalingResponse> getBasicScaling() {
         return this.basicScaling;
     }
-    /**
-     * Metadata settings that are supplied to this version to enable beta runtime features.
-     */
     @OutputExport(name="betaSettings", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> betaSettings;
 
-    /**
-     * @return Metadata settings that are supplied to this version to enable beta runtime features.
-     */
     public Output<Map<String,String>> getBetaSettings() {
         return this.betaSettings;
     }
-    /**
-     * Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="buildEnvVariables", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> buildEnvVariables;
 
-    /**
-     * @return Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
-     */
     public Output<Map<String,String>> getBuildEnvVariables() {
         return this.buildEnvVariables;
     }
-    /**
-     * Time that this version was created.
-     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    /**
-     * @return Time that this version was created.
-     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    /**
-     * Email address of the user who created this version.
-     */
     @OutputExport(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
-    /**
-     * @return Email address of the user who created this version.
-     */
     public Output<String> getCreatedBy() {
         return this.createdBy;
     }
-    /**
-     * Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="defaultExpiration", type=String.class, parameters={})
     private Output<String> defaultExpiration;
 
-    /**
-     * @return Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
-     */
     public Output<String> getDefaultExpiration() {
         return this.defaultExpiration;
     }
-    /**
-     * Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="deployment", type=DeploymentResponse.class, parameters={})
     private Output<DeploymentResponse> deployment;
 
-    /**
-     * @return Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
-     */
     public Output<DeploymentResponse> getDeployment() {
         return this.deployment;
     }
-    /**
-     * Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
-     */
     @OutputExport(name="diskUsageBytes", type=String.class, parameters={})
     private Output<String> diskUsageBytes;
 
-    /**
-     * @return Total size in bytes of all the files that are included in this version and currently hosted on the App Engine disk.
-     */
     public Output<String> getDiskUsageBytes() {
         return this.diskUsageBytes;
     }
-    /**
-     * Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
-     */
     @OutputExport(name="endpointsApiService", type=EndpointsApiServiceResponse.class, parameters={})
     private Output<EndpointsApiServiceResponse> endpointsApiService;
 
-    /**
-     * @return Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
-     */
     public Output<EndpointsApiServiceResponse> getEndpointsApiService() {
         return this.endpointsApiService;
     }
-    /**
-     * The entrypoint for the application.
-     */
     @OutputExport(name="entrypoint", type=EntrypointResponse.class, parameters={})
     private Output<EntrypointResponse> entrypoint;
 
-    /**
-     * @return The entrypoint for the application.
-     */
     public Output<EntrypointResponse> getEntrypoint() {
         return this.entrypoint;
     }
-    /**
-     * App Engine execution environment for this version.Defaults to standard.
-     */
     @OutputExport(name="env", type=String.class, parameters={})
     private Output<String> env;
 
-    /**
-     * @return App Engine execution environment for this version.Defaults to standard.
-     */
     public Output<String> getEnv() {
         return this.env;
     }
-    /**
-     * Environment variables available to the application.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="envVariables", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> envVariables;
 
-    /**
-     * @return Environment variables available to the application.Only returned in GET requests if view=FULL is set.
-     */
     public Output<Map<String,String>> getEnvVariables() {
         return this.envVariables;
     }
-    /**
-     * Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="errorHandlers", type=List.class, parameters={ErrorHandlerResponse.class})
     private Output<List<ErrorHandlerResponse>> errorHandlers;
 
-    /**
-     * @return Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
-     */
     public Output<List<ErrorHandlerResponse>> getErrorHandlers() {
         return this.errorHandlers;
     }
-    /**
-     * An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="handlers", type=List.class, parameters={UrlMapResponse.class})
     private Output<List<UrlMapResponse>> handlers;
 
-    /**
-     * @return An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
-     */
     public Output<List<UrlMapResponse>> getHandlers() {
         return this.handlers;
     }
-    /**
-     * Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="healthCheck", type=HealthCheckResponse.class, parameters={})
     private Output<HealthCheckResponse> healthCheck;
 
-    /**
-     * @return Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
-     */
     public Output<HealthCheckResponse> getHealthCheck() {
         return this.healthCheck;
     }
-    /**
-     * Before an application can receive email or XMPP messages, the application must be configured to enable the service.
-     */
     @OutputExport(name="inboundServices", type=List.class, parameters={String.class})
     private Output<List<String>> inboundServices;
 
-    /**
-     * @return Before an application can receive email or XMPP messages, the application must be configured to enable the service.
-     */
     public Output<List<String>> getInboundServices() {
         return this.inboundServices;
     }
-    /**
-     * Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
-     */
     @OutputExport(name="instanceClass", type=String.class, parameters={})
     private Output<String> instanceClass;
 
-    /**
-     * @return Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
-     */
     public Output<String> getInstanceClass() {
         return this.instanceClass;
     }
-    /**
-     * Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="libraries", type=List.class, parameters={LibraryResponse.class})
     private Output<List<LibraryResponse>> libraries;
 
-    /**
-     * @return Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
-     */
     public Output<List<LibraryResponse>> getLibraries() {
         return this.libraries;
     }
-    /**
-     * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="livenessCheck", type=LivenessCheckResponse.class, parameters={})
     private Output<LivenessCheckResponse> livenessCheck;
 
-    /**
-     * @return Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
-     */
     public Output<LivenessCheckResponse> getLivenessCheck() {
         return this.livenessCheck;
     }
-    /**
-     * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
-     */
     @OutputExport(name="manualScaling", type=ManualScalingResponse.class, parameters={})
     private Output<ManualScalingResponse> manualScaling;
 
-    /**
-     * @return A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
-     */
     public Output<ManualScalingResponse> getManualScaling() {
         return this.manualScaling;
     }
-    /**
-     * Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Full path to the Version resource in the API. Example: apps/myapp/services/default/versions/v1.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Extra network settings. Only applicable in the App Engine flexible environment.
-     */
     @OutputExport(name="network", type=NetworkResponse.class, parameters={})
     private Output<NetworkResponse> network;
 
-    /**
-     * @return Extra network settings. Only applicable in the App Engine flexible environment.
-     */
     public Output<NetworkResponse> getNetwork() {
         return this.network;
     }
-    /**
-     * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="nobuildFilesRegex", type=String.class, parameters={})
     private Output<String> nobuildFilesRegex;
 
-    /**
-     * @return Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
-     */
     public Output<String> getNobuildFilesRegex() {
         return this.nobuildFilesRegex;
     }
-    /**
-     * Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
-     */
     @OutputExport(name="readinessCheck", type=ReadinessCheckResponse.class, parameters={})
     private Output<ReadinessCheckResponse> readinessCheck;
 
-    /**
-     * @return Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
-     */
     public Output<ReadinessCheckResponse> getReadinessCheck() {
         return this.readinessCheck;
     }
-    /**
-     * Machine resources for this version. Only applicable in the App Engine flexible environment.
-     */
     @OutputExport(name="resources", type=ResourcesResponse.class, parameters={})
     private Output<ResourcesResponse> resources;
 
-    /**
-     * @return Machine resources for this version. Only applicable in the App Engine flexible environment.
-     */
     public Output<ResourcesResponse> getResources() {
         return this.resources;
     }
-    /**
-     * Desired runtime. Example: python27.
-     */
     @OutputExport(name="runtime", type=String.class, parameters={})
     private Output<String> runtime;
 
-    /**
-     * @return Desired runtime. Example: python27.
-     */
     public Output<String> getRuntime() {
         return this.runtime;
     }
-    /**
-     * The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
-     */
     @OutputExport(name="runtimeApiVersion", type=String.class, parameters={})
     private Output<String> runtimeApiVersion;
 
-    /**
-     * @return The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
-     */
     public Output<String> getRuntimeApiVersion() {
         return this.runtimeApiVersion;
     }
-    /**
-     * The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
-     */
     @OutputExport(name="runtimeChannel", type=String.class, parameters={})
     private Output<String> runtimeChannel;
 
-    /**
-     * @return The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
-     */
     public Output<String> getRuntimeChannel() {
         return this.runtimeChannel;
     }
-    /**
-     * The path or name of the app's main executable.
-     */
     @OutputExport(name="runtimeMainExecutablePath", type=String.class, parameters={})
     private Output<String> runtimeMainExecutablePath;
 
-    /**
-     * @return The path or name of the app's main executable.
-     */
     public Output<String> getRuntimeMainExecutablePath() {
         return this.runtimeMainExecutablePath;
     }
-    /**
-     * The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
-     */
     @OutputExport(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
-    /**
-     * @return The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
-     */
     public Output<String> getServiceAccount() {
         return this.serviceAccount;
     }
-    /**
-     * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
-     */
     @OutputExport(name="servingStatus", type=String.class, parameters={})
     private Output<String> servingStatus;
 
-    /**
-     * @return Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
-     */
     public Output<String> getServingStatus() {
         return this.servingStatus;
     }
-    /**
-     * Whether multiple requests can be dispatched to this version at once.
-     */
     @OutputExport(name="threadsafe", type=Boolean.class, parameters={})
     private Output<Boolean> threadsafe;
 
-    /**
-     * @return Whether multiple requests can be dispatched to this version at once.
-     */
     public Output<Boolean> getThreadsafe() {
         return this.threadsafe;
     }
-    /**
-     * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
-     */
     @OutputExport(name="versionUrl", type=String.class, parameters={})
     private Output<String> versionUrl;
 
-    /**
-     * @return Serving URL for this version. Example: "https://myversion-dot-myservice-dot-myapp.appspot.com"
-     */
     public Output<String> getVersionUrl() {
         return this.versionUrl;
     }
-    /**
-     * Whether to deploy this version in a container on a virtual machine.
-     */
     @OutputExport(name="vm", type=Boolean.class, parameters={})
     private Output<Boolean> vm;
 
-    /**
-     * @return Whether to deploy this version in a container on a virtual machine.
-     */
     public Output<Boolean> getVm() {
         return this.vm;
     }
-    /**
-     * Enables VPC connectivity for standard apps.
-     */
     @OutputExport(name="vpcAccessConnector", type=VpcAccessConnectorResponse.class, parameters={})
     private Output<VpcAccessConnectorResponse> vpcAccessConnector;
 
-    /**
-     * @return Enables VPC connectivity for standard apps.
-     */
     public Output<VpcAccessConnectorResponse> getVpcAccessConnector() {
         return this.vpcAccessConnector;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Version(String name, VersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:appengine/v1beta:Version", name, args == null ? VersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -515,14 +277,6 @@ public class Version extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Version get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Version(name, id, options);
     }

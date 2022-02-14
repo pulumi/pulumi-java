@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Different types of filters supported and its values.
- */
 public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterableProperty Empty = new FilterableProperty();
 
-    /**
-     * Values to be filtered.
-     */
     @InputImport(name="supportedValues", required=true)
     private final List<String> supportedValues;
 
@@ -28,9 +22,6 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
         return this.supportedValues;
     }
 
-    /**
-     * Type of product filter.
-     */
     @InputImport(name="type", required=true)
     private final Either<String,SupportedFilterTypes> type;
 

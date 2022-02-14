@@ -17,309 +17,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Job Definition.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### JobDefinitions_CreateOrUpdatePUT83
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var jobDefinition = new AzureNative.HybridData.JobDefinition("jobDefinition", new AzureNative.HybridData.JobDefinitionArgs
-        {
-            DataManagerName = "TestAzureSDKOperations",
-            DataServiceInput = 
-            {
-                { "AzureStorageType", "Blob" },
-                { "BackupChoice", "UseExistingLatest" },
-                { "ContainerName", "containerfromtest" },
-                { "DeviceName", "8600-SHG0997877L71FC" },
-                { "FileNameFilter", "*" },
-                { "IsDirectoryMode", false },
-                { "RootDirectories", 
-                {
-                    "\\",
-                } },
-                { "VolumeNames", 
-                {
-                    "TestAutomation",
-                } },
-            },
-            DataServiceName = "DataTransformation",
-            DataSinkId = "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1",
-            DataSourceId = "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1",
-            JobDefinitionName = "jobdeffromtestcode1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            RunLocation = "westus",
-            State = "Enabled",
-            UserConfirmation = "Required",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	hybriddata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybriddata"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hybriddata.NewJobDefinition(ctx, "jobDefinition", &hybriddata.JobDefinitionArgs{
-			DataManagerName: pulumi.String("TestAzureSDKOperations"),
-			DataServiceInput: pulumi.Any{
-				AzureStorageType: "Blob",
-				BackupChoice:     "UseExistingLatest",
-				ContainerName:    "containerfromtest",
-				DeviceName:       "8600-SHG0997877L71FC",
-				FileNameFilter:   "*",
-				IsDirectoryMode:  false,
-				RootDirectories: []string{
-					"\\",
-				},
-				VolumeNames: []string{
-					"TestAutomation",
-				},
-			},
-			DataServiceName:   pulumi.String("DataTransformation"),
-			DataSinkId:        pulumi.String("/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1"),
-			DataSourceId:      pulumi.String("/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1"),
-			JobDefinitionName: pulumi.String("jobdeffromtestcode1"),
-			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
-			RunLocation:       "westus",
-			State:             "Enabled",
-			UserConfirmation:  "Required",
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition", {
-    dataManagerName: "TestAzureSDKOperations",
-    dataServiceInput: {
-        AzureStorageType: "Blob",
-        BackupChoice: "UseExistingLatest",
-        ContainerName: "containerfromtest",
-        DeviceName: "8600-SHG0997877L71FC",
-        FileNameFilter: "*",
-        IsDirectoryMode: false,
-        RootDirectories: ["\\"],
-        VolumeNames: ["TestAutomation"],
-    },
-    dataServiceName: "DataTransformation",
-    dataSinkId: "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1",
-    dataSourceId: "/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1",
-    jobDefinitionName: "jobdeffromtestcode1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    runLocation: "westus",
-    state: "Enabled",
-    userConfirmation: "Required",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-job_definition = azure_native.hybriddata.JobDefinition("jobDefinition",
-    data_manager_name="TestAzureSDKOperations",
-    data_service_input={
-        "AzureStorageType": "Blob",
-        "BackupChoice": "UseExistingLatest",
-        "ContainerName": "containerfromtest",
-        "DeviceName": "8600-SHG0997877L71FC",
-        "FileNameFilter": "*",
-        "IsDirectoryMode": False,
-        "RootDirectories": ["\\"],
-        "VolumeNames": ["TestAutomation"],
-    },
-    data_service_name="DataTransformation",
-    data_sink_id="/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestAzureStorage1",
-    data_source_id="/subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataStores/TestStorSimpleSource1",
-    job_definition_name="jobdeffromtestcode1",
-    resource_group_name="ResourceGroupForSDKTest",
-    run_location="westus",
-    state="Enabled",
-    user_confirmation="Required")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:hybriddata:JobDefinition jobdeffromtestcode1 /subscriptions/6e0219f5-327a-4365-904f-05eed4227ad7/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.HybridData/dataManagers/TestAzureSDKOperations/dataServices/DataTransformation/jobDefinitions/jobdeffromtestcode1 
-```
-
- */
 @ResourceType(type="azure-native:hybriddata:JobDefinition")
 public class JobDefinition extends io.pulumi.resources.CustomResource {
-    /**
-     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-     */
     @OutputExport(name="customerSecrets", type=List.class, parameters={CustomerSecretResponse.class})
     private Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets;
 
-    /**
-     * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-     */
     public Output</* @Nullable */ List<CustomerSecretResponse>> getCustomerSecrets() {
         return this.customerSecrets;
     }
-    /**
-     * A generic json used differently by each data service type.
-     */
     @OutputExport(name="dataServiceInput", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> dataServiceInput;
 
-    /**
-     * @return A generic json used differently by each data service type.
-     */
     public Output</* @Nullable */ Object> getDataServiceInput() {
         return this.dataServiceInput;
     }
-    /**
-     * Data Sink Id associated to the job definition.
-     */
     @OutputExport(name="dataSinkId", type=String.class, parameters={})
     private Output<String> dataSinkId;
 
-    /**
-     * @return Data Sink Id associated to the job definition.
-     */
     public Output<String> getDataSinkId() {
         return this.dataSinkId;
     }
-    /**
-     * Data Source Id associated to the job definition.
-     */
     @OutputExport(name="dataSourceId", type=String.class, parameters={})
     private Output<String> dataSourceId;
 
-    /**
-     * @return Data Source Id associated to the job definition.
-     */
     public Output<String> getDataSourceId() {
         return this.dataSourceId;
     }
-    /**
-     * Last modified time of the job definition.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
-    /**
-     * @return Last modified time of the job definition.
-     */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * Name of the object.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the object.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * This is the preferred geo location for the job to run.
-     */
     @OutputExport(name="runLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> runLocation;
 
-    /**
-     * @return This is the preferred geo location for the job to run.
-     */
     public Output</* @Nullable */ String> getRunLocation() {
         return this.runLocation;
     }
-    /**
-     * Schedule for running the job definition
-     */
     @OutputExport(name="schedules", type=List.class, parameters={ScheduleResponse.class})
     private Output</* @Nullable */ List<ScheduleResponse>> schedules;
 
-    /**
-     * @return Schedule for running the job definition
-     */
     public Output</* @Nullable */ List<ScheduleResponse>> getSchedules() {
         return this.schedules;
     }
-    /**
-     * State of the job definition.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return State of the job definition.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * Type of the object.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the object.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
-     */
     @OutputExport(name="userConfirmation", type=String.class, parameters={})
     private Output</* @Nullable */ String> userConfirmation;
 
-    /**
-     * @return Enum to detect if user confirmation is required. If not passed will default to NotRequired.
-     */
     public Output</* @Nullable */ String> getUserConfirmation() {
         return this.userConfirmation;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public JobDefinition(String name, JobDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybriddata:JobDefinition", name, args == null ? JobDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -339,14 +105,6 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static JobDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobDefinition(name, id, options);
     }

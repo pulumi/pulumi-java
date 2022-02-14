@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
-    /**
-     * Name of the connector.
-     */
     @InputImport(name="connectorName")
     private final @Nullable Input<String> connectorName;
 
@@ -32,9 +26,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorName == null ? Input.empty() : this.connectorName;
     }
 
-    /**
-     * The connector properties.
-     */
     @InputImport(name="connectorProperties", required=true)
     private final Input<Map<String,Object>> connectorProperties;
 
@@ -42,9 +33,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorProperties;
     }
 
-    /**
-     * Type of connector.
-     */
     @InputImport(name="connectorType", required=true)
     private final Input<Either<String,ConnectorTypes>> connectorType;
 
@@ -52,9 +40,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorType;
     }
 
-    /**
-     * Description of the connector.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -62,9 +47,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Display name of the connector.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -72,9 +54,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -82,9 +61,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName;
     }
 
-    /**
-     * If this is an internal connector.
-     */
     @InputImport(name="isInternal")
     private final @Nullable Input<Boolean> isInternal;
 
@@ -92,9 +68,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.isInternal == null ? Input.empty() : this.isInternal;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * DataBox Disk Job Details.
- */
 public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataBoxDiskJobDetailsArgs Empty = new DataBoxDiskJobDetailsArgs();
 
-    /**
-     * Contact details for notification and shipping.
-     */
     @InputImport(name="contactDetails", required=true)
     private final Input<ContactDetailsArgs> contactDetails;
 
@@ -36,9 +30,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
         return this.contactDetails;
     }
 
-    /**
-     * Details of the data to be exported from azure.
-     */
     @InputImport(name="dataExportDetails")
     private final @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails;
 
@@ -46,9 +37,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
         return this.dataExportDetails == null ? Input.empty() : this.dataExportDetails;
     }
 
-    /**
-     * Details of the data to be imported into azure.
-     */
     @InputImport(name="dataImportDetails")
     private final @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails;
 
@@ -56,9 +44,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
         return this.dataImportDetails == null ? Input.empty() : this.dataImportDetails;
     }
 
-    /**
-     * The expected size of the data, which needs to be transferred in this job, in terabytes.
-     */
     @InputImport(name="expectedDataSizeInTeraBytes")
     private final @Nullable Input<Integer> expectedDataSizeInTeraBytes;
 
@@ -66,10 +51,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
         return this.expectedDataSizeInTeraBytes == null ? Input.empty() : this.expectedDataSizeInTeraBytes;
     }
 
-    /**
-     * Indicates the type of job details.
-Expected value is 'DataBoxDisk'.
-     */
     @InputImport(name="jobDetailsType", required=true)
     private final Input<String> jobDetailsType;
 
@@ -77,9 +58,6 @@ Expected value is 'DataBoxDisk'.
         return this.jobDetailsType;
     }
 
-    /**
-     * Details about which key encryption type is being used.
-     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey;
 
@@ -87,9 +65,6 @@ Expected value is 'DataBoxDisk'.
         return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
     }
 
-    /**
-     * User entered passkey for DataBox Disk job.
-     */
     @InputImport(name="passkey")
     private final @Nullable Input<String> passkey;
 
@@ -97,9 +72,6 @@ Expected value is 'DataBoxDisk'.
         return this.passkey == null ? Input.empty() : this.passkey;
     }
 
-    /**
-     * Preferences for the order.
-     */
     @InputImport(name="preferences")
     private final @Nullable Input<PreferencesArgs> preferences;
 
@@ -107,9 +79,6 @@ Expected value is 'DataBoxDisk'.
         return this.preferences == null ? Input.empty() : this.preferences;
     }
 
-    /**
-     * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
-     */
     @InputImport(name="preferredDisks")
     private final @Nullable Input<Map<String,Integer>> preferredDisks;
 
@@ -117,9 +86,6 @@ Expected value is 'DataBoxDisk'.
         return this.preferredDisks == null ? Input.empty() : this.preferredDisks;
     }
 
-    /**
-     * Shipping address of the customer.
-     */
     @InputImport(name="shippingAddress")
     private final @Nullable Input<ShippingAddressArgs> shippingAddress;
 

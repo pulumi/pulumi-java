@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyCreationTimeResponse {
-/**
- * 
- */
     private final @Nullable String key1;
-/**
- * 
- */
     private final @Nullable String key2;
 
     @OutputCustomType.Constructor({"key1","key2"})
@@ -28,15 +22,9 @@ public final class KeyCreationTimeResponse {
         this.key2 = key2;
     }
 
-/**
- * 
- */
     public Optional<String> getKey1() {
         return Optional.ofNullable(this.key1);
     }
-/**
- * 
- */
     public Optional<String> getKey2() {
         return Optional.ofNullable(this.key2);
     }

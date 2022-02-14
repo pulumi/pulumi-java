@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskPoolArgs Empty = new DiskPoolArgs();
 
-    /**
-     * List of additional capabilities for a Disk pool.
-     */
     @InputImport(name="additionalCapabilities")
     private final @Nullable Input<List<String>> additionalCapabilities;
 
@@ -32,9 +26,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
     }
 
-    /**
-     * Logical zone for Disk pool resource; example: ["1"].
-     */
     @InputImport(name="availabilityZones", required=true)
     private final Input<List<String>> availabilityZones;
 
@@ -42,9 +33,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityZones;
     }
 
-    /**
-     * The name of the Disk pool.
-     */
     @InputImport(name="diskPoolName")
     private final @Nullable Input<String> diskPoolName;
 
@@ -52,9 +40,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskPoolName == null ? Input.empty() : this.diskPoolName;
     }
 
-    /**
-     * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
-     */
     @InputImport(name="disks")
     private final @Nullable Input<List<DiskArgs>> disks;
 
@@ -62,9 +47,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.disks == null ? Input.empty() : this.disks;
     }
 
-    /**
-     * The geo-location where the resource lives.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -72,9 +54,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,9 +61,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Azure Resource ID of a Subnet for the Disk pool.
-     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -92,9 +68,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -102,9 +75,6 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Determines the SKU of VM deployed for Disk pool
-     */
     @InputImport(name="tier", required=true)
     private final Input<Either<String,DiskPoolTier>> tier;
 

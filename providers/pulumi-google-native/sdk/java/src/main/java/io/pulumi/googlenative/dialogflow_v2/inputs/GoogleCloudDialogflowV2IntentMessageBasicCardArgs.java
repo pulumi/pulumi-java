@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The basic card message. Useful for displaying information.
- */
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageBasicCardArgs Empty = new GoogleCloudDialogflowV2IntentMessageBasicCardArgs();
 
-    /**
-     * Optional. The collection of card buttons.
-     */
     @InputImport(name="buttons")
     private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
@@ -30,9 +24,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
         return this.buttons == null ? Input.empty() : this.buttons;
     }
 
-    /**
-     * Required, unless image is present. The body text of the card.
-     */
     @InputImport(name="formattedText")
     private final @Nullable Input<String> formattedText;
 
@@ -40,9 +31,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
         return this.formattedText == null ? Input.empty() : this.formattedText;
     }
 
-    /**
-     * Optional. The image for the card.
-     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
@@ -50,9 +38,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
         return this.image == null ? Input.empty() : this.image;
     }
 
-    /**
-     * Optional. The subtitle of the card.
-     */
     @InputImport(name="subtitle")
     private final @Nullable Input<String> subtitle;
 
@@ -60,9 +45,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
         return this.subtitle == null ? Input.empty() : this.subtitle;
     }
 
-    /**
-     * Optional. The title of the card.
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

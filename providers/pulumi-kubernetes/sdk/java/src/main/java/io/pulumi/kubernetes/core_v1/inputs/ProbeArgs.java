@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
- */
 public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProbeArgs Empty = new ProbeArgs();
 
-    /**
-     * Exec specifies the action to take.
-     */
     @InputImport(name="exec")
     private final @Nullable Input<ExecActionArgs> exec;
 
@@ -31,9 +25,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.exec == null ? Input.empty() : this.exec;
     }
 
-    /**
-     * Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
-     */
     @InputImport(name="failureThreshold")
     private final @Nullable Input<Integer> failureThreshold;
 
@@ -41,9 +32,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
     }
 
-    /**
-     * GRPC specifies an action involving a GRPC port. This is an alpha field and requires enabling GRPCContainerProbe feature gate.
-     */
     @InputImport(name="grpc")
     private final @Nullable Input<GRPCActionArgs> grpc;
 
@@ -51,9 +39,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.grpc == null ? Input.empty() : this.grpc;
     }
 
-    /**
-     * HTTPGet specifies the http request to perform.
-     */
     @InputImport(name="httpGet")
     private final @Nullable Input<HTTPGetActionArgs> httpGet;
 
@@ -61,9 +46,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpGet == null ? Input.empty() : this.httpGet;
     }
 
-    /**
-     * Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     */
     @InputImport(name="initialDelaySeconds")
     private final @Nullable Input<Integer> initialDelaySeconds;
 
@@ -71,9 +53,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
     }
 
-    /**
-     * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
-     */
     @InputImport(name="periodSeconds")
     private final @Nullable Input<Integer> periodSeconds;
 
@@ -81,9 +60,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
     }
 
-    /**
-     * Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.
-     */
     @InputImport(name="successThreshold")
     private final @Nullable Input<Integer> successThreshold;
 
@@ -91,9 +67,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
     }
 
-    /**
-     * TCPSocket specifies an action involving a TCP port.
-     */
     @InputImport(name="tcpSocket")
     private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
 
@@ -101,9 +74,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tcpSocket == null ? Input.empty() : this.tcpSocket;
     }
 
-    /**
-     * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
-     */
     @InputImport(name="terminationGracePeriodSeconds")
     private final @Nullable Input<Integer> terminationGracePeriodSeconds;
 
@@ -111,9 +81,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.terminationGracePeriodSeconds == null ? Input.empty() : this.terminationGracePeriodSeconds;
     }
 
-    /**
-     * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 

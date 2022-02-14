@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * FlowDistinguisherMethod specifies the method of a flow distinguisher.
- */
 public final class FlowDistinguisherMethodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowDistinguisherMethodArgs Empty = new FlowDistinguisherMethodArgs();
 
-    /**
-     * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

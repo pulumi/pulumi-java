@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudServiceRoleProfileResponse {
-/**
- * List of roles for the cloud service.
- */
     private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
     @OutputCustomType.Constructor({"roles"})
@@ -21,9 +18,6 @@ public final class CloudServiceRoleProfileResponse {
         this.roles = roles;
     }
 
-/**
- * List of roles for the cloud service.
- */
     public List<CloudServiceRoleProfilePropertiesResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }

@@ -11,41 +11,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSqlPoolWorkloadClassifierResult {
-/**
- * The workload classifier context.
- */
     private final @Nullable String context;
-/**
- * The workload classifier end time for classification.
- */
     private final @Nullable String endTime;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The workload classifier importance.
- */
     private final @Nullable String importance;
-/**
- * The workload classifier label.
- */
     private final @Nullable String label;
-/**
- * The workload classifier member name.
- */
     private final String memberName;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The workload classifier start time for classification.
- */
     private final @Nullable String startTime;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"context","endTime","id","importance","label","memberName","name","startTime","type"})
@@ -70,57 +43,30 @@ public final class GetSqlPoolWorkloadClassifierResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The workload classifier context.
- */
     public Optional<String> getContext() {
         return Optional.ofNullable(this.context);
     }
-/**
- * The workload classifier end time for classification.
- */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The workload classifier importance.
- */
     public Optional<String> getImportance() {
         return Optional.ofNullable(this.importance);
     }
-/**
- * The workload classifier label.
- */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
-/**
- * The workload classifier member name.
- */
     public String getMemberName() {
         return this.memberName;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The workload classifier start time for classification.
- */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

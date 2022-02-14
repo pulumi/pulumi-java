@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProjectIamPolicy {
-/**
- * Returns the IAM access control policy for the specified Project. Permission is denied if the policy or the resource does not exist. Authorization requires the Google IAM permission `resourcemanager.projects.getIamPolicy` on the project. For additional information about `resource` (e.g. my-project-id) structure and identification, see [Resource Names](https://cloud.google.com/apis/design/resource_names).
- */
     public static CompletableFuture<GetProjectIamPolicyResult> invokeAsync(GetProjectIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v1:getProjectIamPolicy", TypeShape.of(GetProjectIamPolicyResult.class), args == null ? GetProjectIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

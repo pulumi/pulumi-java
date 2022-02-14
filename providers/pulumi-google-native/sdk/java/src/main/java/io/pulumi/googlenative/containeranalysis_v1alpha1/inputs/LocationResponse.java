@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An occurrence of a particular package installation found within a system's filesystem. e.g. glibc was found in /var/lib/dpkg/status
- */
 public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LocationResponse Empty = new LocationResponse();
 
-    /**
-     * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
-     */
     @InputImport(name="cpeUri", required=true)
     private final String cpeUri;
 
@@ -26,9 +20,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
         return this.cpeUri;
     }
 
-    /**
-     * The path from which we gathered that this package/version is installed.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -36,9 +27,6 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
         return this.path;
     }
 
-    /**
-     * The version installed at this location.
-     */
     @InputImport(name="version", required=true)
     private final VersionResponse version;
 

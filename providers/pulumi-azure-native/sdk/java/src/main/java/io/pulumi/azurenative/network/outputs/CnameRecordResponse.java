@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CnameRecordResponse {
-/**
- * The canonical name for this CNAME record.
- */
     private final @Nullable String cname;
 
     @OutputCustomType.Constructor({"cname"})
@@ -21,9 +18,6 @@ public final class CnameRecordResponse {
         this.cname = cname;
     }
 
-/**
- * The canonical name for this CNAME record.
- */
     public Optional<String> getCname() {
         return Optional.ofNullable(this.cname);
     }

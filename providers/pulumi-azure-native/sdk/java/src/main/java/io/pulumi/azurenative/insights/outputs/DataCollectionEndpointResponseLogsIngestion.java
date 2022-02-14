@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataCollectionEndpointResponseLogsIngestion {
-/**
- * The endpoint. This property is READ-ONLY.
- */
     private final String endpoint;
 
     @OutputCustomType.Constructor({"endpoint"})
@@ -19,9 +16,6 @@ public final class DataCollectionEndpointResponseLogsIngestion {
         this.endpoint = Objects.requireNonNull(endpoint);
     }
 
-/**
- * The endpoint. This property is READ-ONLY.
- */
     public String getEndpoint() {
         return this.endpoint;
     }

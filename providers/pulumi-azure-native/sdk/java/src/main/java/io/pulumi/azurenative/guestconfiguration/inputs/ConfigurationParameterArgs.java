@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a configuration parameter.
- */
 public final class ConfigurationParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationParameterArgs Empty = new ConfigurationParameterArgs();
 
-    /**
-     * Name of the configuration parameter.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class ConfigurationParameterArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Value of the configuration parameter.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

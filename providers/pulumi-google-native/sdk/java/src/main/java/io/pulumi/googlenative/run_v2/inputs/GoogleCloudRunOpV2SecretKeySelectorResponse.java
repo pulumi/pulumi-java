@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * SecretEnvVarSource represents a source for the value of an EnvVar.
- */
 public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunOpV2SecretKeySelectorResponse Empty = new GoogleCloudRunOpV2SecretKeySelectorResponse();
 
-    /**
-     * The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
-     */
     @InputImport(name="secret", required=true)
     private final String secret;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
         return this.secret;
     }
 
-    /**
-     * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PivotPropertiesResponse {
-/**
- * Data field to show in view.
- */
     private final @Nullable String name;
-/**
- * Data type to show in view.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"name","type"})
@@ -28,15 +22,9 @@ public final class PivotPropertiesResponse {
         this.type = type;
     }
 
-/**
- * Data field to show in view.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Data type to show in view.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

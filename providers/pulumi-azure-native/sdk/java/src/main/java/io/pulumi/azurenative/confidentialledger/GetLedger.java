@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLedger {
-/**
- * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
-API Version: 2020-12-01-preview.
- *
- * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
- */
     public static CompletableFuture<GetLedgerResult> invokeAsync(GetLedgerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confidentialledger:getLedger", TypeShape.of(GetLedgerResult.class), args == null ? GetLedgerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The current state of the Domain Mapping.
- */
 public final class DomainMappingStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainMappingStatusResponse Empty = new DomainMappingStatusResponse();
 
-    /**
-     * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
-     */
     @InputImport(name="conditions", required=true)
     private final List<GoogleCloudRunV1ConditionResponse> conditions;
 
@@ -29,9 +23,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
         return this.conditions;
     }
 
-    /**
-     * The name of the route that the mapping currently points to.
-     */
     @InputImport(name="mappedRouteName", required=true)
     private final String mappedRouteName;
 
@@ -39,9 +30,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
         return this.mappedRouteName;
     }
 
-    /**
-     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
-     */
     @InputImport(name="observedGeneration", required=true)
     private final Integer observedGeneration;
 
@@ -49,9 +37,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
         return this.observedGeneration;
     }
 
-    /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
-     */
     @InputImport(name="resourceRecords", required=true)
     private final List<ResourceRecordResponse> resourceRecords;
 
@@ -59,9 +44,6 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
         return this.resourceRecords;
     }
 
-    /**
-     * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
-     */
     @InputImport(name="url", required=true)
     private final String url;
 

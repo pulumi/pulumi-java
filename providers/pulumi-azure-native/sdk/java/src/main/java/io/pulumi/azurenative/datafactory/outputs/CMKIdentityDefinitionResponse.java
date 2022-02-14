@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CMKIdentityDefinitionResponse {
-/**
- * The resource id of the user assigned identity to authenticate to customer's key vault.
- */
     private final @Nullable String userAssignedIdentity;
 
     @OutputCustomType.Constructor({"userAssignedIdentity"})
@@ -21,9 +18,6 @@ public final class CMKIdentityDefinitionResponse {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
-/**
- * The resource id of the user assigned identity to authenticate to customer's key vault.
- */
     public Optional<String> getUserAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }

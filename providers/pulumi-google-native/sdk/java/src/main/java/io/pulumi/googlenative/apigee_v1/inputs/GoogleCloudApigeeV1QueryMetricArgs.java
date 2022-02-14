@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * More info about Metric: https://docs.apigee.com/api-platform/analytics/analytics-reference#metrics
- */
 public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1QueryMetricArgs Empty = new GoogleCloudApigeeV1QueryMetricArgs();
 
-    /**
-     * Alias for the metric. Alias will be used to replace metric name in query results.
-     */
     @InputImport(name="alias")
     private final @Nullable Input<String> alias;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
         return this.alias == null ? Input.empty() : this.alias;
     }
 
-    /**
-     * Aggregation function: avg, min, max, or sum.
-     */
     @InputImport(name="function")
     private final @Nullable Input<String> function;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
         return this.function == null ? Input.empty() : this.function;
     }
 
-    /**
-     * Metric name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -47,9 +35,6 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
         return this.name;
     }
 
-    /**
-     * One of `+`, `-`, `/`, `%`, `*`.
-     */
     @InputImport(name="operator")
     private final @Nullable Input<String> operator;
 
@@ -57,9 +42,6 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
         return this.operator == null ? Input.empty() : this.operator;
     }
 
-    /**
-     * Operand value should be provided when operator is set.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

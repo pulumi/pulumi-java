@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Enum value definition.
- */
 public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnumValueResponse Empty = new EnumValueResponse();
 
-    /**
-     * Enum value name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,9 +22,6 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Enum value number.
-     */
     @InputImport(name="number", required=true)
     private final Integer number;
 
@@ -38,9 +29,6 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.number;
     }
 
-    /**
-     * Protocol buffer options.
-     */
     @InputImport(name="options", required=true)
     private final List<OptionResponse> options;
 

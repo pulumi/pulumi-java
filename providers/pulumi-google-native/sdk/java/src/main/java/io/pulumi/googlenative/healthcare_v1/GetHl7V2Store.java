@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHl7V2Store {
-/**
- * Gets the specified HL7v2 store.
- */
     public static CompletableFuture<GetHl7V2StoreResult> invokeAsync(GetHl7V2StoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getHl7V2Store", TypeShape.of(GetHl7V2StoreResult.class), args == null ? GetHl7V2StoreArgs.Empty : args, Utilities.withVersion(options));
     }

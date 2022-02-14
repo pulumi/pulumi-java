@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration parameters used for performing automatic OS upgrade.
- */
 public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomaticOSUpgradePolicyArgs Empty = new AutomaticOSUpgradePolicyArgs();
 
-    /**
-     * Whether OS image rollback feature should be disabled. Default value is false.
-     */
     @InputImport(name="disableAutomaticRollback")
     private final @Nullable Input<Boolean> disableAutomaticRollback;
 
@@ -27,9 +21,6 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
         return this.disableAutomaticRollback == null ? Input.empty() : this.disableAutomaticRollback;
     }
 
-    /**
-     * Indicates whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the OS image becomes available. Default value is false. <br><br> If this is set to true for Windows based scale sets, [enableAutomaticUpdates](https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.windowsconfiguration.enableautomaticupdates?view=azure-dotnet) is automatically set to false and cannot be set to true.
-     */
     @InputImport(name="enableAutomaticOSUpgrade")
     private final @Nullable Input<Boolean> enableAutomaticOSUpgrade;
 

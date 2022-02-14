@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiIssueArgs Empty = new GetApiIssueArgs();
 
-    /**
-     * API identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -28,9 +22,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
-    /**
-     * Expand the comment attachments. 
-     */
     @InputImport(name="expandCommentsAttachments")
     private final @Nullable Boolean expandCommentsAttachments;
 
@@ -38,9 +29,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
         return this.expandCommentsAttachments == null ? Optional.empty() : Optional.ofNullable(this.expandCommentsAttachments);
     }
 
-    /**
-     * Issue identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="issueId", required=true)
     private final String issueId;
 
@@ -48,9 +36,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
         return this.issueId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

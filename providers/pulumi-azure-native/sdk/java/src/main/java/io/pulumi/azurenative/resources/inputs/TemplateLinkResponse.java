@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Entity representing the reference to the template.
- */
 public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TemplateLinkResponse Empty = new TemplateLinkResponse();
 
-    /**
-     * If included, must match the ContentVersion in the template.
-     */
     @InputImport(name="contentVersion")
     private final @Nullable String contentVersion;
 
@@ -27,9 +21,6 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
     }
 
-    /**
-     * The resource id of a Template Spec. Use either the id or uri property, but not both.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,9 +28,6 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The query string (for example, a SAS token) to be used with the templateLink URI.
-     */
     @InputImport(name="queryString")
     private final @Nullable String queryString;
 
@@ -47,9 +35,6 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
-    /**
-     * The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
-     */
     @InputImport(name="relativePath")
     private final @Nullable String relativePath;
 
@@ -57,9 +42,6 @@ public final class TemplateLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
     }
 
-    /**
-     * The URI of the template to deploy. Use either the uri or id property, but not both.
-     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
- */
     @EnumType
     public enum GPUInstanceProfile {
-/**
- * 
- */
         MIG1g("MIG1g"),
-/**
- * 
- */
         MIG2g("MIG2g"),
-/**
- * 
- */
         MIG3g("MIG3g"),
-/**
- * 
- */
         MIG4g("MIG4g"),
-/**
- * 
- */
         MIG7g("MIG7g");
 
         private final String value;

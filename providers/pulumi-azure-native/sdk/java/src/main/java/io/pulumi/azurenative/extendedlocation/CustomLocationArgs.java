@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomLocationArgs Empty = new CustomLocationArgs();
 
-    /**
-     * This is optional input that contains the authentication that should be used to generate the namespace.
-     */
     @InputImport(name="authentication")
     private final @Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication;
 
@@ -32,9 +26,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
-    /**
-     * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
-     */
     @InputImport(name="clusterExtensionIds")
     private final @Nullable Input<List<String>> clusterExtensionIds;
 
@@ -42,9 +33,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterExtensionIds == null ? Input.empty() : this.clusterExtensionIds;
     }
 
-    /**
-     * Display name for the Custom Locations location.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -52,9 +40,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
-     */
     @InputImport(name="hostResourceId")
     private final @Nullable Input<String> hostResourceId;
 
@@ -62,9 +47,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostResourceId == null ? Input.empty() : this.hostResourceId;
     }
 
-    /**
-     * Type of host the Custom Locations is referencing (Kubernetes, etc...).
-     */
     @InputImport(name="hostType")
     private final @Nullable Input<Either<String,HostType>> hostType;
 
@@ -72,9 +54,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostType == null ? Input.empty() : this.hostType;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -82,9 +61,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Kubernetes namespace that will be created on the specified cluster.
-     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -92,9 +68,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
-    /**
-     * Provisioning State for the Custom Location.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -102,9 +75,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -112,9 +82,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Custom Locations name.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -122,9 +89,6 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

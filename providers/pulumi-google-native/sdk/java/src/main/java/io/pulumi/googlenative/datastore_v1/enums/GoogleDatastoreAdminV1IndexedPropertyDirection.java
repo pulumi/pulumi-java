@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
- */
     @EnumType
     public enum GoogleDatastoreAdminV1IndexedPropertyDirection {
-/**
- * The direction is unspecified.
- */
         DirectionUnspecified("DIRECTION_UNSPECIFIED"),
-/**
- * The property's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.
- */
         Ascending("ASCENDING"),
-/**
- * The property's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.
- */
         Descending("DESCENDING");
 
         private final String value;

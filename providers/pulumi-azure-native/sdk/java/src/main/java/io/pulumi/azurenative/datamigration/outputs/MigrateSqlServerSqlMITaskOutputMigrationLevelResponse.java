@@ -14,74 +14,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
-/**
- * Selected agent jobs as a map from name to id
- */
     private final Map<String,String> agentJobs;
-/**
- * Selected databases as a map from database name to database id
- */
     private final Map<String,String> databases;
-/**
- * Migration end time
- */
     private final String endedOn;
-/**
- * Migration exceptions and warnings.
- */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
-/**
- * Result identifier
- */
     private final String id;
-/**
- * Selected logins as a map from name to id
- */
     private final Map<String,String> logins;
-/**
- * Migration progress message
- */
     private final String message;
-/**
- * List of orphaned users.
- */
     private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
-/**
- * Result type
-Expected value is 'MigrationLevelOutput'.
- */
     private final String resultType;
-/**
- * Map of server role migration results.
- */
     private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
-/**
- * Source server brand version
- */
     private final String sourceServerBrandVersion;
-/**
- * Source server version
- */
     private final String sourceServerVersion;
-/**
- * Migration start time
- */
     private final String startedOn;
-/**
- * Current state of migration
- */
     private final String state;
-/**
- * Current status of migration
- */
     private final String status;
-/**
- * Target server brand version
- */
     private final String targetServerBrandVersion;
-/**
- * Target server version
- */
     private final String targetServerVersion;
 
     @OutputCustomType.Constructor({"agentJobs","databases","endedOn","exceptionsAndWarnings","id","logins","message","orphanedUsersInfo","resultType","serverRoleResults","sourceServerBrandVersion","sourceServerVersion","startedOn","state","status","targetServerBrandVersion","targetServerVersion"})
@@ -122,106 +70,54 @@ Expected value is 'MigrationLevelOutput'.
         this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
     }
 
-/**
- * Selected agent jobs as a map from name to id
- */
     public Map<String,String> getAgentJobs() {
         return this.agentJobs;
     }
-/**
- * Selected databases as a map from database name to database id
- */
     public Map<String,String> getDatabases() {
         return this.databases;
     }
-/**
- * Migration end time
- */
     public String getEndedOn() {
         return this.endedOn;
     }
-/**
- * Migration exceptions and warnings.
- */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
-/**
- * Result identifier
- */
     public String getId() {
         return this.id;
     }
-/**
- * Selected logins as a map from name to id
- */
     public Map<String,String> getLogins() {
         return this.logins;
     }
-/**
- * Migration progress message
- */
     public String getMessage() {
         return this.message;
     }
-/**
- * List of orphaned users.
- */
     public List<OrphanedUserInfoResponse> getOrphanedUsersInfo() {
         return this.orphanedUsersInfo;
     }
-/**
- * Result type
-Expected value is 'MigrationLevelOutput'.
- */
     public String getResultType() {
         return this.resultType;
     }
-/**
- * Map of server role migration results.
- */
     public Map<String,StartMigrationScenarioServerRoleResultResponse> getServerRoleResults() {
         return this.serverRoleResults;
     }
-/**
- * Source server brand version
- */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
-/**
- * Source server version
- */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
-/**
- * Migration start time
- */
     public String getStartedOn() {
         return this.startedOn;
     }
-/**
- * Current state of migration
- */
     public String getState() {
         return this.state;
     }
-/**
- * Current status of migration
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Target server brand version
- */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
-/**
- * Target server version
- */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }

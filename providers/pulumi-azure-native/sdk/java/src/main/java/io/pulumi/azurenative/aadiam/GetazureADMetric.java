@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetazureADMetric {
-/**
- * AzureADMetrics resource.
-API Version: 2020-07-01-preview.
- *
- * AzureADMetrics resource.
- */
     public static CompletableFuture<GetazureADMetricResult> invokeAsync(GetazureADMetricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getazureADMetric", TypeShape.of(GetazureADMetricResult.class), args == null ? GetazureADMetricArgs.Empty : args, Utilities.withVersion(options));
     }

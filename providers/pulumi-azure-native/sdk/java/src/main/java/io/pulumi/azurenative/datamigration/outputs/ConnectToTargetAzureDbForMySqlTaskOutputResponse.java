@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
-/**
- * List of databases on target server
- */
     private final List<String> databases;
-/**
- * Result identifier
- */
     private final String id;
-/**
- * Version of the target server
- */
     private final String serverVersion;
-/**
- * Target server brand version
- */
     private final String targetServerBrandVersion;
-/**
- * Validation errors associated with the task
- */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @OutputCustomType.Constructor({"databases","id","serverVersion","targetServerBrandVersion","validationErrors"})
@@ -46,33 +31,18 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
-/**
- * List of databases on target server
- */
     public List<String> getDatabases() {
         return this.databases;
     }
-/**
- * Result identifier
- */
     public String getId() {
         return this.id;
     }
-/**
- * Version of the target server
- */
     public String getServerVersion() {
         return this.serverVersion;
     }
-/**
- * Target server brand version
- */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
-/**
- * Validation errors associated with the task
- */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

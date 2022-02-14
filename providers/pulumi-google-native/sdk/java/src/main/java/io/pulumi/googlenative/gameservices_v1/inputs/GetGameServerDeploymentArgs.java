@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetGameServerDeploymentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGameServerDeploymentArgs Empty = new GetGameServerDeploymentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="gameServerDeploymentId", required=true)
     private final String gameServerDeploymentId;
 
@@ -27,9 +21,6 @@ public final class GetGameServerDeploymentArgs extends io.pulumi.resources.Invok
         return this.gameServerDeploymentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetGameServerDeploymentArgs extends io.pulumi.resources.Invok
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MySQL database structure
- */
 public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MysqlRdbmsArgs Empty = new MysqlRdbmsArgs();
 
-    /**
-     * Mysql databases on the server
-     */
     @InputImport(name="mysqlDatabases")
     private final @Nullable Input<List<MysqlDatabaseArgs>> mysqlDatabases;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A field or a column.
- */
 public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardSqlFieldArgs Empty = new StandardSqlFieldArgs();
 
-    /**
-     * Optional. The name of this field. Can be absent for struct fields.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,9 +22,6 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
-     */
     @InputImport(name="type")
     private final @Nullable Input<StandardSqlDataTypeArgs> type;
 

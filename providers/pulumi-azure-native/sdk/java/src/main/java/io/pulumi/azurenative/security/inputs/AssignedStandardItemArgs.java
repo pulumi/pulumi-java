@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * describe the properties of a of a security standard object reference
- */
 public final class AssignedStandardItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignedStandardItemArgs Empty = new AssignedStandardItemArgs();
 
-    /**
-     * full resourceId of the Microsoft.Security/standard object
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

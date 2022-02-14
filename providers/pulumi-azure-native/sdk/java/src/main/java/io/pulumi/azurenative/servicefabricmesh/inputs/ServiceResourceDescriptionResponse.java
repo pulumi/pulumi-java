@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This type describes a service resource.
- */
 public final class ServiceResourceDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceResourceDescriptionResponse Empty = new ServiceResourceDescriptionResponse();
 
-    /**
-     * Auto scaling policies
-     */
     @InputImport(name="autoScalingPolicies")
     private final @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
 
@@ -33,9 +27,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.autoScalingPolicies == null ? List.of() : this.autoScalingPolicies;
     }
 
-    /**
-     * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
-     */
     @InputImport(name="codePackages", required=true)
     private final List<ContainerCodePackagePropertiesResponse> codePackages;
 
@@ -43,9 +34,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.codePackages;
     }
 
-    /**
-     * User readable description of the service.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -53,9 +41,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Reference to sinks in DiagnosticsDescription.
-     */
     @InputImport(name="diagnostics")
     private final @Nullable DiagnosticsRefResponse diagnostics;
 
@@ -63,9 +48,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
     }
 
-    /**
-     * Describes the health state of an application resource.
-     */
     @InputImport(name="healthState", required=true)
     private final String healthState;
 
@@ -73,9 +55,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.healthState;
     }
 
-    /**
-     * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -83,9 +62,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.id;
     }
 
-    /**
-     * The name of the resource
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -93,9 +69,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The names of the private networks that this service needs to be part of.
-     */
     @InputImport(name="networkRefs")
     private final @Nullable List<NetworkRefResponse> networkRefs;
 
@@ -103,9 +76,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.networkRefs == null ? List.of() : this.networkRefs;
     }
 
-    /**
-     * The operation system required by the code in service.
-     */
     @InputImport(name="osType", required=true)
     private final String osType;
 
@@ -113,9 +83,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.osType;
     }
 
-    /**
-     * State of the resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -123,9 +90,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.provisioningState;
     }
 
-    /**
-     * The number of replicas of the service to create. Defaults to 1 if not specified.
-     */
     @InputImport(name="replicaCount")
     private final @Nullable Integer replicaCount;
 
@@ -133,9 +97,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
     }
 
-    /**
-     * Status of the service.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -143,9 +104,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.status;
     }
 
-    /**
-     * Gives additional information about the current status of the service.
-     */
     @InputImport(name="statusDetails", required=true)
     private final String statusDetails;
 
@@ -153,9 +111,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.statusDetails;
     }
 
-    /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -163,9 +118,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
         return this.type;
     }
 
-    /**
-     * When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
-     */
     @InputImport(name="unhealthyEvaluation", required=true)
     private final String unhealthyEvaluation;
 

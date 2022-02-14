@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Managed application policy.
- */
 public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationPolicyArgs Empty = new ApplicationPolicyArgs();
 
-    /**
-     * The policy name
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The policy parameters.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<String> parameters;
 
@@ -37,9 +28,6 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The policy definition Id.
-     */
     @InputImport(name="policyDefinitionId")
     private final @Nullable Input<String> policyDefinitionId;
 

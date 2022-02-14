@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The result of the assessment
- */
 public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssessmentStatusResponse Empty = new AssessmentStatusResponse();
 
-    /**
-     * Programmatic code for the cause of the assessment status
-     */
     @InputImport(name="cause")
     private final @Nullable String cause;
 
@@ -27,9 +21,6 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
         return this.cause == null ? Optional.empty() : Optional.ofNullable(this.cause);
     }
 
-    /**
-     * Programmatic code for the status of the assessment
-     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -37,9 +28,6 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
         return this.code;
     }
 
-    /**
-     * Human readable description of the assessment status
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomAssessmentAutomation {
-/**
- * Custom Assessment Automation
-API Version: 2021-07-01-preview.
- *
- * Custom Assessment Automation
- */
     public static CompletableFuture<GetCustomAssessmentAutomationResult> invokeAsync(GetCustomAssessmentAutomationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getCustomAssessmentAutomation", TypeShape.of(GetCustomAssessmentAutomationResult.class), args == null ? GetCustomAssessmentAutomationArgs.Empty : args, Utilities.withVersion(options));
     }

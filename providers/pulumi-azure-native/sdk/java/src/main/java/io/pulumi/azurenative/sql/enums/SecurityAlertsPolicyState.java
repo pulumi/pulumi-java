@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
- */
     @EnumType
     public enum SecurityAlertsPolicyState {
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

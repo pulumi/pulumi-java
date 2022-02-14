@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SparkMavenPackageArgs Empty = new SparkMavenPackageArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="artifact")
     private final @Nullable Input<String> artifact;
 
@@ -27,9 +21,6 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
         return this.artifact == null ? Input.empty() : this.artifact;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -37,9 +28,6 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
         return this.group == null ? Input.empty() : this.group;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

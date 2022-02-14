@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The recurrence schedule.
- */
 public final class RecurrenceScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecurrenceScheduleResponse Empty = new RecurrenceScheduleResponse();
 
-    /**
-     * The hours.
-     */
     @InputImport(name="hours")
     private final @Nullable List<Integer> hours;
 
@@ -30,9 +24,6 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
         return this.hours == null ? List.of() : this.hours;
     }
 
-    /**
-     * The minutes.
-     */
     @InputImport(name="minutes")
     private final @Nullable List<Integer> minutes;
 
@@ -40,9 +31,6 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
         return this.minutes == null ? List.of() : this.minutes;
     }
 
-    /**
-     * The month days.
-     */
     @InputImport(name="monthDays")
     private final @Nullable List<Integer> monthDays;
 
@@ -50,9 +38,6 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
         return this.monthDays == null ? List.of() : this.monthDays;
     }
 
-    /**
-     * The monthly occurrences.
-     */
     @InputImport(name="monthlyOccurrences")
     private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
 
@@ -60,9 +45,6 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
 
-    /**
-     * The days of the week.
-     */
     @InputImport(name="weekDays")
     private final @Nullable List<String> weekDays;
 

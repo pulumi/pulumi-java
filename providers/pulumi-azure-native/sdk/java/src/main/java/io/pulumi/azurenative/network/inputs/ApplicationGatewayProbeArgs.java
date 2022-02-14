@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Probe of the application gateway.
- */
 public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayProbeArgs Empty = new ApplicationGatewayProbeArgs();
 
-    /**
-     * Host name to send the probe to.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -32,9 +26,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -42,9 +33,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
-     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -52,9 +40,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.interval == null ? Input.empty() : this.interval;
     }
 
-    /**
-     * Criterion for classifying a healthy probe response.
-     */
     @InputImport(name="match")
     private final @Nullable Input<ApplicationGatewayProbeHealthResponseMatchArgs> match;
 
@@ -62,9 +47,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.match == null ? Input.empty() : this.match;
     }
 
-    /**
-     * Minimum number of servers that are always marked healthy. Default value is 0.
-     */
     @InputImport(name="minServers")
     private final @Nullable Input<Integer> minServers;
 
@@ -72,9 +54,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.minServers == null ? Input.empty() : this.minServers;
     }
 
-    /**
-     * Name of the probe that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,9 +61,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -92,9 +68,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.path == null ? Input.empty() : this.path;
     }
 
-    /**
-     * Whether the host header should be picked from the backend http settings. Default value is false.
-     */
     @InputImport(name="pickHostNameFromBackendHttpSettings")
     private final @Nullable Input<Boolean> pickHostNameFromBackendHttpSettings;
 
@@ -102,9 +75,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.pickHostNameFromBackendHttpSettings == null ? Input.empty() : this.pickHostNameFromBackendHttpSettings;
     }
 
-    /**
-     * Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -112,9 +82,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * The protocol used for the probe.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
 
@@ -122,9 +89,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
-    /**
-     * The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
-     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -132,9 +96,6 @@ public final class ApplicationGatewayProbeArgs extends io.pulumi.resources.Resou
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
-    /**
-     * The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
-     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Input<Integer> unhealthyThreshold;
 

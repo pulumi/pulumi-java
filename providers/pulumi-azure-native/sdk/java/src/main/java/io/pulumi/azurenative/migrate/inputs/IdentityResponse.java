@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the MSI properties of the Move Collection.
- */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
-    /**
-     * Gets or sets the principal id.
-     */
     @InputImport(name="principalId")
     private final @Nullable String principalId;
 
@@ -27,9 +21,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
-    /**
-     * Gets or sets the tenant id.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -37,9 +28,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
-    /**
-     * The type of identity used for the resource mover service.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

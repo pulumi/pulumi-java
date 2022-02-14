@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Key Vault container for a certificate that is purchased through Azure.
- */
 public final class AppServiceCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppServiceCertificateArgs Empty = new AppServiceCertificateArgs();
 
-    /**
-     * Key Vault resource Id.
-     */
     @InputImport(name="keyVaultId")
     private final @Nullable Input<String> keyVaultId;
 
@@ -27,9 +21,6 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
     }
 
-    /**
-     * Key Vault secret name.
-     */
     @InputImport(name="keyVaultSecretName")
     private final @Nullable Input<String> keyVaultSecretName;
 

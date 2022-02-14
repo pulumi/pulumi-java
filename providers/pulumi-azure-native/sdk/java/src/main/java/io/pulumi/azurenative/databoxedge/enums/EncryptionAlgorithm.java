@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The algorithm used to encrypt "Value".
- */
     @EnumType
     public enum EncryptionAlgorithm {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         AES256("AES256"),
-/**
- * 
- */
         RSAES_PKCS1_v_1_5("RSAES_PKCS1_v_1_5");
 
         private final String value;

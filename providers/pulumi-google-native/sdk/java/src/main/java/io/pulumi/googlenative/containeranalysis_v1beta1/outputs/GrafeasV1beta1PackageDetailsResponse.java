@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1PackageDetailsResponse {
-/**
- * Where the package was installed.
- */
     private final InstallationResponse installation;
 
     @OutputCustomType.Constructor({"installation"})
@@ -19,9 +16,6 @@ public final class GrafeasV1beta1PackageDetailsResponse {
         this.installation = Objects.requireNonNull(installation);
     }
 
-/**
- * Where the package was installed.
- */
     public InstallationResponse getInstallation() {
         return this.installation;
     }

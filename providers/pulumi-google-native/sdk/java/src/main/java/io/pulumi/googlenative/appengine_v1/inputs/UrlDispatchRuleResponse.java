@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Rules to match an HTTP request and dispatch that request to a service.
- */
 public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UrlDispatchRuleResponse Empty = new UrlDispatchRuleResponse();
 
-    /**
-     * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".
-     */
     @InputImport(name="domain", required=true)
     private final String domain;
 
@@ -25,9 +19,6 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
         return this.domain;
     }
 
-    /**
-     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -35,9 +26,6 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
         return this.path;
     }
 
-    /**
-     * Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
-     */
     @InputImport(name="service", required=true)
     private final String service;
 

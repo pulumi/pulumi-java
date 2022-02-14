@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStorageAccountSAS {
-/**
- * The List SAS credentials operation response.
-API Version: 2021-02-01.
- *
- * The List SAS credentials operation response.
- */
     public static CompletableFuture<ListStorageAccountSASResult> invokeAsync(ListStorageAccountSASArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountSAS", TypeShape.of(ListStorageAccountSASResult.class), args == null ? ListStorageAccountSASArgs.Empty : args, Utilities.withVersion(options));
     }

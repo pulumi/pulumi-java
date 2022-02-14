@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CustomResourceDefinitionCondition contains details for the current condition of this pod.
- */
 public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceDefinitionConditionArgs Empty = new CustomResourceDefinitionConditionArgs();
 
-    /**
-     * lastTransitionTime last time the condition transitioned from one status to another.
-     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -27,9 +21,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
-    /**
-     * message is a human-readable message indicating details about last transition.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -37,9 +28,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * reason is a unique, one-word, CamelCase reason for the condition's last transition.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -47,9 +35,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
         return this.reason == null ? Input.empty() : this.reason;
     }
 
-    /**
-     * status is the status of the condition. Can be True, False, Unknown.
-     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -57,9 +42,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
         return this.status;
     }
 
-    /**
-     * type is the type of the condition. Types include Established, NamesAccepted and Terminating.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnector {
-/**
- * The connector resource format.
-API Version: 2017-04-26.
- *
- * The connector resource format.
- */
     public static CompletableFuture<GetConnectorResult> invokeAsync(GetConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnector", TypeShape.of(GetConnectorResult.class), args == null ? GetConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

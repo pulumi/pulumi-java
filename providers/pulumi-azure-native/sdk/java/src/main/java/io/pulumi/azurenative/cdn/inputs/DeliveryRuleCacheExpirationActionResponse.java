@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the cache expiration action for the delivery rule.
- */
 public final class DeliveryRuleCacheExpirationActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleCacheExpirationActionResponse Empty = new DeliveryRuleCacheExpirationActionResponse();
 
-    /**
-     * The name of the action for the delivery rule.
-Expected value is 'CacheExpiration'.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +20,6 @@ Expected value is 'CacheExpiration'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the action.
-     */
     @InputImport(name="parameters", required=true)
     private final CacheExpirationActionParametersResponse parameters;
 

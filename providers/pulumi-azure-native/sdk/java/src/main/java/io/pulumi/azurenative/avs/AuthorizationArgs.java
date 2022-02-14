@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizationArgs Empty = new AuthorizationArgs();
 
-    /**
-     * Name of the ExpressRoute Circuit Authorization in the private cloud
-     */
     @InputImport(name="authorizationName")
     private final @Nullable Input<String> authorizationName;
 
@@ -27,9 +21,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizationName == null ? Input.empty() : this.authorizationName;
     }
 
-    /**
-     * The name of the private cloud.
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -37,9 +28,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

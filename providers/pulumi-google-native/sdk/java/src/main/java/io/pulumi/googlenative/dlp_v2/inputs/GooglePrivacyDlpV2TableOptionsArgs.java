@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Instructions regarding the table content being inspected.
- */
 public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2TableOptionsArgs Empty = new GooglePrivacyDlpV2TableOptionsArgs();
 
-    /**
-     * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
-     */
     @InputImport(name="identifyingFields")
     private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 

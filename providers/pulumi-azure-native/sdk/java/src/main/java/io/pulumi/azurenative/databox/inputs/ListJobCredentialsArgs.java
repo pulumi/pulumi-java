@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListJobCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListJobCredentialsArgs Empty = new ListJobCredentialsArgs();
 
-    /**
-     * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -25,9 +19,6 @@ public final class ListJobCredentialsArgs extends io.pulumi.resources.InvokeArgs
         return this.jobName;
     }
 
-    /**
-     * The Resource Group Name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

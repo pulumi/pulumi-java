@@ -14,17 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggerArgs Empty = new LoggerArgs();
 
-    /**
-     * The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.
-     */
     @InputImport(name="credentials")
     private final @Nullable Input<Map<String,String>> credentials;
 
@@ -32,9 +25,6 @@ Instrumentation key for applicationInsights logger.
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    /**
-     * Logger description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,9 +32,6 @@ Instrumentation key for applicationInsights logger.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     */
     @InputImport(name="isBuffered")
     private final @Nullable Input<Boolean> isBuffered;
 
@@ -52,9 +39,6 @@ Instrumentation key for applicationInsights logger.
         return this.isBuffered == null ? Input.empty() : this.isBuffered;
     }
 
-    /**
-     * Logger identifier. Must be unique in the API Management service instance.
-     */
     @InputImport(name="loggerId")
     private final @Nullable Input<String> loggerId;
 
@@ -62,9 +46,6 @@ Instrumentation key for applicationInsights logger.
         return this.loggerId == null ? Input.empty() : this.loggerId;
     }
 
-    /**
-     * Logger type.
-     */
     @InputImport(name="loggerType", required=true)
     private final Input<Either<String,LoggerType>> loggerType;
 
@@ -72,9 +53,6 @@ Instrumentation key for applicationInsights logger.
         return this.loggerType;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,9 +60,6 @@ Instrumentation key for applicationInsights logger.
         return this.resourceGroupName;
     }
 
-    /**
-     * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -92,9 +67,6 @@ Instrumentation key for applicationInsights logger.
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

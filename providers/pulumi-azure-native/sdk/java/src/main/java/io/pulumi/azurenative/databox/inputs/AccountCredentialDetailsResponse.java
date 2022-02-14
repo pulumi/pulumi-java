@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Credential details of the account.
- */
 public final class AccountCredentialDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountCredentialDetailsResponse Empty = new AccountCredentialDetailsResponse();
 
-    /**
-     * Connection string of the account endpoint to use the account as a storage endpoint on the device.
-     */
     @InputImport(name="accountConnectionString", required=true)
     private final String accountConnectionString;
 
@@ -27,9 +21,6 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
         return this.accountConnectionString;
     }
 
-    /**
-     * Name of the account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -37,9 +28,6 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
         return this.accountName;
     }
 
-    /**
-     * Type of the account.
-     */
     @InputImport(name="dataAccountType", required=true)
     private final String dataAccountType;
 
@@ -47,9 +35,6 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
         return this.dataAccountType;
     }
 
-    /**
-     * Per share level unencrypted access credentials.
-     */
     @InputImport(name="shareCredentialDetails", required=true)
     private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 

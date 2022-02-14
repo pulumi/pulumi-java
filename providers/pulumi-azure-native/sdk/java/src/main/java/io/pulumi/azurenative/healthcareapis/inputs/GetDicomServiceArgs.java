@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDicomServiceArgs Empty = new GetDicomServiceArgs();
 
-    /**
-     * The name of DICOM Service resource.
-     */
     @InputImport(name="dicomServiceName", required=true)
     private final String dicomServiceName;
 
@@ -25,9 +19,6 @@ public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.dicomServiceName;
     }
 
-    /**
-     * The name of the resource group that contains the service instance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of workspace resource.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

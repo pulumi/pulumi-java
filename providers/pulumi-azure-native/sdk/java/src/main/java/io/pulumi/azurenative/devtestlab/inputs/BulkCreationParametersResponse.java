@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters for creating multiple virtual machines as a single action.
- */
 public final class BulkCreationParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BulkCreationParametersResponse Empty = new BulkCreationParametersResponse();
 
-    /**
-     * The number of virtual machine instances to create.
-     */
     @InputImport(name="instanceCount")
     private final @Nullable Integer instanceCount;
 

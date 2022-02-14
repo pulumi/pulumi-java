@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The regular expressions to match the response content with.
- */
 public final class RestResponseResponseRegex extends io.pulumi.resources.InvokeArgs {
 
     public static final RestResponseResponseRegex Empty = new RestResponseResponseRegex();
 
-    /**
-     * Indicates whether any or all of the expressions should match with the response content.
-     */
     @InputImport(name="matchQuantifier")
     private final @Nullable String matchQuantifier;
 
@@ -28,9 +22,6 @@ public final class RestResponseResponseRegex extends io.pulumi.resources.InvokeA
         return this.matchQuantifier == null ? Optional.empty() : Optional.ofNullable(this.matchQuantifier);
     }
 
-    /**
-     * The list of regular expressions.
-     */
     @InputImport(name="matches")
     private final @Nullable List<String> matches;
 

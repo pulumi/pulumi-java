@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents a user's consent in terms of the resources that can be accessed and under what conditions.
- */
 public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudHealthcareV1ConsentPolicyResponse Empty = new GoogleCloudHealthcareV1ConsentPolicyResponse();
 
-    /**
-     * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
-     */
     @InputImport(name="authorizationRule", required=true)
     private final ExprResponse authorizationRule;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends io.pulum
         return this.authorizationRule;
     }
 
-    /**
-     * The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
-     */
     @InputImport(name="resourceAttributes", required=true)
     private final List<AttributeResponse> resourceAttributes;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineElapsedTimeMetricPolicyResponse {
-/**
- * TimeSpan value, after which an Azure Monitoring Metric is fired.
- */
     private final @Nullable Object duration;
 
     @OutputCustomType.Constructor({"duration"})
@@ -21,9 +18,6 @@ public final class PipelineElapsedTimeMetricPolicyResponse {
         this.duration = duration;
     }
 
-/**
- * TimeSpan value, after which an Azure Monitoring Metric is fired.
- */
     public Optional<Object> getDuration() {
         return Optional.ofNullable(this.duration);
     }

@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * A day in a week.
- */
     @EnumType
     public enum WeekDay {
-/**
- * 
- */
         Sunday("Sunday"),
-/**
- * 
- */
         Monday("Monday"),
-/**
- * 
- */
         Tuesday("Tuesday"),
-/**
- * 
- */
         Wednesday("Wednesday"),
-/**
- * 
- */
         Thursday("Thursday"),
-/**
- * 
- */
         Friday("Friday"),
-/**
- * 
- */
         Saturday("Saturday");
 
         private final String value;

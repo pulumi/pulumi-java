@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CustomMetricResponse {
-/**
- * Allows filtering on the metric's fields.
- */
     private final String filter;
-/**
- * The name of the metric.
- */
     private final String metricName;
-/**
- * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
- */
     private final Double singleInstanceAssignment;
-/**
- * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
- */
     private final String targetType;
-/**
- * The target value for the metric.
- */
     private final Double targetUtilization;
 
     @OutputCustomType.Constructor({"filter","metricName","singleInstanceAssignment","targetType","targetUtilization"})
@@ -45,33 +30,18 @@ public final class CustomMetricResponse {
         this.targetUtilization = Objects.requireNonNull(targetUtilization);
     }
 
-/**
- * Allows filtering on the metric's fields.
- */
     public String getFilter() {
         return this.filter;
     }
-/**
- * The name of the metric.
- */
     public String getMetricName() {
         return this.metricName;
     }
-/**
- * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
- */
     public Double getSingleInstanceAssignment() {
         return this.singleInstanceAssignment;
     }
-/**
- * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
- */
     public String getTargetType() {
         return this.targetType;
     }
-/**
- * The target value for the metric.
- */
     public Double getTargetUtilization() {
         return this.targetUtilization;
     }

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of action.
- */
     @EnumType
     public enum FirewallPolicyFilterRuleActionType {
-/**
- * 
- */
         Allow("Allow"),
-/**
- * 
- */
         Deny("Deny");
 
         private final String value;

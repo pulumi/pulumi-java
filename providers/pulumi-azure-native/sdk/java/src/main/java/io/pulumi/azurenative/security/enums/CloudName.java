@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The multi cloud resource's cloud name.
- */
     @EnumType
     public enum CloudName {
-/**
- * 
- */
         Azure("Azure"),
-/**
- * 
- */
         AWS("AWS"),
-/**
- * 
- */
         GCP("GCP");
 
         private final String value;

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Contains information for manual implementation for an Azure SQL Database, Server or Elastic Pool Recommended Action.
- */
 public final class RecommendedActionImplementationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecommendedActionImplementationInfoResponse Empty = new RecommendedActionImplementationInfoResponse();
 
-    /**
-     * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
-     */
     @InputImport(name="method", required=true)
     private final String method;
 
@@ -25,9 +19,6 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
         return this.method;
     }
 
-    /**
-     * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
-     */
     @InputImport(name="script", required=true)
     private final String script;
 

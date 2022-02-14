@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The X12 schema reference.
- */
 public final class X12SchemaReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12SchemaReferenceResponse Empty = new X12SchemaReferenceResponse();
 
-    /**
-     * The message id.
-     */
     @InputImport(name="messageId", required=true)
     private final String messageId;
 
@@ -27,9 +21,6 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
         return this.messageId;
     }
 
-    /**
-     * The schema name.
-     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 
@@ -37,9 +28,6 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
         return this.schemaName;
     }
 
-    /**
-     * The schema version.
-     */
     @InputImport(name="schemaVersion", required=true)
     private final String schemaVersion;
 
@@ -47,9 +35,6 @@ public final class X12SchemaReferenceResponse extends io.pulumi.resources.Invoke
         return this.schemaVersion;
     }
 
-    /**
-     * The sender application id.
-     */
     @InputImport(name="senderApplicationId")
     private final @Nullable String senderApplicationId;
 

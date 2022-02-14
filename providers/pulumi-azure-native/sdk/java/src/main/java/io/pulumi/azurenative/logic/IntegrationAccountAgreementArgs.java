@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationAccountAgreementArgs Empty = new IntegrationAccountAgreementArgs();
 
-    /**
-     * The integration account agreement name.
-     */
     @InputImport(name="agreementName")
     private final @Nullable Input<String> agreementName;
 
@@ -32,9 +26,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.agreementName == null ? Input.empty() : this.agreementName;
     }
 
-    /**
-     * The agreement type.
-     */
     @InputImport(name="agreementType", required=true)
     private final Input<AgreementType> agreementType;
 
@@ -42,9 +33,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.agreementType;
     }
 
-    /**
-     * The agreement content.
-     */
     @InputImport(name="content", required=true)
     private final Input<AgreementContentArgs> content;
 
@@ -52,9 +40,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.content;
     }
 
-    /**
-     * The business identity of the guest partner.
-     */
     @InputImport(name="guestIdentity", required=true)
     private final Input<BusinessIdentityArgs> guestIdentity;
 
@@ -62,9 +47,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.guestIdentity;
     }
 
-    /**
-     * The integration account partner that is set as guest partner for this agreement.
-     */
     @InputImport(name="guestPartner", required=true)
     private final Input<String> guestPartner;
 
@@ -72,9 +54,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.guestPartner;
     }
 
-    /**
-     * The business identity of the host partner.
-     */
     @InputImport(name="hostIdentity", required=true)
     private final Input<BusinessIdentityArgs> hostIdentity;
 
@@ -82,9 +61,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.hostIdentity;
     }
 
-    /**
-     * The integration account partner that is set as host partner for this agreement.
-     */
     @InputImport(name="hostPartner", required=true)
     private final Input<String> hostPartner;
 
@@ -92,9 +68,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.hostPartner;
     }
 
-    /**
-     * The integration account name.
-     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -102,9 +75,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.integrationAccountName;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -112,9 +82,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -122,9 +89,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -132,9 +96,6 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

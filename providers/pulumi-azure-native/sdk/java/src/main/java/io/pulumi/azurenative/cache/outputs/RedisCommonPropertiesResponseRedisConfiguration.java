@@ -11,49 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RedisCommonPropertiesResponseRedisConfiguration {
-/**
- * First storage account connection string
- */
     private final @Nullable String aofStorageConnectionString0;
-/**
- * Second storage account connection string
- */
     private final @Nullable String aofStorageConnectionString1;
-/**
- * The max clients config
- */
     private final String maxclients;
-/**
- * Value in megabytes reserved for fragmentation per shard
- */
     private final @Nullable String maxfragmentationmemoryReserved;
-/**
- * Value in megabytes reserved for non-cache usage per shard e.g. failover.
- */
     private final @Nullable String maxmemoryDelta;
-/**
- * The eviction strategy used when your data won't fit within its memory limit.
- */
     private final @Nullable String maxmemoryPolicy;
-/**
- * Value in megabytes reserved for non-cache usage per shard e.g. failover.
- */
     private final @Nullable String maxmemoryReserved;
-/**
- * Specifies whether the rdb backup is enabled
- */
     private final @Nullable String rdbBackupEnabled;
-/**
- * Specifies the frequency for creating rdb backup
- */
     private final @Nullable String rdbBackupFrequency;
-/**
- * Specifies the maximum number of snapshots for rdb backup
- */
     private final @Nullable String rdbBackupMaxSnapshotCount;
-/**
- * The storage account connection string for storing rdb file
- */
     private final @Nullable String rdbStorageConnectionString;
 
     @OutputCustomType.Constructor({"aofStorageConnectionString0","aofStorageConnectionString1","maxclients","maxfragmentationmemoryReserved","maxmemoryDelta","maxmemoryPolicy","maxmemoryReserved","rdbBackupEnabled","rdbBackupFrequency","rdbBackupMaxSnapshotCount","rdbStorageConnectionString"})
@@ -82,69 +49,36 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
         this.rdbStorageConnectionString = rdbStorageConnectionString;
     }
 
-/**
- * First storage account connection string
- */
     public Optional<String> getAofStorageConnectionString0() {
         return Optional.ofNullable(this.aofStorageConnectionString0);
     }
-/**
- * Second storage account connection string
- */
     public Optional<String> getAofStorageConnectionString1() {
         return Optional.ofNullable(this.aofStorageConnectionString1);
     }
-/**
- * The max clients config
- */
     public String getMaxclients() {
         return this.maxclients;
     }
-/**
- * Value in megabytes reserved for fragmentation per shard
- */
     public Optional<String> getMaxfragmentationmemoryReserved() {
         return Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
-/**
- * Value in megabytes reserved for non-cache usage per shard e.g. failover.
- */
     public Optional<String> getMaxmemoryDelta() {
         return Optional.ofNullable(this.maxmemoryDelta);
     }
-/**
- * The eviction strategy used when your data won't fit within its memory limit.
- */
     public Optional<String> getMaxmemoryPolicy() {
         return Optional.ofNullable(this.maxmemoryPolicy);
     }
-/**
- * Value in megabytes reserved for non-cache usage per shard e.g. failover.
- */
     public Optional<String> getMaxmemoryReserved() {
         return Optional.ofNullable(this.maxmemoryReserved);
     }
-/**
- * Specifies whether the rdb backup is enabled
- */
     public Optional<String> getRdbBackupEnabled() {
         return Optional.ofNullable(this.rdbBackupEnabled);
     }
-/**
- * Specifies the frequency for creating rdb backup
- */
     public Optional<String> getRdbBackupFrequency() {
         return Optional.ofNullable(this.rdbBackupFrequency);
     }
-/**
- * Specifies the maximum number of snapshots for rdb backup
- */
     public Optional<String> getRdbBackupMaxSnapshotCount() {
         return Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
-/**
- * The storage account connection string for storing rdb file
- */
     public Optional<String> getRdbStorageConnectionString() {
         return Optional.ofNullable(this.rdbStorageConnectionString);
     }

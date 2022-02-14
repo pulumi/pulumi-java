@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Caching behavior for the requests
- */
     @EnumType
     public enum QueryStringBehavior {
-/**
- * 
- */
         Include("Include"),
-/**
- * 
- */
         IncludeAll("IncludeAll"),
-/**
- * 
- */
         Exclude("Exclude"),
-/**
- * 
- */
         ExcludeAll("ExcludeAll");
 
         private final String value;

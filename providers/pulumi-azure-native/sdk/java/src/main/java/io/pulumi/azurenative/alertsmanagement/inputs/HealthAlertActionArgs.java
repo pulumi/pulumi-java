@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An alert action.
- */
 public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthAlertActionArgs Empty = new HealthAlertActionArgs();
 
-    /**
-     * the id of the action group to use.
-     */
     @InputImport(name="actionGroupId")
     private final @Nullable Input<String> actionGroupId;
 
@@ -28,9 +22,6 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
         return this.actionGroupId == null ? Input.empty() : this.actionGroupId;
     }
 
-    /**
-     * The properties of a webhook object.
-     */
     @InputImport(name="webHookProperties")
     private final @Nullable Input<Map<String,String>> webHookProperties;
 

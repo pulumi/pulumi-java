@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * GroupSubject holds detailed information for group-kind subject.
- */
 public final class GroupSubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupSubjectArgs Empty = new GroupSubjectArgs();
 
-    /**
-     * name is the user group that matches, or "*" to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

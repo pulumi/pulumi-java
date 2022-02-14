@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WaitStepAttributesResponse {
-/**
- * The duration in ISO 8601 format of how long the wait should be.
- */
     private final String duration;
 
     @OutputCustomType.Constructor({"duration"})
@@ -19,9 +16,6 @@ public final class WaitStepAttributesResponse {
         this.duration = Objects.requireNonNull(duration);
     }
 
-/**
- * The duration in ISO 8601 format of how long the wait should be.
- */
     public String getDuration() {
         return this.duration;
     }

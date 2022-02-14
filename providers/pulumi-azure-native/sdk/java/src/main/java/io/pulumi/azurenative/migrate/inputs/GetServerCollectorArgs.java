@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServerCollectorArgs Empty = new GetServerCollectorArgs();
 
-    /**
-     * Name of the Azure Migrate project.
-     */
     @InputImport(name="projectName", required=true)
     private final String projectName;
 
@@ -25,9 +19,6 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
         return this.projectName;
     }
 
-    /**
-     * Name of the Azure Resource Group that project is part of.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Unique name of a Server collector within a project.
-     */
     @InputImport(name="serverCollectorName", required=true)
     private final String serverCollectorName;
 

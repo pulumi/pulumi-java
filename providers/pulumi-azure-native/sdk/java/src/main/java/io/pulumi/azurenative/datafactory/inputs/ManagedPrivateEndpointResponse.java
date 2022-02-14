@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a managed private endpoint
- */
 public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedPrivateEndpointResponse Empty = new ManagedPrivateEndpointResponse();
 
-    /**
-     * The managed private endpoint connection state
-     */
     @InputImport(name="connectionState")
     private final @Nullable ConnectionStatePropertiesResponse connectionState;
 
@@ -30,9 +24,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
         return this.connectionState == null ? Optional.empty() : Optional.ofNullable(this.connectionState);
     }
 
-    /**
-     * Fully qualified domain names
-     */
     @InputImport(name="fqdns")
     private final @Nullable List<String> fqdns;
 
@@ -40,9 +31,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
         return this.fqdns == null ? List.of() : this.fqdns;
     }
 
-    /**
-     * The groupId to which the managed private endpoint is created
-     */
     @InputImport(name="groupId")
     private final @Nullable String groupId;
 
@@ -50,9 +38,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
-    /**
-     * Denotes whether the managed private endpoint is reserved
-     */
     @InputImport(name="isReserved", required=true)
     private final Boolean isReserved;
 
@@ -60,9 +45,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
         return this.isReserved;
     }
 
-    /**
-     * The ARM resource ID of the resource to which the managed private endpoint is created
-     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable String privateLinkResourceId;
 
@@ -70,9 +52,6 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
     }
 
-    /**
-     * The managed private endpoint provisioning state
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

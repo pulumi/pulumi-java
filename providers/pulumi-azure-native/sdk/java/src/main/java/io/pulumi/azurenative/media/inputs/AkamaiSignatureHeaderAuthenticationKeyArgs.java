@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Akamai Signature Header authentication key.
- */
 public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AkamaiSignatureHeaderAuthenticationKeyArgs Empty = new AkamaiSignatureHeaderAuthenticationKeyArgs();
 
-    /**
-     * authentication key
-     */
     @InputImport(name="base64Key")
     private final @Nullable Input<String> base64Key;
 
@@ -27,9 +21,6 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
         return this.base64Key == null ? Input.empty() : this.base64Key;
     }
 
-    /**
-     * The expiration time of the authentication key.
-     */
     @InputImport(name="expiration")
     private final @Nullable Input<String> expiration;
 
@@ -37,9 +28,6 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
         return this.expiration == null ? Input.empty() : this.expiration;
     }
 
-    /**
-     * identifier of the key
-     */
     @InputImport(name="identifier")
     private final @Nullable Input<String> identifier;
 

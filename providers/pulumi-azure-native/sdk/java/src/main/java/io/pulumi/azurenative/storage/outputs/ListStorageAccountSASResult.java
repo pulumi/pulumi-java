@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListStorageAccountSASResult {
-/**
- * List SAS credentials of storage account.
- */
     private final String accountSasToken;
 
     @OutputCustomType.Constructor({"accountSasToken"})
@@ -19,9 +16,6 @@ public final class ListStorageAccountSASResult {
         this.accountSasToken = Objects.requireNonNull(accountSasToken);
     }
 
-/**
- * List SAS credentials of storage account.
- */
     public String getAccountSasToken() {
         return this.accountSasToken;
     }

@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventResponseMessageResponse {
-/**
- * The content of the event response message.
- */
     private final @Nullable String content;
-/**
- * The headers of the event response message.
- */
     private final @Nullable Map<String,String> headers;
-/**
- * The reason phrase of the event response message.
- */
     private final @Nullable String reasonPhrase;
-/**
- * The status code of the event response message.
- */
     private final @Nullable String statusCode;
-/**
- * The HTTP message version.
- */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"content","headers","reasonPhrase","statusCode","version"})
@@ -47,33 +32,18 @@ public final class EventResponseMessageResponse {
         this.version = version;
     }
 
-/**
- * The content of the event response message.
- */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
-/**
- * The headers of the event response message.
- */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
-/**
- * The reason phrase of the event response message.
- */
     public Optional<String> getReasonPhrase() {
         return Optional.ofNullable(this.reasonPhrase);
     }
-/**
- * The status code of the event response message.
- */
     public Optional<String> getStatusCode() {
         return Optional.ofNullable(this.statusCode);
     }
-/**
- * The HTTP message version.
- */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

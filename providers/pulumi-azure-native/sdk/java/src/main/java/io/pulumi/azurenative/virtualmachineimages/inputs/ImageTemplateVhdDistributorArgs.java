@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Distribute via VHD in a storage account.
- */
 public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateVhdDistributorArgs Empty = new ImageTemplateVhdDistributorArgs();
 
-    /**
-     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
-     */
     @InputImport(name="artifactTags")
     private final @Nullable Input<Map<String,String>> artifactTags;
 
@@ -28,9 +22,6 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
         return this.artifactTags == null ? Input.empty() : this.artifactTags;
     }
 
-    /**
-     * The name to be used for the associated RunOutput.
-     */
     @InputImport(name="runOutputName", required=true)
     private final Input<String> runOutputName;
 
@@ -38,10 +29,6 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
         return this.runOutputName;
     }
 
-    /**
-     * Type of distribution.
-Expected value is 'VHD'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntry {
-/**
- * Gets an entry.
- */
     public static CompletableFuture<GetEntryResult> invokeAsync(GetEntryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getEntry", TypeShape.of(GetEntryResult.class), args == null ? GetEntryArgs.Empty : args, Utilities.withVersion(options));
     }

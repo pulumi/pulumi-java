@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a configuration for non-DRM keys.
- */
 public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyClearKeyConfigurationArgs Empty = new ContentKeyPolicyClearKeyConfigurationArgs();
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

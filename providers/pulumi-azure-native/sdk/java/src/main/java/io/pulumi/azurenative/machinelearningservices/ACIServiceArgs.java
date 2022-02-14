@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ACIServiceArgs Empty = new ACIServiceArgs();
 
-    /**
-     * Whether or not Application Insights is enabled.
-     */
     @InputImport(name="appInsightsEnabled")
     private final @Nullable Input<Boolean> appInsightsEnabled;
 
@@ -35,9 +29,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.appInsightsEnabled == null ? Input.empty() : this.appInsightsEnabled;
     }
 
-    /**
-     * Whether or not authentication is enabled on the service.
-     */
     @InputImport(name="authEnabled")
     private final @Nullable Input<Boolean> authEnabled;
 
@@ -45,9 +36,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.authEnabled == null ? Input.empty() : this.authEnabled;
     }
 
-    /**
-     * The CName for the service.
-     */
     @InputImport(name="cname")
     private final @Nullable Input<String> cname;
 
@@ -55,10 +43,6 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.cname == null ? Input.empty() : this.cname;
     }
 
-    /**
-     * The compute environment type for the service.
-Expected value is 'ACI'.
-     */
     @InputImport(name="computeType", required=true)
     private final Input<String> computeType;
 
@@ -66,9 +50,6 @@ Expected value is 'ACI'.
         return this.computeType;
     }
 
-    /**
-     * The container resource requirements.
-     */
     @InputImport(name="containerResourceRequirements")
     private final @Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
@@ -76,9 +57,6 @@ Expected value is 'ACI'.
         return this.containerResourceRequirements == null ? Input.empty() : this.containerResourceRequirements;
     }
 
-    /**
-     * Details of the data collection options specified.
-     */
     @InputImport(name="dataCollection")
     private final @Nullable Input<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
 
@@ -86,9 +64,6 @@ Expected value is 'ACI'.
         return this.dataCollection == null ? Input.empty() : this.dataCollection;
     }
 
-    /**
-     * The description of the service.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -96,9 +71,6 @@ Expected value is 'ACI'.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The Dns label for the service.
-     */
     @InputImport(name="dnsNameLabel")
     private final @Nullable Input<String> dnsNameLabel;
 
@@ -106,9 +78,6 @@ Expected value is 'ACI'.
         return this.dnsNameLabel == null ? Input.empty() : this.dnsNameLabel;
     }
 
-    /**
-     * The encryption properties.
-     */
     @InputImport(name="encryptionProperties")
     private final @Nullable Input<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
 
@@ -116,9 +85,6 @@ Expected value is 'ACI'.
         return this.encryptionProperties == null ? Input.empty() : this.encryptionProperties;
     }
 
-    /**
-     * The Environment, models and assets needed for inferencing.
-     */
     @InputImport(name="environmentImageRequest")
     private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
@@ -126,9 +92,6 @@ Expected value is 'ACI'.
         return this.environmentImageRequest == null ? Input.empty() : this.environmentImageRequest;
     }
 
-    /**
-     * The authentication keys.
-     */
     @InputImport(name="keys")
     private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
 
@@ -136,9 +99,6 @@ Expected value is 'ACI'.
         return this.keys == null ? Input.empty() : this.keys;
     }
 
-    /**
-     * The service tag dictionary. Tags are mutable.
-     */
     @InputImport(name="kvTags")
     private final @Nullable Input<Map<String,String>> kvTags;
 
@@ -146,9 +106,6 @@ Expected value is 'ACI'.
         return this.kvTags == null ? Input.empty() : this.kvTags;
     }
 
-    /**
-     * The name of the Azure location/region.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -156,9 +113,6 @@ Expected value is 'ACI'.
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The service properties dictionary. Properties are immutable.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -166,9 +120,6 @@ Expected value is 'ACI'.
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the resource group in which workspace is located.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -176,9 +127,6 @@ Expected value is 'ACI'.
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the Azure Machine Learning service.
-     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -186,9 +134,6 @@ Expected value is 'ACI'.
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
-    /**
-     * The public SSL certificate in PEM format to use if SSL is enabled.
-     */
     @InputImport(name="sslCertificate")
     private final @Nullable Input<String> sslCertificate;
 
@@ -196,9 +141,6 @@ Expected value is 'ACI'.
         return this.sslCertificate == null ? Input.empty() : this.sslCertificate;
     }
 
-    /**
-     * Whether or not SSL is enabled.
-     */
     @InputImport(name="sslEnabled")
     private final @Nullable Input<Boolean> sslEnabled;
 
@@ -206,9 +148,6 @@ Expected value is 'ACI'.
         return this.sslEnabled == null ? Input.empty() : this.sslEnabled;
     }
 
-    /**
-     * The public SSL key in PEM format for the certificate.
-     */
     @InputImport(name="sslKey")
     private final @Nullable Input<String> sslKey;
 
@@ -216,9 +155,6 @@ Expected value is 'ACI'.
         return this.sslKey == null ? Input.empty() : this.sslKey;
     }
 
-    /**
-     * The virtual network configuration.
-     */
     @InputImport(name="vnetConfiguration")
     private final @Nullable Input<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
 
@@ -226,9 +162,6 @@ Expected value is 'ACI'.
         return this.vnetConfiguration == null ? Input.empty() : this.vnetConfiguration;
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

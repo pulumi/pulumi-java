@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse {
-/**
- * Display name of the parameter.
- */
     private final String parameter;
-/**
- * The new value of the parameter. A null value clears the parameter.
- */
     private final Object value;
 
     @OutputCustomType.Constructor({"parameter","value"})
@@ -27,15 +21,9 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * Display name of the parameter.
- */
     public String getParameter() {
         return this.parameter;
     }
-/**
- * The new value of the parameter. A null value clears the parameter.
- */
     public Object getValue() {
         return this.value;
     }

@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Method of cost allocation for the rule
- */
     @EnumType
     public enum CostAllocationPolicyType {
-/**
- * 
- */
         FixedProportion("FixedProportion");
 
         private final String value;

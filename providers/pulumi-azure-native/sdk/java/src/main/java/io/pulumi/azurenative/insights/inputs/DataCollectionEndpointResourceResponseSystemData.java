@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
 public final class DataCollectionEndpointResourceResponseSystemData extends io.pulumi.resources.InvokeArgs {
 
     public static final DataCollectionEndpointResourceResponseSystemData Empty = new DataCollectionEndpointResourceResponseSystemData();
 
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @InputImport(name="createdAt")
     private final @Nullable String createdAt;
 
@@ -27,9 +21,6 @@ public final class DataCollectionEndpointResourceResponseSystemData extends io.p
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
     }
 
-    /**
-     * The identity that created the resource.
-     */
     @InputImport(name="createdBy")
     private final @Nullable String createdBy;
 
@@ -37,9 +28,6 @@ public final class DataCollectionEndpointResourceResponseSystemData extends io.p
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
-    /**
-     * The type of identity that created the resource.
-     */
     @InputImport(name="createdByType")
     private final @Nullable String createdByType;
 
@@ -47,9 +35,6 @@ public final class DataCollectionEndpointResourceResponseSystemData extends io.p
         return this.createdByType == null ? Optional.empty() : Optional.ofNullable(this.createdByType);
     }
 
-    /**
-     * The timestamp of resource last modification (UTC)
-     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable String lastModifiedAt;
 
@@ -57,9 +42,6 @@ public final class DataCollectionEndpointResourceResponseSystemData extends io.p
         return this.lastModifiedAt == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedAt);
     }
 
-    /**
-     * The identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable String lastModifiedBy;
 
@@ -67,9 +49,6 @@ public final class DataCollectionEndpointResourceResponseSystemData extends io.p
         return this.lastModifiedBy == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedBy);
     }
 
-    /**
-     * The type of identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable String lastModifiedByType;
 

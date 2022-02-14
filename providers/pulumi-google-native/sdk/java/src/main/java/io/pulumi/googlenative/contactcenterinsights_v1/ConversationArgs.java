@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConversationArgs Empty = new ConversationArgs();
 
-    /**
-     * An opaque, user-specified string representing the human agent who handled the conversation.
-     */
     @InputImport(name="agentId")
     private final @Nullable Input<String> agentId;
 
@@ -31,9 +25,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId == null ? Input.empty() : this.agentId;
     }
 
-    /**
-     * Call-specific metadata.
-     */
     @InputImport(name="callMetadata")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
 
@@ -41,9 +32,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.callMetadata == null ? Input.empty() : this.callMetadata;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="conversationId")
     private final @Nullable Input<String> conversationId;
 
@@ -51,9 +39,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.conversationId == null ? Input.empty() : this.conversationId;
     }
 
-    /**
-     * The source of the audio and transcription for the conversation.
-     */
     @InputImport(name="dataSource")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
 
@@ -61,9 +46,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSource == null ? Input.empty() : this.dataSource;
     }
 
-    /**
-     * The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
-     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 
@@ -71,9 +53,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
-    /**
-     * A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -81,9 +60,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * A user-specified language code for the conversation.
-     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -91,9 +67,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -101,9 +74,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
-     */
     @InputImport(name="medium")
     private final @Nullable Input<ConversationMedium> medium;
 
@@ -111,9 +81,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.medium == null ? Input.empty() : this.medium;
     }
 
-    /**
-     * Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -121,9 +88,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Obfuscated user ID which the customer sent to us.
-     */
     @InputImport(name="obfuscatedUserId")
     private final @Nullable Input<String> obfuscatedUserId;
 
@@ -131,9 +95,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.obfuscatedUserId == null ? Input.empty() : this.obfuscatedUserId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -141,9 +102,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The time at which the conversation started.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -151,9 +109,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
-     */
     @InputImport(name="ttl")
     private final @Nullable Input<String> ttl;
 

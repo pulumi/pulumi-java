@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Message defining the location of a BigQuery table. A table is uniquely identified by its project_id, dataset_id, and table_name. Within a query a table is often referenced with a string in the format of: `:.` or `..`.
- */
 public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2BigQueryTableResponse Empty = new GooglePrivacyDlpV2BigQueryTableResponse();
 
-    /**
-     * Dataset ID of the table.
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -25,9 +19,6 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
         return this.datasetId;
     }
 
-    /**
-     * The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -35,9 +26,6 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends io.pulumi.res
         return this.project;
     }
 
-    /**
-     * Name of the table.
-     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 

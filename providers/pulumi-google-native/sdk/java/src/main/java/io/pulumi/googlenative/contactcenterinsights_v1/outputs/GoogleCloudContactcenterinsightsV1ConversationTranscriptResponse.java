@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse {
-/**
- * A list of sequential transcript segments that comprise the conversation.
- */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
     @OutputCustomType.Constructor({"transcriptSegments"})
@@ -20,9 +17,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
         this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
     }
 
-/**
- * A list of sequential transcript segments that comprise the conversation.
- */
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> getTranscriptSegments() {
         return this.transcriptSegments;
     }

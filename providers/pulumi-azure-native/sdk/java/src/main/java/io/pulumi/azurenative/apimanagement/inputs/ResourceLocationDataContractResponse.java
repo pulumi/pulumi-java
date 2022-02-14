@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Resource location data properties.
- */
 public final class ResourceLocationDataContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceLocationDataContractResponse Empty = new ResourceLocationDataContractResponse();
 
-    /**
-     * The city or locality where the resource is located.
-     */
     @InputImport(name="city")
     private final @Nullable String city;
 
@@ -27,9 +21,6 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
     }
 
-    /**
-     * The country or region where the resource is located.
-     */
     @InputImport(name="countryOrRegion")
     private final @Nullable String countryOrRegion;
 
@@ -37,9 +28,6 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
         return this.countryOrRegion == null ? Optional.empty() : Optional.ofNullable(this.countryOrRegion);
     }
 
-    /**
-     * The district, state, or province where the resource is located.
-     */
     @InputImport(name="district")
     private final @Nullable String district;
 
@@ -47,9 +35,6 @@ public final class ResourceLocationDataContractResponse extends io.pulumi.resour
         return this.district == null ? Optional.empty() : Optional.ofNullable(this.district);
     }
 
-    /**
-     * A canonical name for the geographic or physical location.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

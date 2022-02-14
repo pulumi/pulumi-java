@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Customer Certificate used for https
- */
 public final class CustomerCertificateParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerCertificateParametersArgs Empty = new CustomerCertificateParametersArgs();
 
-    /**
-     * Certificate issuing authority.
-     */
     @InputImport(name="certificateAuthority")
     private final @Nullable Input<String> certificateAuthority;
 
@@ -30,9 +24,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
     }
 
-    /**
-     * Resource reference to the KV secret
-     */
     @InputImport(name="secretSource", required=true)
     private final Input<ResourceReferenceArgs> secretSource;
 
@@ -40,9 +31,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
         return this.secretSource;
     }
 
-    /**
-     * Version of the secret to be used
-     */
     @InputImport(name="secretVersion")
     private final @Nullable Input<String> secretVersion;
 
@@ -50,9 +38,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
         return this.secretVersion == null ? Input.empty() : this.secretVersion;
     }
 
-    /**
-     * The list of SANs.
-     */
     @InputImport(name="subjectAlternativeNames")
     private final @Nullable Input<List<String>> subjectAlternativeNames;
 
@@ -60,10 +45,6 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
     }
 
-    /**
-     * The type of the Secret to create.
-Expected value is 'CustomerCertificate'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -71,9 +52,6 @@ Expected value is 'CustomerCertificate'.
         return this.type;
     }
 
-    /**
-     * Whether to use the latest version for the certificate
-     */
     @InputImport(name="useLatestVersion")
     private final @Nullable Input<Boolean> useLatestVersion;
 

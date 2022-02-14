@@ -11,17 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Security Rule data model for Network Security Groups.
- */
 public final class NsgSecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NsgSecurityRuleArgs Empty = new NsgSecurityRuleArgs();
 
-    /**
-     * Gets or sets whether network traffic is allowed or denied.
-Possible values are “Allow” and “Deny”.
-     */
     @InputImport(name="access")
     private final @Nullable Input<String> access;
 
@@ -29,9 +22,6 @@ Possible values are “Allow” and “Deny”.
         return this.access == null ? Input.empty() : this.access;
     }
 
-    /**
-     * Gets or sets a description for this rule. Restricted to 140 chars.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,11 +29,6 @@ Possible values are “Allow” and “Deny”.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Gets or sets destination address prefix. CIDR or source IP range.
- A “*” can also be used to match all source IPs. Default tags such
-as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
-     */
     @InputImport(name="destinationAddressPrefix")
     private final @Nullable Input<String> destinationAddressPrefix;
 
@@ -51,10 +36,6 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
         return this.destinationAddressPrefix == null ? Input.empty() : this.destinationAddressPrefix;
     }
 
-    /**
-     * Gets or sets Destination Port or Range. Integer or range between
-0 and 65535. A “*” can also be used to match all ports.
-     */
     @InputImport(name="destinationPortRange")
     private final @Nullable Input<String> destinationPortRange;
 
@@ -62,10 +43,6 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
         return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
     }
 
-    /**
-     * Gets or sets the direction of the rule.InBound or Outbound. The
-direction specifies if rule will be evaluated on incoming or outgoing traffic.
-     */
     @InputImport(name="direction")
     private final @Nullable Input<String> direction;
 
@@ -73,9 +50,6 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.
         return this.direction == null ? Input.empty() : this.direction;
     }
 
-    /**
-     * Gets or sets the Security rule name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -83,11 +57,6 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Gets or sets the priority of the rule. The value can be between
-100 and 4096. The priority number must be unique for each rule in the collection.
-The lower the priority number, the higher the priority of the rule.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -95,9 +64,6 @@ The lower the priority number, the higher the priority of the rule.
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 
@@ -105,12 +71,6 @@ The lower the priority number, the higher the priority of the rule.
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
-    /**
-     * Gets or sets source address prefix. CIDR or source IP range. A
-“*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
-‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
-rule, specifies where network traffic originates from.
-     */
     @InputImport(name="sourceAddressPrefix")
     private final @Nullable Input<String> sourceAddressPrefix;
 
@@ -118,10 +78,6 @@ rule, specifies where network traffic originates from.
         return this.sourceAddressPrefix == null ? Input.empty() : this.sourceAddressPrefix;
     }
 
-    /**
-     * Gets or sets Source Port or Range. Integer or range between 0 and
-65535. A “*” can also be used to match all ports.
-     */
     @InputImport(name="sourcePortRange")
     private final @Nullable Input<String> sourcePortRange;
 

@@ -13,22 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AlertRuleAnyOfOrLeafConditionResponse {
-/**
- * An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
- */
     private final @Nullable List<AlertRuleLeafConditionResponse> anyOf;
-/**
- * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
- */
     private final @Nullable List<String> containsAny;
-/**
- * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
- */
     private final @Nullable String equals;
-/**
- * The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
- */
     private final @Nullable String field;
 
     @OutputCustomType.Constructor({"anyOf","containsAny","equals","field"})
@@ -43,28 +30,15 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         this.field = field;
     }
 
-/**
- * An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
- */
     public List<AlertRuleLeafConditionResponse> getAnyOf() {
         return this.anyOf == null ? List.of() : this.anyOf;
     }
-/**
- * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
- */
     public List<String> getContainsAny() {
         return this.containsAny == null ? List.of() : this.containsAny;
     }
-/**
- * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
- */
     public Optional<String> getEquals() {
         return Optional.ofNullable(this.equals);
     }
-/**
- * The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
- */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }

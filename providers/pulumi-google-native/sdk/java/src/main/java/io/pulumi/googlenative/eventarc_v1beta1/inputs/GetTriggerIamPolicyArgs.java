@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTriggerIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTriggerIamPolicyArgs Empty = new GetTriggerIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetTriggerIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -37,9 +28,6 @@ public final class GetTriggerIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -47,9 +35,6 @@ public final class GetTriggerIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="triggerId", required=true)
     private final String triggerId;
 

@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Concur Service linked service.
- */
 public final class ConcurLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConcurLinkedServiceResponse Empty = new ConcurLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -35,9 +29,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Application client_id supplied by Concur App Management.
-     */
     @InputImport(name="clientId", required=true)
     private final Object clientId;
 
@@ -45,9 +36,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.clientId;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -55,9 +43,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
-     */
     @InputImport(name="connectionProperties")
     private final @Nullable Object connectionProperties;
 
@@ -65,9 +50,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -75,9 +57,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -85,9 +64,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -95,9 +71,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The password corresponding to the user name that you provided in the username field.
-     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -105,10 +78,6 @@ public final class ConcurLinkedServiceResponse extends io.pulumi.resources.Invok
         return this.password == null ? null : this.password;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Concur'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -116,9 +85,6 @@ Expected value is 'Concur'.
         return this.type;
     }
 
-    /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Object useEncryptedEndpoints;
 
@@ -126,9 +92,6 @@ Expected value is 'Concur'.
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
-    /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     */
     @InputImport(name="useHostVerification")
     private final @Nullable Object useHostVerification;
 
@@ -136,9 +99,6 @@ Expected value is 'Concur'.
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
     }
 
-    /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Object usePeerVerification;
 
@@ -146,9 +106,6 @@ Expected value is 'Concur'.
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
     }
 
-    /**
-     * The user name that you use to access Concur Service.
-     */
     @InputImport(name="username", required=true)
     private final Object username;
 

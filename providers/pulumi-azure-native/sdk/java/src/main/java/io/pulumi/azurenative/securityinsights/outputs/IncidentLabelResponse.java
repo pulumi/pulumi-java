@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IncidentLabelResponse {
-/**
- * The name of the label
- */
     private final String labelName;
-/**
- * The type of the label
- */
     private final String labelType;
 
     @OutputCustomType.Constructor({"labelName","labelType"})
@@ -26,15 +20,9 @@ public final class IncidentLabelResponse {
         this.labelType = Objects.requireNonNull(labelType);
     }
 
-/**
- * The name of the label
- */
     public String getLabelName() {
         return this.labelName;
     }
-/**
- * The type of the label
- */
     public String getLabelType() {
         return this.labelType;
     }

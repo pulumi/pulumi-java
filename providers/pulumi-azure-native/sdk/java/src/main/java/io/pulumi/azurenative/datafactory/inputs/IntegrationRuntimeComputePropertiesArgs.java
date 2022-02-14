@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The compute resource properties for managed integration runtime.
- */
 public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationRuntimeComputePropertiesArgs Empty = new IntegrationRuntimeComputePropertiesArgs();
 
-    /**
-     * Data flow properties for managed integration runtime.
-     */
     @InputImport(name="dataFlowProperties")
     private final @Nullable Input<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties;
 
@@ -30,9 +24,6 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
         return this.dataFlowProperties == null ? Input.empty() : this.dataFlowProperties;
     }
 
-    /**
-     * The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,9 +31,6 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Maximum parallel executions count per node for managed integration runtime.
-     */
     @InputImport(name="maxParallelExecutionsPerNode")
     private final @Nullable Input<Integer> maxParallelExecutionsPerNode;
 
@@ -50,9 +38,6 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
         return this.maxParallelExecutionsPerNode == null ? Input.empty() : this.maxParallelExecutionsPerNode;
     }
 
-    /**
-     * The node size requirement to managed integration runtime.
-     */
     @InputImport(name="nodeSize")
     private final @Nullable Input<String> nodeSize;
 
@@ -60,9 +45,6 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
         return this.nodeSize == null ? Input.empty() : this.nodeSize;
     }
 
-    /**
-     * The required number of nodes for managed integration runtime.
-     */
     @InputImport(name="numberOfNodes")
     private final @Nullable Input<Integer> numberOfNodes;
 
@@ -70,9 +52,6 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
         return this.numberOfNodes == null ? Input.empty() : this.numberOfNodes;
     }
 
-    /**
-     * VNet properties for managed integration runtime.
-     */
     @InputImport(name="vNetProperties")
     private final @Nullable Input<IntegrationRuntimeVNetPropertiesArgs> vNetProperties;
 

@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the frequency of the schedule.
- */
     @EnumType
     public enum ScheduleFrequency {
-/**
- * 
- */
         OneTime("OneTime"),
-/**
- * 
- */
         Day("Day"),
-/**
- * 
- */
         Hour("Hour"),
-/**
- * 
- */
         Week("Week"),
-/**
- * 
- */
         Month("Month"),
-/**
- * The minimum allowed interval for Minute schedules is 15 minutes.
- */
         Minute("Minute");
 
         private final String value;

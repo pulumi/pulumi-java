@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
- */
     @EnumType
     public enum HyperVGenerationTypes {
-/**
- * 
- */
         V1("V1"),
-/**
- * 
- */
         V2("V2");
 
         private final String value;

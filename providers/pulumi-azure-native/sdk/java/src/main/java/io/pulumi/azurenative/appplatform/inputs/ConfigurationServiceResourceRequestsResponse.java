@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Resource request payload of Application Configuration Service
- */
 public final class ConfigurationServiceResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationServiceResourceRequestsResponse Empty = new ConfigurationServiceResourceRequestsResponse();
 
-    /**
-     * Cpu allocated to each Application Configuration Service instance
-     */
     @InputImport(name="cpu", required=true)
     private final String cpu;
 
@@ -26,9 +20,6 @@ public final class ConfigurationServiceResourceRequestsResponse extends io.pulum
         return this.cpu;
     }
 
-    /**
-     * Instance count of the Application Configuration Service
-     */
     @InputImport(name="instanceCount", required=true)
     private final Integer instanceCount;
 
@@ -36,9 +27,6 @@ public final class ConfigurationServiceResourceRequestsResponse extends io.pulum
         return this.instanceCount;
     }
 
-    /**
-     * Memory allocated to each Application Configuration Service instance
-     */
     @InputImport(name="memory", required=true)
     private final String memory;
 

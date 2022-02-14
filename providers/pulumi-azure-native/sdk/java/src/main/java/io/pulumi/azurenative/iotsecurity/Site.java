@@ -16,175 +16,39 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * IoT site model
-API Version: 2021-02-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update IoT site
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var site = new AzureNative.IoTSecurity.Site("site", new AzureNative.IoTSecurity.SiteArgs
-        {
-            DisplayName = "IoT site name",
-            Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
-            Tags = 
-            {
-                { "key1", "value1" },
-                { "key2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	iotsecurity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/iotsecurity"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := iotsecurity.NewSite(ctx, "site", &iotsecurity.SiteArgs{
-			DisplayName: pulumi.String("IoT site name"),
-			Scope:       pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-				"key2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const site = new azure_native.iotsecurity.Site("site", {
-    displayName: "IoT site name",
-    scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
-    tags: {
-        key1: "value1",
-        key2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-site = azure_native.iotsecurity.Site("site",
-    display_name="IoT site name",
-    scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
-    tags={
-        "key1": "value1",
-        "key2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:iotsecurity:Site default subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub/providers/Microsoft.IoTSecurity/sites/default 
-```
-
- */
 @ResourceType(type="azure-native:iotsecurity:Site")
 public class Site extends io.pulumi.resources.CustomResource {
-    /**
-     * Display name of the IoT site
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return Display name of the IoT site
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Tags of the IoT site
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Tags of the IoT site
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Site(String name, SiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:iotsecurity:Site", name, args == null ? SiteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -203,14 +67,6 @@ public class Site extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Site get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Site(name, id, options);
     }

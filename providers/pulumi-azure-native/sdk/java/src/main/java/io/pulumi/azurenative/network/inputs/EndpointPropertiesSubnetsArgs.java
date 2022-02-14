@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Subnet first address, scope, and/or last address.
- */
 public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointPropertiesSubnetsArgs Empty = new EndpointPropertiesSubnetsArgs();
 
-    /**
-     * First address in the subnet.
-     */
     @InputImport(name="first")
     private final @Nullable Input<String> first;
 
@@ -28,9 +22,6 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
         return this.first == null ? Input.empty() : this.first;
     }
 
-    /**
-     * Last address in the subnet.
-     */
     @InputImport(name="last")
     private final @Nullable Input<String> last;
 
@@ -38,9 +29,6 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
         return this.last == null ? Input.empty() : this.last;
     }
 
-    /**
-     * Block size (number of leading bits in the subnet mask).
-     */
     @InputImport(name="scope")
     private final @Nullable Input<Integer> scope;
 

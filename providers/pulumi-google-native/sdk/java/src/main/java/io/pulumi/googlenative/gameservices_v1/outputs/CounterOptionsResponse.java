@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CounterOptionsResponse {
-/**
- * Custom fields.
- */
     private final List<CustomFieldResponse> customFields;
-/**
- * The field value to attribute.
- */
     private final String field;
-/**
- * The metric to update.
- */
     private final String metric;
 
     @OutputCustomType.Constructor({"customFields","field","metric"})
@@ -34,21 +25,12 @@ public final class CounterOptionsResponse {
         this.metric = Objects.requireNonNull(metric);
     }
 
-/**
- * Custom fields.
- */
     public List<CustomFieldResponse> getCustomFields() {
         return this.customFields;
     }
-/**
- * The field value to attribute.
- */
     public String getField() {
         return this.field;
     }
-/**
- * The metric to update.
- */
     public String getMetric() {
         return this.metric;
     }

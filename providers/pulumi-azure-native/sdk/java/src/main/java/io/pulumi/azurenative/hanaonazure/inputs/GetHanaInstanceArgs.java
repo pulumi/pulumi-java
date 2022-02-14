@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetHanaInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHanaInstanceArgs Empty = new GetHanaInstanceArgs();
 
-    /**
-     * Name of the SAP HANA on Azure instance.
-     */
     @InputImport(name="hanaInstanceName", required=true)
     private final String hanaInstanceName;
 
@@ -25,9 +19,6 @@ public final class GetHanaInstanceArgs extends io.pulumi.resources.InvokeArgs {
         return this.hanaInstanceName;
     }
 
-    /**
-     * Name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

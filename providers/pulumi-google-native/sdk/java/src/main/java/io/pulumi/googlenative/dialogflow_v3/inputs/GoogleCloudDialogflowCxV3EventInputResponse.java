@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents the event to trigger.
- */
 public final class GoogleCloudDialogflowCxV3EventInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3EventInputResponse Empty = new GoogleCloudDialogflowCxV3EventInputResponse();
 
-    /**
-     * Name of the event.
-     */
     @InputImport(name="event", required=true)
     private final String event;
 

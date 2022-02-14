@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Notification settings for a schedule.
- */
 public final class NotificationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationSettingsResponse Empty = new NotificationSettingsResponse();
 
-    /**
-     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     */
     @InputImport(name="emailRecipient")
     private final @Nullable String emailRecipient;
 
@@ -28,9 +22,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
         return this.emailRecipient == null ? Optional.empty() : Optional.ofNullable(this.emailRecipient);
     }
 
-    /**
-     * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     */
     @InputImport(name="notificationLocale")
     private final @Nullable String notificationLocale;
 
@@ -38,9 +29,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
         return this.notificationLocale == null ? Optional.empty() : Optional.ofNullable(this.notificationLocale);
     }
 
-    /**
-     * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -48,9 +36,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * Time in minutes before event at which notification will be sent.
-     */
     @InputImport(name="timeInMinutes")
     private final @Nullable Integer timeInMinutes;
 
@@ -58,9 +43,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
         return this.timeInMinutes == null ? Optional.empty() : Optional.ofNullable(this.timeInMinutes);
     }
 
-    /**
-     * The webhook URL to which the notification will be sent.
-     */
     @InputImport(name="webhookUrl")
     private final @Nullable String webhookUrl;
 

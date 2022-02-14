@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * System data for notebook resource
- */
 public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="createdAt")
     private final @Nullable Input<String> createdAt;
 
@@ -27,9 +21,6 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="createdBy")
     private final @Nullable Input<String> createdBy;
 
@@ -37,9 +28,6 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="createdByType")
     private final @Nullable Input<String> createdByType;
 
@@ -47,9 +35,6 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable Input<String> lastModifiedAt;
 
@@ -57,9 +42,6 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable Input<String> lastModifiedBy;
 
@@ -67,9 +49,6 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable Input<String> lastModifiedByType;
 

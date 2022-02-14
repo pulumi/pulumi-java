@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the load balancer configuration.
- */
 public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerConfigurationArgs Empty = new LoadBalancerConfigurationArgs();
 
-    /**
-     * Resource Id
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,9 +22,6 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the Load balancer
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,9 +29,6 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
-    /**
-     * Properties of the load balancer configuration.
-     */
     @InputImport(name="properties", required=true)
     private final Input<LoadBalancerConfigurationPropertiesArgs> properties;
 

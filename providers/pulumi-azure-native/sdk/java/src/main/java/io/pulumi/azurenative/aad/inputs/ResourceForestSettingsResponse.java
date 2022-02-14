@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Settings for Resource Forest
- */
 public final class ResourceForestSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceForestSettingsResponse Empty = new ResourceForestSettingsResponse();
 
-    /**
-     * Resource Forest
-     */
     @InputImport(name="resourceForest")
     private final @Nullable String resourceForest;
 
@@ -29,9 +23,6 @@ public final class ResourceForestSettingsResponse extends io.pulumi.resources.In
         return this.resourceForest == null ? Optional.empty() : Optional.ofNullable(this.resourceForest);
     }
 
-    /**
-     * List of settings for Resource Forest
-     */
     @InputImport(name="settings")
     private final @Nullable List<ForestTrustResponse> settings;
 

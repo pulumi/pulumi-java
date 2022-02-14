@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Weekly Schedule properties, make a snapshot every week at a specific day or days
- */
 public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WeeklyScheduleResponse Empty = new WeeklyScheduleResponse();
 
-    /**
-     * Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
-     */
     @InputImport(name="day")
     private final @Nullable String day;
 
@@ -29,9 +23,6 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
     }
 
-    /**
-     * Indicates which hour in UTC timezone a snapshot should be taken
-     */
     @InputImport(name="hour")
     private final @Nullable Integer hour;
 
@@ -39,9 +30,6 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.hour == null ? Optional.empty() : Optional.ofNullable(this.hour);
     }
 
-    /**
-     * Indicates which minute snapshot should be taken
-     */
     @InputImport(name="minute")
     private final @Nullable Integer minute;
 
@@ -49,9 +37,6 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
     }
 
-    /**
-     * Weekly snapshot count to keep
-     */
     @InputImport(name="snapshotsToKeep")
     private final @Nullable Integer snapshotsToKeep;
 
@@ -59,9 +44,6 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.snapshotsToKeep == null ? Optional.empty() : Optional.ofNullable(this.snapshotsToKeep);
     }
 
-    /**
-     * Resource size in bytes, current storage usage for the volume in bytes
-     */
     @InputImport(name="usedBytes")
     private final @Nullable Double usedBytes;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyValueArgs Empty = new GetKeyValueArgs();
 
-    /**
-     * The name of the configuration store.
-     */
     @InputImport(name="configStoreName", required=true)
     private final String configStoreName;
 
@@ -25,9 +19,6 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
         return this.configStoreName;
     }
 
-    /**
-     * Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
-     */
     @InputImport(name="keyValueName", required=true)
     private final String keyValueName;
 
@@ -35,9 +26,6 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyValueName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

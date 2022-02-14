@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Debug info option.
- */
     @EnumType
     public enum HDInsightActivityDebugInfoOption {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Always("Always"),
-/**
- * 
- */
         Failure("Failure");
 
         private final String value;

@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PostArgsMatchConditionParametersResponse {
-/**
- * The match value for the condition of the delivery rule
- */
     private final @Nullable List<String> matchValues;
-/**
- * Describes if this is negate condition or not
- */
     private final @Nullable Boolean negateCondition;
-/**
- * 
- */
     private final String odataType;
-/**
- * Describes operator to be matched
- */
     private final String operator;
-/**
- * Name of PostArg to be matched
- */
     private final @Nullable String selector;
-/**
- * List of transforms
- */
     private final @Nullable List<String> transforms;
 
     @OutputCustomType.Constructor({"matchValues","negateCondition","odataType","operator","selector","transforms"})
@@ -54,39 +36,21 @@ public final class PostArgsMatchConditionParametersResponse {
         this.transforms = transforms;
     }
 
-/**
- * The match value for the condition of the delivery rule
- */
     public List<String> getMatchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
-/**
- * Describes if this is negate condition or not
- */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
-/**
- * 
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * Describes operator to be matched
- */
     public String getOperator() {
         return this.operator;
     }
-/**
- * Name of PostArg to be matched
- */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
-/**
- * List of transforms
- */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

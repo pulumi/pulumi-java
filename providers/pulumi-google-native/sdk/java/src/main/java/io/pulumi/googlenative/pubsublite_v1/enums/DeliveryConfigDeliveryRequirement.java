@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The DeliveryRequirement for this subscription.
- */
     @EnumType
     public enum DeliveryConfigDeliveryRequirement {
-/**
- * Default value. This value is unused.
- */
         DeliveryRequirementUnspecified("DELIVERY_REQUIREMENT_UNSPECIFIED"),
-/**
- * The server does not wait for a published message to be successfully written to storage before delivering it to subscribers.
- */
         DeliverImmediately("DELIVER_IMMEDIATELY"),
-/**
- * The server will not deliver a published message to subscribers until the message has been successfully written to storage. This will result in higher end-to-end latency, but consistent delivery.
- */
         DeliverAfterStored("DELIVER_AFTER_STORED");
 
         private final String value;

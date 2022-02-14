@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SSIS embedded child package.
- */
 public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SSISChildPackageArgs Empty = new SSISChildPackageArgs();
 
-    /**
-     * Content for embedded child package. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="packageContent", required=true)
     private final Input<Object> packageContent;
 
@@ -28,9 +22,6 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
         return this.packageContent;
     }
 
-    /**
-     * Last modified date for embedded child package.
-     */
     @InputImport(name="packageLastModifiedDate")
     private final @Nullable Input<String> packageLastModifiedDate;
 
@@ -38,9 +29,6 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
         return this.packageLastModifiedDate == null ? Input.empty() : this.packageLastModifiedDate;
     }
 
-    /**
-     * Name for embedded child package.
-     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 
@@ -48,9 +36,6 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
-    /**
-     * Path for embedded child package. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="packagePath", required=true)
     private final Input<Object> packagePath;
 

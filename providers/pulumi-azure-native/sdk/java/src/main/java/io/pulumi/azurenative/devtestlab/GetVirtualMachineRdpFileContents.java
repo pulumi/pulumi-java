@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineRdpFileContents {
-/**
- * Represents a .rdp file
-API Version: 2018-09-15.
- *
- * Represents a .rdp file
- */
     public static CompletableFuture<GetVirtualMachineRdpFileContentsResult> invokeAsync(GetVirtualMachineRdpFileContentsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getVirtualMachineRdpFileContents", TypeShape.of(GetVirtualMachineRdpFileContentsResult.class), args == null ? GetVirtualMachineRdpFileContentsArgs.Empty : args, Utilities.withVersion(options));
     }

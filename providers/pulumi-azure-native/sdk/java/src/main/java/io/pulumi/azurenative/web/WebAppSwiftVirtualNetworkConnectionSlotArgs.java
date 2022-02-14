@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSwiftVirtualNetworkConnectionSlotArgs Empty = new WebAppSwiftVirtualNetworkConnectionSlotArgs();
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,9 +22,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,9 +29,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API will add or update connections for the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 
@@ -58,9 +43,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
         return this.slot;
     }
 
-    /**
-     * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
-     */
     @InputImport(name="subnetResourceId")
     private final @Nullable Input<String> subnetResourceId;
 
@@ -68,9 +50,6 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
     }
 
-    /**
-     * A flag that specifies if the scale unit this Web App is on supports Swift integration.
-     */
     @InputImport(name="swiftSupported")
     private final @Nullable Input<Boolean> swiftSupported;
 

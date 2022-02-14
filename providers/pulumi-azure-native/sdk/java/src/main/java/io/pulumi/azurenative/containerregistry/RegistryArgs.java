@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryArgs Empty = new RegistryArgs();
 
-    /**
-     * The value that indicates whether the admin user is enabled.
-     */
     @InputImport(name="adminUserEnabled")
     private final @Nullable Input<Boolean> adminUserEnabled;
 
@@ -33,9 +27,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.adminUserEnabled == null ? Input.empty() : this.adminUserEnabled;
     }
 
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,9 +34,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The network rule set for a container registry.
-     */
     @InputImport(name="networkRuleSet")
     private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
 
@@ -53,9 +41,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
     }
 
-    /**
-     * The policies for a container registry.
-     */
     @InputImport(name="policies")
     private final @Nullable Input<PoliciesArgs> policies;
 
@@ -63,9 +48,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.policies == null ? Input.empty() : this.policies;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName")
     private final @Nullable Input<String> registryName;
 
@@ -73,9 +55,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName == null ? Input.empty() : this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,9 +62,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The SKU of the container registry.
-     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -93,9 +69,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
-    /**
-     * The properties of the storage account for the container registry. Only applicable to Classic SKU.
-     */
     @InputImport(name="storageAccount")
     private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
 
@@ -103,9 +76,6 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

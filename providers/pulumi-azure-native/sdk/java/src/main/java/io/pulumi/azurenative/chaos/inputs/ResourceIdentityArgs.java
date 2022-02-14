@@ -9,16 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * The managed identity of a resource.
- */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
-    /**
-     * String of the resource identity type.
-     */
     @InputImport(name="type", required=true)
     private final Input<ResourceIdentityType> type;
 

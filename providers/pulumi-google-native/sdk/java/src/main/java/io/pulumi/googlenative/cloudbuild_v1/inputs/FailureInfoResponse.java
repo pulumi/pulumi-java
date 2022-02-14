@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A fatal problem encountered during the execution of the build.
- */
 public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailureInfoResponse Empty = new FailureInfoResponse();
 
-    /**
-     * Explains the failure issue in more detail using hard-coded text.
-     */
     @InputImport(name="detail", required=true)
     private final String detail;
 
@@ -25,9 +19,6 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.detail;
     }
 
-    /**
-     * The name of the failure.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

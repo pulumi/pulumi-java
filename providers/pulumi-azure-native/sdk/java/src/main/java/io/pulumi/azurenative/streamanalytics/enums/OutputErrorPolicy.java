@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
- */
     @EnumType
     public enum OutputErrorPolicy {
-/**
- * 
- */
         Stop("Stop"),
-/**
- * 
- */
         Drop("Drop");
 
         private final String value;

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
- */
     @EnumType
     public enum EncryptionConfigType {
-/**
- * 
- */
         UserManaged("UserManaged"),
-/**
- * 
- */
         ServiceManaged("ServiceManaged");
 
         private final String value;

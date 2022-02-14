@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Virtual application in an app.
- */
 public final class VirtualApplicationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualApplicationResponse Empty = new VirtualApplicationResponse();
 
-    /**
-     * Physical path.
-     */
     @InputImport(name="physicalPath")
     private final @Nullable String physicalPath;
 
@@ -30,9 +24,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
         return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
     }
 
-    /**
-     * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
-     */
     @InputImport(name="preloadEnabled")
     private final @Nullable Boolean preloadEnabled;
 
@@ -40,9 +31,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
         return this.preloadEnabled == null ? Optional.empty() : Optional.ofNullable(this.preloadEnabled);
     }
 
-    /**
-     * Virtual directories for virtual application.
-     */
     @InputImport(name="virtualDirectories")
     private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
 
@@ -50,9 +38,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
     }
 
-    /**
-     * Virtual path.
-     */
     @InputImport(name="virtualPath")
     private final @Nullable String virtualPath;
 

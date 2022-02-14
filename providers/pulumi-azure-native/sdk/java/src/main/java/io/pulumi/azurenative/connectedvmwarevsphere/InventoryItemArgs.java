@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InventoryItemArgs Empty = new InventoryItemArgs();
 
-    /**
-     * Name of the inventoryItem.
-     */
     @InputImport(name="inventoryItemName")
     private final @Nullable Input<String> inventoryItemName;
 
@@ -29,9 +23,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.inventoryItemName == null ? Input.empty() : this.inventoryItemName;
     }
 
-    /**
-     * They inventory type.
-     */
     @InputImport(name="inventoryType", required=true)
     private final Input<Either<String,InventoryType>> inventoryType;
 
@@ -39,9 +30,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.inventoryType;
     }
 
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -49,9 +37,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Gets or sets the tracked resource id corresponding to the inventory resource.
-     */
     @InputImport(name="managedResourceId")
     private final @Nullable Input<String> managedResourceId;
 
@@ -59,9 +44,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedResourceId == null ? Input.empty() : this.managedResourceId;
     }
 
-    /**
-     * Gets or sets the vCenter Managed Object name for the inventory item.
-     */
     @InputImport(name="moName")
     private final @Nullable Input<String> moName;
 
@@ -69,9 +51,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.moName == null ? Input.empty() : this.moName;
     }
 
-    /**
-     * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
-     */
     @InputImport(name="moRefId")
     private final @Nullable Input<String> moRefId;
 
@@ -79,9 +58,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.moRefId == null ? Input.empty() : this.moRefId;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -89,9 +65,6 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the vCenter.
-     */
     @InputImport(name="vcenterName", required=true)
     private final Input<String> vcenterName;
 

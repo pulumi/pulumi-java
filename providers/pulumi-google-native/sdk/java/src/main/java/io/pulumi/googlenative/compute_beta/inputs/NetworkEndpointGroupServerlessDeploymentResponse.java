@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for a serverless network endpoint group (NEG). The platform must be provided. Note: The target backend service must be in the same project and located in the same region as the Serverless NEG.
- */
 public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkEndpointGroupServerlessDeploymentResponse Empty = new NetworkEndpointGroupServerlessDeploymentResponse();
 
-    /**
-     * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com 
-     */
     @InputImport(name="platform", required=true)
     private final String platform;
 
@@ -25,9 +19,6 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
         return this.platform;
     }
 
-    /**
-     * The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name 
-     */
     @InputImport(name="resource", required=true)
     private final String resource;
 
@@ -35,9 +26,6 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
         return this.resource;
     }
 
-    /**
-     * A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag 
-     */
     @InputImport(name="urlMask", required=true)
     private final String urlMask;
 
@@ -45,9 +33,6 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
         return this.urlMask;
     }
 
-    /**
-     * The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag 
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

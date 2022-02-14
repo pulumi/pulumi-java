@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Sftp write settings.
- */
 public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SftpWriteSettingsArgs Empty = new SftpWriteSettingsArgs();
 
-    /**
-     * The type of copy behavior for copy sink.
-     */
     @InputImport(name="copyBehavior")
     private final @Nullable Input<Object> copyBehavior;
 
@@ -28,9 +22,6 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.copyBehavior == null ? Input.empty() : this.copyBehavior;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -38,9 +29,6 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -48,9 +36,6 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
-     */
     @InputImport(name="operationTimeout")
     private final @Nullable Input<Object> operationTimeout;
 
@@ -58,10 +43,6 @@ public final class SftpWriteSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.operationTimeout == null ? Input.empty() : this.operationTimeout;
     }
 
-    /**
-     * The write setting type.
-Expected value is 'SftpWriteSettings'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -69,9 +50,6 @@ Expected value is 'SftpWriteSettings'.
         return this.type;
     }
 
-    /**
-     * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="useTempFileRename")
     private final @Nullable Input<Object> useTempFileRename;
 

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of a resource currently being monitored by the Logz monitor resource.
- */
 public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoredResourceResponse Empty = new MonitoredResourceResponse();
 
-    /**
-     * The ARM id of the resource.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -29,9 +23,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Reason for why the resource is sending logs (or why it is not sending).
-     */
     @InputImport(name="reasonForLogsStatus")
     private final @Nullable String reasonForLogsStatus;
 
@@ -39,9 +30,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
         return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
     }
 
-    /**
-     * Reason for why the resource is sending metrics (or why it is not sending).
-     */
     @InputImport(name="reasonForMetricsStatus")
     private final @Nullable String reasonForMetricsStatus;
 
@@ -49,9 +37,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
         return this.reasonForMetricsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForMetricsStatus);
     }
 
-    /**
-     * Flag indicating if resource is sending logs to Logz.
-     */
     @InputImport(name="sendingLogs")
     private final @Nullable Boolean sendingLogs;
 
@@ -59,9 +44,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
         return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
     }
 
-    /**
-     * Flag indicating if resource is sending metrics to Logz.
-     */
     @InputImport(name="sendingMetrics")
     private final @Nullable Boolean sendingMetrics;
 
@@ -69,9 +51,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
         return this.sendingMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendingMetrics);
     }
 
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @InputImport(name="systemData", required=true)
     private final SystemDataResponse systemData;
 

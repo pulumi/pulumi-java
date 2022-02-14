@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDdosProtectionPlan {
-/**
- * A DDoS protection plan in a resource group.
-API Version: 2020-11-01.
- *
- * A DDoS protection plan in a resource group.
- */
     public static CompletableFuture<GetDdosProtectionPlanResult> invokeAsync(GetDdosProtectionPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDdosProtectionPlan", TypeShape.of(GetDdosProtectionPlanResult.class), args == null ? GetDdosProtectionPlanArgs.Empty : args, Utilities.withVersion(options));
     }

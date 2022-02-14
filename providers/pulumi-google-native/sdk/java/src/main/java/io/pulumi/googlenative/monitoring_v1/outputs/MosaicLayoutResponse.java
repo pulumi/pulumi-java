@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MosaicLayoutResponse {
-/**
- * The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
- */
     private final Integer columns;
-/**
- * The tiles to display.
- */
     private final List<TileResponse> tiles;
 
     @OutputCustomType.Constructor({"columns","tiles"})
@@ -28,15 +22,9 @@ public final class MosaicLayoutResponse {
         this.tiles = Objects.requireNonNull(tiles);
     }
 
-/**
- * The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
- */
     public Integer getColumns() {
         return this.columns;
     }
-/**
- * The tiles to display.
- */
     public List<TileResponse> getTiles() {
         return this.tiles;
     }

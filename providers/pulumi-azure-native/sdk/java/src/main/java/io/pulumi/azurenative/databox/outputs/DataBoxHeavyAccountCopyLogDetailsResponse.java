@@ -10,22 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataBoxHeavyAccountCopyLogDetailsResponse {
-/**
- * Account name.
- */
     private final String accountName;
-/**
- * Indicates the type of job details.
-Expected value is 'DataBoxHeavy'.
- */
     private final String copyLogDetailsType;
-/**
- * Link for copy logs.
- */
     private final List<String> copyLogLink;
-/**
- * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
- */
     private final List<String> copyVerboseLogLink;
 
     @OutputCustomType.Constructor({"accountName","copyLogDetailsType","copyLogLink","copyVerboseLogLink"})
@@ -40,28 +27,15 @@ Expected value is 'DataBoxHeavy'.
         this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
     }
 
-/**
- * Account name.
- */
     public String getAccountName() {
         return this.accountName;
     }
-/**
- * Indicates the type of job details.
-Expected value is 'DataBoxHeavy'.
- */
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
     }
-/**
- * Link for copy logs.
- */
     public List<String> getCopyLogLink() {
         return this.copyLogLink;
     }
-/**
- * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
- */
     public List<String> getCopyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }

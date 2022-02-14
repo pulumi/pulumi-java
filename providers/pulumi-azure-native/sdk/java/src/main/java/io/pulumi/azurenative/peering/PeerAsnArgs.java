@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeerAsnArgs Empty = new PeerAsnArgs();
 
-    /**
-     * The Autonomous System Number (ASN) of the peer.
-     */
     @InputImport(name="peerAsn")
     private final @Nullable Input<Integer> peerAsn;
 
@@ -32,9 +26,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
     }
 
-    /**
-     * The peer ASN name.
-     */
     @InputImport(name="peerAsnName")
     private final @Nullable Input<String> peerAsnName;
 
@@ -42,9 +33,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerAsnName == null ? Input.empty() : this.peerAsnName;
     }
 
-    /**
-     * The contact details of the peer.
-     */
     @InputImport(name="peerContactDetail")
     private final @Nullable Input<List<ContactDetailArgs>> peerContactDetail;
 
@@ -52,9 +40,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerContactDetail == null ? Input.empty() : this.peerContactDetail;
     }
 
-    /**
-     * The name of the peer.
-     */
     @InputImport(name="peerName")
     private final @Nullable Input<String> peerName;
 
@@ -62,9 +47,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
         return this.peerName == null ? Input.empty() : this.peerName;
     }
 
-    /**
-     * The validation state of the ASN associated with the peer.
-     */
     @InputImport(name="validationState")
     private final @Nullable Input<Either<String,ValidationState>> validationState;
 

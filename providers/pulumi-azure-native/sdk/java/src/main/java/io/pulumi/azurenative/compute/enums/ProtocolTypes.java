@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**
- */
     @EnumType
     public enum ProtocolTypes {
-/**
- * 
- */
         Http("Http"),
-/**
- * 
- */
         Https("Https");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Resource Access Rule.
- */
 public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceAccessRuleArgs Empty = new ResourceAccessRuleArgs();
 
-    /**
-     * Resource Id
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -27,9 +21,6 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
-    /**
-     * Tenant Id
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

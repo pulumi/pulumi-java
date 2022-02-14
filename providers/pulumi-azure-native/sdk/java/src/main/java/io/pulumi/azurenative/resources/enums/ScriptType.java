@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the script.
- */
     @EnumType
     public enum ScriptType {
-/**
- * 
- */
         AzurePowerShell("AzurePowerShell"),
-/**
- * 
- */
         AzureCLI("AzureCLI");
 
         private final String value;

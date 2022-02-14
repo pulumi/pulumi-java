@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SecurityPartnerProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPartnerProviderArgs Empty = new SecurityPartnerProviderArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,9 +25,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,9 +39,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Security Partner Provider.
-     */
     @InputImport(name="securityPartnerProviderName")
     private final @Nullable Input<String> securityPartnerProviderName;
 
@@ -61,9 +46,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
         return this.securityPartnerProviderName == null ? Input.empty() : this.securityPartnerProviderName;
     }
 
-    /**
-     * The security provider name.
-     */
     @InputImport(name="securityProviderName")
     private final @Nullable Input<Either<String,SecurityProviderName>> securityProviderName;
 
@@ -71,9 +53,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
         return this.securityProviderName == null ? Input.empty() : this.securityProviderName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -81,9 +60,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The virtualHub to which the Security Partner Provider belongs.
-     */
     @InputImport(name="virtualHub")
     private final @Nullable Input<SubResourceArgs> virtualHub;
 

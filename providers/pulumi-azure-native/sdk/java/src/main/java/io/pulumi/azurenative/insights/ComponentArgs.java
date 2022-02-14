@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComponentArgs Empty = new ComponentArgs();
 
-    /**
-     * Type of application being monitored.
-     */
     @InputImport(name="applicationType", required=true)
     private final Input<Either<String,ApplicationType>> applicationType;
 
@@ -36,9 +30,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationType;
     }
 
-    /**
-     * Disable IP masking.
-     */
     @InputImport(name="disableIpMasking")
     private final @Nullable Input<Boolean> disableIpMasking;
 
@@ -46,9 +37,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableIpMasking == null ? Input.empty() : this.disableIpMasking;
     }
 
-    /**
-     * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
-     */
     @InputImport(name="flowType")
     private final @Nullable Input<Either<String,FlowType>> flowType;
 
@@ -56,9 +44,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowType == null ? Input.empty() : this.flowType;
     }
 
-    /**
-     * The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
-     */
     @InputImport(name="hockeyAppId")
     private final @Nullable Input<String> hockeyAppId;
 
@@ -66,9 +51,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.hockeyAppId == null ? Input.empty() : this.hockeyAppId;
     }
 
-    /**
-     * Purge data immediately after 30 days.
-     */
     @InputImport(name="immediatePurgeDataOn30Days")
     private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
 
@@ -76,9 +58,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.immediatePurgeDataOn30Days == null ? Input.empty() : this.immediatePurgeDataOn30Days;
     }
 
-    /**
-     * Indicates the flow of the ingestion.
-     */
     @InputImport(name="ingestionMode")
     private final @Nullable Input<Either<String,IngestionMode>> ingestionMode;
 
@@ -86,9 +65,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.ingestionMode == null ? Input.empty() : this.ingestionMode;
     }
 
-    /**
-     * The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -96,9 +72,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -106,9 +79,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
-     */
     @InputImport(name="requestSource")
     private final @Nullable Input<Either<String,RequestSource>> requestSource;
 
@@ -116,9 +86,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestSource == null ? Input.empty() : this.requestSource;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -126,9 +93,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -136,9 +100,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Retention period in days.
-     */
     @InputImport(name="retentionInDays")
     private final @Nullable Input<Integer> retentionInDays;
 
@@ -146,9 +107,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
     }
 
-    /**
-     * Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
-     */
     @InputImport(name="samplingPercentage")
     private final @Nullable Input<Double> samplingPercentage;
 
@@ -156,9 +114,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         return this.samplingPercentage == null ? Input.empty() : this.samplingPercentage;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkDnsZoneArgs Empty = new WorkloadNetworkDnsZoneArgs();
 
-    /**
-     * Display name of the DNS Zone.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,9 +23,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * DNS Server IP array of the DNS Zone.
-     */
     @InputImport(name="dnsServerIps")
     private final @Nullable Input<List<String>> dnsServerIps;
 
@@ -39,9 +30,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.dnsServerIps == null ? Input.empty() : this.dnsServerIps;
     }
 
-    /**
-     * Number of DNS Services using the DNS zone.
-     */
     @InputImport(name="dnsServices")
     private final @Nullable Input<Double> dnsServices;
 
@@ -49,9 +37,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.dnsServices == null ? Input.empty() : this.dnsServices;
     }
 
-    /**
-     * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
-     */
     @InputImport(name="dnsZoneId")
     private final @Nullable Input<String> dnsZoneId;
 
@@ -59,9 +44,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.dnsZoneId == null ? Input.empty() : this.dnsZoneId;
     }
 
-    /**
-     * Domain names of the DNS Zone.
-     */
     @InputImport(name="domain")
     private final @Nullable Input<List<String>> domain;
 
@@ -69,9 +51,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.domain == null ? Input.empty() : this.domain;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -79,9 +58,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -89,9 +65,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * NSX revision number.
-     */
     @InputImport(name="revision")
     private final @Nullable Input<Double> revision;
 
@@ -99,9 +72,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
         return this.revision == null ? Input.empty() : this.revision;
     }
 
-    /**
-     * Source IP of the DNS Zone.
-     */
     @InputImport(name="sourceIp")
     private final @Nullable Input<String> sourceIp;
 

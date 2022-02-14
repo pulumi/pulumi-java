@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConsentArtifactArgs Empty = new ConsentArtifactArgs();
 
-    /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
-     */
     @InputImport(name="consentContentScreenshots")
     private final @Nullable Input<List<ImageArgs>> consentContentScreenshots;
 
@@ -31,9 +25,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.consentContentScreenshots == null ? Input.empty() : this.consentContentScreenshots;
     }
 
-    /**
-     * Optional. An string indicating the version of the consent information shown to the user.
-     */
     @InputImport(name="consentContentVersion")
     private final @Nullable Input<String> consentContentVersion;
 
@@ -41,9 +32,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.consentContentVersion == null ? Input.empty() : this.consentContentVersion;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="consentStoreId", required=true)
     private final Input<String> consentStoreId;
 
@@ -51,9 +39,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.consentStoreId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -61,9 +46,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.datasetId;
     }
 
-    /**
-     * Optional. A signature from a guardian.
-     */
     @InputImport(name="guardianSignature")
     private final @Nullable Input<SignatureArgs> guardianSignature;
 
@@ -71,9 +53,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.guardianSignature == null ? Input.empty() : this.guardianSignature;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -91,9 +67,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -101,9 +74,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -111,9 +81,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * User's UUID provided by the client.
-     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 
@@ -121,9 +88,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.userId;
     }
 
-    /**
-     * Optional. User's signature.
-     */
     @InputImport(name="userSignature")
     private final @Nullable Input<SignatureArgs> userSignature;
 
@@ -131,9 +95,6 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
         return this.userSignature == null ? Input.empty() : this.userSignature;
     }
 
-    /**
-     * Optional. A signature from a witness.
-     */
     @InputImport(name="witnessSignature")
     private final @Nullable Input<SignatureArgs> witnessSignature;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions {
-/**
- * 
- */
     private final @Nullable String optInHeaders;
 
     @OutputCustomType.Constructor({"optInHeaders"})
@@ -21,9 +18,6 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
         this.optInHeaders = optInHeaders;
     }
 
-/**
- * 
- */
     public Optional<String> getOptInHeaders() {
         return Optional.ofNullable(this.optInHeaders);
     }

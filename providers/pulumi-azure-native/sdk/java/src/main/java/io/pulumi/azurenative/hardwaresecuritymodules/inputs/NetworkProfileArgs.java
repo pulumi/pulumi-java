@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
-    /**
-     * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
@@ -29,9 +23,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
-    /**
-     * Specifies the identifier of the subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<ApiEntityReferenceArgs> subnet;
 

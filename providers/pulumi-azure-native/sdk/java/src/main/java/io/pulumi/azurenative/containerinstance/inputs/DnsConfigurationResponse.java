@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * DNS configuration for the container group.
- */
 public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DnsConfigurationResponse Empty = new DnsConfigurationResponse();
 
-    /**
-     * The DNS servers for the container group.
-     */
     @InputImport(name="nameServers", required=true)
     private final List<String> nameServers;
 
@@ -28,9 +22,6 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.nameServers;
     }
 
-    /**
-     * The DNS options for the container group.
-     */
     @InputImport(name="options")
     private final @Nullable String options;
 
@@ -38,9 +29,6 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
     }
 
-    /**
-     * The DNS search domains for hostname lookup in the container group.
-     */
     @InputImport(name="searchDomains")
     private final @Nullable String searchDomains;
 

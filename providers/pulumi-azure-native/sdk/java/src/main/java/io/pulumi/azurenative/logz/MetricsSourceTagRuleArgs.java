@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricsSourceTagRuleArgs Empty = new MetricsSourceTagRuleArgs();
 
-    /**
-     * Metrics Account resource name
-     */
     @InputImport(name="metricsSourceName", required=true)
     private final Input<String> metricsSourceName;
 
@@ -28,9 +22,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
         return this.metricsSourceName;
     }
 
-    /**
-     * Monitor resource name
-     */
     @InputImport(name="monitorName", required=true)
     private final Input<String> monitorName;
 
@@ -38,9 +29,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
         return this.monitorName;
     }
 
-    /**
-     * Definition of the properties for a TagRules resource.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<MetricsTagRulesPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="ruleSetName")
     private final @Nullable Input<String> ruleSetName;
 

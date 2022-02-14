@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * If omitted, no disks on the compute nodes in the pool will be encrypted.
- */
     @EnumType
     public enum DiskEncryptionTarget {
-/**
- * The OS Disk on the compute node is encrypted.
- */
         OsDisk("OsDisk"),
-/**
- * The temporary disk on the compute node is encrypted. On Linux this encryption applies to other partitions (such as those on mounted data disks) when encryption occurs at boot time.
- */
         TemporaryDisk("TemporaryDisk");
 
         private final String value;

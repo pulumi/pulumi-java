@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudChannelV1ProvisionedServiceResponse {
-/**
- * The product pertaining to the provisioning resource as specified in the Offer.
- */
     private final String productId;
-/**
- * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
- */
     private final String provisioningId;
-/**
- * The SKU pertaining to the provisioning resource as specified in the Offer.
- */
     private final String skuId;
 
     @OutputCustomType.Constructor({"productId","provisioningId","skuId"})
@@ -32,21 +23,12 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
         this.skuId = Objects.requireNonNull(skuId);
     }
 
-/**
- * The product pertaining to the provisioning resource as specified in the Offer.
- */
     public String getProductId() {
         return this.productId;
     }
-/**
- * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
- */
     public String getProvisioningId() {
         return this.provisioningId;
     }
-/**
- * The SKU pertaining to the provisioning resource as specified in the Offer.
- */
     public String getSkuId() {
         return this.skuId;
     }

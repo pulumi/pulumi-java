@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The Fluid Relay endpoints for this server
- */
 public final class FluidRelayEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FluidRelayEndpointsResponse Empty = new FluidRelayEndpointsResponse();
 
-    /**
-     * The Fluid Relay Orderer endpoints.
-     */
     @InputImport(name="ordererEndpoints", required=true)
     private final List<String> ordererEndpoints;
 
@@ -26,9 +20,6 @@ public final class FluidRelayEndpointsResponse extends io.pulumi.resources.Invok
         return this.ordererEndpoints;
     }
 
-    /**
-     * The Fluid Relay storage endpoints.
-     */
     @InputImport(name="storageEndpoints", required=true)
     private final List<String> storageEndpoints;
 

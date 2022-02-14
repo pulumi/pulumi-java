@@ -12,61 +12,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRegionSslPolicyResult {
-/**
- * Creation timestamp in RFC3339 text format.
- */
     private final String creationTimestamp;
-/**
- * A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
- */
     private final List<String> customFeatures;
-/**
- * An optional description of this resource. Provide this property when you create the resource.
- */
     private final String description;
-/**
- * The list of features enabled in the SSL policy.
- */
     private final List<String> enabledFeatures;
-/**
- * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
- */
     private final String fingerprint;
-/**
- * [Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.
- */
     private final String kind;
-/**
- * The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
- */
     private final String minTlsVersion;
-/**
- * Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
- */
     private final String name;
-/**
- * Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
- */
     private final String profile;
-/**
- * URL of the region where the regional SSL policy resides. This field is not applicable to global SSL policies.
- */
     private final String region;
-/**
- * Server-defined URL for the resource.
- */
     private final String selfLink;
-/**
- * Server-defined URL for this resource with the resource id.
- */
     private final String selfLinkWithId;
-/**
- * Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
- */
     private final ServerTlsSettingsResponse tlsSettings;
-/**
- * If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.
- */
     private final List<RegionSslPolicyWarningsItemResponse> warnings;
 
     @OutputCustomType.Constructor({"creationTimestamp","customFeatures","description","enabledFeatures","fingerprint","kind","minTlsVersion","name","profile","region","selfLink","selfLinkWithId","tlsSettings","warnings"})
@@ -101,87 +59,45 @@ public final class GetRegionSslPolicyResult {
         this.warnings = Objects.requireNonNull(warnings);
     }
 
-/**
- * Creation timestamp in RFC3339 text format.
- */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
-/**
- * A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
- */
     public List<String> getCustomFeatures() {
         return this.customFeatures;
     }
-/**
- * An optional description of this resource. Provide this property when you create the resource.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The list of features enabled in the SSL policy.
- */
     public List<String> getEnabledFeatures() {
         return this.enabledFeatures;
     }
-/**
- * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
- */
     public String getFingerprint() {
         return this.fingerprint;
     }
-/**
- * [Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
- */
     public String getMinTlsVersion() {
         return this.minTlsVersion;
     }
-/**
- * Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
- */
     public String getProfile() {
         return this.profile;
     }
-/**
- * URL of the region where the regional SSL policy resides. This field is not applicable to global SSL policies.
- */
     public String getRegion() {
         return this.region;
     }
-/**
- * Server-defined URL for the resource.
- */
     public String getSelfLink() {
         return this.selfLink;
     }
-/**
- * Server-defined URL for this resource with the resource id.
- */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
-/**
- * Security settings for the proxy. This field is only applicable to a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED.
- */
     public ServerTlsSettingsResponse getTlsSettings() {
         return this.tlsSettings;
     }
-/**
- * If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.
- */
     public List<RegionSslPolicyWarningsItemResponse> getWarnings() {
         return this.warnings;
     }

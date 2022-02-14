@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NetworkInterface represents a NIC of a VM.
- */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 
-    /**
-     * The external IP to define in the NIC.
-     */
     @InputImport(name="externalIp")
     private final @Nullable Input<String> externalIp;
 
@@ -27,9 +21,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.externalIp == null ? Input.empty() : this.externalIp;
     }
 
-    /**
-     * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
-     */
     @InputImport(name="internalIp")
     private final @Nullable Input<String> internalIp;
 
@@ -37,9 +28,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.internalIp == null ? Input.empty() : this.internalIp;
     }
 
-    /**
-     * The network to connect the NIC to.
-     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -47,9 +35,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.network == null ? Input.empty() : this.network;
     }
 
-    /**
-     * The subnetwork to connect the NIC to.
-     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 

@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 
-    /**
-     * The path for the route.
-     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -27,9 +21,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.path;
     }
 
-    /**
-     * The port for the route.
-     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 

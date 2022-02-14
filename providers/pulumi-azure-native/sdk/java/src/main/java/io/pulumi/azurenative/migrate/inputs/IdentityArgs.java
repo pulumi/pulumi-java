@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the MSI properties of the Move Collection.
- */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 
-    /**
-     * Gets or sets the principal id.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -29,9 +23,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * Gets or sets the tenant id.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -39,9 +30,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * The type of identity used for the resource mover service.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ResourceIdentityType>> type;
 

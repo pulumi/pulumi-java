@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.
- */
     @EnumType
     public enum TaskResponseView {
-/**
- * Unspecified. Defaults to BASIC.
- */
         ViewUnspecified("VIEW_UNSPECIFIED"),
-/**
- * The basic view omits fields which can be large or can contain sensitive data. This view does not include the (payload in AppEngineHttpRequest and payload in PullMessage). These payloads are desirable to return only when needed, because they can be large and because of the sensitivity of the data that you choose to store in it.
- */
         Basic("BASIC"),
-/**
- * All information is returned. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Queue resource.
- */
         Full("FULL");
 
         private final String value;

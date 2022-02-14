@@ -8,58 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum JobJobBenefitsItem {
-/**
- * Default value if the type isn't specified.
- */
         JobBenefitUnspecified("JOB_BENEFIT_UNSPECIFIED"),
-/**
- * The job includes access to programs that support child care, such as daycare.
- */
         ChildCare("CHILD_CARE"),
-/**
- * The job includes dental services covered by a dental insurance plan.
- */
         Dental("DENTAL"),
-/**
- * The job offers specific benefits to domestic partners.
- */
         DomesticPartner("DOMESTIC_PARTNER"),
-/**
- * The job allows for a flexible work schedule.
- */
         FlexibleHours("FLEXIBLE_HOURS"),
-/**
- * The job includes health services covered by a medical insurance plan.
- */
         Medical("MEDICAL"),
-/**
- * The job includes a life insurance plan provided by the employer or available for purchase by the employee.
- */
         LifeInsurance("LIFE_INSURANCE"),
-/**
- * The job allows for a leave of absence to a parent to care for a newborn child.
- */
         ParentalLeave("PARENTAL_LEAVE"),
-/**
- * The job includes a workplace retirement plan provided by the employer or available for purchase by the employee.
- */
         RetirementPlan("RETIREMENT_PLAN"),
-/**
- * The job allows for paid time off due to illness.
- */
         SickDays("SICK_DAYS"),
-/**
- * The job includes paid time off for vacation.
- */
         Vacation("VACATION"),
-/**
- * The job includes vision services covered by a vision insurance plan.
- */
         Vision("VISION");
 
         private final String value;

@@ -19,331 +19,93 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * HANA instance info on Azure (ARM properties and HANA properties)
-API Version: 2017-11-03-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a HANA instance
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var hanaInstance = new AzureNative.HanaOnAzure.HanaInstance("hanaInstance", new AzureNative.HanaOnAzure.HanaInstanceArgs
-        {
-            HanaInstanceName = "myHanaInstance",
-            Location = "westus",
-            NetworkProfile = new AzureNative.HanaOnAzure.Inputs.NetworkProfileArgs
-            {
-                NetworkInterfaces = 
-                {
-                    new AzureNative.HanaOnAzure.Inputs.IpAddressArgs
-                    {
-                        IpAddress = "100.100.100.100",
-                    },
-                },
-            },
-            OsProfile = new AzureNative.HanaOnAzure.Inputs.OSProfileArgs
-            {
-                ComputerName = "myComputerName",
-                SshPublicKey = "AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
-            },
-            PartnerNodeId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
-            ResourceGroupName = "myResourceGroup",
-            Tags = 
-            {
-                { "key", "value" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	hanaonazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hanaonazure"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hanaonazure.NewHanaInstance(ctx, "hanaInstance", &hanaonazure.HanaInstanceArgs{
-			HanaInstanceName: pulumi.String("myHanaInstance"),
-			Location:         pulumi.String("westus"),
-			NetworkProfile: &hanaonazure.NetworkProfileArgs{
-				NetworkInterfaces: hanaonazure.IpAddressArray{
-					&hanaonazure.IpAddressArgs{
-						IpAddress: pulumi.String("100.100.100.100"),
-					},
-				},
-			},
-			OsProfile: &hanaonazure.OSProfileArgs{
-				ComputerName: pulumi.String("myComputerName"),
-				SshPublicKey: pulumi.String("AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L"),
-			},
-			PartnerNodeId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Tags: pulumi.StringMap{
-				"key": pulumi.String("value"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const hanaInstance = new azure_native.hanaonazure.HanaInstance("hanaInstance", {
-    hanaInstanceName: "myHanaInstance",
-    location: "westus",
-    networkProfile: {
-        networkInterfaces: [{
-            ipAddress: "100.100.100.100",
-        }],
-    },
-    osProfile: {
-        computerName: "myComputerName",
-        sshPublicKey: "AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
-    },
-    partnerNodeId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
-    resourceGroupName: "myResourceGroup",
-    tags: {
-        key: "value",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-hana_instance = azure_native.hanaonazure.HanaInstance("hanaInstance",
-    hana_instance_name="myHanaInstance",
-    location="westus",
-    network_profile=azure_native.hanaonazure.NetworkProfileArgs(
-        network_interfaces=[azure_native.hanaonazure.IpAddressArgs(
-            ip_address="100.100.100.100",
-        )],
-    ),
-    os_profile=azure_native.hanaonazure.OSProfileArgs(
-        computer_name="myComputerName",
-        ssh_public_key="AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
-    ),
-    partner_node_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
-    resource_group_name="myResourceGroup",
-    tags={
-        "key": "value",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:hanaonazure:HanaInstance myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
-```
-
- */
 @ResourceType(type="azure-native:hanaonazure:HanaInstance")
 public class HanaInstance extends io.pulumi.resources.CustomResource {
-    /**
-     * Specifies the HANA instance unique ID.
-     */
     @OutputExport(name="hanaInstanceId", type=String.class, parameters={})
     private Output<String> hanaInstanceId;
 
-    /**
-     * @return Specifies the HANA instance unique ID.
-     */
     public Output<String> getHanaInstanceId() {
         return this.hanaInstanceId;
     }
-    /**
-     * Specifies the hardware settings for the HANA instance.
-     */
     @OutputExport(name="hardwareProfile", type=HardwareProfileResponse.class, parameters={})
     private Output</* @Nullable */ HardwareProfileResponse> hardwareProfile;
 
-    /**
-     * @return Specifies the hardware settings for the HANA instance.
-     */
     public Output</* @Nullable */ HardwareProfileResponse> getHardwareProfile() {
         return this.hardwareProfile;
     }
-    /**
-     * Hardware revision of a HANA instance
-     */
     @OutputExport(name="hwRevision", type=String.class, parameters={})
     private Output<String> hwRevision;
 
-    /**
-     * @return Hardware revision of a HANA instance
-     */
     public Output<String> getHwRevision() {
         return this.hwRevision;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Specifies the network settings for the HANA instance.
-     */
     @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
-    /**
-     * @return Specifies the network settings for the HANA instance.
-     */
     public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
         return this.networkProfile;
     }
-    /**
-     * Specifies the operating system settings for the HANA instance.
-     */
     @OutputExport(name="osProfile", type=OSProfileResponse.class, parameters={})
     private Output</* @Nullable */ OSProfileResponse> osProfile;
 
-    /**
-     * @return Specifies the operating system settings for the HANA instance.
-     */
     public Output</* @Nullable */ OSProfileResponse> getOsProfile() {
         return this.osProfile;
     }
-    /**
-     * ARM ID of another HanaInstance that will share a network with this HanaInstance
-     */
     @OutputExport(name="partnerNodeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerNodeId;
 
-    /**
-     * @return ARM ID of another HanaInstance that will share a network with this HanaInstance
-     */
     public Output</* @Nullable */ String> getPartnerNodeId() {
         return this.partnerNodeId;
     }
-    /**
-     * Resource power state
-     */
     @OutputExport(name="powerState", type=String.class, parameters={})
     private Output<String> powerState;
 
-    /**
-     * @return Resource power state
-     */
     public Output<String> getPowerState() {
         return this.powerState;
     }
-    /**
-     * State of provisioning of the HanaInstance
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return State of provisioning of the HanaInstance
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource proximity placement group
-     */
     @OutputExport(name="proximityPlacementGroup", type=String.class, parameters={})
     private Output<String> proximityPlacementGroup;
 
-    /**
-     * @return Resource proximity placement group
-     */
     public Output<String> getProximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
-    /**
-     * Specifies the storage settings for the HANA instance disks.
-     */
     @OutputExport(name="storageProfile", type=StorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ StorageProfileResponse> storageProfile;
 
-    /**
-     * @return Specifies the storage settings for the HANA instance disks.
-     */
     public Output</* @Nullable */ StorageProfileResponse> getStorageProfile() {
         return this.storageProfile;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public HanaInstance(String name, HanaInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hanaonazure:HanaInstance", name, args == null ? HanaInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -362,14 +124,6 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static HanaInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HanaInstance(name, id, options);
     }

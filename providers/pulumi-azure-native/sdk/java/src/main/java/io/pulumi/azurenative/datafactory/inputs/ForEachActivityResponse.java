@@ -54,16 +54,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This activity is used for iterating over a collection and execute given activities.
- */
 public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForEachActivityResponse Empty = new ForEachActivityResponse();
 
-    /**
-     * List of activities to execute .
-     */
     @InputImport(name="activities", required=true)
     private final List<Object> activities;
 
@@ -71,9 +65,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.activities;
     }
 
-    /**
-     * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
-     */
     @InputImport(name="batchCount")
     private final @Nullable Integer batchCount;
 
@@ -81,9 +72,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.batchCount == null ? Optional.empty() : Optional.ofNullable(this.batchCount);
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -91,9 +79,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -101,9 +86,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Should the loop be executed in sequence or in parallel (max 50)
-     */
     @InputImport(name="isSequential")
     private final @Nullable Boolean isSequential;
 
@@ -111,9 +93,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.isSequential == null ? Optional.empty() : Optional.ofNullable(this.isSequential);
     }
 
-    /**
-     * Collection to iterate.
-     */
     @InputImport(name="items", required=true)
     private final ExpressionResponse items;
 
@@ -121,9 +100,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.items;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -131,10 +107,6 @@ public final class ForEachActivityResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'ForEach'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -142,9 +114,6 @@ Expected value is 'ForEach'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

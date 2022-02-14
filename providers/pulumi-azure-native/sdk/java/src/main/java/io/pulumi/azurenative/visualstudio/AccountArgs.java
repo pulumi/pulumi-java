@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * The account name.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -30,9 +24,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * The Azure instance location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,9 +31,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The type of the operation.
-     */
     @InputImport(name="operationType")
     private final @Nullable Input<Either<String,AccountResourceRequestOperationType>> operationType;
 
@@ -50,9 +38,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationType == null ? Input.empty() : this.operationType;
     }
 
-    /**
-     * The custom properties of the resource.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -60,9 +45,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,9 +52,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -80,9 +59,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * The custom tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

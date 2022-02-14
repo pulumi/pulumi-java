@@ -24,861 +24,153 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format <endpointname>.azureedge.net.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Endpoints_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var endpoint = new AzureNative.Cdn.Endpoint("endpoint", new AzureNative.Cdn.EndpointArgs
-        {
-            ContentTypesToCompress = 
-            {
-                "text/html",
-                "application/octet-stream",
-            },
-            DefaultOriginGroup = new AzureNative.Cdn.Inputs.ResourceReferenceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
-            },
-            DeliveryPolicy = new AzureNative.Cdn.Inputs.EndpointPropertiesUpdateParametersDeliveryPolicyArgs
-            {
-                Description = "Test description for a policy.",
-                Rules = 
-                {
-                    new AzureNative.Cdn.Inputs.DeliveryRuleArgs
-                    {
-                        Actions = 
-                        {
-                            new AzureNative.Cdn.Inputs.DeliveryRuleCacheExpirationActionArgs
-                            {
-                                Name = "CacheExpiration",
-                                Parameters = new AzureNative.Cdn.Inputs.CacheExpirationActionParametersArgs
-                                {
-                                    CacheBehavior = "Override",
-                                    CacheDuration = "10:10:09",
-                                    CacheType = "All",
-                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                                },
-                            },
-                            new AzureNative.Cdn.Inputs.DeliveryRuleResponseHeaderActionArgs
-                            {
-                                Name = "ModifyResponseHeader",
-                                Parameters = new AzureNative.Cdn.Inputs.HeaderActionParametersArgs
-                                {
-                                    HeaderAction = "Overwrite",
-                                    HeaderName = "Access-Control-Allow-Origin",
-                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                                    Value = "*",
-                                },
-                            },
-                            new AzureNative.Cdn.Inputs.DeliveryRuleRequestHeaderActionArgs
-                            {
-                                Name = "ModifyRequestHeader",
-                                Parameters = new AzureNative.Cdn.Inputs.HeaderActionParametersArgs
-                                {
-                                    HeaderAction = "Overwrite",
-                                    HeaderName = "Accept-Encoding",
-                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                                    Value = "gzip",
-                                },
-                            },
-                        },
-                        Conditions = 
-                        {
-                            new AzureNative.Cdn.Inputs.DeliveryRuleRemoteAddressConditionArgs
-                            {
-                                Name = "RemoteAddress",
-                                Parameters = new AzureNative.Cdn.Inputs.RemoteAddressMatchConditionParametersArgs
-                                {
-                                    MatchValues = 
-                                    {
-                                        "192.168.1.0/24",
-                                        "10.0.0.0/24",
-                                    },
-                                    NegateCondition = true,
-                                    OdataType = "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                                    Operator = "IPMatch",
-                                },
-                            },
-                        },
-                        Name = "rule1",
-                        Order = 1,
-                    },
-                },
-            },
-            EndpointName = "endpoint1",
-            IsCompressionEnabled = true,
-            IsHttpAllowed = true,
-            IsHttpsAllowed = true,
-            Location = "WestUs",
-            OriginGroups = 
-            {
-                new AzureNative.Cdn.Inputs.DeepCreatedOriginGroupArgs
-                {
-                    HealthProbeSettings = new AzureNative.Cdn.Inputs.HealthProbeParametersArgs
-                    {
-                        ProbeIntervalInSeconds = 120,
-                        ProbePath = "/health.aspx",
-                        ProbeProtocol = "Http",
-                        ProbeRequestType = "GET",
-                    },
-                    Name = "originGroup1",
-                    Origins = 
-                    {
-                        new AzureNative.Cdn.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-                        },
-                        new AzureNative.Cdn.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2",
-                        },
-                    },
-                    ResponseBasedOriginErrorDetectionSettings = new AzureNative.Cdn.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
-                    {
-                        ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
-                        ResponseBasedFailoverThresholdPercentage = 10,
-                    },
-                },
-            },
-            OriginHostHeader = "www.bing.com",
-            OriginPath = "/photos",
-            Origins = 
-            {
-                new AzureNative.Cdn.Inputs.DeepCreatedOriginArgs
-                {
-                    Enabled = true,
-                    HostName = "www.someDomain1.net",
-                    HttpPort = 80,
-                    HttpsPort = 443,
-                    Name = "origin1",
-                    OriginHostHeader = "www.someDomain1.net",
-                    Priority = 1,
-                    Weight = 50,
-                },
-                new AzureNative.Cdn.Inputs.DeepCreatedOriginArgs
-                {
-                    Enabled = true,
-                    HostName = "www.someDomain2.net",
-                    HttpPort = 80,
-                    HttpsPort = 443,
-                    Name = "origin2",
-                    OriginHostHeader = "www.someDomain2.net",
-                    Priority = 2,
-                    Weight = 50,
-                },
-            },
-            ProfileName = "profile1",
-            QueryStringCachingBehavior = "BypassCaching",
-            ResourceGroupName = "RG",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cdn.NewEndpoint(ctx, "endpoint", &cdn.EndpointArgs{
-			ContentTypesToCompress: pulumi.StringArray{
-				pulumi.String("text/html"),
-				pulumi.String("application/octet-stream"),
-			},
-			DefaultOriginGroup: &cdn.ResourceReferenceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1"),
-			},
-			DeliveryPolicy: &cdn.EndpointPropertiesUpdateParametersDeliveryPolicyArgs{
-				Description: pulumi.String("Test description for a policy."),
-				Rules: []cdn.DeliveryRuleArgs{
-					&cdn.DeliveryRuleArgs{
-						Actions: pulumi.AnyArray{
-							cdn.DeliveryRuleCacheExpirationAction{
-								Name: "CacheExpiration",
-								Parameters: cdn.CacheExpirationActionParameters{
-									CacheBehavior: "Override",
-									CacheDuration: "10:10:09",
-									CacheType:     "All",
-									OdataType:     "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-								},
-							},
-							cdn.DeliveryRuleResponseHeaderAction{
-								Name: "ModifyResponseHeader",
-								Parameters: cdn.HeaderActionParameters{
-									HeaderAction: "Overwrite",
-									HeaderName:   "Access-Control-Allow-Origin",
-									OdataType:    "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-									Value:        "*",
-								},
-							},
-							cdn.DeliveryRuleRequestHeaderAction{
-								Name: "ModifyRequestHeader",
-								Parameters: cdn.HeaderActionParameters{
-									HeaderAction: "Overwrite",
-									HeaderName:   "Accept-Encoding",
-									OdataType:    "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-									Value:        "gzip",
-								},
-							},
-						},
-						Conditions: pulumi.AnyArray{
-							cdn.DeliveryRuleRemoteAddressCondition{
-								Name: "RemoteAddress",
-								Parameters: cdn.RemoteAddressMatchConditionParameters{
-									MatchValues: []string{
-										"192.168.1.0/24",
-										"10.0.0.0/24",
-									},
-									NegateCondition: true,
-									OdataType:       "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-									Operator:        "IPMatch",
-								},
-							},
-						},
-						Name:  pulumi.String("rule1"),
-						Order: pulumi.Int(1),
-					},
-				},
-			},
-			EndpointName:         pulumi.String("endpoint1"),
-			IsCompressionEnabled: pulumi.Bool(true),
-			IsHttpAllowed:        pulumi.Bool(true),
-			IsHttpsAllowed:       pulumi.Bool(true),
-			Location:             pulumi.String("WestUs"),
-			OriginGroups: []cdn.DeepCreatedOriginGroupArgs{
-				&cdn.DeepCreatedOriginGroupArgs{
-					HealthProbeSettings: &cdn.HealthProbeParametersArgs{
-						ProbeIntervalInSeconds: pulumi.Int(120),
-						ProbePath:              pulumi.String("/health.aspx"),
-						ProbeProtocol:          "Http",
-						ProbeRequestType:       "GET",
-					},
-					Name: pulumi.String("originGroup1"),
-					Origins: []cdn.ResourceReferenceArgs{
-						&cdn.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1"),
-						},
-						&cdn.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2"),
-						},
-					},
-					ResponseBasedOriginErrorDetectionSettings: &cdn.ResponseBasedOriginErrorDetectionParametersArgs{
-						ResponseBasedDetectedErrorTypes:          "TcpErrorsOnly",
-						ResponseBasedFailoverThresholdPercentage: pulumi.Int(10),
-					},
-				},
-			},
-			OriginHostHeader: pulumi.String("www.bing.com"),
-			OriginPath:       pulumi.String("/photos"),
-			Origins: cdn.DeepCreatedOriginArray{
-				&cdn.DeepCreatedOriginArgs{
-					Enabled:          pulumi.Bool(true),
-					HostName:         pulumi.String("www.someDomain1.net"),
-					HttpPort:         pulumi.Int(80),
-					HttpsPort:        pulumi.Int(443),
-					Name:             pulumi.String("origin1"),
-					OriginHostHeader: pulumi.String("www.someDomain1.net"),
-					Priority:         pulumi.Int(1),
-					Weight:           pulumi.Int(50),
-				},
-				&cdn.DeepCreatedOriginArgs{
-					Enabled:          pulumi.Bool(true),
-					HostName:         pulumi.String("www.someDomain2.net"),
-					HttpPort:         pulumi.Int(80),
-					HttpsPort:        pulumi.Int(443),
-					Name:             pulumi.String("origin2"),
-					OriginHostHeader: pulumi.String("www.someDomain2.net"),
-					Priority:         pulumi.Int(2),
-					Weight:           pulumi.Int(50),
-				},
-			},
-			ProfileName:                pulumi.String("profile1"),
-			QueryStringCachingBehavior: "BypassCaching",
-			ResourceGroupName:          pulumi.String("RG"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const endpoint = new azure_native.cdn.Endpoint("endpoint", {
-    contentTypesToCompress: [
-        "text/html",
-        "application/octet-stream",
-    ],
-    defaultOriginGroup: {
-        id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
-    },
-    deliveryPolicy: {
-        description: "Test description for a policy.",
-        rules: [{
-            actions: [
-                {
-                    name: "CacheExpiration",
-                    parameters: {
-                        cacheBehavior: "Override",
-                        cacheDuration: "10:10:09",
-                        cacheType: "All",
-                        odataType: "#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                    },
-                },
-                {
-                    name: "ModifyResponseHeader",
-                    parameters: {
-                        headerAction: "Overwrite",
-                        headerName: "Access-Control-Allow-Origin",
-                        odataType: "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        value: "*",
-                    },
-                },
-                {
-                    name: "ModifyRequestHeader",
-                    parameters: {
-                        headerAction: "Overwrite",
-                        headerName: "Accept-Encoding",
-                        odataType: "#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        value: "gzip",
-                    },
-                },
-            ],
-            conditions: [{
-                name: "RemoteAddress",
-                parameters: {
-                    matchValues: [
-                        "192.168.1.0/24",
-                        "10.0.0.0/24",
-                    ],
-                    negateCondition: true,
-                    odataType: "#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                    operator: "IPMatch",
-                },
-            }],
-            name: "rule1",
-            order: 1,
-        }],
-    },
-    endpointName: "endpoint1",
-    isCompressionEnabled: true,
-    isHttpAllowed: true,
-    isHttpsAllowed: true,
-    location: "WestUs",
-    originGroups: [{
-        healthProbeSettings: {
-            probeIntervalInSeconds: 120,
-            probePath: "/health.aspx",
-            probeProtocol: "Http",
-            probeRequestType: "GET",
-        },
-        name: "originGroup1",
-        origins: [
-            {
-                id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-            },
-            {
-                id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2",
-            },
-        ],
-        responseBasedOriginErrorDetectionSettings: {
-            responseBasedDetectedErrorTypes: "TcpErrorsOnly",
-            responseBasedFailoverThresholdPercentage: 10,
-        },
-    }],
-    originHostHeader: "www.bing.com",
-    originPath: "/photos",
-    origins: [
-        {
-            enabled: true,
-            hostName: "www.someDomain1.net",
-            httpPort: 80,
-            httpsPort: 443,
-            name: "origin1",
-            originHostHeader: "www.someDomain1.net",
-            priority: 1,
-            weight: 50,
-        },
-        {
-            enabled: true,
-            hostName: "www.someDomain2.net",
-            httpPort: 80,
-            httpsPort: 443,
-            name: "origin2",
-            originHostHeader: "www.someDomain2.net",
-            priority: 2,
-            weight: 50,
-        },
-    ],
-    profileName: "profile1",
-    queryStringCachingBehavior: "BypassCaching",
-    resourceGroupName: "RG",
-    tags: {
-        key1: "value1",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-endpoint = azure_native.cdn.Endpoint("endpoint",
-    content_types_to_compress=[
-        "text/html",
-        "application/octet-stream",
-    ],
-    default_origin_group=azure_native.cdn.ResourceReferenceArgs(
-        id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1",
-    ),
-    delivery_policy=azure_native.cdn.EndpointPropertiesUpdateParametersDeliveryPolicyArgs(
-        description="Test description for a policy.",
-        rules=[azure_native.cdn.DeliveryRuleArgs(
-            actions=[
-                azure_native.cdn.DeliveryRuleCacheExpirationActionArgs(
-                    name="CacheExpiration",
-                    parameters=azure_native.cdn.CacheExpirationActionParametersArgs(
-                        cache_behavior="Override",
-                        cache_duration="10:10:09",
-                        cache_type="All",
-                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleCacheExpirationActionParameters",
-                    ),
-                ),
-                azure_native.cdn.DeliveryRuleResponseHeaderActionArgs(
-                    name="ModifyResponseHeader",
-                    parameters=azure_native.cdn.HeaderActionParametersArgs(
-                        header_action="Overwrite",
-                        header_name="Access-Control-Allow-Origin",
-                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        value="*",
-                    ),
-                ),
-                azure_native.cdn.DeliveryRuleRequestHeaderActionArgs(
-                    name="ModifyRequestHeader",
-                    parameters=azure_native.cdn.HeaderActionParametersArgs(
-                        header_action="Overwrite",
-                        header_name="Accept-Encoding",
-                        odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleHeaderActionParameters",
-                        value="gzip",
-                    ),
-                ),
-            ],
-            conditions=[azure_native.cdn.DeliveryRuleRemoteAddressConditionArgs(
-                name="RemoteAddress",
-                parameters=azure_native.cdn.RemoteAddressMatchConditionParametersArgs(
-                    match_values=[
-                        "192.168.1.0/24",
-                        "10.0.0.0/24",
-                    ],
-                    negate_condition=True,
-                    odata_type="#Microsoft.Azure.Cdn.Models.DeliveryRuleRemoteAddressConditionParameters",
-                    operator="IPMatch",
-                ),
-            )],
-            name="rule1",
-            order=1,
-        )],
-    ),
-    endpoint_name="endpoint1",
-    is_compression_enabled=True,
-    is_http_allowed=True,
-    is_https_allowed=True,
-    location="WestUs",
-    origin_groups=[azure_native.cdn.DeepCreatedOriginGroupArgs(
-        health_probe_settings=azure_native.cdn.HealthProbeParametersArgs(
-            probe_interval_in_seconds=120,
-            probe_path="/health.aspx",
-            probe_protocol="Http",
-            probe_request_type="GET",
-        ),
-        name="originGroup1",
-        origins=[
-            azure_native.cdn.ResourceReferenceArgs(
-                id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-            ),
-            azure_native.cdn.ResourceReferenceArgs(
-                id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin2",
-            ),
-        ],
-        response_based_origin_error_detection_settings=azure_native.cdn.ResponseBasedOriginErrorDetectionParametersArgs(
-            response_based_detected_error_types="TcpErrorsOnly",
-            response_based_failover_threshold_percentage=10,
-        ),
-    )],
-    origin_host_header="www.bing.com",
-    origin_path="/photos",
-    origins=[
-        azure_native.cdn.DeepCreatedOriginArgs(
-            enabled=True,
-            host_name="www.someDomain1.net",
-            http_port=80,
-            https_port=443,
-            name="origin1",
-            origin_host_header="www.someDomain1.net",
-            priority=1,
-            weight=50,
-        ),
-        azure_native.cdn.DeepCreatedOriginArgs(
-            enabled=True,
-            host_name="www.someDomain2.net",
-            http_port=80,
-            https_port=443,
-            name="origin2",
-            origin_host_header="www.someDomain2.net",
-            priority=2,
-            weight=50,
-        ),
-    ],
-    profile_name="profile1",
-    query_string_caching_behavior="BypassCaching",
-    resource_group_name="RG",
-    tags={
-        "key1": "value1",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:cdn:Endpoint endpoint4899 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1 
-```
-
- */
 @ResourceType(type="azure-native:cdn:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {
-    /**
-     * List of content types on which compression applies. The value should be a valid MIME type.
-     */
     @OutputExport(name="contentTypesToCompress", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> contentTypesToCompress;
 
-    /**
-     * @return List of content types on which compression applies. The value should be a valid MIME type.
-     */
     public Output</* @Nullable */ List<String>> getContentTypesToCompress() {
         return this.contentTypesToCompress;
     }
-    /**
-     * A reference to the origin group.
-     */
     @OutputExport(name="defaultOriginGroup", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> defaultOriginGroup;
 
-    /**
-     * @return A reference to the origin group.
-     */
     public Output</* @Nullable */ ResourceReferenceResponse> getDefaultOriginGroup() {
         return this.defaultOriginGroup;
     }
-    /**
-     * A policy that specifies the delivery rules to be used for an endpoint.
-     */
     @OutputExport(name="deliveryPolicy", type=EndpointPropertiesUpdateParametersResponseDeliveryPolicy.class, parameters={})
     private Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseDeliveryPolicy> deliveryPolicy;
 
-    /**
-     * @return A policy that specifies the delivery rules to be used for an endpoint.
-     */
     public Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseDeliveryPolicy> getDeliveryPolicy() {
         return this.deliveryPolicy;
     }
-    /**
-     * List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
-     */
     @OutputExport(name="geoFilters", type=List.class, parameters={GeoFilterResponse.class})
     private Output</* @Nullable */ List<GeoFilterResponse>> geoFilters;
 
-    /**
-     * @return List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
-     */
     public Output</* @Nullable */ List<GeoFilterResponse>> getGeoFilters() {
         return this.geoFilters;
     }
-    /**
-     * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
-     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
-    /**
-     * @return The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
-     */
     public Output<String> getHostName() {
         return this.hostName;
     }
-    /**
-     * Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
-     */
     @OutputExport(name="isCompressionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isCompressionEnabled;
 
-    /**
-     * @return Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
-     */
     public Output</* @Nullable */ Boolean> getIsCompressionEnabled() {
         return this.isCompressionEnabled;
     }
-    /**
-     * Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-     */
     @OutputExport(name="isHttpAllowed", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isHttpAllowed;
 
-    /**
-     * @return Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-     */
     public Output</* @Nullable */ Boolean> getIsHttpAllowed() {
         return this.isHttpAllowed;
     }
-    /**
-     * Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-     */
     @OutputExport(name="isHttpsAllowed", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isHttpsAllowed;
 
-    /**
-     * @return Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
-     */
     public Output</* @Nullable */ Boolean> getIsHttpsAllowed() {
         return this.isHttpsAllowed;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
-     */
     @OutputExport(name="optimizationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> optimizationType;
 
-    /**
-     * @return Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
-     */
     public Output</* @Nullable */ String> getOptimizationType() {
         return this.optimizationType;
     }
-    /**
-     * The origin groups comprising of origins that are used for load balancing the traffic based on availability.
-     */
     @OutputExport(name="originGroups", type=List.class, parameters={DeepCreatedOriginGroupResponse.class})
     private Output</* @Nullable */ List<DeepCreatedOriginGroupResponse>> originGroups;
 
-    /**
-     * @return The origin groups comprising of origins that are used for load balancing the traffic based on availability.
-     */
     public Output</* @Nullable */ List<DeepCreatedOriginGroupResponse>> getOriginGroups() {
         return this.originGroups;
     }
-    /**
-     * The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
-     */
     @OutputExport(name="originHostHeader", type=String.class, parameters={})
     private Output</* @Nullable */ String> originHostHeader;
 
-    /**
-     * @return The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
-     */
     public Output</* @Nullable */ String> getOriginHostHeader() {
         return this.originHostHeader;
     }
-    /**
-     * A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
-     */
     @OutputExport(name="originPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> originPath;
 
-    /**
-     * @return A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
-     */
     public Output</* @Nullable */ String> getOriginPath() {
         return this.originPath;
     }
-    /**
-     * The source of the content being delivered via CDN.
-     */
     @OutputExport(name="origins", type=List.class, parameters={DeepCreatedOriginResponse.class})
     private Output<List<DeepCreatedOriginResponse>> origins;
 
-    /**
-     * @return The source of the content being delivered via CDN.
-     */
     public Output<List<DeepCreatedOriginResponse>> getOrigins() {
         return this.origins;
     }
-    /**
-     * Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
-     */
     @OutputExport(name="probePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> probePath;
 
-    /**
-     * @return Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
-     */
     public Output</* @Nullable */ String> getProbePath() {
         return this.probePath;
     }
-    /**
-     * Provisioning status of the endpoint.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning status of the endpoint.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
-     */
     @OutputExport(name="queryStringCachingBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryStringCachingBehavior;
 
-    /**
-     * @return Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
-     */
     public Output</* @Nullable */ String> getQueryStringCachingBehavior() {
         return this.queryStringCachingBehavior;
     }
-    /**
-     * Resource status of the endpoint.
-     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
-    /**
-     * @return Resource status of the endpoint.
-     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
-    /**
-     * Read only system data
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Read only system data
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * List of keys used to validate the signed URL hashes.
-     */
     @OutputExport(name="urlSigningKeys", type=List.class, parameters={UrlSigningKeyResponse.class})
     private Output</* @Nullable */ List<UrlSigningKeyResponse>> urlSigningKeys;
 
-    /**
-     * @return List of keys used to validate the signed URL hashes.
-     */
     public Output</* @Nullable */ List<UrlSigningKeyResponse>> getUrlSigningKeys() {
         return this.urlSigningKeys;
     }
-    /**
-     * Defines the Web Application Firewall policy for the endpoint (if applicable)
-     */
     @OutputExport(name="webApplicationFirewallPolicyLink", type=EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink.class, parameters={})
     private Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink;
 
-    /**
-     * @return Defines the Web Application Firewall policy for the endpoint (if applicable)
-     */
     public Output</* @Nullable */ EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -909,14 +201,6 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Endpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Endpoint(name, id, options);
     }

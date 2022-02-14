@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of a SKU for a scalable resource.
- */
 public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuDescriptionArgs Empty = new SkuDescriptionArgs();
 
-    /**
-     * Capabilities of the SKU, e.g., is traffic manager enabled?
-     */
     @InputImport(name="capabilities")
     private final @Nullable Input<List<CapabilityArgs>> capabilities;
 
@@ -31,9 +25,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
-    /**
-     * Current number of instances assigned to the resource.
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -41,9 +32,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * Family code of the resource SKU.
-     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -51,9 +39,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
-    /**
-     * Locations of the SKU.
-     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -61,9 +46,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
-    /**
-     * Name of the resource SKU.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -71,9 +53,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Size specifier of the resource SKU.
-     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -81,9 +60,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
-    /**
-     * Min, max, and default scale values of the SKU.
-     */
     @InputImport(name="skuCapacity")
     private final @Nullable Input<SkuCapacityArgs> skuCapacity;
 
@@ -91,9 +67,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.skuCapacity == null ? Input.empty() : this.skuCapacity;
     }
 
-    /**
-     * Service tier of the resource SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

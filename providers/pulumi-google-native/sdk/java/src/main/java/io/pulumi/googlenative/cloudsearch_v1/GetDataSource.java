@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataSource {
-/**
- * Gets a datasource. **Note:** This API requires an admin account to execute.
- */
     public static CompletableFuture<GetDataSourceResult> invokeAsync(GetDataSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getDataSource", TypeShape.of(GetDataSourceResult.class), args == null ? GetDataSourceArgs.Empty : args, Utilities.withVersion(options));
     }

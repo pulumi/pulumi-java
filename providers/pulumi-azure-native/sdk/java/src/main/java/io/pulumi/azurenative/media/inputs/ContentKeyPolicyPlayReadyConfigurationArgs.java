@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies a configuration for PlayReady licenses.
- */
 public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyConfigurationArgs Empty = new ContentKeyPolicyPlayReadyConfigurationArgs();
 
-    /**
-     * The PlayReady licenses.
-     */
     @InputImport(name="licenses", required=true)
     private final Input<List<ContentKeyPolicyPlayReadyLicenseArgs>> licenses;
 
@@ -29,10 +23,6 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
         return this.licenses;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -40,9 +30,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
         return this.odataType;
     }
 
-    /**
-     * The custom response data.
-     */
     @InputImport(name="responseCustomData")
     private final @Nullable Input<String> responseCustomData;
 

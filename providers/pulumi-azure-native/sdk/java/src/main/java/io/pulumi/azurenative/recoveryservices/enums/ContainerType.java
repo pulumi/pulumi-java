@@ -8,73 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
- */
     @EnumType
     public enum ContainerType {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         IaasVMContainer("IaasVMContainer"),
-/**
- * 
- */
         IaasVMServiceContainer("IaasVMServiceContainer"),
-/**
- * 
- */
         DPMContainer("DPMContainer"),
-/**
- * 
- */
         AzureBackupServerContainer("AzureBackupServerContainer"),
-/**
- * 
- */
         MABContainer("MABContainer"),
-/**
- * 
- */
         Cluster("Cluster"),
-/**
- * 
- */
         AzureSqlContainer("AzureSqlContainer"),
-/**
- * 
- */
         Windows("Windows"),
-/**
- * 
- */
         VCenter("VCenter"),
-/**
- * 
- */
         VMAppContainer("VMAppContainer"),
-/**
- * 
- */
         SQLAGWorkLoadContainer("SQLAGWorkLoadContainer"),
-/**
- * 
- */
         StorageContainer("StorageContainer"),
-/**
- * 
- */
         GenericContainer("GenericContainer");
 
         private final String value;

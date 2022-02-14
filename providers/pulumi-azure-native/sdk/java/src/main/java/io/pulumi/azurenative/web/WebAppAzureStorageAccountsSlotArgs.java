@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppAzureStorageAccountsSlotArgs Empty = new WebAppAzureStorageAccountsSlotArgs();
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -29,9 +23,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -39,9 +30,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
         return this.name;
     }
 
-    /**
-     * Azure storage accounts.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> properties;
 
@@ -49,9 +37,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class WebAppAzureStorageAccountsSlotArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API will update the Azure storage account configurations for the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

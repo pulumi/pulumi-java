@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The AS2 agreement security settings.
- */
 public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AS2SecuritySettingsArgs Empty = new AS2SecuritySettingsArgs();
 
-    /**
-     * The value indicating whether to enable NRR for inbound decoded messages.
-     */
     @InputImport(name="enableNRRForInboundDecodedMessages", required=true)
     private final Input<Boolean> enableNRRForInboundDecodedMessages;
 
@@ -28,9 +22,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.enableNRRForInboundDecodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for inbound encoded messages.
-     */
     @InputImport(name="enableNRRForInboundEncodedMessages", required=true)
     private final Input<Boolean> enableNRRForInboundEncodedMessages;
 
@@ -38,9 +29,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.enableNRRForInboundEncodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for inbound MDN.
-     */
     @InputImport(name="enableNRRForInboundMDN", required=true)
     private final Input<Boolean> enableNRRForInboundMDN;
 
@@ -48,9 +36,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.enableNRRForInboundMDN;
     }
 
-    /**
-     * The value indicating whether to enable NRR for outbound decoded messages.
-     */
     @InputImport(name="enableNRRForOutboundDecodedMessages", required=true)
     private final Input<Boolean> enableNRRForOutboundDecodedMessages;
 
@@ -58,9 +43,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.enableNRRForOutboundDecodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for outbound encoded messages.
-     */
     @InputImport(name="enableNRRForOutboundEncodedMessages", required=true)
     private final Input<Boolean> enableNRRForOutboundEncodedMessages;
 
@@ -68,9 +50,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.enableNRRForOutboundEncodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for outbound MDN.
-     */
     @InputImport(name="enableNRRForOutboundMDN", required=true)
     private final Input<Boolean> enableNRRForOutboundMDN;
 
@@ -78,9 +57,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.enableNRRForOutboundMDN;
     }
 
-    /**
-     * The name of the encryption certificate.
-     */
     @InputImport(name="encryptionCertificateName")
     private final @Nullable Input<String> encryptionCertificateName;
 
@@ -88,9 +64,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.encryptionCertificateName == null ? Input.empty() : this.encryptionCertificateName;
     }
 
-    /**
-     * The value indicating whether to send or request a MDN.
-     */
     @InputImport(name="overrideGroupSigningCertificate", required=true)
     private final Input<Boolean> overrideGroupSigningCertificate;
 
@@ -98,9 +71,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.overrideGroupSigningCertificate;
     }
 
-    /**
-     * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
-     */
     @InputImport(name="sha2AlgorithmFormat")
     private final @Nullable Input<String> sha2AlgorithmFormat;
 
@@ -108,9 +78,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
         return this.sha2AlgorithmFormat == null ? Input.empty() : this.sha2AlgorithmFormat;
     }
 
-    /**
-     * The name of the signing certificate.
-     */
     @InputImport(name="signingCertificateName")
     private final @Nullable Input<String> signingCertificateName;
 

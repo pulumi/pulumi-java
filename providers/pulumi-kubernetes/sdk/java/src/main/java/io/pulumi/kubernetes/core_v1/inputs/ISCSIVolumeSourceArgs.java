@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
- */
 public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ISCSIVolumeSourceArgs Empty = new ISCSIVolumeSourceArgs();
 
-    /**
-     * whether support iSCSI Discovery CHAP authentication
-     */
     @InputImport(name="chapAuthDiscovery")
     private final @Nullable Input<Boolean> chapAuthDiscovery;
 
@@ -31,9 +25,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.chapAuthDiscovery == null ? Input.empty() : this.chapAuthDiscovery;
     }
 
-    /**
-     * whether support iSCSI Session CHAP authentication
-     */
     @InputImport(name="chapAuthSession")
     private final @Nullable Input<Boolean> chapAuthSession;
 
@@ -41,9 +32,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.chapAuthSession == null ? Input.empty() : this.chapAuthSession;
     }
 
-    /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
-     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -51,9 +39,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
-    /**
-     * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.
-     */
     @InputImport(name="initiatorName")
     private final @Nullable Input<String> initiatorName;
 
@@ -61,9 +46,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.initiatorName == null ? Input.empty() : this.initiatorName;
     }
 
-    /**
-     * Target iSCSI Qualified Name.
-     */
     @InputImport(name="iqn", required=true)
     private final Input<String> iqn;
 
@@ -71,9 +53,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.iqn;
     }
 
-    /**
-     * iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
-     */
     @InputImport(name="iscsiInterface")
     private final @Nullable Input<String> iscsiInterface;
 
@@ -81,9 +60,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.iscsiInterface == null ? Input.empty() : this.iscsiInterface;
     }
 
-    /**
-     * iSCSI Target Lun number.
-     */
     @InputImport(name="lun", required=true)
     private final Input<Integer> lun;
 
@@ -91,9 +67,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.lun;
     }
 
-    /**
-     * iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
-     */
     @InputImport(name="portals")
     private final @Nullable Input<List<String>> portals;
 
@@ -101,9 +74,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.portals == null ? Input.empty() : this.portals;
     }
 
-    /**
-     * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -111,9 +81,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
-    /**
-     * CHAP Secret for iSCSI target and initiator authentication
-     */
     @InputImport(name="secretRef")
     private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 
@@ -121,9 +88,6 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.secretRef == null ? Input.empty() : this.secretRef;
     }
 
-    /**
-     * iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
-     */
     @InputImport(name="targetPortal", required=true)
     private final Input<String> targetPortal;
 

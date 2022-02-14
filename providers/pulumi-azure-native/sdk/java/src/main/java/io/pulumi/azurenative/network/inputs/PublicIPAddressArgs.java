@@ -24,16 +24,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Public IP address resource.
- */
 public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicIPAddressArgs Empty = new PublicIPAddressArgs();
 
-    /**
-     * The DDoS protection custom policy associated with the public IP address.
-     */
     @InputImport(name="ddosSettings")
     private final @Nullable Input<DdosSettingsArgs> ddosSettings;
 
@@ -41,9 +35,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.ddosSettings == null ? Input.empty() : this.ddosSettings;
     }
 
-    /**
-     * The FQDN of the DNS record associated with the public IP address.
-     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings;
 
@@ -51,9 +42,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
-    /**
-     * The extended location of the public ip address.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -61,9 +49,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -71,9 +56,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The idle timeout of the public IP address.
-     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
@@ -81,9 +63,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
     }
 
-    /**
-     * The IP address associated with the public IP address resource.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -91,9 +70,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * The list of tags associated with the public IP address.
-     */
     @InputImport(name="ipTags")
     private final @Nullable Input<List<IpTagArgs>> ipTags;
 
@@ -101,9 +77,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.ipTags == null ? Input.empty() : this.ipTags;
     }
 
-    /**
-     * The linked public IP address of the public IP address resource.
-     */
     @InputImport(name="linkedPublicIPAddress")
     private final @Nullable Input<PublicIPAddressArgs> linkedPublicIPAddress;
 
@@ -111,9 +84,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.linkedPublicIPAddress == null ? Input.empty() : this.linkedPublicIPAddress;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -121,9 +91,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Migration phase of Public IP Address.
-     */
     @InputImport(name="migrationPhase")
     private final @Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
 
@@ -131,9 +98,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.migrationPhase == null ? Input.empty() : this.migrationPhase;
     }
 
-    /**
-     * The NatGateway for the Public IP address.
-     */
     @InputImport(name="natGateway")
     private final @Nullable Input<NatGatewayArgs> natGateway;
 
@@ -141,9 +105,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.natGateway == null ? Input.empty() : this.natGateway;
     }
 
-    /**
-     * The public IP address version.
-     */
     @InputImport(name="publicIPAddressVersion")
     private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
 
@@ -151,9 +112,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
     }
 
-    /**
-     * The public IP address allocation method.
-     */
     @InputImport(name="publicIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
 
@@ -161,9 +119,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.publicIPAllocationMethod == null ? Input.empty() : this.publicIPAllocationMethod;
     }
 
-    /**
-     * The Public IP Prefix this Public IP Address should be allocated from.
-     */
     @InputImport(name="publicIPPrefix")
     private final @Nullable Input<SubResourceArgs> publicIPPrefix;
 
@@ -171,9 +126,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
     }
 
-    /**
-     * The service public IP address of the public IP address resource.
-     */
     @InputImport(name="servicePublicIPAddress")
     private final @Nullable Input<PublicIPAddressArgs> servicePublicIPAddress;
 
@@ -181,9 +133,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.servicePublicIPAddress == null ? Input.empty() : this.servicePublicIPAddress;
     }
 
-    /**
-     * The public IP address SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<PublicIPAddressSkuArgs> sku;
 
@@ -191,9 +140,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -201,9 +147,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

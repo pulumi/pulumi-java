@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse {
-/**
- * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
- */
     private final Boolean allowPlaybackInterruption;
-/**
- * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
- */
     private final String audioUri;
 
     @OutputCustomType.Constructor({"allowPlaybackInterruption","audioUri"})
@@ -27,15 +21,9 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
         this.audioUri = Objects.requireNonNull(audioUri);
     }
 
-/**
- * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
- */
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
-/**
- * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
- */
     public String getAudioUri() {
         return this.audioUri;
     }

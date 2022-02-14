@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Profile of network configuration.
- */
 public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerServiceNetworkProfileArgs Empty = new ContainerServiceNetworkProfileArgs();
 
-    /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-     */
     @InputImport(name="dnsServiceIP")
     private final @Nullable Input<String> dnsServiceIP;
 
@@ -34,9 +28,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.dnsServiceIP == null ? Input.empty() : this.dnsServiceIP;
     }
 
-    /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-     */
     @InputImport(name="dockerBridgeCidr")
     private final @Nullable Input<String> dockerBridgeCidr;
 
@@ -44,9 +35,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.dockerBridgeCidr == null ? Input.empty() : this.dockerBridgeCidr;
     }
 
-    /**
-     * Profile of the cluster load balancer.
-     */
     @InputImport(name="loadBalancerProfile")
     private final @Nullable Input<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
 
@@ -54,9 +42,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.loadBalancerProfile == null ? Input.empty() : this.loadBalancerProfile;
     }
 
-    /**
-     * The load balancer sku for the managed cluster.
-     */
     @InputImport(name="loadBalancerSku")
     private final @Nullable Input<Either<String,LoadBalancerSku>> loadBalancerSku;
 
@@ -64,9 +49,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.loadBalancerSku == null ? Input.empty() : this.loadBalancerSku;
     }
 
-    /**
-     * Network mode used for building Kubernetes network.
-     */
     @InputImport(name="networkMode")
     private final @Nullable Input<Either<String,NetworkMode>> networkMode;
 
@@ -74,9 +56,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.networkMode == null ? Input.empty() : this.networkMode;
     }
 
-    /**
-     * Network plugin used for building Kubernetes network.
-     */
     @InputImport(name="networkPlugin")
     private final @Nullable Input<Either<String,NetworkPlugin>> networkPlugin;
 
@@ -84,9 +63,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.networkPlugin == null ? Input.empty() : this.networkPlugin;
     }
 
-    /**
-     * Network policy used for building Kubernetes network.
-     */
     @InputImport(name="networkPolicy")
     private final @Nullable Input<Either<String,NetworkPolicy>> networkPolicy;
 
@@ -94,9 +70,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.networkPolicy == null ? Input.empty() : this.networkPolicy;
     }
 
-    /**
-     * The outbound (egress) routing method.
-     */
     @InputImport(name="outboundType")
     private final @Nullable Input<Either<String,OutboundType>> outboundType;
 
@@ -104,9 +77,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.outboundType == null ? Input.empty() : this.outboundType;
     }
 
-    /**
-     * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
-     */
     @InputImport(name="podCidr")
     private final @Nullable Input<String> podCidr;
 
@@ -114,9 +84,6 @@ public final class ContainerServiceNetworkProfileArgs extends io.pulumi.resource
         return this.podCidr == null ? Input.empty() : this.podCidr;
     }
 
-    /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
-     */
     @InputImport(name="serviceCidr")
     private final @Nullable Input<String> serviceCidr;
 

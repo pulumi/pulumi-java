@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetwork {
-/**
- * This type describes a network resource.
-API Version: 2018-09-01-preview.
- *
- * This type describes a network resource.
- */
     public static CompletableFuture<GetNetworkResult> invokeAsync(GetNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getNetwork", TypeShape.of(GetNetworkResult.class), args == null ? GetNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowArgs Empty = new FlowArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentId", required=true)
     private final Input<String> agentId;
 
@@ -31,9 +25,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
-    /**
-     * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,9 +32,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The human-readable name of the flow.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -51,9 +39,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page's event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
-     */
     @InputImport(name="eventHandlers")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
@@ -61,9 +46,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -71,9 +53,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -91,9 +67,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * NLU related settings of the flow.
-     */
     @InputImport(name="nluSettings")
     private final @Nullable Input<GoogleCloudDialogflowCxV3NluSettingsArgs> nluSettings;
 
@@ -101,9 +74,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.nluSettings == null ? Input.empty() : this.nluSettings;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -111,9 +81,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * A flow's transition route group serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
-     */
     @InputImport(name="transitionRouteGroups")
     private final @Nullable Input<List<String>> transitionRouteGroups;
 
@@ -121,9 +88,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
     }
 
-    /**
-     * A flow's transition routes serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition routes and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
-     */
     @InputImport(name="transitionRoutes")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 

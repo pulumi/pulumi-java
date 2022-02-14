@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AuthorizationActionMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthorizationActionMappingResponse Empty = new AuthorizationActionMappingResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="desired")
     private final @Nullable String desired;
 
@@ -27,9 +21,6 @@ public final class AuthorizationActionMappingResponse extends io.pulumi.resource
         return this.desired == null ? Optional.empty() : Optional.ofNullable(this.desired);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="original")
     private final @Nullable String original;
 

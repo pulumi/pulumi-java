@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2RecordConditionResponse {
-/**
- * An expression.
- */
     private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 
     @OutputCustomType.Constructor({"expressions"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
         this.expressions = Objects.requireNonNull(expressions);
     }
 
-/**
- * An expression.
- */
     public GooglePrivacyDlpV2ExpressionsResponse getExpressions() {
         return this.expressions;
     }

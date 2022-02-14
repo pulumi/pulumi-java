@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMicrosoftSecurityIncidentCreationAlertRule {
-/**
- * Represents MicrosoftSecurityIncidentCreation rule.
-API Version: 2020-01-01.
- *
- * Represents MicrosoftSecurityIncidentCreation rule.
- */
     public static CompletableFuture<GetMicrosoftSecurityIncidentCreationAlertRuleResult> invokeAsync(GetMicrosoftSecurityIncidentCreationAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMicrosoftSecurityIncidentCreationAlertRule", TypeShape.of(GetMicrosoftSecurityIncidentCreationAlertRuleResult.class), args == null ? GetMicrosoftSecurityIncidentCreationAlertRuleArgs.Empty : args, Utilities.withVersion(options));
     }

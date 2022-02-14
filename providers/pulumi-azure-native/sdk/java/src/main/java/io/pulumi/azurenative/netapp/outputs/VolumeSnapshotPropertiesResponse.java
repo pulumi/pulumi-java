@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VolumeSnapshotPropertiesResponse {
-/**
- * Snapshot Policy ResourceId
- */
     private final @Nullable String snapshotPolicyId;
 
     @OutputCustomType.Constructor({"snapshotPolicyId"})
@@ -21,9 +18,6 @@ public final class VolumeSnapshotPropertiesResponse {
         this.snapshotPolicyId = snapshotPolicyId;
     }
 
-/**
- * Snapshot Policy ResourceId
- */
     public Optional<String> getSnapshotPolicyId() {
         return Optional.ofNullable(this.snapshotPolicyId);
     }

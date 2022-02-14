@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LocalTimestampResponseTimeZoneOffset {
-/**
- * The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00)
- */
     private final @Nullable String propertyName;
 
     @OutputCustomType.Constructor({"propertyName"})
@@ -21,9 +18,6 @@ public final class LocalTimestampResponseTimeZoneOffset {
         this.propertyName = propertyName;
     }
 
-/**
- * The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00)
- */
     public Optional<String> getPropertyName() {
         return Optional.ofNullable(this.propertyName);
     }

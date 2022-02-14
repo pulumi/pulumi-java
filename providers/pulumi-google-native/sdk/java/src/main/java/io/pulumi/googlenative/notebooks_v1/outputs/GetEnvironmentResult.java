@@ -11,33 +11,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
-/**
- * Use a container image to start the notebook instance.
- */
     private final ContainerImageResponse containerImage;
-/**
- * The time at which this environment was created.
- */
     private final String createTime;
-/**
- * A brief description of this environment.
- */
     private final String description;
-/**
- * Display name of this environment for the UI.
- */
     private final String displayName;
-/**
- * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
- */
     private final String name;
-/**
- * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
- */
     private final String postStartupScript;
-/**
- * Use a Compute Engine VM image to start the notebook instance.
- */
     private final VmImageResponse vmImage;
 
     @OutputCustomType.Constructor({"containerImage","createTime","description","displayName","name","postStartupScript","vmImage"})
@@ -58,45 +37,24 @@ public final class GetEnvironmentResult {
         this.vmImage = Objects.requireNonNull(vmImage);
     }
 
-/**
- * Use a container image to start the notebook instance.
- */
     public ContainerImageResponse getContainerImage() {
         return this.containerImage;
     }
-/**
- * The time at which this environment was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * A brief description of this environment.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Display name of this environment for the UI.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
- */
     public String getName() {
         return this.name;
     }
-/**
- * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
- */
     public String getPostStartupScript() {
         return this.postStartupScript;
     }
-/**
- * Use a Compute Engine VM image to start the notebook instance.
- */
     public VmImageResponse getVmImage() {
         return this.vmImage;
     }

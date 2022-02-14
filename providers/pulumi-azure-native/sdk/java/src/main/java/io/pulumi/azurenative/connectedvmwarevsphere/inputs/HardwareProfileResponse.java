@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the resource properties.
- */
 public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HardwareProfileResponse Empty = new HardwareProfileResponse();
 
-    /**
-     * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
-     */
     @InputImport(name="cpuHotAddEnabled", required=true)
     private final Boolean cpuHotAddEnabled;
 
@@ -28,9 +22,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
         return this.cpuHotAddEnabled;
     }
 
-    /**
-     * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
-     */
     @InputImport(name="cpuHotRemoveEnabled", required=true)
     private final Boolean cpuHotRemoveEnabled;
 
@@ -38,9 +29,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
         return this.cpuHotRemoveEnabled;
     }
 
-    /**
-     * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
-     */
     @InputImport(name="memoryHotAddEnabled", required=true)
     private final Boolean memoryHotAddEnabled;
 
@@ -48,9 +36,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
         return this.memoryHotAddEnabled;
     }
 
-    /**
-     * Gets or sets memory size in MBs for the vm.
-     */
     @InputImport(name="memorySizeMB")
     private final @Nullable Integer memorySizeMB;
 
@@ -58,9 +43,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
         return this.memorySizeMB == null ? Optional.empty() : Optional.ofNullable(this.memorySizeMB);
     }
 
-    /**
-     * Gets or sets the number of vCPUs for the vm.
-     */
     @InputImport(name="numCPUs")
     private final @Nullable Integer numCPUs;
 
@@ -68,9 +50,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
         return this.numCPUs == null ? Optional.empty() : Optional.ofNullable(this.numCPUs);
     }
 
-    /**
-     * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
-     */
     @InputImport(name="numCoresPerSocket")
     private final @Nullable Integer numCoresPerSocket;
 

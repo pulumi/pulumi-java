@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
-/**
- * List of gateway routes.
- */
     private final @Nullable List<GatewayRouteResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -21,9 +18,6 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
         this.value = value;
     }
 
-/**
- * List of gateway routes.
- */
     public List<GatewayRouteResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerKey {
-/**
- * A MySQL Server key.
-API Version: 2020-01-01.
- *
- * A MySQL Server key.
- */
     public static CompletableFuture<GetServerKeyResult> invokeAsync(GetServerKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getServerKey", TypeShape.of(GetServerKeyResult.class), args == null ? GetServerKeyArgs.Empty : args, Utilities.withVersion(options));
     }

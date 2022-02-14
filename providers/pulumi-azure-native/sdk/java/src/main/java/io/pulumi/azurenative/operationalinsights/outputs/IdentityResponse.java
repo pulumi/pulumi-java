@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityResponse {
-/**
- * The principal ID of resource identity.
- */
     private final String principalId;
-/**
- * The tenant ID of resource.
- */
     private final String tenantId;
-/**
- * Type of managed service identity.
- */
     private final String type;
-/**
- * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
- */
     private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -41,27 +29,15 @@ public final class IdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
-/**
- * The principal ID of resource identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant ID of resource.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * Type of managed service identity.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
- */
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

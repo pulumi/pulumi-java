@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SuppressionArgs Empty = new SuppressionArgs();
 
-    /**
-     * The name of the suppression.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The recommendation ID.
-     */
     @InputImport(name="recommendationId", required=true)
     private final Input<String> recommendationId;
 
@@ -37,9 +28,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.recommendationId;
     }
 
-    /**
-     * The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
-     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 
@@ -47,9 +35,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceUri;
     }
 
-    /**
-     * The GUID of the suppression.
-     */
     @InputImport(name="suppressionId")
     private final @Nullable Input<String> suppressionId;
 
@@ -57,9 +42,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.suppressionId == null ? Input.empty() : this.suppressionId;
     }
 
-    /**
-     * The duration for which the suppression is valid.
-     */
     @InputImport(name="ttl")
     private final @Nullable Input<String> ttl;
 

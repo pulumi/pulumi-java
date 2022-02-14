@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabelingJobImagePropertiesResponse {
-/**
- * Annotation type of image labeling tasks.
- */
     private final @Nullable String annotationType;
-/**
- * Media type of data asset.
- */
     private final String mediaType;
 
     @OutputCustomType.Constructor({"annotationType","mediaType"})
@@ -28,15 +22,9 @@ public final class LabelingJobImagePropertiesResponse {
         this.mediaType = Objects.requireNonNull(mediaType);
     }
 
-/**
- * Annotation type of image labeling tasks.
- */
     public Optional<String> getAnnotationType() {
         return Optional.ofNullable(this.annotationType);
     }
-/**
- * Media type of data asset.
- */
     public String getMediaType() {
         return this.mediaType;
     }

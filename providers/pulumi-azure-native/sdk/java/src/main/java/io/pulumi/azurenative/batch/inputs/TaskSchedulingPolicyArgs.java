@@ -9,16 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskSchedulingPolicyArgs Empty = new TaskSchedulingPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="nodeFillType", required=true)
     private final Input<ComputeNodeFillType> nodeFillType;
 

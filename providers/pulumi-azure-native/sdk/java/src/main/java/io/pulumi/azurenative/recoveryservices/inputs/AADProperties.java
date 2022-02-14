@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AADProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final AADProperties Empty = new AADProperties();
 
-    /**
-     * 
-     */
     @InputImport(name="audience")
     private final @Nullable String audience;
 
@@ -27,9 +21,6 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="authority")
     private final @Nullable String authority;
 
@@ -37,9 +28,6 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="servicePrincipalClientId")
     private final @Nullable String servicePrincipalClientId;
 
@@ -47,9 +35,6 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
         return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="servicePrincipalObjectId")
     private final @Nullable String servicePrincipalObjectId;
 
@@ -57,9 +42,6 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
         return this.servicePrincipalObjectId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalObjectId);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * PrivateLinkConnection properties for the network interface.
- */
 public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse Empty = new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse();
 
-    /**
-     * List of FQDNs for current private link connection.
-     */
     @InputImport(name="fqdns", required=true)
     private final List<String> fqdns;
 
@@ -26,9 +20,6 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
         return this.fqdns;
     }
 
-    /**
-     * The group ID for current private link connection.
-     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -36,9 +27,6 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
         return this.groupId;
     }
 
-    /**
-     * The required member name for current private link connection.
-     */
     @InputImport(name="requiredMemberName", required=true)
     private final String requiredMemberName;
 

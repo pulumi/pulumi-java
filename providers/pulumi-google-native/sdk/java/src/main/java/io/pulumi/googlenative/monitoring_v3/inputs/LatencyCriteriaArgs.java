@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters for a latency threshold SLI.
- */
 public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LatencyCriteriaArgs Empty = new LatencyCriteriaArgs();
 
-    /**
-     * Good service is defined to be the count of requests made to this service that return in no more than threshold.
-     */
     @InputImport(name="threshold")
     private final @Nullable Input<String> threshold;
 

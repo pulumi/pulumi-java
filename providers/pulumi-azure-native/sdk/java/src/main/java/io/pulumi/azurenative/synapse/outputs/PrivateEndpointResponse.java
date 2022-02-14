@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateEndpointResponse {
-/**
- * Resource id of the private endpoint.
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class PrivateEndpointResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * Resource id of the private endpoint.
- */
     public String getId() {
         return this.id;
     }

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BuildpackBindingLaunchPropertiesResponse {
-/**
- * Non-sensitive properties for launchProperties
- */
     private final @Nullable Map<String,String> properties;
-/**
- * Sensitive properties for launchProperties
- */
     private final @Nullable Map<String,String> secrets;
 
     @OutputCustomType.Constructor({"properties","secrets"})
@@ -28,15 +22,9 @@ public final class BuildpackBindingLaunchPropertiesResponse {
         this.secrets = secrets;
     }
 
-/**
- * Non-sensitive properties for launchProperties
- */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * Sensitive properties for launchProperties
- */
     public Map<String,String> getSecrets() {
         return this.secrets == null ? Map.of() : this.secrets;
     }

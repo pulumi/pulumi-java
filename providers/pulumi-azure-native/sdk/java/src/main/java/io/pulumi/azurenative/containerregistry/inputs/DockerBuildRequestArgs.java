@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters for a docker quick build.
- */
 public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DockerBuildRequestArgs Empty = new DockerBuildRequestArgs();
 
-    /**
-     * The machine configuration of the run agent.
-     */
     @InputImport(name="agentConfiguration")
     private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
 
@@ -34,9 +28,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
     }
 
-    /**
-     * The dedicated agent pool for the run.
-     */
     @InputImport(name="agentPoolName")
     private final @Nullable Input<String> agentPoolName;
 
@@ -44,9 +35,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
     }
 
-    /**
-     * The collection of override arguments to be used when executing the run.
-     */
     @InputImport(name="arguments")
     private final @Nullable Input<List<ArgumentArgs>> arguments;
 
@@ -54,9 +42,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
-    /**
-     * The properties that describes a set of credentials that will be used when this run is invoked.
-     */
     @InputImport(name="credentials")
     private final @Nullable Input<CredentialsArgs> credentials;
 
@@ -64,9 +49,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    /**
-     * The Docker file path relative to the source location.
-     */
     @InputImport(name="dockerFilePath", required=true)
     private final Input<String> dockerFilePath;
 
@@ -74,9 +56,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.dockerFilePath;
     }
 
-    /**
-     * The fully qualified image names including the repository and tag.
-     */
     @InputImport(name="imageNames")
     private final @Nullable Input<List<String>> imageNames;
 
@@ -84,9 +63,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.imageNames == null ? Input.empty() : this.imageNames;
     }
 
-    /**
-     * The value that indicates whether archiving is enabled for the run or not.
-     */
     @InputImport(name="isArchiveEnabled")
     private final @Nullable Input<Boolean> isArchiveEnabled;
 
@@ -94,9 +70,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
     }
 
-    /**
-     * The value of this property indicates whether the image built should be pushed to the registry or not.
-     */
     @InputImport(name="isPushEnabled")
     private final @Nullable Input<Boolean> isPushEnabled;
 
@@ -104,9 +77,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.isPushEnabled == null ? Input.empty() : this.isPushEnabled;
     }
 
-    /**
-     * The template that describes the repository and tag information for run log artifact.
-     */
     @InputImport(name="logTemplate")
     private final @Nullable Input<String> logTemplate;
 
@@ -114,9 +84,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
     }
 
-    /**
-     * The value of this property indicates whether the image cache is enabled or not.
-     */
     @InputImport(name="noCache")
     private final @Nullable Input<Boolean> noCache;
 
@@ -124,9 +91,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.noCache == null ? Input.empty() : this.noCache;
     }
 
-    /**
-     * The platform properties against which the run has to happen.
-     */
     @InputImport(name="platform", required=true)
     private final Input<PlatformPropertiesArgs> platform;
 
@@ -134,10 +98,6 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
         return this.platform;
     }
 
-    /**
-     * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
-If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-     */
     @InputImport(name="sourceLocation")
     private final @Nullable Input<String> sourceLocation;
 
@@ -145,9 +105,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
         return this.sourceLocation == null ? Input.empty() : this.sourceLocation;
     }
 
-    /**
-     * The name of the target build stage for the docker build.
-     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 
@@ -155,9 +112,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
         return this.target == null ? Input.empty() : this.target;
     }
 
-    /**
-     * Run timeout in seconds.
-     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -165,10 +119,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
-    /**
-     * The type of the run request.
-Expected value is 'DockerBuildRequest'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

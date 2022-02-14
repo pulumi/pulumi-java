@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Refers to the sku name which should be "Standard"
- */
     @EnumType
     public enum ManagerSkuType {
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

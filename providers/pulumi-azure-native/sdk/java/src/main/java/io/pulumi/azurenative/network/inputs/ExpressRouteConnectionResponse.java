@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * ExpressRouteConnection resource.
- */
 public final class ExpressRouteConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteConnectionResponse Empty = new ExpressRouteConnectionResponse();
 
-    /**
-     * Authorization key to establish the connection.
-     */
     @InputImport(name="authorizationKey")
     private final @Nullable String authorizationKey;
 
@@ -31,9 +25,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
     }
 
-    /**
-     * Enable internet security.
-     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Boolean enableInternetSecurity;
 
@@ -41,9 +32,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
     }
 
-    /**
-     * The ExpressRoute circuit peering.
-     */
     @InputImport(name="expressRouteCircuitPeering", required=true)
     private final ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering;
 
@@ -51,9 +39,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.expressRouteCircuitPeering;
     }
 
-    /**
-     * Enable FastPath to vWan Firewall hub.
-     */
     @InputImport(name="expressRouteGatewayBypass")
     private final @Nullable Boolean expressRouteGatewayBypass;
 
@@ -61,9 +46,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.expressRouteGatewayBypass == null ? Optional.empty() : Optional.ofNullable(this.expressRouteGatewayBypass);
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -71,9 +53,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -81,9 +60,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.name;
     }
 
-    /**
-     * The provisioning state of the express route connection resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -91,9 +67,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.provisioningState;
     }
 
-    /**
-     * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     */
     @InputImport(name="routingConfiguration")
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
@@ -101,9 +74,6 @@ public final class ExpressRouteConnectionResponse extends io.pulumi.resources.In
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
     }
 
-    /**
-     * The routing weight associated to the connection.
-     */
     @InputImport(name="routingWeight")
     private final @Nullable Integer routingWeight;
 

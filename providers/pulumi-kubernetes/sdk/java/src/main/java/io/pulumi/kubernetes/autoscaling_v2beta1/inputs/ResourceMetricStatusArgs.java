@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
- */
 public final class ResourceMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceMetricStatusArgs Empty = new ResourceMetricStatusArgs();
 
-    /**
-     * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.
-     */
     @InputImport(name="currentAverageUtilization")
     private final @Nullable Input<Integer> currentAverageUtilization;
 
@@ -28,9 +22,6 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
         return this.currentAverageUtilization == null ? Input.empty() : this.currentAverageUtilization;
     }
 
-    /**
-     * currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.
-     */
     @InputImport(name="currentAverageValue", required=true)
     private final Input<String> currentAverageValue;
 
@@ -38,9 +29,6 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
         return this.currentAverageValue;
     }
 
-    /**
-     * name is the name of the resource in question.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

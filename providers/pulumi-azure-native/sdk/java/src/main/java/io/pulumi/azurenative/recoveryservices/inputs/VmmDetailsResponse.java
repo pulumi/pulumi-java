@@ -8,17 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * VMM fabric specific details.
- */
 public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmmDetailsResponse Empty = new VmmDetailsResponse();
 
-    /**
-     * Gets the class type. Overridden in derived classes.
-Expected value is 'VMM'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 

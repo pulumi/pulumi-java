@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespaceVirtualNetworkRule {
-/**
- * Single item in a List or Get VirtualNetworkRules operation
-API Version: 2018-01-01-preview.
- *
- * Single item in a List or Get VirtualNetworkRules operation
- */
     public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> invokeAsync(GetNamespaceVirtualNetworkRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceVirtualNetworkRule", TypeShape.of(GetNamespaceVirtualNetworkRuleResult.class), args == null ? GetNamespaceVirtualNetworkRuleArgs.Empty : args, Utilities.withVersion(options));
     }

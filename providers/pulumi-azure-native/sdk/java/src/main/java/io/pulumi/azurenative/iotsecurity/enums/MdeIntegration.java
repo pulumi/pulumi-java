@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Integration status
- */
     @EnumType
     public enum MdeIntegration {
-/**
- * 
- */
         Disabled("Disabled"),
-/**
- * 
- */
         Enabled("Enabled");
 
         private final String value;

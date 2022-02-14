@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedAccessCheckArgs Empty = new LinkedAccessCheckArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="actionName")
     private final @Nullable Input<String> actionName;
 
@@ -27,9 +21,6 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
         return this.actionName == null ? Input.empty() : this.actionName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedAction")
     private final @Nullable Input<String> linkedAction;
 
@@ -37,9 +28,6 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
         return this.linkedAction == null ? Input.empty() : this.linkedAction;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedActionVerb")
     private final @Nullable Input<String> linkedActionVerb;
 
@@ -47,9 +35,6 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
         return this.linkedActionVerb == null ? Input.empty() : this.linkedActionVerb;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedProperty")
     private final @Nullable Input<String> linkedProperty;
 
@@ -57,9 +42,6 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
         return this.linkedProperty == null ? Input.empty() : this.linkedProperty;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedType")
     private final @Nullable Input<String> linkedType;
 

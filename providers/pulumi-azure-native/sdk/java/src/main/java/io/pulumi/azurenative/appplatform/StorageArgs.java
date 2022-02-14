@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageArgs Empty = new StorageArgs();
 
-    /**
-     * Properties of the storage resource payload.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<StorageAccountArgs> properties;
 
@@ -28,9 +22,6 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,9 +29,6 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -48,9 +36,6 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * The name of the storage resource.
-     */
     @InputImport(name="storageName")
     private final @Nullable Input<String> storageName;
 

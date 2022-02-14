@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RelationshipLinkArgs Empty = new RelationshipLinkArgs();
 
-    /**
-     * Localized descriptions for the Relationship Link.
-     */
     @InputImport(name="description")
     private final @Nullable Input<Map<String,String>> description;
 
@@ -31,9 +25,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Localized display name for the Relationship Link.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<Map<String,String>> displayName;
 
@@ -41,9 +32,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -51,9 +39,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.hubName;
     }
 
-    /**
-     * The InteractionType associated with the Relationship Link.
-     */
     @InputImport(name="interactionType", required=true)
     private final Input<String> interactionType;
 
@@ -61,9 +46,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.interactionType;
     }
 
-    /**
-     * The mappings between Interaction and Relationship fields.
-     */
     @InputImport(name="mappings")
     private final @Nullable Input<List<RelationshipLinkFieldMappingArgs>> mappings;
 
@@ -71,9 +53,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.mappings == null ? Input.empty() : this.mappings;
     }
 
-    /**
-     * The property references for the Profile of the Relationship.
-     */
     @InputImport(name="profilePropertyReferences", required=true)
     private final Input<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
 
@@ -81,9 +60,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.profilePropertyReferences;
     }
 
-    /**
-     * The property references for the Related Profile of the Relationship.
-     */
     @InputImport(name="relatedProfilePropertyReferences", required=true)
     private final Input<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
 
@@ -91,9 +67,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.relatedProfilePropertyReferences;
     }
 
-    /**
-     * The name of the relationship link.
-     */
     @InputImport(name="relationshipLinkName")
     private final @Nullable Input<String> relationshipLinkName;
 
@@ -101,9 +74,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.relationshipLinkName == null ? Input.empty() : this.relationshipLinkName;
     }
 
-    /**
-     * The Relationship associated with the Link.
-     */
     @InputImport(name="relationshipName", required=true)
     private final Input<String> relationshipName;
 
@@ -111,9 +81,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.relationshipName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

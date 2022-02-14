@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The binding to a JavaScript function.
- */
 public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JavaScriptFunctionBindingArgs Empty = new JavaScriptFunctionBindingArgs();
 
-    /**
-     * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
-     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 
@@ -27,10 +21,6 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
         return this.script == null ? Input.empty() : this.script;
     }
 
-    /**
-     * Indicates the function binding type.
-Expected value is 'Microsoft.StreamAnalytics/JavascriptUdf'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

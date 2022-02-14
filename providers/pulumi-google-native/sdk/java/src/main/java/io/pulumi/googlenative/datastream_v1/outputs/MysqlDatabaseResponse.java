@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlDatabaseResponse {
-/**
- * Database name.
- */
     private final String database;
-/**
- * Tables in the database.
- */
     private final List<MysqlTableResponse> mysqlTables;
 
     @OutputCustomType.Constructor({"database","mysqlTables"})
@@ -28,15 +22,9 @@ public final class MysqlDatabaseResponse {
         this.mysqlTables = Objects.requireNonNull(mysqlTables);
     }
 
-/**
- * Database name.
- */
     public String getDatabase() {
         return this.database;
     }
-/**
- * Tables in the database.
- */
     public List<MysqlTableResponse> getMysqlTables() {
         return this.mysqlTables;
     }

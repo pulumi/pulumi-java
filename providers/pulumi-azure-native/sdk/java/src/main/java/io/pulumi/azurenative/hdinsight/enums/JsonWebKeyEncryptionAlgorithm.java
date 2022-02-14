@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Algorithm identifier for encryption, default RSA-OAEP.
- */
     @EnumType
     public enum JsonWebKeyEncryptionAlgorithm {
-/**
- * 
- */
         RSAOAEP("RSA-OAEP"),
-/**
- * 
- */
         RSAOAEP256("RSA-OAEP-256"),
-/**
- * 
- */
         RSA1_5("RSA1_5");
 
         private final String value;

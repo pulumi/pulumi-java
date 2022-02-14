@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListWebAppMetadataArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppMetadataArgs Empty = new ListWebAppMetadataArgs();
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ListWebAppMetadataArgs extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

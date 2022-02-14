@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskEncryptionSettingsResponse {
-/**
- * Specifies the location of the disk encryption key, which is a Key Vault Secret.
- */
     private final @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
-/**
- * Specifies whether disk encryption should be enabled on the virtual machine.
- */
     private final @Nullable Boolean enabled;
-/**
- * Specifies the location of the key encryption key in Key Vault.
- */
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     @OutputCustomType.Constructor({"diskEncryptionKey","enabled","keyEncryptionKey"})
@@ -36,21 +27,12 @@ public final class DiskEncryptionSettingsResponse {
         this.keyEncryptionKey = keyEncryptionKey;
     }
 
-/**
- * Specifies the location of the disk encryption key, which is a Key Vault Secret.
- */
     public Optional<KeyVaultSecretReferenceResponse> getDiskEncryptionKey() {
         return Optional.ofNullable(this.diskEncryptionKey);
     }
-/**
- * Specifies whether disk encryption should be enabled on the virtual machine.
- */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
-/**
- * Specifies the location of the key encryption key in Key Vault.
- */
     public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }

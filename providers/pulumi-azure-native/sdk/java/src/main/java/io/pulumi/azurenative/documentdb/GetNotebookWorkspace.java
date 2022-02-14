@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotebookWorkspace {
-/**
- * A notebook workspace resource
-API Version: 2021-03-15.
- *
- * A notebook workspace resource
- */
     public static CompletableFuture<GetNotebookWorkspaceResult> invokeAsync(GetNotebookWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getNotebookWorkspace", TypeShape.of(GetNotebookWorkspaceResult.class), args == null ? GetNotebookWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

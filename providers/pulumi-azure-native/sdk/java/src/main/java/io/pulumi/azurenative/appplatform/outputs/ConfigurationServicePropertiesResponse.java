@@ -15,21 +15,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConfigurationServicePropertiesResponse {
-/**
- * Collection of instances belong to Application Configuration Service.
- */
     private final List<ConfigurationServiceInstanceResponse> instances;
-/**
- * State of the Application Configuration Service.
- */
     private final String provisioningState;
-/**
- * The requested resource quantity for required CPU and Memory.
- */
     private final ConfigurationServiceResourceRequestsResponse resourceRequests;
-/**
- * The settings of Application Configuration Service.
- */
     private final @Nullable ConfigurationServiceSettingsResponse settings;
 
     @OutputCustomType.Constructor({"instances","provisioningState","resourceRequests","settings"})
@@ -44,27 +32,15 @@ public final class ConfigurationServicePropertiesResponse {
         this.settings = settings;
     }
 
-/**
- * Collection of instances belong to Application Configuration Service.
- */
     public List<ConfigurationServiceInstanceResponse> getInstances() {
         return this.instances;
     }
-/**
- * State of the Application Configuration Service.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The requested resource quantity for required CPU and Memory.
- */
     public ConfigurationServiceResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }
-/**
- * The settings of Application Configuration Service.
- */
     public Optional<ConfigurationServiceSettingsResponse> getSettings() {
         return Optional.ofNullable(this.settings);
     }

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorDetailResponse {
-/**
- * Error code.
- */
     private final String code;
-/**
- * Error message.
- */
     private final String message;
 
     @OutputCustomType.Constructor({"code","message"})
@@ -26,15 +20,9 @@ public final class ErrorDetailResponse {
         this.message = Objects.requireNonNull(message);
     }
 
-/**
- * Error code.
- */
     public String getCode() {
         return this.code;
     }
-/**
- * Error message.
- */
     public String getMessage() {
         return this.message;
     }

@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Represents a whole calendar date, for example a date of birth. The time of day and time zone are either specified elsewhere or are not significant. The date is relative to the [Proleptic Gregorian Calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar). The date must be a valid calendar date between the year 1 and 9999.
- */
 public final class DateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DateResponse Empty = new DateResponse();
 
-    /**
-     * Day of month. Must be from 1 to 31 and valid for the year and month.
-     */
     @InputImport(name="day", required=true)
     private final Integer day;
 
@@ -25,9 +19,6 @@ public final class DateResponse extends io.pulumi.resources.InvokeArgs {
         return this.day;
     }
 
-    /**
-     * Month of date. Must be from 1 to 12.
-     */
     @InputImport(name="month", required=true)
     private final Integer month;
 
@@ -35,9 +26,6 @@ public final class DateResponse extends io.pulumi.resources.InvokeArgs {
         return this.month;
     }
 
-    /**
-     * Year of date. Must be from 1 to 9999.
-     */
     @InputImport(name="year", required=true)
     private final Integer year;
 

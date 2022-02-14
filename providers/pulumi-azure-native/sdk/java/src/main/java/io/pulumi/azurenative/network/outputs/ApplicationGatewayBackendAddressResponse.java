@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayBackendAddressResponse {
-/**
- * Fully qualified domain name (FQDN).
- */
     private final @Nullable String fqdn;
-/**
- * IP address.
- */
     private final @Nullable String ipAddress;
 
     @OutputCustomType.Constructor({"fqdn","ipAddress"})
@@ -28,15 +22,9 @@ public final class ApplicationGatewayBackendAddressResponse {
         this.ipAddress = ipAddress;
     }
 
-/**
- * Fully qualified domain name (FQDN).
- */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
-/**
- * IP address.
- */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SystemAssignedIdentityAuthInfoResponse {
-/**
- * The authentication type.
-Expected value is 'systemAssignedIdentity'.
- */
     private final String authType;
 
     @OutputCustomType.Constructor({"authType"})
@@ -20,10 +16,6 @@ Expected value is 'systemAssignedIdentity'.
         this.authType = Objects.requireNonNull(authType);
     }
 
-/**
- * The authentication type.
-Expected value is 'systemAssignedIdentity'.
- */
     public String getAuthType() {
         return this.authType;
     }

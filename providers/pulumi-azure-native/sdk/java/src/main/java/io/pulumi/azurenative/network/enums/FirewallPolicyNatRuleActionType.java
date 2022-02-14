@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of action.
- */
     @EnumType
     public enum FirewallPolicyNatRuleActionType {
-/**
- * 
- */
         DNAT("DNAT");
 
         private final String value;

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatastoreArgs Empty = new DatastoreArgs();
 
-    /**
-     * Datastore Configurations.
-     */
     @InputImport(name="datastoreConfig")
     private final @Nullable Input<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
@@ -28,9 +22,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.datastoreConfig == null ? Input.empty() : this.datastoreConfig;
     }
 
-    /**
-     * Display name in UI
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -38,9 +29,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -48,9 +36,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * Destination storage type. Supported types `gcs` or `bigquery`.
-     */
     @InputImport(name="targetType")
     private final @Nullable Input<String> targetType;
 

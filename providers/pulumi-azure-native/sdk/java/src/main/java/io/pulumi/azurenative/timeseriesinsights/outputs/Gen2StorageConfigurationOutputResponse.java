@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class Gen2StorageConfigurationOutputResponse {
-/**
- * The name of the storage account that will hold the environment's Gen2 data.
- */
     private final String accountName;
 
     @OutputCustomType.Constructor({"accountName"})
@@ -19,9 +16,6 @@ public final class Gen2StorageConfigurationOutputResponse {
         this.accountName = Objects.requireNonNull(accountName);
     }
 
-/**
- * The name of the storage account that will hold the environment's Gen2 data.
- */
     public String getAccountName() {
         return this.accountName;
     }

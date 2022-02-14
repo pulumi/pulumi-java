@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container message for hash values.
- */
 public final class HashArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HashArgs Empty = new HashArgs();
 
-    /**
-     * The type of hash that was performed.
-     */
     @InputImport(name="type")
     private final @Nullable Input<HashType> type;
 
@@ -28,9 +22,6 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The hash value.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

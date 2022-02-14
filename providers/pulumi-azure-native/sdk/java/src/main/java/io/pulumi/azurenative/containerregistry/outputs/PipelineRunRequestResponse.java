@@ -14,28 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineRunRequestResponse {
-/**
- * List of source artifacts to be transferred by the pipeline. 
-Specify an image by repository ('hello-world'). This will use the 'latest' tag.
-Specify an image by tag ('hello-world:latest').
-Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
- */
     private final @Nullable List<String> artifacts;
-/**
- * The digest of the tar used to transfer the artifacts.
- */
     private final @Nullable String catalogDigest;
-/**
- * The resource ID of the pipeline to run.
- */
     private final @Nullable String pipelineResourceId;
-/**
- * The source properties of the pipeline run.
- */
     private final @Nullable PipelineRunSourcePropertiesResponse source;
-/**
- * The target properties of the pipeline run.
- */
     private final @Nullable PipelineRunTargetPropertiesResponse target;
 
     @OutputCustomType.Constructor({"artifacts","catalogDigest","pipelineResourceId","source","target"})
@@ -52,36 +34,18 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
         this.target = target;
     }
 
-/**
- * List of source artifacts to be transferred by the pipeline. 
-Specify an image by repository ('hello-world'). This will use the 'latest' tag.
-Specify an image by tag ('hello-world:latest').
-Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
- */
     public List<String> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
-/**
- * The digest of the tar used to transfer the artifacts.
- */
     public Optional<String> getCatalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
-/**
- * The resource ID of the pipeline to run.
- */
     public Optional<String> getPipelineResourceId() {
         return Optional.ofNullable(this.pipelineResourceId);
     }
-/**
- * The source properties of the pipeline run.
- */
     public Optional<PipelineRunSourcePropertiesResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
-/**
- * The target properties of the pipeline run.
- */
     public Optional<PipelineRunTargetPropertiesResponse> getTarget() {
         return Optional.ofNullable(this.target);
     }

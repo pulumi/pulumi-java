@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicySetDefinition {
-/**
- * The policy set definition.
-API Version: 2020-09-01.
- *
- * The policy set definition.
- */
     public static CompletableFuture<GetPolicySetDefinitionResult> invokeAsync(GetPolicySetDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicySetDefinition", TypeShape.of(GetPolicySetDefinitionResult.class), args == null ? GetPolicySetDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The API deployment parameter metadata.
- */
 public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiDeploymentParameterMetadataResponse Empty = new ApiDeploymentParameterMetadataResponse();
 
-    /**
-     * The description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,9 +22,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -38,9 +29,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * Indicates whether its required.
-     */
     @InputImport(name="isRequired")
     private final @Nullable Boolean isRequired;
 
@@ -48,9 +36,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
         return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
     }
 
-    /**
-     * The type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -58,9 +43,6 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The visibility.
-     */
     @InputImport(name="visibility")
     private final @Nullable String visibility;
 

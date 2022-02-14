@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity Azure Search Index sink.
- */
 public final class AzureSearchIndexSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureSearchIndexSinkArgs Empty = new AzureSearchIndexSinkArgs();
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -30,9 +24,6 @@ public final class AzureSearchIndexSinkArgs extends io.pulumi.resources.Resource
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -40,9 +31,6 @@ public final class AzureSearchIndexSinkArgs extends io.pulumi.resources.Resource
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -50,9 +38,6 @@ public final class AzureSearchIndexSinkArgs extends io.pulumi.resources.Resource
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
-    /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -60,10 +45,6 @@ public final class AzureSearchIndexSinkArgs extends io.pulumi.resources.Resource
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
-    /**
-     * Copy sink type.
-Expected value is 'AzureSearchIndexSink'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -71,9 +52,6 @@ Expected value is 'AzureSearchIndexSink'.
         return this.type;
     }
 
-    /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -81,9 +59,6 @@ Expected value is 'AzureSearchIndexSink'.
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
-    /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 
@@ -91,9 +66,6 @@ Expected value is 'AzureSearchIndexSink'.
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
     }
 
-    /**
-     * Specify the write behavior when upserting documents into Azure Search Index.
-     */
     @InputImport(name="writeBehavior")
     private final @Nullable Input<Either<String,AzureSearchIndexWriteBehaviorType>> writeBehavior;
 

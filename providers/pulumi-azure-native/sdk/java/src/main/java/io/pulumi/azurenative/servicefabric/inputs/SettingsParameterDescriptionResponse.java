@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes a parameter in fabric settings of the cluster.
- */
 public final class SettingsParameterDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SettingsParameterDescriptionResponse Empty = new SettingsParameterDescriptionResponse();
 
-    /**
-     * The parameter name of fabric setting.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class SettingsParameterDescriptionResponse extends io.pulumi.resour
         return this.name;
     }
 
-    /**
-     * The parameter value of fabric setting.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

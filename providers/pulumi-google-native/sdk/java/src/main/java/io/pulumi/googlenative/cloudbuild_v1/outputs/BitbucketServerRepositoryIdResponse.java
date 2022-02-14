@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BitbucketServerRepositoryIdResponse {
-/**
- * Identifier for the project storing the repository.
- */
     private final String projectKey;
-/**
- * Identifier for the repository.
- */
     private final String repoSlug;
-/**
- * The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
- */
     private final Integer webhookId;
 
     @OutputCustomType.Constructor({"projectKey","repoSlug","webhookId"})
@@ -33,21 +24,12 @@ public final class BitbucketServerRepositoryIdResponse {
         this.webhookId = Objects.requireNonNull(webhookId);
     }
 
-/**
- * Identifier for the project storing the repository.
- */
     public String getProjectKey() {
         return this.projectKey;
     }
-/**
- * Identifier for the repository.
- */
     public String getRepoSlug() {
         return this.repoSlug;
     }
-/**
- * The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
- */
     public Integer getWebhookId() {
         return this.webhookId;
     }

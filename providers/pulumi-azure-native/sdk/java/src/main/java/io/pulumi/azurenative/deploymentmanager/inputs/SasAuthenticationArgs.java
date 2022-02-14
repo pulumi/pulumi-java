@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the properties to access the artifacts using an Azure Storage SAS URI.
- */
 public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SasAuthenticationArgs Empty = new SasAuthenticationArgs();
 
-    /**
-     * The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
-     */
     @InputImport(name="sasUri", required=true)
     private final Input<String> sasUri;
 
@@ -26,10 +20,6 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
         return this.sasUri;
     }
 
-    /**
-     * The authentication type
-Expected value is 'Sas'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

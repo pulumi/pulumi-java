@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Pool of backend IP addresses.
- */
 public final class BackendAddressPoolResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendAddressPoolResponse Empty = new BackendAddressPoolResponse();
 
-    /**
-     * An array of references to IP addresses defined in network interfaces.
-     */
     @InputImport(name="backendIPConfigurations", required=true)
     private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
@@ -31,9 +25,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.backendIPConfigurations;
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -41,9 +32,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -51,9 +39,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * An array of backend addresses.
-     */
     @InputImport(name="loadBalancerBackendAddresses")
     private final @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
 
@@ -61,9 +46,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.loadBalancerBackendAddresses == null ? List.of() : this.loadBalancerBackendAddresses;
     }
 
-    /**
-     * An array of references to load balancing rules that use this backend address pool.
-     */
     @InputImport(name="loadBalancingRules", required=true)
     private final List<SubResourceResponse> loadBalancingRules;
 
@@ -71,9 +53,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.loadBalancingRules;
     }
 
-    /**
-     * The location of the backend address pool.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -81,9 +60,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -91,9 +67,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * A reference to an outbound rule that uses this backend address pool.
-     */
     @InputImport(name="outboundRule", required=true)
     private final SubResourceResponse outboundRule;
 
@@ -101,9 +74,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.outboundRule;
     }
 
-    /**
-     * An array of references to outbound rules that use this backend address pool.
-     */
     @InputImport(name="outboundRules", required=true)
     private final List<SubResourceResponse> outboundRules;
 
@@ -111,9 +81,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.outboundRules;
     }
 
-    /**
-     * The provisioning state of the backend address pool resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -121,9 +88,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
         return this.provisioningState;
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

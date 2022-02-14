@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum NotificationMode {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         EventHub("EventHub"),
-/**
- * 
- */
         WebHook("WebHook");
 
         private final String value;

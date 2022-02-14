@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskExclusionPropertiesArgs Empty = new DiskExclusionPropertiesArgs();
 
-    /**
-     * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
-     */
     @InputImport(name="diskLunList")
     private final @Nullable Input<List<Integer>> diskLunList;
 
@@ -29,9 +23,6 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
         return this.diskLunList == null ? Input.empty() : this.diskLunList;
     }
 
-    /**
-     * Flag to indicate whether DiskLunList is to be included/ excluded from backup.
-     */
     @InputImport(name="isInclusionList")
     private final @Nullable Input<Boolean> isInclusionList;
 

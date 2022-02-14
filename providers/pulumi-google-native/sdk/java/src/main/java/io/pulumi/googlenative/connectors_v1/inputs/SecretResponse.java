@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Secret provides a reference to entries in Secret Manager.
- */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretResponse Empty = new SecretResponse();
 
-    /**
-     * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
-     */
     @InputImport(name="secretVersion", required=true)
     private final String secretVersion;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransactionNodeArgs Empty = new TransactionNodeArgs();
 
-    /**
-     * Blockchain member name.
-     */
     @InputImport(name="blockchainMemberName", required=true)
     private final Input<String> blockchainMemberName;
 
@@ -29,9 +23,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
         return this.blockchainMemberName;
     }
 
-    /**
-     * Gets or sets the firewall rules.
-     */
     @InputImport(name="firewallRules")
     private final @Nullable Input<List<FirewallRuleArgs>> firewallRules;
 
@@ -39,9 +30,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
     }
 
-    /**
-     * Gets or sets the transaction node location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Sets the transaction node dns endpoint basic auth password.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -59,9 +44,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Transaction node name.
-     */
     @InputImport(name="transactionNodeName")
     private final @Nullable Input<String> transactionNodeName;
 

@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorResponseResponse {
-/**
- * Error code.
- */
     private final String code;
-/**
- * An array of error detail objects.
- */
     private final List<ErrorDetailResponse> details;
-/**
- * Error message.
- */
     private final String message;
 
     @OutputCustomType.Constructor({"code","details","message"})
@@ -34,21 +25,12 @@ public final class ErrorResponseResponse {
         this.message = Objects.requireNonNull(message);
     }
 
-/**
- * Error code.
- */
     public String getCode() {
         return this.code;
     }
-/**
- * An array of error detail objects.
- */
     public List<ErrorDetailResponse> getDetails() {
         return this.details;
     }
-/**
- * Error message.
- */
     public String getMessage() {
         return this.message;
     }

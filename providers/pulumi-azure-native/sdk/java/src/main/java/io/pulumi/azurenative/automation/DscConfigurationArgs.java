@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DscConfigurationArgs Empty = new DscConfigurationArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -31,9 +25,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.automationAccountName;
     }
 
-    /**
-     * The create or update parameters for configuration.
-     */
     @InputImport(name="configurationName")
     private final @Nullable Input<String> configurationName;
 
@@ -41,9 +32,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.configurationName == null ? Input.empty() : this.configurationName;
     }
 
-    /**
-     * Gets or sets the description of the configuration.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -51,9 +39,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Gets or sets the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,9 +46,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Gets or sets progress log option.
-     */
     @InputImport(name="logProgress")
     private final @Nullable Input<Boolean> logProgress;
 
@@ -71,9 +53,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.logProgress == null ? Input.empty() : this.logProgress;
     }
 
-    /**
-     * Gets or sets verbose log option.
-     */
     @InputImport(name="logVerbose")
     private final @Nullable Input<Boolean> logVerbose;
 
@@ -81,9 +60,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.logVerbose == null ? Input.empty() : this.logVerbose;
     }
 
-    /**
-     * Gets or sets name of the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -91,9 +67,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Gets or sets the configuration parameters.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,DscConfigurationParameterArgs>> parameters;
 
@@ -101,9 +74,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -111,9 +81,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Gets or sets the source.
-     */
     @InputImport(name="source", required=true)
     private final Input<ContentSourceArgs> source;
 
@@ -121,9 +88,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.source;
     }
 
-    /**
-     * Gets or sets the tags attached to the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

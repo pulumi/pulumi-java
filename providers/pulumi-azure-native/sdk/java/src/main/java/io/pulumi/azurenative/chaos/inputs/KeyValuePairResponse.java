@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A map to describe the settings of an action.
- */
 public final class KeyValuePairResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyValuePairResponse Empty = new KeyValuePairResponse();
 
-    /**
-     * The name of the setting for the action.
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -25,9 +19,6 @@ public final class KeyValuePairResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
-    /**
-     * The value of the setting for the action.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

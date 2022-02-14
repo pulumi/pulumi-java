@@ -11,16 +11,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Not supported by Cloud Run Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
- */
 public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProbeResponse Empty = new ProbeResponse();
 
-    /**
-     * (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
-     */
     @InputImport(name="exec", required=true)
     private final ExecActionResponse exec;
 
@@ -28,9 +22,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.exec;
     }
 
-    /**
-     * (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
-     */
     @InputImport(name="failureThreshold", required=true)
     private final Integer failureThreshold;
 
@@ -38,9 +29,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.failureThreshold;
     }
 
-    /**
-     * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
-     */
     @InputImport(name="httpGet", required=true)
     private final HTTPGetActionResponse httpGet;
 
@@ -48,9 +36,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.httpGet;
     }
 
-    /**
-     * (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     */
     @InputImport(name="initialDelaySeconds", required=true)
     private final Integer initialDelaySeconds;
 
@@ -58,9 +43,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.initialDelaySeconds;
     }
 
-    /**
-     * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
-     */
     @InputImport(name="periodSeconds", required=true)
     private final Integer periodSeconds;
 
@@ -68,9 +50,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.periodSeconds;
     }
 
-    /**
-     * (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
-     */
     @InputImport(name="successThreshold", required=true)
     private final Integer successThreshold;
 
@@ -78,9 +57,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.successThreshold;
     }
 
-    /**
-     * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
-     */
     @InputImport(name="tcpSocket", required=true)
     private final TCPSocketActionResponse tcpSocket;
 
@@ -88,9 +64,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.tcpSocket;
     }
 
-    /**
-     * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-     */
     @InputImport(name="timeoutSeconds", required=true)
     private final Integer timeoutSeconds;
 

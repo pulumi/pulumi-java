@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The name of the SKU.
- */
     @EnumType
     public enum WorkspaceSkuNameEnum {
-/**
- * 
- */
         Free("Free"),
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium"),
-/**
- * 
- */
         PerNode("PerNode"),
-/**
- * 
- */
         PerGB2018("PerGB2018"),
-/**
- * 
- */
         Standalone("Standalone"),
-/**
- * 
- */
         CapacityReservation("CapacityReservation"),
-/**
- * 
- */
         LACluster("LACluster");
 
         private final String value;

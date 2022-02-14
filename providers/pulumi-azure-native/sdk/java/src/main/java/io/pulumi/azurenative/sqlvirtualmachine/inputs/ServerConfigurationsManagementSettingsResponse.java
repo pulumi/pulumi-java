@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Set the connectivity, storage and workload settings.
- */
 public final class ServerConfigurationsManagementSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerConfigurationsManagementSettingsResponse Empty = new ServerConfigurationsManagementSettingsResponse();
 
-    /**
-     * Additional SQL feature settings.
-     */
     @InputImport(name="additionalFeaturesServerConfigurations")
     private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
 
@@ -30,9 +24,6 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
         return this.additionalFeaturesServerConfigurations == null ? Optional.empty() : Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
 
-    /**
-     * SQL connectivity type settings.
-     */
     @InputImport(name="sqlConnectivityUpdateSettings")
     private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
 
@@ -40,9 +31,6 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
         return this.sqlConnectivityUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
 
-    /**
-     * SQL storage update settings.
-     */
     @InputImport(name="sqlStorageUpdateSettings")
     private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
 
@@ -50,9 +38,6 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
         return this.sqlStorageUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
 
-    /**
-     * SQL workload type settings.
-     */
     @InputImport(name="sqlWorkloadTypeUpdateSettings")
     private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 

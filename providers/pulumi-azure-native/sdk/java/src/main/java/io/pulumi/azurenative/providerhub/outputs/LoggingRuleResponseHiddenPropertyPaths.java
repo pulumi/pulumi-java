@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoggingRuleResponseHiddenPropertyPaths {
-/**
- * 
- */
     private final @Nullable List<String> hiddenPathsOnRequest;
-/**
- * 
- */
     private final @Nullable List<String> hiddenPathsOnResponse;
 
     @OutputCustomType.Constructor({"hiddenPathsOnRequest","hiddenPathsOnResponse"})
@@ -28,15 +22,9 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
         this.hiddenPathsOnResponse = hiddenPathsOnResponse;
     }
 
-/**
- * 
- */
     public List<String> getHiddenPathsOnRequest() {
         return this.hiddenPathsOnRequest == null ? List.of() : this.hiddenPathsOnRequest;
     }
-/**
- * 
- */
     public List<String> getHiddenPathsOnResponse() {
         return this.hiddenPathsOnResponse == null ? List.of() : this.hiddenPathsOnResponse;
     }

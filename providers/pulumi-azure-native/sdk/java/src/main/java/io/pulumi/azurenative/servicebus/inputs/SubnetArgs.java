@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Properties supplied for Subnet
- */
 public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetArgs Empty = new SubnetArgs();
 
-    /**
-     * Resource ID of Virtual Network Subnet
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

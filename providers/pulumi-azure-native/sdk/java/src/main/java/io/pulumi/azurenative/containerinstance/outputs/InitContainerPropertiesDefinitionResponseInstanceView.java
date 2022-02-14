@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InitContainerPropertiesDefinitionResponseInstanceView {
-/**
- * The current state of the init container.
- */
     private final ContainerStateResponse currentState;
-/**
- * The events of the init container.
- */
     private final List<EventResponse> events;
-/**
- * The previous state of the init container.
- */
     private final ContainerStateResponse previousState;
-/**
- * The number of times that the init container has been restarted.
- */
     private final Integer restartCount;
 
     @OutputCustomType.Constructor({"currentState","events","previousState","restartCount"})
@@ -41,27 +29,15 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView {
         this.restartCount = Objects.requireNonNull(restartCount);
     }
 
-/**
- * The current state of the init container.
- */
     public ContainerStateResponse getCurrentState() {
         return this.currentState;
     }
-/**
- * The events of the init container.
- */
     public List<EventResponse> getEvents() {
         return this.events;
     }
-/**
- * The previous state of the init container.
- */
     public ContainerStateResponse getPreviousState() {
         return this.previousState;
     }
-/**
- * The number of times that the init container has been restarted.
- */
     public Integer getRestartCount() {
         return this.restartCount;
     }

@@ -8,16 +8,10 @@ import io.pulumi.googlenative.gkehub_v1alpha.inputs.StatusResponse;
 import java.util.Objects;
 
 
-/**
- * State for App Dev Exp Feature.
- */
 public final class AppDevExperienceFeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppDevExperienceFeatureStateResponse Empty = new AppDevExperienceFeatureStateResponse();
 
-    /**
-     * Status of subcomponent that detects configured Service Mesh resources.
-     */
     @InputImport(name="networkingInstallSucceeded", required=true)
     private final StatusResponse networkingInstallSucceeded;
 

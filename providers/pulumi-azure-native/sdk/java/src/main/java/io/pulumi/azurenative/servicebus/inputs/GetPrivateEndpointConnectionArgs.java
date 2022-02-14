@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -25,9 +19,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.namespaceName;
     }
 
-    /**
-     * The PrivateEndpointConnection name
-     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -35,9 +26,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

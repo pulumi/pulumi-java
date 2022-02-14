@@ -15,53 +15,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDigitalTwinResult {
-/**
- * Time when DigitalTwinsInstance was created.
- */
     private final String createdTime;
-/**
- * Api endpoint to work with DigitalTwinsInstance.
- */
     private final String hostName;
-/**
- * The resource identifier.
- */
     private final String id;
-/**
- * The managed identity for the DigitalTwinsInstance.
- */
     private final @Nullable DigitalTwinsIdentityResponse identity;
-/**
- * Time when DigitalTwinsInstance was updated.
- */
     private final String lastUpdatedTime;
-/**
- * The resource location.
- */
     private final String location;
-/**
- * The resource name.
- */
     private final String name;
-/**
- * 
- */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-/**
- * The provisioning state.
- */
     private final String provisioningState;
-/**
- * Public network access for the DigitalTwinsInstance.
- */
     private final @Nullable String publicNetworkAccess;
-/**
- * The resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"createdTime","hostName","id","identity","lastUpdatedTime","location","name","privateEndpointConnections","provisioningState","publicNetworkAccess","tags","type"})
@@ -92,75 +56,39 @@ public final class GetDigitalTwinResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Time when DigitalTwinsInstance was created.
- */
     public String getCreatedTime() {
         return this.createdTime;
     }
-/**
- * Api endpoint to work with DigitalTwinsInstance.
- */
     public String getHostName() {
         return this.hostName;
     }
-/**
- * The resource identifier.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The managed identity for the DigitalTwinsInstance.
- */
     public Optional<DigitalTwinsIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * Time when DigitalTwinsInstance was updated.
- */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-/**
- * The resource location.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
- */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
-/**
- * The provisioning state.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Public network access for the DigitalTwinsInstance.
- */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
-/**
- * The resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The resource type.
- */
     public String getType() {
         return this.type;
     }

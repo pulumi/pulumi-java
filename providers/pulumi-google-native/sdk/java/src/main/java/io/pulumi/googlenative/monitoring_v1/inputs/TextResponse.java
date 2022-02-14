@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A widget that displays textual content.
- */
 public final class TextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TextResponse Empty = new TextResponse();
 
-    /**
-     * The text content to be displayed.
-     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -25,9 +19,6 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
         return this.content;
     }
 
-    /**
-     * How the text content is formatted.
-     */
     @InputImport(name="format", required=true)
     private final String format;
 

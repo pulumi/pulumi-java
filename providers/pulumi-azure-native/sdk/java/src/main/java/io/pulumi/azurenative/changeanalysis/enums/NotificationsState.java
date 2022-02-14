@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The state of notifications feature.
- */
     @EnumType
     public enum NotificationsState {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

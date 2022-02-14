@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 
-    /**
-     * The table plan.
-     */
     @InputImport(name="plan")
     private final @Nullable Input<Either<String,TablePlanEnum>> plan;
 
@@ -33,9 +27,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,9 +34,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Parameters of the restore operation that initiated this table.
-     */
     @InputImport(name="restoredLogs")
     private final @Nullable Input<RestoredLogsArgs> restoredLogs;
 
@@ -53,9 +41,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.restoredLogs == null ? Input.empty() : this.restoredLogs;
     }
 
-    /**
-     * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
-     */
     @InputImport(name="retentionInDays")
     private final @Nullable Input<Integer> retentionInDays;
 
@@ -63,9 +48,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
     }
 
-    /**
-     * Table schema.
-     */
     @InputImport(name="schema")
     private final @Nullable Input<SchemaArgs> schema;
 
@@ -73,9 +55,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
-    /**
-     * Parameters of the search job that initiated this table.
-     */
     @InputImport(name="searchResults")
     private final @Nullable Input<SearchResultsArgs> searchResults;
 
@@ -83,9 +62,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.searchResults == null ? Input.empty() : this.searchResults;
     }
 
-    /**
-     * The name of the table.
-     */
     @InputImport(name="tableName")
     private final @Nullable Input<String> tableName;
 
@@ -93,9 +69,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.tableName == null ? Input.empty() : this.tableName;
     }
 
-    /**
-     * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
-     */
     @InputImport(name="totalRetentionInDays")
     private final @Nullable Input<Integer> totalRetentionInDays;
 
@@ -103,9 +76,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
         return this.totalRetentionInDays == null ? Input.empty() : this.totalRetentionInDays;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

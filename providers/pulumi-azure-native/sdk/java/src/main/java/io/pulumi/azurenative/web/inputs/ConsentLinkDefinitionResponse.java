@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A consent link
- */
 public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsentLinkDefinitionResponse Empty = new ConsentLinkDefinitionResponse();
 
-    /**
-     * Display name of the parameter in the connection provider's OAuth settings
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -27,9 +21,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * URI for first party login
-     */
     @InputImport(name="firstPartyLoginUri")
     private final @Nullable String firstPartyLoginUri;
 
@@ -37,9 +28,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
         return this.firstPartyLoginUri == null ? Optional.empty() : Optional.ofNullable(this.firstPartyLoginUri);
     }
 
-    /**
-     * URI for the consent link
-     */
     @InputImport(name="link")
     private final @Nullable String link;
 
@@ -47,9 +35,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
-    /**
-     * Status of the link
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

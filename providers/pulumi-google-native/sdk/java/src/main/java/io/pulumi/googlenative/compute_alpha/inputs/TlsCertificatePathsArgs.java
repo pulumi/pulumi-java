@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * [Deprecated] The paths to the mounted TLS Certificates and private key. The paths to the mounted TLS Certificates and private key.
- */
 public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TlsCertificatePathsArgs Empty = new TlsCertificatePathsArgs();
 
-    /**
-     * The path to the file holding the client or server TLS certificate to use.
-     */
     @InputImport(name="certificatePath")
     private final @Nullable Input<String> certificatePath;
 
@@ -27,9 +21,6 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
         return this.certificatePath == null ? Input.empty() : this.certificatePath;
     }
 
-    /**
-     * The path to the file holding the client or server private key.
-     */
     @InputImport(name="privateKeyPath")
     private final @Nullable Input<String> privateKeyPath;
 

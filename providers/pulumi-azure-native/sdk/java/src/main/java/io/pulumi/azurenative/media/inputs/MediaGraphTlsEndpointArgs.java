@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An endpoint which must be connected over TLS/SSL.
- */
 public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MediaGraphTlsEndpointArgs Empty = new MediaGraphTlsEndpointArgs();
 
-    /**
-     * Polymorphic credentials to present to the endpoint.
-     */
     @InputImport(name="credentials")
     private final @Nullable Input<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
@@ -30,10 +24,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -41,9 +31,6 @@ Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
         return this.odataType;
     }
 
-    /**
-     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
-     */
     @InputImport(name="trustedCertificates")
     private final @Nullable Input<MediaGraphPemCertificateListArgs> trustedCertificates;
 
@@ -51,9 +38,6 @@ Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
         return this.trustedCertificates == null ? Input.empty() : this.trustedCertificates;
     }
 
-    /**
-     * Url for the endpoint.
-     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 
@@ -61,9 +45,6 @@ Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
         return this.url;
     }
 
-    /**
-     * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     */
     @InputImport(name="validationOptions")
     private final @Nullable Input<MediaGraphTlsValidationOptionsArgs> validationOptions;
 

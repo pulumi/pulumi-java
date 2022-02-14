@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlPoolWorkloadClassifierArgs Empty = new SqlPoolWorkloadClassifierArgs();
 
-    /**
-     * The workload classifier context.
-     */
     @InputImport(name="context")
     private final @Nullable Input<String> context;
 
@@ -27,9 +21,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.context == null ? Input.empty() : this.context;
     }
 
-    /**
-     * The workload classifier end time for classification.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -37,9 +28,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * The workload classifier importance.
-     */
     @InputImport(name="importance")
     private final @Nullable Input<String> importance;
 
@@ -47,9 +35,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.importance == null ? Input.empty() : this.importance;
     }
 
-    /**
-     * The workload classifier label.
-     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -57,9 +42,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.label == null ? Input.empty() : this.label;
     }
 
-    /**
-     * The workload classifier member name.
-     */
     @InputImport(name="memberName", required=true)
     private final Input<String> memberName;
 
@@ -67,9 +49,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.memberName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,9 +56,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * SQL pool name
-     */
     @InputImport(name="sqlPoolName", required=true)
     private final Input<String> sqlPoolName;
 
@@ -87,9 +63,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.sqlPoolName;
     }
 
-    /**
-     * The workload classifier start time for classification.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -97,9 +70,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * The name of the workload classifier.
-     */
     @InputImport(name="workloadClassifierName")
     private final @Nullable Input<String> workloadClassifierName;
 
@@ -107,9 +77,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.workloadClassifierName == null ? Input.empty() : this.workloadClassifierName;
     }
 
-    /**
-     * The name of the workload group.
-     */
     @InputImport(name="workloadGroupName", required=true)
     private final Input<String> workloadGroupName;
 
@@ -117,9 +84,6 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
         return this.workloadGroupName;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

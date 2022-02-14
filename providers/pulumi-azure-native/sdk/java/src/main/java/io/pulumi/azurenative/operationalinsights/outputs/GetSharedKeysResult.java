@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSharedKeysResult {
-/**
- * The primary shared key of a workspace.
- */
     private final @Nullable String primarySharedKey;
-/**
- * The secondary shared key of a workspace.
- */
     private final @Nullable String secondarySharedKey;
 
     @OutputCustomType.Constructor({"primarySharedKey","secondarySharedKey"})
@@ -28,15 +22,9 @@ public final class GetSharedKeysResult {
         this.secondarySharedKey = secondarySharedKey;
     }
 
-/**
- * The primary shared key of a workspace.
- */
     public Optional<String> getPrimarySharedKey() {
         return Optional.ofNullable(this.primarySharedKey);
     }
-/**
- * The secondary shared key of a workspace.
- */
     public Optional<String> getSecondarySharedKey() {
         return Optional.ofNullable(this.secondarySharedKey);
     }

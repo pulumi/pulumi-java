@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Buildpack Binding Type
- */
     @EnumType
     public enum BindingType {
-/**
- * 
- */
         ApplicationInsights("ApplicationInsights"),
-/**
- * 
- */
         ApacheSkyWalking("ApacheSkyWalking"),
-/**
- * 
- */
         AppDynamics("AppDynamics"),
-/**
- * 
- */
         Dynatrace("Dynatrace"),
-/**
- * 
- */
         NewRelic("NewRelic"),
-/**
- * 
- */
         ElasticAPM("ElasticAPM");
 
         private final String value;

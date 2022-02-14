@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The WSDL definition
- */
 public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WsdlDefinitionArgs Empty = new WsdlDefinitionArgs();
 
-    /**
-     * The WSDL content
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -30,9 +24,6 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The WSDL import method
-     */
     @InputImport(name="importMethod")
     private final @Nullable Input<Either<String,WsdlImportMethod>> importMethod;
 
@@ -40,9 +31,6 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.importMethod == null ? Input.empty() : this.importMethod;
     }
 
-    /**
-     * The service with name and endpoint names
-     */
     @InputImport(name="service")
     private final @Nullable Input<WsdlServiceArgs> service;
 
@@ -50,9 +38,6 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.service == null ? Input.empty() : this.service;
     }
 
-    /**
-     * The WSDL URL
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeystoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeystoreArgs Empty = new KeystoreArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -27,9 +21,6 @@ public final class KeystoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
-    /**
-     * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,9 +28,6 @@ public final class KeystoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

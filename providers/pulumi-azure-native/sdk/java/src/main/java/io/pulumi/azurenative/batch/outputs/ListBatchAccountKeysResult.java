@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListBatchAccountKeysResult {
-/**
- * The Batch account name.
- */
     private final String accountName;
-/**
- * The primary key associated with the account.
- */
     private final String primary;
-/**
- * The secondary key associated with the account.
- */
     private final String secondary;
 
     @OutputCustomType.Constructor({"accountName","primary","secondary"})
@@ -32,21 +23,12 @@ public final class ListBatchAccountKeysResult {
         this.secondary = Objects.requireNonNull(secondary);
     }
 
-/**
- * The Batch account name.
- */
     public String getAccountName() {
         return this.accountName;
     }
-/**
- * The primary key associated with the account.
- */
     public String getPrimary() {
         return this.primary;
     }
-/**
- * The secondary key associated with the account.
- */
     public String getSecondary() {
         return this.secondary;
     }

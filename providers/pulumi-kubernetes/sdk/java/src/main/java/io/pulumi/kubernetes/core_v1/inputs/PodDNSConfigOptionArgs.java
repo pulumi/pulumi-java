@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PodDNSConfigOption defines DNS resolver options of a pod.
- */
 public final class PodDNSConfigOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodDNSConfigOptionArgs Empty = new PodDNSConfigOptionArgs();
 
-    /**
-     * Required.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class PodDNSConfigOptionArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

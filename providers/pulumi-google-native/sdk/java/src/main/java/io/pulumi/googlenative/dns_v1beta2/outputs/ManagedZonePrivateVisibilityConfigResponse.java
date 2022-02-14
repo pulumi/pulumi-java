@@ -12,17 +12,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZonePrivateVisibilityConfigResponse {
-/**
- * The list of Google Kubernetes Engine clusters that can see this zone.
- */
     private final List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
-/**
- * 
- */
     private final String kind;
-/**
- * The list of VPC networks that can see this zone.
- */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     @OutputCustomType.Constructor({"gkeClusters","kind","networks"})
@@ -35,21 +26,12 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
         this.networks = Objects.requireNonNull(networks);
     }
 
-/**
- * The list of Google Kubernetes Engine clusters that can see this zone.
- */
     public List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> getGkeClusters() {
         return this.gkeClusters;
     }
-/**
- * 
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The list of VPC networks that can see this zone.
- */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
         return this.networks;
     }

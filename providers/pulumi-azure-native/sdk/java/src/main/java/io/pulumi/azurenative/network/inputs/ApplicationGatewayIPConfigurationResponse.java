@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.
- */
 public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayIPConfigurationResponse Empty = new ApplicationGatewayIPConfigurationResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the IP configuration that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the application gateway IP configuration resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -58,9 +43,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
         return this.provisioningState;
     }
 
-    /**
-     * Reference to the subnet resource. A subnet from where application gateway gets its private address.
-     */
     @InputImport(name="subnet")
     private final @Nullable SubResourceResponse subnet;
 
@@ -68,9 +50,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

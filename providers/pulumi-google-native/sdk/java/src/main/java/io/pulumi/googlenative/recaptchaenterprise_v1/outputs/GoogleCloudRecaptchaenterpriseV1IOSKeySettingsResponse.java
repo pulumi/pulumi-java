@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
-/**
- * If set to true, allowed_bundle_ids are not enforced.
- */
     private final Boolean allowAllBundleIds;
-/**
- * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
- */
     private final List<String> allowedBundleIds;
 
     @OutputCustomType.Constructor({"allowAllBundleIds","allowedBundleIds"})
@@ -28,15 +22,9 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
         this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
     }
 
-/**
- * If set to true, allowed_bundle_ids are not enforced.
- */
     public Boolean getAllowAllBundleIds() {
         return this.allowAllBundleIds;
     }
-/**
- * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
- */
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds;
     }

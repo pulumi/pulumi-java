@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This is optional input that contains the authentication that should be used to generate the namespace.
- */
 public final class CustomLocationPropertiesAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomLocationPropertiesAuthenticationArgs Empty = new CustomLocationPropertiesAuthenticationArgs();
 
-    /**
-     * The type of the Custom Locations authentication
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -27,9 +21,6 @@ public final class CustomLocationPropertiesAuthenticationArgs extends io.pulumi.
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The kubeconfig value.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

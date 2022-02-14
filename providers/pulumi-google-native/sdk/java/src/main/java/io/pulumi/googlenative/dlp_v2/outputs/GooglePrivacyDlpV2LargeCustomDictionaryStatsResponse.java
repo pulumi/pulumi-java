@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse {
-/**
- * Approximate number of distinct phrases in the dictionary.
- */
     private final String approxNumPhrases;
 
     @OutputCustomType.Constructor({"approxNumPhrases"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse {
         this.approxNumPhrases = Objects.requireNonNull(approxNumPhrases);
     }
 
-/**
- * Approximate number of distinct phrases in the dictionary.
- */
     public String getApproxNumPhrases() {
         return this.approxNumPhrases;
     }

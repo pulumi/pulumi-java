@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MaterialResponse {
-/**
- * 
- */
     private final Map<String,String> digest;
-/**
- * 
- */
     private final String uri;
 
     @OutputCustomType.Constructor({"digest","uri"})
@@ -27,15 +21,9 @@ public final class MaterialResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
-/**
- * 
- */
     public Map<String,String> getDigest() {
         return this.digest;
     }
-/**
- * 
- */
     public String getUri() {
         return this.uri;
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A single automation scope.
- */
 public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationScopeArgs Empty = new AutomationScopeArgs();
 
-    /**
-     * The resources scope description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,9 +21,6 @@ public final class AutomationScopeArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
-     */
     @InputImport(name="scopePath")
     private final @Nullable Input<String> scopePath;
 

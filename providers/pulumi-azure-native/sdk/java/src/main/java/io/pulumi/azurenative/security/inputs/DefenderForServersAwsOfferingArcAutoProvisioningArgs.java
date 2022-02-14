@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The ARC autoprovisioning configuration
- */
 public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefenderForServersAwsOfferingArcAutoProvisioningArgs Empty = new DefenderForServersAwsOfferingArcAutoProvisioningArgs();
 
-    /**
-     * Is arc auto provisioning enabled
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -28,9 +22,6 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Metadata of Service Principal secret for autoprovisioning
-     */
     @InputImport(name="servicePrincipalSecretMetadata")
     private final @Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
 

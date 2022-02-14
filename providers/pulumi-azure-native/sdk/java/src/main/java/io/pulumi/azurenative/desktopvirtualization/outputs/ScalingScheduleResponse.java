@@ -14,77 +14,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScalingScheduleResponse {
-/**
- * Set of days of the week on which this schedule is active.
- */
     private final @Nullable List<String> daysOfWeek;
-/**
- * Name of the scaling schedule.
- */
     private final @Nullable String name;
-/**
- * Load balancing algorithm for off-peak period.
- */
     private final @Nullable String offPeakLoadBalancingAlgorithm;
-/**
- * Starting time for off-peak period.
- */
     private final @Nullable String offPeakStartTime;
-/**
- * Load balancing algorithm for peak period.
- */
     private final @Nullable String peakLoadBalancingAlgorithm;
-/**
- * Starting time for peak period.
- */
     private final @Nullable String peakStartTime;
-/**
- * Capacity threshold for ramp down period.
- */
     private final @Nullable Integer rampDownCapacityThresholdPct;
-/**
- * Should users be logged off forcefully from hosts.
- */
     private final @Nullable Boolean rampDownForceLogoffUsers;
-/**
- * Load balancing algorithm for ramp down period.
- */
     private final @Nullable String rampDownLoadBalancingAlgorithm;
-/**
- * Minimum host percentage for ramp down period.
- */
     private final @Nullable Integer rampDownMinimumHostsPct;
-/**
- * Notification message for users during ramp down period.
- */
     private final @Nullable String rampDownNotificationMessage;
-/**
- * Starting time for ramp down period.
- */
     private final @Nullable String rampDownStartTime;
-/**
- * Specifies when to stop hosts during ramp down period.
- */
     private final @Nullable String rampDownStopHostsWhen;
-/**
- * Number of minutes to wait to stop hosts during ramp down period.
- */
     private final @Nullable Integer rampDownWaitTimeMinutes;
-/**
- * Capacity threshold for ramp up period.
- */
     private final @Nullable Integer rampUpCapacityThresholdPct;
-/**
- * Load balancing algorithm for ramp up period.
- */
     private final @Nullable String rampUpLoadBalancingAlgorithm;
-/**
- * Minimum host percentage for ramp up period.
- */
     private final @Nullable Integer rampUpMinimumHostsPct;
-/**
- * Starting time for ramp up period.
- */
     private final @Nullable String rampUpStartTime;
 
     @OutputCustomType.Constructor({"daysOfWeek","name","offPeakLoadBalancingAlgorithm","offPeakStartTime","peakLoadBalancingAlgorithm","peakStartTime","rampDownCapacityThresholdPct","rampDownForceLogoffUsers","rampDownLoadBalancingAlgorithm","rampDownMinimumHostsPct","rampDownNotificationMessage","rampDownStartTime","rampDownStopHostsWhen","rampDownWaitTimeMinutes","rampUpCapacityThresholdPct","rampUpLoadBalancingAlgorithm","rampUpMinimumHostsPct","rampUpStartTime"})
@@ -127,111 +73,57 @@ public final class ScalingScheduleResponse {
         this.rampUpStartTime = rampUpStartTime;
     }
 
-/**
- * Set of days of the week on which this schedule is active.
- */
     public List<String> getDaysOfWeek() {
         return this.daysOfWeek == null ? List.of() : this.daysOfWeek;
     }
-/**
- * Name of the scaling schedule.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Load balancing algorithm for off-peak period.
- */
     public Optional<String> getOffPeakLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.offPeakLoadBalancingAlgorithm);
     }
-/**
- * Starting time for off-peak period.
- */
     public Optional<String> getOffPeakStartTime() {
         return Optional.ofNullable(this.offPeakStartTime);
     }
-/**
- * Load balancing algorithm for peak period.
- */
     public Optional<String> getPeakLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.peakLoadBalancingAlgorithm);
     }
-/**
- * Starting time for peak period.
- */
     public Optional<String> getPeakStartTime() {
         return Optional.ofNullable(this.peakStartTime);
     }
-/**
- * Capacity threshold for ramp down period.
- */
     public Optional<Integer> getRampDownCapacityThresholdPct() {
         return Optional.ofNullable(this.rampDownCapacityThresholdPct);
     }
-/**
- * Should users be logged off forcefully from hosts.
- */
     public Optional<Boolean> getRampDownForceLogoffUsers() {
         return Optional.ofNullable(this.rampDownForceLogoffUsers);
     }
-/**
- * Load balancing algorithm for ramp down period.
- */
     public Optional<String> getRampDownLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.rampDownLoadBalancingAlgorithm);
     }
-/**
- * Minimum host percentage for ramp down period.
- */
     public Optional<Integer> getRampDownMinimumHostsPct() {
         return Optional.ofNullable(this.rampDownMinimumHostsPct);
     }
-/**
- * Notification message for users during ramp down period.
- */
     public Optional<String> getRampDownNotificationMessage() {
         return Optional.ofNullable(this.rampDownNotificationMessage);
     }
-/**
- * Starting time for ramp down period.
- */
     public Optional<String> getRampDownStartTime() {
         return Optional.ofNullable(this.rampDownStartTime);
     }
-/**
- * Specifies when to stop hosts during ramp down period.
- */
     public Optional<String> getRampDownStopHostsWhen() {
         return Optional.ofNullable(this.rampDownStopHostsWhen);
     }
-/**
- * Number of minutes to wait to stop hosts during ramp down period.
- */
     public Optional<Integer> getRampDownWaitTimeMinutes() {
         return Optional.ofNullable(this.rampDownWaitTimeMinutes);
     }
-/**
- * Capacity threshold for ramp up period.
- */
     public Optional<Integer> getRampUpCapacityThresholdPct() {
         return Optional.ofNullable(this.rampUpCapacityThresholdPct);
     }
-/**
- * Load balancing algorithm for ramp up period.
- */
     public Optional<String> getRampUpLoadBalancingAlgorithm() {
         return Optional.ofNullable(this.rampUpLoadBalancingAlgorithm);
     }
-/**
- * Minimum host percentage for ramp up period.
- */
     public Optional<Integer> getRampUpMinimumHostsPct() {
         return Optional.ofNullable(this.rampUpMinimumHostsPct);
     }
-/**
- * Starting time for ramp up period.
- */
     public Optional<String> getRampUpStartTime() {
         return Optional.ofNullable(this.rampUpStartTime);
     }

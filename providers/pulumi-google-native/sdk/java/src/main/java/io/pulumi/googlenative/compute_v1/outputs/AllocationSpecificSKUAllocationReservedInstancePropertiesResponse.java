@@ -12,25 +12,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResponse {
-/**
- * Specifies accelerator type and count.
- */
     private final List<AcceleratorConfigResponse> guestAccelerators;
-/**
- * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
- */
     private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
-/**
- * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
- */
     private final String locationHint;
-/**
- * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
- */
     private final String machineType;
-/**
- * Minimum cpu platform the reservation.
- */
     private final String minCpuPlatform;
 
     @OutputCustomType.Constructor({"guestAccelerators","localSsds","locationHint","machineType","minCpuPlatform"})
@@ -47,33 +32,18 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
     }
 
-/**
- * Specifies accelerator type and count.
- */
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
         return this.guestAccelerators;
     }
-/**
- * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
- */
     public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> getLocalSsds() {
         return this.localSsds;
     }
-/**
- * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
- */
     public String getLocationHint() {
         return this.locationHint;
     }
-/**
- * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
- */
     public String getMachineType() {
         return this.machineType;
     }
-/**
- * Minimum cpu platform the reservation.
- */
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }

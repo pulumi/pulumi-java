@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes header information for http route matching.
- */
 public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpRouteMatchHeaderArgs Empty = new HttpRouteMatchHeaderArgs();
 
-    /**
-     * Name of header to match in request.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,9 +23,6 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
         return this.name;
     }
 
-    /**
-     * how to match header value
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,HeaderMatchType>> type;
 
@@ -39,9 +30,6 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * Value of header to match in request.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

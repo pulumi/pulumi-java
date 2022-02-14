@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAvailabilityGroupListenerArgs Empty = new GetAvailabilityGroupListenerArgs();
 
-    /**
-     * Name of the availability group listener.
-     */
     @InputImport(name="availabilityGroupListenerName", required=true)
     private final String availabilityGroupListenerName;
 
@@ -25,9 +19,6 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
         return this.availabilityGroupListenerName;
     }
 
-    /**
-     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the SQL virtual machine group.
-     */
     @InputImport(name="sqlVirtualMachineGroupName", required=true)
     private final String sqlVirtualMachineGroupName;
 

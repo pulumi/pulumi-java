@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IngressClassParametersReference identifies an API object. This can be used to specify a cluster or namespace-scoped resource.
- */
 public final class IngressClassParametersReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressClassParametersReferenceArgs Empty = new IngressClassParametersReferenceArgs();
 
-    /**
-     * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
-     */
     @InputImport(name="apiGroup")
     private final @Nullable Input<String> apiGroup;
 
@@ -27,9 +21,6 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
         return this.apiGroup == null ? Input.empty() : this.apiGroup;
     }
 
-    /**
-     * Kind is the type of resource being referenced.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -37,9 +28,6 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
         return this.kind;
     }
 
-    /**
-     * Name is the name of resource being referenced.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -47,9 +35,6 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
         return this.name;
     }
 
-    /**
-     * Namespace is the namespace of the resource being referenced. This field is required when scope is set to "Namespace" and must be unset when scope is set to "Cluster".
-     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -57,9 +42,6 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
-    /**
-     * Scope represents if this refers to a cluster or namespace scoped resource. This may be set to "Cluster" (default) or "Namespace".
-     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 

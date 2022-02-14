@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContentPathMapResponse {
-/**
- * Content type.
- */
     private final @Nullable String contentType;
-/**
- * The path to the content.
- */
     private final @Nullable String path;
 
     @OutputCustomType.Constructor({"contentType","path"})
@@ -28,15 +22,9 @@ public final class ContentPathMapResponse {
         this.path = path;
     }
 
-/**
- * Content type.
- */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
-/**
- * The path to the content.
- */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }

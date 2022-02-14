@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Configuration of preserved resources.
- */
 public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatefulPolicyPreservedStateResponse Empty = new StatefulPolicyPreservedStateResponse();
 
-    /**
-     * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
-     */
     @InputImport(name="disks", required=true)
     private final Map<String,String> disks;
 
@@ -26,9 +20,6 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
         return this.disks;
     }
 
-    /**
-     * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
-     */
     @InputImport(name="externalIPs", required=true)
     private final Map<String,String> externalIPs;
 
@@ -36,9 +27,6 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
         return this.externalIPs;
     }
 
-    /**
-     * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
-     */
     @InputImport(name="internalIPs", required=true)
     private final Map<String,String> internalIPs;
 

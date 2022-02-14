@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceBinding {
-/**
- * Gets details of a single ServiceBinding.
- */
     public static CompletableFuture<GetServiceBindingResult> invokeAsync(GetServiceBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getServiceBinding", TypeShape.of(GetServiceBindingResult.class), args == null ? GetServiceBindingArgs.Empty : args, Utilities.withVersion(options));
     }

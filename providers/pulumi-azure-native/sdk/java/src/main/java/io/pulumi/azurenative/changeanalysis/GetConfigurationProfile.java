@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationProfile {
-/**
- * A profile object that contains change analysis configuration, such as notification settings, for this subscription
-API Version: 2020-04-01-preview.
- *
- * A profile object that contains change analysis configuration, such as notification settings, for this subscription
- */
     public static CompletableFuture<GetConfigurationProfileResult> invokeAsync(GetConfigurationProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:changeanalysis:getConfigurationProfile", TypeShape.of(GetConfigurationProfileResult.class), args == null ? GetConfigurationProfileArgs.Empty : args, Utilities.withVersion(options));
     }

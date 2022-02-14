@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListNotebookProxyCredentialsResult {
-/**
- * Hostname for the Notebook Proxy resource
- */
     private final @Nullable String hostname;
-/**
- * The primary key of the NotebookProxy resource.
- */
     private final @Nullable String primaryAccessKey;
-/**
- * Notebook Proxy resource id
- */
     private final @Nullable String resourceId;
-/**
- * The secondary key of the NotebookProxy resource.
- */
     private final @Nullable String secondaryAccessKey;
 
     @OutputCustomType.Constructor({"hostname","primaryAccessKey","resourceId","secondaryAccessKey"})
@@ -40,27 +28,15 @@ public final class ListNotebookProxyCredentialsResult {
         this.secondaryAccessKey = secondaryAccessKey;
     }
 
-/**
- * Hostname for the Notebook Proxy resource
- */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
-/**
- * The primary key of the NotebookProxy resource.
- */
     public Optional<String> getPrimaryAccessKey() {
         return Optional.ofNullable(this.primaryAccessKey);
     }
-/**
- * Notebook Proxy resource id
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
-/**
- * The secondary key of the NotebookProxy resource.
- */
     public Optional<String> getSecondaryAccessKey() {
         return Optional.ofNullable(this.secondaryAccessKey);
     }

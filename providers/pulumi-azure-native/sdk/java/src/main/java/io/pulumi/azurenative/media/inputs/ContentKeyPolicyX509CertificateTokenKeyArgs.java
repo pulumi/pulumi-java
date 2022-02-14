@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Specifies a certificate for token validation.
- */
 public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyX509CertificateTokenKeyArgs Empty = new ContentKeyPolicyX509CertificateTokenKeyArgs();
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -27,9 +20,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
         return this.odataType;
     }
 
-    /**
-     * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
-     */
     @InputImport(name="rawBody", required=true)
     private final Input<String> rawBody;
 

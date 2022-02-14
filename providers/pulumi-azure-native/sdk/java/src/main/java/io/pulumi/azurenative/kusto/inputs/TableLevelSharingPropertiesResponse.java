@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Tables that will be included and excluded in the follower database
- */
 public final class TableLevelSharingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TableLevelSharingPropertiesResponse Empty = new TableLevelSharingPropertiesResponse();
 
-    /**
-     * List of external tables exclude from the follower database
-     */
     @InputImport(name="externalTablesToExclude")
     private final @Nullable List<String> externalTablesToExclude;
 
@@ -28,9 +22,6 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
         return this.externalTablesToExclude == null ? List.of() : this.externalTablesToExclude;
     }
 
-    /**
-     * List of external tables to include in the follower database
-     */
     @InputImport(name="externalTablesToInclude")
     private final @Nullable List<String> externalTablesToInclude;
 
@@ -38,9 +29,6 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
         return this.externalTablesToInclude == null ? List.of() : this.externalTablesToInclude;
     }
 
-    /**
-     * List of materialized views exclude from the follower database
-     */
     @InputImport(name="materializedViewsToExclude")
     private final @Nullable List<String> materializedViewsToExclude;
 
@@ -48,9 +36,6 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
         return this.materializedViewsToExclude == null ? List.of() : this.materializedViewsToExclude;
     }
 
-    /**
-     * List of materialized views to include in the follower database
-     */
     @InputImport(name="materializedViewsToInclude")
     private final @Nullable List<String> materializedViewsToInclude;
 
@@ -58,9 +43,6 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
         return this.materializedViewsToInclude == null ? List.of() : this.materializedViewsToInclude;
     }
 
-    /**
-     * List of tables to exclude from the follower database
-     */
     @InputImport(name="tablesToExclude")
     private final @Nullable List<String> tablesToExclude;
 
@@ -68,9 +50,6 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
         return this.tablesToExclude == null ? List.of() : this.tablesToExclude;
     }
 
-    /**
-     * List of tables to include in the follower database
-     */
     @InputImport(name="tablesToInclude")
     private final @Nullable List<String> tablesToInclude;
 

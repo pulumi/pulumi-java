@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contact Profile Link Channel
- */
 public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactProfileLinkChannelArgs Empty = new ContactProfileLinkChannelArgs();
 
-    /**
-     * Bandwidth in MHz
-     */
     @InputImport(name="bandwidthMHz", required=true)
     private final Input<Double> bandwidthMHz;
 
@@ -29,9 +23,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
         return this.bandwidthMHz;
     }
 
-    /**
-     * Center Frequency in MHz
-     */
     @InputImport(name="centerFrequencyMHz", required=true)
     private final Input<Double> centerFrequencyMHz;
 
@@ -39,9 +30,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
         return this.centerFrequencyMHz;
     }
 
-    /**
-     * Configuration for decoding
-     */
     @InputImport(name="decodingConfiguration")
     private final @Nullable Input<String> decodingConfiguration;
 
@@ -49,9 +37,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
         return this.decodingConfiguration == null ? Input.empty() : this.decodingConfiguration;
     }
 
-    /**
-     * Configuration for demodulation
-     */
     @InputImport(name="demodulationConfiguration")
     private final @Nullable Input<String> demodulationConfiguration;
 
@@ -59,9 +44,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
         return this.demodulationConfiguration == null ? Input.empty() : this.demodulationConfiguration;
     }
 
-    /**
-     * Configuration for encoding
-     */
     @InputImport(name="encodingConfiguration")
     private final @Nullable Input<String> encodingConfiguration;
 
@@ -69,9 +51,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
         return this.encodingConfiguration == null ? Input.empty() : this.encodingConfiguration;
     }
 
-    /**
-     * Customer End point to store/retrieve data during a contact.
-     */
     @InputImport(name="endPoint", required=true)
     private final Input<EndPointArgs> endPoint;
 
@@ -79,9 +58,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
         return this.endPoint;
     }
 
-    /**
-     * Configuration for modulation
-     */
     @InputImport(name="modulationConfiguration")
     private final @Nullable Input<String> modulationConfiguration;
 

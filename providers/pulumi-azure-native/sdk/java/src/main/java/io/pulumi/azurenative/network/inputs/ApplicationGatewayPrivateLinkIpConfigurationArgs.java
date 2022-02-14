@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The application gateway private link ip configuration.
- */
 public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayPrivateLinkIpConfigurationArgs Empty = new ApplicationGatewayPrivateLinkIpConfigurationArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,9 +25,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of application gateway private link ip configuration.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -41,9 +32,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Whether the ip configuration is primary or not.
-     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 
@@ -51,9 +39,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
         return this.primary == null ? Input.empty() : this.primary;
     }
 
-    /**
-     * The private IP address of the IP configuration.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -61,9 +46,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
-    /**
-     * The private IP address allocation method.
-     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -71,9 +53,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
-    /**
-     * Reference to the subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubResourceArgs> subnet;
 

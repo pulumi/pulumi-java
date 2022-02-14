@@ -15,49 +15,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPeeringResult {
-/**
- * The properties that define a direct peering.
- */
     private final @Nullable PeeringPropertiesDirectResponse direct;
-/**
- * The properties that define an exchange peering.
- */
     private final @Nullable PeeringPropertiesExchangeResponse exchange;
-/**
- * The ID of the resource.
- */
     private final String id;
-/**
- * The kind of the peering.
- */
     private final String kind;
-/**
- * The location of the resource.
- */
     private final String location;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The location of the peering.
- */
     private final @Nullable String peeringLocation;
-/**
- * The provisioning state of the resource.
- */
     private final String provisioningState;
-/**
- * The SKU that defines the tier and kind of the peering.
- */
     private final PeeringSkuResponse sku;
-/**
- * The resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"direct","exchange","id","kind","location","name","peeringLocation","provisioningState","sku","tags","type"})
@@ -86,69 +53,36 @@ public final class GetPeeringResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The properties that define a direct peering.
- */
     public Optional<PeeringPropertiesDirectResponse> getDirect() {
         return Optional.ofNullable(this.direct);
     }
-/**
- * The properties that define an exchange peering.
- */
     public Optional<PeeringPropertiesExchangeResponse> getExchange() {
         return Optional.ofNullable(this.exchange);
     }
-/**
- * The ID of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The kind of the peering.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The location of the resource.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The location of the peering.
- */
     public Optional<String> getPeeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
-/**
- * The provisioning state of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The SKU that defines the tier and kind of the peering.
- */
     public PeeringSkuResponse getSku() {
         return this.sku;
     }
-/**
- * The resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

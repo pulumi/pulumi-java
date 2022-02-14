@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes related incident information for the bookmark
- */
 public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IncidentInfoResponse Empty = new IncidentInfoResponse();
 
-    /**
-     * Incident Id
-     */
     @InputImport(name="incidentId")
     private final @Nullable String incidentId;
 
@@ -27,9 +21,6 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.incidentId == null ? Optional.empty() : Optional.ofNullable(this.incidentId);
     }
 
-    /**
-     * Relation Name
-     */
     @InputImport(name="relationName")
     private final @Nullable String relationName;
 
@@ -37,9 +28,6 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.relationName == null ? Optional.empty() : Optional.ofNullable(this.relationName);
     }
 
-    /**
-     * The severity of the incident
-     */
     @InputImport(name="severity")
     private final @Nullable String severity;
 
@@ -47,9 +35,6 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
-    /**
-     * The title of the incident
-     */
     @InputImport(name="title")
     private final @Nullable String title;
 

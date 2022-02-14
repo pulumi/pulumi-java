@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Allows autoscaling based on Stackdriver metrics.
- */
 public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomMetricArgs Empty = new CustomMetricArgs();
 
-    /**
-     * Allows filtering on the metric's fields.
-     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -28,9 +22,6 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
-    /**
-     * The name of the metric.
-     */
     @InputImport(name="metricName")
     private final @Nullable Input<String> metricName;
 
@@ -38,9 +29,6 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.metricName == null ? Input.empty() : this.metricName;
     }
 
-    /**
-     * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
-     */
     @InputImport(name="singleInstanceAssignment")
     private final @Nullable Input<Double> singleInstanceAssignment;
 
@@ -48,9 +36,6 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
     }
 
-    /**
-     * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
-     */
     @InputImport(name="targetType")
     private final @Nullable Input<String> targetType;
 
@@ -58,9 +43,6 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetType == null ? Input.empty() : this.targetType;
     }
 
-    /**
-     * The target value for the metric.
-     */
     @InputImport(name="targetUtilization")
     private final @Nullable Input<Double> targetUtilization;
 

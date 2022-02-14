@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of custom domain for Spring Cloud Gateway
- */
 public final class GatewayCustomDomainPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayCustomDomainPropertiesResponse Empty = new GatewayCustomDomainPropertiesResponse();
 
-    /**
-     * The thumbprint of bound certificate.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 

@@ -8,17 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Details for the storage account.
- */
 public final class StorageAccountDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountDetailsResponse Empty = new StorageAccountDetailsResponse();
 
-    /**
-     * Account Type of the data to be transferred.
-Expected value is 'StorageAccount'.
-     */
     @InputImport(name="dataAccountType", required=true)
     private final String dataAccountType;
 
@@ -26,9 +19,6 @@ Expected value is 'StorageAccount'.
         return this.dataAccountType;
     }
 
-    /**
-     * Storage Account Resource Id.
-     */
     @InputImport(name="storageAccountId", required=true)
     private final String storageAccountId;
 

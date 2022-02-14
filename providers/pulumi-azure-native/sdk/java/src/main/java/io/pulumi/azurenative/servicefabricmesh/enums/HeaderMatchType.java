@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * how to match header value
- */
     @EnumType
     public enum HeaderMatchType {
-/**
- * 
- */
         Exact("exact");
 
         private final String value;

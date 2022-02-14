@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class StepLabelsEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StepLabelsEntryResponse Empty = new StepLabelsEntryResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -25,9 +19,6 @@ public final class StepLabelsEntryResponse extends io.pulumi.resources.InvokeArg
         return this.key;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

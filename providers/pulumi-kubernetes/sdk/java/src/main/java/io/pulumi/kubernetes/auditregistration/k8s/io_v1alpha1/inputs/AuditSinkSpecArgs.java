@@ -10,16 +10,10 @@ import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookArgs
 import java.util.Objects;
 
 
-/**
- * AuditSinkSpec holds the spec for the audit sink
- */
 public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuditSinkSpecArgs Empty = new AuditSinkSpecArgs();
 
-    /**
-     * Policy defines the policy for selecting which events should be sent to the webhook required
-     */
     @InputImport(name="policy", required=true)
     private final Input<PolicyArgs> policy;
 
@@ -27,9 +21,6 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.policy;
     }
 
-    /**
-     * Webhook to send events required
-     */
     @InputImport(name="webhook", required=true)
     private final Input<WebhookArgs> webhook;
 

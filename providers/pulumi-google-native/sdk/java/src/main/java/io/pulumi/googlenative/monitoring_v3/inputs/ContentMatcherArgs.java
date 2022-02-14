@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Optional. Used to perform content matching. This allows matching based on substrings and regular expressions, together with their negations. Only the first 4 MB of an HTTP or HTTPS check's response (and the first 1 MB of a TCP check's response) are examined for purposes of content matching.
- */
 public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentMatcherArgs Empty = new ContentMatcherArgs();
 
-    /**
-     * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -28,9 +22,6 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
-     */
     @InputImport(name="matcher")
     private final @Nullable Input<ContentMatcherMatcher> matcher;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchematizedDataResponse {
-/**
- * JSON output of the parser.
- */
     private final String data;
-/**
- * The error output of the parser.
- */
     private final String error;
 
     @OutputCustomType.Constructor({"data","error"})
@@ -26,15 +20,9 @@ public final class SchematizedDataResponse {
         this.error = Objects.requireNonNull(error);
     }
 
-/**
- * JSON output of the parser.
- */
     public String getData() {
         return this.data;
     }
-/**
- * The error output of the parser.
- */
     public String getError() {
         return this.error;
     }

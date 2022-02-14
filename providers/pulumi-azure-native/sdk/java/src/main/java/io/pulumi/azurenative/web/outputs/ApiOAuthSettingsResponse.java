@@ -15,33 +15,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiOAuthSettingsResponse {
-/**
- * Resource provider client id
- */
     private final @Nullable String clientId;
-/**
- * Client Secret needed for OAuth
- */
     private final @Nullable String clientSecret;
-/**
- * OAuth parameters key is the name of parameter
- */
     private final @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
-/**
- * Identity provider
- */
     private final @Nullable String identityProvider;
-/**
- * Read only properties for this oauth setting.
- */
     private final @Nullable Object properties;
-/**
- * Url
- */
     private final @Nullable String redirectUrl;
-/**
- * OAuth scopes
- */
     private final @Nullable List<String> scopes;
 
     @OutputCustomType.Constructor({"clientId","clientSecret","customParameters","identityProvider","properties","redirectUrl","scopes"})
@@ -62,45 +41,24 @@ public final class ApiOAuthSettingsResponse {
         this.scopes = scopes;
     }
 
-/**
- * Resource provider client id
- */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
-/**
- * Client Secret needed for OAuth
- */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
-/**
- * OAuth parameters key is the name of parameter
- */
     public Map<String,ApiOAuthSettingsParameterResponse> getCustomParameters() {
         return this.customParameters == null ? Map.of() : this.customParameters;
     }
-/**
- * Identity provider
- */
     public Optional<String> getIdentityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
-/**
- * Read only properties for this oauth setting.
- */
     public Optional<Object> getProperties() {
         return Optional.ofNullable(this.properties);
     }
-/**
- * Url
- */
     public Optional<String> getRedirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
-/**
- * OAuth scopes
- */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }

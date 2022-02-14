@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NodeManagement defines the set of node management services turned on for the node pool.
- */
 public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeManagementArgs Empty = new NodeManagementArgs();
 
-    /**
-     * Whether the nodes will be automatically repaired.
-     */
     @InputImport(name="autoRepair")
     private final @Nullable Input<Boolean> autoRepair;
 
@@ -28,9 +22,6 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
     }
 
-    /**
-     * Whether the nodes will be automatically upgraded.
-     */
     @InputImport(name="autoUpgrade")
     private final @Nullable Input<Boolean> autoUpgrade;
 
@@ -38,9 +29,6 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
     }
 
-    /**
-     * Specifies the Auto Upgrade knobs for the node pool.
-     */
     @InputImport(name="upgradeOptions")
     private final @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions;
 

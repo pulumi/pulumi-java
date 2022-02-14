@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionDiskArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionDiskArgs Empty = new GetRegionDiskArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="disk", required=true)
     private final String disk;
 
@@ -27,9 +21,6 @@ public final class GetRegionDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.disk;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

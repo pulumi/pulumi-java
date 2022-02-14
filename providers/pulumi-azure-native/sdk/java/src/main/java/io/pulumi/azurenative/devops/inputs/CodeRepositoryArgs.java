@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Repository containing the source code for a pipeline.
- */
 public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CodeRepositoryArgs Empty = new CodeRepositoryArgs();
 
-    /**
-     * Authorization info to access the code repository.
-     */
     @InputImport(name="authorization")
     private final @Nullable Input<AuthorizationArgs> authorization;
 
@@ -31,9 +25,6 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorization == null ? Input.empty() : this.authorization;
     }
 
-    /**
-     * Default branch used to configure Continuous Integration (CI) in the pipeline.
-     */
     @InputImport(name="defaultBranch", required=true)
     private final Input<String> defaultBranch;
 
@@ -41,9 +32,6 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultBranch;
     }
 
-    /**
-     * Unique immutable identifier of the code repository.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -51,9 +39,6 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.id;
     }
 
-    /**
-     * Repository-specific properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -61,9 +46,6 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Type of code repository.
-     */
     @InputImport(name="repositoryType", required=true)
     private final Input<Either<String,CodeRepositoryType>> repositoryType;
 

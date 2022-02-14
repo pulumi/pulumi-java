@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Tag filter information for the VM.
- */
 public final class TagSettingsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TagSettingsPropertiesResponse Empty = new TagSettingsPropertiesResponse();
 
-    /**
-     * Filter VMs by Any or All specified tags.
-     */
     @InputImport(name="filterOperator")
     private final @Nullable String filterOperator;
 
@@ -29,9 +23,6 @@ public final class TagSettingsPropertiesResponse extends io.pulumi.resources.Inv
         return this.filterOperator == null ? Optional.empty() : Optional.ofNullable(this.filterOperator);
     }
 
-    /**
-     * Dictionary of tags with its list of values.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,List<String>> tags;
 

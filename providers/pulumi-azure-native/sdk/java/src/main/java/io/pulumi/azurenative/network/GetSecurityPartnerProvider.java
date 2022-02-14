@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityPartnerProvider {
-/**
- * Security Partner Provider resource.
-API Version: 2020-11-01.
- *
- * Security Partner Provider resource.
- */
     public static CompletableFuture<GetSecurityPartnerProviderResult> invokeAsync(GetSecurityPartnerProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityPartnerProvider", TypeShape.of(GetSecurityPartnerProviderResult.class), args == null ? GetSecurityPartnerProviderArgs.Empty : args, Utilities.withVersion(options));
     }

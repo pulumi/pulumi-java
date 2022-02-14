@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkerConfigResponse {
-/**
- * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
- */
     private final String diskSizeGb;
-/**
- * Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
- */
     private final String machineType;
 
     @OutputCustomType.Constructor({"diskSizeGb","machineType"})
@@ -26,15 +20,9 @@ public final class WorkerConfigResponse {
         this.machineType = Objects.requireNonNull(machineType);
     }
 
-/**
- * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
- */
     public String getDiskSizeGb() {
         return this.diskSizeGb;
     }
-/**
- * Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
- */
     public String getMachineType() {
         return this.machineType;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Execution configuration for a workload.
- */
 public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecutionConfigArgs Empty = new ExecutionConfigArgs();
 
-    /**
-     * Optional. The Cloud KMS key to use for encryption.
-     */
     @InputImport(name="kmsKey")
     private final @Nullable Input<String> kmsKey;
 
@@ -28,9 +22,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
     }
 
-    /**
-     * Optional. Tags used for network traffic control.
-     */
     @InputImport(name="networkTags")
     private final @Nullable Input<List<String>> networkTags;
 
@@ -38,9 +29,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkTags == null ? Input.empty() : this.networkTags;
     }
 
-    /**
-     * Optional. Network URI to connect workload to.
-     */
     @InputImport(name="networkUri")
     private final @Nullable Input<String> networkUri;
 
@@ -48,9 +36,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkUri == null ? Input.empty() : this.networkUri;
     }
 
-    /**
-     * Optional. Service account that used to execute workload.
-     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -58,9 +43,6 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
-    /**
-     * Optional. Subnetwork URI to connect workload to.
-     */
     @InputImport(name="subnetworkUri")
     private final @Nullable Input<String> subnetworkUri;
 

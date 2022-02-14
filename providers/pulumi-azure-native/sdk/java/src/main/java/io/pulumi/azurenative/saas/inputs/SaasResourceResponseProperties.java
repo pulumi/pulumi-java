@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * saas properties
- */
 public final class SaasResourceResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final SaasResourceResponseProperties Empty = new SaasResourceResponseProperties();
 
-    /**
-     * Whether the SaaS subscription will auto renew upon term end.
-     */
     @InputImport(name="autoRenew")
     private final @Nullable Boolean autoRenew;
 
@@ -31,9 +25,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
     }
 
-    /**
-     * The created date of this resource.
-     */
     @InputImport(name="created", required=true)
     private final String created;
 
@@ -41,9 +32,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.created;
     }
 
-    /**
-     * Whether the current term is a Free Trial term
-     */
     @InputImport(name="isFreeTrial")
     private final @Nullable Boolean isFreeTrial;
 
@@ -51,9 +39,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.isFreeTrial == null ? Optional.empty() : Optional.ofNullable(this.isFreeTrial);
     }
 
-    /**
-     * The last modifier date if this resource.
-     */
     @InputImport(name="lastModified")
     private final @Nullable String lastModified;
 
@@ -61,9 +46,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.lastModified == null ? Optional.empty() : Optional.ofNullable(this.lastModified);
     }
 
-    /**
-     * The offer id.
-     */
     @InputImport(name="offerId")
     private final @Nullable String offerId;
 
@@ -71,9 +53,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.offerId == null ? Optional.empty() : Optional.ofNullable(this.offerId);
     }
 
-    /**
-     * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
-     */
     @InputImport(name="paymentChannelMetadata")
     private final @Nullable Map<String,String> paymentChannelMetadata;
 
@@ -81,9 +60,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.paymentChannelMetadata == null ? Map.of() : this.paymentChannelMetadata;
     }
 
-    /**
-     * The Payment channel for the SaasSubscription.
-     */
     @InputImport(name="paymentChannelType")
     private final @Nullable String paymentChannelType;
 
@@ -91,9 +67,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.paymentChannelType == null ? Optional.empty() : Optional.ofNullable(this.paymentChannelType);
     }
 
-    /**
-     * The publisher id.
-     */
     @InputImport(name="publisherId")
     private final @Nullable String publisherId;
 
@@ -101,9 +74,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.publisherId == null ? Optional.empty() : Optional.ofNullable(this.publisherId);
     }
 
-    /**
-     * The environment in the publisher side for this resource.
-     */
     @InputImport(name="publisherTestEnvironment")
     private final @Nullable String publisherTestEnvironment;
 
@@ -111,9 +81,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.publisherTestEnvironment == null ? Optional.empty() : Optional.ofNullable(this.publisherTestEnvironment);
     }
 
-    /**
-     * The seat count.
-     */
     @InputImport(name="quantity")
     private final @Nullable Double quantity;
 
@@ -121,9 +88,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
     }
 
-    /**
-     * The SaaS resource name.
-     */
     @InputImport(name="saasResourceName")
     private final @Nullable String saasResourceName;
 
@@ -131,9 +95,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.saasResourceName == null ? Optional.empty() : Optional.ofNullable(this.saasResourceName);
     }
 
-    /**
-     * The saas session id used for dev service migration request.
-     */
     @InputImport(name="saasSessionId")
     private final @Nullable String saasSessionId;
 
@@ -141,9 +102,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.saasSessionId == null ? Optional.empty() : Optional.ofNullable(this.saasSessionId);
     }
 
-    /**
-     * The saas subscription id used for tenant to subscription level migration request.
-     */
     @InputImport(name="saasSubscriptionId")
     private final @Nullable String saasSubscriptionId;
 
@@ -151,9 +109,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.saasSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.saasSubscriptionId);
     }
 
-    /**
-     * The plan id.
-     */
     @InputImport(name="skuId")
     private final @Nullable String skuId;
 
@@ -161,9 +116,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.skuId == null ? Optional.empty() : Optional.ofNullable(this.skuId);
     }
 
-    /**
-     * The SaaS Subscription Status.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -171,9 +123,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * The current Term object.
-     */
     @InputImport(name="term")
     private final @Nullable SaasPropertiesResponseTerm term;
 
@@ -181,9 +130,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
         return this.term == null ? Optional.empty() : Optional.ofNullable(this.term);
     }
 
-    /**
-     * The current Term id.
-     */
     @InputImport(name="termId")
     private final @Nullable String termId;
 

@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HeaderResponse {
-/**
- * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
- */
     private final String glob;
-/**
- * The additional headers to add to the response.
- */
     private final Map<String,String> headers;
-/**
- * The user-supplied RE2 regular expression to match against the request URL path.
- */
     private final String regex;
 
     @OutputCustomType.Constructor({"glob","headers","regex"})
@@ -33,21 +24,12 @@ public final class HeaderResponse {
         this.regex = Objects.requireNonNull(regex);
     }
 
-/**
- * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
- */
     public String getGlob() {
         return this.glob;
     }
-/**
- * The additional headers to add to the response.
- */
     public Map<String,String> getHeaders() {
         return this.headers;
     }
-/**
- * The user-supplied RE2 regular expression to match against the request URL path.
- */
     public String getRegex() {
         return this.regex;
     }

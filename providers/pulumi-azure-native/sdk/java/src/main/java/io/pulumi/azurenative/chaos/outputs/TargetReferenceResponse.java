@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TargetReferenceResponse {
-/**
- * String of the resource ID of a Target resource.
- */
     private final String id;
-/**
- * Enum of the Target reference type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","type"})
@@ -26,15 +20,9 @@ public final class TargetReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * String of the resource ID of a Target resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Enum of the Target reference type.
- */
     public String getType() {
         return this.type;
     }

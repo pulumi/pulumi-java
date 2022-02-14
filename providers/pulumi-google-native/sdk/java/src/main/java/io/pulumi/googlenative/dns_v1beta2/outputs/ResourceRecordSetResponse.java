@@ -12,33 +12,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceRecordSetResponse {
-/**
- * 
- */
     private final String kind;
-/**
- * For example, www.example.com.
- */
     private final String name;
-/**
- * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
- */
     private final RRSetRoutingPolicyResponse routingPolicy;
-/**
- * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
- */
     private final List<String> rrdatas;
-/**
- * As defined in RFC 4034 (section 3.2).
- */
     private final List<String> signatureRrdatas;
-/**
- * Number of seconds that this ResourceRecordSet can be cached by resolvers.
- */
     private final Integer ttl;
-/**
- * The identifier of a supported record type. See the list of Supported DNS record types.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"kind","name","routingPolicy","rrdatas","signatureRrdatas","ttl","type"})
@@ -59,45 +38,24 @@ public final class ResourceRecordSetResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * 
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * For example, www.example.com.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
- */
     public RRSetRoutingPolicyResponse getRoutingPolicy() {
         return this.routingPolicy;
     }
-/**
- * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
- */
     public List<String> getRrdatas() {
         return this.rrdatas;
     }
-/**
- * As defined in RFC 4034 (section 3.2).
- */
     public List<String> getSignatureRrdatas() {
         return this.signatureRrdatas;
     }
-/**
- * Number of seconds that this ResourceRecordSet can be cached by resolvers.
- */
     public Integer getTtl() {
         return this.ttl;
     }
-/**
- * The identifier of a supported record type. See the list of Supported DNS record types.
- */
     public String getType() {
         return this.type;
     }

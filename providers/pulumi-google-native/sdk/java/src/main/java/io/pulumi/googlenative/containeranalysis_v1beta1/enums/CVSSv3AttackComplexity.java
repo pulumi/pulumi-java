@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum CVSSv3AttackComplexity {
-/**
- * 
- */
         AttackComplexityUnspecified("ATTACK_COMPLEXITY_UNSPECIFIED"),
-/**
- * 
- */
         AttackComplexityLow("ATTACK_COMPLEXITY_LOW"),
-/**
- * 
- */
         AttackComplexityHigh("ATTACK_COMPLEXITY_HIGH");
 
         private final String value;

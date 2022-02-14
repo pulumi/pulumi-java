@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Metadata for a Cloud Bigtable connector used by the job.
- */
 public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BigTableIODetailsArgs Empty = new BigTableIODetailsArgs();
 
-    /**
-     * InstanceId accessed in the connection.
-     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -27,9 +21,6 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
-    /**
-     * ProjectId accessed in the connection.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -37,9 +28,6 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * TableId accessed in the connection.
-     */
     @InputImport(name="tableId")
     private final @Nullable Input<String> tableId;
 

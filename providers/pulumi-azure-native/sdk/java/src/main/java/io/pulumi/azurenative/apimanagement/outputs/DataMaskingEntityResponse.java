@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataMaskingEntityResponse {
-/**
- * Data masking mode.
- */
     private final @Nullable String mode;
-/**
- * The name of an entity to mask (e.g. a name of a header or a query parameter).
- */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"mode","value"})
@@ -28,15 +22,9 @@ public final class DataMaskingEntityResponse {
         this.value = value;
     }
 
-/**
- * Data masking mode.
- */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
-/**
- * The name of an entity to mask (e.g. a name of a header or a query parameter).
- */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

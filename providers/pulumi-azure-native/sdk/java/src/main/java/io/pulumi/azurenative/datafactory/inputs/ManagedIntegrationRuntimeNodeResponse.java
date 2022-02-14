@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of integration runtime node.
- */
 public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIntegrationRuntimeNodeResponse Empty = new ManagedIntegrationRuntimeNodeResponse();
 
-    /**
-     * The errors that occurred on this integration runtime node.
-     */
     @InputImport(name="errors")
     private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
 
@@ -29,9 +23,6 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
         return this.errors == null ? List.of() : this.errors;
     }
 
-    /**
-     * The managed integration runtime node id.
-     */
     @InputImport(name="nodeId", required=true)
     private final String nodeId;
 
@@ -39,9 +30,6 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
         return this.nodeId;
     }
 
-    /**
-     * The managed integration runtime node status.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

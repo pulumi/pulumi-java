@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Condition defines a generic condition for a Resource.
- */
 public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunV1ConditionResponse Empty = new GoogleCloudRunV1ConditionResponse();
 
-    /**
-     * Optional. Last time the condition transitioned from one status to another.
-     */
     @InputImport(name="lastTransitionTime", required=true)
     private final String lastTransitionTime;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
         return this.lastTransitionTime;
     }
 
-    /**
-     * Optional. Human readable message indicating details about the current status.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -35,9 +26,6 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
         return this.message;
     }
 
-    /**
-     * Optional. One-word CamelCase reason for the condition's last transition.
-     */
     @InputImport(name="reason", required=true)
     private final String reason;
 
@@ -45,9 +33,6 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
         return this.reason;
     }
 
-    /**
-     * Optional. How to interpret failures of this condition, one of Error, Warning, Info
-     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -55,9 +40,6 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
         return this.severity;
     }
 
-    /**
-     * Status of the condition, one of True, False, Unknown.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -65,9 +47,6 @@ public final class GoogleCloudRunV1ConditionResponse extends io.pulumi.resources
         return this.status;
     }
 
-    /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

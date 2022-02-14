@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SolutionArgs Empty = new SolutionArgs();
 
-    /**
-     * Name of the Azure Migrate project.
-     */
     @InputImport(name="migrateProjectName", required=true)
     private final Input<String> migrateProjectName;
 
@@ -28,9 +22,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.migrateProjectName;
     }
 
-    /**
-     * Gets or sets the properties of the solution.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<SolutionPropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the Azure Resource Group that migrate project is part of.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Unique name of a migration solution within a migrate project.
-     */
     @InputImport(name="solutionName")
     private final @Nullable Input<String> solutionName;
 

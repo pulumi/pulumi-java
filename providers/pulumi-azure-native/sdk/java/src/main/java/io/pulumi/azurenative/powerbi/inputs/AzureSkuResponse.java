@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSkuResponse Empty = new AzureSkuResponse();
 
-    /**
-     * SKU name
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * SKU tier
-     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

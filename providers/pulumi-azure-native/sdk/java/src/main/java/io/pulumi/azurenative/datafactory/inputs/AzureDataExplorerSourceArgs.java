@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity Azure Data Explorer (Kusto) source.
- */
 public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDataExplorerSourceArgs Empty = new AzureDataExplorerSourceArgs();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -28,9 +22,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -38,9 +29,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -48,9 +36,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * The name of the Boolean option that controls whether truncation is applied to result-sets that go beyond a certain row-count limit.
-     */
     @InputImport(name="noTruncation")
     private final @Nullable Input<Object> noTruncation;
 
@@ -58,9 +43,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.noTruncation == null ? Input.empty() : this.noTruncation;
     }
 
-    /**
-     * Database query. Should be a Kusto Query Language (KQL) query. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="query", required=true)
     private final Input<Object> query;
 
@@ -68,9 +50,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.query;
     }
 
-    /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..
-     */
     @InputImport(name="queryTimeout")
     private final @Nullable Input<Object> queryTimeout;
 
@@ -78,9 +57,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -88,9 +64,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -98,10 +71,6 @@ public final class AzureDataExplorerSourceArgs extends io.pulumi.resources.Resou
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
-    /**
-     * Copy source type.
-Expected value is 'AzureDataExplorerSource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

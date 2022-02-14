@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -25,9 +19,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * The name of certificate.
-     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -35,9 +26,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         return this.certificateName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

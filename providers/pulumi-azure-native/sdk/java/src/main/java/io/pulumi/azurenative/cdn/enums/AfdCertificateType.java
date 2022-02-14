@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Defines the source of the SSL certificate.
- */
     @EnumType
     public enum AfdCertificateType {
-/**
- * 
- */
         CustomerCertificate("CustomerCertificate"),
-/**
- * 
- */
         ManagedCertificate("ManagedCertificate");
 
         private final String value;

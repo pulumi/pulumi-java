@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains SKU in an ExpressRouteCircuit.
- */
 public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteCircuitSkuResponse Empty = new ExpressRouteCircuitSkuResponse();
 
-    /**
-     * The family of the SKU.
-     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -27,9 +21,6 @@ public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.In
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
-    /**
-     * The name of the SKU.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,9 +28,6 @@ public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The tier of the SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

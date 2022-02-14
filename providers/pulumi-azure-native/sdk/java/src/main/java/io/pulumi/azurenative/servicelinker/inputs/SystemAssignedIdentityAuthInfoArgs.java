@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The authentication info when authType is systemAssignedIdentity
- */
 public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SystemAssignedIdentityAuthInfoArgs Empty = new SystemAssignedIdentityAuthInfoArgs();
 
-    /**
-     * The authentication type.
-Expected value is 'systemAssignedIdentity'.
-     */
     @InputImport(name="authType", required=true)
     private final Input<String> authType;
 

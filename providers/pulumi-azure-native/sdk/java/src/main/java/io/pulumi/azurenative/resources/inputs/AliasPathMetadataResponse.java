@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AliasPathMetadataResponse Empty = new AliasPathMetadataResponse();
 
-    /**
-     * The attributes of the token that the alias path is referring to.
-     */
     @InputImport(name="attributes", required=true)
     private final String attributes;
 
@@ -25,9 +19,6 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
         return this.attributes;
     }
 
-    /**
-     * The type of the token that the alias path is referring to.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

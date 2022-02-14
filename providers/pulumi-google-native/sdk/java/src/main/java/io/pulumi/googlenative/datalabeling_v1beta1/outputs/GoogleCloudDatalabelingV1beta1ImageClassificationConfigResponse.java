@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse {
-/**
- * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
- */
     private final Boolean allowMultiLabel;
-/**
- * Annotation spec set resource name.
- */
     private final String annotationSpecSet;
-/**
- * Optional. The type of how to aggregate answers.
- */
     private final String answerAggregationType;
 
     @OutputCustomType.Constructor({"allowMultiLabel","annotationSpecSet","answerAggregationType"})
@@ -33,21 +24,12 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
         this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
     }
 
-/**
- * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
- */
     public Boolean getAllowMultiLabel() {
         return this.allowMultiLabel;
     }
-/**
- * Annotation spec set resource name.
- */
     public String getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
-/**
- * Optional. The type of how to aggregate answers.
- */
     public String getAnswerAggregationType() {
         return this.answerAggregationType;
     }

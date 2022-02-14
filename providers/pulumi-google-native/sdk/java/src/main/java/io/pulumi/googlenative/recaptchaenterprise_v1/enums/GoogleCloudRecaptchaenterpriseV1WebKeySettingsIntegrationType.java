@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. Describes how this key is integrated with the website.
- */
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType {
-/**
- * Default type that indicates this enum hasn't been specified. This is not a valid IntegrationType, one of the other types must be specified instead.
- */
         IntegrationTypeUnspecified("INTEGRATION_TYPE_UNSPECIFIED"),
-/**
- * Only used to produce scores. It doesn't display the "I'm not a robot" checkbox and never shows captcha challenges.
- */
         Score("SCORE"),
-/**
- * Displays the "I'm not a robot" checkbox and may show captcha challenges after it is checked.
- */
         Checkbox("CHECKBOX"),
-/**
- * Doesn't display the "I'm not a robot" checkbox, but may show captcha challenges after risk analysis.
- */
         Invisible("INVISIBLE");
 
         private final String value;

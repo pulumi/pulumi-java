@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeploymentArgs Empty = new GetDeploymentArgs();
 
-    /**
-     * The name of Cognitive Services account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the deployment associated with the Cognitive Services Account
-     */
     @InputImport(name="deploymentName", required=true)
     private final String deploymentName;
 
@@ -35,9 +26,6 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
         return this.deploymentName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

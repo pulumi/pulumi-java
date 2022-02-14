@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The location of Oracle Cloud Storage dataset.
- */
 public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleCloudStorageLocationArgs Empty = new OracleCloudStorageLocationArgs();
 
-    /**
-     * Specify the bucketName of Oracle Cloud Storage. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="bucketName")
     private final @Nullable Input<Object> bucketName;
 
@@ -28,9 +22,6 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
-    /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileName")
     private final @Nullable Input<Object> fileName;
 
@@ -38,9 +29,6 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
-    /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="folderPath")
     private final @Nullable Input<Object> folderPath;
 
@@ -48,10 +36,6 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
-    /**
-     * Type of dataset storage location.
-Expected value is 'OracleCloudStorageLocation'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -59,9 +43,6 @@ Expected value is 'OracleCloudStorageLocation'.
         return this.type;
     }
 
-    /**
-     * Specify the version of Oracle Cloud Storage. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="version")
     private final @Nullable Input<Object> version;
 

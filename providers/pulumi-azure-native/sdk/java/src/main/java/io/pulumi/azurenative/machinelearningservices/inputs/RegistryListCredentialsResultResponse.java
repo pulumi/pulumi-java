@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegistryListCredentialsResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistryListCredentialsResultResponse Empty = new RegistryListCredentialsResultResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -29,9 +23,6 @@ public final class RegistryListCredentialsResultResponse extends io.pulumi.resou
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="passwords")
     private final @Nullable List<PasswordResponse> passwords;
 
@@ -39,9 +30,6 @@ public final class RegistryListCredentialsResultResponse extends io.pulumi.resou
         return this.passwords == null ? List.of() : this.passwords;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="username", required=true)
     private final String username;
 

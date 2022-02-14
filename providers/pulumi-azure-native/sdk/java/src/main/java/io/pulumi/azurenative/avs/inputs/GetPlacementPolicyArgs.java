@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPlacementPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPlacementPolicyArgs Empty = new GetPlacementPolicyArgs();
 
-    /**
-     * Name of the cluster in the private cloud
-     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -25,9 +19,6 @@ public final class GetPlacementPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.clusterName;
     }
 
-    /**
-     * Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
-     */
     @InputImport(name="placementPolicyName", required=true)
     private final String placementPolicyName;
 
@@ -35,9 +26,6 @@ public final class GetPlacementPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.placementPolicyName;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -45,9 +33,6 @@ public final class GetPlacementPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
-/**
- * Transformation for each infoType. Cannot specify more than one for a given infoType.
- */
     private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
     @OutputCustomType.Constructor({"transformations"})
@@ -20,9 +17,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
         this.transformations = Objects.requireNonNull(transformations);
     }
 
-/**
- * Transformation for each infoType. Cannot specify more than one for a given infoType.
- */
     public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> getTransformations() {
         return this.transformations;
     }

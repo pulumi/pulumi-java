@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a Sql Server database on the Cloud SQL instance.
- */
 public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlServerDatabaseDetailsResponse Empty = new SqlServerDatabaseDetailsResponse();
 
-    /**
-     * The version of SQL Server with which the database is to be made compatible
-     */
     @InputImport(name="compatibilityLevel", required=true)
     private final Integer compatibilityLevel;
 
@@ -26,9 +20,6 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
         return this.compatibilityLevel;
     }
 
-    /**
-     * The recovery model of a SQL Server database
-     */
     @InputImport(name="recoveryModel", required=true)
     private final String recoveryModel;
 

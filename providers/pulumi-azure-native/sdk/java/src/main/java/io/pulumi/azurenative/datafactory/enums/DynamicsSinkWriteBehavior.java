@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The write behavior for the operation.
- */
     @EnumType
     public enum DynamicsSinkWriteBehavior {
-/**
- * 
- */
         Upsert("Upsert");
 
         private final String value;

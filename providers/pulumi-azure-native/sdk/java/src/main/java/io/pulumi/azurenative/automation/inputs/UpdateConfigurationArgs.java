@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Update specific properties of the software update configuration.
- */
 public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UpdateConfigurationArgs Empty = new UpdateConfigurationArgs();
 
-    /**
-     * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-     */
     @InputImport(name="azureVirtualMachines")
     private final @Nullable Input<List<String>> azureVirtualMachines;
 
@@ -32,9 +26,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.azureVirtualMachines == null ? Input.empty() : this.azureVirtualMachines;
     }
 
-    /**
-     * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-     */
     @InputImport(name="duration")
     private final @Nullable Input<String> duration;
 
@@ -42,9 +33,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.duration == null ? Input.empty() : this.duration;
     }
 
-    /**
-     * Linux specific update configuration.
-     */
     @InputImport(name="linux")
     private final @Nullable Input<LinuxPropertiesArgs> linux;
 
@@ -52,9 +40,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.linux == null ? Input.empty() : this.linux;
     }
 
-    /**
-     * List of names of non-azure machines targeted by the software update configuration.
-     */
     @InputImport(name="nonAzureComputerNames")
     private final @Nullable Input<List<String>> nonAzureComputerNames;
 
@@ -62,9 +47,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.nonAzureComputerNames == null ? Input.empty() : this.nonAzureComputerNames;
     }
 
-    /**
-     * operating system of target machines
-     */
     @InputImport(name="operatingSystem", required=true)
     private final Input<OperatingSystemType> operatingSystem;
 
@@ -72,9 +54,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.operatingSystem;
     }
 
-    /**
-     * Group targets for the software update configuration.
-     */
     @InputImport(name="targets")
     private final @Nullable Input<TargetPropertiesArgs> targets;
 
@@ -82,9 +61,6 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.targets == null ? Input.empty() : this.targets;
     }
 
-    /**
-     * Windows specific update configuration.
-     */
     @InputImport(name="windows")
     private final @Nullable Input<WindowsPropertiesArgs> windows;
 

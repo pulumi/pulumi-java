@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableFieldSchemaPolicyTagsResponse {
-/**
- * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
- */
     private final List<String> names;
 
     @OutputCustomType.Constructor({"names"})
@@ -20,9 +17,6 @@ public final class TableFieldSchemaPolicyTagsResponse {
         this.names = Objects.requireNonNull(names);
     }
 
-/**
- * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
- */
     public List<String> getNames() {
         return this.names;
     }

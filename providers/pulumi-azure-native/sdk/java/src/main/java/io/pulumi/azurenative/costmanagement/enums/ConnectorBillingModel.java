@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Connector billing model
- */
     @EnumType
     public enum ConnectorBillingModel {
-/**
- * 
- */
         Trial("trial"),
-/**
- * 
- */
         AutoUpgrade("autoUpgrade"),
-/**
- * 
- */
         Premium("premium"),
-/**
- * 
- */
         Expired("expired");
 
         private final String value;

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetApplianceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplianceArgs Empty = new GetApplianceArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetApplianceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Appliances name.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

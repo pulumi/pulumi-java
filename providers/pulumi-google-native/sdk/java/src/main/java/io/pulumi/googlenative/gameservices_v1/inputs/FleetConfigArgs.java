@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Fleet configs for Agones.
- */
 public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetConfigArgs Empty = new FleetConfigArgs();
 
-    /**
-     * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
-     */
     @InputImport(name="fleetSpec")
     private final @Nullable Input<String> fleetSpec;
 
@@ -27,9 +21,6 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fleetSpec == null ? Input.empty() : this.fleetSpec;
     }
 
-    /**
-     * The name of the FleetConfig.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

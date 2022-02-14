@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The recurrence type.
- */
     @EnumType
     public enum RecurrenceType {
-/**
- * 
- */
         Minutes("Minutes"),
-/**
- * 
- */
         Hourly("Hourly"),
-/**
- * 
- */
         Daily("Daily"),
-/**
- * 
- */
         Weekly("Weekly");
 
         private final String value;

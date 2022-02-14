@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSessionEntityTypeResult {
-/**
- * The collection of entities to override or supplement the custom entity type.
- */
     private final List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities;
-/**
- * Indicates whether the additional data should override or supplement the custom entity type definition.
- */
     private final String entityOverrideMode;
-/**
- * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"entities","entityOverrideMode","name"})
@@ -34,21 +25,12 @@ public final class GetSessionEntityTypeResult {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The collection of entities to override or supplement the custom entity type.
- */
     public List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> getEntities() {
         return this.entities;
     }
-/**
- * Indicates whether the additional data should override or supplement the custom entity type definition.
- */
     public String getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
-/**
- * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
- */
     public String getName() {
         return this.name;
     }

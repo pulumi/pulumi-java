@@ -20,364 +20,123 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A private cloud resource
-API Version: 2020-03-20.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PrivateClouds_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateCloud = new AzureNative.AVS.PrivateCloud("privateCloud", new AzureNative.AVS.PrivateCloudArgs
-        {
-            Location = "eastus2",
-            ManagementCluster = new AzureNative.AVS.Inputs.ManagementClusterArgs
-            {
-                ClusterSize = 4,
-            },
-            NetworkBlock = "192.168.48.0/22",
-            PrivateCloudName = "cloud1",
-            ResourceGroupName = "group1",
-            Sku = new AzureNative.AVS.Inputs.SkuArgs
-            {
-                Name = "AV36",
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := avs.NewPrivateCloud(ctx, "privateCloud", &avs.PrivateCloudArgs{
-			Location: pulumi.String("eastus2"),
-			ManagementCluster: &avs.ManagementClusterArgs{
-				ClusterSize: pulumi.Int(4),
-			},
-			NetworkBlock:      pulumi.String("192.168.48.0/22"),
-			PrivateCloudName:  pulumi.String("cloud1"),
-			ResourceGroupName: pulumi.String("group1"),
-			Sku: &avs.SkuArgs{
-				Name: pulumi.String("AV36"),
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateCloud = new azure_native.avs.PrivateCloud("privateCloud", {
-    location: "eastus2",
-    managementCluster: {
-        clusterSize: 4,
-    },
-    networkBlock: "192.168.48.0/22",
-    privateCloudName: "cloud1",
-    resourceGroupName: "group1",
-    sku: {
-        name: "AV36",
-    },
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_cloud = azure_native.avs.PrivateCloud("privateCloud",
-    location="eastus2",
-    management_cluster=azure_native.avs.ManagementClusterArgs(
-        cluster_size=4,
-    ),
-    network_block="192.168.48.0/22",
-    private_cloud_name="cloud1",
-    resource_group_name="group1",
-    sku=azure_native.avs.SkuArgs(
-        name="AV36",
-    ),
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:avs:PrivateCloud cloud1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1 
-```
-
- */
 @ResourceType(type="azure-native:avs:PrivateCloud")
 public class PrivateCloud extends io.pulumi.resources.CustomResource {
-    /**
-     * An ExpressRoute Circuit
-     */
     @OutputExport(name="circuit", type=CircuitResponse.class, parameters={})
     private Output</* @Nullable */ CircuitResponse> circuit;
 
-    /**
-     * @return An ExpressRoute Circuit
-     */
     public Output</* @Nullable */ CircuitResponse> getCircuit() {
         return this.circuit;
     }
-    /**
-     * The endpoints
-     */
     @OutputExport(name="endpoints", type=EndpointsResponse.class, parameters={})
     private Output<EndpointsResponse> endpoints;
 
-    /**
-     * @return The endpoints
-     */
     public Output<EndpointsResponse> getEndpoints() {
         return this.endpoints;
     }
-    /**
-     * vCenter Single Sign On Identity Sources
-     */
     @OutputExport(name="identitySources", type=List.class, parameters={IdentitySourceResponse.class})
     private Output</* @Nullable */ List<IdentitySourceResponse>> identitySources;
 
-    /**
-     * @return vCenter Single Sign On Identity Sources
-     */
     public Output</* @Nullable */ List<IdentitySourceResponse>> getIdentitySources() {
         return this.identitySources;
     }
-    /**
-     * Connectivity to internet is enabled or disabled
-     */
     @OutputExport(name="internet", type=String.class, parameters={})
     private Output</* @Nullable */ String> internet;
 
-    /**
-     * @return Connectivity to internet is enabled or disabled
-     */
     public Output</* @Nullable */ String> getInternet() {
         return this.internet;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The default cluster used for management
-     */
     @OutputExport(name="managementCluster", type=ManagementClusterResponse.class, parameters={})
     private Output<ManagementClusterResponse> managementCluster;
 
-    /**
-     * @return The default cluster used for management
-     */
     public Output<ManagementClusterResponse> getManagementCluster() {
         return this.managementCluster;
     }
-    /**
-     * Network used to access vCenter Server and NSX-T Manager
-     */
     @OutputExport(name="managementNetwork", type=String.class, parameters={})
     private Output<String> managementNetwork;
 
-    /**
-     * @return Network used to access vCenter Server and NSX-T Manager
-     */
     public Output<String> getManagementNetwork() {
         return this.managementNetwork;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
-     */
     @OutputExport(name="networkBlock", type=String.class, parameters={})
     private Output<String> networkBlock;
 
-    /**
-     * @return The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
-     */
     public Output<String> getNetworkBlock() {
         return this.networkBlock;
     }
-    /**
-     * Thumbprint of the NSX-T Manager SSL certificate
-     */
     @OutputExport(name="nsxtCertificateThumbprint", type=String.class, parameters={})
     private Output<String> nsxtCertificateThumbprint;
 
-    /**
-     * @return Thumbprint of the NSX-T Manager SSL certificate
-     */
     public Output<String> getNsxtCertificateThumbprint() {
         return this.nsxtCertificateThumbprint;
     }
-    /**
-     * Optionally, set the NSX-T Manager password when the private cloud is created
-     */
     @OutputExport(name="nsxtPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> nsxtPassword;
 
-    /**
-     * @return Optionally, set the NSX-T Manager password when the private cloud is created
-     */
     public Output</* @Nullable */ String> getNsxtPassword() {
         return this.nsxtPassword;
     }
-    /**
-     * Used for virtual machine cold migration, cloning, and snapshot migration
-     */
     @OutputExport(name="provisioningNetwork", type=String.class, parameters={})
     private Output<String> provisioningNetwork;
 
-    /**
-     * @return Used for virtual machine cold migration, cloning, and snapshot migration
-     */
     public Output<String> getProvisioningNetwork() {
         return this.provisioningNetwork;
     }
-    /**
-     * The provisioning state
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The private cloud SKU
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
-    /**
-     * @return The private cloud SKU
-     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Thumbprint of the vCenter Server SSL certificate
-     */
     @OutputExport(name="vcenterCertificateThumbprint", type=String.class, parameters={})
     private Output<String> vcenterCertificateThumbprint;
 
-    /**
-     * @return Thumbprint of the vCenter Server SSL certificate
-     */
     public Output<String> getVcenterCertificateThumbprint() {
         return this.vcenterCertificateThumbprint;
     }
-    /**
-     * Optionally, set the vCenter admin password when the private cloud is created
-     */
     @OutputExport(name="vcenterPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> vcenterPassword;
 
-    /**
-     * @return Optionally, set the vCenter admin password when the private cloud is created
-     */
     public Output</* @Nullable */ String> getVcenterPassword() {
         return this.vcenterPassword;
     }
-    /**
-     * Used for live migration of virtual machines
-     */
     @OutputExport(name="vmotionNetwork", type=String.class, parameters={})
     private Output<String> vmotionNetwork;
 
-    /**
-     * @return Used for live migration of virtual machines
-     */
     public Output<String> getVmotionNetwork() {
         return this.vmotionNetwork;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateCloud(String name, PrivateCloudArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:PrivateCloud", name, args == null ? PrivateCloudArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -400,14 +159,6 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateCloud get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateCloud(name, id, options);
     }

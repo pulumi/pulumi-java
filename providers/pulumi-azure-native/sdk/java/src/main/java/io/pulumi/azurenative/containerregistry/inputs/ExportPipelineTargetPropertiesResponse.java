@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the export pipeline target.
- */
 public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExportPipelineTargetPropertiesResponse Empty = new ExportPipelineTargetPropertiesResponse();
 
-    /**
-     * They key vault secret uri to obtain the target storage SAS token.
-     */
     @InputImport(name="keyVaultUri", required=true)
     private final String keyVaultUri;
 
@@ -27,9 +21,6 @@ public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.reso
         return this.keyVaultUri;
     }
 
-    /**
-     * The type of target for the export pipeline.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -37,11 +28,6 @@ public final class ExportPipelineTargetPropertiesResponse extends io.pulumi.reso
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The target uri of the export pipeline.
-When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/containerName"
-     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

@@ -10,62 +10,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GcpCredentialsDetailsPropertiesResponse {
-/**
- * Auth provider x509 certificate URL field of the API key (write only)
- */
     private final String authProviderX509CertUrl;
-/**
- * Auth URI field of the API key (write only)
- */
     private final String authUri;
-/**
- * State of the multi-cloud connector
- */
     private final String authenticationProvisioningState;
-/**
- * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-Expected value is 'gcpCredentials'.
- */
     private final String authenticationType;
-/**
- * Client email field of the API key (write only)
- */
     private final String clientEmail;
-/**
- * Client ID field of the API key (write only)
- */
     private final String clientId;
-/**
- * Client x509 certificate URL field of the API key (write only)
- */
     private final String clientX509CertUrl;
-/**
- * The permissions detected in the cloud account.
- */
     private final List<String> grantedPermissions;
-/**
- * The organization ID of the GCP cloud account
- */
     private final String organizationId;
-/**
- * Private key field of the API key (write only)
- */
     private final String privateKey;
-/**
- * Private key ID field of the API key (write only)
- */
     private final String privateKeyId;
-/**
- * Project ID field of the API key (write only)
- */
     private final String projectId;
-/**
- * Token URI field of the API key (write only)
- */
     private final String tokenUri;
-/**
- * Type field of the API key (write only)
- */
     private final String type;
 
     @OutputCustomType.Constructor({"authProviderX509CertUrl","authUri","authenticationProvisioningState","authenticationType","clientEmail","clientId","clientX509CertUrl","grantedPermissions","organizationId","privateKey","privateKeyId","projectId","tokenUri","type"})
@@ -100,88 +57,45 @@ Expected value is 'gcpCredentials'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Auth provider x509 certificate URL field of the API key (write only)
- */
     public String getAuthProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
-/**
- * Auth URI field of the API key (write only)
- */
     public String getAuthUri() {
         return this.authUri;
     }
-/**
- * State of the multi-cloud connector
- */
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
-/**
- * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-Expected value is 'gcpCredentials'.
- */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
-/**
- * Client email field of the API key (write only)
- */
     public String getClientEmail() {
         return this.clientEmail;
     }
-/**
- * Client ID field of the API key (write only)
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * Client x509 certificate URL field of the API key (write only)
- */
     public String getClientX509CertUrl() {
         return this.clientX509CertUrl;
     }
-/**
- * The permissions detected in the cloud account.
- */
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;
     }
-/**
- * The organization ID of the GCP cloud account
- */
     public String getOrganizationId() {
         return this.organizationId;
     }
-/**
- * Private key field of the API key (write only)
- */
     public String getPrivateKey() {
         return this.privateKey;
     }
-/**
- * Private key ID field of the API key (write only)
- */
     public String getPrivateKeyId() {
         return this.privateKeyId;
     }
-/**
- * Project ID field of the API key (write only)
- */
     public String getProjectId() {
         return this.projectId;
     }
-/**
- * Token URI field of the API key (write only)
- */
     public String getTokenUri() {
         return this.tokenUri;
     }
-/**
- * Type field of the API key (write only)
- */
     public String getType() {
         return this.type;
     }

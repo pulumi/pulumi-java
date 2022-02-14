@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * HPAScalingPolicy is a single policy which must hold true for a specified past interval.
- */
 public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HPAScalingPolicyArgs Empty = new HPAScalingPolicyArgs();
 
-    /**
-     * PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).
-     */
     @InputImport(name="periodSeconds", required=true)
     private final Input<Integer> periodSeconds;
 
@@ -27,9 +21,6 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.periodSeconds;
     }
 
-    /**
-     * Type is used to specify the scaling policy.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -37,9 +28,6 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.type;
     }
 
-    /**
-     * Value contains the amount of change which is permitted by the policy. It must be greater than zero
-     */
     @InputImport(name="value", required=true)
     private final Input<Integer> value;
 

@@ -16,209 +16,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Site REST Resource.
-API Version: 2020-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create VMware site
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var site = new AzureNative.OffAzure.Site("site", new AzureNative.OffAzure.SiteArgs
-        {
-            Location = "eastus",
-            Properties = new AzureNative.OffAzure.Inputs.SitePropertiesArgs
-            {
-                ServicePrincipalIdentityDetails = new AzureNative.OffAzure.Inputs.SiteSpnPropertiesArgs
-                {
-                    AadAuthority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
-                    ApplicationId = "e9f013df-2a2a-4871-b766-e79867f30348",
-                    Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
-                    ObjectId = "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
-                    TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                },
-            },
-            ResourceGroupName = "pajindTest",
-            SiteName = "appliance1e39site",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	offazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/offazure"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := offazure.NewSite(ctx, "site", &offazure.SiteArgs{
-			Location: pulumi.String("eastus"),
-			Properties: &offazure.SitePropertiesArgs{
-				ServicePrincipalIdentityDetails: &offazure.SiteSpnPropertiesArgs{
-					AadAuthority:  pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
-					ApplicationId: pulumi.String("e9f013df-2a2a-4871-b766-e79867f30348"),
-					Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp"),
-					ObjectId:      pulumi.String("2cd492bc-7ef3-4ee0-b301-59a88108b47b"),
-					TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
-				},
-			},
-			ResourceGroupName: pulumi.String("pajindTest"),
-			SiteName:          pulumi.String("appliance1e39site"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const site = new azure_native.offazure.Site("site", {
-    location: "eastus",
-    properties: {
-        servicePrincipalIdentityDetails: {
-            aadAuthority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
-            applicationId: "e9f013df-2a2a-4871-b766-e79867f30348",
-            audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
-            objectId: "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
-            tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
-        },
-    },
-    resourceGroupName: "pajindTest",
-    siteName: "appliance1e39site",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-site = azure_native.offazure.Site("site",
-    location="eastus",
-    properties=azure_native.offazure.SitePropertiesArgs(
-        service_principal_identity_details=azure_native.offazure.SiteSpnPropertiesArgs(
-            aad_authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
-            application_id="e9f013df-2a2a-4871-b766-e79867f30348",
-            audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
-            object_id="2cd492bc-7ef3-4ee0-b301-59a88108b47b",
-            tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
-        ),
-    ),
-    resource_group_name="pajindTest",
-    site_name="appliance1e39site")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:offazure:Site appliance1e39site /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/appliance1e39site 
-```
-
- */
 @ResourceType(type="azure-native:offazure:Site")
 public class Site extends io.pulumi.resources.CustomResource {
-    /**
-     * eTag for concurrency control.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    /**
-     * @return eTag for concurrency control.
-     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    /**
-     * Azure location in which Sites is created.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Azure location in which Sites is created.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Name of the VMware site.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return Name of the VMware site.
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * Nested properties of VMWare site.
-     */
     @OutputExport(name="properties", type=SitePropertiesResponse.class, parameters={})
     private Output<SitePropertiesResponse> properties;
 
-    /**
-     * @return Nested properties of VMWare site.
-     */
     public Output<SitePropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * 
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Type of resource. Type = Microsoft.OffAzure/VMWareSites.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of resource. Type = Microsoft.OffAzure/VMWareSites.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Site(String name, SiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:offazure:Site", name, args == null ? SiteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -238,14 +74,6 @@ public class Site extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Site get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Site(name, id, options);
     }

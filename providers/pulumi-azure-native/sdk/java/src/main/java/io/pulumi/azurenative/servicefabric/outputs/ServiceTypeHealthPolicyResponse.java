@@ -11,10 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTypeHealthPolicyResponse {
-/**
- * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
- */
     private final @Nullable Integer maxPercentUnhealthyServices;
 
     @OutputCustomType.Constructor({"maxPercentUnhealthyServices"})
@@ -22,10 +18,6 @@ public final class ServiceTypeHealthPolicyResponse {
         this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
     }
 
-/**
- * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
- */
     public Optional<Integer> getMaxPercentUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }

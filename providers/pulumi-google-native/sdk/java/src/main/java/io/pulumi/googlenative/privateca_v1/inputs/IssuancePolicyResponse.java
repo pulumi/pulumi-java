@@ -14,16 +14,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Defines controls over all certificate issuance within a CaPool.
- */
 public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IssuancePolicyResponse Empty = new IssuancePolicyResponse();
 
-    /**
-     * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
-     */
     @InputImport(name="allowedIssuanceModes", required=true)
     private final IssuanceModesResponse allowedIssuanceModes;
 
@@ -31,9 +25,6 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.allowedIssuanceModes;
     }
 
-    /**
-     * Optional. If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used.
-     */
     @InputImport(name="allowedKeyTypes", required=true)
     private final List<AllowedKeyTypeResponse> allowedKeyTypes;
 
@@ -41,9 +32,6 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.allowedKeyTypes;
     }
 
-    /**
-     * Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.
-     */
     @InputImport(name="baselineValues", required=true)
     private final X509ParametersResponse baselineValues;
 
@@ -51,9 +39,6 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.baselineValues;
     }
 
-    /**
-     * Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity.
-     */
     @InputImport(name="identityConstraints", required=true)
     private final CertificateIdentityConstraintsResponse identityConstraints;
 
@@ -61,9 +46,6 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.identityConstraints;
     }
 
-    /**
-     * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
-     */
     @InputImport(name="maximumLifetime", required=true)
     private final String maximumLifetime;
 
@@ -71,9 +53,6 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.maximumLifetime;
     }
 
-    /**
-     * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool's baseline_values.
-     */
     @InputImport(name="passthroughExtensions", required=true)
     private final CertificateExtensionConstraintsResponse passthroughExtensions;
 

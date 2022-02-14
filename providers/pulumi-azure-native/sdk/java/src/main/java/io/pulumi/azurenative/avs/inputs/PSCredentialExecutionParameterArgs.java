@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * a powershell credential object
- */
 public final class PSCredentialExecutionParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PSCredentialExecutionParameterArgs Empty = new PSCredentialExecutionParameterArgs();
 
-    /**
-     * The parameter name
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,9 +21,6 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
         return this.name;
     }
 
-    /**
-     * password for login
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -37,10 +28,6 @@ public final class PSCredentialExecutionParameterArgs extends io.pulumi.resource
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The type of execution parameter
-Expected value is 'Credential'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -48,9 +35,6 @@ Expected value is 'Credential'.
         return this.type;
     }
 
-    /**
-     * username for login
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

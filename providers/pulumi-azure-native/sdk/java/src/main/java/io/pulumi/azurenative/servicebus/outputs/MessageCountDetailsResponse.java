@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MessageCountDetailsResponse {
-/**
- * Number of active messages in the queue, topic, or subscription.
- */
     private final Double activeMessageCount;
-/**
- * Number of messages that are dead lettered.
- */
     private final Double deadLetterMessageCount;
-/**
- * Number of scheduled messages.
- */
     private final Double scheduledMessageCount;
-/**
- * Number of messages transferred into dead letters.
- */
     private final Double transferDeadLetterMessageCount;
-/**
- * Number of messages transferred to another queue, topic, or subscription.
- */
     private final Double transferMessageCount;
 
     @OutputCustomType.Constructor({"activeMessageCount","deadLetterMessageCount","scheduledMessageCount","transferDeadLetterMessageCount","transferMessageCount"})
@@ -44,33 +29,18 @@ public final class MessageCountDetailsResponse {
         this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
     }
 
-/**
- * Number of active messages in the queue, topic, or subscription.
- */
     public Double getActiveMessageCount() {
         return this.activeMessageCount;
     }
-/**
- * Number of messages that are dead lettered.
- */
     public Double getDeadLetterMessageCount() {
         return this.deadLetterMessageCount;
     }
-/**
- * Number of scheduled messages.
- */
     public Double getScheduledMessageCount() {
         return this.scheduledMessageCount;
     }
-/**
- * Number of messages transferred into dead letters.
- */
     public Double getTransferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
     }
-/**
- * Number of messages transferred to another queue, topic, or subscription.
- */
     public Double getTransferMessageCount() {
         return this.transferMessageCount;
     }

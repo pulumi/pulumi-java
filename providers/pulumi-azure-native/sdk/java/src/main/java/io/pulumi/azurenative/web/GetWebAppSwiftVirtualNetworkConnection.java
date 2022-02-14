@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSwiftVirtualNetworkConnection {
-/**
- * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
-API Version: 2020-10-01.
- *
- * Swift Virtual Network Contract. This is used to enable the new Swift way of doing virtual network integration.
- */
     public static CompletableFuture<GetWebAppSwiftVirtualNetworkConnectionResult> invokeAsync(GetWebAppSwiftVirtualNetworkConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSwiftVirtualNetworkConnection", TypeShape.of(GetWebAppSwiftVirtualNetworkConnectionResult.class), args == null ? GetWebAppSwiftVirtualNetworkConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

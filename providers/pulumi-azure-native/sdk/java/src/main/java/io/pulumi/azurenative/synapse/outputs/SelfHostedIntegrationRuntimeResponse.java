@@ -14,18 +14,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SelfHostedIntegrationRuntimeResponse {
-/**
- * Integration runtime description.
- */
     private final @Nullable String description;
-/**
- * Linked integration runtime type from data factory
- */
     private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
-/**
- * The type of integration runtime.
-Expected value is 'SelfHosted'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"description","linkedInfo","type"})
@@ -38,22 +28,12 @@ Expected value is 'SelfHosted'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Integration runtime description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Linked integration runtime type from data factory
- */
     public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> getLinkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
-/**
- * The type of integration runtime.
-Expected value is 'SelfHosted'.
- */
     public String getType() {
         return this.type;
     }

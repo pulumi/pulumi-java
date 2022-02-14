@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB capability object
- */
 public final class CapabilityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapabilityResponse Empty = new CapabilityResponse();
 
-    /**
-     * Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

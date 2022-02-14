@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An error response from the azure resource mover service.
- */
 public final class MoveResourceErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourceErrorResponse Empty = new MoveResourceErrorResponse();
 
-    /**
-     * The move resource error body.
-     */
     @InputImport(name="properties")
     private final @Nullable MoveResourceErrorBodyResponse properties;
 

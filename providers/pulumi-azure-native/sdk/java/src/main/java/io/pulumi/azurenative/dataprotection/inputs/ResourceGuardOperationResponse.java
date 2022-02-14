@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * This class contains all the details about a critical operation.
- */
 public final class ResourceGuardOperationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceGuardOperationResponse Empty = new ResourceGuardOperationResponse();
 
-    /**
-     * Type of resource request.
-     */
     @InputImport(name="requestResourceType", required=true)
     private final String requestResourceType;
 
@@ -25,9 +19,6 @@ public final class ResourceGuardOperationResponse extends io.pulumi.resources.In
         return this.requestResourceType;
     }
 
-    /**
-     * Name of the critical operation.
-     */
     @InputImport(name="vaultCriticalOperation", required=true)
     private final String vaultCriticalOperation;
 

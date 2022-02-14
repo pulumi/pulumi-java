@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for stored infoTypes. All fields and subfield are provided by the user. For more information, see https://cloud.google.com/dlp/docs/creating-custom-infotypes.
- */
 public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2StoredInfoTypeConfigArgs Empty = new GooglePrivacyDlpV2StoredInfoTypeConfigArgs();
 
-    /**
-     * Description of the StoredInfoType (max 256 characters).
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Store dictionary-based CustomInfoType.
-     */
     @InputImport(name="dictionary")
     private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
@@ -40,9 +31,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
         return this.dictionary == null ? Input.empty() : this.dictionary;
     }
 
-    /**
-     * Display name of the StoredInfoType (max 256 characters).
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -50,9 +38,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * StoredInfoType where findings are defined by a dictionary of phrases.
-     */
     @InputImport(name="largeCustomDictionary")
     private final @Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
 
@@ -60,9 +45,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
         return this.largeCustomDictionary == null ? Input.empty() : this.largeCustomDictionary;
     }
 
-    /**
-     * Store regular expression-based StoredInfoType.
-     */
     @InputImport(name="regex")
     private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
 

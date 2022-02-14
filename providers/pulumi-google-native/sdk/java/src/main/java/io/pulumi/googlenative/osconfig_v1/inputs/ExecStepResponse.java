@@ -8,16 +8,10 @@ import io.pulumi.googlenative.osconfig_v1.inputs.ExecStepConfigResponse;
 import java.util.Objects;
 
 
-/**
- * A step that runs an executable for a PatchJob.
- */
 public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExecStepResponse Empty = new ExecStepResponse();
 
-    /**
-     * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
-     */
     @InputImport(name="linuxExecStepConfig", required=true)
     private final ExecStepConfigResponse linuxExecStepConfig;
 
@@ -25,9 +19,6 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.linuxExecStepConfig;
     }
 
-    /**
-     * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
-     */
     @InputImport(name="windowsExecStepConfig", required=true)
     private final ExecStepConfigResponse windowsExecStepConfig;
 

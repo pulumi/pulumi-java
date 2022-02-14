@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1AddonsConfigResponse {
-/**
- * Configuration for the Advanced API Ops add-on.
- */
     private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
-/**
- * Configuration for the Connectors Platform add-on.
- */
     private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
-/**
- * Configuration for the Integration add-on.
- */
     private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
-/**
- * Configuration for the Monetization add-on.
- */
     private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
     @OutputCustomType.Constructor({"advancedApiOpsConfig","connectorsPlatformConfig","integrationConfig","monetizationConfig"})
@@ -41,27 +29,15 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
         this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
     }
 
-/**
- * Configuration for the Advanced API Ops add-on.
- */
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse getAdvancedApiOpsConfig() {
         return this.advancedApiOpsConfig;
     }
-/**
- * Configuration for the Connectors Platform add-on.
- */
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse getConnectorsPlatformConfig() {
         return this.connectorsPlatformConfig;
     }
-/**
- * Configuration for the Integration add-on.
- */
     public GoogleCloudApigeeV1IntegrationConfigResponse getIntegrationConfig() {
         return this.integrationConfig;
     }
-/**
- * Configuration for the Monetization add-on.
- */
     public GoogleCloudApigeeV1MonetizationConfigResponse getMonetizationConfig() {
         return this.monetizationConfig;
     }

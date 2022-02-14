@@ -19,50 +19,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OdbcLinkedServiceResponse {
-/**
- * List of tags that can be used for describing the linked service.
- */
     private final @Nullable List<Object> annotations;
-/**
- * Type of authentication used to connect to the ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object authenticationType;
-/**
- * The integration runtime reference.
- */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-/**
- * The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
- */
     private final Object connectionString;
-/**
- * The access credential portion of the connection string specified in driver-specific property-value format.
- */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential;
-/**
- * Linked service description.
- */
     private final @Nullable String description;
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encryptedCredential;
-/**
- * Parameters for linked service.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * Password for Basic authentication.
- */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-/**
- * Type of linked service.
-Expected value is 'Odbc'.
- */
     private final String type;
-/**
- * User name for Basic authentication. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object userName;
 
     @OutputCustomType.Constructor({"annotations","authenticationType","connectVia","connectionString","credential","description","encryptedCredential","parameters","password","type","userName"})
@@ -91,70 +57,36 @@ Expected value is 'Odbc'.
         this.userName = userName;
     }
 
-/**
- * List of tags that can be used for describing the linked service.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * Type of authentication used to connect to the ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
-/**
- * The integration runtime reference.
- */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
-/**
- * The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
- */
     public Object getConnectionString() {
         return this.connectionString;
     }
-/**
- * The access credential portion of the connection string specified in driver-specific property-value format.
- */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getCredential() {
         return Optional.ofNullable(this.credential);
     }
-/**
- * Linked service description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
-/**
- * Parameters for linked service.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * Password for Basic authentication.
- */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * Type of linked service.
-Expected value is 'Odbc'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * User name for Basic authentication. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }

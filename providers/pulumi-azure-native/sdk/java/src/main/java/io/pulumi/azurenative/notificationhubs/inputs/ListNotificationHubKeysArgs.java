@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListNotificationHubKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListNotificationHubKeysArgs Empty = new ListNotificationHubKeysArgs();
 
-    /**
-     * The connection string of the NotificationHub for the specified authorizationRule.
-     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -25,9 +19,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
         return this.authorizationRuleName;
     }
 
-    /**
-     * The namespace name.
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -35,9 +26,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
         return this.namespaceName;
     }
 
-    /**
-     * The notification hub name.
-     */
     @InputImport(name="notificationHubName", required=true)
     private final String notificationHubName;
 
@@ -45,9 +33,6 @@ public final class ListNotificationHubKeysArgs extends io.pulumi.resources.Invok
         return this.notificationHubName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

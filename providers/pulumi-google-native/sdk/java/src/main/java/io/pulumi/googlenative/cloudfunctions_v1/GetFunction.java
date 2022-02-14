@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFunction {
-/**
- * Returns a function with the given name from the requested project.
- */
     public static CompletableFuture<GetFunctionResult> invokeAsync(GetFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v1:getFunction", TypeShape.of(GetFunctionResult.class), args == null ? GetFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

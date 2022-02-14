@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters of the search job that initiated this table.
- */
 public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SearchResultsResponse Empty = new SearchResultsResponse();
 
-    /**
-     * Search results table's Description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,9 +22,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The timestamp to end the search by (UTC)
-     */
     @InputImport(name="endSearchTime")
     private final @Nullable String endSearchTime;
 
@@ -38,9 +29,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
         return this.endSearchTime == null ? Optional.empty() : Optional.ofNullable(this.endSearchTime);
     }
 
-    /**
-     * Limit the search job to return up to specified number of rows.
-     */
     @InputImport(name="limit")
     private final @Nullable Integer limit;
 
@@ -48,9 +36,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
     }
 
-    /**
-     * Search job query.
-     */
     @InputImport(name="query")
     private final @Nullable String query;
 
@@ -58,9 +43,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
-    /**
-     * The table to search data from.
-     */
     @InputImport(name="sourceTable", required=true)
     private final String sourceTable;
 
@@ -68,9 +50,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceTable;
     }
 
-    /**
-     * The timestamp to start the search from (UTC)
-     */
     @InputImport(name="startSearchTime")
     private final @Nullable String startSearchTime;
 

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ByProductsResponse {
-/**
- * 
- */
     private final Map<String,String> customValues;
 
     @OutputCustomType.Constructor({"customValues"})
@@ -20,9 +17,6 @@ public final class ByProductsResponse {
         this.customValues = Objects.requireNonNull(customValues);
     }
 
-/**
- * 
- */
     public Map<String,String> getCustomValues() {
         return this.customValues;
     }

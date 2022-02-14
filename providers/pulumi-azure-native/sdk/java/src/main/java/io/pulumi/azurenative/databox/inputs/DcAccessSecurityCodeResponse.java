@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Dc access security code
- */
 public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DcAccessSecurityCodeResponse Empty = new DcAccessSecurityCodeResponse();
 
-    /**
-     * Forward Dc access security code.
-     */
     @InputImport(name="forwardDCAccessCode")
     private final @Nullable String forwardDCAccessCode;
 
@@ -27,9 +21,6 @@ public final class DcAccessSecurityCodeResponse extends io.pulumi.resources.Invo
         return this.forwardDCAccessCode == null ? Optional.empty() : Optional.ofNullable(this.forwardDCAccessCode);
     }
 
-    /**
-     * Reverse Dc access security code.
-     */
     @InputImport(name="reverseDCAccessCode")
     private final @Nullable String reverseDCAccessCode;
 

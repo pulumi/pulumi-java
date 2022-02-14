@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleset {
-/**
- * Get a `Ruleset` by name including the full `Source` contents.
- */
     public static CompletableFuture<GetRulesetResult> invokeAsync(GetRulesetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRuleset", TypeShape.of(GetRulesetResult.class), args == null ? GetRulesetArgs.Empty : args, Utilities.withVersion(options));
     }

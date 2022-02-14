@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharedPrivateLinkResourceResponse Empty = new SharedPrivateLinkResourceResponse();
 
-    /**
-     * The private link resource group id.
-     */
     @InputImport(name="groupId")
     private final @Nullable String groupId;
 
@@ -27,9 +21,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
-    /**
-     * Unique name of the private link.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,9 +28,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The resource id that private link links to.
-     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable String privateLinkResourceId;
 
@@ -47,9 +35,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
     }
 
-    /**
-     * Request message.
-     */
     @InputImport(name="requestMessage")
     private final @Nullable String requestMessage;
 
@@ -57,9 +42,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
-    /**
-     * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

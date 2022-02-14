@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SettingsSectionDescriptionResponse {
-/**
- * The section name of the fabric settings.
- */
     private final String name;
-/**
- * The collection of parameters in the section.
- */
     private final List<SettingsParameterDescriptionResponse> parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -28,15 +22,9 @@ public final class SettingsSectionDescriptionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
-/**
- * The section name of the fabric settings.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The collection of parameters in the section.
- */
     public List<SettingsParameterDescriptionResponse> getParameters() {
         return this.parameters;
     }

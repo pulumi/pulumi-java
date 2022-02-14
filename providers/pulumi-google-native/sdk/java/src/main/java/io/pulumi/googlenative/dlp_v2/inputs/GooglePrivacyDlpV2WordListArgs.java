@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Message defining a list of words or phrases to search for in the data.
- */
 public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2WordListArgs Empty = new GooglePrivacyDlpV2WordListArgs();
 
-    /**
-     * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
-     */
     @InputImport(name="words")
     private final @Nullable Input<List<String>> words;
 

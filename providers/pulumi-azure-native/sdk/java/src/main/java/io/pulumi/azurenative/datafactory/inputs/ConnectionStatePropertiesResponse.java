@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The connection state of a managed private endpoint
- */
 public final class ConnectionStatePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionStatePropertiesResponse Empty = new ConnectionStatePropertiesResponse();
 
-    /**
-     * The actions required on the managed private endpoint
-     */
     @InputImport(name="actionsRequired", required=true)
     private final String actionsRequired;
 
@@ -25,9 +19,6 @@ public final class ConnectionStatePropertiesResponse extends io.pulumi.resources
         return this.actionsRequired;
     }
 
-    /**
-     * The managed private endpoint description
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -35,9 +26,6 @@ public final class ConnectionStatePropertiesResponse extends io.pulumi.resources
         return this.description;
     }
 
-    /**
-     * The approval status
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

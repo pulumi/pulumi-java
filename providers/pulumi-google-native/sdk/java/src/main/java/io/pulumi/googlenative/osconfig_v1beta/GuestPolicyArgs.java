@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestPolicyArgs Empty = new GuestPolicyArgs();
 
-    /**
-     * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
-     */
     @InputImport(name="assignment", required=true)
     private final Input<AssignmentArgs> assignment;
 
@@ -32,9 +26,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignment;
     }
 
-    /**
-     * Description of the guest policy. Length of the description is limited to 1024 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,9 +33,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The etag for this guest policy. If this is provided on update, it must match the server's etag.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -52,9 +40,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="guestPolicyId", required=true)
     private final Input<String> guestPolicyId;
 
@@ -62,9 +47,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.guestPolicyId;
     }
 
-    /**
-     * Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -72,9 +54,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
-     */
     @InputImport(name="packageRepositories")
     private final @Nullable Input<List<PackageRepositoryArgs>> packageRepositories;
 
@@ -82,9 +61,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageRepositories == null ? Input.empty() : this.packageRepositories;
     }
 
-    /**
-     * The software packages to be managed by this policy.
-     */
     @InputImport(name="packages")
     private final @Nullable Input<List<PackageArgs>> packages;
 
@@ -92,9 +68,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.packages == null ? Input.empty() : this.packages;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -102,9 +75,6 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * A list of Recipes to install on the VM instance.
-     */
     @InputImport(name="recipes")
     private final @Nullable Input<List<SoftwareRecipeArgs>> recipes;
 

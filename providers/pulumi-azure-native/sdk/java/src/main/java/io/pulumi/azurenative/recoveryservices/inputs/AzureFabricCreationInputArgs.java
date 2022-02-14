@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Fabric provider specific settings.
- */
 public final class AzureFabricCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFabricCreationInputArgs Empty = new AzureFabricCreationInputArgs();
 
-    /**
-     * Gets the class type.
-Expected value is 'Azure'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -28,9 +21,6 @@ Expected value is 'Azure'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The Location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 

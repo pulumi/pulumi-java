@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FavoriteArgs Empty = new FavoriteArgs();
 
-    /**
-     * Favorite category, as defined by the user at creation time.
-     */
     @InputImport(name="category")
     private final @Nullable Input<String> category;
 
@@ -30,9 +24,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.category == null ? Input.empty() : this.category;
     }
 
-    /**
-     * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
-     */
     @InputImport(name="config")
     private final @Nullable Input<String> config;
 
@@ -40,9 +31,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
-    /**
-     * The Id of a specific favorite defined in the Application Insights component
-     */
     @InputImport(name="favoriteId")
     private final @Nullable Input<String> favoriteId;
 
@@ -50,9 +38,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.favoriteId == null ? Input.empty() : this.favoriteId;
     }
 
-    /**
-     * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     */
     @InputImport(name="favoriteType")
     private final @Nullable Input<FavoriteType> favoriteType;
 
@@ -60,9 +45,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.favoriteType == null ? Input.empty() : this.favoriteType;
     }
 
-    /**
-     * Flag denoting wether or not this favorite was generated from a template.
-     */
     @InputImport(name="isGeneratedFromTemplate")
     private final @Nullable Input<Boolean> isGeneratedFromTemplate;
 
@@ -70,9 +52,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isGeneratedFromTemplate == null ? Input.empty() : this.isGeneratedFromTemplate;
     }
 
-    /**
-     * The user-defined name of the favorite.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,9 +59,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -90,9 +66,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -100,9 +73,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName;
     }
 
-    /**
-     * The source of the favorite definition.
-     */
     @InputImport(name="sourceType")
     private final @Nullable Input<String> sourceType;
 
@@ -110,9 +80,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceType == null ? Input.empty() : this.sourceType;
     }
 
-    /**
-     * A list of 0 or more tags that are associated with this favorite definition
-     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -120,9 +87,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

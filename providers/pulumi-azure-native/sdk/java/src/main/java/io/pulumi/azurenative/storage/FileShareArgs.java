@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileShareArgs Empty = new FileShareArgs();
 
-    /**
-     * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
-     */
     @InputImport(name="accessTier")
     private final @Nullable Input<Either<String,ShareAccessTier>> accessTier;
 
@@ -33,9 +27,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessTier == null ? Input.empty() : this.accessTier;
     }
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -43,9 +34,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The authentication protocol that is used for the file share. Can only be specified when creating a share.
-     */
     @InputImport(name="enabledProtocols")
     private final @Nullable Input<Either<String,EnabledProtocols>> enabledProtocols;
 
@@ -53,9 +41,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
     }
 
-    /**
-     * Optional, used to create a snapshot.
-     */
     @InputImport(name="expand")
     private final @Nullable Input<String> expand;
 
@@ -63,9 +48,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.expand == null ? Input.empty() : this.expand;
     }
 
-    /**
-     * A name-value pair to associate with the share as metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -73,9 +55,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,9 +62,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The property is for NFS share only. The default is NoRootSquash.
-     */
     @InputImport(name="rootSquash")
     private final @Nullable Input<Either<String,RootSquashType>> rootSquash;
 
@@ -93,9 +69,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.rootSquash == null ? Input.empty() : this.rootSquash;
     }
 
-    /**
-     * The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-     */
     @InputImport(name="shareName")
     private final @Nullable Input<String> shareName;
 
@@ -103,9 +76,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareName == null ? Input.empty() : this.shareName;
     }
 
-    /**
-     * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
-     */
     @InputImport(name="shareQuota")
     private final @Nullable Input<Integer> shareQuota;
 

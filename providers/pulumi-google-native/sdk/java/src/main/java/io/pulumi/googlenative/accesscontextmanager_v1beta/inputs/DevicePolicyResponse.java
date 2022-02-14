@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * `DevicePolicy` specifies device specific restrictions necessary to acquire a given access level. A `DevicePolicy` specifies requirements for requests from devices to be granted access levels, it does not do any enforcement on the device. `DevicePolicy` acts as an AND over all specified fields, and each repeated field is an OR over its elements. Any unset fields are ignored. For example, if the proto is { os_type : DESKTOP_WINDOWS, os_type : DESKTOP_LINUX, encryption_status: ENCRYPTED}, then the DevicePolicy will be true for requests originating from encrypted Linux desktops and encrypted Windows desktops.
- */
 public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DevicePolicyResponse Empty = new DevicePolicyResponse();
 
-    /**
-     * Allowed device management levels, an empty list allows all management levels.
-     */
     @InputImport(name="allowedDeviceManagementLevels", required=true)
     private final List<String> allowedDeviceManagementLevels;
 
@@ -28,9 +22,6 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedDeviceManagementLevels;
     }
 
-    /**
-     * Allowed encryptions statuses, an empty list allows all statuses.
-     */
     @InputImport(name="allowedEncryptionStatuses", required=true)
     private final List<String> allowedEncryptionStatuses;
 
@@ -38,9 +29,6 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedEncryptionStatuses;
     }
 
-    /**
-     * Allowed OS versions, an empty list allows all types and all versions.
-     */
     @InputImport(name="osConstraints", required=true)
     private final List<OsConstraintResponse> osConstraints;
 
@@ -48,9 +36,6 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.osConstraints;
     }
 
-    /**
-     * Whether the device needs to be approved by the customer admin.
-     */
     @InputImport(name="requireAdminApproval", required=true)
     private final Boolean requireAdminApproval;
 
@@ -58,9 +43,6 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.requireAdminApproval;
     }
 
-    /**
-     * Whether the device needs to be corp owned.
-     */
     @InputImport(name="requireCorpOwned", required=true)
     private final Boolean requireCorpOwned;
 
@@ -68,9 +50,6 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.requireCorpOwned;
     }
 
-    /**
-     * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
-     */
     @InputImport(name="requireScreenlock", required=true)
     private final Boolean requireScreenlock;
 

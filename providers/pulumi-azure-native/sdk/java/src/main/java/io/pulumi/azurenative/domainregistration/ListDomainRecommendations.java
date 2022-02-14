@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDomainRecommendations {
-/**
- * Collection of domain name identifiers.
-API Version: 2020-10-01.
- *
- * Collection of domain name identifiers.
- */
     public static CompletableFuture<ListDomainRecommendationsResult> invokeAsync(@Nullable ListDomainRecommendationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:listDomainRecommendations", TypeShape.of(ListDomainRecommendationsResult.class), args == null ? ListDomainRecommendationsArgs.Empty : args, Utilities.withVersion(options));
     }

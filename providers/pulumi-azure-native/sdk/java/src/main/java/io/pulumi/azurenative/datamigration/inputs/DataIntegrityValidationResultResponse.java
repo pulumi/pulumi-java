@@ -10,16 +10,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Results for checksum based Data Integrity validation results
- */
 public final class DataIntegrityValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataIntegrityValidationResultResponse Empty = new DataIntegrityValidationResultResponse();
 
-    /**
-     * List of failed table names of source and target pair
-     */
     @InputImport(name="failedObjects", required=true)
     private final Map<String,String> failedObjects;
 
@@ -27,9 +21,6 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
         return this.failedObjects;
     }
 
-    /**
-     * List of errors that happened while performing data integrity validation
-     */
     @InputImport(name="validationErrors", required=true)
     private final ValidationErrorResponse validationErrors;
 

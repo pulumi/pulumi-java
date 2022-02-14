@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyRuleMatcherConfigResponse {
-/**
- * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     private final List<String> destIpRanges;
-/**
- * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     private final List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts;
-/**
- * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     private final List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
-/**
- * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
- */
     private final List<String> srcIpRanges;
 
     @OutputCustomType.Constructor({"destIpRanges","destPorts","layer4Configs","srcIpRanges"})
@@ -41,27 +29,15 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
         this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
     }
 
-/**
- * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     public List<String> getDestIpRanges() {
         return this.destIpRanges;
     }
-/**
- * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     public List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> getDestPorts() {
         return this.destPorts;
     }
-/**
- * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> getLayer4Configs() {
         return this.layer4Configs;
     }
-/**
- * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
- */
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
     }

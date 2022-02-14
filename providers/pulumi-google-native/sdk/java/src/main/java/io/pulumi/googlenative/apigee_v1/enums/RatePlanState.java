@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Current state of the rate plan (draft or published).
- */
     @EnumType
     public enum RatePlanState {
-/**
- * State of the rate plan is not specified.
- */
         StateUnspecified("STATE_UNSPECIFIED"),
-/**
- * Rate plan is in draft mode and only visible to API providers.
- */
         Draft("DRAFT"),
-/**
- * Rate plan is published and will become visible to developers for the configured duration (between `startTime` and `endTime`).
- */
         Published("PUBLISHED");
 
         private final String value;

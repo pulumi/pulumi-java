@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Definition for extended entitlement parameters.
- */
 public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudChannelV1ParameterResponse Empty = new GoogleCloudChannelV1ParameterResponse();
 
-    /**
-     * Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
-     */
     @InputImport(name="editable", required=true)
     private final Boolean editable;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
         return this.editable;
     }
 
-    /**
-     * Name of the parameter.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
         return this.name;
     }
 
-    /**
-     * Value of the parameter.
-     */
     @InputImport(name="value", required=true)
     private final GoogleCloudChannelV1ValueResponse value;
 

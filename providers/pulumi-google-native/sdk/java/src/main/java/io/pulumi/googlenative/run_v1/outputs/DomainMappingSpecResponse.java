@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DomainMappingSpecResponse {
-/**
- * The mode of the certificate.
- */
     private final String certificateMode;
-/**
- * If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
- */
     private final Boolean forceOverride;
-/**
- * The name of the Knative Route that this DomainMapping applies to. The route must exist.
- */
     private final String routeName;
 
     @OutputCustomType.Constructor({"certificateMode","forceOverride","routeName"})
@@ -33,21 +24,12 @@ public final class DomainMappingSpecResponse {
         this.routeName = Objects.requireNonNull(routeName);
     }
 
-/**
- * The mode of the certificate.
- */
     public String getCertificateMode() {
         return this.certificateMode;
     }
-/**
- * If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
- */
     public Boolean getForceOverride() {
         return this.forceOverride;
     }
-/**
- * The name of the Knative Route that this DomainMapping applies to. The route must exist.
- */
     public String getRouteName() {
         return this.routeName;
     }

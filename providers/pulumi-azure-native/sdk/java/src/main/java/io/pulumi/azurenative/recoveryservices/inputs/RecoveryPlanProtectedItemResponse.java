@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Recovery plan protected item.
- */
 public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanProtectedItemResponse Empty = new RecoveryPlanProtectedItemResponse();
 
-    /**
-     * The ARM Id of the recovery plan protected item.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -27,9 +21,6 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The virtual machine Id.
-     */
     @InputImport(name="virtualMachineId")
     private final @Nullable String virtualMachineId;
 

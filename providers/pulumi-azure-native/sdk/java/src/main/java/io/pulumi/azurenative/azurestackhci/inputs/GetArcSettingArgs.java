@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetArcSettingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetArcSettingArgs Empty = new GetArcSettingArgs();
 
-    /**
-     * The name of the proxy resource holding details of HCI ArcSetting information.
-     */
     @InputImport(name="arcSettingName", required=true)
     private final String arcSettingName;
 
@@ -25,9 +19,6 @@ public final class GetArcSettingArgs extends io.pulumi.resources.InvokeArgs {
         return this.arcSettingName;
     }
 
-    /**
-     * The name of the cluster.
-     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -35,9 +26,6 @@ public final class GetArcSettingArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

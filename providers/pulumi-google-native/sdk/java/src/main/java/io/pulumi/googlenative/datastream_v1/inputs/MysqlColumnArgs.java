@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MySQL Column.
- */
 public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MysqlColumnArgs Empty = new MysqlColumnArgs();
 
-    /**
-     * Column collation.
-     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -29,9 +23,6 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
-    /**
-     * Column name.
-     */
     @InputImport(name="column")
     private final @Nullable Input<String> column;
 
@@ -39,9 +30,6 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.column == null ? Input.empty() : this.column;
     }
 
-    /**
-     * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
-     */
     @InputImport(name="dataType")
     private final @Nullable Input<String> dataType;
 
@@ -49,9 +37,6 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
-    /**
-     * Column length.
-     */
     @InputImport(name="length")
     private final @Nullable Input<Integer> length;
 
@@ -59,9 +44,6 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.length == null ? Input.empty() : this.length;
     }
 
-    /**
-     * Whether or not the column can accept a null value.
-     */
     @InputImport(name="nullable")
     private final @Nullable Input<Boolean> nullable;
 
@@ -69,9 +51,6 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.nullable == null ? Input.empty() : this.nullable;
     }
 
-    /**
-     * The ordinal position of the column in the table.
-     */
     @InputImport(name="ordinalPosition")
     private final @Nullable Input<Integer> ordinalPosition;
 
@@ -79,9 +58,6 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.ordinalPosition == null ? Input.empty() : this.ordinalPosition;
     }
 
-    /**
-     * Whether or not the column represents a primary key.
-     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<Boolean> primaryKey;
 

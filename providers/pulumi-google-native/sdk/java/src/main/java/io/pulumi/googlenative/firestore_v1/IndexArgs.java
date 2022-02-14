@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexArgs Empty = new IndexArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="collectionGroupId", required=true)
     private final Input<String> collectionGroupId;
 
@@ -30,9 +24,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.collectionGroupId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="databaseId", required=true)
     private final Input<String> databaseId;
 
@@ -40,9 +31,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseId;
     }
 
-    /**
-     * The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<GoogleFirestoreAdminV1IndexFieldArgs>> fields;
 
@@ -50,9 +38,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -60,9 +45,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.
-     */
     @InputImport(name="queryScope")
     private final @Nullable Input<IndexQueryScope> queryScope;
 

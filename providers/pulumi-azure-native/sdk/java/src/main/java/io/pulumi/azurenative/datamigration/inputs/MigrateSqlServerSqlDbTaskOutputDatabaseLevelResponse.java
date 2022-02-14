@@ -13,16 +13,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Database level result for Sql Server to Azure Sql DB migration.
- */
 public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse Empty = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse();
 
-    /**
-     * Name of the item
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -30,9 +24,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.databaseName;
     }
 
-    /**
-     * Migration end time
-     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -40,9 +31,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.endedOn;
     }
 
-    /**
-     * Number of database/object errors.
-     */
     @InputImport(name="errorCount", required=true)
     private final Double errorCount;
 
@@ -50,9 +38,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.errorCount;
     }
 
-    /**
-     * Wildcard string prefix to use for querying all errors of the item
-     */
     @InputImport(name="errorPrefix", required=true)
     private final String errorPrefix;
 
@@ -60,9 +45,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.errorPrefix;
     }
 
-    /**
-     * Migration exceptions and warnings.
-     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -70,9 +52,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.exceptionsAndWarnings;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -80,9 +59,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.id;
     }
 
-    /**
-     * Migration progress message
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -90,9 +66,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.message;
     }
 
-    /**
-     * Number of objects
-     */
     @InputImport(name="numberOfObjects", required=true)
     private final Double numberOfObjects;
 
@@ -100,9 +73,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.numberOfObjects;
     }
 
-    /**
-     * Number of successfully completed objects
-     */
     @InputImport(name="numberOfObjectsCompleted", required=true)
     private final Double numberOfObjectsCompleted;
 
@@ -110,9 +80,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.numberOfObjectsCompleted;
     }
 
-    /**
-     * Summary of object results in the migration
-     */
     @InputImport(name="objectSummary", required=true)
     private final Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
 
@@ -120,9 +87,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.objectSummary;
     }
 
-    /**
-     * Wildcard string prefix to use for querying all sub-tem results of the item
-     */
     @InputImport(name="resultPrefix", required=true)
     private final String resultPrefix;
 
@@ -130,10 +94,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
         return this.resultPrefix;
     }
 
-    /**
-     * Result type
-Expected value is 'DatabaseLevelOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -141,9 +101,6 @@ Expected value is 'DatabaseLevelOutput'.
         return this.resultType;
     }
 
-    /**
-     * Migration stage that this database is in
-     */
     @InputImport(name="stage", required=true)
     private final String stage;
 
@@ -151,9 +108,6 @@ Expected value is 'DatabaseLevelOutput'.
         return this.stage;
     }
 
-    /**
-     * Migration start time
-     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -161,9 +115,6 @@ Expected value is 'DatabaseLevelOutput'.
         return this.startedOn;
     }
 
-    /**
-     * Current state of migration
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -171,9 +122,6 @@ Expected value is 'DatabaseLevelOutput'.
         return this.state;
     }
 
-    /**
-     * Status message
-     */
     @InputImport(name="statusMessage", required=true)
     private final String statusMessage;
 

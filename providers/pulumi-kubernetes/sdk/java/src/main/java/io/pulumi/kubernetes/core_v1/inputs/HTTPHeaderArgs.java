@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * HTTPHeader describes a custom header to be used in HTTP probes
- */
 public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HTTPHeaderArgs Empty = new HTTPHeaderArgs();
 
-    /**
-     * The header field name
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class HTTPHeaderArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The header field value
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

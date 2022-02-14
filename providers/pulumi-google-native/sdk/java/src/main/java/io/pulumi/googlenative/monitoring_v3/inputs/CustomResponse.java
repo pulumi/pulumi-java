@@ -6,9 +6,6 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 import java.util.Objects;
 
 
-/**
- * Custom view of service telemetry. Currently a place-holder pending final design.
- */
 public final class CustomResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomResponse Empty = new CustomResponse();

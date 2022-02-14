@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VmmToAzureNetworkMappingSettingsResponse {
-/**
- * Gets the Instance type.
-Expected value is 'VmmToAzure'.
- */
     private final String instanceType;
 
     @OutputCustomType.Constructor({"instanceType"})
@@ -20,10 +16,6 @@ Expected value is 'VmmToAzure'.
         this.instanceType = Objects.requireNonNull(instanceType);
     }
 
-/**
- * Gets the Instance type.
-Expected value is 'VmmToAzure'.
- */
     public String getInstanceType() {
         return this.instanceType;
     }

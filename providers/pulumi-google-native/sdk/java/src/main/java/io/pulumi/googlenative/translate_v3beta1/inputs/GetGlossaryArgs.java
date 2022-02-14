@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetGlossaryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlossaryArgs Empty = new GetGlossaryArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="glossaryId", required=true)
     private final String glossaryId;
 
@@ -27,9 +21,6 @@ public final class GetGlossaryArgs extends io.pulumi.resources.InvokeArgs {
         return this.glossaryId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetGlossaryArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Network mode used for building Kubernetes network.
- */
     @EnumType
     public enum NetworkMode {
-/**
- * 
- */
         Transparent("transparent"),
-/**
- * 
- */
         Bridge("bridge");
 
         private final String value;

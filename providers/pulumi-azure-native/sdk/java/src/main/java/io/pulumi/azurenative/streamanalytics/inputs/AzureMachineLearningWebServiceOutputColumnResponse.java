@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes an output column for the Azure Machine Learning web service endpoint.
- */
 public final class AzureMachineLearningWebServiceOutputColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureMachineLearningWebServiceOutputColumnResponse Empty = new AzureMachineLearningWebServiceOutputColumnResponse();
 
-    /**
-     * The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
-     */
     @InputImport(name="dataType")
     private final @Nullable String dataType;
 
@@ -27,9 +21,6 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse extends io
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
-    /**
-     * The name of the output column.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -11,17 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois 
-directories as per ICANN requirements.
- */
 public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactArgs Empty = new ContactArgs();
 
-    /**
-     * Mailing address.
-     */
     @InputImport(name="addressMailing")
     private final @Nullable Input<AddressArgs> addressMailing;
 
@@ -29,9 +22,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressMailing == null ? Input.empty() : this.addressMailing;
     }
 
-    /**
-     * Email address.
-     */
     @InputImport(name="email", required=true)
     private final Input<String> email;
 
@@ -39,9 +29,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.email;
     }
 
-    /**
-     * Fax number.
-     */
     @InputImport(name="fax")
     private final @Nullable Input<String> fax;
 
@@ -49,9 +36,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.fax == null ? Input.empty() : this.fax;
     }
 
-    /**
-     * Job title.
-     */
     @InputImport(name="jobTitle")
     private final @Nullable Input<String> jobTitle;
 
@@ -59,9 +43,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobTitle == null ? Input.empty() : this.jobTitle;
     }
 
-    /**
-     * First name.
-     */
     @InputImport(name="nameFirst", required=true)
     private final Input<String> nameFirst;
 
@@ -69,9 +50,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameFirst;
     }
 
-    /**
-     * Last name.
-     */
     @InputImport(name="nameLast", required=true)
     private final Input<String> nameLast;
 
@@ -79,9 +57,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameLast;
     }
 
-    /**
-     * Middle name.
-     */
     @InputImport(name="nameMiddle")
     private final @Nullable Input<String> nameMiddle;
 
@@ -89,9 +64,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameMiddle == null ? Input.empty() : this.nameMiddle;
     }
 
-    /**
-     * Organization contact belongs to.
-     */
     @InputImport(name="organization")
     private final @Nullable Input<String> organization;
 
@@ -99,9 +71,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.organization == null ? Input.empty() : this.organization;
     }
 
-    /**
-     * Phone number.
-     */
     @InputImport(name="phone", required=true)
     private final Input<String> phone;
 

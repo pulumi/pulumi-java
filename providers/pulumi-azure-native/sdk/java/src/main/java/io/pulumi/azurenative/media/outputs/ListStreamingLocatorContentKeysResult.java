@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListStreamingLocatorContentKeysResult {
-/**
- * ContentKeys used by current Streaming Locator
- */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
 
     @OutputCustomType.Constructor({"contentKeys"})
@@ -21,9 +18,6 @@ public final class ListStreamingLocatorContentKeysResult {
         this.contentKeys = contentKeys;
     }
 
-/**
- * ContentKeys used by current Streaming Locator
- */
     public List<StreamingLocatorContentKeyResponse> getContentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;
     }

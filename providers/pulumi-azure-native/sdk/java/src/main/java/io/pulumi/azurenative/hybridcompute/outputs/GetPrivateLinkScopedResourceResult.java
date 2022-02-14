@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateLinkScopedResourceResult {
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The resource id of the scoped Azure monitor resource.
- */
     private final @Nullable String linkedResourceId;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * State of the private endpoint connection.
- */
     private final String provisioningState;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","linkedResourceId","name","provisioningState","type"})
@@ -46,33 +31,18 @@ public final class GetPrivateLinkScopedResourceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The resource id of the scoped Azure monitor resource.
- */
     public Optional<String> getLinkedResourceId() {
         return Optional.ofNullable(this.linkedResourceId);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * State of the private endpoint connection.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

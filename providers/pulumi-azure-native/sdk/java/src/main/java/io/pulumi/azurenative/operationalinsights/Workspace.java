@@ -21,336 +21,111 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The top level Workspace resource container.
-API Version: 2020-10-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### WorkspacesCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workspace = new AzureNative.OperationalInsights.Workspace("workspace", new AzureNative.OperationalInsights.WorkspaceArgs
-        {
-            Location = "australiasoutheast",
-            ResourceGroupName = "oiautorest6685",
-            RetentionInDays = 30,
-            Sku = new AzureNative.OperationalInsights.Inputs.WorkspaceSkuArgs
-            {
-                Name = "PerGB2018",
-            },
-            Tags = 
-            {
-                { "tag1", "val1" },
-            },
-            WorkspaceName = "oiautorest6685",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := operationalinsights.NewWorkspace(ctx, "workspace", &operationalinsights.WorkspaceArgs{
-			Location:          pulumi.String("australiasoutheast"),
-			ResourceGroupName: pulumi.String("oiautorest6685"),
-			RetentionInDays:   pulumi.Int(30),
-			Sku: &operationalinsights.WorkspaceSkuArgs{
-				Name: pulumi.String("PerGB2018"),
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("val1"),
-			},
-			WorkspaceName: pulumi.String("oiautorest6685"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const workspace = new azure_native.operationalinsights.Workspace("workspace", {
-    location: "australiasoutheast",
-    resourceGroupName: "oiautorest6685",
-    retentionInDays: 30,
-    sku: {
-        name: "PerGB2018",
-    },
-    tags: {
-        tag1: "val1",
-    },
-    workspaceName: "oiautorest6685",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-workspace = azure_native.operationalinsights.Workspace("workspace",
-    location="australiasoutheast",
-    resource_group_name="oiautorest6685",
-    retention_in_days=30,
-    sku=azure_native.operationalinsights.WorkspaceSkuArgs(
-        name="PerGB2018",
-    ),
-    tags={
-        "tag1": "val1",
-    },
-    workspace_name="oiautorest6685")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:operationalinsights:Workspace AzTest2170 /subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/workspaces/aztest2170 
-```
-
- */
 @ResourceType(type="azure-native:operationalinsights:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
-    /**
-     * Workspace creation date.
-     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
-    /**
-     * @return Workspace creation date.
-     */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
-    /**
-     * This is a read-only property. Represents the ID associated with the workspace.
-     */
     @OutputExport(name="customerId", type=String.class, parameters={})
     private Output<String> customerId;
 
-    /**
-     * @return This is a read-only property. Represents the ID associated with the workspace.
-     */
     public Output<String> getCustomerId() {
         return this.customerId;
     }
-    /**
-     * The ETag of the workspace.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    /**
-     * @return The ETag of the workspace.
-     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    /**
-     * Workspace features.
-     */
     @OutputExport(name="features", type=WorkspaceFeaturesResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceFeaturesResponse> features;
 
-    /**
-     * @return Workspace features.
-     */
     public Output</* @Nullable */ WorkspaceFeaturesResponse> getFeatures() {
         return this.features;
     }
-    /**
-     * Indicates whether customer managed storage is mandatory for query management.
-     */
     @OutputExport(name="forceCmkForQuery", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceCmkForQuery;
 
-    /**
-     * @return Indicates whether customer managed storage is mandatory for query management.
-     */
     public Output</* @Nullable */ Boolean> getForceCmkForQuery() {
         return this.forceCmkForQuery;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Workspace modification date.
-     */
     @OutputExport(name="modifiedDate", type=String.class, parameters={})
     private Output<String> modifiedDate;
 
-    /**
-     * @return Workspace modification date.
-     */
     public Output<String> getModifiedDate() {
         return this.modifiedDate;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of linked private link scope resources.
-     */
     @OutputExport(name="privateLinkScopedResources", type=List.class, parameters={PrivateLinkScopedResourceResponse.class})
     private Output<List<PrivateLinkScopedResourceResponse>> privateLinkScopedResources;
 
-    /**
-     * @return List of linked private link scope resources.
-     */
     public Output<List<PrivateLinkScopedResourceResponse>> getPrivateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
-    /**
-     * The provisioning state of the workspace.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
-    /**
-     * @return The provisioning state of the workspace.
-     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The network access type for accessing Log Analytics ingestion.
-     */
     @OutputExport(name="publicNetworkAccessForIngestion", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccessForIngestion;
 
-    /**
-     * @return The network access type for accessing Log Analytics ingestion.
-     */
     public Output</* @Nullable */ String> getPublicNetworkAccessForIngestion() {
         return this.publicNetworkAccessForIngestion;
     }
-    /**
-     * The network access type for accessing Log Analytics query.
-     */
     @OutputExport(name="publicNetworkAccessForQuery", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccessForQuery;
 
-    /**
-     * @return The network access type for accessing Log Analytics query.
-     */
     public Output</* @Nullable */ String> getPublicNetworkAccessForQuery() {
         return this.publicNetworkAccessForQuery;
     }
-    /**
-     * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-     */
     @OutputExport(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
-    /**
-     * @return The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-     */
     public Output</* @Nullable */ Integer> getRetentionInDays() {
         return this.retentionInDays;
     }
-    /**
-     * The SKU of the workspace.
-     */
     @OutputExport(name="sku", type=WorkspaceSkuResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceSkuResponse> sku;
 
-    /**
-     * @return The SKU of the workspace.
-     */
     public Output</* @Nullable */ WorkspaceSkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The daily volume cap for ingestion.
-     */
     @OutputExport(name="workspaceCapping", type=WorkspaceCappingResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceCappingResponse> workspaceCapping;
 
-    /**
-     * @return The daily volume cap for ingestion.
-     */
     public Output</* @Nullable */ WorkspaceCappingResponse> getWorkspaceCapping() {
         return this.workspaceCapping;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -374,14 +149,6 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }

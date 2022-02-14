@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DiskEncryptionConfigurationResponse {
-/**
- * This is always `sql#diskEncryptionConfiguration`.
- */
     private final String kind;
-/**
- * Resource name of KMS key for disk encryption
- */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"kind","kmsKeyName"})
@@ -26,15 +20,9 @@ public final class DiskEncryptionConfigurationResponse {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
-/**
- * This is always `sql#diskEncryptionConfiguration`.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Resource name of KMS key for disk encryption
- */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Executes an artifact or local file.
- */
 public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SoftwareRecipeStepExecFileResponse Empty = new SoftwareRecipeStepExecFileResponse();
 
-    /**
-     * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
-     */
     @InputImport(name="allowedExitCodes", required=true)
     private final List<Integer> allowedExitCodes;
 
@@ -27,9 +21,6 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
         return this.allowedExitCodes;
     }
 
-    /**
-     * Arguments to be passed to the provided executable.
-     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -37,9 +28,6 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
         return this.args;
     }
 
-    /**
-     * The id of the relevant artifact in the recipe.
-     */
     @InputImport(name="artifactId", required=true)
     private final String artifactId;
 
@@ -47,9 +35,6 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
         return this.artifactId;
     }
 
-    /**
-     * The absolute path of the file on the local filesystem.
-     */
     @InputImport(name="localPath", required=true)
     private final String localPath;
 

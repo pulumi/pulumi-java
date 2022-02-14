@@ -13,57 +13,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCaseResult {
-/**
- * The issue classification applicable to this case.
- */
     private final CaseClassificationResponse classification;
-/**
- * The time this case was created.
- */
     private final String createTime;
-/**
- * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
- */
     private final ActorResponse creator;
-/**
- * A broad description of the issue.
- */
     private final String description;
-/**
- * The short summary of the issue reported in this case.
- */
     private final String displayName;
-/**
- * Whether the case is currently escalated.
- */
     private final Boolean escalated;
-/**
- * The resource name for the case.
- */
     private final String name;
-/**
- * The priority of this case. If this is set, do not set severity.
- */
     private final String priority;
-/**
- * The current status of the support case.
- */
     private final String state;
-/**
- * The email addresses to receive updates on this case.
- */
     private final List<String> subscriberEmailAddresses;
-/**
- * Whether this case was created for internal API testing and should not be acted on by the support team.
- */
     private final Boolean testCase;
-/**
- * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
- */
     private final String timeZone;
-/**
- * The time this case was last updated.
- */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"classification","createTime","creator","description","displayName","escalated","name","priority","state","subscriberEmailAddresses","testCase","timeZone","updateTime"})
@@ -96,81 +57,42 @@ public final class GetCaseResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
-/**
- * The issue classification applicable to this case.
- */
     public CaseClassificationResponse getClassification() {
         return this.classification;
     }
-/**
- * The time this case was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
- */
     public ActorResponse getCreator() {
         return this.creator;
     }
-/**
- * A broad description of the issue.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The short summary of the issue reported in this case.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Whether the case is currently escalated.
- */
     public Boolean getEscalated() {
         return this.escalated;
     }
-/**
- * The resource name for the case.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The priority of this case. If this is set, do not set severity.
- */
     public String getPriority() {
         return this.priority;
     }
-/**
- * The current status of the support case.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The email addresses to receive updates on this case.
- */
     public List<String> getSubscriberEmailAddresses() {
         return this.subscriberEmailAddresses;
     }
-/**
- * Whether this case was created for internal API testing and should not be acted on by the support team.
- */
     public Boolean getTestCase() {
         return this.testCase;
     }
-/**
- * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
- */
     public String getTimeZone() {
         return this.timeZone;
     }
-/**
- * The time this case was last updated.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }

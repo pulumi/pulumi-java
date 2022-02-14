@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentPoolId", required=true)
     private final Input<String> agentPoolId;
 
@@ -28,9 +22,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentPoolId;
     }
 
-    /**
-     * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
-     */
     @InputImport(name="bandwidthLimit")
     private final @Nullable Input<BandwidthLimitArgs> bandwidthLimit;
 
@@ -38,9 +29,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.bandwidthLimit == null ? Input.empty() : this.bandwidthLimit;
     }
 
-    /**
-     * Specifies the client-specified AgentPool description.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -48,9 +36,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,9 +43,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

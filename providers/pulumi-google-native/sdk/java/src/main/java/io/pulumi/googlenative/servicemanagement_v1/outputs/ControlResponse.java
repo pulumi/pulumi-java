@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ControlResponse {
-/**
- * The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
- */
     private final String environment;
 
     @OutputCustomType.Constructor({"environment"})
@@ -19,9 +16,6 @@ public final class ControlResponse {
         this.environment = Objects.requireNonNull(environment);
     }
 
-/**
- * The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
- */
     public String getEnvironment() {
         return this.environment;
     }

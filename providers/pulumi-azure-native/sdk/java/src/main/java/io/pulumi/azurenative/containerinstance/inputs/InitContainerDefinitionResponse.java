@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The init container definition.
- */
 public final class InitContainerDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InitContainerDefinitionResponse Empty = new InitContainerDefinitionResponse();
 
-    /**
-     * The command to execute within the init container in exec form.
-     */
     @InputImport(name="command")
     private final @Nullable List<String> command;
 
@@ -31,9 +25,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
         return this.command == null ? List.of() : this.command;
     }
 
-    /**
-     * The environment variables to set in the init container.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
@@ -41,9 +32,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
 
-    /**
-     * The image of the init container.
-     */
     @InputImport(name="image")
     private final @Nullable String image;
 
@@ -51,9 +39,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
-    /**
-     * The instance view of the init container. Only valid in response.
-     */
     @InputImport(name="instanceView", required=true)
     private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
 
@@ -61,9 +46,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
         return this.instanceView;
     }
 
-    /**
-     * The name for the init container.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -71,9 +53,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
         return this.name;
     }
 
-    /**
-     * The volume mounts available to the init container.
-     */
     @InputImport(name="volumeMounts")
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 

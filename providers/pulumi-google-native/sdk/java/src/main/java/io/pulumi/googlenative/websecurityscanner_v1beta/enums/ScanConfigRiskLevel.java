@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The risk level selected for the scan
- */
     @EnumType
     public enum ScanConfigRiskLevel {
-/**
- * Use default, which is NORMAL.
- */
         RiskLevelUnspecified("RISK_LEVEL_UNSPECIFIED"),
-/**
- * Normal scanning (Recommended)
- */
         Normal("NORMAL"),
-/**
- * Lower impact scanning
- */
         Low("LOW");
 
         private final String value;

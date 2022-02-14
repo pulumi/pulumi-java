@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A backend pool is a collection of backends that can be routed to.
- */
 public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendPoolArgs Empty = new BackendPoolArgs();
 
-    /**
-     * The set of backends for this pool
-     */
     @InputImport(name="backends")
     private final @Nullable Input<List<BackendArgs>> backends;
 
@@ -30,9 +24,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.backends == null ? Input.empty() : this.backends;
     }
 
-    /**
-     * L7 health probe settings for a backend pool
-     */
     @InputImport(name="healthProbeSettings")
     private final @Nullable Input<SubResourceArgs> healthProbeSettings;
 
@@ -40,9 +31,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -50,9 +38,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Load balancing settings for a backend pool
-     */
     @InputImport(name="loadBalancingSettings")
     private final @Nullable Input<SubResourceArgs> loadBalancingSettings;
 
@@ -60,9 +45,6 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

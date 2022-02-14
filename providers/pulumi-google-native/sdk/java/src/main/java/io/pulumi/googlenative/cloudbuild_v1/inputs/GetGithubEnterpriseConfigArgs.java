@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGithubEnterpriseConfigArgs Empty = new GetGithubEnterpriseConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="configId")
     private final @Nullable String configId;
 
@@ -27,9 +21,6 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
         return this.configId == null ? Optional.empty() : Optional.ofNullable(this.configId);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="githubEnterpriseConfigId", required=true)
     private final String githubEnterpriseConfigId;
 
@@ -37,9 +28,6 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
         return this.githubEnterpriseConfigId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -57,9 +42,6 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="projectId")
     private final @Nullable String projectId;
 

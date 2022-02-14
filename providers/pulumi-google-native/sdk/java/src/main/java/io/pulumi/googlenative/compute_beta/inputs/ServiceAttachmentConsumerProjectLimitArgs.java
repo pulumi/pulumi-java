@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAttachmentConsumerProjectLimitArgs Empty = new ServiceAttachmentConsumerProjectLimitArgs();
 
-    /**
-     * The value of the limit to set.
-     */
     @InputImport(name="connectionLimit")
     private final @Nullable Input<Integer> connectionLimit;
 
@@ -28,9 +22,6 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
         return this.connectionLimit == null ? Input.empty() : this.connectionLimit;
     }
 
-    /**
-     * The project id or number for the project to set the limit for.
-     */
     @InputImport(name="projectIdOrNum")
     private final @Nullable Input<String> projectIdOrNum;
 

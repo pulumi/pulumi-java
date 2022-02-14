@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetInstanceAttachmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceAttachmentArgs Empty = new GetInstanceAttachmentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="attachmentId", required=true)
     private final String attachmentId;
 
@@ -25,9 +19,6 @@ public final class GetInstanceAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.attachmentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -35,9 +26,6 @@ public final class GetInstanceAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.instanceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

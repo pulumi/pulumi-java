@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOnlineDeploymentLogsArgs Empty = new GetOnlineDeploymentLogsArgs();
 
-    /**
-     * The type of container to retrieve logs from.
-     */
     @InputImport(name="containerType")
     private final @Nullable Either<String,ContainerType> containerType;
 
@@ -30,9 +24,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
         return this.containerType == null ? null : this.containerType;
     }
 
-    /**
-     * The name and identifier for the endpoint.
-     */
     @InputImport(name="deploymentName", required=true)
     private final String deploymentName;
 
@@ -40,9 +31,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
         return this.deploymentName;
     }
 
-    /**
-     * Inference endpoint name.
-     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -50,9 +38,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
         return this.endpointName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
-    /**
-     * The maximum number of lines to tail.
-     */
     @InputImport(name="tail")
     private final @Nullable Integer tail;
 
@@ -70,9 +52,6 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
         return this.tail == null ? Optional.empty() : Optional.ofNullable(this.tail);
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

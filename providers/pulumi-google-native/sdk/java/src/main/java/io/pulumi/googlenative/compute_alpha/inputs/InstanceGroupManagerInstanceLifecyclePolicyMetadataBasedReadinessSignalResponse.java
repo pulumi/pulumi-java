@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse Empty = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse();
 
-    /**
-     * The number of seconds to wait for a readiness signal during initialization before timing out.
-     */
     @InputImport(name="timeoutSec", required=true)
     private final Integer timeoutSec;
 

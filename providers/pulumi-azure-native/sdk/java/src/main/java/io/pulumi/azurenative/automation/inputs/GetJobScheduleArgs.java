@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetJobScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobScheduleArgs Empty = new GetJobScheduleArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -25,9 +19,6 @@ public final class GetJobScheduleArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * The job schedule name.
-     */
     @InputImport(name="jobScheduleId", required=true)
     private final String jobScheduleId;
 
@@ -35,9 +26,6 @@ public final class GetJobScheduleArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobScheduleId;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

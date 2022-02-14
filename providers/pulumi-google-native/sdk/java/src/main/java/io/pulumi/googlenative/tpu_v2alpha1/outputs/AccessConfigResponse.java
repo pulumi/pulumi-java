@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccessConfigResponse {
-/**
- * An external IP address associated with the TPU worker.
- */
     private final String externalIp;
 
     @OutputCustomType.Constructor({"externalIp"})
@@ -19,9 +16,6 @@ public final class AccessConfigResponse {
         this.externalIp = Objects.requireNonNull(externalIp);
     }
 
-/**
- * An external IP address associated with the TPU worker.
- */
     public String getExternalIp() {
         return this.externalIp;
     }

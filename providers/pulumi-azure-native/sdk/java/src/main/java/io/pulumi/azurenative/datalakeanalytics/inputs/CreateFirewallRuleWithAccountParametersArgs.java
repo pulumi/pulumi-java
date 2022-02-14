@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The parameters used to create a new firewall rule while creating a new Data Lake Analytics account.
- */
 public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateFirewallRuleWithAccountParametersArgs Empty = new CreateFirewallRuleWithAccountParametersArgs();
 
-    /**
-     * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     */
     @InputImport(name="endIpAddress", required=true)
     private final Input<String> endIpAddress;
 
@@ -26,9 +20,6 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
         return this.endIpAddress;
     }
 
-    /**
-     * The unique name of the firewall rule to create.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,9 +27,6 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
         return this.name;
     }
 
-    /**
-     * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     */
     @InputImport(name="startIpAddress", required=true)
     private final Input<String> startIpAddress;
 

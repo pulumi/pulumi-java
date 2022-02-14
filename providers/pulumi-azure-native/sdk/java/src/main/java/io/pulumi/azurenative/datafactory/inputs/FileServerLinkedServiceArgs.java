@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * File system linked service.
- */
 public final class FileServerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileServerLinkedServiceArgs Empty = new FileServerLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -45,9 +36,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,9 +43,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -65,9 +50,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Host name of the server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="host", required=true)
     private final Input<Object> host;
 
@@ -75,9 +57,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.host;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -85,9 +64,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password to logon the server.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -95,10 +71,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'FileServer'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -106,9 +78,6 @@ Expected value is 'FileServer'.
         return this.type;
     }
 
-    /**
-     * User ID to logon the server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userId")
     private final @Nullable Input<Object> userId;
 

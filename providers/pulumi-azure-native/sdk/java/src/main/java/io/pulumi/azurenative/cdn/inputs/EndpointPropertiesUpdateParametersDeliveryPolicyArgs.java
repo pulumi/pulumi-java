@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A policy that specifies the delivery rules to be used for an endpoint.
- */
 public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointPropertiesUpdateParametersDeliveryPolicyArgs Empty = new EndpointPropertiesUpdateParametersDeliveryPolicyArgs();
 
-    /**
-     * User-friendly description of the policy.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,9 +23,6 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * A list of the delivery rules.
-     */
     @InputImport(name="rules", required=true)
     private final Input<List<DeliveryRuleArgs>> rules;
 

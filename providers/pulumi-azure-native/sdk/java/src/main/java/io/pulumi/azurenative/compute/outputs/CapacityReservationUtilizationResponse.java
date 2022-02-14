@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CapacityReservationUtilizationResponse {
-/**
- * A list of all virtual machines resource ids allocated against the capacity reservation.
- */
     private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
     @OutputCustomType.Constructor({"virtualMachinesAllocated"})
@@ -20,9 +17,6 @@ public final class CapacityReservationUtilizationResponse {
         this.virtualMachinesAllocated = Objects.requireNonNull(virtualMachinesAllocated);
     }
 
-/**
- * A list of all virtual machines resource ids allocated against the capacity reservation.
- */
     public List<SubResourceReadOnlyResponse> getVirtualMachinesAllocated() {
         return this.virtualMachinesAllocated;
     }

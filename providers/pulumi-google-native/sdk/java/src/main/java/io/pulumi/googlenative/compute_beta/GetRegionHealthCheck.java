@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionHealthCheck {
-/**
- * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
- */
     public static CompletableFuture<GetRegionHealthCheckResult> invokeAsync(GetRegionHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionHealthCheck", TypeShape.of(GetRegionHealthCheckResult.class), args == null ? GetRegionHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

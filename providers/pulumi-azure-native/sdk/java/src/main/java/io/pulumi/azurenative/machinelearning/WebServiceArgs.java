@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebServiceArgs Empty = new WebServiceArgs();
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Contains the property payload that describes the web service.
-     */
     @InputImport(name="properties", required=true)
     private final Input<WebServicePropertiesForGraphArgs> properties;
 
@@ -39,9 +30,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * Name of the resource group in which the web service is located.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Contains resource tags defined as key/value pairs.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -59,9 +44,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the web service.
-     */
     @InputImport(name="webServiceName")
     private final @Nullable Input<String> webServiceName;
 

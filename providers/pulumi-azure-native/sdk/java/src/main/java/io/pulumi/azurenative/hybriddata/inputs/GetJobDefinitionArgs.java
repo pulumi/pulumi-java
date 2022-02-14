@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobDefinitionArgs Empty = new GetJobDefinitionArgs();
 
-    /**
-     * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     */
     @InputImport(name="dataManagerName", required=true)
     private final String dataManagerName;
 
@@ -25,9 +19,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataManagerName;
     }
 
-    /**
-     * The data service name of the job definition
-     */
     @InputImport(name="dataServiceName", required=true)
     private final String dataServiceName;
 
@@ -35,9 +26,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataServiceName;
     }
 
-    /**
-     * The job definition name that is being queried.
-     */
     @InputImport(name="jobDefinitionName", required=true)
     private final String jobDefinitionName;
 
@@ -45,9 +33,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobDefinitionName;
     }
 
-    /**
-     * The Resource Group Name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

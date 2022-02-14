@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceProviderParameterResponseMetadata {
-/**
- * the constraints of the bot meta data.
- */
     private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 
     @OutputCustomType.Constructor({"constraints"})
@@ -21,9 +18,6 @@ public final class ServiceProviderParameterResponseMetadata {
         this.constraints = constraints;
     }
 
-/**
- * the constraints of the bot meta data.
- */
     public Optional<ServiceProviderParameterResponseConstraints> getConstraints() {
         return Optional.ofNullable(this.constraints);
     }

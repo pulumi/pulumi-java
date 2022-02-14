@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Authentication type to use for connection
- */
     @EnumType
     public enum AuthenticationType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         WindowsAuthentication("WindowsAuthentication"),
-/**
- * 
- */
         SqlAuthentication("SqlAuthentication"),
-/**
- * 
- */
         ActiveDirectoryIntegrated("ActiveDirectoryIntegrated"),
-/**
- * 
- */
         ActiveDirectoryPassword("ActiveDirectoryPassword");
 
         private final String value;

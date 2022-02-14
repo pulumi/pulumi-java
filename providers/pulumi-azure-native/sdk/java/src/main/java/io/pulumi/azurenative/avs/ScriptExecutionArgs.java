@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScriptExecutionArgs Empty = new ScriptExecutionArgs();
 
-    /**
-     * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
-     */
     @InputImport(name="failureReason")
     private final @Nullable Input<String> failureReason;
 
@@ -33,9 +27,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.failureReason == null ? Input.empty() : this.failureReason;
     }
 
-    /**
-     * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
-     */
     @InputImport(name="hiddenParameters")
     private final @Nullable Input<List<Object>> hiddenParameters;
 
@@ -43,9 +34,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.hiddenParameters == null ? Input.empty() : this.hiddenParameters;
     }
 
-    /**
-     * User-defined dictionary.
-     */
     @InputImport(name="namedOutputs")
     private final @Nullable Input<Map<String,Object>> namedOutputs;
 
@@ -53,9 +41,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.namedOutputs == null ? Input.empty() : this.namedOutputs;
     }
 
-    /**
-     * Standard output stream from the powershell execution
-     */
     @InputImport(name="output")
     private final @Nullable Input<List<String>> output;
 
@@ -63,9 +48,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.output == null ? Input.empty() : this.output;
     }
 
-    /**
-     * Parameters the script will accept
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<Object>> parameters;
 
@@ -73,9 +55,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The name of the private cloud.
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -83,9 +62,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,9 +69,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Time to live for the resource. If not provided, will be available for 60 days
-     */
     @InputImport(name="retention")
     private final @Nullable Input<String> retention;
 
@@ -103,9 +76,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.retention == null ? Input.empty() : this.retention;
     }
 
-    /**
-     * A reference to the script cmdlet resource if user is running a AVS script
-     */
     @InputImport(name="scriptCmdletId")
     private final @Nullable Input<String> scriptCmdletId;
 
@@ -113,9 +83,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptCmdletId == null ? Input.empty() : this.scriptCmdletId;
     }
 
-    /**
-     * Name of the user-invoked script execution resource
-     */
     @InputImport(name="scriptExecutionName")
     private final @Nullable Input<String> scriptExecutionName;
 
@@ -123,9 +90,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptExecutionName == null ? Input.empty() : this.scriptExecutionName;
     }
 
-    /**
-     * Time limit for execution
-     */
     @InputImport(name="timeout", required=true)
     private final Input<String> timeout;
 

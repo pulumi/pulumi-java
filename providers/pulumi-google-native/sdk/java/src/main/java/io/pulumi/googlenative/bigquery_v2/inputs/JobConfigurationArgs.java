@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobConfigurationArgs Empty = new JobConfigurationArgs();
 
-    /**
-     * [Pick one] Copies a table.
-     */
     @InputImport(name="copy")
     private final @Nullable Input<JobConfigurationTableCopyArgs> copy;
 
@@ -33,9 +27,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.copy == null ? Input.empty() : this.copy;
     }
 
-    /**
-     * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
-     */
     @InputImport(name="dryRun")
     private final @Nullable Input<Boolean> dryRun;
 
@@ -43,9 +34,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.dryRun == null ? Input.empty() : this.dryRun;
     }
 
-    /**
-     * [Pick one] Configures an extract job.
-     */
     @InputImport(name="extract")
     private final @Nullable Input<JobConfigurationExtractArgs> extract;
 
@@ -53,9 +41,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.extract == null ? Input.empty() : this.extract;
     }
 
-    /**
-     * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
-     */
     @InputImport(name="jobTimeoutMs")
     private final @Nullable Input<String> jobTimeoutMs;
 
@@ -63,9 +48,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
     }
 
-    /**
-     * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -73,9 +55,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * [Pick one] Configures a load job.
-     */
     @InputImport(name="load")
     private final @Nullable Input<JobConfigurationLoadArgs> load;
 
@@ -83,9 +62,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.load == null ? Input.empty() : this.load;
     }
 
-    /**
-     * [Pick one] Configures a query job.
-     */
     @InputImport(name="query")
     private final @Nullable Input<JobConfigurationQueryArgs> query;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for resources used by Airflow workers.
- */
 public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkerResourceArgs Empty = new WorkerResourceArgs();
 
-    /**
-     * Optional. CPU request and limit for a single Airflow worker replica.
-     */
     @InputImport(name="cpu")
     private final @Nullable Input<Double> cpu;
 
@@ -28,9 +22,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
-    /**
-     * Optional. Maximum number of workers for autoscaling.
-     */
     @InputImport(name="maxCount")
     private final @Nullable Input<Integer> maxCount;
 
@@ -38,9 +29,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxCount == null ? Input.empty() : this.maxCount;
     }
 
-    /**
-     * Optional. Memory (GB) request and limit for a single Airflow worker replica.
-     */
     @InputImport(name="memoryGb")
     private final @Nullable Input<Double> memoryGb;
 
@@ -48,9 +36,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
-    /**
-     * Optional. Minimum number of workers for autoscaling.
-     */
     @InputImport(name="minCount")
     private final @Nullable Input<Integer> minCount;
 
@@ -58,9 +43,6 @@ public final class WorkerResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.minCount == null ? Input.empty() : this.minCount;
     }
 
-    /**
-     * Optional. Storage (GB) request and limit for a single Airflow worker replica.
-     */
     @InputImport(name="storageGb")
     private final @Nullable Input<Double> storageGb;
 

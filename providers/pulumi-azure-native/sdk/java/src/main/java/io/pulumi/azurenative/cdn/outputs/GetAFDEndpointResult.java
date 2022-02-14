@@ -14,49 +14,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAFDEndpointResult {
-/**
- * 
- */
     private final String deploymentStatus;
-/**
- * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
- */
     private final @Nullable String enabledState;
-/**
- * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
- */
     private final String hostName;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource location.
- */
     private final String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
- */
     private final @Nullable Integer originResponseTimeoutSeconds;
-/**
- * Provisioning status
- */
     private final String provisioningState;
-/**
- * Read only system data
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"deploymentStatus","enabledState","hostName","id","location","name","originResponseTimeoutSeconds","provisioningState","systemData","tags","type"})
@@ -85,69 +52,36 @@ public final class GetAFDEndpointResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * 
- */
     public String getDeploymentStatus() {
         return this.deploymentStatus;
     }
-/**
- * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
- */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
-/**
- * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
- */
     public String getHostName() {
         return this.hostName;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
- */
     public Optional<Integer> getOriginResponseTimeoutSeconds() {
         return Optional.ofNullable(this.originResponseTimeoutSeconds);
     }
-/**
- * Provisioning status
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Read only system data
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

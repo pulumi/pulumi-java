@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The alert rule severity.
- */
     @EnumType
     public enum Severity {
-/**
- * 
- */
         Sev0("Sev0"),
-/**
- * 
- */
         Sev1("Sev1"),
-/**
- * 
- */
         Sev2("Sev2"),
-/**
- * 
- */
         Sev3("Sev3"),
-/**
- * 
- */
         Sev4("Sev4");
 
         private final String value;

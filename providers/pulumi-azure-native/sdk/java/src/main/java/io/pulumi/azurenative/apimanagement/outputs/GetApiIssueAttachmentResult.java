@@ -9,29 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetApiIssueAttachmentResult {
-/**
- * An HTTP link or Base64-encoded binary data.
- */
     private final String content;
-/**
- * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
- */
     private final String contentFormat;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Filename by which the binary data will be saved.
- */
     private final String title;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"content","contentFormat","id","name","title","type"})
@@ -50,39 +32,21 @@ public final class GetApiIssueAttachmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * An HTTP link or Base64-encoded binary data.
- */
     public String getContent() {
         return this.content;
     }
-/**
- * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
- */
     public String getContentFormat() {
         return this.contentFormat;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Filename by which the binary data will be saved.
- */
     public String getTitle() {
         return this.title;
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }

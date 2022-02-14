@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBatchAccountKeys {
-/**
- * A set of Azure Batch account keys.
-API Version: 2021-01-01.
- *
- * A set of Azure Batch account keys.
- */
     public static CompletableFuture<ListBatchAccountKeysResult> invokeAsync(ListBatchAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:listBatchAccountKeys", TypeShape.of(ListBatchAccountKeysResult.class), args == null ? ListBatchAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

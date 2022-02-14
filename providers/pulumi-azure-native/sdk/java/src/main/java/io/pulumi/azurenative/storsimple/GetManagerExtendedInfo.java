@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagerExtendedInfo {
-/**
- * The extended info of the manager.
-API Version: 2017-06-01.
- *
- * The extended info of the manager.
- */
     public static CompletableFuture<GetManagerExtendedInfoResult> invokeAsync(GetManagerExtendedInfoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManagerExtendedInfo", TypeShape.of(GetManagerExtendedInfoResult.class), args == null ? GetManagerExtendedInfoArgs.Empty : args, Utilities.withVersion(options));
     }

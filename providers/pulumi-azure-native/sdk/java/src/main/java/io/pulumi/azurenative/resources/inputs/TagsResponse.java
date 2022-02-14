@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A dictionary of name and value pairs.
- */
 public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TagsResponse Empty = new TagsResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

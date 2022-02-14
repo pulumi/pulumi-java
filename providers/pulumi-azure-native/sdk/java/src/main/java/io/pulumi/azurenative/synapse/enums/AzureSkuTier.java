@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SKU tier.
- */
     @EnumType
     public enum AzureSkuTier {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

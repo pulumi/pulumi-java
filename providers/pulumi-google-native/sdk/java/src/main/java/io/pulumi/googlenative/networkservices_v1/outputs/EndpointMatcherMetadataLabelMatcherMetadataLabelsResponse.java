@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
-/**
- * Label name presented as key in xDS Node Metadata.
- */
     private final String labelName;
-/**
- * Label value presented as value corresponding to the above key, in xDS Node Metadata.
- */
     private final String labelValue;
 
     @OutputCustomType.Constructor({"labelName","labelValue"})
@@ -26,15 +20,9 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
         this.labelValue = Objects.requireNonNull(labelValue);
     }
 
-/**
- * Label name presented as key in xDS Node Metadata.
- */
     public String getLabelName() {
         return this.labelName;
     }
-/**
- * Label value presented as value corresponding to the above key, in xDS Node Metadata.
- */
     public String getLabelValue() {
         return this.labelValue;
     }

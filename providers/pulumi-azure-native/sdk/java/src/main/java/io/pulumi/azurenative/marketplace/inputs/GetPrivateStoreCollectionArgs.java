@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateStoreCollectionArgs Empty = new GetPrivateStoreCollectionArgs();
 
-    /**
-     * The collection ID
-     */
     @InputImport(name="collectionId", required=true)
     private final String collectionId;
 
@@ -25,9 +19,6 @@ public final class GetPrivateStoreCollectionArgs extends io.pulumi.resources.Inv
         return this.collectionId;
     }
 
-    /**
-     * The store ID - must use the tenant ID
-     */
     @InputImport(name="privateStoreId", required=true)
     private final String privateStoreId;
 

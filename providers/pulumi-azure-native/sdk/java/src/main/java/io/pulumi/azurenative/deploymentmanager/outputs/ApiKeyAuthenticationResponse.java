@@ -9,22 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiKeyAuthenticationResponse {
-/**
- * The location of the authentication key/value pair in the request.
- */
     private final String in;
-/**
- * The key name of the authentication key/value pair.
- */
     private final String name;
-/**
- * The authentication type.
-Expected value is 'ApiKey'.
- */
     private final String type;
-/**
- * The value of the authentication key/value pair.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"in","name","type","value"})
@@ -39,28 +26,15 @@ Expected value is 'ApiKey'.
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The location of the authentication key/value pair in the request.
- */
     public String getIn() {
         return this.in;
     }
-/**
- * The key name of the authentication key/value pair.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The authentication type.
-Expected value is 'ApiKey'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The value of the authentication key/value pair.
- */
     public String getValue() {
         return this.value;
     }

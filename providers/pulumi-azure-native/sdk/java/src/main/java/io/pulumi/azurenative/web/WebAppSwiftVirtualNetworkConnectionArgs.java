@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSwiftVirtualNetworkConnectionArgs Empty = new WebAppSwiftVirtualNetworkConnectionArgs();
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,9 +22,6 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,9 +29,6 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
-    /**
-     * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
-     */
     @InputImport(name="subnetResourceId")
     private final @Nullable Input<String> subnetResourceId;
 
@@ -58,9 +43,6 @@ public final class WebAppSwiftVirtualNetworkConnectionArgs extends io.pulumi.res
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
     }
 
-    /**
-     * A flag that specifies if the scale unit this Web App is on supports Swift integration.
-     */
     @InputImport(name="swiftSupported")
     private final @Nullable Input<Boolean> swiftSupported;
 

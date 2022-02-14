@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specification for a Kubernetes Environment to use for this resource.
- */
 public final class KubeEnvironmentProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubeEnvironmentProfileArgs Empty = new KubeEnvironmentProfileArgs();
 
-    /**
-     * Resource ID of the Kubernetes Environment.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

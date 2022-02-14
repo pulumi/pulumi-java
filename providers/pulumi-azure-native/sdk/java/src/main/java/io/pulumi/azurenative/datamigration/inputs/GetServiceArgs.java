@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
-    /**
-     * Name of the resource group
-     */
     @InputImport(name="groupName", required=true)
     private final String groupName;
 
@@ -25,9 +19,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.groupName;
     }
 
-    /**
-     * Name of the service
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

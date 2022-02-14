@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIngressRule {
-/**
- * Gets the specified firewall rule.
- */
     public static CompletableFuture<GetIngressRuleResult> invokeAsync(GetIngressRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getIngressRule", TypeShape.of(GetIngressRuleResult.class), args == null ? GetIngressRuleArgs.Empty : args, Utilities.withVersion(options));
     }

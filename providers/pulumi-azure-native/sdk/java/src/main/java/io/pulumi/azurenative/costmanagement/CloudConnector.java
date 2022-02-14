@@ -16,314 +16,111 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The Connector model definition
-API Version: 2019-03-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CloudConnector_Put
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cloudConnector = new AzureNative.CostManagement.CloudConnector("cloudConnector", new AzureNative.CostManagement.CloudConnectorArgs
-        {
-            ConnectorName = "aws-123456789012",
-            CredentialsKey = "arn:aws:iam::123456789012:role/AzureCostManagementRole",
-            CredentialsSecret = "external-id",
-            DisplayName = "AWS-Consolidated-1",
-            ReportId = "HourlyWithResources",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := costmanagement.NewCloudConnector(ctx, "cloudConnector", &costmanagement.CloudConnectorArgs{
-			ConnectorName:     pulumi.String("aws-123456789012"),
-			CredentialsKey:    pulumi.String("arn:aws:iam::123456789012:role/AzureCostManagementRole"),
-			CredentialsSecret: pulumi.String("external-id"),
-			DisplayName:       pulumi.String("AWS-Consolidated-1"),
-			ReportId:          pulumi.String("HourlyWithResources"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConnector", {
-    connectorName: "aws-123456789012",
-    credentialsKey: "arn:aws:iam::123456789012:role/AzureCostManagementRole",
-    credentialsSecret: "external-id",
-    displayName: "AWS-Consolidated-1",
-    reportId: "HourlyWithResources",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-cloud_connector = azure_native.costmanagement.CloudConnector("cloudConnector",
-    connector_name="aws-123456789012",
-    credentials_key="arn:aws:iam::123456789012:role/AzureCostManagementRole",
-    credentials_secret="external-id",
-    display_name="AWS-Consolidated-1",
-    report_id="HourlyWithResources")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:costmanagement:CloudConnector aws-123456789012 /providers/Microsoft.CostManagement/cloudConnectors/aws-123456789012 
-```
-
- */
 @ResourceType(type="azure-native:costmanagement:CloudConnector")
 public class CloudConnector extends io.pulumi.resources.CustomResource {
-    /**
-     * Connector billing model
-     */
     @OutputExport(name="billingModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingModel;
 
-    /**
-     * @return Connector billing model
-     */
     public Output</* @Nullable */ String> getBillingModel() {
         return this.billingModel;
     }
-    /**
-     * Collection information
-     */
     @OutputExport(name="collectionInfo", type=ConnectorCollectionInfoResponse.class, parameters={})
     private Output<ConnectorCollectionInfoResponse> collectionInfo;
 
-    /**
-     * @return Collection information
-     */
     public Output<ConnectorCollectionInfoResponse> getCollectionInfo() {
         return this.collectionInfo;
     }
-    /**
-     * Connector definition creation datetime
-     */
     @OutputExport(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
-    /**
-     * @return Connector definition creation datetime
-     */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
-    /**
-     * Credentials authentication key (eg AWS ARN)
-     */
     @OutputExport(name="credentialsKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> credentialsKey;
 
-    /**
-     * @return Credentials authentication key (eg AWS ARN)
-     */
     public Output</* @Nullable */ String> getCredentialsKey() {
         return this.credentialsKey;
     }
-    /**
-     * Number of days remaining of trial
-     */
     @OutputExport(name="daysTrialRemaining", type=Integer.class, parameters={})
     private Output<Integer> daysTrialRemaining;
 
-    /**
-     * @return Number of days remaining of trial
-     */
     public Output<Integer> getDaysTrialRemaining() {
         return this.daysTrialRemaining;
     }
-    /**
-     * Default ManagementGroupId
-     */
     @OutputExport(name="defaultManagementGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultManagementGroupId;
 
-    /**
-     * @return Default ManagementGroupId
-     */
     public Output</* @Nullable */ String> getDefaultManagementGroupId() {
         return this.defaultManagementGroupId;
     }
-    /**
-     * Connector DisplayName
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return Connector DisplayName
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Associated ExternalBillingAccountId
-     */
     @OutputExport(name="externalBillingAccountId", type=String.class, parameters={})
     private Output<String> externalBillingAccountId;
 
-    /**
-     * @return Associated ExternalBillingAccountId
-     */
     public Output<String> getExternalBillingAccountId() {
         return this.externalBillingAccountId;
     }
-    /**
-     * Connector kind (eg aws)
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Connector kind (eg aws)
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Connector last modified datetime
-     */
     @OutputExport(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
-    /**
-     * @return Connector last modified datetime
-     */
     public Output<String> getModifiedOn() {
         return this.modifiedOn;
     }
-    /**
-     * Connector name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Connector name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The display name of the providerBillingAccountId as defined on the external provider
-     */
     @OutputExport(name="providerBillingAccountDisplayName", type=String.class, parameters={})
     private Output<String> providerBillingAccountDisplayName;
 
-    /**
-     * @return The display name of the providerBillingAccountId as defined on the external provider
-     */
     public Output<String> getProviderBillingAccountDisplayName() {
         return this.providerBillingAccountDisplayName;
     }
-    /**
-     * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
-     */
     @OutputExport(name="providerBillingAccountId", type=String.class, parameters={})
     private Output<String> providerBillingAccountId;
 
-    /**
-     * @return Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
-     */
     public Output<String> getProviderBillingAccountId() {
         return this.providerBillingAccountId;
     }
-    /**
-     * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     */
     @OutputExport(name="reportId", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportId;
 
-    /**
-     * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     */
     public Output</* @Nullable */ String> getReportId() {
         return this.reportId;
     }
-    /**
-     * Connector status
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return Connector status
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * Billing SubscriptionId
-     */
     @OutputExport(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
-    /**
-     * @return Billing SubscriptionId
-     */
     public Output</* @Nullable */ String> getSubscriptionId() {
         return this.subscriptionId;
     }
-    /**
-     * Connector type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Connector type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public CloudConnector(String name, @Nullable CloudConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:costmanagement:CloudConnector", name, args == null ? CloudConnectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -343,14 +140,6 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static CloudConnector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudConnector(name, id, options);
     }

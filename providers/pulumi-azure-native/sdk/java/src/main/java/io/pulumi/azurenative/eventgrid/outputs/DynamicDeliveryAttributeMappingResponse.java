@@ -11,18 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DynamicDeliveryAttributeMappingResponse {
-/**
- * Name of the delivery attribute or header.
- */
     private final @Nullable String name;
-/**
- * JSON path in the event which contains attribute value.
- */
     private final @Nullable String sourceField;
-/**
- * Type of the delivery attribute or header name.
-Expected value is 'Dynamic'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"name","sourceField","type"})
@@ -35,22 +25,12 @@ Expected value is 'Dynamic'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Name of the delivery attribute or header.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * JSON path in the event which contains attribute value.
- */
     public Optional<String> getSourceField() {
         return Optional.ofNullable(this.sourceField);
     }
-/**
- * Type of the delivery attribute or header name.
-Expected value is 'Dynamic'.
- */
     public String getType() {
         return this.type;
     }

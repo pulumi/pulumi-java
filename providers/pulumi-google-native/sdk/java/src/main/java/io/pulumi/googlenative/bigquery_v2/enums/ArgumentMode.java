@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
- */
     @EnumType
     public enum ArgumentMode {
-/**
- * 
- */
         ModeUnspecified("MODE_UNSPECIFIED"),
-/**
- * The argument is input-only.
- */
         In("IN"),
-/**
- * The argument is output-only.
- */
         Out("OUT"),
-/**
- * The argument is both an input and an output.
- */
         Inout("INOUT");
 
         private final String value;

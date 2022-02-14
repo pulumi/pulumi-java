@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedNetworkGroupArgs Empty = new ManagedNetworkGroupArgs();
 
-    /**
-     * Responsibility role under which this Managed Network Group will be created
-     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,Kind>> kind;
 
@@ -31,9 +25,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the Managed Network Group.
-     */
     @InputImport(name="managedNetworkGroupName")
     private final @Nullable Input<String> managedNetworkGroupName;
 
@@ -51,9 +39,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.managedNetworkGroupName == null ? Input.empty() : this.managedNetworkGroupName;
     }
 
-    /**
-     * The name of the Managed Network.
-     */
     @InputImport(name="managedNetworkName", required=true)
     private final Input<String> managedNetworkName;
 
@@ -61,9 +46,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.managedNetworkName;
     }
 
-    /**
-     * The collection of management groups covered by the Managed Network
-     */
     @InputImport(name="managementGroups")
     private final @Nullable Input<List<ResourceIdArgs>> managementGroups;
 
@@ -71,9 +53,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.managementGroups == null ? Input.empty() : this.managementGroups;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -81,9 +60,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * The collection of  subnets covered by the Managed Network
-     */
     @InputImport(name="subnets")
     private final @Nullable Input<List<ResourceIdArgs>> subnets;
 
@@ -91,9 +67,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.subnets == null ? Input.empty() : this.subnets;
     }
 
-    /**
-     * The collection of subscriptions covered by the Managed Network
-     */
     @InputImport(name="subscriptions")
     private final @Nullable Input<List<ResourceIdArgs>> subscriptions;
 
@@ -101,9 +74,6 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
         return this.subscriptions == null ? Input.empty() : this.subscriptions;
     }
 
-    /**
-     * The collection of virtual nets covered by the Managed Network
-     */
     @InputImport(name="virtualNetworks")
     private final @Nullable Input<List<ResourceIdArgs>> virtualNetworks;
 

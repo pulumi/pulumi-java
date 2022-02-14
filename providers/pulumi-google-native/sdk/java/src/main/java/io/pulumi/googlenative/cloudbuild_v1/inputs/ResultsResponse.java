@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Artifacts created by the build pipeline.
- */
 public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResultsResponse Empty = new ResultsResponse();
 
-    /**
-     * Path to the artifact manifest. Only populated when artifacts are uploaded.
-     */
     @InputImport(name="artifactManifest", required=true)
     private final String artifactManifest;
 
@@ -28,9 +22,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
         return this.artifactManifest;
     }
 
-    /**
-     * Time to push all non-container artifacts.
-     */
     @InputImport(name="artifactTiming", required=true)
     private final TimeSpanResponse artifactTiming;
 
@@ -38,9 +29,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
         return this.artifactTiming;
     }
 
-    /**
-     * List of build step digests, in the order corresponding to build step indices.
-     */
     @InputImport(name="buildStepImages", required=true)
     private final List<String> buildStepImages;
 
@@ -48,9 +36,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
         return this.buildStepImages;
     }
 
-    /**
-     * List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
-     */
     @InputImport(name="buildStepOutputs", required=true)
     private final List<String> buildStepOutputs;
 
@@ -58,9 +43,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
         return this.buildStepOutputs;
     }
 
-    /**
-     * Container images that were built as a part of the build.
-     */
     @InputImport(name="images", required=true)
     private final List<BuiltImageResponse> images;
 
@@ -68,9 +50,6 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
         return this.images;
     }
 
-    /**
-     * Number of artifacts uploaded. Only populated when artifacts are uploaded.
-     */
     @InputImport(name="numArtifacts", required=true)
     private final String numArtifacts;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAddressByNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAddressByNameArgs Empty = new GetAddressByNameArgs();
 
-    /**
-     * The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     */
     @InputImport(name="addressName", required=true)
     private final String addressName;
 
@@ -25,9 +19,6 @@ public final class GetAddressByNameArgs extends io.pulumi.resources.InvokeArgs {
         return this.addressName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

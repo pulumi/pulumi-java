@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Category represents catalog item category hierarchy.
- */
 public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse Empty = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse();
 
-    /**
-     * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
-     */
     @InputImport(name="categories", required=true)
     private final List<String> categories;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * EnvFromSource represents the source of a set of ConfigMaps
- */
 public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvFromSourceArgs Empty = new EnvFromSourceArgs();
 
-    /**
-     * The ConfigMap to select from
-     */
     @InputImport(name="configMapRef")
     private final @Nullable Input<ConfigMapEnvSourceArgs> configMapRef;
 
@@ -29,9 +23,6 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.configMapRef == null ? Input.empty() : this.configMapRef;
     }
 
-    /**
-     * An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -39,9 +30,6 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
-    /**
-     * The Secret to select from
-     */
     @InputImport(name="secretRef")
     private final @Nullable Input<SecretEnvSourceArgs> secretRef;
 

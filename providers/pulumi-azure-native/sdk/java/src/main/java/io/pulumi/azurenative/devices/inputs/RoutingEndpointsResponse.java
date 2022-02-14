@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
- */
 public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoutingEndpointsResponse Empty = new RoutingEndpointsResponse();
 
-    /**
-     * The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
-     */
     @InputImport(name="eventHubs")
     private final @Nullable List<RoutingEventHubPropertiesResponse> eventHubs;
 
@@ -31,9 +25,6 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
         return this.eventHubs == null ? List.of() : this.eventHubs;
     }
 
-    /**
-     * The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
-     */
     @InputImport(name="serviceBusQueues")
     private final @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues;
 
@@ -41,9 +32,6 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
         return this.serviceBusQueues == null ? List.of() : this.serviceBusQueues;
     }
 
-    /**
-     * The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
-     */
     @InputImport(name="serviceBusTopics")
     private final @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics;
 
@@ -51,9 +39,6 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
         return this.serviceBusTopics == null ? List.of() : this.serviceBusTopics;
     }
 
-    /**
-     * The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
-     */
     @InputImport(name="storageContainers")
     private final @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
 

@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionFeatureRegistrationResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final SubscriptionFeatureRegistrationResponseProperties Empty = new SubscriptionFeatureRegistrationResponseProperties();
 
-    /**
-     * The feature approval type.
-     */
     @InputImport(name="approvalType", required=true)
     private final String approvalType;
 
@@ -30,9 +24,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.approvalType;
     }
 
-    /**
-     * Authorization Profile
-     */
     @InputImport(name="authorizationProfile")
     private final @Nullable AuthorizationProfileResponse authorizationProfile;
 
@@ -40,9 +31,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.authorizationProfile == null ? Optional.empty() : Optional.ofNullable(this.authorizationProfile);
     }
 
-    /**
-     * The feature description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,9 +38,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The featureDisplayName.
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -60,9 +45,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.displayName;
     }
 
-    /**
-     * The feature documentation link.
-     */
     @InputImport(name="documentationLink", required=true)
     private final String documentationLink;
 
@@ -70,9 +52,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.documentationLink;
     }
 
-    /**
-     * The featureName.
-     */
     @InputImport(name="featureName", required=true)
     private final String featureName;
 
@@ -80,9 +59,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.featureName;
     }
 
-    /**
-     * Key-value pairs for meta data.
-     */
     @InputImport(name="metadata")
     private final @Nullable Map<String,String> metadata;
 
@@ -90,9 +66,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
-    /**
-     * The providerNamespace.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final String providerNamespace;
 
@@ -100,9 +73,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.providerNamespace;
     }
 
-    /**
-     * The feature registration date.
-     */
     @InputImport(name="registrationDate", required=true)
     private final String registrationDate;
 
@@ -110,9 +80,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.registrationDate;
     }
 
-    /**
-     * The feature release date.
-     */
     @InputImport(name="releaseDate", required=true)
     private final String releaseDate;
 
@@ -120,9 +87,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.releaseDate;
     }
 
-    /**
-     * Indicates whether feature should be displayed in Portal.
-     */
     @InputImport(name="shouldFeatureDisplayInPortal")
     private final @Nullable Boolean shouldFeatureDisplayInPortal;
 
@@ -130,9 +94,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.shouldFeatureDisplayInPortal == null ? Optional.empty() : Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
 
-    /**
-     * The state.
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -140,9 +101,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
-    /**
-     * The subscriptionId.
-     */
     @InputImport(name="subscriptionId", required=true)
     private final String subscriptionId;
 
@@ -150,9 +108,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
         return this.subscriptionId;
     }
 
-    /**
-     * The tenantId.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 

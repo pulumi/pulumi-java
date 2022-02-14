@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Response media object for media content card.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs();
 
-    /**
-     * Url where the media is stored.
-     */
     @InputImport(name="contentUrl", required=true)
     private final Input<String> contentUrl;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.contentUrl;
     }
 
-    /**
-     * Optional. Description of media card.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,9 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Optional. Icon to display above media content.
-     */
     @InputImport(name="icon")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
 
@@ -48,9 +36,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.icon == null ? Input.empty() : this.icon;
     }
 
-    /**
-     * Optional. Image to display above media content.
-     */
     @InputImport(name="largeImage")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
 
@@ -58,9 +43,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.largeImage == null ? Input.empty() : this.largeImage;
     }
 
-    /**
-     * Name of media card.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

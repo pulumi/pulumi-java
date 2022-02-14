@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 
-    /**
-     * User-provided description of the source.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,9 +23,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The labels of the source.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -39,9 +30,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,9 +44,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -69,9 +51,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sourceId", required=true)
     private final Input<String> sourceId;
 
@@ -79,9 +58,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceId;
     }
 
-    /**
-     * Vmware type source details.
-     */
     @InputImport(name="vmware")
     private final @Nullable Input<VmwareSourceDetailsArgs> vmware;
 

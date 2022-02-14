@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A unique identifier for a Cloud Repo.
- */
 public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepoIdArgs Empty = new RepoIdArgs();
 
-    /**
-     * A combination of a project ID and a repo name.
-     */
     @InputImport(name="projectRepoId")
     private final @Nullable Input<ProjectRepoIdArgs> projectRepoId;
 
@@ -28,9 +22,6 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectRepoId == null ? Input.empty() : this.projectRepoId;
     }
 
-    /**
-     * A server-assigned, globally unique identifier.
-     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

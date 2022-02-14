@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class B2BPartnerContentResponse {
-/**
- * The list of partner business identities.
- */
     private final @Nullable List<BusinessIdentityResponse> businessIdentities;
 
     @OutputCustomType.Constructor({"businessIdentities"})
@@ -21,9 +18,6 @@ public final class B2BPartnerContentResponse {
         this.businessIdentities = businessIdentities;
     }
 
-/**
- * The list of partner business identities.
- */
     public List<BusinessIdentityResponse> getBusinessIdentities() {
         return this.businessIdentities == null ? List.of() : this.businessIdentities;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLab {
-/**
- * A lab.
-API Version: 2018-09-15.
- *
- * A lab.
- */
     public static CompletableFuture<GetLabResult> invokeAsync(GetLabArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getLab", TypeShape.of(GetLabResult.class), args == null ? GetLabArgs.Empty : args, Utilities.withVersion(options));
     }

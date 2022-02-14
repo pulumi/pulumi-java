@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Model that represents a discrete action.
- */
 public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiscreteActionResponse Empty = new DiscreteActionResponse();
 
-    /**
-     * String that represents a Capability URN.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +21,6 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * List of key value pairs.
-     */
     @InputImport(name="parameters", required=true)
     private final List<KeyValuePairResponse> parameters;
 
@@ -37,9 +28,6 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
         return this.parameters;
     }
 
-    /**
-     * String that represents a selector.
-     */
     @InputImport(name="selectorId", required=true)
     private final String selectorId;
 
@@ -47,10 +35,6 @@ public final class DiscreteActionResponse extends io.pulumi.resources.InvokeArgs
         return this.selectorId;
     }
 
-    /**
-     * Enum that discriminates between action models.
-Expected value is 'discrete'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

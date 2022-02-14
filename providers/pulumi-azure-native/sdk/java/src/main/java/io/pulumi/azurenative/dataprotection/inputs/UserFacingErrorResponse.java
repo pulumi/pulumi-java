@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Error object used by layers that have access to localized content, and propagate that to user
- */
 public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserFacingErrorResponse Empty = new UserFacingErrorResponse();
 
-    /**
-     * Unique code for this error
-     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -31,9 +25,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
-    /**
-     * Additional related Errors
-     */
     @InputImport(name="details")
     private final @Nullable List<UserFacingErrorResponse> details;
 
@@ -41,9 +32,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.details == null ? List.of() : this.details;
     }
 
-    /**
-     * Inner Error
-     */
     @InputImport(name="innerError")
     private final @Nullable InnerErrorResponse innerError;
 
@@ -51,9 +39,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.innerError == null ? Optional.empty() : Optional.ofNullable(this.innerError);
     }
 
-    /**
-     * Whether the operation will be retryable or not
-     */
     @InputImport(name="isRetryable")
     private final @Nullable Boolean isRetryable;
 
@@ -61,9 +46,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.isRetryable == null ? Optional.empty() : Optional.ofNullable(this.isRetryable);
     }
 
-    /**
-     * Whether the operation is due to a user error or service error
-     */
     @InputImport(name="isUserError")
     private final @Nullable Boolean isUserError;
 
@@ -71,9 +53,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.isUserError == null ? Optional.empty() : Optional.ofNullable(this.isUserError);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -81,9 +60,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Any key value pairs that can be injected inside error object
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -91,9 +67,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * RecommendedAction � localized.
-     */
     @InputImport(name="recommendedAction")
     private final @Nullable List<String> recommendedAction;
 
@@ -101,9 +74,6 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
     }
 
-    /**
-     * Target of the error.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 

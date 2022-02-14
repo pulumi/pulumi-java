@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The identity information with the event subscription.
- */
 public final class EventSubscriptionIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventSubscriptionIdentityResponse Empty = new EventSubscriptionIdentityResponse();
 
-    /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -27,9 +21,6 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The user identity associated with the resource.
-     */
     @InputImport(name="userAssignedIdentity")
     private final @Nullable String userAssignedIdentity;
 

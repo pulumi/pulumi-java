@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Volume details using the backup policy
- */
 public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeBackupsResponse Empty = new VolumeBackupsResponse();
 
-    /**
-     * Total count of backups for volume
-     */
     @InputImport(name="backupsCount")
     private final @Nullable Integer backupsCount;
 
@@ -29,9 +23,6 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
         return this.backupsCount == null ? Optional.empty() : Optional.ofNullable(this.backupsCount);
     }
 
-    /**
-     * Policy enabled
-     */
     @InputImport(name="policyEnabled")
     private final @Nullable Boolean policyEnabled;
 
@@ -39,9 +30,6 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
         return this.policyEnabled == null ? Optional.empty() : Optional.ofNullable(this.policyEnabled);
     }
 
-    /**
-     * Volume name
-     */
     @InputImport(name="volumeName")
     private final @Nullable String volumeName;
 

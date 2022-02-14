@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DedicatedHostGroupArgs Empty = new DedicatedHostGroupArgs();
 
-    /**
-     * The name of the dedicated host group.
-     */
     @InputImport(name="hostGroupName")
     private final @Nullable Input<String> hostGroupName;
 
@@ -31,9 +25,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
         return this.hostGroupName == null ? Input.empty() : this.hostGroupName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Number of fault domains that the host group can span.
-     */
     @InputImport(name="platformFaultDomainCount", required=true)
     private final Input<Integer> platformFaultDomainCount;
 
@@ -51,9 +39,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
         return this.platformFaultDomainCount;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,9 +46,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
-     */
     @InputImport(name="supportAutomaticPlacement")
     private final @Nullable Input<Boolean> supportAutomaticPlacement;
 
@@ -71,9 +53,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
         return this.supportAutomaticPlacement == null ? Input.empty() : this.supportAutomaticPlacement;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -81,9 +60,6 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

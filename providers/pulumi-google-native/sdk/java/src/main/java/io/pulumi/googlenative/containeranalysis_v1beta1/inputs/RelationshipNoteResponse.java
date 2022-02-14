@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
- */
 public final class RelationshipNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RelationshipNoteResponse Empty = new RelationshipNoteResponse();
 
-    /**
-     * The type of relationship between the source and target SPDX elements
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

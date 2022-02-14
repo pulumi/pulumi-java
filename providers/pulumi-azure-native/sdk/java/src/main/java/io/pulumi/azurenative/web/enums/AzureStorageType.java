@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of storage.
- */
     @EnumType
     public enum AzureStorageType {
-/**
- * 
- */
         AzureFiles("AzureFiles"),
-/**
- * 
- */
         AzureBlob("AzureBlob");
 
         private final String value;

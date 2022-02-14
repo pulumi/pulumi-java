@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MountPointMapResponse {
-/**
- * Mount point for the share.
- */
     private final String mountPoint;
-/**
- * Mounting type.
- */
     private final String mountType;
-/**
- * ID of the role to which share is mounted.
- */
     private final String roleId;
-/**
- * Role type.
- */
     private final String roleType;
-/**
- * ID of the share mounted to the role VM.
- */
     private final String shareId;
 
     @OutputCustomType.Constructor({"mountPoint","mountType","roleId","roleType","shareId"})
@@ -44,33 +29,18 @@ public final class MountPointMapResponse {
         this.shareId = Objects.requireNonNull(shareId);
     }
 
-/**
- * Mount point for the share.
- */
     public String getMountPoint() {
         return this.mountPoint;
     }
-/**
- * Mounting type.
- */
     public String getMountType() {
         return this.mountType;
     }
-/**
- * ID of the role to which share is mounted.
- */
     public String getRoleId() {
         return this.roleId;
     }
-/**
- * Role type.
- */
     public String getRoleType() {
         return this.roleType;
     }
-/**
- * ID of the share mounted to the role VM.
- */
     public String getShareId() {
         return this.shareId;
     }

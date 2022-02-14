@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertRuleArgs Empty = new AlertRuleArgs();
 
-    /**
-     * The alert rule kind
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,AlertRuleKind>> kind;
 
@@ -29,9 +23,6 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,9 +30,6 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Alert rule ID
-     */
     @InputImport(name="ruleId")
     private final @Nullable Input<String> ruleId;
 
@@ -49,9 +37,6 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleId == null ? Input.empty() : this.ruleId;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

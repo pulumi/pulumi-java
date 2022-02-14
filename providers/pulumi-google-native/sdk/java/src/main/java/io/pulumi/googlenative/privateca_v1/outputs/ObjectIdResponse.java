@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ObjectIdResponse {
-/**
- * The parts of an OID path. The most significant parts of the path come first.
- */
     private final List<Integer> objectIdPath;
 
     @OutputCustomType.Constructor({"objectIdPath"})
@@ -20,9 +17,6 @@ public final class ObjectIdResponse {
         this.objectIdPath = Objects.requireNonNull(objectIdPath);
     }
 
-/**
- * The parts of an OID path. The most significant parts of the path come first.
- */
     public List<Integer> getObjectIdPath() {
         return this.objectIdPath;
     }

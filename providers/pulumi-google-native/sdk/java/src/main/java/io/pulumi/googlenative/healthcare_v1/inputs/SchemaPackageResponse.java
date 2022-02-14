@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A schema package contains a set of schemas and type definitions.
- */
 public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchemaPackageResponse Empty = new SchemaPackageResponse();
 
-    /**
-     * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
-     */
     @InputImport(name="ignoreMinOccurs", required=true)
     private final Boolean ignoreMinOccurs;
 
@@ -29,9 +23,6 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
         return this.ignoreMinOccurs;
     }
 
-    /**
-     * Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
-     */
     @InputImport(name="schemas", required=true)
     private final List<Hl7SchemaConfigResponse> schemas;
 
@@ -39,9 +30,6 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
         return this.schemas;
     }
 
-    /**
-     * Determines how messages that fail to parse are handled.
-     */
     @InputImport(name="schematizedParsingType", required=true)
     private final String schematizedParsingType;
 
@@ -49,9 +37,6 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
         return this.schematizedParsingType;
     }
 
-    /**
-     * Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
-     */
     @InputImport(name="types", required=true)
     private final List<Hl7TypesConfigResponse> types;
 
@@ -59,9 +44,6 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
         return this.types;
     }
 
-    /**
-     * Determines how unexpected segments (segments not matched to the schema) are handled.
-     */
     @InputImport(name="unexpectedSegmentHandling", required=true)
     private final String unexpectedSegmentHandling;
 

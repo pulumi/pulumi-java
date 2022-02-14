@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Flag if need to remove current existing peerings.
- */
     @EnumType
     public enum DeleteExistingPeering {
-/**
- * 
- */
         False("False"),
-/**
- * 
- */
         True("True");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleSetArgs Empty = new RuleSetArgs();
 
-    /**
-     * Name of the CDN profile which is unique within the resource group.
-     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -27,9 +21,6 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the rule set under the profile which is unique globally
-     */
     @InputImport(name="ruleSetName")
     private final @Nullable Input<String> ruleSetName;
 

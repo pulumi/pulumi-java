@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VM-VM placement policy properties
- */
 public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmVmPlacementPolicyPropertiesResponse Empty = new VmVmPlacementPolicyPropertiesResponse();
 
-    /**
-     * placement policy affinity type
-     */
     @InputImport(name="affinityType", required=true)
     private final String affinityType;
 
@@ -28,9 +22,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
         return this.affinityType;
     }
 
-    /**
-     * Display name of the placement policy
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -38,9 +29,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * The provisioning state
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -48,9 +36,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
         return this.provisioningState;
     }
 
-    /**
-     * Whether the placement policy is enabled or disabled
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -58,10 +43,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
-    /**
-     * placement policy type
-Expected value is 'VmVm'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -69,9 +50,6 @@ Expected value is 'VmVm'.
         return this.type;
     }
 
-    /**
-     * Virtual machine members list
-     */
     @InputImport(name="vmMembers", required=true)
     private final List<String> vmMembers;
 

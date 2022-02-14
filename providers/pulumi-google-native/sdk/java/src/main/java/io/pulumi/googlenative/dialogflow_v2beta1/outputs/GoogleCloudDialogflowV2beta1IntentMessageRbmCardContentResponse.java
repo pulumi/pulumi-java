@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse {
-/**
- * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
- */
     private final String description;
-/**
- * Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
-/**
- * Optional. List of suggestions to include in the card.
- */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
-/**
- * Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
- */
     private final String title;
 
     @OutputCustomType.Constructor({"description","media","suggestions","title"})
@@ -41,27 +29,15 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
         this.title = Objects.requireNonNull(title);
     }
 
-/**
- * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse getMedia() {
         return this.media;
     }
-/**
- * Optional. List of suggestions to include in the card.
- */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getSuggestions() {
         return this.suggestions;
     }
-/**
- * Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
- */
     public String getTitle() {
         return this.title;
     }

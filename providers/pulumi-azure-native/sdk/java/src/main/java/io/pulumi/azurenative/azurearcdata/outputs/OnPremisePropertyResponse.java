@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OnPremisePropertyResponse {
-/**
- * A globally unique ID identifying the associated Kubernetes cluster
- */
     private final String id;
-/**
- * Certificate that contains the Kubernetes cluster public key used to verify signing
- */
     private final String publicSigningKey;
-/**
- * Unique thumbprint returned to customer to verify the certificate being uploaded
- */
     private final @Nullable String signingCertificateThumbprint;
 
     @OutputCustomType.Constructor({"id","publicSigningKey","signingCertificateThumbprint"})
@@ -34,21 +25,12 @@ public final class OnPremisePropertyResponse {
         this.signingCertificateThumbprint = signingCertificateThumbprint;
     }
 
-/**
- * A globally unique ID identifying the associated Kubernetes cluster
- */
     public String getId() {
         return this.id;
     }
-/**
- * Certificate that contains the Kubernetes cluster public key used to verify signing
- */
     public String getPublicSigningKey() {
         return this.publicSigningKey;
     }
-/**
- * Unique thumbprint returned to customer to verify the certificate being uploaded
- */
     public Optional<String> getSigningCertificateThumbprint() {
         return Optional.ofNullable(this.signingCertificateThumbprint);
     }

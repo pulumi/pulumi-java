@@ -19,258 +19,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A Media Services account.
-API Version: 2020-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a Media Services account
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mediaService = new AzureNative.Media.MediaService("mediaService", new AzureNative.Media.MediaServiceArgs
-        {
-            AccountName = "contososports",
-            Location = "South Central US",
-            ResourceGroupName = "contoso",
-            StorageAccounts = 
-            {
-                new AzureNative.Media.Inputs.StorageAccountArgs
-                {
-                    Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
-                    Type = "Primary",
-                },
-            },
-            Tags = 
-            {
-                { "key1", "value1" },
-                { "key2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewMediaService(ctx, "mediaService", &media.MediaServiceArgs{
-			AccountName:       pulumi.String("contososports"),
-			Location:          pulumi.String("South Central US"),
-			ResourceGroupName: pulumi.String("contoso"),
-			StorageAccounts: []media.StorageAccountArgs{
-				&media.StorageAccountArgs{
-					Id:   pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore"),
-					Type: pulumi.String("Primary"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-				"key2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const mediaService = new azure_native.media.MediaService("mediaService", {
-    accountName: "contososports",
-    location: "South Central US",
-    resourceGroupName: "contoso",
-    storageAccounts: [{
-        id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
-        type: "Primary",
-    }],
-    tags: {
-        key1: "value1",
-        key2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-media_service = azure_native.media.MediaService("mediaService",
-    account_name="contososports",
-    location="South Central US",
-    resource_group_name="contoso",
-    storage_accounts=[azure_native.media.StorageAccountArgs(
-        id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore",
-        type="Primary",
-    )],
-    tags={
-        "key1": "value1",
-        "key2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:media:MediaService contososports /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contososports 
-```
-
- */
 @ResourceType(type="azure-native:media:MediaService")
 public class MediaService extends io.pulumi.resources.CustomResource {
-    /**
-     * The account encryption properties.
-     */
     @OutputExport(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ AccountEncryptionResponse> encryption;
 
-    /**
-     * @return The account encryption properties.
-     */
     public Output</* @Nullable */ AccountEncryptionResponse> getEncryption() {
         return this.encryption;
     }
-    /**
-     * The Managed Identity for the Media Services account.
-     */
     @OutputExport(name="identity", type=MediaServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ MediaServiceIdentityResponse> identity;
 
-    /**
-     * @return The Managed Identity for the Media Services account.
-     */
     public Output</* @Nullable */ MediaServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The Media Services account ID.
-     */
     @OutputExport(name="mediaServiceId", type=String.class, parameters={})
     private Output<String> mediaServiceId;
 
-    /**
-     * @return The Media Services account ID.
-     */
     public Output<String> getMediaServiceId() {
         return this.mediaServiceId;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The storage accounts for this resource.
-     */
     @OutputExport(name="storageAccounts", type=List.class, parameters={StorageAccountResponse.class})
     private Output</* @Nullable */ List<StorageAccountResponse>> storageAccounts;
 
-    /**
-     * @return The storage accounts for this resource.
-     */
     public Output</* @Nullable */ List<StorageAccountResponse>> getStorageAccounts() {
         return this.storageAccounts;
     }
-    /**
-     * 
-     */
     @OutputExport(name="storageAuthentication", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAuthentication;
 
     public Output</* @Nullable */ String> getStorageAuthentication() {
         return this.storageAuthentication;
     }
-    /**
-     * The system metadata relating to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata relating to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public MediaService(String name, MediaServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:MediaService", name, args == null ? MediaServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -295,14 +106,6 @@ public class MediaService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static MediaService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MediaService(name, id, options);
     }

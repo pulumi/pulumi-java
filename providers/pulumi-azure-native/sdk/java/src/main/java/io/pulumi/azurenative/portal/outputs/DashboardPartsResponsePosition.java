@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DashboardPartsResponsePosition {
-/**
- * The dashboard's part column span.
- */
     private final Integer colSpan;
-/**
- * The dashboard part's metadata.
- */
     private final @Nullable Map<String,Object> metadata;
-/**
- * The dashboard's part row span.
- */
     private final Integer rowSpan;
-/**
- * The dashboard's part x coordinate.
- */
     private final Integer x;
-/**
- * The dashboard's part y coordinate.
- */
     private final Integer y;
 
     @OutputCustomType.Constructor({"colSpan","metadata","rowSpan","x","y"})
@@ -48,33 +33,18 @@ public final class DashboardPartsResponsePosition {
         this.y = Objects.requireNonNull(y);
     }
 
-/**
- * The dashboard's part column span.
- */
     public Integer getColSpan() {
         return this.colSpan;
     }
-/**
- * The dashboard part's metadata.
- */
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
-/**
- * The dashboard's part row span.
- */
     public Integer getRowSpan() {
         return this.rowSpan;
     }
-/**
- * The dashboard's part x coordinate.
- */
     public Integer getX() {
         return this.x;
     }
-/**
- * The dashboard's part y coordinate.
- */
     public Integer getY() {
         return this.y;
     }

@@ -22,655 +22,207 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
-API Version: 2016-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates the specified Data Lake Analytics account. This supplies the user with computation services for Data Lake Analytics workloads.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var account = new AzureNative.DataLakeAnalytics.Account("account", new AzureNative.DataLakeAnalytics.AccountArgs
-        {
-            AccountName = "contosoadla",
-            ComputePolicies = 
-            {
-                new AzureNative.DataLakeAnalytics.Inputs.CreateComputePolicyWithAccountParametersArgs
-                {
-                    MaxDegreeOfParallelismPerJob = 1,
-                    MinPriorityPerJob = 1,
-                    Name = "test_policy",
-                    ObjectId = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
-                    ObjectType = "User",
-                },
-            },
-            DataLakeStoreAccounts = 
-            {
-                new AzureNative.DataLakeAnalytics.Inputs.AddDataLakeStoreWithAccountParametersArgs
-                {
-                    Name = "test_adls",
-                    Suffix = "test_suffix",
-                },
-            },
-            DefaultDataLakeStoreAccount = "test_adls",
-            FirewallAllowAzureIps = "Enabled",
-            FirewallRules = 
-            {
-                new AzureNative.DataLakeAnalytics.Inputs.CreateFirewallRuleWithAccountParametersArgs
-                {
-                    EndIpAddress = "2.2.2.2",
-                    Name = "test_rule",
-                    StartIpAddress = "1.1.1.1",
-                },
-            },
-            FirewallState = "Enabled",
-            Location = "eastus2",
-            MaxDegreeOfParallelism = 30,
-            MaxDegreeOfParallelismPerJob = 1,
-            MaxJobCount = 3,
-            MinPriorityPerJob = 1,
-            NewTier = "Consumption",
-            QueryStoreRetention = 30,
-            ResourceGroupName = "contosorg",
-            StorageAccounts = 
-            {
-                new AzureNative.DataLakeAnalytics.Inputs.AddStorageAccountWithAccountParametersArgs
-                {
-                    AccessKey = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
-                    Name = "test_storage",
-                    Suffix = "test_suffix",
-                },
-            },
-            Tags = 
-            {
-                { "test_key", "test_value" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datalakeanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakeanalytics"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datalakeanalytics.NewAccount(ctx, "account", &datalakeanalytics.AccountArgs{
-			AccountName: pulumi.String("contosoadla"),
-			ComputePolicies: []datalakeanalytics.CreateComputePolicyWithAccountParametersArgs{
-				&datalakeanalytics.CreateComputePolicyWithAccountParametersArgs{
-					MaxDegreeOfParallelismPerJob: pulumi.Int(1),
-					MinPriorityPerJob:            pulumi.Int(1),
-					Name:                         pulumi.String("test_policy"),
-					ObjectId:                     pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab345"),
-					ObjectType:                   pulumi.String("User"),
-				},
-			},
-			DataLakeStoreAccounts: datalakeanalytics.AddDataLakeStoreWithAccountParametersArray{
-				&datalakeanalytics.AddDataLakeStoreWithAccountParametersArgs{
-					Name:   pulumi.String("test_adls"),
-					Suffix: pulumi.String("test_suffix"),
-				},
-			},
-			DefaultDataLakeStoreAccount: pulumi.String("test_adls"),
-			FirewallAllowAzureIps:       "Enabled",
-			FirewallRules: []datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs{
-				&datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs{
-					EndIpAddress:   pulumi.String("2.2.2.2"),
-					Name:           pulumi.String("test_rule"),
-					StartIpAddress: pulumi.String("1.1.1.1"),
-				},
-			},
-			FirewallState:                "Enabled",
-			Location:                     pulumi.String("eastus2"),
-			MaxDegreeOfParallelism:       pulumi.Int(30),
-			MaxDegreeOfParallelismPerJob: pulumi.Int(1),
-			MaxJobCount:                  pulumi.Int(3),
-			MinPriorityPerJob:            pulumi.Int(1),
-			NewTier:                      "Consumption",
-			QueryStoreRetention:          pulumi.Int(30),
-			ResourceGroupName:            pulumi.String("contosorg"),
-			StorageAccounts: []datalakeanalytics.AddStorageAccountWithAccountParametersArgs{
-				&datalakeanalytics.AddStorageAccountWithAccountParametersArgs{
-					AccessKey: pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab346"),
-					Name:      pulumi.String("test_storage"),
-					Suffix:    pulumi.String("test_suffix"),
-				},
-			},
-			Tags: pulumi.StringMap{
-				"test_key": pulumi.String("test_value"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const account = new azure_native.datalakeanalytics.Account("account", {
-    accountName: "contosoadla",
-    computePolicies: [{
-        maxDegreeOfParallelismPerJob: 1,
-        minPriorityPerJob: 1,
-        name: "test_policy",
-        objectId: "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
-        objectType: "User",
-    }],
-    dataLakeStoreAccounts: [{
-        name: "test_adls",
-        suffix: "test_suffix",
-    }],
-    defaultDataLakeStoreAccount: "test_adls",
-    firewallAllowAzureIps: "Enabled",
-    firewallRules: [{
-        endIpAddress: "2.2.2.2",
-        name: "test_rule",
-        startIpAddress: "1.1.1.1",
-    }],
-    firewallState: "Enabled",
-    location: "eastus2",
-    maxDegreeOfParallelism: 30,
-    maxDegreeOfParallelismPerJob: 1,
-    maxJobCount: 3,
-    minPriorityPerJob: 1,
-    newTier: "Consumption",
-    queryStoreRetention: 30,
-    resourceGroupName: "contosorg",
-    storageAccounts: [{
-        accessKey: "34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
-        name: "test_storage",
-        suffix: "test_suffix",
-    }],
-    tags: {
-        test_key: "test_value",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-account = azure_native.datalakeanalytics.Account("account",
-    account_name="contosoadla",
-    compute_policies=[azure_native.datalakeanalytics.CreateComputePolicyWithAccountParametersArgs(
-        max_degree_of_parallelism_per_job=1,
-        min_priority_per_job=1,
-        name="test_policy",
-        object_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
-        object_type="User",
-    )],
-    data_lake_store_accounts=[azure_native.datalakeanalytics.AddDataLakeStoreWithAccountParametersArgs(
-        name="test_adls",
-        suffix="test_suffix",
-    )],
-    default_data_lake_store_account="test_adls",
-    firewall_allow_azure_ips="Enabled",
-    firewall_rules=[azure_native.datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs(
-        end_ip_address="2.2.2.2",
-        name="test_rule",
-        start_ip_address="1.1.1.1",
-    )],
-    firewall_state="Enabled",
-    location="eastus2",
-    max_degree_of_parallelism=30,
-    max_degree_of_parallelism_per_job=1,
-    max_job_count=3,
-    min_priority_per_job=1,
-    new_tier="Consumption",
-    query_store_retention=30,
-    resource_group_name="contosorg",
-    storage_accounts=[azure_native.datalakeanalytics.AddStorageAccountWithAccountParametersArgs(
-        access_key="34adfa4f-cedf-4dc0-ba29-b6d1a69ab346",
-        name="test_storage",
-        suffix="test_suffix",
-    )],
-    tags={
-        "test_key": "test_value",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datalakeanalytics:Account test_account /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rgaba12041/providers/Microsoft.DataLakeAnalytics/accounts/testaba15818 
-```
-
- */
 @ResourceType(type="azure-native:datalakeanalytics:Account")
 public class Account extends io.pulumi.resources.CustomResource {
-    /**
-     * The unique identifier associated with this Data Lake Analytics account.
-     */
     @OutputExport(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    /**
-     * @return The unique identifier associated with this Data Lake Analytics account.
-     */
     public Output<String> getAccountId() {
         return this.accountId;
     }
-    /**
-     * The list of compute policies associated with this account.
-     */
     @OutputExport(name="computePolicies", type=List.class, parameters={ComputePolicyResponse.class})
     private Output<List<ComputePolicyResponse>> computePolicies;
 
-    /**
-     * @return The list of compute policies associated with this account.
-     */
     public Output<List<ComputePolicyResponse>> getComputePolicies() {
         return this.computePolicies;
     }
-    /**
-     * The account creation time.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    /**
-     * @return The account creation time.
-     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * The commitment tier in use for the current month.
-     */
     @OutputExport(name="currentTier", type=String.class, parameters={})
     private Output<String> currentTier;
 
-    /**
-     * @return The commitment tier in use for the current month.
-     */
     public Output<String> getCurrentTier() {
         return this.currentTier;
     }
-    /**
-     * The list of Data Lake Store accounts associated with this account.
-     */
     @OutputExport(name="dataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
     private Output<List<DataLakeStoreAccountInformationResponse>> dataLakeStoreAccounts;
 
-    /**
-     * @return The list of Data Lake Store accounts associated with this account.
-     */
     public Output<List<DataLakeStoreAccountInformationResponse>> getDataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
-    /**
-     * The current state of the DebugDataAccessLevel for this account.
-     */
     @OutputExport(name="debugDataAccessLevel", type=String.class, parameters={})
     private Output<String> debugDataAccessLevel;
 
-    /**
-     * @return The current state of the DebugDataAccessLevel for this account.
-     */
     public Output<String> getDebugDataAccessLevel() {
         return this.debugDataAccessLevel;
     }
-    /**
-     * The default Data Lake Store account associated with this account.
-     */
     @OutputExport(name="defaultDataLakeStoreAccount", type=String.class, parameters={})
     private Output<String> defaultDataLakeStoreAccount;
 
-    /**
-     * @return The default Data Lake Store account associated with this account.
-     */
     public Output<String> getDefaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
-    /**
-     * The full CName endpoint for this account.
-     */
     @OutputExport(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
-    /**
-     * @return The full CName endpoint for this account.
-     */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
-    /**
-     * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     */
     @OutputExport(name="firewallAllowAzureIps", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallAllowAzureIps;
 
-    /**
-     * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     */
     public Output</* @Nullable */ String> getFirewallAllowAzureIps() {
         return this.firewallAllowAzureIps;
     }
-    /**
-     * The list of firewall rules associated with this account.
-     */
     @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output<List<FirewallRuleResponse>> firewallRules;
 
-    /**
-     * @return The list of firewall rules associated with this account.
-     */
     public Output<List<FirewallRuleResponse>> getFirewallRules() {
         return this.firewallRules;
     }
-    /**
-     * The current state of the IP address firewall for this account.
-     */
     @OutputExport(name="firewallState", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallState;
 
-    /**
-     * @return The current state of the IP address firewall for this account.
-     */
     public Output</* @Nullable */ String> getFirewallState() {
         return this.firewallState;
     }
-    /**
-     * The list of hiveMetastores associated with this account.
-     */
     @OutputExport(name="hiveMetastores", type=List.class, parameters={HiveMetastoreResponse.class})
     private Output<List<HiveMetastoreResponse>> hiveMetastores;
 
-    /**
-     * @return The list of hiveMetastores associated with this account.
-     */
     public Output<List<HiveMetastoreResponse>> getHiveMetastores() {
         return this.hiveMetastores;
     }
-    /**
-     * The account last modified time.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    /**
-     * @return The account last modified time.
-     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The maximum supported active jobs under the account at the same time.
-     */
     @OutputExport(name="maxActiveJobCountPerUser", type=Integer.class, parameters={})
     private Output<Integer> maxActiveJobCountPerUser;
 
-    /**
-     * @return The maximum supported active jobs under the account at the same time.
-     */
     public Output<Integer> getMaxActiveJobCountPerUser() {
         return this.maxActiveJobCountPerUser;
     }
-    /**
-     * The maximum supported degree of parallelism for this account.
-     */
     @OutputExport(name="maxDegreeOfParallelism", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDegreeOfParallelism;
 
-    /**
-     * @return The maximum supported degree of parallelism for this account.
-     */
     public Output</* @Nullable */ Integer> getMaxDegreeOfParallelism() {
         return this.maxDegreeOfParallelism;
     }
-    /**
-     * The maximum supported degree of parallelism per job for this account.
-     */
     @OutputExport(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDegreeOfParallelismPerJob;
 
-    /**
-     * @return The maximum supported degree of parallelism per job for this account.
-     */
     public Output</* @Nullable */ Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
-    /**
-     * The maximum supported jobs running under the account at the same time.
-     */
     @OutputExport(name="maxJobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxJobCount;
 
-    /**
-     * @return The maximum supported jobs running under the account at the same time.
-     */
     public Output</* @Nullable */ Integer> getMaxJobCount() {
         return this.maxJobCount;
     }
-    /**
-     * The maximum supported active jobs under the account at the same time.
-     */
     @OutputExport(name="maxJobRunningTimeInMin", type=Integer.class, parameters={})
     private Output<Integer> maxJobRunningTimeInMin;
 
-    /**
-     * @return The maximum supported active jobs under the account at the same time.
-     */
     public Output<Integer> getMaxJobRunningTimeInMin() {
         return this.maxJobRunningTimeInMin;
     }
-    /**
-     * The maximum supported jobs queued under the account at the same time.
-     */
     @OutputExport(name="maxQueuedJobCountPerUser", type=Integer.class, parameters={})
     private Output<Integer> maxQueuedJobCountPerUser;
 
-    /**
-     * @return The maximum supported jobs queued under the account at the same time.
-     */
     public Output<Integer> getMaxQueuedJobCountPerUser() {
         return this.maxQueuedJobCountPerUser;
     }
-    /**
-     * The minimum supported priority per job for this account.
-     */
     @OutputExport(name="minPriorityPerJob", type=Integer.class, parameters={})
     private Output<Integer> minPriorityPerJob;
 
-    /**
-     * @return The minimum supported priority per job for this account.
-     */
     public Output<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The commitment tier for the next month.
-     */
     @OutputExport(name="newTier", type=String.class, parameters={})
     private Output</* @Nullable */ String> newTier;
 
-    /**
-     * @return The commitment tier for the next month.
-     */
     public Output</* @Nullable */ String> getNewTier() {
         return this.newTier;
     }
-    /**
-     * The provisioning status of the Data Lake Analytics account.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning status of the Data Lake Analytics account.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The list of Data Lake Store accounts associated with this account.
-     */
     @OutputExport(name="publicDataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
     private Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> publicDataLakeStoreAccounts;
 
-    /**
-     * @return The list of Data Lake Store accounts associated with this account.
-     */
     public Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> getPublicDataLakeStoreAccounts() {
         return this.publicDataLakeStoreAccounts;
     }
-    /**
-     * The number of days that job metadata is retained.
-     */
     @OutputExport(name="queryStoreRetention", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queryStoreRetention;
 
-    /**
-     * @return The number of days that job metadata is retained.
-     */
     public Output</* @Nullable */ Integer> getQueryStoreRetention() {
         return this.queryStoreRetention;
     }
-    /**
-     * The state of the Data Lake Analytics account.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return The state of the Data Lake Analytics account.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * The list of Azure Blob Storage accounts associated with this account.
-     */
     @OutputExport(name="storageAccounts", type=List.class, parameters={StorageAccountInformationResponse.class})
     private Output<List<StorageAccountInformationResponse>> storageAccounts;
 
-    /**
-     * @return The list of Azure Blob Storage accounts associated with this account.
-     */
     public Output<List<StorageAccountInformationResponse>> getStorageAccounts() {
         return this.storageAccounts;
     }
-    /**
-     * The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
-     */
     @OutputExport(name="systemMaxDegreeOfParallelism", type=Integer.class, parameters={})
     private Output<Integer> systemMaxDegreeOfParallelism;
 
-    /**
-     * @return The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
-     */
     public Output<Integer> getSystemMaxDegreeOfParallelism() {
         return this.systemMaxDegreeOfParallelism;
     }
-    /**
-     * The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
-     */
     @OutputExport(name="systemMaxJobCount", type=Integer.class, parameters={})
     private Output<Integer> systemMaxJobCount;
 
-    /**
-     * @return The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
-     */
     public Output<Integer> getSystemMaxJobCount() {
         return this.systemMaxJobCount;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The list of virtualNetwork rules associated with this account.
-     */
     @OutputExport(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
-    /**
-     * @return The list of virtualNetwork rules associated with this account.
-     */
     public Output<List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datalakeanalytics:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -691,14 +243,6 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

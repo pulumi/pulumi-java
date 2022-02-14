@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
-    /**
-     * The name of the Kusto cluster.
-     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -38,9 +32,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
-    /**
-     * A boolean value that indicates if the cluster's disks are encrypted.
-     */
     @InputImport(name="enableDiskEncryption")
     private final @Nullable Input<Boolean> enableDiskEncryption;
 
@@ -48,9 +39,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDiskEncryption == null ? Input.empty() : this.enableDiskEncryption;
     }
 
-    /**
-     * A boolean value that indicates if double encryption is enabled.
-     */
     @InputImport(name="enableDoubleEncryption")
     private final @Nullable Input<Boolean> enableDoubleEncryption;
 
@@ -58,9 +46,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableDoubleEncryption == null ? Input.empty() : this.enableDoubleEncryption;
     }
 
-    /**
-     * A boolean value that indicates if the purge operations are enabled.
-     */
     @InputImport(name="enablePurge")
     private final @Nullable Input<Boolean> enablePurge;
 
@@ -68,9 +53,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enablePurge == null ? Input.empty() : this.enablePurge;
     }
 
-    /**
-     * A boolean value that indicates if the streaming ingest is enabled.
-     */
     @InputImport(name="enableStreamingIngest")
     private final @Nullable Input<Boolean> enableStreamingIngest;
 
@@ -78,9 +60,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableStreamingIngest == null ? Input.empty() : this.enableStreamingIngest;
     }
 
-    /**
-     * The engine type
-     */
     @InputImport(name="engineType")
     private final @Nullable Input<Either<String,EngineType>> engineType;
 
@@ -88,9 +67,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.engineType == null ? Input.empty() : this.engineType;
     }
 
-    /**
-     * The identity of the cluster, if configured.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -98,9 +74,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * KeyVault properties for the cluster encryption.
-     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
@@ -108,9 +81,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -118,9 +88,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Optimized auto scale definition.
-     */
     @InputImport(name="optimizedAutoscale")
     private final @Nullable Input<OptimizedAutoscaleArgs> optimizedAutoscale;
 
@@ -128,9 +95,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.optimizedAutoscale == null ? Input.empty() : this.optimizedAutoscale;
     }
 
-    /**
-     * The name of the resource group containing the Kusto cluster.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -138,9 +102,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The SKU of the cluster.
-     */
     @InputImport(name="sku", required=true)
     private final Input<AzureSkuArgs> sku;
 
@@ -148,9 +109,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -158,9 +116,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The cluster's external tenants.
-     */
     @InputImport(name="trustedExternalTenants")
     private final @Nullable Input<List<TrustedExternalTenantArgs>> trustedExternalTenants;
 
@@ -168,9 +123,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.trustedExternalTenants == null ? Input.empty() : this.trustedExternalTenants;
     }
 
-    /**
-     * Virtual network definition.
-     */
     @InputImport(name="virtualNetworkConfiguration")
     private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
@@ -178,9 +130,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
     }
 
-    /**
-     * The availability zones of the cluster.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

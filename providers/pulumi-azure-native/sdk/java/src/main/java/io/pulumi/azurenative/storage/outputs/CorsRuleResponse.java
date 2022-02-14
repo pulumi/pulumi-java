@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CorsRuleResponse {
-/**
- * Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
- */
     private final List<String> allowedHeaders;
-/**
- * Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
- */
     private final List<String> allowedMethods;
-/**
- * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
- */
     private final List<String> allowedOrigins;
-/**
- * Required if CorsRule element is present. A list of response headers to expose to CORS clients.
- */
     private final List<String> exposedHeaders;
-/**
- * Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
- */
     private final Integer maxAgeInSeconds;
 
     @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposedHeaders","maxAgeInSeconds"})
@@ -46,33 +31,18 @@ public final class CorsRuleResponse {
         this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
     }
 
-/**
- * Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
- */
     public List<String> getAllowedHeaders() {
         return this.allowedHeaders;
     }
-/**
- * Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
- */
     public List<String> getAllowedMethods() {
         return this.allowedMethods;
     }
-/**
- * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
- */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins;
     }
-/**
- * Required if CorsRule element is present. A list of response headers to expose to CORS clients.
- */
     public List<String> getExposedHeaders() {
         return this.exposedHeaders;
     }
-/**
- * Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
- */
     public Integer getMaxAgeInSeconds() {
         return this.maxAgeInSeconds;
     }

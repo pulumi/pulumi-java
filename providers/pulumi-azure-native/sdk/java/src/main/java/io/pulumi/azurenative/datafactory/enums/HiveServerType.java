@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of Hive server.
- */
     @EnumType
     public enum HiveServerType {
-/**
- * 
- */
         HiveServer1("HiveServer1"),
-/**
- * 
- */
         HiveServer2("HiveServer2"),
-/**
- * 
- */
         HiveThriftServer("HiveThriftServer");
 
         private final String value;

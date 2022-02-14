@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackupInfoResponse {
-/**
- * Name of the backup.
- */
     private final String backup;
-/**
- * The time the CreateBackup request was received.
- */
     private final String createTime;
-/**
- * Name of the database the backup was created from.
- */
     private final String sourceDatabase;
-/**
- * The backup contains an externally consistent copy of `source_database` at the timestamp specified by `version_time`. If the CreateBackup request did not specify `version_time`, the `version_time` of the backup is equivalent to the `create_time`.
- */
     private final String versionTime;
 
     @OutputCustomType.Constructor({"backup","createTime","sourceDatabase","versionTime"})
@@ -38,27 +26,15 @@ public final class BackupInfoResponse {
         this.versionTime = Objects.requireNonNull(versionTime);
     }
 
-/**
- * Name of the backup.
- */
     public String getBackup() {
         return this.backup;
     }
-/**
- * The time the CreateBackup request was received.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Name of the database the backup was created from.
- */
     public String getSourceDatabase() {
         return this.sourceDatabase;
     }
-/**
- * The backup contains an externally consistent copy of `source_database` at the timestamp specified by `version_time`. If the CreateBackup request did not specify `version_time`, the `version_time` of the backup is equivalent to the `create_time`.
- */
     public String getVersionTime() {
         return this.versionTime;
     }

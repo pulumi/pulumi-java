@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDigitalTwin {
-/**
- * The description of the DigitalTwins service.
-API Version: 2020-12-01.
- *
- * The description of the DigitalTwins service.
- */
     public static CompletableFuture<GetDigitalTwinResult> invokeAsync(GetDigitalTwinArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getDigitalTwin", TypeShape.of(GetDigitalTwinResult.class), args == null ? GetDigitalTwinArgs.Empty : args, Utilities.withVersion(options));
     }

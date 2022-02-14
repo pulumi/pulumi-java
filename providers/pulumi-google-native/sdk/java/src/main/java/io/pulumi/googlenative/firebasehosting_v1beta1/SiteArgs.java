@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteArgs Empty = new SiteArgs();
 
-    /**
-     * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
-     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -28,9 +22,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
-    /**
-     * Optional. User-specified labels for the Hosting site.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -38,9 +29,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -48,9 +36,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="siteId", required=true)
     private final Input<String> siteId;
 

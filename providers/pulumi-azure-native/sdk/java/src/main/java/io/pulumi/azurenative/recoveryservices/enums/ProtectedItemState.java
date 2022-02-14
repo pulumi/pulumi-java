@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Protection state of the backup engine
- */
     @EnumType
     public enum ProtectedItemState {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         IRPending("IRPending"),
-/**
- * 
- */
         Protected("Protected"),
-/**
- * 
- */
         ProtectionError("ProtectionError"),
-/**
- * 
- */
         ProtectionStopped("ProtectionStopped"),
-/**
- * 
- */
         ProtectionPaused("ProtectionPaused");
 
         private final String value;

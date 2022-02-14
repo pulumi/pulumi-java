@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The managed identity for the DigitalTwinsInstance.
- */
 public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DigitalTwinsIdentityArgs Empty = new DigitalTwinsIdentityArgs();
 
-    /**
-     * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,DigitalTwinsIdentityType>> type;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The IP addresses of callers that are allowed to use the key.
- */
 public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final V2ServerKeyRestrictionsArgs Empty = new V2ServerKeyRestrictionsArgs();
 
-    /**
-     * A list of the caller IP addresses that are allowed to make API calls with this key.
-     */
     @InputImport(name="allowedIps")
     private final @Nullable Input<List<String>> allowedIps;
 

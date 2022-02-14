@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Creator resource properties
- */
 public final class CreatorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CreatorPropertiesResponse Empty = new CreatorPropertiesResponse();
 
-    /**
-     * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 

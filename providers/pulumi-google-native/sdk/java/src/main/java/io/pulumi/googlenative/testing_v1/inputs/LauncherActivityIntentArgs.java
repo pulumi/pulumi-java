@@ -6,9 +6,6 @@ package io.pulumi.googlenative.testing_v1.inputs;
 import java.util.Objects;
 
 
-/**
- * Specifies an intent that starts the main launcher activity.
- */
 public final class LauncherActivityIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LauncherActivityIntentArgs Empty = new LauncherActivityIntentArgs();

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterIdentityResponseUserAssignedIdentities Empty = new ClusterIdentityResponseUserAssignedIdentities();
 
-    /**
-     * The client id of user assigned identity.
-     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -27,9 +21,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
         return this.clientId;
     }
 
-    /**
-     * The principal id of user assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -37,9 +28,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
         return this.principalId;
     }
 
-    /**
-     * The tenant id of user assigned identity.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

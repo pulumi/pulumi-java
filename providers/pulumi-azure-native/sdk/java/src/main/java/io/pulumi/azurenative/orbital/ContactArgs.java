@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactArgs Empty = new ContactArgs();
 
-    /**
-     * Contact Name
-     */
     @InputImport(name="contactName")
     private final @Nullable Input<String> contactName;
 
@@ -28,9 +22,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactName == null ? Input.empty() : this.contactName;
     }
 
-    /**
-     * The reference to the contact profile resource.
-     */
     @InputImport(name="contactProfile", required=true)
     private final Input<ResourceReferenceArgs> contactProfile;
 
@@ -38,9 +29,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactProfile;
     }
 
-    /**
-     * Azure Ground Station name.
-     */
     @InputImport(name="groundStationName", required=true)
     private final Input<String> groundStationName;
 
@@ -48,9 +36,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.groundStationName;
     }
 
-    /**
-     * Reservation end time of a contact.
-     */
     @InputImport(name="reservationEndTime", required=true)
     private final Input<String> reservationEndTime;
 
@@ -58,9 +43,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationEndTime;
     }
 
-    /**
-     * Reservation start time of a contact.
-     */
     @InputImport(name="reservationStartTime", required=true)
     private final Input<String> reservationStartTime;
 
@@ -68,9 +50,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationStartTime;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -78,9 +57,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Spacecraft ID
-     */
     @InputImport(name="spacecraftName", required=true)
     private final Input<String> spacecraftName;
 

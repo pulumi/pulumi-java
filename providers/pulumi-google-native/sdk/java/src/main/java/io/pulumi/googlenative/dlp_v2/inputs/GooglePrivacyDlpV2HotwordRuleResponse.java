@@ -10,16 +10,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexResponse;
 import java.util.Objects;
 
 
-/**
- * The rule that adjusts the likelihood of findings within a certain proximity of hotwords.
- */
 public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2HotwordRuleResponse Empty = new GooglePrivacyDlpV2HotwordRuleResponse();
 
-    /**
-     * Regular expression pattern defining what qualifies as a hotword.
-     */
     @InputImport(name="hotwordRegex", required=true)
     private final GooglePrivacyDlpV2RegexResponse hotwordRegex;
 
@@ -27,9 +21,6 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
         return this.hotwordRegex;
     }
 
-    /**
-     * Likelihood adjustment to apply to all matching findings.
-     */
     @InputImport(name="likelihoodAdjustment", required=true)
     private final GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
 
@@ -37,9 +28,6 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
         return this.likelihoodAdjustment;
     }
 
-    /**
-     * Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "\(\d{3}\) \d{3}-\d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "\(xxx\)", where "xxx" is the area code in question.
-     */
     @InputImport(name="proximity", required=true)
     private final GooglePrivacyDlpV2ProximityResponse proximity;
 

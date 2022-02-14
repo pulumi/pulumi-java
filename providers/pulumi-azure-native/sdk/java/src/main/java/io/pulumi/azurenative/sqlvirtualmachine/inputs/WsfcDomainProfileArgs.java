@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Active Directory account details to operate Windows Server Failover Cluster.
- */
 public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WsfcDomainProfileArgs Empty = new WsfcDomainProfileArgs();
 
-    /**
-     * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
-     */
     @InputImport(name="clusterBootstrapAccount")
     private final @Nullable Input<String> clusterBootstrapAccount;
 
@@ -27,9 +21,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.clusterBootstrapAccount == null ? Input.empty() : this.clusterBootstrapAccount;
     }
 
-    /**
-     * Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
-     */
     @InputImport(name="clusterOperatorAccount")
     private final @Nullable Input<String> clusterOperatorAccount;
 
@@ -37,9 +28,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.clusterOperatorAccount == null ? Input.empty() : this.clusterOperatorAccount;
     }
 
-    /**
-     * Fully qualified name of the domain.
-     */
     @InputImport(name="domainFqdn")
     private final @Nullable Input<String> domainFqdn;
 
@@ -47,9 +35,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.domainFqdn == null ? Input.empty() : this.domainFqdn;
     }
 
-    /**
-     * Optional path for fileshare witness.
-     */
     @InputImport(name="fileShareWitnessPath")
     private final @Nullable Input<String> fileShareWitnessPath;
 
@@ -57,9 +42,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.fileShareWitnessPath == null ? Input.empty() : this.fileShareWitnessPath;
     }
 
-    /**
-     * Organizational Unit path in which the nodes and cluster will be present.
-     */
     @InputImport(name="ouPath")
     private final @Nullable Input<String> ouPath;
 
@@ -67,9 +49,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.ouPath == null ? Input.empty() : this.ouPath;
     }
 
-    /**
-     * Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
-     */
     @InputImport(name="sqlServiceAccount")
     private final @Nullable Input<String> sqlServiceAccount;
 
@@ -77,9 +56,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.sqlServiceAccount == null ? Input.empty() : this.sqlServiceAccount;
     }
 
-    /**
-     * Primary key of the witness storage account.
-     */
     @InputImport(name="storageAccountPrimaryKey")
     private final @Nullable Input<String> storageAccountPrimaryKey;
 
@@ -87,9 +63,6 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
         return this.storageAccountPrimaryKey == null ? Input.empty() : this.storageAccountPrimaryKey;
     }
 
-    /**
-     * Fully qualified ARM resource id of the witness storage account.
-     */
     @InputImport(name="storageAccountUrl")
     private final @Nullable Input<String> storageAccountUrl;
 

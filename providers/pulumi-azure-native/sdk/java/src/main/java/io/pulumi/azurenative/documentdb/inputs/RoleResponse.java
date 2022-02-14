@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The set of roles permitted through this Role Definition.
- */
 public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoleResponse Empty = new RoleResponse();
 
-    /**
-     * The database name the role is applied.
-     */
     @InputImport(name="db")
     private final @Nullable String db;
 
@@ -27,9 +21,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.db == null ? Optional.empty() : Optional.ofNullable(this.db);
     }
 
-    /**
-     * The role name.
-     */
     @InputImport(name="role")
     private final @Nullable String role;
 

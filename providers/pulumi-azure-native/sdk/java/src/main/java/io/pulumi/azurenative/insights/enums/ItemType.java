@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Enum indicating the type of the Analytics item.
- */
     @EnumType
     public enum ItemType {
-/**
- * 
- */
         None("none"),
-/**
- * 
- */
         Query("query"),
-/**
- * 
- */
         Recent("recent"),
-/**
- * 
- */
         Function("function");
 
         private final String value;

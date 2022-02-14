@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionInstantSnapshot {
-/**
- * Returns the specified InstantSnapshot resource in the specified region.
- */
     public static CompletableFuture<GetRegionInstantSnapshotResult> invokeAsync(GetRegionInstantSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionInstantSnapshot", TypeShape.of(GetRegionInstantSnapshotResult.class), args == null ? GetRegionInstantSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

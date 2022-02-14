@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageVersionArgs Empty = new GalleryImageVersionArgs();
 
-    /**
-     * The name of the gallery image definition in which the Image Version is to be created.
-     */
     @InputImport(name="galleryImageName", required=true)
     private final Input<String> galleryImageName;
 
@@ -30,9 +24,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.galleryImageName;
     }
 
-    /**
-     * The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>
-     */
     @InputImport(name="galleryImageVersionName")
     private final @Nullable Input<String> galleryImageVersionName;
 
@@ -40,9 +31,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.galleryImageVersionName == null ? Input.empty() : this.galleryImageVersionName;
     }
 
-    /**
-     * The name of the Shared Image Gallery in which the Image Definition resides.
-     */
     @InputImport(name="galleryName", required=true)
     private final Input<String> galleryName;
 
@@ -50,9 +38,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.galleryName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,9 +45,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The publishing profile of a gallery image Version.
-     */
     @InputImport(name="publishingProfile")
     private final @Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile;
 
@@ -70,9 +52,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.publishingProfile == null ? Input.empty() : this.publishingProfile;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -80,9 +59,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * This is the storage profile of a Gallery Image Version.
-     */
     @InputImport(name="storageProfile", required=true)
     private final Input<GalleryImageVersionStorageProfileArgs> storageProfile;
 
@@ -90,9 +66,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
         return this.storageProfile;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdaptiveApplicationControlArgs Empty = new AdaptiveApplicationControlArgs();
 
-    /**
-     * The location where ASC stores the data of the subscription. can be retrieved from Get locations
-     */
     @InputImport(name="ascLocation", required=true)
     private final Input<String> ascLocation;
 
@@ -31,9 +25,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
         return this.ascLocation;
     }
 
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     */
     @InputImport(name="enforcementMode")
     private final @Nullable Input<String> enforcementMode;
 
@@ -41,9 +32,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
         return this.enforcementMode == null ? Input.empty() : this.enforcementMode;
     }
 
-    /**
-     * Name of an application control machine group
-     */
     @InputImport(name="groupName")
     private final @Nullable Input<String> groupName;
 
@@ -51,9 +39,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
         return this.groupName == null ? Input.empty() : this.groupName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="pathRecommendations")
     private final @Nullable Input<List<PathRecommendationArgs>> pathRecommendations;
 
@@ -61,9 +46,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
         return this.pathRecommendations == null ? Input.empty() : this.pathRecommendations;
     }
 
-    /**
-     * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     */
     @InputImport(name="protectionMode")
     private final @Nullable Input<ProtectionModeArgs> protectionMode;
 
@@ -71,9 +53,6 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
         return this.protectionMode == null ? Input.empty() : this.protectionMode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="vmRecommendations")
     private final @Nullable Input<List<VmRecommendationArgs>> vmRecommendations;
 

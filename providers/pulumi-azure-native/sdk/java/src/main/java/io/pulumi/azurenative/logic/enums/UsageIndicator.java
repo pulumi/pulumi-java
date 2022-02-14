@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The usage indicator.
- */
     @EnumType
     public enum UsageIndicator {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Test("Test"),
-/**
- * 
- */
         Information("Information"),
-/**
- * 
- */
         Production("Production");
 
         private final String value;

@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerArgs Empty = new LoadBalancerArgs();
 
-    /**
-     * Collection of backend address pools used by a load balancer.
-     */
     @InputImport(name="backendAddressPools")
     private final @Nullable Input<List<BackendAddressPoolArgs>> backendAddressPools;
 
@@ -38,9 +32,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendAddressPools == null ? Input.empty() : this.backendAddressPools;
     }
 
-    /**
-     * The extended location of the load balancer.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -48,9 +39,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Object representing the frontend IPs to be used for the load balancer.
-     */
     @InputImport(name="frontendIPConfigurations")
     private final @Nullable Input<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
 
@@ -58,9 +46,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendIPConfigurations == null ? Input.empty() : this.frontendIPConfigurations;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -68,9 +53,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
-     */
     @InputImport(name="inboundNatPools")
     private final @Nullable Input<List<InboundNatPoolArgs>> inboundNatPools;
 
@@ -78,9 +60,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.inboundNatPools == null ? Input.empty() : this.inboundNatPools;
     }
 
-    /**
-     * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
-     */
     @InputImport(name="inboundNatRules")
     private final @Nullable Input<List<InboundNatRuleArgs>> inboundNatRules;
 
@@ -88,9 +67,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.inboundNatRules == null ? Input.empty() : this.inboundNatRules;
     }
 
-    /**
-     * The name of the load balancer.
-     */
     @InputImport(name="loadBalancerName")
     private final @Nullable Input<String> loadBalancerName;
 
@@ -98,9 +74,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
     }
 
-    /**
-     * Object collection representing the load balancing rules Gets the provisioning.
-     */
     @InputImport(name="loadBalancingRules")
     private final @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
@@ -108,9 +81,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancingRules == null ? Input.empty() : this.loadBalancingRules;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -118,9 +88,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The outbound rules.
-     */
     @InputImport(name="outboundRules")
     private final @Nullable Input<List<OutboundRuleArgs>> outboundRules;
 
@@ -128,9 +95,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.outboundRules == null ? Input.empty() : this.outboundRules;
     }
 
-    /**
-     * Collection of probe objects used in the load balancer.
-     */
     @InputImport(name="probes")
     private final @Nullable Input<List<ProbeArgs>> probes;
 
@@ -138,9 +102,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.probes == null ? Input.empty() : this.probes;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -148,9 +109,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The load balancer SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<LoadBalancerSkuArgs> sku;
 
@@ -158,9 +116,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

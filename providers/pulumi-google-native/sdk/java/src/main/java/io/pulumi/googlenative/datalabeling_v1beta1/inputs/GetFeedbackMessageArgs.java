@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFeedbackMessageArgs Empty = new GetFeedbackMessageArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="annotatedDatasetId", required=true)
     private final String annotatedDatasetId;
 
@@ -27,9 +21,6 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
         return this.annotatedDatasetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -37,9 +28,6 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
         return this.datasetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="feedbackMessageId", required=true)
     private final String feedbackMessageId;
 
@@ -47,9 +35,6 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
         return this.feedbackMessageId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="feedbackThreadId", required=true)
     private final String feedbackThreadId;
 
@@ -57,9 +42,6 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
         return this.feedbackThreadId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

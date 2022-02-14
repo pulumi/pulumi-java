@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional information on the backed up item.
- */
 public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MabFileFolderProtectedItemExtendedInfoArgs Empty = new MabFileFolderProtectedItemExtendedInfoArgs();
 
-    /**
-     * Last time when the agent data synced to service.
-     */
     @InputImport(name="lastRefreshedAt")
     private final @Nullable Input<String> lastRefreshedAt;
 
@@ -28,9 +22,6 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
     }
 
-    /**
-     * The oldest backup copy available.
-     */
     @InputImport(name="oldestRecoveryPoint")
     private final @Nullable Input<String> oldestRecoveryPoint;
 
@@ -38,9 +29,6 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
     }
 
-    /**
-     * Number of backup copies associated with the backup item.
-     */
     @InputImport(name="recoveryPointCount")
     private final @Nullable Input<Integer> recoveryPointCount;
 

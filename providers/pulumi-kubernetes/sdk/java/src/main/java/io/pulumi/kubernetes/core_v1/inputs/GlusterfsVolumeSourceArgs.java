@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
- */
 public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlusterfsVolumeSourceArgs Empty = new GlusterfsVolumeSourceArgs();
 
-    /**
-     * EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
-     */
     @InputImport(name="endpoints", required=true)
     private final Input<String> endpoints;
 
@@ -28,9 +22,6 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.endpoints;
     }
 
-    /**
-     * Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
-     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -38,9 +29,6 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.path;
     }
 
-    /**
-     * ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 

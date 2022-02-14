@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The resource status information.
- */
 public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceStatusResponse Empty = new ResourceStatusResponse();
 
-    /**
-     * The last update time for this condition.
-     */
     @InputImport(name="lastUpdatedAt", required=true)
     private final String lastUpdatedAt;
 
@@ -25,9 +19,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
         return this.lastUpdatedAt;
     }
 
-    /**
-     * A human readable message indicating details about the status.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -35,9 +26,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
         return this.message;
     }
 
-    /**
-     * The reason for the condition's status.
-     */
     @InputImport(name="reason", required=true)
     private final String reason;
 
@@ -45,9 +33,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
         return this.reason;
     }
 
-    /**
-     * Severity with which to treat failures of this type of condition.
-     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -55,9 +40,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
         return this.severity;
     }
 
-    /**
-     * Status of the condition.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -65,9 +47,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
         return this.status;
     }
 
-    /**
-     * The type of the condition.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

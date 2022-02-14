@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
- */
     @EnumType
     public enum ClusterSkuName {
-/**
- * The default SKU.
- */
         Default("Default");
 
         private final String value;

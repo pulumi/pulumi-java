@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleQueryStringConditionResponse {
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'QueryString'.
- */
     private final String name;
-/**
- * Defines the parameters for the condition.
- */
     private final QueryStringMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -28,16 +21,9 @@ Expected value is 'QueryString'.
         this.parameters = Objects.requireNonNull(parameters);
     }
 
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'QueryString'.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines the parameters for the condition.
- */
     public QueryStringMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

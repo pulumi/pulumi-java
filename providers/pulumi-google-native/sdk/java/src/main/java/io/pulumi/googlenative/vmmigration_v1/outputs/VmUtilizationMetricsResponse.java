@@ -10,37 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VmUtilizationMetricsResponse {
-/**
- * Average CPU usage, percent.
- */
     private final Integer cpuAveragePercent;
-/**
- * Max CPU usage, percent.
- */
     private final Integer cpuMaxPercent;
-/**
- * Average disk IO rate, in kilobytes per second.
- */
     private final String diskIoRateAverageKbps;
-/**
- * Max disk IO rate, in kilobytes per second.
- */
     private final String diskIoRateMaxKbps;
-/**
- * Average memory usage, percent.
- */
     private final Integer memoryAveragePercent;
-/**
- * Max memory usage, percent.
- */
     private final Integer memoryMaxPercent;
-/**
- * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
- */
     private final String networkThroughputAverageKbps;
-/**
- * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
- */
     private final String networkThroughputMaxKbps;
 
     @OutputCustomType.Constructor({"cpuAveragePercent","cpuMaxPercent","diskIoRateAverageKbps","diskIoRateMaxKbps","memoryAveragePercent","memoryMaxPercent","networkThroughputAverageKbps","networkThroughputMaxKbps"})
@@ -63,51 +39,27 @@ public final class VmUtilizationMetricsResponse {
         this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
     }
 
-/**
- * Average CPU usage, percent.
- */
     public Integer getCpuAveragePercent() {
         return this.cpuAveragePercent;
     }
-/**
- * Max CPU usage, percent.
- */
     public Integer getCpuMaxPercent() {
         return this.cpuMaxPercent;
     }
-/**
- * Average disk IO rate, in kilobytes per second.
- */
     public String getDiskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps;
     }
-/**
- * Max disk IO rate, in kilobytes per second.
- */
     public String getDiskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps;
     }
-/**
- * Average memory usage, percent.
- */
     public Integer getMemoryAveragePercent() {
         return this.memoryAveragePercent;
     }
-/**
- * Max memory usage, percent.
- */
     public Integer getMemoryMaxPercent() {
         return this.memoryMaxPercent;
     }
-/**
- * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
- */
     public String getNetworkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps;
     }
-/**
- * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
- */
     public String getNetworkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps;
     }

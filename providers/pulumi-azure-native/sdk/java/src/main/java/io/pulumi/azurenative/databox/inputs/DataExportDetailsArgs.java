@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the data to be used for exporting data from azure.
- */
 public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataExportDetailsArgs Empty = new DataExportDetailsArgs();
 
-    /**
-     * Account details of the data to be transferred
-     */
     @InputImport(name="accountDetails", required=true)
     private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
@@ -32,9 +26,6 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.accountDetails;
     }
 
-    /**
-     * Level of the logs to be collected.
-     */
     @InputImport(name="logCollectionLevel")
     private final @Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel;
 
@@ -42,9 +33,6 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.logCollectionLevel == null ? Input.empty() : this.logCollectionLevel;
     }
 
-    /**
-     * Configuration for the data transfer.
-     */
     @InputImport(name="transferConfiguration", required=true)
     private final Input<TransferConfigurationArgs> transferConfiguration;
 

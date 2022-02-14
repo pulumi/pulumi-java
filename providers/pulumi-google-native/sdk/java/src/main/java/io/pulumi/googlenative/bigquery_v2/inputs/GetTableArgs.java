@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTableArgs Empty = new GetTableArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -27,9 +21,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="selectedFields")
     private final @Nullable String selectedFields;
 
@@ -47,9 +35,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.selectedFields == null ? Optional.empty() : Optional.ofNullable(this.selectedFields);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 

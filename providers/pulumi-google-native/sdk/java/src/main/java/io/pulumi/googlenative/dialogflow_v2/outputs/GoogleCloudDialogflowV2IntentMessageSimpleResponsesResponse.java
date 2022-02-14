@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse {
-/**
- * The list of simple responses.
- */
     private final List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> simpleResponses;
 
     @OutputCustomType.Constructor({"simpleResponses"})
@@ -20,9 +17,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse {
         this.simpleResponses = Objects.requireNonNull(simpleResponses);
     }
 
-/**
- * The list of simple responses.
- */
     public List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> getSimpleResponses() {
         return this.simpleResponses;
     }

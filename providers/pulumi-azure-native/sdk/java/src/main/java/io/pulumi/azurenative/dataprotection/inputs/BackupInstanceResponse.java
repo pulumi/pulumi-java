@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Backup Instance
- */
 public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupInstanceResponse Empty = new BackupInstanceResponse();
 
-    /**
-     * Specifies the current protection state of the resource
-     */
     @InputImport(name="currentProtectionState", required=true)
     private final String currentProtectionState;
 
@@ -32,9 +26,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.currentProtectionState;
     }
 
-    /**
-     * Gets or sets the data source information.
-     */
     @InputImport(name="dataSourceInfo", required=true)
     private final DatasourceResponse dataSourceInfo;
 
@@ -42,9 +33,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.dataSourceInfo;
     }
 
-    /**
-     * Gets or sets the data source set information.
-     */
     @InputImport(name="dataSourceSetInfo")
     private final @Nullable DatasourceSetResponse dataSourceSetInfo;
 
@@ -52,9 +40,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.dataSourceSetInfo == null ? Optional.empty() : Optional.ofNullable(this.dataSourceSetInfo);
     }
 
-    /**
-     * Gets or sets the Backup Instance friendly name.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -62,9 +47,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -72,9 +54,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.objectType;
     }
 
-    /**
-     * Gets or sets the policy information.
-     */
     @InputImport(name="policyInfo", required=true)
     private final PolicyInfoResponse policyInfo;
 
@@ -82,9 +61,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.policyInfo;
     }
 
-    /**
-     * Specifies the protection error of the resource
-     */
     @InputImport(name="protectionErrorDetails", required=true)
     private final UserFacingErrorResponse protectionErrorDetails;
 
@@ -92,9 +68,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.protectionErrorDetails;
     }
 
-    /**
-     * Specifies the protection status of the resource
-     */
     @InputImport(name="protectionStatus", required=true)
     private final ProtectionStatusDetailsResponse protectionStatus;
 
@@ -102,9 +75,6 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
         return this.protectionStatus;
     }
 
-    /**
-     * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

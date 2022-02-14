@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Name of the notification hub sku
- */
     @EnumType
     public enum SkuName {
-/**
- * 
- */
         Free("Free"),
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

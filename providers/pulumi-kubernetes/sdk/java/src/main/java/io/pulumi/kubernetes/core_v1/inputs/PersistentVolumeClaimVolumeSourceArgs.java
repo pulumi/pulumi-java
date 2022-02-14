@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PersistentVolumeClaimVolumeSource references the user's PVC in the same namespace. This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).
- */
 public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PersistentVolumeClaimVolumeSourceArgs Empty = new PersistentVolumeClaimVolumeSourceArgs();
 
-    /**
-     * ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-     */
     @InputImport(name="claimName", required=true)
     private final Input<String> claimName;
 
@@ -28,9 +22,6 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
         return this.claimName;
     }
 
-    /**
-     * Will force the ReadOnly setting in VolumeMounts. Default false.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 

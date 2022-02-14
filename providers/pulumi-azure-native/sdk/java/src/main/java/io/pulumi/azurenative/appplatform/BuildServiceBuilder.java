@@ -16,216 +16,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * KPack Builder resource
-API Version: 2022-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### BuildServiceBuilder_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var buildServiceBuilder = new AzureNative.AppPlatform.BuildServiceBuilder("buildServiceBuilder", new AzureNative.AppPlatform.BuildServiceBuilderArgs
-        {
-            BuildServiceName = "default",
-            BuilderName = "mybuilder",
-            Properties = new AzureNative.AppPlatform.Inputs.BuilderPropertiesArgs
-            {
-                BuildpackGroups = 
-                {
-                    new AzureNative.AppPlatform.Inputs.BuildpacksGroupPropertiesArgs
-                    {
-                        Buildpacks = 
-                        {
-                            new AzureNative.AppPlatform.Inputs.BuildpackPropertiesArgs
-                            {
-                                Id = "tanzu-buildpacks/java-azure",
-                            },
-                        },
-                        Name = "mix",
-                    },
-                },
-                Stack = new AzureNative.AppPlatform.Inputs.StackPropertiesArgs
-                {
-                    Id = "io.buildpacks.stacks.bionic",
-                    Version = "base",
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            ServiceName = "myservice",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := appplatform.NewBuildServiceBuilder(ctx, "buildServiceBuilder", &appplatform.BuildServiceBuilderArgs{
-			BuildServiceName: pulumi.String("default"),
-			BuilderName:      pulumi.String("mybuilder"),
-			Properties: &appplatform.BuilderPropertiesArgs{
-				BuildpackGroups: appplatform.BuildpacksGroupPropertiesArray{
-					&appplatform.BuildpacksGroupPropertiesArgs{
-						Buildpacks: appplatform.BuildpackPropertiesArray{
-							&appplatform.BuildpackPropertiesArgs{
-								Id: pulumi.String("tanzu-buildpacks/java-azure"),
-							},
-						},
-						Name: pulumi.String("mix"),
-					},
-				},
-				Stack: &appplatform.StackPropertiesArgs{
-					Id:      pulumi.String("io.buildpacks.stacks.bionic"),
-					Version: pulumi.String("base"),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ServiceName:       pulumi.String("myservice"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const buildServiceBuilder = new azure_native.appplatform.BuildServiceBuilder("buildServiceBuilder", {
-    buildServiceName: "default",
-    builderName: "mybuilder",
-    properties: {
-        buildpackGroups: [{
-            buildpacks: [{
-                id: "tanzu-buildpacks/java-azure",
-            }],
-            name: "mix",
-        }],
-        stack: {
-            id: "io.buildpacks.stacks.bionic",
-            version: "base",
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-    serviceName: "myservice",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-build_service_builder = azure_native.appplatform.BuildServiceBuilder("buildServiceBuilder",
-    build_service_name="default",
-    builder_name="mybuilder",
-    properties=azure_native.appplatform.BuilderPropertiesArgs(
-        buildpack_groups=[azure_native.appplatform.BuildpacksGroupPropertiesArgs(
-            buildpacks=[azure_native.appplatform.BuildpackPropertiesArgs(
-                id="tanzu-buildpacks/java-azure",
-            )],
-            name="mix",
-        )],
-        stack=azure_native.appplatform.StackPropertiesArgs(
-            id="io.buildpacks.stacks.bionic",
-            version="base",
-        ),
-    ),
-    resource_group_name="myResourceGroup",
-    service_name="myservice")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:appplatform:BuildServiceBuilder mybuilder /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/buildServices/default/builders/mybuilder 
-```
-
- */
 @ResourceType(type="azure-native:appplatform:BuildServiceBuilder")
 public class BuildServiceBuilder extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Property of the Builder resource.
-     */
     @OutputExport(name="properties", type=BuilderPropertiesResponse.class, parameters={})
     private Output<BuilderPropertiesResponse> properties;
 
-    /**
-     * @return Property of the Builder resource.
-     */
     public Output<BuilderPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public BuildServiceBuilder(String name, BuildServiceBuilderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:BuildServiceBuilder", name, args == null ? BuildServiceBuilderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -244,14 +61,6 @@ public class BuildServiceBuilder extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static BuildServiceBuilder get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BuildServiceBuilder(name, id, options);
     }

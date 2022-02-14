@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * LoggingComponentConfig is cluster logging component configuration.
- */
 public final class LoggingComponentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingComponentConfigArgs Empty = new LoggingComponentConfigArgs();
 
-    /**
-     * Select components to collect logs. An empty set would disable all logging.
-     */
     @InputImport(name="enableComponents")
     private final @Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 

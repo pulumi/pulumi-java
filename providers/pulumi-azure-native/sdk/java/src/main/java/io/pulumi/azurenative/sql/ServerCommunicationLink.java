@@ -14,178 +14,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Server communication link.
-API Version: 2014-04-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a server communication link
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serverCommunicationLink = new AzureNative.Sql.ServerCommunicationLink("serverCommunicationLink", new AzureNative.Sql.ServerCommunicationLinkArgs
-        {
-            CommunicationLinkName = "link1",
-            PartnerServer = "sqldcrudtest-test",
-            ResourceGroupName = "sqlcrudtest-7398",
-            ServerName = "sqlcrudtest-4645",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewServerCommunicationLink(ctx, "serverCommunicationLink", &sql.ServerCommunicationLinkArgs{
-			CommunicationLinkName: pulumi.String("link1"),
-			PartnerServer:         pulumi.String("sqldcrudtest-test"),
-			ResourceGroupName:     pulumi.String("sqlcrudtest-7398"),
-			ServerName:            pulumi.String("sqlcrudtest-4645"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const serverCommunicationLink = new azure_native.sql.ServerCommunicationLink("serverCommunicationLink", {
-    communicationLinkName: "link1",
-    partnerServer: "sqldcrudtest-test",
-    resourceGroupName: "sqlcrudtest-7398",
-    serverName: "sqlcrudtest-4645",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-server_communication_link = azure_native.sql.ServerCommunicationLink("serverCommunicationLink",
-    communication_link_name="link1",
-    partner_server="sqldcrudtest-test",
-    resource_group_name="sqlcrudtest-7398",
-    server_name="sqlcrudtest-4645")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:ServerCommunicationLink link1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/communicationLinks/link1 
-```
-
- */
 @ResourceType(type="azure-native:sql:ServerCommunicationLink")
 public class ServerCommunicationLink extends io.pulumi.resources.CustomResource {
-    /**
-     * Communication link kind.  This property is used for Azure Portal metadata.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Communication link kind.  This property is used for Azure Portal metadata.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Communication link location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Communication link location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The name of the partner server.
-     */
     @OutputExport(name="partnerServer", type=String.class, parameters={})
     private Output<String> partnerServer;
 
-    /**
-     * @return The name of the partner server.
-     */
     public Output<String> getPartnerServer() {
         return this.partnerServer;
     }
-    /**
-     * The state.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return The state.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ServerCommunicationLink(String name, ServerCommunicationLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ServerCommunicationLink", name, args == null ? ServerCommunicationLinkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -204,14 +71,6 @@ public class ServerCommunicationLink extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ServerCommunicationLink get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerCommunicationLink(name, id, options);
     }

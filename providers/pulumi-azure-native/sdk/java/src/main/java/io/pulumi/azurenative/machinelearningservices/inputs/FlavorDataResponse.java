@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FlavorDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FlavorDataResponse Empty = new FlavorDataResponse();
 
-    /**
-     * Model flavor-specific data.
-     */
     @InputImport(name="data")
     private final @Nullable Map<String,String> data;
 

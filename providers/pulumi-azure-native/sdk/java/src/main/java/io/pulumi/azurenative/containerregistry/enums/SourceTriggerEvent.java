@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum SourceTriggerEvent {
-/**
- * 
- */
         Commit("commit"),
-/**
- * 
- */
         Pullrequest("pullrequest");
 
         private final String value;

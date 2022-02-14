@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for Cloud TPU.
- */
 public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TpuConfigResponse Empty = new TpuConfigResponse();
 
-    /**
-     * Whether Cloud TPU integration is enabled or not.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -26,9 +20,6 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.enabled;
     }
 
-    /**
-     * IPv4 CIDR block reserved for Cloud TPU in the VPC.
-     */
     @InputImport(name="ipv4CidrBlock", required=true)
     private final String ipv4CidrBlock;
 
@@ -36,9 +27,6 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipv4CidrBlock;
     }
 
-    /**
-     * Whether to use service networking for Cloud TPU or not.
-     */
     @InputImport(name="useServiceNetworking", required=true)
     private final Boolean useServiceNetworking;
 

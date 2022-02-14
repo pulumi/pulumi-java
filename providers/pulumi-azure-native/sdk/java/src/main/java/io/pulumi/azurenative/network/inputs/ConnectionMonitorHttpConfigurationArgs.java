@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the HTTP configuration.
- */
 public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorHttpConfigurationArgs Empty = new ConnectionMonitorHttpConfigurationArgs();
 
-    /**
-     * The HTTP method to use.
-     */
     @InputImport(name="method")
     private final @Nullable Input<Either<String,HTTPConfigurationMethod>> method;
 
@@ -33,9 +27,6 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
         return this.method == null ? Input.empty() : this.method;
     }
 
-    /**
-     * The path component of the URI. For instance, "/dir1/dir2".
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -43,9 +34,6 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
         return this.path == null ? Input.empty() : this.path;
     }
 
-    /**
-     * The port to connect to.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -53,9 +41,6 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-     */
     @InputImport(name="preferHTTPS")
     private final @Nullable Input<Boolean> preferHTTPS;
 
@@ -63,9 +48,6 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
         return this.preferHTTPS == null ? Input.empty() : this.preferHTTPS;
     }
 
-    /**
-     * The HTTP headers to transmit with the request.
-     */
     @InputImport(name="requestHeaders")
     private final @Nullable Input<List<HTTPHeaderArgs>> requestHeaders;
 
@@ -73,9 +55,6 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
         return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
     }
 
-    /**
-     * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
-     */
     @InputImport(name="validStatusCodeRanges")
     private final @Nullable Input<List<String>> validStatusCodeRanges;
 

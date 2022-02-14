@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A Symptom instance.
- */
 public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SymptomResponse Empty = new SymptomResponse();
 
-    /**
-     * Timestamp when the Symptom is created.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -25,9 +19,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
         return this.createTime;
     }
 
-    /**
-     * Detailed information of the current Symptom.
-     */
     @InputImport(name="details", required=true)
     private final String details;
 
@@ -35,9 +26,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
         return this.details;
     }
 
-    /**
-     * Type of the Symptom.
-     */
     @InputImport(name="symptomType", required=true)
     private final String symptomType;
 
@@ -45,9 +33,6 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
         return this.symptomType;
     }
 
-    /**
-     * A string used to uniquely distinguish a worker within a TPU node.
-     */
     @InputImport(name="workerId", required=true)
     private final String workerId;
 

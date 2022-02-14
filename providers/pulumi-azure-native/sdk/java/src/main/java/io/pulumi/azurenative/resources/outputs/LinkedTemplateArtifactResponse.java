@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LinkedTemplateArtifactResponse {
-/**
- * A filesystem safe relative path of the artifact.
- */
     private final String path;
-/**
- * The Azure Resource Manager template.
- */
     private final Object template;
 
     @OutputCustomType.Constructor({"path","template"})
@@ -27,15 +21,9 @@ public final class LinkedTemplateArtifactResponse {
         this.template = Objects.requireNonNull(template);
     }
 
-/**
- * A filesystem safe relative path of the artifact.
- */
     public String getPath() {
         return this.path;
     }
-/**
- * The Azure Resource Manager template.
- */
     public Object getTemplate() {
         return this.template;
     }

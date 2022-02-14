@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Compute binding definition.
- */
 public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeBindingResponse Empty = new ComputeBindingResponse();
 
-    /**
-     * ID of the compute resource.
-     */
     @InputImport(name="computeId")
     private final @Nullable String computeId;
 
@@ -28,9 +22,6 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
         return this.computeId == null ? Optional.empty() : Optional.ofNullable(this.computeId);
     }
 
-    /**
-     * Number of nodes.
-     */
     @InputImport(name="nodeCount")
     private final @Nullable Integer nodeCount;
 

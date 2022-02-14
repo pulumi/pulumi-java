@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * UserSubject holds detailed information for user-kind subject.
- */
 public final class UserSubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserSubjectArgs Empty = new UserSubjectArgs();
 
-    /**
-     * `name` is the username that matches, or "*" to match all usernames. Required.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

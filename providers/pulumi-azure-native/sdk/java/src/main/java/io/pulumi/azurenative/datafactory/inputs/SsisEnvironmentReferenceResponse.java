@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Ssis environment reference.
- */
 public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisEnvironmentReferenceResponse Empty = new SsisEnvironmentReferenceResponse();
 
-    /**
-     * Environment folder name.
-     */
     @InputImport(name="environmentFolderName")
     private final @Nullable String environmentFolderName;
 
@@ -28,9 +22,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
         return this.environmentFolderName == null ? Optional.empty() : Optional.ofNullable(this.environmentFolderName);
     }
 
-    /**
-     * Environment name.
-     */
     @InputImport(name="environmentName")
     private final @Nullable String environmentName;
 
@@ -38,9 +29,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
         return this.environmentName == null ? Optional.empty() : Optional.ofNullable(this.environmentName);
     }
 
-    /**
-     * Environment reference id.
-     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -48,9 +36,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Reference type
-     */
     @InputImport(name="referenceType")
     private final @Nullable String referenceType;
 

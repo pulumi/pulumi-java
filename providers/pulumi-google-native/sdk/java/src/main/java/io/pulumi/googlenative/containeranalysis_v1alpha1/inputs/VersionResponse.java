@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Version contains structured information about the version of the package. For a discussion of this in Debian/Ubuntu: http://serverfault.com/questions/604541/debian-packages-version-convention For a discussion of this in Redhat/Fedora/Centos: http://blog.jasonantman.com/2014/07/how-yum-and-rpm-compare-versions/
- */
 public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VersionResponse Empty = new VersionResponse();
 
-    /**
-     * Used to correct mistakes in the version numbering scheme.
-     */
     @InputImport(name="epoch", required=true)
     private final Integer epoch;
 
@@ -27,9 +21,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.epoch;
     }
 
-    /**
-     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
-     */
     @InputImport(name="inclusive", required=true)
     private final Boolean inclusive;
 
@@ -37,9 +28,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.inclusive;
     }
 
-    /**
-     * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -47,9 +35,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind;
     }
 
-    /**
-     * The main part of the version name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -57,9 +42,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The iteration of the package build from the above version.
-     */
     @InputImport(name="revision", required=true)
     private final String revision;
 

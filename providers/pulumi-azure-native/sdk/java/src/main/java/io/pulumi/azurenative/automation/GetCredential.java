@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCredential {
-/**
- * Definition of the credential.
-API Version: 2019-06-01.
- *
- * Definition of the credential.
- */
     public static CompletableFuture<GetCredentialResult> invokeAsync(GetCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getCredential", TypeShape.of(GetCredentialResult.class), args == null ? GetCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates the spatial type of index.
- */
     @EnumType
     public enum SpatialType {
-/**
- * 
- */
         Point("Point"),
-/**
- * 
- */
         LineString("LineString"),
-/**
- * 
- */
         Polygon("Polygon"),
-/**
- * 
- */
         MultiPolygon("MultiPolygon");
 
         private final String value;

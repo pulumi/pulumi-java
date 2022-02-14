@@ -12,45 +12,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetBitbucketServerConfigResult {
-/**
- * Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
- */
     private final String apiKey;
-/**
- * Connected Bitbucket Server repositories for this config.
- */
     private final List<BitbucketServerRepositoryIdResponse> connectedRepositories;
-/**
- * Time when the config was created.
- */
     private final String createTime;
-/**
- * Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
- */
     private final String hostUri;
-/**
- * The resource name for the config.
- */
     private final String name;
-/**
- * Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
- */
     private final String peeredNetwork;
-/**
- * Secret Manager secrets needed by the config.
- */
     private final BitbucketServerSecretsResponse secrets;
-/**
- * Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
- */
     private final String sslCa;
-/**
- * Username of the account Cloud Build will use on Bitbucket Server.
- */
     private final String username;
-/**
- * UUID included in webhook requests. The UUID is used to look up the corresponding config.
- */
     private final String webhookKey;
 
     @OutputCustomType.Constructor({"apiKey","connectedRepositories","createTime","hostUri","name","peeredNetwork","secrets","sslCa","username","webhookKey"})
@@ -77,63 +47,33 @@ public final class GetBitbucketServerConfigResult {
         this.webhookKey = Objects.requireNonNull(webhookKey);
     }
 
-/**
- * Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
- */
     public String getApiKey() {
         return this.apiKey;
     }
-/**
- * Connected Bitbucket Server repositories for this config.
- */
     public List<BitbucketServerRepositoryIdResponse> getConnectedRepositories() {
         return this.connectedRepositories;
     }
-/**
- * Time when the config was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
- */
     public String getHostUri() {
         return this.hostUri;
     }
-/**
- * The resource name for the config.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
- */
     public String getPeeredNetwork() {
         return this.peeredNetwork;
     }
-/**
- * Secret Manager secrets needed by the config.
- */
     public BitbucketServerSecretsResponse getSecrets() {
         return this.secrets;
     }
-/**
- * Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
- */
     public String getSslCa() {
         return this.sslCa;
     }
-/**
- * Username of the account Cloud Build will use on Bitbucket Server.
- */
     public String getUsername() {
         return this.username;
     }
-/**
- * UUID included in webhook requests. The UUID is used to look up the corresponding config.
- */
     public String getWebhookKey() {
         return this.webhookKey;
     }

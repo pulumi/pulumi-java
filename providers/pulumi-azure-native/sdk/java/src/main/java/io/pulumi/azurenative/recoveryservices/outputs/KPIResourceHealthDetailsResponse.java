@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KPIResourceHealthDetailsResponse {
-/**
- * Resource Health Status
- */
     private final @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
-/**
- * Resource Health Status
- */
     private final @Nullable String resourceHealthStatus;
 
     @OutputCustomType.Constructor({"resourceHealthDetails","resourceHealthStatus"})
@@ -30,15 +24,9 @@ public final class KPIResourceHealthDetailsResponse {
         this.resourceHealthStatus = resourceHealthStatus;
     }
 
-/**
- * Resource Health Status
- */
     public List<ResourceHealthDetailsResponse> getResourceHealthDetails() {
         return this.resourceHealthDetails == null ? List.of() : this.resourceHealthDetails;
     }
-/**
- * Resource Health Status
- */
     public Optional<String> getResourceHealthStatus() {
         return Optional.ofNullable(this.resourceHealthStatus);
     }

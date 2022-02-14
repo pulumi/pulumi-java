@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListGlobalUserEnvironmentsResult {
-/**
- * List of all the environments
- */
     private final @Nullable List<EnvironmentDetailsResponse> environments;
 
     @OutputCustomType.Constructor({"environments"})
@@ -21,9 +18,6 @@ public final class ListGlobalUserEnvironmentsResult {
         this.environments = environments;
     }
 
-/**
- * List of all the environments
- */
     public List<EnvironmentDetailsResponse> getEnvironments() {
         return this.environments == null ? List.of() : this.environments;
     }

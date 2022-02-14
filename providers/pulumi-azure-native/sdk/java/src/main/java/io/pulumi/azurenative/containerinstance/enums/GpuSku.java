@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The SKU of the GPU resource.
- */
     @EnumType
     public enum GpuSku {
-/**
- * 
- */
         K80("K80"),
-/**
- * 
- */
         P100("P100"),
-/**
- * 
- */
         V100("V100");
 
         private final String value;

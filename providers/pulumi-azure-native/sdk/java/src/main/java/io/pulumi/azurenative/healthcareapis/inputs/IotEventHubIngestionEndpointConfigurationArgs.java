@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Event Hub ingestion endpoint configuration
- */
 public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotEventHubIngestionEndpointConfigurationArgs Empty = new IotEventHubIngestionEndpointConfigurationArgs();
 
-    /**
-     * Consumer group of the event hub to connected to.
-     */
     @InputImport(name="consumerGroup")
     private final @Nullable Input<String> consumerGroup;
 
@@ -27,9 +21,6 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
         return this.consumerGroup == null ? Input.empty() : this.consumerGroup;
     }
 
-    /**
-     * Event Hub name to connect to.
-     */
     @InputImport(name="eventHubName")
     private final @Nullable Input<String> eventHubName;
 
@@ -37,9 +28,6 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
     }
 
-    /**
-     * Fully qualified namespace of the Event Hub to connect to.
-     */
     @InputImport(name="fullyQualifiedEventHubNamespace")
     private final @Nullable Input<String> fullyQualifiedEventHubNamespace;
 

@@ -21,418 +21,99 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * OpenShift Managed cluster.
-API Version: 2019-04-30.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create/Update OpenShift Managed Cluster
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var openShiftManagedCluster = new AzureNative.ContainerService.OpenShiftManagedCluster("openShiftManagedCluster", new AzureNative.ContainerService.OpenShiftManagedClusterArgs
-        {
-            AgentPoolProfiles = 
-            {
-                new AzureNative.ContainerService.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
-                {
-                    Count = 2,
-                    Name = "infra",
-                    OsType = "Linux",
-                    Role = "infra",
-                    SubnetCidr = "10.0.0.0/24",
-                    VmSize = "Standard_D4s_v3",
-                },
-                new AzureNative.ContainerService.Inputs.OpenShiftManagedClusterAgentPoolProfileArgs
-                {
-                    Count = 4,
-                    Name = "compute",
-                    OsType = "Linux",
-                    Role = "compute",
-                    SubnetCidr = "10.0.0.0/24",
-                    VmSize = "Standard_D4s_v3",
-                },
-            },
-            AuthProfile = new AzureNative.ContainerService.Inputs.OpenShiftManagedClusterAuthProfileArgs
-            {
-                IdentityProviders = 
-                {
-                    new AzureNative.ContainerService.Inputs.OpenShiftManagedClusterIdentityProviderArgs
-                    {
-                        Name = "Azure AD",
-                        Provider = new AzureNative.ContainerService.Inputs.OpenShiftManagedClusterAADIdentityProviderArgs
-                        {
-                            ClientId = "clientId",
-                            CustomerAdminGroupId = "customerAdminGroupId",
-                            Kind = "AADIdentityProvider",
-                            Secret = "secret",
-                            TenantId = "tenantId",
-                        },
-                    },
-                },
-            },
-            Location = "location1",
-            MasterPoolProfile = new AzureNative.ContainerService.Inputs.OpenShiftManagedClusterMasterPoolProfileArgs
-            {
-                Count = 3,
-                Name = "master",
-                OsType = "Linux",
-                SubnetCidr = "10.0.0.0/24",
-                VmSize = "Standard_D4s_v3",
-            },
-            NetworkProfile = new AzureNative.ContainerService.Inputs.NetworkProfileArgs
-            {
-                VnetCidr = "10.0.0.0/8",
-            },
-            OpenShiftVersion = "v3.11",
-            ResourceGroupName = "rg1",
-            ResourceName = "clustername1",
-            RouterProfiles = 
-            {
-                new AzureNative.ContainerService.Inputs.OpenShiftRouterProfileArgs
-                {
-                    Name = "default",
-                },
-            },
-            Tags = 
-            {
-                { "archv2", "" },
-                { "tier", "production" },
-            },
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManagedCluster("openShiftManagedCluster", {
-    agentPoolProfiles: [
-        {
-            count: 2,
-            name: "infra",
-            osType: "Linux",
-            role: "infra",
-            subnetCidr: "10.0.0.0/24",
-            vmSize: "Standard_D4s_v3",
-        },
-        {
-            count: 4,
-            name: "compute",
-            osType: "Linux",
-            role: "compute",
-            subnetCidr: "10.0.0.0/24",
-            vmSize: "Standard_D4s_v3",
-        },
-    ],
-    authProfile: {
-        identityProviders: [{
-            name: "Azure AD",
-            provider: {
-                clientId: "clientId",
-                customerAdminGroupId: "customerAdminGroupId",
-                kind: "AADIdentityProvider",
-                secret: "secret",
-                tenantId: "tenantId",
-            },
-        }],
-    },
-    location: "location1",
-    masterPoolProfile: {
-        count: 3,
-        name: "master",
-        osType: "Linux",
-        subnetCidr: "10.0.0.0/24",
-        vmSize: "Standard_D4s_v3",
-    },
-    networkProfile: {
-        vnetCidr: "10.0.0.0/8",
-    },
-    openShiftVersion: "v3.11",
-    resourceGroupName: "rg1",
-    resourceName: "clustername1",
-    routerProfiles: [{
-        name: "default",
-    }],
-    tags: {
-        archv2: "",
-        tier: "production",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-open_shift_managed_cluster = azure_native.containerservice.OpenShiftManagedCluster("openShiftManagedCluster",
-    agent_pool_profiles=[
-        azure_native.containerservice.OpenShiftManagedClusterAgentPoolProfileArgs(
-            count=2,
-            name="infra",
-            os_type="Linux",
-            role="infra",
-            subnet_cidr="10.0.0.0/24",
-            vm_size="Standard_D4s_v3",
-        ),
-        azure_native.containerservice.OpenShiftManagedClusterAgentPoolProfileArgs(
-            count=4,
-            name="compute",
-            os_type="Linux",
-            role="compute",
-            subnet_cidr="10.0.0.0/24",
-            vm_size="Standard_D4s_v3",
-        ),
-    ],
-    auth_profile=azure_native.containerservice.OpenShiftManagedClusterAuthProfileArgs(
-        identity_providers=[azure_native.containerservice.OpenShiftManagedClusterIdentityProviderArgs(
-            name="Azure AD",
-            provider={
-                "clientId": "clientId",
-                "customerAdminGroupId": "customerAdminGroupId",
-                "kind": "AADIdentityProvider",
-                "secret": "secret",
-                "tenantId": "tenantId",
-            },
-        )],
-    ),
-    location="location1",
-    master_pool_profile=azure_native.containerservice.OpenShiftManagedClusterMasterPoolProfileArgs(
-        count=3,
-        name="master",
-        os_type="Linux",
-        subnet_cidr="10.0.0.0/24",
-        vm_size="Standard_D4s_v3",
-    ),
-    network_profile=azure_native.containerservice.NetworkProfileArgs(
-        vnet_cidr="10.0.0.0/8",
-    ),
-    open_shift_version="v3.11",
-    resource_group_name="rg1",
-    resource_name="clustername1",
-    router_profiles=[azure_native.containerservice.OpenShiftRouterProfileArgs(
-        name="default",
-    )],
-    tags={
-        "archv2": "",
-        "tier": "production",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:containerservice:OpenShiftManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/openShiftManagedClusters/clustername1 
-```
-
- */
 @ResourceType(type="azure-native:containerservice:OpenShiftManagedCluster")
 public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource {
-    /**
-     * Configuration of OpenShift cluster VMs.
-     */
     @OutputExport(name="agentPoolProfiles", type=List.class, parameters={OpenShiftManagedClusterAgentPoolProfileResponse.class})
     private Output</* @Nullable */ List<OpenShiftManagedClusterAgentPoolProfileResponse>> agentPoolProfiles;
 
-    /**
-     * @return Configuration of OpenShift cluster VMs.
-     */
     public Output</* @Nullable */ List<OpenShiftManagedClusterAgentPoolProfileResponse>> getAgentPoolProfiles() {
         return this.agentPoolProfiles;
     }
-    /**
-     * Configures OpenShift authentication.
-     */
     @OutputExport(name="authProfile", type=OpenShiftManagedClusterAuthProfileResponse.class, parameters={})
     private Output</* @Nullable */ OpenShiftManagedClusterAuthProfileResponse> authProfile;
 
-    /**
-     * @return Configures OpenShift authentication.
-     */
     public Output</* @Nullable */ OpenShiftManagedClusterAuthProfileResponse> getAuthProfile() {
         return this.authProfile;
     }
-    /**
-     * Version of OpenShift specified when creating the cluster.
-     */
     @OutputExport(name="clusterVersion", type=String.class, parameters={})
     private Output<String> clusterVersion;
 
-    /**
-     * @return Version of OpenShift specified when creating the cluster.
-     */
     public Output<String> getClusterVersion() {
         return this.clusterVersion;
     }
-    /**
-     * Service generated FQDN for OpenShift API server loadbalancer internal hostname.
-     */
     @OutputExport(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
-    /**
-     * @return Service generated FQDN for OpenShift API server loadbalancer internal hostname.
-     */
     public Output<String> getFqdn() {
         return this.fqdn;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Configuration for OpenShift master VMs.
-     */
     @OutputExport(name="masterPoolProfile", type=OpenShiftManagedClusterMasterPoolProfileResponse.class, parameters={})
     private Output</* @Nullable */ OpenShiftManagedClusterMasterPoolProfileResponse> masterPoolProfile;
 
-    /**
-     * @return Configuration for OpenShift master VMs.
-     */
     public Output</* @Nullable */ OpenShiftManagedClusterMasterPoolProfileResponse> getMasterPoolProfile() {
         return this.masterPoolProfile;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Configuration for OpenShift networking.
-     */
     @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
-    /**
-     * @return Configuration for OpenShift networking.
-     */
     public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
         return this.networkProfile;
     }
-    /**
-     * Version of OpenShift specified when creating the cluster.
-     */
     @OutputExport(name="openShiftVersion", type=String.class, parameters={})
     private Output<String> openShiftVersion;
 
-    /**
-     * @return Version of OpenShift specified when creating the cluster.
-     */
     public Output<String> getOpenShiftVersion() {
         return this.openShiftVersion;
     }
-    /**
-     * Define the resource plan as required by ARM for billing purposes
-     */
     @OutputExport(name="plan", type=PurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ PurchasePlanResponse> plan;
 
-    /**
-     * @return Define the resource plan as required by ARM for billing purposes
-     */
     public Output</* @Nullable */ PurchasePlanResponse> getPlan() {
         return this.plan;
     }
-    /**
-     * The current deployment or provisioning state, which only appears in the response.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The current deployment or provisioning state, which only appears in the response.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Service generated FQDN for OpenShift API server.
-     */
     @OutputExport(name="publicHostname", type=String.class, parameters={})
     private Output<String> publicHostname;
 
-    /**
-     * @return Service generated FQDN for OpenShift API server.
-     */
     public Output<String> getPublicHostname() {
         return this.publicHostname;
     }
-    /**
-     * Configuration for OpenShift router(s).
-     */
     @OutputExport(name="routerProfiles", type=List.class, parameters={OpenShiftRouterProfileResponse.class})
     private Output</* @Nullable */ List<OpenShiftRouterProfileResponse>> routerProfiles;
 
-    /**
-     * @return Configuration for OpenShift router(s).
-     */
     public Output</* @Nullable */ List<OpenShiftRouterProfileResponse>> getRouterProfiles() {
         return this.routerProfiles;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public OpenShiftManagedCluster(String name, OpenShiftManagedClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerservice:OpenShiftManagedCluster", name, args == null ? OpenShiftManagedClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -454,14 +135,6 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static OpenShiftManagedCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OpenShiftManagedCluster(name, id, options);
     }

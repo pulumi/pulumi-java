@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The encryption configuration for the integration service environment.
- */
 public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmenEncryptionConfigurationArgs Empty = new IntegrationServiceEnvironmenEncryptionConfigurationArgs();
 
-    /**
-     * The encryption key reference.
-     */
     @InputImport(name="encryptionKeyReference")
     private final @Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 

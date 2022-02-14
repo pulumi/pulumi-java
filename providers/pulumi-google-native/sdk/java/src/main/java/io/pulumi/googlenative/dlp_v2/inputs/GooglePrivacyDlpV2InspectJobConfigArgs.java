@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Controls what and how to inspect for findings.
- */
 public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectJobConfigArgs Empty = new GooglePrivacyDlpV2InspectJobConfigArgs();
 
-    /**
-     * Actions to execute at the completion of the job.
-     */
     @InputImport(name="actions")
     private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
@@ -31,9 +25,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
         return this.actions == null ? Input.empty() : this.actions;
     }
 
-    /**
-     * How and what to scan for.
-     */
     @InputImport(name="inspectConfig")
     private final @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
@@ -41,9 +32,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
     }
 
-    /**
-     * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
-     */
     @InputImport(name="inspectTemplateName")
     private final @Nullable Input<String> inspectTemplateName;
 
@@ -51,9 +39,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
         return this.inspectTemplateName == null ? Input.empty() : this.inspectTemplateName;
     }
 
-    /**
-     * The data to scan.
-     */
     @InputImport(name="storageConfig")
     private final @Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 

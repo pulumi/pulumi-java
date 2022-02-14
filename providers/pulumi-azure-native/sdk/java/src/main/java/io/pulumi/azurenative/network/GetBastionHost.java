@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBastionHost {
-/**
- * Bastion Host resource.
-API Version: 2020-11-01.
- *
- * Bastion Host resource.
- */
     public static CompletableFuture<GetBastionHostResult> invokeAsync(GetBastionHostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getBastionHost", TypeShape.of(GetBastionHostResult.class), args == null ? GetBastionHostArgs.Empty : args, Utilities.withVersion(options));
     }

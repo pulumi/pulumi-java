@@ -11,29 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEventSourceResult {
-/**
- * Resource Id
- */
     private final String id;
-/**
- * The kind of the event source.
- */
     private final String kind;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","location","name","tags","type"})
@@ -52,39 +34,21 @@ public final class GetEventSourceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * The kind of the event source.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

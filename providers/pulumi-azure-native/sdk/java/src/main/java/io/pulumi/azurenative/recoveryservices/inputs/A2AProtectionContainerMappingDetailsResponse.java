@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A2A provider specific settings.
- */
 public final class A2AProtectionContainerMappingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final A2AProtectionContainerMappingDetailsResponse Empty = new A2AProtectionContainerMappingDetailsResponse();
 
-    /**
-     * A value indicating whether the auto update is enabled.
-     */
     @InputImport(name="agentAutoUpdateStatus")
     private final @Nullable String agentAutoUpdateStatus;
 
@@ -27,9 +21,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
         return this.agentAutoUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentAutoUpdateStatus);
     }
 
-    /**
-     * The automation account arm id.
-     */
     @InputImport(name="automationAccountArmId")
     private final @Nullable String automationAccountArmId;
 
@@ -37,10 +28,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
         return this.automationAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.automationAccountArmId);
     }
 
-    /**
-     * Gets the class type. Overridden in derived classes.
-Expected value is 'A2A'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -48,9 +35,6 @@ Expected value is 'A2A'.
         return this.instanceType;
     }
 
-    /**
-     * The job schedule arm name.
-     */
     @InputImport(name="jobScheduleName")
     private final @Nullable String jobScheduleName;
 
@@ -58,9 +42,6 @@ Expected value is 'A2A'.
         return this.jobScheduleName == null ? Optional.empty() : Optional.ofNullable(this.jobScheduleName);
     }
 
-    /**
-     * The schedule arm name.
-     */
     @InputImport(name="scheduleName")
     private final @Nullable String scheduleName;
 

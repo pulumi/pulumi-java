@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Optimization objective.
- */
 public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectiveResponse Empty = new ObjectiveResponse();
 
-    /**
-     * Defines supported metric goals for hyperparameter tuning
-     */
     @InputImport(name="goal", required=true)
     private final String goal;
 
@@ -25,9 +19,6 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
         return this.goal;
     }
 
-    /**
-     * Name of the metric to optimize.
-     */
     @InputImport(name="primaryMetric", required=true)
     private final String primaryMetric;
 

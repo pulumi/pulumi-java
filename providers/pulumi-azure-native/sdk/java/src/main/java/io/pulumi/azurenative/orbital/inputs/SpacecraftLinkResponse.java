@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Spacecraft Link
- */
 public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SpacecraftLinkResponse Empty = new SpacecraftLinkResponse();
 
-    /**
-     * Bandwidth in MHz
-     */
     @InputImport(name="bandwidthMHz", required=true)
     private final Double bandwidthMHz;
 
@@ -26,9 +20,6 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
         return this.bandwidthMHz;
     }
 
-    /**
-     * Center Frequency in MHz
-     */
     @InputImport(name="centerFrequencyMHz", required=true)
     private final Double centerFrequencyMHz;
 
@@ -36,9 +27,6 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
         return this.centerFrequencyMHz;
     }
 
-    /**
-     * Direction (uplink or downlink)
-     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -46,9 +34,6 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
         return this.direction;
     }
 
-    /**
-     * polarization. eg (RHCP, LHCP)
-     */
     @InputImport(name="polarization", required=true)
     private final String polarization;
 

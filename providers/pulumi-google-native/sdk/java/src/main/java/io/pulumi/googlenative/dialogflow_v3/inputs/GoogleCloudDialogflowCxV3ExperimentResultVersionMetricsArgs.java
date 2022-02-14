@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Version variant and associated metrics.
- */
 public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs Empty = new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs();
 
-    /**
-     * The metrics and corresponding confidence intervals in the inference result.
-     */
     @InputImport(name="metrics")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics;
 
@@ -30,9 +24,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
-    /**
-     * Number of sessions that were allocated to this version.
-     */
     @InputImport(name="sessionCount")
     private final @Nullable Input<Integer> sessionCount;
 
@@ -40,9 +31,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
         return this.sessionCount == null ? Input.empty() : this.sessionCount;
     }
 
-    /**
-     * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

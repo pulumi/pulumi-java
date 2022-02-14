@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -25,9 +19,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.appId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="developerId", required=true)
     private final String developerId;
 
@@ -35,9 +26,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.developerId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="keyId", required=true)
     private final String keyId;
 
@@ -45,9 +33,6 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

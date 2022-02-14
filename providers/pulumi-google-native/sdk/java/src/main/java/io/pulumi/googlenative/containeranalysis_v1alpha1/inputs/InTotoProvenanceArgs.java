@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InTotoProvenanceArgs Empty = new InTotoProvenanceArgs();
 
-    /**
-     * required
-     */
     @InputImport(name="builderConfig")
     private final @Nullable Input<BuilderConfigArgs> builderConfig;
 
@@ -31,9 +25,6 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
         return this.builderConfig == null ? Input.empty() : this.builderConfig;
     }
 
-    /**
-     * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
-     */
     @InputImport(name="materials")
     private final @Nullable Input<List<String>> materials;
 
@@ -41,9 +32,6 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
         return this.materials == null ? Input.empty() : this.materials;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<MetadataArgs> metadata;
 
@@ -51,9 +39,6 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
-     */
     @InputImport(name="recipe")
     private final @Nullable Input<RecipeArgs> recipe;
 

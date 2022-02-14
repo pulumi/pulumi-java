@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRepoArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRepoArgs Empty = new GetRepoArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -27,9 +21,6 @@ public final class GetRepoArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="repoId", required=true)
     private final String repoId;
 

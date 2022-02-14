@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BuildpacksGroupPropertiesResponse {
-/**
- * Buildpacks in the buildpack group
- */
     private final @Nullable List<BuildpackPropertiesResponse> buildpacks;
-/**
- * Buildpack group name
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"buildpacks","name"})
@@ -30,15 +24,9 @@ public final class BuildpacksGroupPropertiesResponse {
         this.name = name;
     }
 
-/**
- * Buildpacks in the buildpack group
- */
     public List<BuildpackPropertiesResponse> getBuildpacks() {
         return this.buildpacks == null ? List.of() : this.buildpacks;
     }
-/**
- * Buildpack group name
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

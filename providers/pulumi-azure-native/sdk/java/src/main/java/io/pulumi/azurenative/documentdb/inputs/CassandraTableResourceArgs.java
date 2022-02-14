@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB Cassandra table resource object
- */
 public final class CassandraTableResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CassandraTableResourceArgs Empty = new CassandraTableResourceArgs();
 
-    /**
-     * Analytical TTL.
-     */
     @InputImport(name="analyticalStorageTtl")
     private final @Nullable Input<Integer> analyticalStorageTtl;
 
@@ -29,9 +23,6 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
         return this.analyticalStorageTtl == null ? Input.empty() : this.analyticalStorageTtl;
     }
 
-    /**
-     * Time to live of the Cosmos DB Cassandra table
-     */
     @InputImport(name="defaultTtl")
     private final @Nullable Input<Integer> defaultTtl;
 
@@ -39,9 +30,6 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
     }
 
-    /**
-     * Name of the Cosmos DB Cassandra table
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -49,9 +37,6 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
         return this.id;
     }
 
-    /**
-     * Schema of the Cosmos DB Cassandra table
-     */
     @InputImport(name="schema")
     private final @Nullable Input<CassandraSchemaArgs> schema;
 

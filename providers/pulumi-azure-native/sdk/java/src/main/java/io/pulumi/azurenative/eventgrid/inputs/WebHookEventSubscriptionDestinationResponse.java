@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about the webhook destination for an event subscription.
- */
 public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebHookEventSubscriptionDestinationResponse Empty = new WebHookEventSubscriptionDestinationResponse();
 
-    /**
-     * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-     */
     @InputImport(name="azureActiveDirectoryApplicationIdOrUri")
     private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
 
@@ -28,9 +22,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
         return this.azureActiveDirectoryApplicationIdOrUri == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
 
-    /**
-     * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-     */
     @InputImport(name="azureActiveDirectoryTenantId")
     private final @Nullable String azureActiveDirectoryTenantId;
 
@@ -38,9 +29,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
         return this.azureActiveDirectoryTenantId == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
 
-    /**
-     * The base URL that represents the endpoint of the destination of an event subscription.
-     */
     @InputImport(name="endpointBaseUrl", required=true)
     private final String endpointBaseUrl;
 
@@ -48,10 +36,6 @@ public final class WebHookEventSubscriptionDestinationResponse extends io.pulumi
         return this.endpointBaseUrl;
     }
 
-    /**
-     * Type of the endpoint for the event subscription destination.
-Expected value is 'WebHook'.
-     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -59,9 +43,6 @@ Expected value is 'WebHook'.
         return this.endpointType;
     }
 
-    /**
-     * The URL that represents the endpoint of the destination of an event subscription.
-     */
     @InputImport(name="endpointUrl")
     private final @Nullable String endpointUrl;
 
@@ -69,9 +50,6 @@ Expected value is 'WebHook'.
         return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
     }
 
-    /**
-     * Maximum number of events per batch.
-     */
     @InputImport(name="maxEventsPerBatch")
     private final @Nullable Integer maxEventsPerBatch;
 
@@ -79,9 +57,6 @@ Expected value is 'WebHook'.
         return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
     }
 
-    /**
-     * Preferred batch size in Kilobytes.
-     */
     @InputImport(name="preferredBatchSizeInKilobytes")
     private final @Nullable Integer preferredBatchSizeInKilobytes;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityReservationGroup {
-/**
- * Specifies information about the capacity reservation group that the capacity reservations should be assigned to. <br><br> Currently, a capacity reservation can only be added to a capacity reservation group at creation time. An existing capacity reservation cannot be added or moved to another capacity reservation group.
-API Version: 2021-04-01.
- *
- * Specifies information about the capacity reservation group that the capacity reservations should be assigned to. <br><br> Currently, a capacity reservation can only be added to a capacity reservation group at creation time. An existing capacity reservation cannot be added or moved to another capacity reservation group.
- */
     public static CompletableFuture<GetCapacityReservationGroupResult> invokeAsync(GetCapacityReservationGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCapacityReservationGroup", TypeShape.of(GetCapacityReservationGroupResult.class), args == null ? GetCapacityReservationGroupArgs.Empty : args, Utilities.withVersion(options));
     }

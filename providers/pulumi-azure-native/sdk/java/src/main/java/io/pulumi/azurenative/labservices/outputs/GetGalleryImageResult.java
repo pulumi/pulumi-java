@@ -15,73 +15,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGalleryImageResult {
-/**
- * The author of the gallery image.
- */
     private final String author;
-/**
- * The creation date of the gallery image.
- */
     private final String createdDate;
-/**
- * The description of the gallery image.
- */
     private final String description;
-/**
- * The icon of the gallery image.
- */
     private final String icon;
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * The image reference of the gallery image.
- */
     private final GalleryImageReferenceResponse imageReference;
-/**
- * Indicates whether this gallery image is enabled.
- */
     private final @Nullable Boolean isEnabled;
-/**
- * Indicates whether this gallery has been overridden for this lab account
- */
     private final @Nullable Boolean isOverride;
-/**
- * Indicates if the plan has been authorized for programmatic deployment.
- */
     private final @Nullable Boolean isPlanAuthorized;
-/**
- * The details of the latest operation. ex: status, error
- */
     private final LatestOperationResultResponse latestOperationResult;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The third party plan that applies to this image
- */
     private final String planId;
-/**
- * The provisioning status of the resource.
- */
     private final @Nullable String provisioningState;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     private final @Nullable String uniqueIdentifier;
 
     @OutputCustomType.Constructor({"author","createdDate","description","icon","id","imageReference","isEnabled","isOverride","isPlanAuthorized","latestOperationResult","location","name","planId","provisioningState","tags","type","uniqueIdentifier"})
@@ -122,105 +71,54 @@ public final class GetGalleryImageResult {
         this.uniqueIdentifier = uniqueIdentifier;
     }
 
-/**
- * The author of the gallery image.
- */
     public String getAuthor() {
         return this.author;
     }
-/**
- * The creation date of the gallery image.
- */
     public String getCreatedDate() {
         return this.createdDate;
     }
-/**
- * The description of the gallery image.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The icon of the gallery image.
- */
     public String getIcon() {
         return this.icon;
     }
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The image reference of the gallery image.
- */
     public GalleryImageReferenceResponse getImageReference() {
         return this.imageReference;
     }
-/**
- * Indicates whether this gallery image is enabled.
- */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
-/**
- * Indicates whether this gallery has been overridden for this lab account
- */
     public Optional<Boolean> getIsOverride() {
         return Optional.ofNullable(this.isOverride);
     }
-/**
- * Indicates if the plan has been authorized for programmatic deployment.
- */
     public Optional<Boolean> getIsPlanAuthorized() {
         return Optional.ofNullable(this.isPlanAuthorized);
     }
-/**
- * The details of the latest operation. ex: status, error
- */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The third party plan that applies to this image
- */
     public String getPlanId() {
         return this.planId;
     }
-/**
- * The provisioning status of the resource.
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }

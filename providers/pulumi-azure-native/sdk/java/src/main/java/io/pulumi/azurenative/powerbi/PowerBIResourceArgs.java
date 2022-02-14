@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PowerBIResourceArgs Empty = new PowerBIResourceArgs();
 
-    /**
-     * The name of the Azure resource.
-     */
     @InputImport(name="azureResourceName")
     private final @Nullable Input<String> azureResourceName;
 
@@ -30,9 +24,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.azureResourceName == null ? Input.empty() : this.azureResourceName;
     }
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,9 +31,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Specifies the private endpoint connections of the resource.
-     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
@@ -50,9 +38,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Specifies the tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -70,9 +52,6 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Specifies the tenant id of the resource.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

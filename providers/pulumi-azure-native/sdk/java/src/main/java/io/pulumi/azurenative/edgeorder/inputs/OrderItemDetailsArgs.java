@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Order item details
- */
 public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrderItemDetailsArgs Empty = new OrderItemDetailsArgs();
 
-    /**
-     * Additional notification email list
-     */
     @InputImport(name="notificationEmailList")
     private final @Nullable Input<List<String>> notificationEmailList;
 
@@ -32,9 +26,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
         return this.notificationEmailList == null ? Input.empty() : this.notificationEmailList;
     }
 
-    /**
-     * Order item type.
-     */
     @InputImport(name="orderItemType", required=true)
     private final Input<Either<String,OrderItemType>> orderItemType;
 
@@ -42,9 +33,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
         return this.orderItemType;
     }
 
-    /**
-     * Customer notification Preferences
-     */
     @InputImport(name="preferences")
     private final @Nullable Input<PreferencesArgs> preferences;
 
@@ -52,9 +40,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
         return this.preferences == null ? Input.empty() : this.preferences;
     }
 
-    /**
-     * Unique identifier for configuration.
-     */
     @InputImport(name="productDetails", required=true)
     private final Input<ProductDetailsArgs> productDetails;
 

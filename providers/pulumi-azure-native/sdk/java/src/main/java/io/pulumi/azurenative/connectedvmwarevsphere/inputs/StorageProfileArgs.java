@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the resource properties.
- */
 public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 
-    /**
-     * Gets or sets the list of virtual disks associated with the virtual machine.
-     */
     @InputImport(name="disks")
     private final @Nullable Input<List<VirtualDiskArgs>> disks;
 

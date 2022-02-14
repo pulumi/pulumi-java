@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Binding resource properties payload
- */
 public final class BindingResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BindingResourcePropertiesResponse Empty = new BindingResourcePropertiesResponse();
 
-    /**
-     * Binding parameters of the Binding resource
-     */
     @InputImport(name="bindingParameters")
     private final @Nullable Map<String,Object> bindingParameters;
 
@@ -29,9 +23,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.bindingParameters == null ? Map.of() : this.bindingParameters;
     }
 
-    /**
-     * Creation time of the Binding resource
-     */
     @InputImport(name="createdAt", required=true)
     private final String createdAt;
 
@@ -39,9 +30,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.createdAt;
     }
 
-    /**
-     * The generated Spring Boot property file for this binding. The secret will be deducted.
-     */
     @InputImport(name="generatedProperties", required=true)
     private final String generatedProperties;
 
@@ -49,9 +37,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.generatedProperties;
     }
 
-    /**
-     * The key of the bound resource
-     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -59,9 +44,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
-    /**
-     * The Azure resource id of the bound resource
-     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -69,9 +51,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
-    /**
-     * The name of the bound resource
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -79,9 +58,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.resourceName;
     }
 
-    /**
-     * The standard Azure resource type of the bound resource
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -89,9 +65,6 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
         return this.resourceType;
     }
 
-    /**
-     * Update time of the Binding resource
-     */
     @InputImport(name="updatedAt", required=true)
     private final String updatedAt;
 

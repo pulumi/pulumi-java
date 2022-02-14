@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListKeyByAutomationAccountArgs Empty = new ListKeyByAutomationAccountArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -25,9 +19,6 @@ public final class ListKeyByAutomationAccountArgs extends io.pulumi.resources.In
         return this.automationAccountName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

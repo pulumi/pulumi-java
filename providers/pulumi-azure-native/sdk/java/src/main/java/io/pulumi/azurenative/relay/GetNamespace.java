@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespace {
-/**
- * Description of a namespace resource.
-API Version: 2017-04-01.
- *
- * Description of a namespace resource.
- */
     public static CompletableFuture<GetNamespaceResult> invokeAsync(GetNamespaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getNamespace", TypeShape.of(GetNamespaceResult.class), args == null ? GetNamespaceArgs.Empty : args, Utilities.withVersion(options));
     }

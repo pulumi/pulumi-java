@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A detail for a distro and package affected by this vulnerability and its associated fix (if one is available).
- */
 public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetailArgs Empty = new DetailArgs();
 
-    /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
-     */
     @InputImport(name="affectedCpeUri", required=true)
     private final Input<String> affectedCpeUri;
 
@@ -29,9 +23,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedCpeUri;
     }
 
-    /**
-     * The package this vulnerability affects.
-     */
     @InputImport(name="affectedPackage", required=true)
     private final Input<String> affectedPackage;
 
@@ -39,9 +30,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedPackage;
     }
 
-    /**
-     * The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
-     */
     @InputImport(name="affectedVersionEnd")
     private final @Nullable Input<VersionArgs> affectedVersionEnd;
 
@@ -49,9 +37,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedVersionEnd == null ? Input.empty() : this.affectedVersionEnd;
     }
 
-    /**
-     * The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
-     */
     @InputImport(name="affectedVersionStart")
     private final @Nullable Input<VersionArgs> affectedVersionStart;
 
@@ -59,9 +44,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedVersionStart == null ? Input.empty() : this.affectedVersionStart;
     }
 
-    /**
-     * A vendor-specific description of this vulnerability.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -69,9 +51,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The distro recommended [CPE URI](https://cpe.mitre.org/specification/) to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_cpe_uri.
-     */
     @InputImport(name="fixedCpeUri")
     private final @Nullable Input<String> fixedCpeUri;
 
@@ -79,9 +58,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedCpeUri == null ? Input.empty() : this.fixedCpeUri;
     }
 
-    /**
-     * The distro recommended package to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_package.
-     */
     @InputImport(name="fixedPackage")
     private final @Nullable Input<String> fixedPackage;
 
@@ -89,9 +65,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedPackage == null ? Input.empty() : this.fixedPackage;
     }
 
-    /**
-     * The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.
-     */
     @InputImport(name="fixedVersion")
     private final @Nullable Input<VersionArgs> fixedVersion;
 
@@ -99,9 +72,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedVersion == null ? Input.empty() : this.fixedVersion;
     }
 
-    /**
-     * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
-     */
     @InputImport(name="isObsolete")
     private final @Nullable Input<Boolean> isObsolete;
 
@@ -109,9 +79,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.isObsolete == null ? Input.empty() : this.isObsolete;
     }
 
-    /**
-     * The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
-     */
     @InputImport(name="packageType")
     private final @Nullable Input<String> packageType;
 
@@ -119,9 +86,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageType == null ? Input.empty() : this.packageType;
     }
 
-    /**
-     * The distro assigned severity of this vulnerability.
-     */
     @InputImport(name="severityName")
     private final @Nullable Input<String> severityName;
 
@@ -129,9 +93,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.severityName == null ? Input.empty() : this.severityName;
     }
 
-    /**
-     * The source from which the information in this Detail was obtained.
-     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -139,9 +100,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
-    /**
-     * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
-     */
     @InputImport(name="sourceUpdateTime")
     private final @Nullable Input<String> sourceUpdateTime;
 
@@ -149,9 +107,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceUpdateTime == null ? Input.empty() : this.sourceUpdateTime;
     }
 
-    /**
-     * The name of the vendor of the product.
-     */
     @InputImport(name="vendor")
     private final @Nullable Input<String> vendor;
 

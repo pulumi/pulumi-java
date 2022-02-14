@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents a relationship between two domains. This allows a controller in one domain to authenticate a user in another domain.
- */
 public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrustResponse Empty = new TrustResponse();
 
-    /**
-     * The time the instance was created.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -27,9 +21,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.createTime;
     }
 
-    /**
-     * The last heartbeat time when the trust was known to be connected.
-     */
     @InputImport(name="lastTrustHeartbeatTime", required=true)
     private final String lastTrustHeartbeatTime;
 
@@ -37,9 +28,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastTrustHeartbeatTime;
     }
 
-    /**
-     * The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
-     */
     @InputImport(name="selectiveAuthentication", required=true)
     private final Boolean selectiveAuthentication;
 
@@ -47,9 +35,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.selectiveAuthentication;
     }
 
-    /**
-     * The current state of the trust.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -57,9 +42,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.state;
     }
 
-    /**
-     * Additional information about the current state of the trust, if available.
-     */
     @InputImport(name="stateDescription", required=true)
     private final String stateDescription;
 
@@ -67,9 +49,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.stateDescription;
     }
 
-    /**
-     * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
-     */
     @InputImport(name="targetDnsIpAddresses", required=true)
     private final List<String> targetDnsIpAddresses;
 
@@ -77,9 +56,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetDnsIpAddresses;
     }
 
-    /**
-     * The fully qualified target domain name which will be in trust with the current domain.
-     */
     @InputImport(name="targetDomainName", required=true)
     private final String targetDomainName;
 
@@ -87,9 +63,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetDomainName;
     }
 
-    /**
-     * The trust direction, which decides if the current domain is trusted, trusting, or both.
-     */
     @InputImport(name="trustDirection", required=true)
     private final String trustDirection;
 
@@ -97,9 +70,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.trustDirection;
     }
 
-    /**
-     * Input only. The trust secret used for the handshake with the target domain. It will not be stored.
-     */
     @InputImport(name="trustHandshakeSecret", required=true)
     private final String trustHandshakeSecret;
 
@@ -107,9 +77,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.trustHandshakeSecret;
     }
 
-    /**
-     * The type of trust represented by the trust resource.
-     */
     @InputImport(name="trustType", required=true)
     private final String trustType;
 
@@ -117,9 +84,6 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
         return this.trustType;
     }
 
-    /**
-     * The last update time.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

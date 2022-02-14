@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LiveEventOutputTranscriptionTrackResponse {
-/**
- * The output track name. This property is reserved for future use, any value set on this property will be ignored.
- */
     private final String trackName;
 
     @OutputCustomType.Constructor({"trackName"})
@@ -19,9 +16,6 @@ public final class LiveEventOutputTranscriptionTrackResponse {
         this.trackName = Objects.requireNonNull(trackName);
     }
 
-/**
- * The output track name. This property is reserved for future use, any value set on this property will be ignored.
- */
     public String getTrackName() {
         return this.trackName;
     }

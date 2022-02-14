@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBillingRoleAssignmentByDepartmentArgs Empty = new GetBillingRoleAssignmentByDepartmentArgs();
 
-    /**
-     * The ID that uniquely identifies a billing account.
-     */
     @InputImport(name="billingAccountName", required=true)
     private final String billingAccountName;
 
@@ -25,9 +19,6 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
         return this.billingAccountName;
     }
 
-    /**
-     * The ID that uniquely identifies a role assignment.
-     */
     @InputImport(name="billingRoleAssignmentName", required=true)
     private final String billingRoleAssignmentName;
 
@@ -35,9 +26,6 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
         return this.billingRoleAssignmentName;
     }
 
-    /**
-     * The ID that uniquely identifies a department.
-     */
     @InputImport(name="departmentName", required=true)
     private final String departmentName;
 

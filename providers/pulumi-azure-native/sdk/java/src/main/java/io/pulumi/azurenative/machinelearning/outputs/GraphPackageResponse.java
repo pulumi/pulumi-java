@@ -15,17 +15,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GraphPackageResponse {
-/**
- * The list of edges making up the graph.
- */
     private final @Nullable List<GraphEdgeResponse> edges;
-/**
- * The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
- */
     private final @Nullable Map<String,GraphParameterResponse> graphParameters;
-/**
- * The set of nodes making up the graph, provided as a nodeId to GraphNode map
- */
     private final @Nullable Map<String,GraphNodeResponse> nodes;
 
     @OutputCustomType.Constructor({"edges","graphParameters","nodes"})
@@ -38,21 +29,12 @@ public final class GraphPackageResponse {
         this.nodes = nodes;
     }
 
-/**
- * The list of edges making up the graph.
- */
     public List<GraphEdgeResponse> getEdges() {
         return this.edges == null ? List.of() : this.edges;
     }
-/**
- * The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
- */
     public Map<String,GraphParameterResponse> getGraphParameters() {
         return this.graphParameters == null ? Map.of() : this.graphParameters;
     }
-/**
- * The set of nodes making up the graph, provided as a nodeId to GraphNode map
- */
     public Map<String,GraphNodeResponse> getNodes() {
         return this.nodes == null ? Map.of() : this.nodes;
     }

@@ -13,45 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AS2ValidationSettingsResponse {
-/**
- * The value indicating whether to check for certificate revocation list on receive.
- */
     private final Boolean checkCertificateRevocationListOnReceive;
-/**
- * The value indicating whether to check for certificate revocation list on send.
- */
     private final Boolean checkCertificateRevocationListOnSend;
-/**
- * The value indicating whether to check for duplicate message.
- */
     private final Boolean checkDuplicateMessage;
-/**
- * The value indicating whether the message has to be compressed.
- */
     private final Boolean compressMessage;
-/**
- * The value indicating whether the message has to be encrypted.
- */
     private final Boolean encryptMessage;
-/**
- * The encryption algorithm.
- */
     private final String encryptionAlgorithm;
-/**
- * The number of days to look back for duplicate interchange.
- */
     private final Integer interchangeDuplicatesValidityDays;
-/**
- * The value indicating whether to override incoming message properties with those in agreement.
- */
     private final Boolean overrideMessageProperties;
-/**
- * The value indicating whether the message has to be signed.
- */
     private final Boolean signMessage;
-/**
- * The signing algorithm.
- */
     private final @Nullable String signingAlgorithm;
 
     @OutputCustomType.Constructor({"checkCertificateRevocationListOnReceive","checkCertificateRevocationListOnSend","checkDuplicateMessage","compressMessage","encryptMessage","encryptionAlgorithm","interchangeDuplicatesValidityDays","overrideMessageProperties","signMessage","signingAlgorithm"})
@@ -78,63 +48,33 @@ public final class AS2ValidationSettingsResponse {
         this.signingAlgorithm = signingAlgorithm;
     }
 
-/**
- * The value indicating whether to check for certificate revocation list on receive.
- */
     public Boolean getCheckCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
-/**
- * The value indicating whether to check for certificate revocation list on send.
- */
     public Boolean getCheckCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
-/**
- * The value indicating whether to check for duplicate message.
- */
     public Boolean getCheckDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
-/**
- * The value indicating whether the message has to be compressed.
- */
     public Boolean getCompressMessage() {
         return this.compressMessage;
     }
-/**
- * The value indicating whether the message has to be encrypted.
- */
     public Boolean getEncryptMessage() {
         return this.encryptMessage;
     }
-/**
- * The encryption algorithm.
- */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
-/**
- * The number of days to look back for duplicate interchange.
- */
     public Integer getInterchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
-/**
- * The value indicating whether to override incoming message properties with those in agreement.
- */
     public Boolean getOverrideMessageProperties() {
         return this.overrideMessageProperties;
     }
-/**
- * The value indicating whether the message has to be signed.
- */
     public Boolean getSignMessage() {
         return this.signMessage;
     }
-/**
- * The signing algorithm.
- */
     public Optional<String> getSigningAlgorithm() {
         return Optional.ofNullable(this.signingAlgorithm);
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The runbook property associated with the entity.
- */
 public final class RunbookAssociationPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RunbookAssociationPropertyResponse Empty = new RunbookAssociationPropertyResponse();
 
-    /**
-     * Gets or sets the name of the runbook.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

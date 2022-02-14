@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
- */
 public final class TimeZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeZoneArgs Empty = new TimeZoneArgs();
 
-    /**
-     * IANA Time Zone Database time zone, e.g. "America/New_York".
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -27,9 +21,6 @@ public final class TimeZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Optional. IANA Time Zone Database version number, e.g. "2019a".
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

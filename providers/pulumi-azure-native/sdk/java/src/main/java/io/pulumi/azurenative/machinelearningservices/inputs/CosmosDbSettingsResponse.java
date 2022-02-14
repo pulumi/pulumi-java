@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CosmosDbSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CosmosDbSettingsResponse Empty = new CosmosDbSettingsResponse();
 
-    /**
-     * The throughput of the collections in cosmosdb database
-     */
     @InputImport(name="collectionsThroughput")
     private final @Nullable Integer collectionsThroughput;
 

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of identity used for the resource mover service.
- */
     @EnumType
     public enum ResourceIdentityType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         SystemAssigned("SystemAssigned"),
-/**
- * 
- */
         UserAssigned("UserAssigned");
 
         private final String value;

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The credential result response.
- */
 public final class CredentialResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CredentialResultResponse Empty = new CredentialResultResponse();
 
-    /**
-     * The name of the credential.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class CredentialResultResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
-    /**
-     * Base64-encoded Kubernetes configuration file.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Information about a system service deployed in the cluster
- */
 public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SystemServiceArgs Empty = new SystemServiceArgs();
 
-    /**
-     * The system service type
-     */
     @InputImport(name="systemServiceType", required=true)
     private final Input<Either<String,SystemServiceType>> systemServiceType;
 

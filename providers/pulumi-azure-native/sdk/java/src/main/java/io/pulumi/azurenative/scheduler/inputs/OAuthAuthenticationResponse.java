@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OAuthAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OAuthAuthenticationResponse Empty = new OAuthAuthenticationResponse();
 
-    /**
-     * Gets or sets the audience.
-     */
     @InputImport(name="audience")
     private final @Nullable String audience;
 
@@ -27,9 +21,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
-    /**
-     * Gets or sets the client identifier.
-     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -37,9 +28,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * Gets or sets the secret, return value will always be empty.
-     */
     @InputImport(name="secret")
     private final @Nullable String secret;
 
@@ -47,9 +35,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 
-    /**
-     * Gets or sets the tenant.
-     */
     @InputImport(name="tenant")
     private final @Nullable String tenant;
 
@@ -57,10 +42,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
-    /**
-     * Gets or sets the HTTP authentication type.
-Expected value is 'ActiveDirectoryOAuth'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

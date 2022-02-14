@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 
-    /**
-     * The destination CIDR to which the route applies.
-     */
     @InputImport(name="addressPrefix")
     private final @Nullable Input<String> addressPrefix;
 
@@ -30,9 +24,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
     }
 
-    /**
-     * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
-     */
     @InputImport(name="hasBgpOverride")
     private final @Nullable Input<Boolean> hasBgpOverride;
 
@@ -40,9 +31,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.hasBgpOverride == null ? Input.empty() : this.hasBgpOverride;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -50,9 +38,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,9 +45,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-     */
     @InputImport(name="nextHopIpAddress")
     private final @Nullable Input<String> nextHopIpAddress;
 
@@ -70,9 +52,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopIpAddress == null ? Input.empty() : this.nextHopIpAddress;
     }
 
-    /**
-     * The type of Azure hop the packet should be sent to.
-     */
     @InputImport(name="nextHopType", required=true)
     private final Input<Either<String,RouteNextHopType>> nextHopType;
 
@@ -80,9 +59,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopType;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -90,9 +66,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the route.
-     */
     @InputImport(name="routeName")
     private final @Nullable Input<String> routeName;
 
@@ -100,9 +73,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeName == null ? Input.empty() : this.routeName;
     }
 
-    /**
-     * The name of the route table.
-     */
     @InputImport(name="routeTableName", required=true)
     private final Input<String> routeTableName;
 
@@ -110,9 +80,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeTableName;
     }
 
-    /**
-     * The type of the resource.
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

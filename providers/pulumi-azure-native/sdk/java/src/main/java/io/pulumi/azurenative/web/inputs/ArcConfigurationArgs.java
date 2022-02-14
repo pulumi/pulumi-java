@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArcConfigurationArgs Empty = new ArcConfigurationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="artifactStorageAccessMode")
     private final @Nullable Input<String> artifactStorageAccessMode;
 
@@ -29,9 +23,6 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.artifactStorageAccessMode == null ? Input.empty() : this.artifactStorageAccessMode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="artifactStorageClassName")
     private final @Nullable Input<String> artifactStorageClassName;
 
@@ -39,9 +30,6 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.artifactStorageClassName == null ? Input.empty() : this.artifactStorageClassName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="artifactStorageMountPath")
     private final @Nullable Input<String> artifactStorageMountPath;
 
@@ -49,9 +37,6 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.artifactStorageMountPath == null ? Input.empty() : this.artifactStorageMountPath;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="artifactStorageNodeName")
     private final @Nullable Input<String> artifactStorageNodeName;
 
@@ -59,9 +44,6 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.artifactStorageNodeName == null ? Input.empty() : this.artifactStorageNodeName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="artifactsStorageType")
     private final @Nullable Input<StorageType> artifactsStorageType;
 
@@ -69,9 +51,6 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.artifactsStorageType == null ? Input.empty() : this.artifactsStorageType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="frontEndServiceConfiguration")
     private final @Nullable Input<FrontEndConfigurationArgs> frontEndServiceConfiguration;
 
@@ -79,9 +58,6 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.frontEndServiceConfiguration == null ? Input.empty() : this.frontEndServiceConfiguration;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kubeConfig")
     private final @Nullable Input<String> kubeConfig;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity for the container group.
- */
 public final class ContainerGroupIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerGroupIdentityArgs Empty = new ContainerGroupIdentityArgs();
 
-    /**
-     * The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
-     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 
@@ -30,9 +24,6 @@ public final class ContainerGroupIdentityArgs extends io.pulumi.resources.Resour
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

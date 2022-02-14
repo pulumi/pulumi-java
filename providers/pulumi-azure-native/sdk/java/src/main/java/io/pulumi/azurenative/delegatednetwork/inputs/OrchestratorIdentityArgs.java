@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OrchestratorIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrchestratorIdentityArgs Empty = new OrchestratorIdentityArgs();
 
-    /**
-     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
-     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

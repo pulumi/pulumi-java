@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketLifecycleResponse {
-/**
- * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
- */
     private final List<BucketLifecycleRuleItemResponse> rule;
 
     @OutputCustomType.Constructor({"rule"})
@@ -20,9 +17,6 @@ public final class BucketLifecycleResponse {
         this.rule = Objects.requireNonNull(rule);
     }
 
-/**
- * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
- */
     public List<BucketLifecycleRuleItemResponse> getRule() {
         return this.rule;
     }

@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutPropertiesStatusArgs Empty = new DefaultRolloutPropertiesStatusArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="completedRegions")
     private final @Nullable Input<List<String>> completedRegions;
 
@@ -33,9 +27,6 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
         return this.completedRegions == null ? Input.empty() : this.completedRegions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="failedOrSkippedRegions")
     private final @Nullable Input<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions;
 
@@ -43,9 +34,6 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
         return this.failedOrSkippedRegions == null ? Input.empty() : this.failedOrSkippedRegions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="nextTrafficRegion")
     private final @Nullable Input<Either<String,TrafficRegionCategory>> nextTrafficRegion;
 
@@ -53,9 +41,6 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
         return this.nextTrafficRegion == null ? Input.empty() : this.nextTrafficRegion;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="nextTrafficRegionScheduledTime")
     private final @Nullable Input<String> nextTrafficRegionScheduledTime;
 
@@ -63,9 +48,6 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
         return this.nextTrafficRegionScheduledTime == null ? Input.empty() : this.nextTrafficRegionScheduledTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="subscriptionReregistrationResult")
     private final @Nullable Input<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult;
 

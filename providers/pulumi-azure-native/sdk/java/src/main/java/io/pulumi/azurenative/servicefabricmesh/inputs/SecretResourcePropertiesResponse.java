@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of a secret resource.
- */
 public final class SecretResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretResourcePropertiesResponse Empty = new SecretResourcePropertiesResponse();
 
-    /**
-     * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
-     */
     @InputImport(name="contentType")
     private final @Nullable String contentType;
 
@@ -27,9 +21,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
-    /**
-     * User readable description of the secret.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -37,10 +28,6 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Describes the kind of secret.
-Expected value is 'SecretResourceProperties'.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -48,9 +35,6 @@ Expected value is 'SecretResourceProperties'.
         return this.kind;
     }
 
-    /**
-     * State of the resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -58,9 +42,6 @@ Expected value is 'SecretResourceProperties'.
         return this.provisioningState;
     }
 
-    /**
-     * Status of the resource.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -68,9 +49,6 @@ Expected value is 'SecretResourceProperties'.
         return this.status;
     }
 
-    /**
-     * Gives additional information about the current status of the secret.
-     */
     @InputImport(name="statusDetails", required=true)
     private final String statusDetails;
 

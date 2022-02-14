@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVolumeArgs Empty = new GetVolumeArgs();
 
-    /**
-     * The device name
-     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -25,9 +19,6 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
-    /**
-     * The manager name
-     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -35,9 +26,6 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
         return this.managerName;
     }
 
-    /**
-     * The resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The volume container name.
-     */
     @InputImport(name="volumeContainerName", required=true)
     private final String volumeContainerName;
 
@@ -55,9 +40,6 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
         return this.volumeContainerName;
     }
 
-    /**
-     * The volume name.
-     */
     @InputImport(name="volumeName", required=true)
     private final String volumeName;
 

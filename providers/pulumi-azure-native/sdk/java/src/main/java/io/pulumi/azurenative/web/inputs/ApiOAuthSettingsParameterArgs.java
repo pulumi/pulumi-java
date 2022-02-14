@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * OAuth settings for the API
- */
 public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiOAuthSettingsParameterArgs Empty = new ApiOAuthSettingsParameterArgs();
 
-    /**
-     * Options available to this parameter
-     */
     @InputImport(name="options")
     private final @Nullable Input<Object> options;
 
@@ -28,9 +22,6 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
         return this.options == null ? Input.empty() : this.options;
     }
 
-    /**
-     * UI definitions per culture as caller can specify the culture
-     */
     @InputImport(name="uiDefinition")
     private final @Nullable Input<Object> uiDefinition;
 
@@ -38,9 +29,6 @@ public final class ApiOAuthSettingsParameterArgs extends io.pulumi.resources.Res
         return this.uiDefinition == null ? Input.empty() : this.uiDefinition;
     }
 
-    /**
-     * Value of the setting
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

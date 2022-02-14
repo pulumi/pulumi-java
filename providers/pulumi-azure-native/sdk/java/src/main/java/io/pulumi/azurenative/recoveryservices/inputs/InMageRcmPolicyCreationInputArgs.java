@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * InMageRcm policy creation input.
- */
 public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageRcmPolicyCreationInputArgs Empty = new InMageRcmPolicyCreationInputArgs();
 
-    /**
-     * The app consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
@@ -28,9 +22,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The crash consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
@@ -38,9 +29,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
-    /**
-     * A value indicating whether multi-VM sync has to be enabled.
-     */
     @InputImport(name="enableMultiVmSync")
     private final @Nullable Input<String> enableMultiVmSync;
 
@@ -48,10 +36,6 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
         return this.enableMultiVmSync == null ? Input.empty() : this.enableMultiVmSync;
     }
 
-    /**
-     * The class type.
-Expected value is 'InMageRcm'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -59,9 +43,6 @@ Expected value is 'InMageRcm'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     */
     @InputImport(name="recoveryPointHistoryInMinutes")
     private final @Nullable Input<Integer> recoveryPointHistoryInMinutes;
 

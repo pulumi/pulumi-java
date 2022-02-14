@@ -12,42 +12,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FactoryGitHubConfigurationResponse {
-/**
- * Account name.
- */
     private final String accountName;
-/**
- * GitHub bring your own app client id.
- */
     private final @Nullable String clientId;
-/**
- * GitHub bring your own app client secret information.
- */
     private final @Nullable GitHubClientSecretResponse clientSecret;
-/**
- * Collaboration branch.
- */
     private final String collaborationBranch;
-/**
- * GitHub Enterprise host name. For example: https://github.mydomain.com
- */
     private final @Nullable String hostName;
-/**
- * Last commit id.
- */
     private final @Nullable String lastCommitId;
-/**
- * Repository name.
- */
     private final String repositoryName;
-/**
- * Root folder.
- */
     private final String rootFolder;
-/**
- * Type of repo configuration.
-Expected value is 'FactoryGitHubConfiguration'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"accountName","clientId","clientSecret","collaborationBranch","hostName","lastCommitId","repositoryName","rootFolder","type"})
@@ -72,58 +44,30 @@ Expected value is 'FactoryGitHubConfiguration'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Account name.
- */
     public String getAccountName() {
         return this.accountName;
     }
-/**
- * GitHub bring your own app client id.
- */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
-/**
- * GitHub bring your own app client secret information.
- */
     public Optional<GitHubClientSecretResponse> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
-/**
- * Collaboration branch.
- */
     public String getCollaborationBranch() {
         return this.collaborationBranch;
     }
-/**
- * GitHub Enterprise host name. For example: https://github.mydomain.com
- */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
-/**
- * Last commit id.
- */
     public Optional<String> getLastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
-/**
- * Repository name.
- */
     public String getRepositoryName() {
         return this.repositoryName;
     }
-/**
- * Root folder.
- */
     public String getRootFolder() {
         return this.rootFolder;
     }
-/**
- * Type of repo configuration.
-Expected value is 'FactoryGitHubConfiguration'.
- */
     public String getType() {
         return this.type;
     }

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BodyDiagnosticSettingsResponse {
-/**
- * Number of request body bytes to log.
- */
     private final @Nullable Integer bytes;
 
     @OutputCustomType.Constructor({"bytes"})
@@ -21,9 +18,6 @@ public final class BodyDiagnosticSettingsResponse {
         this.bytes = bytes;
     }
 
-/**
- * Number of request body bytes to log.
- */
     public Optional<Integer> getBytes() {
         return Optional.ofNullable(this.bytes);
     }

@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ChangeFeedResponse {
-/**
- * Indicates whether change feed event logging is enabled for the Blob service.
- */
     private final @Nullable Boolean enabled;
-/**
- * Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
- */
     private final @Nullable Integer retentionInDays;
 
     @OutputCustomType.Constructor({"enabled","retentionInDays"})
@@ -29,15 +23,9 @@ public final class ChangeFeedResponse {
         this.retentionInDays = retentionInDays;
     }
 
-/**
- * Indicates whether change feed event logging is enabled for the Blob service.
- */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
-/**
- * Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
- */
     public Optional<Integer> getRetentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }

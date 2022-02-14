@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListMediaServiceKeysResult {
-/**
- * The primary authorization endpoint.
- */
     private final @Nullable String primaryAuthEndpoint;
-/**
- * The primary key for the Media Service resource.
- */
     private final @Nullable String primaryKey;
-/**
- * The authorization scope.
- */
     private final @Nullable String scope;
-/**
- * The secondary authorization endpoint.
- */
     private final @Nullable String secondaryAuthEndpoint;
-/**
- * The secondary key for the Media Service resource.
- */
     private final @Nullable String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryAuthEndpoint","primaryKey","scope","secondaryAuthEndpoint","secondaryKey"})
@@ -46,33 +31,18 @@ public final class ListMediaServiceKeysResult {
         this.secondaryKey = secondaryKey;
     }
 
-/**
- * The primary authorization endpoint.
- */
     public Optional<String> getPrimaryAuthEndpoint() {
         return Optional.ofNullable(this.primaryAuthEndpoint);
     }
-/**
- * The primary key for the Media Service resource.
- */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
-/**
- * The authorization scope.
- */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
-/**
- * The secondary authorization endpoint.
- */
     public Optional<String> getSecondaryAuthEndpoint() {
         return Optional.ofNullable(this.secondaryAuthEndpoint);
     }
-/**
- * The secondary key for the Media Service resource.
- */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

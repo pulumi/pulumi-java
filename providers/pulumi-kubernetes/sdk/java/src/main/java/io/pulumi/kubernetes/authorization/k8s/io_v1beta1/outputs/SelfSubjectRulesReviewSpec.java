@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SelfSubjectRulesReviewSpec {
-/**
- * Namespace to evaluate rules for. Required.
- */
     private final @Nullable String namespace;
 
     @OutputCustomType.Constructor({"namespace"})
@@ -21,9 +18,6 @@ public final class SelfSubjectRulesReviewSpec {
         this.namespace = namespace;
     }
 
-/**
- * Namespace to evaluate rules for. Required.
- */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

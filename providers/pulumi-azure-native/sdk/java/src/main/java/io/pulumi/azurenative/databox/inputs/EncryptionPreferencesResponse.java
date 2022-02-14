@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Preferences related to the Encryption.
- */
 public final class EncryptionPreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionPreferencesResponse Empty = new EncryptionPreferencesResponse();
 
-    /**
-     * Defines secondary layer of software-based encryption enablement.
-     */
     @InputImport(name="doubleEncryption")
     private final @Nullable String doubleEncryption;
 

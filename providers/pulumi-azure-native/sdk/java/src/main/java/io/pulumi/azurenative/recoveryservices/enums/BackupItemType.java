@@ -8,70 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of backup items associated with this container.
- */
     @EnumType
     public enum BackupItemType {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         VM("VM"),
-/**
- * 
- */
         FileFolder("FileFolder"),
-/**
- * 
- */
         AzureSqlDb("AzureSqlDb"),
-/**
- * 
- */
         SQLDB("SQLDB"),
-/**
- * 
- */
         Exchange("Exchange"),
-/**
- * 
- */
         Sharepoint("Sharepoint"),
-/**
- * 
- */
         VMwareVM("VMwareVM"),
-/**
- * 
- */
         SystemState("SystemState"),
-/**
- * 
- */
         Client("Client"),
-/**
- * 
- */
         GenericDataSource("GenericDataSource"),
-/**
- * 
- */
         SQLDataBase("SQLDataBase"),
-/**
- * 
- */
         AzureFileShare("AzureFileShare"),
-/**
- * 
- */
         SAPHanaDatabase("SAPHanaDatabase"),
-/**
- * 
- */
         SAPAseDatabase("SAPAseDatabase");
 
         private final String value;

@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The name of the SKU.
- */
     @EnumType
     public enum ClusterSkuNameEnum {
-/**
- * 
- */
         CapacityReservation("CapacityReservation");
 
         private final String value;

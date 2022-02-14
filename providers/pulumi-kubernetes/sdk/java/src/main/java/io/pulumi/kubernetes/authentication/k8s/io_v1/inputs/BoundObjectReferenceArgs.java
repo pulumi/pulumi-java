@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * BoundObjectReference is a reference to an object that a token is bound to.
- */
 public final class BoundObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BoundObjectReferenceArgs Empty = new BoundObjectReferenceArgs();
 
-    /**
-     * API version of the referent.
-     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -27,9 +21,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
-    /**
-     * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -37,9 +28,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the referent.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,9 +35,6 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * UID of the referent.
-     */
     @InputImport(name="uid")
     private final @Nullable Input<String> uid;
 

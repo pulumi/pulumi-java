@@ -16,53 +16,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuSettingResponse {
-/**
- * 
- */
     private final @Nullable List<SkuCapabilityResponse> capabilities;
-/**
- * 
- */
     private final @Nullable SkuSettingResponseCapacity capacity;
-/**
- * 
- */
     private final @Nullable List<SkuCostResponse> costs;
-/**
- * 
- */
     private final @Nullable String family;
-/**
- * 
- */
     private final @Nullable String kind;
-/**
- * 
- */
     private final @Nullable List<SkuLocationInfoResponse> locationInfo;
-/**
- * 
- */
     private final @Nullable List<String> locations;
-/**
- * 
- */
     private final String name;
-/**
- * 
- */
     private final @Nullable List<String> requiredFeatures;
-/**
- * 
- */
     private final @Nullable List<String> requiredQuotaIds;
-/**
- * 
- */
     private final @Nullable String size;
-/**
- * 
- */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capabilities","capacity","costs","family","kind","locationInfo","locations","name","requiredFeatures","requiredQuotaIds","size","tier"})
@@ -93,75 +57,39 @@ public final class SkuSettingResponse {
         this.tier = tier;
     }
 
-/**
- * 
- */
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
-/**
- * 
- */
     public Optional<SkuSettingResponseCapacity> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
-/**
- * 
- */
     public List<SkuCostResponse> getCosts() {
         return this.costs == null ? List.of() : this.costs;
     }
-/**
- * 
- */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
-/**
- * 
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * 
- */
     public List<SkuLocationInfoResponse> getLocationInfo() {
         return this.locationInfo == null ? List.of() : this.locationInfo;
     }
-/**
- * 
- */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
-/**
- * 
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
- */
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
-/**
- * 
- */
     public List<String> getRequiredQuotaIds() {
         return this.requiredQuotaIds == null ? List.of() : this.requiredQuotaIds;
     }
-/**
- * 
- */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
-/**
- * 
- */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkGroupArgs Empty = new NetworkGroupArgs();
 
-    /**
-     * Network group conditional filter.
-     */
     @InputImport(name="conditionalMembership")
     private final @Nullable Input<String> conditionalMembership;
 
@@ -29,9 +23,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditionalMembership == null ? Input.empty() : this.conditionalMembership;
     }
 
-    /**
-     * A description of the network group.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * A friendly name for the network group.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -49,9 +37,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Group members of network group.
-     */
     @InputImport(name="groupMembers")
     private final @Nullable Input<List<GroupMembersItemArgs>> groupMembers;
 
@@ -59,9 +44,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupMembers == null ? Input.empty() : this.groupMembers;
     }
 
-    /**
-     * Group member type.
-     */
     @InputImport(name="memberType")
     private final @Nullable Input<String> memberType;
 
@@ -69,9 +51,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.memberType == null ? Input.empty() : this.memberType;
     }
 
-    /**
-     * The name of the network group to get.
-     */
     @InputImport(name="networkGroupName")
     private final @Nullable Input<String> networkGroupName;
 
@@ -79,9 +58,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkGroupName == null ? Input.empty() : this.networkGroupName;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -89,9 +65,6 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

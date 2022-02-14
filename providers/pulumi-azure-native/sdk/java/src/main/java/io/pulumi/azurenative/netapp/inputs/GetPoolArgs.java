@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPoolArgs Empty = new GetPoolArgs();
 
-    /**
-     * The name of the NetApp account
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the capacity pool
-     */
     @InputImport(name="poolName", required=true)
     private final String poolName;
 
@@ -35,9 +26,6 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.poolName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

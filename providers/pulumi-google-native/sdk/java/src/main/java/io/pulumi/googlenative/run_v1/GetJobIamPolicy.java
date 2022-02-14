@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobIamPolicy {
-/**
- * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
- */
     public static CompletableFuture<GetJobIamPolicyResult> invokeAsync(GetJobIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getJobIamPolicy", TypeShape.of(GetJobIamPolicyResult.class), args == null ? GetJobIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

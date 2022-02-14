@@ -12,16 +12,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Describes the environment in which a Dataflow Job runs.
- */
 public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentResponse Empty = new EnvironmentResponse();
 
-    /**
-     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".
-     */
     @InputImport(name="clusterManagerApiService", required=true)
     private final String clusterManagerApiService;
 
@@ -29,9 +23,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.clusterManagerApiService;
     }
 
-    /**
-     * The dataset for the current project where various workflow related tables are stored. The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
-     */
     @InputImport(name="dataset", required=true)
     private final String dataset;
 
@@ -39,9 +30,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataset;
     }
 
-    /**
-     * Any debugging options to be supplied to the job.
-     */
     @InputImport(name="debugOptions", required=true)
     private final DebugOptionsResponse debugOptions;
 
@@ -49,9 +37,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.debugOptions;
     }
 
-    /**
-     * The list of experiments to enable. This field should be used for SDK related experiments and not for service related experiments. The proper field for service related experiments is service_options.
-     */
     @InputImport(name="experiments", required=true)
     private final List<String> experiments;
 
@@ -59,9 +44,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.experiments;
     }
 
-    /**
-     * Which Flexible Resource Scheduling mode to run in.
-     */
     @InputImport(name="flexResourceSchedulingGoal", required=true)
     private final String flexResourceSchedulingGoal;
 
@@ -69,9 +51,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.flexResourceSchedulingGoal;
     }
 
-    /**
-     * Experimental settings.
-     */
     @InputImport(name="internalExperiments", required=true)
     private final Map<String,String> internalExperiments;
 
@@ -79,9 +58,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.internalExperiments;
     }
 
-    /**
-     * The Cloud Dataflow SDK pipeline options specified by the user. These options are passed through the service and are used to recreate the SDK pipeline options on the worker in a language agnostic and platform independent way.
-     */
     @InputImport(name="sdkPipelineOptions", required=true)
     private final Map<String,String> sdkPipelineOptions;
 
@@ -89,9 +65,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.sdkPipelineOptions;
     }
 
-    /**
-     * Identity to run virtual machines as. Defaults to the default account.
-     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final String serviceAccountEmail;
 
@@ -99,9 +72,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceAccountEmail;
     }
 
-    /**
-     * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer Managed Encryption Key (CMEK). Format: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
-     */
     @InputImport(name="serviceKmsKeyName", required=true)
     private final String serviceKmsKeyName;
 
@@ -109,9 +79,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceKmsKeyName;
     }
 
-    /**
-     * The list of service options to enable. This field should be used for service related experiments only. These experiments, when graduating to GA, should be replaced by dedicated fields or become default (i.e. always on).
-     */
     @InputImport(name="serviceOptions", required=true)
     private final List<String> serviceOptions;
 
@@ -119,9 +86,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceOptions;
     }
 
-    /**
-     * The shuffle mode used for the job.
-     */
     @InputImport(name="shuffleMode", required=true)
     private final String shuffleMode;
 
@@ -129,9 +93,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.shuffleMode;
     }
 
-    /**
-     * The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
-     */
     @InputImport(name="tempStoragePrefix", required=true)
     private final String tempStoragePrefix;
 
@@ -139,9 +100,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.tempStoragePrefix;
     }
 
-    /**
-     * A description of the process that generated the request.
-     */
     @InputImport(name="userAgent", required=true)
     private final Map<String,String> userAgent;
 
@@ -149,9 +107,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.userAgent;
     }
 
-    /**
-     * A structure describing which components and their versions of the service are required in order to run the job.
-     */
     @InputImport(name="version", required=true)
     private final Map<String,String> version;
 
@@ -159,9 +114,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.version;
     }
 
-    /**
-     * The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.
-     */
     @InputImport(name="workerPools", required=true)
     private final List<WorkerPoolResponse> workerPools;
 
@@ -169,9 +121,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.workerPools;
     }
 
-    /**
-     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
-     */
     @InputImport(name="workerRegion", required=true)
     private final String workerRegion;
 
@@ -179,9 +128,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.workerRegion;
     }
 
-    /**
-     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.
-     */
     @InputImport(name="workerZone", required=true)
     private final String workerZone;
 

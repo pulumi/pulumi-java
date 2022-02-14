@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LimitRangeSpec {
-/**
- * Limits is the list of LimitRangeItem objects that are enforced.
- */
     private final List<LimitRangeItem> limits;
 
     @OutputCustomType.Constructor({"limits"})
@@ -20,9 +17,6 @@ public final class LimitRangeSpec {
         this.limits = Objects.requireNonNull(limits);
     }
 
-/**
- * Limits is the list of LimitRangeItem objects that are enforced.
- */
     public List<LimitRangeItem> getLimits() {
         return this.limits;
     }

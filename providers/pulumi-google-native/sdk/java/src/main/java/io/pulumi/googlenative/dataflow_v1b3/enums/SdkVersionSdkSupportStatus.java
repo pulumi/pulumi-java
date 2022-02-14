@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The support status for this SDK version.
- */
     @EnumType
     public enum SdkVersionSdkSupportStatus {
-/**
- * Cloud Dataflow is unaware of this version.
- */
         Unknown("UNKNOWN"),
-/**
- * This is a known version of an SDK, and is supported.
- */
         Supported("SUPPORTED"),
-/**
- * A newer version of the SDK family exists, and an update is recommended.
- */
         Stale("STALE"),
-/**
- * This version of the SDK is deprecated and will eventually be unsupported.
- */
         Deprecated("DEPRECATED"),
-/**
- * Support for this SDK version has ended and it should no longer be used.
- */
         Unsupported("UNSUPPORTED");
 
         private final String value;

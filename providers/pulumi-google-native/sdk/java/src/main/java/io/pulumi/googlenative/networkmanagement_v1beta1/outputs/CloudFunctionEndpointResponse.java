@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudFunctionEndpointResponse {
-/**
- * A [Cloud function](https://cloud.google.com/functions) name.
- */
     private final String uri;
 
     @OutputCustomType.Constructor({"uri"})
@@ -19,9 +16,6 @@ public final class CloudFunctionEndpointResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
-/**
- * A [Cloud function](https://cloud.google.com/functions) name.
- */
     public String getUri() {
         return this.uri;
     }

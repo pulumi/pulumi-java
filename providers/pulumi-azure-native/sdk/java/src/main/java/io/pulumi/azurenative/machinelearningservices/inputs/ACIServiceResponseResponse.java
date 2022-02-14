@@ -21,16 +21,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The response for an ACI service.
- */
 public final class ACIServiceResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ACIServiceResponseResponse Empty = new ACIServiceResponseResponse();
 
-    /**
-     * Whether or not Application Insights is enabled.
-     */
     @InputImport(name="appInsightsEnabled")
     private final @Nullable Boolean appInsightsEnabled;
 
@@ -38,9 +32,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
     }
 
-    /**
-     * Whether or not authentication is enabled on the service.
-     */
     @InputImport(name="authEnabled")
     private final @Nullable Boolean authEnabled;
 
@@ -48,9 +39,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
     }
 
-    /**
-     * The CName for the service.
-     */
     @InputImport(name="cname")
     private final @Nullable String cname;
 
@@ -58,10 +46,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
     }
 
-    /**
-     * The compute environment type for the service.
-Expected value is 'ACI'.
-     */
     @InputImport(name="computeType", required=true)
     private final String computeType;
 
@@ -69,9 +53,6 @@ Expected value is 'ACI'.
         return this.computeType;
     }
 
-    /**
-     * The container resource requirements.
-     */
     @InputImport(name="containerResourceRequirements")
     private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
@@ -79,9 +60,6 @@ Expected value is 'ACI'.
         return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
     }
 
-    /**
-     * Details of the data collection options specified.
-     */
     @InputImport(name="dataCollection")
     private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
 
@@ -89,9 +67,6 @@ Expected value is 'ACI'.
         return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
     }
 
-    /**
-     * The deployment type for the service.
-     */
     @InputImport(name="deploymentType")
     private final @Nullable String deploymentType;
 
@@ -99,9 +74,6 @@ Expected value is 'ACI'.
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
-    /**
-     * The service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -109,9 +81,6 @@ Expected value is 'ACI'.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encryption properties.
-     */
     @InputImport(name="encryptionProperties")
     private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
 
@@ -119,9 +88,6 @@ Expected value is 'ACI'.
         return this.encryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionProperties);
     }
 
-    /**
-     * The Environment, models and assets used for inferencing.
-     */
     @InputImport(name="environmentImageRequest")
     private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
@@ -129,9 +95,6 @@ Expected value is 'ACI'.
         return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
     }
 
-    /**
-     * The error details.
-     */
     @InputImport(name="error", required=true)
     private final ServiceResponseBaseResponseError error;
 
@@ -139,9 +102,6 @@ Expected value is 'ACI'.
         return this.error;
     }
 
-    /**
-     * The service tag dictionary. Tags are mutable.
-     */
     @InputImport(name="kvTags")
     private final @Nullable Map<String,String> kvTags;
 
@@ -149,9 +109,6 @@ Expected value is 'ACI'.
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
-    /**
-     * The name of the Azure location/region.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -159,9 +116,6 @@ Expected value is 'ACI'.
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Details on the models and configurations.
-     */
     @InputImport(name="modelConfigMap", required=true)
     private final Map<String,Object> modelConfigMap;
 
@@ -169,9 +123,6 @@ Expected value is 'ACI'.
         return this.modelConfigMap;
     }
 
-    /**
-     * The list of models.
-     */
     @InputImport(name="models")
     private final @Nullable List<ModelResponse> models;
 
@@ -179,9 +130,6 @@ Expected value is 'ACI'.
         return this.models == null ? List.of() : this.models;
     }
 
-    /**
-     * The service property dictionary. Properties are immutable.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -189,9 +137,6 @@ Expected value is 'ACI'.
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * The public Fqdn for the service.
-     */
     @InputImport(name="publicFqdn")
     private final @Nullable String publicFqdn;
 
@@ -199,9 +144,6 @@ Expected value is 'ACI'.
         return this.publicFqdn == null ? Optional.empty() : Optional.ofNullable(this.publicFqdn);
     }
 
-    /**
-     * The public IP address for the service.
-     */
     @InputImport(name="publicIp")
     private final @Nullable String publicIp;
 
@@ -209,9 +151,6 @@ Expected value is 'ACI'.
         return this.publicIp == null ? Optional.empty() : Optional.ofNullable(this.publicIp);
     }
 
-    /**
-     * The Uri for sending scoring requests.
-     */
     @InputImport(name="scoringUri", required=true)
     private final String scoringUri;
 
@@ -219,9 +158,6 @@ Expected value is 'ACI'.
         return this.scoringUri;
     }
 
-    /**
-     * The public SSL certificate in PEM format to use if SSL is enabled.
-     */
     @InputImport(name="sslCertificate")
     private final @Nullable String sslCertificate;
 
@@ -229,9 +165,6 @@ Expected value is 'ACI'.
         return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
     }
 
-    /**
-     * Whether or not SSL is enabled.
-     */
     @InputImport(name="sslEnabled")
     private final @Nullable Boolean sslEnabled;
 
@@ -239,9 +172,6 @@ Expected value is 'ACI'.
         return this.sslEnabled == null ? Optional.empty() : Optional.ofNullable(this.sslEnabled);
     }
 
-    /**
-     * The public SSL key in PEM format for the certificate.
-     */
     @InputImport(name="sslKey")
     private final @Nullable String sslKey;
 
@@ -249,9 +179,6 @@ Expected value is 'ACI'.
         return this.sslKey == null ? Optional.empty() : Optional.ofNullable(this.sslKey);
     }
 
-    /**
-     * The current state of the service.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -259,9 +186,6 @@ Expected value is 'ACI'.
         return this.state;
     }
 
-    /**
-     * The Uri for sending swagger requests.
-     */
     @InputImport(name="swaggerUri", required=true)
     private final String swaggerUri;
 
@@ -269,9 +193,6 @@ Expected value is 'ACI'.
         return this.swaggerUri;
     }
 
-    /**
-     * The virtual network configuration.
-     */
     @InputImport(name="vnetConfiguration")
     private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 

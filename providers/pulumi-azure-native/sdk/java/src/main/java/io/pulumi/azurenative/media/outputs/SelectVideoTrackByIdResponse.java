@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SelectVideoTrackByIdResponse {
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.SelectVideoTrackById'.
- */
     private final String odataType;
-/**
- * Track identifier to select
- */
     private final Double trackId;
 
     @OutputCustomType.Constructor({"odataType","trackId"})
@@ -28,16 +21,9 @@ Expected value is '#Microsoft.Media.SelectVideoTrackById'.
         this.trackId = Objects.requireNonNull(trackId);
     }
 
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.SelectVideoTrackById'.
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * Track identifier to select
- */
     public Double getTrackId() {
         return this.trackId;
     }

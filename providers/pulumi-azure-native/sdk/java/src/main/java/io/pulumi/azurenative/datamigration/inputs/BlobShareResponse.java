@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Blob container storage information.
- */
 public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobShareResponse Empty = new BlobShareResponse();
 
-    /**
-     * SAS URI of Azure Storage Account Container.
-     */
     @InputImport(name="sasUri", required=true)
     private final String sasUri;
 

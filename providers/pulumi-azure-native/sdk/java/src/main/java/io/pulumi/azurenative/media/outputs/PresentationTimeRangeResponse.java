@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PresentationTimeRangeResponse {
-/**
- * The absolute end time boundary.
- */
     private final @Nullable Double endTimestamp;
-/**
- * The indicator of forcing existing of end time stamp.
- */
     private final @Nullable Boolean forceEndTimestamp;
-/**
- * The relative to end right edge.
- */
     private final @Nullable Double liveBackoffDuration;
-/**
- * The relative to end sliding window.
- */
     private final @Nullable Double presentationWindowDuration;
-/**
- * The absolute start time boundary.
- */
     private final @Nullable Double startTimestamp;
-/**
- * The time scale of time stamps.
- */
     private final @Nullable Double timescale;
 
     @OutputCustomType.Constructor({"endTimestamp","forceEndTimestamp","liveBackoffDuration","presentationWindowDuration","startTimestamp","timescale"})
@@ -53,39 +35,21 @@ public final class PresentationTimeRangeResponse {
         this.timescale = timescale;
     }
 
-/**
- * The absolute end time boundary.
- */
     public Optional<Double> getEndTimestamp() {
         return Optional.ofNullable(this.endTimestamp);
     }
-/**
- * The indicator of forcing existing of end time stamp.
- */
     public Optional<Boolean> getForceEndTimestamp() {
         return Optional.ofNullable(this.forceEndTimestamp);
     }
-/**
- * The relative to end right edge.
- */
     public Optional<Double> getLiveBackoffDuration() {
         return Optional.ofNullable(this.liveBackoffDuration);
     }
-/**
- * The relative to end sliding window.
- */
     public Optional<Double> getPresentationWindowDuration() {
         return Optional.ofNullable(this.presentationWindowDuration);
     }
-/**
- * The absolute start time boundary.
- */
     public Optional<Double> getStartTimestamp() {
         return Optional.ofNullable(this.startTimestamp);
     }
-/**
- * The time scale of time stamps.
- */
     public Optional<Double> getTimescale() {
         return Optional.ofNullable(this.timescale);
     }

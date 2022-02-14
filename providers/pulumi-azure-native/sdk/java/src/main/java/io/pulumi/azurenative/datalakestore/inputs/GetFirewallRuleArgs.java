@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFirewallRuleArgs Empty = new GetFirewallRuleArgs();
 
-    /**
-     * The name of the Data Lake Store account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the firewall rule to retrieve.
-     */
     @InputImport(name="firewallRuleName", required=true)
     private final String firewallRuleName;
 
@@ -35,9 +26,6 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.firewallRuleName;
     }
 
-    /**
-     * The name of the Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

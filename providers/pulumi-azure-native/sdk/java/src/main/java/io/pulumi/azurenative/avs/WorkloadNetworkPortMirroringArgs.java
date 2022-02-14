@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkPortMirroringArgs Empty = new WorkloadNetworkPortMirroringArgs();
 
-    /**
-     * Destination VM Group.
-     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -30,9 +24,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.destination == null ? Input.empty() : this.destination;
     }
 
-    /**
-     * Direction of port mirroring profile.
-     */
     @InputImport(name="direction")
     private final @Nullable Input<Either<String,PortMirroringDirectionEnum>> direction;
 
@@ -40,9 +31,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.direction == null ? Input.empty() : this.direction;
     }
 
-    /**
-     * Display name of the port mirroring profile.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -50,9 +38,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
-     */
     @InputImport(name="portMirroringId")
     private final @Nullable Input<String> portMirroringId;
 
@@ -60,9 +45,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.portMirroringId == null ? Input.empty() : this.portMirroringId;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -70,9 +52,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -80,9 +59,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * NSX revision number.
-     */
     @InputImport(name="revision")
     private final @Nullable Input<Double> revision;
 
@@ -90,9 +66,6 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
         return this.revision == null ? Input.empty() : this.revision;
     }
 
-    /**
-     * Source VM Group.
-     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 

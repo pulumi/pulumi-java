@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Parameters for a latency threshold SLI.
- */
 public final class LatencyCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LatencyCriteriaResponse Empty = new LatencyCriteriaResponse();
 
-    /**
-     * Good service is defined to be the count of requests made to this service that return in no more than threshold.
-     */
     @InputImport(name="threshold", required=true)
     private final String threshold;
 

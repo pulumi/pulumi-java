@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A class representing follower database request.
- */
 public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FollowerDatabaseDefinitionResponse Empty = new FollowerDatabaseDefinitionResponse();
 
-    /**
-     * Resource name of the attached database configuration in the follower cluster.
-     */
     @InputImport(name="attachedDatabaseConfigurationName", required=true)
     private final String attachedDatabaseConfigurationName;
 
@@ -25,9 +19,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
         return this.attachedDatabaseConfigurationName;
     }
 
-    /**
-     * Resource id of the cluster that follows a database owned by this cluster.
-     */
     @InputImport(name="clusterResourceId", required=true)
     private final String clusterResourceId;
 
@@ -35,9 +26,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
         return this.clusterResourceId;
     }
 
-    /**
-     * The database name owned by this cluster that was followed. * in case following all databases.
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 

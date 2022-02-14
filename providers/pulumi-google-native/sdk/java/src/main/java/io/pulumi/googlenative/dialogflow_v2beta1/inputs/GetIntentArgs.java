@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIntentArgs Empty = new GetIntentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="intentId", required=true)
     private final String intentId;
 
@@ -27,9 +21,6 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
         return this.intentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="intentView")
     private final @Nullable String intentView;
 
@@ -37,9 +28,6 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
         return this.intentView == null ? Optional.empty() : Optional.ofNullable(this.intentView);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="languageCode")
     private final @Nullable String languageCode;
 
@@ -47,9 +35,6 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -57,9 +42,6 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

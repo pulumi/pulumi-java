@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * InMageRcm last source agent upgrade error details.
- */
 public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmLastAgentUpgradeErrorDetailsResponse Empty = new InMageRcmLastAgentUpgradeErrorDetailsResponse();
 
-    /**
-     * The error code.
-     */
     @InputImport(name="errorCode", required=true)
     private final String errorCode;
 
@@ -26,9 +20,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
         return this.errorCode;
     }
 
-    /**
-     * The error message.
-     */
     @InputImport(name="errorMessage", required=true)
     private final String errorMessage;
 
@@ -36,9 +27,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
         return this.errorMessage;
     }
 
-    /**
-     * The error message parameters.
-     */
     @InputImport(name="errorMessageParameters", required=true)
     private final Map<String,String> errorMessageParameters;
 
@@ -46,9 +34,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
         return this.errorMessageParameters;
     }
 
-    /**
-     * The error tags.
-     */
     @InputImport(name="errorTags", required=true)
     private final Map<String,String> errorTags;
 
@@ -56,9 +41,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
         return this.errorTags;
     }
 
-    /**
-     * The possible causes.
-     */
     @InputImport(name="possibleCauses", required=true)
     private final String possibleCauses;
 
@@ -66,9 +48,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
         return this.possibleCauses;
     }
 
-    /**
-     * The recommended action.
-     */
     @InputImport(name="recommendedAction", required=true)
     private final String recommendedAction;
 

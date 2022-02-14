@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListStorageAccountSasTokensResult {
-/**
- * The link (url) to the next page of results.
- */
     private final String nextLink;
-/**
- * The results of the list operation.
- */
     private final List<SasTokenInformationResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -28,15 +22,9 @@ public final class ListStorageAccountSasTokensResult {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The link (url) to the next page of results.
- */
     public String getNextLink() {
         return this.nextLink;
     }
-/**
- * The results of the list operation.
- */
     public List<SasTokenInformationResponse> getValue() {
         return this.value;
     }

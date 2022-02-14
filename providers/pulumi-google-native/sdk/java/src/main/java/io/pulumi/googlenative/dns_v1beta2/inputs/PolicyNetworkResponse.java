@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class PolicyNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyNetworkResponse Empty = new PolicyNetworkResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -25,9 +19,6 @@ public final class PolicyNetworkResponse extends io.pulumi.resources.InvokeArgs 
         return this.kind;
     }
 
-    /**
-     * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-     */
     @InputImport(name="networkUrl", required=true)
     private final String networkUrl;
 

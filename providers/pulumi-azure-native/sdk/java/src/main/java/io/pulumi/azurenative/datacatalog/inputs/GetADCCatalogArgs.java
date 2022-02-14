@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetADCCatalogArgs Empty = new GetADCCatalogArgs();
 
-    /**
-     * The name of the data catalog in the specified subscription and resource group.
-     */
     @InputImport(name="catalogName", required=true)
     private final String catalogName;
 
@@ -25,9 +19,6 @@ public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
         return this.catalogName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

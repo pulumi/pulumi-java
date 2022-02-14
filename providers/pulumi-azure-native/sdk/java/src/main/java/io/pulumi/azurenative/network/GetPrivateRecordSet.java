@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateRecordSet {
-/**
- * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
-API Version: 2020-06-01.
- *
- * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
- */
     public static CompletableFuture<GetPrivateRecordSetResult> invokeAsync(GetPrivateRecordSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateRecordSet", TypeShape.of(GetPrivateRecordSetResult.class), args == null ? GetPrivateRecordSetArgs.Empty : args, Utilities.withVersion(options));
     }

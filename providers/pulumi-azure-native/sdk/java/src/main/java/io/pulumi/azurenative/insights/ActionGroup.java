@@ -26,715 +26,117 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An action group resource.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update an action group
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var actionGroup = new AzureNative.Insights.ActionGroup("actionGroup", new AzureNative.Insights.ActionGroupArgs
-        {
-            ActionGroupName = "SampleActionGroup",
-            ArmRoleReceivers = 
-            {
-                new AzureNative.Insights.Inputs.ArmRoleReceiverArgs
-                {
-                    Name = "Sample armRole",
-                    RoleId = "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
-                    UseCommonAlertSchema = true,
-                },
-            },
-            AutomationRunbookReceivers = 
-            {
-                new AzureNative.Insights.Inputs.AutomationRunbookReceiverArgs
-                {
-                    AutomationAccountId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
-                    IsGlobalRunbook = false,
-                    Name = "testRunbook",
-                    RunbookName = "Sample runbook",
-                    ServiceUri = "<serviceUri>",
-                    UseCommonAlertSchema = true,
-                    WebhookResourceId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
-                },
-            },
-            AzureAppPushReceivers = 
-            {
-                new AzureNative.Insights.Inputs.AzureAppPushReceiverArgs
-                {
-                    EmailAddress = "johndoe@email.com",
-                    Name = "Sample azureAppPush",
-                },
-            },
-            AzureFunctionReceivers = 
-            {
-                new AzureNative.Insights.Inputs.AzureFunctionReceiverArgs
-                {
-                    FunctionAppResourceId = "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
-                    FunctionName = "HttpTriggerCSharp1",
-                    HttpTriggerUrl = "<httpTriggerUrl>",
-                    Name = "Sample azureFunction",
-                    UseCommonAlertSchema = true,
-                },
-            },
-            EmailReceivers = 
-            {
-                new AzureNative.Insights.Inputs.EmailReceiverArgs
-                {
-                    EmailAddress = "johndoe@email.com",
-                    Name = "John Doe's email",
-                    UseCommonAlertSchema = false,
-                },
-                new AzureNative.Insights.Inputs.EmailReceiverArgs
-                {
-                    EmailAddress = "janesmith@email.com",
-                    Name = "Jane Smith's email",
-                    UseCommonAlertSchema = true,
-                },
-            },
-            Enabled = true,
-            GroupShortName = "sample",
-            ItsmReceivers = 
-            {
-                new AzureNative.Insights.Inputs.ItsmReceiverArgs
-                {
-                    ConnectionId = "a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
-                    Name = "Sample itsm",
-                    Region = "westcentralus",
-                    TicketConfiguration = "{\"PayloadRevision\":0,\"WorkItemType\":\"Incident\",\"UseTemplate\":false,\"WorkItemData\":\"{}\",\"CreateOneWIPerCI\":false}",
-                    WorkspaceId = "5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c",
-                },
-            },
-            Location = "Global",
-            LogicAppReceivers = 
-            {
-                new AzureNative.Insights.Inputs.LogicAppReceiverArgs
-                {
-                    CallbackUrl = "https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
-                    Name = "Sample logicApp",
-                    ResourceId = "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp",
-                    UseCommonAlertSchema = false,
-                },
-            },
-            ResourceGroupName = "Default-NotificationRules",
-            SmsReceivers = 
-            {
-                new AzureNative.Insights.Inputs.SmsReceiverArgs
-                {
-                    CountryCode = "1",
-                    Name = "John Doe's mobile",
-                    PhoneNumber = "1234567890",
-                },
-                new AzureNative.Insights.Inputs.SmsReceiverArgs
-                {
-                    CountryCode = "1",
-                    Name = "Jane Smith's mobile",
-                    PhoneNumber = "0987654321",
-                },
-            },
-            Tags = ,
-            VoiceReceivers = 
-            {
-                new AzureNative.Insights.Inputs.VoiceReceiverArgs
-                {
-                    CountryCode = "1",
-                    Name = "Sample voice",
-                    PhoneNumber = "1234567890",
-                },
-            },
-            WebhookReceivers = 
-            {
-                new AzureNative.Insights.Inputs.WebhookReceiverArgs
-                {
-                    Name = "Sample webhook 1",
-                    ServiceUri = "http://www.example.com/webhook1",
-                    UseCommonAlertSchema = true,
-                },
-                new AzureNative.Insights.Inputs.WebhookReceiverArgs
-                {
-                    IdentifierUri = "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
-                    Name = "Sample webhook 2",
-                    ObjectId = "d3bb868c-fe44-452c-aa26-769a6538c808",
-                    ServiceUri = "http://www.example.com/webhook2",
-                    TenantId = "68a4459a-ccb8-493c-b9da-dd30457d1b84",
-                    UseAadAuth = true,
-                    UseCommonAlertSchema = true,
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewActionGroup(ctx, "actionGroup", &insights.ActionGroupArgs{
-			ActionGroupName: pulumi.String("SampleActionGroup"),
-			ArmRoleReceivers: []insights.ArmRoleReceiverArgs{
-				&insights.ArmRoleReceiverArgs{
-					Name:                 pulumi.String("Sample armRole"),
-					RoleId:               pulumi.String("8e3af657-a8ff-443c-a75c-2fe8c4bcb635"),
-					UseCommonAlertSchema: pulumi.Bool(true),
-				},
-			},
-			AutomationRunbookReceivers: []insights.AutomationRunbookReceiverArgs{
-				&insights.AutomationRunbookReceiverArgs{
-					AutomationAccountId:  pulumi.String("/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest"),
-					IsGlobalRunbook:      pulumi.Bool(false),
-					Name:                 pulumi.String("testRunbook"),
-					RunbookName:          pulumi.String("Sample runbook"),
-					ServiceUri:           pulumi.String("<serviceUri>"),
-					UseCommonAlertSchema: pulumi.Bool(true),
-					WebhookResourceId:    pulumi.String("/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084"),
-				},
-			},
-			AzureAppPushReceivers: []insights.AzureAppPushReceiverArgs{
-				&insights.AzureAppPushReceiverArgs{
-					EmailAddress: pulumi.String("johndoe@email.com"),
-					Name:         pulumi.String("Sample azureAppPush"),
-				},
-			},
-			AzureFunctionReceivers: []insights.AzureFunctionReceiverArgs{
-				&insights.AzureFunctionReceiverArgs{
-					FunctionAppResourceId: pulumi.String("/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp"),
-					FunctionName:          pulumi.String("HttpTriggerCSharp1"),
-					HttpTriggerUrl:        pulumi.String("<httpTriggerUrl>"),
-					Name:                  pulumi.String("Sample azureFunction"),
-					UseCommonAlertSchema:  pulumi.Bool(true),
-				},
-			},
-			EmailReceivers: []insights.EmailReceiverArgs{
-				&insights.EmailReceiverArgs{
-					EmailAddress:         pulumi.String("johndoe@email.com"),
-					Name:                 pulumi.String("John Doe's email"),
-					UseCommonAlertSchema: pulumi.Bool(false),
-				},
-				&insights.EmailReceiverArgs{
-					EmailAddress:         pulumi.String("janesmith@email.com"),
-					Name:                 pulumi.String("Jane Smith's email"),
-					UseCommonAlertSchema: pulumi.Bool(true),
-				},
-			},
-			Enabled:        pulumi.Bool(true),
-			GroupShortName: pulumi.String("sample"),
-			ItsmReceivers: []insights.ItsmReceiverArgs{
-				&insights.ItsmReceiverArgs{
-					ConnectionId:        pulumi.String("a3b9076c-ce8e-434e-85b4-aff10cb3c8f1"),
-					Name:                pulumi.String("Sample itsm"),
-					Region:              pulumi.String("westcentralus"),
-					TicketConfiguration: pulumi.String("{\"PayloadRevision\":0,\"WorkItemType\":\"Incident\",\"UseTemplate\":false,\"WorkItemData\":\"{}\",\"CreateOneWIPerCI\":false}"),
-					WorkspaceId:         pulumi.String("5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c"),
-				},
-			},
-			Location: pulumi.String("Global"),
-			LogicAppReceivers: []insights.LogicAppReceiverArgs{
-				&insights.LogicAppReceiverArgs{
-					CallbackUrl:          pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=", "%", "2Ftriggers", "%", "2Fmanual", "%", "2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w")),
-					Name:                 pulumi.String("Sample logicApp"),
-					ResourceId:           pulumi.String("/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp"),
-					UseCommonAlertSchema: pulumi.Bool(false),
-				},
-			},
-			ResourceGroupName: pulumi.String("Default-NotificationRules"),
-			SmsReceivers: []insights.SmsReceiverArgs{
-				&insights.SmsReceiverArgs{
-					CountryCode: pulumi.String("1"),
-					Name:        pulumi.String("John Doe's mobile"),
-					PhoneNumber: pulumi.String("1234567890"),
-				},
-				&insights.SmsReceiverArgs{
-					CountryCode: pulumi.String("1"),
-					Name:        pulumi.String("Jane Smith's mobile"),
-					PhoneNumber: pulumi.String("0987654321"),
-				},
-			},
-			Tags: nil,
-			VoiceReceivers: []insights.VoiceReceiverArgs{
-				&insights.VoiceReceiverArgs{
-					CountryCode: pulumi.String("1"),
-					Name:        pulumi.String("Sample voice"),
-					PhoneNumber: pulumi.String("1234567890"),
-				},
-			},
-			WebhookReceivers: []insights.WebhookReceiverArgs{
-				&insights.WebhookReceiverArgs{
-					Name:                 pulumi.String("Sample webhook 1"),
-					ServiceUri:           pulumi.String("http://www.example.com/webhook1"),
-					UseCommonAlertSchema: pulumi.Bool(true),
-				},
-				&insights.WebhookReceiverArgs{
-					IdentifierUri:        pulumi.String("http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a"),
-					Name:                 pulumi.String("Sample webhook 2"),
-					ObjectId:             pulumi.String("d3bb868c-fe44-452c-aa26-769a6538c808"),
-					ServiceUri:           pulumi.String("http://www.example.com/webhook2"),
-					TenantId:             pulumi.String("68a4459a-ccb8-493c-b9da-dd30457d1b84"),
-					UseAadAuth:           pulumi.Bool(true),
-					UseCommonAlertSchema: pulumi.Bool(true),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
-    actionGroupName: "SampleActionGroup",
-    armRoleReceivers: [{
-        name: "Sample armRole",
-        roleId: "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
-        useCommonAlertSchema: true,
-    }],
-    automationRunbookReceivers: [{
-        automationAccountId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
-        isGlobalRunbook: false,
-        name: "testRunbook",
-        runbookName: "Sample runbook",
-        serviceUri: "<serviceUri>",
-        useCommonAlertSchema: true,
-        webhookResourceId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
-    }],
-    azureAppPushReceivers: [{
-        emailAddress: "johndoe@email.com",
-        name: "Sample azureAppPush",
-    }],
-    azureFunctionReceivers: [{
-        functionAppResourceId: "/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
-        functionName: "HttpTriggerCSharp1",
-        httpTriggerUrl: "<httpTriggerUrl>",
-        name: "Sample azureFunction",
-        useCommonAlertSchema: true,
-    }],
-    emailReceivers: [
-        {
-            emailAddress: "johndoe@email.com",
-            name: "John Doe's email",
-            useCommonAlertSchema: false,
-        },
-        {
-            emailAddress: "janesmith@email.com",
-            name: "Jane Smith's email",
-            useCommonAlertSchema: true,
-        },
-    ],
-    enabled: true,
-    groupShortName: "sample",
-    itsmReceivers: [{
-        connectionId: "a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
-        name: "Sample itsm",
-        region: "westcentralus",
-        ticketConfiguration: "{\"PayloadRevision\":0,\"WorkItemType\":\"Incident\",\"UseTemplate\":false,\"WorkItemData\":\"{}\",\"CreateOneWIPerCI\":false}",
-        workspaceId: "5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c",
-    }],
-    location: "Global",
-    logicAppReceivers: [{
-        callbackUrl: `https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w`,
-        name: "Sample logicApp",
-        resourceId: "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp",
-        useCommonAlertSchema: false,
-    }],
-    resourceGroupName: "Default-NotificationRules",
-    smsReceivers: [
-        {
-            countryCode: "1",
-            name: "John Doe's mobile",
-            phoneNumber: "1234567890",
-        },
-        {
-            countryCode: "1",
-            name: "Jane Smith's mobile",
-            phoneNumber: "0987654321",
-        },
-    ],
-    tags: {},
-    voiceReceivers: [{
-        countryCode: "1",
-        name: "Sample voice",
-        phoneNumber: "1234567890",
-    }],
-    webhookReceivers: [
-        {
-            name: "Sample webhook 1",
-            serviceUri: "http://www.example.com/webhook1",
-            useCommonAlertSchema: true,
-        },
-        {
-            identifierUri: "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
-            name: "Sample webhook 2",
-            objectId: "d3bb868c-fe44-452c-aa26-769a6538c808",
-            serviceUri: "http://www.example.com/webhook2",
-            tenantId: "68a4459a-ccb8-493c-b9da-dd30457d1b84",
-            useAadAuth: true,
-            useCommonAlertSchema: true,
-        },
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-action_group = azure_native.insights.ActionGroup("actionGroup",
-    action_group_name="SampleActionGroup",
-    arm_role_receivers=[azure_native.insights.ArmRoleReceiverArgs(
-        name="Sample armRole",
-        role_id="8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
-        use_common_alert_schema=True,
-    )],
-    automation_runbook_receivers=[azure_native.insights.AutomationRunbookReceiverArgs(
-        automation_account_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest",
-        is_global_runbook=False,
-        name="testRunbook",
-        runbook_name="Sample runbook",
-        service_uri="<serviceUri>",
-        use_common_alert_schema=True,
-        webhook_resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084",
-    )],
-    azure_app_push_receivers=[azure_native.insights.AzureAppPushReceiverArgs(
-        email_address="johndoe@email.com",
-        name="Sample azureAppPush",
-    )],
-    azure_function_receivers=[azure_native.insights.AzureFunctionReceiverArgs(
-        function_app_resource_id="/subscriptions/5def922a-3ed4-49c1-b9fd-05ec533819a3/resourceGroups/aznsTest/providers/Microsoft.Web/sites/testFunctionApp",
-        function_name="HttpTriggerCSharp1",
-        http_trigger_url="<httpTriggerUrl>",
-        name="Sample azureFunction",
-        use_common_alert_schema=True,
-    )],
-    email_receivers=[
-        azure_native.insights.EmailReceiverArgs(
-            email_address="johndoe@email.com",
-            name="John Doe's email",
-            use_common_alert_schema=False,
-        ),
-        azure_native.insights.EmailReceiverArgs(
-            email_address="janesmith@email.com",
-            name="Jane Smith's email",
-            use_common_alert_schema=True,
-        ),
-    ],
-    enabled=True,
-    group_short_name="sample",
-    itsm_receivers=[azure_native.insights.ItsmReceiverArgs(
-        connection_id="a3b9076c-ce8e-434e-85b4-aff10cb3c8f1",
-        name="Sample itsm",
-        region="westcentralus",
-        ticket_configuration="{\"PayloadRevision\":0,\"WorkItemType\":\"Incident\",\"UseTemplate\":false,\"WorkItemData\":\"{}\",\"CreateOneWIPerCI\":false}",
-        workspace_id="5def922a-3ed4-49c1-b9fd-05ec533819a3|55dfd1f8-7e59-4f89-bf56-4c82f5ace23c",
-    )],
-    location="Global",
-    logic_app_receivers=[azure_native.insights.LogicAppReceiverArgs(
-        callback_url="https://prod-27.northcentralus.logic.azure.com/workflows/68e572e818e5457ba898763b7db90877/triggers/manual/paths/invoke/azns/test?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Abpsb72UYJxPPvmDo937uzofupO5r_vIeWEx7KVHo7w",
-        name="Sample logicApp",
-        resource_id="/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/LogicApp/providers/Microsoft.Logic/workflows/testLogicApp",
-        use_common_alert_schema=False,
-    )],
-    resource_group_name="Default-NotificationRules",
-    sms_receivers=[
-        azure_native.insights.SmsReceiverArgs(
-            country_code="1",
-            name="John Doe's mobile",
-            phone_number="1234567890",
-        ),
-        azure_native.insights.SmsReceiverArgs(
-            country_code="1",
-            name="Jane Smith's mobile",
-            phone_number="0987654321",
-        ),
-    ],
-    tags={},
-    voice_receivers=[azure_native.insights.VoiceReceiverArgs(
-        country_code="1",
-        name="Sample voice",
-        phone_number="1234567890",
-    )],
-    webhook_receivers=[
-        azure_native.insights.WebhookReceiverArgs(
-            name="Sample webhook 1",
-            service_uri="http://www.example.com/webhook1",
-            use_common_alert_schema=True,
-        ),
-        azure_native.insights.WebhookReceiverArgs(
-            identifier_uri="http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a",
-            name="Sample webhook 2",
-            object_id="d3bb868c-fe44-452c-aa26-769a6538c808",
-            service_uri="http://www.example.com/webhook2",
-            tenant_id="68a4459a-ccb8-493c-b9da-dd30457d1b84",
-            use_aad_auth=True,
-            use_common_alert_schema=True,
-        ),
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:ActionGroup SampleActionGroup /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/actionGroups/SampleActionGroup 
-```
-
- */
 @ResourceType(type="azure-native:insights:ActionGroup")
 public class ActionGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
-     */
     @OutputExport(name="armRoleReceivers", type=List.class, parameters={ArmRoleReceiverResponse.class})
     private Output</* @Nullable */ List<ArmRoleReceiverResponse>> armRoleReceivers;
 
-    /**
-     * @return The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
-     */
     public Output</* @Nullable */ List<ArmRoleReceiverResponse>> getArmRoleReceivers() {
         return this.armRoleReceivers;
     }
-    /**
-     * The list of AutomationRunbook receivers that are part of this action group.
-     */
     @OutputExport(name="automationRunbookReceivers", type=List.class, parameters={AutomationRunbookReceiverResponse.class})
     private Output</* @Nullable */ List<AutomationRunbookReceiverResponse>> automationRunbookReceivers;
 
-    /**
-     * @return The list of AutomationRunbook receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<AutomationRunbookReceiverResponse>> getAutomationRunbookReceivers() {
         return this.automationRunbookReceivers;
     }
-    /**
-     * The list of AzureAppPush receivers that are part of this action group.
-     */
     @OutputExport(name="azureAppPushReceivers", type=List.class, parameters={AzureAppPushReceiverResponse.class})
     private Output</* @Nullable */ List<AzureAppPushReceiverResponse>> azureAppPushReceivers;
 
-    /**
-     * @return The list of AzureAppPush receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<AzureAppPushReceiverResponse>> getAzureAppPushReceivers() {
         return this.azureAppPushReceivers;
     }
-    /**
-     * The list of azure function receivers that are part of this action group.
-     */
     @OutputExport(name="azureFunctionReceivers", type=List.class, parameters={AzureFunctionReceiverResponse.class})
     private Output</* @Nullable */ List<AzureFunctionReceiverResponse>> azureFunctionReceivers;
 
-    /**
-     * @return The list of azure function receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<AzureFunctionReceiverResponse>> getAzureFunctionReceivers() {
         return this.azureFunctionReceivers;
     }
-    /**
-     * The list of email receivers that are part of this action group.
-     */
     @OutputExport(name="emailReceivers", type=List.class, parameters={EmailReceiverResponse.class})
     private Output</* @Nullable */ List<EmailReceiverResponse>> emailReceivers;
 
-    /**
-     * @return The list of email receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<EmailReceiverResponse>> getEmailReceivers() {
         return this.emailReceivers;
     }
-    /**
-     * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
-     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
-    /**
-     * @return Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
-     */
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
-    /**
-     * The short name of the action group. This will be used in SMS messages.
-     */
     @OutputExport(name="groupShortName", type=String.class, parameters={})
     private Output<String> groupShortName;
 
-    /**
-     * @return The short name of the action group. This will be used in SMS messages.
-     */
     public Output<String> getGroupShortName() {
         return this.groupShortName;
     }
-    /**
-     * Azure resource identity
-     */
     @OutputExport(name="identity", type=String.class, parameters={})
     private Output<String> identity;
 
-    /**
-     * @return Azure resource identity
-     */
     public Output<String> getIdentity() {
         return this.identity;
     }
-    /**
-     * The list of ITSM receivers that are part of this action group.
-     */
     @OutputExport(name="itsmReceivers", type=List.class, parameters={ItsmReceiverResponse.class})
     private Output</* @Nullable */ List<ItsmReceiverResponse>> itsmReceivers;
 
-    /**
-     * @return The list of ITSM receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<ItsmReceiverResponse>> getItsmReceivers() {
         return this.itsmReceivers;
     }
-    /**
-     * Azure resource kind
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Azure resource kind
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The list of logic app receivers that are part of this action group.
-     */
     @OutputExport(name="logicAppReceivers", type=List.class, parameters={LogicAppReceiverResponse.class})
     private Output</* @Nullable */ List<LogicAppReceiverResponse>> logicAppReceivers;
 
-    /**
-     * @return The list of logic app receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<LogicAppReceiverResponse>> getLogicAppReceivers() {
         return this.logicAppReceivers;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The list of SMS receivers that are part of this action group.
-     */
     @OutputExport(name="smsReceivers", type=List.class, parameters={SmsReceiverResponse.class})
     private Output</* @Nullable */ List<SmsReceiverResponse>> smsReceivers;
 
-    /**
-     * @return The list of SMS receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<SmsReceiverResponse>> getSmsReceivers() {
         return this.smsReceivers;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The list of voice receivers that are part of this action group.
-     */
     @OutputExport(name="voiceReceivers", type=List.class, parameters={VoiceReceiverResponse.class})
     private Output</* @Nullable */ List<VoiceReceiverResponse>> voiceReceivers;
 
-    /**
-     * @return The list of voice receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<VoiceReceiverResponse>> getVoiceReceivers() {
         return this.voiceReceivers;
     }
-    /**
-     * The list of webhook receivers that are part of this action group.
-     */
     @OutputExport(name="webhookReceivers", type=List.class, parameters={WebhookReceiverResponse.class})
     private Output</* @Nullable */ List<WebhookReceiverResponse>> webhookReceivers;
 
-    /**
-     * @return The list of webhook receivers that are part of this action group.
-     */
     public Output</* @Nullable */ List<WebhookReceiverResponse>> getWebhookReceivers() {
         return this.webhookReceivers;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ActionGroup(String name, ActionGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ActionGroup", name, args == null ? ActionGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -758,14 +160,6 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ActionGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ActionGroup(name, id, options);
     }

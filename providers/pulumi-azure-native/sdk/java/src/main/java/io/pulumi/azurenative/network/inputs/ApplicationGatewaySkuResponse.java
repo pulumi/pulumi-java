@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of an application gateway.
- */
 public final class ApplicationGatewaySkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewaySkuResponse Empty = new ApplicationGatewaySkuResponse();
 
-    /**
-     * Capacity (instance count) of an application gateway.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewaySkuResponse extends io.pulumi.resources.Inv
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Name of an application gateway SKU.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewaySkuResponse extends io.pulumi.resources.Inv
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Tier of an application gateway.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

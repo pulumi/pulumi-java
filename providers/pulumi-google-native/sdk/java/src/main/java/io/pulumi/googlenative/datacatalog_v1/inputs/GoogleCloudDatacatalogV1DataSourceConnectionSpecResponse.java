@@ -8,16 +8,10 @@ import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQ
 import java.util.Objects;
 
 
-/**
- * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
- */
 public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse Empty = new GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse();
 
-    /**
-     * Fields specific to BigQuery connections.
-     */
     @InputImport(name="bigqueryConnectionSpec", required=true)
     private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 

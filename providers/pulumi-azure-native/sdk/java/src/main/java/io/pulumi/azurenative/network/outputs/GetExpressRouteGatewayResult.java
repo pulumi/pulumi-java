@@ -16,45 +16,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetExpressRouteGatewayResult {
-/**
- * Configuration for auto scaling.
- */
     private final @Nullable ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration autoScaleConfiguration;
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * List of ExpressRoute connections to the ExpressRoute gateway.
- */
     private final List<ExpressRouteConnectionResponse> expressRouteConnections;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Resource location.
- */
     private final @Nullable String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The provisioning state of the express route gateway resource.
- */
     private final String provisioningState;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
-/**
- * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
- */
     private final VirtualHubIdResponse virtualHub;
 
     @OutputCustomType.Constructor({"autoScaleConfiguration","etag","expressRouteConnections","id","location","name","provisioningState","tags","type","virtualHub"})
@@ -81,63 +51,33 @@ public final class GetExpressRouteGatewayResult {
         this.virtualHub = Objects.requireNonNull(virtualHub);
     }
 
-/**
- * Configuration for auto scaling.
- */
     public Optional<ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> getAutoScaleConfiguration() {
         return Optional.ofNullable(this.autoScaleConfiguration);
     }
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * List of ExpressRoute connections to the ExpressRoute gateway.
- */
     public List<ExpressRouteConnectionResponse> getExpressRouteConnections() {
         return this.expressRouteConnections;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state of the express route gateway resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
- */
     public VirtualHubIdResponse getVirtualHub() {
         return this.virtualHub;
     }

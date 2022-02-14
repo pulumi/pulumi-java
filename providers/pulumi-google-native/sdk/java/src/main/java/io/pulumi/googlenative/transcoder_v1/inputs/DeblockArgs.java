@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Deblock preprocessing configuration.
- */
 public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeblockArgs Empty = new DeblockArgs();
 
-    /**
-     * Enable deblocker. The default is `false`.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -28,9 +22,6 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
-     */
     @InputImport(name="strength")
     private final @Nullable Input<Double> strength;
 

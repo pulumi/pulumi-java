@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActionGroup {
-/**
- * An action group resource.
-API Version: 2019-06-01.
- *
- * An action group resource.
- */
     public static CompletableFuture<GetActionGroupResult> invokeAsync(GetActionGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getActionGroup", TypeShape.of(GetActionGroupResult.class), args == null ? GetActionGroupArgs.Empty : args, Utilities.withVersion(options));
     }

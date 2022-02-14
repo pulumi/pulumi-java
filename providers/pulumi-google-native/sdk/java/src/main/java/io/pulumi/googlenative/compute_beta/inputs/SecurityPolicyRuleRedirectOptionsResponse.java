@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyRuleRedirectOptionsResponse Empty = new SecurityPolicyRuleRedirectOptionsResponse();
 
-    /**
-     * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
-     */
     @InputImport(name="target", required=true)
     private final String target;
 
@@ -25,9 +19,6 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
         return this.target;
     }
 
-    /**
-     * Type of the redirect action.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

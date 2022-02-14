@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VirtualHub route.
- */
 public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubRouteArgs Empty = new VirtualHubRouteArgs();
 
-    /**
-     * List of all addressPrefixes.
-     */
     @InputImport(name="addressPrefixes")
     private final @Nullable Input<List<String>> addressPrefixes;
 
@@ -28,9 +22,6 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
         return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
     }
 
-    /**
-     * NextHop ip address.
-     */
     @InputImport(name="nextHopIpAddress")
     private final @Nullable Input<String> nextHopIpAddress;
 

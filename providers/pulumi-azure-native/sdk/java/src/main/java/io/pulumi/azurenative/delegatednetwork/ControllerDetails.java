@@ -15,210 +15,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Represents an instance of a DNC controller.
-API Version: 2021-03-15.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create controller
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var controllerDetails = new AzureNative.DelegatedNetwork.ControllerDetails("controllerDetails", new AzureNative.DelegatedNetwork.ControllerDetailsArgs
-        {
-            Location = "West US",
-            ResourceGroupName = "TestRG",
-            ResourceName = "testcontroller",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	delegatednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/delegatednetwork"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := delegatednetwork.NewControllerDetails(ctx, "controllerDetails", &delegatednetwork.ControllerDetailsArgs{
-			Location:          pulumi.String("West US"),
-			ResourceGroupName: pulumi.String("TestRG"),
-			ResourceName:      pulumi.String("testcontroller"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const controllerDetails = new azure_native.delegatednetwork.ControllerDetails("controllerDetails", {
-    location: "West US",
-    resourceGroupName: "TestRG",
-    resourceName: "testcontroller",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-controller_details = azure_native.delegatednetwork.ControllerDetails("controllerDetails",
-    location="West US",
-    resource_group_name="TestRG",
-    resource_name="testcontroller")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:delegatednetwork:ControllerDetails testcontroller /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller 
-```
-
- */
 @ResourceType(type="azure-native:delegatednetwork:ControllerDetails")
 public class ControllerDetails extends io.pulumi.resources.CustomResource {
-    /**
-     * dnc application id should be used by customer to authenticate with dnc gateway.
-     */
     @OutputExport(name="dncAppId", type=String.class, parameters={})
     private Output<String> dncAppId;
 
-    /**
-     * @return dnc application id should be used by customer to authenticate with dnc gateway.
-     */
     public Output<String> getDncAppId() {
         return this.dncAppId;
     }
-    /**
-     * dnc endpoint url that customers can use to connect to
-     */
     @OutputExport(name="dncEndpoint", type=String.class, parameters={})
     private Output<String> dncEndpoint;
 
-    /**
-     * @return dnc endpoint url that customers can use to connect to
-     */
     public Output<String> getDncEndpoint() {
         return this.dncEndpoint;
     }
-    /**
-     * tenant id of dnc application id
-     */
     @OutputExport(name="dncTenantId", type=String.class, parameters={})
     private Output<String> dncTenantId;
 
-    /**
-     * @return tenant id of dnc application id
-     */
     public Output<String> getDncTenantId() {
         return this.dncTenantId;
     }
-    /**
-     * Location of the resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Location of the resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The current state of dnc controller resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The current state of dnc controller resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource guid.
-     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
-    /**
-     * @return Resource guid.
-     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ControllerDetails(String name, ControllerDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:delegatednetwork:ControllerDetails", name, args == null ? ControllerDetailsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -238,14 +91,6 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ControllerDetails get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ControllerDetails(name, id, options);
     }

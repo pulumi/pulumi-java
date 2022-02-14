@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FusionAlertRuleArgs Empty = new FusionAlertRuleArgs();
 
-    /**
-     * The Name of the alert rule template used to create this rule.
-     */
     @InputImport(name="alertRuleTemplateName", required=true)
     private final Input<String> alertRuleTemplateName;
 
@@ -28,9 +22,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.alertRuleTemplateName;
     }
 
-    /**
-     * Determines whether this alert rule is enabled or disabled.
-     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -38,10 +29,6 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.enabled;
     }
 
-    /**
-     * The kind of the alert rule
-Expected value is 'Fusion'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -49,9 +36,6 @@ Expected value is 'Fusion'.
         return this.kind;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +43,6 @@ Expected value is 'Fusion'.
         return this.resourceGroupName;
     }
 
-    /**
-     * Alert rule ID
-     */
     @InputImport(name="ruleId")
     private final @Nullable Input<String> ruleId;
 
@@ -69,9 +50,6 @@ Expected value is 'Fusion'.
         return this.ruleId == null ? Input.empty() : this.ruleId;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

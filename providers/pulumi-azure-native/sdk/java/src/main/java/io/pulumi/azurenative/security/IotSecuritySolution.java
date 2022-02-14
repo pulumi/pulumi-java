@@ -19,396 +19,105 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * IoT Security solution configuration and resource information.
-API Version: 2019-08-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a IoT security solution
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var iotSecuritySolution = new AzureNative.Security.IotSecuritySolution("iotSecuritySolution", new AzureNative.Security.IotSecuritySolutionArgs
-        {
-            DisabledDataSources = {},
-            DisplayName = "Solution Default",
-            Export = {},
-            IotHubs = 
-            {
-                "/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub",
-            },
-            Location = "East Us",
-            RecommendationsConfiguration = 
-            {
-                new AzureNative.Security.Inputs.RecommendationConfigurationPropertiesArgs
-                {
-                    RecommendationType = "IoT_OpenPorts",
-                    Status = "Disabled",
-                },
-                new AzureNative.Security.Inputs.RecommendationConfigurationPropertiesArgs
-                {
-                    RecommendationType = "IoT_SharedCredentials",
-                    Status = "Disabled",
-                },
-            },
-            ResourceGroupName = "MyGroup",
-            SolutionName = "default",
-            Status = "Enabled",
-            Tags = ,
-            UnmaskedIpLoggingStatus = "Enabled",
-            UserDefinedResources = new AzureNative.Security.Inputs.UserDefinedResourcesPropertiesArgs
-            {
-                Query = "where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
-                QuerySubscriptions = 
-                {
-                    "075423e9-7d33-4166-8bdf-3920b04e3735",
-                },
-            },
-            Workspace = "/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewIotSecuritySolution(ctx, "iotSecuritySolution", &security.IotSecuritySolutionArgs{
-			DisabledDataSources: pulumi.StringArray{},
-			DisplayName:         pulumi.String("Solution Default"),
-			Export:              pulumi.StringArray{},
-			IotHubs: pulumi.StringArray{
-				pulumi.String("/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"),
-			},
-			Location: pulumi.String("East Us"),
-			RecommendationsConfiguration: []security.RecommendationConfigurationPropertiesArgs{
-				&security.RecommendationConfigurationPropertiesArgs{
-					RecommendationType: pulumi.String("IoT_OpenPorts"),
-					Status:             pulumi.String("Disabled"),
-				},
-				&security.RecommendationConfigurationPropertiesArgs{
-					RecommendationType: pulumi.String("IoT_SharedCredentials"),
-					Status:             pulumi.String("Disabled"),
-				},
-			},
-			ResourceGroupName:       pulumi.String("MyGroup"),
-			SolutionName:            pulumi.String("default"),
-			Status:                  pulumi.String("Enabled"),
-			Tags:                    nil,
-			UnmaskedIpLoggingStatus: pulumi.String("Enabled"),
-			UserDefinedResources: &security.UserDefinedResourcesPropertiesArgs{
-				Query: pulumi.String("where type != \"microsoft.devices/iothubs\" | where name contains \"iot\""),
-				QuerySubscriptions: pulumi.StringArray{
-					pulumi.String("075423e9-7d33-4166-8bdf-3920b04e3735"),
-				},
-			},
-			Workspace: pulumi.String("/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const iotSecuritySolution = new azure_native.security.IotSecuritySolution("iotSecuritySolution", {
-    disabledDataSources: [],
-    displayName: "Solution Default",
-    "export": [],
-    iotHubs: ["/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"],
-    location: "East Us",
-    recommendationsConfiguration: [
-        {
-            recommendationType: "IoT_OpenPorts",
-            status: "Disabled",
-        },
-        {
-            recommendationType: "IoT_SharedCredentials",
-            status: "Disabled",
-        },
-    ],
-    resourceGroupName: "MyGroup",
-    solutionName: "default",
-    status: "Enabled",
-    tags: {},
-    unmaskedIpLoggingStatus: "Enabled",
-    userDefinedResources: {
-        query: "where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
-        querySubscriptions: ["075423e9-7d33-4166-8bdf-3920b04e3735"],
-    },
-    workspace: "/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-iot_security_solution = azure_native.security.IotSecuritySolution("iotSecuritySolution",
-    disabled_data_sources=[],
-    display_name="Solution Default",
-    export=[],
-    iot_hubs=["/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"],
-    location="East Us",
-    recommendations_configuration=[
-        azure_native.security.RecommendationConfigurationPropertiesArgs(
-            recommendation_type="IoT_OpenPorts",
-            status="Disabled",
-        ),
-        azure_native.security.RecommendationConfigurationPropertiesArgs(
-            recommendation_type="IoT_SharedCredentials",
-            status="Disabled",
-        ),
-    ],
-    resource_group_name="MyGroup",
-    solution_name="default",
-    status="Enabled",
-    tags={},
-    unmasked_ip_logging_status="Enabled",
-    user_defined_resources=azure_native.security.UserDefinedResourcesPropertiesArgs(
-        query="where type != \"microsoft.devices/iothubs\" | where name contains \"iot\"",
-        query_subscriptions=["075423e9-7d33-4166-8bdf-3920b04e3735"],
-    ),
-    workspace="/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:security:IotSecuritySolution default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
-```
-
- */
 @ResourceType(type="azure-native:security:IotSecuritySolution")
 public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
-    /**
-     * List of additional workspaces
-     */
     @OutputExport(name="additionalWorkspaces", type=List.class, parameters={AdditionalWorkspacesPropertiesResponse.class})
     private Output</* @Nullable */ List<AdditionalWorkspacesPropertiesResponse>> additionalWorkspaces;
 
-    /**
-     * @return List of additional workspaces
-     */
     public Output</* @Nullable */ List<AdditionalWorkspacesPropertiesResponse>> getAdditionalWorkspaces() {
         return this.additionalWorkspaces;
     }
-    /**
-     * List of resources that were automatically discovered as relevant to the security solution.
-     */
     @OutputExport(name="autoDiscoveredResources", type=List.class, parameters={String.class})
     private Output<List<String>> autoDiscoveredResources;
 
-    /**
-     * @return List of resources that were automatically discovered as relevant to the security solution.
-     */
     public Output<List<String>> getAutoDiscoveredResources() {
         return this.autoDiscoveredResources;
     }
-    /**
-     * Disabled data sources. Disabling these data sources compromises the system.
-     */
     @OutputExport(name="disabledDataSources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> disabledDataSources;
 
-    /**
-     * @return Disabled data sources. Disabling these data sources compromises the system.
-     */
     public Output</* @Nullable */ List<String>> getDisabledDataSources() {
         return this.disabledDataSources;
     }
-    /**
-     * Resource display name.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return Resource display name.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * List of additional options for exporting to workspace data.
-     */
     @OutputExport(name="export", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> export;
 
-    /**
-     * @return List of additional options for exporting to workspace data.
-     */
     public Output</* @Nullable */ List<String>> getExport() {
         return this.export;
     }
-    /**
-     * IoT Hub resource IDs
-     */
     @OutputExport(name="iotHubs", type=List.class, parameters={String.class})
     private Output<List<String>> iotHubs;
 
-    /**
-     * @return IoT Hub resource IDs
-     */
     public Output<List<String>> getIotHubs() {
         return this.iotHubs;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of the configuration status for each recommendation type.
-     */
     @OutputExport(name="recommendationsConfiguration", type=List.class, parameters={RecommendationConfigurationPropertiesResponse.class})
     private Output</* @Nullable */ List<RecommendationConfigurationPropertiesResponse>> recommendationsConfiguration;
 
-    /**
-     * @return List of the configuration status for each recommendation type.
-     */
     public Output</* @Nullable */ List<RecommendationConfigurationPropertiesResponse>> getRecommendationsConfiguration() {
         return this.recommendationsConfiguration;
     }
-    /**
-     * Status of the IoT Security solution.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
-    /**
-     * @return Status of the IoT Security solution.
-     */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Unmasked IP address logging status
-     */
     @OutputExport(name="unmaskedIpLoggingStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> unmaskedIpLoggingStatus;
 
-    /**
-     * @return Unmasked IP address logging status
-     */
     public Output</* @Nullable */ String> getUnmaskedIpLoggingStatus() {
         return this.unmaskedIpLoggingStatus;
     }
-    /**
-     * Properties of the IoT Security solution's user defined resources.
-     */
     @OutputExport(name="userDefinedResources", type=UserDefinedResourcesPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ UserDefinedResourcesPropertiesResponse> userDefinedResources;
 
-    /**
-     * @return Properties of the IoT Security solution's user defined resources.
-     */
     public Output</* @Nullable */ UserDefinedResourcesPropertiesResponse> getUserDefinedResources() {
         return this.userDefinedResources;
     }
-    /**
-     * Workspace resource ID
-     */
     @OutputExport(name="workspace", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspace;
 
-    /**
-     * @return Workspace resource ID
-     */
     public Output</* @Nullable */ String> getWorkspace() {
         return this.workspace;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public IotSecuritySolution(String name, IotSecuritySolutionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:IotSecuritySolution", name, args == null ? IotSecuritySolutionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -428,14 +137,6 @@ public class IotSecuritySolution extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static IotSecuritySolution get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotSecuritySolution(name, id, options);
     }

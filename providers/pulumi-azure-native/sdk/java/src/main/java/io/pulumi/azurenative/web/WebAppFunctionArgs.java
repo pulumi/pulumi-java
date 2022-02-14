@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppFunctionArgs Empty = new WebAppFunctionArgs();
 
-    /**
-     * Config information.
-     */
     @InputImport(name="config")
     private final @Nullable Input<Object> config;
 
@@ -30,9 +24,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
-    /**
-     * Config URI.
-     */
     @InputImport(name="configHref")
     private final @Nullable Input<String> configHref;
 
@@ -40,9 +31,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.configHref == null ? Input.empty() : this.configHref;
     }
 
-    /**
-     * File list.
-     */
     @InputImport(name="files")
     private final @Nullable Input<Map<String,String>> files;
 
@@ -50,9 +38,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.files == null ? Input.empty() : this.files;
     }
 
-    /**
-     * Function App ID.
-     */
     @InputImport(name="functionAppId")
     private final @Nullable Input<String> functionAppId;
 
@@ -60,9 +45,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.functionAppId == null ? Input.empty() : this.functionAppId;
     }
 
-    /**
-     * Function name.
-     */
     @InputImport(name="functionName")
     private final @Nullable Input<String> functionName;
 
@@ -70,9 +52,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.functionName == null ? Input.empty() : this.functionName;
     }
 
-    /**
-     * Function URI.
-     */
     @InputImport(name="href")
     private final @Nullable Input<String> href;
 
@@ -80,9 +59,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.href == null ? Input.empty() : this.href;
     }
 
-    /**
-     * The invocation URL
-     */
     @InputImport(name="invokeUrlTemplate")
     private final @Nullable Input<String> invokeUrlTemplate;
 
@@ -90,9 +66,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.invokeUrlTemplate == null ? Input.empty() : this.invokeUrlTemplate;
     }
 
-    /**
-     * Gets or sets a value indicating whether the function is disabled
-     */
     @InputImport(name="isDisabled")
     private final @Nullable Input<Boolean> isDisabled;
 
@@ -100,9 +73,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.isDisabled == null ? Input.empty() : this.isDisabled;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -110,9 +80,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The function language
-     */
     @InputImport(name="language")
     private final @Nullable Input<String> language;
 
@@ -120,9 +87,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.language == null ? Input.empty() : this.language;
     }
 
-    /**
-     * Site name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -130,9 +94,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -140,9 +101,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Script URI.
-     */
     @InputImport(name="scriptHref")
     private final @Nullable Input<String> scriptHref;
 
@@ -150,9 +108,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptHref == null ? Input.empty() : this.scriptHref;
     }
 
-    /**
-     * Script root path URI.
-     */
     @InputImport(name="scriptRootPathHref")
     private final @Nullable Input<String> scriptRootPathHref;
 
@@ -160,9 +115,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptRootPathHref == null ? Input.empty() : this.scriptRootPathHref;
     }
 
-    /**
-     * Secrets file URI.
-     */
     @InputImport(name="secretsFileHref")
     private final @Nullable Input<String> secretsFileHref;
 
@@ -170,9 +122,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretsFileHref == null ? Input.empty() : this.secretsFileHref;
     }
 
-    /**
-     * Test data used when testing via the Azure Portal.
-     */
     @InputImport(name="testData")
     private final @Nullable Input<String> testData;
 
@@ -180,9 +129,6 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
         return this.testData == null ? Input.empty() : this.testData;
     }
 
-    /**
-     * Test data URI.
-     */
     @InputImport(name="testDataHref")
     private final @Nullable Input<String> testDataHref;
 

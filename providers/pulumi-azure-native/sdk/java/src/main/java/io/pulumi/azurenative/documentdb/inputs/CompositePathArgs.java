@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompositePathArgs Empty = new CompositePathArgs();
 
-    /**
-     * Sort order for composite paths.
-     */
     @InputImport(name="order")
     private final @Nullable Input<Either<String,CompositePathSortOrder>> order;
 
@@ -29,9 +23,6 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
         return this.order == null ? Input.empty() : this.order;
     }
 
-    /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

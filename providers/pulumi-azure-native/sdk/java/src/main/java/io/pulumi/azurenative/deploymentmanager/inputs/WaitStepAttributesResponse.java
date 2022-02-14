@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The parameters for the wait step.
- */
 public final class WaitStepAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WaitStepAttributesResponse Empty = new WaitStepAttributesResponse();
 
-    /**
-     * The duration in ISO 8601 format of how long the wait should be.
-     */
     @InputImport(name="duration", required=true)
     private final String duration;
 

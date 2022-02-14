@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Day of the week.
- */
 public final class DayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DayArgs Empty = new DayArgs();
 
-    /**
-     * Date of the month
-     */
     @InputImport(name="date")
     private final @Nullable Input<Integer> date;
 
@@ -28,9 +22,6 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
         return this.date == null ? Input.empty() : this.date;
     }
 
-    /**
-     * Whether Date is last date of month
-     */
     @InputImport(name="isLast")
     private final @Nullable Input<Boolean> isLast;
 

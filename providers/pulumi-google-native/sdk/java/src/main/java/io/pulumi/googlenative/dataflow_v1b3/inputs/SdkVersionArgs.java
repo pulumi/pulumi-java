@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The version of the SDK used to run the job.
- */
 public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SdkVersionArgs Empty = new SdkVersionArgs();
 
-    /**
-     * The support status for this SDK version.
-     */
     @InputImport(name="sdkSupportStatus")
     private final @Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus;
 
@@ -28,9 +22,6 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sdkSupportStatus == null ? Input.empty() : this.sdkSupportStatus;
     }
 
-    /**
-     * The version of the SDK used to run the job.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -38,9 +29,6 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.version == null ? Input.empty() : this.version;
     }
 
-    /**
-     * A readable string describing the version of the SDK.
-     */
     @InputImport(name="versionDisplayName")
     private final @Nullable Input<String> versionDisplayName;
 

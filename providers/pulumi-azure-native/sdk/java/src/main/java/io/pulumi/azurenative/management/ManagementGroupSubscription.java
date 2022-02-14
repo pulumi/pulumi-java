@@ -15,163 +15,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The details of subscription under management group.
-API Version: 2020-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### AddSubscriptionToManagementGroup
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managementGroupSubscription = new AzureNative.Management.ManagementGroupSubscription("managementGroupSubscription", new AzureNative.Management.ManagementGroupSubscriptionArgs
-        {
-            GroupId = "Group",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	management "github.com/pulumi/pulumi-azure-native/sdk/go/azure/management"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := management.NewManagementGroupSubscription(ctx, "managementGroupSubscription", &management.ManagementGroupSubscriptionArgs{
-			GroupId: pulumi.String("Group"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managementGroupSubscription = new azure_native.management.ManagementGroupSubscription("managementGroupSubscription", {groupId: "Group"});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-management_group_subscription = azure_native.management.ManagementGroupSubscription("managementGroupSubscription", group_id="Group")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:management:ManagementGroupSubscription 728bcbe4-8d56-4510-86c2-4921b8beefbc  /providers/Microsoft.Management/managementGroups/Group/subscriptions/728bcbe4-8d56-4510-86c2-4921b8beefbc 
-```
-
- */
 @ResourceType(type="azure-native:management:ManagementGroupSubscription")
 public class ManagementGroupSubscription extends io.pulumi.resources.CustomResource {
-    /**
-     * The friendly name of the subscription.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The friendly name of the subscription.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The ID of the parent management group.
-     */
     @OutputExport(name="parent", type=DescendantParentGroupInfoResponse.class, parameters={})
     private Output</* @Nullable */ DescendantParentGroupInfoResponse> parent;
 
-    /**
-     * @return The ID of the parent management group.
-     */
     public Output</* @Nullable */ DescendantParentGroupInfoResponse> getParent() {
         return this.parent;
     }
-    /**
-     * The state of the subscription.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
-    /**
-     * @return The state of the subscription.
-     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
-    /**
-     * The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
-     */
     @OutputExport(name="tenant", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenant;
 
-    /**
-     * @return The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
-     */
     public Output</* @Nullable */ String> getTenant() {
         return this.tenant;
     }
-    /**
-     * The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ManagementGroupSubscription(String name, ManagementGroupSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:management:ManagementGroupSubscription", name, args == null ? ManagementGroupSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -192,14 +74,6 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ManagementGroupSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagementGroupSubscription(name, id, options);
     }

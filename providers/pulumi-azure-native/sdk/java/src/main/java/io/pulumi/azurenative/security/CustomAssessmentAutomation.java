@@ -15,242 +15,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Custom Assessment Automation
-API Version: 2021-07-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a Custom Assessment Automation
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var customAssessmentAutomation = new AzureNative.Security.CustomAssessmentAutomation("customAssessmentAutomation", new AzureNative.Security.CustomAssessmentAutomationArgs
-        {
-            CompressedQuery = "DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=",
-            CustomAssessmentAutomationName = "MyCustomAssessmentAutomation",
-            Description = "Data should be encrypted",
-            DisplayName = "Password Policy",
-            RemediationDescription = "Encrypt store by...",
-            ResourceGroupName = "TestResourceGroup",
-            Severity = "Medium",
-            SupportedCloud = "AWS",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewCustomAssessmentAutomation(ctx, "customAssessmentAutomation", &security.CustomAssessmentAutomationArgs{
-			CompressedQuery:                pulumi.String("DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA="),
-			CustomAssessmentAutomationName: pulumi.String("MyCustomAssessmentAutomation"),
-			Description:                    pulumi.String("Data should be encrypted"),
-			DisplayName:                    pulumi.String("Password Policy"),
-			RemediationDescription:         pulumi.String("Encrypt store by..."),
-			ResourceGroupName:              pulumi.String("TestResourceGroup"),
-			Severity:                       pulumi.String("Medium"),
-			SupportedCloud:                 pulumi.String("AWS"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const customAssessmentAutomation = new azure_native.security.CustomAssessmentAutomation("customAssessmentAutomation", {
-    compressedQuery: "DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=",
-    customAssessmentAutomationName: "MyCustomAssessmentAutomation",
-    description: "Data should be encrypted",
-    displayName: "Password Policy",
-    remediationDescription: "Encrypt store by...",
-    resourceGroupName: "TestResourceGroup",
-    severity: "Medium",
-    supportedCloud: "AWS",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-custom_assessment_automation = azure_native.security.CustomAssessmentAutomation("customAssessmentAutomation",
-    compressed_query="DQAKAEkAYQBtAF8ARwByAG8AdQBwAA0ACgB8ACAAZQB4AHQAZQBuAGQAIABIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAD0AIABpAGYAZgAoAHQAbwBzAHQAcgBpAG4AZwAoAFIAZQBjAG8AcgBkAC4AVQBzAGUAcgBOAGEAbQBlACkAIABjAG8AbgB0AGEAaQBuAHMAIAAnAHUAcwBlAHIAJwAsACAAJwBVAE4ASABFAEEATABUAEgAWQAnACwAIAAnAEgARQBBAEwAVABIAFkAJwApAA0ACgA=",
-    custom_assessment_automation_name="MyCustomAssessmentAutomation",
-    description="Data should be encrypted",
-    display_name="Password Policy",
-    remediation_description="Encrypt store by...",
-    resource_group_name="TestResourceGroup",
-    severity="Medium",
-    supported_cloud="AWS")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:security:CustomAssessmentAutomation 33e7cc6e-a139-4723-a0e5-76993aee0771 /subscriptions/e5d1b86c-3051-44d5-8802-aa65d45a279b/resourcegroups/TestResourceGroup/providers/Microsoft.Security/customAssessmentAutomations/33e7cc6e-a139-4723-a0e5-76993aee0771 
-```
-
- */
 @ResourceType(type="azure-native:security:CustomAssessmentAutomation")
 public class CustomAssessmentAutomation extends io.pulumi.resources.CustomResource {
-    /**
-     * The assessment metadata key used when an assessment is generated for this assessment automation.
-     */
     @OutputExport(name="assessmentKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> assessmentKey;
 
-    /**
-     * @return The assessment metadata key used when an assessment is generated for this assessment automation.
-     */
     public Output</* @Nullable */ String> getAssessmentKey() {
         return this.assessmentKey;
     }
-    /**
-     * GZip encoded KQL query representing the assessment automation results required.
-     */
     @OutputExport(name="compressedQuery", type=String.class, parameters={})
     private Output</* @Nullable */ String> compressedQuery;
 
-    /**
-     * @return GZip encoded KQL query representing the assessment automation results required.
-     */
     public Output</* @Nullable */ String> getCompressedQuery() {
         return this.compressedQuery;
     }
-    /**
-     * The description to relate to the assessments generated by this assessment automation.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description to relate to the assessments generated by this assessment automation.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The display name of the assessments generated by this assessment automation.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The display name of the assessments generated by this assessment automation.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The remediation description to relate to the assessments generated by this assessment automation.
-     */
     @OutputExport(name="remediationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> remediationDescription;
 
-    /**
-     * @return The remediation description to relate to the assessments generated by this assessment automation.
-     */
     public Output</* @Nullable */ String> getRemediationDescription() {
         return this.remediationDescription;
     }
-    /**
-     * The severity to relate to the assessments generated by this assessment automation.
-     */
     @OutputExport(name="severity", type=String.class, parameters={})
     private Output</* @Nullable */ String> severity;
 
-    /**
-     * @return The severity to relate to the assessments generated by this assessment automation.
-     */
     public Output</* @Nullable */ String> getSeverity() {
         return this.severity;
     }
-    /**
-     * Relevant cloud for the custom assessment automation.
-     */
     @OutputExport(name="supportedCloud", type=String.class, parameters={})
     private Output</* @Nullable */ String> supportedCloud;
 
-    /**
-     * @return Relevant cloud for the custom assessment automation.
-     */
     public Output</* @Nullable */ String> getSupportedCloud() {
         return this.supportedCloud;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public CustomAssessmentAutomation(String name, CustomAssessmentAutomationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:CustomAssessmentAutomation", name, args == null ? CustomAssessmentAutomationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -269,14 +96,6 @@ public class CustomAssessmentAutomation extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static CustomAssessmentAutomation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomAssessmentAutomation(name, id, options);
     }

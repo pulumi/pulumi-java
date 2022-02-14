@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSiteExtensionArgs Empty = new WebAppSiteExtensionArgs();
 
-    /**
-     * Site name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,9 +21,6 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * Site extension name.
-     */
     @InputImport(name="siteExtensionId")
     private final @Nullable Input<String> siteExtensionId;
 

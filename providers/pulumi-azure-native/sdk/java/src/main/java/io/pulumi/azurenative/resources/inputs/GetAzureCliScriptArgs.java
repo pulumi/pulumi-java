@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAzureCliScriptArgs Empty = new GetAzureCliScriptArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment script.
-     */
     @InputImport(name="scriptName", required=true)
     private final String scriptName;
 

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiResourcePoliciesResponse {
-/**
- * The API level only policies XML as embedded content.
- */
     private final @Nullable String content;
-/**
- * The content link to the policies.
- */
     private final @Nullable String contentLink;
 
     @OutputCustomType.Constructor({"content","contentLink"})
@@ -28,15 +22,9 @@ public final class ApiResourcePoliciesResponse {
         this.contentLink = contentLink;
     }
 
-/**
- * The API level only policies XML as embedded content.
- */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
-/**
- * The content link to the policies.
- */
     public Optional<String> getContentLink() {
         return Optional.ofNullable(this.contentLink);
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a cloud service extension profile.
- */
 public final class CloudServiceExtensionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudServiceExtensionProfileResponse Empty = new CloudServiceExtensionProfileResponse();
 
-    /**
-     * List of extensions for the cloud service.
-     */
     @InputImport(name="extensions")
     private final @Nullable List<ExtensionResponse> extensions;
 

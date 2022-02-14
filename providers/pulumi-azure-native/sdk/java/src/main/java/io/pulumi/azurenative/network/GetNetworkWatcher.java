@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkWatcher {
-/**
- * Network watcher in a resource group.
-API Version: 2020-11-01.
- *
- * Network watcher in a resource group.
- */
     public static CompletableFuture<GetNetworkWatcherResult> invokeAsync(GetNetworkWatcherArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkWatcher", TypeShape.of(GetNetworkWatcherResult.class), args == null ? GetNetworkWatcherArgs.Empty : args, Utilities.withVersion(options));
     }

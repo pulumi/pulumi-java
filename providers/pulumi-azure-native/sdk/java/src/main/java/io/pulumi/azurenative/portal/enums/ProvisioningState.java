@@ -8,46 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Provisioning state of the console.
- */
     @EnumType
     public enum ProvisioningState {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Accepted("Accepted"),
-/**
- * 
- */
         Pending("Pending"),
-/**
- * 
- */
         Updating("Updating"),
-/**
- * 
- */
         Creating("Creating"),
-/**
- * 
- */
         Repairing("Repairing"),
-/**
- * 
- */
         Failed("Failed"),
-/**
- * 
- */
         Canceled("Canceled"),
-/**
- * 
- */
         Succeeded("Succeeded");
 
         private final String value;

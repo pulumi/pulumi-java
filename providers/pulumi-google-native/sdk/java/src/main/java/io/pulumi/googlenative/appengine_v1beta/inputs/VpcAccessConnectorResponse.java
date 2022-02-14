@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * VPC access connector specification.
- */
 public final class VpcAccessConnectorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpcAccessConnectorResponse Empty = new VpcAccessConnectorResponse();
 
-    /**
-     * The egress setting for the connector, controlling what traffic is diverted through it.
-     */
     @InputImport(name="egressSetting", required=true)
     private final String egressSetting;
 
@@ -25,9 +19,6 @@ public final class VpcAccessConnectorResponse extends io.pulumi.resources.Invoke
         return this.egressSetting;
     }
 
-    /**
-     * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

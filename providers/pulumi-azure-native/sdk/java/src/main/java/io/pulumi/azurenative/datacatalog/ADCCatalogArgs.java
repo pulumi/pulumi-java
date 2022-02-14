@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ADCCatalogArgs Empty = new ADCCatalogArgs();
 
-    /**
-     * Azure data catalog admin list.
-     */
     @InputImport(name="admins")
     private final @Nullable Input<List<PrincipalsArgs>> admins;
 
@@ -34,9 +28,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.admins == null ? Input.empty() : this.admins;
     }
 
-    /**
-     * The name of the data catalog in the specified subscription and resource group.
-     */
     @InputImport(name="catalogName")
     private final @Nullable Input<String> catalogName;
 
@@ -44,9 +35,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.catalogName == null ? Input.empty() : this.catalogName;
     }
 
-    /**
-     * Automatic unit adjustment enabled or not.
-     */
     @InputImport(name="enableAutomaticUnitAdjustment")
     private final @Nullable Input<Boolean> enableAutomaticUnitAdjustment;
 
@@ -54,9 +42,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableAutomaticUnitAdjustment == null ? Input.empty() : this.enableAutomaticUnitAdjustment;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -64,9 +49,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,9 +56,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Azure data catalog SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<Either<String,SkuType>> sku;
 
@@ -84,9 +63,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Azure data catalog provision status.
-     */
     @InputImport(name="successfullyProvisioned")
     private final @Nullable Input<Boolean> successfullyProvisioned;
 
@@ -94,9 +70,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.successfullyProvisioned == null ? Input.empty() : this.successfullyProvisioned;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -104,9 +77,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Azure data catalog units.
-     */
     @InputImport(name="units")
     private final @Nullable Input<Integer> units;
 
@@ -114,9 +84,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
         return this.units == null ? Input.empty() : this.units;
     }
 
-    /**
-     * Azure data catalog user list.
-     */
     @InputImport(name="users")
     private final @Nullable Input<List<PrincipalsArgs>> users;
 

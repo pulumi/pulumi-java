@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetResourceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceGroupArgs Empty = new GetResourceGroupArgs();
 
-    /**
-     * The name of the resource group to get. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

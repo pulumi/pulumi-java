@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ContainerStateWaiting is a waiting state of a container.
- */
 public final class ContainerStateWaitingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerStateWaitingArgs Empty = new ContainerStateWaitingArgs();
 
-    /**
-     * Message regarding why the container is not yet running.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -27,9 +21,6 @@ public final class ContainerStateWaitingArgs extends io.pulumi.resources.Resourc
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * (brief) reason the container is not yet running.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 

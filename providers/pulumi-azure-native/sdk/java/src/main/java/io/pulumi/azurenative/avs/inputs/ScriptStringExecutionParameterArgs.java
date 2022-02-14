@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * a plain text value execution parameter
- */
 public final class ScriptStringExecutionParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScriptStringExecutionParameterArgs Empty = new ScriptStringExecutionParameterArgs();
 
-    /**
-     * The parameter name
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,10 +21,6 @@ public final class ScriptStringExecutionParameterArgs extends io.pulumi.resource
         return this.name;
     }
 
-    /**
-     * The type of execution parameter
-Expected value is 'Value'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -38,9 +28,6 @@ Expected value is 'Value'.
         return this.type;
     }
 
-    /**
-     * The value for the passed parameter
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

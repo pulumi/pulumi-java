@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Allocation configuration used by Batch Service to provision the nodes.
- */
 public final class NodePlacementConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodePlacementConfigurationArgs Empty = new NodePlacementConfigurationArgs();
 
-    /**
-     * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
-     */
     @InputImport(name="policy")
     private final @Nullable Input<NodePlacementPolicyType> policy;
 

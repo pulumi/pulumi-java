@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity for the virtual machine.
- */
 public final class VirtualMachineIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineIdentityResponse Empty = new VirtualMachineIdentityResponse();
 
-    /**
-     * The principal id of virtual machine identity. This property will only be provided for a system assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -29,9 +23,6 @@ public final class VirtualMachineIdentityResponse extends io.pulumi.resources.In
         return this.principalId;
     }
 
-    /**
-     * The tenant id associated with the virtual machine. This property will only be provided for a system assigned identity.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -39,9 +30,6 @@ public final class VirtualMachineIdentityResponse extends io.pulumi.resources.In
         return this.tenantId;
     }
 
-    /**
-     * The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -49,9 +37,6 @@ public final class VirtualMachineIdentityResponse extends io.pulumi.resources.In
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The list of user identities associated with the Virtual Machine. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,VirtualMachineIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 

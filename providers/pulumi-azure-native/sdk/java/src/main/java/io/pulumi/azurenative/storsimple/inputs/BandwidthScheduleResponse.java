@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The schedule for bandwidth setting.
- */
 public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BandwidthScheduleResponse Empty = new BandwidthScheduleResponse();
 
-    /**
-     * The days of the week when this schedule is applicable.
-     */
     @InputImport(name="days", required=true)
     private final List<String> days;
 
@@ -28,9 +22,6 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
         return this.days;
     }
 
-    /**
-     * The rate in Mbps.
-     */
     @InputImport(name="rateInMbps", required=true)
     private final Integer rateInMbps;
 
@@ -38,9 +29,6 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
         return this.rateInMbps;
     }
 
-    /**
-     * The start time of the schedule.
-     */
     @InputImport(name="start", required=true)
     private final TimeResponse start;
 
@@ -48,9 +36,6 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
         return this.start;
     }
 
-    /**
-     * The stop time of the schedule.
-     */
     @InputImport(name="stop", required=true)
     private final TimeResponse stop;
 

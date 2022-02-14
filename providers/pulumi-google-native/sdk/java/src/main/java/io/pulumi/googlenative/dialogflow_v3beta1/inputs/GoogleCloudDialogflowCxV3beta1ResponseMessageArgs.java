@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a response message that can be returned by a conversational agent. Response messages are also used for output audio synthesis. The approach is as follows: * If at least one OutputAudioText response is present, then all OutputAudioText responses are linearly concatenated, and the result is used for output audio synthesis. * If the OutputAudioText responses are a mixture of text and SSML, then the concatenated result is treated as SSML; otherwise, the result is treated as either text or SSML as appropriate. The agent designer should ideally use either text or SSML consistently throughout the bot design. * Otherwise, all Text responses are linearly concatenated, and the result is used for output audio synthesis. This approach allows for more sophisticated user experience scenarios, where the text displayed to the user may differ from what is heard.
- */
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ResponseMessageArgs Empty = new GoogleCloudDialogflowCxV3beta1ResponseMessageArgs();
 
-    /**
-     * Indicates that the conversation succeeded.
-     */
     @InputImport(name="conversationSuccess")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess;
 
@@ -34,9 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
         return this.conversationSuccess == null ? Input.empty() : this.conversationSuccess;
     }
 
-    /**
-     * Hands off conversation to a human agent.
-     */
     @InputImport(name="liveAgentHandoff")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
 
@@ -44,9 +35,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
         return this.liveAgentHandoff == null ? Input.empty() : this.liveAgentHandoff;
     }
 
-    /**
-     * A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.
-     */
     @InputImport(name="outputAudioText")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText;
 
@@ -54,9 +42,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
         return this.outputAudioText == null ? Input.empty() : this.outputAudioText;
     }
 
-    /**
-     * Returns a response containing a custom, platform-specific payload.
-     */
     @InputImport(name="payload")
     private final @Nullable Input<Map<String,String>> payload;
 
@@ -64,9 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
         return this.payload == null ? Input.empty() : this.payload;
     }
 
-    /**
-     * Signal that the client should play an audio clip hosted at a client-specific URI. Dialogflow uses this to construct mixed_audio. However, Dialogflow itself does not try to read or process the URI in any way.
-     */
     @InputImport(name="playAudio")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio;
 
@@ -74,9 +56,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
         return this.playAudio == null ? Input.empty() : this.playAudio;
     }
 
-    /**
-     * A signal that the client should transfer the phone call connected to this agent to a third-party endpoint.
-     */
     @InputImport(name="telephonyTransferCall")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
@@ -84,9 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
         return this.telephonyTransferCall == null ? Input.empty() : this.telephonyTransferCall;
     }
 
-    /**
-     * Returns a text response.
-     */
     @InputImport(name="text")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text;
 

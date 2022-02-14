@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenAuthenticationAccessPolicyResponse {
-/**
- * The access policy claims.
- */
     private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
-/**
- * Type of provider for OAuth.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"claims","type"})
@@ -30,15 +24,9 @@ public final class OpenAuthenticationAccessPolicyResponse {
         this.type = type;
     }
 
-/**
- * The access policy claims.
- */
     public List<OpenAuthenticationPolicyClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
     }
-/**
- * Type of provider for OAuth.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

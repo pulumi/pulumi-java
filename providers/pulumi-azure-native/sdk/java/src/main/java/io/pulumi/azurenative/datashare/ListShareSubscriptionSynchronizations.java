@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSynchronizations {
-/**
- * A consumer side list of share subscription synchronizations
-API Version: 2020-09-01.
- *
- * A consumer side list of share subscription synchronizations
- */
     public static CompletableFuture<ListShareSubscriptionSynchronizationsResult> invokeAsync(ListShareSubscriptionSynchronizationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSynchronizations", TypeShape.of(ListShareSubscriptionSynchronizationsResult.class), args == null ? ListShareSubscriptionSynchronizationsArgs.Empty : args, Utilities.withVersion(options));
     }

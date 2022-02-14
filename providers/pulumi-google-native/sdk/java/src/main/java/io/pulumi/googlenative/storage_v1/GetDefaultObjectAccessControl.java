@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultObjectAccessControl {
-/**
- * Returns the default object ACL entry for the specified entity on the specified bucket.
- */
     public static CompletableFuture<GetDefaultObjectAccessControlResult> invokeAsync(GetDefaultObjectAccessControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getDefaultObjectAccessControl", TypeShape.of(GetDefaultObjectAccessControlResult.class), args == null ? GetDefaultObjectAccessControlArgs.Empty : args, Utilities.withVersion(options));
     }

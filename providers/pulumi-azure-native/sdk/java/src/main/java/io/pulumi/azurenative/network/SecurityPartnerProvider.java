@@ -16,240 +16,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Security Partner Provider resource.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create Security Partner Provider
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var securityPartnerProvider = new AzureNative.Network.SecurityPartnerProvider("securityPartnerProvider", new AzureNative.Network.SecurityPartnerProviderArgs
-        {
-            Location = "West US",
-            ResourceGroupName = "rg1",
-            SecurityPartnerProviderName = "securityPartnerProvider",
-            SecurityProviderName = "ZScaler",
-            Tags = 
-            {
-                { "key1", "value1" },
-            },
-            VirtualHub = new AzureNative.Network.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewSecurityPartnerProvider(ctx, "securityPartnerProvider", &network.SecurityPartnerProviderArgs{
-			Location:                    pulumi.String("West US"),
-			ResourceGroupName:           pulumi.String("rg1"),
-			SecurityPartnerProviderName: pulumi.String("securityPartnerProvider"),
-			SecurityProviderName:        pulumi.String("ZScaler"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-			},
-			VirtualHub: &network.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const securityPartnerProvider = new azure_native.network.SecurityPartnerProvider("securityPartnerProvider", {
-    location: "West US",
-    resourceGroupName: "rg1",
-    securityPartnerProviderName: "securityPartnerProvider",
-    securityProviderName: "ZScaler",
-    tags: {
-        key1: "value1",
-    },
-    virtualHub: {
-        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-security_partner_provider = azure_native.network.SecurityPartnerProvider("securityPartnerProvider",
-    location="West US",
-    resource_group_name="rg1",
-    security_partner_provider_name="securityPartnerProvider",
-    security_provider_name="ZScaler",
-    tags={
-        "key1": "value1",
-    },
-    virtual_hub=azure_native.network.SubResourceArgs(
-        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:SecurityPartnerProvider securityPartnerProvider /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/securityPartnerProviders/securityPartnerProvider 
-```
-
- */
 @ResourceType(type="azure-native:network:SecurityPartnerProvider")
 public class SecurityPartnerProvider extends io.pulumi.resources.CustomResource {
-    /**
-     * The connection status with the Security Partner Provider.
-     */
     @OutputExport(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
-    /**
-     * @return The connection status with the Security Partner Provider.
-     */
     public Output<String> getConnectionStatus() {
         return this.connectionStatus;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the Security Partner Provider resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the Security Partner Provider resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The security provider name.
-     */
     @OutputExport(name="securityProviderName", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProviderName;
 
-    /**
-     * @return The security provider name.
-     */
     public Output</* @Nullable */ String> getSecurityProviderName() {
         return this.securityProviderName;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The virtualHub to which the Security Partner Provider belongs.
-     */
     @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
-    /**
-     * @return The virtualHub to which the Security Partner Provider belongs.
-     */
     public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
         return this.virtualHub;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SecurityPartnerProvider(String name, SecurityPartnerProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:SecurityPartnerProvider", name, args == null ? SecurityPartnerProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -277,14 +100,6 @@ public class SecurityPartnerProvider extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SecurityPartnerProvider get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SecurityPartnerProvider(name, id, options);
     }

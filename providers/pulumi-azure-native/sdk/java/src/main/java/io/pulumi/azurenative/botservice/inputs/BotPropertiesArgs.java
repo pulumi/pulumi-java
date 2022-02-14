@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the Bot.
- */
 public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotPropertiesArgs Empty = new BotPropertiesArgs();
 
-    /**
-     * Contains resource all settings defined as key/value pairs.
-     */
     @InputImport(name="allSettings")
     private final @Nullable Input<Map<String,String>> allSettings;
 
@@ -33,9 +27,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.allSettings == null ? Input.empty() : this.allSettings;
     }
 
-    /**
-     * The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
-     */
     @InputImport(name="appPasswordHint")
     private final @Nullable Input<String> appPasswordHint;
 
@@ -43,9 +34,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.appPasswordHint == null ? Input.empty() : this.appPasswordHint;
     }
 
-    /**
-     * The CMK Url
-     */
     @InputImport(name="cmekKeyVaultUrl")
     private final @Nullable Input<String> cmekKeyVaultUrl;
 
@@ -53,9 +41,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.cmekKeyVaultUrl == null ? Input.empty() : this.cmekKeyVaultUrl;
     }
 
-    /**
-     * The description of the bot
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -63,9 +48,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The Application Insights key
-     */
     @InputImport(name="developerAppInsightKey")
     private final @Nullable Input<String> developerAppInsightKey;
 
@@ -73,9 +55,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.developerAppInsightKey == null ? Input.empty() : this.developerAppInsightKey;
     }
 
-    /**
-     * The Application Insights Api Key
-     */
     @InputImport(name="developerAppInsightsApiKey")
     private final @Nullable Input<String> developerAppInsightsApiKey;
 
@@ -83,9 +62,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.developerAppInsightsApiKey == null ? Input.empty() : this.developerAppInsightsApiKey;
     }
 
-    /**
-     * The Application Insights App Id
-     */
     @InputImport(name="developerAppInsightsApplicationId")
     private final @Nullable Input<String> developerAppInsightsApplicationId;
 
@@ -93,9 +69,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.developerAppInsightsApplicationId == null ? Input.empty() : this.developerAppInsightsApplicationId;
     }
 
-    /**
-     * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
-     */
     @InputImport(name="disableLocalAuth")
     private final @Nullable Input<Boolean> disableLocalAuth;
 
@@ -103,9 +76,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
     }
 
-    /**
-     * The Name of the bot
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -113,9 +83,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * The bot's endpoint
-     */
     @InputImport(name="endpoint", required=true)
     private final Input<String> endpoint;
 
@@ -123,9 +90,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpoint;
     }
 
-    /**
-     * The Icon Url of the bot
-     */
     @InputImport(name="iconUrl")
     private final @Nullable Input<String> iconUrl;
 
@@ -133,9 +97,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.iconUrl == null ? Input.empty() : this.iconUrl;
     }
 
-    /**
-     * Whether Cmek is enabled
-     */
     @InputImport(name="isCmekEnabled")
     private final @Nullable Input<Boolean> isCmekEnabled;
 
@@ -143,9 +104,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.isCmekEnabled == null ? Input.empty() : this.isCmekEnabled;
     }
 
-    /**
-     * Whether the bot is streaming supported
-     */
     @InputImport(name="isStreamingSupported")
     private final @Nullable Input<Boolean> isStreamingSupported;
 
@@ -153,9 +111,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.isStreamingSupported == null ? Input.empty() : this.isStreamingSupported;
     }
 
-    /**
-     * Collection of LUIS App Ids
-     */
     @InputImport(name="luisAppIds")
     private final @Nullable Input<List<String>> luisAppIds;
 
@@ -163,9 +118,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.luisAppIds == null ? Input.empty() : this.luisAppIds;
     }
 
-    /**
-     * The LUIS Key
-     */
     @InputImport(name="luisKey")
     private final @Nullable Input<String> luisKey;
 
@@ -173,9 +125,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.luisKey == null ? Input.empty() : this.luisKey;
     }
 
-    /**
-     * The bot's manifest url
-     */
     @InputImport(name="manifestUrl")
     private final @Nullable Input<String> manifestUrl;
 
@@ -183,9 +132,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.manifestUrl == null ? Input.empty() : this.manifestUrl;
     }
 
-    /**
-     * Microsoft App Id for the bot
-     */
     @InputImport(name="msaAppId", required=true)
     private final Input<String> msaAppId;
 
@@ -193,9 +139,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.msaAppId;
     }
 
-    /**
-     * Microsoft App Managed Identity Resource Id for the bot
-     */
     @InputImport(name="msaAppMSIResourceId")
     private final @Nullable Input<String> msaAppMSIResourceId;
 
@@ -203,9 +146,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.msaAppMSIResourceId == null ? Input.empty() : this.msaAppMSIResourceId;
     }
 
-    /**
-     * Microsoft App Tenant Id for the bot
-     */
     @InputImport(name="msaAppTenantId")
     private final @Nullable Input<String> msaAppTenantId;
 
@@ -213,9 +153,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.msaAppTenantId == null ? Input.empty() : this.msaAppTenantId;
     }
 
-    /**
-     * Microsoft App Type for the bot
-     */
     @InputImport(name="msaAppType")
     private final @Nullable Input<Either<String,MsaAppType>> msaAppType;
 
@@ -223,9 +160,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.msaAppType == null ? Input.empty() : this.msaAppType;
     }
 
-    /**
-     * The hint to browser (e.g. protocol handler) on how to open the bot for authoring
-     */
     @InputImport(name="openWithHint")
     private final @Nullable Input<String> openWithHint;
 
@@ -233,9 +167,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.openWithHint == null ? Input.empty() : this.openWithHint;
     }
 
-    /**
-     * Contains resource parameters defined as key/value pairs.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 
@@ -243,9 +174,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Whether the bot is in an isolated network
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -253,9 +181,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * Publishing credentials of the resource
-     */
     @InputImport(name="publishingCredentials")
     private final @Nullable Input<String> publishingCredentials;
 
@@ -263,9 +188,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.publishingCredentials == null ? Input.empty() : this.publishingCredentials;
     }
 
-    /**
-     * The channel schema transformation version for the bot
-     */
     @InputImport(name="schemaTransformationVersion")
     private final @Nullable Input<String> schemaTransformationVersion;
 
@@ -273,9 +195,6 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaTransformationVersion == null ? Input.empty() : this.schemaTransformationVersion;
     }
 
-    /**
-     * The storage resourceId for the bot
-     */
     @InputImport(name="storageResourceId")
     private final @Nullable Input<String> storageResourceId;
 

@@ -14,45 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIpGroupResult {
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * List of references to Firewall Policies resources that this IpGroups is associated with.
- */
     private final List<SubResourceResponse> firewallPolicies;
-/**
- * List of references to Firewall resources that this IpGroups is associated with.
- */
     private final List<SubResourceResponse> firewalls;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * IpAddresses/IpAddressPrefixes in the IpGroups resource.
- */
     private final @Nullable List<String> ipAddresses;
-/**
- * Resource location.
- */
     private final @Nullable String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The provisioning state of the IpGroups resource.
- */
     private final String provisioningState;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","firewallPolicies","firewalls","id","ipAddresses","location","name","provisioningState","tags","type"})
@@ -79,63 +49,33 @@ public final class GetIpGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * List of references to Firewall Policies resources that this IpGroups is associated with.
- */
     public List<SubResourceResponse> getFirewallPolicies() {
         return this.firewallPolicies;
     }
-/**
- * List of references to Firewall resources that this IpGroups is associated with.
- */
     public List<SubResourceResponse> getFirewalls() {
         return this.firewalls;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * IpAddresses/IpAddressPrefixes in the IpGroups resource.
- */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
-/**
- * Resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state of the IpGroups resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

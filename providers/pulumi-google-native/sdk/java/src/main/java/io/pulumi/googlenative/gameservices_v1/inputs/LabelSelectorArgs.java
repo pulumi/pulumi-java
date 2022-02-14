@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The label selector, used to group labels on the resources.
- */
 public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelSelectorArgs Empty = new LabelSelectorArgs();
 
-    /**
-     * Resource labels for this selector.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataCollectionEndpointResponseNetworkAcls {
-/**
- * The configuration to set whether network access from public internet to the endpoints are allowed.
- */
     private final @Nullable String publicNetworkAccess;
 
     @OutputCustomType.Constructor({"publicNetworkAccess"})
@@ -21,9 +18,6 @@ public final class DataCollectionEndpointResponseNetworkAcls {
         this.publicNetworkAccess = publicNetworkAccess;
     }
 
-/**
- * The configuration to set whether network access from public internet to the endpoints are allowed.
- */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }

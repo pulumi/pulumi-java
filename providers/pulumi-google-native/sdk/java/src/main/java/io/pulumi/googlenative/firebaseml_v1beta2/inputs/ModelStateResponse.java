@@ -9,16 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * State common to all model types. Includes publishing and validation information.
- */
 public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelStateResponse Empty = new ModelStateResponse();
 
-    /**
-     * Indicates if this model has been published.
-     */
     @InputImport(name="published", required=true)
     private final Boolean published;
 
@@ -26,9 +20,6 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
         return this.published;
     }
 
-    /**
-     * Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
-     */
     @InputImport(name="validationError", required=true)
     private final StatusResponse validationError;
 

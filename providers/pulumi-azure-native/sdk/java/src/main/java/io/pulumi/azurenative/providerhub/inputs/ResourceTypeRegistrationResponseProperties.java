@@ -29,16 +29,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeRegistrationResponseProperties Empty = new ResourceTypeRegistrationResponseProperties();
 
-    /**
-     * 
-     */
     @InputImport(name="allowedUnauthorizedActions")
     private final @Nullable List<String> allowedUnauthorizedActions;
 
@@ -46,9 +40,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.allowedUnauthorizedActions == null ? List.of() : this.allowedUnauthorizedActions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="authorizationActionMappings")
     private final @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings;
 
@@ -56,9 +47,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.authorizationActionMappings == null ? List.of() : this.authorizationActionMappings;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="checkNameAvailabilitySpecifications")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications;
 
@@ -66,9 +54,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.checkNameAvailabilitySpecifications == null ? Optional.empty() : Optional.ofNullable(this.checkNameAvailabilitySpecifications);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="defaultApiVersion")
     private final @Nullable String defaultApiVersion;
 
@@ -76,9 +61,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.defaultApiVersion == null ? Optional.empty() : Optional.ofNullable(this.defaultApiVersion);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="disallowedActionVerbs")
     private final @Nullable List<String> disallowedActionVerbs;
 
@@ -86,9 +68,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.disallowedActionVerbs == null ? List.of() : this.disallowedActionVerbs;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="enableAsyncOperation")
     private final @Nullable Boolean enableAsyncOperation;
 
@@ -96,9 +75,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.enableAsyncOperation == null ? Optional.empty() : Optional.ofNullable(this.enableAsyncOperation);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="enableThirdPartyS2S")
     private final @Nullable Boolean enableThirdPartyS2S;
 
@@ -106,9 +82,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.enableThirdPartyS2S == null ? Optional.empty() : Optional.ofNullable(this.enableThirdPartyS2S);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="endpoints")
     private final @Nullable List<ResourceTypeEndpointResponse> endpoints;
 
@@ -116,9 +89,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="extendedLocations")
     private final @Nullable List<ExtendedLocationOptionsResponse> extendedLocations;
 
@@ -126,9 +96,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="extensionOptions")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions;
 
@@ -136,9 +103,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.extensionOptions == null ? Optional.empty() : Optional.ofNullable(this.extensionOptions);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="featuresRule")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule;
 
@@ -146,9 +110,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="identityManagement")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement;
 
@@ -156,9 +117,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.identityManagement == null ? Optional.empty() : Optional.ofNullable(this.identityManagement);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="isPureProxy")
     private final @Nullable Boolean isPureProxy;
 
@@ -166,9 +124,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.isPureProxy == null ? Optional.empty() : Optional.ofNullable(this.isPureProxy);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedAccessChecks")
     private final @Nullable List<LinkedAccessCheckResponse> linkedAccessChecks;
 
@@ -176,9 +131,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.linkedAccessChecks == null ? List.of() : this.linkedAccessChecks;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="loggingRules")
     private final @Nullable List<LoggingRuleResponse> loggingRules;
 
@@ -186,9 +138,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.loggingRules == null ? List.of() : this.loggingRules;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="marketplaceType")
     private final @Nullable String marketplaceType;
 
@@ -196,9 +145,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.marketplaceType == null ? Optional.empty() : Optional.ofNullable(this.marketplaceType);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -206,9 +152,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="regionality")
     private final @Nullable String regionality;
 
@@ -216,9 +159,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.regionality == null ? Optional.empty() : Optional.ofNullable(this.regionality);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestHeaderOptions")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions;
 
@@ -226,9 +166,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.requestHeaderOptions == null ? Optional.empty() : Optional.ofNullable(this.requestHeaderOptions);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requiredFeatures")
     private final @Nullable List<String> requiredFeatures;
 
@@ -236,9 +173,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="resourceDeletionPolicy")
     private final @Nullable String resourceDeletionPolicy;
 
@@ -246,9 +180,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.resourceDeletionPolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceDeletionPolicy);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="resourceMovePolicy")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy;
 
@@ -256,9 +187,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.resourceMovePolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceMovePolicy);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="routingType")
     private final @Nullable String routingType;
 
@@ -266,9 +194,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.routingType == null ? Optional.empty() : Optional.ofNullable(this.routingType);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceTreeInfos")
     private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
@@ -276,9 +201,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="subscriptionLifecycleNotificationSpecifications")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
 
@@ -286,9 +208,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.subscriptionLifecycleNotificationSpecifications == null ? Optional.empty() : Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="subscriptionStateRules")
     private final @Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules;
 
@@ -296,9 +215,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.subscriptionStateRules == null ? List.of() : this.subscriptionStateRules;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="swaggerSpecifications")
     private final @Nullable List<SwaggerSpecificationResponse> swaggerSpecifications;
 
@@ -306,9 +222,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.swaggerSpecifications == null ? List.of() : this.swaggerSpecifications;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="templateDeploymentOptions")
     private final @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
@@ -316,9 +229,6 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
         return this.templateDeploymentOptions == null ? Optional.empty() : Optional.ofNullable(this.templateDeploymentOptions);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="throttlingRules")
     private final @Nullable List<ThrottlingRuleResponse> throttlingRules;
 

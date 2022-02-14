@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MultiCloudClusterResponse {
-/**
- * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
- */
     private final Boolean clusterMissing;
-/**
- * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
- */
     private final String resourceLink;
 
     @OutputCustomType.Constructor({"clusterMissing","resourceLink"})
@@ -27,15 +21,9 @@ public final class MultiCloudClusterResponse {
         this.resourceLink = Objects.requireNonNull(resourceLink);
     }
 
-/**
- * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
- */
     public Boolean getClusterMissing() {
         return this.clusterMissing;
     }
-/**
- * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
- */
     public String getResourceLink() {
         return this.resourceLink;
     }

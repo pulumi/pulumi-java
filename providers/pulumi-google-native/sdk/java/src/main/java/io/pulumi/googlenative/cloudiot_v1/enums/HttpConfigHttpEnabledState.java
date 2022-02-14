@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
- */
     @EnumType
     public enum HttpConfigHttpEnabledState {
-/**
- * No HTTP state specified. If not specified, DeviceService will be enabled by default.
- */
         HttpStateUnspecified("HTTP_STATE_UNSPECIFIED"),
-/**
- * Enables DeviceService (HTTP) service for the registry.
- */
         HttpEnabled("HTTP_ENABLED"),
-/**
- * Disables DeviceService (HTTP) service for the registry.
- */
         HttpDisabled("HTTP_DISABLED");
 
         private final String value;

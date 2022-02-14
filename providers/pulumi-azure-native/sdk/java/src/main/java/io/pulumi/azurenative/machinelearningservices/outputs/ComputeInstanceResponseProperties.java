@@ -21,57 +21,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ComputeInstanceResponseProperties {
-/**
- * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
- */
     private final @Nullable String applicationSharingPolicy;
-/**
- * Describes available applications and their endpoints on this ComputeInstance.
- */
     private final List<ComputeInstanceApplicationResponse> applications;
-/**
- * The Compute Instance Authorization type. Available values are personal (default).
- */
     private final @Nullable String computeInstanceAuthorizationType;
-/**
- * Describes all connectivity endpoints available for this ComputeInstance.
- */
     private final ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
-/**
- * Describes information on user who created this ComputeInstance.
- */
     private final ComputeInstanceCreatedByResponse createdBy;
-/**
- * Collection of errors encountered on this ComputeInstance.
- */
     private final List<MachineLearningServiceErrorResponse> errors;
-/**
- * The last operation on ComputeInstance.
- */
     private final ComputeInstanceLastOperationResponse lastOperation;
-/**
- * Settings for a personal compute instance.
- */
     private final @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
-/**
- * Details of customized scripts to execute for setting up the cluster.
- */
     private final @Nullable SetupScriptsResponse setupScripts;
-/**
- * Specifies policy and settings for SSH access.
- */
     private final @Nullable ComputeInstanceSshSettingsResponse sshSettings;
-/**
- * The current state of this ComputeInstance.
- */
     private final String state;
-/**
- * Virtual network subnet resource ID the compute nodes belong to.
- */
     private final @Nullable ResourceIdResponse subnet;
-/**
- * Virtual Machine Size
- */
     private final @Nullable String vmSize;
 
     @OutputCustomType.Constructor({"applicationSharingPolicy","applications","computeInstanceAuthorizationType","connectivityEndpoints","createdBy","errors","lastOperation","personalComputeInstanceSettings","setupScripts","sshSettings","state","subnet","vmSize"})
@@ -104,81 +65,42 @@ public final class ComputeInstanceResponseProperties {
         this.vmSize = vmSize;
     }
 
-/**
- * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
- */
     public Optional<String> getApplicationSharingPolicy() {
         return Optional.ofNullable(this.applicationSharingPolicy);
     }
-/**
- * Describes available applications and their endpoints on this ComputeInstance.
- */
     public List<ComputeInstanceApplicationResponse> getApplications() {
         return this.applications;
     }
-/**
- * The Compute Instance Authorization type. Available values are personal (default).
- */
     public Optional<String> getComputeInstanceAuthorizationType() {
         return Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
-/**
- * Describes all connectivity endpoints available for this ComputeInstance.
- */
     public ComputeInstanceConnectivityEndpointsResponse getConnectivityEndpoints() {
         return this.connectivityEndpoints;
     }
-/**
- * Describes information on user who created this ComputeInstance.
- */
     public ComputeInstanceCreatedByResponse getCreatedBy() {
         return this.createdBy;
     }
-/**
- * Collection of errors encountered on this ComputeInstance.
- */
     public List<MachineLearningServiceErrorResponse> getErrors() {
         return this.errors;
     }
-/**
- * The last operation on ComputeInstance.
- */
     public ComputeInstanceLastOperationResponse getLastOperation() {
         return this.lastOperation;
     }
-/**
- * Settings for a personal compute instance.
- */
     public Optional<PersonalComputeInstanceSettingsResponse> getPersonalComputeInstanceSettings() {
         return Optional.ofNullable(this.personalComputeInstanceSettings);
     }
-/**
- * Details of customized scripts to execute for setting up the cluster.
- */
     public Optional<SetupScriptsResponse> getSetupScripts() {
         return Optional.ofNullable(this.setupScripts);
     }
-/**
- * Specifies policy and settings for SSH access.
- */
     public Optional<ComputeInstanceSshSettingsResponse> getSshSettings() {
         return Optional.ofNullable(this.sshSettings);
     }
-/**
- * The current state of this ComputeInstance.
- */
     public String getState() {
         return this.state;
     }
-/**
- * Virtual network subnet resource ID the compute nodes belong to.
- */
     public Optional<ResourceIdResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
-/**
- * Virtual Machine Size
- */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }

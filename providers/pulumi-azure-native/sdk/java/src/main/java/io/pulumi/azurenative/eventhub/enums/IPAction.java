@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The IP Filter Action
- */
     @EnumType
     public enum IPAction {
-/**
- * 
- */
         Accept("Accept"),
-/**
- * 
- */
         Reject("Reject");
 
         private final String value;

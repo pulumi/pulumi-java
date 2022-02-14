@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Table card for Actions on Google.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs();
 
-    /**
-     * Optional. List of buttons for the card.
-     */
     @InputImport(name="buttons")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
 
@@ -32,9 +26,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
         return this.buttons == null ? Input.empty() : this.buttons;
     }
 
-    /**
-     * Optional. Display properties for the columns in this table.
-     */
     @InputImport(name="columnProperties")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs>> columnProperties;
 
@@ -42,9 +33,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
         return this.columnProperties == null ? Input.empty() : this.columnProperties;
     }
 
-    /**
-     * Optional. Image which should be displayed on the card.
-     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
@@ -52,9 +40,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
         return this.image == null ? Input.empty() : this.image;
     }
 
-    /**
-     * Optional. Rows in this table of data.
-     */
     @InputImport(name="rows")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs>> rows;
 
@@ -62,9 +47,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
         return this.rows == null ? Input.empty() : this.rows;
     }
 
-    /**
-     * Optional. Subtitle to the title.
-     */
     @InputImport(name="subtitle")
     private final @Nullable Input<String> subtitle;
 
@@ -72,9 +54,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs extend
         return this.subtitle == null ? Input.empty() : this.subtitle;
     }
 
-    /**
-     * Title of the card.
-     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

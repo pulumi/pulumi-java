@@ -16,238 +16,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The description of the Windows IoT Device Service.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Service_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureNative.WindowsIoT.Service("service", new AzureNative.WindowsIoT.ServiceArgs
-        {
-            AdminDomainName = "d.e.f",
-            BillingDomainName = "a.b.c",
-            DeviceName = "service4445",
-            Location = "East US",
-            Notes = "blah",
-            Quantity = 1000000,
-            ResourceGroupName = "res9101",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	windowsiot "github.com/pulumi/pulumi-azure-native/sdk/go/azure/windowsiot"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := windowsiot.NewService(ctx, "service", &windowsiot.ServiceArgs{
-			AdminDomainName:   pulumi.String("d.e.f"),
-			BillingDomainName: pulumi.String("a.b.c"),
-			DeviceName:        pulumi.String("service4445"),
-			Location:          pulumi.String("East US"),
-			Notes:             pulumi.String("blah"),
-			Quantity:          pulumi.Float64(1000000),
-			ResourceGroupName: pulumi.String("res9101"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const service = new azure_native.windowsiot.Service("service", {
-    adminDomainName: "d.e.f",
-    billingDomainName: "a.b.c",
-    deviceName: "service4445",
-    location: "East US",
-    notes: "blah",
-    quantity: 1000000,
-    resourceGroupName: "res9101",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-service = azure_native.windowsiot.Service("service",
-    admin_domain_name="d.e.f",
-    billing_domain_name="a.b.c",
-    device_name="service4445",
-    location="East US",
-    notes="blah",
-    quantity=1000000,
-    resource_group_name="res9101")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:windowsiot:Service myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.WindowsIoT/deviceServices/{deviceName} 
-```
-
- */
 @ResourceType(type="azure-native:windowsiot:Service")
 public class Service extends io.pulumi.resources.CustomResource {
-    /**
-     * Windows IoT Device Service OEM AAD domain
-     */
     @OutputExport(name="adminDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> adminDomainName;
 
-    /**
-     * @return Windows IoT Device Service OEM AAD domain
-     */
     public Output</* @Nullable */ String> getAdminDomainName() {
         return this.adminDomainName;
     }
-    /**
-     * Windows IoT Device Service ODM AAD domain
-     */
     @OutputExport(name="billingDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingDomainName;
 
-    /**
-     * @return Windows IoT Device Service ODM AAD domain
-     */
     public Output</* @Nullable */ String> getBillingDomainName() {
         return this.billingDomainName;
     }
-    /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * The Azure Region where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The Azure Region where the resource lives
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Windows IoT Device Service notes.
-     */
     @OutputExport(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
-    /**
-     * @return Windows IoT Device Service notes.
-     */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
-    /**
-     * Windows IoT Device Service device allocation,
-     */
     @OutputExport(name="quantity", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> quantity;
 
-    /**
-     * @return Windows IoT Device Service device allocation,
-     */
     public Output</* @Nullable */ Double> getQuantity() {
         return this.quantity;
     }
-    /**
-     * Windows IoT Device Service start date,
-     */
     @OutputExport(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
-    /**
-     * @return Windows IoT Device Service start date,
-     */
     public Output<String> getStartDate() {
         return this.startDate;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:windowsiot:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -267,14 +98,6 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters to be applied to the cluster-autoscaler when enabled
- */
 public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterPropertiesAutoScalerProfileArgs Empty = new ManagedClusterPropertiesAutoScalerProfileArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="balanceSimilarNodeGroups")
     private final @Nullable Input<String> balanceSimilarNodeGroups;
 
@@ -29,9 +23,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.balanceSimilarNodeGroups == null ? Input.empty() : this.balanceSimilarNodeGroups;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="expander")
     private final @Nullable Input<Either<String,Expander>> expander;
 
@@ -39,9 +30,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.expander == null ? Input.empty() : this.expander;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxEmptyBulkDelete")
     private final @Nullable Input<String> maxEmptyBulkDelete;
 
@@ -49,9 +37,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.maxEmptyBulkDelete == null ? Input.empty() : this.maxEmptyBulkDelete;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxGracefulTerminationSec")
     private final @Nullable Input<String> maxGracefulTerminationSec;
 
@@ -59,9 +44,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.maxGracefulTerminationSec == null ? Input.empty() : this.maxGracefulTerminationSec;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxNodeProvisionTime")
     private final @Nullable Input<String> maxNodeProvisionTime;
 
@@ -69,9 +51,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.maxNodeProvisionTime == null ? Input.empty() : this.maxNodeProvisionTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxTotalUnreadyPercentage")
     private final @Nullable Input<String> maxTotalUnreadyPercentage;
 
@@ -79,9 +58,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.maxTotalUnreadyPercentage == null ? Input.empty() : this.maxTotalUnreadyPercentage;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="newPodScaleUpDelay")
     private final @Nullable Input<String> newPodScaleUpDelay;
 
@@ -89,9 +65,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.newPodScaleUpDelay == null ? Input.empty() : this.newPodScaleUpDelay;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="okTotalUnreadyCount")
     private final @Nullable Input<String> okTotalUnreadyCount;
 
@@ -99,9 +72,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.okTotalUnreadyCount == null ? Input.empty() : this.okTotalUnreadyCount;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownDelayAfterAdd")
     private final @Nullable Input<String> scaleDownDelayAfterAdd;
 
@@ -109,9 +79,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scaleDownDelayAfterAdd == null ? Input.empty() : this.scaleDownDelayAfterAdd;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownDelayAfterDelete")
     private final @Nullable Input<String> scaleDownDelayAfterDelete;
 
@@ -119,9 +86,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scaleDownDelayAfterDelete == null ? Input.empty() : this.scaleDownDelayAfterDelete;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownDelayAfterFailure")
     private final @Nullable Input<String> scaleDownDelayAfterFailure;
 
@@ -129,9 +93,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scaleDownDelayAfterFailure == null ? Input.empty() : this.scaleDownDelayAfterFailure;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownUnneededTime")
     private final @Nullable Input<String> scaleDownUnneededTime;
 
@@ -139,9 +100,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scaleDownUnneededTime == null ? Input.empty() : this.scaleDownUnneededTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownUnreadyTime")
     private final @Nullable Input<String> scaleDownUnreadyTime;
 
@@ -149,9 +107,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scaleDownUnreadyTime == null ? Input.empty() : this.scaleDownUnreadyTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownUtilizationThreshold")
     private final @Nullable Input<String> scaleDownUtilizationThreshold;
 
@@ -159,9 +114,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scaleDownUtilizationThreshold == null ? Input.empty() : this.scaleDownUtilizationThreshold;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scanInterval")
     private final @Nullable Input<String> scanInterval;
 
@@ -169,9 +121,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.scanInterval == null ? Input.empty() : this.scanInterval;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="skipNodesWithLocalStorage")
     private final @Nullable Input<String> skipNodesWithLocalStorage;
 
@@ -179,9 +128,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
         return this.skipNodesWithLocalStorage == null ? Input.empty() : this.skipNodesWithLocalStorage;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="skipNodesWithSystemPods")
     private final @Nullable Input<String> skipNodesWithSystemPods;
 

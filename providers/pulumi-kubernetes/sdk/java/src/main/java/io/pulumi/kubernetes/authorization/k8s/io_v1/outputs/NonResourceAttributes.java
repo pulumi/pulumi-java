@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NonResourceAttributes {
-/**
- * Path is the URL path of the request
- */
     private final @Nullable String path;
-/**
- * Verb is the standard HTTP verb
- */
     private final @Nullable String verb;
 
     @OutputCustomType.Constructor({"path","verb"})
@@ -28,15 +22,9 @@ public final class NonResourceAttributes {
         this.verb = verb;
     }
 
-/**
- * Path is the URL path of the request
- */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
-/**
- * Verb is the standard HTTP verb
- */
     public Optional<String> getVerb() {
         return Optional.ofNullable(this.verb);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetNatAddressArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNatAddressArgs Empty = new GetNatAddressArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -25,9 +19,6 @@ public final class GetNatAddressArgs extends io.pulumi.resources.InvokeArgs {
         return this.instanceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="natAddressId", required=true)
     private final String natAddressId;
 
@@ -35,9 +26,6 @@ public final class GetNatAddressArgs extends io.pulumi.resources.InvokeArgs {
         return this.natAddressId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

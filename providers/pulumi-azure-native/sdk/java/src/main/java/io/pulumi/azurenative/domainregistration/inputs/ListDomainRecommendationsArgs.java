@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListDomainRecommendationsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListDomainRecommendationsArgs Empty = new ListDomainRecommendationsArgs();
 
-    /**
-     * Keywords to be used for generating domain recommendations.
-     */
     @InputImport(name="keywords")
     private final @Nullable String keywords;
 
@@ -28,9 +22,6 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
         return this.keywords == null ? Optional.empty() : Optional.ofNullable(this.keywords);
     }
 
-    /**
-     * Maximum number of recommendations.
-     */
     @InputImport(name="maxDomainRecommendations")
     private final @Nullable Integer maxDomainRecommendations;
 

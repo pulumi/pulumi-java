@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationUserAssignedIdentityArgs Empty = new ApplicationUserAssignedIdentityArgs();
 
-    /**
-     * The friendly name of user assigned identity.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
         return this.name;
     }
 
-    /**
-     * The principal id of user assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 

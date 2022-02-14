@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiProduct {
-/**
- * Gets configuration details for an API product. The API product name required in the request URL is the internal name of the product, not the display name. While they may be the same, it depends on whether the API product was created via the UI or the API. View the list of API products to verify the internal name.
- */
     public static CompletableFuture<GetApiProductResult> invokeAsync(GetApiProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getApiProduct", TypeShape.of(GetApiProductResult.class), args == null ? GetApiProductArgs.Empty : args, Utilities.withVersion(options));
     }

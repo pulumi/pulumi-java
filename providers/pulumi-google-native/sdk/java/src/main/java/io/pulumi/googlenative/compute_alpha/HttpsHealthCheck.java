@@ -13,174 +13,87 @@ import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a HttpsHealthCheck resource in the specified project using the data included in the request.
- */
 @ResourceType(type="google-native:compute/alpha:HttpsHealthCheck")
 public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
-    /**
-     * How often (in seconds) to send a health check. The default value is 5 seconds.
-     */
     @OutputExport(name="checkIntervalSec", type=Integer.class, parameters={})
     private Output<Integer> checkIntervalSec;
 
-    /**
-     * @return How often (in seconds) to send a health check. The default value is 5 seconds.
-     */
     public Output<Integer> getCheckIntervalSec() {
         return this.checkIntervalSec;
     }
-    /**
-     * Creation timestamp in RFC3339 text format.
-     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
-    /**
-     * @return Creation timestamp in RFC3339 text format.
-     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return An optional description of this resource. Provide this property when you create the resource.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-     */
     @OutputExport(name="healthyThreshold", type=Integer.class, parameters={})
     private Output<Integer> healthyThreshold;
 
-    /**
-     * @return A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-     */
     public Output<Integer> getHealthyThreshold() {
         return this.healthyThreshold;
     }
-    /**
-     * The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.
-     */
     @OutputExport(name="host", type=String.class, parameters={})
     private Output<String> host;
 
-    /**
-     * @return The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.
-     */
     public Output<String> getHost() {
         return this.host;
     }
-    /**
-     * Type of the resource.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Type of the resource.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The TCP port number for the HTTPS health check request. The default value is 443.
-     */
     @OutputExport(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
-    /**
-     * @return The TCP port number for the HTTPS health check request. The default value is 443.
-     */
     public Output<Integer> getPort() {
         return this.port;
     }
-    /**
-     * The request path of the HTTPS health check request. The default value is "/".
-     */
     @OutputExport(name="requestPath", type=String.class, parameters={})
     private Output<String> requestPath;
 
-    /**
-     * @return The request path of the HTTPS health check request. The default value is "/".
-     */
     public Output<String> getRequestPath() {
         return this.requestPath;
     }
-    /**
-     * Server-defined URL for the resource.
-     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
-    /**
-     * @return Server-defined URL for the resource.
-     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
-    /**
-     * Server-defined URL for this resource with the resource id.
-     */
     @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
-    /**
-     * @return Server-defined URL for this resource with the resource id.
-     */
     public Output<String> getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
-    /**
-     * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have a greater value than checkIntervalSec.
-     */
     @OutputExport(name="timeoutSec", type=Integer.class, parameters={})
     private Output<Integer> timeoutSec;
 
-    /**
-     * @return How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have a greater value than checkIntervalSec.
-     */
     public Output<Integer> getTimeoutSec() {
         return this.timeoutSec;
     }
-    /**
-     * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
-     */
     @OutputExport(name="unhealthyThreshold", type=Integer.class, parameters={})
     private Output<Integer> unhealthyThreshold;
 
-    /**
-     * @return A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
-     */
     public Output<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public HttpsHealthCheck(String name, @Nullable HttpsHealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/alpha:HttpsHealthCheck", name, args == null ? HttpsHealthCheckArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -196,14 +109,6 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static HttpsHealthCheck get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HttpsHealthCheck(name, id, options);
     }

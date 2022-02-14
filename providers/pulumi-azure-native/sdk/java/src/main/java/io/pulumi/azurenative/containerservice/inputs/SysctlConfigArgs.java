@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Sysctl settings for Linux agent nodes.
- */
 public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SysctlConfigArgs Empty = new SysctlConfigArgs();
 
-    /**
-     * Sysctl setting fs.aio-max-nr.
-     */
     @InputImport(name="fsAioMaxNr")
     private final @Nullable Input<Integer> fsAioMaxNr;
 
@@ -29,9 +23,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fsAioMaxNr == null ? Input.empty() : this.fsAioMaxNr;
     }
 
-    /**
-     * Sysctl setting fs.file-max.
-     */
     @InputImport(name="fsFileMax")
     private final @Nullable Input<Integer> fsFileMax;
 
@@ -39,9 +30,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fsFileMax == null ? Input.empty() : this.fsFileMax;
     }
 
-    /**
-     * Sysctl setting fs.inotify.max_user_watches.
-     */
     @InputImport(name="fsInotifyMaxUserWatches")
     private final @Nullable Input<Integer> fsInotifyMaxUserWatches;
 
@@ -49,9 +37,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fsInotifyMaxUserWatches == null ? Input.empty() : this.fsInotifyMaxUserWatches;
     }
 
-    /**
-     * Sysctl setting fs.nr_open.
-     */
     @InputImport(name="fsNrOpen")
     private final @Nullable Input<Integer> fsNrOpen;
 
@@ -59,9 +44,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fsNrOpen == null ? Input.empty() : this.fsNrOpen;
     }
 
-    /**
-     * Sysctl setting kernel.threads-max.
-     */
     @InputImport(name="kernelThreadsMax")
     private final @Nullable Input<Integer> kernelThreadsMax;
 
@@ -69,9 +51,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.kernelThreadsMax == null ? Input.empty() : this.kernelThreadsMax;
     }
 
-    /**
-     * Sysctl setting net.core.netdev_max_backlog.
-     */
     @InputImport(name="netCoreNetdevMaxBacklog")
     private final @Nullable Input<Integer> netCoreNetdevMaxBacklog;
 
@@ -79,9 +58,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreNetdevMaxBacklog == null ? Input.empty() : this.netCoreNetdevMaxBacklog;
     }
 
-    /**
-     * Sysctl setting net.core.optmem_max.
-     */
     @InputImport(name="netCoreOptmemMax")
     private final @Nullable Input<Integer> netCoreOptmemMax;
 
@@ -89,9 +65,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreOptmemMax == null ? Input.empty() : this.netCoreOptmemMax;
     }
 
-    /**
-     * Sysctl setting net.core.rmem_default.
-     */
     @InputImport(name="netCoreRmemDefault")
     private final @Nullable Input<Integer> netCoreRmemDefault;
 
@@ -99,9 +72,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreRmemDefault == null ? Input.empty() : this.netCoreRmemDefault;
     }
 
-    /**
-     * Sysctl setting net.core.rmem_max.
-     */
     @InputImport(name="netCoreRmemMax")
     private final @Nullable Input<Integer> netCoreRmemMax;
 
@@ -109,9 +79,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreRmemMax == null ? Input.empty() : this.netCoreRmemMax;
     }
 
-    /**
-     * Sysctl setting net.core.somaxconn.
-     */
     @InputImport(name="netCoreSomaxconn")
     private final @Nullable Input<Integer> netCoreSomaxconn;
 
@@ -119,9 +86,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreSomaxconn == null ? Input.empty() : this.netCoreSomaxconn;
     }
 
-    /**
-     * Sysctl setting net.core.wmem_default.
-     */
     @InputImport(name="netCoreWmemDefault")
     private final @Nullable Input<Integer> netCoreWmemDefault;
 
@@ -129,9 +93,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreWmemDefault == null ? Input.empty() : this.netCoreWmemDefault;
     }
 
-    /**
-     * Sysctl setting net.core.wmem_max.
-     */
     @InputImport(name="netCoreWmemMax")
     private final @Nullable Input<Integer> netCoreWmemMax;
 
@@ -139,9 +100,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netCoreWmemMax == null ? Input.empty() : this.netCoreWmemMax;
     }
 
-    /**
-     * Sysctl setting net.ipv4.ip_local_port_range.
-     */
     @InputImport(name="netIpv4IpLocalPortRange")
     private final @Nullable Input<String> netIpv4IpLocalPortRange;
 
@@ -149,9 +107,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4IpLocalPortRange == null ? Input.empty() : this.netIpv4IpLocalPortRange;
     }
 
-    /**
-     * Sysctl setting net.ipv4.neigh.default.gc_thresh1.
-     */
     @InputImport(name="netIpv4NeighDefaultGcThresh1")
     private final @Nullable Input<Integer> netIpv4NeighDefaultGcThresh1;
 
@@ -159,9 +114,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4NeighDefaultGcThresh1 == null ? Input.empty() : this.netIpv4NeighDefaultGcThresh1;
     }
 
-    /**
-     * Sysctl setting net.ipv4.neigh.default.gc_thresh2.
-     */
     @InputImport(name="netIpv4NeighDefaultGcThresh2")
     private final @Nullable Input<Integer> netIpv4NeighDefaultGcThresh2;
 
@@ -169,9 +121,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4NeighDefaultGcThresh2 == null ? Input.empty() : this.netIpv4NeighDefaultGcThresh2;
     }
 
-    /**
-     * Sysctl setting net.ipv4.neigh.default.gc_thresh3.
-     */
     @InputImport(name="netIpv4NeighDefaultGcThresh3")
     private final @Nullable Input<Integer> netIpv4NeighDefaultGcThresh3;
 
@@ -179,9 +128,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4NeighDefaultGcThresh3 == null ? Input.empty() : this.netIpv4NeighDefaultGcThresh3;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_fin_timeout.
-     */
     @InputImport(name="netIpv4TcpFinTimeout")
     private final @Nullable Input<Integer> netIpv4TcpFinTimeout;
 
@@ -189,9 +135,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpFinTimeout == null ? Input.empty() : this.netIpv4TcpFinTimeout;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_keepalive_probes.
-     */
     @InputImport(name="netIpv4TcpKeepaliveProbes")
     private final @Nullable Input<Integer> netIpv4TcpKeepaliveProbes;
 
@@ -199,9 +142,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpKeepaliveProbes == null ? Input.empty() : this.netIpv4TcpKeepaliveProbes;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_keepalive_time.
-     */
     @InputImport(name="netIpv4TcpKeepaliveTime")
     private final @Nullable Input<Integer> netIpv4TcpKeepaliveTime;
 
@@ -209,9 +149,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpKeepaliveTime == null ? Input.empty() : this.netIpv4TcpKeepaliveTime;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_max_syn_backlog.
-     */
     @InputImport(name="netIpv4TcpMaxSynBacklog")
     private final @Nullable Input<Integer> netIpv4TcpMaxSynBacklog;
 
@@ -219,9 +156,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpMaxSynBacklog == null ? Input.empty() : this.netIpv4TcpMaxSynBacklog;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_max_tw_buckets.
-     */
     @InputImport(name="netIpv4TcpMaxTwBuckets")
     private final @Nullable Input<Integer> netIpv4TcpMaxTwBuckets;
 
@@ -229,9 +163,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpMaxTwBuckets == null ? Input.empty() : this.netIpv4TcpMaxTwBuckets;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_tw_reuse.
-     */
     @InputImport(name="netIpv4TcpTwReuse")
     private final @Nullable Input<Boolean> netIpv4TcpTwReuse;
 
@@ -239,9 +170,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpTwReuse == null ? Input.empty() : this.netIpv4TcpTwReuse;
     }
 
-    /**
-     * Sysctl setting net.ipv4.tcp_keepalive_intvl.
-     */
     @InputImport(name="netIpv4TcpkeepaliveIntvl")
     private final @Nullable Input<Integer> netIpv4TcpkeepaliveIntvl;
 
@@ -249,9 +177,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netIpv4TcpkeepaliveIntvl == null ? Input.empty() : this.netIpv4TcpkeepaliveIntvl;
     }
 
-    /**
-     * Sysctl setting net.netfilter.nf_conntrack_buckets.
-     */
     @InputImport(name="netNetfilterNfConntrackBuckets")
     private final @Nullable Input<Integer> netNetfilterNfConntrackBuckets;
 
@@ -259,9 +184,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netNetfilterNfConntrackBuckets == null ? Input.empty() : this.netNetfilterNfConntrackBuckets;
     }
 
-    /**
-     * Sysctl setting net.netfilter.nf_conntrack_max.
-     */
     @InputImport(name="netNetfilterNfConntrackMax")
     private final @Nullable Input<Integer> netNetfilterNfConntrackMax;
 
@@ -269,9 +191,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.netNetfilterNfConntrackMax == null ? Input.empty() : this.netNetfilterNfConntrackMax;
     }
 
-    /**
-     * Sysctl setting vm.max_map_count.
-     */
     @InputImport(name="vmMaxMapCount")
     private final @Nullable Input<Integer> vmMaxMapCount;
 
@@ -279,9 +198,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmMaxMapCount == null ? Input.empty() : this.vmMaxMapCount;
     }
 
-    /**
-     * Sysctl setting vm.swappiness.
-     */
     @InputImport(name="vmSwappiness")
     private final @Nullable Input<Integer> vmSwappiness;
 
@@ -289,9 +205,6 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmSwappiness == null ? Input.empty() : this.vmSwappiness;
     }
 
-    /**
-     * Sysctl setting vm.vfs_cache_pressure.
-     */
     @InputImport(name="vmVfsCachePressure")
     private final @Nullable Input<Integer> vmVfsCachePressure;
 

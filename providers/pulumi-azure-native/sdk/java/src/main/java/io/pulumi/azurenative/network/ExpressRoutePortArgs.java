@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRoutePortArgs Empty = new ExpressRoutePortArgs();
 
-    /**
-     * Bandwidth of procured ports in Gbps.
-     */
     @InputImport(name="bandwidthInGbps")
     private final @Nullable Input<Integer> bandwidthInGbps;
 
@@ -34,9 +28,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.bandwidthInGbps == null ? Input.empty() : this.bandwidthInGbps;
     }
 
-    /**
-     * Encapsulation method on physical ports.
-     */
     @InputImport(name="encapsulation")
     private final @Nullable Input<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
@@ -44,9 +35,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.encapsulation == null ? Input.empty() : this.encapsulation;
     }
 
-    /**
-     * The name of the ExpressRoutePort resource.
-     */
     @InputImport(name="expressRoutePortName")
     private final @Nullable Input<String> expressRoutePortName;
 
@@ -54,9 +42,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.expressRoutePortName == null ? Input.empty() : this.expressRoutePortName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -64,9 +49,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The identity of ExpressRoutePort, if configured.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -74,9 +56,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The set of physical links of the ExpressRoutePort resource.
-     */
     @InputImport(name="links")
     private final @Nullable Input<List<ExpressRouteLinkArgs>> links;
 
@@ -84,9 +63,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.links == null ? Input.empty() : this.links;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -94,9 +70,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the peering location that the ExpressRoutePort is mapped to physically.
-     */
     @InputImport(name="peeringLocation")
     private final @Nullable Input<String> peeringLocation;
 
@@ -104,9 +77,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.peeringLocation == null ? Input.empty() : this.peeringLocation;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -114,9 +84,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

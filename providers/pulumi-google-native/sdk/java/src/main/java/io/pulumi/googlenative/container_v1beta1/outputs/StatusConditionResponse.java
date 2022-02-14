@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StatusConditionResponse {
-/**
- * Canonical code of the condition.
- */
     private final String canonicalCode;
-/**
- * Human-friendly representation of the condition
- */
     private final String message;
 
     @OutputCustomType.Constructor({"canonicalCode","message"})
@@ -26,15 +20,9 @@ public final class StatusConditionResponse {
         this.message = Objects.requireNonNull(message);
     }
 
-/**
- * Canonical code of the condition.
- */
     public String getCanonicalCode() {
         return this.canonicalCode;
     }
-/**
- * Human-friendly representation of the condition
- */
     public String getMessage() {
         return this.message;
     }

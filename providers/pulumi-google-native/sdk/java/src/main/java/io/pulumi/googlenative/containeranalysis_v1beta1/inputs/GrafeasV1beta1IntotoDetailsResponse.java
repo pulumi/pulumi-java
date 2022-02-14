@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * This corresponds to a signed in-toto link - it is made up of one or more signatures and the in-toto link itself. This is used for occurrences of a Grafeas in-toto note.
- */
 public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1IntotoDetailsResponse Empty = new GrafeasV1beta1IntotoDetailsResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="signatures", required=true)
     private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
 
@@ -27,9 +21,6 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resourc
         return this.signatures;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="signed", required=true)
     private final LinkResponse signed;
 

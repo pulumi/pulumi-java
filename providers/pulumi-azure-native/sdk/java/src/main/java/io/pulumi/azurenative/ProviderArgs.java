@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    /**
-     * Any additional Tenant IDs which should be used for authentication.
-     */
     @InputImport(name="auxiliaryTenantIds", json=true)
     private final @Nullable Input<List<String>> auxiliaryTenantIds;
 
@@ -29,9 +23,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.auxiliaryTenantIds == null ? Input.empty() : this.auxiliaryTenantIds;
     }
 
-    /**
-     * The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
-     */
     @InputImport(name="clientCertificatePassword", json=true)
     private final @Nullable Input<String> clientCertificatePassword;
 
@@ -39,9 +30,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertificatePassword == null ? Input.empty() : this.clientCertificatePassword;
     }
 
-    /**
-     * The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
-     */
     @InputImport(name="clientCertificatePath", json=true)
     private final @Nullable Input<String> clientCertificatePath;
 
@@ -49,9 +37,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertificatePath == null ? Input.empty() : this.clientCertificatePath;
     }
 
-    /**
-     * The Client ID which should be used.
-     */
     @InputImport(name="clientId", json=true)
     private final @Nullable Input<String> clientId;
 
@@ -59,9 +44,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
-    /**
-     * The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-     */
     @InputImport(name="clientSecret", json=true)
     private final @Nullable Input<String> clientSecret;
 
@@ -69,9 +51,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
-    /**
-     * This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.
-     */
     @InputImport(name="disablePulumiPartnerId", json=true)
     private final @Nullable Input<Boolean> disablePulumiPartnerId;
 
@@ -79,9 +58,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.disablePulumiPartnerId == null ? Input.empty() : this.disablePulumiPartnerId;
     }
 
-    /**
-     * The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
-     */
     @InputImport(name="environment", json=true)
     private final @Nullable Input<String> environment;
 
@@ -89,9 +65,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.environment == null ? Input.empty() : this.environment;
     }
 
-    /**
-     * The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. 
-     */
     @InputImport(name="msiEndpoint", json=true)
     private final @Nullable Input<String> msiEndpoint;
 
@@ -99,9 +72,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.msiEndpoint == null ? Input.empty() : this.msiEndpoint;
     }
 
-    /**
-     * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
-     */
     @InputImport(name="partnerId", json=true)
     private final @Nullable Input<String> partnerId;
 
@@ -109,9 +79,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.partnerId == null ? Input.empty() : this.partnerId;
     }
 
-    /**
-     * The Subscription ID which should be used.
-     */
     @InputImport(name="subscriptionId", json=true)
     private final @Nullable Input<String> subscriptionId;
 
@@ -119,9 +86,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
-    /**
-     * The Tenant ID which should be used.
-     */
     @InputImport(name="tenantId", json=true)
     private final @Nullable Input<String> tenantId;
 
@@ -129,9 +93,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * Allowed Managed Service Identity be used for Authentication.
-     */
     @InputImport(name="useMsi", json=true)
     private final @Nullable Input<Boolean> useMsi;
 

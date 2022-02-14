@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Details of a build occurrence.
- */
 public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1BuildDetailsResponse Empty = new GrafeasV1beta1BuildDetailsResponse();
 
-    /**
-     * The actual provenance for the build.
-     */
     @InputImport(name="provenance", required=true)
     private final BuildProvenanceResponse provenance;
 
@@ -26,9 +20,6 @@ public final class GrafeasV1beta1BuildDetailsResponse extends io.pulumi.resource
         return this.provenance;
     }
 
-    /**
-     * Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
-     */
     @InputImport(name="provenanceBytes", required=true)
     private final String provenanceBytes;
 

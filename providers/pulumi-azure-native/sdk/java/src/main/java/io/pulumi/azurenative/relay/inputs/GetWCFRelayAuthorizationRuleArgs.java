@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWCFRelayAuthorizationRuleArgs Empty = new GetWCFRelayAuthorizationRuleArgs();
 
-    /**
-     * The authorization rule name.
-     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -25,9 +19,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
         return this.authorizationRuleName;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -35,9 +26,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
         return this.namespaceName;
     }
 
-    /**
-     * The relay name.
-     */
     @InputImport(name="relayName", required=true)
     private final String relayName;
 
@@ -45,9 +33,6 @@ public final class GetWCFRelayAuthorizationRuleArgs extends io.pulumi.resources.
         return this.relayName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -31,16 +31,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Filter for the Event Channel.
- */
 public final class EventChannelFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventChannelFilterResponse Empty = new EventChannelFilterResponse();
 
-    /**
-     * An array of advanced filters that are used for filtering event channels.
-     */
     @InputImport(name="advancedFilters")
     private final @Nullable List<Object> advancedFilters;
 
@@ -48,9 +42,6 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
 
-    /**
-     * Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
-     */
     @InputImport(name="enableAdvancedFilteringOnArrays")
     private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 

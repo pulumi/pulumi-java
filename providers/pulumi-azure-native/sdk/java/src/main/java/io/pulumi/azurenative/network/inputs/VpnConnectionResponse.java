@@ -19,16 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VpnConnection Resource.
- */
 public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnConnectionResponse Empty = new VpnConnectionResponse();
 
-    /**
-     * Expected bandwidth in MBPS.
-     */
     @InputImport(name="connectionBandwidth")
     private final @Nullable Integer connectionBandwidth;
 
@@ -36,9 +30,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.connectionBandwidth == null ? Optional.empty() : Optional.ofNullable(this.connectionBandwidth);
     }
 
-    /**
-     * The connection status.
-     */
     @InputImport(name="connectionStatus", required=true)
     private final String connectionStatus;
 
@@ -46,9 +37,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.connectionStatus;
     }
 
-    /**
-     * DPD timeout in seconds for vpn connection.
-     */
     @InputImport(name="dpdTimeoutSeconds")
     private final @Nullable Integer dpdTimeoutSeconds;
 
@@ -56,9 +44,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.dpdTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.dpdTimeoutSeconds);
     }
 
-    /**
-     * Egress bytes transferred.
-     */
     @InputImport(name="egressBytesTransferred", required=true)
     private final Double egressBytesTransferred;
 
@@ -66,9 +51,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.egressBytesTransferred;
     }
 
-    /**
-     * EnableBgp flag.
-     */
     @InputImport(name="enableBgp")
     private final @Nullable Boolean enableBgp;
 
@@ -76,9 +58,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.enableBgp == null ? Optional.empty() : Optional.ofNullable(this.enableBgp);
     }
 
-    /**
-     * Enable internet security.
-     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Boolean enableInternetSecurity;
 
@@ -86,9 +65,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
     }
 
-    /**
-     * EnableBgp flag.
-     */
     @InputImport(name="enableRateLimiting")
     private final @Nullable Boolean enableRateLimiting;
 
@@ -96,9 +72,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.enableRateLimiting == null ? Optional.empty() : Optional.ofNullable(this.enableRateLimiting);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -106,9 +79,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -116,9 +86,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Ingress bytes transferred.
-     */
     @InputImport(name="ingressBytesTransferred", required=true)
     private final Double ingressBytesTransferred;
 
@@ -126,9 +93,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.ingressBytesTransferred;
     }
 
-    /**
-     * The IPSec Policies to be considered by this connection.
-     */
     @InputImport(name="ipsecPolicies")
     private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
 
@@ -136,9 +100,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -146,9 +107,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the VPN connection resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -156,9 +114,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.provisioningState;
     }
 
-    /**
-     * Id of the connected vpn site.
-     */
     @InputImport(name="remoteVpnSite")
     private final @Nullable SubResourceResponse remoteVpnSite;
 
@@ -166,9 +121,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.remoteVpnSite == null ? Optional.empty() : Optional.ofNullable(this.remoteVpnSite);
     }
 
-    /**
-     * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     */
     @InputImport(name="routingConfiguration")
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
@@ -176,9 +128,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
     }
 
-    /**
-     * Routing weight for vpn connection.
-     */
     @InputImport(name="routingWeight")
     private final @Nullable Integer routingWeight;
 
@@ -186,9 +135,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.routingWeight == null ? Optional.empty() : Optional.ofNullable(this.routingWeight);
     }
 
-    /**
-     * SharedKey for the vpn connection.
-     */
     @InputImport(name="sharedKey")
     private final @Nullable String sharedKey;
 
@@ -196,9 +142,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.sharedKey == null ? Optional.empty() : Optional.ofNullable(this.sharedKey);
     }
 
-    /**
-     * The Traffic Selector Policies to be considered by this connection.
-     */
     @InputImport(name="trafficSelectorPolicies")
     private final @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
 
@@ -206,9 +149,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
     }
 
-    /**
-     * Use local azure ip to initiate connection.
-     */
     @InputImport(name="useLocalAzureIpAddress")
     private final @Nullable Boolean useLocalAzureIpAddress;
 
@@ -216,9 +156,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.useLocalAzureIpAddress == null ? Optional.empty() : Optional.ofNullable(this.useLocalAzureIpAddress);
     }
 
-    /**
-     * Enable policy-based traffic selectors.
-     */
     @InputImport(name="usePolicyBasedTrafficSelectors")
     private final @Nullable Boolean usePolicyBasedTrafficSelectors;
 
@@ -226,9 +163,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.usePolicyBasedTrafficSelectors == null ? Optional.empty() : Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
 
-    /**
-     * Connection protocol used for this connection.
-     */
     @InputImport(name="vpnConnectionProtocolType")
     private final @Nullable String vpnConnectionProtocolType;
 
@@ -236,9 +170,6 @@ public final class VpnConnectionResponse extends io.pulumi.resources.InvokeArgs 
         return this.vpnConnectionProtocolType == null ? Optional.empty() : Optional.ofNullable(this.vpnConnectionProtocolType);
     }
 
-    /**
-     * List of all vpn site link connections to the gateway.
-     */
     @InputImport(name="vpnLinkConnections")
     private final @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingAccountSink {
-/**
- * Gets a sink.
- */
     public static CompletableFuture<GetBillingAccountSinkResult> invokeAsync(GetBillingAccountSinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountSink", TypeShape.of(GetBillingAccountSinkResult.class), args == null ? GetBillingAccountSinkArgs.Empty : args, Utilities.withVersion(options));
     }

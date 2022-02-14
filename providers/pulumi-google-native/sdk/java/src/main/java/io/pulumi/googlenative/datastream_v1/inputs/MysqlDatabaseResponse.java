@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * MySQL database.
- */
 public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MysqlDatabaseResponse Empty = new MysqlDatabaseResponse();
 
-    /**
-     * Database name.
-     */
     @InputImport(name="database", required=true)
     private final String database;
 
@@ -27,9 +21,6 @@ public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs 
         return this.database;
     }
 
-    /**
-     * Tables in the database.
-     */
     @InputImport(name="mysqlTables", required=true)
     private final List<MysqlTableResponse> mysqlTables;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The error message associated with the cluster creation.
- */
 public final class ErrorsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ErrorsArgs Empty = new ErrorsArgs();
 
-    /**
-     * The error code.
-     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -27,9 +21,6 @@ public final class ErrorsArgs extends io.pulumi.resources.ResourceArgs {
         return this.code == null ? Input.empty() : this.code;
     }
 
-    /**
-     * The error message.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

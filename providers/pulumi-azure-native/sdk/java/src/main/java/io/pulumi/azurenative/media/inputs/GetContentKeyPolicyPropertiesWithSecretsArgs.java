@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetContentKeyPolicyPropertiesWithSecretsArgs Empty = new GetContentKeyPolicyPropertiesWithSecretsArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
         return this.accountName;
     }
 
-    /**
-     * The Content Key Policy name.
-     */
     @InputImport(name="contentKeyPolicyName", required=true)
     private final String contentKeyPolicyName;
 
@@ -35,9 +26,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
         return this.contentKeyPolicyName;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

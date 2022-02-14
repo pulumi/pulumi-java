@@ -10,16 +10,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * The integration account AS2 one-way agreement.
- */
 public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AS2OneWayAgreementArgs Empty = new AS2OneWayAgreementArgs();
 
-    /**
-     * The AS2 protocol settings.
-     */
     @InputImport(name="protocolSettings", required=true)
     private final Input<AS2ProtocolSettingsArgs> protocolSettings;
 
@@ -27,9 +21,6 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
         return this.protocolSettings;
     }
 
-    /**
-     * The receiver business identity
-     */
     @InputImport(name="receiverBusinessIdentity", required=true)
     private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
 
@@ -37,9 +28,6 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
         return this.receiverBusinessIdentity;
     }
 
-    /**
-     * The sender business identity
-     */
     @InputImport(name="senderBusinessIdentity", required=true)
     private final Input<BusinessIdentityArgs> senderBusinessIdentity;
 

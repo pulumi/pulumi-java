@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BigtableOptionsResponse {
-/**
- * [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
- */
     private final List<BigtableColumnFamilyResponse> columnFamilies;
-/**
- * [Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.
- */
     private final Boolean ignoreUnspecifiedColumnFamilies;
-/**
- * [Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.
- */
     private final Boolean readRowkeyAsString;
 
     @OutputCustomType.Constructor({"columnFamilies","ignoreUnspecifiedColumnFamilies","readRowkeyAsString"})
@@ -34,21 +25,12 @@ public final class BigtableOptionsResponse {
         this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
     }
 
-/**
- * [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
- */
     public List<BigtableColumnFamilyResponse> getColumnFamilies() {
         return this.columnFamilies;
     }
-/**
- * [Optional] If field is true, then the column families that are not specified in columnFamilies list are not exposed in the table schema. Otherwise, they are read with BYTES type values. The default value is false.
- */
     public Boolean getIgnoreUnspecifiedColumnFamilies() {
         return this.ignoreUnspecifiedColumnFamilies;
     }
-/**
- * [Optional] If field is true, then the rowkey column families will be read and converted to string. Otherwise they are read with BYTES type values and users need to manually cast them with CAST if necessary. The default value is false.
- */
     public Boolean getReadRowkeyAsString() {
         return this.readRowkeyAsString;
     }

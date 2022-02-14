@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class LightHouseAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LightHouseAuthorizationResponse Empty = new LightHouseAuthorizationResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -25,9 +19,6 @@ public final class LightHouseAuthorizationResponse extends io.pulumi.resources.I
         return this.principalId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="roleDefinitionId", required=true)
     private final String roleDefinitionId;
 

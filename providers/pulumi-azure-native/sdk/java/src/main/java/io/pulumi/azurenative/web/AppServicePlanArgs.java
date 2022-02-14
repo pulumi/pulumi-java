@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppServicePlanArgs Empty = new AppServicePlanArgs();
 
-    /**
-     * The time when the server farm free offer expires.
-     */
     @InputImport(name="freeOfferExpirationTime")
     private final @Nullable Input<String> freeOfferExpirationTime;
 
@@ -33,9 +27,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.freeOfferExpirationTime == null ? Input.empty() : this.freeOfferExpirationTime;
     }
 
-    /**
-     * Specification for the App Service Environment to use for the App Service plan.
-     */
     @InputImport(name="hostingEnvironmentProfile")
     private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
@@ -43,9 +34,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostingEnvironmentProfile == null ? Input.empty() : this.hostingEnvironmentProfile;
     }
 
-    /**
-     * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     */
     @InputImport(name="hyperV")
     private final @Nullable Input<Boolean> hyperV;
 
@@ -53,9 +41,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.hyperV == null ? Input.empty() : this.hyperV;
     }
 
-    /**
-     * If <code>true</code>, this App Service Plan owns spot instances.
-     */
     @InputImport(name="isSpot")
     private final @Nullable Input<Boolean> isSpot;
 
@@ -63,9 +48,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSpot == null ? Input.empty() : this.isSpot;
     }
 
-    /**
-     * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
-     */
     @InputImport(name="isXenon")
     private final @Nullable Input<Boolean> isXenon;
 
@@ -73,9 +55,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.isXenon == null ? Input.empty() : this.isXenon;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -83,9 +62,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Specification for the Kubernetes Environment to use for the App Service plan.
-     */
     @InputImport(name="kubeEnvironmentProfile")
     private final @Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
 
@@ -93,9 +69,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.kubeEnvironmentProfile == null ? Input.empty() : this.kubeEnvironmentProfile;
     }
 
-    /**
-     * Resource Location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -103,9 +76,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
-     */
     @InputImport(name="maximumElasticWorkerCount")
     private final @Nullable Input<Integer> maximumElasticWorkerCount;
 
@@ -113,9 +83,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximumElasticWorkerCount == null ? Input.empty() : this.maximumElasticWorkerCount;
     }
 
-    /**
-     * Name of the App Service plan.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -123,10 +90,6 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
-If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
-     */
     @InputImport(name="perSiteScaling")
     private final @Nullable Input<Boolean> perSiteScaling;
 
@@ -134,9 +97,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.perSiteScaling == null ? Input.empty() : this.perSiteScaling;
     }
 
-    /**
-     * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
-     */
     @InputImport(name="reserved")
     private final @Nullable Input<Boolean> reserved;
 
@@ -144,9 +104,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.reserved == null ? Input.empty() : this.reserved;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -154,9 +111,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.resourceGroupName;
     }
 
-    /**
-     * Description of a SKU for a scalable resource.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuDescriptionArgs> sku;
 
@@ -164,9 +118,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The time when the server farm expires. Valid only if it is a spot server farm.
-     */
     @InputImport(name="spotExpirationTime")
     private final @Nullable Input<String> spotExpirationTime;
 
@@ -174,9 +125,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.spotExpirationTime == null ? Input.empty() : this.spotExpirationTime;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -184,9 +132,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Scaling worker count.
-     */
     @InputImport(name="targetWorkerCount")
     private final @Nullable Input<Integer> targetWorkerCount;
 
@@ -194,9 +139,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.targetWorkerCount == null ? Input.empty() : this.targetWorkerCount;
     }
 
-    /**
-     * Scaling worker size ID.
-     */
     @InputImport(name="targetWorkerSizeId")
     private final @Nullable Input<Integer> targetWorkerSizeId;
 
@@ -204,9 +146,6 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
         return this.targetWorkerSizeId == null ? Input.empty() : this.targetWorkerSizeId;
     }
 
-    /**
-     * Target worker tier assigned to the App Service plan.
-     */
     @InputImport(name="workerTierName")
     private final @Nullable Input<String> workerTierName;
 

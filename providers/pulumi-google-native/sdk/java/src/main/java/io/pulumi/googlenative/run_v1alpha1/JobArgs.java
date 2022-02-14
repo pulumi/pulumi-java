@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
-    /**
-     * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
-     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -30,9 +24,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
-    /**
-     * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -40,9 +31,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -50,9 +38,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="namespaceId", required=true)
     private final Input<String> namespaceId;
 
@@ -60,9 +45,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceId;
     }
 
-    /**
-     * Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     */
     @InputImport(name="spec")
     private final @Nullable Input<JobSpecArgs> spec;
 
@@ -70,9 +52,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.spec == null ? Input.empty() : this.spec;
     }
 
-    /**
-     * Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     */
     @InputImport(name="status")
     private final @Nullable Input<JobStatusArgs> status;
 

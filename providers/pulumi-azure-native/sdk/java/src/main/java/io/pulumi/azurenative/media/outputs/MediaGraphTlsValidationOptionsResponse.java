@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MediaGraphTlsValidationOptionsResponse {
-/**
- * Ignore the host name (common name) during validation.
- */
     private final Boolean ignoreHostname;
-/**
- * Ignore the integrity of the certificate chain at the current time.
- */
     private final Boolean ignoreSignature;
 
     @OutputCustomType.Constructor({"ignoreHostname","ignoreSignature"})
@@ -26,15 +20,9 @@ public final class MediaGraphTlsValidationOptionsResponse {
         this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
     }
 
-/**
- * Ignore the host name (common name) during validation.
- */
     public Boolean getIgnoreHostname() {
         return this.ignoreHostname;
     }
-/**
- * Ignore the integrity of the certificate chain at the current time.
- */
     public Boolean getIgnoreSignature() {
         return this.ignoreSignature;
     }

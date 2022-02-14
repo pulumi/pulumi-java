@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * H264 codec settings.
- */
 public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final H264CodecSettingsArgs Empty = new H264CodecSettingsArgs();
 
-    /**
-     * Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
-     */
     @InputImport(name="allowOpenGop")
     private final @Nullable Input<Boolean> allowOpenGop;
 
@@ -30,9 +24,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.allowOpenGop == null ? Input.empty() : this.allowOpenGop;
     }
 
-    /**
-     * Specify the intensity of the adaptive quantizer (AQ). Must be between 0 and 1, where 0 disables the quantizer and 1 maximizes the quantizer. A higher value equals a lower bitrate but smoother image. The default is 0.
-     */
     @InputImport(name="aqStrength")
     private final @Nullable Input<Double> aqStrength;
 
@@ -40,9 +31,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.aqStrength == null ? Input.empty() : this.aqStrength;
     }
 
-    /**
-     * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than `VideoStream.gop_frame_count` if set. The default is 0.
-     */
     @InputImport(name="bFrameCount")
     private final @Nullable Input<Integer> bFrameCount;
 
@@ -50,9 +38,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.bFrameCount == null ? Input.empty() : this.bFrameCount;
     }
 
-    /**
-     * Allow B-pyramid for reference frame selection. This may not be supported on all decoders. The default is `false`.
-     */
     @InputImport(name="bPyramid")
     private final @Nullable Input<Boolean> bPyramid;
 
@@ -60,9 +45,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.bPyramid == null ? Input.empty() : this.bPyramid;
     }
 
-    /**
-     * The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 800,000,000.
-     */
     @InputImport(name="bitrateBps", required=true)
     private final Input<Integer> bitrateBps;
 
@@ -70,9 +52,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.bitrateBps;
     }
 
-    /**
-     * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21.
-     */
     @InputImport(name="crfLevel")
     private final @Nullable Input<Integer> crfLevel;
 
@@ -80,9 +59,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.crfLevel == null ? Input.empty() : this.crfLevel;
     }
 
-    /**
-     * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
-     */
     @InputImport(name="enableTwoPass")
     private final @Nullable Input<Boolean> enableTwoPass;
 
@@ -90,9 +66,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.enableTwoPass == null ? Input.empty() : this.enableTwoPass;
     }
 
-    /**
-     * The entropy coder to use. The default is `cabac`. Supported entropy coders: - `cavlc` - `cabac`
-     */
     @InputImport(name="entropyCoder")
     private final @Nullable Input<String> entropyCoder;
 
@@ -100,9 +73,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.entropyCoder == null ? Input.empty() : this.entropyCoder;
     }
 
-    /**
-     * The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
-     */
     @InputImport(name="frameRate", required=true)
     private final Input<Double> frameRate;
 
@@ -110,9 +80,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.frameRate;
     }
 
-    /**
-     * Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
-     */
     @InputImport(name="gopDuration")
     private final @Nullable Input<String> gopDuration;
 
@@ -120,9 +87,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.gopDuration == null ? Input.empty() : this.gopDuration;
     }
 
-    /**
-     * Select the GOP size based on the specified frame count. Must be greater than zero.
-     */
     @InputImport(name="gopFrameCount")
     private final @Nullable Input<Integer> gopFrameCount;
 
@@ -130,9 +94,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.gopFrameCount == null ? Input.empty() : this.gopFrameCount;
     }
 
-    /**
-     * The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
-     */
     @InputImport(name="heightPixels")
     private final @Nullable Input<Integer> heightPixels;
 
@@ -140,9 +101,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.heightPixels == null ? Input.empty() : this.heightPixels;
     }
 
-    /**
-     * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
-     */
     @InputImport(name="pixelFormat")
     private final @Nullable Input<String> pixelFormat;
 
@@ -150,9 +108,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.pixelFormat == null ? Input.empty() : this.pixelFormat;
     }
 
-    /**
-     * Enforces the specified codec preset. The default is `veryfast`. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     */
     @InputImport(name="preset")
     private final @Nullable Input<String> preset;
 
@@ -160,9 +115,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.preset == null ? Input.empty() : this.preset;
     }
 
-    /**
-     * Enforces the specified codec profile. The following profiles are supported: * `baseline` * `main` * `high` (default) The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     */
     @InputImport(name="profile")
     private final @Nullable Input<String> profile;
 
@@ -170,9 +122,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.profile == null ? Input.empty() : this.profile;
     }
 
-    /**
-     * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate - `crf` - constant rate factor
-     */
     @InputImport(name="rateControlMode")
     private final @Nullable Input<String> rateControlMode;
 
@@ -180,9 +129,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.rateControlMode == null ? Input.empty() : this.rateControlMode;
     }
 
-    /**
-     * Enforces the specified codec tune. The available options are [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune). Note that certain values for this field may cause the transcoder to override other fields you set in the `H264CodecSettings` message.
-     */
     @InputImport(name="tune")
     private final @Nullable Input<String> tune;
 
@@ -190,9 +136,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.tune == null ? Input.empty() : this.tune;
     }
 
-    /**
-     * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
-     */
     @InputImport(name="vbvFullnessBits")
     private final @Nullable Input<Integer> vbvFullnessBits;
 
@@ -200,9 +143,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.vbvFullnessBits == null ? Input.empty() : this.vbvFullnessBits;
     }
 
-    /**
-     * Size of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than zero. The default is equal to `VideoStream.bitrate_bps`.
-     */
     @InputImport(name="vbvSizeBits")
     private final @Nullable Input<Integer> vbvSizeBits;
 
@@ -210,9 +150,6 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.vbvSizeBits == null ? Input.empty() : this.vbvSizeBits;
     }
 
-    /**
-     * The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
-     */
     @InputImport(name="widthPixels")
     private final @Nullable Input<Integer> widthPixels;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStaticSiteFunctionAppSettings {
-/**
- * String dictionary resource.
-API Version: 2020-12-01.
- *
- * String dictionary resource.
- */
     public static CompletableFuture<ListStaticSiteFunctionAppSettingsResult> invokeAsync(ListStaticSiteFunctionAppSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteFunctionAppSettings", TypeShape.of(ListStaticSiteFunctionAppSettingsResult.class), args == null ? ListStaticSiteFunctionAppSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

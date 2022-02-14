@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The verbosity of logs persisted on the connected registry.
- */
     @EnumType
     public enum LogLevel {
-/**
- * 
- */
         Debug("Debug"),
-/**
- * 
- */
         Information("Information"),
-/**
- * 
- */
         Warning("Warning"),
-/**
- * 
- */
         Error("Error"),
-/**
- * 
- */
         None("None");
 
         private final String value;

@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterValueResponse {
-/**
- * Parameter value as reference type.
- */
     private final @Nullable SecretValueReferenceResponse reference;
-/**
- * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
- */
     private final @Nullable Object value;
 
     @OutputCustomType.Constructor({"reference","value"})
@@ -29,15 +23,9 @@ public final class ParameterValueResponse {
         this.value = value;
     }
 
-/**
- * Parameter value as reference type.
- */
     public Optional<SecretValueReferenceResponse> getReference() {
         return Optional.ofNullable(this.reference);
     }
-/**
- * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
- */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }

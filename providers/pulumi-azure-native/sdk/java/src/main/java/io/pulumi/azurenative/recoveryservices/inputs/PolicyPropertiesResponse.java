@@ -22,16 +22,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Protection profile custom data details.
- */
 public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyPropertiesResponse Empty = new PolicyPropertiesResponse();
 
-    /**
-     * The FriendlyName.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -39,9 +33,6 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * The ReplicationChannelSetting.
-     */
     @InputImport(name="providerSpecificDetails")
     private final @Nullable Object providerSpecificDetails;
 

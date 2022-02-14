@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AwsResponse {
-/**
- * The AWS account ID.
- */
     private final String accountId;
 
     @OutputCustomType.Constructor({"accountId"})
@@ -19,9 +16,6 @@ public final class AwsResponse {
         this.accountId = Objects.requireNonNull(accountId);
     }
 
-/**
- * The AWS account ID.
- */
     public String getAccountId() {
         return this.accountId;
     }

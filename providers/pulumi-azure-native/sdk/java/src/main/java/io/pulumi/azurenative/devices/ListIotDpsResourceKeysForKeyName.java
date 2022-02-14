@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIotDpsResourceKeysForKeyName {
-/**
- * Description of the shared access key.
-API Version: 2020-03-01.
- *
- * Description of the shared access key.
- */
     public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> invokeAsync(ListIotDpsResourceKeysForKeyNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotDpsResourceKeysForKeyName", TypeShape.of(ListIotDpsResourceKeysForKeyNameResult.class), args == null ? ListIotDpsResourceKeysForKeyNameArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Transformation for data flow source.
- */
 public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataFlowSourceResponse Empty = new DataFlowSourceResponse();
 
-    /**
-     * Dataset reference.
-     */
     @InputImport(name="dataset")
     private final @Nullable DatasetReferenceResponse dataset;
 
@@ -30,9 +24,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
     }
 
-    /**
-     * Transformation description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -40,9 +31,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Flowlet Reference
-     */
     @InputImport(name="flowlet")
     private final @Nullable DataFlowReferenceResponse flowlet;
 
@@ -50,9 +38,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.flowlet == null ? Optional.empty() : Optional.ofNullable(this.flowlet);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedService")
     private final @Nullable LinkedServiceReferenceResponse linkedService;
 
@@ -60,9 +45,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);
     }
 
-    /**
-     * Transformation name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -70,9 +52,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * Schema linked service reference.
-     */
     @InputImport(name="schemaLinkedService")
     private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 

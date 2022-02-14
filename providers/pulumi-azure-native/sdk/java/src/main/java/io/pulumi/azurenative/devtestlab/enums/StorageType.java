@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The storage type for the disk (i.e. Standard, Premium).
- */
     @EnumType
     public enum StorageType {
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium"),
-/**
- * 
- */
         StandardSSD("StandardSSD");
 
         private final String value;

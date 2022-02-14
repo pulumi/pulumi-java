@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Asset output port
- */
 public final class OutputPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutputPortArgs Empty = new OutputPortArgs();
 
-    /**
-     * Port data type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,OutputPortType>> type;
 

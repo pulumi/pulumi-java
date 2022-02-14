@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListWorkspaceKeysResult {
-/**
- * 
- */
     private final String appInsightsInstrumentationKey;
-/**
- * 
- */
     private final RegistryListCredentialsResultResponse containerRegistryCredentials;
-/**
- * 
- */
     private final ListNotebookKeysResultResponse notebookAccessKeys;
-/**
- * 
- */
     private final String userStorageKey;
-/**
- * 
- */
     private final String userStorageResourceId;
 
     @OutputCustomType.Constructor({"appInsightsInstrumentationKey","containerRegistryCredentials","notebookAccessKeys","userStorageKey","userStorageResourceId"})
@@ -46,33 +31,18 @@ public final class ListWorkspaceKeysResult {
         this.userStorageResourceId = Objects.requireNonNull(userStorageResourceId);
     }
 
-/**
- * 
- */
     public String getAppInsightsInstrumentationKey() {
         return this.appInsightsInstrumentationKey;
     }
-/**
- * 
- */
     public RegistryListCredentialsResultResponse getContainerRegistryCredentials() {
         return this.containerRegistryCredentials;
     }
-/**
- * 
- */
     public ListNotebookKeysResultResponse getNotebookAccessKeys() {
         return this.notebookAccessKeys;
     }
-/**
- * 
- */
     public String getUserStorageKey() {
         return this.userStorageKey;
     }
-/**
- * 
- */
     public String getUserStorageResourceId() {
         return this.userStorageResourceId;
     }

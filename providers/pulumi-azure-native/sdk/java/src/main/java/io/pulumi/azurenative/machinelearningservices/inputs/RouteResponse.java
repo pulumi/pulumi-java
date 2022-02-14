@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RouteResponse Empty = new RouteResponse();
 
-    /**
-     * The path for the route.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -26,9 +20,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.path;
     }
 
-    /**
-     * The port for the route.
-     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

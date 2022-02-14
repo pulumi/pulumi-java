@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Metadata for a File connector used by the job.
- */
 public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileIODetailsResponse Empty = new FileIODetailsResponse();
 
-    /**
-     * File Pattern used to access files by the connector.
-     */
     @InputImport(name="filePattern", required=true)
     private final String filePattern;
 

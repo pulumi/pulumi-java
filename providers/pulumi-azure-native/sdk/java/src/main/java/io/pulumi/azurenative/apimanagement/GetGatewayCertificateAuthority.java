@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayCertificateAuthority {
-/**
- * Gateway certificate authority details.
-API Version: 2020-12-01.
- *
- * Gateway certificate authority details.
- */
     public static CompletableFuture<GetGatewayCertificateAuthorityResult> invokeAsync(GetGatewayCertificateAuthorityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayCertificateAuthority", TypeShape.of(GetGatewayCertificateAuthorityResult.class), args == null ? GetGatewayCertificateAuthorityArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the kind of blueprint artifact.
- */
     @EnumType
     public enum ArtifactKind {
-/**
- * 
- */
         Template("template"),
-/**
- * 
- */
         RoleAssignment("roleAssignment"),
-/**
- * 
- */
         PolicyAssignment("policyAssignment");
 
         private final String value;

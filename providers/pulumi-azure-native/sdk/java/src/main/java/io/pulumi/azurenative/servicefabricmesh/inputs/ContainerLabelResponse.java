@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes a container label.
- */
 public final class ContainerLabelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerLabelResponse Empty = new ContainerLabelResponse();
 
-    /**
-     * The name of the container label.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ContainerLabelResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * The value of the container label.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

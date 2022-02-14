@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Recovery Services Vault specific protection intent item.
- */
 public final class AzureRecoveryServiceVaultProtectionIntentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureRecoveryServiceVaultProtectionIntentResponse Empty = new AzureRecoveryServiceVaultProtectionIntentResponse();
 
-    /**
-     * Type of backup management for the backed up item.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -27,9 +21,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse extends io.
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
-    /**
-     * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-     */
     @InputImport(name="itemId")
     private final @Nullable String itemId;
 
@@ -37,9 +28,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse extends io.
         return this.itemId == null ? Optional.empty() : Optional.ofNullable(this.itemId);
     }
 
-    /**
-     * ID of the backup policy with which this item is backed up.
-     */
     @InputImport(name="policyId")
     private final @Nullable String policyId;
 
@@ -47,10 +35,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse extends io.
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
-    /**
-     * backup protectionIntent type.
-Expected value is 'RecoveryServiceVaultItem'.
-     */
     @InputImport(name="protectionIntentItemType", required=true)
     private final String protectionIntentItemType;
 
@@ -58,9 +42,6 @@ Expected value is 'RecoveryServiceVaultItem'.
         return this.protectionIntentItemType;
     }
 
-    /**
-     * Backup state of this backup item.
-     */
     @InputImport(name="protectionState")
     private final @Nullable String protectionState;
 
@@ -68,9 +49,6 @@ Expected value is 'RecoveryServiceVaultItem'.
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
-    /**
-     * ARM ID of the resource to be backed up.
-     */
     @InputImport(name="sourceResourceId")
     private final @Nullable String sourceResourceId;
 

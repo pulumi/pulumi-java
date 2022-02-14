@@ -14,16 +14,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Automatic scaling is based on request rate, response latencies, and other application metrics.
- */
 public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomaticScalingResponse Empty = new AutomaticScalingResponse();
 
-    /**
-     * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
-     */
     @InputImport(name="coolDownPeriod", required=true)
     private final String coolDownPeriod;
 
@@ -31,9 +25,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.coolDownPeriod;
     }
 
-    /**
-     * Target scaling by CPU usage.
-     */
     @InputImport(name="cpuUtilization", required=true)
     private final CpuUtilizationResponse cpuUtilization;
 
@@ -41,9 +32,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.cpuUtilization;
     }
 
-    /**
-     * Target scaling by disk usage.
-     */
     @InputImport(name="diskUtilization", required=true)
     private final DiskUtilizationResponse diskUtilization;
 
@@ -51,9 +39,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.diskUtilization;
     }
 
-    /**
-     * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
-     */
     @InputImport(name="maxConcurrentRequests", required=true)
     private final Integer maxConcurrentRequests;
 
@@ -61,9 +46,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.maxConcurrentRequests;
     }
 
-    /**
-     * Maximum number of idle instances that should be maintained for this version.
-     */
     @InputImport(name="maxIdleInstances", required=true)
     private final Integer maxIdleInstances;
 
@@ -71,9 +53,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.maxIdleInstances;
     }
 
-    /**
-     * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     */
     @InputImport(name="maxPendingLatency", required=true)
     private final String maxPendingLatency;
 
@@ -81,9 +60,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.maxPendingLatency;
     }
 
-    /**
-     * Maximum number of instances that should be started to handle requests for this version.
-     */
     @InputImport(name="maxTotalInstances", required=true)
     private final Integer maxTotalInstances;
 
@@ -91,9 +67,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.maxTotalInstances;
     }
 
-    /**
-     * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
-     */
     @InputImport(name="minIdleInstances", required=true)
     private final Integer minIdleInstances;
 
@@ -101,9 +74,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.minIdleInstances;
     }
 
-    /**
-     * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     */
     @InputImport(name="minPendingLatency", required=true)
     private final String minPendingLatency;
 
@@ -111,9 +81,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.minPendingLatency;
     }
 
-    /**
-     * Minimum number of running instances that should be maintained for this version.
-     */
     @InputImport(name="minTotalInstances", required=true)
     private final Integer minTotalInstances;
 
@@ -121,9 +88,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.minTotalInstances;
     }
 
-    /**
-     * Target scaling by network usage.
-     */
     @InputImport(name="networkUtilization", required=true)
     private final NetworkUtilizationResponse networkUtilization;
 
@@ -131,9 +95,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.networkUtilization;
     }
 
-    /**
-     * Target scaling by request utilization.
-     */
     @InputImport(name="requestUtilization", required=true)
     private final RequestUtilizationResponse requestUtilization;
 
@@ -141,9 +102,6 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
         return this.requestUtilization;
     }
 
-    /**
-     * Scheduler settings for standard environment.
-     */
     @InputImport(name="standardSchedulerSettings", required=true)
     private final StandardSchedulerSettingsResponse standardSchedulerSettings;
 

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The container group encryption properties.
- */
 public final class EncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionPropertiesArgs Empty = new EncryptionPropertiesArgs();
 
-    /**
-     * The encryption key name.
-     */
     @InputImport(name="keyName", required=true)
     private final Input<String> keyName;
 
@@ -26,9 +20,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
         return this.keyName;
     }
 
-    /**
-     * The encryption key version.
-     */
     @InputImport(name="keyVersion", required=true)
     private final Input<String> keyVersion;
 
@@ -36,9 +27,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
         return this.keyVersion;
     }
 
-    /**
-     * The keyvault base url.
-     */
     @InputImport(name="vaultBaseUrl", required=true)
     private final Input<String> vaultBaseUrl;
 

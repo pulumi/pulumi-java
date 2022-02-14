@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * RevisionSpec holds the desired state of the Revision (from the client).
- */
 public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RevisionSpecArgs Empty = new RevisionSpecArgs();
 
-    /**
-     * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.
-     */
     @InputImport(name="containerConcurrency")
     private final @Nullable Input<Integer> containerConcurrency;
 
@@ -33,9 +27,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
     }
 
-    /**
-     * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
-     */
     @InputImport(name="containers")
     private final @Nullable Input<List<ContainerArgs>> containers;
 
@@ -43,9 +34,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.containers == null ? Input.empty() : this.containers;
     }
 
-    /**
-     * Indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
-     */
     @InputImport(name="enableServiceLinks")
     private final @Nullable Input<Boolean> enableServiceLinks;
 
@@ -53,9 +41,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableServiceLinks == null ? Input.empty() : this.enableServiceLinks;
     }
 
-    /**
-     * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported.
-     */
     @InputImport(name="imagePullSecrets")
     private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
@@ -63,9 +48,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.imagePullSecrets == null ? Input.empty() : this.imagePullSecrets;
     }
 
-    /**
-     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
-     */
     @InputImport(name="serviceAccountName")
     private final @Nullable Input<String> serviceAccountName;
 
@@ -73,9 +55,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
     }
 
-    /**
-     * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.
-     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 
@@ -83,9 +62,6 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<VolumeArgs>> volumes;
 

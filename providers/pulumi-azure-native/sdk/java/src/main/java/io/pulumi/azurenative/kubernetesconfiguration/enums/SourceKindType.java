@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Source Kind to pull the configuration data from.
- */
     @EnumType
     public enum SourceKindType {
-/**
- * 
- */
         GitRepository("GitRepository");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="deviceId", required=true)
     private final String deviceId;
 
@@ -27,9 +21,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="fieldMask")
     private final @Nullable String fieldMask;
 
@@ -37,9 +28,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         return this.fieldMask == null ? Optional.empty() : Optional.ofNullable(this.fieldMask);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -57,9 +42,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="registryId", required=true)
     private final String registryId;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a lab's support banner
- */
 public final class LabSupportPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabSupportPropertiesResponse Empty = new LabSupportPropertiesResponse();
 
-    /**
-     * Is the lab support banner active/enabled at this time?
-     */
     @InputImport(name="enabled")
     private final @Nullable String enabled;
 
@@ -27,9 +21,6 @@ public final class LabSupportPropertiesResponse extends io.pulumi.resources.Invo
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    /**
-     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     */
     @InputImport(name="markdown")
     private final @Nullable String markdown;
 

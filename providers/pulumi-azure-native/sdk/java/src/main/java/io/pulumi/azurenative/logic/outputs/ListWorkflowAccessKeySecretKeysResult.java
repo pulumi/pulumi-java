@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListWorkflowAccessKeySecretKeysResult {
-/**
- * Gets the primary secret key.
- */
     private final String primarySecretKey;
-/**
- * Gets the secondary secret key.
- */
     private final String secondarySecretKey;
 
     @OutputCustomType.Constructor({"primarySecretKey","secondarySecretKey"})
@@ -26,15 +20,9 @@ public final class ListWorkflowAccessKeySecretKeysResult {
         this.secondarySecretKey = Objects.requireNonNull(secondarySecretKey);
     }
 
-/**
- * Gets the primary secret key.
- */
     public String getPrimarySecretKey() {
         return this.primarySecretKey;
     }
-/**
- * Gets the secondary secret key.
- */
     public String getSecondarySecretKey() {
         return this.secondarySecretKey;
     }

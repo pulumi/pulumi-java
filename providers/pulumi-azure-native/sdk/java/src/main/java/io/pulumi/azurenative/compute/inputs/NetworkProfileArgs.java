@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the network interfaces or the networking configuration of the virtual machine.
- */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
-    /**
-     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
-     */
     @InputImport(name="networkApiVersion")
     private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
 
@@ -32,9 +26,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkApiVersion == null ? Input.empty() : this.networkApiVersion;
     }
 
-    /**
-     * Specifies the networking configurations that will be used to create the virtual machine networking resources.
-     */
     @InputImport(name="networkInterfaceConfigurations")
     private final @Nullable Input<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
@@ -42,9 +33,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
     }
 
-    /**
-     * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
-     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 

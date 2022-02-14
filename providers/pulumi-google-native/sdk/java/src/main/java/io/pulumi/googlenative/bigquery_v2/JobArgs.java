@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
-    /**
-     * [Required] Describes the job configuration.
-     */
     @InputImport(name="configuration")
     private final @Nullable Input<JobConfigurationArgs> configuration;
 
@@ -30,9 +24,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
-    /**
-     * [Optional] Reference describing the unique-per-user name of the job.
-     */
     @InputImport(name="jobReference")
     private final @Nullable Input<JobReferenceArgs> jobReference;
 
@@ -40,9 +31,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobReference == null ? Input.empty() : this.jobReference;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,9 +38,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="source")
     private final @Nullable Input<AssetOrArchive> source;
 

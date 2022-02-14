@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents output related to a built-in algorithm Job.
- */
 public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse Empty = new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse();
 
-    /**
-     * Framework on which the built-in algorithm was trained.
-     */
     @InputImport(name="framework", required=true)
     private final String framework;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
         return this.framework;
     }
 
-    /**
-     * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
-     */
     @InputImport(name="modelPath", required=true)
     private final String modelPath;
 
@@ -35,9 +26,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
         return this.modelPath;
     }
 
-    /**
-     * Python version on which the built-in algorithm was trained.
-     */
     @InputImport(name="pythonVersion", required=true)
     private final String pythonVersion;
 
@@ -45,9 +33,6 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends io.pu
         return this.pythonVersion;
     }
 
-    /**
-     * AI Platform runtime version on which the built-in algorithm was trained.
-     */
     @InputImport(name="runtimeVersion", required=true)
     private final String runtimeVersion;
 

@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Network Mapping Properties.
- */
 public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkMappingPropertiesResponse Empty = new NetworkMappingPropertiesResponse();
 
-    /**
-     * The fabric specific settings.
-     */
     @InputImport(name="fabricSpecificSettings")
     private final @Nullable Object fabricSpecificSettings;
 
@@ -31,9 +25,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.fabricSpecificSettings == null ? null : this.fabricSpecificSettings;
     }
 
-    /**
-     * The primary fabric friendly name.
-     */
     @InputImport(name="primaryFabricFriendlyName")
     private final @Nullable String primaryFabricFriendlyName;
 
@@ -41,9 +32,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
-    /**
-     * The primary network friendly name.
-     */
     @InputImport(name="primaryNetworkFriendlyName")
     private final @Nullable String primaryNetworkFriendlyName;
 
@@ -51,9 +39,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.primaryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
 
-    /**
-     * The primary network id for network mapping.
-     */
     @InputImport(name="primaryNetworkId")
     private final @Nullable String primaryNetworkId;
 
@@ -61,9 +46,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.primaryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkId);
     }
 
-    /**
-     * The recovery fabric ARM id.
-     */
     @InputImport(name="recoveryFabricArmId")
     private final @Nullable String recoveryFabricArmId;
 
@@ -71,9 +53,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.recoveryFabricArmId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricArmId);
     }
 
-    /**
-     * The recovery fabric friendly name.
-     */
     @InputImport(name="recoveryFabricFriendlyName")
     private final @Nullable String recoveryFabricFriendlyName;
 
@@ -81,9 +60,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
-    /**
-     * The recovery network friendly name.
-     */
     @InputImport(name="recoveryNetworkFriendlyName")
     private final @Nullable String recoveryNetworkFriendlyName;
 
@@ -91,9 +67,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.recoveryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
 
-    /**
-     * The recovery network id for network mapping.
-     */
     @InputImport(name="recoveryNetworkId")
     private final @Nullable String recoveryNetworkId;
 
@@ -101,9 +74,6 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
         return this.recoveryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkId);
     }
 
-    /**
-     * The pairing state for network mapping.
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

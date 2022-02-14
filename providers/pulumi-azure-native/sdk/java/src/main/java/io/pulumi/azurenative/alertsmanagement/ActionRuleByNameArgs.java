@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActionRuleByNameArgs Empty = new ActionRuleByNameArgs();
 
-    /**
-     * The name of action rule that needs to be created/updated
-     */
     @InputImport(name="actionRuleName")
     private final @Nullable Input<String> actionRuleName;
 
@@ -32,9 +26,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
         return this.actionRuleName == null ? Input.empty() : this.actionRuleName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,9 +33,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * action rule properties
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -52,9 +40,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Resource group name where the resource is created.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,9 +47,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

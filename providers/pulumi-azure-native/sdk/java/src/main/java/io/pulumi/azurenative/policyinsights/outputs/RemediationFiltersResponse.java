@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RemediationFiltersResponse {
-/**
- * The resource locations that will be remediated.
- */
     private final @Nullable List<String> locations;
 
     @OutputCustomType.Constructor({"locations"})
@@ -21,9 +18,6 @@ public final class RemediationFiltersResponse {
         this.locations = locations;
     }
 
-/**
- * The resource locations that will be remediated.
- */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }

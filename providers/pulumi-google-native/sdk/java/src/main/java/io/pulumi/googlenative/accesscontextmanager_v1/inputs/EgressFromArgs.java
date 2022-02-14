@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the conditions under which an EgressPolicy matches a request. Conditions based on information about the source of the request. Note that if the destination of the request is also protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which allows access in order for this request to succeed.
- */
 public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EgressFromArgs Empty = new EgressFromArgs();
 
-    /**
-     * A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
-     */
     @InputImport(name="identities")
     private final @Nullable Input<List<String>> identities;
 
@@ -29,9 +23,6 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
         return this.identities == null ? Input.empty() : this.identities;
     }
 
-    /**
-     * Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
-     */
     @InputImport(name="identityType")
     private final @Nullable Input<EgressFromIdentityType> identityType;
 

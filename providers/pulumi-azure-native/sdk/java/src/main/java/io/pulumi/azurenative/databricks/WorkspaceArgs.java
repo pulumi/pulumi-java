@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceArgs Empty = new WorkspaceArgs();
 
-    /**
-     * The workspace provider authorizations.
-     */
     @InputImport(name="authorizations")
     private final @Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations;
 
@@ -32,9 +26,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizations == null ? Input.empty() : this.authorizations;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,9 +33,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The managed resource group Id.
-     */
     @InputImport(name="managedResourceGroupId", required=true)
     private final Input<String> managedResourceGroupId;
 
@@ -52,9 +40,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedResourceGroupId;
     }
 
-    /**
-     * The workspace's custom parameters.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<WorkspaceCustomParametersArgs> parameters;
 
@@ -62,9 +47,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,9 +54,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The SKU of the resource.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -82,9 +61,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -92,9 +68,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The blob URI where the UI definition file is located.
-     */
     @InputImport(name="uiDefinitionUri")
     private final @Nullable Input<String> uiDefinitionUri;
 
@@ -102,9 +75,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.uiDefinitionUri == null ? Input.empty() : this.uiDefinitionUri;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName")
     private final @Nullable Input<String> workspaceName;
 

@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JitNetworkAccessRequestResponse {
-/**
- * The justification for making the initiate request
- */
     private final @Nullable String justification;
-/**
- * The identity of the person who made the request
- */
     private final String requestor;
-/**
- * The start time of the request in UTC
- */
     private final String startTimeUtc;
-/**
- * 
- */
     private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
     @OutputCustomType.Constructor({"justification","requestor","startTimeUtc","virtualMachines"})
@@ -42,27 +30,15 @@ public final class JitNetworkAccessRequestResponse {
         this.virtualMachines = Objects.requireNonNull(virtualMachines);
     }
 
-/**
- * The justification for making the initiate request
- */
     public Optional<String> getJustification() {
         return Optional.ofNullable(this.justification);
     }
-/**
- * The identity of the person who made the request
- */
     public String getRequestor() {
         return this.requestor;
     }
-/**
- * The start time of the request in UTC
- */
     public String getStartTimeUtc() {
         return this.startTimeUtc;
     }
-/**
- * 
- */
     public List<JitNetworkAccessRequestVirtualMachineResponse> getVirtualMachines() {
         return this.virtualMachines;
     }

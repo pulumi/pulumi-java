@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Managed Virtual Network reference type.
- */
 public final class ManagedVirtualNetworkReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedVirtualNetworkReferenceResponse Empty = new ManagedVirtualNetworkReferenceResponse();
 
-    /**
-     * Reference ManagedVirtualNetwork name.
-     */
     @InputImport(name="referenceName", required=true)
     private final String referenceName;
 
@@ -25,9 +19,6 @@ public final class ManagedVirtualNetworkReferenceResponse extends io.pulumi.reso
         return this.referenceName;
     }
 
-    /**
-     * Managed Virtual Network reference type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaxonomyIamPolicy {
-/**
- * Gets the IAM policy for a policy tag or a taxonomy.
- */
     public static CompletableFuture<GetTaxonomyIamPolicyResult> invokeAsync(GetTaxonomyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getTaxonomyIamPolicy", TypeShape.of(GetTaxonomyIamPolicyResult.class), args == null ? GetTaxonomyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

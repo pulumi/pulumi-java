@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The current state of the Domain Mapping.
- */
 public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingStatusArgs Empty = new DomainMappingStatusArgs();
 
-    /**
-     * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
@@ -31,9 +25,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * The name of the route that the mapping currently points to.
-     */
     @InputImport(name="mappedRouteName")
     private final @Nullable Input<String> mappedRouteName;
 
@@ -41,9 +32,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
         return this.mappedRouteName == null ? Input.empty() : this.mappedRouteName;
     }
 
-    /**
-     * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
-     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -51,9 +39,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
-    /**
-     * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
-     */
     @InputImport(name="resourceRecords")
     private final @Nullable Input<List<ResourceRecordArgs>> resourceRecords;
 
@@ -61,9 +46,6 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
         return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
     }
 
-    /**
-     * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

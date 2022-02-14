@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * KubernetesMetadata provides informational metadata for Memberships representing Kubernetes clusters.
- */
 public final class KubernetesMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesMetadataResponse Empty = new KubernetesMetadataResponse();
 
-    /**
-     * Kubernetes API server version string as reported by '/version'.
-     */
     @InputImport(name="kubernetesApiServerVersion", required=true)
     private final String kubernetesApiServerVersion;
 
@@ -26,9 +20,6 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
         return this.kubernetesApiServerVersion;
     }
 
-    /**
-     * The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.
-     */
     @InputImport(name="memoryMb", required=true)
     private final Integer memoryMb;
 
@@ -36,9 +27,6 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
         return this.memoryMb;
     }
 
-    /**
-     * Node count as reported by Kubernetes nodes resources.
-     */
     @InputImport(name="nodeCount", required=true)
     private final Integer nodeCount;
 
@@ -46,9 +34,6 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
         return this.nodeCount;
     }
 
-    /**
-     * Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.
-     */
     @InputImport(name="nodeProviderId", required=true)
     private final String nodeProviderId;
 
@@ -56,9 +41,6 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
         return this.nodeProviderId;
     }
 
-    /**
-     * The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 
@@ -66,9 +48,6 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
         return this.updateTime;
     }
 
-    /**
-     * vCPU count as reported by Kubernetes nodes resources.
-     */
     @InputImport(name="vcpuCount", required=true)
     private final Integer vcpuCount;
 

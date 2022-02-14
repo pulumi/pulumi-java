@@ -8,46 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type.
- */
     @EnumType
     public enum ParameterType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         String("String"),
-/**
- * 
- */
         SecureString("SecureString"),
-/**
- * 
- */
         Int("Int"),
-/**
- * 
- */
         Float("Float"),
-/**
- * 
- */
         Bool("Bool"),
-/**
- * 
- */
         Array("Array"),
-/**
- * 
- */
         Object("Object"),
-/**
- * 
- */
         SecureObject("SecureObject");
 
         private final String value;

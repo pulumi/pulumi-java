@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for the task that validates connection to SQL DB and target server requirements for online migration
- */
 public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs Empty = new ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs();
 
-    /**
-     * Task input
-     */
     @InputImport(name="input")
     private final @Nullable Input<ConnectToTargetSqlSqlDbSyncTaskInputArgs> input;
 
@@ -28,10 +22,6 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesArgs extends io.pulu
         return this.input == null ? Input.empty() : this.input;
     }
 
-    /**
-     * Task type.
-Expected value is 'ConnectToTarget.SqlDb.Sync'.
-     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

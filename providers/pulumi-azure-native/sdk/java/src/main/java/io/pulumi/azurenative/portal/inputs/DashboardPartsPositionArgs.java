@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The dashboard's part position.
- */
 public final class DashboardPartsPositionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardPartsPositionArgs Empty = new DashboardPartsPositionArgs();
 
-    /**
-     * The dashboard's part column span.
-     */
     @InputImport(name="colSpan", required=true)
     private final Input<Integer> colSpan;
 
@@ -30,9 +24,6 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
         return this.colSpan;
     }
 
-    /**
-     * The dashboard part's metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,Object>> metadata;
 
@@ -40,9 +31,6 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The dashboard's part row span.
-     */
     @InputImport(name="rowSpan", required=true)
     private final Input<Integer> rowSpan;
 
@@ -50,9 +38,6 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
         return this.rowSpan;
     }
 
-    /**
-     * The dashboard's part x coordinate.
-     */
     @InputImport(name="x", required=true)
     private final Input<Integer> x;
 
@@ -60,9 +45,6 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
         return this.x;
     }
 
-    /**
-     * The dashboard's part y coordinate.
-     */
     @InputImport(name="y", required=true)
     private final Input<Integer> y;
 

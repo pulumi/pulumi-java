@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexArgs Empty = new IndexArgs();
 
-    /**
-     * The collection ID to which this index applies. Required.
-     */
     @InputImport(name="collectionId")
     private final @Nullable Input<String> collectionId;
 
@@ -30,9 +24,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.collectionId == null ? Input.empty() : this.collectionId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="databaseId", required=true)
     private final Input<String> databaseId;
 
@@ -40,9 +31,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseId;
     }
 
-    /**
-     * The fields to index.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
@@ -50,9 +38,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
-    /**
-     * The resource name of the index. Output only.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,9 +45,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -70,9 +52,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The state of the index. Output only.
-     */
     @InputImport(name="state")
     private final @Nullable Input<IndexState> state;
 

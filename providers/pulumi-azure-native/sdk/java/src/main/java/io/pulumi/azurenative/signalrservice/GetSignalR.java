@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSignalR {
-/**
- * A class represent a SignalR service resource.
-API Version: 2020-05-01.
- *
- * A class represent a SignalR service resource.
- */
     public static CompletableFuture<GetSignalRResult> invokeAsync(GetSignalRArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalR", TypeShape.of(GetSignalRResult.class), args == null ? GetSignalRArgs.Empty : args, Utilities.withVersion(options));
     }

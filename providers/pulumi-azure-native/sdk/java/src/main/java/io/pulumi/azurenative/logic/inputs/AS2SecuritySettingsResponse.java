@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The AS2 agreement security settings.
- */
 public final class AS2SecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AS2SecuritySettingsResponse Empty = new AS2SecuritySettingsResponse();
 
-    /**
-     * The value indicating whether to enable NRR for inbound decoded messages.
-     */
     @InputImport(name="enableNRRForInboundDecodedMessages", required=true)
     private final Boolean enableNRRForInboundDecodedMessages;
 
@@ -28,9 +22,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.enableNRRForInboundDecodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for inbound encoded messages.
-     */
     @InputImport(name="enableNRRForInboundEncodedMessages", required=true)
     private final Boolean enableNRRForInboundEncodedMessages;
 
@@ -38,9 +29,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.enableNRRForInboundEncodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for inbound MDN.
-     */
     @InputImport(name="enableNRRForInboundMDN", required=true)
     private final Boolean enableNRRForInboundMDN;
 
@@ -48,9 +36,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.enableNRRForInboundMDN;
     }
 
-    /**
-     * The value indicating whether to enable NRR for outbound decoded messages.
-     */
     @InputImport(name="enableNRRForOutboundDecodedMessages", required=true)
     private final Boolean enableNRRForOutboundDecodedMessages;
 
@@ -58,9 +43,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.enableNRRForOutboundDecodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for outbound encoded messages.
-     */
     @InputImport(name="enableNRRForOutboundEncodedMessages", required=true)
     private final Boolean enableNRRForOutboundEncodedMessages;
 
@@ -68,9 +50,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.enableNRRForOutboundEncodedMessages;
     }
 
-    /**
-     * The value indicating whether to enable NRR for outbound MDN.
-     */
     @InputImport(name="enableNRRForOutboundMDN", required=true)
     private final Boolean enableNRRForOutboundMDN;
 
@@ -78,9 +57,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.enableNRRForOutboundMDN;
     }
 
-    /**
-     * The name of the encryption certificate.
-     */
     @InputImport(name="encryptionCertificateName")
     private final @Nullable String encryptionCertificateName;
 
@@ -88,9 +64,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.encryptionCertificateName == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertificateName);
     }
 
-    /**
-     * The value indicating whether to send or request a MDN.
-     */
     @InputImport(name="overrideGroupSigningCertificate", required=true)
     private final Boolean overrideGroupSigningCertificate;
 
@@ -98,9 +71,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.overrideGroupSigningCertificate;
     }
 
-    /**
-     * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
-     */
     @InputImport(name="sha2AlgorithmFormat")
     private final @Nullable String sha2AlgorithmFormat;
 
@@ -108,9 +78,6 @@ public final class AS2SecuritySettingsResponse extends io.pulumi.resources.Invok
         return this.sha2AlgorithmFormat == null ? Optional.empty() : Optional.ofNullable(this.sha2AlgorithmFormat);
     }
 
-    /**
-     * The name of the signing certificate.
-     */
     @InputImport(name="signingCertificateName")
     private final @Nullable String signingCertificateName;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents an Azure resource group.
- */
 public final class ResourceGroupValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceGroupValueResponse Empty = new ResourceGroupValueResponse();
 
-    /**
-     * Location of the resource group.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -27,9 +21,6 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Name of the resource group.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

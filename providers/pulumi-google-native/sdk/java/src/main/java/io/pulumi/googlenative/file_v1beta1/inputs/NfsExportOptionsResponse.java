@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * NFS export options specifications.
- */
 public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NfsExportOptionsResponse Empty = new NfsExportOptionsResponse();
 
-    /**
-     * Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
-     */
     @InputImport(name="accessMode", required=true)
     private final String accessMode;
 
@@ -26,9 +20,6 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
         return this.accessMode;
     }
 
-    /**
-     * An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
-     */
     @InputImport(name="anonGid", required=true)
     private final String anonGid;
 
@@ -36,9 +27,6 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
         return this.anonGid;
     }
 
-    /**
-     * An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
-     */
     @InputImport(name="anonUid", required=true)
     private final String anonUid;
 
@@ -46,9 +34,6 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
         return this.anonUid;
     }
 
-    /**
-     * List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
-     */
     @InputImport(name="ipRanges", required=true)
     private final List<String> ipRanges;
 
@@ -56,9 +41,6 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
         return this.ipRanges;
     }
 
-    /**
-     * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
-     */
     @InputImport(name="squashMode", required=true)
     private final String squashMode;
 

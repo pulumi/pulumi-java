@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The period during which some deployable was active in a runtime.
- */
 public final class DeploymentOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentOccurrenceResponse Empty = new DeploymentOccurrenceResponse();
 
-    /**
-     * Address of the runtime element hosting this deployment.
-     */
     @InputImport(name="address", required=true)
     private final String address;
 
@@ -26,9 +20,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
         return this.address;
     }
 
-    /**
-     * Configuration used to create this deployment.
-     */
     @InputImport(name="config", required=true)
     private final String config;
 
@@ -36,9 +27,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
         return this.config;
     }
 
-    /**
-     * Beginning of the lifetime of this deployment.
-     */
     @InputImport(name="deployTime", required=true)
     private final String deployTime;
 
@@ -46,9 +34,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
         return this.deployTime;
     }
 
-    /**
-     * Platform hosting this deployment.
-     */
     @InputImport(name="platform", required=true)
     private final String platform;
 
@@ -56,9 +41,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
         return this.platform;
     }
 
-    /**
-     * Resource URI for the artifact being deployed taken from the deployable field with the same name.
-     */
     @InputImport(name="resourceUri", required=true)
     private final List<String> resourceUri;
 
@@ -66,9 +48,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
         return this.resourceUri;
     }
 
-    /**
-     * End of the lifetime of this deployment.
-     */
     @InputImport(name="undeployTime", required=true)
     private final String undeployTime;
 
@@ -76,9 +55,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
         return this.undeployTime;
     }
 
-    /**
-     * Identity of the user that triggered this deployment.
-     */
     @InputImport(name="userEmail", required=true)
     private final String userEmail;
 

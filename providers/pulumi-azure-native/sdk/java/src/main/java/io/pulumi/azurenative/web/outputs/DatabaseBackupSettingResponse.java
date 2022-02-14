@@ -11,22 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseBackupSettingResponse {
-/**
- * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
- */
     private final @Nullable String connectionString;
-/**
- * Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.
- */
     private final @Nullable String connectionStringName;
-/**
- * Database type (e.g. SqlAzure / MySql).
- */
     private final String databaseType;
-/**
- * 
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"connectionString","connectionStringName","databaseType","name"})
@@ -41,28 +28,15 @@ This is used during restore with overwrite connection strings options.
         this.name = name;
     }
 
-/**
- * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
- */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
-/**
- * Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
-This is used during restore with overwrite connection strings options.
- */
     public Optional<String> getConnectionStringName() {
         return Optional.ofNullable(this.connectionStringName);
     }
-/**
- * Database type (e.g. SqlAzure / MySql).
- */
     public String getDatabaseType() {
         return this.databaseType;
     }
-/**
- * 
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

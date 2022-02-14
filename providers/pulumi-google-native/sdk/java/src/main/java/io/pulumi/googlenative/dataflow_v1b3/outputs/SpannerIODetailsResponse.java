@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SpannerIODetailsResponse {
-/**
- * DatabaseId accessed in the connection.
- */
     private final String databaseId;
-/**
- * InstanceId accessed in the connection.
- */
     private final String instanceId;
-/**
- * ProjectId accessed in the connection.
- */
     private final String project;
 
     @OutputCustomType.Constructor({"databaseId","instanceId","project"})
@@ -32,21 +23,12 @@ public final class SpannerIODetailsResponse {
         this.project = Objects.requireNonNull(project);
     }
 
-/**
- * DatabaseId accessed in the connection.
- */
     public String getDatabaseId() {
         return this.databaseId;
     }
-/**
- * InstanceId accessed in the connection.
- */
     public String getInstanceId() {
         return this.instanceId;
     }
-/**
- * ProjectId accessed in the connection.
- */
     public String getProject() {
         return this.project;
     }

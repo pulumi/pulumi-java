@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicIPPrefixArgs Empty = new PublicIPPrefixArgs();
 
-    /**
-     * The customIpPrefix that this prefix is associated with.
-     */
     @InputImport(name="customIPPrefix")
     private final @Nullable Input<SubResourceArgs> customIPPrefix;
 
@@ -37,9 +31,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.customIPPrefix == null ? Input.empty() : this.customIPPrefix;
     }
 
-    /**
-     * The extended location of the public ip address.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -47,9 +38,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -57,9 +45,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The list of tags associated with the public IP prefix.
-     */
     @InputImport(name="ipTags")
     private final @Nullable Input<List<IpTagArgs>> ipTags;
 
@@ -67,9 +52,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipTags == null ? Input.empty() : this.ipTags;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -77,9 +59,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * NatGateway of Public IP Prefix.
-     */
     @InputImport(name="natGateway")
     private final @Nullable Input<NatGatewayArgs> natGateway;
 
@@ -87,9 +66,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.natGateway == null ? Input.empty() : this.natGateway;
     }
 
-    /**
-     * The Length of the Public IP Prefix.
-     */
     @InputImport(name="prefixLength")
     private final @Nullable Input<Integer> prefixLength;
 
@@ -97,9 +73,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixLength == null ? Input.empty() : this.prefixLength;
     }
 
-    /**
-     * The public IP address version.
-     */
     @InputImport(name="publicIPAddressVersion")
     private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
 
@@ -107,9 +80,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
     }
 
-    /**
-     * The name of the public IP prefix.
-     */
     @InputImport(name="publicIpPrefixName")
     private final @Nullable Input<String> publicIpPrefixName;
 
@@ -117,9 +87,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicIpPrefixName == null ? Input.empty() : this.publicIpPrefixName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -127,9 +94,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The public IP prefix SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<PublicIPPrefixSkuArgs> sku;
 
@@ -137,9 +101,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -147,9 +108,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

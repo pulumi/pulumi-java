@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Base class for all control activities like IfCondition, ForEach , Until.
- */
 public final class ControlActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ControlActivityResponse Empty = new ControlActivityResponse();
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -30,9 +24,6 @@ public final class ControlActivityResponse extends io.pulumi.resources.InvokeArg
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -40,9 +31,6 @@ public final class ControlActivityResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -50,10 +38,6 @@ public final class ControlActivityResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'Container'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -61,9 +45,6 @@ Expected value is 'Container'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

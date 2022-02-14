@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInventoryItemArgs Empty = new GetInventoryItemArgs();
 
-    /**
-     * Name of the inventoryItem.
-     */
     @InputImport(name="inventoryItemName", required=true)
     private final String inventoryItemName;
 
@@ -25,9 +19,6 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.inventoryItemName;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the vCenter.
-     */
     @InputImport(name="vcenterName", required=true)
     private final String vcenterName;
 

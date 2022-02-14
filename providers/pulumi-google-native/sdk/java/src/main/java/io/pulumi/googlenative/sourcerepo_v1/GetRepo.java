@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepo {
-/**
- * Returns information about a repo.
- */
     public static CompletableFuture<GetRepoResult> invokeAsync(GetRepoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sourcerepo/v1:getRepo", TypeShape.of(GetRepoResult.class), args == null ? GetRepoArgs.Empty : args, Utilities.withVersion(options));
     }

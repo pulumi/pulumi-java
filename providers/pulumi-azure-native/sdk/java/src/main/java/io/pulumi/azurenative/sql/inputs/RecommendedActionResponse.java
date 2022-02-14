@@ -18,16 +18,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Database, Server or Elastic Pool Recommended Action.
- */
 public final class RecommendedActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecommendedActionResponse Empty = new RecommendedActionResponse();
 
-    /**
-     * Gets additional details specific to this recommended action.
-     */
     @InputImport(name="details", required=true)
     private final Map<String,Object> details;
 
@@ -35,9 +29,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.details;
     }
 
-    /**
-     * Gets the error details if and why this recommended action is put to error state.
-     */
     @InputImport(name="errorDetails", required=true)
     private final RecommendedActionErrorInfoResponse errorDetails;
 
@@ -45,9 +36,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.errorDetails;
     }
 
-    /**
-     * Gets the estimated impact info for this recommended action e.g., Estimated CPU gain, Estimated Disk Space change
-     */
     @InputImport(name="estimatedImpact", required=true)
     private final List<RecommendedActionImpactRecordResponse> estimatedImpact;
 
@@ -55,9 +43,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.estimatedImpact;
     }
 
-    /**
-     * Gets the time taken for applying this recommended action on user resource. e.g., time taken for index creation
-     */
     @InputImport(name="executeActionDuration", required=true)
     private final String executeActionDuration;
 
@@ -65,9 +50,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.executeActionDuration;
     }
 
-    /**
-     * Gets if approval for applying this recommended action was given by user/system.
-     */
     @InputImport(name="executeActionInitiatedBy", required=true)
     private final String executeActionInitiatedBy;
 
@@ -75,9 +57,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.executeActionInitiatedBy;
     }
 
-    /**
-     * Gets the time when this recommended action was approved for execution.
-     */
     @InputImport(name="executeActionInitiatedTime", required=true)
     private final String executeActionInitiatedTime;
 
@@ -85,9 +64,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.executeActionInitiatedTime;
     }
 
-    /**
-     * Gets the time when system started applying this recommended action on the user resource. e.g., index creation start time
-     */
     @InputImport(name="executeActionStartTime", required=true)
     private final String executeActionStartTime;
 
@@ -95,9 +71,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.executeActionStartTime;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -105,9 +78,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.id;
     }
 
-    /**
-     * Gets the implementation details of this recommended action for user to apply it manually.
-     */
     @InputImport(name="implementationDetails", required=true)
     private final RecommendedActionImplementationInfoResponse implementationDetails;
 
@@ -115,9 +85,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.implementationDetails;
     }
 
-    /**
-     * Gets if this recommended action was suggested some time ago but user chose to ignore this and system added a new recommended action again.
-     */
     @InputImport(name="isArchivedAction", required=true)
     private final Boolean isArchivedAction;
 
@@ -125,9 +92,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.isArchivedAction;
     }
 
-    /**
-     * Gets if this recommended action is actionable by user
-     */
     @InputImport(name="isExecutableAction", required=true)
     private final Boolean isExecutableAction;
 
@@ -135,9 +99,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.isExecutableAction;
     }
 
-    /**
-     * Gets if changes applied by this recommended action can be reverted by user
-     */
     @InputImport(name="isRevertableAction", required=true)
     private final Boolean isRevertableAction;
 
@@ -145,9 +106,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.isRevertableAction;
     }
 
-    /**
-     * Resource kind.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -155,9 +113,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.kind;
     }
 
-    /**
-     * Gets time when this recommended action was last refreshed.
-     */
     @InputImport(name="lastRefresh", required=true)
     private final String lastRefresh;
 
@@ -165,9 +120,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.lastRefresh;
     }
 
-    /**
-     * Gets the linked objects, if any.
-     */
     @InputImport(name="linkedObjects", required=true)
     private final List<String> linkedObjects;
 
@@ -175,9 +127,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.linkedObjects;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -185,9 +134,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.location;
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -195,9 +141,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
-    /**
-     * Gets the observed/actual impact info for this recommended action e.g., Actual CPU gain, Actual Disk Space change
-     */
     @InputImport(name="observedImpact", required=true)
     private final List<RecommendedActionImpactRecordResponse> observedImpact;
 
@@ -205,9 +148,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.observedImpact;
     }
 
-    /**
-     * Gets the reason for recommending this action. e.g., DuplicateIndex
-     */
     @InputImport(name="recommendationReason", required=true)
     private final String recommendationReason;
 
@@ -215,9 +155,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.recommendationReason;
     }
 
-    /**
-     * Gets the time taken for reverting changes of this recommended action on user resource. e.g., time taken for dropping the created index.
-     */
     @InputImport(name="revertActionDuration", required=true)
     private final String revertActionDuration;
 
@@ -225,9 +162,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.revertActionDuration;
     }
 
-    /**
-     * Gets if approval for reverting this recommended action was given by user/system.
-     */
     @InputImport(name="revertActionInitiatedBy", required=true)
     private final String revertActionInitiatedBy;
 
@@ -235,9 +169,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.revertActionInitiatedBy;
     }
 
-    /**
-     * Gets the time when this recommended action was approved for revert.
-     */
     @InputImport(name="revertActionInitiatedTime", required=true)
     private final String revertActionInitiatedTime;
 
@@ -245,9 +176,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.revertActionInitiatedTime;
     }
 
-    /**
-     * Gets the time when system started reverting changes of this recommended action on user resource. e.g., time when index drop is executed.
-     */
     @InputImport(name="revertActionStartTime", required=true)
     private final String revertActionStartTime;
 
@@ -255,9 +183,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.revertActionStartTime;
     }
 
-    /**
-     * Gets the impact of this recommended action. Possible values are 1 - Low impact, 2 - Medium Impact and 3 - High Impact
-     */
     @InputImport(name="score", required=true)
     private final Integer score;
 
@@ -265,9 +190,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.score;
     }
 
-    /**
-     * Gets the info of the current state the recommended action is in.
-     */
     @InputImport(name="state", required=true)
     private final RecommendedActionStateInfoResponse state;
 
@@ -275,9 +197,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.state;
     }
 
-    /**
-     * Gets the time series info of metrics for this recommended action e.g., CPU consumption time series
-     */
     @InputImport(name="timeSeries", required=true)
     private final List<RecommendedActionMetricInfoResponse> timeSeries;
 
@@ -285,9 +204,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.timeSeries;
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -295,9 +211,6 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
-    /**
-     * Gets the time since when this recommended action is valid.
-     */
     @InputImport(name="validSince", required=true)
     private final String validSince;
 

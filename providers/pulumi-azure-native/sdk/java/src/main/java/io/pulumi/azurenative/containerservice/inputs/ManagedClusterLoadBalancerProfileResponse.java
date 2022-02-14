@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Profile of the managed cluster load balancer.
- */
 public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterLoadBalancerProfileResponse Empty = new ManagedClusterLoadBalancerProfileResponse();
 
-    /**
-     * Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
-     */
     @InputImport(name="allocatedOutboundPorts")
     private final @Nullable Integer allocatedOutboundPorts;
 
@@ -32,9 +26,6 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
         return this.allocatedOutboundPorts == null ? Optional.empty() : Optional.ofNullable(this.allocatedOutboundPorts);
     }
 
-    /**
-     * The effective outbound IP resources of the cluster load balancer.
-     */
     @InputImport(name="effectiveOutboundIPs")
     private final @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs;
 
@@ -42,9 +33,6 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
         return this.effectiveOutboundIPs == null ? List.of() : this.effectiveOutboundIPs;
     }
 
-    /**
-     * Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
-     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Integer idleTimeoutInMinutes;
 
@@ -52,9 +40,6 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
-    /**
-     * Desired managed outbound IPs for the cluster load balancer.
-     */
     @InputImport(name="managedOutboundIPs")
     private final @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs;
 
@@ -62,9 +47,6 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
         return this.managedOutboundIPs == null ? Optional.empty() : Optional.ofNullable(this.managedOutboundIPs);
     }
 
-    /**
-     * Desired outbound IP Prefix resources for the cluster load balancer.
-     */
     @InputImport(name="outboundIPPrefixes")
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes;
 
@@ -72,9 +54,6 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
         return this.outboundIPPrefixes == null ? Optional.empty() : Optional.ofNullable(this.outboundIPPrefixes);
     }
 
-    /**
-     * Desired outbound IP resources for the cluster load balancer.
-     */
     @InputImport(name="outboundIPs")
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 

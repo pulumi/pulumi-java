@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTopLevelDomainAgreements {
-/**
- * Collection of top-level domain legal agreements.
-API Version: 2020-10-01.
- *
- * Collection of top-level domain legal agreements.
- */
     public static CompletableFuture<ListTopLevelDomainAgreementsResult> invokeAsync(ListTopLevelDomainAgreementsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:listTopLevelDomainAgreements", TypeShape.of(ListTopLevelDomainAgreementsResult.class), args == null ? ListTopLevelDomainAgreementsArgs.Empty : args, Utilities.withVersion(options));
     }

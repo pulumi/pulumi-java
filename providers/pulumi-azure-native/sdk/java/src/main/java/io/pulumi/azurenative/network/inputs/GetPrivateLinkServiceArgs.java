@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetPrivateLinkServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateLinkServiceArgs Empty = new GetPrivateLinkServiceArgs();
 
-    /**
-     * Expands referenced resources.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetPrivateLinkServiceArgs extends io.pulumi.resources.InvokeA
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class GetPrivateLinkServiceArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the private link service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

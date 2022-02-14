@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the IP address of the network interface.
- */
 public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IpAddressArgs Empty = new IpAddressArgs();
 
-    /**
-     * Specifies the IP address of the network interface.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 

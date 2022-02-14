@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Details of the Azure resource that was assessed
- */
 public final class AzureResourceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureResourceDetailsArgs Empty = new AzureResourceDetailsArgs();
 
-    /**
-     * The platform where the assessed resource resides
-Expected value is 'Azure'.
-     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 

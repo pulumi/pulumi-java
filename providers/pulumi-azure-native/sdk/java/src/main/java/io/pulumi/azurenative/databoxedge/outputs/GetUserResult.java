@@ -15,33 +15,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetUserResult {
-/**
- * The password details.
- */
     private final @Nullable AsymmetricEncryptedSecretResponse encryptedPassword;
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * The object name.
- */
     private final String name;
-/**
- * List of shares that the user has rights on. This field should not be specified during user creation.
- */
     private final List<ShareAccessRightResponse> shareAccessRights;
-/**
- * User in DataBoxEdge Resource
- */
     private final SystemDataResponse systemData;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
-/**
- * Type of the user.
- */
     private final String userType;
 
     @OutputCustomType.Constructor({"encryptedPassword","id","name","shareAccessRights","systemData","type","userType"})
@@ -62,45 +41,24 @@ public final class GetUserResult {
         this.userType = Objects.requireNonNull(userType);
     }
 
-/**
- * The password details.
- */
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptedPassword() {
         return Optional.ofNullable(this.encryptedPassword);
     }
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * List of shares that the user has rights on. This field should not be specified during user creation.
- */
     public List<ShareAccessRightResponse> getShareAccessRights() {
         return this.shareAccessRights;
     }
-/**
- * User in DataBoxEdge Resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Type of the user.
- */
     public String getUserType() {
         return this.userType;
     }

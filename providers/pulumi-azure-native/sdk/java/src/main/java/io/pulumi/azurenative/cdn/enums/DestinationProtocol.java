@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Protocol to use for the redirect. The default value is MatchRequest
- */
     @EnumType
     public enum DestinationProtocol {
-/**
- * 
- */
         MatchRequest("MatchRequest"),
-/**
- * 
- */
         Http("Http"),
-/**
- * 
- */
         Https("Https");
 
         private final String value;

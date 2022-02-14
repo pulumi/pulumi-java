@@ -13,49 +13,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
-/**
- * The display name of the Azure Resource Manager template that produced the environment.
- */
     private final @Nullable String armTemplateDisplayName;
-/**
- * The creator of the environment.
- */
     private final String createdByUser;
-/**
- * The deployment properties of the environment.
- */
     private final @Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties;
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The provisioning status of the resource.
- */
     private final String provisioningState;
-/**
- * The identifier of the resource group containing the environment's resources.
- */
     private final String resourceGroupId;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     private final String uniqueIdentifier;
 
     @OutputCustomType.Constructor({"armTemplateDisplayName","createdByUser","deploymentProperties","id","location","name","provisioningState","resourceGroupId","tags","type","uniqueIdentifier"})
@@ -84,69 +51,36 @@ public final class GetEnvironmentResult {
         this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
     }
 
-/**
- * The display name of the Azure Resource Manager template that produced the environment.
- */
     public Optional<String> getArmTemplateDisplayName() {
         return Optional.ofNullable(this.armTemplateDisplayName);
     }
-/**
- * The creator of the environment.
- */
     public String getCreatedByUser() {
         return this.createdByUser;
     }
-/**
- * The deployment properties of the environment.
- */
     public Optional<EnvironmentDeploymentPropertiesResponse> getDeploymentProperties() {
         return Optional.ofNullable(this.deploymentProperties);
     }
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning status of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The identifier of the resource group containing the environment's resources.
- */
     public String getResourceGroupId() {
         return this.resourceGroupId;
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }

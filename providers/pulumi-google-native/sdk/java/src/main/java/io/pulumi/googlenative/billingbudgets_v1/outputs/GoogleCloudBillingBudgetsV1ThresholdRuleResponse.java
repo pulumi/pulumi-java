@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse {
-/**
- * Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
- */
     private final String spendBasis;
-/**
- * Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
- */
     private final Double thresholdPercent;
 
     @OutputCustomType.Constructor({"spendBasis","thresholdPercent"})
@@ -27,15 +21,9 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse {
         this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
     }
 
-/**
- * Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
- */
     public String getSpendBasis() {
         return this.spendBasis;
     }
-/**
- * Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
- */
     public Double getThresholdPercent() {
         return this.thresholdPercent;
     }

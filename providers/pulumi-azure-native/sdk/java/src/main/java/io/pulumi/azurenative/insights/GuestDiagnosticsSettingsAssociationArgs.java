@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestDiagnosticsSettingsAssociationArgs Empty = new GuestDiagnosticsSettingsAssociationArgs();
 
-    /**
-     * The name of the diagnostic settings association.
-     */
     @InputImport(name="associationName")
     private final @Nullable Input<String> associationName;
 
@@ -28,9 +22,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
         return this.associationName == null ? Input.empty() : this.associationName;
     }
 
-    /**
-     * The guest diagnostic settings name.
-     */
     @InputImport(name="guestDiagnosticSettingsName", required=true)
     private final Input<String> guestDiagnosticSettingsName;
 
@@ -38,9 +29,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
         return this.guestDiagnosticSettingsName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,9 +36,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The fully qualified ID of the resource, including the resource name and resource type.
-     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 
@@ -58,9 +43,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
         return this.resourceUri;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Message representing a single file or path in Cloud Storage.
- */
 public final class GooglePrivacyDlpV2CloudStoragePathResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2CloudStoragePathResponse Empty = new GooglePrivacyDlpV2CloudStoragePathResponse();
 
-    /**
-     * A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
-     */
     @InputImport(name="path", required=true)
     private final String path;
 

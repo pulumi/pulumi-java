@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutineArgs Empty = new RoutineArgs();
 
-    /**
-     * Optional.
-     */
     @InputImport(name="arguments")
     private final @Nullable Input<List<ArgumentArgs>> arguments;
 
@@ -36,9 +30,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -46,9 +37,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId;
     }
 
-    /**
-     * The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.
-     */
     @InputImport(name="definitionBody", required=true)
     private final Input<String> definitionBody;
 
@@ -56,9 +44,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.definitionBody;
     }
 
-    /**
-     * Optional. The description of the routine, if defined.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -66,9 +51,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Optional. The determinism level of the JavaScript UDF, if defined.
-     */
     @InputImport(name="determinismLevel")
     private final @Nullable Input<RoutineDeterminismLevel> determinismLevel;
 
@@ -76,9 +58,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.determinismLevel == null ? Input.empty() : this.determinismLevel;
     }
 
-    /**
-     * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
-     */
     @InputImport(name="importedLibraries")
     private final @Nullable Input<List<String>> importedLibraries;
 
@@ -86,9 +65,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.importedLibraries == null ? Input.empty() : this.importedLibraries;
     }
 
-    /**
-     * Optional. Defaults to "SQL".
-     */
     @InputImport(name="language")
     private final @Nullable Input<RoutineLanguage> language;
 
@@ -96,9 +72,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.language == null ? Input.empty() : this.language;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -106,9 +79,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
-     */
     @InputImport(name="returnTableType")
     private final @Nullable Input<StandardSqlTableTypeArgs> returnTableType;
 
@@ -116,9 +86,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.returnTableType == null ? Input.empty() : this.returnTableType;
     }
 
-    /**
-     * Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
-     */
     @InputImport(name="returnType")
     private final @Nullable Input<StandardSqlDataTypeArgs> returnType;
 
@@ -126,9 +93,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.returnType == null ? Input.empty() : this.returnType;
     }
 
-    /**
-     * Reference describing the ID of this routine.
-     */
     @InputImport(name="routineReference", required=true)
     private final Input<RoutineReferenceArgs> routineReference;
 
@@ -136,9 +100,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.routineReference;
     }
 
-    /**
-     * The type of routine.
-     */
     @InputImport(name="routineType", required=true)
     private final Input<RoutineRoutineType> routineType;
 
@@ -146,9 +107,6 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
         return this.routineType;
     }
 
-    /**
-     * Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
-     */
     @InputImport(name="strictMode")
     private final @Nullable Input<Boolean> strictMode;
 

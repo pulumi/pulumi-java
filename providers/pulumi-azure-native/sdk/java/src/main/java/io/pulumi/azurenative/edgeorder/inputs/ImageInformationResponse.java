@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Image for the product
- */
 public final class ImageInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageInformationResponse Empty = new ImageInformationResponse();
 
-    /**
-     * Type of the image
-     */
     @InputImport(name="imageType", required=true)
     private final String imageType;
 
@@ -25,9 +19,6 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
         return this.imageType;
     }
 
-    /**
-     * Url of the image
-     */
     @InputImport(name="imageUrl", required=true)
     private final String imageUrl;
 

@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration of the modify properties automation rule action
- */
 public final class AutomationRuleModifyPropertiesActionResponseActionConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRuleModifyPropertiesActionResponseActionConfiguration Empty = new AutomationRuleModifyPropertiesActionResponseActionConfiguration();
 
-    /**
-     * The reason the incident was closed
-     */
     @InputImport(name="classification")
     private final @Nullable String classification;
 
@@ -30,9 +24,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         return this.classification == null ? Optional.empty() : Optional.ofNullable(this.classification);
     }
 
-    /**
-     * Describes the reason the incident was closed
-     */
     @InputImport(name="classificationComment")
     private final @Nullable String classificationComment;
 
@@ -40,9 +31,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         return this.classificationComment == null ? Optional.empty() : Optional.ofNullable(this.classificationComment);
     }
 
-    /**
-     * The classification reason to close the incident with
-     */
     @InputImport(name="classificationReason")
     private final @Nullable String classificationReason;
 
@@ -50,9 +38,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         return this.classificationReason == null ? Optional.empty() : Optional.ofNullable(this.classificationReason);
     }
 
-    /**
-     * List of labels to add to the incident
-     */
     @InputImport(name="labels")
     private final @Nullable List<IncidentLabelResponse> labels;
 
@@ -60,9 +45,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         return this.labels == null ? List.of() : this.labels;
     }
 
-    /**
-     * Describes a user that the incident is assigned to
-     */
     @InputImport(name="owner")
     private final @Nullable IncidentOwnerInfoResponse owner;
 
@@ -70,9 +52,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
     }
 
-    /**
-     * The severity of the incident
-     */
     @InputImport(name="severity")
     private final @Nullable String severity;
 
@@ -80,9 +59,6 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
-    /**
-     * The status of the incident
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceGuardOperationDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceGuardOperationDetailResponse Empty = new ResourceGuardOperationDetailResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="defaultResourceRequest")
     private final @Nullable String defaultResourceRequest;
 
@@ -27,9 +21,6 @@ public final class ResourceGuardOperationDetailResponse extends io.pulumi.resour
         return this.defaultResourceRequest == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceRequest);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="vaultCriticalOperation")
     private final @Nullable String vaultCriticalOperation;
 

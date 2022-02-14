@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkFunction {
-/**
- * Network function resource response.
-API Version: 2020-01-01-preview.
- *
- * Network function resource response.
- */
     public static CompletableFuture<GetNetworkFunctionResult> invokeAsync(GetNetworkFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getNetworkFunction", TypeShape.of(GetNetworkFunctionResult.class), args == null ? GetNetworkFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

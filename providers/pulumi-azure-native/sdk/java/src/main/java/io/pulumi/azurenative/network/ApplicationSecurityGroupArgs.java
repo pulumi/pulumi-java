@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationSecurityGroupArgs Empty = new ApplicationSecurityGroupArgs();
 
-    /**
-     * The name of the application security group.
-     */
     @InputImport(name="applicationSecurityGroupName")
     private final @Nullable Input<String> applicationSecurityGroupName;
 
@@ -28,9 +22,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
         return this.applicationSecurityGroupName == null ? Input.empty() : this.applicationSecurityGroupName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -38,9 +29,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,9 +36,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class ApplicationSecurityGroupArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines an edge within the web service's graph.
- */
 public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GraphEdgeResponse Empty = new GraphEdgeResponse();
 
-    /**
-     * The source graph node's identifier.
-     */
     @InputImport(name="sourceNodeId")
     private final @Nullable String sourceNodeId;
 
@@ -27,9 +21,6 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceNodeId == null ? Optional.empty() : Optional.ofNullable(this.sourceNodeId);
     }
 
-    /**
-     * The identifier of the source node's port that the edge connects from.
-     */
     @InputImport(name="sourcePortId")
     private final @Nullable String sourcePortId;
 
@@ -37,9 +28,6 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourcePortId == null ? Optional.empty() : Optional.ofNullable(this.sourcePortId);
     }
 
-    /**
-     * The destination graph node's identifier.
-     */
     @InputImport(name="targetNodeId")
     private final @Nullable String targetNodeId;
 
@@ -47,9 +35,6 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetNodeId == null ? Optional.empty() : Optional.ofNullable(this.targetNodeId);
     }
 
-    /**
-     * The identifier of the destination node's port that the edge connects into.
-     */
     @InputImport(name="targetPortId")
     private final @Nullable String targetPortId;
 

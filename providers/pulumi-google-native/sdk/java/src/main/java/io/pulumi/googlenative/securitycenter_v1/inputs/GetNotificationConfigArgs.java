@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetNotificationConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNotificationConfigArgs Empty = new GetNotificationConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="notificationConfigId", required=true)
     private final String notificationConfigId;
 
@@ -25,9 +19,6 @@ public final class GetNotificationConfigArgs extends io.pulumi.resources.InvokeA
         return this.notificationConfigId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

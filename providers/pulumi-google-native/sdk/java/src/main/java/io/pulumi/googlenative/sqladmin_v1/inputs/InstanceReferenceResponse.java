@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Reference to another Cloud SQL instance.
- */
 public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceReferenceResponse Empty = new InstanceReferenceResponse();
 
-    /**
-     * The name of the Cloud SQL instance being referenced. This does not include the project ID.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
-    /**
-     * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -35,9 +26,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
         return this.project;
     }
 
-    /**
-     * The region of the Cloud SQL instance being referenced.
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

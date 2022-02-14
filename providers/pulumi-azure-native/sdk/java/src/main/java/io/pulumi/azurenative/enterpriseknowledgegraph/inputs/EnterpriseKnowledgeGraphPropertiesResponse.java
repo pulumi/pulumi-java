@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the EnterpriseKnowledgeGraph.
- */
 public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnterpriseKnowledgeGraphPropertiesResponse Empty = new EnterpriseKnowledgeGraphPropertiesResponse();
 
-    /**
-     * The description of the EnterpriseKnowledgeGraph
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,9 +22,6 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Specifies the metadata  of the resource.
-     */
     @InputImport(name="metadata")
     private final @Nullable Object metadata;
 
@@ -38,9 +29,6 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
-    /**
-     * The state of EnterpriseKnowledgeGraph provisioning
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 

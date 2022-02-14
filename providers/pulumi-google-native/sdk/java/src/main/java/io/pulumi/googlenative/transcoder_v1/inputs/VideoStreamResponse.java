@@ -10,16 +10,10 @@ import io.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsResponse;
 import java.util.Objects;
 
 
-/**
- * Video stream resource.
- */
 public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VideoStreamResponse Empty = new VideoStreamResponse();
 
-    /**
-     * H264 codec settings.
-     */
     @InputImport(name="h264", required=true)
     private final H264CodecSettingsResponse h264;
 
@@ -27,9 +21,6 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.h264;
     }
 
-    /**
-     * H265 codec settings.
-     */
     @InputImport(name="h265", required=true)
     private final H265CodecSettingsResponse h265;
 
@@ -37,9 +28,6 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
         return this.h265;
     }
 
-    /**
-     * VP9 codec settings.
-     */
     @InputImport(name="vp9", required=true)
     private final Vp9CodecSettingsResponse vp9;
 

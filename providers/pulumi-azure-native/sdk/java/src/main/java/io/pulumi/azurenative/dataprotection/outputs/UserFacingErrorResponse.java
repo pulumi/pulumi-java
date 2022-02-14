@@ -15,41 +15,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserFacingErrorResponse {
-/**
- * Unique code for this error
- */
     private final @Nullable String code;
-/**
- * Additional related Errors
- */
     private final @Nullable List<UserFacingErrorResponse> details;
-/**
- * Inner Error
- */
     private final @Nullable InnerErrorResponse innerError;
-/**
- * Whether the operation will be retryable or not
- */
     private final @Nullable Boolean isRetryable;
-/**
- * Whether the operation is due to a user error or service error
- */
     private final @Nullable Boolean isUserError;
-/**
- * 
- */
     private final @Nullable String message;
-/**
- * Any key value pairs that can be injected inside error object
- */
     private final @Nullable Map<String,String> properties;
-/**
- * RecommendedAction � localized.
- */
     private final @Nullable List<String> recommendedAction;
-/**
- * Target of the error.
- */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"code","details","innerError","isRetryable","isUserError","message","properties","recommendedAction","target"})
@@ -74,57 +47,30 @@ public final class UserFacingErrorResponse {
         this.target = target;
     }
 
-/**
- * Unique code for this error
- */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
-/**
- * Additional related Errors
- */
     public List<UserFacingErrorResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
-/**
- * Inner Error
- */
     public Optional<InnerErrorResponse> getInnerError() {
         return Optional.ofNullable(this.innerError);
     }
-/**
- * Whether the operation will be retryable or not
- */
     public Optional<Boolean> getIsRetryable() {
         return Optional.ofNullable(this.isRetryable);
     }
-/**
- * Whether the operation is due to a user error or service error
- */
     public Optional<Boolean> getIsUserError() {
         return Optional.ofNullable(this.isUserError);
     }
-/**
- * 
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
-/**
- * Any key value pairs that can be injected inside error object
- */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * RecommendedAction � localized.
- */
     public List<String> getRecommendedAction() {
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
     }
-/**
- * Target of the error.
- */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

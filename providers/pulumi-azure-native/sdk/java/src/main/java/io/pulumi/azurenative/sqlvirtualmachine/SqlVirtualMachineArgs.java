@@ -22,16 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlVirtualMachineArgs Empty = new SqlVirtualMachineArgs();
 
-    /**
-     * Auto backup settings for SQL Server.
-     */
     @InputImport(name="autoBackupSettings")
     private final @Nullable Input<AutoBackupSettingsArgs> autoBackupSettings;
 
@@ -39,9 +33,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.autoBackupSettings == null ? Input.empty() : this.autoBackupSettings;
     }
 
-    /**
-     * Auto patching settings for applying critical security updates to SQL virtual machine.
-     */
     @InputImport(name="autoPatchingSettings")
     private final @Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings;
 
@@ -49,9 +40,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.autoPatchingSettings == null ? Input.empty() : this.autoPatchingSettings;
     }
 
-    /**
-     * Azure Active Directory identity of the server.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -59,9 +47,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Key vault credential settings.
-     */
     @InputImport(name="keyVaultCredentialSettings")
     private final @Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
 
@@ -69,9 +54,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.keyVaultCredentialSettings == null ? Input.empty() : this.keyVaultCredentialSettings;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -79,9 +61,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -89,9 +68,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
-    /**
-     * SQL Server configuration management settings.
-     */
     @InputImport(name="serverConfigurationsManagementSettings")
     private final @Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
 
@@ -99,9 +75,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.serverConfigurationsManagementSettings == null ? Input.empty() : this.serverConfigurationsManagementSettings;
     }
 
-    /**
-     * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
-     */
     @InputImport(name="sqlImageOffer")
     private final @Nullable Input<String> sqlImageOffer;
 
@@ -109,9 +82,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.sqlImageOffer == null ? Input.empty() : this.sqlImageOffer;
     }
 
-    /**
-     * SQL Server edition type.
-     */
     @InputImport(name="sqlImageSku")
     private final @Nullable Input<Either<String,SqlImageSku>> sqlImageSku;
 
@@ -119,9 +89,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.sqlImageSku == null ? Input.empty() : this.sqlImageSku;
     }
 
-    /**
-     * SQL Server Management type.
-     */
     @InputImport(name="sqlManagement")
     private final @Nullable Input<Either<String,SqlManagementMode>> sqlManagement;
 
@@ -129,9 +96,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.sqlManagement == null ? Input.empty() : this.sqlManagement;
     }
 
-    /**
-     * SQL Server license type.
-     */
     @InputImport(name="sqlServerLicenseType")
     private final @Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
 
@@ -139,9 +103,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.sqlServerLicenseType == null ? Input.empty() : this.sqlServerLicenseType;
     }
 
-    /**
-     * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
-     */
     @InputImport(name="sqlVirtualMachineGroupResourceId")
     private final @Nullable Input<String> sqlVirtualMachineGroupResourceId;
 
@@ -149,9 +110,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.sqlVirtualMachineGroupResourceId == null ? Input.empty() : this.sqlVirtualMachineGroupResourceId;
     }
 
-    /**
-     * Name of the SQL virtual machine.
-     */
     @InputImport(name="sqlVirtualMachineName")
     private final @Nullable Input<String> sqlVirtualMachineName;
 
@@ -159,9 +117,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.sqlVirtualMachineName == null ? Input.empty() : this.sqlVirtualMachineName;
     }
 
-    /**
-     * Storage Configuration Settings.
-     */
     @InputImport(name="storageConfigurationSettings")
     private final @Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings;
 
@@ -169,9 +124,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.storageConfigurationSettings == null ? Input.empty() : this.storageConfigurationSettings;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -179,9 +131,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * ARM Resource id of underlying virtual machine created from SQL marketplace image.
-     */
     @InputImport(name="virtualMachineResourceId")
     private final @Nullable Input<String> virtualMachineResourceId;
 
@@ -189,9 +138,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
         return this.virtualMachineResourceId == null ? Input.empty() : this.virtualMachineResourceId;
     }
 
-    /**
-     * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
-     */
     @InputImport(name="wsfcDomainCredentials")
     private final @Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 

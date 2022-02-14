@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * StringNotEndsWith Advanced Filter.
- */
 public final class StringNotEndsWithAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StringNotEndsWithAdvancedFilterResponse Empty = new StringNotEndsWithAdvancedFilterResponse();
 
-    /**
-     * The field/property in the event based on which you want to filter.
-     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -28,10 +22,6 @@ public final class StringNotEndsWithAdvancedFilterResponse extends io.pulumi.res
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
-    /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'StringNotEndsWith'.
-     */
     @InputImport(name="operatorType", required=true)
     private final String operatorType;
 
@@ -39,9 +29,6 @@ Expected value is 'StringNotEndsWith'.
         return this.operatorType;
     }
 
-    /**
-     * The set of filter values.
-     */
     @InputImport(name="values")
     private final @Nullable List<String> values;
 

@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The tier of this particular SKU.
- */
     @EnumType
     public enum Tier {
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

@@ -13,69 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDiskResult {
-/**
- * The creation date of the disk.
- */
     private final String createdDate;
-/**
- * When backed by a blob, the name of the VHD blob without extension.
- */
     private final @Nullable String diskBlobName;
-/**
- * The size of the disk in Gibibytes.
- */
     private final @Nullable Integer diskSizeGiB;
-/**
- * The storage type for the disk (i.e. Standard, Premium).
- */
     private final @Nullable String diskType;
-/**
- * When backed by a blob, the URI of underlying blob.
- */
     private final @Nullable String diskUri;
-/**
- * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
- */
     private final @Nullable String hostCaching;
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * The resource ID of the VM to which this disk is leased.
- */
     private final @Nullable String leasedByLabVmId;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * When backed by managed disk, this is the ID of the compute disk resource.
- */
     private final @Nullable String managedDiskId;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The provisioning status of the resource.
- */
     private final String provisioningState;
-/**
- * When backed by a blob, the storage account where the blob is.
- */
     private final @Nullable String storageAccountId;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     private final String uniqueIdentifier;
 
     @OutputCustomType.Constructor({"createdDate","diskBlobName","diskSizeGiB","diskType","diskUri","hostCaching","id","leasedByLabVmId","location","managedDiskId","name","provisioningState","storageAccountId","tags","type","uniqueIdentifier"})
@@ -114,99 +66,51 @@ public final class GetDiskResult {
         this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
     }
 
-/**
- * The creation date of the disk.
- */
     public String getCreatedDate() {
         return this.createdDate;
     }
-/**
- * When backed by a blob, the name of the VHD blob without extension.
- */
     public Optional<String> getDiskBlobName() {
         return Optional.ofNullable(this.diskBlobName);
     }
-/**
- * The size of the disk in Gibibytes.
- */
     public Optional<Integer> getDiskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
-/**
- * The storage type for the disk (i.e. Standard, Premium).
- */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
-/**
- * When backed by a blob, the URI of underlying blob.
- */
     public Optional<String> getDiskUri() {
         return Optional.ofNullable(this.diskUri);
     }
-/**
- * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
- */
     public Optional<String> getHostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The resource ID of the VM to which this disk is leased.
- */
     public Optional<String> getLeasedByLabVmId() {
         return Optional.ofNullable(this.leasedByLabVmId);
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * When backed by managed disk, this is the ID of the compute disk resource.
- */
     public Optional<String> getManagedDiskId() {
         return Optional.ofNullable(this.managedDiskId);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning status of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * When backed by a blob, the storage account where the blob is.
- */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }

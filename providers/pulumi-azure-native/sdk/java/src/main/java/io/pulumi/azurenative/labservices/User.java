@@ -16,171 +16,81 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The User registered to a lab
-API Version: 2018-10-15.
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:labservices:User myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/labs/{labName}/users/{userName} 
-```
-
- */
 @ResourceType(type="azure-native:labservices:User")
 public class User extends io.pulumi.resources.CustomResource {
-    /**
-     * The user email address, as it was specified during registration.
-     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output<String> email;
 
-    /**
-     * @return The user email address, as it was specified during registration.
-     */
     public Output<String> getEmail() {
         return this.email;
     }
-    /**
-     * The user family name, as it was specified during registration.
-     */
     @OutputExport(name="familyName", type=String.class, parameters={})
     private Output<String> familyName;
 
-    /**
-     * @return The user family name, as it was specified during registration.
-     */
     public Output<String> getFamilyName() {
         return this.familyName;
     }
-    /**
-     * The user given name, as it was specified during registration.
-     */
     @OutputExport(name="givenName", type=String.class, parameters={})
     private Output<String> givenName;
 
-    /**
-     * @return The user given name, as it was specified during registration.
-     */
     public Output<String> getGivenName() {
         return this.givenName;
     }
-    /**
-     * The details of the latest operation. ex: status, error
-     */
     @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
-    /**
-     * @return The details of the latest operation. ex: status, error
-     */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
-    /**
-     * The location of the resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning status of the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
-    /**
-     * @return The provisioning status of the resource.
-     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The tags of the resource.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The tags of the resource.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The user tenant ID, as it was specified during registration.
-     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
-    /**
-     * @return The user tenant ID, as it was specified during registration.
-     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
-    /**
-     * How long the user has used his VMs in this lab
-     */
     @OutputExport(name="totalUsage", type=String.class, parameters={})
     private Output<String> totalUsage;
 
-    /**
-     * @return How long the user has used his VMs in this lab
-     */
     public Output<String> getTotalUsage() {
         return this.totalUsage;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
-    /**
-     * @return The unique immutable identifier of a resource (Guid).
-     */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:labservices:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -199,14 +109,6 @@ public class User extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static User get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new User(name, id, options);
     }

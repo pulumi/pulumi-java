@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Sampler of distributed tracing. OFF is the default value.
- */
     @EnumType
     public enum GoogleCloudApigeeV1TraceSamplingConfigSampler {
-/**
- * Sampler unspecified.
- */
         SamplerUnspecified("SAMPLER_UNSPECIFIED"),
-/**
- * OFF means distributed trace is disabled, or the sampling probability is 0.
- */
         Off("OFF"),
-/**
- * PROBABILITY means traces are captured on a probability that defined by sampling_rate. The sampling rate is limited to 0 to 0.5 when this is set.
- */
         Probability("PROBABILITY");
 
         private final String value;

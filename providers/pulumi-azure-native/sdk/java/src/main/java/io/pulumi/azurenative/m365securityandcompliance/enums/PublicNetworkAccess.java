@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
- */
     @EnumType
     public enum PublicNetworkAccess {
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

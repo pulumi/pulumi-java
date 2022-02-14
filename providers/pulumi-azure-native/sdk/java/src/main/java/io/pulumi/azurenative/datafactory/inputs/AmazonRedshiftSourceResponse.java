@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity source for Amazon Redshift Source.
- */
 public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AmazonRedshiftSourceResponse Empty = new AmazonRedshiftSourceResponse();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -29,9 +23,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -39,9 +30,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -49,9 +37,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
-    /**
-     * Database query. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="query")
     private final @Nullable Object query;
 
@@ -59,9 +44,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
-    /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -69,9 +51,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
-    /**
-     * The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
-     */
     @InputImport(name="redshiftUnloadSettings")
     private final @Nullable RedshiftUnloadSettingsResponse redshiftUnloadSettings;
 
@@ -79,9 +58,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.redshiftUnloadSettings == null ? Optional.empty() : Optional.ofNullable(this.redshiftUnloadSettings);
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -89,9 +65,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -99,10 +72,6 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
-    /**
-     * Copy source type.
-Expected value is 'AmazonRedshiftSource'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabelSelectorRequirement {
-/**
- * key is the label key that the selector applies to.
- */
     private final String key;
-/**
- * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
- */
     private final String operator;
-/**
- * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
- */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"key","operator","values"})
@@ -34,21 +25,12 @@ public final class LabelSelectorRequirement {
         this.values = values;
     }
 
-/**
- * key is the label key that the selector applies to.
- */
     public String getKey() {
         return this.key;
     }
-/**
- * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
- */
     public String getOperator() {
         return this.operator;
     }
-/**
- * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
- */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

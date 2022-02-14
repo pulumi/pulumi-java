@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Flag if global mesh is supported.
- */
     @EnumType
     public enum IsGlobal {
-/**
- * 
- */
         False("False"),
-/**
- * 
- */
         True("True");
 
         private final String value;

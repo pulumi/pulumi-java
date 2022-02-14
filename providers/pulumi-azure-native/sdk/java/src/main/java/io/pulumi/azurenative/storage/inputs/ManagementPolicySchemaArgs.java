@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
- */
 public final class ManagementPolicySchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementPolicySchemaArgs Empty = new ManagementPolicySchemaArgs();
 
-    /**
-     * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
-     */
     @InputImport(name="rules", required=true)
     private final Input<List<ManagementPolicyRuleArgs>> rules;
 

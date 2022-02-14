@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Hyper-V Replica Azure specific input for creating a protection profile.
- */
 public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HyperVReplicaAzurePolicyInputArgs Empty = new HyperVReplicaAzurePolicyInputArgs();
 
-    /**
-     * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
-     */
     @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
     private final @Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours;
 
@@ -29,10 +23,6 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Input.empty() : this.applicationConsistentSnapshotFrequencyInHours;
     }
 
-    /**
-     * The class type.
-Expected value is 'HyperVReplicaAzure'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -40,9 +30,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
-     */
     @InputImport(name="onlineReplicationStartTime")
     private final @Nullable Input<String> onlineReplicationStartTime;
 
@@ -50,9 +37,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.onlineReplicationStartTime == null ? Input.empty() : this.onlineReplicationStartTime;
     }
 
-    /**
-     * The duration (in hours) to which point the recovery history needs to be maintained.
-     */
     @InputImport(name="recoveryPointHistoryDuration")
     private final @Nullable Input<Integer> recoveryPointHistoryDuration;
 
@@ -60,9 +44,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.recoveryPointHistoryDuration == null ? Input.empty() : this.recoveryPointHistoryDuration;
     }
 
-    /**
-     * The replication interval.
-     */
     @InputImport(name="replicationInterval")
     private final @Nullable Input<Integer> replicationInterval;
 
@@ -70,9 +51,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.replicationInterval == null ? Input.empty() : this.replicationInterval;
     }
 
-    /**
-     * The list of storage accounts to which the VMs in the primary cloud can replicate to.
-     */
     @InputImport(name="storageAccounts")
     private final @Nullable Input<List<String>> storageAccounts;
 

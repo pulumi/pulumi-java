@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExecutionConfigResponse {
-/**
- * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
- */
     private final String artifactStorage;
-/**
- * Optional. Use default Cloud Build pool.
- */
     private final DefaultPoolResponse defaultPool;
-/**
- * Optional. Use private Cloud Build pool.
- */
     private final PrivatePoolResponse privatePool;
-/**
- * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
- */
     private final String serviceAccount;
-/**
- * Usages when this configuration should be applied.
- */
     private final List<String> usages;
-/**
- * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
- */
     private final String workerPool;
 
     @OutputCustomType.Constructor({"artifactStorage","defaultPool","privatePool","serviceAccount","usages","workerPool"})
@@ -53,39 +35,21 @@ public final class ExecutionConfigResponse {
         this.workerPool = Objects.requireNonNull(workerPool);
     }
 
-/**
- * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
- */
     public String getArtifactStorage() {
         return this.artifactStorage;
     }
-/**
- * Optional. Use default Cloud Build pool.
- */
     public DefaultPoolResponse getDefaultPool() {
         return this.defaultPool;
     }
-/**
- * Optional. Use private Cloud Build pool.
- */
     public PrivatePoolResponse getPrivatePool() {
         return this.privatePool;
     }
-/**
- * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
- */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
-/**
- * Usages when this configuration should be applied.
- */
     public List<String> getUsages() {
         return this.usages;
     }
-/**
- * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
- */
     public String getWorkerPool() {
         return this.workerPool;
     }

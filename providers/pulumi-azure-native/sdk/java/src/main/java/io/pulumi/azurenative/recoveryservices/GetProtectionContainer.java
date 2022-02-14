@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectionContainer {
-/**
- * Base class for container with backup items. Containers with specific workloads are derived from this class.
-API Version: 2021-02-01.
- *
- * Base class for container with backup items. Containers with specific workloads are derived from this class.
- */
     public static CompletableFuture<GetProtectionContainerResult> invokeAsync(GetProtectionContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionContainer", TypeShape.of(GetProtectionContainerResult.class), args == null ? GetProtectionContainerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
-    /**
-     * The Video Analyzer account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
-    /**
-     * Private endpoint connection name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.name;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

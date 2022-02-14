@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The auto scaler properties.
- */
 public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AKSServiceCreateRequestAutoScalerArgs Empty = new AKSServiceCreateRequestAutoScalerArgs();
 
-    /**
-     * Option to enable/disable auto scaling.
-     */
     @InputImport(name="autoscaleEnabled")
     private final @Nullable Input<Boolean> autoscaleEnabled;
 
@@ -28,9 +22,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
         return this.autoscaleEnabled == null ? Input.empty() : this.autoscaleEnabled;
     }
 
-    /**
-     * The maximum number of replicas in the cluster.
-     */
     @InputImport(name="maxReplicas")
     private final @Nullable Input<Integer> maxReplicas;
 
@@ -38,9 +29,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
         return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
     }
 
-    /**
-     * The minimum number of replicas to scale down to.
-     */
     @InputImport(name="minReplicas")
     private final @Nullable Input<Integer> minReplicas;
 
@@ -48,9 +36,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
     }
 
-    /**
-     * The amount of seconds to wait between auto scale updates.
-     */
     @InputImport(name="refreshPeriodInSeconds")
     private final @Nullable Input<Integer> refreshPeriodInSeconds;
 
@@ -58,9 +43,6 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
         return this.refreshPeriodInSeconds == null ? Input.empty() : this.refreshPeriodInSeconds;
     }
 
-    /**
-     * The target utilization percentage to use for determining whether to scale the cluster.
-     */
     @InputImport(name="targetUtilization")
     private final @Nullable Input<Integer> targetUtilization;
 

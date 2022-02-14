@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The password that will be used for authenticating the token of a container registry.
- */
 public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenPasswordArgs Empty = new TokenPasswordArgs();
 
-    /**
-     * The creation datetime of the password.
-     */
     @InputImport(name="creationTime")
     private final @Nullable Input<String> creationTime;
 
@@ -29,9 +23,6 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
-    /**
-     * The expiry datetime of the password.
-     */
     @InputImport(name="expiry")
     private final @Nullable Input<String> expiry;
 
@@ -39,9 +30,6 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
         return this.expiry == null ? Input.empty() : this.expiry;
     }
 
-    /**
-     * The password name "password1" or "password2"
-     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,TokenPasswordName>> name;
 

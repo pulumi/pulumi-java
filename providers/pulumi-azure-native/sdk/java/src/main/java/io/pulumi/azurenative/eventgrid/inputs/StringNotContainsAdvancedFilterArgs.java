@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * StringNotContains Advanced Filter.
- */
 public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StringNotContainsAdvancedFilterArgs Empty = new StringNotContainsAdvancedFilterArgs();
 
-    /**
-     * The field/property in the event based on which you want to filter.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -28,10 +22,6 @@ public final class StringNotContainsAdvancedFilterArgs extends io.pulumi.resourc
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'StringNotContains'.
-     */
     @InputImport(name="operatorType", required=true)
     private final Input<String> operatorType;
 
@@ -39,9 +29,6 @@ Expected value is 'StringNotContains'.
         return this.operatorType;
     }
 
-    /**
-     * The set of filter values.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

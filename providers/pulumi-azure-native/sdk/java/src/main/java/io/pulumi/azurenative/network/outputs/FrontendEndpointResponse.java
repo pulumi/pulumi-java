@@ -14,49 +14,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FrontendEndpointResponse {
-/**
- * The configuration specifying how to enable HTTPS
- */
     private final CustomHttpsConfigurationResponse customHttpsConfiguration;
-/**
- * Provisioning status of Custom Https of the frontendEndpoint.
- */
     private final String customHttpsProvisioningState;
-/**
- * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
- */
     private final String customHttpsProvisioningSubstate;
-/**
- * The host name of the frontendEndpoint. Must be a domain name.
- */
     private final @Nullable String hostName;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Resource name.
- */
     private final @Nullable String name;
-/**
- * Resource status.
- */
     private final String resourceState;
-/**
- * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
- */
     private final @Nullable String sessionAffinityEnabledState;
-/**
- * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
- */
     private final @Nullable Integer sessionAffinityTtlSeconds;
-/**
- * Resource type.
- */
     private final String type;
-/**
- * Defines the Web Application Firewall policy for each host (if applicable)
- */
     private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     @OutputCustomType.Constructor({"customHttpsConfiguration","customHttpsProvisioningState","customHttpsProvisioningSubstate","hostName","id","name","resourceState","sessionAffinityEnabledState","sessionAffinityTtlSeconds","type","webApplicationFirewallPolicyLink"})
@@ -85,69 +52,36 @@ public final class FrontendEndpointResponse {
         this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
     }
 
-/**
- * The configuration specifying how to enable HTTPS
- */
     public CustomHttpsConfigurationResponse getCustomHttpsConfiguration() {
         return this.customHttpsConfiguration;
     }
-/**
- * Provisioning status of Custom Https of the frontendEndpoint.
- */
     public String getCustomHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
-/**
- * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
- */
     public String getCustomHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
-/**
- * The host name of the frontendEndpoint. Must be a domain name.
- */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Resource name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Resource status.
- */
     public String getResourceState() {
         return this.resourceState;
     }
-/**
- * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
- */
     public Optional<String> getSessionAffinityEnabledState() {
         return Optional.ofNullable(this.sessionAffinityEnabledState);
     }
-/**
- * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
- */
     public Optional<Integer> getSessionAffinityTtlSeconds() {
         return Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Defines the Web Application Firewall policy for each host (if applicable)
- */
     public Optional<FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }

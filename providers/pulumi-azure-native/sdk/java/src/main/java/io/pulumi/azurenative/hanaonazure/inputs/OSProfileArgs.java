@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the operating system settings for the HANA instance.
- */
 public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSProfileArgs Empty = new OSProfileArgs();
 
-    /**
-     * Specifies the host OS name of the HANA instance.
-     */
     @InputImport(name="computerName")
     private final @Nullable Input<String> computerName;
 
@@ -27,9 +21,6 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.computerName == null ? Input.empty() : this.computerName;
     }
 
-    /**
-     * Specifies the SSH public key used to access the operating system.
-     */
     @InputImport(name="sshPublicKey")
     private final @Nullable Input<String> sshPublicKey;
 

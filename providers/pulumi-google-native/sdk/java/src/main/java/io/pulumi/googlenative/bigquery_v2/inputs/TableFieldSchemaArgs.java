@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableFieldSchemaArgs Empty = new TableFieldSchemaArgs();
 
-    /**
-     * [Optional] The categories attached to this field, used for field-level access control.
-     */
     @InputImport(name="categories")
     private final @Nullable Input<TableFieldSchemaCategoriesArgs> categories;
 
@@ -30,9 +24,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.categories == null ? Input.empty() : this.categories;
     }
 
-    /**
-     * Optional. Collation specification of the field. It only can be set on string type field.
-     */
     @InputImport(name="collationSpec")
     private final @Nullable Input<String> collationSpec;
 
@@ -40,9 +31,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.collationSpec == null ? Input.empty() : this.collationSpec;
     }
 
-    /**
-     * [Optional] The field description. The maximum length is 1,024 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,9 +38,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * [Optional] Describes the nested schema fields if the type property is set to RECORD.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
 
@@ -60,9 +45,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.fields == null ? Input.empty() : this.fields;
     }
 
-    /**
-     * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = "STRING", then max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES", then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ "STRING" and ≠ "BYTES".
-     */
     @InputImport(name="maxLength")
     private final @Nullable Input<String> maxLength;
 
@@ -70,9 +52,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.maxLength == null ? Input.empty() : this.maxLength;
     }
 
-    /**
-     * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -80,9 +59,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.mode == null ? Input.empty() : this.mode;
     }
 
-    /**
-     * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -90,9 +66,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="policyTags")
     private final @Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags;
 
@@ -100,9 +73,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.policyTags == null ? Input.empty() : this.policyTags;
     }
 
-    /**
-     * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.
-     */
     @InputImport(name="precision")
     private final @Nullable Input<String> precision;
 
@@ -110,9 +80,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.precision == null ? Input.empty() : this.precision;
     }
 
-    /**
-     * [Optional] See documentation for precision.
-     */
     @InputImport(name="scale")
     private final @Nullable Input<String> scale;
 
@@ -120,9 +87,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
         return this.scale == null ? Input.empty() : this.scale;
     }
 
-    /**
-     * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

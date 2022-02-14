@@ -14,33 +14,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMongoDBResourceMongoRoleDefinitionResult {
-/**
- * The database name for which access is being granted for this Role Definition.
- */
     private final @Nullable String databaseName;
-/**
- * The unique resource identifier of the database account.
- */
     private final String id;
-/**
- * The name of the database account.
- */
     private final String name;
-/**
- * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
- */
     private final @Nullable List<PrivilegeResponse> privileges;
-/**
- * A user-friendly name for the Role Definition. Must be unique for the database account.
- */
     private final @Nullable String roleName;
-/**
- * The set of roles inherited by this Role Definition.
- */
     private final @Nullable List<RoleResponse> roles;
-/**
- * The type of Azure resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"databaseName","id","name","privileges","roleName","roles","type"})
@@ -61,45 +40,24 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The database name for which access is being granted for this Role Definition.
- */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
-/**
- * The unique resource identifier of the database account.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the database account.
- */
     public String getName() {
         return this.name;
     }
-/**
- * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
- */
     public List<PrivilegeResponse> getPrivileges() {
         return this.privileges == null ? List.of() : this.privileges;
     }
-/**
- * A user-friendly name for the Role Definition. Must be unique for the database account.
- */
     public Optional<String> getRoleName() {
         return Optional.ofNullable(this.roleName);
     }
-/**
- * The set of roles inherited by this Role Definition.
- */
     public List<RoleResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
-/**
- * The type of Azure resource.
- */
     public String getType() {
         return this.type;
     }

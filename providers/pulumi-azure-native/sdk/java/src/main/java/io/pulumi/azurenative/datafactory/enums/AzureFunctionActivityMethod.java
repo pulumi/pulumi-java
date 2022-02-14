@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Rest API method for target endpoint.
- */
     @EnumType
     public enum AzureFunctionActivityMethod {
-/**
- * 
- */
         GET("GET"),
-/**
- * 
- */
         POST("POST"),
-/**
- * 
- */
         PUT("PUT"),
-/**
- * 
- */
         DELETE("DELETE"),
-/**
- * 
- */
         OPTIONS("OPTIONS"),
-/**
- * 
- */
         HEAD("HEAD"),
-/**
- * 
- */
         TRACE("TRACE");
 
         private final String value;

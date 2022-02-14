@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PodTemplate {
-/**
- * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
- */
     private final @Nullable String apiVersion;
-/**
- * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     private final @Nullable String kind;
-/**
- * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
- */
     private final @Nullable ObjectMeta metadata;
-/**
- * Template defines the pods that will be created from this pod template. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
- */
     private final @Nullable PodTemplateSpec template;
 
     @OutputCustomType.Constructor({"apiVersion","kind","metadata","template"})
@@ -42,27 +30,15 @@ public final class PodTemplate {
         this.template = template;
     }
 
-/**
- * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
- */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
-/**
- * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
- */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
-/**
- * Template defines the pods that will be created from this pod template. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
- */
     public Optional<PodTemplateSpec> getTemplate() {
         return Optional.ofNullable(this.template);
     }

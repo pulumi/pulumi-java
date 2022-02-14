@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A VPN gateway interface.
- */
 public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnGatewayVpnGatewayInterfaceArgs Empty = new VpnGatewayVpnGatewayInterfaceArgs();
 
-    /**
-     * URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface. When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the specified VLAN attachment resource. Not currently available publicly. 
-     */
     @InputImport(name="interconnectAttachment")
     private final @Nullable Input<String> interconnectAttachment;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Rule condition of type network.
- */
 public final class NetworkRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkRuleConditionResponse Empty = new NetworkRuleConditionResponse();
 
-    /**
-     * Description of the rule condition.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,9 +22,6 @@ public final class NetworkRuleConditionResponse extends io.pulumi.resources.Invo
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * List of destination IP addresses or Service Tags.
-     */
     @InputImport(name="destinationAddresses")
     private final @Nullable List<String> destinationAddresses;
 
@@ -38,9 +29,6 @@ public final class NetworkRuleConditionResponse extends io.pulumi.resources.Invo
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
-    /**
-     * List of destination IpGroups for this rule.
-     */
     @InputImport(name="destinationIpGroups")
     private final @Nullable List<String> destinationIpGroups;
 
@@ -48,9 +36,6 @@ public final class NetworkRuleConditionResponse extends io.pulumi.resources.Invo
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
 
-    /**
-     * List of destination ports.
-     */
     @InputImport(name="destinationPorts")
     private final @Nullable List<String> destinationPorts;
 
@@ -58,9 +43,6 @@ public final class NetworkRuleConditionResponse extends io.pulumi.resources.Invo
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
-    /**
-     * Array of FirewallPolicyRuleConditionNetworkProtocols.
-     */
     @InputImport(name="ipProtocols")
     private final @Nullable List<String> ipProtocols;
 
@@ -68,9 +50,6 @@ public final class NetworkRuleConditionResponse extends io.pulumi.resources.Invo
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
 
-    /**
-     * Name of the rule condition.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -78,10 +57,6 @@ public final class NetworkRuleConditionResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Rule Condition Type.
-Expected value is 'NetworkRuleCondition'.
-     */
     @InputImport(name="ruleConditionType", required=true)
     private final String ruleConditionType;
 
@@ -89,9 +64,6 @@ Expected value is 'NetworkRuleCondition'.
         return this.ruleConditionType;
     }
 
-    /**
-     * List of source IP addresses for this rule.
-     */
     @InputImport(name="sourceAddresses")
     private final @Nullable List<String> sourceAddresses;
 
@@ -99,9 +71,6 @@ Expected value is 'NetworkRuleCondition'.
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
-    /**
-     * List of source IpGroups for this rule.
-     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable List<String> sourceIpGroups;
 

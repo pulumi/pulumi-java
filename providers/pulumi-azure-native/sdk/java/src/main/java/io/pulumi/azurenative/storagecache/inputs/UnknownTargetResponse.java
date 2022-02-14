@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties pertaining to the UnknownTarget
- */
 public final class UnknownTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UnknownTargetResponse Empty = new UnknownTargetResponse();
 
-    /**
-     * Dictionary of string->string pairs containing information about the Storage Target.
-     */
     @InputImport(name="attributes")
     private final @Nullable Map<String,String> attributes;
 

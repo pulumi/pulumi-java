@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResultsResponse {
-/**
- * Path to the artifact manifest. Only populated when artifacts are uploaded.
- */
     private final String artifactManifest;
-/**
- * Time to push all non-container artifacts.
- */
     private final TimeSpanResponse artifactTiming;
-/**
- * List of build step digests, in the order corresponding to build step indices.
- */
     private final List<String> buildStepImages;
-/**
- * List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
- */
     private final List<String> buildStepOutputs;
-/**
- * Container images that were built as a part of the build.
- */
     private final List<BuiltImageResponse> images;
-/**
- * Number of artifacts uploaded. Only populated when artifacts are uploaded.
- */
     private final String numArtifacts;
 
     @OutputCustomType.Constructor({"artifactManifest","artifactTiming","buildStepImages","buildStepOutputs","images","numArtifacts"})
@@ -53,39 +35,21 @@ public final class ResultsResponse {
         this.numArtifacts = Objects.requireNonNull(numArtifacts);
     }
 
-/**
- * Path to the artifact manifest. Only populated when artifacts are uploaded.
- */
     public String getArtifactManifest() {
         return this.artifactManifest;
     }
-/**
- * Time to push all non-container artifacts.
- */
     public TimeSpanResponse getArtifactTiming() {
         return this.artifactTiming;
     }
-/**
- * List of build step digests, in the order corresponding to build step indices.
- */
     public List<String> getBuildStepImages() {
         return this.buildStepImages;
     }
-/**
- * List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
- */
     public List<String> getBuildStepOutputs() {
         return this.buildStepOutputs;
     }
-/**
- * Container images that were built as a part of the build.
- */
     public List<BuiltImageResponse> getImages() {
         return this.images;
     }
-/**
- * Number of artifacts uploaded. Only populated when artifacts are uploaded.
- */
     public String getNumArtifacts() {
         return this.numArtifacts;
     }

@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GoogleResponse {
-/**
- * <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
- */
     private final @Nullable Boolean enabled;
-/**
- * The configuration settings of the login flow.
- */
     private final @Nullable LoginScopesResponse login;
-/**
- * The configuration settings of the app registration for the Google provider.
- */
     private final @Nullable ClientRegistrationResponse registration;
-/**
- * The configuration settings of the Azure Active Directory token validation flow.
- */
     private final @Nullable AllowedAudiencesValidationResponse validation;
 
     @OutputCustomType.Constructor({"enabled","login","registration","validation"})
@@ -43,27 +31,15 @@ public final class GoogleResponse {
         this.validation = validation;
     }
 
-/**
- * <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
- */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
-/**
- * The configuration settings of the login flow.
- */
     public Optional<LoginScopesResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
-/**
- * The configuration settings of the app registration for the Google provider.
- */
     public Optional<ClientRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }
-/**
- * The configuration settings of the Azure Active Directory token validation flow.
- */
     public Optional<AllowedAudiencesValidationResponse> getValidation() {
         return Optional.ofNullable(this.validation);
     }

@@ -17,687 +17,99 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Class representing a Traffic Manager endpoint.
-API Version: 2018-08-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Endpoint-PUT-External-WithCustomHeaders
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var endpoint = new AzureNative.Network.Endpoint("endpoint", new AzureNative.Network.EndpointArgs
-        {
-            CustomHeaders = 
-            {
-                new AzureNative.Network.Inputs.EndpointPropertiesCustomHeadersArgs
-                {
-                    Name = "header-1",
-                    Value = "value-1",
-                },
-                new AzureNative.Network.Inputs.EndpointPropertiesCustomHeadersArgs
-                {
-                    Name = "header-2",
-                    Value = "value-2",
-                },
-            },
-            EndpointLocation = "North Europe",
-            EndpointName = "azsmnet7187",
-            EndpointStatus = "Enabled",
-            EndpointType = "ExternalEndpoints",
-            Name = "azsmnet7187",
-            ProfileName = "azsmnet6386",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager1421",
-            Target = "foobar.contoso.com",
-            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewEndpoint(ctx, "endpoint", &network.EndpointArgs{
-			CustomHeaders: []network.EndpointPropertiesCustomHeadersArgs{
-				&network.EndpointPropertiesCustomHeadersArgs{
-					Name:  pulumi.String("header-1"),
-					Value: pulumi.String("value-1"),
-				},
-				&network.EndpointPropertiesCustomHeadersArgs{
-					Name:  pulumi.String("header-2"),
-					Value: pulumi.String("value-2"),
-				},
-			},
-			EndpointLocation:  pulumi.String("North Europe"),
-			EndpointName:      pulumi.String("azsmnet7187"),
-			EndpointStatus:    pulumi.String("Enabled"),
-			EndpointType:      pulumi.String("ExternalEndpoints"),
-			Name:              pulumi.String("azsmnet7187"),
-			ProfileName:       pulumi.String("azsmnet6386"),
-			ResourceGroupName: pulumi.String("azuresdkfornetautoresttrafficmanager1421"),
-			Target:            pulumi.String("foobar.contoso.com"),
-			Type:              pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const endpoint = new azure_native.network.Endpoint("endpoint", {
-    customHeaders: [
-        {
-            name: "header-1",
-            value: "value-1",
-        },
-        {
-            name: "header-2",
-            value: "value-2",
-        },
-    ],
-    endpointLocation: "North Europe",
-    endpointName: "azsmnet7187",
-    endpointStatus: "Enabled",
-    endpointType: "ExternalEndpoints",
-    name: "azsmnet7187",
-    profileName: "azsmnet6386",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
-    target: "foobar.contoso.com",
-    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-endpoint = azure_native.network.Endpoint("endpoint",
-    custom_headers=[
-        azure_native.network.EndpointPropertiesCustomHeadersArgs(
-            name="header-1",
-            value="value-1",
-        ),
-        azure_native.network.EndpointPropertiesCustomHeadersArgs(
-            name="header-2",
-            value="value-2",
-        ),
-    ],
-    endpoint_location="North Europe",
-    endpoint_name="azsmnet7187",
-    endpoint_status="Enabled",
-    endpoint_type="ExternalEndpoints",
-    name="azsmnet7187",
-    profile_name="azsmnet6386",
-    resource_group_name="azuresdkfornetautoresttrafficmanager1421",
-    target="foobar.contoso.com",
-    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Endpoint-PUT-External-WithGeoMapping
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var endpoint = new AzureNative.Network.Endpoint("endpoint", new AzureNative.Network.EndpointArgs
-        {
-            EndpointName = "My%20external%20endpoint",
-            EndpointStatus = "Enabled",
-            EndpointType = "ExternalEndpoints",
-            GeoMapping = 
-            {
-                "GEO-AS",
-                "GEO-AF",
-            },
-            Name = "My external endpoint",
-            ProfileName = "azuresdkfornetautoresttrafficmanager8224",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2191",
-            Target = "foobar.contoso.com",
-            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewEndpoint(ctx, "endpoint", &network.EndpointArgs{
-			EndpointName:   pulumi.String(fmt.Sprintf("%v%v%v%v%v", "My", "%", "20external", "%", "20endpoint")),
-			EndpointStatus: pulumi.String("Enabled"),
-			EndpointType:   pulumi.String("ExternalEndpoints"),
-			GeoMapping: pulumi.StringArray{
-				pulumi.String("GEO-AS"),
-				pulumi.String("GEO-AF"),
-			},
-			Name:              pulumi.String("My external endpoint"),
-			ProfileName:       pulumi.String("azuresdkfornetautoresttrafficmanager8224"),
-			ResourceGroupName: pulumi.String("azuresdkfornetautoresttrafficmanager2191"),
-			Target:            pulumi.String("foobar.contoso.com"),
-			Type:              pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const endpoint = new azure_native.network.Endpoint("endpoint", {
-    endpointName: `My%20external%20endpoint`,
-    endpointStatus: "Enabled",
-    endpointType: "ExternalEndpoints",
-    geoMapping: [
-        "GEO-AS",
-        "GEO-AF",
-    ],
-    name: "My external endpoint",
-    profileName: "azuresdkfornetautoresttrafficmanager8224",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager2191",
-    target: "foobar.contoso.com",
-    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-endpoint = azure_native.network.Endpoint("endpoint",
-    endpoint_name="My%20external%20endpoint",
-    endpoint_status="Enabled",
-    endpoint_type="ExternalEndpoints",
-    geo_mapping=[
-        "GEO-AS",
-        "GEO-AF",
-    ],
-    name="My external endpoint",
-    profile_name="azuresdkfornetautoresttrafficmanager8224",
-    resource_group_name="azuresdkfornetautoresttrafficmanager2191",
-    target="foobar.contoso.com",
-    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Endpoint-PUT-External-WithLocation
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var endpoint = new AzureNative.Network.Endpoint("endpoint", new AzureNative.Network.EndpointArgs
-        {
-            EndpointLocation = "North Europe",
-            EndpointName = "azsmnet7187",
-            EndpointStatus = "Enabled",
-            EndpointType = "ExternalEndpoints",
-            Name = "azsmnet7187",
-            ProfileName = "azsmnet6386",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager1421",
-            Target = "foobar.contoso.com",
-            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewEndpoint(ctx, "endpoint", &network.EndpointArgs{
-			EndpointLocation:  pulumi.String("North Europe"),
-			EndpointName:      pulumi.String("azsmnet7187"),
-			EndpointStatus:    pulumi.String("Enabled"),
-			EndpointType:      pulumi.String("ExternalEndpoints"),
-			Name:              pulumi.String("azsmnet7187"),
-			ProfileName:       pulumi.String("azsmnet6386"),
-			ResourceGroupName: pulumi.String("azuresdkfornetautoresttrafficmanager1421"),
-			Target:            pulumi.String("foobar.contoso.com"),
-			Type:              pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const endpoint = new azure_native.network.Endpoint("endpoint", {
-    endpointLocation: "North Europe",
-    endpointName: "azsmnet7187",
-    endpointStatus: "Enabled",
-    endpointType: "ExternalEndpoints",
-    name: "azsmnet7187",
-    profileName: "azsmnet6386",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager1421",
-    target: "foobar.contoso.com",
-    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-endpoint = azure_native.network.Endpoint("endpoint",
-    endpoint_location="North Europe",
-    endpoint_name="azsmnet7187",
-    endpoint_status="Enabled",
-    endpoint_type="ExternalEndpoints",
-    name="azsmnet7187",
-    profile_name="azsmnet6386",
-    resource_group_name="azuresdkfornetautoresttrafficmanager1421",
-    target="foobar.contoso.com",
-    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Endpoint-PUT-External-WithSubnetMapping
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var endpoint = new AzureNative.Network.Endpoint("endpoint", new AzureNative.Network.EndpointArgs
-        {
-            EndpointName = "My%20external%20endpoint",
-            EndpointStatus = "Enabled",
-            EndpointType = "ExternalEndpoints",
-            Name = "My external endpoint",
-            ProfileName = "azuresdkfornetautoresttrafficmanager8224",
-            ResourceGroupName = "azuresdkfornetautoresttrafficmanager2191",
-            Subnets = 
-            {
-                new AzureNative.Network.Inputs.EndpointPropertiesSubnetsArgs
-                {
-                    First = "1.2.3.0",
-                    Scope = 24,
-                },
-                new AzureNative.Network.Inputs.EndpointPropertiesSubnetsArgs
-                {
-                    First = "25.26.27.28",
-                    Last = "29.30.31.32",
-                },
-            },
-            Target = "foobar.contoso.com",
-            Type = "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewEndpoint(ctx, "endpoint", &network.EndpointArgs{
-			EndpointName:      pulumi.String(fmt.Sprintf("%v%v%v%v%v", "My", "%", "20external", "%", "20endpoint")),
-			EndpointStatus:    pulumi.String("Enabled"),
-			EndpointType:      pulumi.String("ExternalEndpoints"),
-			Name:              pulumi.String("My external endpoint"),
-			ProfileName:       pulumi.String("azuresdkfornetautoresttrafficmanager8224"),
-			ResourceGroupName: pulumi.String("azuresdkfornetautoresttrafficmanager2191"),
-			Subnets: []network.EndpointPropertiesSubnetsArgs{
-				&network.EndpointPropertiesSubnetsArgs{
-					First: pulumi.String("1.2.3.0"),
-					Scope: pulumi.Int(24),
-				},
-				&network.EndpointPropertiesSubnetsArgs{
-					First: pulumi.String("25.26.27.28"),
-					Last:  pulumi.String("29.30.31.32"),
-				},
-			},
-			Target: pulumi.String("foobar.contoso.com"),
-			Type:   pulumi.String("Microsoft.network/TrafficManagerProfiles/ExternalEndpoints"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const endpoint = new azure_native.network.Endpoint("endpoint", {
-    endpointName: `My%20external%20endpoint`,
-    endpointStatus: "Enabled",
-    endpointType: "ExternalEndpoints",
-    name: "My external endpoint",
-    profileName: "azuresdkfornetautoresttrafficmanager8224",
-    resourceGroupName: "azuresdkfornetautoresttrafficmanager2191",
-    subnets: [
-        {
-            first: "1.2.3.0",
-            scope: 24,
-        },
-        {
-            first: "25.26.27.28",
-            last: "29.30.31.32",
-        },
-    ],
-    target: "foobar.contoso.com",
-    type: "Microsoft.network/TrafficManagerProfiles/ExternalEndpoints",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-endpoint = azure_native.network.Endpoint("endpoint",
-    endpoint_name="My%20external%20endpoint",
-    endpoint_status="Enabled",
-    endpoint_type="ExternalEndpoints",
-    name="My external endpoint",
-    profile_name="azuresdkfornetautoresttrafficmanager8224",
-    resource_group_name="azuresdkfornetautoresttrafficmanager2191",
-    subnets=[
-        azure_native.network.EndpointPropertiesSubnetsArgs(
-            first="1.2.3.0",
-            scope=24,
-        ),
-        azure_native.network.EndpointPropertiesSubnetsArgs(
-            first="25.26.27.28",
-            last="29.30.31.32",
-        ),
-    ],
-    target="foobar.contoso.com",
-    type="Microsoft.network/TrafficManagerProfiles/ExternalEndpoints")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:Endpoint My external endpoint /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2191/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager8224/externalEndpoints/My external endpoint 
-```
-
- */
 @ResourceType(type="azure-native:network:Endpoint")
 public class Endpoint extends io.pulumi.resources.CustomResource {
-    /**
-     * List of custom headers.
-     */
     @OutputExport(name="customHeaders", type=List.class, parameters={EndpointPropertiesResponseCustomHeaders.class})
     private Output</* @Nullable */ List<EndpointPropertiesResponseCustomHeaders>> customHeaders;
 
-    /**
-     * @return List of custom headers.
-     */
     public Output</* @Nullable */ List<EndpointPropertiesResponseCustomHeaders>> getCustomHeaders() {
         return this.customHeaders;
     }
-    /**
-     * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
-     */
     @OutputExport(name="endpointLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointLocation;
 
-    /**
-     * @return Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
-     */
     public Output</* @Nullable */ String> getEndpointLocation() {
         return this.endpointLocation;
     }
-    /**
-     * The monitoring status of the endpoint.
-     */
     @OutputExport(name="endpointMonitorStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointMonitorStatus;
 
-    /**
-     * @return The monitoring status of the endpoint.
-     */
     public Output</* @Nullable */ String> getEndpointMonitorStatus() {
         return this.endpointMonitorStatus;
     }
-    /**
-     * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
-     */
     @OutputExport(name="endpointStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointStatus;
 
-    /**
-     * @return The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
-     */
     public Output</* @Nullable */ String> getEndpointStatus() {
         return this.endpointStatus;
     }
-    /**
-     * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
-     */
     @OutputExport(name="geoMapping", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> geoMapping;
 
-    /**
-     * @return The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
-     */
     public Output</* @Nullable */ List<String>> getGeoMapping() {
         return this.geoMapping;
     }
-    /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     @OutputExport(name="minChildEndpoints", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpoints;
 
-    /**
-     * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     public Output</* @Nullable */ Double> getMinChildEndpoints() {
         return this.minChildEndpoints;
     }
-    /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     @OutputExport(name="minChildEndpointsIPv4", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpointsIPv4;
 
-    /**
-     * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     public Output</* @Nullable */ Double> getMinChildEndpointsIPv4() {
         return this.minChildEndpointsIPv4;
     }
-    /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     @OutputExport(name="minChildEndpointsIPv6", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpointsIPv6;
 
-    /**
-     * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     public Output</* @Nullable */ Double> getMinChildEndpointsIPv6() {
         return this.minChildEndpointsIPv6;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
-     */
     @OutputExport(name="priority", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> priority;
 
-    /**
-     * @return The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
-     */
     public Output</* @Nullable */ Double> getPriority() {
         return this.priority;
     }
-    /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
-     */
     @OutputExport(name="subnets", type=List.class, parameters={EndpointPropertiesResponseSubnets.class})
     private Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> subnets;
 
-    /**
-     * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
-     */
     public Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> getSubnets() {
         return this.subnets;
     }
-    /**
-     * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
-     */
     @OutputExport(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
-    /**
-     * @return The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
-     */
     public Output</* @Nullable */ String> getTarget() {
         return this.target;
     }
-    /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
-     */
     @OutputExport(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
-    /**
-     * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
-     */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
-    /**
-     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
-    /**
-     * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
-    /**
-     * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
-     */
     @OutputExport(name="weight", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> weight;
 
-    /**
-     * @return The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
-     */
     public Output</* @Nullable */ Double> getWeight() {
         return this.weight;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -722,14 +134,6 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Endpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Endpoint(name, id, options);
     }

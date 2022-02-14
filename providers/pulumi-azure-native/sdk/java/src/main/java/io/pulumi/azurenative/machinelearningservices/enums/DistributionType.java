@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the type of distribution framework.
- */
     @EnumType
     public enum DistributionType {
-/**
- * 
- */
         PyTorch("PyTorch"),
-/**
- * 
- */
         TensorFlow("TensorFlow"),
-/**
- * 
- */
         Mpi("Mpi");
 
         private final String value;

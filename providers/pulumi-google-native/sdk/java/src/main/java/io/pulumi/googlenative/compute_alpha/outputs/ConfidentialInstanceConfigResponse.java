@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConfidentialInstanceConfigResponse {
-/**
- * Defines whether the instance should have confidential compute enabled.
- */
     private final Boolean enableConfidentialCompute;
 
     @OutputCustomType.Constructor({"enableConfidentialCompute"})
@@ -19,9 +16,6 @@ public final class ConfidentialInstanceConfigResponse {
         this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
     }
 
-/**
- * Defines whether the instance should have confidential compute enabled.
- */
     public Boolean getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }

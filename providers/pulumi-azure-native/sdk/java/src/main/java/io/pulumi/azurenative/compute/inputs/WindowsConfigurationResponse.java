@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies Windows operating system settings on the virtual machine.
- */
 public final class WindowsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WindowsConfigurationResponse Empty = new WindowsConfigurationResponse();
 
-    /**
-     * Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
-     */
     @InputImport(name="additionalUnattendContent")
     private final @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent;
 
@@ -32,9 +26,6 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
         return this.additionalUnattendContent == null ? List.of() : this.additionalUnattendContent;
     }
 
-    /**
-     * Indicates whether Automatic Updates is enabled for the Windows virtual machine. Default value is true. <br><br> For virtual machine scale sets, this property can be updated and updates will take effect on OS reprovisioning.
-     */
     @InputImport(name="enableAutomaticUpdates")
     private final @Nullable Boolean enableAutomaticUpdates;
 
@@ -42,9 +33,6 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
         return this.enableAutomaticUpdates == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpdates);
     }
 
-    /**
-     * [Preview Feature] Specifies settings related to VM Guest Patching on Windows.
-     */
     @InputImport(name="patchSettings")
     private final @Nullable PatchSettingsResponse patchSettings;
 
@@ -52,9 +40,6 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
         return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
     }
 
-    /**
-     * Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
-     */
     @InputImport(name="provisionVMAgent")
     private final @Nullable Boolean provisionVMAgent;
 
@@ -62,9 +47,6 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
         return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
     }
 
-    /**
-     * Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
-     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 
@@ -72,9 +54,6 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 
-    /**
-     * Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.
-     */
     @InputImport(name="winRM")
     private final @Nullable WinRMConfigurationResponse winRM;
 

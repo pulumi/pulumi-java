@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EntityReferenceResponse {
-/**
- * The name of this referenced entity.
- */
     private final @Nullable String referenceName;
-/**
- * The type of this referenced entity.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"referenceName","type"})
@@ -28,15 +22,9 @@ public final class EntityReferenceResponse {
         this.type = type;
     }
 
-/**
- * The name of this referenced entity.
- */
     public Optional<String> getReferenceName() {
         return Optional.ofNullable(this.referenceName);
     }
-/**
- * The type of this referenced entity.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

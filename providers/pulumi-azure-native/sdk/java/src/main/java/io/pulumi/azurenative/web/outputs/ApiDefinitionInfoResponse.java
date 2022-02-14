@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiDefinitionInfoResponse {
-/**
- * The URL of the API definition.
- */
     private final @Nullable String url;
 
     @OutputCustomType.Constructor({"url"})
@@ -21,9 +18,6 @@ public final class ApiDefinitionInfoResponse {
         this.url = url;
     }
 
-/**
- * The URL of the API definition.
- */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

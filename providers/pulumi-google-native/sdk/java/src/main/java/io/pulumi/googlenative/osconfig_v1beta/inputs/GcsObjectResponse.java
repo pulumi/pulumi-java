@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Google Cloud Storage object representation.
- */
 public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GcsObjectResponse Empty = new GcsObjectResponse();
 
-    /**
-     * Bucket of the Google Cloud Storage object.
-     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -25,9 +19,6 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.bucket;
     }
 
-    /**
-     * Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-     */
     @InputImport(name="generationNumber", required=true)
     private final String generationNumber;
 
@@ -35,9 +26,6 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.generationNumber;
     }
 
-    /**
-     * Name of the Google Cloud Storage object.
-     */
     @InputImport(name="object", required=true)
     private final String object;
 

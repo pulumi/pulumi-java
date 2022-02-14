@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
-/**
- * Private endpoint which the connection belongs to.
- */
     private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
-/**
- * Connection state of the private endpoint connection.
- */
     private final @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
-/**
- * State of the private endpoint connection.
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
@@ -36,21 +27,12 @@ public final class PrivateEndpointConnectionPropertiesResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * Private endpoint which the connection belongs to.
- */
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
-/**
- * Connection state of the private endpoint connection.
- */
     public Optional<PrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-/**
- * State of the private endpoint connection.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

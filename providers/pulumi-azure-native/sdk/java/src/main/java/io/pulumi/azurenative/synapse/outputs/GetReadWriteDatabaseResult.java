@@ -14,50 +14,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetReadWriteDatabaseResult {
-/**
- * The time the data should be kept in cache for fast queries in TimeSpan.
- */
     private final @Nullable String hotCachePeriod;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * Indicates whether the database is followed.
- */
     private final Boolean isFollowed;
-/**
- * Kind of the database
-Expected value is 'ReadWrite'.
- */
     private final String kind;
-/**
- * Resource location.
- */
     private final @Nullable String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The provisioned state of the resource.
- */
     private final String provisioningState;
-/**
- * The time the data should be kept before it stops being accessible to queries in TimeSpan.
- */
     private final @Nullable String softDeletePeriod;
-/**
- * The statistics of the database.
- */
     private final DatabaseStatisticsResponse statistics;
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     private final SystemDataResponse systemData;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"hotCachePeriod","id","isFollowed","kind","location","name","provisioningState","softDeletePeriod","statistics","systemData","type"})
@@ -86,70 +52,36 @@ Expected value is 'ReadWrite'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The time the data should be kept in cache for fast queries in TimeSpan.
- */
     public Optional<String> getHotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Indicates whether the database is followed.
- */
     public Boolean getIsFollowed() {
         return this.isFollowed;
     }
-/**
- * Kind of the database
-Expected value is 'ReadWrite'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioned state of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The time the data should be kept before it stops being accessible to queries in TimeSpan.
- */
     public Optional<String> getSoftDeletePeriod() {
         return Optional.ofNullable(this.softDeletePeriod);
     }
-/**
- * The statistics of the database.
- */
     public DatabaseStatisticsResponse getStatistics() {
         return this.statistics;
     }
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OracleSourceConfigResponse {
-/**
- * Oracle objects to exclude from the stream.
- */
     private final OracleRdbmsResponse excludeObjects;
-/**
- * Oracle objects to include in the stream.
- */
     private final OracleRdbmsResponse includeObjects;
 
     @OutputCustomType.Constructor({"excludeObjects","includeObjects"})
@@ -26,15 +20,9 @@ public final class OracleSourceConfigResponse {
         this.includeObjects = Objects.requireNonNull(includeObjects);
     }
 
-/**
- * Oracle objects to exclude from the stream.
- */
     public OracleRdbmsResponse getExcludeObjects() {
         return this.excludeObjects;
     }
-/**
- * Oracle objects to include in the stream.
- */
     public OracleRdbmsResponse getIncludeObjects() {
         return this.includeObjects;
     }

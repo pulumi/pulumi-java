@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. The WAF service that uses this key.
- */
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1WafSettingsWafService {
-/**
- * Undefined WAF
- */
         WafServiceUnspecified("WAF_SERVICE_UNSPECIFIED"),
-/**
- * Cloud Armor
- */
         Ca("CA");
 
         private final String value;

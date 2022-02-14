@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UebaArgs Empty = new UebaArgs();
 
-    /**
-     * The relevant data sources that enriched by ueba
-     */
     @InputImport(name="dataSources")
     private final @Nullable Input<List<Either<String,UebaDataSources>>> dataSources;
 
@@ -30,10 +24,6 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSources == null ? Input.empty() : this.dataSources;
     }
 
-    /**
-     * The kind of the setting
-Expected value is 'Ueba'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -41,9 +31,6 @@ Expected value is 'Ueba'.
         return this.kind;
     }
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -51,9 +38,6 @@ Expected value is 'Ueba'.
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,9 +45,6 @@ Expected value is 'Ueba'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
-     */
     @InputImport(name="settingsName")
     private final @Nullable Input<String> settingsName;
 
@@ -71,9 +52,6 @@ Expected value is 'Ueba'.
         return this.settingsName == null ? Input.empty() : this.settingsName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

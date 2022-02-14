@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionAutoscalerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionAutoscalerArgs Empty = new GetRegionAutoscalerArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="autoscaler", required=true)
     private final String autoscaler;
 
@@ -27,9 +21,6 @@ public final class GetRegionAutoscalerArgs extends io.pulumi.resources.InvokeArg
         return this.autoscaler;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionAutoscalerArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

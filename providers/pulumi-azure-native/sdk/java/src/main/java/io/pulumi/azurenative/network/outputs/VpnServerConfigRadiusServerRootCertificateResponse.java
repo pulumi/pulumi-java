@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VpnServerConfigRadiusServerRootCertificateResponse {
-/**
- * The certificate name.
- */
     private final @Nullable String name;
-/**
- * The certificate public data.
- */
     private final @Nullable String publicCertData;
 
     @OutputCustomType.Constructor({"name","publicCertData"})
@@ -28,15 +22,9 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse {
         this.publicCertData = publicCertData;
     }
 
-/**
- * The certificate name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The certificate public data.
- */
     public Optional<String> getPublicCertData() {
         return Optional.ofNullable(this.publicCertData);
     }

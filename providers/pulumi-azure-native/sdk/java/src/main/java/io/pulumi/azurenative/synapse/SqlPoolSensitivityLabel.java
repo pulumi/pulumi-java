@@ -15,275 +15,81 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A sensitivity label.
-API Version: 2021-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Updates the sensitivity label of a given column with all parameters
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlPoolSensitivityLabel = new AzureNative.Synapse.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", new AzureNative.Synapse.SqlPoolSensitivityLabelArgs
-        {
-            ColumnName = "myColumn",
-            InformationType = "PhoneNumber",
-            InformationTypeId = "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
-            LabelId = "bf91e08c-f4f0-478a-b016-25164b2a65ff",
-            LabelName = "PII",
-            ResourceGroupName = "myRG",
-            SchemaName = "dbo",
-            SensitivityLabelSource = "current",
-            SqlPoolName = "myDatabase",
-            TableName = "myTable",
-            WorkspaceName = "myServer",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := synapse.NewSqlPoolSensitivityLabel(ctx, "sqlPoolSensitivityLabel", &synapse.SqlPoolSensitivityLabelArgs{
-			ColumnName:             pulumi.String("myColumn"),
-			InformationType:        pulumi.String("PhoneNumber"),
-			InformationTypeId:      pulumi.String("d22fa6e9-5ee4-3bde-4c2b-a409604c4646"),
-			LabelId:                pulumi.String("bf91e08c-f4f0-478a-b016-25164b2a65ff"),
-			LabelName:              pulumi.String("PII"),
-			ResourceGroupName:      pulumi.String("myRG"),
-			SchemaName:             pulumi.String("dbo"),
-			SensitivityLabelSource: pulumi.String("current"),
-			SqlPoolName:            pulumi.String("myDatabase"),
-			TableName:              pulumi.String("myTable"),
-			WorkspaceName:          pulumi.String("myServer"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", {
-    columnName: "myColumn",
-    informationType: "PhoneNumber",
-    informationTypeId: "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
-    labelId: "bf91e08c-f4f0-478a-b016-25164b2a65ff",
-    labelName: "PII",
-    resourceGroupName: "myRG",
-    schemaName: "dbo",
-    sensitivityLabelSource: "current",
-    sqlPoolName: "myDatabase",
-    tableName: "myTable",
-    workspaceName: "myServer",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_pool_sensitivity_label = azure_native.synapse.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel",
-    column_name="myColumn",
-    information_type="PhoneNumber",
-    information_type_id="d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
-    label_id="bf91e08c-f4f0-478a-b016-25164b2a65ff",
-    label_name="PII",
-    resource_group_name="myRG",
-    schema_name="dbo",
-    sensitivity_label_source="current",
-    sql_pool_name="myDatabase",
-    table_name="myTable",
-    workspace_name="myServer")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:synapse:SqlPoolSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Synapse/workspaces/myServer/sqlPools/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
-```
-
- */
 @ResourceType(type="azure-native:synapse:SqlPoolSensitivityLabel")
 public class SqlPoolSensitivityLabel extends io.pulumi.resources.CustomResource {
-    /**
-     * The column name.
-     */
     @OutputExport(name="columnName", type=String.class, parameters={})
     private Output<String> columnName;
 
-    /**
-     * @return The column name.
-     */
     public Output<String> getColumnName() {
         return this.columnName;
     }
-    /**
-     * The information type.
-     */
     @OutputExport(name="informationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> informationType;
 
-    /**
-     * @return The information type.
-     */
     public Output</* @Nullable */ String> getInformationType() {
         return this.informationType;
     }
-    /**
-     * The information type ID.
-     */
     @OutputExport(name="informationTypeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> informationTypeId;
 
-    /**
-     * @return The information type ID.
-     */
     public Output</* @Nullable */ String> getInformationTypeId() {
         return this.informationTypeId;
     }
-    /**
-     * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
-     */
     @OutputExport(name="isDisabled", type=Boolean.class, parameters={})
     private Output<Boolean> isDisabled;
 
-    /**
-     * @return Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
-     */
     public Output<Boolean> getIsDisabled() {
         return this.isDisabled;
     }
-    /**
-     * The label ID.
-     */
     @OutputExport(name="labelId", type=String.class, parameters={})
     private Output</* @Nullable */ String> labelId;
 
-    /**
-     * @return The label ID.
-     */
     public Output</* @Nullable */ String> getLabelId() {
         return this.labelId;
     }
-    /**
-     * The label name.
-     */
     @OutputExport(name="labelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> labelName;
 
-    /**
-     * @return The label name.
-     */
     public Output</* @Nullable */ String> getLabelName() {
         return this.labelName;
     }
-    /**
-     * managed by
-     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
-    /**
-     * @return managed by
-     */
     public Output<String> getManagedBy() {
         return this.managedBy;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="rank", type=String.class, parameters={})
     private Output</* @Nullable */ String> rank;
 
     public Output</* @Nullable */ String> getRank() {
         return this.rank;
     }
-    /**
-     * The schema name.
-     */
     @OutputExport(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
-    /**
-     * @return The schema name.
-     */
     public Output<String> getSchemaName() {
         return this.schemaName;
     }
-    /**
-     * The table name.
-     */
     @OutputExport(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
-    /**
-     * @return The table name.
-     */
     public Output<String> getTableName() {
         return this.tableName;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SqlPoolSensitivityLabel(String name, SqlPoolSensitivityLabelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:SqlPoolSensitivityLabel", name, args == null ? SqlPoolSensitivityLabelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -308,14 +114,6 @@ public class SqlPoolSensitivityLabel extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SqlPoolSensitivityLabel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlPoolSensitivityLabel(name, id, options);
     }

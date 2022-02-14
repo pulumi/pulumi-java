@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Time window specified for weekly operations.
- */
 public final class ResourcePolicyWeeklyCycleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyWeeklyCycleResponse Empty = new ResourcePolicyWeeklyCycleResponse();
 
-    /**
-     * Up to 7 intervals/windows, one for each day of the week.
-     */
     @InputImport(name="dayOfWeeks", required=true)
     private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 

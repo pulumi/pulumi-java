@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStaticMemberArgs Empty = new GetStaticMemberArgs();
 
-    /**
-     * The name of the network group.
-     */
     @InputImport(name="networkGroupName", required=true)
     private final String networkGroupName;
 
@@ -25,9 +19,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.networkGroupName;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -35,9 +26,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the static member.
-     */
     @InputImport(name="staticMemberName", required=true)
     private final String staticMemberName;
 

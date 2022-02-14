@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class StepDimensionValueEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StepDimensionValueEntryResponse Empty = new StepDimensionValueEntryResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -25,9 +19,6 @@ public final class StepDimensionValueEntryResponse extends io.pulumi.resources.I
         return this.key;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

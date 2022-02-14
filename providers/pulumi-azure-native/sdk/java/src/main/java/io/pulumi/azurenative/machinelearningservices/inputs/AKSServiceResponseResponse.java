@@ -24,16 +24,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The response for an AKS service.
- */
 public final class AKSServiceResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AKSServiceResponseResponse Empty = new AKSServiceResponseResponse();
 
-    /**
-     * Whether or not AAD authentication is enabled.
-     */
     @InputImport(name="aadAuthEnabled")
     private final @Nullable Boolean aadAuthEnabled;
 
@@ -41,9 +35,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.aadAuthEnabled == null ? Optional.empty() : Optional.ofNullable(this.aadAuthEnabled);
     }
 
-    /**
-     * Whether or not Application Insights is enabled.
-     */
     @InputImport(name="appInsightsEnabled")
     private final @Nullable Boolean appInsightsEnabled;
 
@@ -51,9 +42,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
     }
 
-    /**
-     * Whether or not authentication is enabled.
-     */
     @InputImport(name="authEnabled")
     private final @Nullable Boolean authEnabled;
 
@@ -61,9 +49,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
     }
 
-    /**
-     * The auto scaler properties.
-     */
     @InputImport(name="autoScaler")
     private final @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
 
@@ -71,9 +56,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.autoScaler == null ? Optional.empty() : Optional.ofNullable(this.autoScaler);
     }
 
-    /**
-     * The name of the compute resource.
-     */
     @InputImport(name="computeName")
     private final @Nullable String computeName;
 
@@ -81,10 +63,6 @@ public final class AKSServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.computeName == null ? Optional.empty() : Optional.ofNullable(this.computeName);
     }
 
-    /**
-     * The compute environment type for the service.
-Expected value is 'AKS'.
-     */
     @InputImport(name="computeType", required=true)
     private final String computeType;
 
@@ -92,9 +70,6 @@ Expected value is 'AKS'.
         return this.computeType;
     }
 
-    /**
-     * The container resource requirements.
-     */
     @InputImport(name="containerResourceRequirements")
     private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
@@ -102,9 +77,6 @@ Expected value is 'AKS'.
         return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
     }
 
-    /**
-     * Details of the data collection options specified.
-     */
     @InputImport(name="dataCollection")
     private final @Nullable AKSServiceResponseResponseDataCollection dataCollection;
 
@@ -112,9 +84,6 @@ Expected value is 'AKS'.
         return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
     }
 
-    /**
-     * The deployment status.
-     */
     @InputImport(name="deploymentStatus", required=true)
     private final AKSServiceResponseResponseDeploymentStatus deploymentStatus;
 
@@ -122,9 +91,6 @@ Expected value is 'AKS'.
         return this.deploymentStatus;
     }
 
-    /**
-     * The deployment type for the service.
-     */
     @InputImport(name="deploymentType")
     private final @Nullable String deploymentType;
 
@@ -132,9 +98,6 @@ Expected value is 'AKS'.
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
-    /**
-     * The service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -142,9 +105,6 @@ Expected value is 'AKS'.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The Environment, models and assets used for inferencing.
-     */
     @InputImport(name="environmentImageRequest")
     private final @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
@@ -152,9 +112,6 @@ Expected value is 'AKS'.
         return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
     }
 
-    /**
-     * The error details.
-     */
     @InputImport(name="error", required=true)
     private final ServiceResponseBaseResponseError error;
 
@@ -162,9 +119,6 @@ Expected value is 'AKS'.
         return this.error;
     }
 
-    /**
-     * Is this the default variant.
-     */
     @InputImport(name="isDefault")
     private final @Nullable Boolean isDefault;
 
@@ -172,9 +126,6 @@ Expected value is 'AKS'.
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
     }
 
-    /**
-     * The service tag dictionary. Tags are mutable.
-     */
     @InputImport(name="kvTags")
     private final @Nullable Map<String,String> kvTags;
 
@@ -182,9 +133,6 @@ Expected value is 'AKS'.
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
-    /**
-     * The liveness probe requirements.
-     */
     @InputImport(name="livenessProbeRequirements")
     private final @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
 
@@ -192,9 +140,6 @@ Expected value is 'AKS'.
         return this.livenessProbeRequirements == null ? Optional.empty() : Optional.ofNullable(this.livenessProbeRequirements);
     }
 
-    /**
-     * The maximum number of concurrent requests per container.
-     */
     @InputImport(name="maxConcurrentRequestsPerContainer")
     private final @Nullable Integer maxConcurrentRequestsPerContainer;
 
@@ -202,9 +147,6 @@ Expected value is 'AKS'.
         return this.maxConcurrentRequestsPerContainer == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
     }
 
-    /**
-     * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
-     */
     @InputImport(name="maxQueueWaitMs")
     private final @Nullable Integer maxQueueWaitMs;
 
@@ -212,9 +154,6 @@ Expected value is 'AKS'.
         return this.maxQueueWaitMs == null ? Optional.empty() : Optional.ofNullable(this.maxQueueWaitMs);
     }
 
-    /**
-     * Details on the models and configurations.
-     */
     @InputImport(name="modelConfigMap", required=true)
     private final Map<String,Object> modelConfigMap;
 
@@ -222,9 +161,6 @@ Expected value is 'AKS'.
         return this.modelConfigMap;
     }
 
-    /**
-     * The list of models.
-     */
     @InputImport(name="models")
     private final @Nullable List<ModelResponse> models;
 
@@ -232,9 +168,6 @@ Expected value is 'AKS'.
         return this.models == null ? List.of() : this.models;
     }
 
-    /**
-     * The Kubernetes namespace of the deployment.
-     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 
@@ -242,9 +175,6 @@ Expected value is 'AKS'.
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
-    /**
-     * The number of replicas on the cluster.
-     */
     @InputImport(name="numReplicas")
     private final @Nullable Integer numReplicas;
 
@@ -252,9 +182,6 @@ Expected value is 'AKS'.
         return this.numReplicas == null ? Optional.empty() : Optional.ofNullable(this.numReplicas);
     }
 
-    /**
-     * The service property dictionary. Properties are immutable.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -262,9 +189,6 @@ Expected value is 'AKS'.
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * The scoring timeout in milliseconds.
-     */
     @InputImport(name="scoringTimeoutMs")
     private final @Nullable Integer scoringTimeoutMs;
 
@@ -272,9 +196,6 @@ Expected value is 'AKS'.
         return this.scoringTimeoutMs == null ? Optional.empty() : Optional.ofNullable(this.scoringTimeoutMs);
     }
 
-    /**
-     * The Uri for sending scoring requests.
-     */
     @InputImport(name="scoringUri", required=true)
     private final String scoringUri;
 
@@ -282,9 +203,6 @@ Expected value is 'AKS'.
         return this.scoringUri;
     }
 
-    /**
-     * The current state of the service.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -292,9 +210,6 @@ Expected value is 'AKS'.
         return this.state;
     }
 
-    /**
-     * The Uri for sending swagger requests.
-     */
     @InputImport(name="swaggerUri", required=true)
     private final String swaggerUri;
 
@@ -302,9 +217,6 @@ Expected value is 'AKS'.
         return this.swaggerUri;
     }
 
-    /**
-     * The amount of traffic variant receives.
-     */
     @InputImport(name="trafficPercentile")
     private final @Nullable Double trafficPercentile;
 
@@ -312,9 +224,6 @@ Expected value is 'AKS'.
         return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
     }
 
-    /**
-     * The type of the variant.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

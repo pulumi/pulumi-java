@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssignmentArgs Empty = new GetAssignmentArgs();
 
-    /**
-     * The security assignment key - unique key for the standard assignment
-     */
     @InputImport(name="assignmentId", required=true)
     private final String assignmentId;
 
@@ -25,9 +19,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.assignmentId;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

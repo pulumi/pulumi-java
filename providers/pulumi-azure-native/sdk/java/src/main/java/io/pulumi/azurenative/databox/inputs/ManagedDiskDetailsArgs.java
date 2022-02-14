@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the managed disks.
- */
 public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedDiskDetailsArgs Empty = new ManagedDiskDetailsArgs();
 
-    /**
-     * Account Type of the data to be transferred.
-Expected value is 'ManagedDisk'.
-     */
     @InputImport(name="dataAccountType", required=true)
     private final Input<String> dataAccountType;
 
@@ -28,9 +21,6 @@ Expected value is 'ManagedDisk'.
         return this.dataAccountType;
     }
 
-    /**
-     * Resource Group Id of the compute disks.
-     */
     @InputImport(name="resourceGroupId", required=true)
     private final Input<String> resourceGroupId;
 
@@ -38,9 +28,6 @@ Expected value is 'ManagedDisk'.
         return this.resourceGroupId;
     }
 
-    /**
-     * Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
-     */
     @InputImport(name="sharePassword")
     private final @Nullable Input<String> sharePassword;
 
@@ -48,9 +35,6 @@ Expected value is 'ManagedDisk'.
         return this.sharePassword == null ? Input.empty() : this.sharePassword;
     }
 
-    /**
-     * Resource Id of the storage account that can be used to copy the vhd for staging.
-     */
     @InputImport(name="stagingStorageAccountId", required=true)
     private final Input<String> stagingStorageAccountId;
 

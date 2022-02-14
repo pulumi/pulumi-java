@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHubRouteTableV2 {
-/**
- * VirtualHubRouteTableV2 Resource.
-API Version: 2020-11-01.
- *
- * VirtualHubRouteTableV2 Resource.
- */
     public static CompletableFuture<GetVirtualHubRouteTableV2Result> invokeAsync(GetVirtualHubRouteTableV2Args args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubRouteTableV2", TypeShape.of(GetVirtualHubRouteTableV2Result.class), args == null ? GetVirtualHubRouteTableV2Args.Empty : args, Utilities.withVersion(options));
     }

@@ -12,53 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDeviceExtendedInformationResult {
-/**
- * The name of Channel Integrity Key stored in the Client Key Vault
- */
     private final @Nullable String channelIntegrityKeyName;
-/**
- * The version of Channel Integrity Key stored in the Client Key Vault
- */
     private final @Nullable String channelIntegrityKeyVersion;
-/**
- * The Key Vault ARM Id for client secrets
- */
     private final @Nullable String clientSecretStoreId;
-/**
- * The url to access the Client Key Vault
- */
     private final @Nullable String clientSecretStoreUrl;
-/**
- * Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
- */
     private final DeviceSecretsResponse deviceSecrets;
-/**
- * The public part of the encryption certificate. Client uses this to encrypt any secret.
- */
     private final @Nullable String encryptionKey;
-/**
- * The digital signature of encrypted certificate.
- */
     private final @Nullable String encryptionKeyThumbprint;
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * Key vault sync status
- */
     private final @Nullable String keyVaultSyncStatus;
-/**
- * The object name.
- */
     private final String name;
-/**
- * The Resource ID of the Resource.
- */
     private final String resourceKey;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"channelIntegrityKeyName","channelIntegrityKeyVersion","clientSecretStoreId","clientSecretStoreUrl","deviceSecrets","encryptionKey","encryptionKeyThumbprint","id","keyVaultSyncStatus","name","resourceKey","type"})
@@ -89,75 +53,39 @@ public final class GetDeviceExtendedInformationResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The name of Channel Integrity Key stored in the Client Key Vault
- */
     public Optional<String> getChannelIntegrityKeyName() {
         return Optional.ofNullable(this.channelIntegrityKeyName);
     }
-/**
- * The version of Channel Integrity Key stored in the Client Key Vault
- */
     public Optional<String> getChannelIntegrityKeyVersion() {
         return Optional.ofNullable(this.channelIntegrityKeyVersion);
     }
-/**
- * The Key Vault ARM Id for client secrets
- */
     public Optional<String> getClientSecretStoreId() {
         return Optional.ofNullable(this.clientSecretStoreId);
     }
-/**
- * The url to access the Client Key Vault
- */
     public Optional<String> getClientSecretStoreUrl() {
         return Optional.ofNullable(this.clientSecretStoreUrl);
     }
-/**
- * Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
- */
     public DeviceSecretsResponse getDeviceSecrets() {
         return this.deviceSecrets;
     }
-/**
- * The public part of the encryption certificate. Client uses this to encrypt any secret.
- */
     public Optional<String> getEncryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
-/**
- * The digital signature of encrypted certificate.
- */
     public Optional<String> getEncryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Key vault sync status
- */
     public Optional<String> getKeyVaultSyncStatus() {
         return Optional.ofNullable(this.keyVaultSyncStatus);
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The Resource ID of the Resource.
- */
     public String getResourceKey() {
         return this.resourceKey;
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }

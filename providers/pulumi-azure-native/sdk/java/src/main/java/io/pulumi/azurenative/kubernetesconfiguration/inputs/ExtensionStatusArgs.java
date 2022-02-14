@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Status from this instance of the extension.
- */
 public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionStatusArgs Empty = new ExtensionStatusArgs();
 
-    /**
-     * Status code provided by the Extension
-     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -29,9 +23,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.code == null ? Input.empty() : this.code;
     }
 
-    /**
-     * Short description of status of this instance of the extension.
-     */
     @InputImport(name="displayStatus")
     private final @Nullable Input<String> displayStatus;
 
@@ -39,9 +30,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.displayStatus == null ? Input.empty() : this.displayStatus;
     }
 
-    /**
-     * Level of the status.
-     */
     @InputImport(name="level")
     private final @Nullable Input<Either<String,LevelType>> level;
 
@@ -49,9 +37,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.level == null ? Input.empty() : this.level;
     }
 
-    /**
-     * Detailed message of the status from the Extension instance.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -59,9 +44,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * DateLiteral (per ISO8601) noting the time of installation status.
-     */
     @InputImport(name="time")
     private final @Nullable Input<String> time;
 

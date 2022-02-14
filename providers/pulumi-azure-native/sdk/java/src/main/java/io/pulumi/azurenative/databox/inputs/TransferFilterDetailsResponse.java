@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the filtering the transfer of data.
- */
 public final class TransferFilterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TransferFilterDetailsResponse Empty = new TransferFilterDetailsResponse();
 
-    /**
-     * Filter details to transfer Azure files.
-     */
     @InputImport(name="azureFileFilterDetails")
     private final @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
 
@@ -31,9 +25,6 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
         return this.azureFileFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.azureFileFilterDetails);
     }
 
-    /**
-     * Filter details to transfer blobs.
-     */
     @InputImport(name="blobFilterDetails")
     private final @Nullable BlobFilterDetailsResponse blobFilterDetails;
 
@@ -41,9 +32,6 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
         return this.blobFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.blobFilterDetails);
     }
 
-    /**
-     * Type of the account of data.
-     */
     @InputImport(name="dataAccountType", required=true)
     private final String dataAccountType;
 
@@ -51,9 +39,6 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
         return this.dataAccountType;
     }
 
-    /**
-     * Details of the filter files to be used for data transfer.
-     */
     @InputImport(name="filterFileDetails")
     private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListServerGatewayStatusResult {
-/**
- * Live message of list gateway. Status: 0 - Live
- */
     private final @Nullable Integer status;
 
     @OutputCustomType.Constructor({"status"})
@@ -21,9 +18,6 @@ public final class ListServerGatewayStatusResult {
         this.status = status;
     }
 
-/**
- * Live message of list gateway. Status: 0 - Live
- */
     public Optional<Integer> getStatus() {
         return Optional.ofNullable(this.status);
     }

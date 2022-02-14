@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGroupResult {
-/**
- * A user-assigned name for this group, used only for display purposes.
- */
     private final String displayName;
-/**
- * The filter used to determine which monitored resources belong to this group.
- */
     private final String filter;
-/**
- * If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
- */
     private final Boolean isCluster;
-/**
- * The name of this group. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored and a new name is created consisting of the project specified in the call to CreateGroup and a unique [GROUP_ID] that is generated automatically.
- */
     private final String name;
-/**
- * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
- */
     private final String parentName;
 
     @OutputCustomType.Constructor({"displayName","filter","isCluster","name","parentName"})
@@ -45,33 +30,18 @@ public final class GetGroupResult {
         this.parentName = Objects.requireNonNull(parentName);
     }
 
-/**
- * A user-assigned name for this group, used only for display purposes.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * The filter used to determine which monitored resources belong to this group.
- */
     public String getFilter() {
         return this.filter;
     }
-/**
- * If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
- */
     public Boolean getIsCluster() {
         return this.isCluster;
     }
-/**
- * The name of this group. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored and a new name is created consisting of the project specified in the call to CreateGroup and a unique [GROUP_ID] that is generated automatically.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
- */
     public String getParentName() {
         return this.parentName;
     }

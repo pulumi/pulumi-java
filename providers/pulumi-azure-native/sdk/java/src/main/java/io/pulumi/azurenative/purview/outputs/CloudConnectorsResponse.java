@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudConnectorsResponse {
-/**
- * AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning
- */
     private final String awsExternalId;
 
     @OutputCustomType.Constructor({"awsExternalId"})
@@ -20,10 +16,6 @@ Configured in AWS to allow use of the role arn used for scanning
         this.awsExternalId = Objects.requireNonNull(awsExternalId);
     }
 
-/**
- * AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning
- */
     public String getAwsExternalId() {
         return this.awsExternalId;
     }

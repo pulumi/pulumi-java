@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
-/**
- * Value to replace it with.
- */
     private final GooglePrivacyDlpV2ValueResponse newValue;
 
     @OutputCustomType.Constructor({"newValue"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
         this.newValue = Objects.requireNonNull(newValue);
     }
 
-/**
- * Value to replace it with.
- */
     public GooglePrivacyDlpV2ValueResponse getNewValue() {
         return this.newValue;
     }

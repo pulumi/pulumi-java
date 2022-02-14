@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
-/**
- * List of management groups.
- */
     private final @Nullable List<String> managementGroups;
-/**
- * List of subscriptions.
- */
     private final @Nullable List<String> subscriptions;
 
     @OutputCustomType.Constructor({"managementGroups","subscriptions"})
@@ -28,15 +22,9 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
         this.subscriptions = subscriptions;
     }
 
-/**
- * List of management groups.
- */
     public List<String> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
-/**
- * List of subscriptions.
- */
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }

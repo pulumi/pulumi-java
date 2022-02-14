@@ -16,16 +16,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * A piece of metadata that applies to a window of a call.
- */
 public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1CallAnnotationResponse Empty = new GoogleCloudContactcenterinsightsV1CallAnnotationResponse();
 
-    /**
-     * The boundary in the conversation where the annotation ends, inclusive.
-     */
     @InputImport(name="annotationEndBoundary", required=true)
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary;
 
@@ -33,9 +27,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.annotationEndBoundary;
     }
 
-    /**
-     * The boundary in the conversation where the annotation starts, inclusive.
-     */
     @InputImport(name="annotationStartBoundary", required=true)
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary;
 
@@ -43,9 +34,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.annotationStartBoundary;
     }
 
-    /**
-     * The channel of the audio where the annotation occurs. For single-channel audio, this field is not populated.
-     */
     @InputImport(name="channelTag", required=true)
     private final Integer channelTag;
 
@@ -53,9 +41,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.channelTag;
     }
 
-    /**
-     * Data specifying an entity mention.
-     */
     @InputImport(name="entityMentionData", required=true)
     private final GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData;
 
@@ -63,9 +48,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.entityMentionData;
     }
 
-    /**
-     * Data specifying a hold.
-     */
     @InputImport(name="holdData", required=true)
     private final GoogleCloudContactcenterinsightsV1HoldDataResponse holdData;
 
@@ -73,9 +55,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.holdData;
     }
 
-    /**
-     * Data specifying an intent match.
-     */
     @InputImport(name="intentMatchData", required=true)
     private final GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData;
 
@@ -83,9 +62,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.intentMatchData;
     }
 
-    /**
-     * Data specifying an interruption.
-     */
     @InputImport(name="interruptionData", required=true)
     private final GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData;
 
@@ -93,9 +69,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.interruptionData;
     }
 
-    /**
-     * Data specifying a phrase match.
-     */
     @InputImport(name="phraseMatchData", required=true)
     private final GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData;
 
@@ -103,9 +76,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.phraseMatchData;
     }
 
-    /**
-     * Data specifying sentiment.
-     */
     @InputImport(name="sentimentData", required=true)
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
@@ -113,9 +83,6 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
         return this.sentimentData;
     }
 
-    /**
-     * Data specifying silence.
-     */
     @InputImport(name="silenceData", required=true)
     private final GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
 

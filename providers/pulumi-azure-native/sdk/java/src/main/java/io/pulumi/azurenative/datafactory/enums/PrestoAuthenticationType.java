@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The authentication mechanism used to connect to the Presto server.
- */
     @EnumType
     public enum PrestoAuthenticationType {
-/**
- * 
- */
         Anonymous("Anonymous"),
-/**
- * 
- */
         LDAP("LDAP");
 
         private final String value;

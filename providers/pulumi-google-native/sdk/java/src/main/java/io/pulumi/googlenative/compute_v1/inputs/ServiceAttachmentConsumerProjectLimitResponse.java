@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAttachmentConsumerProjectLimitResponse Empty = new ServiceAttachmentConsumerProjectLimitResponse();
 
-    /**
-     * The value of the limit to set.
-     */
     @InputImport(name="connectionLimit", required=true)
     private final Integer connectionLimit;
 
@@ -26,9 +20,6 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
         return this.connectionLimit;
     }
 
-    /**
-     * The project id or number for the project to set the limit for.
-     */
     @InputImport(name="projectIdOrNum", required=true)
     private final String projectIdOrNum;
 

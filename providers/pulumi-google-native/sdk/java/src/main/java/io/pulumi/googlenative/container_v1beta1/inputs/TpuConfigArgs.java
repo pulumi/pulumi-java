@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for Cloud TPU.
- */
 public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TpuConfigArgs Empty = new TpuConfigArgs();
 
-    /**
-     * Whether Cloud TPU integration is enabled or not.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -28,9 +22,6 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * IPv4 CIDR block reserved for Cloud TPU in the VPC.
-     */
     @InputImport(name="ipv4CidrBlock")
     private final @Nullable Input<String> ipv4CidrBlock;
 
@@ -38,9 +29,6 @@ public final class TpuConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipv4CidrBlock == null ? Input.empty() : this.ipv4CidrBlock;
     }
 
-    /**
-     * Whether to use service networking for Cloud TPU or not.
-     */
     @InputImport(name="useServiceNetworking")
     private final @Nullable Input<Boolean> useServiceNetworking;
 

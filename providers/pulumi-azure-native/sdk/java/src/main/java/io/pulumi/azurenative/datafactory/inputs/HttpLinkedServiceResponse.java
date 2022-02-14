@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Linked service for an HTTP source.
- */
 public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpLinkedServiceResponse Empty = new HttpLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -35,9 +29,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
-     */
     @InputImport(name="authHeaders")
     private final @Nullable Object authHeaders;
 
@@ -45,9 +36,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
     }
 
-    /**
-     * The authentication type to be used to connect to the HTTP server.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -55,9 +43,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
-    /**
-     * Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="certThumbprint")
     private final @Nullable Object certThumbprint;
 
@@ -65,9 +50,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.certThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certThumbprint);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -75,9 +57,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -85,9 +64,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="embeddedCertData")
     private final @Nullable Object embeddedCertData;
 
@@ -95,9 +71,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.embeddedCertData == null ? Optional.empty() : Optional.ofNullable(this.embeddedCertData);
     }
 
-    /**
-     * If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="enableServerCertificateValidation")
     private final @Nullable Object enableServerCertificateValidation;
 
@@ -105,9 +78,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.enableServerCertificateValidation == null ? Optional.empty() : Optional.ofNullable(this.enableServerCertificateValidation);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -115,9 +85,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -125,9 +92,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
-     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -135,10 +99,6 @@ public final class HttpLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.password == null ? null : this.password;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'HttpServer'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -146,9 +106,6 @@ Expected value is 'HttpServer'.
         return this.type;
     }
 
-    /**
-     * The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="url", required=true)
     private final Object url;
 
@@ -156,9 +113,6 @@ Expected value is 'HttpServer'.
         return this.url;
     }
 
-    /**
-     * User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userName")
     private final @Nullable Object userName;
 

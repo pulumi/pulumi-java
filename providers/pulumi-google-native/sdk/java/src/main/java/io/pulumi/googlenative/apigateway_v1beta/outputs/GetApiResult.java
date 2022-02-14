@@ -10,33 +10,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetApiResult {
-/**
- * Created time.
- */
     private final String createTime;
-/**
- * Optional. Display name.
- */
     private final String displayName;
-/**
- * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
- */
     private final Map<String,String> labels;
-/**
- * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
- */
     private final String managedService;
-/**
- * Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
- */
     private final String name;
-/**
- * State of the API.
- */
     private final String state;
-/**
- * Updated time.
- */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","displayName","labels","managedService","name","state","updateTime"})
@@ -57,45 +36,24 @@ public final class GetApiResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
-/**
- * Created time.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Optional. Display name.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
- */
     public String getManagedService() {
         return this.managedService;
     }
-/**
- * Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
- */
     public String getName() {
         return this.name;
     }
-/**
- * State of the API.
- */
     public String getState() {
         return this.state;
     }
-/**
- * Updated time.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }

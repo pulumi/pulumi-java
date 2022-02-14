@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConditionResponse {
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String iam;
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String op;
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String svc;
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String sys;
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"iam","op","svc","sys","values"})
@@ -45,33 +30,18 @@ public final class ConditionResponse {
         this.values = Objects.requireNonNull(values);
     }
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getIam() {
         return this.iam;
     }
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getOp() {
         return this.op;
     }
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getSvc() {
         return this.svc;
     }
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getSys() {
         return this.sys;
     }
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public List<String> getValues() {
         return this.values;
     }

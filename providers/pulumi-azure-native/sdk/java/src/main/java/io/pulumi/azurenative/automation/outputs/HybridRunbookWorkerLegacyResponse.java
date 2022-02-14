@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HybridRunbookWorkerLegacyResponse {
-/**
- * Gets or sets the assigned machine IP address.
- */
     private final @Nullable String ip;
-/**
- * Last Heartbeat from the Worker
- */
     private final @Nullable String lastSeenDateTime;
-/**
- * Gets or sets the worker machine name.
- */
     private final @Nullable String name;
-/**
- * Gets or sets the registration time of the worker machine.
- */
     private final @Nullable String registrationTime;
 
     @OutputCustomType.Constructor({"ip","lastSeenDateTime","name","registrationTime"})
@@ -40,27 +28,15 @@ public final class HybridRunbookWorkerLegacyResponse {
         this.registrationTime = registrationTime;
     }
 
-/**
- * Gets or sets the assigned machine IP address.
- */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
-/**
- * Last Heartbeat from the Worker
- */
     public Optional<String> getLastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
-/**
- * Gets or sets the worker machine name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Gets or sets the registration time of the worker machine.
- */
     public Optional<String> getRegistrationTime() {
         return Optional.ofNullable(this.registrationTime);
     }

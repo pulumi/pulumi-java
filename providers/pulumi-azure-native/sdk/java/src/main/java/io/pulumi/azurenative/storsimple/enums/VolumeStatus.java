@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The volume status.
- */
     @EnumType
     public enum VolumeStatus {
-/**
- * 
- */
         Online("Online"),
-/**
- * 
- */
         Offline("Offline");
 
         private final String value;

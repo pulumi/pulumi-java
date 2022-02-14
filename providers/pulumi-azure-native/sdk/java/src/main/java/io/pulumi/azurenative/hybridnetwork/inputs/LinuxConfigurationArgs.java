@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the Linux operating system settings on the virtual machine.
- */
 public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinuxConfigurationArgs Empty = new LinuxConfigurationArgs();
 
-    /**
-     * Specifies the ssh key configuration for a Linux OS.
-     */
     @InputImport(name="ssh")
     private final @Nullable Input<SshConfigurationArgs> ssh;
 

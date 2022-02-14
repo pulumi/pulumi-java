@@ -12,26 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AudioResponse {
-/**
- * The bitrate, in bits per second, of the output encoded audio.
- */
     private final @Nullable Integer bitrate;
-/**
- * The number of channels in the audio.
- */
     private final @Nullable Integer channels;
-/**
- * An optional label for the codec. The label can be used to control muxing behavior.
- */
     private final @Nullable String label;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.Audio'.
- */
     private final String odataType;
-/**
- * The sampling rate to use for encoding in hertz.
- */
     private final @Nullable Integer samplingRate;
 
     @OutputCustomType.Constructor({"bitrate","channels","label","odataType","samplingRate"})
@@ -48,34 +32,18 @@ Expected value is '#Microsoft.Media.Audio'.
         this.samplingRate = samplingRate;
     }
 
-/**
- * The bitrate, in bits per second, of the output encoded audio.
- */
     public Optional<Integer> getBitrate() {
         return Optional.ofNullable(this.bitrate);
     }
-/**
- * The number of channels in the audio.
- */
     public Optional<Integer> getChannels() {
         return Optional.ofNullable(this.channels);
     }
-/**
- * An optional label for the codec. The label can be used to control muxing behavior.
- */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.Audio'.
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * The sampling rate to use for encoding in hertz.
- */
     public Optional<Integer> getSamplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }

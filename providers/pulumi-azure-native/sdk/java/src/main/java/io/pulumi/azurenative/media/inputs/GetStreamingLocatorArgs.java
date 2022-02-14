@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetStreamingLocatorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStreamingLocatorArgs Empty = new GetStreamingLocatorArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetStreamingLocatorArgs extends io.pulumi.resources.InvokeArg
         return this.accountName;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetStreamingLocatorArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
-    /**
-     * The Streaming Locator name.
-     */
     @InputImport(name="streamingLocatorName", required=true)
     private final String streamingLocatorName;
 

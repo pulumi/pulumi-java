@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters for the scaling action.
- */
 public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleActionArgs Empty = new ScaleActionArgs();
 
-    /**
-     * the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
-     */
     @InputImport(name="cooldown", required=true)
     private final Input<String> cooldown;
 
@@ -29,9 +23,6 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.cooldown;
     }
 
-    /**
-     * the scale direction. Whether the scaling action increases or decreases the number of instances.
-     */
     @InputImport(name="direction", required=true)
     private final Input<ScaleDirection> direction;
 
@@ -39,9 +30,6 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.direction;
     }
 
-    /**
-     * the type of action that should occur when the scale rule fires.
-     */
     @InputImport(name="type", required=true)
     private final Input<ScaleType> type;
 
@@ -49,9 +37,6 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
-    /**
-     * the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

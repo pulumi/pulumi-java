@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDistributedAvailabilityGroup {
-/**
- * Distributed availability group between box and Sql Managed Instance.
-API Version: 2021-05-01-preview.
- *
- * Distributed availability group between box and Sql Managed Instance.
- */
     public static CompletableFuture<GetDistributedAvailabilityGroupResult> invokeAsync(GetDistributedAvailabilityGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDistributedAvailabilityGroup", TypeShape.of(GetDistributedAvailabilityGroupResult.class), args == null ? GetDistributedAvailabilityGroupArgs.Empty : args, Utilities.withVersion(options));
     }

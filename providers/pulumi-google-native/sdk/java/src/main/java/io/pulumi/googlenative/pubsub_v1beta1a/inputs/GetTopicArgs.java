@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTopicArgs Empty = new GetTopicArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="topicId", required=true)
     private final String topicId;
 

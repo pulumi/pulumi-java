@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TaskContainerSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TaskContainerSettingsResponse Empty = new TaskContainerSettingsResponse();
 
-    /**
-     * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
-     */
     @InputImport(name="containerRunOptions")
     private final @Nullable String containerRunOptions;
 
@@ -28,9 +22,6 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
         return this.containerRunOptions == null ? Optional.empty() : Optional.ofNullable(this.containerRunOptions);
     }
 
-    /**
-     * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
-     */
     @InputImport(name="imageName", required=true)
     private final String imageName;
 
@@ -38,9 +29,6 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
         return this.imageName;
     }
 
-    /**
-     * This setting can be omitted if was already provided at pool creation.
-     */
     @InputImport(name="registry")
     private final @Nullable ContainerRegistryResponse registry;
 
@@ -48,9 +36,6 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="workingDirectory")
     private final @Nullable String workingDirectory;
 

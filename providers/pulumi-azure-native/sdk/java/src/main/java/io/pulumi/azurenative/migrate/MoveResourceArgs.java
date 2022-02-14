@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MoveResourceArgs Empty = new MoveResourceArgs();
 
-    /**
-     * The Move Collection Name.
-     */
     @InputImport(name="moveCollectionName", required=true)
     private final Input<String> moveCollectionName;
 
@@ -28,9 +22,6 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.moveCollectionName;
     }
 
-    /**
-     * The Move Resource Name.
-     */
     @InputImport(name="moveResourceName")
     private final @Nullable Input<String> moveResourceName;
 
@@ -38,9 +29,6 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.moveResourceName == null ? Input.empty() : this.moveResourceName;
     }
 
-    /**
-     * Defines the move resource properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<MoveResourcePropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

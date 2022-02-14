@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedNetworkPeeringPolicyArgs Empty = new GetManagedNetworkPeeringPolicyArgs();
 
-    /**
-     * The name of the Managed Network.
-     */
     @InputImport(name="managedNetworkName", required=true)
     private final String managedNetworkName;
 
@@ -25,9 +19,6 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
         return this.managedNetworkName;
     }
 
-    /**
-     * The name of the Managed Network Peering Policy.
-     */
     @InputImport(name="managedNetworkPeeringPolicyName", required=true)
     private final String managedNetworkPeeringPolicyName;
 
@@ -35,9 +26,6 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
         return this.managedNetworkPeeringPolicyName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

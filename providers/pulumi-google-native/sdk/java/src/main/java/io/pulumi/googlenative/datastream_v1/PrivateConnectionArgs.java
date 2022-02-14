@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateConnectionArgs Empty = new PrivateConnectionArgs();
 
-    /**
-     * Display name.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -29,9 +23,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.displayName;
     }
 
-    /**
-     * Labels.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -39,9 +30,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="privateConnectionId", required=true)
     private final Input<String> privateConnectionId;
 
@@ -59,9 +44,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.privateConnectionId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -69,9 +51,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -79,9 +58,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * VPC Peering Config.
-     */
     @InputImport(name="vpcPeeringConfig")
     private final @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig;
 

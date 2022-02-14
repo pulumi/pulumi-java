@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum TokenCertificateName {
-/**
- * 
- */
         Certificate1("certificate1"),
-/**
- * 
- */
         Certificate2("certificate2");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 
-    /**
-     * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,9 +21,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The display name of the dataset. Maximum of 64 characters.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -37,9 +28,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
-     */
     @InputImport(name="lastMigrateTime")
     private final @Nullable Input<String> lastMigrateTime;
 
@@ -47,9 +35,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastMigrateTime == null ? Input.empty() : this.lastMigrateTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -16,228 +16,44 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A SQL Migration Service.
-API Version: 2021-10-30-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or Update SQL Migration Service with maximum parameters.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlMigrationService = new AzureNative.DataMigration.SqlMigrationService("sqlMigrationService", new AzureNative.DataMigration.SqlMigrationServiceArgs
-        {
-            Location = "northeurope",
-            ResourceGroupName = "testrg",
-            SqlMigrationServiceName = "testagent",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datamigration.NewSqlMigrationService(ctx, "sqlMigrationService", &datamigration.SqlMigrationServiceArgs{
-			Location:                pulumi.String("northeurope"),
-			ResourceGroupName:       pulumi.String("testrg"),
-			SqlMigrationServiceName: pulumi.String("testagent"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlMigrationService = new azure_native.datamigration.SqlMigrationService("sqlMigrationService", {
-    location: "northeurope",
-    resourceGroupName: "testrg",
-    sqlMigrationServiceName: "testagent",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_migration_service = azure_native.datamigration.SqlMigrationService("sqlMigrationService",
-    location="northeurope",
-    resource_group_name="testrg",
-    sql_migration_service_name="testagent")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create or Update SQL Migration Service with minimum parameters.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlMigrationService = new AzureNative.DataMigration.SqlMigrationService("sqlMigrationService", new AzureNative.DataMigration.SqlMigrationServiceArgs
-        {
-            Location = "northeurope",
-            ResourceGroupName = "testrg",
-            SqlMigrationServiceName = "testagent",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datamigration.NewSqlMigrationService(ctx, "sqlMigrationService", &datamigration.SqlMigrationServiceArgs{
-			Location:                pulumi.String("northeurope"),
-			ResourceGroupName:       pulumi.String("testrg"),
-			SqlMigrationServiceName: pulumi.String("testagent"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlMigrationService = new azure_native.datamigration.SqlMigrationService("sqlMigrationService", {
-    location: "northeurope",
-    resourceGroupName: "testrg",
-    sqlMigrationServiceName: "testagent",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_migration_service = azure_native.datamigration.SqlMigrationService("sqlMigrationService",
-    location="northeurope",
-    resource_group_name="testrg",
-    sql_migration_service_name="testagent")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datamigration:SqlMigrationService testagent /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.DataMigration/sqlMigrationServices/testagent 
-```
-
- */
 @ResourceType(type="azure-native:datamigration:SqlMigrationService")
 public class SqlMigrationService extends io.pulumi.resources.CustomResource {
-    /**
-     * Current state of the Integration runtime.
-     */
     @OutputExport(name="integrationRuntimeState", type=String.class, parameters={})
     private Output<String> integrationRuntimeState;
 
-    /**
-     * @return Current state of the Integration runtime.
-     */
     public Output<String> getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
     }
-    /**
-     * 
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * 
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state to track the async operation status.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state to track the async operation status.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * 
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * 
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * 
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
@@ -245,12 +61,6 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SqlMigrationService(String name, SqlMigrationServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datamigration:SqlMigrationService", name, args == null ? SqlMigrationServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -269,14 +79,6 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SqlMigrationService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlMigrationService(name, id, options);
     }

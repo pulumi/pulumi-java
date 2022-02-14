@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Name value pair.
- */
 public final class NameValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NameValuePairArgs Empty = new NameValuePairArgs();
 
-    /**
-     * Pair name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class NameValuePairArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Pair value.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -9,16 +9,10 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AttestationArgs;
 import java.util.Objects;
 
 
-/**
- * Details of an attestation occurrence.
- */
 public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetailsArgs Empty = new DetailsArgs();
 
-    /**
-     * Attestation for the resource.
-     */
     @InputImport(name="attestation", required=true)
     private final Input<AttestationArgs> attestation;
 

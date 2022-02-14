@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2CloudStoragePathResponse {
-/**
- * A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
- */
     private final String path;
 
     @OutputCustomType.Constructor({"path"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse {
         this.path = Objects.requireNonNull(path);
     }
 
-/**
- * A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt
- */
     public String getPath() {
         return this.path;
     }

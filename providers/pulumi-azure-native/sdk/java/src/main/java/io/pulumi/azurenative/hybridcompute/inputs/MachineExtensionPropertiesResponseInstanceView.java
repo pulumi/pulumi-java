@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The machine extension instance view.
- */
 public final class MachineExtensionPropertiesResponseInstanceView extends io.pulumi.resources.InvokeArgs {
 
     public static final MachineExtensionPropertiesResponseInstanceView Empty = new MachineExtensionPropertiesResponseInstanceView();
 
-    /**
-     * The machine extension name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,9 +22,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
         return this.name;
     }
 
-    /**
-     * Instance view status.
-     */
     @InputImport(name="status")
     private final @Nullable MachineExtensionInstanceViewResponseStatus status;
 
@@ -38,9 +29,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -48,9 +36,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
         return this.type;
     }
 
-    /**
-     * Specifies the version of the script handler.
-     */
     @InputImport(name="typeHandlerVersion", required=true)
     private final String typeHandlerVersion;
 

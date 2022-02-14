@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TrackSelectionResponse {
-/**
- * TrackSelections is a track property condition list which can specify track(s)
- */
     private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
     @OutputCustomType.Constructor({"trackSelections"})
@@ -21,9 +18,6 @@ public final class TrackSelectionResponse {
         this.trackSelections = trackSelections;
     }
 
-/**
- * TrackSelections is a track property condition list which can specify track(s)
- */
     public List<TrackPropertyConditionResponse> getTrackSelections() {
         return this.trackSelections == null ? List.of() : this.trackSelections;
     }

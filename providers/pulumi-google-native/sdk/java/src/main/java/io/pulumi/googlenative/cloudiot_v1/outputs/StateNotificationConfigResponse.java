@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StateNotificationConfigResponse {
-/**
- * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
- */
     private final String pubsubTopicName;
 
     @OutputCustomType.Constructor({"pubsubTopicName"})
@@ -19,9 +16,6 @@ public final class StateNotificationConfigResponse {
         this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
     }
 
-/**
- * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
- */
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
     }

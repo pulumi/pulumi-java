@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KpiAliasResponse {
-/**
- * KPI alias name.
- */
     private final String aliasName;
-/**
- * The expression.
- */
     private final String expression;
 
     @OutputCustomType.Constructor({"aliasName","expression"})
@@ -26,15 +20,9 @@ public final class KpiAliasResponse {
         this.expression = Objects.requireNonNull(expression);
     }
 
-/**
- * KPI alias name.
- */
     public String getAliasName() {
         return this.aliasName;
     }
-/**
- * The expression.
- */
     public String getExpression() {
         return this.expression;
     }

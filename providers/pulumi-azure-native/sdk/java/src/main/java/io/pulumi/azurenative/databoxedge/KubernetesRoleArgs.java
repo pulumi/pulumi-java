@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubernetesRoleArgs Empty = new KubernetesRoleArgs();
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -32,9 +26,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
-    /**
-     * Host OS supported by the Kubernetes role.
-     */
     @InputImport(name="hostPlatform", required=true)
     private final Input<Either<String,PlatformType>> hostPlatform;
 
@@ -42,10 +33,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPlatform;
     }
 
-    /**
-     * Role type.
-Expected value is 'Kubernetes'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -53,9 +40,6 @@ Expected value is 'Kubernetes'.
         return this.kind;
     }
 
-    /**
-     * Kubernetes cluster configuration
-     */
     @InputImport(name="kubernetesClusterInfo", required=true)
     private final Input<KubernetesClusterInfoArgs> kubernetesClusterInfo;
 
@@ -63,9 +47,6 @@ Expected value is 'Kubernetes'.
         return this.kubernetesClusterInfo;
     }
 
-    /**
-     * Kubernetes role resources
-     */
     @InputImport(name="kubernetesRoleResources", required=true)
     private final Input<KubernetesRoleResourcesArgs> kubernetesRoleResources;
 
@@ -73,9 +54,6 @@ Expected value is 'Kubernetes'.
         return this.kubernetesRoleResources;
     }
 
-    /**
-     * The role name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -83,9 +61,6 @@ Expected value is 'Kubernetes'.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,9 +68,6 @@ Expected value is 'Kubernetes'.
         return this.resourceGroupName;
     }
 
-    /**
-     * Role status.
-     */
     @InputImport(name="roleStatus", required=true)
     private final Input<Either<String,RoleStatus>> roleStatus;
 

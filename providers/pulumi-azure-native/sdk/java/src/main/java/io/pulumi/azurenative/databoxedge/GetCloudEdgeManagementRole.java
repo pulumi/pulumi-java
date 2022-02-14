@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudEdgeManagementRole {
-/**
- * CloudEdgeManagementRole role.
-API Version: 2020-12-01.
- *
- * CloudEdgeManagementRole role.
- */
     public static CompletableFuture<GetCloudEdgeManagementRoleResult> invokeAsync(GetCloudEdgeManagementRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getCloudEdgeManagementRole", TypeShape.of(GetCloudEdgeManagementRoleResult.class), args == null ? GetCloudEdgeManagementRoleArgs.Empty : args, Utilities.withVersion(options));
     }

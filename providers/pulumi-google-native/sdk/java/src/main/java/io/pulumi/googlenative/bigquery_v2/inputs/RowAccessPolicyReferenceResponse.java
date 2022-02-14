@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RowAccessPolicyReferenceResponse Empty = new RowAccessPolicyReferenceResponse();
 
-    /**
-     * [Required] The ID of the dataset containing this row access policy.
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -25,9 +19,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
         return this.datasetId;
     }
 
-    /**
-     * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-     */
     @InputImport(name="policyId", required=true)
     private final String policyId;
 
@@ -35,9 +26,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
         return this.policyId;
     }
 
-    /**
-     * [Required] The ID of the project containing this row access policy.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -45,9 +33,6 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
         return this.project;
     }
 
-    /**
-     * [Required] The ID of the table containing this row access policy.
-     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 

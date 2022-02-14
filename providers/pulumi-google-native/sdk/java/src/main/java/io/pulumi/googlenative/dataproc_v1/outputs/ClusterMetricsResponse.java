@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterMetricsResponse {
-/**
- * The HDFS metrics.
- */
     private final Map<String,String> hdfsMetrics;
-/**
- * The YARN metrics.
- */
     private final Map<String,String> yarnMetrics;
 
     @OutputCustomType.Constructor({"hdfsMetrics","yarnMetrics"})
@@ -27,15 +21,9 @@ public final class ClusterMetricsResponse {
         this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
     }
 
-/**
- * The HDFS metrics.
- */
     public Map<String,String> getHdfsMetrics() {
         return this.hdfsMetrics;
     }
-/**
- * The YARN metrics.
- */
     public Map<String,String> getYarnMetrics() {
         return this.yarnMetrics;
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A iOS mobile test specification
- */
 public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IosTestArgs Empty = new IosTestArgs();
 
-    /**
-     * Information about the application under test.
-     */
     @InputImport(name="iosAppInfo")
     private final @Nullable Input<IosAppInfoArgs> iosAppInfo;
 
@@ -31,9 +25,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosAppInfo == null ? Input.empty() : this.iosAppInfo;
     }
 
-    /**
-     * An iOS Robo test.
-     */
     @InputImport(name="iosRoboTest")
     private final @Nullable Input<IosRoboTestArgs> iosRoboTest;
 
@@ -41,9 +32,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosRoboTest == null ? Input.empty() : this.iosRoboTest;
     }
 
-    /**
-     * An iOS test loop.
-     */
     @InputImport(name="iosTestLoop")
     private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
 
@@ -51,9 +39,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosTestLoop == null ? Input.empty() : this.iosTestLoop;
     }
 
-    /**
-     * An iOS XCTest.
-     */
     @InputImport(name="iosXcTest")
     private final @Nullable Input<IosXcTestArgs> iosXcTest;
 
@@ -61,9 +46,6 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.iosXcTest == null ? Input.empty() : this.iosXcTest;
     }
 
-    /**
-     * Max time a test is allowed to run before it is automatically cancelled.
-     */
     @InputImport(name="testTimeout")
     private final @Nullable Input<DurationArgs> testTimeout;
 

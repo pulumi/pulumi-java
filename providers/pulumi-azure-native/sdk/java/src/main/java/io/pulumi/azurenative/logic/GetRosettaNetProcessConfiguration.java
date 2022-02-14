@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRosettaNetProcessConfiguration {
-/**
- * The integration account RosettaNet process configuration.
-API Version: 2016-06-01.
- *
- * The integration account RosettaNet process configuration.
- */
     public static CompletableFuture<GetRosettaNetProcessConfigurationResult> invokeAsync(GetRosettaNetProcessConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getRosettaNetProcessConfiguration", TypeShape.of(GetRosettaNetProcessConfigurationResult.class), args == null ? GetRosettaNetProcessConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

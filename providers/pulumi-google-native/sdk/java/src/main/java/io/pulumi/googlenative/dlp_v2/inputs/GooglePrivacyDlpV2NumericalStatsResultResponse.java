@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Result of the numerical stats computation.
- */
 public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2NumericalStatsResultResponse Empty = new GooglePrivacyDlpV2NumericalStatsResultResponse();
 
-    /**
-     * Maximum value appearing in the column.
-     */
     @InputImport(name="maxValue", required=true)
     private final GooglePrivacyDlpV2ValueResponse maxValue;
 
@@ -26,9 +20,6 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
         return this.maxValue;
     }
 
-    /**
-     * Minimum value appearing in the column.
-     */
     @InputImport(name="minValue", required=true)
     private final GooglePrivacyDlpV2ValueResponse minValue;
 
@@ -36,9 +27,6 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
         return this.minValue;
     }
 
-    /**
-     * List of 99 values that partition the set of field values into 100 equal sized buckets.
-     */
     @InputImport(name="quantileValues", required=true)
     private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 

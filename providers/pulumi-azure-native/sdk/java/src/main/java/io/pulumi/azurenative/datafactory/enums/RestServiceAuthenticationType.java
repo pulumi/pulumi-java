@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of authentication used to connect to the REST service.
- */
     @EnumType
     public enum RestServiceAuthenticationType {
-/**
- * 
- */
         Anonymous("Anonymous"),
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         AadServicePrincipal("AadServicePrincipal"),
-/**
- * 
- */
         ManagedServiceIdentity("ManagedServiceIdentity");
 
         private final String value;

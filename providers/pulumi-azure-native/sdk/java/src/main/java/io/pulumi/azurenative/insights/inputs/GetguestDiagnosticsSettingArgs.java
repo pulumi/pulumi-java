@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetguestDiagnosticsSettingArgs Empty = new GetguestDiagnosticsSettingArgs();
 
-    /**
-     * The name of the diagnostic setting.
-     */
     @InputImport(name="diagnosticSettingsName", required=true)
     private final String diagnosticSettingsName;
 
@@ -25,9 +19,6 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
         return this.diagnosticSettingsName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

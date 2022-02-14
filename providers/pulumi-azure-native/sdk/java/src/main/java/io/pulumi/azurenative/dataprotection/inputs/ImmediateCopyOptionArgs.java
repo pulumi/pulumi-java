@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Immediate copy Option
- */
 public final class ImmediateCopyOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImmediateCopyOptionArgs Empty = new ImmediateCopyOptionArgs();
 
-    /**
-     * Type of the specific object - used for deserializing
-Expected value is 'ImmediateCopyOption'.
-     */
     @InputImport(name="objectType", required=true)
     private final Input<String> objectType;
 

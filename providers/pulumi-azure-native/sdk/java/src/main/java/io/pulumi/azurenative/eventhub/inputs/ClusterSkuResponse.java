@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU parameters particular to a cluster instance.
- */
 public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterSkuResponse Empty = new ClusterSkuResponse();
 
-    /**
-     * The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Name of this SKU.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

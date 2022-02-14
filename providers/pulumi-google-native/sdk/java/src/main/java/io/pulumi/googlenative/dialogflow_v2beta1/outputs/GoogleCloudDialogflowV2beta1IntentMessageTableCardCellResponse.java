@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse {
-/**
- * Text in this cell.
- */
     private final String text;
 
     @OutputCustomType.Constructor({"text"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
         this.text = Objects.requireNonNull(text);
     }
 
-/**
- * Text in this cell.
- */
     public String getText() {
         return this.text;
     }

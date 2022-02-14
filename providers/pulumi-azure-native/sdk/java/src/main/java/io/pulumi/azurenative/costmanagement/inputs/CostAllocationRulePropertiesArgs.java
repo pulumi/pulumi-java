@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of a cost allocation rule
- */
 public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CostAllocationRulePropertiesArgs Empty = new CostAllocationRulePropertiesArgs();
 
-    /**
-     * Description of a cost allocation rule.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Resource information for the cost allocation rule
-     */
     @InputImport(name="details", required=true)
     private final Input<CostAllocationRuleDetailsArgs> details;
 
@@ -40,9 +31,6 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
         return this.details;
     }
 
-    /**
-     * Status of the rule
-     */
     @InputImport(name="status", required=true)
     private final Input<Either<String,RuleStatus>> status;
 

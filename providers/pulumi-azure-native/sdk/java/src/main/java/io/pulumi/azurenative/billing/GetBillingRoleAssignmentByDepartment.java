@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingRoleAssignmentByDepartment {
-/**
- * The role assignment
-API Version: 2019-10-01-preview.
- *
- * The role assignment
- */
     public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> invokeAsync(GetBillingRoleAssignmentByDepartmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByDepartment", TypeShape.of(GetBillingRoleAssignmentByDepartmentResult.class), args == null ? GetBillingRoleAssignmentByDepartmentArgs.Empty : args, Utilities.withVersion(options));
     }

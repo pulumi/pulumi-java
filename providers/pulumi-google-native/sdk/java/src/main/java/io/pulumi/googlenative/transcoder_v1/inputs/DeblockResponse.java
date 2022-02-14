@@ -9,16 +9,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
-/**
- * Deblock preprocessing configuration.
- */
 public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeblockResponse Empty = new DeblockResponse();
 
-    /**
-     * Enable deblocker. The default is `false`.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -26,9 +20,6 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
         return this.enabled;
     }
 
-    /**
-     * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
-     */
     @InputImport(name="strength", required=true)
     private final Double strength;
 

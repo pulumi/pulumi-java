@@ -8,16 +8,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
-/**
- * Options regarding evaluation between bounding boxes.
- */
 public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse Empty = new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse();
 
-    /**
-     * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
-     */
     @InputImport(name="iouThreshold", required=true)
     private final Double iouThreshold;
 

@@ -11,17 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The resource requirements for the container (cpu and memory).
- */
 public final class ContainerResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerResourceRequirementsArgs Empty = new ContainerResourceRequirementsArgs();
 
-    /**
-     * The minimum amount of CPU cores to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="cpu")
     private final @Nullable Input<Double> cpu;
 
@@ -29,10 +22,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
-    /**
-     * The maximum amount of CPU cores allowed to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="cpuLimit")
     private final @Nullable Input<Double> cpuLimit;
 
@@ -40,9 +29,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.cpuLimit == null ? Input.empty() : this.cpuLimit;
     }
 
-    /**
-     * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
-     */
     @InputImport(name="fpga")
     private final @Nullable Input<Integer> fpga;
 
@@ -50,9 +36,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.fpga == null ? Input.empty() : this.fpga;
     }
 
-    /**
-     * The number of GPU cores in the container.
-     */
     @InputImport(name="gpu")
     private final @Nullable Input<Integer> gpu;
 
@@ -60,10 +43,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.gpu == null ? Input.empty() : this.gpu;
     }
 
-    /**
-     * The minimum amount of memory (in GB) to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="memoryInGB")
     private final @Nullable Input<Double> memoryInGB;
 
@@ -71,10 +50,6 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
     }
 
-    /**
-     * The maximum amount of memory (in GB) allowed to be used by the container. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-     */
     @InputImport(name="memoryInGBLimit")
     private final @Nullable Input<Double> memoryInGBLimit;
 

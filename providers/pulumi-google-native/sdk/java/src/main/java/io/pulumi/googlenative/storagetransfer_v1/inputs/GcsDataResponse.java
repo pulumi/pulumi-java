@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * In a GcsData resource, an object's name is the Cloud Storage object's name and its "last modification time" refers to the object's `updated` property of Cloud Storage objects, which changes when the content or the metadata of the object is updated.
- */
 public final class GcsDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GcsDataResponse Empty = new GcsDataResponse();
 
-    /**
-     * Cloud Storage bucket name. Must meet [Bucket Name Requirements](/storage/docs/naming#requirements).
-     */
     @InputImport(name="bucketName", required=true)
     private final String bucketName;
 
@@ -25,9 +19,6 @@ public final class GcsDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.bucketName;
     }
 
-    /**
-     * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. The root path value must meet [Object Name Requirements](/storage/docs/naming#objectnames).
-     */
     @InputImport(name="path", required=true)
     private final String path;
 

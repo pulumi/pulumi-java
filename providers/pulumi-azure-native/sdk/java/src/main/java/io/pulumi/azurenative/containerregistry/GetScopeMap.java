@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScopeMap {
-/**
- * An object that represents a scope map for a container registry.
-API Version: 2020-11-01-preview.
- *
- * An object that represents a scope map for a container registry.
- */
     public static CompletableFuture<GetScopeMapResult> invokeAsync(GetScopeMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getScopeMap", TypeShape.of(GetScopeMapResult.class), args == null ? GetScopeMapArgs.Empty : args, Utilities.withVersion(options));
     }

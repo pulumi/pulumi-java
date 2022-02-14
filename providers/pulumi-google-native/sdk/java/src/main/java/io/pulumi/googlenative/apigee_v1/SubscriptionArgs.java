@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 
-    /**
-     * Name of the API product for which the developer is purchasing a subscription.
-     */
     @InputImport(name="apiproduct")
     private final @Nullable Input<String> apiproduct;
 
@@ -27,9 +21,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiproduct == null ? Input.empty() : this.apiproduct;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="developerId", required=true)
     private final Input<String> developerId;
 
@@ -37,9 +28,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.developerId;
     }
 
-    /**
-     * Time when the API product subscription ends in milliseconds since epoch.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -47,9 +35,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -57,9 +42,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * Time when the API product subscription starts in milliseconds since epoch.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

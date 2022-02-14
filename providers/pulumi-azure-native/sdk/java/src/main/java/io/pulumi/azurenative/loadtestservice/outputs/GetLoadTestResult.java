@@ -14,45 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLoadTestResult {
-/**
- * Resource data plane URI.
- */
     private final String dataPlaneURI;
-/**
- * Description of the resource.
- */
     private final @Nullable String description;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The type of identity used for the resource.
- */
     private final @Nullable SystemAssignedServiceIdentityResponse identity;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Resource provisioning state.
- */
     private final String provisioningState;
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"dataPlaneURI","description","id","identity","location","name","provisioningState","systemData","tags","type"})
@@ -79,63 +49,33 @@ public final class GetLoadTestResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource data plane URI.
- */
     public String getDataPlaneURI() {
         return this.dataPlaneURI;
     }
-/**
- * Description of the resource.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The type of identity used for the resource.
- */
     public Optional<SystemAssignedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource provisioning state.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

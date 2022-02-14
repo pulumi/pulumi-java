@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKustoPoolPrincipalAssignmentArgs Empty = new GetKustoPoolPrincipalAssignmentArgs();
 
-    /**
-     * The name of the Kusto pool.
-     */
     @InputImport(name="kustoPoolName", required=true)
     private final String kustoPoolName;
 
@@ -25,9 +19,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
         return this.kustoPoolName;
     }
 
-    /**
-     * The name of the Kusto principalAssignment.
-     */
     @InputImport(name="principalAssignmentName", required=true)
     private final String principalAssignmentName;
 
@@ -35,9 +26,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
         return this.principalAssignmentName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

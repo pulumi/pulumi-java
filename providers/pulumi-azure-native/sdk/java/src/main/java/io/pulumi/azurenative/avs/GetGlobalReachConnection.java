@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalReachConnection {
-/**
- * A global reach connection resource
-API Version: 2020-07-17-preview.
- *
- * A global reach connection resource
- */
     public static CompletableFuture<GetGlobalReachConnectionResult> invokeAsync(GetGlobalReachConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getGlobalReachConnection", TypeShape.of(GetGlobalReachConnectionResult.class), args == null ? GetGlobalReachConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

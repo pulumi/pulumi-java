@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnabledConfigResponse {
-/**
- * True if configuration is enabled, false if it is disabled and null if configuration is not set.
- */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -21,9 +18,6 @@ public final class EnabledConfigResponse {
         this.enabled = enabled;
     }
 
-/**
- * True if configuration is enabled, false if it is disabled and null if configuration is not set.
- */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

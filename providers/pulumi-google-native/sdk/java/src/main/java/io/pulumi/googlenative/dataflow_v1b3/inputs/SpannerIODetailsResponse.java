@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Metadata for a Spanner connector used by the job.
- */
 public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SpannerIODetailsResponse Empty = new SpannerIODetailsResponse();
 
-    /**
-     * DatabaseId accessed in the connection.
-     */
     @InputImport(name="databaseId", required=true)
     private final String databaseId;
 
@@ -25,9 +19,6 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
         return this.databaseId;
     }
 
-    /**
-     * InstanceId accessed in the connection.
-     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -35,9 +26,6 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
         return this.instanceId;
     }
 
-    /**
-     * ProjectId accessed in the connection.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 

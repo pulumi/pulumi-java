@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of a NotificationHub GcmCredential.
- */
 public final class GcmCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GcmCredentialResponse Empty = new GcmCredentialResponse();
 
-    /**
-     * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
-     */
     @InputImport(name="gcmEndpoint")
     private final @Nullable String gcmEndpoint;
 
@@ -27,9 +21,6 @@ public final class GcmCredentialResponse extends io.pulumi.resources.InvokeArgs 
         return this.gcmEndpoint == null ? Optional.empty() : Optional.ofNullable(this.gcmEndpoint);
     }
 
-    /**
-     * The Google API key.
-     */
     @InputImport(name="googleApiKey")
     private final @Nullable String googleApiKey;
 

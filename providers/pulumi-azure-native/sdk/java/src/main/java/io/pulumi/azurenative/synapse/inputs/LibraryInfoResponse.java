@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Library/package information of a Big Data pool powered by Apache Spark
- */
 public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LibraryInfoResponse Empty = new LibraryInfoResponse();
 
-    /**
-     * Storage blob container name.
-     */
     @InputImport(name="containerName")
     private final @Nullable String containerName;
 
@@ -27,9 +21,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
-    /**
-     * Creator Id of the library/package.
-     */
     @InputImport(name="creatorId", required=true)
     private final String creatorId;
 
@@ -37,9 +28,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.creatorId;
     }
 
-    /**
-     * Name of the library.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -47,9 +35,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Storage blob path of library.
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -57,9 +42,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * Provisioning status of the library/package.
-     */
     @InputImport(name="provisioningStatus", required=true)
     private final String provisioningStatus;
 
@@ -67,9 +49,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningStatus;
     }
 
-    /**
-     * Type of the library.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -77,9 +56,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The last update time of the library.
-     */
     @InputImport(name="uploadedTimestamp", required=true)
     private final String uploadedTimestamp;
 

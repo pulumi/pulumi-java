@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalReachConnectionArgs Empty = new GetGlobalReachConnectionArgs();
 
-    /**
-     * Name of the global reach connection in the private cloud
-     */
     @InputImport(name="globalReachConnectionName", required=true)
     private final String globalReachConnectionName;
 
@@ -25,9 +19,6 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
         return this.globalReachConnectionName;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -35,9 +26,6 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

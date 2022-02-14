@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SiteLimitsResponse {
-/**
- * Maximum allowed disk size usage in MB.
- */
     private final @Nullable Double maxDiskSizeInMb;
-/**
- * Maximum allowed memory usage in MB.
- */
     private final @Nullable Double maxMemoryInMb;
-/**
- * Maximum allowed CPU usage percentage.
- */
     private final @Nullable Double maxPercentageCpu;
 
     @OutputCustomType.Constructor({"maxDiskSizeInMb","maxMemoryInMb","maxPercentageCpu"})
@@ -34,21 +25,12 @@ public final class SiteLimitsResponse {
         this.maxPercentageCpu = maxPercentageCpu;
     }
 
-/**
- * Maximum allowed disk size usage in MB.
- */
     public Optional<Double> getMaxDiskSizeInMb() {
         return Optional.ofNullable(this.maxDiskSizeInMb);
     }
-/**
- * Maximum allowed memory usage in MB.
- */
     public Optional<Double> getMaxMemoryInMb() {
         return Optional.ofNullable(this.maxMemoryInMb);
     }
-/**
- * Maximum allowed CPU usage percentage.
- */
     public Optional<Double> getMaxPercentageCpu() {
         return Optional.ofNullable(this.maxPercentageCpu);
     }

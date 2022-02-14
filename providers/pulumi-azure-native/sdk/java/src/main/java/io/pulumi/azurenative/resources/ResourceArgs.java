@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceArgs Empty = new ResourceArgs();
 
-    /**
-     * The identity of the resource.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -32,9 +26,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The kind of the resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -42,9 +33,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,9 +40,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * ID of the resource that manages this resource.
-     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -62,9 +47,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
-    /**
-     * The parent resource identity.
-     */
     @InputImport(name="parentResourcePath", required=true)
     private final Input<String> parentResourcePath;
 
@@ -72,9 +54,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResourcePath;
     }
 
-    /**
-     * The plan of the resource.
-     */
     @InputImport(name="plan")
     private final @Nullable Input<PlanArgs> plan;
 
@@ -82,9 +61,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
-    /**
-     * The resource properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -92,9 +68,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group for the resource. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -102,9 +75,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource to create.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -112,9 +82,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * The namespace of the resource provider.
-     */
     @InputImport(name="resourceProviderNamespace", required=true)
     private final Input<String> resourceProviderNamespace;
 
@@ -122,9 +89,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceProviderNamespace;
     }
 
-    /**
-     * The resource type of the resource to create.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -132,9 +96,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceType;
     }
 
-    /**
-     * The SKU of the resource.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -142,9 +103,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ImportFileResponse {
-/**
- * The contents of the file.
- */
     private final String content;
-/**
- * The name of the file.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"content","name"})
@@ -26,15 +20,9 @@ public final class ImportFileResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The contents of the file.
- */
     public String getContent() {
         return this.content;
     }
-/**
- * The name of the file.
- */
     public String getName() {
         return this.name;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapability {
-/**
- * Model that represents a Capability resource.
-API Version: 2021-09-15-preview.
- *
- * Model that represents a Capability resource.
- */
     public static CompletableFuture<GetCapabilityResult> invokeAsync(GetCapabilityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getCapability", TypeShape.of(GetCapabilityResult.class), args == null ? GetCapabilityArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetArgs Empty = new BudgetArgs();
 
-    /**
-     * Budgeted amount.
-     */
     @InputImport(name="amount", required=true)
     private final Input<GoogleCloudBillingBudgetsV1BudgetAmountArgs> amount;
 
@@ -32,9 +26,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.amount;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="billingAccountId", required=true)
     private final Input<String> billingAccountId;
 
@@ -42,9 +33,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingAccountId;
     }
 
-    /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
-     */
     @InputImport(name="budgetFilter")
     private final @Nullable Input<GoogleCloudBillingBudgetsV1FilterArgs> budgetFilter;
 
@@ -52,9 +40,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.budgetFilter == null ? Input.empty() : this.budgetFilter;
     }
 
-    /**
-     * User data for display name in UI. The name must be less than or equal to 60 characters.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -62,9 +47,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag causes an update to overwrite other changes.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -72,9 +54,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
-     */
     @InputImport(name="notificationsRule")
     private final @Nullable Input<GoogleCloudBillingBudgetsV1NotificationsRuleArgs> notificationsRule;
 
@@ -82,9 +61,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationsRule == null ? Input.empty() : this.notificationsRule;
     }
 
-    /**
-     * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
-     */
     @InputImport(name="thresholdRules")
     private final @Nullable Input<List<GoogleCloudBillingBudgetsV1ThresholdRuleArgs>> thresholdRules;
 

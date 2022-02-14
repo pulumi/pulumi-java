@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudRunRewriteResponse {
-/**
- * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.
- */
     private final String region;
-/**
- * User-defined ID of the Cloud Run service.
- */
     private final String serviceId;
 
     @OutputCustomType.Constructor({"region","serviceId"})
@@ -26,15 +20,9 @@ public final class CloudRunRewriteResponse {
         this.serviceId = Objects.requireNonNull(serviceId);
     }
 
-/**
- * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.
- */
     public String getRegion() {
         return this.region;
     }
-/**
- * User-defined ID of the Cloud Run service.
- */
     public String getServiceId() {
         return this.serviceId;
     }

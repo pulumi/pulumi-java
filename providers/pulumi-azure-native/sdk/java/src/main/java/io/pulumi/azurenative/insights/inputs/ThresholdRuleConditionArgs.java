@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A rule condition based on a metric crossing a threshold.
- */
 public final class ThresholdRuleConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThresholdRuleConditionArgs Empty = new ThresholdRuleConditionArgs();
 
-    /**
-     * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
-     */
     @InputImport(name="dataSource")
     private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
@@ -33,10 +27,6 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
         return this.dataSource == null ? Input.empty() : this.dataSource;
     }
 
-    /**
-     * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -44,9 +34,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondi
         return this.odataType;
     }
 
-    /**
-     * the operator used to compare the data and the threshold.
-     */
     @InputImport(name="operator", required=true)
     private final Input<ConditionOperator> operator;
 
@@ -54,9 +41,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondi
         return this.operator;
     }
 
-    /**
-     * the threshold value that activates the alert.
-     */
     @InputImport(name="threshold", required=true)
     private final Input<Double> threshold;
 
@@ -64,9 +48,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondi
         return this.threshold;
     }
 
-    /**
-     * the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
-     */
     @InputImport(name="timeAggregation")
     private final @Nullable Input<TimeAggregationOperator> timeAggregation;
 
@@ -74,9 +55,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondi
         return this.timeAggregation == null ? Input.empty() : this.timeAggregation;
     }
 
-    /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     */
     @InputImport(name="windowSize")
     private final @Nullable Input<String> windowSize;
 

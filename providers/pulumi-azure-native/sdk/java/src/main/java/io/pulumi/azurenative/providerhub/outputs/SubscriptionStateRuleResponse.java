@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubscriptionStateRuleResponse {
-/**
- * 
- */
     private final @Nullable List<String> allowedActions;
-/**
- * 
- */
     private final @Nullable String state;
 
     @OutputCustomType.Constructor({"allowedActions","state"})
@@ -29,15 +23,9 @@ public final class SubscriptionStateRuleResponse {
         this.state = state;
     }
 
-/**
- * 
- */
     public List<String> getAllowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
-/**
- * 
- */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a virtual machine scale set virtual machine profile.
- */
 public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetVMProfileArgs Empty = new VirtualMachineScaleSetVMProfileArgs();
 
-    /**
-     * Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.
-     */
     @InputImport(name="billingProfile")
     private final @Nullable Input<BillingProfileArgs> billingProfile;
 
@@ -38,9 +32,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.billingProfile == null ? Input.empty() : this.billingProfile;
     }
 
-    /**
-     * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
-     */
     @InputImport(name="diagnosticsProfile")
     private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
 
@@ -48,9 +39,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.diagnosticsProfile == null ? Input.empty() : this.diagnosticsProfile;
     }
 
-    /**
-     * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
-     */
     @InputImport(name="evictionPolicy")
     private final @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
@@ -58,9 +46,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
     }
 
-    /**
-     * Specifies a collection of settings for extensions installed on virtual machines in the scale set.
-     */
     @InputImport(name="extensionProfile")
     private final @Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
 
@@ -68,9 +53,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.extensionProfile == null ? Input.empty() : this.extensionProfile;
     }
 
-    /**
-     * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
-     */
     @InputImport(name="licenseType")
     private final @Nullable Input<String> licenseType;
 
@@ -78,9 +60,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
-    /**
-     * Specifies properties of the network interfaces of the virtual machines in the scale set.
-     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
 
@@ -88,9 +67,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
     }
 
-    /**
-     * Specifies the operating system settings for the virtual machines in the scale set.
-     */
     @InputImport(name="osProfile")
     private final @Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile;
 
@@ -98,9 +74,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.osProfile == null ? Input.empty() : this.osProfile;
     }
 
-    /**
-     * Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
 
@@ -108,9 +81,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * Specifies Scheduled Event related configurations.
-     */
     @InputImport(name="scheduledEventsProfile")
     private final @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
@@ -118,9 +88,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.scheduledEventsProfile == null ? Input.empty() : this.scheduledEventsProfile;
     }
 
-    /**
-     * Specifies the Security related profile settings for the virtual machines in the scale set.
-     */
     @InputImport(name="securityProfile")
     private final @Nullable Input<SecurityProfileArgs> securityProfile;
 
@@ -128,9 +95,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
     }
 
-    /**
-     * Specifies the storage settings for the virtual machine disks.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
 
@@ -138,9 +102,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
-    /**
-     * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
-     */
     @InputImport(name="userData")
     private final @Nullable Input<String> userData;
 

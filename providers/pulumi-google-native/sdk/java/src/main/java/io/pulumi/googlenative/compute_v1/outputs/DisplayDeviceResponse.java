@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DisplayDeviceResponse {
-/**
- * Defines whether the instance has Display enabled.
- */
     private final Boolean enableDisplay;
 
     @OutputCustomType.Constructor({"enableDisplay"})
@@ -19,9 +16,6 @@ public final class DisplayDeviceResponse {
         this.enableDisplay = Objects.requireNonNull(enableDisplay);
     }
 
-/**
- * Defines whether the instance has Display enabled.
- */
     public Boolean getEnableDisplay() {
         return this.enableDisplay;
     }

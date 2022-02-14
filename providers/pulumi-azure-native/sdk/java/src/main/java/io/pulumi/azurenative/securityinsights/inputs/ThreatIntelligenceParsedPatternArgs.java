@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes parsed pattern entity
- */
 public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThreatIntelligenceParsedPatternArgs Empty = new ThreatIntelligenceParsedPatternArgs();
 
-    /**
-     * Pattern type key
-     */
     @InputImport(name="patternTypeKey")
     private final @Nullable Input<String> patternTypeKey;
 
@@ -29,9 +23,6 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
         return this.patternTypeKey == null ? Input.empty() : this.patternTypeKey;
     }
 
-    /**
-     * Pattern type keys
-     */
     @InputImport(name="patternTypeValues")
     private final @Nullable Input<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 

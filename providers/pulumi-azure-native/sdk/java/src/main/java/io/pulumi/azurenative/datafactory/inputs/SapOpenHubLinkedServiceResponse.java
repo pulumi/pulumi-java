@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SAP Business Warehouse Open Hub Destination Linked Service.
- */
 public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SapOpenHubLinkedServiceResponse Empty = new SapOpenHubLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -35,9 +29,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-     */
     @InputImport(name="clientId")
     private final @Nullable Object clientId;
 
@@ -45,9 +36,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -55,9 +43,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -65,9 +50,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -75,9 +57,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="language")
     private final @Nullable Object language;
 
@@ -85,9 +64,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
     }
 
-    /**
-     * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="logonGroup")
     private final @Nullable Object logonGroup;
 
@@ -95,9 +71,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.logonGroup == null ? Optional.empty() : Optional.ofNullable(this.logonGroup);
     }
 
-    /**
-     * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="messageServer")
     private final @Nullable Object messageServer;
 
@@ -105,9 +78,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.messageServer == null ? Optional.empty() : Optional.ofNullable(this.messageServer);
     }
 
-    /**
-     * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="messageServerService")
     private final @Nullable Object messageServerService;
 
@@ -115,9 +85,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.messageServerService == null ? Optional.empty() : Optional.ofNullable(this.messageServerService);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -125,9 +92,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Password to access the SAP BW server where the open hub destination is located.
-     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -135,9 +99,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.password == null ? null : this.password;
     }
 
-    /**
-     * Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="server")
     private final @Nullable Object server;
 
@@ -145,9 +106,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
     }
 
-    /**
-     * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="systemId")
     private final @Nullable Object systemId;
 
@@ -155,9 +113,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.systemId == null ? Optional.empty() : Optional.ofNullable(this.systemId);
     }
 
-    /**
-     * System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
-     */
     @InputImport(name="systemNumber")
     private final @Nullable Object systemNumber;
 
@@ -165,10 +120,6 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
         return this.systemNumber == null ? Optional.empty() : Optional.ofNullable(this.systemNumber);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'SapOpenHub'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -176,9 +127,6 @@ Expected value is 'SapOpenHub'.
         return this.type;
     }
 
-    /**
-     * Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userName")
     private final @Nullable Object userName;
 

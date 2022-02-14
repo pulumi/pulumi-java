@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerBindingArgs Empty = new ServerBindingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="type")
     private final @Nullable Input<ServerBindingType> type;
 

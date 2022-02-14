@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Linux specific update configuration.
- */
 public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinuxPropertiesArgs Empty = new LinuxPropertiesArgs();
 
-    /**
-     * packages excluded from the software update configuration.
-     */
     @InputImport(name="excludedPackageNameMasks")
     private final @Nullable Input<List<String>> excludedPackageNameMasks;
 
@@ -30,9 +24,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
         return this.excludedPackageNameMasks == null ? Input.empty() : this.excludedPackageNameMasks;
     }
 
-    /**
-     * Update classifications included in the software update configuration.
-     */
     @InputImport(name="includedPackageClassifications")
     private final @Nullable Input<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
@@ -40,9 +31,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
         return this.includedPackageClassifications == null ? Input.empty() : this.includedPackageClassifications;
     }
 
-    /**
-     * packages included from the software update configuration.
-     */
     @InputImport(name="includedPackageNameMasks")
     private final @Nullable Input<List<String>> includedPackageNameMasks;
 
@@ -50,9 +38,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
         return this.includedPackageNameMasks == null ? Input.empty() : this.includedPackageNameMasks;
     }
 
-    /**
-     * Reboot setting for the software update configuration.
-     */
     @InputImport(name="rebootSetting")
     private final @Nullable Input<String> rebootSetting;
 

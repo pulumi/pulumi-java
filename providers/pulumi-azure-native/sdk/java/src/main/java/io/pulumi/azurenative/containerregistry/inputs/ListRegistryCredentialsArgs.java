@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListRegistryCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListRegistryCredentialsArgs Empty = new ListRegistryCredentialsArgs();
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -25,9 +19,6 @@ public final class ListRegistryCredentialsArgs extends io.pulumi.resources.Invok
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

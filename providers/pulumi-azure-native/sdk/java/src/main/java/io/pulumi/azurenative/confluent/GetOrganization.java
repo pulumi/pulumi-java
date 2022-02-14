@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganization {
-/**
- * Organization resource.
-API Version: 2020-03-01.
- *
- * Organization resource.
- */
     public static CompletableFuture<GetOrganizationResult> invokeAsync(GetOrganizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confluent:getOrganization", TypeShape.of(GetOrganizationResult.class), args == null ? GetOrganizationArgs.Empty : args, Utilities.withVersion(options));
     }

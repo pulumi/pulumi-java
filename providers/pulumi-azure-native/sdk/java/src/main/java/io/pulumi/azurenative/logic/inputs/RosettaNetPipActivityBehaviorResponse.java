@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The integration account RosettaNet ProcessConfiguration activity behavior.
- */
 public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RosettaNetPipActivityBehaviorResponse Empty = new RosettaNetPipActivityBehaviorResponse();
 
-    /**
-     * The value indicating whether the RosettaNet PIP is used for a single action.
-     */
     @InputImport(name="actionType", required=true)
     private final String actionType;
 
@@ -27,9 +21,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.actionType;
     }
 
-    /**
-     * The value indicating whether authorization is required.
-     */
     @InputImport(name="isAuthorizationRequired", required=true)
     private final Boolean isAuthorizationRequired;
 
@@ -37,9 +28,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.isAuthorizationRequired;
     }
 
-    /**
-     * The value indicating whether secured transport is required.
-     */
     @InputImport(name="isSecuredTransportRequired", required=true)
     private final Boolean isSecuredTransportRequired;
 
@@ -47,9 +35,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.isSecuredTransportRequired;
     }
 
-    /**
-     * The value indicating whether non-repudiation is for origin and content.
-     */
     @InputImport(name="nonRepudiationOfOriginAndContent", required=true)
     private final Boolean nonRepudiationOfOriginAndContent;
 
@@ -57,9 +42,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.nonRepudiationOfOriginAndContent;
     }
 
-    /**
-     * The persistent confidentiality encryption scope.
-     */
     @InputImport(name="persistentConfidentialityScope", required=true)
     private final String persistentConfidentialityScope;
 
@@ -67,9 +49,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.persistentConfidentialityScope;
     }
 
-    /**
-     * The value indicating whether the RosettaNet PIP communication is synchronous.
-     */
     @InputImport(name="responseType", required=true)
     private final String responseType;
 
@@ -77,9 +56,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.responseType;
     }
 
-    /**
-     * The value indicating retry count.
-     */
     @InputImport(name="retryCount", required=true)
     private final Integer retryCount;
 
@@ -87,9 +63,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
         return this.retryCount;
     }
 
-    /**
-     * The time to perform in seconds.
-     */
     @InputImport(name="timeToPerformInSeconds", required=true)
     private final Integer timeToPerformInSeconds;
 

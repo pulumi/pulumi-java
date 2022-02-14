@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerCommunicationLink {
-/**
- * Server communication link.
-API Version: 2014-04-01.
- *
- * Server communication link.
- */
     public static CompletableFuture<GetServerCommunicationLinkResult> invokeAsync(GetServerCommunicationLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerCommunicationLink", TypeShape.of(GetServerCommunicationLinkResult.class), args == null ? GetServerCommunicationLinkArgs.Empty : args, Utilities.withVersion(options));
     }

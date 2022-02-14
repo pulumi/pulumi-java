@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSynapseWorkspaceSqlPoolTableDataSet {
-/**
- * A Synapse Workspace Sql Pool Table data set.
-API Version: 2020-09-01.
- *
- * A Synapse Workspace Sql Pool Table data set.
- */
     public static CompletableFuture<GetSynapseWorkspaceSqlPoolTableDataSetResult> invokeAsync(GetSynapseWorkspaceSqlPoolTableDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynapseWorkspaceSqlPoolTableDataSet", TypeShape.of(GetSynapseWorkspaceSqlPoolTableDataSetResult.class), args == null ? GetSynapseWorkspaceSqlPoolTableDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

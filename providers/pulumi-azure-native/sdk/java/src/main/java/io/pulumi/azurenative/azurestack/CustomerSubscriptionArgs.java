@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomerSubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerSubscriptionArgs Empty = new CustomerSubscriptionArgs();
 
-    /**
-     * Name of the product.
-     */
     @InputImport(name="customerSubscriptionName")
     private final @Nullable Input<String> customerSubscriptionName;
 
@@ -27,9 +21,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
         return this.customerSubscriptionName == null ? Input.empty() : this.customerSubscriptionName;
     }
 
-    /**
-     * Name of the Azure Stack registration.
-     */
     @InputImport(name="registrationName", required=true)
     private final Input<String> registrationName;
 
@@ -37,9 +28,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
         return this.registrationName;
     }
 
-    /**
-     * Name of the resource group.
-     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -47,9 +35,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
         return this.resourceGroup;
     }
 
-    /**
-     * Tenant Id.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

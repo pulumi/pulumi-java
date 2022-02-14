@@ -8,16 +8,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
-/**
- * Range of numerical values within min and max.
- */
 public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleMonitoringV3RangeResponse Empty = new GoogleMonitoringV3RangeResponse();
 
-    /**
-     * Range maximum.
-     */
     @InputImport(name="max", required=true)
     private final Double max;
 
@@ -25,9 +19,6 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
         return this.max;
     }
 
-    /**
-     * Range minimum.
-     */
     @InputImport(name="min", required=true)
     private final Double min;
 

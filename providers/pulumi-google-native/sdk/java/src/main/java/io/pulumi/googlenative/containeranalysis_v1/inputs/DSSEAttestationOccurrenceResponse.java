@@ -9,16 +9,10 @@ import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementRespons
 import java.util.Objects;
 
 
-/**
- * Deprecated. Prefer to use a regular Occurrence, and populate the Envelope at the top level of the Occurrence.
- */
 public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DSSEAttestationOccurrenceResponse Empty = new DSSEAttestationOccurrenceResponse();
 
-    /**
-     * If doing something security critical, make sure to verify the signatures in this metadata.
-     */
     @InputImport(name="envelope", required=true)
     private final EnvelopeResponse envelope;
 
@@ -26,9 +20,6 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
         return this.envelope;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="statement", required=true)
     private final InTotoStatementResponse statement;
 

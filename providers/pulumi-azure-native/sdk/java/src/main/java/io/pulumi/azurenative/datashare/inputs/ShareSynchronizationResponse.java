@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A ShareSynchronization data transfer object.
- */
 public final class ShareSynchronizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShareSynchronizationResponse Empty = new ShareSynchronizationResponse();
 
-    /**
-     * Email of the user who created the synchronization
-     */
     @InputImport(name="consumerEmail")
     private final @Nullable String consumerEmail;
 
@@ -28,9 +22,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
     }
 
-    /**
-     * Name of the user who created the synchronization
-     */
     @InputImport(name="consumerName")
     private final @Nullable String consumerName;
 
@@ -38,9 +29,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
     }
 
-    /**
-     * Tenant name of the consumer who created the synchronization
-     */
     @InputImport(name="consumerTenantName")
     private final @Nullable String consumerTenantName;
 
@@ -48,9 +36,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
     }
 
-    /**
-     * synchronization duration
-     */
     @InputImport(name="durationMs")
     private final @Nullable Integer durationMs;
 
@@ -58,9 +43,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
     }
 
-    /**
-     * End time of synchronization
-     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -68,9 +50,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
-    /**
-     * message of synchronization
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -78,9 +57,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * start time of synchronization
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -88,9 +64,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
-    /**
-     * Raw Status
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -98,9 +71,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * Synchronization id
-     */
     @InputImport(name="synchronizationId")
     private final @Nullable String synchronizationId;
 
@@ -108,9 +78,6 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
         return this.synchronizationId == null ? Optional.empty() : Optional.ofNullable(this.synchronizationId);
     }
 
-    /**
-     * Synchronization mode
-     */
     @InputImport(name="synchronizationMode", required=true)
     private final String synchronizationMode;
 

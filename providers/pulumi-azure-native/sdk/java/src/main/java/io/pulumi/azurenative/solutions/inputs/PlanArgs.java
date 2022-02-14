@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Plan for the managed application.
- */
 public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlanArgs Empty = new PlanArgs();
 
-    /**
-     * The plan name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,9 +21,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The product code.
-     */
     @InputImport(name="product", required=true)
     private final Input<String> product;
 
@@ -37,9 +28,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.product;
     }
 
-    /**
-     * The promotion code.
-     */
     @InputImport(name="promotionCode")
     private final @Nullable Input<String> promotionCode;
 
@@ -47,9 +35,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.promotionCode == null ? Input.empty() : this.promotionCode;
     }
 
-    /**
-     * The publisher ID.
-     */
     @InputImport(name="publisher", required=true)
     private final Input<String> publisher;
 
@@ -57,9 +42,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisher;
     }
 
-    /**
-     * The plan's version.
-     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

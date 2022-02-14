@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines a global parameter in the graph.
- */
 public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GraphParameterResponse Empty = new GraphParameterResponse();
 
-    /**
-     * Description of this graph parameter.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -29,9 +23,6 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Association links for this parameter to nodes in the graph.
-     */
     @InputImport(name="links", required=true)
     private final List<GraphParameterLinkResponse> links;
 
@@ -39,9 +30,6 @@ public final class GraphParameterResponse extends io.pulumi.resources.InvokeArgs
         return this.links;
     }
 
-    /**
-     * Graph parameter's type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of a service instance.
- */
 public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicesPropertiesArgs Empty = new ServicesPropertiesArgs();
 
-    /**
-     * The access policies of the service instance.
-     */
     @InputImport(name="accessPolicies")
     private final @Nullable Input<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
@@ -37,9 +31,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
     }
 
-    /**
-     * The azure container registry settings used for convert data operation of the service instance.
-     */
     @InputImport(name="acrConfiguration")
     private final @Nullable Input<ServiceAcrConfigurationInfoArgs> acrConfiguration;
 
@@ -47,9 +38,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.acrConfiguration == null ? Input.empty() : this.acrConfiguration;
     }
 
-    /**
-     * The authentication configuration for the service instance.
-     */
     @InputImport(name="authenticationConfiguration")
     private final @Nullable Input<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
@@ -57,9 +45,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
     }
 
-    /**
-     * The settings for the CORS configuration of the service instance.
-     */
     @InputImport(name="corsConfiguration")
     private final @Nullable Input<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
@@ -67,9 +52,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
     }
 
-    /**
-     * The settings for the Cosmos DB database backing the service.
-     */
     @InputImport(name="cosmosDbConfiguration")
     private final @Nullable Input<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
@@ -77,9 +59,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.cosmosDbConfiguration == null ? Input.empty() : this.cosmosDbConfiguration;
     }
 
-    /**
-     * The settings for the export operation of the service instance.
-     */
     @InputImport(name="exportConfiguration")
     private final @Nullable Input<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
@@ -87,9 +66,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.exportConfiguration == null ? Input.empty() : this.exportConfiguration;
     }
 
-    /**
-     * The list of private endpoint connections that are set up for this resource.
-     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
@@ -97,9 +73,6 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
     }
 
-    /**
-     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 

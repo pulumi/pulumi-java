@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Video sink in a live topology allows for video and audio to be captured, optionally archived, and published via a video resource. If archiving is enabled, this results in a video of type 'archive'. If used in a batch topology, this allows for video and audio to be stored as a file, and published via a video resource of type 'file'
- */
 public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoSinkArgs Empty = new VideoSinkArgs();
 
-    /**
-     * An array of upstream node references within the topology to be used as inputs for this node.
-     */
     @InputImport(name="inputs", required=true)
     private final Input<List<NodeInputArgs>> inputs;
 
@@ -31,9 +25,6 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputs;
     }
 
-    /**
-     * Node name. Must be unique within the topology.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -41,10 +32,6 @@ public final class VideoSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -52,9 +39,6 @@ Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
         return this.type;
     }
 
-    /**
-     * Optional video properties to be used in case a new video resource needs to be created on the service.
-     */
     @InputImport(name="videoCreationProperties")
     private final @Nullable Input<VideoCreationPropertiesArgs> videoCreationProperties;
 
@@ -62,9 +46,6 @@ Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
         return this.videoCreationProperties == null ? Input.empty() : this.videoCreationProperties;
     }
 
-    /**
-     * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
-     */
     @InputImport(name="videoName", required=true)
     private final Input<String> videoName;
 
@@ -72,9 +53,6 @@ Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
         return this.videoName;
     }
 
-    /**
-     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
-     */
     @InputImport(name="videoPublishingOptions")
     private final @Nullable Input<VideoPublishingOptionsArgs> videoPublishingOptions;
 

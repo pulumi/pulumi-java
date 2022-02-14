@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KustoDatabaseDataSetArgs Empty = new KustoDatabaseDataSetArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
         return this.accountName;
     }
 
-    /**
-     * The name of the dataSet.
-     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -37,10 +28,6 @@ public final class KustoDatabaseDataSetArgs extends io.pulumi.resources.Resource
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
-    /**
-     * Kind of data set.
-Expected value is 'KustoDatabase'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -48,9 +35,6 @@ Expected value is 'KustoDatabase'.
         return this.kind;
     }
 
-    /**
-     * Resource id of the kusto database.
-     */
     @InputImport(name="kustoDatabaseResourceId", required=true)
     private final Input<String> kustoDatabaseResourceId;
 
@@ -58,9 +42,6 @@ Expected value is 'KustoDatabase'.
         return this.kustoDatabaseResourceId;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +49,6 @@ Expected value is 'KustoDatabase'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share to add the data set to.
-     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 

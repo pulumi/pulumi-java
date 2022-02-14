@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectivityTest {
-/**
- * Gets the details of a specific Connectivity Test.
- */
     public static CompletableFuture<GetConnectivityTestResult> invokeAsync(GetConnectivityTestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkmanagement/v1:getConnectivityTest", TypeShape.of(GetConnectivityTestResult.class), args == null ? GetConnectivityTestArgs.Empty : args, Utilities.withVersion(options));
     }

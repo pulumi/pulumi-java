@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for controlling master global access settings.
- */
 public final class PrivateClusterMasterGlobalAccessConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateClusterMasterGlobalAccessConfigArgs Empty = new PrivateClusterMasterGlobalAccessConfigArgs();
 
-    /**
-     * Whenever master is accessible globally or not.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

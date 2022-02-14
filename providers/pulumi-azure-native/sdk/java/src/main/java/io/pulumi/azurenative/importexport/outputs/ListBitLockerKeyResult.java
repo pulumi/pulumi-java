@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListBitLockerKeyResult {
-/**
- * drive status
- */
     private final @Nullable List<DriveBitLockerKeyResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -21,9 +18,6 @@ public final class ListBitLockerKeyResult {
         this.value = value;
     }
 
-/**
- * drive status
- */
     public List<DriveBitLockerKeyResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

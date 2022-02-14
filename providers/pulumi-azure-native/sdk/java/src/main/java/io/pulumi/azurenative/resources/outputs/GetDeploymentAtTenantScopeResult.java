@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDeploymentAtTenantScopeResult {
-/**
- * The ID of the deployment.
- */
     private final String id;
-/**
- * the location of the deployment.
- */
     private final @Nullable String location;
-/**
- * The name of the deployment.
- */
     private final String name;
-/**
- * Deployment properties.
- */
     private final DeploymentPropertiesExtendedResponse properties;
-/**
- * Deployment tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the deployment.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
@@ -54,39 +36,21 @@ public final class GetDeploymentAtTenantScopeResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The ID of the deployment.
- */
     public String getId() {
         return this.id;
     }
-/**
- * the location of the deployment.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the deployment.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Deployment properties.
- */
     public DeploymentPropertiesExtendedResponse getProperties() {
         return this.properties;
     }
-/**
- * Deployment tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the deployment.
- */
     public String getType() {
         return this.type;
     }

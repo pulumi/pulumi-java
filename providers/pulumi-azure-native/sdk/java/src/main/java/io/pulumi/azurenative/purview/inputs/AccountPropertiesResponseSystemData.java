@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
 public final class AccountPropertiesResponseSystemData extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountPropertiesResponseSystemData Empty = new AccountPropertiesResponseSystemData();
 
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @InputImport(name="createdAt", required=true)
     private final String createdAt;
 
@@ -25,9 +19,6 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
         return this.createdAt;
     }
 
-    /**
-     * The identity that created the resource.
-     */
     @InputImport(name="createdBy", required=true)
     private final String createdBy;
 
@@ -35,9 +26,6 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
         return this.createdBy;
     }
 
-    /**
-     * The type of identity that created the resource.
-     */
     @InputImport(name="createdByType", required=true)
     private final String createdByType;
 
@@ -45,9 +33,6 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
         return this.createdByType;
     }
 
-    /**
-     * The timestamp of the last modification the resource (UTC).
-     */
     @InputImport(name="lastModifiedAt", required=true)
     private final String lastModifiedAt;
 
@@ -55,9 +40,6 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
         return this.lastModifiedAt;
     }
 
-    /**
-     * The identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedBy", required=true)
     private final String lastModifiedBy;
 
@@ -65,9 +47,6 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
         return this.lastModifiedBy;
     }
 
-    /**
-     * The type of identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedByType", required=true)
     private final String lastModifiedByType;
 

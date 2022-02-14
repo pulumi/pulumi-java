@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLinkedStorageAccountResult {
-/**
- * Linked storage accounts type.
- */
     private final String dataSourceType;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Linked storage accounts resources ids.
- */
     private final @Nullable List<String> storageAccountIds;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"dataSourceType","id","name","storageAccountIds","type"})
@@ -46,33 +31,18 @@ public final class GetLinkedStorageAccountResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Linked storage accounts type.
- */
     public String getDataSourceType() {
         return this.dataSourceType;
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Linked storage accounts resources ids.
- */
     public List<String> getStorageAccountIds() {
         return this.storageAccountIds == null ? List.of() : this.storageAccountIds;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

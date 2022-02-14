@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of an artifact.
- */
 public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArtifactInstallPropertiesResponse Empty = new ArtifactInstallPropertiesResponse();
 
-    /**
-     * The artifact's identifier.
-     */
     @InputImport(name="artifactId")
     private final @Nullable String artifactId;
 
@@ -29,9 +23,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
         return this.artifactId == null ? Optional.empty() : Optional.ofNullable(this.artifactId);
     }
 
-    /**
-     * The artifact's title.
-     */
     @InputImport(name="artifactTitle")
     private final @Nullable String artifactTitle;
 
@@ -39,9 +30,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
         return this.artifactTitle == null ? Optional.empty() : Optional.ofNullable(this.artifactTitle);
     }
 
-    /**
-     * The status message from the deployment.
-     */
     @InputImport(name="deploymentStatusMessage")
     private final @Nullable String deploymentStatusMessage;
 
@@ -49,9 +37,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
         return this.deploymentStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatusMessage);
     }
 
-    /**
-     * The time that the artifact starts to install on the virtual machine.
-     */
     @InputImport(name="installTime")
     private final @Nullable String installTime;
 
@@ -59,9 +44,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
         return this.installTime == null ? Optional.empty() : Optional.ofNullable(this.installTime);
     }
 
-    /**
-     * The parameters of the artifact.
-     */
     @InputImport(name="parameters")
     private final @Nullable List<ArtifactParameterPropertiesResponse> parameters;
 
@@ -69,9 +51,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
         return this.parameters == null ? List.of() : this.parameters;
     }
 
-    /**
-     * The status of the artifact.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -79,9 +58,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * The status message from the virtual machine extension.
-     */
     @InputImport(name="vmExtensionStatusMessage")
     private final @Nullable String vmExtensionStatusMessage;
 

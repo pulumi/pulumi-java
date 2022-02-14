@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListLinkerConfigurations {
-/**
- * Configurations for source resource, include appSettings, connectionString and serviceBindings
-API Version: 2021-11-01-preview.
- *
- * Configurations for source resource, include appSettings, connectionString and serviceBindings
- */
     public static CompletableFuture<ListLinkerConfigurationsResult> invokeAsync(ListLinkerConfigurationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicelinker:listLinkerConfigurations", TypeShape.of(ListLinkerConfigurationsResult.class), args == null ? ListLinkerConfigurationsArgs.Empty : args, Utilities.withVersion(options));
     }

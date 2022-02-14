@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListMonitorUserRolesArgs Empty = new ListMonitorUserRolesArgs();
 
-    /**
-     * Email of the user used by Logz for contacting them if needed
-     */
     @InputImport(name="emailAddress")
     private final @Nullable String emailAddress;
 
@@ -27,9 +21,6 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
-    /**
-     * Monitor resource name
-     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -37,9 +28,6 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
         return this.monitorName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

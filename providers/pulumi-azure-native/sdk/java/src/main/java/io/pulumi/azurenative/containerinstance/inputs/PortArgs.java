@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The port exposed on the container group.
- */
 public final class PortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PortArgs Empty = new PortArgs();
 
-    /**
-     * The port number.
-     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -30,9 +24,6 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
         return this.port;
     }
 
-    /**
-     * The protocol associated with the port.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
 

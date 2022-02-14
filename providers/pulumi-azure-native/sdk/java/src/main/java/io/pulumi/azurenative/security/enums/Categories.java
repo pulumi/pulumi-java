@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The categories of resource that is at risk when the assessment is unhealthy
- */
     @EnumType
     public enum Categories {
-/**
- * 
- */
         Compute("Compute"),
-/**
- * 
- */
         Networking("Networking"),
-/**
- * 
- */
         Data("Data"),
-/**
- * 
- */
         IdentityAndAccess("IdentityAndAccess"),
-/**
- * 
- */
         IoT("IoT");
 
         private final String value;

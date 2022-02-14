@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Markdown part settings.
- */
 public final class MarkdownPartMetadataSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MarkdownPartMetadataSettingsArgs Empty = new MarkdownPartMetadataSettingsArgs();
 
-    /**
-     * The content of markdown part.
-     */
     @InputImport(name="content")
     private final @Nullable Input<MarkdownPartMetadataContentArgs> content;
 

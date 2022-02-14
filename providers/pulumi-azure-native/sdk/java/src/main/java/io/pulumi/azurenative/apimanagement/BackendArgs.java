@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendArgs Empty = new BackendArgs();
 
-    /**
-     * Identifier of the Backend entity. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="backendId")
     private final @Nullable Input<String> backendId;
 
@@ -33,9 +27,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendId == null ? Input.empty() : this.backendId;
     }
 
-    /**
-     * Backend Credentials Contract Properties
-     */
     @InputImport(name="credentials")
     private final @Nullable Input<BackendCredentialsContractArgs> credentials;
 
@@ -43,9 +34,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    /**
-     * Backend Description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -53,9 +41,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Backend Properties contract
-     */
     @InputImport(name="properties")
     private final @Nullable Input<BackendPropertiesArgs> properties;
 
@@ -63,9 +48,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Backend communication protocol.
-     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,BackendProtocol>> protocol;
 
@@ -73,9 +55,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol;
     }
 
-    /**
-     * Backend Proxy Contract Properties
-     */
     @InputImport(name="proxy")
     private final @Nullable Input<BackendProxyContractArgs> proxy;
 
@@ -83,9 +62,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.proxy == null ? Input.empty() : this.proxy;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,9 +69,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -103,9 +76,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -113,9 +83,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Backend Title.
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -123,9 +90,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.title == null ? Input.empty() : this.title;
     }
 
-    /**
-     * Backend TLS Properties
-     */
     @InputImport(name="tls")
     private final @Nullable Input<BackendTlsPropertiesArgs> tls;
 
@@ -133,9 +97,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.tls == null ? Input.empty() : this.tls;
     }
 
-    /**
-     * Runtime Url of the Backend.
-     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

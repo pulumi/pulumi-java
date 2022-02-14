@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The data source precedence is a way to know the precedence of each data source.
- */
 public final class DataSourcePrecedenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourcePrecedenceResponse Empty = new DataSourcePrecedenceResponse();
 
-    /**
-     * The data source reference id.
-     */
     @InputImport(name="dataSourceReferenceId", required=true)
     private final String dataSourceReferenceId;
 
@@ -28,9 +22,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
         return this.dataSourceReferenceId;
     }
 
-    /**
-     * The data source type.
-     */
     @InputImport(name="dataSourceType", required=true)
     private final String dataSourceType;
 
@@ -38,9 +29,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
         return this.dataSourceType;
     }
 
-    /**
-     * The data source ID.
-     */
     @InputImport(name="id", required=true)
     private final Integer id;
 
@@ -48,9 +36,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
         return this.id;
     }
 
-    /**
-     * The data source name
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -58,9 +43,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
-    /**
-     * the precedence value.
-     */
     @InputImport(name="precedence")
     private final @Nullable Integer precedence;
 
@@ -68,9 +50,6 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
         return this.precedence == null ? Optional.empty() : Optional.ofNullable(this.precedence);
     }
 
-    /**
-     * The data source status.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

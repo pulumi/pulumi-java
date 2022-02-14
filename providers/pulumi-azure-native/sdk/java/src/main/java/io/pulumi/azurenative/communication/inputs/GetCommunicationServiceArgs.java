@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCommunicationServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCommunicationServiceArgs Empty = new GetCommunicationServiceArgs();
 
-    /**
-     * The name of the CommunicationService resource.
-     */
     @InputImport(name="communicationServiceName", required=true)
     private final String communicationServiceName;
 
@@ -25,9 +19,6 @@ public final class GetCommunicationServiceArgs extends io.pulumi.resources.Invok
         return this.communicationServiceName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

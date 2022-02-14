@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt scale in of a MIG, it will be throttled as specified by the parameters below.
- */
 public final class AutoscalingPolicyScaleDownControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscalingPolicyScaleDownControlResponse Empty = new AutoscalingPolicyScaleDownControlResponse();
 
-    /**
-     * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
-     */
     @InputImport(name="maxScaledDownReplicas", required=true)
     private final FixedOrPercentResponse maxScaledDownReplicas;
 
@@ -26,9 +20,6 @@ public final class AutoscalingPolicyScaleDownControlResponse extends io.pulumi.r
         return this.maxScaledDownReplicas;
     }
 
-    /**
-     * How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
-     */
     @InputImport(name="timeWindowSec", required=true)
     private final Integer timeWindowSec;
 

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Action rule with action group configuration
- */
 public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActionGroupResponse Empty = new ActionGroupResponse();
 
-    /**
-     * Action group to trigger if action rule matches
-     */
     @InputImport(name="actionGroupId", required=true)
     private final String actionGroupId;
 
@@ -29,9 +23,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.actionGroupId;
     }
 
-    /**
-     * conditions on which alerts will be filtered
-     */
     @InputImport(name="conditions")
     private final @Nullable ConditionsResponse conditions;
 
@@ -39,9 +30,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.conditions == null ? Optional.empty() : Optional.ofNullable(this.conditions);
     }
 
-    /**
-     * Creation time of action rule. Date-Time in ISO-8601 format.
-     */
     @InputImport(name="createdAt", required=true)
     private final String createdAt;
 
@@ -49,9 +37,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdAt;
     }
 
-    /**
-     * Created by user name.
-     */
     @InputImport(name="createdBy", required=true)
     private final String createdBy;
 
@@ -59,9 +44,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdBy;
     }
 
-    /**
-     * Description of action rule
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -69,9 +51,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Last updated time of action rule. Date-Time in ISO-8601 format.
-     */
     @InputImport(name="lastModifiedAt", required=true)
     private final String lastModifiedAt;
 
@@ -79,9 +58,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastModifiedAt;
     }
 
-    /**
-     * Last modified by user name.
-     */
     @InputImport(name="lastModifiedBy", required=true)
     private final String lastModifiedBy;
 
@@ -89,9 +65,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastModifiedBy;
     }
 
-    /**
-     * scope on which action rule will apply
-     */
     @InputImport(name="scope")
     private final @Nullable ScopeResponse scope;
 
@@ -99,9 +72,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
-    /**
-     * Indicates if the given action rule is enabled or disabled
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -109,10 +79,6 @@ public final class ActionGroupResponse extends io.pulumi.resources.InvokeArgs {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * Indicates type of action rule
-Expected value is 'ActionGroup'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

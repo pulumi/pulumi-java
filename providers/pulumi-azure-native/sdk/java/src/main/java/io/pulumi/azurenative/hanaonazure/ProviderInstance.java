@@ -14,174 +14,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A provider instance associated with a SAP monitor.
-API Version: 2020-02-07-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a SAP Monitor
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var providerInstance = new AzureNative.HanaOnAzure.ProviderInstance("providerInstance", new AzureNative.HanaOnAzure.ProviderInstanceArgs
-        {
-            Metadata = "{\"key\":\"value\"}",
-            Properties = "{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
-            ProviderInstanceName = "myProviderInstance",
-            ResourceGroupName = "myResourceGroup",
-            SapMonitorName = "mySapMonitor",
-            Type = "hana",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	hanaonazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hanaonazure"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hanaonazure.NewProviderInstance(ctx, "providerInstance", &hanaonazure.ProviderInstanceArgs{
-			Metadata:             pulumi.String("{\"key\":\"value\"}"),
-			Properties:           pulumi.String("{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}"),
-			ProviderInstanceName: pulumi.String("myProviderInstance"),
-			ResourceGroupName:    pulumi.String("myResourceGroup"),
-			SapMonitorName:       pulumi.String("mySapMonitor"),
-			Type:                 pulumi.String("hana"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const providerInstance = new azure_native.hanaonazure.ProviderInstance("providerInstance", {
-    metadata: "{\"key\":\"value\"}",
-    properties: "{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
-    providerInstanceName: "myProviderInstance",
-    resourceGroupName: "myResourceGroup",
-    sapMonitorName: "mySapMonitor",
-    type: "hana",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-provider_instance = azure_native.hanaonazure.ProviderInstance("providerInstance",
-    metadata="{\"key\":\"value\"}",
-    properties="{\"hostname\":\"10.0.0.6\",\"dbName\":\"SYSTEMDB\",\"sqlPort\":30013,\"dbUsername\":\"SYSTEM\",\"dbPassword\":\"PASSWORD\"}",
-    provider_instance_name="myProviderInstance",
-    resource_group_name="myResourceGroup",
-    sap_monitor_name="mySapMonitor",
-    type="hana")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:hanaonazure:ProviderInstance myProviderInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/sapMonitors/mySapMonitor/providerInstances/myProviderInstance 
-```
-
- */
 @ResourceType(type="azure-native:hanaonazure:ProviderInstance")
 public class ProviderInstance extends io.pulumi.resources.CustomResource {
-    /**
-     * A JSON string containing metadata of the provider instance.
-     */
     @OutputExport(name="metadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> metadata;
 
-    /**
-     * @return A JSON string containing metadata of the provider instance.
-     */
     public Output</* @Nullable */ String> getMetadata() {
         return this.metadata;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * A JSON string containing the properties of the provider instance.
-     */
     @OutputExport(name="properties", type=String.class, parameters={})
     private Output<String> properties;
 
-    /**
-     * @return A JSON string containing the properties of the provider instance.
-     */
     public Output<String> getProperties() {
         return this.properties;
     }
-    /**
-     * State of provisioning of the provider instance
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return State of provisioning of the provider instance
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ProviderInstance(String name, ProviderInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hanaonazure:ProviderInstance", name, args == null ? ProviderInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -200,14 +65,6 @@ public class ProviderInstance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ProviderInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProviderInstance(name, id, options);
     }

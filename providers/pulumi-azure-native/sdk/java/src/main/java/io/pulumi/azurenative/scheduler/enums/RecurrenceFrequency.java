@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
- */
     @EnumType
     public enum RecurrenceFrequency {
-/**
- * 
- */
         Minute("Minute"),
-/**
- * 
- */
         Hour("Hour"),
-/**
- * 
- */
         Day("Day"),
-/**
- * 
- */
         Week("Week"),
-/**
- * 
- */
         Month("Month");
 
         private final String value;

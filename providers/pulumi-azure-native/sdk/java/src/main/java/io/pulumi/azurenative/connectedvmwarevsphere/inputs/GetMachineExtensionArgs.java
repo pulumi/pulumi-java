@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMachineExtensionArgs Empty = new GetMachineExtensionArgs();
 
-    /**
-     * The name of the machine extension.
-     */
     @InputImport(name="extensionName", required=true)
     private final String extensionName;
 
@@ -25,9 +19,6 @@ public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArg
         return this.extensionName;
     }
 
-    /**
-     * The name of the machine containing the extension.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

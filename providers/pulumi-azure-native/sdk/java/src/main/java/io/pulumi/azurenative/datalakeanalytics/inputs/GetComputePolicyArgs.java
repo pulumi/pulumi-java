@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetComputePolicyArgs Empty = new GetComputePolicyArgs();
 
-    /**
-     * The name of the Data Lake Analytics account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the compute policy to retrieve.
-     */
     @InputImport(name="computePolicyName", required=true)
     private final String computePolicyName;
 
@@ -35,9 +26,6 @@ public final class GetComputePolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.computePolicyName;
     }
 
-    /**
-     * The name of the Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

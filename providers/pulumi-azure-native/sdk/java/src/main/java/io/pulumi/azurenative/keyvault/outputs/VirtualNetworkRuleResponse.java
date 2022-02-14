@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNetworkRuleResponse {
-/**
- * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
- */
     private final String id;
-/**
- * Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
- */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
     @OutputCustomType.Constructor({"id","ignoreMissingVnetServiceEndpoint"})
@@ -29,15 +23,9 @@ public final class VirtualNetworkRuleResponse {
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
     }
 
-/**
- * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
- */
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }

@@ -14,150 +14,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A stored credential that can be used by a job to connect to target databases.
-API Version: 2020-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a credential
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var jobCredential = new AzureNative.Sql.JobCredential("jobCredential", new AzureNative.Sql.JobCredentialArgs
-        {
-            CredentialName = "cred1",
-            JobAgentName = "agent1",
-            Password = "<password>",
-            ResourceGroupName = "group1",
-            ServerName = "server1",
-            Username = "myuser",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewJobCredential(ctx, "jobCredential", &sql.JobCredentialArgs{
-			CredentialName:    pulumi.String("cred1"),
-			JobAgentName:      pulumi.String("agent1"),
-			Password:          pulumi.String("<password>"),
-			ResourceGroupName: pulumi.String("group1"),
-			ServerName:        pulumi.String("server1"),
-			Username:          pulumi.String("myuser"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const jobCredential = new azure_native.sql.JobCredential("jobCredential", {
-    credentialName: "cred1",
-    jobAgentName: "agent1",
-    password: "<password>",
-    resourceGroupName: "group1",
-    serverName: "server1",
-    username: "myuser",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-job_credential = azure_native.sql.JobCredential("jobCredential",
-    credential_name="cred1",
-    job_agent_name="agent1",
-    password="<password>",
-    resource_group_name="group1",
-    server_name="server1",
-    username="myuser")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:JobCredential cred1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/cred1 
-```
-
- */
 @ResourceType(type="azure-native:sql:JobCredential")
 public class JobCredential extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The credential user name.
-     */
     @OutputExport(name="username", type=String.class, parameters={})
     private Output<String> username;
 
-    /**
-     * @return The credential user name.
-     */
     public Output<String> getUsername() {
         return this.username;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public JobCredential(String name, JobCredentialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:JobCredential", name, args == null ? JobCredentialArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -182,14 +59,6 @@ public class JobCredential extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static JobCredential get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobCredential(name, id, options);
     }

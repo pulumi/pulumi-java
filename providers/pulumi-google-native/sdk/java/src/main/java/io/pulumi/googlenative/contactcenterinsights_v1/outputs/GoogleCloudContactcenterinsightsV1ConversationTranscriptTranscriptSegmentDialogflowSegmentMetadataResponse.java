@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse {
-/**
- * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
- */
     private final Boolean smartReplyAllowlistCovered;
 
     @OutputCustomType.Constructor({"smartReplyAllowlistCovered"})
@@ -19,9 +16,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered);
     }
 
-/**
- * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
- */
     public Boolean getSmartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
     }

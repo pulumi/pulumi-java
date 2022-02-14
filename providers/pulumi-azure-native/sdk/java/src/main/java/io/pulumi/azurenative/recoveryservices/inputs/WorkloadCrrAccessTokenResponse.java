@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkloadCrrAccessTokenResponse Empty = new WorkloadCrrAccessTokenResponse();
 
-    /**
-     * Access token used for authentication
-     */
     @InputImport(name="accessTokenString")
     private final @Nullable String accessTokenString;
 
@@ -30,9 +24,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.accessTokenString == null ? Optional.empty() : Optional.ofNullable(this.accessTokenString);
     }
 
-    /**
-     * Active region name of BMS Stamp
-     */
     @InputImport(name="bMSActiveRegion")
     private final @Nullable String bMSActiveRegion;
 
@@ -40,9 +31,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.bMSActiveRegion == null ? Optional.empty() : Optional.ofNullable(this.bMSActiveRegion);
     }
 
-    /**
-     * Backup Management Type
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -50,9 +38,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
-    /**
-     * Container Id
-     */
     @InputImport(name="containerId")
     private final @Nullable String containerId;
 
@@ -60,9 +45,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
     }
 
-    /**
-     * Container Unique name
-     */
     @InputImport(name="containerName")
     private final @Nullable String containerName;
 
@@ -70,9 +52,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
-    /**
-     * Container Type
-     */
     @InputImport(name="containerType")
     private final @Nullable String containerType;
 
@@ -80,9 +59,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.containerType == null ? Optional.empty() : Optional.ofNullable(this.containerType);
     }
 
-    /**
-     * CoordinatorServiceStampId to be used by BCM in restore call
-     */
     @InputImport(name="coordinatorServiceStampId")
     private final @Nullable String coordinatorServiceStampId;
 
@@ -90,9 +66,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.coordinatorServiceStampId == null ? Optional.empty() : Optional.ofNullable(this.coordinatorServiceStampId);
     }
 
-    /**
-     * CoordinatorServiceStampUri to be used by BCM in restore call
-     */
     @InputImport(name="coordinatorServiceStampUri")
     private final @Nullable String coordinatorServiceStampUri;
 
@@ -100,9 +73,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.coordinatorServiceStampUri == null ? Optional.empty() : Optional.ofNullable(this.coordinatorServiceStampUri);
     }
 
-    /**
-     * Datasource Container Unique Name
-     */
     @InputImport(name="datasourceContainerName")
     private final @Nullable String datasourceContainerName;
 
@@ -110,9 +80,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.datasourceContainerName == null ? Optional.empty() : Optional.ofNullable(this.datasourceContainerName);
     }
 
-    /**
-     * Datasource Id
-     */
     @InputImport(name="datasourceId")
     private final @Nullable String datasourceId;
 
@@ -120,9 +87,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.datasourceId == null ? Optional.empty() : Optional.ofNullable(this.datasourceId);
     }
 
-    /**
-     * Datasource Friendly Name
-     */
     @InputImport(name="datasourceName")
     private final @Nullable String datasourceName;
 
@@ -130,9 +94,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.datasourceName == null ? Optional.empty() : Optional.ofNullable(this.datasourceName);
     }
 
-    /**
-     * Datasource Type
-     */
     @InputImport(name="datasourceType")
     private final @Nullable String datasourceType;
 
@@ -140,10 +101,6 @@ public final class WorkloadCrrAccessTokenResponse extends io.pulumi.resources.In
         return this.datasourceType == null ? Optional.empty() : Optional.ofNullable(this.datasourceType);
     }
 
-    /**
-     * Type of the specific object - used for deserializing
-Expected value is 'WorkloadCrrAccessToken'.
-     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -151,9 +108,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.objectType;
     }
 
-    /**
-     * Policy Id
-     */
     @InputImport(name="policyId")
     private final @Nullable String policyId;
 
@@ -161,9 +115,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
-    /**
-     * Policy Name
-     */
     @InputImport(name="policyName")
     private final @Nullable String policyName;
 
@@ -171,9 +122,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protectableObjectContainerHostOsName")
     private final @Nullable String protectableObjectContainerHostOsName;
 
@@ -181,9 +129,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectableObjectContainerHostOsName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectContainerHostOsName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protectableObjectFriendlyName")
     private final @Nullable String protectableObjectFriendlyName;
 
@@ -191,9 +136,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectableObjectFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectFriendlyName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protectableObjectParentLogicalContainerName")
     private final @Nullable String protectableObjectParentLogicalContainerName;
 
@@ -201,9 +143,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectableObjectParentLogicalContainerName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectParentLogicalContainerName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protectableObjectProtectionState")
     private final @Nullable String protectableObjectProtectionState;
 
@@ -211,9 +150,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectableObjectProtectionState == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectProtectionState);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protectableObjectUniqueName")
     private final @Nullable String protectableObjectUniqueName;
 
@@ -221,9 +157,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectableObjectUniqueName == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectUniqueName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protectableObjectWorkloadType")
     private final @Nullable String protectableObjectWorkloadType;
 
@@ -231,9 +164,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectableObjectWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.protectableObjectWorkloadType);
     }
 
-    /**
-     * Protected item container id
-     */
     @InputImport(name="protectionContainerId")
     private final @Nullable Double protectionContainerId;
 
@@ -241,9 +171,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectionContainerId == null ? Optional.empty() : Optional.ofNullable(this.protectionContainerId);
     }
 
-    /**
-     * ProtectionServiceStampId to be used by BCM in restore call
-     */
     @InputImport(name="protectionServiceStampId")
     private final @Nullable String protectionServiceStampId;
 
@@ -251,9 +178,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectionServiceStampId == null ? Optional.empty() : Optional.ofNullable(this.protectionServiceStampId);
     }
 
-    /**
-     * ProtectionServiceStampUri to be used by BCM in restore call
-     */
     @InputImport(name="protectionServiceStampUri")
     private final @Nullable String protectionServiceStampUri;
 
@@ -261,9 +185,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.protectionServiceStampUri == null ? Optional.empty() : Optional.ofNullable(this.protectionServiceStampUri);
     }
 
-    /**
-     * Recovery Point Id
-     */
     @InputImport(name="recoveryPointId")
     private final @Nullable String recoveryPointId;
 
@@ -271,9 +192,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.recoveryPointId == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointId);
     }
 
-    /**
-     * Recovery Point Time
-     */
     @InputImport(name="recoveryPointTime")
     private final @Nullable String recoveryPointTime;
 
@@ -281,9 +199,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.recoveryPointTime == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointTime);
     }
 
-    /**
-     * Resource Group name of the source vault
-     */
     @InputImport(name="resourceGroupName")
     private final @Nullable String resourceGroupName;
 
@@ -291,9 +206,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
-    /**
-     * Resource Id of the source vault
-     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -301,9 +213,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
-    /**
-     * Resource Name of the source vault
-     */
     @InputImport(name="resourceName")
     private final @Nullable String resourceName;
 
@@ -311,9 +220,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
-    /**
-     * Recovery point information: Managed virtual machine
-     */
     @InputImport(name="rpIsManagedVirtualMachine")
     private final @Nullable Boolean rpIsManagedVirtualMachine;
 
@@ -321,9 +227,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.rpIsManagedVirtualMachine == null ? Optional.empty() : Optional.ofNullable(this.rpIsManagedVirtualMachine);
     }
 
-    /**
-     * Recovery point information: Original SA option
-     */
     @InputImport(name="rpOriginalSAOption")
     private final @Nullable Boolean rpOriginalSAOption;
 
@@ -331,9 +234,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.rpOriginalSAOption == null ? Optional.empty() : Optional.ofNullable(this.rpOriginalSAOption);
     }
 
-    /**
-     * Recovery point Tier Information
-     */
     @InputImport(name="rpTierInformation")
     private final @Nullable Map<String,String> rpTierInformation;
 
@@ -341,9 +241,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.rpTierInformation == null ? Map.of() : this.rpTierInformation;
     }
 
-    /**
-     * Recovery point information: VM size description
-     */
     @InputImport(name="rpVMSizeDescription")
     private final @Nullable String rpVMSizeDescription;
 
@@ -351,9 +248,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.rpVMSizeDescription == null ? Optional.empty() : Optional.ofNullable(this.rpVMSizeDescription);
     }
 
-    /**
-     * Subscription Id of the source vault
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 
@@ -361,9 +255,6 @@ Expected value is 'WorkloadCrrAccessToken'.
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
-    /**
-     * Extended Information about the token like FileSpec etc.
-     */
     @InputImport(name="tokenExtendedInformation")
     private final @Nullable String tokenExtendedInformation;
 

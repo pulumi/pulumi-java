@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedDatabaseSensitivityLabelArgs Empty = new ManagedDatabaseSensitivityLabelArgs();
 
-    /**
-     * The name of the column.
-     */
     @InputImport(name="columnName", required=true)
     private final Input<String> columnName;
 
@@ -28,9 +22,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.columnName;
     }
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -38,9 +29,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.databaseName;
     }
 
-    /**
-     * The information type.
-     */
     @InputImport(name="informationType")
     private final @Nullable Input<String> informationType;
 
@@ -48,9 +36,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.informationType == null ? Input.empty() : this.informationType;
     }
 
-    /**
-     * The information type ID.
-     */
     @InputImport(name="informationTypeId")
     private final @Nullable Input<String> informationTypeId;
 
@@ -58,9 +43,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.informationTypeId == null ? Input.empty() : this.informationTypeId;
     }
 
-    /**
-     * The label ID.
-     */
     @InputImport(name="labelId")
     private final @Nullable Input<String> labelId;
 
@@ -68,9 +50,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.labelId == null ? Input.empty() : this.labelId;
     }
 
-    /**
-     * The label name.
-     */
     @InputImport(name="labelName")
     private final @Nullable Input<String> labelName;
 
@@ -78,9 +57,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.labelName == null ? Input.empty() : this.labelName;
     }
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName", required=true)
     private final Input<String> managedInstanceName;
 
@@ -88,9 +64,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.managedInstanceName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="rank")
     private final @Nullable Input<SensitivityLabelRank> rank;
 
@@ -98,9 +71,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.rank == null ? Input.empty() : this.rank;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -108,9 +78,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the schema.
-     */
     @InputImport(name="schemaName", required=true)
     private final Input<String> schemaName;
 
@@ -118,9 +85,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.schemaName;
     }
 
-    /**
-     * The source of the sensitivity label.
-     */
     @InputImport(name="sensitivityLabelSource")
     private final @Nullable Input<String> sensitivityLabelSource;
 
@@ -128,9 +92,6 @@ public final class ManagedDatabaseSensitivityLabelArgs extends io.pulumi.resourc
         return this.sensitivityLabelSource == null ? Input.empty() : this.sensitivityLabelSource;
     }
 
-    /**
-     * The name of the table.
-     */
     @InputImport(name="tableName", required=true)
     private final Input<String> tableName;
 

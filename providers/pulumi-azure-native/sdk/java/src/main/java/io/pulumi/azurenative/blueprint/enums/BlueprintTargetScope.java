@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The scope where this blueprint definition can be assigned.
- */
     @EnumType
     public enum BlueprintTargetScope {
-/**
- * The blueprint targets a subscription during blueprint assignment.
- */
         Subscription("subscription"),
-/**
- * The blueprint targets a management group during blueprint assignment. This is reserved for future use.
- */
         ManagementGroup("managementGroup");
 
         private final String value;

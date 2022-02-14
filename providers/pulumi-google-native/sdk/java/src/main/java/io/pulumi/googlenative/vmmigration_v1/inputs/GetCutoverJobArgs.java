@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCutoverJobArgs Empty = new GetCutoverJobArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="cutoverJobId", required=true)
     private final String cutoverJobId;
 
@@ -27,9 +21,6 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.cutoverJobId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="migratingVmId", required=true)
     private final String migratingVmId;
 
@@ -47,9 +35,6 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.migratingVmId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -57,9 +42,6 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sourceId", required=true)
     private final String sourceId;
 

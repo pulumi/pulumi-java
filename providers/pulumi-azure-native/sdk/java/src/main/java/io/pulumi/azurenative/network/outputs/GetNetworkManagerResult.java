@@ -15,53 +15,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNetworkManagerResult {
-/**
- * A description of the network manager.
- */
     private final @Nullable String description;
-/**
- * A friendly name for the network manager.
- */
     private final @Nullable String displayName;
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Resource location.
- */
     private final @Nullable String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Scope Access.
- */
     private final @Nullable List<String> networkManagerScopeAccesses;
-/**
- * Scope of Network Manager.
- */
     private final @Nullable NetworkManagerPropertiesResponseNetworkManagerScopes networkManagerScopes;
-/**
- * The provisioning state of the scope assignment resource.
- */
     private final String provisioningState;
-/**
- * The system metadata related to this resource.
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"description","displayName","etag","id","location","name","networkManagerScopeAccesses","networkManagerScopes","provisioningState","systemData","tags","type"})
@@ -92,75 +56,39 @@ public final class GetNetworkManagerResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * A description of the network manager.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * A friendly name for the network manager.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Scope Access.
- */
     public List<String> getNetworkManagerScopeAccesses() {
         return this.networkManagerScopeAccesses == null ? List.of() : this.networkManagerScopeAccesses;
     }
-/**
- * Scope of Network Manager.
- */
     public Optional<NetworkManagerPropertiesResponseNetworkManagerScopes> getNetworkManagerScopes() {
         return Optional.ofNullable(this.networkManagerScopes);
     }
-/**
- * The provisioning state of the scope assignment resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The system metadata related to this resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

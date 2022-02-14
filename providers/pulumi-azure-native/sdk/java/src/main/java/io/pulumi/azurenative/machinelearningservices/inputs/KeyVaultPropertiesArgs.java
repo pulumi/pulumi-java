@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultPropertiesArgs Empty = new KeyVaultPropertiesArgs();
 
-    /**
-     * For future use - The client id of the identity which will be used to access key vault.
-     */
     @InputImport(name="identityClientId")
     private final @Nullable Input<String> identityClientId;
 
@@ -27,9 +21,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.identityClientId == null ? Input.empty() : this.identityClientId;
     }
 
-    /**
-     * Key vault uri to access the encryption key.
-     */
     @InputImport(name="keyIdentifier", required=true)
     private final Input<String> keyIdentifier;
 
@@ -37,9 +28,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.keyIdentifier;
     }
 
-    /**
-     * The ArmId of the keyVault where the customer owned encryption key is present.
-     */
     @InputImport(name="keyVaultArmId", required=true)
     private final Input<String> keyVaultArmId;
 

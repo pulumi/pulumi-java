@@ -13,81 +13,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActiveDirectoryResponse {
-/**
- * Id of the Active Directory
- */
     private final @Nullable String activeDirectoryId;
-/**
- * Name of the active directory machine. This optional parameter is used only while creating kerberos volume
- */
     private final @Nullable String adName;
-/**
- * If enabled, AES encryption will be enabled for SMB communication.
- */
     private final @Nullable Boolean aesEncryption;
-/**
- *  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
- */
     private final @Nullable Boolean allowLocalNfsUsersWithLdap;
-/**
- * Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
- */
     private final @Nullable List<String> backupOperators;
-/**
- * Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
- */
     private final @Nullable String dns;
-/**
- * Name of the Active Directory domain
- */
     private final @Nullable String domain;
-/**
- * kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
- */
     private final @Nullable String kdcIP;
-/**
- * Specifies whether or not the LDAP traffic needs to be secured via TLS.
- */
     private final @Nullable Boolean ldapOverTLS;
-/**
- * Specifies whether or not the LDAP traffic needs to be signed.
- */
     private final @Nullable Boolean ldapSigning;
-/**
- * The Organizational Unit (OU) within the Windows Active Directory
- */
     private final @Nullable String organizationalUnit;
-/**
- * Plain text password of Active Directory domain administrator, value is masked in the response
- */
     private final @Nullable String password;
-/**
- * Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
- */
     private final @Nullable List<String> securityOperators;
-/**
- * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
- */
     private final @Nullable String serverRootCACertificate;
-/**
- * The Active Directory site the service will limit Domain Controller discovery to
- */
     private final @Nullable String site;
-/**
- * NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
- */
     private final @Nullable String smbServerName;
-/**
- * Status of the Active Directory
- */
     private final String status;
-/**
- * Any details in regards to the Status of the Active Directory
- */
     private final String statusDetails;
-/**
- * Username of Active Directory domain administrator
- */
     private final @Nullable String username;
 
     @OutputCustomType.Constructor({"activeDirectoryId","adName","aesEncryption","allowLocalNfsUsersWithLdap","backupOperators","dns","domain","kdcIP","ldapOverTLS","ldapSigning","organizationalUnit","password","securityOperators","serverRootCACertificate","site","smbServerName","status","statusDetails","username"})
@@ -132,117 +75,60 @@ public final class ActiveDirectoryResponse {
         this.username = username;
     }
 
-/**
- * Id of the Active Directory
- */
     public Optional<String> getActiveDirectoryId() {
         return Optional.ofNullable(this.activeDirectoryId);
     }
-/**
- * Name of the active directory machine. This optional parameter is used only while creating kerberos volume
- */
     public Optional<String> getAdName() {
         return Optional.ofNullable(this.adName);
     }
-/**
- * If enabled, AES encryption will be enabled for SMB communication.
- */
     public Optional<Boolean> getAesEncryption() {
         return Optional.ofNullable(this.aesEncryption);
     }
-/**
- *  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
- */
     public Optional<Boolean> getAllowLocalNfsUsersWithLdap() {
         return Optional.ofNullable(this.allowLocalNfsUsersWithLdap);
     }
-/**
- * Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
- */
     public List<String> getBackupOperators() {
         return this.backupOperators == null ? List.of() : this.backupOperators;
     }
-/**
- * Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
- */
     public Optional<String> getDns() {
         return Optional.ofNullable(this.dns);
     }
-/**
- * Name of the Active Directory domain
- */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
-/**
- * kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
- */
     public Optional<String> getKdcIP() {
         return Optional.ofNullable(this.kdcIP);
     }
-/**
- * Specifies whether or not the LDAP traffic needs to be secured via TLS.
- */
     public Optional<Boolean> getLdapOverTLS() {
         return Optional.ofNullable(this.ldapOverTLS);
     }
-/**
- * Specifies whether or not the LDAP traffic needs to be signed.
- */
     public Optional<Boolean> getLdapSigning() {
         return Optional.ofNullable(this.ldapSigning);
     }
-/**
- * The Organizational Unit (OU) within the Windows Active Directory
- */
     public Optional<String> getOrganizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
-/**
- * Plain text password of Active Directory domain administrator, value is masked in the response
- */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
- */
     public List<String> getSecurityOperators() {
         return this.securityOperators == null ? List.of() : this.securityOperators;
     }
-/**
- * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
- */
     public Optional<String> getServerRootCACertificate() {
         return Optional.ofNullable(this.serverRootCACertificate);
     }
-/**
- * The Active Directory site the service will limit Domain Controller discovery to
- */
     public Optional<String> getSite() {
         return Optional.ofNullable(this.site);
     }
-/**
- * NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
- */
     public Optional<String> getSmbServerName() {
         return Optional.ofNullable(this.smbServerName);
     }
-/**
- * Status of the Active Directory
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Any details in regards to the Status of the Active Directory
- */
     public String getStatusDetails() {
         return this.statusDetails;
     }
-/**
- * Username of Active Directory domain administrator
- */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

@@ -17,191 +17,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The Private Endpoint Connection resource.
-API Version: 2021-03-08.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PrivateEndpointConnection_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateEndpointConnectionsForEDM = new AzureNative.SecurityAndCompliance.PrivateEndpointConnectionsForEDM("privateEndpointConnectionsForEDM", new AzureNative.SecurityAndCompliance.PrivateEndpointConnectionsForEDMArgs
-        {
-            PrivateEndpointConnectionName = "myConnection",
-            PrivateLinkServiceConnectionState = new AzureNative.SecurityAndCompliance.Inputs.PrivateLinkServiceConnectionStateArgs
-            {
-                Description = "Auto-Approved",
-                Status = "Approved",
-            },
-            ResourceGroupName = "rgname",
-            ResourceName = "service1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityandcompliance "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityandcompliance"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityandcompliance.NewPrivateEndpointConnectionsForEDM(ctx, "privateEndpointConnectionsForEDM", &securityandcompliance.PrivateEndpointConnectionsForEDMArgs{
-			PrivateEndpointConnectionName: pulumi.String("myConnection"),
-			PrivateLinkServiceConnectionState: &securityandcompliance.PrivateLinkServiceConnectionStateArgs{
-				Description: pulumi.String("Auto-Approved"),
-				Status:      pulumi.String("Approved"),
-			},
-			ResourceGroupName: pulumi.String("rgname"),
-			ResourceName:      pulumi.String("service1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateEndpointConnectionsForEDM = new azure_native.securityandcompliance.PrivateEndpointConnectionsForEDM("privateEndpointConnectionsForEDM", {
-    privateEndpointConnectionName: "myConnection",
-    privateLinkServiceConnectionState: {
-        description: "Auto-Approved",
-        status: "Approved",
-    },
-    resourceGroupName: "rgname",
-    resourceName: "service1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_endpoint_connections_for_edm = azure_native.securityandcompliance.PrivateEndpointConnectionsForEDM("privateEndpointConnectionsForEDM",
-    private_endpoint_connection_name="myConnection",
-    private_link_service_connection_state=azure_native.securityandcompliance.PrivateLinkServiceConnectionStateArgs(
-        description="Auto-Approved",
-        status="Approved",
-    ),
-    resource_group_name="rgname",
-    resource_name="service1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:securityandcompliance:PrivateEndpointConnectionsForEDM myConnection /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.SecurityAndCompliance/privateLinkServicesForEDMUpload/service1/privateEndpointConnections/myConnection 
-```
-
- */
 @ResourceType(type="azure-native:securityandcompliance:PrivateEndpointConnectionsForEDM")
 public class PrivateEndpointConnectionsForEDM extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource of private end point.
-     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
-    /**
-     * @return The resource of private end point.
-     */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     */
     @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
-    /**
-     * @return A collection of information about the state of the connection between service consumer and provider.
-     */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
-    /**
-     * The provisioning state of the private endpoint connection resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the private endpoint connection resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Required property for system data
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Required property for system data
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateEndpointConnectionsForEDM(String name, PrivateEndpointConnectionsForEDMArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityandcompliance:PrivateEndpointConnectionsForEDM", name, args == null ? PrivateEndpointConnectionsForEDMArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -221,14 +75,6 @@ public class PrivateEndpointConnectionsForEDM extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateEndpointConnectionsForEDM get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnectionsForEDM(name, id, options);
     }

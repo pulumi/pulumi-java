@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProduct {
-/**
- * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product does not exist.
- */
     public static CompletableFuture<GetProductResult> invokeAsync(GetProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getProduct", TypeShape.of(GetProductResult.class), args == null ? GetProductArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPipelineTopologyArgs Empty = new GetPipelineTopologyArgs();
 
-    /**
-     * The Azure Video Analyzer account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
         return this.accountName;
     }
 
-    /**
-     * Pipeline topology unique identifier.
-     */
     @InputImport(name="pipelineTopologyName", required=true)
     private final String pipelineTopologyName;
 
@@ -35,9 +26,6 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
         return this.pipelineTopologyName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

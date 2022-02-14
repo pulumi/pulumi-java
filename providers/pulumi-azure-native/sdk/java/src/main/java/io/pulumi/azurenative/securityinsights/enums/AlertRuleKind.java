@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The alert rule kind
- */
     @EnumType
     public enum AlertRuleKind {
-/**
- * 
- */
         Scheduled("Scheduled"),
-/**
- * 
- */
         MicrosoftSecurityIncidentCreation("MicrosoftSecurityIncidentCreation"),
-/**
- * 
- */
         Fusion("Fusion");
 
         private final String value;

@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines contents of a web application rule.
- */
 public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebApplicationFirewallCustomRuleArgs Empty = new WebApplicationFirewallCustomRuleArgs();
 
-    /**
-     * Type of Actions.
-     */
     @InputImport(name="action", required=true)
     private final Input<Either<String,WebApplicationFirewallAction>> action;
 
@@ -33,9 +27,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
         return this.action;
     }
 
-    /**
-     * List of match conditions.
-     */
     @InputImport(name="matchConditions", required=true)
     private final Input<List<MatchConditionArgs>> matchConditions;
 
@@ -43,9 +34,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
         return this.matchConditions;
     }
 
-    /**
-     * The name of the resource that is unique within a policy. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -53,9 +41,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 
@@ -63,9 +48,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
         return this.priority;
     }
 
-    /**
-     * The rule type.
-     */
     @InputImport(name="ruleType", required=true)
     private final Input<Either<String,WebApplicationFirewallRuleType>> ruleType;
 

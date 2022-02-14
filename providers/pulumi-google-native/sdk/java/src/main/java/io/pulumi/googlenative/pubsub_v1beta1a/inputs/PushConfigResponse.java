@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for a push delivery endpoint.
- */
 public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PushConfigResponse Empty = new PushConfigResponse();
 
-    /**
-     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
-     */
     @InputImport(name="pushEndpoint", required=true)
     private final String pushEndpoint;
 

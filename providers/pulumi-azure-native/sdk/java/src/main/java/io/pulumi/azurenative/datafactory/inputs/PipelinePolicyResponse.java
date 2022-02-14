@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Pipeline Policy.
- */
 public final class PipelinePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelinePolicyResponse Empty = new PipelinePolicyResponse();
 
-    /**
-     * Pipeline ElapsedTime Metric Policy.
-     */
     @InputImport(name="elapsedTimeMetric")
     private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 

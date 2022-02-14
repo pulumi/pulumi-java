@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * format for the workspace connection value
- */
     @EnumType
     public enum ValueFormat {
-/**
- * 
- */
         JSON("JSON");
 
         private final String value;

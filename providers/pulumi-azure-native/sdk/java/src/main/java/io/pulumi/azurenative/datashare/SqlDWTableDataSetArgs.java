@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlDWTableDataSetArgs Empty = new SqlDWTableDataSetArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
         return this.accountName;
     }
 
-    /**
-     * The name of the dataSet.
-     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -37,9 +28,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
-    /**
-     * DataWarehouse name of the source data set
-     */
     @InputImport(name="dataWarehouseName", required=true)
     private final Input<String> dataWarehouseName;
 
@@ -47,10 +35,6 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
         return this.dataWarehouseName;
     }
 
-    /**
-     * Kind of data set.
-Expected value is 'SqlDWTable'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -58,9 +42,6 @@ Expected value is 'SqlDWTable'.
         return this.kind;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +49,6 @@ Expected value is 'SqlDWTable'.
         return this.resourceGroupName;
     }
 
-    /**
-     * Schema of the table. Default value is dbo.
-     */
     @InputImport(name="schemaName", required=true)
     private final Input<String> schemaName;
 
@@ -78,9 +56,6 @@ Expected value is 'SqlDWTable'.
         return this.schemaName;
     }
 
-    /**
-     * The name of the share to add the data set to.
-     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -88,9 +63,6 @@ Expected value is 'SqlDWTable'.
         return this.shareName;
     }
 
-    /**
-     * Resource id of SQL server
-     */
     @InputImport(name="sqlServerResourceId", required=true)
     private final Input<String> sqlServerResourceId;
 
@@ -98,9 +70,6 @@ Expected value is 'SqlDWTable'.
         return this.sqlServerResourceId;
     }
 
-    /**
-     * SQL DW table name.
-     */
     @InputImport(name="tableName", required=true)
     private final Input<String> tableName;
 

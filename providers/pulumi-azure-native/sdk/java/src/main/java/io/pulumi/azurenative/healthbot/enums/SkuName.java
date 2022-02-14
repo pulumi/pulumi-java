@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The name of the HealthBot SKU
- */
     @EnumType
     public enum SkuName {
-/**
- * 
- */
         F0("F0"),
-/**
- * 
- */
         S1("S1"),
-/**
- * 
- */
         C0("C0");
 
         private final String value;

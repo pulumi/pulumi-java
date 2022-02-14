@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
- */
 public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProtectionModeResponse Empty = new ProtectionModeResponse();
 
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     */
     @InputImport(name="exe")
     private final @Nullable String exe;
 
@@ -27,9 +21,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
         return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
     }
 
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     */
     @InputImport(name="executable")
     private final @Nullable String executable;
 
@@ -37,9 +28,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
         return this.executable == null ? Optional.empty() : Optional.ofNullable(this.executable);
     }
 
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     */
     @InputImport(name="msi")
     private final @Nullable String msi;
 
@@ -47,9 +35,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
         return this.msi == null ? Optional.empty() : Optional.ofNullable(this.msi);
     }
 
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     */
     @InputImport(name="script")
     private final @Nullable String script;
 

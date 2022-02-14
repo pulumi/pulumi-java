@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DateAfterModificationResponse {
-/**
- * Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
- */
     private final @Nullable Double daysAfterLastAccessTimeGreaterThan;
-/**
- * Value indicating the age in days after last modification
- */
     private final @Nullable Double daysAfterModificationGreaterThan;
 
     @OutputCustomType.Constructor({"daysAfterLastAccessTimeGreaterThan","daysAfterModificationGreaterThan"})
@@ -28,15 +22,9 @@ public final class DateAfterModificationResponse {
         this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
     }
 
-/**
- * Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
- */
     public Optional<Double> getDaysAfterLastAccessTimeGreaterThan() {
         return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
-/**
- * Value indicating the age in days after last modification
- */
     public Optional<Double> getDaysAfterModificationGreaterThan() {
         return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }

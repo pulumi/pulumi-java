@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Gets the application SSH endpoint
- */
 public final class ApplicationGetEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGetEndpointArgs Empty = new ApplicationGetEndpointArgs();
 
-    /**
-     * The destination port to connect to.
-     */
     @InputImport(name="destinationPort")
     private final @Nullable Input<Integer> destinationPort;
 
@@ -28,9 +22,6 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
     }
 
-    /**
-     * The location of the endpoint.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The private ip address of the endpoint.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -48,9 +36,6 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
-    /**
-     * The public port to connect to.
-     */
     @InputImport(name="publicPort")
     private final @Nullable Input<Integer> publicPort;
 

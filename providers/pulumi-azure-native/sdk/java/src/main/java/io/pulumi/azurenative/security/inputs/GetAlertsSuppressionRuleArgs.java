@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAlertsSuppressionRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAlertsSuppressionRuleArgs Empty = new GetAlertsSuppressionRuleArgs();
 
-    /**
-     * The unique name of the suppression alert rule
-     */
     @InputImport(name="alertsSuppressionRuleName", required=true)
     private final String alertsSuppressionRuleName;
 

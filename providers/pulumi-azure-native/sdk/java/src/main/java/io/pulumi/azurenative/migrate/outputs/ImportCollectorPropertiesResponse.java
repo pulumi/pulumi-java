@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImportCollectorPropertiesResponse {
-/**
- * 
- */
     private final String createdTimestamp;
-/**
- * 
- */
     private final @Nullable String discoverySiteId;
-/**
- * 
- */
     private final String updatedTimestamp;
 
     @OutputCustomType.Constructor({"createdTimestamp","discoverySiteId","updatedTimestamp"})
@@ -34,21 +25,12 @@ public final class ImportCollectorPropertiesResponse {
         this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
     }
 
-/**
- * 
- */
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
-/**
- * 
- */
     public Optional<String> getDiscoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
-/**
- * 
- */
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
     }

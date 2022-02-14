@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnergyServicePropertiesResponse {
-/**
- * 
- */
     private final @Nullable String authAppId;
-/**
- * 
- */
     private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
-/**
- * 
- */
     private final String dnsName;
-/**
- * 
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"authAppId","dataPartitionNames","dnsName","provisioningState"})
@@ -42,27 +30,15 @@ public final class EnergyServicePropertiesResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * 
- */
     public Optional<String> getAuthAppId() {
         return Optional.ofNullable(this.authAppId);
     }
-/**
- * 
- */
     public List<DataPartitionNamesResponse> getDataPartitionNames() {
         return this.dataPartitionNames == null ? List.of() : this.dataPartitionNames;
     }
-/**
- * 
- */
     public String getDnsName() {
         return this.dnsName;
     }
-/**
- * 
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

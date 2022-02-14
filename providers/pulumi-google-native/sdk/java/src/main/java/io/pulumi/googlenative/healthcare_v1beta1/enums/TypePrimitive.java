@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
- */
     @EnumType
     public enum TypePrimitive {
-/**
- * Not a primitive.
- */
         PrimitiveUnspecified("PRIMITIVE_UNSPECIFIED"),
-/**
- * String primitive.
- */
         String("STRING"),
-/**
- * Element that can have unschematized children.
- */
         Varies("VARIES"),
-/**
- * Like STRING, but all delimiters below this element are ignored.
- */
         UnescapedString("UNESCAPED_STRING");
 
         private final String value;

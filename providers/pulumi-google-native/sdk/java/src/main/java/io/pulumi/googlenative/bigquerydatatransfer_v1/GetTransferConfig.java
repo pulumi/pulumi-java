@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransferConfig {
-/**
- * Returns information about a data transfer config.
- */
     public static CompletableFuture<GetTransferConfigResult> invokeAsync(GetTransferConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquerydatatransfer/v1:getTransferConfig", TypeShape.of(GetTransferConfigResult.class), args == null ? GetTransferConfigArgs.Empty : args, Utilities.withVersion(options));
     }

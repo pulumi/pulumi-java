@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetArgs Empty = new AssetArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The alternate ID of the Asset.
-     */
     @InputImport(name="alternateId")
     private final @Nullable Input<String> alternateId;
 
@@ -37,9 +28,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.alternateId == null ? Input.empty() : this.alternateId;
     }
 
-    /**
-     * The Asset name.
-     */
     @InputImport(name="assetName")
     private final @Nullable Input<String> assetName;
 
@@ -47,9 +35,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetName == null ? Input.empty() : this.assetName;
     }
 
-    /**
-     * The name of the asset blob container.
-     */
     @InputImport(name="container")
     private final @Nullable Input<String> container;
 
@@ -57,9 +42,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.container == null ? Input.empty() : this.container;
     }
 
-    /**
-     * The Asset description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -67,9 +49,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,9 +56,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the storage account.
-     */
     @InputImport(name="storageAccountName")
     private final @Nullable Input<String> storageAccountName;
 

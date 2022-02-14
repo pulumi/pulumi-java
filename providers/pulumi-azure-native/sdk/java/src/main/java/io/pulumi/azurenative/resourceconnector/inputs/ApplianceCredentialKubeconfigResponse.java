@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Cluster User Credential appliance.
- */
 public final class ApplianceCredentialKubeconfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplianceCredentialKubeconfigResponse Empty = new ApplianceCredentialKubeconfigResponse();
 
-    /**
-     * Name which contains the role of the kubeconfig.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ApplianceCredentialKubeconfigResponse extends io.pulumi.resou
         return this.name;
     }
 
-    /**
-     * Contains the kubeconfig value.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

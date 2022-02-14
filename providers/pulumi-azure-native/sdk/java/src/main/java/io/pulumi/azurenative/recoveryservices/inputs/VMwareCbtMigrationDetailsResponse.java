@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VMwareCbt provider specific settings
- */
 public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMwareCbtMigrationDetailsResponse Empty = new VMwareCbtMigrationDetailsResponse();
 
-    /**
-     * The data mover RunAs account Id.
-     */
     @InputImport(name="dataMoverRunAsAccountId", required=true)
     private final String dataMoverRunAsAccountId;
 
@@ -30,10 +24,6 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.dataMoverRunAsAccountId;
     }
 
-    /**
-     * Gets the instance type.
-Expected value is 'VMwareCbt'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -41,9 +31,6 @@ Expected value is 'VMwareCbt'.
         return this.instanceType;
     }
 
-    /**
-     * The last recovery point received time.
-     */
     @InputImport(name="lastRecoveryPointReceived", required=true)
     private final String lastRecoveryPointReceived;
 
@@ -51,9 +38,6 @@ Expected value is 'VMwareCbt'.
         return this.lastRecoveryPointReceived;
     }
 
-    /**
-     * License Type of the VM to be used.
-     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -61,9 +45,6 @@ Expected value is 'VMwareCbt'.
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
-    /**
-     * The recovery point Id to which the VM was migrated.
-     */
     @InputImport(name="migrationRecoveryPointId", required=true)
     private final String migrationRecoveryPointId;
 
@@ -71,9 +52,6 @@ Expected value is 'VMwareCbt'.
         return this.migrationRecoveryPointId;
     }
 
-    /**
-     * The type of the OS on the VM.
-     */
     @InputImport(name="osType", required=true)
     private final String osType;
 
@@ -81,9 +59,6 @@ Expected value is 'VMwareCbt'.
         return this.osType;
     }
 
-    /**
-     * The list of protected disks.
-     */
     @InputImport(name="protectedDisks")
     private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
 
@@ -91,9 +66,6 @@ Expected value is 'VMwareCbt'.
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
 
-    /**
-     * The snapshot RunAs account Id.
-     */
     @InputImport(name="snapshotRunAsAccountId", required=true)
     private final String snapshotRunAsAccountId;
 
@@ -101,9 +73,6 @@ Expected value is 'VMwareCbt'.
         return this.snapshotRunAsAccountId;
     }
 
-    /**
-     * The target availability set Id.
-     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable String targetAvailabilitySetId;
 
@@ -111,9 +80,6 @@ Expected value is 'VMwareCbt'.
         return this.targetAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
-    /**
-     * The target boot diagnostics storage account ARM Id.
-     */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
     private final @Nullable String targetBootDiagnosticsStorageAccountId;
 
@@ -121,9 +87,6 @@ Expected value is 'VMwareCbt'.
         return this.targetBootDiagnosticsStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
 
-    /**
-     * The target location.
-     */
     @InputImport(name="targetLocation", required=true)
     private final String targetLocation;
 
@@ -131,9 +94,6 @@ Expected value is 'VMwareCbt'.
         return this.targetLocation;
     }
 
-    /**
-     * The target network Id.
-     */
     @InputImport(name="targetNetworkId")
     private final @Nullable String targetNetworkId;
 
@@ -141,9 +101,6 @@ Expected value is 'VMwareCbt'.
         return this.targetNetworkId == null ? Optional.empty() : Optional.ofNullable(this.targetNetworkId);
     }
 
-    /**
-     * The target resource group Id.
-     */
     @InputImport(name="targetResourceGroupId")
     private final @Nullable String targetResourceGroupId;
 
@@ -151,9 +108,6 @@ Expected value is 'VMwareCbt'.
         return this.targetResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceGroupId);
     }
 
-    /**
-     * Target VM name.
-     */
     @InputImport(name="targetVmName")
     private final @Nullable String targetVmName;
 
@@ -161,9 +115,6 @@ Expected value is 'VMwareCbt'.
         return this.targetVmName == null ? Optional.empty() : Optional.ofNullable(this.targetVmName);
     }
 
-    /**
-     * The target VM size.
-     */
     @InputImport(name="targetVmSize")
     private final @Nullable String targetVmSize;
 
@@ -171,9 +122,6 @@ Expected value is 'VMwareCbt'.
         return this.targetVmSize == null ? Optional.empty() : Optional.ofNullable(this.targetVmSize);
     }
 
-    /**
-     * The network details.
-     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
 
@@ -181,9 +129,6 @@ Expected value is 'VMwareCbt'.
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
-    /**
-     * The ARM Id of the VM discovered in VMware.
-     */
     @InputImport(name="vmwareMachineId", required=true)
     private final String vmwareMachineId;
 

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Application logs configuration.
- */
 public final class ApplicationLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationLogsConfigResponse Empty = new ApplicationLogsConfigResponse();
 
-    /**
-     * Application logs to blob storage configuration.
-     */
     @InputImport(name="azureBlobStorage")
     private final @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
 
@@ -29,9 +23,6 @@ public final class ApplicationLogsConfigResponse extends io.pulumi.resources.Inv
         return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
     }
 
-    /**
-     * Application logs to azure table storage configuration.
-     */
     @InputImport(name="azureTableStorage")
     private final @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
 
@@ -39,9 +30,6 @@ public final class ApplicationLogsConfigResponse extends io.pulumi.resources.Inv
         return this.azureTableStorage == null ? Optional.empty() : Optional.ofNullable(this.azureTableStorage);
     }
 
-    /**
-     * Application logs to file system configuration.
-     */
     @InputImport(name="fileSystem")
     private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 

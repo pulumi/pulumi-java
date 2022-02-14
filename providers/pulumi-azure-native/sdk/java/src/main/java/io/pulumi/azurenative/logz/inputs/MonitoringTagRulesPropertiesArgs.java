@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the properties for a TagRules resource.
- */
 public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringTagRulesPropertiesArgs Empty = new MonitoringTagRulesPropertiesArgs();
 
-    /**
-     * Set of rules for sending logs for the Monitor resource.
-     */
     @InputImport(name="logRules")
     private final @Nullable Input<LogRulesArgs> logRules;
 

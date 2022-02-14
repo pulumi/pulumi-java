@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateSyncCompleteCommandInputResponse {
-/**
- * Time stamp to complete
- */
     private final @Nullable String commitTimeStamp;
-/**
- * Name of database
- */
     private final String databaseName;
 
     @OutputCustomType.Constructor({"commitTimeStamp","databaseName"})
@@ -28,15 +22,9 @@ public final class MigrateSyncCompleteCommandInputResponse {
         this.databaseName = Objects.requireNonNull(databaseName);
     }
 
-/**
- * Time stamp to complete
- */
     public Optional<String> getCommitTimeStamp() {
         return Optional.ofNullable(this.commitTimeStamp);
     }
-/**
- * Name of database
- */
     public String getDatabaseName() {
         return this.databaseName;
     }

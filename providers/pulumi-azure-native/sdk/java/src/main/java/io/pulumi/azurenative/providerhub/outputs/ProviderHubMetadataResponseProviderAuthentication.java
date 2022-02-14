@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ProviderHubMetadataResponseProviderAuthentication {
-/**
- * 
- */
     private final List<String> allowedAudiences;
 
     @OutputCustomType.Constructor({"allowedAudiences"})
@@ -20,9 +17,6 @@ public final class ProviderHubMetadataResponseProviderAuthentication {
         this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
     }
 
-/**
- * 
- */
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences;
     }

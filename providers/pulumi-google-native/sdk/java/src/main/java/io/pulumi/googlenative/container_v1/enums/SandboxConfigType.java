@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the sandbox to use for the node.
- */
     @EnumType
     public enum SandboxConfigType {
-/**
- * Default value. This should not be used.
- */
         Unspecified("UNSPECIFIED"),
-/**
- * Run sandbox using gvisor.
- */
         Gvisor("GVISOR");
 
         private final String value;

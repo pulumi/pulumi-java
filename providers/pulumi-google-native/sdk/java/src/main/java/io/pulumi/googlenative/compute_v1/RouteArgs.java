@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 
-    /**
-     * An optional description of this resource. Provide this field when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,9 +23,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are supported.
-     */
     @InputImport(name="destRange")
     private final @Nullable Input<String> destRange;
 
@@ -39,9 +30,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.destRange == null ? Input.empty() : this.destRange;
     }
 
-    /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,9 +37,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Fully-qualified URL of the network that this route applies to.
-     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -59,9 +44,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
-    /**
-     * The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-gateway
-     */
     @InputImport(name="nextHopGateway")
     private final @Nullable Input<String> nextHopGateway;
 
@@ -69,9 +51,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopGateway == null ? Input.empty() : this.nextHopGateway;
     }
 
-    /**
-     * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets or the IP address of the forwarding Rule. For example, the following are all valid URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule 
-     */
     @InputImport(name="nextHopIlb")
     private final @Nullable Input<String> nextHopIlb;
 
@@ -79,9 +58,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopIlb == null ? Input.empty() : this.nextHopIlb;
     }
 
-    /**
-     * The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/
-     */
     @InputImport(name="nextHopInstance")
     private final @Nullable Input<String> nextHopInstance;
 
@@ -89,9 +65,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopInstance == null ? Input.empty() : this.nextHopInstance;
     }
 
-    /**
-     * The network IP address of an instance that should handle matching packets. Only IPv4 is supported.
-     */
     @InputImport(name="nextHopIp")
     private final @Nullable Input<String> nextHopIp;
 
@@ -99,9 +72,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopIp == null ? Input.empty() : this.nextHopIp;
     }
 
-    /**
-     * The URL of the local network if it should handle matching packets.
-     */
     @InputImport(name="nextHopNetwork")
     private final @Nullable Input<String> nextHopNetwork;
 
@@ -109,9 +79,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopNetwork == null ? Input.empty() : this.nextHopNetwork;
     }
 
-    /**
-     * The URL to a VpnTunnel that should handle matching packets.
-     */
     @InputImport(name="nextHopVpnTunnel")
     private final @Nullable Input<String> nextHopVpnTunnel;
 
@@ -119,9 +86,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.nextHopVpnTunnel == null ? Input.empty() : this.nextHopVpnTunnel;
     }
 
-    /**
-     * The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length. In cases where multiple routes have equal prefix length, the one with the lowest-numbered priority value wins. The default value is `1000`. The priority value must be from `0` to `65535`, inclusive.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -129,9 +93,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -139,9 +100,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -149,9 +107,6 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * A list of instance tags to which this route applies.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 

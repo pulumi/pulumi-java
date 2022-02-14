@@ -16,41 +16,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMonitorResult {
-/**
- * ARM id of the monitor resource.
- */
     private final String id;
-/**
- * Identity properties of the monitor resource.
- */
     private final @Nullable IdentityPropertiesResponse identity;
-/**
- * The location of the monitor resource
- */
     private final String location;
-/**
- * Name of the monitor resource.
- */
     private final String name;
-/**
- * Properties of the monitor resource.
- */
     private final MonitorPropertiesResponse properties;
-/**
- * SKU of the monitor resource.
- */
     private final @Nullable ResourceSkuResponse sku;
-/**
- * The system metadata relating to this resource
- */
     private final SystemDataResponse systemData;
-/**
- * The tags of the monitor resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the monitor resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","identity","location","name","properties","sku","systemData","tags","type"})
@@ -75,57 +48,30 @@ public final class GetMonitorResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * ARM id of the monitor resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Identity properties of the monitor resource.
- */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * The location of the monitor resource
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Name of the monitor resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Properties of the monitor resource.
- */
     public MonitorPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * SKU of the monitor resource.
- */
     public Optional<ResourceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * The system metadata relating to this resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The tags of the monitor resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the monitor resource.
- */
     public String getType() {
         return this.type;
     }

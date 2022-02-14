@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Table's schema.
- */
 public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaArgs Empty = new SchemaArgs();
 
-    /**
-     * A list of table custom columns.
-     */
     @InputImport(name="columns")
     private final @Nullable Input<List<ColumnArgs>> columns;
 
@@ -29,9 +23,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.columns == null ? Input.empty() : this.columns;
     }
 
-    /**
-     * Table description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Table display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -49,9 +37,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Table name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

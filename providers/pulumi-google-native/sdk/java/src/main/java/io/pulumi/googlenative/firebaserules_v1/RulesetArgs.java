@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesetArgs Empty = new RulesetArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,9 +22,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * `Source` for the `Ruleset`.
-     */
     @InputImport(name="source", required=true)
     private final Input<SourceArgs> source;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * OpenShiftManagedClusterMaterPoolProfile contains configuration for OpenShift master VMs.
- */
 public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OpenShiftManagedClusterMasterPoolProfileResponse Empty = new OpenShiftManagedClusterMasterPoolProfileResponse();
 
-    /**
-     * Number of masters (VMs) to host docker containers. The default value is 3.
-     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -28,9 +22,6 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
         return this.count;
     }
 
-    /**
-     * Unique name of the master pool profile in the context of the subscription and resource group.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -48,9 +36,6 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
-    /**
-     * Subnet CIDR for the peering.
-     */
     @InputImport(name="subnetCidr")
     private final @Nullable String subnetCidr;
 
@@ -58,9 +43,6 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends io.p
         return this.subnetCidr == null ? Optional.empty() : Optional.ofNullable(this.subnetCidr);
     }
 
-    /**
-     * Size of agent VMs.
-     */
     @InputImport(name="vmSize", required=true)
     private final String vmSize;
 

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OneTimeScheduleResponse {
-/**
- * The desired patch job execution time.
- */
     private final String executeTime;
 
     @OutputCustomType.Constructor({"executeTime"})
@@ -19,9 +16,6 @@ public final class OneTimeScheduleResponse {
         this.executeTime = Objects.requireNonNull(executeTime);
     }
 
-/**
- * The desired patch job execution time.
- */
     public String getExecuteTime() {
         return this.executeTime;
     }

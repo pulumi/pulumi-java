@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A condition for determining whether a transformation should be applied to a field.
- */
 public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2RecordConditionArgs Empty = new GooglePrivacyDlpV2RecordConditionArgs();
 
-    /**
-     * An expression.
-     */
     @InputImport(name="expressions")
     private final @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 

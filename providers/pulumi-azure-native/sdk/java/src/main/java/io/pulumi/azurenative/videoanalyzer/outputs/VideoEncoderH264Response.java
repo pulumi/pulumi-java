@@ -12,22 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VideoEncoderH264Response {
-/**
- * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
- */
     private final @Nullable String bitrateKbps;
-/**
- * The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
- */
     private final @Nullable String frameRate;
-/**
- * Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
- */
     private final @Nullable VideoScaleResponse scale;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"bitrateKbps","frameRate","scale","type"})
@@ -42,28 +29,15 @@ Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
- */
     public Optional<String> getBitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
-/**
- * The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
- */
     public Optional<String> getFrameRate() {
         return Optional.ofNullable(this.frameRate);
     }
-/**
- * Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
- */
     public Optional<VideoScaleResponse> getScale() {
         return Optional.ofNullable(this.scale);
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
- */
     public String getType() {
         return this.type;
     }

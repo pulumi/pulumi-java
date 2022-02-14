@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Etcd configuration
- */
 public final class EtcdInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EtcdInfoResponse Empty = new EtcdInfoResponse();
 
-    /**
-     * Etcd type
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -25,9 +19,6 @@ public final class EtcdInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
-    /**
-     * Etcd version
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

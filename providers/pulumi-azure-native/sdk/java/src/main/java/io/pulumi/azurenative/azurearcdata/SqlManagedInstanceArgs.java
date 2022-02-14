@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlManagedInstanceArgs Empty = new SqlManagedInstanceArgs();
 
-    /**
-     * The extendedLocation of the resource.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -31,9 +25,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * null
-     */
     @InputImport(name="properties", required=true)
     private final Input<SqlManagedInstancePropertiesArgs> properties;
 
@@ -51,9 +39,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
         return this.properties;
     }
 
-    /**
-     * The name of the Azure resource group
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,9 +46,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource sku.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SqlManagedInstanceSkuArgs> sku;
 
@@ -71,9 +53,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The name of SQL Managed Instances
-     */
     @InputImport(name="sqlManagedInstanceName")
     private final @Nullable Input<String> sqlManagedInstanceName;
 
@@ -81,9 +60,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
         return this.sqlManagedInstanceName == null ? Input.empty() : this.sqlManagedInstanceName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

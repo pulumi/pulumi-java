@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The key type like 'AzureKeyVault'.
- */
     @EnumType
     public enum ServerKeyType {
-/**
- * 
- */
         AzureKeyVault("AzureKeyVault");
 
         private final String value;

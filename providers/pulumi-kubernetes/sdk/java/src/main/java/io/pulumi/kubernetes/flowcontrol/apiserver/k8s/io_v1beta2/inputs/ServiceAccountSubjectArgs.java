@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * ServiceAccountSubject holds detailed information for service-account-kind subject.
- */
 public final class ServiceAccountSubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAccountSubjectArgs Empty = new ServiceAccountSubjectArgs();
 
-    /**
-     * `name` is the name of matching ServiceAccount objects, or "*" to match regardless of name. Required.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
         return this.name;
     }
 
-    /**
-     * `namespace` is the namespace of matching ServiceAccount objects. Required.
-     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 

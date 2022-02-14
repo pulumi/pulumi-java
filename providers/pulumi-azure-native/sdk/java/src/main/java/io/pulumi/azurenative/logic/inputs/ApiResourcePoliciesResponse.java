@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The API resource policies.
- */
 public final class ApiResourcePoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiResourcePoliciesResponse Empty = new ApiResourcePoliciesResponse();
 
-    /**
-     * The API level only policies XML as embedded content.
-     */
     @InputImport(name="content")
     private final @Nullable String content;
 
@@ -27,9 +21,6 @@ public final class ApiResourcePoliciesResponse extends io.pulumi.resources.Invok
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
-    /**
-     * The content link to the policies.
-     */
     @InputImport(name="contentLink")
     private final @Nullable String contentLink;
 

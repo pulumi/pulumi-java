@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * IdentityServiceConfig is configuration for Identity Service which allows customers to use external identity providers with the K8S API
- */
 public final class IdentityServiceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityServiceConfigResponse Empty = new IdentityServiceConfigResponse();
 
-    /**
-     * Whether to enable the Identity Service component
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

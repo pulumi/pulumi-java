@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExecution {
-/**
- * Gets details of executions
- */
     public static CompletableFuture<GetExecutionResult> invokeAsync(GetExecutionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:notebooks/v1:getExecution", TypeShape.of(GetExecutionResult.class), args == null ? GetExecutionArgs.Empty : args, Utilities.withVersion(options));
     }

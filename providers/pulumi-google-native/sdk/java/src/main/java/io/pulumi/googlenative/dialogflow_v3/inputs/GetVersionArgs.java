@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentId", required=true)
     private final String agentId;
 
@@ -27,9 +21,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.agentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="flowId", required=true)
     private final String flowId;
 
@@ -37,9 +28,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.flowId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -57,9 +42,6 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="versionId", required=true)
     private final String versionId;
 

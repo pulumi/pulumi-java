@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionRegisteredFeaturesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubscriptionRegisteredFeaturesResponse Empty = new SubscriptionRegisteredFeaturesResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class SubscriptionRegisteredFeaturesResponse extends io.pulumi.reso
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

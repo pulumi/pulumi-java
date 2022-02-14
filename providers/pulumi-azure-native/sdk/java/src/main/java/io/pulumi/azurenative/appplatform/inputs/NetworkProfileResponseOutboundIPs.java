@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Desired outbound IP resources for Azure Spring Cloud instance.
- */
 public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkProfileResponseOutboundIPs Empty = new NetworkProfileResponseOutboundIPs();
 
-    /**
-     * A list of public IP addresses.
-     */
     @InputImport(name="publicIPs", required=true)
     private final List<String> publicIPs;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkGroup {
-/**
- * The network group resource
-API Version: 2021-02-01-preview.
- *
- * The network group resource
- */
     public static CompletableFuture<GetNetworkGroupResult> invokeAsync(GetNetworkGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkGroup", TypeShape.of(GetNetworkGroupResult.class), args == null ? GetNetworkGroupArgs.Empty : args, Utilities.withVersion(options));
     }

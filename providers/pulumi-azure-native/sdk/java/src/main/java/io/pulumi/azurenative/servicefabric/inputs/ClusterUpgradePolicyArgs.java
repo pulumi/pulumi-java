@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the policy used when upgrading the cluster.
- */
 public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterUpgradePolicyArgs Empty = new ClusterUpgradePolicyArgs();
 
-    /**
-     * The cluster delta health policy used when upgrading the cluster.
-     */
     @InputImport(name="deltaHealthPolicy")
     private final @Nullable Input<ClusterUpgradeDeltaHealthPolicyArgs> deltaHealthPolicy;
 
@@ -30,9 +24,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.deltaHealthPolicy == null ? Input.empty() : this.deltaHealthPolicy;
     }
 
-    /**
-     * If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
-     */
     @InputImport(name="forceRestart")
     private final @Nullable Input<Boolean> forceRestart;
 
@@ -40,9 +31,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.forceRestart == null ? Input.empty() : this.forceRestart;
     }
 
-    /**
-     * The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-     */
     @InputImport(name="healthCheckRetryTimeout", required=true)
     private final Input<String> healthCheckRetryTimeout;
 
@@ -50,9 +38,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.healthCheckRetryTimeout;
     }
 
-    /**
-     * The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-     */
     @InputImport(name="healthCheckStableDuration", required=true)
     private final Input<String> healthCheckStableDuration;
 
@@ -60,9 +45,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.healthCheckStableDuration;
     }
 
-    /**
-     * The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-     */
     @InputImport(name="healthCheckWaitDuration", required=true)
     private final Input<String> healthCheckWaitDuration;
 
@@ -70,9 +52,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.healthCheckWaitDuration;
     }
 
-    /**
-     * The cluster health policy used when upgrading the cluster.
-     */
     @InputImport(name="healthPolicy", required=true)
     private final Input<ClusterHealthPolicyArgs> healthPolicy;
 
@@ -80,9 +59,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.healthPolicy;
     }
 
-    /**
-     * The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-     */
     @InputImport(name="upgradeDomainTimeout", required=true)
     private final Input<String> upgradeDomainTimeout;
 
@@ -90,9 +66,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.upgradeDomainTimeout;
     }
 
-    /**
-     * The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-     */
     @InputImport(name="upgradeReplicaSetCheckTimeout", required=true)
     private final Input<String> upgradeReplicaSetCheckTimeout;
 
@@ -100,9 +73,6 @@ public final class ClusterUpgradePolicyArgs extends io.pulumi.resources.Resource
         return this.upgradeReplicaSetCheckTimeout;
     }
 
-    /**
-     * The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.
-     */
     @InputImport(name="upgradeTimeout", required=true)
     private final Input<String> upgradeTimeout;
 

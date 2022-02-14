@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Web activity authentication properties.
- */
 public final class WebActivityAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebActivityAuthenticationArgs Empty = new WebActivityAuthenticationArgs();
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable Input<CredentialReferenceArgs> credential;
 
@@ -32,9 +26,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
         return this.credential == null ? Input.empty() : this.credential;
     }
 
-    /**
-     * Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -42,9 +33,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
-     */
     @InputImport(name="pfx")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
@@ -52,9 +40,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
         return this.pfx == null ? Input.empty() : this.pfx;
     }
 
-    /**
-     * Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="resource")
     private final @Nullable Input<Object> resource;
 
@@ -62,9 +47,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
         return this.resource == null ? Input.empty() : this.resource;
     }
 
-    /**
-     * Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -72,9 +54,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userTenant")
     private final @Nullable Input<Object> userTenant;
 
@@ -82,9 +61,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
         return this.userTenant == null ? Input.empty() : this.userTenant;
     }
 
-    /**
-     * Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

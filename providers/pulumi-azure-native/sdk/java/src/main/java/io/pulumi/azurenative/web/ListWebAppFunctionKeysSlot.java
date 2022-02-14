@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppFunctionKeysSlot {
-/**
- * String dictionary resource.
-API Version: 2020-12-01.
- *
- * String dictionary resource.
- */
     public static CompletableFuture<ListWebAppFunctionKeysSlotResult> invokeAsync(ListWebAppFunctionKeysSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionKeysSlot", TypeShape.of(ListWebAppFunctionKeysSlotResult.class), args == null ? ListWebAppFunctionKeysSlotArgs.Empty : args, Utilities.withVersion(options));
     }

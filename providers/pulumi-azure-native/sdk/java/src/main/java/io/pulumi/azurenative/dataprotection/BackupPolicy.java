@@ -16,393 +16,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * BaseBackupPolicy resource
-API Version: 2021-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CreateOrUpdate BackupPolicy
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupPolicy = new AzureNative.DataProtection.BackupPolicy("backupPolicy", new AzureNative.DataProtection.BackupPolicyArgs
-        {
-            BackupPolicyName = "OSSDBPolicy",
-            Properties = new AzureNative.DataProtection.Inputs.BackupPolicyArgs
-            {
-                DatasourceTypes = 
-                {
-                    "OssDB",
-                },
-                ObjectType = "BackupPolicy",
-                PolicyRules = 
-                {
-                    new AzureNative.DataProtection.Inputs.AzureBackupRuleArgs
-                    {
-                        BackupParameters = new AzureNative.DataProtection.Inputs.AzureBackupParamsArgs
-                        {
-                            BackupType = "Full",
-                            ObjectType = "AzureBackupParams",
-                        },
-                        DataStore = new AzureNative.DataProtection.Inputs.DataStoreInfoBaseArgs
-                        {
-                            DataStoreType = "VaultStore",
-                            ObjectType = "DataStoreInfoBase",
-                        },
-                        Name = "BackupWeekly",
-                        ObjectType = "AzureBackupRule",
-                        Trigger = new AzureNative.DataProtection.Inputs.ScheduleBasedTriggerContextArgs
-                        {
-                            ObjectType = "ScheduleBasedTriggerContext",
-                            Schedule = new AzureNative.DataProtection.Inputs.BackupScheduleArgs
-                            {
-                                RepeatingTimeIntervals = 
-                                {
-                                    "R/2019-11-20T08:00:00-08:00/P1W",
-                                },
-                            },
-                            TaggingCriteria = 
-                            {
-                                new AzureNative.DataProtection.Inputs.TaggingCriteriaArgs
-                                {
-                                    IsDefault = true,
-                                    TagInfo = new AzureNative.DataProtection.Inputs.RetentionTagArgs
-                                    {
-                                        TagName = "Default",
-                                    },
-                                    TaggingPriority = 99,
-                                },
-                                new AzureNative.DataProtection.Inputs.TaggingCriteriaArgs
-                                {
-                                    Criteria = 
-                                    {
-                                        new AzureNative.DataProtection.Inputs.ScheduleBasedBackupCriteriaArgs
-                                        {
-                                            DaysOfTheWeek = 
-                                            {
-                                                "Sunday",
-                                            },
-                                            ObjectType = "ScheduleBasedBackupCriteria",
-                                            ScheduleTimes = 
-                                            {
-                                                "2019-03-01T13:00:00Z",
-                                            },
-                                        },
-                                    },
-                                    IsDefault = false,
-                                    TagInfo = new AzureNative.DataProtection.Inputs.RetentionTagArgs
-                                    {
-                                        TagName = "Weekly",
-                                    },
-                                    TaggingPriority = 20,
-                                },
-                            },
-                        },
-                    },
-                    new AzureNative.DataProtection.Inputs.AzureRetentionRuleArgs
-                    {
-                        IsDefault = true,
-                        Lifecycles = 
-                        {
-                            new AzureNative.DataProtection.Inputs.SourceLifeCycleArgs
-                            {
-                                DeleteAfter = new AzureNative.DataProtection.Inputs.AbsoluteDeleteOptionArgs
-                                {
-                                    Duration = "P1W",
-                                    ObjectType = "AbsoluteDeleteOption",
-                                },
-                                SourceDataStore = new AzureNative.DataProtection.Inputs.DataStoreInfoBaseArgs
-                                {
-                                    DataStoreType = "VaultStore",
-                                    ObjectType = "DataStoreInfoBase",
-                                },
-                            },
-                        },
-                        Name = "Default",
-                        ObjectType = "AzureRetentionRule",
-                    },
-                    new AzureNative.DataProtection.Inputs.AzureRetentionRuleArgs
-                    {
-                        IsDefault = false,
-                        Lifecycles = 
-                        {
-                            new AzureNative.DataProtection.Inputs.SourceLifeCycleArgs
-                            {
-                                DeleteAfter = new AzureNative.DataProtection.Inputs.AbsoluteDeleteOptionArgs
-                                {
-                                    Duration = "P12W",
-                                    ObjectType = "AbsoluteDeleteOption",
-                                },
-                                SourceDataStore = new AzureNative.DataProtection.Inputs.DataStoreInfoBaseArgs
-                                {
-                                    DataStoreType = "VaultStore",
-                                    ObjectType = "DataStoreInfoBase",
-                                },
-                            },
-                        },
-                        Name = "Weekly",
-                        ObjectType = "AzureRetentionRule",
-                    },
-                },
-            },
-            ResourceGroupName = "000pikumar",
-            VaultName = "PrivatePreviewVault",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const backupPolicy = new azure_native.dataprotection.BackupPolicy("backupPolicy", {
-    backupPolicyName: "OSSDBPolicy",
-    properties: {
-        datasourceTypes: ["OssDB"],
-        objectType: "BackupPolicy",
-        policyRules: [
-            {
-                backupParameters: {
-                    backupType: "Full",
-                    objectType: "AzureBackupParams",
-                },
-                dataStore: {
-                    dataStoreType: "VaultStore",
-                    objectType: "DataStoreInfoBase",
-                },
-                name: "BackupWeekly",
-                objectType: "AzureBackupRule",
-                trigger: {
-                    objectType: "ScheduleBasedTriggerContext",
-                    schedule: {
-                        repeatingTimeIntervals: ["R/2019-11-20T08:00:00-08:00/P1W"],
-                    },
-                    taggingCriteria: [
-                        {
-                            isDefault: true,
-                            tagInfo: {
-                                tagName: "Default",
-                            },
-                            taggingPriority: 99,
-                        },
-                        {
-                            criteria: [{
-                                daysOfTheWeek: ["Sunday"],
-                                objectType: "ScheduleBasedBackupCriteria",
-                                scheduleTimes: ["2019-03-01T13:00:00Z"],
-                            }],
-                            isDefault: false,
-                            tagInfo: {
-                                tagName: "Weekly",
-                            },
-                            taggingPriority: 20,
-                        },
-                    ],
-                },
-            },
-            {
-                isDefault: true,
-                lifecycles: [{
-                    deleteAfter: {
-                        duration: "P1W",
-                        objectType: "AbsoluteDeleteOption",
-                    },
-                    sourceDataStore: {
-                        dataStoreType: "VaultStore",
-                        objectType: "DataStoreInfoBase",
-                    },
-                }],
-                name: "Default",
-                objectType: "AzureRetentionRule",
-            },
-            {
-                isDefault: false,
-                lifecycles: [{
-                    deleteAfter: {
-                        duration: "P12W",
-                        objectType: "AbsoluteDeleteOption",
-                    },
-                    sourceDataStore: {
-                        dataStoreType: "VaultStore",
-                        objectType: "DataStoreInfoBase",
-                    },
-                }],
-                name: "Weekly",
-                objectType: "AzureRetentionRule",
-            },
-        ],
-    },
-    resourceGroupName: "000pikumar",
-    vaultName: "PrivatePreviewVault",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
-    backup_policy_name="OSSDBPolicy",
-    properties={
-        "datasourceTypes": ["OssDB"],
-        "objectType": "BackupPolicy",
-        "policyRules": [
-            azure_native.dataprotection.AzureBackupRuleArgs(
-                backup_parameters=azure_native.dataprotection.AzureBackupParamsArgs(
-                    backup_type="Full",
-                    object_type="AzureBackupParams",
-                ),
-                data_store=azure_native.dataprotection.DataStoreInfoBaseArgs(
-                    data_store_type="VaultStore",
-                    object_type="DataStoreInfoBase",
-                ),
-                name="BackupWeekly",
-                object_type="AzureBackupRule",
-                trigger=azure_native.dataprotection.ScheduleBasedTriggerContextArgs(
-                    object_type="ScheduleBasedTriggerContext",
-                    schedule=azure_native.dataprotection.BackupScheduleArgs(
-                        repeating_time_intervals=["R/2019-11-20T08:00:00-08:00/P1W"],
-                    ),
-                    tagging_criteria=[
-                        azure_native.dataprotection.TaggingCriteriaArgs(
-                            is_default=True,
-                            tag_info=azure_native.dataprotection.RetentionTagArgs(
-                                tag_name="Default",
-                            ),
-                            tagging_priority=99,
-                        ),
-                        azure_native.dataprotection.TaggingCriteriaArgs(
-                            criteria=[azure_native.dataprotection.ScheduleBasedBackupCriteriaArgs(
-                                days_of_the_week=["Sunday"],
-                                object_type="ScheduleBasedBackupCriteria",
-                                schedule_times=["2019-03-01T13:00:00Z"],
-                            )],
-                            is_default=False,
-                            tag_info=azure_native.dataprotection.RetentionTagArgs(
-                                tag_name="Weekly",
-                            ),
-                            tagging_priority=20,
-                        ),
-                    ],
-                ),
-            ),
-            azure_native.dataprotection.AzureRetentionRuleArgs(
-                is_default=True,
-                lifecycles=[azure_native.dataprotection.SourceLifeCycleArgs(
-                    delete_after=azure_native.dataprotection.AbsoluteDeleteOptionArgs(
-                        duration="P1W",
-                        object_type="AbsoluteDeleteOption",
-                    ),
-                    source_data_store=azure_native.dataprotection.DataStoreInfoBaseArgs(
-                        data_store_type="VaultStore",
-                        object_type="DataStoreInfoBase",
-                    ),
-                )],
-                name="Default",
-                object_type="AzureRetentionRule",
-            ),
-            azure_native.dataprotection.AzureRetentionRuleArgs(
-                is_default=False,
-                lifecycles=[azure_native.dataprotection.SourceLifeCycleArgs(
-                    delete_after=azure_native.dataprotection.AbsoluteDeleteOptionArgs(
-                        duration="P12W",
-                        object_type="AbsoluteDeleteOption",
-                    ),
-                    source_data_store=azure_native.dataprotection.DataStoreInfoBaseArgs(
-                        data_store_type="VaultStore",
-                        object_type="DataStoreInfoBase",
-                    ),
-                )],
-                name="Weekly",
-                object_type="AzureRetentionRule",
-            ),
-        ],
-    },
-    resource_group_name="000pikumar",
-    vault_name="PrivatePreviewVault")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:dataprotection:BackupPolicy OSSDBPolicy /subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/backupVaults/PrivatePreviewVault/backupPolicies/OSSDBPolicy 
-```
-
- */
 @ResourceType(type="azure-native:dataprotection:BackupPolicy")
 public class BackupPolicy extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name associated with the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name associated with the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * BaseBackupPolicyResource properties
-     */
     @OutputExport(name="properties", type=BackupPolicyResponse.class, parameters={})
     private Output<BackupPolicyResponse> properties;
 
-    /**
-     * @return BaseBackupPolicyResource properties
-     */
     public Output<BackupPolicyResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public BackupPolicy(String name, BackupPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dataprotection:BackupPolicy", name, args == null ? BackupPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -426,14 +66,6 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static BackupPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupPolicy(name, id, options);
     }

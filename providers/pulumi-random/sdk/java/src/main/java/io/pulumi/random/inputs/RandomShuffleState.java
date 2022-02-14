@@ -14,17 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomShuffleState Empty = new RandomShuffleState();
 
-    /**
-     * The list of strings to shuffle.
-
-     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<String>> inputs;
 
@@ -32,10 +25,6 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
-    /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -43,10 +32,6 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
-    /**
-     * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
-
-     */
     @InputImport(name="resultCount")
     private final @Nullable Input<Integer> resultCount;
 
@@ -54,10 +39,6 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
         return this.resultCount == null ? Input.empty() : this.resultCount;
     }
 
-    /**
-     * Random permutation of the list of strings given in `input`.
-
-     */
     @InputImport(name="results")
     private final @Nullable Input<List<String>> results;
 
@@ -65,10 +46,6 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
         return this.results == null ? Input.empty() : this.results;
     }
 
-    /**
-     * Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
-
-     */
     @InputImport(name="seed")
     private final @Nullable Input<String> seed;
 

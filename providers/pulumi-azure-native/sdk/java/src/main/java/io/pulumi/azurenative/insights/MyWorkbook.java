@@ -16,327 +16,99 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An Application Insights private workbook definition.
-API Version: 2020-10-20.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### WorkbookAdd
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myWorkbook = new AzureNative.Insights.MyWorkbook("myWorkbook", new AzureNative.Insights.MyWorkbookArgs
-        {
-            Category = "workbook",
-            DisplayName = "Blah Blah Blah",
-            Id = "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
-            Kind = "user",
-            Location = "west us",
-            Name = "deadb33f-8bee-4d3b-a059-9be8dac93960",
-            ResourceGroupName = "my-resource-group",
-            ResourceName = "deadb33f-8bee-4d3b-a059-9be8dac93960",
-            SerializedData = "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}",
-            SourceId = "/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens",
-            Tags = 
-            {
-                "TagSample01",
-                "TagSample02",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewMyWorkbook(ctx, "myWorkbook", &insights.MyWorkbookArgs{
-			Category:          pulumi.String("workbook"),
-			DisplayName:       pulumi.String("Blah Blah Blah"),
-			Id:                pulumi.String("c0deea5e-3344-40f2-96f8-6f8e1c3b5722"),
-			Kind:              pulumi.String("user"),
-			Location:          pulumi.String("west us"),
-			Name:              pulumi.String("deadb33f-8bee-4d3b-a059-9be8dac93960"),
-			ResourceGroupName: pulumi.String("my-resource-group"),
-			ResourceName:      pulumi.String("deadb33f-8bee-4d3b-a059-9be8dac93960"),
-			SerializedData:    pulumi.String("{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}"),
-			SourceId:          pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens"),
-			Tags: pulumi.StringArray{
-				pulumi.String("TagSample01"),
-				pulumi.String("TagSample02"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const myWorkbook = new azure_native.insights.MyWorkbook("myWorkbook", {
-    category: "workbook",
-    displayName: "Blah Blah Blah",
-    id: "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
-    kind: "user",
-    location: "west us",
-    name: "deadb33f-8bee-4d3b-a059-9be8dac93960",
-    resourceGroupName: "my-resource-group",
-    resourceName: "deadb33f-8bee-4d3b-a059-9be8dac93960",
-    serializedData: "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}",
-    sourceId: "/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens",
-    tags: [
-        "TagSample01",
-        "TagSample02",
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-my_workbook = azure_native.insights.MyWorkbook("myWorkbook",
-    category="workbook",
-    display_name="Blah Blah Blah",
-    id="c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
-    kind="user",
-    location="west us",
-    name="deadb33f-8bee-4d3b-a059-9be8dac93960",
-    resource_group_name="my-resource-group",
-    resource_name="deadb33f-8bee-4d3b-a059-9be8dac93960",
-    serialized_data="{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}",
-    source_id="/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens",
-    tags=[
-        "TagSample01",
-        "TagSample02",
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:MyWorkbook deadb33f-8bee-4d3b-a059-9be8dac93960 /subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/my-resource-group/providers/Microsoft.Insights/myworkbooks/deadb33f-8bee-4d3b-a059-9be8dac93960 
-```
-
- */
 @ResourceType(type="azure-native:insights:MyWorkbook")
 public class MyWorkbook extends io.pulumi.resources.CustomResource {
-    /**
-     * Workbook category, as defined by the user at creation time.
-     */
     @OutputExport(name="category", type=String.class, parameters={})
     private Output<String> category;
 
-    /**
-     * @return Workbook category, as defined by the user at creation time.
-     */
     public Output<String> getCategory() {
         return this.category;
     }
-    /**
-     * The user-defined name of the private workbook.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return The user-defined name of the private workbook.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Resource etag
-     */
     @OutputExport(name="etag", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> etag;
 
-    /**
-     * @return Resource etag
-     */
     public Output</* @Nullable */ Map<String,String>> getEtag() {
         return this.etag;
     }
-    /**
-     * Identity used for BYOS
-     */
     @OutputExport(name="identity", type=MyWorkbookManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ MyWorkbookManagedIdentityResponse> identity;
 
-    /**
-     * @return Identity used for BYOS
-     */
     public Output</* @Nullable */ MyWorkbookManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The kind of workbook. Choices are user and shared.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return The kind of workbook. Choices are user and shared.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * Configuration of this particular private workbook. Configuration data is a string containing valid JSON
-     */
     @OutputExport(name="serializedData", type=String.class, parameters={})
     private Output<String> serializedData;
 
-    /**
-     * @return Configuration of this particular private workbook. Configuration data is a string containing valid JSON
-     */
     public Output<String> getSerializedData() {
         return this.serializedData;
     }
-    /**
-     * Optional resourceId for a source resource.
-     */
     @OutputExport(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
 
-    /**
-     * @return Optional resourceId for a source resource.
-     */
     public Output</* @Nullable */ String> getSourceId() {
         return this.sourceId;
     }
-    /**
-     * BYOS Storage Account URI
-     */
     @OutputExport(name="storageUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageUri;
 
-    /**
-     * @return BYOS Storage Account URI
-     */
     public Output</* @Nullable */ String> getStorageUri() {
         return this.storageUri;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Date and time in UTC of the last modification that was made to this private workbook definition.
-     */
     @OutputExport(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
-    /**
-     * @return Date and time in UTC of the last modification that was made to this private workbook definition.
-     */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
-    /**
-     * Unique user id of the specific user that owns this private workbook.
-     */
     @OutputExport(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
-    /**
-     * @return Unique user id of the specific user that owns this private workbook.
-     */
     public Output<String> getUserId() {
         return this.userId;
     }
-    /**
-     * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
-     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
-    /**
-     * @return This instance's version of the data model. This can change as new features are added that can be marked private workbook.
-     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public MyWorkbook(String name, MyWorkbookArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:MyWorkbook", name, args == null ? MyWorkbookArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -357,14 +129,6 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static MyWorkbook get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MyWorkbook(name, id, options);
     }

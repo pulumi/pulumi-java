@@ -11,18 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NamedPartitionSchemeDescriptionResponse {
-/**
- * The number of partitions.
- */
     private final Integer count;
-/**
- * Array of size specified by the ‘count’ parameter, for the names of the partitions.
- */
     private final List<String> names;
-/**
- * Enumerates the ways that a service can be partitioned.
-Expected value is 'Named'.
- */
     private final String partitionScheme;
 
     @OutputCustomType.Constructor({"count","names","partitionScheme"})
@@ -35,22 +25,12 @@ Expected value is 'Named'.
         this.partitionScheme = Objects.requireNonNull(partitionScheme);
     }
 
-/**
- * The number of partitions.
- */
     public Integer getCount() {
         return this.count;
     }
-/**
- * Array of size specified by the ‘count’ parameter, for the names of the partitions.
- */
     public List<String> getNames() {
         return this.names;
     }
-/**
- * Enumerates the ways that a service can be partitioned.
-Expected value is 'Named'.
- */
     public String getPartitionScheme() {
         return this.partitionScheme;
     }

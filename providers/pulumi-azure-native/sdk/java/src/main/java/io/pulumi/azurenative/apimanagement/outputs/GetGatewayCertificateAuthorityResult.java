@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGatewayCertificateAuthorityResult {
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Determines whether certificate authority is trusted.
- */
     private final @Nullable Boolean isTrusted;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","isTrusted","name","type"})
@@ -41,27 +29,15 @@ public final class GetGatewayCertificateAuthorityResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Determines whether certificate authority is trusted.
- */
     public Optional<Boolean> getIsTrusted() {
         return Optional.ofNullable(this.isTrusted);
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }

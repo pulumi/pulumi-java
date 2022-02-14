@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specify the public IP allocation type
- */
     @EnumType
     public enum PublicIPAllocationMethod {
-/**
- * 
- */
         Dynamic("Dynamic"),
-/**
- * 
- */
         Static("Static");
 
         private final String value;

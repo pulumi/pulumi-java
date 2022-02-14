@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BlobInventoryPolicySchemaResponse {
-/**
- * Container name where blob inventory files are stored. Must be pre-created.
- */
     private final String destination;
-/**
- * Policy is enabled if set to true.
- */
     private final Boolean enabled;
-/**
- * The storage account blob inventory policy rules. The rule is applied when it is enabled.
- */
     private final List<BlobInventoryPolicyRuleResponse> rules;
-/**
- * The valid value is Inventory
- */
     private final String type;
 
     @OutputCustomType.Constructor({"destination","enabled","rules","type"})
@@ -41,27 +29,15 @@ public final class BlobInventoryPolicySchemaResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Container name where blob inventory files are stored. Must be pre-created.
- */
     public String getDestination() {
         return this.destination;
     }
-/**
- * Policy is enabled if set to true.
- */
     public Boolean getEnabled() {
         return this.enabled;
     }
-/**
- * The storage account blob inventory policy rules. The rule is applied when it is enabled.
- */
     public List<BlobInventoryPolicyRuleResponse> getRules() {
         return this.rules;
     }
-/**
- * The valid value is Inventory
- */
     public String getType() {
         return this.type;
     }

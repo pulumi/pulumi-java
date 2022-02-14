@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Protocol this rule will use when forwarding traffic to backends.
- */
     @EnumType
     public enum FrontDoorForwardingProtocol {
-/**
- * 
- */
         HttpOnly("HttpOnly"),
-/**
- * 
- */
         HttpsOnly("HttpsOnly"),
-/**
- * 
- */
         MatchRequest("MatchRequest");
 
         private final String value;

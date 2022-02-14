@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameter definition for a module asset.
- */
 public final class ModuleAssetParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModuleAssetParameterArgs Empty = new ModuleAssetParameterArgs();
 
-    /**
-     * Definitions for nested interface parameters if this is a complex module parameter.
-     */
     @InputImport(name="modeValuesInfo")
     private final @Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo;
 
@@ -29,9 +23,6 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
         return this.modeValuesInfo == null ? Input.empty() : this.modeValuesInfo;
     }
 
-    /**
-     * Parameter name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,9 +30,6 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Parameter type.
-     */
     @InputImport(name="parameterType")
     private final @Nullable Input<String> parameterType;
 

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse {
-/**
- * Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
- */
     private final List<String> knowledgeBases;
 
     @OutputCustomType.Constructor({"knowledgeBases"})
@@ -20,9 +17,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
     }
 
-/**
- * Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, only one knowledge base is supported.
- */
     public List<String> getKnowledgeBases() {
         return this.knowledgeBases;
     }

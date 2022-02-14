@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInputArgs Empty = new GetInputArgs();
 
-    /**
-     * The name of the input.
-     */
     @InputImport(name="inputName", required=true)
     private final String inputName;
 
@@ -25,9 +19,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
         return this.inputName;
     }
 
-    /**
-     * The name of the streaming job.
-     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -35,9 +26,6 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

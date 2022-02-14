@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageReferenceResponse Empty = new ImageReferenceResponse();
 
-    /**
-     * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -27,9 +21,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * For example, UbuntuServer or WindowsServer.
-     */
     @InputImport(name="offer")
     private final @Nullable String offer;
 
@@ -37,9 +28,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
-    /**
-     * For example, Canonical or MicrosoftWindowsServer.
-     */
     @InputImport(name="publisher")
     private final @Nullable String publisher;
 
@@ -47,9 +35,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
-    /**
-     * For example, 18.04-LTS or 2019-Datacenter.
-     */
     @InputImport(name="sku")
     private final @Nullable String sku;
 
@@ -57,9 +42,6 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
-    /**
-     * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

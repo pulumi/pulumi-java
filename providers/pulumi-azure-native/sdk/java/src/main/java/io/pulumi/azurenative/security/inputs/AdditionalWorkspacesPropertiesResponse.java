@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the additional workspaces.
- */
 public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdditionalWorkspacesPropertiesResponse Empty = new AdditionalWorkspacesPropertiesResponse();
 
-    /**
-     * List of data types sent to workspace
-     */
     @InputImport(name="dataTypes")
     private final @Nullable List<String> dataTypes;
 
@@ -28,9 +22,6 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
         return this.dataTypes == null ? List.of() : this.dataTypes;
     }
 
-    /**
-     * Workspace type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -38,9 +29,6 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * Workspace resource id
-     */
     @InputImport(name="workspace")
     private final @Nullable String workspace;
 

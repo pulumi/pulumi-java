@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Deployment instance payload
- */
 public final class DeploymentInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentInstanceResponse Empty = new DeploymentInstanceResponse();
 
-    /**
-     * Discovery status of the deployment instance
-     */
     @InputImport(name="discoveryStatus", required=true)
     private final String discoveryStatus;
 
@@ -25,9 +19,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
         return this.discoveryStatus;
     }
 
-    /**
-     * Name of the deployment instance
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * Failed reason of the deployment instance
-     */
     @InputImport(name="reason", required=true)
     private final String reason;
 
@@ -45,9 +33,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
         return this.reason;
     }
 
-    /**
-     * Start time of the deployment instance
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -55,9 +40,6 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
         return this.startTime;
     }
 
-    /**
-     * Status of the deployment instance
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

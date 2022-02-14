@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
-/**
- * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
- */
     private final List<String> queryTerms;
-/**
- * Term that will be used for replacement.
- */
     private final String replacementTerm;
-/**
- * Will be [deprecated = true] post migration;
- */
     private final String term;
 
     @OutputCustomType.Constructor({"queryTerms","replacementTerm","term"})
@@ -33,21 +24,12 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
         this.term = Objects.requireNonNull(term);
     }
 
-/**
- * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
- */
     public List<String> getQueryTerms() {
         return this.queryTerms;
     }
-/**
- * Term that will be used for replacement.
- */
     public String getReplacementTerm() {
         return this.replacementTerm;
     }
-/**
- * Will be [deprecated = true] post migration;
- */
     public String getTerm() {
         return this.term;
     }

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetricDimensionResponse {
-/**
- * The dimension value.
- */
     private final String sourceName;
-/**
- * The dimension type.
- */
     private final String sourceType;
 
     @OutputCustomType.Constructor({"sourceName","sourceType"})
@@ -26,15 +20,9 @@ public final class MetricDimensionResponse {
         this.sourceType = Objects.requireNonNull(sourceType);
     }
 
-/**
- * The dimension value.
- */
     public String getSourceName() {
         return this.sourceName;
     }
-/**
- * The dimension type.
- */
     public String getSourceType() {
         return this.sourceType;
     }

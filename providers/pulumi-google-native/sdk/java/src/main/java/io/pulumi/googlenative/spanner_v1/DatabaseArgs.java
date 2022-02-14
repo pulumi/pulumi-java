@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
-    /**
-     * A `CREATE DATABASE` statement, which specifies the ID of the new database. The database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30 characters in length. If the database ID is a reserved word or if it contains a hyphen, the database ID must be enclosed in backticks (`` ` ``).
-     */
     @InputImport(name="createStatement", required=true)
     private final Input<String> createStatement;
 
@@ -30,9 +24,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.createStatement;
     }
 
-    /**
-     * Optional. The dialect of the Cloud Spanner Database.
-     */
     @InputImport(name="databaseDialect")
     private final @Nullable Input<DatabaseDatabaseDialect> databaseDialect;
 
@@ -40,9 +31,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseDialect == null ? Input.empty() : this.databaseDialect;
     }
 
-    /**
-     * Optional. The encryption configuration for the database. If this field is not specified, Cloud Spanner will encrypt/decrypt all data at rest using Google default encryption.
-     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -50,9 +38,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
-    /**
-     * Optional. A list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.
-     */
     @InputImport(name="extraStatements")
     private final @Nullable Input<List<String>> extraStatements;
 
@@ -60,9 +45,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.extraStatements == null ? Input.empty() : this.extraStatements;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -70,9 +52,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -12,33 +12,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SoaRecordResponse {
-/**
- * The email contact for this SOA record.
- */
     private final @Nullable String email;
-/**
- * The expire time for this SOA record.
- */
     private final @Nullable Double expireTime;
-/**
- * The domain name of the authoritative name server for this SOA record.
- */
     private final @Nullable String host;
-/**
- * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
- */
     private final @Nullable Double minimumTtl;
-/**
- * The refresh value for this SOA record.
- */
     private final @Nullable Double refreshTime;
-/**
- * The retry time for this SOA record.
- */
     private final @Nullable Double retryTime;
-/**
- * The serial number for this SOA record.
- */
     private final @Nullable Double serialNumber;
 
     @OutputCustomType.Constructor({"email","expireTime","host","minimumTtl","refreshTime","retryTime","serialNumber"})
@@ -59,45 +38,24 @@ public final class SoaRecordResponse {
         this.serialNumber = serialNumber;
     }
 
-/**
- * The email contact for this SOA record.
- */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
-/**
- * The expire time for this SOA record.
- */
     public Optional<Double> getExpireTime() {
         return Optional.ofNullable(this.expireTime);
     }
-/**
- * The domain name of the authoritative name server for this SOA record.
- */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
-/**
- * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
- */
     public Optional<Double> getMinimumTtl() {
         return Optional.ofNullable(this.minimumTtl);
     }
-/**
- * The refresh value for this SOA record.
- */
     public Optional<Double> getRefreshTime() {
         return Optional.ofNullable(this.refreshTime);
     }
-/**
- * The retry time for this SOA record.
- */
     public Optional<Double> getRetryTime() {
         return Optional.ofNullable(this.retryTime);
     }
-/**
- * The serial number for this SOA record.
- */
     public Optional<Double> getSerialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }

@@ -13,37 +13,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ValueResponse {
-/**
- * boolean
- */
     private final Boolean booleanValue;
-/**
- * date
- */
     private final GoogleTypeDateResponse dateValue;
-/**
- * day of week
- */
     private final String dayOfWeekValue;
-/**
- * float
- */
     private final Double floatValue;
-/**
- * integer
- */
     private final String integerValue;
-/**
- * string
- */
     private final String stringValue;
-/**
- * time of day
- */
     private final GoogleTypeTimeOfDayResponse timeValue;
-/**
- * timestamp
- */
     private final String timestampValue;
 
     @OutputCustomType.Constructor({"booleanValue","dateValue","dayOfWeekValue","floatValue","integerValue","stringValue","timeValue","timestampValue"})
@@ -66,51 +42,27 @@ public final class GooglePrivacyDlpV2ValueResponse {
         this.timestampValue = Objects.requireNonNull(timestampValue);
     }
 
-/**
- * boolean
- */
     public Boolean getBooleanValue() {
         return this.booleanValue;
     }
-/**
- * date
- */
     public GoogleTypeDateResponse getDateValue() {
         return this.dateValue;
     }
-/**
- * day of week
- */
     public String getDayOfWeekValue() {
         return this.dayOfWeekValue;
     }
-/**
- * float
- */
     public Double getFloatValue() {
         return this.floatValue;
     }
-/**
- * integer
- */
     public String getIntegerValue() {
         return this.integerValue;
     }
-/**
- * string
- */
     public String getStringValue() {
         return this.stringValue;
     }
-/**
- * time of day
- */
     public GoogleTypeTimeOfDayResponse getTimeValue() {
         return this.timeValue;
     }
-/**
- * timestamp
- */
     public String getTimestampValue() {
         return this.timestampValue;
     }

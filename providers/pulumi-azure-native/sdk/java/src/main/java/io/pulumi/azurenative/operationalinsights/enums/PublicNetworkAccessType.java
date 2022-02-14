@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The network access type for accessing Log Analytics query.
- */
     @EnumType
     public enum PublicNetworkAccessType {
-/**
- * Enables connectivity to Log Analytics through public DNS.
- */
         Enabled("Enabled"),
-/**
- * Disables public connectivity to Log Analytics through public DNS.
- */
         Disabled("Disabled");
 
         private final String value;

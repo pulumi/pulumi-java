@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorization {
-/**
- * ExpressRoute Circuit Authorization
-API Version: 2020-03-20.
- *
- * ExpressRoute Circuit Authorization
- */
     public static CompletableFuture<GetAuthorizationResult> invokeAsync(GetAuthorizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getAuthorization", TypeShape.of(GetAuthorizationResult.class), args == null ? GetAuthorizationArgs.Empty : args, Utilities.withVersion(options));
     }

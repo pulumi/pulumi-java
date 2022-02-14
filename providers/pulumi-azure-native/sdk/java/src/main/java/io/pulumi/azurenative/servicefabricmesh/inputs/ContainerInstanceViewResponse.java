@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Runtime information of a container instance.
- */
 public final class ContainerInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerInstanceViewResponse Empty = new ContainerInstanceViewResponse();
 
-    /**
-     * Current container instance state.
-     */
     @InputImport(name="currentState")
     private final @Nullable ContainerStateResponse currentState;
 
@@ -30,9 +24,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
         return this.currentState == null ? Optional.empty() : Optional.ofNullable(this.currentState);
     }
 
-    /**
-     * The events of this container instance.
-     */
     @InputImport(name="events")
     private final @Nullable List<ContainerEventResponse> events;
 
@@ -40,9 +31,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
         return this.events == null ? List.of() : this.events;
     }
 
-    /**
-     * Previous container instance state.
-     */
     @InputImport(name="previousState")
     private final @Nullable ContainerStateResponse previousState;
 
@@ -50,9 +38,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
         return this.previousState == null ? Optional.empty() : Optional.ofNullable(this.previousState);
     }
 
-    /**
-     * The number of times the container has been restarted.
-     */
     @InputImport(name="restartCount")
     private final @Nullable Integer restartCount;
 

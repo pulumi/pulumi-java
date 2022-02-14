@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSiteExtensionSlotArgs Empty = new WebAppSiteExtensionSlotArgs();
 
-    /**
-     * Site name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,9 +21,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
-    /**
-     * Site extension name.
-     */
     @InputImport(name="siteExtensionId")
     private final @Nullable Input<String> siteExtensionId;
 
@@ -47,9 +35,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
         return this.siteExtensionId == null ? Input.empty() : this.siteExtensionId;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API uses the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

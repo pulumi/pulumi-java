@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWebAppPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppPrivateEndpointConnectionArgs Empty = new GetWebAppPrivateEndpointConnectionArgs();
 
-    /**
-     * Name of the site.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetWebAppPrivateEndpointConnectionArgs extends io.pulumi.reso
         return this.name;
     }
 
-    /**
-     * Name of the private endpoint connection.
-     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -35,9 +26,6 @@ public final class GetWebAppPrivateEndpointConnectionArgs extends io.pulumi.reso
         return this.privateEndpointConnectionName;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

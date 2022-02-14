@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CertificateChainsResponse {
-/**
- * Cavium certificate chain corresponding to the attestation.
- */
     private final List<String> caviumCerts;
-/**
- * Google card certificate chain corresponding to the attestation.
- */
     private final List<String> googleCardCerts;
-/**
- * Google partition certificate chain corresponding to the attestation.
- */
     private final List<String> googlePartitionCerts;
 
     @OutputCustomType.Constructor({"caviumCerts","googleCardCerts","googlePartitionCerts"})
@@ -33,21 +24,12 @@ public final class CertificateChainsResponse {
         this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
     }
 
-/**
- * Cavium certificate chain corresponding to the attestation.
- */
     public List<String> getCaviumCerts() {
         return this.caviumCerts;
     }
-/**
- * Google card certificate chain corresponding to the attestation.
- */
     public List<String> getGoogleCardCerts() {
         return this.googleCardCerts;
     }
-/**
- * Google partition certificate chain corresponding to the attestation.
- */
     public List<String> getGooglePartitionCerts() {
         return this.googlePartitionCerts;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMDATPDataConnector {
-/**
- * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
-API Version: 2020-01-01.
- *
- * Represents MDATP (Microsoft Defender Advanced Threat Protection) data connector.
- */
     public static CompletableFuture<GetMDATPDataConnectorResult> invokeAsync(GetMDATPDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMDATPDataConnector", TypeShape.of(GetMDATPDataConnectorResult.class), args == null ? GetMDATPDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

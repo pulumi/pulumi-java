@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CollectionOverride allows resource handling overrides for specific resources within a BaseType
- */
 public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CollectionOverrideArgs Empty = new CollectionOverrideArgs();
 
-    /**
-     * The collection that identifies this resource within its service.
-     */
     @InputImport(name="collection")
     private final @Nullable Input<String> collection;
 
@@ -29,9 +23,6 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
         return this.collection == null ? Input.empty() : this.collection;
     }
 
-    /**
-     * Custom verb method mappings to support unordered list API mappings.
-     */
     @InputImport(name="methodMap")
     private final @Nullable Input<MethodMapArgs> methodMap;
 
@@ -39,9 +30,6 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
         return this.methodMap == null ? Input.empty() : this.methodMap;
     }
 
-    /**
-     * The options to apply to this resource-level override
-     */
     @InputImport(name="options")
     private final @Nullable Input<OptionsArgs> options;
 

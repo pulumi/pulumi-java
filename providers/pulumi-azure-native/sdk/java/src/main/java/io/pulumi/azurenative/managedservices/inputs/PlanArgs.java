@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Plan details for the managed services.
- */
 public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlanArgs Empty = new PlanArgs();
 
-    /**
-     * The plan name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The product code.
-     */
     @InputImport(name="product", required=true)
     private final Input<String> product;
 
@@ -36,9 +27,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.product;
     }
 
-    /**
-     * The publisher ID.
-     */
     @InputImport(name="publisher", required=true)
     private final Input<String> publisher;
 
@@ -46,9 +34,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisher;
     }
 
-    /**
-     * The plan's version.
-     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

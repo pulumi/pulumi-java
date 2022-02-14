@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App scaling configurations.
- */
 public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleArgs Empty = new ScaleArgs();
 
-    /**
-     * Optional. Maximum number of container replicas. Defaults to 10 if not set.
-     */
     @InputImport(name="maxReplicas")
     private final @Nullable Input<Integer> maxReplicas;
 
@@ -29,9 +23,6 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
     }
 
-    /**
-     * Optional. Minimum number of container replicas.
-     */
     @InputImport(name="minReplicas")
     private final @Nullable Input<Integer> minReplicas;
 
@@ -39,9 +30,6 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
         return this.minReplicas == null ? Input.empty() : this.minReplicas;
     }
 
-    /**
-     * Scaling rules.
-     */
     @InputImport(name="rules")
     private final @Nullable Input<List<ScaleRuleArgs>> rules;
 

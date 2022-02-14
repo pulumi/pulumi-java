@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes an Operating System disk.
- */
 public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageOSDiskArgs Empty = new ImageOSDiskArgs();
 
-    /**
-     * The Virtual Hard Disk.
-     */
     @InputImport(name="blobUri")
     private final @Nullable Input<String> blobUri;
 
@@ -35,9 +29,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.blobUri == null ? Input.empty() : this.blobUri;
     }
 
-    /**
-     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     */
     @InputImport(name="caching")
     private final @Nullable Input<CachingTypes> caching;
 
@@ -45,9 +36,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.caching == null ? Input.empty() : this.caching;
     }
 
-    /**
-     * Specifies the customer managed disk encryption set resource id for the managed image disk.
-     */
     @InputImport(name="diskEncryptionSet")
     private final @Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
@@ -55,9 +43,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionSet == null ? Input.empty() : this.diskEncryptionSet;
     }
 
-    /**
-     * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -65,9 +50,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
-    /**
-     * The managedDisk.
-     */
     @InputImport(name="managedDisk")
     private final @Nullable Input<SubResourceArgs> managedDisk;
 
@@ -75,9 +57,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
     }
 
-    /**
-     * The OS State.
-     */
     @InputImport(name="osState", required=true)
     private final Input<OperatingSystemStateTypes> osState;
 
@@ -85,9 +64,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.osState;
     }
 
-    /**
-     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     */
     @InputImport(name="osType", required=true)
     private final Input<OperatingSystemTypes> osType;
 
@@ -95,9 +71,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.osType;
     }
 
-    /**
-     * The snapshot.
-     */
     @InputImport(name="snapshot")
     private final @Nullable Input<SubResourceArgs> snapshot;
 
@@ -105,9 +78,6 @@ public final class ImageOSDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshot == null ? Input.empty() : this.snapshot;
     }
 
-    /**
-     * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,StorageAccountTypes>> storageAccountType;
 

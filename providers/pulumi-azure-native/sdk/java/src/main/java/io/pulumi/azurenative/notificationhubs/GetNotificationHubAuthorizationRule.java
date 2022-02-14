@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationHubAuthorizationRule {
-/**
- * Description of a Namespace AuthorizationRules.
-API Version: 2017-04-01.
- *
- * Description of a Namespace AuthorizationRules.
- */
     public static CompletableFuture<GetNotificationHubAuthorizationRuleResult> invokeAsync(GetNotificationHubAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubAuthorizationRule", TypeShape.of(GetNotificationHubAuthorizationRuleResult.class), args == null ? GetNotificationHubAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

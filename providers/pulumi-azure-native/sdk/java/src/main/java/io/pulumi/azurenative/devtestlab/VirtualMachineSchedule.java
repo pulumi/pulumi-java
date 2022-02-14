@@ -19,408 +19,99 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A schedule.
-API Version: 2018-09-15.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### VirtualMachineSchedules_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachineSchedule = new AzureNative.DevTestLab.VirtualMachineSchedule("virtualMachineSchedule", new AzureNative.DevTestLab.VirtualMachineScheduleArgs
-        {
-            DailyRecurrence = new AzureNative.DevTestLab.Inputs.DayDetailsArgs
-            {
-                Time = "1900",
-            },
-            HourlyRecurrence = new AzureNative.DevTestLab.Inputs.HourDetailsArgs
-            {
-                Minute = 30,
-            },
-            LabName = "{labName}",
-            Location = "{location}",
-            Name = "LabVmsShutdown",
-            NotificationSettings = new AzureNative.DevTestLab.Inputs.NotificationSettingsArgs
-            {
-                EmailRecipient = "{email}",
-                NotificationLocale = "EN",
-                Status = "Enabled",
-                TimeInMinutes = 30,
-                WebhookUrl = "{webhookUrl}",
-            },
-            ResourceGroupName = "resourceGroupName",
-            Status = "Enabled",
-            Tags = 
-            {
-                { "tagName1", "tagValue1" },
-            },
-            TargetResourceId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}",
-            TaskType = "LabVmsShutdownTask",
-            TimeZoneId = "Pacific Standard Time",
-            VirtualMachineName = "{vmName}",
-            WeeklyRecurrence = new AzureNative.DevTestLab.Inputs.WeekDetailsArgs
-            {
-                Time = "1700",
-                Weekdays = 
-                {
-                    "Friday",
-                    "Saturday",
-                    "Sunday",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devtestlab.NewVirtualMachineSchedule(ctx, "virtualMachineSchedule", &devtestlab.VirtualMachineScheduleArgs{
-			DailyRecurrence: &devtestlab.DayDetailsArgs{
-				Time: pulumi.String("1900"),
-			},
-			HourlyRecurrence: &devtestlab.HourDetailsArgs{
-				Minute: pulumi.Int(30),
-			},
-			LabName:  pulumi.String("{labName}"),
-			Location: pulumi.String("{location}"),
-			Name:     pulumi.String("LabVmsShutdown"),
-			NotificationSettings: &devtestlab.NotificationSettingsArgs{
-				EmailRecipient:     pulumi.String("{email}"),
-				NotificationLocale: pulumi.String("EN"),
-				Status:             pulumi.String("Enabled"),
-				TimeInMinutes:      pulumi.Int(30),
-				WebhookUrl:         pulumi.String("{webhookUrl}"),
-			},
-			ResourceGroupName: pulumi.String("resourceGroupName"),
-			Status:            pulumi.String("Enabled"),
-			Tags: pulumi.StringMap{
-				"tagName1": pulumi.String("tagValue1"),
-			},
-			TargetResourceId:   pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}"),
-			TaskType:           pulumi.String("LabVmsShutdownTask"),
-			TimeZoneId:         pulumi.String("Pacific Standard Time"),
-			VirtualMachineName: pulumi.String("{vmName}"),
-			WeeklyRecurrence: &devtestlab.WeekDetailsArgs{
-				Time: pulumi.String("1700"),
-				Weekdays: pulumi.StringArray{
-					pulumi.String("Friday"),
-					pulumi.String("Saturday"),
-					pulumi.String("Sunday"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const virtualMachineSchedule = new azure_native.devtestlab.VirtualMachineSchedule("virtualMachineSchedule", {
-    dailyRecurrence: {
-        time: "1900",
-    },
-    hourlyRecurrence: {
-        minute: 30,
-    },
-    labName: "{labName}",
-    location: "{location}",
-    name: "LabVmsShutdown",
-    notificationSettings: {
-        emailRecipient: "{email}",
-        notificationLocale: "EN",
-        status: "Enabled",
-        timeInMinutes: 30,
-        webhookUrl: "{webhookUrl}",
-    },
-    resourceGroupName: "resourceGroupName",
-    status: "Enabled",
-    tags: {
-        tagName1: "tagValue1",
-    },
-    targetResourceId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}",
-    taskType: "LabVmsShutdownTask",
-    timeZoneId: "Pacific Standard Time",
-    virtualMachineName: "{vmName}",
-    weeklyRecurrence: {
-        time: "1700",
-        weekdays: [
-            "Friday",
-            "Saturday",
-            "Sunday",
-        ],
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-virtual_machine_schedule = azure_native.devtestlab.VirtualMachineSchedule("virtualMachineSchedule",
-    daily_recurrence=azure_native.devtestlab.DayDetailsArgs(
-        time="1900",
-    ),
-    hourly_recurrence=azure_native.devtestlab.HourDetailsArgs(
-        minute=30,
-    ),
-    lab_name="{labName}",
-    location="{location}",
-    name="LabVmsShutdown",
-    notification_settings=azure_native.devtestlab.NotificationSettingsArgs(
-        email_recipient="{email}",
-        notification_locale="EN",
-        status="Enabled",
-        time_in_minutes=30,
-        webhook_url="{webhookUrl}",
-    ),
-    resource_group_name="resourceGroupName",
-    status="Enabled",
-    tags={
-        "tagName1": "tagValue1",
-    },
-    target_resource_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}",
-    task_type="LabVmsShutdownTask",
-    time_zone_id="Pacific Standard Time",
-    virtual_machine_name="{vmName}",
-    weekly_recurrence=azure_native.devtestlab.WeekDetailsArgs(
-        time="1700",
-        weekdays=[
-            "Friday",
-            "Saturday",
-            "Sunday",
-        ],
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:devtestlab:VirtualMachineSchedule LabVmsShutdown /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualMachines/{vmName}/schedules/LabVmsShutdown 
-```
-
- */
 @ResourceType(type="azure-native:devtestlab:VirtualMachineSchedule")
 public class VirtualMachineSchedule extends io.pulumi.resources.CustomResource {
-    /**
-     * The creation date of the schedule.
-     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
-    /**
-     * @return The creation date of the schedule.
-     */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
-    /**
-     * If the schedule will occur once each day of the week, specify the daily recurrence.
-     */
     @OutputExport(name="dailyRecurrence", type=DayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DayDetailsResponse> dailyRecurrence;
 
-    /**
-     * @return If the schedule will occur once each day of the week, specify the daily recurrence.
-     */
     public Output</* @Nullable */ DayDetailsResponse> getDailyRecurrence() {
         return this.dailyRecurrence;
     }
-    /**
-     * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     */
     @OutputExport(name="hourlyRecurrence", type=HourDetailsResponse.class, parameters={})
     private Output</* @Nullable */ HourDetailsResponse> hourlyRecurrence;
 
-    /**
-     * @return If the schedule will occur multiple times a day, specify the hourly recurrence.
-     */
     public Output</* @Nullable */ HourDetailsResponse> getHourlyRecurrence() {
         return this.hourlyRecurrence;
     }
-    /**
-     * The location of the resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Notification settings.
-     */
     @OutputExport(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
-    /**
-     * @return Notification settings.
-     */
     public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
         return this.notificationSettings;
     }
-    /**
-     * The provisioning status of the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning status of the resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The status of the schedule (i.e. Enabled, Disabled)
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
-    /**
-     * @return The status of the schedule (i.e. Enabled, Disabled)
-     */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
-    /**
-     * The tags of the resource.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The tags of the resource.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The resource ID to which the schedule belongs
-     */
     @OutputExport(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
-    /**
-     * @return The resource ID to which the schedule belongs
-     */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
-    /**
-     * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     */
     @OutputExport(name="taskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskType;
 
-    /**
-     * @return The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     */
     public Output</* @Nullable */ String> getTaskType() {
         return this.taskType;
     }
-    /**
-     * The time zone ID (e.g. Pacific Standard time).
-     */
     @OutputExport(name="timeZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZoneId;
 
-    /**
-     * @return The time zone ID (e.g. Pacific Standard time).
-     */
     public Output</* @Nullable */ String> getTimeZoneId() {
         return this.timeZoneId;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
-    /**
-     * @return The unique immutable identifier of a resource (Guid).
-     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
-    /**
-     * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     */
     @OutputExport(name="weeklyRecurrence", type=WeekDetailsResponse.class, parameters={})
     private Output</* @Nullable */ WeekDetailsResponse> weeklyRecurrence;
 
-    /**
-     * @return If the schedule will occur only some days of the week, specify the weekly recurrence.
-     */
     public Output</* @Nullable */ WeekDetailsResponse> getWeeklyRecurrence() {
         return this.weeklyRecurrence;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public VirtualMachineSchedule(String name, VirtualMachineScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:VirtualMachineSchedule", name, args == null ? VirtualMachineScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -440,14 +131,6 @@ public class VirtualMachineSchedule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static VirtualMachineSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineSchedule(name, id, options);
     }

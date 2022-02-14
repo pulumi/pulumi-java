@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of the namespace.
- */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
-    /**
-     * Name of this SKU.
-     */
     @InputImport(name="name", required=true)
     private final Input<SkuName> name;
 
@@ -28,9 +22,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The tier of this SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<SkuTier> tier;
 

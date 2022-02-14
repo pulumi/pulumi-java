@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceRequirements {
-/**
- * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
- */
     private final @Nullable Map<String,String> limits;
-/**
- * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
- */
     private final @Nullable Map<String,String> requests;
 
     @OutputCustomType.Constructor({"limits","requests"})
@@ -28,15 +22,9 @@ public final class ResourceRequirements {
         this.requests = requests;
     }
 
-/**
- * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
- */
     public Map<String,String> getLimits() {
         return this.limits == null ? Map.of() : this.limits;
     }
-/**
- * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
- */
     public Map<String,String> getRequests() {
         return this.requests == null ? Map.of() : this.requests;
     }

@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityResponse {
-/**
- * The principal ID of resource identity.
- */
     private final String principalId;
-/**
- * The tenant ID of resource.
- */
     private final String tenantId;
-/**
- * The identity type.
- */
     private final @Nullable String type;
-/**
- * The user assigned identities associated with the resource.
- */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -42,27 +30,15 @@ public final class IdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
-/**
- * The principal ID of resource identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant ID of resource.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The identity type.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
-/**
- * The user assigned identities associated with the resource.
- */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

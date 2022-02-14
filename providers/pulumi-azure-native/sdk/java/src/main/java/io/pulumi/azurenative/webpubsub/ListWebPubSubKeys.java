@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebPubSubKeys {
-/**
- * A class represents the access keys of the resource.
-API Version: 2021-04-01-preview.
- *
- * A class represents the access keys of the resource.
- */
     public static CompletableFuture<ListWebPubSubKeysResult> invokeAsync(ListWebPubSubKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:listWebPubSubKeys", TypeShape.of(ListWebPubSubKeysResult.class), args == null ? ListWebPubSubKeysArgs.Empty : args, Utilities.withVersion(options));
     }

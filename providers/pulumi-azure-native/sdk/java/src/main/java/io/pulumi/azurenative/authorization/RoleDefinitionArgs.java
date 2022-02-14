@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleDefinitionArgs Empty = new RoleDefinitionArgs();
 
-    /**
-     * Role definition assignable scopes.
-     */
     @InputImport(name="assignableScopes")
     private final @Nullable Input<List<String>> assignableScopes;
 
@@ -29,9 +23,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignableScopes == null ? Input.empty() : this.assignableScopes;
     }
 
-    /**
-     * The role definition description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Role definition permissions.
-     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<PermissionArgs>> permissions;
 
@@ -49,9 +37,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
-    /**
-     * The ID of the role definition.
-     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable Input<String> roleDefinitionId;
 
@@ -59,9 +44,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
     }
 
-    /**
-     * The role name.
-     */
     @InputImport(name="roleName")
     private final @Nullable Input<String> roleName;
 
@@ -69,9 +51,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleName == null ? Input.empty() : this.roleName;
     }
 
-    /**
-     * The role type.
-     */
     @InputImport(name="roleType")
     private final @Nullable Input<String> roleType;
 
@@ -79,9 +58,6 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleType == null ? Input.empty() : this.roleType;
     }
 
-    /**
-     * The scope of the role definition.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

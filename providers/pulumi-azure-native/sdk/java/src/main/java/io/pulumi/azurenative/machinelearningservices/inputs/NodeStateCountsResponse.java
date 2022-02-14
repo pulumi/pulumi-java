@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Counts of various compute node states on the amlCompute.
- */
 public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeStateCountsResponse Empty = new NodeStateCountsResponse();
 
-    /**
-     * Number of compute nodes in idle state.
-     */
     @InputImport(name="idleNodeCount", required=true)
     private final Integer idleNodeCount;
 
@@ -25,9 +19,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
         return this.idleNodeCount;
     }
 
-    /**
-     * Number of compute nodes which are leaving the amlCompute.
-     */
     @InputImport(name="leavingNodeCount", required=true)
     private final Integer leavingNodeCount;
 
@@ -35,9 +26,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
         return this.leavingNodeCount;
     }
 
-    /**
-     * Number of compute nodes which are in preempted state.
-     */
     @InputImport(name="preemptedNodeCount", required=true)
     private final Integer preemptedNodeCount;
 
@@ -45,9 +33,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
         return this.preemptedNodeCount;
     }
 
-    /**
-     * Number of compute nodes which are being prepared.
-     */
     @InputImport(name="preparingNodeCount", required=true)
     private final Integer preparingNodeCount;
 
@@ -55,9 +40,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
         return this.preparingNodeCount;
     }
 
-    /**
-     * Number of compute nodes which are running jobs.
-     */
     @InputImport(name="runningNodeCount", required=true)
     private final Integer runningNodeCount;
 
@@ -65,9 +47,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
         return this.runningNodeCount;
     }
 
-    /**
-     * Number of compute nodes which are in unusable state.
-     */
     @InputImport(name="unusableNodeCount", required=true)
     private final Integer unusableNodeCount;
 

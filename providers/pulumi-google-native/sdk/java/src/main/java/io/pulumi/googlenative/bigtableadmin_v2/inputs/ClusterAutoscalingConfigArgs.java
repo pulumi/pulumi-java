@@ -10,16 +10,10 @@ import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingTargetsArgs;
 import java.util.Objects;
 
 
-/**
- * Autoscaling config for a cluster.
- */
 public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterAutoscalingConfigArgs Empty = new ClusterAutoscalingConfigArgs();
 
-    /**
-     * Autoscaling limits for this cluster.
-     */
     @InputImport(name="autoscalingLimits", required=true)
     private final Input<AutoscalingLimitsArgs> autoscalingLimits;
 
@@ -27,9 +21,6 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
         return this.autoscalingLimits;
     }
 
-    /**
-     * Autoscaling targets for this cluster.
-     */
     @InputImport(name="autoscalingTargets", required=true)
     private final Input<AutoscalingTargetsArgs> autoscalingTargets;
 

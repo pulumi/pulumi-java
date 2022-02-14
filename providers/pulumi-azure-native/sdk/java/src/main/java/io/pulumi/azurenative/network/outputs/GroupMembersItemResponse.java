@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GroupMembersItemResponse {
-/**
- * Resource Id.
- */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"resourceId"})
@@ -21,9 +18,6 @@ public final class GroupMembersItemResponse {
         this.resourceId = resourceId;
     }
 
-/**
- * Resource Id.
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specification determining how headers are added to requests or responses.
- */
 public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpHeaderOptionArgs Empty = new HttpHeaderOptionArgs();
 
-    /**
-     * The name of the header.
-     */
     @InputImport(name="headerName")
     private final @Nullable Input<String> headerName;
 
@@ -28,9 +22,6 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
         return this.headerName == null ? Input.empty() : this.headerName;
     }
 
-    /**
-     * The value of the header to add.
-     */
     @InputImport(name="headerValue")
     private final @Nullable Input<String> headerValue;
 
@@ -38,9 +29,6 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
         return this.headerValue == null ? Input.empty() : this.headerValue;
     }
 
-    /**
-     * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false. 
-     */
     @InputImport(name="replace")
     private final @Nullable Input<Boolean> replace;
 

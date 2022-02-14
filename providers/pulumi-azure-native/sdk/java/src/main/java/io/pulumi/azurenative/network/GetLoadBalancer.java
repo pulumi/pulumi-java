@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancer {
-/**
- * LoadBalancer resource.
-API Version: 2020-11-01.
- *
- * LoadBalancer resource.
- */
     public static CompletableFuture<GetLoadBalancerResult> invokeAsync(GetLoadBalancerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args == null ? GetLoadBalancerArgs.Empty : args, Utilities.withVersion(options));
     }

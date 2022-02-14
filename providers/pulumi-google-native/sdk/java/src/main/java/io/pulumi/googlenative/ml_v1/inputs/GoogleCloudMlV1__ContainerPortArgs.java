@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a network port in a single container. This message is a subset of the [Kubernetes ContainerPort v1 core specification](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#containerport-v1-core).
- */
 public final class GoogleCloudMlV1__ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__ContainerPortArgs Empty = new GoogleCloudMlV1__ContainerPortArgs();
 
-    /**
-     * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
-     */
     @InputImport(name="containerPort")
     private final @Nullable Input<Integer> containerPort;
 

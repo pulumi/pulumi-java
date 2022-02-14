@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger that runs every time the selected Blob container changes.
- */
 public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobTriggerResponse Empty = new BlobTriggerResponse();
 
-    /**
-     * List of tags that can be used for describing the trigger.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -32,9 +26,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Trigger description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -42,9 +33,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The path of the container/folder that will trigger the pipeline.
-     */
     @InputImport(name="folderPath", required=true)
     private final String folderPath;
 
@@ -52,9 +40,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.folderPath;
     }
 
-    /**
-     * The Azure Storage linked service reference.
-     */
     @InputImport(name="linkedService", required=true)
     private final LinkedServiceReferenceResponse linkedService;
 
@@ -62,9 +47,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkedService;
     }
 
-    /**
-     * The max number of parallel files to handle when it is triggered.
-     */
     @InputImport(name="maxConcurrency", required=true)
     private final Integer maxConcurrency;
 
@@ -72,9 +54,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConcurrency;
     }
 
-    /**
-     * Pipelines that need to be started.
-     */
     @InputImport(name="pipelines")
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
@@ -82,9 +61,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
-    /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -92,10 +68,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.runtimeState;
     }
 
-    /**
-     * Trigger type.
-Expected value is 'BlobTrigger'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

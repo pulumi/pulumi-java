@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Specifies options for controlling advanced machine features. Options that would traditionally be configured in a BIOS belong here. Features that require operating system support may have corresponding entries in the GuestOsFeatures of an Image (e.g., whether or not the OS in the Image supports nested virtualization being enabled or disabled).
- */
 public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdvancedMachineFeaturesResponse Empty = new AdvancedMachineFeaturesResponse();
 
-    /**
-     * Whether to enable nested virtualization or not (default is false).
-     */
     @InputImport(name="enableNestedVirtualization", required=true)
     private final Boolean enableNestedVirtualization;
 
@@ -26,9 +20,6 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
         return this.enableNestedVirtualization;
     }
 
-    /**
-     * Whether to enable UEFI networking for instance creation.
-     */
     @InputImport(name="enableUefiNetworking", required=true)
     private final Boolean enableUefiNetworking;
 
@@ -36,9 +27,6 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
         return this.enableUefiNetworking;
     }
 
-    /**
-     * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
-     */
     @InputImport(name="threadsPerCore", required=true)
     private final Integer threadsPerCore;
 

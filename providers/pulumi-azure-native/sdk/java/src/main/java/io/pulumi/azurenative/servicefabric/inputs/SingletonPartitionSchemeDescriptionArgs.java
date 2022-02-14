@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes the partition scheme of a singleton-partitioned, or non-partitioned service.
- */
 public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SingletonPartitionSchemeDescriptionArgs Empty = new SingletonPartitionSchemeDescriptionArgs();
 
-    /**
-     * Enumerates the ways that a service can be partitioned.
-Expected value is 'Singleton'.
-     */
     @InputImport(name="partitionScheme", required=true)
     private final Input<String> partitionScheme;
 

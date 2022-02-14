@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Determines the SKU of VM deployed for Disk pool
- */
     @EnumType
     public enum DiskPoolTier {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium");
 
         private final String value;

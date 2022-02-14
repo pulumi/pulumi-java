@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkflowRunActionExpressionTraces {
-/**
- * The expression traces.
-API Version: 2019-05-01.
- *
- * The expression traces.
- */
     public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> invokeAsync(ListWorkflowRunActionExpressionTracesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionExpressionTraces", TypeShape.of(ListWorkflowRunActionExpressionTracesResult.class), args == null ? ListWorkflowRunActionExpressionTracesArgs.Empty : args, Utilities.withVersion(options));
     }

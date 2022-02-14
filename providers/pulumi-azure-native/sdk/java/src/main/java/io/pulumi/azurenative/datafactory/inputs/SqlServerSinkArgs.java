@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity SQL server sink.
- */
 public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerSinkArgs Empty = new SqlServerSinkArgs();
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -31,9 +25,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -41,9 +32,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * SQL pre-copy script. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="preCopyScript")
     private final @Nullable Input<Object> preCopyScript;
 
@@ -51,9 +39,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.preCopyScript == null ? Input.empty() : this.preCopyScript;
     }
 
-    /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -61,9 +46,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
-    /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -71,9 +53,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
-    /**
-     * SQL writer stored procedure name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sqlWriterStoredProcedureName")
     private final @Nullable Input<Object> sqlWriterStoredProcedureName;
 
@@ -81,9 +60,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlWriterStoredProcedureName == null ? Input.empty() : this.sqlWriterStoredProcedureName;
     }
 
-    /**
-     * SQL writer table type. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sqlWriterTableType")
     private final @Nullable Input<Object> sqlWriterTableType;
 
@@ -91,9 +67,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlWriterTableType == null ? Input.empty() : this.sqlWriterTableType;
     }
 
-    /**
-     * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="sqlWriterUseTableLock")
     private final @Nullable Input<Object> sqlWriterUseTableLock;
 
@@ -101,9 +74,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlWriterUseTableLock == null ? Input.empty() : this.sqlWriterUseTableLock;
     }
 
-    /**
-     * SQL stored procedure parameters.
-     */
     @InputImport(name="storedProcedureParameters")
     private final @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
@@ -111,9 +81,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.storedProcedureParameters == null ? Input.empty() : this.storedProcedureParameters;
     }
 
-    /**
-     * The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="storedProcedureTableTypeParameterName")
     private final @Nullable Input<Object> storedProcedureTableTypeParameterName;
 
@@ -121,9 +88,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.storedProcedureTableTypeParameterName == null ? Input.empty() : this.storedProcedureTableTypeParameterName;
     }
 
-    /**
-     * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tableOption")
     private final @Nullable Input<Object> tableOption;
 
@@ -131,10 +95,6 @@ public final class SqlServerSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.tableOption == null ? Input.empty() : this.tableOption;
     }
 
-    /**
-     * Copy sink type.
-Expected value is 'SqlServerSink'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -142,9 +102,6 @@ Expected value is 'SqlServerSink'.
         return this.type;
     }
 
-    /**
-     * SQL upsert settings.
-     */
     @InputImport(name="upsertSettings")
     private final @Nullable Input<SqlUpsertSettingsArgs> upsertSettings;
 
@@ -152,9 +109,6 @@ Expected value is 'SqlServerSink'.
         return this.upsertSettings == null ? Input.empty() : this.upsertSettings;
     }
 
-    /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -162,9 +116,6 @@ Expected value is 'SqlServerSink'.
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
-    /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 
@@ -172,9 +123,6 @@ Expected value is 'SqlServerSink'.
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
     }
 
-    /**
-     * Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
-     */
     @InputImport(name="writeBehavior")
     private final @Nullable Input<Object> writeBehavior;
 

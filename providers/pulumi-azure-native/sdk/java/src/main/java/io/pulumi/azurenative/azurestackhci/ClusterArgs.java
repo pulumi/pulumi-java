@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
-    /**
-     * App id of cluster AAD identity.
-     */
     @InputImport(name="aadClientId", required=true)
     private final Input<String> aadClientId;
 
@@ -30,9 +24,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.aadClientId;
     }
 
-    /**
-     * Tenant id of cluster AAD identity.
-     */
     @InputImport(name="aadTenantId", required=true)
     private final Input<String> aadTenantId;
 
@@ -40,9 +31,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.aadTenantId;
     }
 
-    /**
-     * The name of the cluster.
-     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -50,9 +38,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @InputImport(name="createdAt")
     private final @Nullable Input<String> createdAt;
 
@@ -60,9 +45,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
-    /**
-     * The identity that created the resource.
-     */
     @InputImport(name="createdBy")
     private final @Nullable Input<String> createdBy;
 
@@ -70,9 +52,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
-    /**
-     * The type of identity that created the resource.
-     */
     @InputImport(name="createdByType")
     private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
@@ -80,9 +59,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
-    /**
-     * The timestamp of resource last modification (UTC)
-     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable Input<String> lastModifiedAt;
 
@@ -90,9 +66,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
-    /**
-     * The identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable Input<String> lastModifiedBy;
 
@@ -100,9 +73,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
-    /**
-     * The type of identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
@@ -110,9 +80,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -120,9 +87,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -130,9 +94,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

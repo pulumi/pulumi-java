@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Application Gateway Ssl policy.
- */
 public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewaySslPolicyResponse Empty = new ApplicationGatewaySslPolicyResponse();
 
-    /**
-     * Ssl cipher suites to be enabled in the specified order to application gateway.
-     */
     @InputImport(name="cipherSuites")
     private final @Nullable List<String> cipherSuites;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
         return this.cipherSuites == null ? List.of() : this.cipherSuites;
     }
 
-    /**
-     * Ssl protocols to be disabled on application gateway.
-     */
     @InputImport(name="disabledSslProtocols")
     private final @Nullable List<String> disabledSslProtocols;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
         return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
     }
 
-    /**
-     * Minimum version of Ssl protocol to be supported on application gateway.
-     */
     @InputImport(name="minProtocolVersion")
     private final @Nullable String minProtocolVersion;
 
@@ -48,9 +36,6 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
         return this.minProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.minProtocolVersion);
     }
 
-    /**
-     * Name of Ssl predefined policy.
-     */
     @InputImport(name="policyName")
     private final @Nullable String policyName;
 
@@ -58,9 +43,6 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 
-    /**
-     * Type of Ssl Policy.
-     */
     @InputImport(name="policyType")
     private final @Nullable String policyType;
 

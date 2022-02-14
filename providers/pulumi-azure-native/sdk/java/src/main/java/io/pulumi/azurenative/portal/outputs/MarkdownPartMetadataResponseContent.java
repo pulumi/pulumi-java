@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MarkdownPartMetadataResponseContent {
-/**
- * The setting of the content of markdown part.
- */
     private final @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
 
     @OutputCustomType.Constructor({"settings"})
@@ -21,9 +18,6 @@ public final class MarkdownPartMetadataResponseContent {
         this.settings = settings;
     }
 
-/**
- * The setting of the content of markdown part.
- */
     public Optional<MarkdownPartMetadataResponseSettingsSettings> getSettings() {
         return Optional.ofNullable(this.settings);
     }

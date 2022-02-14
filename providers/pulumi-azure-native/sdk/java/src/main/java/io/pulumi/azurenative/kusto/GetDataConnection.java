@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
 public class GetDataConnection {
-/**
- * Class representing an data connection.
-API Version: 2021-01-01.
- *
- * Class representing an data connection.
- */
     public static CompletableFuture<GetDataConnectionResult> invokeAsync(GetDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args == null ? GetDataConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

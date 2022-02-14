@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualNetworkResponse {
-/**
- * can be used in vm creation/deletion
- */
     private final Boolean assignable;
-/**
- * virtual network id (privateCloudId:vsphereId)
- */
     private final String id;
-/**
- * Azure region
- */
     private final String location;
-/**
- * {VirtualNetworkName}
- */
     private final String name;
-/**
- * The Private Cloud id
- */
     private final String privateCloudId;
-/**
- * {resourceProviderNamespace}/{resourceType}
- */
     private final String type;
 
     @OutputCustomType.Constructor({"assignable","id","location","name","privateCloudId","type"})
@@ -51,39 +33,21 @@ public final class VirtualNetworkResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * can be used in vm creation/deletion
- */
     public Boolean getAssignable() {
         return this.assignable;
     }
-/**
- * virtual network id (privateCloudId:vsphereId)
- */
     public String getId() {
         return this.id;
     }
-/**
- * Azure region
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * {VirtualNetworkName}
- */
     public String getName() {
         return this.name;
     }
-/**
- * The Private Cloud id
- */
     public String getPrivateCloudId() {
         return this.privateCloudId;
     }
-/**
- * {resourceProviderNamespace}/{resourceType}
- */
     public String getType() {
         return this.type;
     }

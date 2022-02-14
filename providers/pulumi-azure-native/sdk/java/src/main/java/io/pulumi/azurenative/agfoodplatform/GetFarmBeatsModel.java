@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFarmBeatsModel {
-/**
- * FarmBeats ARM Resource.
-API Version: 2020-05-12-preview.
- *
- * FarmBeats ARM Resource.
- */
     public static CompletableFuture<GetFarmBeatsModelResult> invokeAsync(GetFarmBeatsModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getFarmBeatsModel", TypeShape.of(GetFarmBeatsModelResult.class), args == null ? GetFarmBeatsModelArgs.Empty : args, Utilities.withVersion(options));
     }

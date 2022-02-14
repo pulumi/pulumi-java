@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerLabelResponse {
-/**
- * The name of the container label.
- */
     private final String name;
-/**
- * The value of the container label.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -26,15 +20,9 @@ public final class ContainerLabelResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The name of the container label.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The value of the container label.
- */
     public String getValue() {
         return this.value;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * IP configuration of an Azure Firewall.
- */
 public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallIPConfigurationResponse Empty = new AzureFirewallIPConfigurationResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -28,9 +22,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,9 +29,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
-     */
     @InputImport(name="privateIPAddress", required=true)
     private final String privateIPAddress;
 
@@ -58,9 +43,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.privateIPAddress;
     }
 
-    /**
-     * The provisioning state of the Azure firewall IP configuration resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -68,9 +50,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.provisioningState;
     }
 
-    /**
-     * Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
-     */
     @InputImport(name="publicIPAddress")
     private final @Nullable SubResourceResponse publicIPAddress;
 
@@ -78,9 +57,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
-    /**
-     * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
-     */
     @InputImport(name="subnet")
     private final @Nullable SubResourceResponse subnet;
 
@@ -88,9 +64,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

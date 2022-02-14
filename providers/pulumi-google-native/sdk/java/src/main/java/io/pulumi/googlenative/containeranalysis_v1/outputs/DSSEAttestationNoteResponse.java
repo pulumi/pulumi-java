@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DSSEAttestationNoteResponse {
-/**
- * DSSEHint hints at the purpose of the attestation authority.
- */
     private final DSSEHintResponse hint;
 
     @OutputCustomType.Constructor({"hint"})
@@ -19,9 +16,6 @@ public final class DSSEAttestationNoteResponse {
         this.hint = Objects.requireNonNull(hint);
     }
 
-/**
- * DSSEHint hints at the purpose of the attestation authority.
- */
     public DSSEHintResponse getHint() {
         return this.hint;
     }

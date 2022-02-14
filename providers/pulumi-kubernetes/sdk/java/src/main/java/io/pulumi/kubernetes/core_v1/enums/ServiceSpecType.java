@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum ServiceSpecType {
-/**
- * 
- */
         ExternalName("ExternalName"),
-/**
- * 
- */
         ClusterIP("ClusterIP"),
-/**
- * 
- */
         NodePort("NodePort"),
-/**
- * 
- */
         LoadBalancer("LoadBalancer");
 
         private final String value;

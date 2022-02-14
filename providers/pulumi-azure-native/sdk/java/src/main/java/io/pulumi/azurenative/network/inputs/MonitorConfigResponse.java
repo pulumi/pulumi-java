@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Class containing endpoint monitoring settings in a Traffic Manager profile.
- */
 public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitorConfigResponse Empty = new MonitorConfigResponse();
 
-    /**
-     * List of custom headers.
-     */
     @InputImport(name="customHeaders")
     private final @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
 
@@ -31,9 +25,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
 
-    /**
-     * List of expected status code ranges.
-     */
     @InputImport(name="expectedStatusCodeRanges")
     private final @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
 
@@ -41,9 +32,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.expectedStatusCodeRanges == null ? List.of() : this.expectedStatusCodeRanges;
     }
 
-    /**
-     * The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
-     */
     @InputImport(name="intervalInSeconds")
     private final @Nullable Double intervalInSeconds;
 
@@ -51,9 +39,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
-    /**
-     * The path relative to the endpoint domain name used to probe for endpoint health.
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -61,9 +46,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * The TCP port used to probe for endpoint health.
-     */
     @InputImport(name="port")
     private final @Nullable Double port;
 
@@ -71,9 +53,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * The profile-level monitoring status of the Traffic Manager profile.
-     */
     @InputImport(name="profileMonitorStatus")
     private final @Nullable String profileMonitorStatus;
 
@@ -81,9 +60,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.profileMonitorStatus == null ? Optional.empty() : Optional.ofNullable(this.profileMonitorStatus);
     }
 
-    /**
-     * The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
-     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -91,9 +67,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
-    /**
-     * The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
-     */
     @InputImport(name="timeoutInSeconds")
     private final @Nullable Double timeoutInSeconds;
 
@@ -101,9 +74,6 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
     }
 
-    /**
-     * The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
-     */
     @InputImport(name="toleratedNumberOfFailures")
     private final @Nullable Double toleratedNumberOfFailures;
 

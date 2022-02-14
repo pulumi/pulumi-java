@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceRunnerArgs Empty = new ServiceRunnerArgs();
 
-    /**
-     * The identity of the resource.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityPropertiesArgs> identity;
 
@@ -29,9 +23,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -39,9 +30,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the service runner.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,9 +44,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetWebAppResult {
-/**
- * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
- */
     private final String appId;
-/**
- * The URLs where the `WebApp` is hosted.
- */
     private final List<String> appUrls;
-/**
- * The user-assigned display name for the `WebApp`.
- */
     private final String displayName;
-/**
- * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
- */
     private final String name;
-/**
- * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
- */
     private final String project;
-/**
- * Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases, use `appId` to identify or reference the App. The `webId` value is only unique within a `FirebaseProject` and its associated Apps.
- */
     private final String webId;
 
     @OutputCustomType.Constructor({"appId","appUrls","displayName","name","project","webId"})
@@ -51,39 +33,21 @@ public final class GetWebAppResult {
         this.webId = Objects.requireNonNull(webId);
     }
 
-/**
- * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
- */
     public String getAppId() {
         return this.appId;
     }
-/**
- * The URLs where the `WebApp` is hosted.
- */
     public List<String> getAppUrls() {
         return this.appUrls;
     }
-/**
- * The user-assigned display name for the `WebApp`.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
- */
     public String getName() {
         return this.name;
     }
-/**
- * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases, use `appId` to identify or reference the App. The `webId` value is only unique within a `FirebaseProject` and its associated Apps.
- */
     public String getWebId() {
         return this.webId;
     }

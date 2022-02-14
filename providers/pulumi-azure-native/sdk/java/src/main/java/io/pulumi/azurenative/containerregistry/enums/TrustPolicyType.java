@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of trust policy.
- */
     @EnumType
     public enum TrustPolicyType {
-/**
- * 
- */
         Notary("Notary");
 
         private final String value;

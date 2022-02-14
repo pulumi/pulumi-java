@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Timestamps associated with this resource in a particular system.
- */
 public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1SystemTimestampsResponse Empty = new GoogleCloudDatacatalogV1SystemTimestampsResponse();
 
-    /**
-     * Creation timestamp of the resource within the given system.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends io.p
         return this.createTime;
     }
 
-    /**
-     * Expiration timestamp of the resource within the given system. Currently only applicable to BigQuery resources.
-     */
     @InputImport(name="expireTime", required=true)
     private final String expireTime;
 
@@ -35,9 +26,6 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends io.p
         return this.expireTime;
     }
 
-    /**
-     * Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

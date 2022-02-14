@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines load balancer backend address pool properties.
- */
 public final class LBBackendAddressPoolResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LBBackendAddressPoolResourceSettingsArgs Empty = new LBBackendAddressPoolResourceSettingsArgs();
 
-    /**
-     * Gets or sets the backend address pool name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

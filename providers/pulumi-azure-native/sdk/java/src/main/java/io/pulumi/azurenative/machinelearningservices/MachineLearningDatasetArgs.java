@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MachineLearningDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineLearningDatasetArgs Empty = new MachineLearningDatasetArgs();
 
-    /**
-     * The Dataset name.
-     */
     @InputImport(name="datasetName")
     private final @Nullable Input<String> datasetName;
 
@@ -33,9 +27,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.datasetName == null ? Input.empty() : this.datasetName;
     }
 
-    /**
-     * Specifies dataset type.
-     */
     @InputImport(name="datasetType", required=true)
     private final Input<Either<String,DatasetType>> datasetType;
 
@@ -43,9 +34,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.datasetType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="parameters", required=true)
     private final Input<DatasetCreateRequestParametersArgs> parameters;
 
@@ -53,9 +41,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.parameters;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="registration", required=true)
     private final Input<DatasetCreateRequestRegistrationArgs> registration;
 
@@ -63,9 +48,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.registration;
     }
 
-    /**
-     * Name of the resource group in which workspace is located.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,9 +55,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * Skip validation that ensures data can be loaded from the dataset before registration.
-     */
     @InputImport(name="skipValidation")
     private final @Nullable Input<Boolean> skipValidation;
 
@@ -83,9 +62,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.skipValidation == null ? Input.empty() : this.skipValidation;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="timeSeries")
     private final @Nullable Input<DatasetCreateRequestTimeSeriesArgs> timeSeries;
 
@@ -93,9 +69,6 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         return this.timeSeries == null ? Input.empty() : this.timeSeries;
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

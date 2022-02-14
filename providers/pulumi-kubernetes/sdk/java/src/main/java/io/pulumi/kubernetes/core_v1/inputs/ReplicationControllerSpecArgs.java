@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ReplicationControllerSpec is the specification of a replication controller.
- */
 public final class ReplicationControllerSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationControllerSpecArgs Empty = new ReplicationControllerSpecArgs();
 
-    /**
-     * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
-     */
     @InputImport(name="minReadySeconds")
     private final @Nullable Input<Integer> minReadySeconds;
 
@@ -30,9 +24,6 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
         return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
     }
 
-    /**
-     * Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
-     */
     @InputImport(name="replicas")
     private final @Nullable Input<Integer> replicas;
 
@@ -40,9 +31,6 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
         return this.replicas == null ? Input.empty() : this.replicas;
     }
 
-    /**
-     * Selector is a label query over pods that should match the Replicas count. If Selector is empty, it is defaulted to the labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication controller, if empty defaulted to labels on Pod template. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
-     */
     @InputImport(name="selector")
     private final @Nullable Input<Map<String,String>> selector;
 
@@ -50,9 +38,6 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
         return this.selector == null ? Input.empty() : this.selector;
     }
 
-    /**
-     * Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
-     */
     @InputImport(name="template")
     private final @Nullable Input<PodTemplateSpecArgs> template;
 

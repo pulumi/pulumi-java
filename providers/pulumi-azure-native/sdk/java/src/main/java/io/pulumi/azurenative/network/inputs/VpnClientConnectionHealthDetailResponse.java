@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * VPN client connection health detail.
- */
 public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnClientConnectionHealthDetailResponse Empty = new VpnClientConnectionHealthDetailResponse();
 
-    /**
-     * The egress bytes per second.
-     */
     @InputImport(name="egressBytesTransferred", required=true)
     private final Double egressBytesTransferred;
 
@@ -26,9 +20,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.egressBytesTransferred;
     }
 
-    /**
-     * The egress packets per second.
-     */
     @InputImport(name="egressPacketsTransferred", required=true)
     private final Double egressPacketsTransferred;
 
@@ -36,9 +27,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.egressPacketsTransferred;
     }
 
-    /**
-     * The ingress bytes per second.
-     */
     @InputImport(name="ingressBytesTransferred", required=true)
     private final Double ingressBytesTransferred;
 
@@ -46,9 +34,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.ingressBytesTransferred;
     }
 
-    /**
-     * The ingress packets per second.
-     */
     @InputImport(name="ingressPacketsTransferred", required=true)
     private final Double ingressPacketsTransferred;
 
@@ -56,9 +41,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.ingressPacketsTransferred;
     }
 
-    /**
-     * The max band width.
-     */
     @InputImport(name="maxBandwidth", required=true)
     private final Double maxBandwidth;
 
@@ -66,9 +48,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.maxBandwidth;
     }
 
-    /**
-     * The max packets transferred per second.
-     */
     @InputImport(name="maxPacketsPerSecond", required=true)
     private final Double maxPacketsPerSecond;
 
@@ -76,9 +55,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.maxPacketsPerSecond;
     }
 
-    /**
-     * The assigned private Ip of a connected vpn client.
-     */
     @InputImport(name="privateIpAddress", required=true)
     private final String privateIpAddress;
 
@@ -86,9 +62,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.privateIpAddress;
     }
 
-    /**
-     * The public Ip of a connected vpn client.
-     */
     @InputImport(name="publicIpAddress", required=true)
     private final String publicIpAddress;
 
@@ -96,9 +69,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.publicIpAddress;
     }
 
-    /**
-     * The duration time of a connected vpn client.
-     */
     @InputImport(name="vpnConnectionDuration", required=true)
     private final Double vpnConnectionDuration;
 
@@ -106,9 +76,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.vpnConnectionDuration;
     }
 
-    /**
-     * The vpn client Id.
-     */
     @InputImport(name="vpnConnectionId", required=true)
     private final String vpnConnectionId;
 
@@ -116,9 +83,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.vpnConnectionId;
     }
 
-    /**
-     * The start time of a connected vpn client.
-     */
     @InputImport(name="vpnConnectionTime", required=true)
     private final String vpnConnectionTime;
 
@@ -126,9 +90,6 @@ public final class VpnClientConnectionHealthDetailResponse extends io.pulumi.res
         return this.vpnConnectionTime;
     }
 
-    /**
-     * The user name of a connected vpn client.
-     */
     @InputImport(name="vpnUserName", required=true)
     private final String vpnUserName;
 

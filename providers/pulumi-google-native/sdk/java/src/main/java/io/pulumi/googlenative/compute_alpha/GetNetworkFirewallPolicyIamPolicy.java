@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkFirewallPolicyIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- */
     public static CompletableFuture<GetNetworkFirewallPolicyIamPolicyResult> invokeAsync(GetNetworkFirewallPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetworkFirewallPolicyIamPolicy", TypeShape.of(GetNetworkFirewallPolicyIamPolicyResult.class), args == null ? GetNetworkFirewallPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

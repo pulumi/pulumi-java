@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. The type of the parameter.
- */
     @EnumType
     public enum GoogleCloudMlV1_StudyConfig_ParameterSpecType {
-/**
- * You must specify a valid type. Using this unspecified type will result in an error.
- */
         ParameterTypeUnspecified("PARAMETER_TYPE_UNSPECIFIED"),
-/**
- * Type for real-valued parameters.
- */
         Double("DOUBLE"),
-/**
- * Type for integral parameters.
- */
         Integer("INTEGER"),
-/**
- * The parameter is categorical, with a value chosen from the categories field.
- */
         Categorical("CATEGORICAL"),
-/**
- * The parameter is real valued, with a fixed set of feasible points. If `type==DISCRETE`, feasible_points must be provided, and {`min_value`, `max_value`} will be ignored.
- */
         Discrete("DISCRETE");
 
         private final String value;

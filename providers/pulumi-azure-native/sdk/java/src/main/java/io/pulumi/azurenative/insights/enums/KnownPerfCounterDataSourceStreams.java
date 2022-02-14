@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum KnownPerfCounterDataSourceStreams {
-/**
- * 
- */
         MicrosoftPerf("Microsoft-Perf"),
-/**
- * 
- */
         MicrosoftInsightsMetrics("Microsoft-InsightsMetrics");
 
         private final String value;

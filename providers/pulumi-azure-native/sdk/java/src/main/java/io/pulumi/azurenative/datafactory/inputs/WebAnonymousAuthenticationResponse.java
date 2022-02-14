@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A WebLinkedService that uses anonymous authentication to communicate with an HTTP endpoint.
- */
 public final class WebAnonymousAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebAnonymousAuthenticationResponse Empty = new WebAnonymousAuthenticationResponse();
 
-    /**
-     * Type of authentication used to connect to the web table source.
-Expected value is 'Anonymous'.
-     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -27,9 +20,6 @@ Expected value is 'Anonymous'.
         return this.authenticationType;
     }
 
-    /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     */
     @InputImport(name="url", required=true)
     private final Object url;
 

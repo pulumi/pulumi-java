@@ -24,16 +24,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Batch inference settings per deployment.
- */
 public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BatchDeploymentArgs Empty = new BatchDeploymentArgs();
 
-    /**
-     * Code configuration for the endpoint deployment.
-     */
     @InputImport(name="codeConfiguration")
     private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
 
@@ -41,9 +35,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
     }
 
-    /**
-     * Configuration for compute binding.
-     */
     @InputImport(name="compute")
     private final @Nullable Input<ComputeConfigurationArgs> compute;
 
@@ -51,9 +42,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.compute == null ? Input.empty() : this.compute;
     }
 
-    /**
-     * Description of the endpoint deployment.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -61,9 +49,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * ARM resource ID of the environment specification for the endpoint deployment.
-     */
     @InputImport(name="environmentId")
     private final @Nullable Input<String> environmentId;
 
@@ -71,9 +56,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.environmentId == null ? Input.empty() : this.environmentId;
     }
 
-    /**
-     * Environment variables configuration for the deployment.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<Map<String,String>> environmentVariables;
 
@@ -81,13 +63,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
-    /**
-     * Error threshold, if the error count for the entire input goes above this value,
-the batch inference will be aborted. Range is [-1, int.MaxValue].
-For FileDataset, this value is the count of file failures.
-For TabularDataset, this value is the count of record failures.
-If set to -1 (the lower bound), all failures during batch inference will be ignored.
-     */
     @InputImport(name="errorThreshold")
     private final @Nullable Input<Integer> errorThreshold;
 
@@ -95,9 +70,6 @@ If set to -1 (the lower bound), all failures during batch inference will be igno
         return this.errorThreshold == null ? Input.empty() : this.errorThreshold;
     }
 
-    /**
-     * Logging level for batch inference operation.
-     */
     @InputImport(name="loggingLevel")
     private final @Nullable Input<Either<String,BatchLoggingLevel>> loggingLevel;
 
@@ -105,11 +77,6 @@ If set to -1 (the lower bound), all failures during batch inference will be igno
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
     }
 
-    /**
-     * Size of the mini-batch passed to each batch invocation.
-For FileDataset, this is the number of files per mini-batch.
-For TabularDataset, this is the size of the records in bytes, per mini-batch.
-     */
     @InputImport(name="miniBatchSize")
     private final @Nullable Input<Double> miniBatchSize;
 
@@ -117,9 +84,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
         return this.miniBatchSize == null ? Input.empty() : this.miniBatchSize;
     }
 
-    /**
-     * Reference to the model asset for the endpoint deployment.
-     */
     @InputImport(name="model")
     private final @Nullable Input<Object> model;
 
@@ -127,9 +91,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
         return this.model == null ? Input.empty() : this.model;
     }
 
-    /**
-     * Output configuration for the batch inference operation.
-     */
     @InputImport(name="outputConfiguration")
     private final @Nullable Input<BatchOutputConfigurationArgs> outputConfiguration;
 
@@ -137,9 +98,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
         return this.outputConfiguration == null ? Input.empty() : this.outputConfiguration;
     }
 
-    /**
-     * Partition keys list used for Named partitioning.
-     */
     @InputImport(name="partitionKeys")
     private final @Nullable Input<List<String>> partitionKeys;
 
@@ -147,9 +105,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
         return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
     }
 
-    /**
-     * Property dictionary. Properties can be added, but not removed or altered.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -157,9 +112,6 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Retry Settings for the batch inference operation.
-     */
     @InputImport(name="retrySettings")
     private final @Nullable Input<BatchRetrySettingsArgs> retrySettings;
 

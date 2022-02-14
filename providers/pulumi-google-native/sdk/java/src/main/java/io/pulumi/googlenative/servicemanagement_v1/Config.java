@@ -35,332 +35,165 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new service configuration (version) for a managed service. This method only stores the service configuration. To roll out the service configuration to backend systems please call CreateServiceRollout. Only the 100 most recent service configurations and ones referenced by existing rollouts are kept for each service. The rest will be deleted eventually.
-Note - this resource's API doesn't support deletion. When deleted, the resource will persist
-on Google Cloud even though it will be deleted from Pulumi state.
- */
 @ResourceType(type="google-native:servicemanagement/v1:Config")
 public class Config extends io.pulumi.resources.CustomResource {
-    /**
-     * A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
-     */
     @OutputExport(name="apis", type=List.class, parameters={ApiResponse.class})
     private Output<List<ApiResponse>> apis;
 
-    /**
-     * @return A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
-     */
     public Output<List<ApiResponse>> getApis() {
         return this.apis;
     }
-    /**
-     * Auth configuration.
-     */
     @OutputExport(name="authentication", type=AuthenticationResponse.class, parameters={})
     private Output<AuthenticationResponse> authentication;
 
-    /**
-     * @return Auth configuration.
-     */
     public Output<AuthenticationResponse> getAuthentication() {
         return this.authentication;
     }
-    /**
-     * API backend configuration.
-     */
     @OutputExport(name="backend", type=BackendResponse.class, parameters={})
     private Output<BackendResponse> backend;
 
-    /**
-     * @return API backend configuration.
-     */
     public Output<BackendResponse> getBackend() {
         return this.backend;
     }
-    /**
-     * Billing configuration.
-     */
     @OutputExport(name="billing", type=BillingResponse.class, parameters={})
     private Output<BillingResponse> billing;
 
-    /**
-     * @return Billing configuration.
-     */
     public Output<BillingResponse> getBilling() {
         return this.billing;
     }
-    /**
-     * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always sets this field to `3`.
-     */
     @OutputExport(name="configVersion", type=Integer.class, parameters={})
     private Output<Integer> configVersion;
 
-    /**
-     * @return Obsolete. Do not use. This field has no semantic meaning. The service config compiler always sets this field to `3`.
-     */
     public Output<Integer> getConfigVersion() {
         return this.configVersion;
     }
-    /**
-     * Context configuration.
-     */
     @OutputExport(name="context", type=ContextResponse.class, parameters={})
     private Output<ContextResponse> context;
 
-    /**
-     * @return Context configuration.
-     */
     public Output<ContextResponse> getContext() {
         return this.context;
     }
-    /**
-     * Configuration for the service control plane.
-     */
     @OutputExport(name="control", type=ControlResponse.class, parameters={})
     private Output<ControlResponse> control;
 
-    /**
-     * @return Configuration for the service control plane.
-     */
     public Output<ControlResponse> getControl() {
         return this.control;
     }
-    /**
-     * Custom error configuration.
-     */
     @OutputExport(name="customError", type=CustomErrorResponse.class, parameters={})
     private Output<CustomErrorResponse> customError;
 
-    /**
-     * @return Custom error configuration.
-     */
     public Output<CustomErrorResponse> getCustomError() {
         return this.customError;
     }
-    /**
-     * Additional API documentation.
-     */
     @OutputExport(name="documentation", type=DocumentationResponse.class, parameters={})
     private Output<DocumentationResponse> documentation;
 
-    /**
-     * @return Additional API documentation.
-     */
     public Output<DocumentationResponse> getDocumentation() {
         return this.documentation;
     }
-    /**
-     * Configuration for network endpoints. If this is empty, then an endpoint with the same name as the service is automatically generated to service all defined APIs.
-     */
     @OutputExport(name="endpoints", type=List.class, parameters={EndpointResponse.class})
     private Output<List<EndpointResponse>> endpoints;
 
-    /**
-     * @return Configuration for network endpoints. If this is empty, then an endpoint with the same name as the service is automatically generated to service all defined APIs.
-     */
     public Output<List<EndpointResponse>> getEndpoints() {
         return this.endpoints;
     }
-    /**
-     * A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum
-     */
     @OutputExport(name="enums", type=List.class, parameters={EnumResponse.class})
     private Output<List<EnumResponse>> enums;
 
-    /**
-     * @return A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum
-     */
     public Output<List<EnumResponse>> getEnums() {
         return this.enums;
     }
-    /**
-     * HTTP configuration.
-     */
     @OutputExport(name="http", type=HttpResponse.class, parameters={})
     private Output<HttpResponse> http;
 
-    /**
-     * @return HTTP configuration.
-     */
     public Output<HttpResponse> getHttp() {
         return this.http;
     }
-    /**
-     * Logging configuration.
-     */
     @OutputExport(name="logging", type=LoggingResponse.class, parameters={})
     private Output<LoggingResponse> logging;
 
-    /**
-     * @return Logging configuration.
-     */
     public Output<LoggingResponse> getLogging() {
         return this.logging;
     }
-    /**
-     * Defines the logs used by this service.
-     */
     @OutputExport(name="logs", type=List.class, parameters={LogDescriptorResponse.class})
     private Output<List<LogDescriptorResponse>> logs;
 
-    /**
-     * @return Defines the logs used by this service.
-     */
     public Output<List<LogDescriptorResponse>> getLogs() {
         return this.logs;
     }
-    /**
-     * Defines the metrics used by this service.
-     */
     @OutputExport(name="metrics", type=List.class, parameters={MetricDescriptorResponse.class})
     private Output<List<MetricDescriptorResponse>> metrics;
 
-    /**
-     * @return Defines the metrics used by this service.
-     */
     public Output<List<MetricDescriptorResponse>> getMetrics() {
         return this.metrics;
     }
-    /**
-     * Defines the monitored resources used by this service. This is required by the Service.monitoring and Service.logging configurations.
-     */
     @OutputExport(name="monitoredResources", type=List.class, parameters={MonitoredResourceDescriptorResponse.class})
     private Output<List<MonitoredResourceDescriptorResponse>> monitoredResources;
 
-    /**
-     * @return Defines the monitored resources used by this service. This is required by the Service.monitoring and Service.logging configurations.
-     */
     public Output<List<MonitoredResourceDescriptorResponse>> getMonitoredResources() {
         return this.monitoredResources;
     }
-    /**
-     * Monitoring configuration.
-     */
     @OutputExport(name="monitoring", type=MonitoringResponse.class, parameters={})
     private Output<MonitoringResponse> monitoring;
 
-    /**
-     * @return Monitoring configuration.
-     */
     public Output<MonitoringResponse> getMonitoring() {
         return this.monitoring;
     }
-    /**
-     * The service name, which is a DNS-like logical identifier for the service, such as `calendar.googleapis.com`. The service name typically goes through DNS verification to make sure the owner of the service also owns the DNS name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The service name, which is a DNS-like logical identifier for the service, such as `calendar.googleapis.com`. The service name typically goes through DNS verification to make sure the owner of the service also owns the DNS name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The Google project that owns this service.
-     */
     @OutputExport(name="producerProjectId", type=String.class, parameters={})
     private Output<String> producerProjectId;
 
-    /**
-     * @return The Google project that owns this service.
-     */
     public Output<String> getProducerProjectId() {
         return this.producerProjectId;
     }
-    /**
-     * Quota configuration.
-     */
     @OutputExport(name="quota", type=QuotaResponse.class, parameters={})
     private Output<QuotaResponse> quota;
 
-    /**
-     * @return Quota configuration.
-     */
     public Output<QuotaResponse> getQuota() {
         return this.quota;
     }
-    /**
-     * The source information for this configuration if available.
-     */
     @OutputExport(name="sourceInfo", type=SourceInfoResponse.class, parameters={})
     private Output<SourceInfoResponse> sourceInfo;
 
-    /**
-     * @return The source information for this configuration if available.
-     */
     public Output<SourceInfoResponse> getSourceInfo() {
         return this.sourceInfo;
     }
-    /**
-     * System parameter configuration.
-     */
     @OutputExport(name="systemParameters", type=SystemParametersResponse.class, parameters={})
     private Output<SystemParametersResponse> systemParameters;
 
-    /**
-     * @return System parameter configuration.
-     */
     public Output<SystemParametersResponse> getSystemParameters() {
         return this.systemParameters;
     }
-    /**
-     * A list of all proto message types included in this API service. It serves similar purpose as [google.api.Service.types], except that these types are not needed by user-defined APIs. Therefore, they will not show up in the generated discovery doc. This field should only be used to define system APIs in ESF.
-     */
     @OutputExport(name="systemTypes", type=List.class, parameters={TypeResponse.class})
     private Output<List<TypeResponse>> systemTypes;
 
-    /**
-     * @return A list of all proto message types included in this API service. It serves similar purpose as [google.api.Service.types], except that these types are not needed by user-defined APIs. Therefore, they will not show up in the generated discovery doc. This field should only be used to define system APIs in ESF.
-     */
     public Output<List<TypeResponse>> getSystemTypes() {
         return this.systemTypes;
     }
-    /**
-     * The product title for this service, it is the name displayed in Google Cloud Console.
-     */
     @OutputExport(name="title", type=String.class, parameters={})
     private Output<String> title;
 
-    /**
-     * @return The product title for this service, it is the name displayed in Google Cloud Console.
-     */
     public Output<String> getTitle() {
         return this.title;
     }
-    /**
-     * A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32
-     */
     @OutputExport(name="types", type=List.class, parameters={TypeResponse.class})
     private Output<List<TypeResponse>> types;
 
-    /**
-     * @return A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32
-     */
     public Output<List<TypeResponse>> getTypes() {
         return this.types;
     }
-    /**
-     * Configuration controlling usage of this service.
-     */
     @OutputExport(name="usage", type=UsageResponse.class, parameters={})
     private Output<UsageResponse> usage;
 
-    /**
-     * @return Configuration controlling usage of this service.
-     */
     public Output<UsageResponse> getUsage() {
         return this.usage;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Config(String name, ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:servicemanagement/v1:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -376,14 +209,6 @@ public class Config extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Config get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Config(name, id, options);
     }

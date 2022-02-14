@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The location of azure data lake store dataset.
- */
 public final class AzureDataLakeStoreLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataLakeStoreLocationResponse Empty = new AzureDataLakeStoreLocationResponse();
 
-    /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileName")
     private final @Nullable Object fileName;
 
@@ -28,9 +22,6 @@ public final class AzureDataLakeStoreLocationResponse extends io.pulumi.resource
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
     }
 
-    /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="folderPath")
     private final @Nullable Object folderPath;
 
@@ -38,10 +29,6 @@ public final class AzureDataLakeStoreLocationResponse extends io.pulumi.resource
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
-    /**
-     * Type of dataset storage location.
-Expected value is 'AzureDataLakeStoreLocation'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

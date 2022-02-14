@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Error response of an operation failure
- */
 public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorResponseResponse Empty = new ErrorResponseResponse();
 
-    /**
-     * Error code
-     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -27,9 +21,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
-    /**
-     * Error message indicating why the operation failed.
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 

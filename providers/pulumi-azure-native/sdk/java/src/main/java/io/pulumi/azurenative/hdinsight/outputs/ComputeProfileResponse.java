@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ComputeProfileResponse {
-/**
- * The list of roles in the cluster.
- */
     private final @Nullable List<RoleResponse> roles;
 
     @OutputCustomType.Constructor({"roles"})
@@ -21,9 +18,6 @@ public final class ComputeProfileResponse {
         this.roles = roles;
     }
 
-/**
- * The list of roles in the cluster.
- */
     public List<RoleResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }

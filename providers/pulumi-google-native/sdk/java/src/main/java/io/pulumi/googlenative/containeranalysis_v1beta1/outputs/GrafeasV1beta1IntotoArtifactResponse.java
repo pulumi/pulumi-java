@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1IntotoArtifactResponse {
-/**
- * 
- */
     private final ArtifactHashesResponse hashes;
-/**
- * 
- */
     private final String resourceUri;
 
     @OutputCustomType.Constructor({"hashes","resourceUri"})
@@ -27,15 +21,9 @@ public final class GrafeasV1beta1IntotoArtifactResponse {
         this.resourceUri = Objects.requireNonNull(resourceUri);
     }
 
-/**
- * 
- */
     public ArtifactHashesResponse getHashes() {
         return this.hashes;
     }
-/**
- * 
- */
     public String getResourceUri() {
         return this.resourceUri;
     }

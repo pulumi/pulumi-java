@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetvNetPeering {
-/**
- * Peerings in a VirtualNetwork resource
-API Version: 2018-04-01.
- *
- * Peerings in a VirtualNetwork resource
- */
     public static CompletableFuture<GetvNetPeeringResult> invokeAsync(GetvNetPeeringArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databricks:getvNetPeering", TypeShape.of(GetvNetPeeringResult.class), args == null ? GetvNetPeeringArgs.Empty : args, Utilities.withVersion(options));
     }

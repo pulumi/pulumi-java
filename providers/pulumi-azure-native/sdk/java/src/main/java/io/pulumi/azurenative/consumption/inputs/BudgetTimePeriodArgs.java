@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The start and end date for a budget.
- */
 public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetTimePeriodArgs Empty = new BudgetTimePeriodArgs();
 
-    /**
-     * The end date for the budget. If not provided, we default this to 10 years from the start date.
-     */
     @InputImport(name="endDate")
     private final @Nullable Input<String> endDate;
 
@@ -27,9 +21,6 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
         return this.endDate == null ? Input.empty() : this.endDate;
     }
 
-    /**
-     * The start date for the budget.
-     */
     @InputImport(name="startDate", required=true)
     private final Input<String> startDate;
 

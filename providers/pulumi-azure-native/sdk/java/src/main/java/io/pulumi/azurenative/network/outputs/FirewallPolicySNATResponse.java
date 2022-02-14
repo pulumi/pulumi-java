@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicySNATResponse {
-/**
- * List of private IP addresses/IP address ranges to not be SNAT.
- */
     private final @Nullable List<String> privateRanges;
 
     @OutputCustomType.Constructor({"privateRanges"})
@@ -21,9 +18,6 @@ public final class FirewallPolicySNATResponse {
         this.privateRanges = privateRanges;
     }
 
-/**
- * List of private IP addresses/IP address ranges to not be SNAT.
- */
     public List<String> getPrivateRanges() {
         return this.privateRanges == null ? List.of() : this.privateRanges;
     }

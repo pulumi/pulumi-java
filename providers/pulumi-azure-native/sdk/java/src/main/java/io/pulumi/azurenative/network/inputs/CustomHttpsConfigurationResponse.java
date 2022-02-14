@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Https settings for a domain
- */
 public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomHttpsConfigurationResponse Empty = new CustomHttpsConfigurationResponse();
 
-    /**
-     * Defines the source of the SSL certificate
-     */
     @InputImport(name="certificateSource", required=true)
     private final String certificateSource;
 
@@ -28,9 +22,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
         return this.certificateSource;
     }
 
-    /**
-     * Defines the type of the certificate used for secure connections to a frontendEndpoint
-     */
     @InputImport(name="certificateType")
     private final @Nullable String certificateType;
 
@@ -38,9 +29,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
         return this.certificateType == null ? Optional.empty() : Optional.ofNullable(this.certificateType);
     }
 
-    /**
-     * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
-     */
     @InputImport(name="minimumTlsVersion", required=true)
     private final String minimumTlsVersion;
 
@@ -48,9 +36,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
         return this.minimumTlsVersion;
     }
 
-    /**
-     * Defines the TLS extension protocol that is used for secure delivery
-     */
     @InputImport(name="protocolType", required=true)
     private final String protocolType;
 
@@ -58,9 +43,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
         return this.protocolType;
     }
 
-    /**
-     * The name of the Key Vault secret representing the full certificate PFX
-     */
     @InputImport(name="secretName")
     private final @Nullable String secretName;
 
@@ -68,9 +50,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
         return this.secretName == null ? Optional.empty() : Optional.ofNullable(this.secretName);
     }
 
-    /**
-     * The version of the Key Vault secret representing the full certificate PFX
-     */
     @InputImport(name="secretVersion")
     private final @Nullable String secretVersion;
 
@@ -78,9 +57,6 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
-    /**
-     * The Key Vault containing the SSL certificate
-     */
     @InputImport(name="vault")
     private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 

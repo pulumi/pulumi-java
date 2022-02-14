@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Identity-Aware Proxy
- */
 public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendServiceIAPResponse Empty = new BackendServiceIAPResponse();
 
-    /**
-     * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -27,9 +21,6 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
         return this.enabled;
     }
 
-    /**
-     * OAuth2 client ID to use for the authentication flow.
-     */
     @InputImport(name="oauth2ClientId", required=true)
     private final String oauth2ClientId;
 
@@ -37,9 +28,6 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
         return this.oauth2ClientId;
     }
 
-    /**
-     * [Input Only] OAuth client info required to generate client id to be used for IAP.
-     */
     @InputImport(name="oauth2ClientInfo", required=true)
     private final BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo;
 
@@ -47,9 +35,6 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
         return this.oauth2ClientInfo;
     }
 
-    /**
-     * OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
-     */
     @InputImport(name="oauth2ClientSecret", required=true)
     private final String oauth2ClientSecret;
 
@@ -57,9 +42,6 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
         return this.oauth2ClientSecret;
     }
 
-    /**
-     * SHA256 hash value for the field oauth2_client_secret above.
-     */
     @InputImport(name="oauth2ClientSecretSha256", required=true)
     private final String oauth2ClientSecretSha256;
 

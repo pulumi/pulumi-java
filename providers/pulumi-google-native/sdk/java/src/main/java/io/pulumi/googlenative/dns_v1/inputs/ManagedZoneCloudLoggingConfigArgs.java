@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cloud Logging configurations for publicly visible zones.
- */
 public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneCloudLoggingConfigArgs Empty = new ManagedZoneCloudLoggingConfigArgs();
 
-    /**
-     * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
-     */
     @InputImport(name="enableLogging")
     private final @Nullable Input<Boolean> enableLogging;
 
@@ -28,9 +22,6 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

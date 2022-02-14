@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TfLiteModelResponse {
-/**
- * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
- */
     private final String automlModel;
-/**
- * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
- */
     private final String gcsTfliteUri;
-/**
- * The size of the TFLite model
- */
     private final String sizeBytes;
 
     @OutputCustomType.Constructor({"automlModel","gcsTfliteUri","sizeBytes"})
@@ -32,21 +23,12 @@ public final class TfLiteModelResponse {
         this.sizeBytes = Objects.requireNonNull(sizeBytes);
     }
 
-/**
- * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
- */
     public String getAutomlModel() {
         return this.automlModel;
     }
-/**
- * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
- */
     public String getGcsTfliteUri() {
         return this.gcsTfliteUri;
     }
-/**
- * The size of the TFLite model
- */
     public String getSizeBytes() {
         return this.sizeBytes;
     }

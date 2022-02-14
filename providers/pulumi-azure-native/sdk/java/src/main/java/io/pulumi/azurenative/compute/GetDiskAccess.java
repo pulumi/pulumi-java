@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskAccess {
-/**
- * disk access resource.
-API Version: 2020-12-01.
- *
- * disk access resource.
- */
     public static CompletableFuture<GetDiskAccessResult> invokeAsync(GetDiskAccessArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskAccess", TypeShape.of(GetDiskAccessResult.class), args == null ? GetDiskAccessArgs.Empty : args, Utilities.withVersion(options));
     }

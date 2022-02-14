@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
- */
 public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelDefinitionModelOptionsArgs Empty = new ModelDefinitionModelOptionsArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="labels")
     private final @Nullable Input<List<String>> labels;
 
@@ -28,9 +22,6 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lossType")
     private final @Nullable Input<String> lossType;
 
@@ -38,9 +29,6 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
         return this.lossType == null ? Input.empty() : this.lossType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="modelType")
     private final @Nullable Input<String> modelType;
 

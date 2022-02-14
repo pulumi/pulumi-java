@@ -11,16 +11,10 @@ import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricTargetArgs;
 import java.util.Objects;
 
 
-/**
- * ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
- */
 public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectMetricSourceArgs Empty = new ObjectMetricSourceArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="describedObject", required=true)
     private final Input<CrossVersionObjectReferenceArgs> describedObject;
 
@@ -28,9 +22,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
         return this.describedObject;
     }
 
-    /**
-     * metric identifies the target metric by name and selector
-     */
     @InputImport(name="metric", required=true)
     private final Input<MetricIdentifierArgs> metric;
 
@@ -38,9 +29,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
         return this.metric;
     }
 
-    /**
-     * target specifies the target value for the given metric
-     */
     @InputImport(name="target", required=true)
     private final Input<MetricTargetArgs> target;
 

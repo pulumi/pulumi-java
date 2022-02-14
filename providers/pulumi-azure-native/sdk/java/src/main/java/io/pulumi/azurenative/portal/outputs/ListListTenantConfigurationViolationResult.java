@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListListTenantConfigurationViolationResult {
-/**
- * The URL to use for getting the next set of results.
- */
     private final @Nullable String nextLink;
-/**
- * The array of violations.
- */
     private final @Nullable List<ViolationResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -30,15 +24,9 @@ public final class ListListTenantConfigurationViolationResult {
         this.value = value;
     }
 
-/**
- * The URL to use for getting the next set of results.
- */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
-/**
- * The array of violations.
- */
     public List<ViolationResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

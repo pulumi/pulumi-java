@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration options for Istio addon.
- */
 public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IstioConfigArgs Empty = new IstioConfigArgs();
 
-    /**
-     * The specified Istio auth mode, either none, or mutual TLS.
-     */
     @InputImport(name="auth")
     private final @Nullable Input<IstioConfigAuth> auth;
 
@@ -28,9 +22,6 @@ public final class IstioConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.auth == null ? Input.empty() : this.auth;
     }
 
-    /**
-     * Whether Istio is enabled for this cluster.
-     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 

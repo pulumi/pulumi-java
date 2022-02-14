@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the layout properties and content for a column.
- */
 public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ColumnArgs Empty = new ColumnArgs();
 
-    /**
-     * The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
-     */
     @InputImport(name="weight")
     private final @Nullable Input<String> weight;
 
@@ -29,9 +23,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.weight == null ? Input.empty() : this.weight;
     }
 
-    /**
-     * The display widgets arranged vertically in this column.
-     */
     @InputImport(name="widgets")
     private final @Nullable Input<List<WidgetArgs>> widgets;
 

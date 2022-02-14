@@ -8,16 +8,10 @@ import io.pulumi.googlenative.container_v1beta1.inputs.GcfsConfigResponse;
 import java.util.Objects;
 
 
-/**
- * Subset of NodeConfig message that has defaults.
- */
 public final class NodeConfigDefaultsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeConfigDefaultsResponse Empty = new NodeConfigDefaultsResponse();
 
-    /**
-     * GCFS (Google Container File System, a.k.a Riptide) options.
-     */
     @InputImport(name="gcfsConfig", required=true)
     private final GcfsConfigResponse gcfsConfig;
 

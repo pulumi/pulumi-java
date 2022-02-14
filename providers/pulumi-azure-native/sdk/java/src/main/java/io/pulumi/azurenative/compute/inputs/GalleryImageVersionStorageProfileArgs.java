@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This is the storage profile of a Gallery Image Version.
- */
 public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageVersionStorageProfileArgs Empty = new GalleryImageVersionStorageProfileArgs();
 
-    /**
-     * A list of data disk images.
-     */
     @InputImport(name="dataDiskImages")
     private final @Nullable Input<List<GalleryDataDiskImageArgs>> dataDiskImages;
 
@@ -30,9 +24,6 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
         return this.dataDiskImages == null ? Input.empty() : this.dataDiskImages;
     }
 
-    /**
-     * This is the OS disk image.
-     */
     @InputImport(name="osDiskImage")
     private final @Nullable Input<GalleryOSDiskImageArgs> osDiskImage;
 
@@ -40,9 +31,6 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
         return this.osDiskImage == null ? Input.empty() : this.osDiskImage;
     }
 
-    /**
-     * The gallery artifact version source.
-     */
     @InputImport(name="source")
     private final @Nullable Input<GalleryArtifactVersionSourceArgs> source;
 

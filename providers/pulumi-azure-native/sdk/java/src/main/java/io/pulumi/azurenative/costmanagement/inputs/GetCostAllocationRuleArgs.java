@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCostAllocationRuleArgs Empty = new GetCostAllocationRuleArgs();
 
-    /**
-     * BillingAccount ID
-     */
     @InputImport(name="billingAccountId", required=true)
     private final String billingAccountId;
 
@@ -25,9 +19,6 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
         return this.billingAccountId;
     }
 
-    /**
-     * Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.
-     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 

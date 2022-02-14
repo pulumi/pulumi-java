@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SinkConfigurationArgs Empty = new SinkConfigurationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 

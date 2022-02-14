@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAutoscaleSettingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAutoscaleSettingArgs Empty = new GetAutoscaleSettingArgs();
 
-    /**
-     * The autoscale setting name.
-     */
     @InputImport(name="autoscaleSettingName", required=true)
     private final String autoscaleSettingName;
 
@@ -25,9 +19,6 @@ public final class GetAutoscaleSettingArgs extends io.pulumi.resources.InvokeArg
         return this.autoscaleSettingName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

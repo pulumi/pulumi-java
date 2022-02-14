@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EncoderSystemPresetResponse {
-/**
- * Name of the built-in encoding preset.
- */
     private final String name;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"name","type"})
@@ -27,16 +20,9 @@ Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Name of the built-in encoding preset.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
- */
     public String getType() {
         return this.type;
     }

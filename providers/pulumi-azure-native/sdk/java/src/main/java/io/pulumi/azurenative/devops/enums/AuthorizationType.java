@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of authorization.
- */
     @EnumType
     public enum AuthorizationType {
-/**
- * 
- */
         PersonalAccessToken("personalAccessToken");
 
         private final String value;

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetProjectKeysResult {
-/**
- * ID of Migration Project.
- */
     private final String workspaceId;
-/**
- * Key of Migration Project.
- */
     private final String workspaceKey;
 
     @OutputCustomType.Constructor({"workspaceId","workspaceKey"})
@@ -26,15 +20,9 @@ public final class GetProjectKeysResult {
         this.workspaceKey = Objects.requireNonNull(workspaceKey);
     }
 
-/**
- * ID of Migration Project.
- */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
-/**
- * Key of Migration Project.
- */
     public String getWorkspaceKey() {
         return this.workspaceKey;
     }

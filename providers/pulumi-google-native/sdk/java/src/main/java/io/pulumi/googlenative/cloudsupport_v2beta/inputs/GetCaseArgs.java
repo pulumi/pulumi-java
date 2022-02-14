@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCaseArgs Empty = new GetCaseArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="caseId", required=true)
     private final String caseId;
 
@@ -25,9 +19,6 @@ public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.caseId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v2betaId1", required=true)
     private final String v2betaId1;
 
@@ -35,9 +26,6 @@ public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.v2betaId1;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v2betumId", required=true)
     private final String v2betumId;
 

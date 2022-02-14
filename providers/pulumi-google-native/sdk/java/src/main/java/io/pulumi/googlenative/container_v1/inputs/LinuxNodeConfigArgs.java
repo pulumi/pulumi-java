@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters that can be configured on Linux nodes.
- */
 public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinuxNodeConfigArgs Empty = new LinuxNodeConfigArgs();
 
-    /**
-     * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The following parameters are supported. net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem net.ipv4.tcp_tw_reuse
-     */
     @InputImport(name="sysctls")
     private final @Nullable Input<Map<String,String>> sysctls;
 

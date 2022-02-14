@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Defender for Containers AWS offering configurations
- */
 public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderForContainersAwsOfferingResponse Empty = new DefenderForContainersAwsOfferingResponse();
 
-    /**
-     * The cloudwatch to kinesis connection configuration
-     */
     @InputImport(name="cloudWatchToKinesis")
     private final @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
 
@@ -31,9 +25,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
         return this.cloudWatchToKinesis == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchToKinesis);
     }
 
-    /**
-     * The offering description.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -41,9 +32,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
         return this.description;
     }
 
-    /**
-     * The kinesis to s3 connection configuration
-     */
     @InputImport(name="kinesisToS3")
     private final @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
 
@@ -51,9 +39,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
         return this.kinesisToS3 == null ? Optional.empty() : Optional.ofNullable(this.kinesisToS3);
     }
 
-    /**
-     * The kubernetes to scuba connection configuration
-     */
     @InputImport(name="kubernetesScubaReader")
     private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
 
@@ -61,9 +46,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
         return this.kubernetesScubaReader == null ? Optional.empty() : Optional.ofNullable(this.kubernetesScubaReader);
     }
 
-    /**
-     * The kubernetes service connection configuration
-     */
     @InputImport(name="kubernetesService")
     private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
 
@@ -71,10 +53,6 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
         return this.kubernetesService == null ? Optional.empty() : Optional.ofNullable(this.kubernetesService);
     }
 
-    /**
-     * The type of the security offering.
-Expected value is 'DefenderForContainersAws'.
-     */
     @InputImport(name="offeringType", required=true)
     private final String offeringType;
 

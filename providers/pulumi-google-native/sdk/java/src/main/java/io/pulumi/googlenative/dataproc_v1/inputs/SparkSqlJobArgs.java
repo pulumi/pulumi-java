@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A Dataproc job for running Apache Spark SQL (https://spark.apache.org/sql/) queries.
- */
 public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SparkSqlJobArgs Empty = new SparkSqlJobArgs();
 
-    /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     */
     @InputImport(name="jarFileUris")
     private final @Nullable Input<List<String>> jarFileUris;
 
@@ -31,9 +25,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jarFileUris == null ? Input.empty() : this.jarFileUris;
     }
 
-    /**
-     * Optional. The runtime log config for job execution.
-     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<LoggingConfigArgs> loggingConfig;
 
@@ -41,9 +32,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
-    /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -51,9 +39,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The HCFS URI of the script that contains SQL queries.
-     */
     @InputImport(name="queryFileUri")
     private final @Nullable Input<String> queryFileUri;
 
@@ -61,9 +46,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryFileUri == null ? Input.empty() : this.queryFileUri;
     }
 
-    /**
-     * A list of queries.
-     */
     @InputImport(name="queryList")
     private final @Nullable Input<QueryListArgs> queryList;
 
@@ -71,9 +53,6 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryList == null ? Input.empty() : this.queryList;
     }
 
-    /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
-     */
     @InputImport(name="scriptVariables")
     private final @Nullable Input<Map<String,String>> scriptVariables;
 

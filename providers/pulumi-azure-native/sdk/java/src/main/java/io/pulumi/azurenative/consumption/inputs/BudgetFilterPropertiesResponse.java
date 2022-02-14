@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Dimensions or Tags to filter a budget by.
- */
 public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BudgetFilterPropertiesResponse Empty = new BudgetFilterPropertiesResponse();
 
-    /**
-     * Has comparison expression for a dimension
-     */
     @InputImport(name="dimensions")
     private final @Nullable BudgetComparisonExpressionResponse dimensions;
 
@@ -27,9 +21,6 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
     }
 
-    /**
-     * Has comparison expression for a tag
-     */
     @InputImport(name="tags")
     private final @Nullable BudgetComparisonExpressionResponse tags;
 

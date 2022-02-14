@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementPolicy {
-/**
- * The Get Storage Account ManagementPolicies operation response.
-API Version: 2021-02-01.
- *
- * The Get Storage Account ManagementPolicies operation response.
- */
     public static CompletableFuture<GetManagementPolicyResult> invokeAsync(GetManagementPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getManagementPolicy", TypeShape.of(GetManagementPolicyResult.class), args == null ? GetManagementPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

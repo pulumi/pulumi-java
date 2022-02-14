@@ -15,203 +15,51 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Describes an identity resource.
-API Version: 2018-11-30.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### IdentityCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var userAssignedIdentity = new AzureNative.ManagedIdentity.UserAssignedIdentity("userAssignedIdentity", new AzureNative.ManagedIdentity.UserAssignedIdentityArgs
-        {
-            Location = "eastus",
-            ResourceGroupName = "rgName",
-            ResourceName = "resourceName",
-            Tags = 
-            {
-                { "key1", "value1" },
-                { "key2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	managedidentity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managedidentity"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := managedidentity.NewUserAssignedIdentity(ctx, "userAssignedIdentity", &managedidentity.UserAssignedIdentityArgs{
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("rgName"),
-			ResourceName:      pulumi.String("resourceName"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-				"key2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const userAssignedIdentity = new azure_native.managedidentity.UserAssignedIdentity("userAssignedIdentity", {
-    location: "eastus",
-    resourceGroupName: "rgName",
-    resourceName: "resourceName",
-    tags: {
-        key1: "value1",
-        key2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-user_assigned_identity = azure_native.managedidentity.UserAssignedIdentity("userAssignedIdentity",
-    location="eastus",
-    resource_group_name="rgName",
-    resource_name="resourceName",
-    tags={
-        "key1": "value1",
-        "key2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:managedidentity:UserAssignedIdentity identityName /subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName 
-```
-
- */
 @ResourceType(type="azure-native:managedidentity:UserAssignedIdentity")
 public class UserAssignedIdentity extends io.pulumi.resources.CustomResource {
-    /**
-     * The id of the app associated with the identity. This is a random generated UUID by MSI.
-     */
     @OutputExport(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
-    /**
-     * @return The id of the app associated with the identity. This is a random generated UUID by MSI.
-     */
     public Output<String> getClientId() {
         return this.clientId;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The id of the service principal object associated with the created identity.
-     */
     @OutputExport(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
-    /**
-     * @return The id of the service principal object associated with the created identity.
-     */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The id of the tenant which the identity belongs to.
-     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
-    /**
-     * @return The id of the tenant which the identity belongs to.
-     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public UserAssignedIdentity(String name, UserAssignedIdentityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:managedidentity:UserAssignedIdentity", name, args == null ? UserAssignedIdentityArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -231,14 +79,6 @@ public class UserAssignedIdentity extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static UserAssignedIdentity get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserAssignedIdentity(name, id, options);
     }

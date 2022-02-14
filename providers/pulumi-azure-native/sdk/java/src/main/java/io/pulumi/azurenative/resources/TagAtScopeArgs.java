@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagAtScopeArgs Empty = new TagAtScopeArgs();
 
-    /**
-     * The set of tags.
-     */
     @InputImport(name="properties", required=true)
     private final Input<TagsArgs> properties;
 
@@ -27,9 +21,6 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * The resource scope.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

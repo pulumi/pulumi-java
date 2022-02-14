@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Identity that will be used to access key vault for encryption at rest
- */
 public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityForCmkArgs Empty = new IdentityForCmkArgs();
 
-    /**
-     * The ArmId of the user assigned identity that will be used to access the customer managed key vault
-     */
     @InputImport(name="userAssignedIdentity", required=true)
     private final Input<String> userAssignedIdentity;
 

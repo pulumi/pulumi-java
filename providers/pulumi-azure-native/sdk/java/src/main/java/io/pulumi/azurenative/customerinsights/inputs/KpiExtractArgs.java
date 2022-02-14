@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The KPI extract.
- */
 public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KpiExtractArgs Empty = new KpiExtractArgs();
 
-    /**
-     * The expression.
-     */
     @InputImport(name="expression", required=true)
     private final Input<String> expression;
 
@@ -26,9 +20,6 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
         return this.expression;
     }
 
-    /**
-     * KPI extract name.
-     */
     @InputImport(name="extractName", required=true)
     private final Input<String> extractName;
 

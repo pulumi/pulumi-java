@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Table view specification.
- */
 public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1ViewSpecResponse Empty = new GoogleCloudDatacatalogV1ViewSpecResponse();
 
-    /**
-     * The query that defines the table view.
-     */
     @InputImport(name="viewQuery", required=true)
     private final String viewQuery;
 

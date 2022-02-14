@@ -18,322 +18,105 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Definition of the schedule.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a schedule
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var schedule = new AzureNative.Automation.Schedule("schedule", new AzureNative.Automation.ScheduleArgs
-        {
-            AdvancedSchedule = ,
-            AutomationAccountName = "myAutomationAccount33",
-            Description = "my description of schedule goes here",
-            ExpiryTime = "2017-04-01T17:28:57.2494819Z",
-            Frequency = "Hour",
-            Interval = 1,
-            Name = "mySchedule",
-            ResourceGroupName = "rg",
-            ScheduleName = "mySchedule",
-            StartTime = "2017-03-27T17:28:57.2494819Z",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewSchedule(ctx, "schedule", &automation.ScheduleArgs{
-			AdvancedSchedule:      nil,
-			AutomationAccountName: pulumi.String("myAutomationAccount33"),
-			Description:           pulumi.String("my description of schedule goes here"),
-			ExpiryTime:            pulumi.String("2017-04-01T17:28:57.2494819Z"),
-			Frequency:             pulumi.String("Hour"),
-			Interval:              pulumi.Any(1),
-			Name:                  pulumi.String("mySchedule"),
-			ResourceGroupName:     pulumi.String("rg"),
-			ScheduleName:          pulumi.String("mySchedule"),
-			StartTime:             pulumi.String("2017-03-27T17:28:57.2494819Z"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const schedule = new azure_native.automation.Schedule("schedule", {
-    advancedSchedule: {},
-    automationAccountName: "myAutomationAccount33",
-    description: "my description of schedule goes here",
-    expiryTime: "2017-04-01T17:28:57.2494819Z",
-    frequency: "Hour",
-    interval: 1,
-    name: "mySchedule",
-    resourceGroupName: "rg",
-    scheduleName: "mySchedule",
-    startTime: "2017-03-27T17:28:57.2494819Z",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-schedule = azure_native.automation.Schedule("schedule",
-    advanced_schedule=azure_native.automation.AdvancedScheduleArgs(),
-    automation_account_name="myAutomationAccount33",
-    description="my description of schedule goes here",
-    expiry_time="2017-04-01T17:28:57.2494819Z",
-    frequency="Hour",
-    interval=1,
-    name="mySchedule",
-    resource_group_name="rg",
-    schedule_name="mySchedule",
-    start_time="2017-03-27T17:28:57.2494819Z")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:Schedule mySchedule /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/schedules/mySchedule 
-```
-
- */
 @ResourceType(type="azure-native:automation:Schedule")
 public class Schedule extends io.pulumi.resources.CustomResource {
-    /**
-     * Gets or sets the advanced schedule.
-     */
     @OutputExport(name="advancedSchedule", type=AdvancedScheduleResponse.class, parameters={})
     private Output</* @Nullable */ AdvancedScheduleResponse> advancedSchedule;
 
-    /**
-     * @return Gets or sets the advanced schedule.
-     */
     public Output</* @Nullable */ AdvancedScheduleResponse> getAdvancedSchedule() {
         return this.advancedSchedule;
     }
-    /**
-     * Gets or sets the creation time.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
-    /**
-     * @return Gets or sets the creation time.
-     */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * Gets or sets the description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Gets or sets the description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Gets or sets the end time of the schedule.
-     */
     @OutputExport(name="expiryTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryTime;
 
-    /**
-     * @return Gets or sets the end time of the schedule.
-     */
     public Output</* @Nullable */ String> getExpiryTime() {
         return this.expiryTime;
     }
-    /**
-     * Gets or sets the expiry time's offset in minutes.
-     */
     @OutputExport(name="expiryTimeOffsetMinutes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> expiryTimeOffsetMinutes;
 
-    /**
-     * @return Gets or sets the expiry time's offset in minutes.
-     */
     public Output</* @Nullable */ Double> getExpiryTimeOffsetMinutes() {
         return this.expiryTimeOffsetMinutes;
     }
-    /**
-     * Gets or sets the frequency of the schedule.
-     */
     @OutputExport(name="frequency", type=String.class, parameters={})
     private Output</* @Nullable */ String> frequency;
 
-    /**
-     * @return Gets or sets the frequency of the schedule.
-     */
     public Output</* @Nullable */ String> getFrequency() {
         return this.frequency;
     }
-    /**
-     * Gets or sets the interval of the schedule.
-     */
     @OutputExport(name="interval", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> interval;
 
-    /**
-     * @return Gets or sets the interval of the schedule.
-     */
     public Output</* @Nullable */ Object> getInterval() {
         return this.interval;
     }
-    /**
-     * Gets or sets a value indicating whether this schedule is enabled.
-     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
-    /**
-     * @return Gets or sets a value indicating whether this schedule is enabled.
-     */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
-    /**
-     * Gets or sets the last modified time.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
-    /**
-     * @return Gets or sets the last modified time.
-     */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Gets or sets the next run time of the schedule.
-     */
     @OutputExport(name="nextRun", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextRun;
 
-    /**
-     * @return Gets or sets the next run time of the schedule.
-     */
     public Output</* @Nullable */ String> getNextRun() {
         return this.nextRun;
     }
-    /**
-     * Gets or sets the next run time's offset in minutes.
-     */
     @OutputExport(name="nextRunOffsetMinutes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> nextRunOffsetMinutes;
 
-    /**
-     * @return Gets or sets the next run time's offset in minutes.
-     */
     public Output</* @Nullable */ Double> getNextRunOffsetMinutes() {
         return this.nextRunOffsetMinutes;
     }
-    /**
-     * Gets or sets the start time of the schedule.
-     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
-    /**
-     * @return Gets or sets the start time of the schedule.
-     */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
-    /**
-     * Gets the start time's offset in minutes.
-     */
     @OutputExport(name="startTimeOffsetMinutes", type=Double.class, parameters={})
     private Output<Double> startTimeOffsetMinutes;
 
-    /**
-     * @return Gets the start time's offset in minutes.
-     */
     public Output<Double> getStartTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
-    /**
-     * Gets or sets the time zone of the schedule.
-     */
     @OutputExport(name="timeZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZone;
 
-    /**
-     * @return Gets or sets the time zone of the schedule.
-     */
     public Output</* @Nullable */ String> getTimeZone() {
         return this.timeZone;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Schedule(String name, ScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -354,14 +137,6 @@ public class Schedule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Schedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Schedule(name, id, options);
     }

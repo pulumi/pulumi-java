@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMwareCbt container mapping input.
- */
 public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VMwareCbtContainerMappingInputArgs Empty = new VMwareCbtContainerMappingInputArgs();
 
-    /**
-     * The class type.
-Expected value is 'VMwareCbt'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -28,9 +21,6 @@ Expected value is 'VMwareCbt'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The target key vault ARM Id.
-     */
     @InputImport(name="keyVaultId", required=true)
     private final Input<String> keyVaultId;
 
@@ -38,9 +28,6 @@ Expected value is 'VMwareCbt'.
         return this.keyVaultId;
     }
 
-    /**
-     * The target key vault URL.
-     */
     @InputImport(name="keyVaultUri", required=true)
     private final Input<String> keyVaultUri;
 
@@ -48,9 +35,6 @@ Expected value is 'VMwareCbt'.
         return this.keyVaultUri;
     }
 
-    /**
-     * The secret name of the service bus connection string.
-     */
     @InputImport(name="serviceBusConnectionStringSecretName", required=true)
     private final Input<String> serviceBusConnectionStringSecretName;
 
@@ -58,9 +42,6 @@ Expected value is 'VMwareCbt'.
         return this.serviceBusConnectionStringSecretName;
     }
 
-    /**
-     * The storage account ARM Id.
-     */
     @InputImport(name="storageAccountId", required=true)
     private final Input<String> storageAccountId;
 
@@ -68,9 +49,6 @@ Expected value is 'VMwareCbt'.
         return this.storageAccountId;
     }
 
-    /**
-     * The secret name of the storage account.
-     */
     @InputImport(name="storageAccountSasSecretName", required=true)
     private final Input<String> storageAccountSasSecretName;
 
@@ -78,9 +56,6 @@ Expected value is 'VMwareCbt'.
         return this.storageAccountSasSecretName;
     }
 
-    /**
-     * The target location.
-     */
     @InputImport(name="targetLocation", required=true)
     private final Input<String> targetLocation;
 

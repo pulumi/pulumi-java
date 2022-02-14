@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties that define a BGP session.
- */
 public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BgpSessionResponse Empty = new BgpSessionResponse();
 
-    /**
-     * The maximum number of prefixes advertised over the IPv4 session.
-     */
     @InputImport(name="maxPrefixesAdvertisedV4")
     private final @Nullable Integer maxPrefixesAdvertisedV4;
 
@@ -28,9 +22,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxPrefixesAdvertisedV4 == null ? Optional.empty() : Optional.ofNullable(this.maxPrefixesAdvertisedV4);
     }
 
-    /**
-     * The maximum number of prefixes advertised over the IPv6 session.
-     */
     @InputImport(name="maxPrefixesAdvertisedV6")
     private final @Nullable Integer maxPrefixesAdvertisedV6;
 
@@ -38,9 +29,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxPrefixesAdvertisedV6 == null ? Optional.empty() : Optional.ofNullable(this.maxPrefixesAdvertisedV6);
     }
 
-    /**
-     * The MD5 authentication key of the session.
-     */
     @InputImport(name="md5AuthenticationKey")
     private final @Nullable String md5AuthenticationKey;
 
@@ -48,9 +36,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.md5AuthenticationKey == null ? Optional.empty() : Optional.ofNullable(this.md5AuthenticationKey);
     }
 
-    /**
-     * The IPv4 session address on Microsoft's end.
-     */
     @InputImport(name="microsoftSessionIPv4Address")
     private final @Nullable String microsoftSessionIPv4Address;
 
@@ -58,9 +43,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.microsoftSessionIPv4Address == null ? Optional.empty() : Optional.ofNullable(this.microsoftSessionIPv4Address);
     }
 
-    /**
-     * The IPv6 session address on Microsoft's end.
-     */
     @InputImport(name="microsoftSessionIPv6Address")
     private final @Nullable String microsoftSessionIPv6Address;
 
@@ -68,9 +50,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.microsoftSessionIPv6Address == null ? Optional.empty() : Optional.ofNullable(this.microsoftSessionIPv6Address);
     }
 
-    /**
-     * The IPv4 session address on peer's end.
-     */
     @InputImport(name="peerSessionIPv4Address")
     private final @Nullable String peerSessionIPv4Address;
 
@@ -78,9 +57,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.peerSessionIPv4Address == null ? Optional.empty() : Optional.ofNullable(this.peerSessionIPv4Address);
     }
 
-    /**
-     * The IPv6 session address on peer's end.
-     */
     @InputImport(name="peerSessionIPv6Address")
     private final @Nullable String peerSessionIPv6Address;
 
@@ -88,9 +64,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.peerSessionIPv6Address == null ? Optional.empty() : Optional.ofNullable(this.peerSessionIPv6Address);
     }
 
-    /**
-     * The IPv4 prefix that contains both ends' IPv4 addresses.
-     */
     @InputImport(name="sessionPrefixV4")
     private final @Nullable String sessionPrefixV4;
 
@@ -98,9 +71,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.sessionPrefixV4 == null ? Optional.empty() : Optional.ofNullable(this.sessionPrefixV4);
     }
 
-    /**
-     * The IPv6 prefix that contains both ends' IPv6 addresses.
-     */
     @InputImport(name="sessionPrefixV6")
     private final @Nullable String sessionPrefixV6;
 
@@ -108,9 +78,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.sessionPrefixV6 == null ? Optional.empty() : Optional.ofNullable(this.sessionPrefixV6);
     }
 
-    /**
-     * The state of the IPv4 session.
-     */
     @InputImport(name="sessionStateV4", required=true)
     private final String sessionStateV4;
 
@@ -118,9 +85,6 @@ public final class BgpSessionResponse extends io.pulumi.resources.InvokeArgs {
         return this.sessionStateV4;
     }
 
-    /**
-     * The state of the IPv6 session.
-     */
     @InputImport(name="sessionStateV6", required=true)
     private final String sessionStateV6;
 

@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoscaleScheduleResponse {
-/**
- * Days of the week for a schedule-based autoscale rule
- */
     private final @Nullable List<String> days;
-/**
- * Time and capacity for a schedule-based autoscale rule
- */
     private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
     @OutputCustomType.Constructor({"days","timeAndCapacity"})
@@ -30,15 +24,9 @@ public final class AutoscaleScheduleResponse {
         this.timeAndCapacity = timeAndCapacity;
     }
 
-/**
- * Days of the week for a schedule-based autoscale rule
- */
     public List<String> getDays() {
         return this.days == null ? List.of() : this.days;
     }
-/**
- * Time and capacity for a schedule-based autoscale rule
- */
     public Optional<AutoscaleTimeAndCapacityResponse> getTimeAndCapacity() {
         return Optional.ofNullable(this.timeAndCapacity);
     }

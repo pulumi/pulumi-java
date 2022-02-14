@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Message for the expected URL mappings.
- */
 public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlMapTestArgs Empty = new UrlMapTestArgs();
 
-    /**
-     * Description of this test case.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer's redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
-     */
     @InputImport(name="expectedOutputUrl")
     private final @Nullable Input<String> expectedOutputUrl;
 
@@ -40,9 +31,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.expectedOutputUrl == null ? Input.empty() : this.expectedOutputUrl;
     }
 
-    /**
-     * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be set when service is set.
-     */
     @InputImport(name="expectedRedirectResponseCode")
     private final @Nullable Input<Integer> expectedRedirectResponseCode;
 
@@ -50,9 +38,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.expectedRedirectResponseCode == null ? Input.empty() : this.expectedRedirectResponseCode;
     }
 
-    /**
-     * HTTP headers for this request. If headers contains a host header, then host must also match the header value.
-     */
     @InputImport(name="headers")
     private final @Nullable Input<List<UrlMapTestHeaderArgs>> headers;
 
@@ -60,9 +45,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
-    /**
-     * Host portion of the URL. If headers contains a host header, then host must also match the header value.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -70,9 +52,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * Path portion of the URL.
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -80,9 +59,6 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
-    /**
-     * Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
-     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

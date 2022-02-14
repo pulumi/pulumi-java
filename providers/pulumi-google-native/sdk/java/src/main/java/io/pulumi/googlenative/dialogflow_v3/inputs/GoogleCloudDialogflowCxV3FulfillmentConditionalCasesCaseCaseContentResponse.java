@@ -9,16 +9,10 @@ import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Resp
 import java.util.Objects;
 
 
-/**
- * The list of messages or conditional cases to activate for this case.
- */
 public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse Empty = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse();
 
-    /**
-     * Additional cases to be evaluated.
-     */
     @InputImport(name="additionalCases", required=true)
     private final GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
         return this.additionalCases;
     }
 
-    /**
-     * Returned message.
-     */
     @InputImport(name="message", required=true)
     private final GoogleCloudDialogflowCxV3ResponseMessageResponse message;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizedCertificate {
-/**
- * Gets the specified SSL certificate.
- */
     public static CompletableFuture<GetAuthorizedCertificateResult> invokeAsync(GetAuthorizedCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1beta:getAuthorizedCertificate", TypeShape.of(GetAuthorizedCertificateResult.class), args == null ? GetAuthorizedCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

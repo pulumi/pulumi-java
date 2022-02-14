@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListDeviceRegistrationKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListDeviceRegistrationKeyArgs Empty = new ListDeviceRegistrationKeyArgs();
 
-    /**
-     * The name of the device resource.
-     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -25,9 +19,6 @@ public final class ListDeviceRegistrationKeyArgs extends io.pulumi.resources.Inv
         return this.deviceName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,18 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AvroFormatResponse {
-/**
- * Deserializer. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object deserializer;
-/**
- * Serializer. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object serializer;
-/**
- * Type of dataset storage format.
-Expected value is 'AvroFormat'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"deserializer","serializer","type"})
@@ -36,22 +26,12 @@ Expected value is 'AvroFormat'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Deserializer. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getDeserializer() {
         return Optional.ofNullable(this.deserializer);
     }
-/**
- * Serializer. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getSerializer() {
         return Optional.ofNullable(this.serializer);
     }
-/**
- * Type of dataset storage format.
-Expected value is 'AvroFormat'.
- */
     public String getType() {
         return this.type;
     }

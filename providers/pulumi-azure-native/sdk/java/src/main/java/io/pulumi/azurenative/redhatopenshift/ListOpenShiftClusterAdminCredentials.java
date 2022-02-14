@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOpenShiftClusterAdminCredentials {
-/**
- * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
-API Version: 2021-09-01-preview.
- *
- * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster's admin kubeconfig.
- */
     public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> invokeAsync(ListOpenShiftClusterAdminCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterAdminCredentials", TypeShape.of(ListOpenShiftClusterAdminCredentialsResult.class), args == null ? ListOpenShiftClusterAdminCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

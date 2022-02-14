@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpointPolicy {
-/**
- * Gets details of a single EndpointPolicy.
- */
     public static CompletableFuture<GetEndpointPolicyResult> invokeAsync(GetEndpointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args == null ? GetEndpointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

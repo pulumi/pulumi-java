@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Version contains structured information about the version of a package.
- */
 public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VersionResponse Empty = new VersionResponse();
 
-    /**
-     * Used to correct mistakes in the version numbering scheme.
-     */
     @InputImport(name="epoch", required=true)
     private final Integer epoch;
 
@@ -27,9 +21,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.epoch;
     }
 
-    /**
-     * Human readable version string. This string is of the form :- and is only set when kind is NORMAL.
-     */
     @InputImport(name="fullName", required=true)
     private final String fullName;
 
@@ -37,9 +28,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.fullName;
     }
 
-    /**
-     * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
-     */
     @InputImport(name="inclusive", required=true)
     private final Boolean inclusive;
 
@@ -47,9 +35,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.inclusive;
     }
 
-    /**
-     * Distinguishes between sentinel MIN/MAX versions and normal versions.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -57,9 +42,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind;
     }
 
-    /**
-     * Required only when version kind is NORMAL. The main part of the version name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -67,9 +49,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The iteration of the package build from the above version.
-     */
     @InputImport(name="revision", required=true)
     private final String revision;
 

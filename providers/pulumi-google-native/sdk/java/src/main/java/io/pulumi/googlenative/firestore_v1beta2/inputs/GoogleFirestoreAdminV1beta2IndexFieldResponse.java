@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A field in an index. The field_path describes which field is indexed, the value_mode describes how the field value is indexed.
- */
 public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleFirestoreAdminV1beta2IndexFieldResponse Empty = new GoogleFirestoreAdminV1beta2IndexFieldResponse();
 
-    /**
-     * Indicates that this field supports operations on `array_value`s.
-     */
     @InputImport(name="arrayConfig", required=true)
     private final String arrayConfig;
 
@@ -25,9 +19,6 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
         return this.arrayConfig;
     }
 
-    /**
-     * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
-     */
     @InputImport(name="fieldPath", required=true)
     private final String fieldPath;
 
@@ -35,9 +26,6 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
         return this.fieldPath;
     }
 
-    /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
-     */
     @InputImport(name="order", required=true)
     private final String order;
 

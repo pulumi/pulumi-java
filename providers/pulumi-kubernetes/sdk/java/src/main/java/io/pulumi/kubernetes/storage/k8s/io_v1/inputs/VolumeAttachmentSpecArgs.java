@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * VolumeAttachmentSpec is the specification of a VolumeAttachment request.
- */
 public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeAttachmentSpecArgs Empty = new VolumeAttachmentSpecArgs();
 
-    /**
-     * Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().
-     */
     @InputImport(name="attacher", required=true)
     private final Input<String> attacher;
 
@@ -27,9 +21,6 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
         return this.attacher;
     }
 
-    /**
-     * The node that the volume should be attached to.
-     */
     @InputImport(name="nodeName", required=true)
     private final Input<String> nodeName;
 
@@ -37,9 +28,6 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
         return this.nodeName;
     }
 
-    /**
-     * Source represents the volume that should be attached.
-     */
     @InputImport(name="source", required=true)
     private final Input<VolumeAttachmentSourceArgs> source;
 

@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * `Backend` defines the backend configuration for a service.
- */
 public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendResponse Empty = new BackendResponse();
 
-    /**
-     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
-     */
     @InputImport(name="rules", required=true)
     private final List<BackendRuleResponse> rules;
 

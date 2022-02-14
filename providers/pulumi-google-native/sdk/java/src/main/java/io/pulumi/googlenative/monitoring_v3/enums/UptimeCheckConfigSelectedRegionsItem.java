@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum UptimeCheckConfigSelectedRegionsItem {
-/**
- * Default value if no region is specified. Will result in Uptime checks running from all regions.
- */
         RegionUnspecified("REGION_UNSPECIFIED"),
-/**
- * Allows checks to run from locations within the United States of America.
- */
         Usa("USA"),
-/**
- * Allows checks to run from locations within the continent of Europe.
- */
         Europe("EUROPE"),
-/**
- * Allows checks to run from locations within the continent of South America.
- */
         SouthAmerica("SOUTH_AMERICA"),
-/**
- * Allows checks to run from locations within the Asia Pacific area (ex: Singapore).
- */
         AsiaPacific("ASIA_PACIFIC");
 
         private final String value;

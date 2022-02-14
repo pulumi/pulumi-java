@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A patient identifier and associated type.
- */
 public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PatientIdArgs Empty = new PatientIdArgs();
 
-    /**
-     * ID type. For example, MRN or NHS.
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -27,9 +21,6 @@ public final class PatientIdArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The patient's unique identifier.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

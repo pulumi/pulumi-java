@@ -8,70 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The EDIFACT frame setting characterSet.
- */
     @EnumType
     public enum EdifactCharacterSet {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         UNOB("UNOB"),
-/**
- * 
- */
         UNOA("UNOA"),
-/**
- * 
- */
         UNOC("UNOC"),
-/**
- * 
- */
         UNOD("UNOD"),
-/**
- * 
- */
         UNOE("UNOE"),
-/**
- * 
- */
         UNOF("UNOF"),
-/**
- * 
- */
         UNOG("UNOG"),
-/**
- * 
- */
         UNOH("UNOH"),
-/**
- * 
- */
         UNOI("UNOI"),
-/**
- * 
- */
         UNOJ("UNOJ"),
-/**
- * 
- */
         UNOK("UNOK"),
-/**
- * 
- */
         UNOX("UNOX"),
-/**
- * 
- */
         UNOY("UNOY"),
-/**
- * 
- */
         KECA("KECA");
 
         private final String value;

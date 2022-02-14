@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
- */
 public final class ManagementPolicyRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementPolicyRuleResponse Empty = new ManagementPolicyRuleResponse();
 
-    /**
-     * An object that defines the Lifecycle rule.
-     */
     @InputImport(name="definition", required=true)
     private final ManagementPolicyDefinitionResponse definition;
 
@@ -29,9 +23,6 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
         return this.definition;
     }
 
-    /**
-     * Rule is enabled if set to true.
-     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -39,9 +30,6 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    /**
-     * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -49,9 +37,6 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
-    /**
-     * The valid value is Lifecycle
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

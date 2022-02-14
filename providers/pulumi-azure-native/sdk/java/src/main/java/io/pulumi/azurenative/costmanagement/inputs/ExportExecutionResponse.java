@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An export execution.
- */
 public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExportExecutionResponse Empty = new ExportExecutionResponse();
 
-    /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     */
     @InputImport(name="eTag")
     private final @Nullable String eTag;
 
@@ -29,9 +23,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
     }
 
-    /**
-     * The details of any error.
-     */
     @InputImport(name="error")
     private final @Nullable ErrorDetailsResponse error;
 
@@ -39,9 +30,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
-    /**
-     * The type of the export execution.
-     */
     @InputImport(name="executionType")
     private final @Nullable String executionType;
 
@@ -49,9 +37,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.executionType == null ? Optional.empty() : Optional.ofNullable(this.executionType);
     }
 
-    /**
-     * The name of the exported file.
-     */
     @InputImport(name="fileName")
     private final @Nullable String fileName;
 
@@ -59,9 +44,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
     }
 
-    /**
-     * Resource Id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -69,9 +51,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.id;
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -79,9 +58,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
-    /**
-     * The time when the export execution finished.
-     */
     @InputImport(name="processingEndTime")
     private final @Nullable String processingEndTime;
 
@@ -89,9 +65,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.processingEndTime == null ? Optional.empty() : Optional.ofNullable(this.processingEndTime);
     }
 
-    /**
-     * The time when export was picked up to be executed.
-     */
     @InputImport(name="processingStartTime")
     private final @Nullable String processingStartTime;
 
@@ -99,9 +72,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.processingStartTime == null ? Optional.empty() : Optional.ofNullable(this.processingStartTime);
     }
 
-    /**
-     * The export settings that were in effect for this execution.
-     */
     @InputImport(name="runSettings")
     private final @Nullable CommonExportPropertiesResponse runSettings;
 
@@ -109,9 +79,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.runSettings == null ? Optional.empty() : Optional.ofNullable(this.runSettings);
     }
 
-    /**
-     * The last known status of the export execution.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -119,9 +86,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
-     */
     @InputImport(name="submittedBy")
     private final @Nullable String submittedBy;
 
@@ -129,9 +93,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.submittedBy == null ? Optional.empty() : Optional.ofNullable(this.submittedBy);
     }
 
-    /**
-     * The time when export was queued to be executed.
-     */
     @InputImport(name="submittedTime")
     private final @Nullable String submittedTime;
 
@@ -139,9 +100,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
         return this.submittedTime == null ? Optional.empty() : Optional.ofNullable(this.submittedTime);
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

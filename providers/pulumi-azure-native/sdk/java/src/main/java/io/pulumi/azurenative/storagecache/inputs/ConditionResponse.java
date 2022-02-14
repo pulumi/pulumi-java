@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Outstanding conditions that will need to be resolved.
- */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConditionResponse Empty = new ConditionResponse();
 
-    /**
-     * The issue requiring attention.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -25,9 +19,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
-    /**
-     * The time when the condition was raised.
-     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 

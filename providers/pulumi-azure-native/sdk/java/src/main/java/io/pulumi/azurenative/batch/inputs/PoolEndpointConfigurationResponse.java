@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class PoolEndpointConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PoolEndpointConfigurationResponse Empty = new PoolEndpointConfigurationResponse();
 
-    /**
-     * The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
-     */
     @InputImport(name="inboundNatPools", required=true)
     private final List<InboundNatPoolResponse> inboundNatPools;
 

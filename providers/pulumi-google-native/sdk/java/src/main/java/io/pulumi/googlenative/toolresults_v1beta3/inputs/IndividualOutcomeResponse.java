@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Step Id and outcome of each individual step that was run as a group with other steps with the same configuration.
- */
 public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IndividualOutcomeResponse Empty = new IndividualOutcomeResponse();
 
-    /**
-     * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     */
     @InputImport(name="multistepNumber", required=true)
     private final Integer multistepNumber;
 
@@ -27,9 +21,6 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
         return this.multistepNumber;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="outcomeSummary", required=true)
     private final String outcomeSummary;
 
@@ -37,9 +28,6 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
         return this.outcomeSummary;
     }
 
-    /**
-     * How long it took for this step to run.
-     */
     @InputImport(name="runDuration", required=true)
     private final DurationResponse runDuration;
 
@@ -47,9 +35,6 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
         return this.runDuration;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="stepId", required=true)
     private final String stepId;
 

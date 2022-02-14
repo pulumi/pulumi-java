@@ -9,29 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccountPropertiesResponseSystemData {
-/**
- * The timestamp of resource creation (UTC).
- */
     private final String createdAt;
-/**
- * The identity that created the resource.
- */
     private final String createdBy;
-/**
- * The type of identity that created the resource.
- */
     private final String createdByType;
-/**
- * The timestamp of the last modification the resource (UTC).
- */
     private final String lastModifiedAt;
-/**
- * The identity that last modified the resource.
- */
     private final String lastModifiedBy;
-/**
- * The type of identity that last modified the resource.
- */
     private final String lastModifiedByType;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
@@ -50,39 +32,21 @@ public final class AccountPropertiesResponseSystemData {
         this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
     }
 
-/**
- * The timestamp of resource creation (UTC).
- */
     public String getCreatedAt() {
         return this.createdAt;
     }
-/**
- * The identity that created the resource.
- */
     public String getCreatedBy() {
         return this.createdBy;
     }
-/**
- * The type of identity that created the resource.
- */
     public String getCreatedByType() {
         return this.createdByType;
     }
-/**
- * The timestamp of the last modification the resource (UTC).
- */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-/**
- * The identity that last modified the resource.
- */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-/**
- * The type of identity that last modified the resource.
- */
     public String getLastModifiedByType() {
         return this.lastModifiedByType;
     }

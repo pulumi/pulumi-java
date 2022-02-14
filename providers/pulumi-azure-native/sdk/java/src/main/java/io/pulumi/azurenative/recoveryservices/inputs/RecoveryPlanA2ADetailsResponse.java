@@ -10,17 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Recovery plan A2A specific details.
- */
 public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanA2ADetailsResponse Empty = new RecoveryPlanA2ADetailsResponse();
 
-    /**
-     * Gets the Instance type.
-Expected value is 'A2A'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -28,9 +21,6 @@ Expected value is 'A2A'.
         return this.instanceType;
     }
 
-    /**
-     * The primary zone.
-     */
     @InputImport(name="primaryZone")
     private final @Nullable String primaryZone;
 
@@ -38,9 +28,6 @@ Expected value is 'A2A'.
         return this.primaryZone == null ? Optional.empty() : Optional.ofNullable(this.primaryZone);
     }
 
-    /**
-     * The recovery zone.
-     */
     @InputImport(name="recoveryZone")
     private final @Nullable String recoveryZone;
 

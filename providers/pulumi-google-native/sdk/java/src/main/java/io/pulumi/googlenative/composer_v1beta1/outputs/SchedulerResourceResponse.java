@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchedulerResourceResponse {
-/**
- * Optional. The number of schedulers.
- */
     private final Integer count;
-/**
- * Optional. CPU request and limit for a single Airflow scheduler replica.
- */
     private final Double cpu;
-/**
- * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
- */
     private final Double memoryGb;
-/**
- * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
- */
     private final Double storageGb;
 
     @OutputCustomType.Constructor({"count","cpu","memoryGb","storageGb"})
@@ -39,27 +27,15 @@ public final class SchedulerResourceResponse {
         this.storageGb = Objects.requireNonNull(storageGb);
     }
 
-/**
- * Optional. The number of schedulers.
- */
     public Integer getCount() {
         return this.count;
     }
-/**
- * Optional. CPU request and limit for a single Airflow scheduler replica.
- */
     public Double getCpu() {
         return this.cpu;
     }
-/**
- * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
- */
     public Double getMemoryGb() {
         return this.memoryGb;
     }
-/**
- * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
- */
     public Double getStorageGb() {
         return this.storageGb;
     }

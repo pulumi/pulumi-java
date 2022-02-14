@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The mode to create a new server.
- */
     @EnumType
     public enum CreateMode {
-/**
- * 
- */
         Default("Default"),
-/**
- * 
- */
         PointInTimeRestore("PointInTimeRestore"),
-/**
- * 
- */
         GeoRestore("GeoRestore"),
-/**
- * 
- */
         Replica("Replica");
 
         private final String value;

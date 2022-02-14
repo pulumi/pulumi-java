@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of a load balancer.
- */
 public final class LoadBalancerSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerSkuResponse Empty = new LoadBalancerSkuResponse();
 
-    /**
-     * Name of a load balancer SKU.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class LoadBalancerSkuResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Tier of a load balancer SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

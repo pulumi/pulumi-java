@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JitNetworkAccessPolicyVirtualMachineResponse {
-/**
- * Resource ID of the virtual machine that is linked to this policy
- */
     private final String id;
-/**
- * Port configurations for the virtual machine
- */
     private final List<JitNetworkAccessPortRuleResponse> ports;
-/**
- * Public IP address of the Azure Firewall that is linked to this policy, if applicable
- */
     private final @Nullable String publicIpAddress;
 
     @OutputCustomType.Constructor({"id","ports","publicIpAddress"})
@@ -36,21 +27,12 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
         this.publicIpAddress = publicIpAddress;
     }
 
-/**
- * Resource ID of the virtual machine that is linked to this policy
- */
     public String getId() {
         return this.id;
     }
-/**
- * Port configurations for the virtual machine
- */
     public List<JitNetworkAccessPortRuleResponse> getPorts() {
         return this.ports;
     }
-/**
- * Public IP address of the Azure Firewall that is linked to this policy, if applicable
- */
     public Optional<String> getPublicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceArgs Empty = new GetResourceArgs();
 
-    /**
-     * The parent resource identity.
-     */
     @InputImport(name="parentResourcePath", required=true)
     private final String parentResourcePath;
 
@@ -25,9 +19,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.parentResourcePath;
     }
 
-    /**
-     * The name of the resource group containing the resource to get. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource to get.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -45,9 +33,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceName;
     }
 
-    /**
-     * The namespace of the resource provider.
-     */
     @InputImport(name="resourceProviderNamespace", required=true)
     private final String resourceProviderNamespace;
 
@@ -55,9 +40,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceProviderNamespace;
     }
 
-    /**
-     * The resource type of the resource.
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

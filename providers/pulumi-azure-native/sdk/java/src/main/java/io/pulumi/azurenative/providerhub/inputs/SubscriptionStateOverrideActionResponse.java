@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SubscriptionStateOverrideActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubscriptionStateOverrideActionResponse Empty = new SubscriptionStateOverrideActionResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -25,9 +19,6 @@ public final class SubscriptionStateOverrideActionResponse extends io.pulumi.res
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="state", required=true)
     private final String state;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityPolicy {
-/**
- * SecurityPolicy association for AzureFrontDoor profile
-API Version: 2020-09-01.
- *
- * SecurityPolicy association for AzureFrontDoor profile
- */
     public static CompletableFuture<GetSecurityPolicyResult> invokeAsync(GetSecurityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args == null ? GetSecurityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

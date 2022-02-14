@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
-/**
- * Total number of values in this bucket.
- */
     private final String bucketSize;
-/**
- * Total number of distinct values in this bucket.
- */
     private final String bucketValueCount;
-/**
- * Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
- */
     private final List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
-/**
- * Lower bound on the value frequency of the values in this bucket.
- */
     private final String valueFrequencyLowerBound;
-/**
- * Upper bound on the value frequency of the values in this bucket.
- */
     private final String valueFrequencyUpperBound;
 
     @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","valueFrequencyLowerBound","valueFrequencyUpperBound"})
@@ -46,33 +31,18 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
         this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
     }
 
-/**
- * Total number of values in this bucket.
- */
     public String getBucketSize() {
         return this.bucketSize;
     }
-/**
- * Total number of distinct values in this bucket.
- */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
-/**
- * Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
- */
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> getBucketValues() {
         return this.bucketValues;
     }
-/**
- * Lower bound on the value frequency of the values in this bucket.
- */
     public String getValueFrequencyLowerBound() {
         return this.valueFrequencyLowerBound;
     }
-/**
- * Upper bound on the value frequency of the values in this bucket.
- */
     public String getValueFrequencyUpperBound() {
         return this.valueFrequencyUpperBound;
     }

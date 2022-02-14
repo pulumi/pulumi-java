@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A map to describe the settings of an action.
- */
 public final class KeyValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyValuePairArgs Empty = new KeyValuePairArgs();
 
-    /**
-     * The name of the setting for the action.
-     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -26,9 +20,6 @@ public final class KeyValuePairArgs extends io.pulumi.resources.ResourceArgs {
         return this.key;
     }
 
-    /**
-     * The value of the setting for the action.
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

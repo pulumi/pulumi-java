@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Encryption details for the fabric.
- */
 public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionDetailsResponse Empty = new EncryptionDetailsResponse();
 
-    /**
-     * The key encryption key certificate expiry date.
-     */
     @InputImport(name="kekCertExpiryDate")
     private final @Nullable String kekCertExpiryDate;
 
@@ -27,9 +21,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.kekCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.kekCertExpiryDate);
     }
 
-    /**
-     * The key encryption key certificate thumbprint.
-     */
     @InputImport(name="kekCertThumbprint")
     private final @Nullable String kekCertThumbprint;
 
@@ -37,9 +28,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.kekCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.kekCertThumbprint);
     }
 
-    /**
-     * The key encryption key state for the Vmm.
-     */
     @InputImport(name="kekState")
     private final @Nullable String kekState;
 

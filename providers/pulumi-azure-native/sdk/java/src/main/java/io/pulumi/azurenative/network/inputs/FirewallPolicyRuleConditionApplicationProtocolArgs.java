@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the application rule protocol.
- */
 public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyRuleConditionApplicationProtocolArgs Empty = new FirewallPolicyRuleConditionApplicationProtocolArgs();
 
-    /**
-     * Port number for the protocol, cannot be greater than 64000.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -30,9 +24,6 @@ public final class FirewallPolicyRuleConditionApplicationProtocolArgs extends io
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * Protocol type.
-     */
     @InputImport(name="protocolType")
     private final @Nullable Input<Either<String,FirewallPolicyRuleConditionApplicationProtocolType>> protocolType;
 

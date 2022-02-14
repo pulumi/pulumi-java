@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Resource properties.
- */
     private final PrivateEndpointConnectionPropertiesResponse properties;
-/**
- * The system meta data relating to this resource.
- */
     private final SystemDataResponse systemData;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
@@ -46,33 +31,18 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource properties.
- */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * The system meta data relating to this resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

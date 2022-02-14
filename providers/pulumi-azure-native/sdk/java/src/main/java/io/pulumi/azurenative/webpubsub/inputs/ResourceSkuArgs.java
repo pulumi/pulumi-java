@@ -13,20 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The billing information of the resource.
- */
 public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSkuArgs Empty = new ResourceSkuArgs();
 
-    /**
-     * Optional, integer. The unit count of the resource. 1 by default.
-
-If present, following values are allowed:
-    Free: 1
-    Standard: 1,2,5,10,20,50,100
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -34,11 +24,6 @@ If present, following values are allowed:
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * The name of the SKU. Required.
-
-Allowed values: Standard_S1, Free_F1
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -46,11 +31,6 @@ Allowed values: Standard_S1, Free_F1
         return this.name;
     }
 
-    /**
-     * Optional tier of this particular SKU. 'Standard' or 'Free'. 
-
-`Basic` is deprecated, use `Standard` instead.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,WebPubSubSkuTier>> tier;
 

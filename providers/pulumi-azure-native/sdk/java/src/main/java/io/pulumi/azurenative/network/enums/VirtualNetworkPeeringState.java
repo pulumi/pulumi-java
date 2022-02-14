@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The status of the virtual network peering.
- */
     @EnumType
     public enum VirtualNetworkPeeringState {
-/**
- * 
- */
         Initiated("Initiated"),
-/**
- * 
- */
         Connected("Connected"),
-/**
- * 
- */
         Disconnected("Disconnected");
 
         private final String value;

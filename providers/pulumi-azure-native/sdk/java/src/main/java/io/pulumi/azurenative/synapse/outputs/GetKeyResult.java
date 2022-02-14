@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetKeyResult {
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * Used to activate the workspace after a customer managed key is provided.
- */
     private final @Nullable Boolean isActiveCMK;
-/**
- * The Key Vault Url of the workspace key.
- */
     private final @Nullable String keyVaultUrl;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","isActiveCMK","keyVaultUrl","name","type"})
@@ -47,33 +32,18 @@ public final class GetKeyResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Used to activate the workspace after a customer managed key is provided.
- */
     public Optional<Boolean> getIsActiveCMK() {
         return Optional.ofNullable(this.isActiveCMK);
     }
-/**
- * The Key Vault Url of the workspace key.
- */
     public Optional<String> getKeyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

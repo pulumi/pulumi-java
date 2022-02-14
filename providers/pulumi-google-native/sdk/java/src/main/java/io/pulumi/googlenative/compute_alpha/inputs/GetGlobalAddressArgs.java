@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetGlobalAddressArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalAddressArgs Empty = new GetGlobalAddressArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="address", required=true)
     private final String address;
 
@@ -27,9 +21,6 @@ public final class GetGlobalAddressArgs extends io.pulumi.resources.InvokeArgs {
         return this.address;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

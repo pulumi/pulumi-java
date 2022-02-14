@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SKU name
- */
     @EnumType
     public enum AzureSkuName {
-/**
- * 
- */
         S1("S1");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Class to specify properties of default content key for each encryption scheme
- */
 public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultKeyResponse Empty = new DefaultKeyResponse();
 
-    /**
-     * Label can be used to specify Content Key when creating a Streaming Locator
-     */
     @InputImport(name="label")
     private final @Nullable String label;
 
@@ -27,9 +21,6 @@ public final class DefaultKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
-    /**
-     * Policy used by Default Key
-     */
     @InputImport(name="policyName")
     private final @Nullable String policyName;
 

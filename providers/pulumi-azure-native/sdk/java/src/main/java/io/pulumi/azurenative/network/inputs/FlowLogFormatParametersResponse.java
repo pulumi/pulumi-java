@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters that define the flow log format.
- */
 public final class FlowLogFormatParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowLogFormatParametersResponse Empty = new FlowLogFormatParametersResponse();
 
-    /**
-     * The file type of flow log.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,9 +22,6 @@ public final class FlowLogFormatParametersResponse extends io.pulumi.resources.I
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The version (revision) of the flow log.
-     */
     @InputImport(name="version")
     private final @Nullable Integer version;
 

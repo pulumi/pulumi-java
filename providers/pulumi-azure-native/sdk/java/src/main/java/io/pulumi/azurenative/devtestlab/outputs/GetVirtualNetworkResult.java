@@ -16,57 +16,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualNetworkResult {
-/**
- * The allowed subnets of the virtual network.
- */
     private final @Nullable List<SubnetResponse> allowedSubnets;
-/**
- * The creation date of the virtual network.
- */
     private final String createdDate;
-/**
- * The description of the virtual network.
- */
     private final @Nullable String description;
-/**
- * The Microsoft.Network resource identifier of the virtual network.
- */
     private final @Nullable String externalProviderResourceId;
-/**
- * The external subnet properties.
- */
     private final List<ExternalSubnetResponse> externalSubnets;
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The provisioning status of the resource.
- */
     private final String provisioningState;
-/**
- * The subnet overrides of the virtual network.
- */
     private final @Nullable List<SubnetOverrideResponse> subnetOverrides;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     private final String uniqueIdentifier;
 
     @OutputCustomType.Constructor({"allowedSubnets","createdDate","description","externalProviderResourceId","externalSubnets","id","location","name","provisioningState","subnetOverrides","tags","type","uniqueIdentifier"})
@@ -99,81 +60,42 @@ public final class GetVirtualNetworkResult {
         this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
     }
 
-/**
- * The allowed subnets of the virtual network.
- */
     public List<SubnetResponse> getAllowedSubnets() {
         return this.allowedSubnets == null ? List.of() : this.allowedSubnets;
     }
-/**
- * The creation date of the virtual network.
- */
     public String getCreatedDate() {
         return this.createdDate;
     }
-/**
- * The description of the virtual network.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The Microsoft.Network resource identifier of the virtual network.
- */
     public Optional<String> getExternalProviderResourceId() {
         return Optional.ofNullable(this.externalProviderResourceId);
     }
-/**
- * The external subnet properties.
- */
     public List<ExternalSubnetResponse> getExternalSubnets() {
         return this.externalSubnets;
     }
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning status of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The subnet overrides of the virtual network.
- */
     public List<SubnetOverrideResponse> getSubnetOverrides() {
         return this.subnetOverrides == null ? List.of() : this.subnetOverrides;
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }

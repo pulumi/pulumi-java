@@ -8,58 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
- */
     @EnumType
     public enum AdvancedFilterOperatorType {
-/**
- * 
- */
         NumberIn("NumberIn"),
-/**
- * 
- */
         NumberNotIn("NumberNotIn"),
-/**
- * 
- */
         NumberLessThan("NumberLessThan"),
-/**
- * 
- */
         NumberGreaterThan("NumberGreaterThan"),
-/**
- * 
- */
         NumberLessThanOrEquals("NumberLessThanOrEquals"),
-/**
- * 
- */
         NumberGreaterThanOrEquals("NumberGreaterThanOrEquals"),
-/**
- * 
- */
         BoolEquals("BoolEquals"),
-/**
- * 
- */
         StringIn("StringIn"),
-/**
- * 
- */
         StringNotIn("StringNotIn"),
-/**
- * 
- */
         StringBeginsWith("StringBeginsWith"),
-/**
- * 
- */
         StringEndsWith("StringEndsWith"),
-/**
- * 
- */
         StringContains("StringContains");
 
         private final String value;

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserAssignedPropertiesResponse {
-/**
- * Arm resource id for user assigned identity to be used to fetch MSI token.
- */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"resourceId"})
@@ -21,9 +18,6 @@ public final class UserAssignedPropertiesResponse {
         this.resourceId = resourceId;
     }
 
-/**
- * Arm resource id for user assigned identity to be used to fetch MSI token.
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

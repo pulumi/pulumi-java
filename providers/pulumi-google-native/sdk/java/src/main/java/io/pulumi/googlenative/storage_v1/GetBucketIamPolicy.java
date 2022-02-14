@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucketIamPolicy {
-/**
- * Returns an IAM policy for the specified bucket.
- */
     public static CompletableFuture<GetBucketIamPolicyResult> invokeAsync(GetBucketIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketIamPolicy", TypeShape.of(GetBucketIamPolicyResult.class), args == null ? GetBucketIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

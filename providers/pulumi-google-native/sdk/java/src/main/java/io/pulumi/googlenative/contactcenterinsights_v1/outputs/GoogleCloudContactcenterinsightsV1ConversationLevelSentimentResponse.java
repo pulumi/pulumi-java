@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse {
-/**
- * The channel of the audio that the data applies to.
- */
     private final Integer channelTag;
-/**
- * Data specifying sentiment.
- */
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
     @OutputCustomType.Constructor({"channelTag","sentimentData"})
@@ -27,15 +21,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
         this.sentimentData = Objects.requireNonNull(sentimentData);
     }
 
-/**
- * The channel of the audio that the data applies to.
- */
     public Integer getChannelTag() {
         return this.channelTag;
     }
-/**
- * Data specifying sentiment.
- */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
         return this.sentimentData;
     }

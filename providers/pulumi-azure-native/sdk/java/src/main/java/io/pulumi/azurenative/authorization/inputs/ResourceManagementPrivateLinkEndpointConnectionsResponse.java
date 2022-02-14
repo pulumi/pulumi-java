@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceManagementPrivateLinkEndpointConnectionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceManagementPrivateLinkEndpointConnectionsResponse Empty = new ResourceManagementPrivateLinkEndpointConnectionsResponse();
 
-    /**
-     * The private endpoint connections.
-     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable List<String> privateEndpointConnections;
 

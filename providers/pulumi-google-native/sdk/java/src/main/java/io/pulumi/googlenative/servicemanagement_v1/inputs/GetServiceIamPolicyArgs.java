@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetServiceIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceIamPolicyArgs Empty = new GetServiceIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="serviceId", required=true)
     private final String serviceId;
 

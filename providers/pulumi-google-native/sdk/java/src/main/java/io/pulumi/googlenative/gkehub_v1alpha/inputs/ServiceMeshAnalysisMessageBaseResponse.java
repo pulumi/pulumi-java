@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * AnalysisMessageBase describes some common information that is needed for all messages.
- */
 public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceMeshAnalysisMessageBaseResponse Empty = new ServiceMeshAnalysisMessageBaseResponse();
 
-    /**
-     * A url pointing to the Service Mesh or Istio documentation for this specific error type.
-     */
     @InputImport(name="documentationUrl", required=true)
     private final String documentationUrl;
 
@@ -26,9 +20,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
         return this.documentationUrl;
     }
 
-    /**
-     * Represents how severe a message is.
-     */
     @InputImport(name="level", required=true)
     private final String level;
 
@@ -36,9 +27,6 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends io.pulumi.reso
         return this.level;
     }
 
-    /**
-     * Represents the specific type of a message.
-     */
     @InputImport(name="type", required=true)
     private final ServiceMeshTypeResponse type;
 

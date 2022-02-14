@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="configId", required=true)
     private final String configId;
 
@@ -27,9 +21,6 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.configId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="gameServerDeploymentId", required=true)
     private final String gameServerDeploymentId;
 
@@ -37,9 +28,6 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.gameServerDeploymentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

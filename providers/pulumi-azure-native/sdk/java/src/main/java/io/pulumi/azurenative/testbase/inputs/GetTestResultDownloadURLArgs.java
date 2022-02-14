@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTestResultDownloadURLArgs Empty = new GetTestResultDownloadURLArgs();
 
-    /**
-     * The resource name of the Test Base Package.
-     */
     @InputImport(name="packageName", required=true)
     private final String packageName;
 
@@ -25,9 +19,6 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
         return this.packageName;
     }
 
-    /**
-     * The name of the resource group that contains the resource.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource name of the Test Base Account.
-     */
     @InputImport(name="testBaseAccountName", required=true)
     private final String testBaseAccountName;
 
@@ -45,9 +33,6 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
         return this.testBaseAccountName;
     }
 
-    /**
-     * The Test Result Name. It equals to {osName}-{TestResultId} string.
-     */
     @InputImport(name="testResultName", required=true)
     private final String testResultName;
 

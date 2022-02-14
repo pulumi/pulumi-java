@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExcludedPathArgs Empty = new ExcludedPathArgs();
 
-    /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

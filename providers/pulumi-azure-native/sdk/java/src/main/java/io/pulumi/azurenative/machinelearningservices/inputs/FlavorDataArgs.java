@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlavorDataArgs Empty = new FlavorDataArgs();
 
-    /**
-     * Model flavor-specific data.
-     */
     @InputImport(name="data")
     private final @Nullable Input<Map<String,String>> data;
 

@@ -13,45 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetProfileResult {
-/**
- * The Id of the frontdoor.
- */
     private final String frontdoorId;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource location.
- */
     private final String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Provisioning status of the profile.
- */
     private final String provisioningState;
-/**
- * Resource status of the profile.
- */
     private final String resourceState;
-/**
- * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
- */
     private final SkuResponse sku;
-/**
- * Read only system data
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"frontdoorId","id","location","name","provisioningState","resourceState","sku","systemData","tags","type"})
@@ -78,63 +48,33 @@ public final class GetProfileResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The Id of the frontdoor.
- */
     public String getFrontdoorId() {
         return this.frontdoorId;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Provisioning status of the profile.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Resource status of the profile.
- */
     public String getResourceState() {
         return this.resourceState;
     }
-/**
- * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
- */
     public SkuResponse getSku() {
         return this.sku;
     }
-/**
- * Read only system data
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

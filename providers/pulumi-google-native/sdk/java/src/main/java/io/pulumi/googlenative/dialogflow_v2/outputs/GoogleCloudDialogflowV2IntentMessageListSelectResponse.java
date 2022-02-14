@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse {
-/**
- * List items.
- */
     private final List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items;
-/**
- * Optional. Subtitle of the list.
- */
     private final String subtitle;
-/**
- * Optional. The overall title of the list.
- */
     private final String title;
 
     @OutputCustomType.Constructor({"items","subtitle","title"})
@@ -34,21 +25,12 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse {
         this.title = Objects.requireNonNull(title);
     }
 
-/**
- * List items.
- */
     public List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> getItems() {
         return this.items;
     }
-/**
- * Optional. Subtitle of the list.
- */
     public String getSubtitle() {
         return this.subtitle;
     }
-/**
- * Optional. The overall title of the list.
- */
     public String getTitle() {
         return this.title;
     }

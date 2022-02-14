@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates whether the device is a gateway.
- */
     @EnumType
     public enum GatewayConfigGatewayType {
-/**
- * If unspecified, the device is considered a non-gateway device.
- */
         GatewayTypeUnspecified("GATEWAY_TYPE_UNSPECIFIED"),
-/**
- * The device is a gateway.
- */
         Gateway("GATEWAY"),
-/**
- * The device is not a gateway.
- */
         NonGateway("NON_GATEWAY");
 
         private final String value;

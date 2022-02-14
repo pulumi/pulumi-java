@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubResourceWithColocationStatusResponse {
-/**
- * Describes colocation status of a resource in the Proximity Placement Group.
- */
     private final @Nullable InstanceViewStatusResponse colocationStatus;
-/**
- * Resource Id
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"colocationStatus","id"})
@@ -29,15 +23,9 @@ public final class SubResourceWithColocationStatusResponse {
         this.id = id;
     }
 
-/**
- * Describes colocation status of a resource in the Proximity Placement Group.
- */
     public Optional<InstanceViewStatusResponse> getColocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
-/**
- * Resource Id
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

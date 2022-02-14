@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SSL profile of an application gateway.
- */
 public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewaySslProfileResponse Empty = new ApplicationGatewaySslProfileResponse();
 
-    /**
-     * Client authentication configuration of the application gateway resource.
-     */
     @InputImport(name="clientAuthConfiguration")
     private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
 
@@ -31,9 +25,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.clientAuthConfiguration == null ? Optional.empty() : Optional.ofNullable(this.clientAuthConfiguration);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -41,9 +32,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -51,9 +39,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the SSL profile that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -61,9 +46,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the HTTP listener resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -71,9 +53,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.provisioningState;
     }
 
-    /**
-     * SSL policy of the application gateway resource.
-     */
     @InputImport(name="sslPolicy")
     private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
@@ -81,9 +60,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.sslPolicy == null ? Optional.empty() : Optional.ofNullable(this.sslPolicy);
     }
 
-    /**
-     * Array of references to application gateway trusted client certificates.
-     */
     @InputImport(name="trustedClientCertificates")
     private final @Nullable List<SubResourceResponse> trustedClientCertificates;
 
@@ -91,9 +67,6 @@ public final class ApplicationGatewaySslProfileResponse extends io.pulumi.resour
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

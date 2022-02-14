@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IP configuration for virtual network gateway.
- */
 public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkGatewayIPConfigurationArgs Empty = new VirtualNetworkGatewayIPConfigurationArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -30,9 +24,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -40,9 +31,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The private IP address allocation method.
-     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -50,9 +38,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
-    /**
-     * The reference to the public IP resource.
-     */
     @InputImport(name="publicIPAddress")
     private final @Nullable Input<SubResourceArgs> publicIPAddress;
 
@@ -60,9 +45,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
     }
 
-    /**
-     * The reference to the subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubResourceArgs> subnet;
 

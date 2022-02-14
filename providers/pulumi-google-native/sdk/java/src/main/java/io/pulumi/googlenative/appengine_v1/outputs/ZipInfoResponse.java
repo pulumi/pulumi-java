@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ZipInfoResponse {
-/**
- * An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
- */
     private final Integer filesCount;
-/**
- * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
- */
     private final String sourceUrl;
 
     @OutputCustomType.Constructor({"filesCount","sourceUrl"})
@@ -27,15 +21,9 @@ public final class ZipInfoResponse {
         this.sourceUrl = Objects.requireNonNull(sourceUrl);
     }
 
-/**
- * An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
- */
     public Integer getFilesCount() {
         return this.filesCount;
     }
-/**
- * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
- */
     public String getSourceUrl() {
         return this.sourceUrl;
     }

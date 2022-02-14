@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSourceControl {
-/**
- * Source control configuration for an app.
-API Version: 2020-12-01.
- *
- * Source control configuration for an app.
- */
     public static CompletableFuture<GetWebAppSourceControlResult> invokeAsync(GetWebAppSourceControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControl", TypeShape.of(GetWebAppSourceControlResult.class), args == null ? GetWebAppSourceControlArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -26,746 +26,123 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A container group.
-API Version: 2021-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ContainerGroupsCreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var containerGroup = new AzureNative.ContainerInstance.ContainerGroup("containerGroup", new AzureNative.ContainerInstance.ContainerGroupArgs
-        {
-            ContainerGroupName = "demo1",
-            Containers = 
-            {
-                new AzureNative.ContainerInstance.Inputs.ContainerArgs
-                {
-                    Command = {},
-                    EnvironmentVariables = {},
-                    Image = "nginx",
-                    Name = "demo1",
-                    Ports = 
-                    {
-                        new AzureNative.ContainerInstance.Inputs.ContainerPortArgs
-                        {
-                            Port = 80,
-                        },
-                    },
-                    Resources = new AzureNative.ContainerInstance.Inputs.ResourceRequirementsArgs
-                    {
-                        Requests = new AzureNative.ContainerInstance.Inputs.ResourceRequestsArgs
-                        {
-                            Cpu = 1,
-                            Gpu = new AzureNative.ContainerInstance.Inputs.GpuResourceArgs
-                            {
-                                Count = 1,
-                                Sku = "K80",
-                            },
-                            MemoryInGB = 1.5,
-                        },
-                    },
-                    VolumeMounts = 
-                    {
-                        new AzureNative.ContainerInstance.Inputs.VolumeMountArgs
-                        {
-                            MountPath = "/mnt/volume1",
-                            Name = "volume1",
-                            ReadOnly = false,
-                        },
-                        new AzureNative.ContainerInstance.Inputs.VolumeMountArgs
-                        {
-                            MountPath = "/mnt/volume2",
-                            Name = "volume2",
-                            ReadOnly = false,
-                        },
-                        new AzureNative.ContainerInstance.Inputs.VolumeMountArgs
-                        {
-                            MountPath = "/mnt/volume3",
-                            Name = "volume3",
-                            ReadOnly = true,
-                        },
-                    },
-                },
-            },
-            Diagnostics = new AzureNative.ContainerInstance.Inputs.ContainerGroupDiagnosticsArgs
-            {
-                LogAnalytics = new AzureNative.ContainerInstance.Inputs.LogAnalyticsArgs
-                {
-                    LogType = "ContainerInsights",
-                    Metadata = 
-                    {
-                        { "test-key", "test-metadata-value" },
-                    },
-                    WorkspaceId = "workspaceid",
-                    WorkspaceKey = "workspaceKey",
-                },
-            },
-            DnsConfig = new AzureNative.ContainerInstance.Inputs.DnsConfigurationArgs
-            {
-                NameServers = 
-                {
-                    "1.1.1.1",
-                },
-                Options = "ndots:2",
-                SearchDomains = "cluster.local svc.cluster.local",
-            },
-            Identity = new AzureNative.ContainerInstance.Inputs.ContainerGroupIdentityArgs
-            {
-                Type = "SystemAssigned, UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name",  },
-                },
-            },
-            ImageRegistryCredentials = {},
-            IpAddress = new AzureNative.ContainerInstance.Inputs.IpAddressArgs
-            {
-                DnsNameLabel = "dnsnamelabel1",
-                Ports = 
-                {
-                    new AzureNative.ContainerInstance.Inputs.PortArgs
-                    {
-                        Port = 80,
-                        Protocol = "TCP",
-                    },
-                },
-                Type = "Public",
-            },
-            Location = "west us",
-            NetworkProfile = new AzureNative.ContainerInstance.Inputs.ContainerGroupNetworkProfileArgs
-            {
-                Id = "test-network-profile-id",
-            },
-            OsType = "Linux",
-            ResourceGroupName = "demo",
-            Volumes = 
-            {
-                new AzureNative.ContainerInstance.Inputs.VolumeArgs
-                {
-                    AzureFile = new AzureNative.ContainerInstance.Inputs.AzureFileVolumeArgs
-                    {
-                        ShareName = "shareName",
-                        StorageAccountKey = "accountKey",
-                        StorageAccountName = "accountName",
-                    },
-                    Name = "volume1",
-                },
-                new AzureNative.ContainerInstance.Inputs.VolumeArgs
-                {
-                    EmptyDir = ,
-                    Name = "volume2",
-                },
-                new AzureNative.ContainerInstance.Inputs.VolumeArgs
-                {
-                    Name = "volume3",
-                    Secret = 
-                    {
-                        { "secretKey1", "SecretValue1InBase64" },
-                        { "secretKey2", "SecretValue2InBase64" },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	containerinstance "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerinstance"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerinstance.NewContainerGroup(ctx, "containerGroup", &containerinstance.ContainerGroupArgs{
-			ContainerGroupName: pulumi.String("demo1"),
-			Containers: containerinstance.ContainerArray{
-				&containerinstance.ContainerArgs{
-					Command:              pulumi.StringArray{},
-					EnvironmentVariables: containerinstance.EnvironmentVariableArray{},
-					Image:                pulumi.String("nginx"),
-					Name:                 pulumi.String("demo1"),
-					Ports: containerinstance.ContainerPortArray{
-						&containerinstance.ContainerPortArgs{
-							Port: pulumi.Int(80),
-						},
-					},
-					Resources: &containerinstance.ResourceRequirementsArgs{
-						Requests: &containerinstance.ResourceRequestsArgs{
-							Cpu: pulumi.Float64(1),
-							Gpu: &containerinstance.GpuResourceArgs{
-								Count: pulumi.Int(1),
-								Sku:   pulumi.String("K80"),
-							},
-							MemoryInGB: pulumi.Float64(1.5),
-						},
-					},
-					VolumeMounts: containerinstance.VolumeMountArray{
-						&containerinstance.VolumeMountArgs{
-							MountPath: pulumi.String("/mnt/volume1"),
-							Name:      pulumi.String("volume1"),
-							ReadOnly:  pulumi.Bool(false),
-						},
-						&containerinstance.VolumeMountArgs{
-							MountPath: pulumi.String("/mnt/volume2"),
-							Name:      pulumi.String("volume2"),
-							ReadOnly:  pulumi.Bool(false),
-						},
-						&containerinstance.VolumeMountArgs{
-							MountPath: pulumi.String("/mnt/volume3"),
-							Name:      pulumi.String("volume3"),
-							ReadOnly:  pulumi.Bool(true),
-						},
-					},
-				},
-			},
-			Diagnostics: &containerinstance.ContainerGroupDiagnosticsArgs{
-				LogAnalytics: &containerinstance.LogAnalyticsArgs{
-					LogType: pulumi.String("ContainerInsights"),
-					Metadata: pulumi.StringMap{
-						"test-key": pulumi.String("test-metadata-value"),
-					},
-					WorkspaceId:  pulumi.String("workspaceid"),
-					WorkspaceKey: pulumi.String("workspaceKey"),
-				},
-			},
-			DnsConfig: &containerinstance.DnsConfigurationArgs{
-				NameServers: pulumi.StringArray{
-					pulumi.String("1.1.1.1"),
-				},
-				Options:       pulumi.String("ndots:2"),
-				SearchDomains: pulumi.String("cluster.local svc.cluster.local"),
-			},
-			Identity: &containerinstance.ContainerGroupIdentityArgs{
-				Type: "SystemAssigned, UserAssigned",
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": nil,
-				},
-			},
-			ImageRegistryCredentials: containerinstance.ImageRegistryCredentialArray{},
-			IpAddress: &containerinstance.IpAddressArgs{
-				DnsNameLabel: pulumi.String("dnsnamelabel1"),
-				Ports: []containerinstance.PortArgs{
-					&containerinstance.PortArgs{
-						Port:     pulumi.Int(80),
-						Protocol: pulumi.String("TCP"),
-					},
-				},
-				Type: pulumi.String("Public"),
-			},
-			Location: pulumi.String("west us"),
-			NetworkProfile: &containerinstance.ContainerGroupNetworkProfileArgs{
-				Id: pulumi.String("test-network-profile-id"),
-			},
-			OsType:            pulumi.String("Linux"),
-			ResourceGroupName: pulumi.String("demo"),
-			Volumes: []containerinstance.VolumeArgs{
-				&containerinstance.VolumeArgs{
-					AzureFile: &containerinstance.AzureFileVolumeArgs{
-						ShareName:          pulumi.String("shareName"),
-						StorageAccountKey:  pulumi.String("accountKey"),
-						StorageAccountName: pulumi.String("accountName"),
-					},
-					Name: pulumi.String("volume1"),
-				},
-				&containerinstance.VolumeArgs{
-					EmptyDir: nil,
-					Name:     pulumi.String("volume2"),
-				},
-				&containerinstance.VolumeArgs{
-					Name: pulumi.String("volume3"),
-					Secret: pulumi.StringMap{
-						"secretKey1": pulumi.String("SecretValue1InBase64"),
-						"secretKey2": pulumi.String("SecretValue2InBase64"),
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const containerGroup = new azure_native.containerinstance.ContainerGroup("containerGroup", {
-    containerGroupName: "demo1",
-    containers: [{
-        command: [],
-        environmentVariables: [],
-        image: "nginx",
-        name: "demo1",
-        ports: [{
-            port: 80,
-        }],
-        resources: {
-            requests: {
-                cpu: 1,
-                gpu: {
-                    count: 1,
-                    sku: "K80",
-                },
-                memoryInGB: 1.5,
-            },
-        },
-        volumeMounts: [
-            {
-                mountPath: "/mnt/volume1",
-                name: "volume1",
-                readOnly: false,
-            },
-            {
-                mountPath: "/mnt/volume2",
-                name: "volume2",
-                readOnly: false,
-            },
-            {
-                mountPath: "/mnt/volume3",
-                name: "volume3",
-                readOnly: true,
-            },
-        ],
-    }],
-    diagnostics: {
-        logAnalytics: {
-            logType: "ContainerInsights",
-            metadata: {
-                "test-key": "test-metadata-value",
-            },
-            workspaceId: "workspaceid",
-            workspaceKey: "workspaceKey",
-        },
-    },
-    dnsConfig: {
-        nameServers: ["1.1.1.1"],
-        options: "ndots:2",
-        searchDomains: "cluster.local svc.cluster.local",
-    },
-    identity: {
-        type: "SystemAssigned, UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
-        },
-    },
-    imageRegistryCredentials: [],
-    ipAddress: {
-        dnsNameLabel: "dnsnamelabel1",
-        ports: [{
-            port: 80,
-            protocol: "TCP",
-        }],
-        type: "Public",
-    },
-    location: "west us",
-    networkProfile: {
-        id: "test-network-profile-id",
-    },
-    osType: "Linux",
-    resourceGroupName: "demo",
-    volumes: [
-        {
-            azureFile: {
-                shareName: "shareName",
-                storageAccountKey: "accountKey",
-                storageAccountName: "accountName",
-            },
-            name: "volume1",
-        },
-        {
-            emptyDir: {},
-            name: "volume2",
-        },
-        {
-            name: "volume3",
-            secret: {
-                secretKey1: "SecretValue1InBase64",
-                secretKey2: "SecretValue2InBase64",
-            },
-        },
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-container_group = azure_native.containerinstance.ContainerGroup("containerGroup",
-    container_group_name="demo1",
-    containers=[azure_native.containerinstance.ContainerArgs(
-        command=[],
-        environment_variables=[],
-        image="nginx",
-        name="demo1",
-        ports=[azure_native.containerinstance.ContainerPortArgs(
-            port=80,
-        )],
-        resources=azure_native.containerinstance.ResourceRequirementsArgs(
-            requests=azure_native.containerinstance.ResourceRequestsArgs(
-                cpu=1,
-                gpu=azure_native.containerinstance.GpuResourceArgs(
-                    count=1,
-                    sku="K80",
-                ),
-                memory_in_gb=1.5,
-            ),
-        ),
-        volume_mounts=[
-            azure_native.containerinstance.VolumeMountArgs(
-                mount_path="/mnt/volume1",
-                name="volume1",
-                read_only=False,
-            ),
-            azure_native.containerinstance.VolumeMountArgs(
-                mount_path="/mnt/volume2",
-                name="volume2",
-                read_only=False,
-            ),
-            azure_native.containerinstance.VolumeMountArgs(
-                mount_path="/mnt/volume3",
-                name="volume3",
-                read_only=True,
-            ),
-        ],
-    )],
-    diagnostics=azure_native.containerinstance.ContainerGroupDiagnosticsArgs(
-        log_analytics=azure_native.containerinstance.LogAnalyticsArgs(
-            log_type="ContainerInsights",
-            metadata={
-                "test-key": "test-metadata-value",
-            },
-            workspace_id="workspaceid",
-            workspace_key="workspaceKey",
-        ),
-    ),
-    dns_config=azure_native.containerinstance.DnsConfigurationArgs(
-        name_servers=["1.1.1.1"],
-        options="ndots:2",
-        search_domains="cluster.local svc.cluster.local",
-    ),
-    identity=azure_native.containerinstance.ContainerGroupIdentityArgs(
-        type="SystemAssigned, UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
-        },
-    ),
-    image_registry_credentials=[],
-    ip_address=azure_native.containerinstance.IpAddressArgs(
-        dns_name_label="dnsnamelabel1",
-        ports=[azure_native.containerinstance.PortArgs(
-            port=80,
-            protocol="TCP",
-        )],
-        type="Public",
-    ),
-    location="west us",
-    network_profile=azure_native.containerinstance.ContainerGroupNetworkProfileArgs(
-        id="test-network-profile-id",
-    ),
-    os_type="Linux",
-    resource_group_name="demo",
-    volumes=[
-        azure_native.containerinstance.VolumeArgs(
-            azure_file=azure_native.containerinstance.AzureFileVolumeArgs(
-                share_name="shareName",
-                storage_account_key="accountKey",
-                storage_account_name="accountName",
-            ),
-            name="volume1",
-        ),
-        azure_native.containerinstance.VolumeArgs(
-            empty_dir={},
-            name="volume2",
-        ),
-        azure_native.containerinstance.VolumeArgs(
-            name="volume3",
-            secret={
-                "secretKey1": "SecretValue1InBase64",
-                "secretKey2": "SecretValue2InBase64",
-            },
-        ),
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:containerinstance:ContainerGroup demo1 /subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/demo1 
-```
-
- */
 @ResourceType(type="azure-native:containerinstance:ContainerGroup")
 public class ContainerGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * The containers within the container group.
-     */
     @OutputExport(name="containers", type=List.class, parameters={ContainerResponse.class})
     private Output<List<ContainerResponse>> containers;
 
-    /**
-     * @return The containers within the container group.
-     */
     public Output<List<ContainerResponse>> getContainers() {
         return this.containers;
     }
-    /**
-     * The diagnostic information for a container group.
-     */
     @OutputExport(name="diagnostics", type=ContainerGroupDiagnosticsResponse.class, parameters={})
     private Output</* @Nullable */ ContainerGroupDiagnosticsResponse> diagnostics;
 
-    /**
-     * @return The diagnostic information for a container group.
-     */
     public Output</* @Nullable */ ContainerGroupDiagnosticsResponse> getDiagnostics() {
         return this.diagnostics;
     }
-    /**
-     * The DNS config information for a container group.
-     */
     @OutputExport(name="dnsConfig", type=DnsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ DnsConfigurationResponse> dnsConfig;
 
-    /**
-     * @return The DNS config information for a container group.
-     */
     public Output</* @Nullable */ DnsConfigurationResponse> getDnsConfig() {
         return this.dnsConfig;
     }
-    /**
-     * The encryption properties for a container group.
-     */
     @OutputExport(name="encryptionProperties", type=EncryptionPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertiesResponse> encryptionProperties;
 
-    /**
-     * @return The encryption properties for a container group.
-     */
     public Output</* @Nullable */ EncryptionPropertiesResponse> getEncryptionProperties() {
         return this.encryptionProperties;
     }
-    /**
-     * The identity of the container group, if configured.
-     */
     @OutputExport(name="identity", type=ContainerGroupIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ContainerGroupIdentityResponse> identity;
 
-    /**
-     * @return The identity of the container group, if configured.
-     */
     public Output</* @Nullable */ ContainerGroupIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The image registry credentials by which the container group is created from.
-     */
     @OutputExport(name="imageRegistryCredentials", type=List.class, parameters={ImageRegistryCredentialResponse.class})
     private Output</* @Nullable */ List<ImageRegistryCredentialResponse>> imageRegistryCredentials;
 
-    /**
-     * @return The image registry credentials by which the container group is created from.
-     */
     public Output</* @Nullable */ List<ImageRegistryCredentialResponse>> getImageRegistryCredentials() {
         return this.imageRegistryCredentials;
     }
-    /**
-     * The init containers for a container group.
-     */
     @OutputExport(name="initContainers", type=List.class, parameters={InitContainerDefinitionResponse.class})
     private Output</* @Nullable */ List<InitContainerDefinitionResponse>> initContainers;
 
-    /**
-     * @return The init containers for a container group.
-     */
     public Output</* @Nullable */ List<InitContainerDefinitionResponse>> getInitContainers() {
         return this.initContainers;
     }
-    /**
-     * The instance view of the container group. Only valid in response.
-     */
     @OutputExport(name="instanceView", type=ContainerGroupResponseInstanceView.class, parameters={})
     private Output<ContainerGroupResponseInstanceView> instanceView;
 
-    /**
-     * @return The instance view of the container group. Only valid in response.
-     */
     public Output<ContainerGroupResponseInstanceView> getInstanceView() {
         return this.instanceView;
     }
-    /**
-     * The IP address type of the container group.
-     */
     @OutputExport(name="ipAddress", type=IpAddressResponse.class, parameters={})
     private Output</* @Nullable */ IpAddressResponse> ipAddress;
 
-    /**
-     * @return The IP address type of the container group.
-     */
     public Output</* @Nullable */ IpAddressResponse> getIpAddress() {
         return this.ipAddress;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The network profile information for a container group.
-     */
     @OutputExport(name="networkProfile", type=ContainerGroupNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ ContainerGroupNetworkProfileResponse> networkProfile;
 
-    /**
-     * @return The network profile information for a container group.
-     */
     public Output</* @Nullable */ ContainerGroupNetworkProfileResponse> getNetworkProfile() {
         return this.networkProfile;
     }
-    /**
-     * The operating system type required by the containers in the container group.
-     */
     @OutputExport(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
-    /**
-     * @return The operating system type required by the containers in the container group.
-     */
     public Output<String> getOsType() {
         return this.osType;
     }
-    /**
-     * The provisioning state of the container group. This only appears in the response.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the container group. This only appears in the response.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Restart policy for all containers within the container group. 
-- `Always` Always restart
-- `OnFailure` Restart on failure
-- `Never` Never restart
-
-     */
     @OutputExport(name="restartPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> restartPolicy;
 
-    /**
-     * @return Restart policy for all containers within the container group. 
-- `Always` Always restart
-- `OnFailure` Restart on failure
-- `Never` Never restart
-
-     */
     public Output</* @Nullable */ String> getRestartPolicy() {
         return this.restartPolicy;
     }
-    /**
-     * The SKU for a container group.
-     */
     @OutputExport(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
-    /**
-     * @return The SKU for a container group.
-     */
     public Output</* @Nullable */ String> getSku() {
         return this.sku;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The list of volumes that can be mounted by containers in this container group.
-     */
     @OutputExport(name="volumes", type=List.class, parameters={VolumeResponse.class})
     private Output</* @Nullable */ List<VolumeResponse>> volumes;
 
-    /**
-     * @return The list of volumes that can be mounted by containers in this container group.
-     */
     public Output</* @Nullable */ List<VolumeResponse>> getVolumes() {
         return this.volumes;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ContainerGroup(String name, ContainerGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerinstance:ContainerGroup", name, args == null ? ContainerGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -797,14 +174,6 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ContainerGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ContainerGroup(name, id, options);
     }

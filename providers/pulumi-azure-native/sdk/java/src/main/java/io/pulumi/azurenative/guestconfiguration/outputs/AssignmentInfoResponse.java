@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AssignmentInfoResponse {
-/**
- * Information about the configuration.
- */
     private final @Nullable ConfigurationInfoResponse configuration;
-/**
- * Name of the guest configuration assignment.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"configuration","name"})
@@ -29,15 +23,9 @@ public final class AssignmentInfoResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Information about the configuration.
- */
     public Optional<ConfigurationInfoResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
-/**
- * Name of the guest configuration assignment.
- */
     public String getName() {
         return this.name;
     }

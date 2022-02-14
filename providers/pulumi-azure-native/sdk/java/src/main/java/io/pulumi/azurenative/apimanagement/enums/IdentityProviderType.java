@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Identity Provider Type identifier.
- */
     @EnumType
     public enum IdentityProviderType {
-/**
- * Facebook as Identity provider.
- */
         Facebook("facebook"),
-/**
- * Google as Identity provider.
- */
         Google("google"),
-/**
- * Microsoft Live as Identity provider.
- */
         Microsoft("microsoft"),
-/**
- * Twitter as Identity provider.
- */
         Twitter("twitter"),
-/**
- * Azure Active Directory as Identity provider.
- */
         Aad("aad"),
-/**
- * Azure Active Directory B2C as Identity provider.
- */
         AadB2C("aadB2C");
 
         private final String value;

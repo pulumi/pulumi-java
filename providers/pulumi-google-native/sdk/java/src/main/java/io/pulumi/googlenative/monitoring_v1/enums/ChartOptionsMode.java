@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The chart mode.
- */
     @EnumType
     public enum ChartOptionsMode {
-/**
- * Mode is unspecified. The view will default to COLOR.
- */
         ModeUnspecified("MODE_UNSPECIFIED"),
-/**
- * The chart distinguishes data series using different color. Line colors may get reused when there are many lines in the chart.
- */
         Color("COLOR"),
-/**
- * The chart uses the Stackdriver x-ray mode, in which each data set is plotted using the same semi-transparent color.
- */
         XRay("X_RAY"),
-/**
- * The chart displays statistics such as average, median, 95th percentile, and more.
- */
         Stats("STATS");
 
         private final String value;

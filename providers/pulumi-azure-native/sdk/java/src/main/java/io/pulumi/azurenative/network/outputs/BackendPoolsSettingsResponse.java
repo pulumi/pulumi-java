@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendPoolsSettingsResponse {
-/**
- * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
- */
     private final @Nullable String enforceCertificateNameCheck;
-/**
- * Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
- */
     private final @Nullable Integer sendRecvTimeoutSeconds;
 
     @OutputCustomType.Constructor({"enforceCertificateNameCheck","sendRecvTimeoutSeconds"})
@@ -29,15 +23,9 @@ public final class BackendPoolsSettingsResponse {
         this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
     }
 
-/**
- * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
- */
     public Optional<String> getEnforceCertificateNameCheck() {
         return Optional.ofNullable(this.enforceCertificateNameCheck);
     }
-/**
- * Send and receive timeout on forwarding request to the backend. When timeout is reached, the request fails and returns.
- */
     public Optional<Integer> getSendRecvTimeoutSeconds() {
         return Optional.ofNullable(this.sendRecvTimeoutSeconds);
     }

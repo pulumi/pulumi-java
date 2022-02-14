@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The schedule of a recurring or one time event. The event's time span is specified by start_time and end_time. If the scheduled event's timespan is larger than the cron_spec + cron_job_duration, the event will be recurring. If only cron_spec + cron_job_duration are specified, the event is effective starting at the local time specified by cron_spec, and is recurring. ``` start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time cron job: cron spec start time + duration ```
- */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleResponse Empty = new ScheduleResponse();
 
-    /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
-     */
     @InputImport(name="cronJobDuration", required=true)
     private final String cronJobDuration;
 
@@ -25,9 +19,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.cronJobDuration;
     }
 
-    /**
-     * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
-     */
     @InputImport(name="cronSpec", required=true)
     private final String cronSpec;
 
@@ -35,9 +26,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.cronSpec;
     }
 
-    /**
-     * The end time of the event.
-     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -45,9 +33,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
-    /**
-     * The start time of the event.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The group type.
- */
     @EnumType
     public enum RecoveryPlanGroupType {
-/**
- * 
- */
         Shutdown("Shutdown"),
-/**
- * 
- */
         Boot("Boot"),
-/**
- * 
- */
         Failover("Failover");
 
         private final String value;

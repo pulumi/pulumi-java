@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMwareCbt disk input.
- */
 public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VMwareCbtDiskInputArgs Empty = new VMwareCbtDiskInputArgs();
 
-    /**
-     * The disk Id.
-     */
     @InputImport(name="diskId", required=true)
     private final Input<String> diskId;
 
@@ -29,9 +23,6 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
         return this.diskId;
     }
 
-    /**
-     * The disk type.
-     */
     @InputImport(name="diskType")
     private final @Nullable Input<Either<String,DiskAccountType>> diskType;
 
@@ -39,9 +30,6 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
-    /**
-     * A value indicating whether the disk is the OS disk.
-     */
     @InputImport(name="isOSDisk", required=true)
     private final Input<String> isOSDisk;
 
@@ -49,9 +37,6 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
         return this.isOSDisk;
     }
 
-    /**
-     * The log storage account ARM Id.
-     */
     @InputImport(name="logStorageAccountId", required=true)
     private final Input<String> logStorageAccountId;
 
@@ -59,9 +44,6 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
         return this.logStorageAccountId;
     }
 
-    /**
-     * The key vault secret name of the log storage account.
-     */
     @InputImport(name="logStorageAccountSasSecretName", required=true)
     private final Input<String> logStorageAccountSasSecretName;
 

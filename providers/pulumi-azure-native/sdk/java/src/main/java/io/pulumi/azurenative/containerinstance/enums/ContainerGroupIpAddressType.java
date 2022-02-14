@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies if the IP is exposed to the public internet or private VNET.
- */
     @EnumType
     public enum ContainerGroupIpAddressType {
-/**
- * 
- */
         Public("Public"),
-/**
- * 
- */
         Private("Private");
 
         private final String value;

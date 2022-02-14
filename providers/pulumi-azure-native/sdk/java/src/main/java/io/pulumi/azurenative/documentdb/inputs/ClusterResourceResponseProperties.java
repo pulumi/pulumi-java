@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a managed Cassandra cluster.
- */
 public final class ClusterResourceResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterResourceResponseProperties Empty = new ClusterResourceResponseProperties();
 
-    /**
-     * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
-     */
     @InputImport(name="authenticationMethod")
     private final @Nullable String authenticationMethod;
 
@@ -32,9 +26,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.authenticationMethod == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethod);
     }
 
-    /**
-     * Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.
-     */
     @InputImport(name="cassandraVersion")
     private final @Nullable String cassandraVersion;
 
@@ -42,9 +33,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.cassandraVersion == null ? Optional.empty() : Optional.ofNullable(this.cassandraVersion);
     }
 
-    /**
-     * List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.
-     */
     @InputImport(name="clientCertificates")
     private final @Nullable List<CertificateResponse> clientCertificates;
 
@@ -52,9 +40,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.clientCertificates == null ? List.of() : this.clientCertificates;
     }
 
-    /**
-     * If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.
-     */
     @InputImport(name="clusterNameOverride")
     private final @Nullable String clusterNameOverride;
 
@@ -62,9 +47,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.clusterNameOverride == null ? Optional.empty() : Optional.ofNullable(this.clusterNameOverride);
     }
 
-    /**
-     * Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'
-     */
     @InputImport(name="delegatedManagementSubnetId")
     private final @Nullable String delegatedManagementSubnetId;
 
@@ -72,9 +54,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.delegatedManagementSubnetId == null ? Optional.empty() : Optional.ofNullable(this.delegatedManagementSubnetId);
     }
 
-    /**
-     * List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.
-     */
     @InputImport(name="externalGossipCertificates")
     private final @Nullable List<CertificateResponse> externalGossipCertificates;
 
@@ -82,9 +61,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.externalGossipCertificates == null ? List.of() : this.externalGossipCertificates;
     }
 
-    /**
-     * List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.
-     */
     @InputImport(name="externalSeedNodes")
     private final @Nullable List<SeedNodeResponse> externalSeedNodes;
 
@@ -92,9 +68,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.externalSeedNodes == null ? List.of() : this.externalSeedNodes;
     }
 
-    /**
-     * List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.
-     */
     @InputImport(name="gossipCertificates", required=true)
     private final List<CertificateResponse> gossipCertificates;
 
@@ -102,9 +75,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.gossipCertificates;
     }
 
-    /**
-     * Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.
-     */
     @InputImport(name="hoursBetweenBackups")
     private final @Nullable Integer hoursBetweenBackups;
 
@@ -112,9 +82,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.hoursBetweenBackups == null ? Optional.empty() : Optional.ofNullable(this.hoursBetweenBackups);
     }
 
-    /**
-     * Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.
-     */
     @InputImport(name="prometheusEndpoint")
     private final @Nullable SeedNodeResponse prometheusEndpoint;
 
@@ -122,9 +89,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.prometheusEndpoint == null ? Optional.empty() : Optional.ofNullable(this.prometheusEndpoint);
     }
 
-    /**
-     * The status of the resource at the time the operation was called.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -132,9 +96,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.
-     */
     @InputImport(name="repairEnabled")
     private final @Nullable Boolean repairEnabled;
 
@@ -142,9 +103,6 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
         return this.repairEnabled == null ? Optional.empty() : Optional.ofNullable(this.repairEnabled);
     }
 
-    /**
-     * List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.
-     */
     @InputImport(name="seedNodes", required=true)
     private final List<SeedNodeResponse> seedNodes;
 

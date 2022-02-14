@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Scope of the extensionInstance. It can be either Cluster or Namespace; but not both.
- */
 public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScopeResponse Empty = new ScopeResponse();
 
-    /**
-     * Specifies that the scope of the extensionInstance is Cluster
-     */
     @InputImport(name="cluster")
     private final @Nullable ScopeClusterResponse cluster;
 
@@ -28,9 +22,6 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
         return this.cluster == null ? Optional.empty() : Optional.ofNullable(this.cluster);
     }
 
-    /**
-     * Specifies that the scope of the extensionInstance is Namespace
-     */
     @InputImport(name="namespace")
     private final @Nullable ScopeNamespaceResponse namespace;
 

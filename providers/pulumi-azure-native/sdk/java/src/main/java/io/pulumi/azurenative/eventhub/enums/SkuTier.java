@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The billing tier of this particular SKU.
- */
     @EnumType
     public enum SkuTier {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

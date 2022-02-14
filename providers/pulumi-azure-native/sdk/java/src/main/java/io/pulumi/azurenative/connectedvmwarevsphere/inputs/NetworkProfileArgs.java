@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the resource properties.
- */
 public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
-    /**
-     * Gets or sets the list of network interfaces associated with the virtual machine.
-     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 

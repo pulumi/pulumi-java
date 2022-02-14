@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaRegistryArgs Empty = new SchemaRegistryArgs();
 
-    /**
-     * dictionary object for SchemaGroup group properties
-     */
     @InputImport(name="groupProperties")
     private final @Nullable Input<Map<String,String>> groupProperties;
 
@@ -31,9 +25,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupProperties == null ? Input.empty() : this.groupProperties;
     }
 
-    /**
-     * The Namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -41,9 +32,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
-    /**
-     * Name of the resource group within the azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,9 +39,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="schemaCompatibility")
     private final @Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility;
 
@@ -61,9 +46,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaCompatibility == null ? Input.empty() : this.schemaCompatibility;
     }
 
-    /**
-     * The Schema Group name 
-     */
     @InputImport(name="schemaGroupName")
     private final @Nullable Input<String> schemaGroupName;
 
@@ -71,9 +53,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaGroupName == null ? Input.empty() : this.schemaGroupName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="schemaType")
     private final @Nullable Input<Either<String,SchemaType>> schemaType;
 

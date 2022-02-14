@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The CORS policy for the Cosmos DB database account.
- */
 public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CorsPolicyResponse Empty = new CorsPolicyResponse();
 
-    /**
-     * The request headers that the origin domain may specify on the CORS request.
-     */
     @InputImport(name="allowedHeaders")
     private final @Nullable String allowedHeaders;
 
@@ -28,9 +22,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedHeaders == null ? Optional.empty() : Optional.ofNullable(this.allowedHeaders);
     }
 
-    /**
-     * The methods (HTTP request verbs) that the origin domain may use for a CORS request.
-     */
     @InputImport(name="allowedMethods")
     private final @Nullable String allowedMethods;
 
@@ -38,9 +29,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedMethods == null ? Optional.empty() : Optional.ofNullable(this.allowedMethods);
     }
 
-    /**
-     * The origin domains that are permitted to make a request against the service via CORS.
-     */
     @InputImport(name="allowedOrigins", required=true)
     private final String allowedOrigins;
 
@@ -48,9 +36,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.allowedOrigins;
     }
 
-    /**
-     * The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
-     */
     @InputImport(name="exposedHeaders")
     private final @Nullable String exposedHeaders;
 
@@ -58,9 +43,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.exposedHeaders == null ? Optional.empty() : Optional.ofNullable(this.exposedHeaders);
     }
 
-    /**
-     * The maximum amount time that a browser should cache the preflight OPTIONS request.
-     */
     @InputImport(name="maxAgeInSeconds")
     private final @Nullable Double maxAgeInSeconds;
 

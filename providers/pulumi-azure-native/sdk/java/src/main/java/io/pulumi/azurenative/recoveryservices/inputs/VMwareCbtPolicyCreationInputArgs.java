@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMware Cbt policy creation input.
- */
 public final class VMwareCbtPolicyCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VMwareCbtPolicyCreationInputArgs Empty = new VMwareCbtPolicyCreationInputArgs();
 
-    /**
-     * The app consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
@@ -28,9 +22,6 @@ public final class VMwareCbtPolicyCreationInputArgs extends io.pulumi.resources.
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The crash consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
@@ -38,10 +29,6 @@ public final class VMwareCbtPolicyCreationInputArgs extends io.pulumi.resources.
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The class type.
-Expected value is 'VMwareCbt'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -49,9 +36,6 @@ Expected value is 'VMwareCbt'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     */
     @InputImport(name="recoveryPointHistoryInMinutes")
     private final @Nullable Input<Integer> recoveryPointHistoryInMinutes;
 

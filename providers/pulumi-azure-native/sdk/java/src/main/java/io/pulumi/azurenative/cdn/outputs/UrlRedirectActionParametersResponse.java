@@ -11,33 +11,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UrlRedirectActionParametersResponse {
-/**
- * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
- */
     private final @Nullable String customFragment;
-/**
- * Host to redirect. Leave empty to use the incoming host as the destination host.
- */
     private final @Nullable String customHostname;
-/**
- * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
- */
     private final @Nullable String customPath;
-/**
- * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
- */
     private final @Nullable String customQueryString;
-/**
- * Protocol to use for the redirect. The default value is MatchRequest
- */
     private final @Nullable String destinationProtocol;
-/**
- * 
- */
     private final String odataType;
-/**
- * The redirect type the rule will use when redirecting traffic.
- */
     private final String redirectType;
 
     @OutputCustomType.Constructor({"customFragment","customHostname","customPath","customQueryString","destinationProtocol","odataType","redirectType"})
@@ -58,45 +37,24 @@ public final class UrlRedirectActionParametersResponse {
         this.redirectType = Objects.requireNonNull(redirectType);
     }
 
-/**
- * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
- */
     public Optional<String> getCustomFragment() {
         return Optional.ofNullable(this.customFragment);
     }
-/**
- * Host to redirect. Leave empty to use the incoming host as the destination host.
- */
     public Optional<String> getCustomHostname() {
         return Optional.ofNullable(this.customHostname);
     }
-/**
- * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
- */
     public Optional<String> getCustomPath() {
         return Optional.ofNullable(this.customPath);
     }
-/**
- * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
- */
     public Optional<String> getCustomQueryString() {
         return Optional.ofNullable(this.customQueryString);
     }
-/**
- * Protocol to use for the redirect. The default value is MatchRequest
- */
     public Optional<String> getDestinationProtocol() {
         return Optional.ofNullable(this.destinationProtocol);
     }
-/**
- * 
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * The redirect type the rule will use when redirecting traffic.
- */
     public String getRedirectType() {
         return this.redirectType;
     }

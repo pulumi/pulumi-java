@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiPortalCustomDomainArgs Empty = new ApiPortalCustomDomainArgs();
 
-    /**
-     * The name of API portal.
-     */
     @InputImport(name="apiPortalName", required=true)
     private final Input<String> apiPortalName;
 
@@ -28,9 +22,6 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
         return this.apiPortalName;
     }
 
-    /**
-     * The name of the API portal custom domain.
-     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -38,9 +29,6 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
-    /**
-     * The properties of custom domain for API portal
-     */
     @InputImport(name="properties")
     private final @Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListPrivateCloudAdminCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListPrivateCloudAdminCredentialsArgs Empty = new ListPrivateCloudAdminCredentialsArgs();
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -25,9 +19,6 @@ public final class ListPrivateCloudAdminCredentialsArgs extends io.pulumi.resour
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

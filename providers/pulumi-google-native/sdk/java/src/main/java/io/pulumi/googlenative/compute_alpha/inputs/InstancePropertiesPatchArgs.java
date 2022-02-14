@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents the change that you want to make to the instance properties.
- */
 public final class InstancePropertiesPatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstancePropertiesPatchArgs Empty = new InstancePropertiesPatchArgs();
 
-    /**
-     * The label key-value pairs that you want to patch onto the instance.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -28,9 +22,6 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 

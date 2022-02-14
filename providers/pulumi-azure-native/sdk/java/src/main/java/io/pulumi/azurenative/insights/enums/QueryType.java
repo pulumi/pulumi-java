@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Set value to 'ResultCount' .
- */
     @EnumType
     public enum QueryType {
-/**
- * 
- */
         ResultCount("ResultCount");
 
         private final String value;

@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ResponsePolicyRuleLocalDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponsePolicyRuleLocalDataResponse Empty = new ResponsePolicyRuleLocalDataResponse();
 
-    /**
-     * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
-     */
     @InputImport(name="localDatas", required=true)
     private final List<ResourceRecordSetResponse> localDatas;
 

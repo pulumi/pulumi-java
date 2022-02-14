@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class X12SchemaReferenceResponse {
-/**
- * The message id.
- */
     private final String messageId;
-/**
- * The schema name.
- */
     private final String schemaName;
-/**
- * The schema version.
- */
     private final String schemaVersion;
-/**
- * The sender application id.
- */
     private final @Nullable String senderApplicationId;
 
     @OutputCustomType.Constructor({"messageId","schemaName","schemaVersion","senderApplicationId"})
@@ -40,27 +28,15 @@ public final class X12SchemaReferenceResponse {
         this.senderApplicationId = senderApplicationId;
     }
 
-/**
- * The message id.
- */
     public String getMessageId() {
         return this.messageId;
     }
-/**
- * The schema name.
- */
     public String getSchemaName() {
         return this.schemaName;
     }
-/**
- * The schema version.
- */
     public String getSchemaVersion() {
         return this.schemaVersion;
     }
-/**
- * The sender application id.
- */
     public Optional<String> getSenderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }

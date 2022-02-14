@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNodeGroup {
-/**
- * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
- */
     public static CompletableFuture<GetNodeGroupResult> invokeAsync(GetNodeGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args == null ? GetNodeGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The rule that specifies conditions when findings of infoTypes specified in `InspectionRuleSet` are removed from results.
- */
 public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ExclusionRuleArgs Empty = new GooglePrivacyDlpV2ExclusionRuleArgs();
 
-    /**
-     * Dictionary which defines the rule.
-     */
     @InputImport(name="dictionary")
     private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
@@ -30,9 +24,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
         return this.dictionary == null ? Input.empty() : this.dictionary;
     }
 
-    /**
-     * Set of infoTypes for which findings would affect this rule.
-     */
     @InputImport(name="excludeInfoTypes")
     private final @Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
@@ -40,9 +31,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
     }
 
-    /**
-     * How the rule is applied, see MatchingType documentation for details.
-     */
     @InputImport(name="matchingType")
     private final @Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
@@ -50,9 +38,6 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
         return this.matchingType == null ? Input.empty() : this.matchingType;
     }
 
-    /**
-     * Regular expression which defines the rule.
-     */
     @InputImport(name="regex")
     private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
 

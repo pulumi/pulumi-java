@@ -19,46 +19,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureMLBatchExecutionActivityResponse {
-/**
- * Activity depends on condition.
- */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-/**
- * Activity description.
- */
     private final @Nullable String description;
-/**
- * Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
- */
     private final @Nullable Map<String,Object> globalParameters;
-/**
- * Linked service reference.
- */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-/**
- * Activity name.
- */
     private final String name;
-/**
- * Activity policy.
- */
     private final @Nullable ActivityPolicyResponse policy;
-/**
- * Type of activity.
-Expected value is 'AzureMLBatchExecution'.
- */
     private final String type;
-/**
- * Activity user properties.
- */
     private final @Nullable List<UserPropertyResponse> userProperties;
-/**
- * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
- */
     private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
-/**
- * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
- */
     private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
 
     @OutputCustomType.Constructor({"dependsOn","description","globalParameters","linkedServiceName","name","policy","type","userProperties","webServiceInputs","webServiceOutputs"})
@@ -85,64 +54,33 @@ Expected value is 'AzureMLBatchExecution'.
         this.webServiceOutputs = webServiceOutputs;
     }
 
-/**
- * Activity depends on condition.
- */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Activity description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
- */
     public Map<String,Object> getGlobalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
-/**
- * Linked service reference.
- */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
-/**
- * Activity name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Activity policy.
- */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
-/**
- * Type of activity.
-Expected value is 'AzureMLBatchExecution'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Activity user properties.
- */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
-/**
- * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
- */
     public Map<String,AzureMLWebServiceFileResponse> getWebServiceInputs() {
         return this.webServiceInputs == null ? Map.of() : this.webServiceInputs;
     }
-/**
- * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
- */
     public Map<String,AzureMLWebServiceFileResponse> getWebServiceOutputs() {
         return this.webServiceOutputs == null ? Map.of() : this.webServiceOutputs;
     }

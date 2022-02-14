@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of authentication used to connect to the OData service.
- */
     @EnumType
     public enum ODataAuthenticationType {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Anonymous("Anonymous"),
-/**
- * 
- */
         Windows("Windows"),
-/**
- * 
- */
         AadServicePrincipal("AadServicePrincipal"),
-/**
- * 
- */
         ManagedServiceIdentity("ManagedServiceIdentity");
 
         private final String value;

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Markdown part metadata.
- */
 public final class MarkdownPartMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MarkdownPartMetadataArgs Empty = new MarkdownPartMetadataArgs();
 
-    /**
-     * Input to dashboard part.
-     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<Object>> inputs;
 
@@ -30,9 +24,6 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
-    /**
-     * Markdown part settings.
-     */
     @InputImport(name="settings")
     private final @Nullable Input<MarkdownPartMetadataSettingsArgs> settings;
 
@@ -40,10 +31,6 @@ public final class MarkdownPartMetadataArgs extends io.pulumi.resources.Resource
         return this.settings == null ? Input.empty() : this.settings;
     }
 
-    /**
-     * The type of dashboard part.
-Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

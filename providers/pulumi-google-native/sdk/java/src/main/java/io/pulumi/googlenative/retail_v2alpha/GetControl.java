@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetControl {
-/**
- * Gets a Control.
- */
     public static CompletableFuture<GetControlResult> invokeAsync(GetControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2alpha:getControl", TypeShape.of(GetControlResult.class), args == null ? GetControlArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App container Azure Queue based scaling rule.
- */
 public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueueScaleRuleResponse Empty = new QueueScaleRuleResponse();
 
-    /**
-     * Authentication secrets for the queue scale rule.
-     */
     @InputImport(name="auth")
     private final @Nullable List<ScaleRuleAuthResponse> auth;
 
@@ -30,9 +24,6 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
         return this.auth == null ? List.of() : this.auth;
     }
 
-    /**
-     * Queue length.
-     */
     @InputImport(name="queueLength")
     private final @Nullable Integer queueLength;
 
@@ -40,9 +31,6 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
         return this.queueLength == null ? Optional.empty() : Optional.ofNullable(this.queueLength);
     }
 
-    /**
-     * Queue name.
-     */
     @InputImport(name="queueName")
     private final @Nullable String queueName;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An object that represents the status of ingress on an environment.
- */
 public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IngressEnvironmentStatusResponse Empty = new IngressEnvironmentStatusResponse();
 
-    /**
-     * This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -28,9 +22,6 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
-    /**
-     * An object that contains the details about an environment's state.
-     */
     @InputImport(name="stateDetails", required=true)
     private final EnvironmentStateDetailsResponse stateDetails;
 

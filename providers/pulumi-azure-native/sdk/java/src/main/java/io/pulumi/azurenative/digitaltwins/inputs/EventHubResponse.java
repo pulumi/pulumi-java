@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties related to EventHub.
- */
 public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventHubResponse Empty = new EventHubResponse();
 
-    /**
-     * Specifies the authentication type being used for connecting to the endpoint.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -27,9 +21,6 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
-    /**
-     * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-     */
     @InputImport(name="connectionStringPrimaryKey")
     private final @Nullable String connectionStringPrimaryKey;
 
@@ -37,9 +28,6 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
         return this.connectionStringPrimaryKey == null ? Optional.empty() : Optional.ofNullable(this.connectionStringPrimaryKey);
     }
 
-    /**
-     * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-     */
     @InputImport(name="connectionStringSecondaryKey")
     private final @Nullable String connectionStringSecondaryKey;
 
@@ -47,9 +35,6 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
         return this.connectionStringSecondaryKey == null ? Optional.empty() : Optional.ofNullable(this.connectionStringSecondaryKey);
     }
 
-    /**
-     * Time when the Endpoint was added to DigitalTwinsInstance.
-     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -57,9 +42,6 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdTime;
     }
 
-    /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     */
     @InputImport(name="deadLetterSecret")
     private final @Nullable String deadLetterSecret;
 
@@ -67,9 +49,6 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
         return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
     }
 
-    /**
-     * Dead letter storage URL for identity-based authentication.
-     */
     @InputImport(name="deadLetterUri")
     private final @Nullable String deadLetterUri;
 
@@ -77,10 +56,6 @@ public final class EventHubResponse extends io.pulumi.resources.InvokeArgs {
         return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
     }
 
-    /**
-     * The type of Digital Twins endpoint
-Expected value is 'EventHub'.
-     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -88,9 +63,6 @@ Expected value is 'EventHub'.
         return this.endpointType;
     }
 
-    /**
-     * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
-     */
     @InputImport(name="endpointUri")
     private final @Nullable String endpointUri;
 
@@ -98,9 +70,6 @@ Expected value is 'EventHub'.
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
-    /**
-     * The EventHub name in the EventHub namespace for identity-based authentication.
-     */
     @InputImport(name="entityPath")
     private final @Nullable String entityPath;
 
@@ -108,9 +77,6 @@ Expected value is 'EventHub'.
         return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
     }
 
-    /**
-     * The provisioning state.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

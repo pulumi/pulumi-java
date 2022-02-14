@@ -15,230 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * NSX Port Mirroring
-API Version: 2020-07-17-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### WorkloadNetworks_CreatePortMirroring
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workloadNetworkPortMirroring = new AzureNative.AVS.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", new AzureNative.AVS.WorkloadNetworkPortMirroringArgs
-        {
-            Destination = "vmGroup2",
-            Direction = "BIDIRECTIONAL",
-            DisplayName = "portMirroring1",
-            PortMirroringId = "portMirroring1",
-            PrivateCloudName = "cloud1",
-            ResourceGroupName = "group1",
-            Revision = 1,
-            Source = "vmGroup1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := avs.NewWorkloadNetworkPortMirroring(ctx, "workloadNetworkPortMirroring", &avs.WorkloadNetworkPortMirroringArgs{
-			Destination:       pulumi.String("vmGroup2"),
-			Direction:         pulumi.String("BIDIRECTIONAL"),
-			DisplayName:       pulumi.String("portMirroring1"),
-			PortMirroringId:   pulumi.String("portMirroring1"),
-			PrivateCloudName:  pulumi.String("cloud1"),
-			ResourceGroupName: pulumi.String("group1"),
-			Revision:          pulumi.Float64(1),
-			Source:            pulumi.String("vmGroup1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const workloadNetworkPortMirroring = new azure_native.avs.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring", {
-    destination: "vmGroup2",
-    direction: "BIDIRECTIONAL",
-    displayName: "portMirroring1",
-    portMirroringId: "portMirroring1",
-    privateCloudName: "cloud1",
-    resourceGroupName: "group1",
-    revision: 1,
-    source: "vmGroup1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-workload_network_port_mirroring = azure_native.avs.WorkloadNetworkPortMirroring("workloadNetworkPortMirroring",
-    destination="vmGroup2",
-    direction="BIDIRECTIONAL",
-    display_name="portMirroring1",
-    port_mirroring_id="portMirroring1",
-    private_cloud_name="cloud1",
-    resource_group_name="group1",
-    revision=1,
-    source="vmGroup1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:avs:WorkloadNetworkPortMirroring portMirroring1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/portMirroringProfiles/portMirroring1 
-```
-
- */
 @ResourceType(type="azure-native:avs:WorkloadNetworkPortMirroring")
 public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomResource {
-    /**
-     * Destination VM Group.
-     */
     @OutputExport(name="destination", type=String.class, parameters={})
     private Output</* @Nullable */ String> destination;
 
-    /**
-     * @return Destination VM Group.
-     */
     public Output</* @Nullable */ String> getDestination() {
         return this.destination;
     }
-    /**
-     * Direction of port mirroring profile.
-     */
     @OutputExport(name="direction", type=String.class, parameters={})
     private Output</* @Nullable */ String> direction;
 
-    /**
-     * @return Direction of port mirroring profile.
-     */
     public Output</* @Nullable */ String> getDirection() {
         return this.direction;
     }
-    /**
-     * Display name of the port mirroring profile.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return Display name of the port mirroring profile.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * NSX revision number.
-     */
     @OutputExport(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
-    /**
-     * @return NSX revision number.
-     */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
-    /**
-     * Source VM Group.
-     */
     @OutputExport(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
-    /**
-     * @return Source VM Group.
-     */
     public Output</* @Nullable */ String> getSource() {
         return this.source;
     }
-    /**
-     * Port Mirroring Status.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return Port Mirroring Status.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public WorkloadNetworkPortMirroring(String name, WorkloadNetworkPortMirroringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:WorkloadNetworkPortMirroring", name, args == null ? WorkloadNetworkPortMirroringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -260,14 +93,6 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static WorkloadNetworkPortMirroring get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkloadNetworkPortMirroring(name, id, options);
     }

@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
-/**
- * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
- */
     private final String description;
-/**
- * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
- */
     private final String displayName;
-/**
- * The name of the environment. Format: `projects//locations//agents//environments/`.
- */
     private final String name;
-/**
- * The test cases config for continuous tests of this environment.
- */
     private final GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse testCasesConfig;
-/**
- * Update time of this environment.
- */
     private final String updateTime;
-/**
- * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
- */
     private final List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs;
 
     @OutputCustomType.Constructor({"description","displayName","name","testCasesConfig","updateTime","versionConfigs"})
@@ -53,39 +35,21 @@ public final class GetEnvironmentResult {
         this.versionConfigs = Objects.requireNonNull(versionConfigs);
     }
 
-/**
- * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * The name of the environment. Format: `projects//locations//agents//environments/`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The test cases config for continuous tests of this environment.
- */
     public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse getTestCasesConfig() {
         return this.testCasesConfig;
     }
-/**
- * Update time of this environment.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }
-/**
- * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
- */
     public List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> getVersionConfigs() {
         return this.versionConfigs;
     }

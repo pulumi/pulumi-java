@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountAssembly {
-/**
- * The assembly definition.
-API Version: 2019-05-01.
- *
- * The assembly definition.
- */
     public static CompletableFuture<GetIntegrationAccountAssemblyResult> invokeAsync(GetIntegrationAccountAssemblyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAssembly", TypeShape.of(GetIntegrationAccountAssemblyResult.class), args == null ? GetIntegrationAccountAssemblyArgs.Empty : args, Utilities.withVersion(options));
     }

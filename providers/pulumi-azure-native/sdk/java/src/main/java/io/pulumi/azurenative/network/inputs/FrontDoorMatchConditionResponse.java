@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Define a match condition.
- */
 public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontDoorMatchConditionResponse Empty = new FrontDoorMatchConditionResponse();
 
-    /**
-     * List of possible match values.
-     */
     @InputImport(name="matchValue", required=true)
     private final List<String> matchValue;
 
@@ -29,9 +23,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
         return this.matchValue;
     }
 
-    /**
-     * Request variable to compare with.
-     */
     @InputImport(name="matchVariable", required=true)
     private final String matchVariable;
 
@@ -39,9 +30,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
         return this.matchVariable;
     }
 
-    /**
-     * Describes if the result of this condition should be negated.
-     */
     @InputImport(name="negateCondition")
     private final @Nullable Boolean negateCondition;
 
@@ -49,9 +37,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
-    /**
-     * Comparison type to use for matching with the variable value.
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -59,9 +44,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
         return this.operator;
     }
 
-    /**
-     * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
-     */
     @InputImport(name="selector")
     private final @Nullable String selector;
 
@@ -69,9 +51,6 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
-    /**
-     * List of transforms.
-     */
     @InputImport(name="transforms")
     private final @Nullable List<String> transforms;
 

@@ -22,16 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyArgs Empty = new FirewallPolicyArgs();
 
-    /**
-     * The parent firewall policy from which rules are inherited.
-     */
     @InputImport(name="basePolicy")
     private final @Nullable Input<SubResourceArgs> basePolicy;
 
@@ -39,9 +33,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.basePolicy == null ? Input.empty() : this.basePolicy;
     }
 
-    /**
-     * DNS Proxy Settings definition.
-     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<DnsSettingsArgs> dnsSettings;
 
@@ -49,9 +40,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
-    /**
-     * The name of the Firewall Policy.
-     */
     @InputImport(name="firewallPolicyName")
     private final @Nullable Input<String> firewallPolicyName;
 
@@ -59,9 +47,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallPolicyName == null ? Input.empty() : this.firewallPolicyName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -69,9 +54,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The identity of the firewall policy.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -79,9 +61,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Insights on Firewall Policy.
-     */
     @InputImport(name="insights")
     private final @Nullable Input<FirewallPolicyInsightsArgs> insights;
 
@@ -89,9 +68,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.insights == null ? Input.empty() : this.insights;
     }
 
-    /**
-     * The configuration for Intrusion detection.
-     */
     @InputImport(name="intrusionDetection")
     private final @Nullable Input<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
@@ -99,9 +75,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.intrusionDetection == null ? Input.empty() : this.intrusionDetection;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -109,9 +82,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -119,9 +89,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The Firewall Policy SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<FirewallPolicySkuArgs> sku;
 
@@ -129,9 +96,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The private IP addresses/IP ranges to which traffic will not be SNAT.
-     */
     @InputImport(name="snat")
     private final @Nullable Input<FirewallPolicySNATArgs> snat;
 
@@ -139,9 +103,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.snat == null ? Input.empty() : this.snat;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -149,9 +110,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The operation mode for Threat Intelligence.
-     */
     @InputImport(name="threatIntelMode")
     private final @Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
@@ -159,9 +117,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.threatIntelMode == null ? Input.empty() : this.threatIntelMode;
     }
 
-    /**
-     * ThreatIntel Whitelist for Firewall Policy.
-     */
     @InputImport(name="threatIntelWhitelist")
     private final @Nullable Input<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
@@ -169,9 +124,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.threatIntelWhitelist == null ? Input.empty() : this.threatIntelWhitelist;
     }
 
-    /**
-     * TLS Configuration definition.
-     */
     @InputImport(name="transportSecurity")
     private final @Nullable Input<FirewallPolicyTransportSecurityArgs> transportSecurity;
 

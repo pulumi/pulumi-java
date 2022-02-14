@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
- */
     @EnumType
     public enum EventSubscriptionIdentityType {
-/**
- * 
- */
         SystemAssigned("SystemAssigned"),
-/**
- * 
- */
         UserAssigned("UserAssigned");
 
         private final String value;

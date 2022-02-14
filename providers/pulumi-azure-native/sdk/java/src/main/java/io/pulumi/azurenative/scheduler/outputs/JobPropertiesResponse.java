@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobPropertiesResponse {
-/**
- * Gets or sets the job action.
- */
     private final @Nullable JobActionResponse action;
-/**
- * Gets or sets the job recurrence.
- */
     private final @Nullable JobRecurrenceResponse recurrence;
-/**
- * Gets or sets the job start time.
- */
     private final @Nullable String startTime;
-/**
- * Gets or set the job state.
- */
     private final @Nullable String state;
-/**
- * Gets the job status.
- */
     private final JobStatusResponse status;
 
     @OutputCustomType.Constructor({"action","recurrence","startTime","state","status"})
@@ -49,33 +34,18 @@ public final class JobPropertiesResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * Gets or sets the job action.
- */
     public Optional<JobActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
-/**
- * Gets or sets the job recurrence.
- */
     public Optional<JobRecurrenceResponse> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }
-/**
- * Gets or sets the job start time.
- */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
-/**
- * Gets or set the job state.
- */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
-/**
- * Gets the job status.
- */
     public JobStatusResponse getStatus() {
         return this.status;
     }

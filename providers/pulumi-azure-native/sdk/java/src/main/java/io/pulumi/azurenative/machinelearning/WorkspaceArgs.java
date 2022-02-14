@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceArgs Empty = new WorkspaceArgs();
 
-    /**
-     * The key vault identifier used for encrypted workspaces.
-     */
     @InputImport(name="keyVaultIdentifierId")
     private final @Nullable Input<String> keyVaultIdentifierId;
 
@@ -28,9 +22,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultIdentifierId == null ? Input.empty() : this.keyVaultIdentifierId;
     }
 
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The email id of the owner for this workspace.
-     */
     @InputImport(name="ownerEmail", required=true)
     private final Input<String> ownerEmail;
 
@@ -48,9 +36,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.ownerEmail;
     }
 
-    /**
-     * The name of the resource group to which the machine learning workspace belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -68,9 +50,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The fully qualified arm id of the storage account associated with this workspace.
-     */
     @InputImport(name="userStorageAccountId", required=true)
     private final Input<String> userStorageAccountId;
 
@@ -78,9 +57,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.userStorageAccountId;
     }
 
-    /**
-     * The name of the machine learning workspace.
-     */
     @InputImport(name="workspaceName")
     private final @Nullable Input<String> workspaceName;
 

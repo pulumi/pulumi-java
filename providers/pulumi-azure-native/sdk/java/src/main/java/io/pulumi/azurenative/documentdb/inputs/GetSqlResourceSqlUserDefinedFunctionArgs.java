@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlResourceSqlUserDefinedFunctionArgs Empty = new GetSqlResourceSqlUserDefinedFunctionArgs();
 
-    /**
-     * Cosmos DB database account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
         return this.accountName;
     }
 
-    /**
-     * Cosmos DB container name.
-     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -35,9 +26,6 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
         return this.containerName;
     }
 
-    /**
-     * Cosmos DB database name.
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -45,9 +33,6 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
         return this.databaseName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -55,9 +40,6 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
-    /**
-     * Cosmos DB userDefinedFunction name.
-     */
     @InputImport(name="userDefinedFunctionName", required=true)
     private final String userDefinedFunctionName;
 

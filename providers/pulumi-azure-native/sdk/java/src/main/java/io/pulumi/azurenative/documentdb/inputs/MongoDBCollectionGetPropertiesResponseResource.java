@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MongoDBCollectionGetPropertiesResponseResource extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoDBCollectionGetPropertiesResponseResource Empty = new MongoDBCollectionGetPropertiesResponseResource();
 
-    /**
-     * Analytical TTL.
-     */
     @InputImport(name="analyticalStorageTtl")
     private final @Nullable Integer analyticalStorageTtl;
 
@@ -32,9 +26,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
     }
 
-    /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -42,9 +33,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
         return this.etag;
     }
 
-    /**
-     * Name of the Cosmos DB MongoDB collection
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -52,9 +40,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
         return this.id;
     }
 
-    /**
-     * List of index keys
-     */
     @InputImport(name="indexes")
     private final @Nullable List<MongoIndexResponse> indexes;
 
@@ -62,9 +47,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
         return this.indexes == null ? List.of() : this.indexes;
     }
 
-    /**
-     * A system generated property. A unique identifier.
-     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -72,9 +54,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
         return this.rid;
     }
 
-    /**
-     * A key-value pair of shard keys to be applied for the request.
-     */
     @InputImport(name="shardKey")
     private final @Nullable Map<String,String> shardKey;
 
@@ -82,9 +61,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
         return this.shardKey == null ? Map.of() : this.shardKey;
     }
 
-    /**
-     * A system generated property that denotes the last updated timestamp of the resource.
-     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 

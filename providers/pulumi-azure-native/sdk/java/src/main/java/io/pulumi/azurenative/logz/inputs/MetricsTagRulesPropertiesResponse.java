@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the properties for a TagRules resource.
- */
 public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricsTagRulesPropertiesResponse Empty = new MetricsTagRulesPropertiesResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="metricRules")
     private final @Nullable List<MetricRulesResponse> metricRules;
 
@@ -31,9 +25,6 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
         return this.metricRules == null ? List.of() : this.metricRules;
     }
 
-    /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -41,9 +32,6 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
-    /**
-     * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
-     */
     @InputImport(name="sendMetrics")
     private final @Nullable Boolean sendMetrics;
 
@@ -51,9 +39,6 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
         return this.sendMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendMetrics);
     }
 
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @InputImport(name="systemData", required=true)
     private final SystemDataResponse systemData;
 

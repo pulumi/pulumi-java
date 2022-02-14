@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A signature object consists of the KeyID used and the signature itself.
- */
 public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrafeasV1beta1IntotoSignatureArgs Empty = new GrafeasV1beta1IntotoSignatureArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="keyid")
     private final @Nullable Input<String> keyid;
 
@@ -27,9 +21,6 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
         return this.keyid == null ? Input.empty() : this.keyid;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sig")
     private final @Nullable Input<String> sig;
 

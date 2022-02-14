@@ -20,113 +20,32 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabVirtualMachineCreationParameterResponse {
-/**
- * Indicates whether another user can take ownership of the virtual machine
- */
     private final @Nullable Boolean allowClaim;
-/**
- * The artifacts to be installed on the virtual machine.
- */
     private final @Nullable List<ArtifactInstallPropertiesResponse> artifacts;
-/**
- * The number of virtual machine instances to create.
- */
     private final @Nullable BulkCreationParametersResponse bulkCreationParameters;
-/**
- * The creation date of the virtual machine.
- */
     private final @Nullable String createdDate;
-/**
- * The custom image identifier of the virtual machine.
- */
     private final @Nullable String customImageId;
-/**
- * New or existing data disks to attach to the virtual machine after creation
- */
     private final @Nullable List<DataDiskPropertiesResponse> dataDiskParameters;
-/**
- * Indicates whether the virtual machine is to be created without a public IP address.
- */
     private final @Nullable Boolean disallowPublicIpAddress;
-/**
- * The resource ID of the environment that contains this virtual machine, if any.
- */
     private final @Nullable String environmentId;
-/**
- * The expiration date for VM.
- */
     private final @Nullable String expirationDate;
-/**
- * The Microsoft Azure Marketplace image reference of the virtual machine.
- */
     private final @Nullable GalleryImageReferenceResponse galleryImageReference;
-/**
- * Indicates whether this virtual machine uses an SSH key for authentication.
- */
     private final @Nullable Boolean isAuthenticationWithSshKey;
-/**
- * The lab subnet name of the virtual machine.
- */
     private final @Nullable String labSubnetName;
-/**
- * The lab virtual network identifier of the virtual machine.
- */
     private final @Nullable String labVirtualNetworkId;
-/**
- * The location of the new virtual machine or environment
- */
     private final @Nullable String location;
-/**
- * The name of the virtual machine or environment
- */
     private final @Nullable String name;
-/**
- * The network interface properties.
- */
     private final @Nullable NetworkInterfacePropertiesResponse networkInterface;
-/**
- * The notes of the virtual machine.
- */
     private final @Nullable String notes;
-/**
- * The object identifier of the owner of the virtual machine.
- */
     private final @Nullable String ownerObjectId;
-/**
- * The user principal name of the virtual machine owner.
- */
     private final @Nullable String ownerUserPrincipalName;
-/**
- * The password of the virtual machine administrator.
- */
     private final @Nullable String password;
-/**
- * The id of the plan associated with the virtual machine image
- */
     private final @Nullable String planId;
-/**
- * Virtual Machine schedules to be created
- */
     private final @Nullable List<ScheduleCreationParameterResponse> scheduleParameters;
-/**
- * The size of the virtual machine.
- */
     private final @Nullable String size;
-/**
- * The SSH key of the virtual machine administrator.
- */
     private final @Nullable String sshKey;
-/**
- * Storage type to use for virtual machine (i.e. Standard, Premium).
- */
     private final @Nullable String storageType;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The user name of the virtual machine.
- */
     private final @Nullable String userName;
 
     @OutputCustomType.Constructor({"allowClaim","artifacts","bulkCreationParameters","createdDate","customImageId","dataDiskParameters","disallowPublicIpAddress","environmentId","expirationDate","galleryImageReference","isAuthenticationWithSshKey","labSubnetName","labVirtualNetworkId","location","name","networkInterface","notes","ownerObjectId","ownerUserPrincipalName","password","planId","scheduleParameters","size","sshKey","storageType","tags","userName"})
@@ -187,165 +106,84 @@ public final class LabVirtualMachineCreationParameterResponse {
         this.userName = userName;
     }
 
-/**
- * Indicates whether another user can take ownership of the virtual machine
- */
     public Optional<Boolean> getAllowClaim() {
         return Optional.ofNullable(this.allowClaim);
     }
-/**
- * The artifacts to be installed on the virtual machine.
- */
     public List<ArtifactInstallPropertiesResponse> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
-/**
- * The number of virtual machine instances to create.
- */
     public Optional<BulkCreationParametersResponse> getBulkCreationParameters() {
         return Optional.ofNullable(this.bulkCreationParameters);
     }
-/**
- * The creation date of the virtual machine.
- */
     public Optional<String> getCreatedDate() {
         return Optional.ofNullable(this.createdDate);
     }
-/**
- * The custom image identifier of the virtual machine.
- */
     public Optional<String> getCustomImageId() {
         return Optional.ofNullable(this.customImageId);
     }
-/**
- * New or existing data disks to attach to the virtual machine after creation
- */
     public List<DataDiskPropertiesResponse> getDataDiskParameters() {
         return this.dataDiskParameters == null ? List.of() : this.dataDiskParameters;
     }
-/**
- * Indicates whether the virtual machine is to be created without a public IP address.
- */
     public Optional<Boolean> getDisallowPublicIpAddress() {
         return Optional.ofNullable(this.disallowPublicIpAddress);
     }
-/**
- * The resource ID of the environment that contains this virtual machine, if any.
- */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
-/**
- * The expiration date for VM.
- */
     public Optional<String> getExpirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
-/**
- * The Microsoft Azure Marketplace image reference of the virtual machine.
- */
     public Optional<GalleryImageReferenceResponse> getGalleryImageReference() {
         return Optional.ofNullable(this.galleryImageReference);
     }
-/**
- * Indicates whether this virtual machine uses an SSH key for authentication.
- */
     public Optional<Boolean> getIsAuthenticationWithSshKey() {
         return Optional.ofNullable(this.isAuthenticationWithSshKey);
     }
-/**
- * The lab subnet name of the virtual machine.
- */
     public Optional<String> getLabSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
-/**
- * The lab virtual network identifier of the virtual machine.
- */
     public Optional<String> getLabVirtualNetworkId() {
         return Optional.ofNullable(this.labVirtualNetworkId);
     }
-/**
- * The location of the new virtual machine or environment
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the virtual machine or environment
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The network interface properties.
- */
     public Optional<NetworkInterfacePropertiesResponse> getNetworkInterface() {
         return Optional.ofNullable(this.networkInterface);
     }
-/**
- * The notes of the virtual machine.
- */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
-/**
- * The object identifier of the owner of the virtual machine.
- */
     public Optional<String> getOwnerObjectId() {
         return Optional.ofNullable(this.ownerObjectId);
     }
-/**
- * The user principal name of the virtual machine owner.
- */
     public Optional<String> getOwnerUserPrincipalName() {
         return Optional.ofNullable(this.ownerUserPrincipalName);
     }
-/**
- * The password of the virtual machine administrator.
- */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * The id of the plan associated with the virtual machine image
- */
     public Optional<String> getPlanId() {
         return Optional.ofNullable(this.planId);
     }
-/**
- * Virtual Machine schedules to be created
- */
     public List<ScheduleCreationParameterResponse> getScheduleParameters() {
         return this.scheduleParameters == null ? List.of() : this.scheduleParameters;
     }
-/**
- * The size of the virtual machine.
- */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
-/**
- * The SSH key of the virtual machine administrator.
- */
     public Optional<String> getSshKey() {
         return Optional.ofNullable(this.sshKey);
     }
-/**
- * Storage type to use for virtual machine (i.e. Standard, Premium).
- */
     public Optional<String> getStorageType() {
         return Optional.ofNullable(this.storageType);
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The user name of the virtual machine.
- */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }

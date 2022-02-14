@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetWebhookResult {
-/**
- * Indicates whether the webhook is disabled.
- */
     private final Boolean disabled;
-/**
- * The human-readable name of the webhook, unique within the agent.
- */
     private final String displayName;
-/**
- * Configuration for a generic web service.
- */
     private final GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService;
-/**
- * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
- */
     private final String name;
-/**
- * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
- */
     private final GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse serviceDirectory;
-/**
- * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
- */
     private final String timeout;
 
     @OutputCustomType.Constructor({"disabled","displayName","genericWebService","name","serviceDirectory","timeout"})
@@ -53,39 +35,21 @@ public final class GetWebhookResult {
         this.timeout = Objects.requireNonNull(timeout);
     }
 
-/**
- * Indicates whether the webhook is disabled.
- */
     public Boolean getDisabled() {
         return this.disabled;
     }
-/**
- * The human-readable name of the webhook, unique within the agent.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Configuration for a generic web service.
- */
     public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse getGenericWebService() {
         return this.genericWebService;
     }
-/**
- * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
- */
     public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse getServiceDirectory() {
         return this.serviceDirectory;
     }
-/**
- * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
- */
     public String getTimeout() {
         return this.timeout;
     }

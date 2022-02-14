@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListDatabaseKeysResult {
-/**
- * The current primary key that clients can use to authenticate
- */
     private final String primaryKey;
-/**
- * The current secondary key that clients can use to authenticate
- */
     private final String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
@@ -26,15 +20,9 @@ public final class ListDatabaseKeysResult {
         this.secondaryKey = Objects.requireNonNull(secondaryKey);
     }
 
-/**
- * The current primary key that clients can use to authenticate
- */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
-/**
- * The current secondary key that clients can use to authenticate
- */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

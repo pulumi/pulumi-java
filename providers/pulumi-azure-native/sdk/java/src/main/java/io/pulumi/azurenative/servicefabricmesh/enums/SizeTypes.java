@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Volume size
- */
     @EnumType
     public enum SizeTypes {
-/**
- * 
- */
         Small("Small"),
-/**
- * 
- */
         Medium("Medium"),
-/**
- * 
- */
         Large("Large");
 
         private final String value;

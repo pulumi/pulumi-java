@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppArgs Empty = new GetAppArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -27,9 +21,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
         return this.appId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="developerId", required=true)
     private final String developerId;
 
@@ -37,9 +28,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
         return this.developerId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="entity")
     private final @Nullable String entity;
 
@@ -47,9 +35,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
         return this.entity == null ? Optional.empty() : Optional.ofNullable(this.entity);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -57,9 +42,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="query")
     private final @Nullable String query;
 

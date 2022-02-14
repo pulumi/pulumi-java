@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Table column.
- */
 public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ColumnArgs Empty = new ColumnArgs();
 
-    /**
-     * Column data type logical hint.
-     */
     @InputImport(name="dataTypeHint")
     private final @Nullable Input<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
@@ -30,9 +24,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataTypeHint == null ? Input.empty() : this.dataTypeHint;
     }
 
-    /**
-     * Column description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Column display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -50,9 +38,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Column name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,9 +45,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Column data type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ColumnTypeEnum>> type;
 

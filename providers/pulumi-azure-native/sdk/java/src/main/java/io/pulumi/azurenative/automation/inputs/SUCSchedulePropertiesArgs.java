@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of schedule parameters.
- */
 public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SUCSchedulePropertiesArgs Empty = new SUCSchedulePropertiesArgs();
 
-    /**
-     * Gets or sets the advanced schedule.
-     */
     @InputImport(name="advancedSchedule")
     private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
 
@@ -32,9 +26,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.advancedSchedule == null ? Input.empty() : this.advancedSchedule;
     }
 
-    /**
-     * Gets or sets the creation time.
-     */
     @InputImport(name="creationTime")
     private final @Nullable Input<String> creationTime;
 
@@ -42,9 +33,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
-    /**
-     * Gets or sets the description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,9 +40,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Gets or sets the end time of the schedule.
-     */
     @InputImport(name="expiryTime")
     private final @Nullable Input<String> expiryTime;
 
@@ -62,9 +47,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.expiryTime == null ? Input.empty() : this.expiryTime;
     }
 
-    /**
-     * Gets or sets the expiry time's offset in minutes.
-     */
     @InputImport(name="expiryTimeOffsetMinutes")
     private final @Nullable Input<Double> expiryTimeOffsetMinutes;
 
@@ -72,9 +54,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.expiryTimeOffsetMinutes == null ? Input.empty() : this.expiryTimeOffsetMinutes;
     }
 
-    /**
-     * Gets or sets the frequency of the schedule.
-     */
     @InputImport(name="frequency")
     private final @Nullable Input<Either<String,ScheduleFrequency>> frequency;
 
@@ -82,9 +61,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.frequency == null ? Input.empty() : this.frequency;
     }
 
-    /**
-     * Gets or sets the interval of the schedule.
-     */
     @InputImport(name="interval")
     private final @Nullable Input<Double> interval;
 
@@ -92,9 +68,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.interval == null ? Input.empty() : this.interval;
     }
 
-    /**
-     * Gets or sets a value indicating whether this schedule is enabled.
-     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -102,9 +75,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
-    /**
-     * Gets or sets the last modified time.
-     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable Input<String> lastModifiedTime;
 
@@ -112,9 +82,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
     }
 
-    /**
-     * Gets or sets the next run time of the schedule.
-     */
     @InputImport(name="nextRun")
     private final @Nullable Input<String> nextRun;
 
@@ -122,9 +89,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.nextRun == null ? Input.empty() : this.nextRun;
     }
 
-    /**
-     * Gets or sets the next run time's offset in minutes.
-     */
     @InputImport(name="nextRunOffsetMinutes")
     private final @Nullable Input<Double> nextRunOffsetMinutes;
 
@@ -132,9 +96,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.nextRunOffsetMinutes == null ? Input.empty() : this.nextRunOffsetMinutes;
     }
 
-    /**
-     * Gets or sets the start time of the schedule.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -142,9 +103,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Gets or sets the time zone of the schedule.
-     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

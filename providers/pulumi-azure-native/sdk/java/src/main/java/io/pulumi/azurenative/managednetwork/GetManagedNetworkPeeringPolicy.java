@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedNetworkPeeringPolicy {
-/**
- * The Managed Network Peering Policy resource
-API Version: 2019-06-01-preview.
- *
- * The Managed Network Peering Policy resource
- */
     public static CompletableFuture<GetManagedNetworkPeeringPolicyResult> invokeAsync(GetManagedNetworkPeeringPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getManagedNetworkPeeringPolicy", TypeShape.of(GetManagedNetworkPeeringPolicyResult.class), args == null ? GetManagedNetworkPeeringPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Chart type of the main view in Cost Analysis. Required.
- */
     @EnumType
     public enum ChartType {
-/**
- * 
- */
         Area("Area"),
-/**
- * 
- */
         Line("Line"),
-/**
- * 
- */
         StackedColumn("StackedColumn"),
-/**
- * 
- */
         GroupedColumn("GroupedColumn"),
-/**
- * 
- */
         Table("Table");
 
         private final String value;

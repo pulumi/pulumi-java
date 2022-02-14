@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionPolicyZoneConfigurationArgs Empty = new DistributionPolicyZoneConfigurationArgs();
 
-    /**
-     * The URL of the zone. The zone must exist in the region where the managed instance group is located.
-     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

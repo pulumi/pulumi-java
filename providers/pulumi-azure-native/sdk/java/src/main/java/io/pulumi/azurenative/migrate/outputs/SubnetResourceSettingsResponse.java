@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubnetResourceSettingsResponse {
-/**
- * Gets or sets address prefix for the subnet.
- */
     private final @Nullable String addressPrefix;
-/**
- * Gets or sets the Subnet name.
- */
     private final @Nullable String name;
-/**
- * Defines reference to NSG.
- */
     private final @Nullable NsgReferenceResponse networkSecurityGroup;
 
     @OutputCustomType.Constructor({"addressPrefix","name","networkSecurityGroup"})
@@ -35,21 +26,12 @@ public final class SubnetResourceSettingsResponse {
         this.networkSecurityGroup = networkSecurityGroup;
     }
 
-/**
- * Gets or sets address prefix for the subnet.
- */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
-/**
- * Gets or sets the Subnet name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Defines reference to NSG.
- */
     public Optional<NsgReferenceResponse> getNetworkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }

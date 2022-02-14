@@ -14,174 +14,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Single item in a List or Get IpFilterRules operation
-API Version: 2018-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### NameSpaceIpFilterRuleCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var namespaceIpFilterRule = new AzureNative.EventHub.NamespaceIpFilterRule("namespaceIpFilterRule", new AzureNative.EventHub.NamespaceIpFilterRuleArgs
-        {
-            Action = "Accept",
-            FilterName = "sdk-IPFilterRules-7337",
-            IpFilterRuleName = "sdk-IPFilterRules-7337",
-            IpMask = "13.78.143.246/32",
-            NamespaceName = "sdk-Namespace-5232",
-            ResourceGroupName = "ResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := eventhub.NewNamespaceIpFilterRule(ctx, "namespaceIpFilterRule", &eventhub.NamespaceIpFilterRuleArgs{
-			Action:            pulumi.String("Accept"),
-			FilterName:        pulumi.String("sdk-IPFilterRules-7337"),
-			IpFilterRuleName:  pulumi.String("sdk-IPFilterRules-7337"),
-			IpMask:            pulumi.String("13.78.143.246/32"),
-			NamespaceName:     pulumi.String("sdk-Namespace-5232"),
-			ResourceGroupName: pulumi.String("ResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const namespaceIpFilterRule = new azure_native.eventhub.NamespaceIpFilterRule("namespaceIpFilterRule", {
-    action: "Accept",
-    filterName: "sdk-IPFilterRules-7337",
-    ipFilterRuleName: "sdk-IPFilterRules-7337",
-    ipMask: "13.78.143.246/32",
-    namespaceName: "sdk-Namespace-5232",
-    resourceGroupName: "ResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-namespace_ip_filter_rule = azure_native.eventhub.NamespaceIpFilterRule("namespaceIpFilterRule",
-    action="Accept",
-    filter_name="sdk-IPFilterRules-7337",
-    ip_filter_rule_name="sdk-IPFilterRules-7337",
-    ip_mask="13.78.143.246/32",
-    namespace_name="sdk-Namespace-5232",
-    resource_group_name="ResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:eventhub:NamespaceIpFilterRule sdk-IPFilterRules-7337 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5232/ipfilterrules/sdk-IPFilterRules-7337 
-```
-
- */
 @ResourceType(type="azure-native:eventhub:NamespaceIpFilterRule")
 public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
-    /**
-     * The IP Filter Action
-     */
     @OutputExport(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
-    /**
-     * @return The IP Filter Action
-     */
     public Output</* @Nullable */ String> getAction() {
         return this.action;
     }
-    /**
-     * IP Filter name
-     */
     @OutputExport(name="filterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterName;
 
-    /**
-     * @return IP Filter name
-     */
     public Output</* @Nullable */ String> getFilterName() {
         return this.filterName;
     }
-    /**
-     * IP Mask
-     */
     @OutputExport(name="ipMask", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipMask;
 
-    /**
-     * @return IP Mask
-     */
     public Output</* @Nullable */ String> getIpMask() {
         return this.ipMask;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public NamespaceIpFilterRule(String name, NamespaceIpFilterRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventhub:NamespaceIpFilterRule", name, args == null ? NamespaceIpFilterRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -200,14 +65,6 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static NamespaceIpFilterRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamespaceIpFilterRule(name, id, options);
     }

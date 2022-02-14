@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudBuildOptionsResponse {
-/**
- * Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
- */
     private final String appYamlPath;
-/**
- * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
- */
     private final String cloudBuildTimeout;
 
     @OutputCustomType.Constructor({"appYamlPath","cloudBuildTimeout"})
@@ -26,15 +20,9 @@ public final class CloudBuildOptionsResponse {
         this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
     }
 
-/**
- * Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
- */
     public String getAppYamlPath() {
         return this.appYamlPath;
     }
-/**
- * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
- */
     public String getCloudBuildTimeout() {
         return this.cloudBuildTimeout;
     }

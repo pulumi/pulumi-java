@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
- */
     @EnumType
     public enum SecurityPolicyRuleDirection {
-/**
- * 
- */
         Egress("EGRESS"),
-/**
- * 
- */
         Ingress("INGRESS");
 
         private final String value;

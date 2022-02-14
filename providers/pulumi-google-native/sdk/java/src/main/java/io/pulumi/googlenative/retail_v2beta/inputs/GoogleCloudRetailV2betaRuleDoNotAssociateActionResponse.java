@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Prevents `query_term` from being associated with specified terms during search. Example: Don't associate "gShoe" and "cheap".
- */
 public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse Empty = new GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse();
 
-    /**
-     * Cannot contain duplicates or the query term. Can specify up to 100 terms.
-     */
     @InputImport(name="doNotAssociateTerms", required=true)
     private final List<String> doNotAssociateTerms;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
         return this.doNotAssociateTerms;
     }
 
-    /**
-     * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
-     */
     @InputImport(name="queryTerms", required=true)
     private final List<String> queryTerms;
 
@@ -36,9 +27,6 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
         return this.queryTerms;
     }
 
-    /**
-     * Will be [deprecated = true] post migration;
-     */
     @InputImport(name="terms", required=true)
     private final List<String> terms;
 

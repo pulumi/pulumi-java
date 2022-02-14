@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The content hash.
- */
 public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentHashResponse Empty = new ContentHashResponse();
 
-    /**
-     * The algorithm of the content hash.
-     */
     @InputImport(name="algorithm")
     private final @Nullable String algorithm;
 
@@ -27,9 +21,6 @@ public final class ContentHashResponse extends io.pulumi.resources.InvokeArgs {
         return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
     }
 
-    /**
-     * The value of the content hash.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Ftp read settings.
- */
 public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FtpReadSettingsResponse Empty = new FtpReadSettingsResponse();
 
-    /**
-     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="deleteFilesAfterCompletion")
     private final @Nullable Object deleteFilesAfterCompletion;
 
@@ -29,9 +23,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.deleteFilesAfterCompletion == null ? Optional.empty() : Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
 
-    /**
-     * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableChunking")
     private final @Nullable Object disableChunking;
 
@@ -39,9 +30,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.disableChunking == null ? Optional.empty() : Optional.ofNullable(this.disableChunking);
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -49,9 +37,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
-    /**
-     * Indicates whether to enable partition discovery.
-     */
     @InputImport(name="enablePartitionDiscovery")
     private final @Nullable Boolean enablePartitionDiscovery;
 
@@ -59,9 +44,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
-    /**
-     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileListPath")
     private final @Nullable Object fileListPath;
 
@@ -69,9 +51,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.fileListPath == null ? Optional.empty() : Optional.ofNullable(this.fileListPath);
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -79,9 +58,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
-    /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="partitionRootPath")
     private final @Nullable Object partitionRootPath;
 
@@ -89,9 +65,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
     }
 
-    /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="recursive")
     private final @Nullable Object recursive;
 
@@ -99,10 +72,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
-    /**
-     * The read setting type.
-Expected value is 'FtpReadSettings'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -110,9 +79,6 @@ Expected value is 'FtpReadSettings'.
         return this.type;
     }
 
-    /**
-     * Specify whether to use binary transfer mode for FTP stores.
-     */
     @InputImport(name="useBinaryTransfer")
     private final @Nullable Boolean useBinaryTransfer;
 
@@ -120,9 +86,6 @@ Expected value is 'FtpReadSettings'.
         return this.useBinaryTransfer == null ? Optional.empty() : Optional.ofNullable(this.useBinaryTransfer);
     }
 
-    /**
-     * Ftp wildcardFileName. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="wildcardFileName")
     private final @Nullable Object wildcardFileName;
 
@@ -130,9 +93,6 @@ Expected value is 'FtpReadSettings'.
         return this.wildcardFileName == null ? Optional.empty() : Optional.ofNullable(this.wildcardFileName);
     }
 
-    /**
-     * Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="wildcardFolderPath")
     private final @Nullable Object wildcardFolderPath;
 

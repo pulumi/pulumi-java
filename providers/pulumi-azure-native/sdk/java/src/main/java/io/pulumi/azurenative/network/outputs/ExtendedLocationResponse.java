@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExtendedLocationResponse {
-/**
- * The name of the extended location.
- */
     private final String name;
-/**
- * The type of the extended location.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"name","type"})
@@ -26,15 +20,9 @@ public final class ExtendedLocationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The name of the extended location.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The type of the extended location.
- */
     public String getType() {
         return this.type;
     }

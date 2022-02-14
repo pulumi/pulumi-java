@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * ConfidentialNodes is configuration for the confidential nodes feature, which makes nodes run on confidential VMs.
- */
 public final class ConfidentialNodesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfidentialNodesResponse Empty = new ConfidentialNodesResponse();
 
-    /**
-     * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

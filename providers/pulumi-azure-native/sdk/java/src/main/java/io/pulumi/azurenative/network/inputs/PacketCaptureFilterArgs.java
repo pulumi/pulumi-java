@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Filter that is applied to packet capture request. Multiple filters can be applied.
- */
 public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketCaptureFilterArgs Empty = new PacketCaptureFilterArgs();
 
-    /**
-     * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     */
     @InputImport(name="localIPAddress")
     private final @Nullable Input<String> localIPAddress;
 
@@ -29,9 +23,6 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
         return this.localIPAddress == null ? Input.empty() : this.localIPAddress;
     }
 
-    /**
-     * Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     */
     @InputImport(name="localPort")
     private final @Nullable Input<String> localPort;
 
@@ -39,9 +30,6 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
         return this.localPort == null ? Input.empty() : this.localPort;
     }
 
-    /**
-     * Protocol to be filtered on.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,PcProtocol>> protocol;
 
@@ -49,9 +37,6 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
-    /**
-     * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     */
     @InputImport(name="remoteIPAddress")
     private final @Nullable Input<String> remoteIPAddress;
 
@@ -59,9 +44,6 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
         return this.remoteIPAddress == null ? Input.empty() : this.remoteIPAddress;
     }
 
-    /**
-     * Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     */
     @InputImport(name="remotePort")
     private final @Nullable Input<String> remotePort;
 

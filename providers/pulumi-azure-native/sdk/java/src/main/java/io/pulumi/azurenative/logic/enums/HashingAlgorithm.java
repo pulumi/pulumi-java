@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The signing or hashing algorithm.
- */
     @EnumType
     public enum HashingAlgorithm {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         MD5("MD5"),
-/**
- * 
- */
         SHA1("SHA1"),
-/**
- * 
- */
         SHA2256("SHA2256"),
-/**
- * 
- */
         SHA2384("SHA2384"),
-/**
- * 
- */
         SHA2512("SHA2512");
 
         private final String value;

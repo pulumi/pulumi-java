@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IotHubLocationDescriptionResponse {
-/**
- * The name of the Azure region
- */
     private final @Nullable String location;
-/**
- * The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
- */
     private final @Nullable String role;
 
     @OutputCustomType.Constructor({"location","role"})
@@ -28,15 +22,9 @@ public final class IotHubLocationDescriptionResponse {
         this.role = role;
     }
 
-/**
- * The name of the Azure region
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
- */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }

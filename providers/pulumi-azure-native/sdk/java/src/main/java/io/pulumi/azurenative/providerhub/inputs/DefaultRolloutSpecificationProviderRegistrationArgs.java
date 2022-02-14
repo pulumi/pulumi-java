@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DefaultRolloutSpecificationProviderRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutSpecificationProviderRegistrationArgs Empty = new DefaultRolloutSpecificationProviderRegistrationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<ProviderRegistrationPropertiesArgs> properties;
 

@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClientCertificateThumbprintResponse {
-/**
- * The thumbprint of the client certificate.
- */
     private final String certificateThumbprint;
-/**
- * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
- */
     private final Boolean isAdmin;
 
     @OutputCustomType.Constructor({"certificateThumbprint","isAdmin"})
@@ -27,15 +21,9 @@ public final class ClientCertificateThumbprintResponse {
         this.isAdmin = Objects.requireNonNull(isAdmin);
     }
 
-/**
- * The thumbprint of the client certificate.
- */
     public String getCertificateThumbprint() {
         return this.certificateThumbprint;
     }
-/**
- * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
- */
     public Boolean getIsAdmin() {
         return this.isAdmin;
     }

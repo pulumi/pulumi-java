@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEnterpriseKnowledgeGraphArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEnterpriseKnowledgeGraphArgs Empty = new GetEnterpriseKnowledgeGraphArgs();
 
-    /**
-     * The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetEnterpriseKnowledgeGraphArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the EnterpriseKnowledgeGraph resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

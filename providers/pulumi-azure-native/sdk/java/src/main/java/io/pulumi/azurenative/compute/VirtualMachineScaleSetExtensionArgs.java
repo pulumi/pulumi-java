@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetExtensionArgs Empty = new VirtualMachineScaleSetExtensionArgs();
 
-    /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -30,9 +24,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
-    /**
-     * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     */
     @InputImport(name="enableAutomaticUpgrade")
     private final @Nullable Input<Boolean> enableAutomaticUpgrade;
 
@@ -40,9 +31,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.enableAutomaticUpgrade == null ? Input.empty() : this.enableAutomaticUpgrade;
     }
 
-    /**
-     * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
-     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -50,9 +38,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
-    /**
-     * The name of the extension.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,9 +45,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     */
     @InputImport(name="protectedSettings")
     private final @Nullable Input<Object> protectedSettings;
 
@@ -70,9 +52,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
     }
 
-    /**
-     * Collection of extension names after which this extension needs to be provisioned.
-     */
     @InputImport(name="provisionAfterExtensions")
     private final @Nullable Input<List<String>> provisionAfterExtensions;
 
@@ -80,9 +59,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.provisionAfterExtensions == null ? Input.empty() : this.provisionAfterExtensions;
     }
 
-    /**
-     * The name of the extension handler publisher.
-     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -90,9 +66,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -100,9 +73,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Json formatted public settings for the extension.
-     */
     @InputImport(name="settings")
     private final @Nullable Input<Object> settings;
 
@@ -110,9 +80,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.settings == null ? Input.empty() : this.settings;
     }
 
-    /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -120,9 +87,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * Specifies the version of the script handler.
-     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable Input<String> typeHandlerVersion;
 
@@ -130,9 +94,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
     }
 
-    /**
-     * The name of the VM scale set where the extension should be create or updated.
-     */
     @InputImport(name="vmScaleSetName", required=true)
     private final Input<String> vmScaleSetName;
 
@@ -140,9 +101,6 @@ public final class VirtualMachineScaleSetExtensionArgs extends io.pulumi.resourc
         return this.vmScaleSetName;
     }
 
-    /**
-     * The name of the VM scale set extension.
-     */
     @InputImport(name="vmssExtensionName")
     private final @Nullable Input<String> vmssExtensionName;
 

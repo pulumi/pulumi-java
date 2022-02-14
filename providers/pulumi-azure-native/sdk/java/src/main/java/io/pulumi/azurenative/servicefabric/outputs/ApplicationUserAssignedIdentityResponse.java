@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationUserAssignedIdentityResponse {
-/**
- * The friendly name of user assigned identity.
- */
     private final String name;
-/**
- * The principal id of user assigned identity.
- */
     private final String principalId;
 
     @OutputCustomType.Constructor({"name","principalId"})
@@ -26,15 +20,9 @@ public final class ApplicationUserAssignedIdentityResponse {
         this.principalId = Objects.requireNonNull(principalId);
     }
 
-/**
- * The friendly name of user assigned identity.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The principal id of user assigned identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }

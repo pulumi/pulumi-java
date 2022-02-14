@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleCookiesConditionResponse {
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'Cookies'.
- */
     private final String name;
-/**
- * Defines the parameters for the condition.
- */
     private final CookiesMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -28,16 +21,9 @@ Expected value is 'Cookies'.
         this.parameters = Objects.requireNonNull(parameters);
     }
 
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'Cookies'.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines the parameters for the condition.
- */
     public CookiesMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

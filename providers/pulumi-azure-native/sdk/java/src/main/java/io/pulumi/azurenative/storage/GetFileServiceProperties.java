@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFileServiceProperties {
-/**
- * The properties of File services in storage account.
-API Version: 2021-02-01.
- *
- * The properties of File services in storage account.
- */
     public static CompletableFuture<GetFileServicePropertiesResult> invokeAsync(GetFileServicePropertiesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getFileServiceProperties", TypeShape.of(GetFileServicePropertiesResult.class), args == null ? GetFileServicePropertiesArgs.Empty : args, Utilities.withVersion(options));
     }

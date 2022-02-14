@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoute {
-/**
- * Returns the specified Route resource. Gets a list of available routes by making a list() request.
- */
     public static CompletableFuture<GetRouteResult> invokeAsync(GetRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRoute", TypeShape.of(GetRouteResult.class), args == null ? GetRouteArgs.Empty : args, Utilities.withVersion(options));
     }

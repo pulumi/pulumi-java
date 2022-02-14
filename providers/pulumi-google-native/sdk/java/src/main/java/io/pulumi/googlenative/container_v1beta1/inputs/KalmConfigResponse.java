@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Configuration options for the KALM addon.
- */
 public final class KalmConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KalmConfigResponse Empty = new KalmConfigResponse();
 
-    /**
-     * Whether KALM is enabled for this cluster.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

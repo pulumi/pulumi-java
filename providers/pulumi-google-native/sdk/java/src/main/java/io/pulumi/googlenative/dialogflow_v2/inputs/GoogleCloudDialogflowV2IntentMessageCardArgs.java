@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The card response message.
- */
 public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageCardArgs Empty = new GoogleCloudDialogflowV2IntentMessageCardArgs();
 
-    /**
-     * Optional. The collection of card buttons.
-     */
     @InputImport(name="buttons")
     private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
         return this.buttons == null ? Input.empty() : this.buttons;
     }
 
-    /**
-     * Optional. The public URI to an image file for the card.
-     */
     @InputImport(name="imageUri")
     private final @Nullable Input<String> imageUri;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
         return this.imageUri == null ? Input.empty() : this.imageUri;
     }
 
-    /**
-     * Optional. The subtitle of the card.
-     */
     @InputImport(name="subtitle")
     private final @Nullable Input<String> subtitle;
 
@@ -49,9 +37,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
         return this.subtitle == null ? Input.empty() : this.subtitle;
     }
 
-    /**
-     * Optional. The title of the card.
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

@@ -13,37 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDiskAccessResult {
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
- */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-/**
- * The disk access resource provisioning state.
- */
     private final String provisioningState;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The time when the disk access was created.
- */
     private final String timeCreated;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","privateEndpointConnections","provisioningState","tags","timeCreated","type"})
@@ -66,51 +42,27 @@ public final class GetDiskAccessResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
- */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-/**
- * The disk access resource provisioning state.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The time when the disk access was created.
- */
     public String getTimeCreated() {
         return this.timeCreated;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

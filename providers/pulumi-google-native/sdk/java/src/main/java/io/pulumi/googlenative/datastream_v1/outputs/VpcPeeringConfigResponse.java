@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VpcPeeringConfigResponse {
-/**
- * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
- */
     private final String subnet;
-/**
- * Fully qualified name of the VPC that Datastream will peer to. Format: `projects/{project}/global/{networks}/{name}`
- */
     private final String vpc;
 
     @OutputCustomType.Constructor({"subnet","vpc"})
@@ -26,15 +20,9 @@ public final class VpcPeeringConfigResponse {
         this.vpc = Objects.requireNonNull(vpc);
     }
 
-/**
- * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
- */
     public String getSubnet() {
         return this.subnet;
     }
-/**
- * Fully qualified name of the VPC that Datastream will peer to. Format: `projects/{project}/global/{networks}/{name}`
- */
     public String getVpc() {
         return this.vpc;
     }

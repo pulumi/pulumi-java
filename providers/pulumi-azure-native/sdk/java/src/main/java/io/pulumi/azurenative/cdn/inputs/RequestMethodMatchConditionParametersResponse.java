@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the parameters for RequestMethod match conditions
- */
 public final class RequestMethodMatchConditionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RequestMethodMatchConditionParametersResponse Empty = new RequestMethodMatchConditionParametersResponse();
 
-    /**
-     * The match value for the condition of the delivery rule
-     */
     @InputImport(name="matchValues")
     private final @Nullable List<String> matchValues;
 
@@ -29,9 +23,6 @@ public final class RequestMethodMatchConditionParametersResponse extends io.pulu
         return this.matchValues == null ? List.of() : this.matchValues;
     }
 
-    /**
-     * Describes if this is negate condition or not
-     */
     @InputImport(name="negateCondition")
     private final @Nullable Boolean negateCondition;
 
@@ -39,9 +30,6 @@ public final class RequestMethodMatchConditionParametersResponse extends io.pulu
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -49,9 +37,6 @@ public final class RequestMethodMatchConditionParametersResponse extends io.pulu
         return this.odataType;
     }
 
-    /**
-     * Describes operator to be matched
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 

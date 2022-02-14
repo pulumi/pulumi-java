@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineRunTargetPropertiesArgs Empty = new PipelineRunTargetPropertiesArgs();
 
-    /**
-     * The name of the target.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,9 +23,6 @@ public final class PipelineRunTargetPropertiesArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The type of the target.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,PipelineRunTargetType>> type;
 

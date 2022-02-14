@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Preferences related to the double encryption
- */
 public final class EncryptionPreferencesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionPreferencesArgs Empty = new EncryptionPreferencesArgs();
 
-    /**
-     * Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
-     */
     @InputImport(name="doubleEncryptionStatus")
     private final @Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 

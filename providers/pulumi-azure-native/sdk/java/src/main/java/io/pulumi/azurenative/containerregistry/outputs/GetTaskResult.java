@@ -24,81 +24,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTaskResult {
-/**
- * The machine configuration of the run agent.
- */
     private final @Nullable AgentPropertiesResponse agentConfiguration;
-/**
- * The dedicated agent pool for the task.
- */
     private final @Nullable String agentPoolName;
-/**
- * The creation date of task.
- */
     private final String creationDate;
-/**
- * The properties that describes a set of credentials that will be used when this run is invoked.
- */
     private final @Nullable CredentialsResponse credentials;
-/**
- * The resource ID.
- */
     private final String id;
-/**
- * Identity for the resource.
- */
     private final @Nullable IdentityPropertiesResponse identity;
-/**
- * The value of this property indicates whether the task resource is system task or not.
- */
     private final @Nullable Boolean isSystemTask;
-/**
- * The location of the resource. This cannot be changed after the resource is created.
- */
     private final String location;
-/**
- * The template that describes the repository and tag information for run log artifact.
- */
     private final @Nullable String logTemplate;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The platform properties against which the run has to happen.
- */
     private final @Nullable PlatformPropertiesResponse platform;
-/**
- * The provisioning state of the task.
- */
     private final String provisioningState;
-/**
- * The current status of task.
- */
     private final @Nullable String status;
-/**
- * The properties of a task step.
- */
     private final @Nullable Object step;
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     private final SystemDataResponse systemData;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Run timeout in seconds.
- */
     private final @Nullable Integer timeout;
-/**
- * The properties that describe all triggers for the task.
- */
     private final @Nullable TriggerPropertiesResponse trigger;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","creationDate","credentials","id","identity","isSystemTask","location","logTemplate","name","platform","provisioningState","status","step","systemData","tags","timeout","trigger","type"})
@@ -143,117 +86,60 @@ public final class GetTaskResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The machine configuration of the run agent.
- */
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
-/**
- * The dedicated agent pool for the task.
- */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
-/**
- * The creation date of task.
- */
     public String getCreationDate() {
         return this.creationDate;
     }
-/**
- * The properties that describes a set of credentials that will be used when this run is invoked.
- */
     public Optional<CredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
-/**
- * The resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Identity for the resource.
- */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * The value of this property indicates whether the task resource is system task or not.
- */
     public Optional<Boolean> getIsSystemTask() {
         return Optional.ofNullable(this.isSystemTask);
     }
-/**
- * The location of the resource. This cannot be changed after the resource is created.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The template that describes the repository and tag information for run log artifact.
- */
     public Optional<String> getLogTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The platform properties against which the run has to happen.
- */
     public Optional<PlatformPropertiesResponse> getPlatform() {
         return Optional.ofNullable(this.platform);
     }
-/**
- * The provisioning state of the task.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The current status of task.
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
-/**
- * The properties of a task step.
- */
     public Optional<Object> getStep() {
         return Optional.ofNullable(this.step);
     }
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Run timeout in seconds.
- */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
-/**
- * The properties that describe all triggers for the task.
- */
     public Optional<TriggerPropertiesResponse> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

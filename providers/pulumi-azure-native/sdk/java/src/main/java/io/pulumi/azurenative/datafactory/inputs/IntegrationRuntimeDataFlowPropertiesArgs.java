@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Data flow properties for managed integration runtime.
- */
 public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationRuntimeDataFlowPropertiesArgs Empty = new IntegrationRuntimeDataFlowPropertiesArgs();
 
-    /**
-     * Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
-     */
     @InputImport(name="cleanup")
     private final @Nullable Input<Boolean> cleanup;
 
@@ -31,9 +25,6 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
         return this.cleanup == null ? Input.empty() : this.cleanup;
     }
 
-    /**
-     * Compute type of the cluster which will execute data flow job.
-     */
     @InputImport(name="computeType")
     private final @Nullable Input<Either<String,DataFlowComputeType>> computeType;
 
@@ -41,9 +32,6 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
         return this.computeType == null ? Input.empty() : this.computeType;
     }
 
-    /**
-     * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
-     */
     @InputImport(name="coreCount")
     private final @Nullable Input<Integer> coreCount;
 
@@ -51,9 +39,6 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
         return this.coreCount == null ? Input.empty() : this.coreCount;
     }
 
-    /**
-     * Time to live (in minutes) setting of the cluster which will execute data flow job.
-     */
     @InputImport(name="timeToLive")
     private final @Nullable Input<Integer> timeToLive;
 

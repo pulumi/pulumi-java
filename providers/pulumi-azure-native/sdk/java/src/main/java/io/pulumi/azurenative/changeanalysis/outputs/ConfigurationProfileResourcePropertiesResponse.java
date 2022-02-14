@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConfigurationProfileResourcePropertiesResponse {
-/**
- * Settings of change notification configuration for a subscription.
- */
     private final @Nullable NotificationSettingsResponse notifications;
 
     @OutputCustomType.Constructor({"notifications"})
@@ -21,9 +18,6 @@ public final class ConfigurationProfileResourcePropertiesResponse {
         this.notifications = notifications;
     }
 
-/**
- * Settings of change notification configuration for a subscription.
- */
     public Optional<NotificationSettingsResponse> getNotifications() {
         return Optional.ofNullable(this.notifications);
     }

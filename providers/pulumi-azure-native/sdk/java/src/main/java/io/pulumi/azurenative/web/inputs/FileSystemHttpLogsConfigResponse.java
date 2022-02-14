@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Http logs to file system configuration.
- */
 public final class FileSystemHttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileSystemHttpLogsConfigResponse Empty = new FileSystemHttpLogsConfigResponse();
 
-    /**
-     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
-     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -28,11 +22,6 @@ public final class FileSystemHttpLogsConfigResponse extends io.pulumi.resources.
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    /**
-     * Retention in days.
-Remove files older than X days.
-0 or lower means no retention.
-     */
     @InputImport(name="retentionInDays")
     private final @Nullable Integer retentionInDays;
 
@@ -40,11 +29,6 @@ Remove files older than X days.
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
     }
 
-    /**
-     * Maximum size in megabytes that http log files can use.
-When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.
-     */
     @InputImport(name="retentionInMb")
     private final @Nullable Integer retentionInMb;
 

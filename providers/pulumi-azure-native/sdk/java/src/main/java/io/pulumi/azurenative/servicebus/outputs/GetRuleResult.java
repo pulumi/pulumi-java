@@ -14,33 +14,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRuleResult {
-/**
- * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
- */
     private final @Nullable ActionResponse action;
-/**
- * Properties of correlationFilter
- */
     private final @Nullable CorrelationFilterResponse correlationFilter;
-/**
- * Filter type that is evaluated against a BrokeredMessage.
- */
     private final @Nullable String filterType;
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Properties of sqlFilter
- */
     private final @Nullable SqlFilterResponse sqlFilter;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"action","correlationFilter","filterType","id","name","sqlFilter","type"})
@@ -61,45 +40,24 @@ public final class GetRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
- */
     public Optional<ActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
-/**
- * Properties of correlationFilter
- */
     public Optional<CorrelationFilterResponse> getCorrelationFilter() {
         return Optional.ofNullable(this.correlationFilter);
     }
-/**
- * Filter type that is evaluated against a BrokeredMessage.
- */
     public Optional<String> getFilterType() {
         return Optional.ofNullable(this.filterType);
     }
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Properties of sqlFilter
- */
     public Optional<SqlFilterResponse> getSqlFilter() {
         return Optional.ofNullable(this.sqlFilter);
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

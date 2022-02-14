@@ -15,134 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Device group
-API Version: 2021-02-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update device group
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var deviceGroup = new AzureNative.IoTSecurity.DeviceGroup("deviceGroup", new AzureNative.IoTSecurity.DeviceGroupArgs
-        {
-            DeviceGroupName = "myGroup",
-            IotDefenderLocation = "eastus",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	iotsecurity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/iotsecurity"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := iotsecurity.NewDeviceGroup(ctx, "deviceGroup", &iotsecurity.DeviceGroupArgs{
-			DeviceGroupName:     pulumi.String("myGroup"),
-			IotDefenderLocation: pulumi.String("eastus"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const deviceGroup = new azure_native.iotsecurity.DeviceGroup("deviceGroup", {
-    deviceGroupName: "myGroup",
-    iotDefenderLocation: "eastus",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-device_group = azure_native.iotsecurity.DeviceGroup("deviceGroup",
-    device_group_name="myGroup",
-    iot_defender_location="eastus")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:iotsecurity:DeviceGroup myGroup /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.IoTSecurity/deviceGroups/myGroup 
-```
-
- */
 @ResourceType(type="azure-native:iotsecurity:DeviceGroup")
 public class DeviceGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DeviceGroup(String name, DeviceGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:iotsecurity:DeviceGroup", name, args == null ? DeviceGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -161,14 +54,6 @@ public class DeviceGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DeviceGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DeviceGroup(name, id, options);
     }

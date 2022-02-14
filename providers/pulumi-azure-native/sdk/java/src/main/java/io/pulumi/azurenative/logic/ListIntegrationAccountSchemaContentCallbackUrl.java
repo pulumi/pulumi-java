@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationAccountSchemaContentCallbackUrl {
-/**
- * The workflow trigger callback URL.
-API Version: 2019-05-01.
- *
- * The workflow trigger callback URL.
- */
     public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> invokeAsync(ListIntegrationAccountSchemaContentCallbackUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountSchemaContentCallbackUrl", TypeShape.of(ListIntegrationAccountSchemaContentCallbackUrlResult.class), args == null ? ListIntegrationAccountSchemaContentCallbackUrlArgs.Empty : args, Utilities.withVersion(options));
     }

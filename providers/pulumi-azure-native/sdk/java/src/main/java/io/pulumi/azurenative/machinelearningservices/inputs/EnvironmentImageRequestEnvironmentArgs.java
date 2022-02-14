@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The details of the AZURE ML environment.
- */
 public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentImageRequestEnvironmentArgs Empty = new EnvironmentImageRequestEnvironmentArgs();
 
-    /**
-     * The definition of a Docker container.
-     */
     @InputImport(name="docker")
     private final @Nullable Input<ModelEnvironmentDefinitionDockerArgs> docker;
 
@@ -32,9 +26,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.docker == null ? Input.empty() : this.docker;
     }
 
-    /**
-     * Definition of environment variables to be defined in the environment.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<Map<String,String>> environmentVariables;
 
@@ -42,9 +33,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
-    /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-     */
     @InputImport(name="inferencingStackVersion")
     private final @Nullable Input<String> inferencingStackVersion;
 
@@ -52,9 +40,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.inferencingStackVersion == null ? Input.empty() : this.inferencingStackVersion;
     }
 
-    /**
-     * The name of the environment.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -62,9 +47,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Settings for a Python environment.
-     */
     @InputImport(name="python")
     private final @Nullable Input<ModelEnvironmentDefinitionPythonArgs> python;
 
@@ -72,9 +54,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.python == null ? Input.empty() : this.python;
     }
 
-    /**
-     * Settings for a R environment.
-     */
     @InputImport(name="r")
     private final @Nullable Input<ModelEnvironmentDefinitionRArgs> r;
 
@@ -82,9 +61,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.r == null ? Input.empty() : this.r;
     }
 
-    /**
-     * The configuration for a Spark environment.
-     */
     @InputImport(name="spark")
     private final @Nullable Input<ModelEnvironmentDefinitionSparkArgs> spark;
 
@@ -92,9 +68,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
         return this.spark == null ? Input.empty() : this.spark;
     }
 
-    /**
-     * The environment version.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

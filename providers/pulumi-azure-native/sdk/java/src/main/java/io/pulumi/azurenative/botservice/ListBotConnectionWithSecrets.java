@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBotConnectionWithSecrets {
-/**
- * Bot channel resource definition
-API Version: 2021-03-01.
- *
- * Bot channel resource definition
- */
     public static CompletableFuture<ListBotConnectionWithSecretsResult> invokeAsync(ListBotConnectionWithSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionWithSecrets", TypeShape.of(ListBotConnectionWithSecretsResult.class), args == null ? ListBotConnectionWithSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

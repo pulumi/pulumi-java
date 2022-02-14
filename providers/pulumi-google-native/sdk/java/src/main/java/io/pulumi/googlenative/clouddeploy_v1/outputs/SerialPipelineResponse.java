@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SerialPipelineResponse {
-/**
- * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
- */
     private final List<StageResponse> stages;
 
     @OutputCustomType.Constructor({"stages"})
@@ -20,9 +17,6 @@ public final class SerialPipelineResponse {
         this.stages = Objects.requireNonNull(stages);
     }
 
-/**
- * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
- */
     public List<StageResponse> getStages() {
         return this.stages;
     }

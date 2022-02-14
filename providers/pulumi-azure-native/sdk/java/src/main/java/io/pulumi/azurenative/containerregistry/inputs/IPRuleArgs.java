@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IP rule with specific IP or IP range in CIDR format.
- */
 public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPRuleArgs Empty = new IPRuleArgs();
 
-    /**
-     * The action of IP ACL rule.
-     */
     @InputImport(name="action")
     private final @Nullable Input<Either<String,Action>> action;
 
@@ -29,9 +23,6 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
-    /**
-     * Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
-     */
     @InputImport(name="iPAddressOrRange", required=true)
     private final Input<String> iPAddressOrRange;
 

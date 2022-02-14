@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceDatabaseIamPolicy {
-/**
- * Gets the access control policy for a database or backup resource. Returns an empty policy if a database or backup exists but does not have a policy set. Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires `spanner.backups.getIamPolicy` permission on resource.
- */
     public static CompletableFuture<GetInstanceDatabaseIamPolicyResult> invokeAsync(GetInstanceDatabaseIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceDatabaseIamPolicy", TypeShape.of(GetInstanceDatabaseIamPolicyResult.class), args == null ? GetInstanceDatabaseIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

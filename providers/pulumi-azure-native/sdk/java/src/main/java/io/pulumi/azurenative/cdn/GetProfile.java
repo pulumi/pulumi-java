@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfile {
-/**
- * CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
-API Version: 2020-09-01.
- *
- * CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
- */
     public static CompletableFuture<GetProfileResult> invokeAsync(GetProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getProfile", TypeShape.of(GetProfileResult.class), args == null ? GetProfileArgs.Empty : args, Utilities.withVersion(options));
     }

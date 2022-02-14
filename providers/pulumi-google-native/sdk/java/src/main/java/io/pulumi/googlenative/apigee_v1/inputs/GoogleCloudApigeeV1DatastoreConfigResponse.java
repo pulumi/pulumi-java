@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration detail for datastore
- */
 public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1DatastoreConfigResponse Empty = new GoogleCloudApigeeV1DatastoreConfigResponse();
 
-    /**
-     * Name of the Cloud Storage bucket. Required for `gcs` target_type.
-     */
     @InputImport(name="bucketName", required=true)
     private final String bucketName;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
         return this.bucketName;
     }
 
-    /**
-     * BigQuery dataset name Required for `bigquery` target_type.
-     */
     @InputImport(name="datasetName", required=true)
     private final String datasetName;
 
@@ -35,9 +26,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
         return this.datasetName;
     }
 
-    /**
-     * Path of Cloud Storage bucket Required for `gcs` target_type.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -45,9 +33,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
         return this.path;
     }
 
-    /**
-     * GCP project in which the datastore exists
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -55,9 +40,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
         return this.project;
     }
 
-    /**
-     * Prefix of BigQuery table Required for `bigquery` target_type.
-     */
     @InputImport(name="tablePrefix", required=true)
     private final String tablePrefix;
 

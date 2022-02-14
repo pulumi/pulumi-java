@@ -15,49 +15,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetHealthAlertResult {
-/**
- * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
- */
     private final @Nullable List<HealthAlertActionResponse> actions;
-/**
- * defines the specific alert criteria information.
- */
     private final HealthAlertCriteriaResponse criteria;
-/**
- * the description of the health alert that will be included in the alert email.
- */
     private final String description;
-/**
- * the flag that indicates whether the health alert is enabled.
- */
     private final Boolean enabled;
-/**
- * Azure resource Id
- */
     private final String id;
-/**
- * Last time the rule was updated in ISO8601 format.
- */
     private final String lastUpdatedTime;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Azure resource name
- */
     private final String name;
-/**
- * the list of resource id's that this health alert is scoped to.
- */
     private final @Nullable List<String> scopes;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Azure resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"actions","criteria","description","enabled","id","lastUpdatedTime","location","name","scopes","tags","type"})
@@ -86,69 +53,36 @@ public final class GetHealthAlertResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
- */
     public List<HealthAlertActionResponse> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
-/**
- * defines the specific alert criteria information.
- */
     public HealthAlertCriteriaResponse getCriteria() {
         return this.criteria;
     }
-/**
- * the description of the health alert that will be included in the alert email.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * the flag that indicates whether the health alert is enabled.
- */
     public Boolean getEnabled() {
         return this.enabled;
     }
-/**
- * Azure resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Last time the rule was updated in ISO8601 format.
- */
     public String getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Azure resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * the list of resource id's that this health alert is scoped to.
- */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Azure resource type
- */
     public String getType() {
         return this.type;
     }

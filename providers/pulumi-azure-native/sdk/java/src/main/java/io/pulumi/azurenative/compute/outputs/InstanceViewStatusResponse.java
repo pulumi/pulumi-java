@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceViewStatusResponse {
-/**
- * The status code.
- */
     private final @Nullable String code;
-/**
- * The short localizable label for the status.
- */
     private final @Nullable String displayStatus;
-/**
- * The level code.
- */
     private final @Nullable String level;
-/**
- * The detailed status message, including for alerts and error messages.
- */
     private final @Nullable String message;
-/**
- * The time of the status.
- */
     private final @Nullable String time;
 
     @OutputCustomType.Constructor({"code","displayStatus","level","message","time"})
@@ -46,33 +31,18 @@ public final class InstanceViewStatusResponse {
         this.time = time;
     }
 
-/**
- * The status code.
- */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
-/**
- * The short localizable label for the status.
- */
     public Optional<String> getDisplayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
-/**
- * The level code.
- */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
-/**
- * The detailed status message, including for alerts and error messages.
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
-/**
- * The time of the status.
- */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }

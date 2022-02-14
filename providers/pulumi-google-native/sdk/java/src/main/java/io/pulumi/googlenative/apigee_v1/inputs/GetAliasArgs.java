@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAliasArgs Empty = new GetAliasArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="aliasId", required=true)
     private final String aliasId;
 
@@ -25,9 +19,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
         return this.aliasId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -35,9 +26,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="keystoreId", required=true)
     private final String keystoreId;
 
@@ -45,9 +33,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
         return this.keystoreId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

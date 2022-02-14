@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInterconnectAttachment {
-/**
- * Returns the specified interconnect attachment.
- */
     public static CompletableFuture<GetInterconnectAttachmentResult> invokeAsync(GetInterconnectAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getInterconnectAttachment", TypeShape.of(GetInterconnectAttachmentResult.class), args == null ? GetInterconnectAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

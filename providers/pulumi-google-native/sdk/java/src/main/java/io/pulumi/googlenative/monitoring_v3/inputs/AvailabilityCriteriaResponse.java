@@ -6,9 +6,6 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 import java.util.Objects;
 
 
-/**
- * Future parameters for the availability SLI.
- */
 public final class AvailabilityCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AvailabilityCriteriaResponse Empty = new AvailabilityCriteriaResponse();

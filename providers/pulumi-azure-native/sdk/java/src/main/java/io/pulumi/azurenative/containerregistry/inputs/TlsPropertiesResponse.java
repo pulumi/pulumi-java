@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The TLS properties of the connected registry login server.
- */
 public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TlsPropertiesResponse Empty = new TlsPropertiesResponse();
 
-    /**
-     * The certificate used to configure HTTPS for the login server.
-     */
     @InputImport(name="certificate", required=true)
     private final TlsCertificatePropertiesResponse certificate;
 
@@ -26,9 +20,6 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         return this.certificate;
     }
 
-    /**
-     * Indicates whether HTTPS is enabled for the login server.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

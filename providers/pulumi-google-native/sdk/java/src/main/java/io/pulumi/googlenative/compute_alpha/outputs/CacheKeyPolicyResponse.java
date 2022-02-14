@@ -11,33 +11,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CacheKeyPolicyResponse {
-/**
- * If true, requests to different hosts will be cached separately.
- */
     private final Boolean includeHost;
-/**
- * Allows HTTP request headers (by name) to be used in the cache key.
- */
     private final List<String> includeHttpHeaders;
-/**
- * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
- */
     private final List<String> includeNamedCookies;
-/**
- * If true, http and https requests will be cached separately.
- */
     private final Boolean includeProtocol;
-/**
- * If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
- */
     private final Boolean includeQueryString;
-/**
- * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
- */
     private final List<String> queryStringBlacklist;
-/**
- * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
- */
     private final List<String> queryStringWhitelist;
 
     @OutputCustomType.Constructor({"includeHost","includeHttpHeaders","includeNamedCookies","includeProtocol","includeQueryString","queryStringBlacklist","queryStringWhitelist"})
@@ -58,45 +37,24 @@ public final class CacheKeyPolicyResponse {
         this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
     }
 
-/**
- * If true, requests to different hosts will be cached separately.
- */
     public Boolean getIncludeHost() {
         return this.includeHost;
     }
-/**
- * Allows HTTP request headers (by name) to be used in the cache key.
- */
     public List<String> getIncludeHttpHeaders() {
         return this.includeHttpHeaders;
     }
-/**
- * Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
- */
     public List<String> getIncludeNamedCookies() {
         return this.includeNamedCookies;
     }
-/**
- * If true, http and https requests will be cached separately.
- */
     public Boolean getIncludeProtocol() {
         return this.includeProtocol;
     }
-/**
- * If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
- */
     public Boolean getIncludeQueryString() {
         return this.includeQueryString;
     }
-/**
- * Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
- */
     public List<String> getQueryStringBlacklist() {
         return this.queryStringBlacklist;
     }
-/**
- * Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
- */
     public List<String> getQueryStringWhitelist() {
         return this.queryStringWhitelist;
     }

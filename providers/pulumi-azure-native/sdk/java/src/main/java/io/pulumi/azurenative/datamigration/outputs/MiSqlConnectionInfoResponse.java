@@ -11,22 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MiSqlConnectionInfoResponse {
-/**
- * Resource id for Azure SQL database Managed instance
- */
     private final String managedInstanceResourceId;
-/**
- * Password credential.
- */
     private final @Nullable String password;
-/**
- * Type of connection info
-Expected value is 'MiSqlConnectionInfo'.
- */
     private final String type;
-/**
- * User name
- */
     private final @Nullable String userName;
 
     @OutputCustomType.Constructor({"managedInstanceResourceId","password","type","userName"})
@@ -41,28 +28,15 @@ Expected value is 'MiSqlConnectionInfo'.
         this.userName = userName;
     }
 
-/**
- * Resource id for Azure SQL database Managed instance
- */
     public String getManagedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
-/**
- * Password credential.
- */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * Type of connection info
-Expected value is 'MiSqlConnectionInfo'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * User name
- */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }

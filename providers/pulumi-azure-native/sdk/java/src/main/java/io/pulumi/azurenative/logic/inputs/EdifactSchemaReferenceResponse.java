@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Edifact schema reference.
- */
 public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactSchemaReferenceResponse Empty = new EdifactSchemaReferenceResponse();
 
-    /**
-     * The association assigned code.
-     */
     @InputImport(name="associationAssignedCode")
     private final @Nullable String associationAssignedCode;
 
@@ -27,9 +21,6 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
         return this.associationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.associationAssignedCode);
     }
 
-    /**
-     * The message id.
-     */
     @InputImport(name="messageId", required=true)
     private final String messageId;
 
@@ -37,9 +28,6 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
         return this.messageId;
     }
 
-    /**
-     * The message release version.
-     */
     @InputImport(name="messageRelease", required=true)
     private final String messageRelease;
 
@@ -47,9 +35,6 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
         return this.messageRelease;
     }
 
-    /**
-     * The message version.
-     */
     @InputImport(name="messageVersion", required=true)
     private final String messageVersion;
 
@@ -57,9 +42,6 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
         return this.messageVersion;
     }
 
-    /**
-     * The schema name.
-     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 
@@ -67,9 +49,6 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
         return this.schemaName;
     }
 
-    /**
-     * The sender application id.
-     */
     @InputImport(name="senderApplicationId")
     private final @Nullable String senderApplicationId;
 
@@ -77,9 +56,6 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
         return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);
     }
 
-    /**
-     * The sender application qualifier.
-     */
     @InputImport(name="senderApplicationQualifier")
     private final @Nullable String senderApplicationQualifier;
 

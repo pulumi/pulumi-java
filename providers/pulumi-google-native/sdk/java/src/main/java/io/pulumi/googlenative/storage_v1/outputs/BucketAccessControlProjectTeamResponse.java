@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketAccessControlProjectTeamResponse {
-/**
- * The project number.
- */
     private final String projectNumber;
-/**
- * The team.
- */
     private final String team;
 
     @OutputCustomType.Constructor({"projectNumber","team"})
@@ -26,15 +20,9 @@ public final class BucketAccessControlProjectTeamResponse {
         this.team = Objects.requireNonNull(team);
     }
 
-/**
- * The project number.
- */
     public String getProjectNumber() {
         return this.projectNumber;
     }
-/**
- * The team.
- */
     public String getTeam() {
         return this.team;
     }

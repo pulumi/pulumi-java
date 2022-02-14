@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Option to specify the logging mode, which determines if and where build logs are stored.
- */
     @EnumType
     public enum BuildOptionsLogging {
-/**
- * The service determines the logging mode. The default is `LEGACY`. Do not rely on the default logging behavior as it may change in the future.
- */
         LoggingUnspecified("LOGGING_UNSPECIFIED"),
-/**
- * Build logs are stored in Cloud Logging and Cloud Storage.
- */
         Legacy("LEGACY"),
-/**
- * Build logs are stored in Cloud Storage.
- */
         GcsOnly("GCS_ONLY"),
-/**
- * This option is the same as CLOUD_LOGGING_ONLY.
- */
         StackdriverOnly("STACKDRIVER_ONLY"),
-/**
- * Build logs are stored in Cloud Logging. Selecting this option will not allow [logs streaming](https://cloud.google.com/sdk/gcloud/reference/builds/log).
- */
         CloudLoggingOnly("CLOUD_LOGGING_ONLY"),
-/**
- * Turn off all logging. No build logs will be captured.
- */
         None("NONE");
 
         private final String value;

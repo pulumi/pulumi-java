@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkflowAccessKeyArgs Empty = new GetWorkflowAccessKeyArgs();
 
-    /**
-     * The workflow access key name.
-     */
     @InputImport(name="accessKeyName", required=true)
     private final String accessKeyName;
 
@@ -25,9 +19,6 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
         return this.accessKeyName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The workflow name.
-     */
     @InputImport(name="workflowName", required=true)
     private final String workflowName;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A PTR record.
- */
 public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PtrRecordArgs Empty = new PtrRecordArgs();
 
-    /**
-     * The PTR target domain name for this PTR record.
-     */
     @InputImport(name="ptrdname")
     private final @Nullable Input<String> ptrdname;
 

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardArgs Empty = new DashboardArgs();
 
-    /**
-     * The name of the dashboard.
-     */
     @InputImport(name="dashboardName")
     private final @Nullable Input<String> dashboardName;
 
@@ -31,9 +25,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.dashboardName == null ? Input.empty() : this.dashboardName;
     }
 
-    /**
-     * The dashboard lenses.
-     */
     @InputImport(name="lenses")
     private final @Nullable Input<List<DashboardLensArgs>> lenses;
 
@@ -41,9 +32,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.lenses == null ? Input.empty() : this.lenses;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,9 +39,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The dashboard metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,Object>> metadata;
 
@@ -61,9 +46,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,9 +53,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

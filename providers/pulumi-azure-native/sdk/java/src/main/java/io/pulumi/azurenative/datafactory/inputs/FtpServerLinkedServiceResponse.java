@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A FTP server Linked Service.
- */
 public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FtpServerLinkedServiceResponse Empty = new FtpServerLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -35,9 +29,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The authentication type to be used to connect to the FTP server.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -45,9 +36,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -55,9 +43,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -65,9 +50,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="enableServerCertificateValidation")
     private final @Nullable Object enableServerCertificateValidation;
 
@@ -75,9 +57,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.enableServerCertificateValidation == null ? Optional.empty() : Optional.ofNullable(this.enableServerCertificateValidation);
     }
 
-    /**
-     * If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="enableSsl")
     private final @Nullable Object enableSsl;
 
@@ -85,9 +64,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -95,9 +71,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Host name of the FTP server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="host", required=true)
     private final Object host;
 
@@ -105,9 +78,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.host;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -115,9 +85,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Password to logon the FTP server.
-     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -125,9 +92,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.password == null ? null : this.password;
     }
 
-    /**
-     * The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="port")
     private final @Nullable Object port;
 
@@ -135,10 +99,6 @@ public final class FtpServerLinkedServiceResponse extends io.pulumi.resources.In
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'FtpServer'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -146,9 +106,6 @@ Expected value is 'FtpServer'.
         return this.type;
     }
 
-    /**
-     * Username to logon the FTP server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userName")
     private final @Nullable Object userName;
 

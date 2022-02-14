@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Server endpoint recall error object
- */
 public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerEndpointRecallErrorResponse Empty = new ServerEndpointRecallErrorResponse();
 
-    /**
-     * Count of occurences of the error
-     */
     @InputImport(name="count", required=true)
     private final Double count;
 
@@ -26,9 +20,6 @@ public final class ServerEndpointRecallErrorResponse extends io.pulumi.resources
         return this.count;
     }
 
-    /**
-     * Error code (HResult)
-     */
     @InputImport(name="errorCode", required=true)
     private final Integer errorCode;
 

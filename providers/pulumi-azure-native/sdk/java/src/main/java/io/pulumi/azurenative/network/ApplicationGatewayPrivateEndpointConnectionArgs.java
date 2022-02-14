@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayPrivateEndpointConnectionArgs Empty = new ApplicationGatewayPrivateEndpointConnectionArgs();
 
-    /**
-     * The name of the application gateway.
-     */
     @InputImport(name="applicationGatewayName", required=true)
     private final Input<String> applicationGatewayName;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
         return this.applicationGatewayName;
     }
 
-    /**
-     * The name of the application gateway private endpoint connection.
-     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -48,9 +36,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Name of the private endpoint connection on an application gateway.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,9 +43,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -68,9 +50,6 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

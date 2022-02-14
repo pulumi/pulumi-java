@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Autoscale defines the autoscaling policy of a worker pool.
- */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs();
 
-    /**
-     * The maximal number of workers. Must be equal to or greater than min_size.
-     */
     @InputImport(name="maxSize")
     private final @Nullable Input<String> maxSize;
 
@@ -27,9 +21,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
         return this.maxSize == null ? Input.empty() : this.maxSize;
     }
 
-    /**
-     * The minimal number of workers. Must be greater than 0.
-     */
     @InputImport(name="minSize")
     private final @Nullable Input<String> minSize;
 

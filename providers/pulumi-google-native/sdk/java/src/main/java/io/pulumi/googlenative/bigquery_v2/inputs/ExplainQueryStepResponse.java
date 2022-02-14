@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExplainQueryStepResponse Empty = new ExplainQueryStepResponse();
 
-    /**
-     * Machine-readable operation type.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -26,9 +20,6 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
         return this.kind;
     }
 
-    /**
-     * Human-readable stage descriptions.
-     */
     @InputImport(name="substeps", required=true)
     private final List<String> substeps;
 

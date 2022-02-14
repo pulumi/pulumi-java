@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The SKU of the Maps Account.
- */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
-    /**
-     * The name of the SKU, in standard format (such as S0).
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

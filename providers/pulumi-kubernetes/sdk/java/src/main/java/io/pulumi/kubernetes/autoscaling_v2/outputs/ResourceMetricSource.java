@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceMetricSource {
-/**
- * name is the name of the resource in question.
- */
     private final String name;
-/**
- * target specifies the target value for the given metric
- */
     private final MetricTarget target;
 
     @OutputCustomType.Constructor({"name","target"})
@@ -27,15 +21,9 @@ public final class ResourceMetricSource {
         this.target = Objects.requireNonNull(target);
     }
 
-/**
- * name is the name of the resource in question.
- */
     public String getName() {
         return this.name;
     }
-/**
- * target specifies the target value for the given metric
- */
     public MetricTarget getTarget() {
         return this.target;
     }

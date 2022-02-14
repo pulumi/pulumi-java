@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
- */
     @EnumType
     public enum ResourceIdentityType {
-/**
- * 
- */
         SystemAssigned("SystemAssigned"),
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         UserAssigned("UserAssigned"),
-/**
- * 
- */
         SystemAssigned_UserAssigned("SystemAssigned, UserAssigned");
 
         private final String value;

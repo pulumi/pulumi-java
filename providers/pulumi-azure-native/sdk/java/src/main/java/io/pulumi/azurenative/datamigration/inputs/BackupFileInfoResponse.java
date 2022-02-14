@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Information of the backup file
- */
 public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupFileInfoResponse Empty = new BackupFileInfoResponse();
 
-    /**
-     * Sequence number of the backup file in the backup set
-     */
     @InputImport(name="familySequenceNumber")
     private final @Nullable Integer familySequenceNumber;
 
@@ -28,9 +22,6 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.familySequenceNumber == null ? Optional.empty() : Optional.ofNullable(this.familySequenceNumber);
     }
 
-    /**
-     * Location of the backup file in shared folder
-     */
     @InputImport(name="fileLocation")
     private final @Nullable String fileLocation;
 
@@ -38,9 +29,6 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.fileLocation == null ? Optional.empty() : Optional.ofNullable(this.fileLocation);
     }
 
-    /**
-     * Status of the backup file during migration
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

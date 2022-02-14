@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyRuleHttpHeaderActionArgs Empty = new SecurityPolicyRuleHttpHeaderActionArgs();
 
-    /**
-     * The list of request headers to add or overwrite if they're already present.
-     */
     @InputImport(name="requestHeadersToAdds")
     private final @Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A Dataproc job for running Apache SparkR (https://spark.apache.org/docs/latest/sparkr.html) applications on YARN.
- */
 public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SparkRJobArgs Empty = new SparkRJobArgs();
 
-    /**
-     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
-     */
     @InputImport(name="archiveUris")
     private final @Nullable Input<List<String>> archiveUris;
 
@@ -30,9 +24,6 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.archiveUris == null ? Input.empty() : this.archiveUris;
     }
 
-    /**
-     * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -40,9 +31,6 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.args == null ? Input.empty() : this.args;
     }
 
-    /**
-     * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
-     */
     @InputImport(name="fileUris")
     private final @Nullable Input<List<String>> fileUris;
 
@@ -50,9 +38,6 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileUris == null ? Input.empty() : this.fileUris;
     }
 
-    /**
-     * Optional. The runtime log config for job execution.
-     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<LoggingConfigArgs> loggingConfig;
 
@@ -60,9 +45,6 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
-    /**
-     * The HCFS URI of the main R file to use as the driver. Must be a .R file.
-     */
     @InputImport(name="mainRFileUri", required=true)
     private final Input<String> mainRFileUri;
 
@@ -70,9 +52,6 @@ public final class SparkRJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.mainRFileUri;
     }
 
-    /**
-     * Optional. A mapping of property names to values, used to configure SparkR. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublishedBlueprintArgs Empty = new PublishedBlueprintArgs();
 
-    /**
-     * Name of the published blueprint definition.
-     */
     @InputImport(name="blueprintName", required=true)
     private final Input<String> blueprintName;
 
@@ -32,9 +26,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.blueprintName;
     }
 
-    /**
-     * Version-specific change notes.
-     */
     @InputImport(name="changeNotes")
     private final @Nullable Input<String> changeNotes;
 
@@ -42,9 +33,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.changeNotes == null ? Input.empty() : this.changeNotes;
     }
 
-    /**
-     * Multi-line explain this resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,9 +40,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * One-liner string explain this resource.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -62,9 +47,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Parameters required by this blueprint definition.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterDefinitionArgs>> parameters;
 
@@ -72,9 +54,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Resource group placeholders defined by this blueprint definition.
-     */
     @InputImport(name="resourceGroups")
     private final @Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
@@ -82,9 +61,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroups == null ? Input.empty() : this.resourceGroups;
     }
 
-    /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     */
     @InputImport(name="resourceScope", required=true)
     private final Input<String> resourceScope;
 
@@ -92,9 +68,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.resourceScope;
     }
 
-    /**
-     * The scope where this blueprint definition can be assigned.
-     */
     @InputImport(name="targetScope")
     private final @Nullable Input<Either<String,BlueprintTargetScope>> targetScope;
 
@@ -102,9 +75,6 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
         return this.targetScope == null ? Input.empty() : this.targetScope;
     }
 
-    /**
-     * Version of the published blueprint definition.
-     */
     @InputImport(name="versionId")
     private final @Nullable Input<String> versionId;
 

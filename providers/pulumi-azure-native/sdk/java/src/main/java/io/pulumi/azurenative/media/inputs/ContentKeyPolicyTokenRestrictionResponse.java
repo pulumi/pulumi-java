@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a token restriction. Provided token must match these requirements for successful license or key delivery.
- */
 public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentKeyPolicyTokenRestrictionResponse Empty = new ContentKeyPolicyTokenRestrictionResponse();
 
-    /**
-     * A list of alternative verification keys.
-     */
     @InputImport(name="alternateVerificationKeys")
     private final @Nullable List<Object> alternateVerificationKeys;
 
@@ -33,9 +27,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
     }
 
-    /**
-     * The audience for the token.
-     */
     @InputImport(name="audience", required=true)
     private final String audience;
 
@@ -43,9 +34,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
         return this.audience;
     }
 
-    /**
-     * The token issuer.
-     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -53,10 +41,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
         return this.issuer;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -64,9 +48,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
         return this.odataType;
     }
 
-    /**
-     * The OpenID connect discovery document.
-     */
     @InputImport(name="openIdConnectDiscoveryDocument")
     private final @Nullable String openIdConnectDiscoveryDocument;
 
@@ -74,9 +55,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
         return this.openIdConnectDiscoveryDocument == null ? Optional.empty() : Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
 
-    /**
-     * The primary verification key.
-     */
     @InputImport(name="primaryVerificationKey", required=true)
     private final Object primaryVerificationKey;
 
@@ -84,9 +62,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
         return this.primaryVerificationKey;
     }
 
-    /**
-     * A list of required token claims.
-     */
     @InputImport(name="requiredClaims")
     private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
 
@@ -94,9 +69,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
     }
 
-    /**
-     * The type of token.
-     */
     @InputImport(name="restrictionTokenType", required=true)
     private final String restrictionTokenType;
 

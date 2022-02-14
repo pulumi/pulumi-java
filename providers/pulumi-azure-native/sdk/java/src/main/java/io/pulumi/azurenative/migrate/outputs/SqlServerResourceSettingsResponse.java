@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SqlServerResourceSettingsResponse {
-/**
- * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Sql/servers'.
- */
     private final String resourceType;
-/**
- * Gets or sets the target Resource name.
- */
     private final String targetResourceName;
 
     @OutputCustomType.Constructor({"resourceType","targetResourceName"})
@@ -27,16 +20,9 @@ Expected value is 'Microsoft.Sql/servers'.
         this.targetResourceName = Objects.requireNonNull(targetResourceName);
     }
 
-/**
- * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Sql/servers'.
- */
     public String getPropResourceType() {
         return this.resourceType;
     }
-/**
- * Gets or sets the target Resource name.
- */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }

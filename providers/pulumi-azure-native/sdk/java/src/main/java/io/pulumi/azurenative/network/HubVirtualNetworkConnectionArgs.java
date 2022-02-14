@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HubVirtualNetworkConnectionArgs Empty = new HubVirtualNetworkConnectionArgs();
 
-    /**
-     * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
-     */
     @InputImport(name="allowHubToRemoteVnetTransit")
     private final @Nullable Input<Boolean> allowHubToRemoteVnetTransit;
 
@@ -30,9 +24,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.allowHubToRemoteVnetTransit == null ? Input.empty() : this.allowHubToRemoteVnetTransit;
     }
 
-    /**
-     * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
-     */
     @InputImport(name="allowRemoteVnetToUseHubVnetGateways")
     private final @Nullable Input<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
@@ -40,9 +31,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.allowRemoteVnetToUseHubVnetGateways == null ? Input.empty() : this.allowRemoteVnetToUseHubVnetGateways;
     }
 
-    /**
-     * The name of the HubVirtualNetworkConnection.
-     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -50,9 +38,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
-    /**
-     * Enable internet security.
-     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Input<Boolean> enableInternetSecurity;
 
@@ -60,9 +45,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -70,9 +52,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -80,9 +59,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Reference to the remote virtual network.
-     */
     @InputImport(name="remoteVirtualNetwork")
     private final @Nullable Input<SubResourceArgs> remoteVirtualNetwork;
 
@@ -90,9 +66,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.remoteVirtualNetwork == null ? Input.empty() : this.remoteVirtualNetwork;
     }
 
-    /**
-     * The resource group name of the HubVirtualNetworkConnection.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -100,9 +73,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
-    /**
-     * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     */
     @InputImport(name="routingConfiguration")
     private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
 
@@ -110,9 +80,6 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
         return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
     }
 
-    /**
-     * The name of the VirtualHub.
-     */
     @InputImport(name="virtualHubName", required=true)
     private final Input<String> virtualHubName;
 

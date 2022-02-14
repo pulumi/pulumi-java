@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PlanQuantityResponse {
-/**
- * The quantity added to the commitment plan at an interval specified by its allowance frequency.
- */
     private final Double allowance;
-/**
- * The quantity available to the plan the last time usage was calculated.
- */
     private final Double amount;
-/**
- * The Azure meter for usage against included quantities.
- */
     private final String includedQuantityMeter;
-/**
- * The Azure meter for usage which exceeds included quantities.
- */
     private final String overageMeter;
 
     @OutputCustomType.Constructor({"allowance","amount","includedQuantityMeter","overageMeter"})
@@ -39,27 +27,15 @@ public final class PlanQuantityResponse {
         this.overageMeter = Objects.requireNonNull(overageMeter);
     }
 
-/**
- * The quantity added to the commitment plan at an interval specified by its allowance frequency.
- */
     public Double getAllowance() {
         return this.allowance;
     }
-/**
- * The quantity available to the plan the last time usage was calculated.
- */
     public Double getAmount() {
         return this.amount;
     }
-/**
- * The Azure meter for usage against included quantities.
- */
     public String getIncludedQuantityMeter() {
         return this.includedQuantityMeter;
     }
-/**
- * The Azure meter for usage which exceeds included quantities.
- */
     public String getOverageMeter() {
         return this.overageMeter;
     }

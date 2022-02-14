@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Support contact information and instructions.
- */
 public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SupportInfoResponse Empty = new SupportInfoResponse();
 
-    /**
-     * Support contact email address.
-     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -27,9 +21,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
-    /**
-     * Support instructions.
-     */
     @InputImport(name="instructions")
     private final @Nullable String instructions;
 
@@ -37,9 +28,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.instructions == null ? Optional.empty() : Optional.ofNullable(this.instructions);
     }
 
-    /**
-     * Support contact phone number.
-     */
     @InputImport(name="phone")
     private final @Nullable String phone;
 
@@ -47,9 +35,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
     }
 
-    /**
-     * Support web address.
-     */
     @InputImport(name="url")
     private final @Nullable String url;
 

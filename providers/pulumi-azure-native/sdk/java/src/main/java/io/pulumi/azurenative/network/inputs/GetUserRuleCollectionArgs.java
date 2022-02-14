@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUserRuleCollectionArgs Empty = new GetUserRuleCollectionArgs();
 
-    /**
-     * The name of the network manager security Configuration.
-     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 
@@ -25,9 +19,6 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
         return this.configurationName;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -35,9 +26,6 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetUserRuleCollectionArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the network manager security Configuration rule collection.
-     */
     @InputImport(name="ruleCollectionName", required=true)
     private final String ruleCollectionName;
 

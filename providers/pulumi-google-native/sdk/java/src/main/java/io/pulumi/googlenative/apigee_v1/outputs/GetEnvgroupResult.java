@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEnvgroupResult {
-/**
- * The time at which the environment group was created as milliseconds since epoch.
- */
     private final String createdAt;
-/**
- * Host names for this environment group.
- */
     private final List<String> hostnames;
-/**
- * The time at which the environment group was last updated as milliseconds since epoch.
- */
     private final String lastModifiedAt;
-/**
- * ID of the environment group.
- */
     private final String name;
-/**
- * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
- */
     private final String state;
 
     @OutputCustomType.Constructor({"createdAt","hostnames","lastModifiedAt","name","state"})
@@ -45,33 +30,18 @@ public final class GetEnvgroupResult {
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * The time at which the environment group was created as milliseconds since epoch.
- */
     public String getCreatedAt() {
         return this.createdAt;
     }
-/**
- * Host names for this environment group.
- */
     public List<String> getHostnames() {
         return this.hostnames;
     }
-/**
- * The time at which the environment group was last updated as milliseconds since epoch.
- */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-/**
- * ID of the environment group.
- */
     public String getName() {
         return this.name;
     }
-/**
- * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
- */
     public String getState() {
         return this.state;
     }

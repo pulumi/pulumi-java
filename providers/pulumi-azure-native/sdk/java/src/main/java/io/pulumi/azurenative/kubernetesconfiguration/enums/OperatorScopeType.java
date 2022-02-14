@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Scope at which the operator will be installed.
- */
     @EnumType
     public enum OperatorScopeType {
-/**
- * 
- */
         Cluster("cluster"),
-/**
- * 
- */
         Namespace("namespace");
 
         private final String value;

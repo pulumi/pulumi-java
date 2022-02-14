@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceIamPolicy {
-/**
- * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This result does not include any inherited policies.
- */
     public static CompletableFuture<GetServiceIamPolicyResult> invokeAsync(GetServiceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args == null ? GetServiceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackage {
-/**
- * The Test Base Package resource.
-API Version: 2020-12-16-preview.
- *
- * The Test Base Package resource.
- */
     public static CompletableFuture<GetPackageResult> invokeAsync(GetPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getPackage", TypeShape.of(GetPackageResult.class), args == null ? GetPackageArgs.Empty : args, Utilities.withVersion(options));
     }

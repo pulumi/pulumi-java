@@ -15,289 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Class representing an attached database configuration.
-API Version: 2021-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### AttachedDatabaseConfigurationsCreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var attachedDatabaseConfiguration = new AzureNative.Kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", new AzureNative.Kusto.AttachedDatabaseConfigurationArgs
-        {
-            AttachedDatabaseConfigurationName = "attachedDatabaseConfigurations1",
-            ClusterName = "kustoclusterrptest4",
-            ClusterResourceId = "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
-            DatabaseName = "kustodatabase",
-            DefaultPrincipalsModificationKind = "Union",
-            Location = "westus",
-            ResourceGroupName = "kustorptest",
-            TableLevelSharingProperties = new AzureNative.Kusto.Inputs.TableLevelSharingPropertiesArgs
-            {
-                ExternalTablesToExclude = 
-                {
-                    "ExternalTable2",
-                },
-                ExternalTablesToInclude = 
-                {
-                    "ExternalTable1",
-                },
-                MaterializedViewsToExclude = 
-                {
-                    "MaterializedViewTable2",
-                },
-                MaterializedViewsToInclude = 
-                {
-                    "MaterializedViewTable1",
-                },
-                TablesToExclude = 
-                {
-                    "Table2",
-                },
-                TablesToInclude = 
-                {
-                    "Table1",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := kusto.NewAttachedDatabaseConfiguration(ctx, "attachedDatabaseConfiguration", &kusto.AttachedDatabaseConfigurationArgs{
-			AttachedDatabaseConfigurationName: pulumi.String("attachedDatabaseConfigurations1"),
-			ClusterName:                       pulumi.String("kustoclusterrptest4"),
-			ClusterResourceId:                 pulumi.String("/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader"),
-			DatabaseName:                      pulumi.String("kustodatabase"),
-			DefaultPrincipalsModificationKind: pulumi.String("Union"),
-			Location:                          pulumi.String("westus"),
-			ResourceGroupName:                 pulumi.String("kustorptest"),
-			TableLevelSharingProperties: &kusto.TableLevelSharingPropertiesArgs{
-				ExternalTablesToExclude: pulumi.StringArray{
-					pulumi.String("ExternalTable2"),
-				},
-				ExternalTablesToInclude: pulumi.StringArray{
-					pulumi.String("ExternalTable1"),
-				},
-				MaterializedViewsToExclude: pulumi.StringArray{
-					pulumi.String("MaterializedViewTable2"),
-				},
-				MaterializedViewsToInclude: pulumi.StringArray{
-					pulumi.String("MaterializedViewTable1"),
-				},
-				TablesToExclude: pulumi.StringArray{
-					pulumi.String("Table2"),
-				},
-				TablesToInclude: pulumi.StringArray{
-					pulumi.String("Table1"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const attachedDatabaseConfiguration = new azure_native.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration", {
-    attachedDatabaseConfigurationName: "attachedDatabaseConfigurations1",
-    clusterName: "kustoclusterrptest4",
-    clusterResourceId: "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
-    databaseName: "kustodatabase",
-    defaultPrincipalsModificationKind: "Union",
-    location: "westus",
-    resourceGroupName: "kustorptest",
-    tableLevelSharingProperties: {
-        externalTablesToExclude: ["ExternalTable2"],
-        externalTablesToInclude: ["ExternalTable1"],
-        materializedViewsToExclude: ["MaterializedViewTable2"],
-        materializedViewsToInclude: ["MaterializedViewTable1"],
-        tablesToExclude: ["Table2"],
-        tablesToInclude: ["Table1"],
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-attached_database_configuration = azure_native.kusto.AttachedDatabaseConfiguration("attachedDatabaseConfiguration",
-    attached_database_configuration_name="attachedDatabaseConfigurations1",
-    cluster_name="kustoclusterrptest4",
-    cluster_resource_id="/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader",
-    database_name="kustodatabase",
-    default_principals_modification_kind="Union",
-    location="westus",
-    resource_group_name="kustorptest",
-    table_level_sharing_properties=azure_native.kusto.TableLevelSharingPropertiesArgs(
-        external_tables_to_exclude=["ExternalTable2"],
-        external_tables_to_include=["ExternalTable1"],
-        materialized_views_to_exclude=["MaterializedViewTable2"],
-        materialized_views_to_include=["MaterializedViewTable1"],
-        tables_to_exclude=["Table2"],
-        tables_to_include=["Table1"],
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:kusto:AttachedDatabaseConfiguration KustoClusterRPTest4/attachedDatabaseConfigurations1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/attachedDatabaseConfigurations/attachedDatabaseConfigurations1 
-```
-
- */
 @ResourceType(type="azure-native:kusto:AttachedDatabaseConfiguration")
 public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomResource {
-    /**
-     * The list of databases from the clusterResourceId which are currently attached to the cluster.
-     */
     @OutputExport(name="attachedDatabaseNames", type=List.class, parameters={String.class})
     private Output<List<String>> attachedDatabaseNames;
 
-    /**
-     * @return The list of databases from the clusterResourceId which are currently attached to the cluster.
-     */
     public Output<List<String>> getAttachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
-    /**
-     * The resource id of the cluster where the databases you would like to attach reside.
-     */
     @OutputExport(name="clusterResourceId", type=String.class, parameters={})
     private Output<String> clusterResourceId;
 
-    /**
-     * @return The resource id of the cluster where the databases you would like to attach reside.
-     */
     public Output<String> getClusterResourceId() {
         return this.clusterResourceId;
     }
-    /**
-     * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     */
     @OutputExport(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
-    /**
-     * @return The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     */
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
-    /**
-     * The default principals modification kind
-     */
     @OutputExport(name="defaultPrincipalsModificationKind", type=String.class, parameters={})
     private Output<String> defaultPrincipalsModificationKind;
 
-    /**
-     * @return The default principals modification kind
-     */
     public Output<String> getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioned state of the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioned state of the resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Table level sharing specifications
-     */
     @OutputExport(name="tableLevelSharingProperties", type=TableLevelSharingPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ TableLevelSharingPropertiesResponse> tableLevelSharingProperties;
 
-    /**
-     * @return Table level sharing specifications
-     */
     public Output</* @Nullable */ TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
         return this.tableLevelSharingProperties;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public AttachedDatabaseConfiguration(String name, AttachedDatabaseConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:AttachedDatabaseConfiguration", name, args == null ? AttachedDatabaseConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -322,14 +96,6 @@ public class AttachedDatabaseConfiguration extends io.pulumi.resources.CustomRes
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static AttachedDatabaseConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AttachedDatabaseConfiguration(name, id, options);
     }

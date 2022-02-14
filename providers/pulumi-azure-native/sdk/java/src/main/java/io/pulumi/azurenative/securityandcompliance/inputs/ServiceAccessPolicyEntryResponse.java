@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An access policy entry.
- */
 public final class ServiceAccessPolicyEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAccessPolicyEntryResponse Empty = new ServiceAccessPolicyEntryResponse();
 
-    /**
-     * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
-     */
     @InputImport(name="objectId", required=true)
     private final String objectId;
 

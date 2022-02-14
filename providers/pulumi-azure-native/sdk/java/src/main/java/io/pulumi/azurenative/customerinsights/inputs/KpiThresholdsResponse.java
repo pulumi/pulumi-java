@@ -9,16 +9,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
-/**
- * Defines the KPI Threshold limits.
- */
 public final class KpiThresholdsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KpiThresholdsResponse Empty = new KpiThresholdsResponse();
 
-    /**
-     * Whether or not the KPI is an increasing KPI.
-     */
     @InputImport(name="increasingKpi", required=true)
     private final Boolean increasingKpi;
 
@@ -26,9 +20,6 @@ public final class KpiThresholdsResponse extends io.pulumi.resources.InvokeArgs 
         return this.increasingKpi;
     }
 
-    /**
-     * The lower threshold limit.
-     */
     @InputImport(name="lowerLimit", required=true)
     private final Double lowerLimit;
 
@@ -36,9 +27,6 @@ public final class KpiThresholdsResponse extends io.pulumi.resources.InvokeArgs 
         return this.lowerLimit;
     }
 
-    /**
-     * The upper threshold limit.
-     */
     @InputImport(name="upperLimit", required=true)
     private final Double upperLimit;
 

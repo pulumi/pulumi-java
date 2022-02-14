@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndpointRangeDescriptionResponse {
-/**
- * End port of a range of ports
- */
     private final Integer endPort;
-/**
- * Starting port of a range of ports
- */
     private final Integer startPort;
 
     @OutputCustomType.Constructor({"endPort","startPort"})
@@ -26,15 +20,9 @@ public final class EndpointRangeDescriptionResponse {
         this.startPort = Objects.requireNonNull(startPort);
     }
 
-/**
- * End port of a range of ports
- */
     public Integer getEndPort() {
         return this.endPort;
     }
-/**
- * Starting port of a range of ports
- */
     public Integer getStartPort() {
         return this.startPort;
     }

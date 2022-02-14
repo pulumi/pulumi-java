@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The quarantine policy for a container registry.
- */
 public final class QuarantinePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QuarantinePolicyResponse Empty = new QuarantinePolicyResponse();
 
-    /**
-     * The value that indicates whether the policy is enabled or not.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

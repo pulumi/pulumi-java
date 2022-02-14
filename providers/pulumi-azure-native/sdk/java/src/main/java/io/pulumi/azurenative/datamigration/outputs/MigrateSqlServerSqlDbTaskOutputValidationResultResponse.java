@@ -12,26 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
-/**
- * Result identifier
- */
     private final String id;
-/**
- * Migration Identifier
- */
     private final String migrationId;
-/**
- * Result type
-Expected value is 'MigrationValidationOutput'.
- */
     private final String resultType;
-/**
- * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
- */
     private final String status;
-/**
- * Validation summary results for each database
- */
     private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
     @OutputCustomType.Constructor({"id","migrationId","resultType","status","summaryResults"})
@@ -48,34 +32,18 @@ Expected value is 'MigrationValidationOutput'.
         this.summaryResults = summaryResults;
     }
 
-/**
- * Result identifier
- */
     public String getId() {
         return this.id;
     }
-/**
- * Migration Identifier
- */
     public String getMigrationId() {
         return this.migrationId;
     }
-/**
- * Result type
-Expected value is 'MigrationValidationOutput'.
- */
     public String getResultType() {
         return this.resultType;
     }
-/**
- * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Validation summary results for each database
- */
     public Map<String,MigrationValidationDatabaseSummaryResultResponse> getSummaryResults() {
         return this.summaryResults == null ? Map.of() : this.summaryResults;
     }

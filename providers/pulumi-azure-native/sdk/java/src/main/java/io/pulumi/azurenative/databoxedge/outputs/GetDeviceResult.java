@@ -20,109 +20,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDeviceResult {
-/**
- * Type of compute roles configured.
- */
     private final List<String> configuredRoleTypes;
-/**
- * The Data Box Edge/Gateway device culture.
- */
     private final String culture;
-/**
- * The status of the Data Box Edge/Gateway device.
- */
     private final @Nullable String dataBoxEdgeDeviceStatus;
-/**
- * The Description of the Data Box Edge/Gateway device.
- */
     private final String description;
-/**
- * The device software version number of the device (eg: 1.2.18105.6).
- */
     private final String deviceHcsVersion;
-/**
- * The Data Box Edge/Gateway device local capacity in MB.
- */
     private final Double deviceLocalCapacity;
-/**
- * The Data Box Edge/Gateway device model.
- */
     private final String deviceModel;
-/**
- * The Data Box Edge/Gateway device software version.
- */
     private final String deviceSoftwareVersion;
-/**
- * The type of the Data Box Edge/Gateway device.
- */
     private final String deviceType;
-/**
- * The details of Edge Profile for this resource
- */
     private final EdgeProfileResponse edgeProfile;
-/**
- * The etag for the devices.
- */
     private final @Nullable String etag;
-/**
- * The Data Box Edge/Gateway device name.
- */
     private final String friendlyName;
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * Msi identity of the resource
- */
     private final @Nullable ResourceIdentityResponse identity;
-/**
- * The etag for the devices.
- */
     private final String kind;
-/**
- * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
- */
     private final String location;
-/**
- * The description of the Data Box Edge/Gateway device model.
- */
     private final String modelDescription;
-/**
- * The object name.
- */
     private final String name;
-/**
- * The number of nodes in the cluster.
- */
     private final Integer nodeCount;
-/**
- * The details of the move operation on this resource.
- */
     private final ResourceMoveDetailsResponse resourceMoveDetails;
-/**
- * The Serial Number of Data Box Edge/Gateway device.
- */
     private final String serialNumber;
-/**
- * The SKU type.
- */
     private final @Nullable SkuResponse sku;
-/**
- * DataBoxEdge Resource
- */
     private final SystemDataResponse systemData;
-/**
- * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The Data Box Edge/Gateway device timezone.
- */
     private final String timeZone;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"configuredRoleTypes","culture","dataBoxEdgeDeviceStatus","description","deviceHcsVersion","deviceLocalCapacity","deviceModel","deviceSoftwareVersion","deviceType","edgeProfile","etag","friendlyName","id","identity","kind","location","modelDescription","name","nodeCount","resourceMoveDetails","serialNumber","sku","systemData","tags","timeZone","type"})
@@ -181,159 +103,81 @@ public final class GetDeviceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Type of compute roles configured.
- */
     public List<String> getConfiguredRoleTypes() {
         return this.configuredRoleTypes;
     }
-/**
- * The Data Box Edge/Gateway device culture.
- */
     public String getCulture() {
         return this.culture;
     }
-/**
- * The status of the Data Box Edge/Gateway device.
- */
     public Optional<String> getDataBoxEdgeDeviceStatus() {
         return Optional.ofNullable(this.dataBoxEdgeDeviceStatus);
     }
-/**
- * The Description of the Data Box Edge/Gateway device.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The device software version number of the device (eg: 1.2.18105.6).
- */
     public String getDeviceHcsVersion() {
         return this.deviceHcsVersion;
     }
-/**
- * The Data Box Edge/Gateway device local capacity in MB.
- */
     public Double getDeviceLocalCapacity() {
         return this.deviceLocalCapacity;
     }
-/**
- * The Data Box Edge/Gateway device model.
- */
     public String getDeviceModel() {
         return this.deviceModel;
     }
-/**
- * The Data Box Edge/Gateway device software version.
- */
     public String getDeviceSoftwareVersion() {
         return this.deviceSoftwareVersion;
     }
-/**
- * The type of the Data Box Edge/Gateway device.
- */
     public String getDeviceType() {
         return this.deviceType;
     }
-/**
- * The details of Edge Profile for this resource
- */
     public EdgeProfileResponse getEdgeProfile() {
         return this.edgeProfile;
     }
-/**
- * The etag for the devices.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * The Data Box Edge/Gateway device name.
- */
     public String getFriendlyName() {
         return this.friendlyName;
     }
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Msi identity of the resource
- */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * The etag for the devices.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The description of the Data Box Edge/Gateway device model.
- */
     public String getModelDescription() {
         return this.modelDescription;
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The number of nodes in the cluster.
- */
     public Integer getNodeCount() {
         return this.nodeCount;
     }
-/**
- * The details of the move operation on this resource.
- */
     public ResourceMoveDetailsResponse getResourceMoveDetails() {
         return this.resourceMoveDetails;
     }
-/**
- * The Serial Number of Data Box Edge/Gateway device.
- */
     public String getSerialNumber() {
         return this.serialNumber;
     }
-/**
- * The SKU type.
- */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * DataBoxEdge Resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The Data Box Edge/Gateway device timezone.
- */
     public String getTimeZone() {
         return this.timeZone;
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }

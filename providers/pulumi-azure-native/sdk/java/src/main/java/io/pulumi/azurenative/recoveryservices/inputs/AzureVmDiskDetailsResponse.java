@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Disk details for E2A provider.
- */
 public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureVmDiskDetailsResponse Empty = new AzureVmDiskDetailsResponse();
 
-    /**
-     * The DiskEncryptionSet ARM ID.
-     */
     @InputImport(name="diskEncryptionSetId")
     private final @Nullable String diskEncryptionSetId;
 
@@ -27,9 +21,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
     }
 
-    /**
-     * The disk resource id.
-     */
     @InputImport(name="diskId")
     private final @Nullable String diskId;
 
@@ -37,9 +28,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
     }
 
-    /**
-     * Ordinal\LunId of the disk for the Azure VM.
-     */
     @InputImport(name="lunId")
     private final @Nullable String lunId;
 
@@ -47,9 +35,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.lunId == null ? Optional.empty() : Optional.ofNullable(this.lunId);
     }
 
-    /**
-     * Max side in MB.
-     */
     @InputImport(name="maxSizeMB")
     private final @Nullable String maxSizeMB;
 
@@ -57,9 +42,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.maxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.maxSizeMB);
     }
 
-    /**
-     * Blob uri of the Azure disk.
-     */
     @InputImport(name="targetDiskLocation")
     private final @Nullable String targetDiskLocation;
 
@@ -67,9 +49,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.targetDiskLocation == null ? Optional.empty() : Optional.ofNullable(this.targetDiskLocation);
     }
 
-    /**
-     * The target Azure disk name.
-     */
     @InputImport(name="targetDiskName")
     private final @Nullable String targetDiskName;
 
@@ -77,9 +56,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.targetDiskName == null ? Optional.empty() : Optional.ofNullable(this.targetDiskName);
     }
 
-    /**
-     * The VHD id.
-     */
     @InputImport(name="vhdId")
     private final @Nullable String vhdId;
 
@@ -87,9 +63,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.vhdId == null ? Optional.empty() : Optional.ofNullable(this.vhdId);
     }
 
-    /**
-     * VHD name.
-     */
     @InputImport(name="vhdName")
     private final @Nullable String vhdName;
 
@@ -97,9 +70,6 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
     }
 
-    /**
-     * VHD type.
-     */
     @InputImport(name="vhdType")
     private final @Nullable String vhdType;
 

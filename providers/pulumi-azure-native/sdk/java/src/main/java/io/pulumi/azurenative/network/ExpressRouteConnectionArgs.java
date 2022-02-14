@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExpressRouteConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteConnectionArgs Empty = new ExpressRouteConnectionArgs();
 
-    /**
-     * Authorization key to establish the connection.
-     */
     @InputImport(name="authorizationKey")
     private final @Nullable Input<String> authorizationKey;
 
@@ -31,9 +25,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
     }
 
-    /**
-     * The name of the connection subresource.
-     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -41,9 +32,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
-    /**
-     * Enable internet security.
-     */
     @InputImport(name="enableInternetSecurity")
     private final @Nullable Input<Boolean> enableInternetSecurity;
 
@@ -51,9 +39,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.enableInternetSecurity == null ? Input.empty() : this.enableInternetSecurity;
     }
 
-    /**
-     * The ExpressRoute circuit peering.
-     */
     @InputImport(name="expressRouteCircuitPeering", required=true)
     private final Input<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
 
@@ -61,9 +46,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.expressRouteCircuitPeering;
     }
 
-    /**
-     * Enable FastPath to vWan Firewall hub.
-     */
     @InputImport(name="expressRouteGatewayBypass")
     private final @Nullable Input<Boolean> expressRouteGatewayBypass;
 
@@ -71,9 +53,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.expressRouteGatewayBypass == null ? Input.empty() : this.expressRouteGatewayBypass;
     }
 
-    /**
-     * The name of the ExpressRoute gateway.
-     */
     @InputImport(name="expressRouteGatewayName", required=true)
     private final Input<String> expressRouteGatewayName;
 
@@ -81,9 +60,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.expressRouteGatewayName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -91,9 +67,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -101,9 +74,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -111,9 +81,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * The Routing Configuration indicating the associated and propagated route tables on this connection.
-     */
     @InputImport(name="routingConfiguration")
     private final @Nullable Input<RoutingConfigurationArgs> routingConfiguration;
 
@@ -121,9 +88,6 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
         return this.routingConfiguration == null ? Input.empty() : this.routingConfiguration;
     }
 
-    /**
-     * The routing weight associated to the connection.
-     */
     @InputImport(name="routingWeight")
     private final @Nullable Input<Integer> routingWeight;
 

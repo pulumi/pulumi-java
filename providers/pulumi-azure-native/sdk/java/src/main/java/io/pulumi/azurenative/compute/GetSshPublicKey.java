@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSshPublicKey {
-/**
- * Specifies information about the SSH public key.
-API Version: 2020-12-01.
- *
- * Specifies information about the SSH public key.
- */
     public static CompletableFuture<GetSshPublicKeyResult> invokeAsync(GetSshPublicKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args == null ? GetSshPublicKeyArgs.Empty : args, Utilities.withVersion(options));
     }

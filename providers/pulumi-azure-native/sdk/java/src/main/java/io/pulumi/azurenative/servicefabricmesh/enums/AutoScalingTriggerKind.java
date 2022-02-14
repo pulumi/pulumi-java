@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of auto scaling trigger
- */
     @EnumType
     public enum AutoScalingTriggerKind {
-/**
- * Indicates that scaling should be performed based on average load of all replicas in the service.
- */
         AverageLoad("AverageLoad");
 
         private final String value;

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 
-    /**
-     * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
-     */
     @InputImport(name="apiConfig", required=true)
     private final Input<String> apiConfig;
 
@@ -28,9 +22,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiConfig;
     }
 
-    /**
-     * Optional. Display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -38,9 +29,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="gatewayId", required=true)
     private final Input<String> gatewayId;
 
@@ -48,9 +36,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayId;
     }
 
-    /**
-     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -58,9 +43,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,9 +50,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

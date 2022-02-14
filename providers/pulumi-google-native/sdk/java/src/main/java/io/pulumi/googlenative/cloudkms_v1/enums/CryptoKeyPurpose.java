@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Immutable. The immutable purpose of this CryptoKey.
- */
     @EnumType
     public enum CryptoKeyPurpose {
-/**
- * Not specified.
- */
         CryptoKeyPurposeUnspecified("CRYPTO_KEY_PURPOSE_UNSPECIFIED"),
-/**
- * CryptoKeys with this purpose may be used with Encrypt and Decrypt.
- */
         EncryptDecrypt("ENCRYPT_DECRYPT"),
-/**
- * CryptoKeys with this purpose may be used with AsymmetricSign and GetPublicKey.
- */
         AsymmetricSign("ASYMMETRIC_SIGN"),
-/**
- * CryptoKeys with this purpose may be used with AsymmetricDecrypt and GetPublicKey.
- */
         AsymmetricDecrypt("ASYMMETRIC_DECRYPT"),
-/**
- * CryptoKeys with this purpose may be used with MacSign.
- */
         Mac("MAC");
 
         private final String value;

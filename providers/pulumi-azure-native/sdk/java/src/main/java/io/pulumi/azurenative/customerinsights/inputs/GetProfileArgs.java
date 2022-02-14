@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProfileArgs Empty = new GetProfileArgs();
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -27,9 +21,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
-    /**
-     * Locale of profile to retrieve, default is en-us.
-     */
     @InputImport(name="localeCode")
     private final @Nullable String localeCode;
 
@@ -37,9 +28,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
         return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
     }
 
-    /**
-     * The name of the profile.
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -47,9 +35,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

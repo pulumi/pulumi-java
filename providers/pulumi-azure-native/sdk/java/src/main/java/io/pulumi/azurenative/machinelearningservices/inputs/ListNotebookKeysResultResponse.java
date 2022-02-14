@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListNotebookKeysResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ListNotebookKeysResultResponse Empty = new ListNotebookKeysResultResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="primaryAccessKey", required=true)
     private final String primaryAccessKey;
 
@@ -25,9 +19,6 @@ public final class ListNotebookKeysResultResponse extends io.pulumi.resources.In
         return this.primaryAccessKey;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="secondaryAccessKey", required=true)
     private final String secondaryAccessKey;
 

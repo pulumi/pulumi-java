@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. Defines text alignment for all cells in this column.
- */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment {
-/**
- * Text is aligned to the leading edge of the column.
- */
         HorizontalAlignmentUnspecified("HORIZONTAL_ALIGNMENT_UNSPECIFIED"),
-/**
- * Text is aligned to the leading edge of the column.
- */
         Leading("LEADING"),
-/**
- * Text is centered in the column.
- */
         Center("CENTER"),
-/**
- * Text is aligned to the trailing edge of the column.
- */
         Trailing("TRAILING");
 
         private final String value;

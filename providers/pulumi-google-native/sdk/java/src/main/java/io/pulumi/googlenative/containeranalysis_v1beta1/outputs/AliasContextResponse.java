@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AliasContextResponse {
-/**
- * The alias kind.
- */
     private final String kind;
-/**
- * The alias name.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"kind","name"})
@@ -26,15 +20,9 @@ public final class AliasContextResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The alias kind.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The alias name.
- */
     public String getName() {
         return this.name;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Kubernetes taint is comprised of three fields: key, value, and effect. Effect can only be one of three types: NoSchedule, PreferNoSchedule or NoExecute. See [here](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration) for more information, including usage and the valid values.
- */
 public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeTaintArgs Empty = new NodeTaintArgs();
 
-    /**
-     * Effect for taint.
-     */
     @InputImport(name="effect")
     private final @Nullable Input<NodeTaintEffect> effect;
 
@@ -28,9 +22,6 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
         return this.effect == null ? Input.empty() : this.effect;
     }
 
-    /**
-     * Key for taint.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -38,9 +29,6 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * Value for taint.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

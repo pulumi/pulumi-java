@@ -13,21 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CronJobSpec describes how the job execution will look like and when it will actually run.
- */
 public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CronJobSpecArgs Empty = new CronJobSpecArgs();
 
-    /**
-     * Specifies how to treat concurrent executions of a Job. Valid values are: - "Allow" (default): allows CronJobs to run concurrently; - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet; - "Replace": cancels currently running job and replaces it with a new one
-
-Possible enum values:
- - `"Allow"` allows CronJobs to run concurrently.
- - `"Forbid"` forbids concurrent runs, skipping next run if previous hasn't finished yet.
- - `"Replace"` cancels currently running job and replaces it with a new one.
-     */
     @InputImport(name="concurrencyPolicy")
     private final @Nullable Input<String> concurrencyPolicy;
 
@@ -35,9 +24,6 @@ Possible enum values:
         return this.concurrencyPolicy == null ? Input.empty() : this.concurrencyPolicy;
     }
 
-    /**
-     * The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
-     */
     @InputImport(name="failedJobsHistoryLimit")
     private final @Nullable Input<Integer> failedJobsHistoryLimit;
 
@@ -45,9 +31,6 @@ Possible enum values:
         return this.failedJobsHistoryLimit == null ? Input.empty() : this.failedJobsHistoryLimit;
     }
 
-    /**
-     * Specifies the job that will be created when executing a CronJob.
-     */
     @InputImport(name="jobTemplate", required=true)
     private final Input<JobTemplateSpecArgs> jobTemplate;
 
@@ -55,9 +38,6 @@ Possible enum values:
         return this.jobTemplate;
     }
 
-    /**
-     * The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
-     */
     @InputImport(name="schedule", required=true)
     private final Input<String> schedule;
 
@@ -65,9 +45,6 @@ Possible enum values:
         return this.schedule;
     }
 
-    /**
-     * Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
-     */
     @InputImport(name="startingDeadlineSeconds")
     private final @Nullable Input<Integer> startingDeadlineSeconds;
 
@@ -75,9 +52,6 @@ Possible enum values:
         return this.startingDeadlineSeconds == null ? Input.empty() : this.startingDeadlineSeconds;
     }
 
-    /**
-     * The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
-     */
     @InputImport(name="successfulJobsHistoryLimit")
     private final @Nullable Input<Integer> successfulJobsHistoryLimit;
 
@@ -85,9 +59,6 @@ Possible enum values:
         return this.successfulJobsHistoryLimit == null ? Input.empty() : this.successfulJobsHistoryLimit;
     }
 
-    /**
-     * This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
-     */
     @InputImport(name="suspend")
     private final @Nullable Input<Boolean> suspend;
 

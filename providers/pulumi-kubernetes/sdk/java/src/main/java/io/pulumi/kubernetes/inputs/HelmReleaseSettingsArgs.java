@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Options to configure the Helm Release resource.
- */
 public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HelmReleaseSettingsArgs Empty = new HelmReleaseSettingsArgs();
 
-    /**
-     * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
-     */
     @InputImport(name="driver")
     private final @Nullable Input<String> driver;
 
@@ -28,9 +22,6 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
         return this.driver == null ? Input.empty() : this.driver;
     }
 
-    /**
-     * The path to the helm plugins directory.
-     */
     @InputImport(name="pluginsPath")
     private final @Nullable Input<String> pluginsPath;
 
@@ -38,9 +29,6 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
         return this.pluginsPath == null ? Input.empty() : this.pluginsPath;
     }
 
-    /**
-     * The path to the registry config file.
-     */
     @InputImport(name="registryConfigPath")
     private final @Nullable Input<String> registryConfigPath;
 
@@ -48,9 +36,6 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
         return this.registryConfigPath == null ? Input.empty() : this.registryConfigPath;
     }
 
-    /**
-     * The path to the file containing cached repository indexes.
-     */
     @InputImport(name="repositoryCache")
     private final @Nullable Input<String> repositoryCache;
 
@@ -58,9 +43,6 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
         return this.repositoryCache == null ? Input.empty() : this.repositoryCache;
     }
 
-    /**
-     * The path to the file containing repository names and URLs.
-     */
     @InputImport(name="repositoryConfigPath")
     private final @Nullable Input<String> repositoryConfigPath;
 

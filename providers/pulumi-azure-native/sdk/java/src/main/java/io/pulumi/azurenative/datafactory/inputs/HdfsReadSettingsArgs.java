@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * HDFS read settings.
- */
 public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HdfsReadSettingsArgs Empty = new HdfsReadSettingsArgs();
 
-    /**
-     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="deleteFilesAfterCompletion")
     private final @Nullable Input<Object> deleteFilesAfterCompletion;
 
@@ -30,9 +24,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.deleteFilesAfterCompletion == null ? Input.empty() : this.deleteFilesAfterCompletion;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -40,9 +31,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * Specifies Distcp-related settings.
-     */
     @InputImport(name="distcpSettings")
     private final @Nullable Input<DistcpSettingsArgs> distcpSettings;
 
@@ -50,9 +38,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.distcpSettings == null ? Input.empty() : this.distcpSettings;
     }
 
-    /**
-     * Indicates whether to enable partition discovery.
-     */
     @InputImport(name="enablePartitionDiscovery")
     private final @Nullable Input<Boolean> enablePartitionDiscovery;
 
@@ -60,9 +45,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.enablePartitionDiscovery == null ? Input.empty() : this.enablePartitionDiscovery;
     }
 
-    /**
-     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileListPath")
     private final @Nullable Input<Object> fileListPath;
 
@@ -70,9 +52,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.fileListPath == null ? Input.empty() : this.fileListPath;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -80,9 +59,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * The end of file's modified datetime. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="modifiedDatetimeEnd")
     private final @Nullable Input<Object> modifiedDatetimeEnd;
 
@@ -90,9 +66,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.modifiedDatetimeEnd == null ? Input.empty() : this.modifiedDatetimeEnd;
     }
 
-    /**
-     * The start of file's modified datetime. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="modifiedDatetimeStart")
     private final @Nullable Input<Object> modifiedDatetimeStart;
 
@@ -100,9 +73,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.modifiedDatetimeStart == null ? Input.empty() : this.modifiedDatetimeStart;
     }
 
-    /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="partitionRootPath")
     private final @Nullable Input<Object> partitionRootPath;
 
@@ -110,9 +80,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.partitionRootPath == null ? Input.empty() : this.partitionRootPath;
     }
 
-    /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="recursive")
     private final @Nullable Input<Object> recursive;
 
@@ -120,10 +87,6 @@ public final class HdfsReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.recursive == null ? Input.empty() : this.recursive;
     }
 
-    /**
-     * The read setting type.
-Expected value is 'HdfsReadSettings'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -131,9 +94,6 @@ Expected value is 'HdfsReadSettings'.
         return this.type;
     }
 
-    /**
-     * HDFS wildcardFileName. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="wildcardFileName")
     private final @Nullable Input<Object> wildcardFileName;
 
@@ -141,9 +101,6 @@ Expected value is 'HdfsReadSettings'.
         return this.wildcardFileName == null ? Input.empty() : this.wildcardFileName;
     }
 
-    /**
-     * HDFS wildcardFolderPath. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="wildcardFolderPath")
     private final @Nullable Input<Object> wildcardFolderPath;
 

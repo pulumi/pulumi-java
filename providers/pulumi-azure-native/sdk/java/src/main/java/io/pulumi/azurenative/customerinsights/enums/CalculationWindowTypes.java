@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The calculation window.
- */
     @EnumType
     public enum CalculationWindowTypes {
-/**
- * 
- */
         Lifetime("Lifetime"),
-/**
- * 
- */
         Hour("Hour"),
-/**
- * 
- */
         Day("Day"),
-/**
- * 
- */
         Week("Week"),
-/**
- * 
- */
         Month("Month");
 
         private final String value;

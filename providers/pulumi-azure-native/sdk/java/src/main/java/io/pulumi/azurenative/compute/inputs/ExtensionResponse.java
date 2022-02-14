@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a cloud service Extension.
- */
 public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtensionResponse Empty = new ExtensionResponse();
 
-    /**
-     * The name of the extension.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,9 +22,6 @@ public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Extension Properties.
-     */
     @InputImport(name="properties")
     private final @Nullable CloudServiceExtensionPropertiesResponse properties;
 

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListOpenShiftClusterCredentialsResult {
-/**
- * The password for the kubeadmin user
- */
     private final @Nullable String kubeadminPassword;
-/**
- * The username for the kubeadmin user
- */
     private final @Nullable String kubeadminUsername;
 
     @OutputCustomType.Constructor({"kubeadminPassword","kubeadminUsername"})
@@ -28,15 +22,9 @@ public final class ListOpenShiftClusterCredentialsResult {
         this.kubeadminUsername = kubeadminUsername;
     }
 
-/**
- * The password for the kubeadmin user
- */
     public Optional<String> getKubeadminPassword() {
         return Optional.ofNullable(this.kubeadminPassword);
     }
-/**
- * The username for the kubeadmin user
- */
     public Optional<String> getKubeadminUsername() {
         return Optional.ofNullable(this.kubeadminUsername);
     }

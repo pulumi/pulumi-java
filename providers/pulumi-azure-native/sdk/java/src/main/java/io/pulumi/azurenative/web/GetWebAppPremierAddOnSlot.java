@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPremierAddOnSlot {
-/**
- * Premier add-on.
-API Version: 2020-12-01.
- *
- * Premier add-on.
- */
     public static CompletableFuture<GetWebAppPremierAddOnSlotResult> invokeAsync(GetWebAppPremierAddOnSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOnSlot", TypeShape.of(GetWebAppPremierAddOnSlotResult.class), args == null ? GetWebAppPremierAddOnSlotArgs.Empty : args, Utilities.withVersion(options));
     }

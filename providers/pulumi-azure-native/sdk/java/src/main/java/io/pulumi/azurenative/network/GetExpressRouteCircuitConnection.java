@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExpressRouteCircuitConnection {
-/**
- * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
-API Version: 2020-11-01.
- *
- * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
- */
     public static CompletableFuture<GetExpressRouteCircuitConnectionResult> invokeAsync(GetExpressRouteCircuitConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteCircuitConnection", TypeShape.of(GetExpressRouteCircuitConnectionResult.class), args == null ? GetExpressRouteCircuitConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

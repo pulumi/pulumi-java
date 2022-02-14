@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a DocumentDB output data source.
- */
 public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DocumentDbOutputDataSourceResponse Empty = new DocumentDbOutputDataSourceResponse();
 
-    /**
-     * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="accountId")
     private final @Nullable String accountId;
 
@@ -27,9 +21,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
-    /**
-     * The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="accountKey")
     private final @Nullable String accountKey;
 
@@ -37,9 +28,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
-    /**
-     * The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="collectionNamePattern")
     private final @Nullable String collectionNamePattern;
 
@@ -47,9 +35,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
         return this.collectionNamePattern == null ? Optional.empty() : Optional.ofNullable(this.collectionNamePattern);
     }
 
-    /**
-     * The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="database")
     private final @Nullable String database;
 
@@ -57,9 +42,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
-    /**
-     * The name of the field in output events used to specify the primary key which insert or update operations are based on.
-     */
     @InputImport(name="documentId")
     private final @Nullable String documentId;
 
@@ -67,9 +49,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
         return this.documentId == null ? Optional.empty() : Optional.ofNullable(this.documentId);
     }
 
-    /**
-     * The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
-     */
     @InputImport(name="partitionKey")
     private final @Nullable String partitionKey;
 
@@ -77,10 +56,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
-    /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Microsoft.Storage/DocumentDB'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

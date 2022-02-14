@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A list of Activity Log Alert rule actions.
- */
 public final class ActionListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActionListResponse Empty = new ActionListResponse();
 
-    /**
-     * The list of the Action Groups.
-     */
     @InputImport(name="actionGroups")
     private final @Nullable List<ActionGroupResponse> actionGroups;
 

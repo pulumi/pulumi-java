@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ies for the solution content item
- */
 public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataCategoriesArgs Empty = new MetadataCategoriesArgs();
 
-    /**
-     * domain for the solution content item
-     */
     @InputImport(name="domains")
     private final @Nullable Input<List<String>> domains;
 
@@ -28,9 +22,6 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
         return this.domains == null ? Input.empty() : this.domains;
     }
 
-    /**
-     * Industry verticals for the solution content item
-     */
     @InputImport(name="verticals")
     private final @Nullable Input<List<String>> verticals;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Determines whether or no a connection is locked. If locked, a reason must be specified.
- */
 public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LockConfigArgs Empty = new LockConfigArgs();
 
-    /**
-     * Indicates whether or not the connection is locked.
-     */
     @InputImport(name="locked")
     private final @Nullable Input<Boolean> locked;
 
@@ -28,9 +22,6 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.locked == null ? Input.empty() : this.locked;
     }
 
-    /**
-     * Describes why a connection is locked.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 

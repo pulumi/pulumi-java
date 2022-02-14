@@ -15,245 +15,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The diagnostic setting resource.
-API Version: 2017-04-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### BatchAccountDelete
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var diagnosticSetting = new AzureNative.AadIam.DiagnosticSetting("diagnosticSetting", new AzureNative.AadIam.DiagnosticSettingArgs
-        {
-            EventHubAuthorizationRuleId = "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
-            EventHubName = "myeventhub",
-            Logs = 
-            {
-                new AzureNative.AadIam.Inputs.LogSettingsArgs
-                {
-                    Category = "AuditLogs",
-                    Enabled = true,
-                    RetentionPolicy = new AzureNative.AadIam.Inputs.RetentionPolicyArgs
-                    {
-                        Days = 0,
-                        Enabled = false,
-                    },
-                },
-            },
-            Name = "mysetting",
-            StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
-            WorkspaceId = "",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	aadiam "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aadiam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aadiam.NewDiagnosticSetting(ctx, "diagnosticSetting", &aadiam.DiagnosticSettingArgs{
-			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
-			EventHubName:                pulumi.String("myeventhub"),
-			Logs: []aadiam.LogSettingsArgs{
-				&aadiam.LogSettingsArgs{
-					Category: pulumi.String("AuditLogs"),
-					Enabled:  pulumi.Bool(true),
-					RetentionPolicy: &aadiam.RetentionPolicyArgs{
-						Days:    pulumi.Int(0),
-						Enabled: pulumi.Bool(false),
-					},
-				},
-			},
-			Name:             pulumi.String("mysetting"),
-			StorageAccountId: pulumi.String("/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1"),
-			WorkspaceId:      pulumi.String(""),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const diagnosticSetting = new azure_native.aadiam.DiagnosticSetting("diagnosticSetting", {
-    eventHubAuthorizationRuleId: "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
-    eventHubName: "myeventhub",
-    logs: [{
-        category: "AuditLogs",
-        enabled: true,
-        retentionPolicy: {
-            days: 0,
-            enabled: false,
-        },
-    }],
-    name: "mysetting",
-    storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
-    workspaceId: "",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-diagnostic_setting = azure_native.aadiam.DiagnosticSetting("diagnosticSetting",
-    event_hub_authorization_rule_id="/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
-    event_hub_name="myeventhub",
-    logs=[azure_native.aadiam.LogSettingsArgs(
-        category="AuditLogs",
-        enabled=True,
-        retention_policy=azure_native.aadiam.RetentionPolicyArgs(
-            days=0,
-            enabled=False,
-        ),
-    )],
-    name="mysetting",
-    storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
-    workspace_id="")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:aadiam:DiagnosticSetting mysetting providers/microsoft.aadiam/diagnosticSettings/mysetting 
-```
-
- */
 @ResourceType(type="azure-native:aadiam:DiagnosticSetting")
 public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
-    /**
-     * The resource Id for the event hub authorization rule.
-     */
     @OutputExport(name="eventHubAuthorizationRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubAuthorizationRuleId;
 
-    /**
-     * @return The resource Id for the event hub authorization rule.
-     */
     public Output</* @Nullable */ String> getEventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId;
     }
-    /**
-     * The name of the event hub. If none is specified, the default event hub will be selected.
-     */
     @OutputExport(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
-    /**
-     * @return The name of the event hub. If none is specified, the default event hub will be selected.
-     */
     public Output</* @Nullable */ String> getEventHubName() {
         return this.eventHubName;
     }
-    /**
-     * The list of logs settings.
-     */
     @OutputExport(name="logs", type=List.class, parameters={LogSettingsResponse.class})
     private Output</* @Nullable */ List<LogSettingsResponse>> logs;
 
-    /**
-     * @return The list of logs settings.
-     */
     public Output</* @Nullable */ List<LogSettingsResponse>> getLogs() {
         return this.logs;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     */
     @OutputExport(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
-    /**
-     * @return The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     */
     public Output</* @Nullable */ String> getServiceBusRuleId() {
         return this.serviceBusRuleId;
     }
-    /**
-     * The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     */
     @OutputExport(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
-    /**
-     * @return The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     */
     @OutputExport(name="workspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceId;
 
-    /**
-     * @return The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     */
     public Output</* @Nullable */ String> getWorkspaceId() {
         return this.workspaceId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DiagnosticSetting(String name, @Nullable DiagnosticSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:aadiam:DiagnosticSetting", name, args == null ? DiagnosticSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -273,14 +85,6 @@ public class DiagnosticSetting extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DiagnosticSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DiagnosticSetting(name, id, options);
     }

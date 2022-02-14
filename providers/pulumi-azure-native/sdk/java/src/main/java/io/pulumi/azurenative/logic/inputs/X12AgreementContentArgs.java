@@ -9,16 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * The X12 agreement content.
- */
 public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X12AgreementContentArgs Empty = new X12AgreementContentArgs();
 
-    /**
-     * The X12 one-way receive agreement.
-     */
     @InputImport(name="receiveAgreement", required=true)
     private final Input<X12OneWayAgreementArgs> receiveAgreement;
 
@@ -26,9 +20,6 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
         return this.receiveAgreement;
     }
 
-    /**
-     * The X12 one-way send agreement.
-     */
     @InputImport(name="sendAgreement", required=true)
     private final Input<X12OneWayAgreementArgs> sendAgreement;
 

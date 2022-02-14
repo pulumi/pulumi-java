@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIssueModel {
-/**
- * Gets an issue model.
- */
     public static CompletableFuture<GetIssueModelResult> invokeAsync(GetIssueModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getIssueModel", TypeShape.of(GetIssueModelResult.class), args == null ? GetIssueModelArgs.Empty : args, Utilities.withVersion(options));
     }

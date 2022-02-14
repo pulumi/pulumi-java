@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExportDeliveryInfoResponse {
-/**
- * Has destination for the export being delivered.
- */
     private final ExportDeliveryDestinationResponse destination;
 
     @OutputCustomType.Constructor({"destination"})
@@ -19,9 +16,6 @@ public final class ExportDeliveryInfoResponse {
         this.destination = Objects.requireNonNull(destination);
     }
 
-/**
- * Has destination for the export being delivered.
- */
     public ExportDeliveryDestinationResponse getDestination() {
         return this.destination;
     }

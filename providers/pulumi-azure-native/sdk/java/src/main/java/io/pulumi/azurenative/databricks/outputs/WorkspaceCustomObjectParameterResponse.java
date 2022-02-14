@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkspaceCustomObjectParameterResponse {
-/**
- * The type of variable that this is
- */
     private final String type;
-/**
- * The value which should be used for this field.
- */
     private final Object value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -27,15 +21,9 @@ public final class WorkspaceCustomObjectParameterResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The type of variable that this is
- */
     public String getType() {
         return this.type;
     }
-/**
- * The value which should be used for this field.
- */
     public Object getValue() {
         return this.value;
     }

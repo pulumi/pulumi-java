@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkerPool {
-/**
- * Returns the specified worker pool.
- */
     public static CompletableFuture<GetWorkerPoolResult> invokeAsync(GetWorkerPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:remotebuildexecution/v1alpha:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args == null ? GetWorkerPoolArgs.Empty : args, Utilities.withVersion(options));
     }

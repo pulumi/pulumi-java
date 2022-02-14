@@ -14,41 +14,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetReferenceDataSetResult {
-/**
- * The time the resource was created.
- */
     private final String creationTime;
-/**
- * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
- */
     private final @Nullable String dataStringComparisonBehavior;
-/**
- * Resource Id
- */
     private final String id;
-/**
- * The list of key properties for the reference data set.
- */
     private final List<ReferenceDataSetKeyPropertyResponse> keyProperties;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Provisioning state of the resource.
- */
     private final String provisioningState;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"creationTime","dataStringComparisonBehavior","id","keyProperties","location","name","provisioningState","tags","type"})
@@ -73,57 +46,30 @@ public final class GetReferenceDataSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The time the resource was created.
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
- */
     public Optional<String> getDataStringComparisonBehavior() {
         return Optional.ofNullable(this.dataStringComparisonBehavior);
     }
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * The list of key properties for the reference data set.
- */
     public List<ReferenceDataSetKeyPropertyResponse> getKeyProperties() {
         return this.keyProperties;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Provisioning state of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

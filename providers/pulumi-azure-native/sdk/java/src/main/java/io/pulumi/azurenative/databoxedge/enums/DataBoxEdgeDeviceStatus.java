@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The status of the Data Box Edge/Gateway device.
- */
     @EnumType
     public enum DataBoxEdgeDeviceStatus {
-/**
- * 
- */
         ReadyToSetup("ReadyToSetup"),
-/**
- * 
- */
         Online("Online"),
-/**
- * 
- */
         Offline("Offline"),
-/**
- * 
- */
         NeedsAttention("NeedsAttention"),
-/**
- * 
- */
         Disconnected("Disconnected"),
-/**
- * 
- */
         PartiallyDisconnected("PartiallyDisconnected"),
-/**
- * 
- */
         Maintenance("Maintenance");
 
         private final String value;

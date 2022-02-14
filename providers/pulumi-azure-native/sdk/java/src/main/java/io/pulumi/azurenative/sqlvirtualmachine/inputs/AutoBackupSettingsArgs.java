@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configure backups for databases in your SQL virtual machine.
- */
 public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoBackupSettingsArgs Empty = new AutoBackupSettingsArgs();
 
-    /**
-     * Backup schedule type.
-     */
     @InputImport(name="backupScheduleType")
     private final @Nullable Input<Either<String,BackupScheduleType>> backupScheduleType;
 
@@ -32,9 +26,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.backupScheduleType == null ? Input.empty() : this.backupScheduleType;
     }
 
-    /**
-     * Include or exclude system databases from auto backup.
-     */
     @InputImport(name="backupSystemDbs")
     private final @Nullable Input<Boolean> backupSystemDbs;
 
@@ -42,9 +33,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.backupSystemDbs == null ? Input.empty() : this.backupSystemDbs;
     }
 
-    /**
-     * Enable or disable autobackup on SQL virtual machine.
-     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -52,9 +40,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.enable == null ? Input.empty() : this.enable;
     }
 
-    /**
-     * Enable or disable encryption for backup on SQL virtual machine.
-     */
     @InputImport(name="enableEncryption")
     private final @Nullable Input<Boolean> enableEncryption;
 
@@ -62,9 +47,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.enableEncryption == null ? Input.empty() : this.enableEncryption;
     }
 
-    /**
-     * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
-     */
     @InputImport(name="fullBackupFrequency")
     private final @Nullable Input<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
 
@@ -72,9 +54,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.fullBackupFrequency == null ? Input.empty() : this.fullBackupFrequency;
     }
 
-    /**
-     * Start time of a given day during which full backups can take place. 0-23 hours.
-     */
     @InputImport(name="fullBackupStartTime")
     private final @Nullable Input<Integer> fullBackupStartTime;
 
@@ -82,9 +61,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.fullBackupStartTime == null ? Input.empty() : this.fullBackupStartTime;
     }
 
-    /**
-     * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
-     */
     @InputImport(name="fullBackupWindowHours")
     private final @Nullable Input<Integer> fullBackupWindowHours;
 
@@ -92,9 +68,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.fullBackupWindowHours == null ? Input.empty() : this.fullBackupWindowHours;
     }
 
-    /**
-     * Frequency of log backups. 5-60 minutes.
-     */
     @InputImport(name="logBackupFrequency")
     private final @Nullable Input<Integer> logBackupFrequency;
 
@@ -102,9 +75,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.logBackupFrequency == null ? Input.empty() : this.logBackupFrequency;
     }
 
-    /**
-     * Password for encryption on backup.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -112,9 +82,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Retention period of backup: 1-30 days.
-     */
     @InputImport(name="retentionPeriod")
     private final @Nullable Input<Integer> retentionPeriod;
 
@@ -122,9 +89,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
     }
 
-    /**
-     * Storage account key where backup will be taken to.
-     */
     @InputImport(name="storageAccessKey")
     private final @Nullable Input<String> storageAccessKey;
 
@@ -132,9 +96,6 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.storageAccessKey == null ? Input.empty() : this.storageAccessKey;
     }
 
-    /**
-     * Storage account url where backup will be taken to.
-     */
     @InputImport(name="storageAccountUrl")
     private final @Nullable Input<String> storageAccountUrl;
 

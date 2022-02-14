@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdAssetReferenceResponse {
-/**
- * ARM resource ID of the asset.
- */
     private final String assetId;
-/**
- * Enum to determine which reference method to use for an asset.
-Expected value is 'Id'.
- */
     private final String referenceType;
 
     @OutputCustomType.Constructor({"assetId","referenceType"})
@@ -27,16 +20,9 @@ Expected value is 'Id'.
         this.referenceType = Objects.requireNonNull(referenceType);
     }
 
-/**
- * ARM resource ID of the asset.
- */
     public String getAssetId() {
         return this.assetId;
     }
-/**
- * Enum to determine which reference method to use for an asset.
-Expected value is 'Id'.
- */
     public String getReferenceType() {
         return this.referenceType;
     }

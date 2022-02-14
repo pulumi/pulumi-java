@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SoftwareRecipeResponse {
-/**
- * Resources available to be used in the steps in the recipe.
- */
     private final List<SoftwareRecipeArtifactResponse> artifacts;
-/**
- * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
- */
     private final String desiredState;
-/**
- * Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
- */
     private final List<SoftwareRecipeStepResponse> installSteps;
-/**
- * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
- */
     private final String name;
-/**
- * Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
- */
     private final List<SoftwareRecipeStepResponse> updateSteps;
-/**
- * The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
- */
     private final String version;
 
     @OutputCustomType.Constructor({"artifacts","desiredState","installSteps","name","updateSteps","version"})
@@ -53,39 +35,21 @@ public final class SoftwareRecipeResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * Resources available to be used in the steps in the recipe.
- */
     public List<SoftwareRecipeArtifactResponse> getArtifacts() {
         return this.artifacts;
     }
-/**
- * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
- */
     public String getDesiredState() {
         return this.desiredState;
     }
-/**
- * Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
- */
     public List<SoftwareRecipeStepResponse> getInstallSteps() {
         return this.installSteps;
     }
-/**
- * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
- */
     public List<SoftwareRecipeStepResponse> getUpdateSteps() {
         return this.updateSteps;
     }
-/**
- * The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
- */
     public String getVersion() {
         return this.version;
     }

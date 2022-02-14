@@ -16,184 +16,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Settings with single toggle.
-API Version: 2021-03-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Update EyesOn settings.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var eyesOn = new AzureNative.SecurityInsights.EyesOn("eyesOn", new AzureNative.SecurityInsights.EyesOnArgs
-        {
-            Kind = "EyesOn",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
-            ResourceGroupName = "myRg",
-            SettingsName = "EyesOn",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewEyesOn(ctx, "eyesOn", &securityinsights.EyesOnArgs{
-			Kind:                                pulumi.String("EyesOn"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			SettingsName:                        pulumi.String("EyesOn"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const eyesOn = new azure_native.securityinsights.EyesOn("eyesOn", {
-    kind: "EyesOn",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
-    resourceGroupName: "myRg",
-    settingsName: "EyesOn",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-eyes_on = azure_native.securityinsights.EyesOn("eyesOn",
-    kind="EyesOn",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
-    resource_group_name="myRg",
-    settings_name="EyesOn",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:securityinsights:EyesOn EyesOn /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/avdvirInt/providers/Microsoft.SecurityInsights/settings/EyesOn 
-```
-
- */
 @ResourceType(type="azure-native:securityinsights:EyesOn")
 public class EyesOn extends io.pulumi.resources.CustomResource {
-    /**
-     * Etag of the azure resource
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Etag of the azure resource
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * Determines whether the setting is enable or disabled.
-     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
-    /**
-     * @return Determines whether the setting is enable or disabled.
-     */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
-    /**
-     * The kind of the setting
-Expected value is 'EyesOn'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return The kind of the setting
-Expected value is 'EyesOn'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public EyesOn(String name, EyesOnArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:EyesOn", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -221,14 +82,6 @@ Expected value is 'EyesOn'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static EyesOn get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EyesOn(name, id, options);
     }

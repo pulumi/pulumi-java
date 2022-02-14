@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Authorization in an ExpressRouteCircuit resource.
- */
 public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteCircuitAuthorizationResponse Empty = new ExpressRouteCircuitAuthorizationResponse();
 
-    /**
-     * The authorization key.
-     */
     @InputImport(name="authorizationKey")
     private final @Nullable String authorizationKey;
 
@@ -27,9 +21,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
     }
 
-    /**
-     * The authorization use status.
-     */
     @InputImport(name="authorizationUseStatus")
     private final @Nullable String authorizationUseStatus;
 
@@ -37,9 +28,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
         return this.authorizationUseStatus == null ? Optional.empty() : Optional.ofNullable(this.authorizationUseStatus);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -47,9 +35,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -57,9 +42,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -67,9 +49,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the authorization resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -77,9 +56,6 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
         return this.provisioningState;
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

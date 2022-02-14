@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
- */
     @EnumType
     public enum ReadWriteEndpointFailoverPolicy {
-/**
- * 
- */
         Manual("Manual"),
-/**
- * 
- */
         Automatic("Automatic");
 
         private final String value;

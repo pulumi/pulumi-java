@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KubernetesMetadataResponse {
-/**
- * Kubernetes API server version string as reported by '/version'.
- */
     private final String kubernetesApiServerVersion;
-/**
- * The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.
- */
     private final Integer memoryMb;
-/**
- * Node count as reported by Kubernetes nodes resources.
- */
     private final Integer nodeCount;
-/**
- * Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.
- */
     private final String nodeProviderId;
-/**
- * The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.
- */
     private final String updateTime;
-/**
- * vCPU count as reported by Kubernetes nodes resources.
- */
     private final Integer vcpuCount;
 
     @OutputCustomType.Constructor({"kubernetesApiServerVersion","memoryMb","nodeCount","nodeProviderId","updateTime","vcpuCount"})
@@ -51,39 +33,21 @@ public final class KubernetesMetadataResponse {
         this.vcpuCount = Objects.requireNonNull(vcpuCount);
     }
 
-/**
- * Kubernetes API server version string as reported by '/version'.
- */
     public String getKubernetesApiServerVersion() {
         return this.kubernetesApiServerVersion;
     }
-/**
- * The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.
- */
     public Integer getMemoryMb() {
         return this.memoryMb;
     }
-/**
- * Node count as reported by Kubernetes nodes resources.
- */
     public Integer getNodeCount() {
         return this.nodeCount;
     }
-/**
- * Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.
- */
     public String getNodeProviderId() {
         return this.nodeProviderId;
     }
-/**
- * The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }
-/**
- * vCPU count as reported by Kubernetes nodes resources.
- */
     public Integer getVcpuCount() {
         return this.vcpuCount;
     }

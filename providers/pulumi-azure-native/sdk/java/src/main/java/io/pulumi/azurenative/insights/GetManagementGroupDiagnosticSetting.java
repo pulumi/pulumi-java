@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementGroupDiagnosticSetting {
-/**
- * The management group diagnostic setting resource.
-API Version: 2020-01-01-preview.
- *
- * The management group diagnostic setting resource.
- */
     public static CompletableFuture<GetManagementGroupDiagnosticSettingResult> invokeAsync(GetManagementGroupDiagnosticSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getManagementGroupDiagnosticSetting", TypeShape.of(GetManagementGroupDiagnosticSettingResult.class), args == null ? GetManagementGroupDiagnosticSettingArgs.Empty : args, Utilities.withVersion(options));
     }

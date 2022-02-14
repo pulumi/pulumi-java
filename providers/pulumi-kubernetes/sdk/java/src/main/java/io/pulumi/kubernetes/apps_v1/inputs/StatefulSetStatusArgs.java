@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * StatefulSetStatus represents the current state of a StatefulSet.
- */
 public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatefulSetStatusArgs Empty = new StatefulSetStatusArgs();
 
-    /**
-     * Total number of available pods (ready for at least minReadySeconds) targeted by this statefulset. This is a beta field and enabled/disabled by StatefulSetMinReadySeconds feature gate.
-     */
     @InputImport(name="availableReplicas", required=true)
     private final Input<Integer> availableReplicas;
 
@@ -30,9 +24,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.availableReplicas;
     }
 
-    /**
-     * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
-     */
     @InputImport(name="collisionCount")
     private final @Nullable Input<Integer> collisionCount;
 
@@ -40,9 +31,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.collisionCount == null ? Input.empty() : this.collisionCount;
     }
 
-    /**
-     * Represents the latest available observations of a statefulset's current state.
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<StatefulSetConditionArgs>> conditions;
 
@@ -50,9 +38,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
-     */
     @InputImport(name="currentReplicas")
     private final @Nullable Input<Integer> currentReplicas;
 
@@ -60,9 +45,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.currentReplicas == null ? Input.empty() : this.currentReplicas;
     }
 
-    /**
-     * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
-     */
     @InputImport(name="currentRevision")
     private final @Nullable Input<String> currentRevision;
 
@@ -70,9 +52,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.currentRevision == null ? Input.empty() : this.currentRevision;
     }
 
-    /**
-     * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
-     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -80,9 +59,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
-    /**
-     * readyReplicas is the number of pods created for this StatefulSet with a Ready Condition.
-     */
     @InputImport(name="readyReplicas")
     private final @Nullable Input<Integer> readyReplicas;
 
@@ -90,9 +66,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
     }
 
-    /**
-     * replicas is the number of Pods created by the StatefulSet controller.
-     */
     @InputImport(name="replicas", required=true)
     private final Input<Integer> replicas;
 
@@ -100,9 +73,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.replicas;
     }
 
-    /**
-     * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
-     */
     @InputImport(name="updateRevision")
     private final @Nullable Input<String> updateRevision;
 
@@ -110,9 +80,6 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
         return this.updateRevision == null ? Input.empty() : this.updateRevision;
     }
 
-    /**
-     * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
-     */
     @InputImport(name="updatedReplicas")
     private final @Nullable Input<Integer> updatedReplicas;
 

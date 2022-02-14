@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 
@@ -25,9 +19,6 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="customerId", required=true)
     private final String customerId;
 
@@ -35,9 +26,6 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
         return this.customerId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="entitlementId", required=true)
     private final String entitlementId;
 

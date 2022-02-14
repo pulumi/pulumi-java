@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubResourceResponse Empty = new SubResourceResponse();
 
-    /**
-     * Resource Id
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

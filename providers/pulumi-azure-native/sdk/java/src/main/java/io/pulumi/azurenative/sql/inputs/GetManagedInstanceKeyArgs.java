@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedInstanceKeyArgs Empty = new GetManagedInstanceKeyArgs();
 
-    /**
-     * The name of the managed instance key to be retrieved.
-     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -25,9 +19,6 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
         return this.keyName;
     }
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName", required=true)
     private final String managedInstanceName;
 
@@ -35,9 +26,6 @@ public final class GetManagedInstanceKeyArgs extends io.pulumi.resources.InvokeA
         return this.managedInstanceName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

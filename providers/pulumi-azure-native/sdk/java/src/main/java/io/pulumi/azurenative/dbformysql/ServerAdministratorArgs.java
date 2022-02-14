@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerAdministratorArgs Empty = new ServerAdministratorArgs();
 
-    /**
-     * The type of administrator.
-     */
     @InputImport(name="administratorType", required=true)
     private final Input<Either<String,AdministratorType>> administratorType;
 
@@ -28,9 +22,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
         return this.administratorType;
     }
 
-    /**
-     * The server administrator login account name.
-     */
     @InputImport(name="login", required=true)
     private final Input<String> login;
 
@@ -38,9 +29,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
         return this.login;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -58,9 +43,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
         return this.serverName;
     }
 
-    /**
-     * The server administrator Sid (Secure ID).
-     */
     @InputImport(name="sid", required=true)
     private final Input<String> sid;
 
@@ -68,9 +50,6 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
         return this.sid;
     }
 
-    /**
-     * The server Active Directory Administrator tenant id.
-     */
     @InputImport(name="tenantId", required=true)
     private final Input<String> tenantId;
 

@@ -11,21 +11,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
-/**
- * 
- */
     private final String kind;
-/**
- * 
- */
     private final List<String> rrdatas;
-/**
- * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
- */
     private final List<String> signatureRrdatas;
-/**
- * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
- */
     private final Double weight;
 
     @OutputCustomType.Constructor({"kind","rrdatas","signatureRrdatas","weight"})
@@ -40,27 +28,15 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
         this.weight = Objects.requireNonNull(weight);
     }
 
-/**
- * 
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * 
- */
     public List<String> getRrdatas() {
         return this.rrdatas;
     }
-/**
- * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
- */
     public List<String> getSignatureRrdatas() {
         return this.signatureRrdatas;
     }
-/**
- * The weight corresponding to this subset of rrdata. When multiple WeightedRoundRobinPolicyItems are configured, the probability of returning an rrset is proportional to its weight relative to the sum of weights configured for all items. This weight should be non-negative.
- */
     public Double getWeight() {
         return this.weight;
     }

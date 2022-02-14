@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * API Definitions
- */
 public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiResourceDefinitionsArgs Empty = new ApiResourceDefinitionsArgs();
 
-    /**
-     * The modified swagger URL
-     */
     @InputImport(name="modifiedSwaggerUrl")
     private final @Nullable Input<String> modifiedSwaggerUrl;
 
@@ -27,9 +21,6 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
         return this.modifiedSwaggerUrl == null ? Input.empty() : this.modifiedSwaggerUrl;
     }
 
-    /**
-     * The original swagger URL
-     */
     @InputImport(name="originalSwaggerUrl")
     private final @Nullable Input<String> originalSwaggerUrl;
 

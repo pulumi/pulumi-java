@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Material is a material used in the generation of the provenance
- */
 public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaterialArgs Empty = new MaterialArgs();
 
-    /**
-     * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
-     */
     @InputImport(name="digest")
     private final @Nullable Input<Map<String,String>> digest;
 
@@ -28,9 +22,6 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
         return this.digest == null ? Input.empty() : this.digest;
     }
 
-    /**
-     * uri is the uri of the material
-     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

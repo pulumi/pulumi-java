@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="gcsPath", required=true)
     private final String gcsPath;
 
@@ -27,9 +21,6 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
         return this.gcsPath;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -47,9 +35,6 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="view")
     private final @Nullable String view;
 

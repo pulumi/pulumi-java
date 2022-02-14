@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TextStreamResponse {
-/**
- * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
- */
     private final String codec;
-/**
- * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
- */
     private final List<TextMappingResponse> mapping;
 
     @OutputCustomType.Constructor({"codec","mapping"})
@@ -28,15 +22,9 @@ public final class TextStreamResponse {
         this.mapping = Objects.requireNonNull(mapping);
     }
 
-/**
- * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
- */
     public String getCodec() {
         return this.codec;
     }
-/**
- * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
- */
     public List<TextMappingResponse> getMapping() {
         return this.mapping;
     }

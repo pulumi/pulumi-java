@@ -14,150 +14,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Represents the serial port of the parent resource.
-API Version: 2018-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a new serial port resource.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serialPort = new AzureNative.SerialConsole.SerialPort("serialPort", new AzureNative.SerialConsole.SerialPortArgs
-        {
-            ParentResource = "myVM",
-            ParentResourceType = "virtualMachines",
-            ResourceGroupName = "myResourceGroup",
-            ResourceProviderNamespace = "Microsoft.Compute",
-            SerialPort = "0",
-            State = "enabled",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	serialconsole "github.com/pulumi/pulumi-azure-native/sdk/go/azure/serialconsole"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := serialconsole.NewSerialPort(ctx, "serialPort", &serialconsole.SerialPortArgs{
-			ParentResource:            pulumi.String("myVM"),
-			ParentResourceType:        pulumi.String("virtualMachines"),
-			ResourceGroupName:         pulumi.String("myResourceGroup"),
-			ResourceProviderNamespace: pulumi.String("Microsoft.Compute"),
-			SerialPort:                pulumi.String("0"),
-			State:                     "enabled",
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const serialPort = new azure_native.serialconsole.SerialPort("serialPort", {
-    parentResource: "myVM",
-    parentResourceType: "virtualMachines",
-    resourceGroupName: "myResourceGroup",
-    resourceProviderNamespace: "Microsoft.Compute",
-    serialPort: "0",
-    state: "enabled",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-serial_port = azure_native.serialconsole.SerialPort("serialPort",
-    parent_resource="myVM",
-    parent_resource_type="virtualMachines",
-    resource_group_name="myResourceGroup",
-    resource_provider_namespace="Microsoft.Compute",
-    serial_port="0",
-    state="enabled")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:serialconsole:SerialPort 0 /subscriptions/00000000-00000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM/providers/Microsoft.SerialConsole/serialPorts/0 
-```
-
- */
 @ResourceType(type="azure-native:serialconsole:SerialPort")
 public class SerialPort extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Specifies whether the port is enabled for a serial console connection.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
-    /**
-     * @return Specifies whether the port is enabled for a serial console connection.
-     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SerialPort(String name, SerialPortArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:serialconsole:SerialPort", name, args == null ? SerialPortArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -176,14 +53,6 @@ public class SerialPort extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SerialPort get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SerialPort(name, id, options);
     }

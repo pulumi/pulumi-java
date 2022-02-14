@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Hyper-V Replica Azure specific protection profile details.
- */
 public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HyperVReplicaAzurePolicyDetailsResponse Empty = new HyperVReplicaAzurePolicyDetailsResponse();
 
-    /**
-     * The active storage account Id.
-     */
     @InputImport(name="activeStorageAccountId")
     private final @Nullable String activeStorageAccountId;
 
@@ -28,9 +22,6 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
         return this.activeStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.activeStorageAccountId);
     }
 
-    /**
-     * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
-     */
     @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
     private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
@@ -38,9 +29,6 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
-    /**
-     * A value indicating whether encryption is enabled for virtual machines in this cloud.
-     */
     @InputImport(name="encryption")
     private final @Nullable String encryption;
 
@@ -48,10 +36,6 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
-    /**
-     * Gets the class type. Overridden in derived classes.
-Expected value is 'HyperVReplicaAzure'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -59,9 +43,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.instanceType;
     }
 
-    /**
-     * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
-     */
     @InputImport(name="onlineReplicationStartTime")
     private final @Nullable String onlineReplicationStartTime;
 
@@ -69,9 +50,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
-    /**
-     * The duration (in hours) to which point the recovery history needs to be maintained.
-     */
     @InputImport(name="recoveryPointHistoryDurationInHours")
     private final @Nullable Integer recoveryPointHistoryDurationInHours;
 
@@ -79,9 +57,6 @@ Expected value is 'HyperVReplicaAzure'.
         return this.recoveryPointHistoryDurationInHours == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
 
-    /**
-     * The replication interval.
-     */
     @InputImport(name="replicationInterval")
     private final @Nullable Integer replicationInterval;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The private endpoint resource from Microsoft.Network provider.
- */
 public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionPropertiesResponsePrivateEndpoint Empty = new PrivateEndpointConnectionPropertiesResponsePrivateEndpoint();
 
-    /**
-     * The resource id of the private endpoint resource from Microsoft.Network provider.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

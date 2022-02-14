@@ -11,18 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeMapArgs Empty = new ScopeMapArgs();
 
-    /**
-     * The list of scoped permissions for registry artifacts.
-E.g. repositories/repository-name/content/read,
-repositories/repository-name/metadata/write
-     */
     @InputImport(name="actions", required=true)
     private final Input<List<String>> actions;
 
@@ -30,9 +22,6 @@ repositories/repository-name/metadata/write
         return this.actions;
     }
 
-    /**
-     * The user friendly description of the scope map.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +29,6 @@ repositories/repository-name/metadata/write
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -50,9 +36,6 @@ repositories/repository-name/metadata/write
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +43,6 @@ repositories/repository-name/metadata/write
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the scope map.
-     */
     @InputImport(name="scopeMapName")
     private final @Nullable Input<String> scopeMapName;
 

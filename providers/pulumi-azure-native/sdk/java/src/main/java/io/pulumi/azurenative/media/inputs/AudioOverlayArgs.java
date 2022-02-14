@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of an audio overlay.
- */
 public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AudioOverlayArgs Empty = new AudioOverlayArgs();
 
-    /**
-     * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
-     */
     @InputImport(name="audioGainLevel")
     private final @Nullable Input<Double> audioGainLevel;
 
@@ -28,9 +22,6 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
         return this.audioGainLevel == null ? Input.empty() : this.audioGainLevel;
     }
 
-    /**
-     * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
-     */
     @InputImport(name="end")
     private final @Nullable Input<String> end;
 
@@ -38,9 +29,6 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
         return this.end == null ? Input.empty() : this.end;
     }
 
-    /**
-     * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
-     */
     @InputImport(name="fadeInDuration")
     private final @Nullable Input<String> fadeInDuration;
 
@@ -48,9 +36,6 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
         return this.fadeInDuration == null ? Input.empty() : this.fadeInDuration;
     }
 
-    /**
-     * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
-     */
     @InputImport(name="fadeOutDuration")
     private final @Nullable Input<String> fadeOutDuration;
 
@@ -58,9 +43,6 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
         return this.fadeOutDuration == null ? Input.empty() : this.fadeOutDuration;
     }
 
-    /**
-     * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
-     */
     @InputImport(name="inputLabel", required=true)
     private final Input<String> inputLabel;
 
@@ -68,10 +50,6 @@ public final class AudioOverlayArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputLabel;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.AudioOverlay'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -79,9 +57,6 @@ Expected value is '#Microsoft.Media.AudioOverlay'.
         return this.odataType;
     }
 
-    /**
-     * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
-     */
     @InputImport(name="start")
     private final @Nullable Input<String> start;
 

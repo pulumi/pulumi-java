@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the content link.
- */
 public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentLinkArgs Empty = new ContentLinkArgs();
 
-    /**
-     * Gets or sets the hash.
-     */
     @InputImport(name="contentHash")
     private final @Nullable Input<ContentHashArgs> contentHash;
 
@@ -28,9 +22,6 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentHash == null ? Input.empty() : this.contentHash;
     }
 
-    /**
-     * Gets or sets the uri of the runbook content.
-     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 
@@ -38,9 +29,6 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.uri == null ? Input.empty() : this.uri;
     }
 
-    /**
-     * Gets or sets the version of the content.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

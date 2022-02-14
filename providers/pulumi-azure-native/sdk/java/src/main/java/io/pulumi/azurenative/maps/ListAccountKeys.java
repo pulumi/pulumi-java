@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAccountKeys {
-/**
- * The set of keys which can be used to access the Maps REST APIs. Two keys are provided for key rotation without interruption.
-API Version: 2018-05-01.
- *
- * The set of keys which can be used to access the Maps REST APIs. Two keys are provided for key rotation without interruption.
- */
     public static CompletableFuture<ListAccountKeysResult> invokeAsync(ListAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:maps:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args == null ? ListAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

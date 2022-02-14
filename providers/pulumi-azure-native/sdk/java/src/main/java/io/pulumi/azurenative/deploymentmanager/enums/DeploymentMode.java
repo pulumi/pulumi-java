@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes the type of ARM deployment to be performed on the resource.
- */
     @EnumType
     public enum DeploymentMode {
-/**
- * 
- */
         Incremental("Incremental"),
-/**
- * 
- */
         Complete("Complete");
 
         private final String value;

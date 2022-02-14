@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMaintenanceConfigurationArgs Empty = new GetMaintenanceConfigurationArgs();
 
-    /**
-     * Resource Group Name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource Identifier
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

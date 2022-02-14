@@ -13,11 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClientToken {
-/**
- * Use this function to get an Azure authentication token for the current login context.
- *
- * Configuration values returned by getClientToken.
- */
     public static CompletableFuture<GetClientTokenResult> invokeAsync(@Nullable GetClientTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientToken", TypeShape.of(GetClientTokenResult.class), args == null ? GetClientTokenArgs.Empty : args, Utilities.withVersion(options));
     }

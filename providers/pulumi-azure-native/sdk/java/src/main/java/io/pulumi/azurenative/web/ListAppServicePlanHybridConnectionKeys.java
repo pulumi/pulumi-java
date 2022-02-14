@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAppServicePlanHybridConnectionKeys {
-/**
- * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
-API Version: 2020-12-01.
- *
- * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
- */
     public static CompletableFuture<ListAppServicePlanHybridConnectionKeysResult> invokeAsync(ListAppServicePlanHybridConnectionKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listAppServicePlanHybridConnectionKeys", TypeShape.of(ListAppServicePlanHybridConnectionKeysResult.class), args == null ? ListAppServicePlanHybridConnectionKeysArgs.Empty : args, Utilities.withVersion(options));
     }

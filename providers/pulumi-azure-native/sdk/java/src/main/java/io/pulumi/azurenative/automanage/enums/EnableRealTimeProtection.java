@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Enables or disables Real Time Protection
- */
     @EnumType
     public enum EnableRealTimeProtection {
-/**
- * 
- */
         True("True"),
-/**
- * 
- */
         False("False");
 
         private final String value;

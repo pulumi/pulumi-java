@@ -14,53 +14,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityAssessmentMetadataPropertiesResponse {
-/**
- * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
- */
     private final String assessmentType;
-/**
- * 
- */
     private final @Nullable List<String> categories;
-/**
- * Human readable description of the assessment
- */
     private final @Nullable String description;
-/**
- * User friendly display name of the assessment
- */
     private final String displayName;
-/**
- * The implementation effort required to remediate this assessment
- */
     private final @Nullable String implementationEffort;
-/**
- * Describes the partner that created the assessment
- */
     private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
-/**
- * Azure resource ID of the policy definition that turns this assessment calculation on
- */
     private final String policyDefinitionId;
-/**
- * True if this assessment is in preview release status
- */
     private final @Nullable Boolean preview;
-/**
- * Human readable description of what you should do to mitigate this security issue
- */
     private final @Nullable String remediationDescription;
-/**
- * The severity level of the assessment
- */
     private final String severity;
-/**
- * 
- */
     private final @Nullable List<String> threats;
-/**
- * The user impact of the assessment
- */
     private final @Nullable String userImpact;
 
     @OutputCustomType.Constructor({"assessmentType","categories","description","displayName","implementationEffort","partnerData","policyDefinitionId","preview","remediationDescription","severity","threats","userImpact"})
@@ -91,75 +55,39 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
         this.userImpact = userImpact;
     }
 
-/**
- * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
- */
     public String getAssessmentType() {
         return this.assessmentType;
     }
-/**
- * 
- */
     public List<String> getCategories() {
         return this.categories == null ? List.of() : this.categories;
     }
-/**
- * Human readable description of the assessment
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * User friendly display name of the assessment
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * The implementation effort required to remediate this assessment
- */
     public Optional<String> getImplementationEffort() {
         return Optional.ofNullable(this.implementationEffort);
     }
-/**
- * Describes the partner that created the assessment
- */
     public Optional<SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
         return Optional.ofNullable(this.partnerData);
     }
-/**
- * Azure resource ID of the policy definition that turns this assessment calculation on
- */
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
-/**
- * True if this assessment is in preview release status
- */
     public Optional<Boolean> getPreview() {
         return Optional.ofNullable(this.preview);
     }
-/**
- * Human readable description of what you should do to mitigate this security issue
- */
     public Optional<String> getRemediationDescription() {
         return Optional.ofNullable(this.remediationDescription);
     }
-/**
- * The severity level of the assessment
- */
     public String getSeverity() {
         return this.severity;
     }
-/**
- * 
- */
     public List<String> getThreats() {
         return this.threats == null ? List.of() : this.threats;
     }
-/**
- * The user impact of the assessment
- */
     public Optional<String> getUserImpact() {
         return Optional.ofNullable(this.userImpact);
     }

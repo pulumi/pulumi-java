@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse {
-/**
- * 
- */
     private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
-/**
- * 
- */
     private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 
     @OutputCustomType.Constructor({"decayCurveStoppingConfig","medianAutomatedStoppingConfig"})
@@ -27,15 +21,9 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse {
         this.medianAutomatedStoppingConfig = Objects.requireNonNull(medianAutomatedStoppingConfig);
     }
 
-/**
- * 
- */
     public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse getDecayCurveStoppingConfig() {
         return this.decayCurveStoppingConfig;
     }
-/**
- * 
- */
     public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse getMedianAutomatedStoppingConfig() {
         return this.medianAutomatedStoppingConfig;
     }

@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
-/**
- * 
- */
     private final ResourceIdResponse privateEndpoint;
-/**
- * 
- */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-/**
- * 
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
@@ -36,21 +27,12 @@ public final class PrivateEndpointConnectionPropertiesResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * 
- */
     public ResourceIdResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
-/**
- * 
- */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-/**
- * 
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

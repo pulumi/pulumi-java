@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleUrlPathConditionResponse {
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'UrlPath'.
- */
     private final String name;
-/**
- * Defines the parameters for the condition.
- */
     private final UrlPathMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -28,16 +21,9 @@ Expected value is 'UrlPath'.
         this.parameters = Objects.requireNonNull(parameters);
     }
 
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'UrlPath'.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines the parameters for the condition.
- */
     public UrlPathMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

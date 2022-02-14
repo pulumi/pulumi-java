@@ -11,33 +11,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetConnectionResult {
-/**
- * Cloud SQL properties.
- */
     private final CloudSqlPropertiesResponse cloudSql;
-/**
- * The creation timestamp of the connection.
- */
     private final String creationTime;
-/**
- * User provided description.
- */
     private final String description;
-/**
- * User provided display name for the connection.
- */
     private final String friendlyName;
-/**
- * True, if credential is configured for this connection.
- */
     private final Boolean hasCredential;
-/**
- * The last update timestamp of the connection.
- */
     private final String lastModifiedTime;
-/**
- * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
- */
     private final String name;
 
     @OutputCustomType.Constructor({"cloudSql","creationTime","description","friendlyName","hasCredential","lastModifiedTime","name"})
@@ -58,45 +37,24 @@ public final class GetConnectionResult {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Cloud SQL properties.
- */
     public CloudSqlPropertiesResponse getCloudSql() {
         return this.cloudSql;
     }
-/**
- * The creation timestamp of the connection.
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * User provided description.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * User provided display name for the connection.
- */
     public String getFriendlyName() {
         return this.friendlyName;
     }
-/**
- * True, if credential is configured for this connection.
- */
     public Boolean getHasCredential() {
         return this.hasCredential;
     }
-/**
- * The last update timestamp of the connection.
- */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-/**
- * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
- */
     public String getName() {
         return this.name;
     }

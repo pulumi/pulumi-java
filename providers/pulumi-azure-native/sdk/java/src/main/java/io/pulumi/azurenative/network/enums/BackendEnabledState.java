@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
- */
     @EnumType
     public enum BackendEnabledState {
-/**
- * 
- */
         Enabled("Enabled"),
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

@@ -8,54 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Kind of data set mapping.
- */
     @EnumType
     public enum DataSetMappingKind {
-/**
- * 
- */
         Blob("Blob"),
-/**
- * 
- */
         Container("Container"),
-/**
- * 
- */
         BlobFolder("BlobFolder"),
-/**
- * 
- */
         AdlsGen2FileSystem("AdlsGen2FileSystem"),
-/**
- * 
- */
         AdlsGen2Folder("AdlsGen2Folder"),
-/**
- * 
- */
         AdlsGen2File("AdlsGen2File"),
-/**
- * 
- */
         KustoCluster("KustoCluster"),
-/**
- * 
- */
         KustoDatabase("KustoDatabase"),
-/**
- * 
- */
         SqlDBTable("SqlDBTable"),
-/**
- * 
- */
         SqlDWTable("SqlDWTable"),
-/**
- * 
- */
         SynapseWorkspaceSqlPoolTable("SynapseWorkspaceSqlPoolTable");
 
         private final String value;

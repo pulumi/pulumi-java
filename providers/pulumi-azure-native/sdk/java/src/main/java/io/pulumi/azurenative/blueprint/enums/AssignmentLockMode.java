@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Lock mode.
- */
     @EnumType
     public enum AssignmentLockMode {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         AllResourcesReadOnly("AllResourcesReadOnly"),
-/**
- * 
- */
         AllResourcesDoNotDelete("AllResourcesDoNotDelete");
 
         private final String value;

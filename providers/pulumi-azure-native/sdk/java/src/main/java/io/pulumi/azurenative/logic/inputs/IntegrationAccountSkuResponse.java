@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The integration account sku.
- */
 public final class IntegrationAccountSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationAccountSkuResponse Empty = new IntegrationAccountSkuResponse();
 
-    /**
-     * The sku name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

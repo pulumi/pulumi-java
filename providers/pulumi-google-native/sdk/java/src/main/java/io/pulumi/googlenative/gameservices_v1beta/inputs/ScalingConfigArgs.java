@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Autoscaling config for an Agones fleet.
- */
 public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScalingConfigArgs Empty = new ScalingConfigArgs();
 
-    /**
-     * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
-     */
     @InputImport(name="fleetAutoscalerSpec", required=true)
     private final Input<String> fleetAutoscalerSpec;
 
@@ -30,9 +24,6 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fleetAutoscalerSpec;
     }
 
-    /**
-     * The name of the Scaling Config
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -40,9 +31,6 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The schedules to which this Scaling Config applies.
-     */
     @InputImport(name="schedules")
     private final @Nullable Input<List<ScheduleArgs>> schedules;
 
@@ -50,9 +38,6 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedules == null ? Input.empty() : this.schedules;
     }
 
-    /**
-     * Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
-     */
     @InputImport(name="selectors")
     private final @Nullable Input<List<LabelSelectorArgs>> selectors;
 

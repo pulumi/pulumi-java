@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Hyper V VM network details.
- */
 public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMNicDetailsResponse Empty = new VMNicDetailsResponse();
 
-    /**
-     * A value indicating whether the NIC has accelerated networking enabled.
-     */
     @InputImport(name="enableAcceleratedNetworkingOnRecovery")
     private final @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
 
@@ -30,9 +24,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.enableAcceleratedNetworkingOnRecovery == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworkingOnRecovery);
     }
 
-    /**
-     * Whether the test failover NIC has accelerated networking enabled.
-     */
     @InputImport(name="enableAcceleratedNetworkingOnTfo")
     private final @Nullable Boolean enableAcceleratedNetworkingOnTfo;
 
@@ -40,9 +31,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.enableAcceleratedNetworkingOnTfo == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworkingOnTfo);
     }
 
-    /**
-     * Ip address type.
-     */
     @InputImport(name="ipAddressType")
     private final @Nullable String ipAddressType;
 
@@ -50,9 +38,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipAddressType == null ? Optional.empty() : Optional.ofNullable(this.ipAddressType);
     }
 
-    /**
-     * The nic Id.
-     */
     @InputImport(name="nicId")
     private final @Nullable String nicId;
 
@@ -60,9 +45,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.nicId == null ? Optional.empty() : Optional.ofNullable(this.nicId);
     }
 
-    /**
-     * Primary nic static IP address.
-     */
     @InputImport(name="primaryNicStaticIPAddress")
     private final @Nullable String primaryNicStaticIPAddress;
 
@@ -70,9 +52,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.primaryNicStaticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.primaryNicStaticIPAddress);
     }
 
-    /**
-     * The target backend address pools for the NIC.
-     */
     @InputImport(name="recoveryLBBackendAddressPoolIds")
     private final @Nullable List<String> recoveryLBBackendAddressPoolIds;
 
@@ -80,9 +59,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryLBBackendAddressPoolIds == null ? List.of() : this.recoveryLBBackendAddressPoolIds;
     }
 
-    /**
-     * The id of the NSG associated with the NIC.
-     */
     @InputImport(name="recoveryNetworkSecurityGroupId")
     private final @Nullable String recoveryNetworkSecurityGroupId;
 
@@ -90,9 +66,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryNetworkSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkSecurityGroupId);
     }
 
-    /**
-     * IP allocation type for recovery VM.
-     */
     @InputImport(name="recoveryNicIpAddressType")
     private final @Nullable String recoveryNicIpAddressType;
 
@@ -100,9 +73,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryNicIpAddressType == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicIpAddressType);
     }
 
-    /**
-     * The name of the NIC to be used when creating target NICs.
-     */
     @InputImport(name="recoveryNicName")
     private final @Nullable String recoveryNicName;
 
@@ -110,9 +80,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryNicName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicName);
     }
 
-    /**
-     * The resource group of the NIC to be used when creating target NICs.
-     */
     @InputImport(name="recoveryNicResourceGroupName")
     private final @Nullable String recoveryNicResourceGroupName;
 
@@ -120,9 +87,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryNicResourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicResourceGroupName);
     }
 
-    /**
-     * The id of the public IP address resource associated with the NIC.
-     */
     @InputImport(name="recoveryPublicIpAddressId")
     private final @Nullable String recoveryPublicIpAddressId;
 
@@ -130,9 +94,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryPublicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.recoveryPublicIpAddressId);
     }
 
-    /**
-     * Recovery VM network Id.
-     */
     @InputImport(name="recoveryVMNetworkId")
     private final @Nullable String recoveryVMNetworkId;
 
@@ -140,9 +101,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryVMNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryVMNetworkId);
     }
 
-    /**
-     * Recovery VM subnet name.
-     */
     @InputImport(name="recoveryVMSubnetName")
     private final @Nullable String recoveryVMSubnetName;
 
@@ -150,9 +108,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.recoveryVMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.recoveryVMSubnetName);
     }
 
-    /**
-     * The replica nic Id.
-     */
     @InputImport(name="replicaNicId")
     private final @Nullable String replicaNicId;
 
@@ -160,9 +115,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.replicaNicId == null ? Optional.empty() : Optional.ofNullable(this.replicaNicId);
     }
 
-    /**
-     * Replica nic static IP address.
-     */
     @InputImport(name="replicaNicStaticIPAddress")
     private final @Nullable String replicaNicStaticIPAddress;
 
@@ -170,9 +122,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.replicaNicStaticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.replicaNicStaticIPAddress);
     }
 
-    /**
-     * A value indicating whether an existing NIC is allowed to be reused during failover subject to availability.
-     */
     @InputImport(name="reuseExistingNic")
     private final @Nullable Boolean reuseExistingNic;
 
@@ -180,9 +129,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.reuseExistingNic == null ? Optional.empty() : Optional.ofNullable(this.reuseExistingNic);
     }
 
-    /**
-     * Selection type for failover.
-     */
     @InputImport(name="selectionType")
     private final @Nullable String selectionType;
 
@@ -190,9 +136,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.selectionType == null ? Optional.empty() : Optional.ofNullable(this.selectionType);
     }
 
-    /**
-     * The source nic ARM Id.
-     */
     @InputImport(name="sourceNicArmId")
     private final @Nullable String sourceNicArmId;
 
@@ -200,9 +143,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceNicArmId == null ? Optional.empty() : Optional.ofNullable(this.sourceNicArmId);
     }
 
-    /**
-     * The IP configurations to be used by NIC during test failover.
-     */
     @InputImport(name="tfoIPConfigs")
     private final @Nullable List<IPConfigResponse> tfoIPConfigs;
 
@@ -210,9 +150,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoIPConfigs == null ? List.of() : this.tfoIPConfigs;
     }
 
-    /**
-     * The NSG to be used by NIC during test failover.
-     */
     @InputImport(name="tfoNetworkSecurityGroupId")
     private final @Nullable String tfoNetworkSecurityGroupId;
 
@@ -220,9 +157,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoNetworkSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.tfoNetworkSecurityGroupId);
     }
 
-    /**
-     * The name of the NIC to be used when creating target NICs in TFO.
-     */
     @InputImport(name="tfoRecoveryNicName")
     private final @Nullable String tfoRecoveryNicName;
 
@@ -230,9 +164,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoRecoveryNicName == null ? Optional.empty() : Optional.ofNullable(this.tfoRecoveryNicName);
     }
 
-    /**
-     * The resource group of the NIC to be used when creating target NICs in TFO.
-     */
     @InputImport(name="tfoRecoveryNicResourceGroupName")
     private final @Nullable String tfoRecoveryNicResourceGroupName;
 
@@ -240,9 +171,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoRecoveryNicResourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.tfoRecoveryNicResourceGroupName);
     }
 
-    /**
-     * A value indicating whether an existing NIC is allowed to be reused during test failover subject to availability.
-     */
     @InputImport(name="tfoReuseExistingNic")
     private final @Nullable Boolean tfoReuseExistingNic;
 
@@ -250,9 +178,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoReuseExistingNic == null ? Optional.empty() : Optional.ofNullable(this.tfoReuseExistingNic);
     }
 
-    /**
-     * The network to be used by NIC during test failover.
-     */
     @InputImport(name="tfoVMNetworkId")
     private final @Nullable String tfoVMNetworkId;
 
@@ -260,9 +185,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoVMNetworkId == null ? Optional.empty() : Optional.ofNullable(this.tfoVMNetworkId);
     }
 
-    /**
-     * The subnet to be used by NIC during test failover.
-     */
     @InputImport(name="tfoVMSubnetName")
     private final @Nullable String tfoVMSubnetName;
 
@@ -270,9 +192,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.tfoVMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.tfoVMSubnetName);
     }
 
-    /**
-     * VM network name.
-     */
     @InputImport(name="vMNetworkName")
     private final @Nullable String vMNetworkName;
 
@@ -280,9 +199,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.vMNetworkName == null ? Optional.empty() : Optional.ofNullable(this.vMNetworkName);
     }
 
-    /**
-     * VM subnet name.
-     */
     @InputImport(name="vMSubnetName")
     private final @Nullable String vMSubnetName;
 

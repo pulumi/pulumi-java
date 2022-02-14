@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the filter file.
- */
     @EnumType
     public enum FilterFileType {
-/**
- * Filter file is of the type AzureBlob.
- */
         AzureBlob("AzureBlob"),
-/**
- * Filter file is of the type AzureFiles.
- */
         AzureFile("AzureFile");
 
         private final String value;

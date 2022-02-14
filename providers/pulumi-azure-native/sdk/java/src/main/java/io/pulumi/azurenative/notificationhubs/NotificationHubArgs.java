@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationHubArgs Empty = new NotificationHubArgs();
 
-    /**
-     * The AdmCredential of the created NotificationHub
-     */
     @InputImport(name="admCredential")
     private final @Nullable Input<AdmCredentialArgs> admCredential;
 
@@ -37,9 +31,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.admCredential == null ? Input.empty() : this.admCredential;
     }
 
-    /**
-     * The ApnsCredential of the created NotificationHub
-     */
     @InputImport(name="apnsCredential")
     private final @Nullable Input<ApnsCredentialArgs> apnsCredential;
 
@@ -47,9 +38,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.apnsCredential == null ? Input.empty() : this.apnsCredential;
     }
 
-    /**
-     * The AuthorizationRules of the created NotificationHub
-     */
     @InputImport(name="authorizationRules")
     private final @Nullable Input<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
@@ -57,9 +45,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.authorizationRules == null ? Input.empty() : this.authorizationRules;
     }
 
-    /**
-     * The BaiduCredential of the created NotificationHub
-     */
     @InputImport(name="baiduCredential")
     private final @Nullable Input<BaiduCredentialArgs> baiduCredential;
 
@@ -67,9 +52,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.baiduCredential == null ? Input.empty() : this.baiduCredential;
     }
 
-    /**
-     * The GcmCredential of the created NotificationHub
-     */
     @InputImport(name="gcmCredential")
     private final @Nullable Input<GcmCredentialArgs> gcmCredential;
 
@@ -77,9 +59,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.gcmCredential == null ? Input.empty() : this.gcmCredential;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -87,9 +66,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The MpnsCredential of the created NotificationHub
-     */
     @InputImport(name="mpnsCredential")
     private final @Nullable Input<MpnsCredentialArgs> mpnsCredential;
 
@@ -97,9 +73,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.mpnsCredential == null ? Input.empty() : this.mpnsCredential;
     }
 
-    /**
-     * The NotificationHub name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -107,9 +80,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The namespace name.
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -117,9 +87,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.namespaceName;
     }
 
-    /**
-     * The notification hub name.
-     */
     @InputImport(name="notificationHubName")
     private final @Nullable Input<String> notificationHubName;
 
@@ -127,9 +94,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.notificationHubName == null ? Input.empty() : this.notificationHubName;
     }
 
-    /**
-     * The RegistrationTtl of the created NotificationHub
-     */
     @InputImport(name="registrationTtl")
     private final @Nullable Input<String> registrationTtl;
 
@@ -137,9 +101,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.registrationTtl == null ? Input.empty() : this.registrationTtl;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -147,9 +108,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The sku of the created namespace
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -157,9 +115,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -167,9 +122,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The WnsCredential of the created NotificationHub
-     */
     @InputImport(name="wnsCredential")
     private final @Nullable Input<WnsCredentialArgs> wnsCredential;
 

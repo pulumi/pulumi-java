@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Programmatic code for the status of the assessment
- */
     @EnumType
     public enum AssessmentStatusCode {
-/**
- * The resource is healthy
- */
         Healthy("Healthy"),
-/**
- * The resource has a security issue that needs to be addressed
- */
         Unhealthy("Unhealthy"),
-/**
- * Assessment for this resource did not happen
- */
         NotApplicable("NotApplicable");
 
         private final String value;

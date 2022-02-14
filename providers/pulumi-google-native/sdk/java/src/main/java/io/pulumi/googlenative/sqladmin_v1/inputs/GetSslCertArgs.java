@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetSslCertArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSslCertArgs Empty = new GetSslCertArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -27,9 +21,6 @@ public final class GetSslCertArgs extends io.pulumi.resources.InvokeArgs {
         return this.instance;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetSslCertArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sha1Fingerprint", required=true)
     private final String sha1Fingerprint;
 

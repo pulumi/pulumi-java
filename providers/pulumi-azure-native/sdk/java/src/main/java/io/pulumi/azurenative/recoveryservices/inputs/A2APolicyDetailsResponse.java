@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A2A specific policy details.
- */
 public final class A2APolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final A2APolicyDetailsResponse Empty = new A2APolicyDetailsResponse();
 
-    /**
-     * The app consistent snapshot frequency in minutes.
-     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Integer appConsistentFrequencyInMinutes;
 
@@ -28,9 +22,6 @@ public final class A2APolicyDetailsResponse extends io.pulumi.resources.InvokeAr
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
-    /**
-     * The crash consistent snapshot frequency in minutes.
-     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
@@ -38,10 +29,6 @@ public final class A2APolicyDetailsResponse extends io.pulumi.resources.InvokeAr
         return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
-    /**
-     * Gets the class type. Overridden in derived classes.
-Expected value is 'A2A'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -49,9 +36,6 @@ Expected value is 'A2A'.
         return this.instanceType;
     }
 
-    /**
-     * A value indicating whether multi-VM sync has to be enabled.
-     */
     @InputImport(name="multiVmSyncStatus")
     private final @Nullable String multiVmSyncStatus;
 
@@ -59,9 +43,6 @@ Expected value is 'A2A'.
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
     }
 
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     */
     @InputImport(name="recoveryPointHistory")
     private final @Nullable Integer recoveryPointHistory;
 
@@ -69,9 +50,6 @@ Expected value is 'A2A'.
         return this.recoveryPointHistory == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistory);
     }
 
-    /**
-     * The recovery point threshold in minutes.
-     */
     @InputImport(name="recoveryPointThresholdInMinutes")
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 

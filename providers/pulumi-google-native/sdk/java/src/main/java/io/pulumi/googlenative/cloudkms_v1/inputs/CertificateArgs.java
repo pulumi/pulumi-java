@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
- */
 public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
-    /**
-     * The raw certificate bytes in DER format.
-     */
     @InputImport(name="rawDer", required=true)
     private final Input<String> rawDer;
 

@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Target portal group properties for create or update iSCSI target request.
- */
 public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetPortalGroupCreateArgs Empty = new TargetPortalGroupCreateArgs();
 
-    /**
-     * Access Control List (ACL) for an iSCSI target portal group.
-     */
     @InputImport(name="acls", required=true)
     private final Input<List<AclArgs>> acls;
 
@@ -29,9 +23,6 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
         return this.acls;
     }
 
-    /**
-     * Attributes of an iSCSI target portal group.
-     */
     @InputImport(name="attributes", required=true)
     private final Input<AttributesArgs> attributes;
 
@@ -39,9 +30,6 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
         return this.attributes;
     }
 
-    /**
-     * List of LUNs to be exposed through the iSCSI target portal group.
-     */
     @InputImport(name="luns", required=true)
     private final Input<List<IscsiLunArgs>> luns;
 

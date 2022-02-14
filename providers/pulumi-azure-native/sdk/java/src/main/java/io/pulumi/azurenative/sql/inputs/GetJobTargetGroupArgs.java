@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobTargetGroupArgs Empty = new GetJobTargetGroupArgs();
 
-    /**
-     * The name of the job agent.
-     */
     @InputImport(name="jobAgentName", required=true)
     private final String jobAgentName;
 
@@ -25,9 +19,6 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
         return this.jobAgentName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 
@@ -45,9 +33,6 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
         return this.serverName;
     }
 
-    /**
-     * The name of the target group.
-     */
     @InputImport(name="targetGroupName", required=true)
     private final String targetGroupName;
 

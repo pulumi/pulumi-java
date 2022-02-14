@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 
-    /**
-     * The factory name.
-     */
     @InputImport(name="factoryName", required=true)
     private final Input<String> factoryName;
 
@@ -36,9 +30,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.factoryName;
     }
 
-    /**
-     * Properties of the trigger.
-     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -46,9 +37,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,9 +44,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The trigger name.
-     */
     @InputImport(name="triggerName")
     private final @Nullable Input<String> triggerName;
 

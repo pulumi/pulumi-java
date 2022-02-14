@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IpAddressResponse {
-/**
- * Specifies the IP address of the network interface.
- */
     private final @Nullable String ipAddress;
 
     @OutputCustomType.Constructor({"ipAddress"})
@@ -21,9 +18,6 @@ public final class IpAddressResponse {
         this.ipAddress = ipAddress;
     }
 
-/**
- * Specifies the IP address of the network interface.
- */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

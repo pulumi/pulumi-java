@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * List of possible provisioning service SKUs.
- */
 public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IotDpsSkuInfoResponse Empty = new IotDpsSkuInfoResponse();
 
-    /**
-     * The number of units to provision
-     */
     @InputImport(name="capacity")
     private final @Nullable Double capacity;
 
@@ -28,9 +22,6 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Sku name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class IotDpsSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Pricing tier name of the provisioning service.
-     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

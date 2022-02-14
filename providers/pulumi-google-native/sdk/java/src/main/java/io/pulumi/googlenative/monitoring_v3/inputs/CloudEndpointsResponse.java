@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
- */
 public final class CloudEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudEndpointsResponse Empty = new CloudEndpointsResponse();
 
-    /**
-     * The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
-     */
     @InputImport(name="service", required=true)
     private final String service;
 

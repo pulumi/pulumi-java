@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Provides details of the entity that created/updated the workspace.
- */
 public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CreatedByResponse Empty = new CreatedByResponse();
 
-    /**
-     * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
-     */
     @InputImport(name="applicationId", required=true)
     private final String applicationId;
 
@@ -25,9 +19,6 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
         return this.applicationId;
     }
 
-    /**
-     * The Object ID that created the workspace.
-     */
     @InputImport(name="oid", required=true)
     private final String oid;
 
@@ -35,9 +26,6 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
         return this.oid;
     }
 
-    /**
-     * The Personal Object ID corresponding to the object ID above
-     */
     @InputImport(name="puid", required=true)
     private final String puid;
 

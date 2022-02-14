@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoHealRulesResponse {
-/**
- * Actions to be executed when a rule is triggered.
- */
     private final @Nullable AutoHealActionsResponse actions;
-/**
- * Conditions that describe when to execute the auto-heal actions.
- */
     private final @Nullable AutoHealTriggersResponse triggers;
 
     @OutputCustomType.Constructor({"actions","triggers"})
@@ -29,15 +23,9 @@ public final class AutoHealRulesResponse {
         this.triggers = triggers;
     }
 
-/**
- * Actions to be executed when a rule is triggered.
- */
     public Optional<AutoHealActionsResponse> getActions() {
         return Optional.ofNullable(this.actions);
     }
-/**
- * Conditions that describe when to execute the auto-heal actions.
- */
     public Optional<AutoHealTriggersResponse> getTriggers() {
         return Optional.ofNullable(this.triggers);
     }

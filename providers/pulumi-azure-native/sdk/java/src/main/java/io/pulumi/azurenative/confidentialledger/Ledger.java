@@ -17,258 +17,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
-API Version: 2020-12-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ConfidentialLedgerCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ledger = new AzureNative.ConfidentialLedger.Ledger("ledger", new AzureNative.ConfidentialLedger.LedgerArgs
-        {
-            LedgerName = "DummyLedgerName",
-            Location = "WestUS",
-            Properties = new AzureNative.ConfidentialLedger.Inputs.LedgerPropertiesArgs
-            {
-                AadBasedSecurityPrincipals = 
-                {
-                    new AzureNative.ConfidentialLedger.Inputs.AADBasedSecurityPrincipalArgs
-                    {
-                        LedgerRoleName = "Administrator",
-                        PrincipalId = "34621747-6fc8-4771-a2eb-72f31c461f2e",
-                        TenantId = "bce123b9-2b7b-4975-8360-5ca0b9b1cd08",
-                    },
-                },
-                CertBasedSecurityPrincipals = 
-                {
-                    new AzureNative.ConfidentialLedger.Inputs.CertBasedSecurityPrincipalArgs
-                    {
-                        Cert = @"-----BEGIN CERTIFICATE-----
-MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd
------END CERTIFICATE-----",
-                        LedgerRoleName = "Reader",
-                    },
-                },
-                LedgerStorageAccount = "dummyStorageAccount",
-                LedgerType = "Public",
-            },
-            ResourceGroupName = "DummyResourceGroupName",
-            Tags = 
-            {
-                { "additionalProps1", "additional properties" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	confidentialledger "github.com/pulumi/pulumi-azure-native/sdk/go/azure/confidentialledger"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := confidentialledger.NewLedger(ctx, "ledger", &confidentialledger.LedgerArgs{
-			LedgerName: pulumi.String("DummyLedgerName"),
-			Location:   pulumi.String("WestUS"),
-			Properties: &confidentialledger.LedgerPropertiesArgs{
-				AadBasedSecurityPrincipals: confidentialledger.AADBasedSecurityPrincipalArray{
-					&confidentialledger.AADBasedSecurityPrincipalArgs{
-						LedgerRoleName: pulumi.String("Administrator"),
-						PrincipalId:    pulumi.String("34621747-6fc8-4771-a2eb-72f31c461f2e"),
-						TenantId:       pulumi.String("bce123b9-2b7b-4975-8360-5ca0b9b1cd08"),
-					},
-				},
-				CertBasedSecurityPrincipals: confidentialledger.CertBasedSecurityPrincipalArray{
-					&confidentialledger.CertBasedSecurityPrincipalArgs{
-						Cert:           pulumi.String("-----BEGIN CERTIFICATE-----\nMIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd\n-----END CERTIFICATE-----"),
-						LedgerRoleName: pulumi.String("Reader"),
-					},
-				},
-				LedgerStorageAccount: pulumi.String("dummyStorageAccount"),
-				LedgerType:           pulumi.String("Public"),
-			},
-			ResourceGroupName: pulumi.String("DummyResourceGroupName"),
-			Tags: pulumi.StringMap{
-				"additionalProps1": pulumi.String("additional properties"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const ledger = new azure_native.confidentialledger.Ledger("ledger", {
-    ledgerName: "DummyLedgerName",
-    location: "WestUS",
-    properties: {
-        aadBasedSecurityPrincipals: [{
-            ledgerRoleName: "Administrator",
-            principalId: "34621747-6fc8-4771-a2eb-72f31c461f2e",
-            tenantId: "bce123b9-2b7b-4975-8360-5ca0b9b1cd08",
-        }],
-        certBasedSecurityPrincipals: [{
-            cert: `-----BEGIN CERTIFICATE-----
-MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd
------END CERTIFICATE-----`,
-            ledgerRoleName: "Reader",
-        }],
-        ledgerStorageAccount: "dummyStorageAccount",
-        ledgerType: "Public",
-    },
-    resourceGroupName: "DummyResourceGroupName",
-    tags: {
-        additionalProps1: "additional properties",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-ledger = azure_native.confidentialledger.Ledger("ledger",
-    ledger_name="DummyLedgerName",
-    location="WestUS",
-    properties=azure_native.confidentialledger.LedgerPropertiesArgs(
-        aad_based_security_principals=[azure_native.confidentialledger.AADBasedSecurityPrincipalArgs(
-            ledger_role_name="Administrator",
-            principal_id="34621747-6fc8-4771-a2eb-72f31c461f2e",
-            tenant_id="bce123b9-2b7b-4975-8360-5ca0b9b1cd08",
-        )],
-        cert_based_security_principals=[azure_native.confidentialledger.CertBasedSecurityPrincipalArgs(
-            cert="""-----BEGIN CERTIFICATE-----
-MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJhY2NvdW50cy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTIwMDMxNzAwMDAwMFoXDTI1MDMxNzAwMDAwMFowLTErMCkGA1UEAxMiYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANfLmdz9yIDskpZzrMXiDeVlCs75ZunrzwzBW5lz7UxdBjHu7Q9iT32otlBp++LOwBcKsVjuQ0GUbulX0FLsfLjEeCe58ZtSn//+6VRFSScg7i+WvDwEUWELR+vMPtCGcXBTpILEnYbSMz0No4+Jpkc1lyMIfDP/KSeqojo74xfW4RKtAgv39uwZ5Yz2hZ/IcWOvaQqMXp1lqhXLFIRWbwjLYYUbmwGwYpQ6++Cml0ucQoMkgYT88HpA/fzXQlLgrHamr3eE/lVp26ZWwfGLAvkdNBabQRSrk8k/c6BmY1mYpUFZo+795PI16mAdp1ioEwH8I5osis+/BR5GhPpwiA8CAwEAAaMhMB8wHQYDVR0OBBYEFF8MDGklOGhGNVJvsHHRCaqtzexcMA0GCSqGSIb3DQEBCwUAA4IBAQCKkegw/mdpCVl1lOpgU4G9RT+1gtcPqZK9kpimuDggSJju6KUQlOCi5/lIH5DCzpjFdmG17TjWVBNve5kowmrhLzovY0Ykk7+6hYTBK8dNNSmd4SK7zY++0aDIuOzHP2Cur+kgFC0gez50tPzotLDtMmp40gknXuzltwJfezNSw3gLgljDsGGcDIXK3qLSYh44qSuRGwulcN2EJUZBI9tIxoODpaWHIN8+z2uZvf8JBYFjA3+n9FRQn51X16CTcjq4QRTbNVpgVuQuyaYnEtx0ZnDvguB3RjGSPIXTRBkLl2x7e8/6uAZ6tchw8rhcOtPsFgJuoJokGjvcUSR/6Eqd
------END CERTIFICATE-----""",
-            ledger_role_name="Reader",
-        )],
-        ledger_storage_account="dummyStorageAccount",
-        ledger_type="Public",
-    ),
-    resource_group_name="DummyResourceGroupName",
-    tags={
-        "additionalProps1": "additional properties",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:confidentialledger:Ledger DummyLedgerName /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/TestRG/providers/Microsoft.ConfidentialLedger/ledgers/DummyLedgerName 
-```
-
- */
 @ResourceType(type="azure-native:confidentialledger:Ledger")
 public class Ledger extends io.pulumi.resources.CustomResource {
-    /**
-     * The Azure location where the Confidential Ledger is running.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The Azure location where the Confidential Ledger is running.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Name of the Resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the Resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of Confidential Ledger Resource.
-     */
     @OutputExport(name="properties", type=LedgerPropertiesResponse.class, parameters={})
     private Output<LedgerPropertiesResponse> properties;
 
-    /**
-     * @return Properties of Confidential Ledger Resource.
-     */
     public Output<LedgerPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Additional tags for Confidential Ledger
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Additional tags for Confidential Ledger
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Ledger(String name, LedgerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:confidentialledger:Ledger", name, args == null ? LedgerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -288,14 +75,6 @@ public class Ledger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Ledger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Ledger(name, id, options);
     }

@@ -11,30 +11,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DenylistCustomAlertRuleResponse {
-/**
- * The values to deny. The format of the values depends on the rule type.
- */
     private final List<String> denylistValues;
-/**
- * The description of the custom alert.
- */
     private final String description;
-/**
- * The display name of the custom alert.
- */
     private final String displayName;
-/**
- * Status of the custom alert.
- */
     private final Boolean isEnabled;
-/**
- * The type of the custom alert rule.
-Expected value is 'DenylistCustomAlertRule'.
- */
     private final String ruleType;
-/**
- * The value type of the items in the list.
- */
     private final String valueType;
 
     @OutputCustomType.Constructor({"denylistValues","description","displayName","isEnabled","ruleType","valueType"})
@@ -53,40 +34,21 @@ Expected value is 'DenylistCustomAlertRule'.
         this.valueType = Objects.requireNonNull(valueType);
     }
 
-/**
- * The values to deny. The format of the values depends on the rule type.
- */
     public List<String> getDenylistValues() {
         return this.denylistValues;
     }
-/**
- * The description of the custom alert.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The display name of the custom alert.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Status of the custom alert.
- */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
-/**
- * The type of the custom alert rule.
-Expected value is 'DenylistCustomAlertRule'.
- */
     public String getRuleType() {
         return this.ruleType;
     }
-/**
- * The value type of the items in the list.
- */
     public String getValueType() {
         return this.valueType;
     }

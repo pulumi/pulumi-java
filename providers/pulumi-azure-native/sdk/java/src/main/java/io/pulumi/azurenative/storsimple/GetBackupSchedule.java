@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupSchedule {
-/**
- * The backup schedule.
-API Version: 2017-06-01.
- *
- * The backup schedule.
- */
     public static CompletableFuture<GetBackupScheduleResult> invokeAsync(GetBackupScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBackupSchedule", TypeShape.of(GetBackupScheduleResult.class), args == null ? GetBackupScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

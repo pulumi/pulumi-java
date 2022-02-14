@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrigger {
-/**
- * Returns information about a `BuildTrigger`. This API is experimental.
- */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

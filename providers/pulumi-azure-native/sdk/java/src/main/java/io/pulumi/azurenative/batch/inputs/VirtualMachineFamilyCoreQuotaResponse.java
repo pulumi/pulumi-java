@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A VM Family and its associated core quota for the Batch account.
- */
 public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineFamilyCoreQuotaResponse Empty = new VirtualMachineFamilyCoreQuotaResponse();
 
-    /**
-     * The core quota for the VM family for the Batch account.
-     */
     @InputImport(name="coreQuota", required=true)
     private final Integer coreQuota;
 
@@ -26,9 +20,6 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
         return this.coreQuota;
     }
 
-    /**
-     * The Virtual Machine family name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

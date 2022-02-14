@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetMetricsSourceTagRuleResult {
-/**
- * The id of the rule set.
- */
     private final String id;
-/**
- * Name of the rule set.
- */
     private final String name;
-/**
- * Definition of the properties for a TagRules resource.
- */
     private final MetricsTagRulesPropertiesResponse properties;
-/**
- * The system metadata relating to this resource
- */
     private final SystemDataResponse systemData;
-/**
- * The type of the rule set.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
@@ -46,33 +31,18 @@ public final class GetMetricsSourceTagRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The id of the rule set.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Name of the rule set.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Definition of the properties for a TagRules resource.
- */
     public MetricsTagRulesPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * The system metadata relating to this resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The type of the rule set.
- */
     public String getType() {
         return this.type;
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * metric name.
- */
     @EnumType
     public enum GoogleCloudMlV1__MetricSpecName {
-/**
- * Unspecified MetricName.
- */
         MetricNameUnspecified("METRIC_NAME_UNSPECIFIED"),
-/**
- * CPU usage.
- */
         CpuUsage("CPU_USAGE"),
-/**
- * GPU duty cycle.
- */
         GpuDutyCycle("GPU_DUTY_CYCLE");
 
         private final String value;

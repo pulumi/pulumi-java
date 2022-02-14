@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateSigningRequest {
-/**
- * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
- */
     private final @Nullable String apiVersion;
-/**
- * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     private final @Nullable String kind;
-/**
- * 
- */
     private final @Nullable ObjectMeta metadata;
-/**
- * The certificate request itself and any additional information.
- */
     private final @Nullable CertificateSigningRequestSpec spec;
-/**
- * Derived information about the request.
- */
     private final @Nullable CertificateSigningRequestStatus status;
 
     @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
@@ -49,33 +34,18 @@ public final class CertificateSigningRequest {
         this.status = status;
     }
 
-/**
- * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
- */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
-/**
- * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * 
- */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
-/**
- * The certificate request itself and any additional information.
- */
     public Optional<CertificateSigningRequestSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
-/**
- * Derived information about the request.
- */
     public Optional<CertificateSigningRequestStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

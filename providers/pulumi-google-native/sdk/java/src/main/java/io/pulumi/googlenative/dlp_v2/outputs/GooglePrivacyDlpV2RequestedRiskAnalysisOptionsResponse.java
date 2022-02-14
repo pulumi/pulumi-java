@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
-/**
- * The job config for the risk job.
- */
     private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
     @OutputCustomType.Constructor({"jobConfig"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
         this.jobConfig = Objects.requireNonNull(jobConfig);
     }
 
-/**
- * The job config for the risk job.
- */
     public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse getJobConfig() {
         return this.jobConfig;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBatchEndpointKeys {
-/**
- * Keys for endpoint authentication.
-API Version: 2021-03-01-preview.
- *
- * Keys for endpoint authentication.
- */
     public static CompletableFuture<ListBatchEndpointKeysResult> invokeAsync(ListBatchEndpointKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listBatchEndpointKeys", TypeShape.of(ListBatchEndpointKeysResult.class), args == null ? ListBatchEndpointKeysArgs.Empty : args, Utilities.withVersion(options));
     }

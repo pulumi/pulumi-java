@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Configuration for the Integration add-on.
- */
 public final class GoogleCloudApigeeV1IntegrationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1IntegrationConfigResponse Empty = new GoogleCloudApigeeV1IntegrationConfigResponse();
 
-    /**
-     * Flag that specifies whether the Integration add-on is enabled.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

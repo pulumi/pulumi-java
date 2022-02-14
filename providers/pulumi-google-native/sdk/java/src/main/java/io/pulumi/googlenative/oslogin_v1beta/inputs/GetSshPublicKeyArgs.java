@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="sshPublicKeyId", required=true)
     private final String sshPublicKeyId;
 
@@ -25,9 +19,6 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.sshPublicKeyId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="userId", required=true)
     private final String userId;
 

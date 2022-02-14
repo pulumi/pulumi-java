@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the VM switch.
- */
     @EnumType
     public enum VMSwitchType {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Management("Management"),
-/**
- * 
- */
         Wan("Wan"),
-/**
- * 
- */
         Lan("Lan");
 
         private final String value;

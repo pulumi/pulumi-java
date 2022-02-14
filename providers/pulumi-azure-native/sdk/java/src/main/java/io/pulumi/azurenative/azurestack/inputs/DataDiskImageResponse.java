@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Data disk image.
- */
 public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataDiskImageResponse Empty = new DataDiskImageResponse();
 
-    /**
-     * The LUN.
-     */
     @InputImport(name="lun", required=true)
     private final Integer lun;
 
@@ -26,9 +20,6 @@ public final class DataDiskImageResponse extends io.pulumi.resources.InvokeArgs 
         return this.lun;
     }
 
-    /**
-     * SAS key for source blob.
-     */
     @InputImport(name="sourceBlobSasUri", required=true)
     private final String sourceBlobSasUri;
 

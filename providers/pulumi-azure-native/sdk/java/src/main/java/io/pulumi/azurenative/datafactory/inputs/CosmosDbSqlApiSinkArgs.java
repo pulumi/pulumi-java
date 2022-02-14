@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity Azure CosmosDB (SQL API) Collection sink.
- */
 public final class CosmosDbSqlApiSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CosmosDbSqlApiSinkArgs Empty = new CosmosDbSqlApiSinkArgs();
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -28,9 +22,6 @@ public final class CosmosDbSqlApiSinkArgs extends io.pulumi.resources.ResourceAr
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -38,9 +29,6 @@ public final class CosmosDbSqlApiSinkArgs extends io.pulumi.resources.ResourceAr
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -48,9 +36,6 @@ public final class CosmosDbSqlApiSinkArgs extends io.pulumi.resources.ResourceAr
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
-    /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -58,10 +43,6 @@ public final class CosmosDbSqlApiSinkArgs extends io.pulumi.resources.ResourceAr
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
-    /**
-     * Copy sink type.
-Expected value is 'CosmosDbSqlApiSink'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -69,9 +50,6 @@ Expected value is 'CosmosDbSqlApiSink'.
         return this.type;
     }
 
-    /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -79,9 +57,6 @@ Expected value is 'CosmosDbSqlApiSink'.
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
-    /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 
@@ -89,9 +64,6 @@ Expected value is 'CosmosDbSqlApiSink'.
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
     }
 
-    /**
-     * Describes how to write data to Azure Cosmos DB. Type: string (or Expression with resultType string). Allowed values: insert and upsert.
-     */
     @InputImport(name="writeBehavior")
     private final @Nullable Input<Object> writeBehavior;
 

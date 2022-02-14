@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncidentCommentArgs Empty = new IncidentCommentArgs();
 
-    /**
-     * Incident comment ID
-     */
     @InputImport(name="incidentCommentId")
     private final @Nullable Input<String> incidentCommentId;
 
@@ -27,9 +21,6 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.incidentCommentId == null ? Input.empty() : this.incidentCommentId;
     }
 
-    /**
-     * Incident ID
-     */
     @InputImport(name="incidentId", required=true)
     private final Input<String> incidentId;
 
@@ -37,9 +28,6 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.incidentId;
     }
 
-    /**
-     * The comment message
-     */
     @InputImport(name="message", required=true)
     private final Input<String> message;
 
@@ -47,9 +35,6 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.message;
     }
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -57,9 +42,6 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

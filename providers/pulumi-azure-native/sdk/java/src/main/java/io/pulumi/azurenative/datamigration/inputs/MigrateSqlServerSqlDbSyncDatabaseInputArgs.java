@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Database specific information for SQL to Azure SQL DB sync migration task inputs
- */
 public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateSqlServerSqlDbSyncDatabaseInputArgs Empty = new MigrateSqlServerSqlDbSyncDatabaseInputArgs();
 
-    /**
-     * Unique identifier for database
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,9 +22,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Migration settings which tune the migration behavior
-     */
     @InputImport(name="migrationSetting")
     private final @Nullable Input<Map<String,String>> migrationSetting;
 
@@ -38,9 +29,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.migrationSetting == null ? Input.empty() : this.migrationSetting;
     }
 
-    /**
-     * Name of database
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Schema name to be migrated
-     */
     @InputImport(name="schemaName")
     private final @Nullable Input<String> schemaName;
 
@@ -58,9 +43,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.schemaName == null ? Input.empty() : this.schemaName;
     }
 
-    /**
-     * Source settings to tune source endpoint migration behavior
-     */
     @InputImport(name="sourceSetting")
     private final @Nullable Input<Map<String,String>> sourceSetting;
 
@@ -68,9 +50,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.sourceSetting == null ? Input.empty() : this.sourceSetting;
     }
 
-    /**
-     * Mapping of source to target tables
-     */
     @InputImport(name="tableMap")
     private final @Nullable Input<Map<String,String>> tableMap;
 
@@ -78,9 +57,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.tableMap == null ? Input.empty() : this.tableMap;
     }
 
-    /**
-     * Target database name
-     */
     @InputImport(name="targetDatabaseName")
     private final @Nullable Input<String> targetDatabaseName;
 
@@ -88,9 +64,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
         return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
     }
 
-    /**
-     * Target settings to tune target endpoint migration behavior
-     */
     @InputImport(name="targetSetting")
     private final @Nullable Input<Map<String,String>> targetSetting;
 

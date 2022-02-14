@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkProfile {
-/**
- * Network profile resource.
-API Version: 2020-11-01.
- *
- * Network profile resource.
- */
     public static CompletableFuture<GetNetworkProfileResult> invokeAsync(GetNetworkProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkProfile", TypeShape.of(GetNetworkProfileResult.class), args == null ? GetNetworkProfileArgs.Empty : args, Utilities.withVersion(options));
     }

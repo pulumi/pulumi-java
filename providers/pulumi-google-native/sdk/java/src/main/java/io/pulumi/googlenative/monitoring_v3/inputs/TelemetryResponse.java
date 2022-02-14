@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for how to query telemetry on a Service.
- */
 public final class TelemetryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TelemetryResponse Empty = new TelemetryResponse();
 
-    /**
-     * The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

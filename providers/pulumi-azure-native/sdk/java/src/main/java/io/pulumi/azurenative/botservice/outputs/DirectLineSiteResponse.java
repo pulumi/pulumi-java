@@ -13,45 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DirectLineSiteResponse {
-/**
- * Whether this site is enabled for block user upload.
- */
     private final @Nullable Boolean isBlockUserUploadEnabled;
-/**
- * Whether this site is enabled for DirectLine channel.
- */
     private final Boolean isEnabled;
-/**
- * Whether this site is enabled for authentication with Bot Framework.
- */
     private final @Nullable Boolean isSecureSiteEnabled;
-/**
- * Whether this site is enabled for Bot Framework V1 protocol.
- */
     private final Boolean isV1Enabled;
-/**
- * Whether this site is enabled for Bot Framework V1 protocol.
- */
     private final Boolean isV3Enabled;
-/**
- * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
- */
     private final String key;
-/**
- * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
- */
     private final String key2;
-/**
- * Site Id
- */
     private final String siteId;
-/**
- * Site name
- */
     private final String siteName;
-/**
- * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
- */
     private final @Nullable List<String> trustedOrigins;
 
     @OutputCustomType.Constructor({"isBlockUserUploadEnabled","isEnabled","isSecureSiteEnabled","isV1Enabled","isV3Enabled","key","key2","siteId","siteName","trustedOrigins"})
@@ -78,63 +48,33 @@ public final class DirectLineSiteResponse {
         this.trustedOrigins = trustedOrigins;
     }
 
-/**
- * Whether this site is enabled for block user upload.
- */
     public Optional<Boolean> getIsBlockUserUploadEnabled() {
         return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
-/**
- * Whether this site is enabled for DirectLine channel.
- */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
-/**
- * Whether this site is enabled for authentication with Bot Framework.
- */
     public Optional<Boolean> getIsSecureSiteEnabled() {
         return Optional.ofNullable(this.isSecureSiteEnabled);
     }
-/**
- * Whether this site is enabled for Bot Framework V1 protocol.
- */
     public Boolean getIsV1Enabled() {
         return this.isV1Enabled;
     }
-/**
- * Whether this site is enabled for Bot Framework V1 protocol.
- */
     public Boolean getIsV3Enabled() {
         return this.isV3Enabled;
     }
-/**
- * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
- */
     public String getKey() {
         return this.key;
     }
-/**
- * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
- */
     public String getKey2() {
         return this.key2;
     }
-/**
- * Site Id
- */
     public String getSiteId() {
         return this.siteId;
     }
-/**
- * Site name
- */
     public String getSiteName() {
         return this.siteName;
     }
-/**
- * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
- */
     public List<String> getTrustedOrigins() {
         return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
     }

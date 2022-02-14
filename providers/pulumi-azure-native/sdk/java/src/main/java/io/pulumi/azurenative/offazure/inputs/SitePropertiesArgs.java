@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class for site properties.
- */
 public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SitePropertiesArgs Empty = new SitePropertiesArgs();
 
-    /**
-     * On-premises agent details.
-     */
     @InputImport(name="agentDetails")
     private final @Nullable Input<SiteAgentPropertiesArgs> agentDetails;
 
@@ -29,9 +23,6 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentDetails == null ? Input.empty() : this.agentDetails;
     }
 
-    /**
-     * Appliance Name.
-     */
     @InputImport(name="applianceName")
     private final @Nullable Input<String> applianceName;
 
@@ -39,9 +30,6 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.applianceName == null ? Input.empty() : this.applianceName;
     }
 
-    /**
-     * ARM ID of migration hub solution for SDS.
-     */
     @InputImport(name="discoverySolutionId")
     private final @Nullable Input<String> discoverySolutionId;
 
@@ -49,9 +37,6 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.discoverySolutionId == null ? Input.empty() : this.discoverySolutionId;
     }
 
-    /**
-     * Service principal identity details used by agent for communication to the service.
-     */
     @InputImport(name="servicePrincipalIdentityDetails")
     private final @Nullable Input<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 

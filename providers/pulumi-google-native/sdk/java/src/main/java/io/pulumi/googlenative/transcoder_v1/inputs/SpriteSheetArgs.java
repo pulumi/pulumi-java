@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Sprite sheet configuration.
- */
 public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpriteSheetArgs Empty = new SpriteSheetArgs();
 
-    /**
-     * The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.
-     */
     @InputImport(name="columnCount")
     private final @Nullable Input<Integer> columnCount;
 
@@ -28,9 +22,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.columnCount == null ? Input.empty() : this.columnCount;
     }
 
-    /**
-     * End time in seconds, relative to the output file timeline. When `end_time_offset` is not specified, the sprites are generated until the end of the output file.
-     */
     @InputImport(name="endTimeOffset")
     private final @Nullable Input<String> endTimeOffset;
 
@@ -38,9 +29,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
     }
 
-    /**
-     * File name prefix for the generated sprite sheets. Each sprite sheet has an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `sprite_sheet0000000123.jpeg`.
-     */
     @InputImport(name="filePrefix", required=true)
     private final Input<String> filePrefix;
 
@@ -48,9 +36,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.filePrefix;
     }
 
-    /**
-     * Format type. The default is `jpeg`. Supported formats: - `jpeg`
-     */
     @InputImport(name="format")
     private final @Nullable Input<String> format;
 
@@ -58,9 +43,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
-    /**
-     * Starting from `0s`, create sprites at regular intervals. Specify the interval value in seconds.
-     */
     @InputImport(name="interval")
     private final @Nullable Input<String> interval;
 
@@ -68,9 +50,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
-    /**
-     * The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the lowest quality and 100 is the highest quality. The default is 100. A high quality value corresponds to a low image data compression ratio.
-     */
     @InputImport(name="quality")
     private final @Nullable Input<Integer> quality;
 
@@ -78,9 +57,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.quality == null ? Input.empty() : this.quality;
     }
 
-    /**
-     * The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet is created. The default is 0, which indicates no maximum limit.
-     */
     @InputImport(name="rowCount")
     private final @Nullable Input<Integer> rowCount;
 
@@ -88,9 +64,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.rowCount == null ? Input.empty() : this.rowCount;
     }
 
-    /**
-     * The height of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_height_pixels field or the SpriteSheet.sprite_width_pixels field, but not both (the API will automatically calculate the missing field).
-     */
     @InputImport(name="spriteHeightPixels", required=true)
     private final Input<Integer> spriteHeightPixels;
 
@@ -98,9 +71,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.spriteHeightPixels;
     }
 
-    /**
-     * The width of sprite in pixels. Must be an even integer. To preserve the source aspect ratio, set the SpriteSheet.sprite_width_pixels field or the SpriteSheet.sprite_height_pixels field, but not both (the API will automatically calculate the missing field).
-     */
     @InputImport(name="spriteWidthPixels", required=true)
     private final Input<Integer> spriteWidthPixels;
 
@@ -108,9 +78,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.spriteWidthPixels;
     }
 
-    /**
-     * Start time in seconds, relative to the output file timeline. Determines the first sprite to pick. The default is `0s`.
-     */
     @InputImport(name="startTimeOffset")
     private final @Nullable Input<String> startTimeOffset;
 
@@ -118,9 +85,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
     }
 
-    /**
-     * Total number of sprites. Create the specified number of sprites distributed evenly across the timeline of the output media. The default is 100.
-     */
     @InputImport(name="totalCount")
     private final @Nullable Input<Integer> totalCount;
 

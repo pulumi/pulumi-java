@@ -12,17 +12,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpgradeNoteResponse {
-/**
- * Metadata about the upgrade for each specific operating system.
- */
     private final List<UpgradeDistributionResponse> distributions;
-/**
- * Required - The package this Upgrade is for.
- */
     private final String $package;
-/**
- * Required - The version of the package in machine + human readable form.
- */
     private final VersionResponse version;
 
     @OutputCustomType.Constructor({"distributions","$package","version"})
@@ -35,21 +26,12 @@ public final class UpgradeNoteResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * Metadata about the upgrade for each specific operating system.
- */
     public List<UpgradeDistributionResponse> getDistributions() {
         return this.distributions;
     }
-/**
- * Required - The package this Upgrade is for.
- */
     public String get$package() {
         return this.$package;
     }
-/**
- * Required - The version of the package in machine + human readable form.
- */
     public VersionResponse getVersion() {
         return this.version;
     }

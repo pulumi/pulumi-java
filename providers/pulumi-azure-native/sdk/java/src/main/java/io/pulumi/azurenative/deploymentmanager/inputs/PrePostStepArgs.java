@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The properties that define a step.
- */
 public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrePostStepArgs Empty = new PrePostStepArgs();
 
-    /**
-     * The resource Id of the step to be run.
-     */
     @InputImport(name="stepId", required=true)
     private final Input<String> stepId;
 

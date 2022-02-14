@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSqlDBTableDataSetMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlDBTableDataSetMappingArgs Empty = new GetSqlDBTableDataSetMappingArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetSqlDBTableDataSetMappingArgs extends io.pulumi.resources.I
         return this.accountName;
     }
 
-    /**
-     * The name of the dataSetMapping.
-     */
     @InputImport(name="dataSetMappingName", required=true)
     private final String dataSetMappingName;
 
@@ -35,9 +26,6 @@ public final class GetSqlDBTableDataSetMappingArgs extends io.pulumi.resources.I
         return this.dataSetMappingName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetSqlDBTableDataSetMappingArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the shareSubscription.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 

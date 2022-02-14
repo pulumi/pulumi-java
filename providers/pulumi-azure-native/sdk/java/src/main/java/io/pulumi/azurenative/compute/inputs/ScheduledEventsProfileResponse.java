@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ScheduledEventsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduledEventsProfileResponse Empty = new ScheduledEventsProfileResponse();
 
-    /**
-     * Specifies Terminate Scheduled Event related configurations.
-     */
     @InputImport(name="terminateNotificationProfile")
     private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 

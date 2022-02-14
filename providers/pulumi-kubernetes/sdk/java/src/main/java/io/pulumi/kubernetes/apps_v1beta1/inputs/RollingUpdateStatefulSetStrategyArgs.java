@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
- */
 public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RollingUpdateStatefulSetStrategyArgs Empty = new RollingUpdateStatefulSetStrategyArgs();
 
-    /**
-     * Partition indicates the ordinal at which the StatefulSet should be partitioned.
-     */
     @InputImport(name="partition")
     private final @Nullable Input<Integer> partition;
 

@@ -15,303 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
-API Version: 2016-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a JavaScript function
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var function = new AzureNative.StreamAnalytics.Function("function", new AzureNative.StreamAnalytics.FunctionArgs
-        {
-            FunctionName = "function8197",
-            JobName = "sj8653",
-            Properties = new AzureNative.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
-            {
-                Binding = new AzureNative.StreamAnalytics.Inputs.JavaScriptFunctionBindingArgs
-                {
-                    Script = "function (x, y) { return x + y; }",
-                    Type = "Microsoft.StreamAnalytics/JavascriptUdf",
-                },
-                Inputs = 
-                {
-                    new AzureNative.StreamAnalytics.Inputs.FunctionInputArgs
-                    {
-                        DataType = "Any",
-                    },
-                },
-                Output = new AzureNative.StreamAnalytics.Inputs.FunctionOutputArgs
-                {
-                    DataType = "Any",
-                },
-                Type = "Scalar",
-            },
-            ResourceGroupName = "sjrg1637",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const _function = new azure_native.streamanalytics.Function("function", {
-    functionName: "function8197",
-    jobName: "sj8653",
-    properties: {
-        binding: {
-            script: "function (x, y) { return x + y; }",
-            type: "Microsoft.StreamAnalytics/JavascriptUdf",
-        },
-        inputs: [{
-            dataType: "Any",
-        }],
-        output: {
-            dataType: "Any",
-        },
-        type: "Scalar",
-    },
-    resourceGroupName: "sjrg1637",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-function = azure_native.streamanalytics.Function("function",
-    function_name="function8197",
-    job_name="sj8653",
-    properties={
-        "binding": azure_native.streamanalytics.JavaScriptFunctionBindingArgs(
-            script="function (x, y) { return x + y; }",
-            type="Microsoft.StreamAnalytics/JavascriptUdf",
-        ),
-        "inputs": [azure_native.streamanalytics.FunctionInputArgs(
-            data_type="Any",
-        )],
-        "output": azure_native.streamanalytics.FunctionOutputArgs(
-            data_type="Any",
-        ),
-        "type": "Scalar",
-    },
-    resource_group_name="sjrg1637")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create an Azure ML function
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var function = new AzureNative.StreamAnalytics.Function("function", new AzureNative.StreamAnalytics.FunctionArgs
-        {
-            FunctionName = "function588",
-            JobName = "sj9093",
-            Properties = new AzureNative.StreamAnalytics.Inputs.ScalarFunctionPropertiesArgs
-            {
-                Binding = new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceFunctionBindingArgs
-                {
-                    ApiKey = "someApiKey==",
-                    BatchSize = 1000,
-                    Endpoint = "someAzureMLEndpointURL",
-                    Inputs = new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputsArgs
-                    {
-                        ColumnNames = 
-                        {
-                            new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceInputColumnArgs
-                            {
-                                DataType = "string",
-                                MapTo = 0,
-                                Name = "tweet",
-                            },
-                        },
-                        Name = "input1",
-                    },
-                    Outputs = 
-                    {
-                        new AzureNative.StreamAnalytics.Inputs.AzureMachineLearningWebServiceOutputColumnArgs
-                        {
-                            DataType = "string",
-                            Name = "Sentiment",
-                        },
-                    },
-                    Type = "Microsoft.MachineLearning/WebService",
-                },
-                Inputs = 
-                {
-                    new AzureNative.StreamAnalytics.Inputs.FunctionInputArgs
-                    {
-                        DataType = "nvarchar(max)",
-                    },
-                },
-                Output = new AzureNative.StreamAnalytics.Inputs.FunctionOutputArgs
-                {
-                    DataType = "nvarchar(max)",
-                },
-                Type = "Scalar",
-            },
-            ResourceGroupName = "sjrg7",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const _function = new azure_native.streamanalytics.Function("function", {
-    functionName: "function588",
-    jobName: "sj9093",
-    properties: {
-        binding: {
-            apiKey: "someApiKey==",
-            batchSize: 1000,
-            endpoint: "someAzureMLEndpointURL",
-            inputs: {
-                columnNames: [{
-                    dataType: "string",
-                    mapTo: 0,
-                    name: "tweet",
-                }],
-                name: "input1",
-            },
-            outputs: [{
-                dataType: "string",
-                name: "Sentiment",
-            }],
-            type: "Microsoft.MachineLearning/WebService",
-        },
-        inputs: [{
-            dataType: "nvarchar(max)",
-        }],
-        output: {
-            dataType: "nvarchar(max)",
-        },
-        type: "Scalar",
-    },
-    resourceGroupName: "sjrg7",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-function = azure_native.streamanalytics.Function("function",
-    function_name="function588",
-    job_name="sj9093",
-    properties={
-        "binding": azure_native.streamanalytics.AzureMachineLearningWebServiceFunctionBindingArgs(
-            api_key="someApiKey==",
-            batch_size=1000,
-            endpoint="someAzureMLEndpointURL",
-            inputs=azure_native.streamanalytics.AzureMachineLearningWebServiceInputsArgs(
-                column_names=[azure_native.streamanalytics.AzureMachineLearningWebServiceInputColumnArgs(
-                    data_type="string",
-                    map_to=0,
-                    name="tweet",
-                )],
-                name="input1",
-            ),
-            outputs=[azure_native.streamanalytics.AzureMachineLearningWebServiceOutputColumnArgs(
-                data_type="string",
-                name="Sentiment",
-            )],
-            type="Microsoft.MachineLearning/WebService",
-        ),
-        "inputs": [azure_native.streamanalytics.FunctionInputArgs(
-            data_type="nvarchar(max)",
-        )],
-        "output": azure_native.streamanalytics.FunctionOutputArgs(
-            data_type="nvarchar(max)",
-        ),
-        "type": "Scalar",
-    },
-    resource_group_name="sjrg7")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:streamanalytics:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
-```
-
- */
 @ResourceType(type="azure-native:streamanalytics:Function")
 public class Function extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * The properties that are associated with a function.
-     */
     @OutputExport(name="properties", type=ScalarFunctionPropertiesResponse.class, parameters={})
     private Output<ScalarFunctionPropertiesResponse> properties;
 
-    /**
-     * @return The properties that are associated with a function.
-     */
     public Output<ScalarFunctionPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Function(String name, FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:streamanalytics:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -333,14 +57,6 @@ public class Function extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Function get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Function(name, id, options);
     }

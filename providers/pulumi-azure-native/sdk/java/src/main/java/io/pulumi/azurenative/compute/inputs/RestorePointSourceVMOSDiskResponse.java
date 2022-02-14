@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes an Operating System disk.
- */
 public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestorePointSourceVMOSDiskResponse Empty = new RestorePointSourceVMOSDiskResponse();
 
-    /**
-     * Gets the caching type.
-     */
     @InputImport(name="caching")
     private final @Nullable String caching;
 
@@ -31,9 +25,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
-    /**
-     * Gets the disk restore point Id.
-     */
     @InputImport(name="diskRestorePoint")
     private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
@@ -41,9 +32,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
         return this.diskRestorePoint == null ? Optional.empty() : Optional.ofNullable(this.diskRestorePoint);
     }
 
-    /**
-     * Gets the disk size in GB.
-     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Integer diskSizeGB;
 
@@ -51,9 +39,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
-    /**
-     * Gets the disk encryption settings.
-     */
     @InputImport(name="encryptionSettings")
     private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
@@ -61,9 +46,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
         return this.encryptionSettings == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettings);
     }
 
-    /**
-     * Gets the managed disk details
-     */
     @InputImport(name="managedDisk")
     private final @Nullable ManagedDiskParametersResponse managedDisk;
 
@@ -71,9 +53,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
-    /**
-     * Gets the disk name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -81,9 +60,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Gets the Operating System type.
-     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPartnerRegistrationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPartnerRegistrationArgs Empty = new GetPartnerRegistrationArgs();
 
-    /**
-     * Name of the partner registration.
-     */
     @InputImport(name="partnerRegistrationName", required=true)
     private final String partnerRegistrationName;
 
@@ -25,9 +19,6 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
         return this.partnerRegistrationName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

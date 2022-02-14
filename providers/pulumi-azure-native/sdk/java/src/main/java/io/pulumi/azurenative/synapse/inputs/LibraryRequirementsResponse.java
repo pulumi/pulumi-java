@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Library requirements for a Big Data pool powered by Apache Spark
- */
 public final class LibraryRequirementsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LibraryRequirementsResponse Empty = new LibraryRequirementsResponse();
 
-    /**
-     * The library requirements.
-     */
     @InputImport(name="content")
     private final @Nullable String content;
 
@@ -27,9 +21,6 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
-    /**
-     * The filename of the library requirements file.
-     */
     @InputImport(name="filename")
     private final @Nullable String filename;
 
@@ -37,9 +28,6 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
         return this.filename == null ? Optional.empty() : Optional.ofNullable(this.filename);
     }
 
-    /**
-     * The last update time of the library requirements file.
-     */
     @InputImport(name="time", required=true)
     private final String time;
 

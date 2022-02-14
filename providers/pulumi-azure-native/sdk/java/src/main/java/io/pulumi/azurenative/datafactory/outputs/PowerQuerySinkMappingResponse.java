@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PowerQuerySinkMappingResponse {
-/**
- * List of sinks mapped to Power Query mashup query.
- */
     private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
-/**
- * Name of the query in Power Query mashup document.
- */
     private final @Nullable String queryName;
 
     @OutputCustomType.Constructor({"dataflowSinks","queryName"})
@@ -30,15 +24,9 @@ public final class PowerQuerySinkMappingResponse {
         this.queryName = queryName;
     }
 
-/**
- * List of sinks mapped to Power Query mashup query.
- */
     public List<PowerQuerySinkResponse> getDataflowSinks() {
         return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
     }
-/**
- * Name of the query in Power Query mashup document.
- */
     public Optional<String> getQueryName() {
         return Optional.ofNullable(this.queryName);
     }

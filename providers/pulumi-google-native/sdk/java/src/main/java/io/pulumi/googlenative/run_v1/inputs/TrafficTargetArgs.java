@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * TrafficTarget holds a single entry of the routing table for a Route.
- */
 public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrafficTargetArgs Empty = new TrafficTargetArgs();
 
-    /**
-     * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
-     */
     @InputImport(name="configurationName")
     private final @Nullable Input<String> configurationName;
 
@@ -29,9 +23,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.configurationName == null ? Input.empty() : this.configurationName;
     }
 
-    /**
-     * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
-     */
     @InputImport(name="latestRevision")
     private final @Nullable Input<Boolean> latestRevision;
 
@@ -39,9 +30,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
     }
 
-    /**
-     * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
-     */
     @InputImport(name="percent")
     private final @Nullable Input<Integer> percent;
 
@@ -49,9 +37,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.percent == null ? Input.empty() : this.percent;
     }
 
-    /**
-     * RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
-     */
     @InputImport(name="revisionName")
     private final @Nullable Input<String> revisionName;
 
@@ -59,9 +44,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.revisionName == null ? Input.empty() : this.revisionName;
     }
 
-    /**
-     * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
-     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 

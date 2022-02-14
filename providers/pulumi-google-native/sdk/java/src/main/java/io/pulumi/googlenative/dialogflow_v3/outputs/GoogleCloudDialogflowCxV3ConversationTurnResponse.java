@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3ConversationTurnResponse {
-/**
- * The user input.
- */
     private final GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput;
-/**
- * The virtual agent output.
- */
     private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
     @OutputCustomType.Constructor({"userInput","virtualAgentOutput"})
@@ -27,15 +21,9 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse {
         this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
     }
 
-/**
- * The user input.
- */
     public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse getUserInput() {
         return this.userInput;
     }
-/**
- * The virtual agent output.
- */
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {
         return this.virtualAgentOutput;
     }

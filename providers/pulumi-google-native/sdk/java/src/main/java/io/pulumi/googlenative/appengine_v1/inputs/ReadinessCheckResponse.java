@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Readiness checking configuration for VM instances. Unhealthy instances are removed from traffic rotation.
- */
 public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReadinessCheckResponse Empty = new ReadinessCheckResponse();
 
-    /**
-     * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
-     */
     @InputImport(name="appStartTimeout", required=true)
     private final String appStartTimeout;
 
@@ -26,9 +20,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
         return this.appStartTimeout;
     }
 
-    /**
-     * Interval between health checks.
-     */
     @InputImport(name="checkInterval", required=true)
     private final String checkInterval;
 
@@ -36,9 +27,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
         return this.checkInterval;
     }
 
-    /**
-     * Number of consecutive failed checks required before removing traffic.
-     */
     @InputImport(name="failureThreshold", required=true)
     private final Integer failureThreshold;
 
@@ -46,9 +34,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
         return this.failureThreshold;
     }
 
-    /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
-     */
     @InputImport(name="host", required=true)
     private final String host;
 
@@ -56,9 +41,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
         return this.host;
     }
 
-    /**
-     * The request path.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -66,9 +48,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
         return this.path;
     }
 
-    /**
-     * Number of consecutive successful checks required before receiving traffic.
-     */
     @InputImport(name="successThreshold", required=true)
     private final Integer successThreshold;
 
@@ -76,9 +55,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
         return this.successThreshold;
     }
 
-    /**
-     * Time before the check is considered failed.
-     */
     @InputImport(name="timeout", required=true)
     private final String timeout;
 

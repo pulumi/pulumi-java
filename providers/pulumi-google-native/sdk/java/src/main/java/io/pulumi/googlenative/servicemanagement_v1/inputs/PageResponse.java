@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents a documentation page. A page can contain subpages to represent nested documentation set structure.
- */
 public final class PageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PageResponse Empty = new PageResponse();
 
-    /**
-     * The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.
-     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -26,9 +20,6 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
         return this.content;
     }
 
-    /**
-     * The name of the page. It will be used as an identity of the page to generate URI of the page, text of the link to this page in navigation, etc. The full page name (start from the root page name to this page concatenated with `.`) can be used as reference to the page in your documentation. For example: pages: - name: Tutorial content: (== include tutorial.md ==) subpages: - name: Java content: (== include tutorial_java.md ==) You can reference `Java` page using Markdown reference link syntax: `Java`.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,9 +27,6 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Subpages of this page. The order of subpages specified here will be honored in the generated docset.
-     */
     @InputImport(name="subpages", required=true)
     private final List<PageResponse> subpages;
 

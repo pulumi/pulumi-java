@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The schema file format along JSON data files.
- */
     @EnumType
     public enum JsonFileFormatSchemaFileFormat {
-/**
- * Unspecified schema file format.
- */
         SchemaFileFormatUnspecified("SCHEMA_FILE_FORMAT_UNSPECIFIED"),
-/**
- * Do not attach schema file.
- */
         NoSchemaFile("NO_SCHEMA_FILE"),
-/**
- * Avro schema format.
- */
         AvroSchemaFile("AVRO_SCHEMA_FILE");
 
         private final String value;

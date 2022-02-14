@@ -12,30 +12,15 @@ import io.pulumi.googlenative.pubsub_v1beta2.TopicArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates the given topic with the given name.
- */
 @ResourceType(type="google-native:pubsub/v1beta2:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
-     */
     public Output<String> getName() {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Topic(String name, TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:pubsub/v1beta2:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -51,14 +36,6 @@ public class Topic extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Topic get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Topic(name, id, options);
     }

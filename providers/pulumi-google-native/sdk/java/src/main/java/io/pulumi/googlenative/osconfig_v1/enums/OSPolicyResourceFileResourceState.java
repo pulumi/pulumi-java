@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. Desired state of the file.
- */
     @EnumType
     public enum OSPolicyResourceFileResourceState {
-/**
- * Unspecified is invalid.
- */
         DesiredStateUnspecified("DESIRED_STATE_UNSPECIFIED"),
-/**
- * Ensure file at path is present.
- */
         Present("PRESENT"),
-/**
- * Ensure file at path is absent.
- */
         Absent("ABSENT"),
-/**
- * Ensure the contents of the file at path matches. If the file does not exist it will be created.
- */
         ContentsMatch("CONTENTS_MATCH");
 
         private final String value;

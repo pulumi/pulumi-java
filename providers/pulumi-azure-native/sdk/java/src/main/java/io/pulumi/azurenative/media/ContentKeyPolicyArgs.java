@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyArgs Empty = new ContentKeyPolicyArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.accountName;
     }
 
-    /**
-     * The Content Key Policy name.
-     */
     @InputImport(name="contentKeyPolicyName")
     private final @Nullable Input<String> contentKeyPolicyName;
 
@@ -39,9 +30,6 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.contentKeyPolicyName == null ? Input.empty() : this.contentKeyPolicyName;
     }
 
-    /**
-     * A description for the Policy.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -49,9 +37,6 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The Key Policy options.
-     */
     @InputImport(name="options", required=true)
     private final Input<List<ContentKeyPolicyOptionArgs>> options;
 
@@ -59,9 +44,6 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.options;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

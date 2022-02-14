@@ -11,19 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PortStatusArgs Empty = new PortStatusArgs();
 
-    /**
-     * Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
-  CamelCase names
-- cloud provider specific error values must have names that comply with the
-  format foo.example.com/CamelCase.
-     */
     @InputImport(name="error")
     private final @Nullable Input<String> error;
 
@@ -31,9 +22,6 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.error == null ? Input.empty() : this.error;
     }
 
-    /**
-     * Port is the port number of the service port of which status is recorded here
-     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -41,14 +29,6 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.port;
     }
 
-    /**
-     * Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"
-
-Possible enum values:
- - `"SCTP"` is the SCTP protocol.
- - `"TCP"` is the TCP protocol.
- - `"UDP"` is the UDP protocol.
-     */
     @InputImport(name="protocol", required=true)
     private final Input<String> protocol;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
-/**
- * Annotation spec set resource name.
- */
     private final String annotationSpecSet;
-/**
- * Optional. Instruction message showed on contributors UI.
- */
     private final String instructionMessage;
 
     @OutputCustomType.Constructor({"annotationSpecSet","instructionMessage"})
@@ -26,15 +20,9 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
         this.instructionMessage = Objects.requireNonNull(instructionMessage);
     }
 
-/**
- * Annotation spec set resource name.
- */
     public String getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
-/**
- * Optional. Instruction message showed on contributors UI.
- */
     public String getInstructionMessage() {
         return this.instructionMessage;
     }

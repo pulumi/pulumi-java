@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Limits for the number of nodes a Cluster can autoscale up/down to.
- */
 public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscalingLimitsArgs Empty = new AutoscalingLimitsArgs();
 
-    /**
-     * Maximum number of nodes to scale up to.
-     */
     @InputImport(name="maxServeNodes", required=true)
     private final Input<Integer> maxServeNodes;
 
@@ -26,9 +20,6 @@ public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArg
         return this.maxServeNodes;
     }
 
-    /**
-     * Minimum number of nodes to scale down to.
-     */
     @InputImport(name="minServeNodes", required=true)
     private final Input<Integer> minServeNodes;
 

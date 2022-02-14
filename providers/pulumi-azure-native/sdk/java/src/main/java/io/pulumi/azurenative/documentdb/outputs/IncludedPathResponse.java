@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IncludedPathResponse {
-/**
- * List of indexes for this path
- */
     private final @Nullable List<IndexesResponse> indexes;
-/**
- * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
- */
     private final @Nullable String path;
 
     @OutputCustomType.Constructor({"indexes","path"})
@@ -30,15 +24,9 @@ public final class IncludedPathResponse {
         this.path = path;
     }
 
-/**
- * List of indexes for this path
- */
     public List<IndexesResponse> getIndexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
-/**
- * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
- */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }

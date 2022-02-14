@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters to be applied to the cluster-autoscaler when enabled
- */
 public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterPropertiesResponseAutoScalerProfile Empty = new ManagedClusterPropertiesResponseAutoScalerProfile();
 
-    /**
-     * 
-     */
     @InputImport(name="balanceSimilarNodeGroups")
     private final @Nullable String balanceSimilarNodeGroups;
 
@@ -27,9 +21,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.balanceSimilarNodeGroups == null ? Optional.empty() : Optional.ofNullable(this.balanceSimilarNodeGroups);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="expander")
     private final @Nullable String expander;
 
@@ -37,9 +28,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.expander == null ? Optional.empty() : Optional.ofNullable(this.expander);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxEmptyBulkDelete")
     private final @Nullable String maxEmptyBulkDelete;
 
@@ -47,9 +35,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.maxEmptyBulkDelete == null ? Optional.empty() : Optional.ofNullable(this.maxEmptyBulkDelete);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxGracefulTerminationSec")
     private final @Nullable String maxGracefulTerminationSec;
 
@@ -57,9 +42,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.maxGracefulTerminationSec == null ? Optional.empty() : Optional.ofNullable(this.maxGracefulTerminationSec);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxNodeProvisionTime")
     private final @Nullable String maxNodeProvisionTime;
 
@@ -67,9 +49,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.maxNodeProvisionTime == null ? Optional.empty() : Optional.ofNullable(this.maxNodeProvisionTime);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxTotalUnreadyPercentage")
     private final @Nullable String maxTotalUnreadyPercentage;
 
@@ -77,9 +56,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.maxTotalUnreadyPercentage == null ? Optional.empty() : Optional.ofNullable(this.maxTotalUnreadyPercentage);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="newPodScaleUpDelay")
     private final @Nullable String newPodScaleUpDelay;
 
@@ -87,9 +63,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.newPodScaleUpDelay == null ? Optional.empty() : Optional.ofNullable(this.newPodScaleUpDelay);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="okTotalUnreadyCount")
     private final @Nullable String okTotalUnreadyCount;
 
@@ -97,9 +70,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.okTotalUnreadyCount == null ? Optional.empty() : Optional.ofNullable(this.okTotalUnreadyCount);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownDelayAfterAdd")
     private final @Nullable String scaleDownDelayAfterAdd;
 
@@ -107,9 +77,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scaleDownDelayAfterAdd == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterAdd);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownDelayAfterDelete")
     private final @Nullable String scaleDownDelayAfterDelete;
 
@@ -117,9 +84,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scaleDownDelayAfterDelete == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterDelete);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownDelayAfterFailure")
     private final @Nullable String scaleDownDelayAfterFailure;
 
@@ -127,9 +91,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scaleDownDelayAfterFailure == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterFailure);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownUnneededTime")
     private final @Nullable String scaleDownUnneededTime;
 
@@ -137,9 +98,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scaleDownUnneededTime == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUnneededTime);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownUnreadyTime")
     private final @Nullable String scaleDownUnreadyTime;
 
@@ -147,9 +105,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scaleDownUnreadyTime == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUnreadyTime);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleDownUtilizationThreshold")
     private final @Nullable String scaleDownUtilizationThreshold;
 
@@ -157,9 +112,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scaleDownUtilizationThreshold == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUtilizationThreshold);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scanInterval")
     private final @Nullable String scanInterval;
 
@@ -167,9 +119,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.scanInterval == null ? Optional.empty() : Optional.ofNullable(this.scanInterval);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="skipNodesWithLocalStorage")
     private final @Nullable String skipNodesWithLocalStorage;
 
@@ -177,9 +126,6 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.
         return this.skipNodesWithLocalStorage == null ? Optional.empty() : Optional.ofNullable(this.skipNodesWithLocalStorage);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="skipNodesWithSystemPods")
     private final @Nullable String skipNodesWithSystemPods;
 

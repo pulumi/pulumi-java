@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionArgs Empty = new ExtensionArgs();
 
-    /**
-     * The name of the Visual Studio Team Services account resource.
-     */
     @InputImport(name="accountResourceName", required=true)
     private final Input<String> accountResourceName;
 
@@ -29,9 +23,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountResourceName;
     }
 
-    /**
-     * The name of the extension.
-     */
     @InputImport(name="extensionResourceName")
     private final @Nullable Input<String> extensionResourceName;
 
@@ -39,9 +30,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensionResourceName == null ? Input.empty() : this.extensionResourceName;
     }
 
-    /**
-     * The Azure region of the Visual Studio account associated with this request (i.e 'southcentralus'.)
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Extended information about the plan being purchased for this extension resource.
-     */
     @InputImport(name="plan")
     private final @Nullable Input<ExtensionResourcePlanArgs> plan;
 
@@ -59,9 +44,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
-    /**
-     * A dictionary of extended properties. This property is currently unused.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -69,9 +51,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,9 +58,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * A dictionary of user-defined tags to be stored with the extension resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

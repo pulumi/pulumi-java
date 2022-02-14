@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Test coverage for the endpoint.
- */
     @EnumType
     public enum CoverageLevel {
-/**
- * 
- */
         Default("Default"),
-/**
- * 
- */
         Low("Low"),
-/**
- * 
- */
         BelowAverage("BelowAverage"),
-/**
- * 
- */
         Average("Average"),
-/**
- * 
- */
         AboveAverage("AboveAverage"),
-/**
- * 
- */
         Full("Full");
 
         private final String value;

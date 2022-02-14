@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlServerRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerRegistrationArgs Empty = new SqlServerRegistrationArgs();
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,9 +22,6 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Optional Properties as JSON string
-     */
     @InputImport(name="propertyBag")
     private final @Nullable Input<String> propertyBag;
 
@@ -38,9 +29,6 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
         return this.propertyBag == null ? Input.empty() : this.propertyBag;
     }
 
-    /**
-     * Resource Group Name
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -48,9 +36,6 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
-    /**
-     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the SQL Server registration.
-     */
     @InputImport(name="sqlServerRegistrationName")
     private final @Nullable Input<String> sqlServerRegistrationName;
 
@@ -68,9 +50,6 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
         return this.sqlServerRegistrationName == null ? Input.empty() : this.sqlServerRegistrationName;
     }
 
-    /**
-     * Subscription Id
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
@@ -78,9 +57,6 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceBindingArgs Empty = new ServiceBindingArgs();
 
-    /**
-     * Optional. A free-text description of the resource. Max length 1024 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     */
     @InputImport(name="endpointFilter")
     private final @Nullable Input<String> endpointFilter;
 
@@ -38,9 +29,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointFilter == null ? Input.empty() : this.endpointFilter;
     }
 
-    /**
-     * Optional. Set of label tags associated with the ServiceBinding resource.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -48,9 +36,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -58,9 +43,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,9 +50,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -78,9 +57,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
-     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 
@@ -88,9 +64,6 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
         return this.service;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceBindingId", required=true)
     private final Input<String> serviceBindingId;
 

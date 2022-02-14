@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The user assigned managed identity to use when accessing a resource.
- */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceIdentityArgs Empty = new ResourceIdentityArgs();
 
-    /**
-     * The user assigned managed identity's resource identifier to use when accessing a resource.
-     */
     @InputImport(name="userAssignedIdentity", required=true)
     private final Input<String> userAssignedIdentity;
 

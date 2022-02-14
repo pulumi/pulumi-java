@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Private Endpoint Connection For Private Link Hub - Basic
- */
 public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionForPrivateLinkHubBasicResponse Empty = new PrivateEndpointConnectionForPrivateLinkHubBasicResponse();
 
-    /**
-     * identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,9 +23,6 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
         return this.id;
     }
 
-    /**
-     * The private endpoint which the connection belongs to.
-     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -39,9 +30,6 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
-    /**
-     * Connection state of the private endpoint connection.
-     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -49,9 +37,6 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
-    /**
-     * Provisioning state of the private endpoint connection.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

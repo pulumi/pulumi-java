@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Encryption settings for one disk volume.
- */
 public final class EncryptionSettingsElementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionSettingsElementResponse Empty = new EncryptionSettingsElementResponse();
 
-    /**
-     * Key Vault Secret Url and vault id of the disk encryption key
-     */
     @InputImport(name="diskEncryptionKey")
     private final @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
 
@@ -28,9 +22,6 @@ public final class EncryptionSettingsElementResponse extends io.pulumi.resources
         return this.diskEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionKey);
     }
 
-    /**
-     * Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
-     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
 

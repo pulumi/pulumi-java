@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProductPolicy {
-/**
- * Policy Contract details.
-API Version: 2020-12-01.
- *
- * Policy Contract details.
- */
     public static CompletableFuture<GetProductPolicyResult> invokeAsync(GetProductPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProductPolicy", TypeShape.of(GetProductPolicyResult.class), args == null ? GetProductPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

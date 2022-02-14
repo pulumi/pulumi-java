@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
-/**
- * Framework on which the built-in algorithm was trained.
- */
     private final String framework;
-/**
- * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
- */
     private final String modelPath;
-/**
- * Python version on which the built-in algorithm was trained.
- */
     private final String pythonVersion;
-/**
- * AI Platform runtime version on which the built-in algorithm was trained.
- */
     private final String runtimeVersion;
 
     @OutputCustomType.Constructor({"framework","modelPath","pythonVersion","runtimeVersion"})
@@ -38,27 +26,15 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
         this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
     }
 
-/**
- * Framework on which the built-in algorithm was trained.
- */
     public String getFramework() {
         return this.framework;
     }
-/**
- * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
- */
     public String getModelPath() {
         return this.modelPath;
     }
-/**
- * Python version on which the built-in algorithm was trained.
- */
     public String getPythonVersion() {
         return this.pythonVersion;
     }
-/**
- * AI Platform runtime version on which the built-in algorithm was trained.
- */
     public String getRuntimeVersion() {
         return this.runtimeVersion;
     }

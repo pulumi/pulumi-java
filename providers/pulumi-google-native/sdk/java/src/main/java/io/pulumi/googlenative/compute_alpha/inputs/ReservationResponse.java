@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a reservation resource. A reservation ensures that capacity is held in a specific zone even if the reserved VMs are not running. For more information, read Reserving zonal resources.
- */
 public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReservationResponse Empty = new ReservationResponse();
 
-    /**
-     * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
-     */
     @InputImport(name="commitment", required=true)
     private final String commitment;
 
@@ -28,9 +22,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.commitment;
     }
 
-    /**
-     * Creation timestamp in RFC3339 text format.
-     */
     @InputImport(name="creationTimestamp", required=true)
     private final String creationTimestamp;
 
@@ -38,9 +29,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.creationTimestamp;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -48,9 +36,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
-    /**
-     * Type of the resource. Always compute#reservations for reservations.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -58,9 +43,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind;
     }
 
-    /**
-     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -68,9 +50,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Reserved for future use.
-     */
     @InputImport(name="satisfiesPzs", required=true)
     private final Boolean satisfiesPzs;
 
@@ -78,9 +57,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.satisfiesPzs;
     }
 
-    /**
-     * Server-defined fully-qualified URL for this resource.
-     */
     @InputImport(name="selfLink", required=true)
     private final String selfLink;
 
@@ -88,9 +64,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.selfLink;
     }
 
-    /**
-     * Server-defined URL for this resource with the resource id.
-     */
     @InputImport(name="selfLinkWithId", required=true)
     private final String selfLinkWithId;
 
@@ -98,9 +71,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.selfLinkWithId;
     }
 
-    /**
-     * Share-settings for shared-reservation
-     */
     @InputImport(name="shareSettings", required=true)
     private final ShareSettingsResponse shareSettings;
 
@@ -108,9 +78,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.shareSettings;
     }
 
-    /**
-     * Reservation for instances with specific machine shapes.
-     */
     @InputImport(name="specificReservation", required=true)
     private final AllocationSpecificSKUReservationResponse specificReservation;
 
@@ -118,9 +85,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.specificReservation;
     }
 
-    /**
-     * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
-     */
     @InputImport(name="specificReservationRequired", required=true)
     private final Boolean specificReservationRequired;
 
@@ -128,9 +92,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.specificReservationRequired;
     }
 
-    /**
-     * The status of the reservation.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -138,9 +99,6 @@ public final class ReservationResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
-    /**
-     * Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
-     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

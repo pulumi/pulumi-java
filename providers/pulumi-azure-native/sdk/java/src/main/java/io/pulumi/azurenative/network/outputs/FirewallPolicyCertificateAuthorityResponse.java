@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicyCertificateAuthorityResponse {
-/**
- * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
- */
     private final @Nullable String keyVaultSecretId;
-/**
- * Name of the CA certificate.
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"keyVaultSecretId","name"})
@@ -28,15 +22,9 @@ public final class FirewallPolicyCertificateAuthorityResponse {
         this.name = name;
     }
 
-/**
- * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
- */
     public Optional<String> getKeyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
-/**
- * Name of the CA certificate.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

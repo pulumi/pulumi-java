@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates the purpose of the parameter
- */
     @EnumType
     public enum ParamIndicator {
-/**
- * 
- */
         Expires("Expires"),
-/**
- * 
- */
         KeyId("KeyId"),
-/**
- * 
- */
         Signature("Signature");
 
         private final String value;

@@ -8,22 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the mode of database creation.
-
-Default: Regular instance creation.
-
-Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
- */
     @EnumType
     public enum ManagedServerCreateMode {
-/**
- * 
- */
         Default("Default"),
-/**
- * 
- */
         PointInTimeRestore("PointInTimeRestore");
 
         private final String value;

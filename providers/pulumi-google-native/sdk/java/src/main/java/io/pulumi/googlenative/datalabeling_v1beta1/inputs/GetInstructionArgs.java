@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetInstructionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstructionArgs Empty = new GetInstructionArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="instructionId", required=true)
     private final String instructionId;
 
@@ -27,9 +21,6 @@ public final class GetInstructionArgs extends io.pulumi.resources.InvokeArgs {
         return this.instructionId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

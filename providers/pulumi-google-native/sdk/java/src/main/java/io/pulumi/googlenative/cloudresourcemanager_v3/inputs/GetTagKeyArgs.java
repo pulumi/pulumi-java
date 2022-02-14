@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTagKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagKeyArgs Empty = new GetTagKeyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="tagKeyId", required=true)
     private final String tagKeyId;
 

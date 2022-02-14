@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureSkuResponse {
-/**
- * SKU name
- */
     private final String name;
-/**
- * SKU tier
- */
     private final String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -26,15 +20,9 @@ public final class AzureSkuResponse {
         this.tier = Objects.requireNonNull(tier);
     }
 
-/**
- * SKU name
- */
     public String getName() {
         return this.name;
     }
-/**
- * SKU tier
- */
     public String getTier() {
         return this.tier;
     }

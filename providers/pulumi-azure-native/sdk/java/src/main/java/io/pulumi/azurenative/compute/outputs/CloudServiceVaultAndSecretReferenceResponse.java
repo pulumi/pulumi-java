@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudServiceVaultAndSecretReferenceResponse {
-/**
- * 
- */
     private final @Nullable String secretUrl;
-/**
- * 
- */
     private final @Nullable SubResourceResponse sourceVault;
 
     @OutputCustomType.Constructor({"secretUrl","sourceVault"})
@@ -29,15 +23,9 @@ public final class CloudServiceVaultAndSecretReferenceResponse {
         this.sourceVault = sourceVault;
     }
 
-/**
- * 
- */
     public Optional<String> getSecretUrl() {
         return Optional.ofNullable(this.secretUrl);
     }
-/**
- * 
- */
     public Optional<SubResourceResponse> getSourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }

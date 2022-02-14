@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Pub/Sub specific notification config.
- */
 public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PubSubArgs Empty = new PubSubArgs();
 
-    /**
-     * Enable notifications for Pub/Sub.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -29,9 +23,6 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
-     */
     @InputImport(name="filter")
     private final @Nullable Input<FilterArgs> filter;
 
@@ -39,9 +30,6 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
-    /**
-     * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
-     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

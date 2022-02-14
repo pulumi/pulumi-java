@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HourDetailsResponse {
-/**
- * Minutes of the hour the schedule will run.
- */
     private final @Nullable Integer minute;
 
     @OutputCustomType.Constructor({"minute"})
@@ -21,9 +18,6 @@ public final class HourDetailsResponse {
         this.minute = minute;
     }
 
-/**
- * Minutes of the hour the schedule will run.
- */
     public Optional<Integer> getMinute() {
         return Optional.ofNullable(this.minute);
     }

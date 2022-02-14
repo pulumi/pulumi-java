@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Deployment scale type.
- */
     @EnumType
     public enum DeploymentScaleType {
-/**
- * 
- */
         Manual("Manual");
 
         private final String value;

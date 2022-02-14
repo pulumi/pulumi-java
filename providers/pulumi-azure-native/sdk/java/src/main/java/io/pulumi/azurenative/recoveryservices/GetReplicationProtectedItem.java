@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationProtectedItem {
-/**
- * Replication protected item.
-API Version: 2018-07-10.
- *
- * Replication protected item.
- */
     public static CompletableFuture<GetReplicationProtectedItemResult> invokeAsync(GetReplicationProtectedItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationProtectedItem", TypeShape.of(GetReplicationProtectedItemResult.class), args == null ? GetReplicationProtectedItemArgs.Empty : args, Utilities.withVersion(options));
     }

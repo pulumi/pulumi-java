@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Inner error details.
- */
 public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InnerErrorResponse Empty = new InnerErrorResponse();
 
-    /**
-     * The internal error message or exception dump.
-     */
     @InputImport(name="errordetail")
     private final @Nullable String errordetail;
 
@@ -27,9 +21,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.errordetail == null ? Optional.empty() : Optional.ofNullable(this.errordetail);
     }
 
-    /**
-     * The exception type.
-     */
     @InputImport(name="exceptiontype")
     private final @Nullable String exceptiontype;
 

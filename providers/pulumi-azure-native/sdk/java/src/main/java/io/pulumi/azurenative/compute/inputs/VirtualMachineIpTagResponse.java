@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains the IP tag associated with the public IP address.
- */
 public final class VirtualMachineIpTagResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineIpTagResponse Empty = new VirtualMachineIpTagResponse();
 
-    /**
-     * IP tag type. Example: FirstPartyUsage.
-     */
     @InputImport(name="ipTagType")
     private final @Nullable String ipTagType;
 
@@ -27,9 +21,6 @@ public final class VirtualMachineIpTagResponse extends io.pulumi.resources.Invok
         return this.ipTagType == null ? Optional.empty() : Optional.ofNullable(this.ipTagType);
     }
 
-    /**
-     * IP tag associated with the public IP. Example: SQL, Storage etc.
-     */
     @InputImport(name="tag")
     private final @Nullable String tag;
 

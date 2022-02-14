@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListMonitorUserRolesResult {
-/**
- * Link to the next set of results, if any.
- */
     private final @Nullable String nextLink;
-/**
- * List of user roles for Logz.io account.
- */
     private final @Nullable List<UserRoleResponseResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -30,15 +24,9 @@ public final class ListMonitorUserRolesResult {
         this.value = value;
     }
 
-/**
- * Link to the next set of results, if any.
- */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
-/**
- * List of user roles for Logz.io account.
- */
     public List<UserRoleResponseResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

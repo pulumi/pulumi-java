@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
- */
 public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileVolumeSourceArgs Empty = new AzureFileVolumeSourceArgs();
 
-    /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -28,9 +22,6 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
-    /**
-     * the name of secret that contains Azure Storage Account Name and Key
-     */
     @InputImport(name="secretName", required=true)
     private final Input<String> secretName;
 
@@ -38,9 +29,6 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.secretName;
     }
 
-    /**
-     * Share Name
-     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 

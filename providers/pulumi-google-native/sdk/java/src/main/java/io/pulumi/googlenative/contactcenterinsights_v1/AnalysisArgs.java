@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisArgs Empty = new AnalysisArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="conversationId", required=true)
     private final Input<String> conversationId;
 
@@ -27,9 +21,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.conversationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,9 +28,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,9 +35,6 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

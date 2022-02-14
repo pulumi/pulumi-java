@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlMITaskOutputLoginLevelResponse Empty = new MigrateSqlServerSqlMITaskOutputLoginLevelResponse();
 
-    /**
-     * Login migration end time
-     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -27,9 +21,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
         return this.endedOn;
     }
 
-    /**
-     * Login migration errors and warnings per login
-     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -37,9 +28,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
         return this.exceptionsAndWarnings;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -47,9 +35,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
         return this.id;
     }
 
-    /**
-     * Login name.
-     */
     @InputImport(name="loginName", required=true)
     private final String loginName;
 
@@ -57,9 +42,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
         return this.loginName;
     }
 
-    /**
-     * Login migration progress message
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -67,10 +49,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
         return this.message;
     }
 
-    /**
-     * Result type
-Expected value is 'LoginLevelOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -78,9 +56,6 @@ Expected value is 'LoginLevelOutput'.
         return this.resultType;
     }
 
-    /**
-     * Current stage of login
-     */
     @InputImport(name="stage", required=true)
     private final String stage;
 
@@ -88,9 +63,6 @@ Expected value is 'LoginLevelOutput'.
         return this.stage;
     }
 
-    /**
-     * Login migration start time
-     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -98,9 +70,6 @@ Expected value is 'LoginLevelOutput'.
         return this.startedOn;
     }
 
-    /**
-     * Current state of login
-     */
     @InputImport(name="state", required=true)
     private final String state;
 

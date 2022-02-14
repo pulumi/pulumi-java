@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The IP access control for the live event preview endpoint.
- */
 public final class LiveEventPreviewAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LiveEventPreviewAccessControlResponse Empty = new LiveEventPreviewAccessControlResponse();
 
-    /**
-     * The IP access control properties.
-     */
     @InputImport(name="ip")
     private final @Nullable IPAccessControlResponse ip;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStandardArgs Empty = new GetStandardArgs();
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The Security Standard key - unique key for the standard type
-     */
     @InputImport(name="standardId", required=true)
     private final String standardId;
 

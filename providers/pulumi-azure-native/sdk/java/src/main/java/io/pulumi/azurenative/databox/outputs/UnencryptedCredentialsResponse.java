@@ -13,13 +13,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UnencryptedCredentialsResponse {
-/**
- * Name of the job.
- */
     private final String jobName;
-/**
- * Secrets related to this job.
- */
     private final Object jobSecrets;
 
     @OutputCustomType.Constructor({"jobName","jobSecrets"})
@@ -30,15 +24,9 @@ public final class UnencryptedCredentialsResponse {
         this.jobSecrets = Objects.requireNonNull(jobSecrets);
     }
 
-/**
- * Name of the job.
- */
     public String getJobName() {
         return this.jobName;
     }
-/**
- * Secrets related to this job.
- */
     public Object getJobSecrets() {
         return this.jobSecrets;
     }

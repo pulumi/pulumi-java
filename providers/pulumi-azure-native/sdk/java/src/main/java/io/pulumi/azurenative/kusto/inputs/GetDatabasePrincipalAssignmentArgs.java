@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatabasePrincipalAssignmentArgs Empty = new GetDatabasePrincipalAssignmentArgs();
 
-    /**
-     * The name of the Kusto cluster.
-     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -25,9 +19,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
         return this.clusterName;
     }
 
-    /**
-     * The name of the database in the Kusto cluster.
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -35,9 +26,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
         return this.databaseName;
     }
 
-    /**
-     * The name of the Kusto principalAssignment.
-     */
     @InputImport(name="principalAssignmentName", required=true)
     private final String principalAssignmentName;
 
@@ -45,9 +33,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
         return this.principalAssignmentName;
     }
 
-    /**
-     * The name of the resource group containing the Kusto cluster.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

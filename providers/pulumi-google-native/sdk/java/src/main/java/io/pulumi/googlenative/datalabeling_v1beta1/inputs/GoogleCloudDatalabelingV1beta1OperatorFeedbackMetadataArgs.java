@@ -6,9 +6,6 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 import java.util.Objects;
 
 
-/**
- * Metadata describing the feedback from the operator.
- */
 public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs Empty = new GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs();

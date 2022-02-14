@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IngressServiceBackend references a Kubernetes Service as a Backend.
- */
 public final class IngressServiceBackendArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressServiceBackendArgs Empty = new IngressServiceBackendArgs();
 
-    /**
-     * Name is the referenced service. The service must exist in the same namespace as the Ingress object.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +22,6 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
         return this.name;
     }
 
-    /**
-     * Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
-     */
     @InputImport(name="port")
     private final @Nullable Input<ServiceBackendPortArgs> port;
 

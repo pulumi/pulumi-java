@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListAccountChannelTypesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListAccountChannelTypesArgs Empty = new ListAccountChannelTypesArgs();
 
-    /**
-     * Account Name
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class ListAccountChannelTypesArgs extends io.pulumi.resources.Invok
         return this.accountName;
     }
 
-    /**
-     * Resource Group Name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a weekly schedule.
- */
 public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WeeklyScheduleResponse Empty = new WeeklyScheduleResponse();
 
-    /**
-     * Day of the week.
-     */
     @InputImport(name="dayOfWeek", required=true)
     private final String dayOfWeek;
 

@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServerCertificateCommonNamesResponse {
-/**
- * The list of server certificates referenced by common name that are used to secure the cluster.
- */
     private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
-/**
- * The local certificate store location.
- */
     private final @Nullable String x509StoreName;
 
     @OutputCustomType.Constructor({"commonNames","x509StoreName"})
@@ -30,15 +24,9 @@ public final class ServerCertificateCommonNamesResponse {
         this.x509StoreName = x509StoreName;
     }
 
-/**
- * The list of server certificates referenced by common name that are used to secure the cluster.
- */
     public List<ServerCertificateCommonNameResponse> getCommonNames() {
         return this.commonNames == null ? List.of() : this.commonNames;
     }
-/**
- * The local certificate store location.
- */
     public Optional<String> getX509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }

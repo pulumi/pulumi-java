@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class I18nConfigResponse {
-/**
- * The user-supplied path where country and language specific content will be looked for within the public directory.
- */
     private final String root;
 
     @OutputCustomType.Constructor({"root"})
@@ -19,9 +16,6 @@ public final class I18nConfigResponse {
         this.root = Objects.requireNonNull(root);
     }
 
-/**
- * The user-supplied path where country and language specific content will be looked for within the public directory.
- */
     public String getRoot() {
         return this.root;
     }

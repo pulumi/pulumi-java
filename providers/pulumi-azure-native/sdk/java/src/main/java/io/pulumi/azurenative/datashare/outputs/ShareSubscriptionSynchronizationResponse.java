@@ -10,33 +10,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ShareSubscriptionSynchronizationResponse {
-/**
- * Synchronization duration
- */
     private final Integer durationMs;
-/**
- * End time of synchronization
- */
     private final String endTime;
-/**
- * message of Synchronization
- */
     private final String message;
-/**
- * start time of synchronization
- */
     private final String startTime;
-/**
- * Raw Status
- */
     private final String status;
-/**
- * Synchronization id
- */
     private final String synchronizationId;
-/**
- * Synchronization Mode
- */
     private final String synchronizationMode;
 
     @OutputCustomType.Constructor({"durationMs","endTime","message","startTime","status","synchronizationId","synchronizationMode"})
@@ -57,45 +36,24 @@ public final class ShareSubscriptionSynchronizationResponse {
         this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
     }
 
-/**
- * Synchronization duration
- */
     public Integer getDurationMs() {
         return this.durationMs;
     }
-/**
- * End time of synchronization
- */
     public String getEndTime() {
         return this.endTime;
     }
-/**
- * message of Synchronization
- */
     public String getMessage() {
         return this.message;
     }
-/**
- * start time of synchronization
- */
     public String getStartTime() {
         return this.startTime;
     }
-/**
- * Raw Status
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Synchronization id
- */
     public String getSynchronizationId() {
         return this.synchronizationId;
     }
-/**
- * Synchronization Mode
- */
     public String getSynchronizationMode() {
         return this.synchronizationMode;
     }

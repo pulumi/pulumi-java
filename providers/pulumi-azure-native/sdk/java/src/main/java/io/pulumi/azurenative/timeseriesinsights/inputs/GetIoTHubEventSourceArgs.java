@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetIoTHubEventSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIoTHubEventSourceArgs Empty = new GetIoTHubEventSourceArgs();
 
-    /**
-     * The name of the Time Series Insights environment associated with the specified resource group.
-     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -25,9 +19,6 @@ public final class GetIoTHubEventSourceArgs extends io.pulumi.resources.InvokeAr
         return this.environmentName;
     }
 
-    /**
-     * The name of the Time Series Insights event source associated with the specified environment.
-     */
     @InputImport(name="eventSourceName", required=true)
     private final String eventSourceName;
 
@@ -35,9 +26,6 @@ public final class GetIoTHubEventSourceArgs extends io.pulumi.resources.InvokeAr
         return this.eventSourceName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

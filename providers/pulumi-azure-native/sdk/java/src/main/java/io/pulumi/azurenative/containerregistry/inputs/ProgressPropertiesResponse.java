@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProgressPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProgressPropertiesResponse Empty = new ProgressPropertiesResponse();
 
-    /**
-     * The percentage complete of the copy operation.
-     */
     @InputImport(name="percentage")
     private final @Nullable String percentage;
 

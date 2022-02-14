@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubnetDetailsResponse {
-/**
- * subnet arm resource id
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -21,9 +18,6 @@ public final class SubnetDetailsResponse {
         this.id = id;
     }
 
-/**
- * subnet arm resource id
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

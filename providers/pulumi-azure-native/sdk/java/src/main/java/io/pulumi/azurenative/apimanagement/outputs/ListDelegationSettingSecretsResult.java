@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListDelegationSettingSecretsResult {
-/**
- * This is secret value of the validation key in portal settings.
- */
     private final @Nullable String validationKey;
 
     @OutputCustomType.Constructor({"validationKey"})
@@ -21,9 +18,6 @@ public final class ListDelegationSettingSecretsResult {
         this.validationKey = validationKey;
     }
 
-/**
- * This is secret value of the validation key in portal settings.
- */
     public Optional<String> getValidationKey() {
         return Optional.ofNullable(this.validationKey);
     }

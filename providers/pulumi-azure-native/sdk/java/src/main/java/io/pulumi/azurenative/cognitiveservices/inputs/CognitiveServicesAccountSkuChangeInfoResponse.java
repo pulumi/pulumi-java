@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Sku change info of account.
- */
 public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CognitiveServicesAccountSkuChangeInfoResponse Empty = new CognitiveServicesAccountSkuChangeInfoResponse();
 
-    /**
-     * Gets the count of downgrades.
-     */
     @InputImport(name="countOfDowngrades", required=true)
     private final Double countOfDowngrades;
 
@@ -26,9 +20,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
         return this.countOfDowngrades;
     }
 
-    /**
-     * Gets the count of upgrades after downgrades.
-     */
     @InputImport(name="countOfUpgradesAfterDowngrades", required=true)
     private final Double countOfUpgradesAfterDowngrades;
 
@@ -36,9 +27,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
         return this.countOfUpgradesAfterDowngrades;
     }
 
-    /**
-     * Gets the last change date.
-     */
     @InputImport(name="lastChangeDate", required=true)
     private final String lastChangeDate;
 

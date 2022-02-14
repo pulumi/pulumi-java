@@ -15,158 +15,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A group created in a Migration project.
-API Version: 2019-10-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Groups_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @group = new AzureNative.Migrate.Group("group", new AzureNative.Migrate.GroupArgs
-        {
-            ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
-            GroupName = "Group2",
-            ProjectName = "abgoyalWEselfhostb72bproject",
-            Properties = ,
-            ResourceGroupName = "abgoyal-westEurope",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := migrate.NewGroup(ctx, "group", &migrate.GroupArgs{
-			ETag:              pulumi.String("\"1e000c2c-0000-0d00-0000-5cdaa4190000\""),
-			GroupName:         pulumi.String("Group2"),
-			ProjectName:       pulumi.String("abgoyalWEselfhostb72bproject"),
-			Properties:        nil,
-			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const group = new azure_native.migrate.Group("group", {
-    eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
-    groupName: "Group2",
-    projectName: "abgoyalWEselfhostb72bproject",
-    properties: {},
-    resourceGroupName: "abgoyal-westEurope",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-group = azure_native.migrate.Group("group",
-    e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
-    group_name="Group2",
-    project_name="abgoyalWEselfhostb72bproject",
-    properties=azure_native.migrate.GroupPropertiesArgs(),
-    resource_group_name="abgoyal-westEurope")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:migrate:Group Group2 /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/groups/Group2 
-```
-
- */
 @ResourceType(type="azure-native:migrate:Group")
 public class Group extends io.pulumi.resources.CustomResource {
-    /**
-     * For optimistic concurrency control.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    /**
-     * @return For optimistic concurrency control.
-     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    /**
-     * Name of the group.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the group.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of the group.
-     */
     @OutputExport(name="properties", type=GroupPropertiesResponse.class, parameters={})
     private Output<GroupPropertiesResponse> properties;
 
-    /**
-     * @return Properties of the group.
-     */
     public Output<GroupPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -185,14 +60,6 @@ public class Group extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Group get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Group(name, id, options);
     }

@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InTotoResponse {
-/**
- * This field contains the expected command used to perform the step.
- */
     private final List<String> expectedCommand;
-/**
- * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
- */
     private final List<ArtifactRuleResponse> expectedMaterials;
-/**
- * 
- */
     private final List<ArtifactRuleResponse> expectedProducts;
-/**
- * This field contains the public keys that can be used to verify the signatures on the step metadata.
- */
     private final List<SigningKeyResponse> signingKeys;
-/**
- * This field identifies the name of the step in the supply chain.
- */
     private final String stepName;
-/**
- * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
- */
     private final String threshold;
 
     @OutputCustomType.Constructor({"expectedCommand","expectedMaterials","expectedProducts","signingKeys","stepName","threshold"})
@@ -53,39 +35,21 @@ public final class InTotoResponse {
         this.threshold = Objects.requireNonNull(threshold);
     }
 
-/**
- * This field contains the expected command used to perform the step.
- */
     public List<String> getExpectedCommand() {
         return this.expectedCommand;
     }
-/**
- * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
- */
     public List<ArtifactRuleResponse> getExpectedMaterials() {
         return this.expectedMaterials;
     }
-/**
- * 
- */
     public List<ArtifactRuleResponse> getExpectedProducts() {
         return this.expectedProducts;
     }
-/**
- * This field contains the public keys that can be used to verify the signatures on the step metadata.
- */
     public List<SigningKeyResponse> getSigningKeys() {
         return this.signingKeys;
     }
-/**
- * This field identifies the name of the step in the supply chain.
- */
     public String getStepName() {
         return this.stepName;
     }
-/**
- * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
- */
     public String getThreshold() {
         return this.threshold;
     }

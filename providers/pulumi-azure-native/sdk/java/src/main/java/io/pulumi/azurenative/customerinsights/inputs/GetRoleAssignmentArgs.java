@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoleAssignmentArgs Empty = new GetRoleAssignmentArgs();
 
-    /**
-     * The name of the role assignment.
-     */
     @InputImport(name="assignmentName", required=true)
     private final String assignmentName;
 
@@ -25,9 +19,6 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
         return this.assignmentName;
     }
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -35,9 +26,6 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
         return this.hubName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * On-prem disk details data.
- */
 public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskDetailsResponse Empty = new DiskDetailsResponse();
 
-    /**
-     * The hard disk max size in MB.
-     */
     @InputImport(name="maxSizeMB")
     private final @Nullable Double maxSizeMB;
 
@@ -28,9 +22,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.maxSizeMB);
     }
 
-    /**
-     * The VHD Id.
-     */
     @InputImport(name="vhdId")
     private final @Nullable String vhdId;
 
@@ -38,9 +29,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.vhdId == null ? Optional.empty() : Optional.ofNullable(this.vhdId);
     }
 
-    /**
-     * The VHD name.
-     */
     @InputImport(name="vhdName")
     private final @Nullable String vhdName;
 
@@ -48,9 +36,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
     }
 
-    /**
-     * The type of the volume.
-     */
     @InputImport(name="vhdType")
     private final @Nullable String vhdType;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The details about how to run the execution.
- */
 public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpecificationArgs Empty = new SpecificationArgs();
 
-    /**
-     * An Android mobile test execution specification.
-     */
     @InputImport(name="androidTest")
     private final @Nullable Input<AndroidTestArgs> androidTest;
 
@@ -28,9 +22,6 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidTest == null ? Input.empty() : this.androidTest;
     }
 
-    /**
-     * An iOS mobile test execution specification.
-     */
     @InputImport(name="iosTest")
     private final @Nullable Input<IosTestArgs> iosTest;
 

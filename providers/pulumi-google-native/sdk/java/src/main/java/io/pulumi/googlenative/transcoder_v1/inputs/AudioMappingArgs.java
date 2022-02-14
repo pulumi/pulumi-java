@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
- */
 public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AudioMappingArgs Empty = new AudioMappingArgs();
 
-    /**
-     * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
-     */
     @InputImport(name="atomKey", required=true)
     private final Input<String> atomKey;
 
@@ -29,9 +23,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.atomKey;
     }
 
-    /**
-     * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
-     */
     @InputImport(name="gainDb")
     private final @Nullable Input<Double> gainDb;
 
@@ -39,9 +30,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.gainDb == null ? Input.empty() : this.gainDb;
     }
 
-    /**
-     * The zero-based index of the channel in the input audio stream.
-     */
     @InputImport(name="inputChannel", required=true)
     private final Input<Integer> inputChannel;
 
@@ -49,9 +37,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputChannel;
     }
 
-    /**
-     * The `Input.key` that identifies the input file.
-     */
     @InputImport(name="inputKey", required=true)
     private final Input<String> inputKey;
 
@@ -59,9 +44,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputKey;
     }
 
-    /**
-     * The zero-based index of the track in the input file.
-     */
     @InputImport(name="inputTrack", required=true)
     private final Input<Integer> inputTrack;
 
@@ -69,9 +51,6 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputTrack;
     }
 
-    /**
-     * The zero-based index of the channel in the output audio stream.
-     */
     @InputImport(name="outputChannel", required=true)
     private final Input<Integer> outputChannel;
 

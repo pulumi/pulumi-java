@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Custom script action to run on HDI ondemand cluster once it's up.
- */
 public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScriptActionArgs Empty = new ScriptActionArgs();
 
-    /**
-     * The user provided name of the script action.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +22,6 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The parameters for the script action.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<String> parameters;
 
@@ -38,9 +29,6 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The node types on which the script action should be executed.
-     */
     @InputImport(name="roles", required=true)
     private final Input<Object> roles;
 
@@ -48,9 +36,6 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.roles;
     }
 
-    /**
-     * The URI for the script action.
-     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

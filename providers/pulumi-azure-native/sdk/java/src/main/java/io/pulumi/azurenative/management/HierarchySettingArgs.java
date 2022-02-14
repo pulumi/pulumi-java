@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HierarchySettingArgs Empty = new HierarchySettingArgs();
 
-    /**
-     * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
-     */
     @InputImport(name="defaultManagementGroup")
     private final @Nullable Input<String> defaultManagementGroup;
 
@@ -28,9 +22,6 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
         return this.defaultManagementGroup == null ? Input.empty() : this.defaultManagementGroup;
     }
 
-    /**
-     * Management Group ID.
-     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -38,9 +29,6 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
         return this.groupId;
     }
 
-    /**
-     * Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
-     */
     @InputImport(name="requireAuthorizationForGroupCreation")
     private final @Nullable Input<Boolean> requireAuthorizationForGroupCreation;
 

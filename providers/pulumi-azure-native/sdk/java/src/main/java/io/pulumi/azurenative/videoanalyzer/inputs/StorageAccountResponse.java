@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The details about the associated storage account.
- */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountResponse Empty = new StorageAccountResponse();
 
-    /**
-     * The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -28,9 +22,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * A managed identity that Video Analyzer will use to access the storage account.
-     */
     @InputImport(name="identity")
     private final @Nullable ResourceIdentityResponse identity;
 
@@ -38,9 +29,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
-    /**
-     * The current status of the storage account mapping.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

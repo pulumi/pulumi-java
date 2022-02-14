@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * HDInsight streaming activity type.
- */
 public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HDInsightStreamingActivityArgs Empty = new HDInsightStreamingActivityArgs();
 
-    /**
-     * User specified arguments to HDInsightActivity.
-     */
     @InputImport(name="arguments")
     private final @Nullable Input<List<Object>> arguments;
 
@@ -36,9 +30,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
-    /**
-     * Combiner executable name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="combiner")
     private final @Nullable Input<Object> combiner;
 
@@ -46,9 +37,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.combiner == null ? Input.empty() : this.combiner;
     }
 
-    /**
-     * Command line environment values.
-     */
     @InputImport(name="commandEnvironment")
     private final @Nullable Input<List<Object>> commandEnvironment;
 
@@ -56,9 +44,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.commandEnvironment == null ? Input.empty() : this.commandEnvironment;
     }
 
-    /**
-     * Allows user to specify defines for streaming job request.
-     */
     @InputImport(name="defines")
     private final @Nullable Input<Map<String,Object>> defines;
 
@@ -66,9 +51,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.defines == null ? Input.empty() : this.defines;
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -76,9 +58,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -86,9 +65,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Linked service reference where the files are located.
-     */
     @InputImport(name="fileLinkedService")
     private final @Nullable Input<LinkedServiceReferenceArgs> fileLinkedService;
 
@@ -96,9 +72,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.fileLinkedService == null ? Input.empty() : this.fileLinkedService;
     }
 
-    /**
-     * Paths to streaming job files. Can be directories.
-     */
     @InputImport(name="filePaths", required=true)
     private final Input<List<Object>> filePaths;
 
@@ -106,9 +79,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.filePaths;
     }
 
-    /**
-     * Debug info option.
-     */
     @InputImport(name="getDebugInfo")
     private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
@@ -116,9 +86,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.getDebugInfo == null ? Input.empty() : this.getDebugInfo;
     }
 
-    /**
-     * Input blob path. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="input", required=true)
     private final Input<Object> input;
 
@@ -126,9 +93,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.input;
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -136,9 +100,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
-    /**
-     * Mapper executable name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="mapper", required=true)
     private final Input<Object> mapper;
 
@@ -146,9 +107,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.mapper;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -156,9 +114,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
-    /**
-     * Output blob path. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="output", required=true)
     private final Input<Object> output;
 
@@ -166,9 +121,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.output;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -176,9 +128,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.policy == null ? Input.empty() : this.policy;
     }
 
-    /**
-     * Reducer executable name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="reducer", required=true)
     private final Input<Object> reducer;
 
@@ -186,9 +135,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.reducer;
     }
 
-    /**
-     * Storage linked service references.
-     */
     @InputImport(name="storageLinkedServices")
     private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
@@ -196,10 +142,6 @@ public final class HDInsightStreamingActivityArgs extends io.pulumi.resources.Re
         return this.storageLinkedServices == null ? Input.empty() : this.storageLinkedServices;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'HDInsightStreaming'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -207,9 +149,6 @@ Expected value is 'HDInsightStreaming'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

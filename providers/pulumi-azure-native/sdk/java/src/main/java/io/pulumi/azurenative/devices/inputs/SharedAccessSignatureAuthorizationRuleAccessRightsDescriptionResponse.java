@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of the shared access key.
- */
 public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse Empty = new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse();
 
-    /**
-     * Name of the key.
-     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -27,9 +21,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
         return this.keyName;
     }
 
-    /**
-     * Primary SAS key value.
-     */
     @InputImport(name="primaryKey")
     private final @Nullable String primaryKey;
 
@@ -37,9 +28,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
         return this.primaryKey == null ? Optional.empty() : Optional.ofNullable(this.primaryKey);
     }
 
-    /**
-     * Rights that this key has.
-     */
     @InputImport(name="rights", required=true)
     private final String rights;
 
@@ -47,9 +35,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
         return this.rights;
     }
 
-    /**
-     * Secondary SAS key value.
-     */
     @InputImport(name="secondaryKey")
     private final @Nullable String secondaryKey;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Configuration for a secret volume. It has the information necessary to fetch the secret value from secret manager and make it available as files mounted at the requested paths within the application container. Secret value is not a part of the configuration. Every filesystem read operation performs a lookup in secret manager to retrieve the secret value.
- */
 public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretVolumeResponse Empty = new SecretVolumeResponse();
 
-    /**
-     * The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
-     */
     @InputImport(name="mountPath", required=true)
     private final String mountPath;
 
@@ -27,9 +21,6 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
         return this.mountPath;
     }
 
-    /**
-     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -37,9 +28,6 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
         return this.project;
     }
 
-    /**
-     * Name of the secret in secret manager (not the full resource name).
-     */
     @InputImport(name="secret", required=true)
     private final String secret;
 
@@ -47,9 +35,6 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
         return this.secret;
     }
 
-    /**
-     * List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
-     */
     @InputImport(name="versions", required=true)
     private final List<SecretVersionResponse> versions;
 

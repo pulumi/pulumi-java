@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Machine Learning dataset object.
- */
 public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetResponse Empty = new DatasetResponse();
 
-    /**
-     * The dataset creation time (UTC).
-     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -31,9 +25,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdTime;
     }
 
-    /**
-     * Unique Dataset identifier.
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -41,9 +32,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
-    /**
-     * Dataset state
-     */
     @InputImport(name="datasetState")
     private final @Nullable DatasetStateResponse datasetState;
 
@@ -51,9 +39,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.datasetState == null ? Optional.empty() : Optional.ofNullable(this.datasetState);
     }
 
-    /**
-     * Dataset Type.
-     */
     @InputImport(name="datasetType", required=true)
     private final String datasetType;
 
@@ -61,9 +46,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.datasetType;
     }
 
-    /**
-     * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
-     */
     @InputImport(name="defaultCompute", required=true)
     private final String defaultCompute;
 
@@ -71,9 +53,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.defaultCompute;
     }
 
-    /**
-     * Description about this dataset version.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -81,9 +60,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
-    /**
-     * eTag description
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -91,9 +67,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
-    /**
-     * Flag to hide Dataset in UI
-     */
     @InputImport(name="isVisible", required=true)
     private final Boolean isVisible;
 
@@ -101,9 +74,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.isVisible;
     }
 
-    /**
-     * Last created Dataset definition.
-     */
     @InputImport(name="latest")
     private final @Nullable DatasetResponseLatest latest;
 
@@ -111,9 +81,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.latest == null ? Optional.empty() : Optional.ofNullable(this.latest);
     }
 
-    /**
-     * The dataset last modified time (UTC).
-     */
     @InputImport(name="modifiedTime", required=true)
     private final String modifiedTime;
 
@@ -121,9 +88,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.modifiedTime;
     }
 
-    /**
-     * Unique dataset name
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -131,9 +95,6 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Tags for this dataset version.
-     */
     @InputImport(name="tags", required=true)
     private final Map<String,String> tags;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the configuration of the OpenShift cluster VMs.
- */
 public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OpenShiftManagedClusterAgentPoolProfileResponse Empty = new OpenShiftManagedClusterAgentPoolProfileResponse();
 
-    /**
-     * Number of agents (VMs) to host docker containers.
-     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -28,9 +22,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
         return this.count;
     }
 
-    /**
-     * Unique name of the pool profile in the context of the subscription and resource group.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,9 +29,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
         return this.name;
     }
 
-    /**
-     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -48,9 +36,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
-    /**
-     * Define the role of the AgentPoolProfile.
-     */
     @InputImport(name="role")
     private final @Nullable String role;
 
@@ -58,9 +43,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 
-    /**
-     * Subnet CIDR for the peering.
-     */
     @InputImport(name="subnetCidr")
     private final @Nullable String subnetCidr;
 
@@ -68,9 +50,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
         return this.subnetCidr == null ? Optional.empty() : Optional.ofNullable(this.subnetCidr);
     }
 
-    /**
-     * Size of agent VMs.
-     */
     @InputImport(name="vmSize", required=true)
     private final String vmSize;
 

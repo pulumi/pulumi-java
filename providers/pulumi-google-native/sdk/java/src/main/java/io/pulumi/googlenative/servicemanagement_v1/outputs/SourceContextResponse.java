@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceContextResponse {
-/**
- * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
- */
     private final String fileName;
 
     @OutputCustomType.Constructor({"fileName"})
@@ -19,9 +16,6 @@ public final class SourceContextResponse {
         this.fileName = Objects.requireNonNull(fileName);
     }
 
-/**
- * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
- */
     public String getFileName() {
         return this.fileName;
     }

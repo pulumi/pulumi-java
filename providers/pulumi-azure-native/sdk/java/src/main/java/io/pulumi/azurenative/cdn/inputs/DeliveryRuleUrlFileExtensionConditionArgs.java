@@ -10,17 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the UrlFileExtension condition for the delivery rule.
- */
 public final class DeliveryRuleUrlFileExtensionConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleUrlFileExtensionConditionArgs Empty = new DeliveryRuleUrlFileExtensionConditionArgs();
 
-    /**
-     * The name of the condition for the delivery rule.
-Expected value is 'UrlFileExtension'.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +21,6 @@ Expected value is 'UrlFileExtension'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the condition.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<UrlFileExtensionMatchConditionParametersArgs> parameters;
 

@@ -30,16 +30,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Excel dataset.
- */
 public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExcelDatasetArgs Empty = new ExcelDatasetArgs();
 
-    /**
-     * List of tags that can be used for describing the Dataset.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -47,9 +41,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The data compression method used for the json dataset.
-     */
     @InputImport(name="compression")
     private final @Nullable Input<DatasetCompressionArgs> compression;
 
@@ -57,9 +48,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
-    /**
-     * Dataset description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -67,9 +55,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="firstRowAsHeader")
     private final @Nullable Input<Object> firstRowAsHeader;
 
@@ -77,9 +62,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstRowAsHeader == null ? Input.empty() : this.firstRowAsHeader;
     }
 
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     */
     @InputImport(name="folder")
     private final @Nullable Input<DatasetFolderArgs> folder;
 
@@ -87,9 +69,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -97,9 +76,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName;
     }
 
-    /**
-     * The location of the excel storage.
-     */
     @InputImport(name="location", required=true)
     private final Input<Object> location;
 
@@ -107,9 +83,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
-    /**
-     * The null value string. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="nullValue")
     private final @Nullable Input<Object> nullValue;
 
@@ -117,9 +90,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.nullValue == null ? Input.empty() : this.nullValue;
     }
 
-    /**
-     * Parameters for dataset.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -127,9 +97,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The partial data of one sheet. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="range")
     private final @Nullable Input<Object> range;
 
@@ -137,9 +104,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.range == null ? Input.empty() : this.range;
     }
 
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 
@@ -147,9 +111,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
-    /**
-     * The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer)
-     */
     @InputImport(name="sheetIndex")
     private final @Nullable Input<Object> sheetIndex;
 
@@ -157,9 +118,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.sheetIndex == null ? Input.empty() : this.sheetIndex;
     }
 
-    /**
-     * The sheet name of excel file. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="sheetName")
     private final @Nullable Input<Object> sheetName;
 
@@ -167,9 +125,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.sheetName == null ? Input.empty() : this.sheetName;
     }
 
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     */
     @InputImport(name="structure")
     private final @Nullable Input<Object> structure;
 
@@ -177,10 +132,6 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.structure == null ? Input.empty() : this.structure;
     }
 
-    /**
-     * Type of dataset.
-Expected value is 'Excel'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -10,16 +10,10 @@ import io.pulumi.googlenative.gameservices_v1.inputs.DataAccessOptionsResponse;
 import java.util.Objects;
 
 
-/**
- * Specifies what kind of log the caller must write
- */
 public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogConfigResponse Empty = new LogConfigResponse();
 
-    /**
-     * Cloud audit options.
-     */
     @InputImport(name="cloudAudit", required=true)
     private final CloudAuditOptionsResponse cloudAudit;
 
@@ -27,9 +21,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudAudit;
     }
 
-    /**
-     * Counter options.
-     */
     @InputImport(name="counter", required=true)
     private final CounterOptionsResponse counter;
 
@@ -37,9 +28,6 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.counter;
     }
 
-    /**
-     * Data access options.
-     */
     @InputImport(name="dataAccess", required=true)
     private final DataAccessOptionsResponse dataAccess;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
- */
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1DatabaseTableSpecResponse Empty = new GoogleCloudDatacatalogV1DatabaseTableSpecResponse();
 
-    /**
-     * Type of this table.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

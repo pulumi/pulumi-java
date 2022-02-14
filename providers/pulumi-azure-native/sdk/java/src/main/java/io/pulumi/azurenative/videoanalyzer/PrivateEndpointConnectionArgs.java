@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
-    /**
-     * The Video Analyzer account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -28,9 +22,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.accountName;
     }
 
-    /**
-     * Private endpoint connection name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -48,9 +36,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

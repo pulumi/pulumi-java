@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetprivateLinkServicesForM365SecurityCenterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetprivateLinkServicesForM365SecurityCenterArgs Empty = new GetprivateLinkServicesForM365SecurityCenterArgs();
 
-    /**
-     * The name of the resource group that contains the service instance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetprivateLinkServicesForM365SecurityCenterArgs extends io.pu
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the service instance.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

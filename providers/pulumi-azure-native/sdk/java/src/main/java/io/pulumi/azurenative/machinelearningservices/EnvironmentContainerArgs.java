@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnvironmentContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentContainerArgs Empty = new EnvironmentContainerArgs();
 
-    /**
-     * Container name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Additional attributes of the entity.
-     */
     @InputImport(name="properties", required=true)
     private final Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentContainerArgs> properties;
 
@@ -37,9 +28,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
         return this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

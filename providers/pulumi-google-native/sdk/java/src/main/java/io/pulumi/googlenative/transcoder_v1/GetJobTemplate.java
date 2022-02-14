@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTemplate {
-/**
- * Returns the job template data.
- */
     public static CompletableFuture<GetJobTemplateResult> invokeAsync(GetJobTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:transcoder/v1:getJobTemplate", TypeShape.of(GetJobTemplateResult.class), args == null ? GetJobTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

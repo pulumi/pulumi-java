@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The filter expression to be used in the report.
- */
 public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportFilterResponse Empty = new ReportFilterResponse();
 
-    /**
-     * The logical "AND" expression. Must have at least 2 items.
-     */
     @InputImport(name="and")
     private final @Nullable List<ReportFilterResponse> and;
 
@@ -28,9 +22,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
         return this.and == null ? List.of() : this.and;
     }
 
-    /**
-     * Has comparison expression for a dimension
-     */
     @InputImport(name="dimension")
     private final @Nullable ReportComparisonExpressionResponse dimension;
 
@@ -38,9 +29,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
         return this.dimension == null ? Optional.empty() : Optional.ofNullable(this.dimension);
     }
 
-    /**
-     * The logical "NOT" expression.
-     */
     @InputImport(name="not")
     private final @Nullable ReportFilterResponse not;
 
@@ -48,9 +36,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
         return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
     }
 
-    /**
-     * The logical "OR" expression. Must have at least 2 items.
-     */
     @InputImport(name="or")
     private final @Nullable List<ReportFilterResponse> or;
 
@@ -58,9 +43,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
         return this.or == null ? List.of() : this.or;
     }
 
-    /**
-     * Has comparison expression for a tag
-     */
     @InputImport(name="tag")
     private final @Nullable ReportComparisonExpressionResponse tag;
 

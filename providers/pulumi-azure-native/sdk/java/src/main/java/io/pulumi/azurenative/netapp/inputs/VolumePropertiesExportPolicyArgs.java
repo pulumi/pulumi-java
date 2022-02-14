@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Set of export policy rules
- */
 public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumePropertiesExportPolicyArgs Empty = new VolumePropertiesExportPolicyArgs();
 
-    /**
-     * Export policy rule
-     */
     @InputImport(name="rules")
     private final @Nullable Input<List<ExportPolicyRuleArgs>> rules;
 

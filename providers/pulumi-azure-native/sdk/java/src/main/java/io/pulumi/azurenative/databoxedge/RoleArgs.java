@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleArgs Empty = new RoleArgs();
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -29,9 +23,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
-    /**
-     * Role type.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,RoleTypes>> kind;
 
@@ -39,9 +30,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The role name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,9 +37,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

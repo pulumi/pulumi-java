@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Ad break.
- */
 public final class AdBreakResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdBreakResponse Empty = new AdBreakResponse();
 
-    /**
-     * Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
-     */
     @InputImport(name="startTimeOffset", required=true)
     private final String startTimeOffset;
 

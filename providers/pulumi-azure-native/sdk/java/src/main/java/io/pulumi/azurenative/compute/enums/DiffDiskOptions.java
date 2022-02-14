@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the ephemeral disk settings for operating system disk.
- */
     @EnumType
     public enum DiffDiskOptions {
-/**
- * 
- */
         Local("Local");
 
         private final String value;

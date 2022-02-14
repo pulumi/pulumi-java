@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * End previous overlay animation from the video. Without AnimationEnd, the overlay object will keep the state of previous animation until the end of the video.
- */
 public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnimationEndArgs Empty = new AnimationEndArgs();
 
-    /**
-     * The time to end overlay object, in seconds. Default: 0
-     */
     @InputImport(name="startTimeOffset")
     private final @Nullable Input<String> startTimeOffset;
 

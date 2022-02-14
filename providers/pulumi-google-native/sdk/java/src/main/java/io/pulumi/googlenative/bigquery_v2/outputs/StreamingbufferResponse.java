@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StreamingbufferResponse {
-/**
- * A lower-bound estimate of the number of bytes currently in the streaming buffer.
- */
     private final String estimatedBytes;
-/**
- * A lower-bound estimate of the number of rows currently in the streaming buffer.
- */
     private final String estimatedRows;
-/**
- * Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
- */
     private final String oldestEntryTime;
 
     @OutputCustomType.Constructor({"estimatedBytes","estimatedRows","oldestEntryTime"})
@@ -32,21 +23,12 @@ public final class StreamingbufferResponse {
         this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
     }
 
-/**
- * A lower-bound estimate of the number of bytes currently in the streaming buffer.
- */
     public String getEstimatedBytes() {
         return this.estimatedBytes;
     }
-/**
- * A lower-bound estimate of the number of rows currently in the streaming buffer.
- */
     public String getEstimatedRows() {
         return this.estimatedRows;
     }
-/**
- * Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
- */
     public String getOldestEntryTime() {
         return this.oldestEntryTime;
     }

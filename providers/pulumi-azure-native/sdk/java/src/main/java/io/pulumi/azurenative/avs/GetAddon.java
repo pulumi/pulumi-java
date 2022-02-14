@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAddon {
-/**
- * An addon resource
-API Version: 2020-07-17-preview.
- *
- * An addon resource
- */
     public static CompletableFuture<GetAddonResult> invokeAsync(GetAddonArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getAddon", TypeShape.of(GetAddonResult.class), args == null ? GetAddonArgs.Empty : args, Utilities.withVersion(options));
     }

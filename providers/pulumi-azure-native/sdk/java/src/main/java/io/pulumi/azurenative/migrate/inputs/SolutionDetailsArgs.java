@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class representing the details of the solution.
- */
 public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SolutionDetailsArgs Empty = new SolutionDetailsArgs();
 
-    /**
-     * Gets or sets the count of assessments reported by the solution.
-     */
     @InputImport(name="assessmentCount")
     private final @Nullable Input<Integer> assessmentCount;
 
@@ -29,9 +23,6 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.assessmentCount == null ? Input.empty() : this.assessmentCount;
     }
 
-    /**
-     * Gets or sets the extended details reported by the solution.
-     */
     @InputImport(name="extendedDetails")
     private final @Nullable Input<Map<String,String>> extendedDetails;
 
@@ -39,9 +30,6 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.extendedDetails == null ? Input.empty() : this.extendedDetails;
     }
 
-    /**
-     * Gets or sets the count of groups reported by the solution.
-     */
     @InputImport(name="groupCount")
     private final @Nullable Input<Integer> groupCount;
 

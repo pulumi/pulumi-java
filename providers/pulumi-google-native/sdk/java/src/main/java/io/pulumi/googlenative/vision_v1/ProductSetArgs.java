@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProductSetArgs Empty = new ProductSetArgs();
 
-    /**
-     * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -27,9 +21,6 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,9 +28,6 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,9 +35,6 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="productSetId")
     private final @Nullable Input<String> productSetId;
 
@@ -57,9 +42,6 @@ public final class ProductSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.productSetId == null ? Input.empty() : this.productSetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

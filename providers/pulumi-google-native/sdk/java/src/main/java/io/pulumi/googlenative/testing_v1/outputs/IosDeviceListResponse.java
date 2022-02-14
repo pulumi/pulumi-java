@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IosDeviceListResponse {
-/**
- * A list of iOS devices.
- */
     private final List<IosDeviceResponse> iosDevices;
 
     @OutputCustomType.Constructor({"iosDevices"})
@@ -20,9 +17,6 @@ public final class IosDeviceListResponse {
         this.iosDevices = Objects.requireNonNull(iosDevices);
     }
 
-/**
- * A list of iOS devices.
- */
     public List<IosDeviceResponse> getIosDevices() {
         return this.iosDevices;
     }

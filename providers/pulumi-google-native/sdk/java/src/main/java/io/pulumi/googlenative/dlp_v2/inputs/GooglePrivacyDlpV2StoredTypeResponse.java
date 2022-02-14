@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A reference to a StoredInfoType to use with scanning.
- */
 public final class GooglePrivacyDlpV2StoredTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2StoredTypeResponse Empty = new GooglePrivacyDlpV2StoredTypeResponse();
 
-    /**
-     * Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -25,9 +19,6 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends io.pulumi.resour
         return this.createTime;
     }
 
-    /**
-     * Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

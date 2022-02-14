@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UtilizationReportArgs Empty = new UtilizationReportArgs();
 
-    /**
-     * The report display name, as assigned by the user.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,9 +24,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,9 +31,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,9 +38,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -60,9 +45,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sourceId", required=true)
     private final Input<String> sourceId;
 
@@ -70,9 +52,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.sourceId;
     }
 
-    /**
-     * Time frame of the report.
-     */
     @InputImport(name="timeFrame")
     private final @Nullable Input<UtilizationReportTimeFrame> timeFrame;
 
@@ -80,9 +59,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.timeFrame == null ? Input.empty() : this.timeFrame;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="utilizationReportId", required=true)
     private final Input<String> utilizationReportId;
 
@@ -90,9 +66,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
         return this.utilizationReportId;
     }
 
-    /**
-     * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
-     */
     @InputImport(name="vms")
     private final @Nullable Input<List<VmUtilizationInfoArgs>> vms;
 

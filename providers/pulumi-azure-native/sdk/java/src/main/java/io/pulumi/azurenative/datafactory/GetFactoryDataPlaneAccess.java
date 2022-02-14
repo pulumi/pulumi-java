@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFactoryDataPlaneAccess {
-/**
- * Get Data Plane read only token response definition.
-API Version: 2018-06-01.
- *
- * Get Data Plane read only token response definition.
- */
     public static CompletableFuture<GetFactoryDataPlaneAccessResult> invokeAsync(GetFactoryDataPlaneAccessArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryDataPlaneAccess", TypeShape.of(GetFactoryDataPlaneAccessResult.class), args == null ? GetFactoryDataPlaneAccessArgs.Empty : args, Utilities.withVersion(options));
     }

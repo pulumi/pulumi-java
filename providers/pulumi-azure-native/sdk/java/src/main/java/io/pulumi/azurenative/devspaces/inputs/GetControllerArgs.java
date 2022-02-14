@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetControllerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetControllerArgs Empty = new GetControllerArgs();
 
-    /**
-     * Name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetControllerArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

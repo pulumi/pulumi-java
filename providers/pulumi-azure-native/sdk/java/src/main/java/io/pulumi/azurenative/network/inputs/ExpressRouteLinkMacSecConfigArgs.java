@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ExpressRouteLink Mac Security Configuration.
- */
 public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteLinkMacSecConfigArgs Empty = new ExpressRouteLinkMacSecConfigArgs();
 
-    /**
-     * Keyvault Secret Identifier URL containing Mac security CAK key.
-     */
     @InputImport(name="cakSecretIdentifier")
     private final @Nullable Input<String> cakSecretIdentifier;
 
@@ -30,9 +24,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
         return this.cakSecretIdentifier == null ? Input.empty() : this.cakSecretIdentifier;
     }
 
-    /**
-     * Mac security cipher.
-     */
     @InputImport(name="cipher")
     private final @Nullable Input<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
 
@@ -40,9 +31,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
         return this.cipher == null ? Input.empty() : this.cipher;
     }
 
-    /**
-     * Keyvault Secret Identifier URL containing Mac security CKN key.
-     */
     @InputImport(name="cknSecretIdentifier")
     private final @Nullable Input<String> cknSecretIdentifier;
 
@@ -50,9 +38,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
         return this.cknSecretIdentifier == null ? Input.empty() : this.cknSecretIdentifier;
     }
 
-    /**
-     * Sci mode enabled/disabled.
-     */
     @InputImport(name="sciState")
     private final @Nullable Input<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
 

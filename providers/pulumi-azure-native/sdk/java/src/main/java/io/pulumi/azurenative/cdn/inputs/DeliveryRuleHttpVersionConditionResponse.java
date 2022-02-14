@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the HttpVersion condition for the delivery rule.
- */
 public final class DeliveryRuleHttpVersionConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleHttpVersionConditionResponse Empty = new DeliveryRuleHttpVersionConditionResponse();
 
-    /**
-     * The name of the condition for the delivery rule.
-Expected value is 'HttpVersion'.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +20,6 @@ Expected value is 'HttpVersion'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the condition.
-     */
     @InputImport(name="parameters", required=true)
     private final HttpVersionMatchConditionParametersResponse parameters;
 

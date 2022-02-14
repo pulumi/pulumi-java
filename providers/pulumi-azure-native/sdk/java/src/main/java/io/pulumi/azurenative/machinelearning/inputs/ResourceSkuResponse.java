@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The SKU of a resource.
- */
 public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceSkuResponse Empty = new ResourceSkuResponse();
 
-    /**
-     * The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * The SKU name. Along with tier, uniquely identifies the SKU.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The SKU tier. Along with name, uniquely identifies the SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

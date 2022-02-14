@@ -17,427 +17,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
-
-This resource waits until its status is ready before registering success
-for create/update, and populating output properties from the current state of the resource.
-The following conditions are used to determine whether the resource creation has
-succeeded or failed:
-
-1.  Ingress object exists.
-2.  Endpoint objects exist with matching names for each Ingress path (except when Service
-    type is ExternalName).
-3.  Ingress entry exists for '.status.loadBalancer.ingress'.
-
-If the Ingress has not reached a Ready state after 10 minutes, it will
-time out and mark the resource update as Failed. You can override the default timeout value
-by setting the 'customTimeouts' option on the resource.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create an Ingress with auto-naming
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as kubernetes from "@pulumi/kubernetes";
-
-const ingress = new kubernetes.networking.v1.Ingress("minimal_ingress", {
-    metadata: {
-        annotations: {
-            "nginx.ingress.kubernetes.io/rewrite-target": "/",
-        },
-    },
-    spec: {
-        rules: [{
-            http: {
-                paths: [{
-                    path: "/testpath",
-                    pathType: "Prefix",
-                    backend: {
-                        service: {
-                            name: "test",
-                            port: {
-                                number: 80,
-                            },
-                        },
-                    },
-                }],
-            },
-        }],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_kubernetes as kubernetes
-
-minimal_ingress = kubernetes.networking.v1.Ingress(
-    "minimal_ingress",
-    metadata=kubernetes.meta.v1.ObjectMetaArgs(
-        annotations={
-            "nginx.ingress.kubernetes.io/rewrite-target": "/",
-        },
-    ),
-    spec=kubernetes.networking.v1.IngressSpecArgs(
-        rules=[kubernetes.networking.v1.IngressRuleArgs(
-            http=kubernetes.networking.v1.HTTPIngressRuleValueArgs(
-                paths=[kubernetes.networking.v1.HTTPIngressPathArgs(
-                    path="/testpath",
-                    path_type="Prefix",
-                    backend=kubernetes.networking.v1.IngressBackendArgs(
-                        service=kubernetes.networking.v1.IngressServiceBackendArgs(
-                            name="test",
-                            port=kubernetes.networking.v1.ServiceBackendPortArgs(
-                                number=80,
-                            ),
-                        ),
-                    ),
-                )],
-            ),
-        )],
-    ))
-```
-```csharp
-using Pulumi;
-using Kubernetes = Pulumi.Kubernetes;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var minimalIngress = new Kubernetes.Networking.V1.Ingress("minimal_ingress", new Kubernetes.Types.Inputs.Networking.V1.IngressArgs
-        {
-            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
-            {
-                Annotations = 
-                {
-                    { "nginx.ingress.kubernetes.io/rewrite-target", "/" },
-                },
-            },
-            Spec = new Kubernetes.Types.Inputs.Networking.V1.IngressSpecArgs
-            {
-                Rules = 
-                {
-                    new Kubernetes.Types.Inputs.Networking.V1.IngressRuleArgs
-                    {
-                        Http = new Kubernetes.Types.Inputs.Networking.V1.HTTPIngressRuleValueArgs
-                        {
-                            Paths = 
-                            {
-                                new Kubernetes.Types.Inputs.Networking.V1.HTTPIngressPathArgs
-                                {
-                                    Path = "/testpath",
-                                    PathType = "Prefix",
-                                    Backend = new Kubernetes.Types.Inputs.Networking.V1.IngressBackendArgs
-                                    {
-                                        Service = new Kubernetes.Types.Inputs.Networking.V1.IngressServiceBackendArgs
-                                        {
-                                            Name = "test",
-                                            Port = new Kubernetes.Types.Inputs.Networking.V1.ServiceBackendPortArgs
-                                            {
-                                                Number = 80,
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-        });
-    }
-}
-```
-```go
-package main
-
-import (
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-	networkingv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/networking/v1"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := networkingv1.NewIngress(ctx, "minimal_ingress", &networkingv1.IngressArgs{
-			Metadata: &metav1.ObjectMetaArgs{
-				Annotations: pulumi.StringMap{
-					"nginx.ingress.kubernetes.io/rewrite-target": pulumi.String("/"),
-				},
-			},
-			Spec: &networkingv1.IngressSpecArgs{
-				Rules: networkingv1.IngressRuleArray{
-					&networkingv1.IngressRuleArgs{
-						Http: &networkingv1.HTTPIngressRuleValueArgs{
-							Paths: networkingv1.HTTPIngressPathArray{
-								&networkingv1.HTTPIngressPathArgs{
-									Path:     pulumi.String("/testpath"),
-									PathType: pulumi.String("Prefix"),
-									Backend: &networkingv1.IngressBackendArgs{
-										Service: &networkingv1.IngressServiceBackendArgs{
-											Name: pulumi.String("test"),
-											Port: &networkingv1.ServiceBackendPortArgs{
-												Number: pulumi.Int(80),
-											},
-										},
-									},
-								},
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{{% example %}}
-### Create an Ingress with a user-specified name
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as kubernetes from "@pulumi/kubernetes";
-
-const ingress = new kubernetes.networking.v1.Ingress("minimal_ingress", {
-    metadata: {
-        name: "minimal-ingress",
-        annotations: {
-            "nginx.ingress.kubernetes.io/rewrite-target": "/",
-        },
-    },
-    spec: {
-        rules: [{
-            http: {
-                paths: [{
-                    path: "/testpath",
-                    pathType: "Prefix",
-                    backend: {
-                        service: {
-                            name: "test",
-                            port: {
-                                number: 80,
-                            },
-                        },
-                    },
-                }],
-            },
-        }],
-    },
-});
-```
-```python
-import pulumi
-import pulumi_kubernetes as kubernetes
-
-minimal_ingress = kubernetes.networking.v1.Ingress(
-    "minimal_ingress",
-    metadata=kubernetes.meta.v1.ObjectMetaArgs(
-        name="minimal-ingress",
-        annotations={
-            "nginx.ingress.kubernetes.io/rewrite-target": "/",
-        },
-    ),
-    spec=kubernetes.networking.v1.IngressSpecArgs(
-        rules=[kubernetes.networking.v1.IngressRuleArgs(
-            http=kubernetes.networking.v1.HTTPIngressRuleValueArgs(
-                paths=[kubernetes.networking.v1.HTTPIngressPathArgs(
-                    path="/testpath",
-                    path_type="Prefix",
-                    backend=kubernetes.networking.v1.IngressBackendArgs(
-                        service=kubernetes.networking.v1.IngressServiceBackendArgs(
-                            name="test",
-                            port=kubernetes.networking.v1.ServiceBackendPortArgs(
-                                number=80,
-                            ),
-                        ),
-                    ),
-                )],
-            ),
-        )],
-    ))
-```
-```csharp
-using Pulumi;
-using Kubernetes = Pulumi.Kubernetes;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var minimalIngress = new Kubernetes.Networking.V1.Ingress("minimal_ingress", new Kubernetes.Types.Inputs.Networking.V1.IngressArgs
-        {
-            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
-            {
-                Name = "minimal-ingress",
-                Annotations = 
-                {
-                    { "nginx.ingress.kubernetes.io/rewrite-target", "/" },
-                },
-            },
-            Spec = new Kubernetes.Types.Inputs.Networking.V1.IngressSpecArgs
-            {
-                Rules = 
-                {
-                    new Kubernetes.Types.Inputs.Networking.V1.IngressRuleArgs
-                    {
-                        Http = new Kubernetes.Types.Inputs.Networking.V1.HTTPIngressRuleValueArgs
-                        {
-                            Paths = 
-                            {
-                                new Kubernetes.Types.Inputs.Networking.V1.HTTPIngressPathArgs
-                                {
-                                    Path = "/testpath",
-                                    PathType = "Prefix",
-                                    Backend = new Kubernetes.Types.Inputs.Networking.V1.IngressBackendArgs
-                                    {
-                                        Service = new Kubernetes.Types.Inputs.Networking.V1.IngressServiceBackendArgs
-                                        {
-                                            Name = "test",
-                                            Port = new Kubernetes.Types.Inputs.Networking.V1.ServiceBackendPortArgs
-                                            {
-                                                Number = 80,
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-        });
-    }
-}
-```
-```go
-package main
-
-import (
-	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-	networkingv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/networking/v1"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := networkingv1.NewIngress(ctx, "minimal_ingress", &networkingv1.IngressArgs{
-			Metadata: &metav1.ObjectMetaArgs{
-				Name: pulumi.String("minimal-ingress"),
-				Annotations: pulumi.StringMap{
-					"nginx.ingress.kubernetes.io/rewrite-target": pulumi.String("/"),
-				},
-			},
-			Spec: &networkingv1.IngressSpecArgs{
-				Rules: networkingv1.IngressRuleArray{
-					&networkingv1.IngressRuleArgs{
-						Http: &networkingv1.HTTPIngressRuleValueArgs{
-							Paths: networkingv1.HTTPIngressPathArray{
-								&networkingv1.HTTPIngressPathArgs{
-									Path:     pulumi.String("/testpath"),
-									PathType: pulumi.String("Prefix"),
-									Backend: &networkingv1.IngressBackendArgs{
-										Service: &networkingv1.IngressServiceBackendArgs{
-											Name: pulumi.String("test"),
-											Port: &networkingv1.ServiceBackendPortArgs{
-												Number: pulumi.Int(80),
-											},
-										},
-									},
-								},
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{% /examples %}}
-
- */
 @ResourceType(type="kubernetes:networking.k8s.io/v1:Ingress")
 public class Ingress extends io.pulumi.resources.CustomResource {
-    /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
-    /**
-     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
-    /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
-    /**
-     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
-    /**
-     * Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     @OutputExport(name="spec", type=IngressSpec.class, parameters={})
     private Output</* @Nullable */ IngressSpec> spec;
 
-    /**
-     * @return Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     public Output</* @Nullable */ IngressSpec> getSpec() {
         return this.spec;
     }
-    /**
-     * Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     @OutputExport(name="status", type=IngressStatus.class, parameters={})
     private Output</* @Nullable */ IngressStatus> status;
 
-    /**
-     * @return Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     public Output</* @Nullable */ IngressStatus> getStatus() {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Ingress(String name, @Nullable IngressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:networking.k8s.io/v1:Ingress", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -465,14 +77,6 @@ public class Ingress extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Ingress get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Ingress(name, id, options);
     }

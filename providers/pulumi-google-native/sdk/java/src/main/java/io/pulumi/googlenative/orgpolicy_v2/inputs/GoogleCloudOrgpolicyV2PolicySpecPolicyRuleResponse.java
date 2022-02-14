@@ -10,16 +10,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * A rule used to express this policy.
- */
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse Empty = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse();
 
-    /**
-     * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
-     */
     @InputImport(name="allowAll", required=true)
     private final Boolean allowAll;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
         return this.allowAll;
     }
 
-    /**
-     * A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&&" operators. Each subexpression must be of the form "resource.matchTag('/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".
-     */
     @InputImport(name="condition", required=true)
     private final GoogleTypeExprResponse condition;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
         return this.condition;
     }
 
-    /**
-     * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
-     */
     @InputImport(name="denyAll", required=true)
     private final Boolean denyAll;
 
@@ -47,9 +35,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
         return this.denyAll;
     }
 
-    /**
-     * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
-     */
     @InputImport(name="enforce", required=true)
     private final Boolean enforce;
 
@@ -57,9 +42,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
         return this.enforce;
     }
 
-    /**
-     * List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints.
-     */
     @InputImport(name="values", required=true)
     private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
 

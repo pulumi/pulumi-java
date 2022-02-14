@@ -8,16 +8,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import java.util.Objects;
 
 
-/**
- * Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more.
- */
 public final class GooglePrivacyDlpV2CryptoHashConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2CryptoHashConfigResponse Empty = new GooglePrivacyDlpV2CryptoHashConfigResponse();
 
-    /**
-     * The key used by the hash function.
-     */
     @InputImport(name="cryptoKey", required=true)
     private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 

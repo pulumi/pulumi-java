@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Replica Set Definition
- */
 public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicaSetResponse Empty = new ReplicaSetResponse();
 
-    /**
-     * List of Domain Controller IP Address
-     */
     @InputImport(name="domainControllerIpAddress", required=true)
     private final List<String> domainControllerIpAddress;
 
@@ -30,9 +24,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.domainControllerIpAddress;
     }
 
-    /**
-     * External access ip address.
-     */
     @InputImport(name="externalAccessIpAddress", required=true)
     private final String externalAccessIpAddress;
 
@@ -40,9 +31,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.externalAccessIpAddress;
     }
 
-    /**
-     * List of Domain Health Alerts
-     */
     @InputImport(name="healthAlerts", required=true)
     private final List<HealthAlertResponse> healthAlerts;
 
@@ -50,9 +38,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.healthAlerts;
     }
 
-    /**
-     * Last domain evaluation run DateTime
-     */
     @InputImport(name="healthLastEvaluated", required=true)
     private final String healthLastEvaluated;
 
@@ -60,9 +45,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.healthLastEvaluated;
     }
 
-    /**
-     * List of Domain Health Monitors
-     */
     @InputImport(name="healthMonitors", required=true)
     private final List<HealthMonitorResponse> healthMonitors;
 
@@ -70,9 +52,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.healthMonitors;
     }
 
-    /**
-     * Virtual network location
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -80,9 +59,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * ReplicaSet Id
-     */
     @InputImport(name="replicaSetId", required=true)
     private final String replicaSetId;
 
@@ -90,9 +66,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.replicaSetId;
     }
 
-    /**
-     * Status of Domain Service instance
-     */
     @InputImport(name="serviceStatus", required=true)
     private final String serviceStatus;
 
@@ -100,9 +73,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceStatus;
     }
 
-    /**
-     * The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
-     */
     @InputImport(name="subnetId")
     private final @Nullable String subnetId;
 
@@ -110,9 +80,6 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
-    /**
-     * Virtual network site id
-     */
     @InputImport(name="vnetSiteId", required=true)
     private final String vnetSiteId;
 

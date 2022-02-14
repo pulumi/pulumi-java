@@ -8,16 +8,10 @@ import io.pulumi.googlenative.eventarc_v1beta1.inputs.CloudRunServiceResponse;
 import java.util.Objects;
 
 
-/**
- * Represents a target of an invocation over HTTP.
- */
 public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DestinationResponse Empty = new DestinationResponse();
 
-    /**
-     * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
-     */
     @InputImport(name="cloudRunService", required=true)
     private final CloudRunServiceResponse cloudRunService;
 

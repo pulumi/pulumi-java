@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Share kind.
- */
     @EnumType
     public enum ShareKind {
-/**
- * 
- */
         CopyBased("CopyBased"),
-/**
- * 
- */
         InPlace("InPlace");
 
         private final String value;

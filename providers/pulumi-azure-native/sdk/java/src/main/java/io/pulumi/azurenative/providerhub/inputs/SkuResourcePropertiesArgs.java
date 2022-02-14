@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuResourcePropertiesArgs Empty = new SkuResourcePropertiesArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -31,9 +25,6 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="skuSettings", required=true)
     private final Input<List<SkuSettingArgs>> skuSettings;
 

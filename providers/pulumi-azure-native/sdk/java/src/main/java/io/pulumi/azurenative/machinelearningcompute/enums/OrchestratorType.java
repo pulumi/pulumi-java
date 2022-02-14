@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of orchestrator. It cannot be changed once the cluster is created.
- */
     @EnumType
     public enum OrchestratorType {
-/**
- * 
- */
         Kubernetes("Kubernetes"),
-/**
- * 
- */
         None("None");
 
         private final String value;

@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuResourceResponseProperties {
-/**
- * 
- */
     private final @Nullable String provisioningState;
-/**
- * 
- */
     private final List<SkuSettingResponse> skuSettings;
 
     @OutputCustomType.Constructor({"provisioningState","skuSettings"})
@@ -30,15 +24,9 @@ public final class SkuResourceResponseProperties {
         this.skuSettings = Objects.requireNonNull(skuSettings);
     }
 
-/**
- * 
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * 
- */
     public List<SkuSettingResponse> getSkuSettings() {
         return this.skuSettings;
     }

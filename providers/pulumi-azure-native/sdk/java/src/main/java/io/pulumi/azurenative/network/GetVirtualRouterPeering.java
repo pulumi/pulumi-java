@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualRouterPeering {
-/**
- * Virtual Router Peering resource.
-API Version: 2020-08-01.
- *
- * Virtual Router Peering resource.
- */
     public static CompletableFuture<GetVirtualRouterPeeringResult> invokeAsync(GetVirtualRouterPeeringArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualRouterPeering", TypeShape.of(GetVirtualRouterPeeringResult.class), args == null ? GetVirtualRouterPeeringArgs.Empty : args, Utilities.withVersion(options));
     }

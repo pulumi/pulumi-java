@@ -17,348 +17,111 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Details of a particular extension in HCI Cluster.
-API Version: 2021-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create Arc Extension
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var extension = new AzureNative.AzureStackHCI.Extension("extension", new AzureNative.AzureStackHCI.ExtensionArgs
-        {
-            ArcSettingName = "default",
-            ClusterName = "myCluster",
-            ExtensionName = "MicrosoftMonitoringAgent",
-            ProtectedSettings = 
-            {
-                { "workspaceKey", "xx" },
-            },
-            Publisher = "Microsoft.Compute",
-            ResourceGroupName = "test-rg",
-            Settings = 
-            {
-                { "workspaceId", "xx" },
-            },
-            Type = "MicrosoftMonitoringAgent",
-            TypeHandlerVersion = "1.10",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	azurestackhci "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurestackhci"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := azurestackhci.NewExtension(ctx, "extension", &azurestackhci.ExtensionArgs{
-			ArcSettingName: pulumi.String("default"),
-			ClusterName:    pulumi.String("myCluster"),
-			ExtensionName:  pulumi.String("MicrosoftMonitoringAgent"),
-			ProtectedSettings: pulumi.Any{
-				WorkspaceKey: "xx",
-			},
-			Publisher:         pulumi.String("Microsoft.Compute"),
-			ResourceGroupName: pulumi.String("test-rg"),
-			Settings: pulumi.Any{
-				WorkspaceId: "xx",
-			},
-			Type:               pulumi.String("MicrosoftMonitoringAgent"),
-			TypeHandlerVersion: pulumi.String("1.10"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const extension = new azure_native.azurestackhci.Extension("extension", {
-    arcSettingName: "default",
-    clusterName: "myCluster",
-    extensionName: "MicrosoftMonitoringAgent",
-    protectedSettings: {
-        workspaceKey: "xx",
-    },
-    publisher: "Microsoft.Compute",
-    resourceGroupName: "test-rg",
-    settings: {
-        workspaceId: "xx",
-    },
-    type: "MicrosoftMonitoringAgent",
-    typeHandlerVersion: "1.10",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-extension = azure_native.azurestackhci.Extension("extension",
-    arc_setting_name="default",
-    cluster_name="myCluster",
-    extension_name="MicrosoftMonitoringAgent",
-    protected_settings={
-        "workspaceKey": "xx",
-    },
-    publisher="Microsoft.Compute",
-    resource_group_name="test-rg",
-    settings={
-        "workspaceId": "xx",
-    },
-    type="MicrosoftMonitoringAgent",
-    type_handler_version="1.10")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:azurestackhci:Extension MicrosoftMonitoringAgent /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/test-rg/providers/Microsoft.AzureStackHCI/clusters/myCluster/arcSettings/default/extensions/MicrosoftMonitoringAgent 
-```
-
- */
 @ResourceType(type="azure-native:azurestackhci:Extension")
 public class Extension extends io.pulumi.resources.CustomResource {
-    /**
-     * Aggregate state of Arc Extensions across the nodes in this HCI cluster.
-     */
     @OutputExport(name="aggregateState", type=String.class, parameters={})
     private Output<String> aggregateState;
 
-    /**
-     * @return Aggregate state of Arc Extensions across the nodes in this HCI cluster.
-     */
     public Output<String> getAggregateState() {
         return this.aggregateState;
     }
-    /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     */
     @OutputExport(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
-    /**
-     * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     */
     public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
-    /**
-     * @return The timestamp of resource creation (UTC).
-     */
     public Output</* @Nullable */ String> getCreatedAt() {
         return this.createdAt;
     }
-    /**
-     * The identity that created the resource.
-     */
     @OutputExport(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
-    /**
-     * @return The identity that created the resource.
-     */
     public Output</* @Nullable */ String> getCreatedBy() {
         return this.createdBy;
     }
-    /**
-     * The type of identity that created the resource.
-     */
     @OutputExport(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
-    /**
-     * @return The type of identity that created the resource.
-     */
     public Output</* @Nullable */ String> getCreatedByType() {
         return this.createdByType;
     }
-    /**
-     * How the extension handler should be forced to update even if the extension configuration has not changed.
-     */
     @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
-    /**
-     * @return How the extension handler should be forced to update even if the extension configuration has not changed.
-     */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
-    /**
-     * The timestamp of resource last modification (UTC)
-     */
     @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
-    /**
-     * @return The timestamp of resource last modification (UTC)
-     */
     public Output</* @Nullable */ String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    /**
-     * The identity that last modified the resource.
-     */
     @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
-    /**
-     * @return The identity that last modified the resource.
-     */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    /**
-     * The type of identity that last modified the resource.
-     */
     @OutputExport(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
-    /**
-     * @return The type of identity that last modified the resource.
-     */
     public Output</* @Nullable */ String> getLastModifiedByType() {
         return this.lastModifiedByType;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * State of Arc Extension in each of the nodes.
-     */
     @OutputExport(name="perNodeExtensionDetails", type=List.class, parameters={PerNodeExtensionStateResponse.class})
     private Output<List<PerNodeExtensionStateResponse>> perNodeExtensionDetails;
 
-    /**
-     * @return State of Arc Extension in each of the nodes.
-     */
     public Output<List<PerNodeExtensionStateResponse>> getPerNodeExtensionDetails() {
         return this.perNodeExtensionDetails;
     }
-    /**
-     * Protected settings (may contain secrets).
-     */
     @OutputExport(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
-    /**
-     * @return Protected settings (may contain secrets).
-     */
     public Output</* @Nullable */ Object> getProtectedSettings() {
         return this.protectedSettings;
     }
-    /**
-     * Provisioning state of the Extension proxy resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the Extension proxy resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The name of the extension handler publisher.
-     */
     @OutputExport(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
-    /**
-     * @return The name of the extension handler publisher.
-     */
     public Output</* @Nullable */ String> getPublisher() {
         return this.publisher;
     }
-    /**
-     * Json formatted public settings for the extension.
-     */
     @OutputExport(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
-    /**
-     * @return Json formatted public settings for the extension.
-     */
     public Output</* @Nullable */ Object> getSettings() {
         return this.settings;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Specifies the version of the script handler.
-     */
     @OutputExport(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
-    /**
-     * @return Specifies the version of the script handler.
-     */
     public Output</* @Nullable */ String> getTypeHandlerVersion() {
         return this.typeHandlerVersion;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Extension(String name, ExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azurestackhci:Extension", name, args == null ? ExtensionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -379,14 +142,6 @@ public class Extension extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Extension get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Extension(name, id, options);
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PlanDataResponse Empty = new PlanDataResponse();
 
-    /**
-     * different billing cycles like MONTHLY/WEEKLY. this could be enum
-     */
     @InputImport(name="billingCycle")
     private final @Nullable String billingCycle;
 
@@ -27,9 +21,6 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.billingCycle == null ? Optional.empty() : Optional.ofNullable(this.billingCycle);
     }
 
-    /**
-     * date when plan was applied
-     */
     @InputImport(name="effectiveDate")
     private final @Nullable String effectiveDate;
 
@@ -37,9 +28,6 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.effectiveDate == null ? Optional.empty() : Optional.ofNullable(this.effectiveDate);
     }
 
-    /**
-     * plan id as published by Logz
-     */
     @InputImport(name="planDetails")
     private final @Nullable String planDetails;
 
@@ -47,9 +35,6 @@ public final class PlanDataResponse extends io.pulumi.resources.InvokeArgs {
         return this.planDetails == null ? Optional.empty() : Optional.ofNullable(this.planDetails);
     }
 
-    /**
-     * different usage type like PAYG/COMMITTED. this could be enum
-     */
     @InputImport(name="usageType")
     private final @Nullable String usageType;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceGuardProxyArgs Empty = new ResourceGuardProxyArgs();
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -27,9 +21,6 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="resourceGuardProxyName")
     private final @Nullable Input<String> resourceGuardProxyName;
 
@@ -37,9 +28,6 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGuardProxyName == null ? Input.empty() : this.resourceGuardProxyName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="vaultName", required=true)
     private final Input<String> vaultName;
 

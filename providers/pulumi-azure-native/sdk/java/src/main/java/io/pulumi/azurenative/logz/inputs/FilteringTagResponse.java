@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The definition of a filtering tag. Filtering tags are used for capturing resources and include/exclude them from being monitored.
- */
 public final class FilteringTagResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FilteringTagResponse Empty = new FilteringTagResponse();
 
-    /**
-     * Valid actions for a filtering tag. Exclusion takes priority over inclusion.
-     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -27,9 +21,6 @@ public final class FilteringTagResponse extends io.pulumi.resources.InvokeArgs {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
-    /**
-     * The name (also known as the key) of the tag.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,9 +28,6 @@ public final class FilteringTagResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The value of the tag.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

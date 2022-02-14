@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure File Storage linked service.
- */
 public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileStorageLinkedServiceArgs Empty = new AzureFileStorageLinkedServiceArgs();
 
-    /**
-     * The Azure key vault secret reference of accountKey in connection string.
-     */
     @InputImport(name="accountKey")
     private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey;
 
@@ -35,9 +29,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.accountKey == null ? Input.empty() : this.accountKey;
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -45,9 +36,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -55,9 +43,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString")
     private final @Nullable Input<Object> connectionString;
 
@@ -65,9 +50,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.connectionString == null ? Input.empty() : this.connectionString;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -75,9 +57,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -85,9 +64,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileShare")
     private final @Nullable Input<Object> fileShare;
 
@@ -95,9 +71,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.fileShare == null ? Input.empty() : this.fileShare;
     }
 
-    /**
-     * Host name of the server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="host")
     private final @Nullable Input<Object> host;
 
@@ -105,9 +78,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -115,9 +85,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password to logon the server.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -125,9 +92,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The Azure key vault secret reference of sasToken in sas uri.
-     */
     @InputImport(name="sasToken")
     private final @Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken;
 
@@ -135,9 +99,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.sasToken == null ? Input.empty() : this.sasToken;
     }
 
-    /**
-     * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="sasUri")
     private final @Nullable Input<Object> sasUri;
 
@@ -145,9 +106,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.sasUri == null ? Input.empty() : this.sasUri;
     }
 
-    /**
-     * The azure file share snapshot version. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="snapshot")
     private final @Nullable Input<Object> snapshot;
 
@@ -155,10 +113,6 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
         return this.snapshot == null ? Input.empty() : this.snapshot;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureFileStorage'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -166,9 +120,6 @@ Expected value is 'AzureFileStorage'.
         return this.type;
     }
 
-    /**
-     * User ID to logon the server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userId")
     private final @Nullable Input<Object> userId;
 

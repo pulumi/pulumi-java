@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedServiceIdentityResponse {
-/**
- * Principal Id of managed service identity.
- */
     private final String principalId;
-/**
- * Tenant of managed service identity.
- */
     private final String tenantId;
-/**
- * Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
- */
     private final String type;
-/**
- * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
- */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -41,27 +29,15 @@ public final class ManagedServiceIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
-/**
- * Principal Id of managed service identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * Tenant of managed service identity.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * Type of managed service identity. The type 'SystemAssigned' includes an implicitly created identity. The type 'None' will remove any identities from the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
- */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * App Engine service. Learn more at https://cloud.google.com/appengine.
- */
 public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppEngineArgs Empty = new AppEngineArgs();
 
-    /**
-     * The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
-     */
     @InputImport(name="moduleId")
     private final @Nullable Input<String> moduleId;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OpenIdConnectProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenIdConnectProviderArgs Empty = new OpenIdConnectProviderArgs();
 
-    /**
-     * Client ID of developer console which is the client application.
-     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -27,9 +21,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.clientId;
     }
 
-    /**
-     * Client Secret of developer console which is the client application.
-     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -37,9 +28,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
-    /**
-     * User-friendly description of OpenID Connect Provider.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,9 +35,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * User-friendly OpenID Connect Provider name.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -57,9 +42,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.displayName;
     }
 
-    /**
-     * Metadata endpoint URI.
-     */
     @InputImport(name="metadataEndpoint", required=true)
     private final Input<String> metadataEndpoint;
 
@@ -67,9 +49,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.metadataEndpoint;
     }
 
-    /**
-     * Identifier of the OpenID Connect Provider.
-     */
     @InputImport(name="opid")
     private final @Nullable Input<String> opid;
 
@@ -77,9 +56,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.opid == null ? Input.empty() : this.opid;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -87,9 +63,6 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

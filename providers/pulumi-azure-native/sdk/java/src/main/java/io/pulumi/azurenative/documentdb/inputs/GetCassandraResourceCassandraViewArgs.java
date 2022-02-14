@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCassandraResourceCassandraViewArgs Empty = new GetCassandraResourceCassandraViewArgs();
 
-    /**
-     * Cosmos DB database account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
         return this.accountName;
     }
 
-    /**
-     * Cosmos DB keyspace name.
-     */
     @InputImport(name="keyspaceName", required=true)
     private final String keyspaceName;
 
@@ -35,9 +26,6 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
         return this.keyspaceName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
         return this.resourceGroupName;
     }
 
-    /**
-     * Cosmos DB view name.
-     */
     @InputImport(name="viewName", required=true)
     private final String viewName;
 

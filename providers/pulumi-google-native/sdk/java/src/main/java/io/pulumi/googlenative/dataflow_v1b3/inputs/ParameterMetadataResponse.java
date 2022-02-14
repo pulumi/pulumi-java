@@ -11,16 +11,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Metadata for a specific parameter.
- */
 public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterMetadataResponse Empty = new ParameterMetadataResponse();
 
-    /**
-     * Optional. Additional metadata for describing this parameter.
-     */
     @InputImport(name="customMetadata", required=true)
     private final Map<String,String> customMetadata;
 
@@ -28,9 +22,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
         return this.customMetadata;
     }
 
-    /**
-     * The help text to display for the parameter.
-     */
     @InputImport(name="helpText", required=true)
     private final String helpText;
 
@@ -38,9 +29,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
         return this.helpText;
     }
 
-    /**
-     * Optional. Whether the parameter is optional. Defaults to false.
-     */
     @InputImport(name="isOptional", required=true)
     private final Boolean isOptional;
 
@@ -48,9 +36,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
         return this.isOptional;
     }
 
-    /**
-     * The label to display for the parameter.
-     */
     @InputImport(name="label", required=true)
     private final String label;
 
@@ -58,9 +43,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
         return this.label;
     }
 
-    /**
-     * The name of the parameter.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -68,9 +50,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
-    /**
-     * Optional. The type of the parameter. Used for selecting input picker.
-     */
     @InputImport(name="paramType", required=true)
     private final String paramType;
 
@@ -78,9 +57,6 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
         return this.paramType;
     }
 
-    /**
-     * Optional. Regexes that the parameter must match.
-     */
     @InputImport(name="regexes", required=true)
     private final List<String> regexes;
 

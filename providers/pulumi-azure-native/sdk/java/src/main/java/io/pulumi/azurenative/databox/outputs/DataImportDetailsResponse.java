@@ -11,9 +11,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataImportDetailsResponse {
-/**
- * Account details of the data to be transferred
- */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
     @OutputCustomType.Constructor({"accountDetails"})
@@ -21,9 +18,6 @@ public final class DataImportDetailsResponse {
         this.accountDetails = Objects.requireNonNull(accountDetails);
     }
 
-/**
- * Account details of the data to be transferred
- */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
         return this.accountDetails;
     }

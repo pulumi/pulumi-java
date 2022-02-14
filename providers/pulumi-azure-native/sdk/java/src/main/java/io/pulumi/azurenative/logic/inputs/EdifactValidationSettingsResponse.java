@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The Edifact agreement validation settings.
- */
 public final class EdifactValidationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactValidationSettingsResponse Empty = new EdifactValidationSettingsResponse();
 
-    /**
-     * The value indicating whether to allow leading and trailing spaces and zeroes.
-     */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
     private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
@@ -27,9 +21,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
-    /**
-     * The value indicating whether to check for duplicate group control number.
-     */
     @InputImport(name="checkDuplicateGroupControlNumber", required=true)
     private final Boolean checkDuplicateGroupControlNumber;
 
@@ -37,9 +28,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.checkDuplicateGroupControlNumber;
     }
 
-    /**
-     * The value indicating whether to check for duplicate interchange control number.
-     */
     @InputImport(name="checkDuplicateInterchangeControlNumber", required=true)
     private final Boolean checkDuplicateInterchangeControlNumber;
 
@@ -47,9 +35,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.checkDuplicateInterchangeControlNumber;
     }
 
-    /**
-     * The value indicating whether to check for duplicate transaction set control number.
-     */
     @InputImport(name="checkDuplicateTransactionSetControlNumber", required=true)
     private final Boolean checkDuplicateTransactionSetControlNumber;
 
@@ -57,9 +42,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.checkDuplicateTransactionSetControlNumber;
     }
 
-    /**
-     * The validity period of interchange control number.
-     */
     @InputImport(name="interchangeControlNumberValidityDays", required=true)
     private final Integer interchangeControlNumberValidityDays;
 
@@ -67,9 +49,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.interchangeControlNumberValidityDays;
     }
 
-    /**
-     * The trailing separator policy.
-     */
     @InputImport(name="trailingSeparatorPolicy", required=true)
     private final String trailingSeparatorPolicy;
 
@@ -77,9 +56,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.trailingSeparatorPolicy;
     }
 
-    /**
-     * The value indicating whether to trim leading and trailing spaces and zeroes.
-     */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
     private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
@@ -87,9 +63,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
-    /**
-     * The value indicating whether to validate character set in the message.
-     */
     @InputImport(name="validateCharacterSet", required=true)
     private final Boolean validateCharacterSet;
 
@@ -97,9 +70,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.validateCharacterSet;
     }
 
-    /**
-     * The value indicating whether to Whether to validate EDI types.
-     */
     @InputImport(name="validateEDITypes", required=true)
     private final Boolean validateEDITypes;
 
@@ -107,9 +77,6 @@ public final class EdifactValidationSettingsResponse extends io.pulumi.resources
         return this.validateEDITypes;
     }
 
-    /**
-     * The value indicating whether to Whether to validate XSD types.
-     */
     @InputImport(name="validateXSDTypes", required=true)
     private final Boolean validateXSDTypes;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackup {
-/**
- * Gets metadata on a pending or completed Cloud Bigtable Backup.
- */
     public static CompletableFuture<GetBackupResult> invokeAsync(GetBackupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getBackup", TypeShape.of(GetBackupResult.class), args == null ? GetBackupArgs.Empty : args, Utilities.withVersion(options));
     }

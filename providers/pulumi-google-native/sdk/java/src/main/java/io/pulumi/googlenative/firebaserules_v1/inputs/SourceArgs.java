@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * `Source` is one or more `File` messages comprising a logical set of rules.
- */
 public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 
-    /**
-     * `File` set constituting the `Source` bundle.
-     */
     @InputImport(name="files", required=true)
     private final Input<List<FileArgs>> files;
 

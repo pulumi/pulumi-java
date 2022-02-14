@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FileServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileServicePropertiesArgs Empty = new FileServicePropertiesArgs();
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -30,9 +24,6 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.accountName;
     }
 
-    /**
-     * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
-     */
     @InputImport(name="cors")
     private final @Nullable Input<CorsRulesArgs> cors;
 
@@ -40,9 +31,6 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.cors == null ? Input.empty() : this.cors;
     }
 
-    /**
-     * The name of the file Service within the specified storage account. File Service Name must be "default"
-     */
     @InputImport(name="fileServicesName")
     private final @Nullable Input<String> fileServicesName;
 
@@ -50,9 +38,6 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.fileServicesName == null ? Input.empty() : this.fileServicesName;
     }
 
-    /**
-     * Protocol settings for file service
-     */
     @InputImport(name="protocolSettings")
     private final @Nullable Input<ProtocolSettingsArgs> protocolSettings;
 
@@ -60,9 +45,6 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.protocolSettings == null ? Input.empty() : this.protocolSettings;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,9 +52,6 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The file service properties for share soft delete.
-     */
     @InputImport(name="shareDeleteRetentionPolicy")
     private final @Nullable Input<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
 

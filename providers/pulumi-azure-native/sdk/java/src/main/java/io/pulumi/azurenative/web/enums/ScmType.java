@@ -8,66 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SCM type.
- */
     @EnumType
     public enum ScmType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Dropbox("Dropbox"),
-/**
- * 
- */
         Tfs("Tfs"),
-/**
- * 
- */
         LocalGit("LocalGit"),
-/**
- * 
- */
         GitHub("GitHub"),
-/**
- * 
- */
         CodePlexGit("CodePlexGit"),
-/**
- * 
- */
         CodePlexHg("CodePlexHg"),
-/**
- * 
- */
         BitbucketGit("BitbucketGit"),
-/**
- * 
- */
         BitbucketHg("BitbucketHg"),
-/**
- * 
- */
         ExternalGit("ExternalGit"),
-/**
- * 
- */
         ExternalHg("ExternalHg"),
-/**
- * 
- */
         OneDrive("OneDrive"),
-/**
- * 
- */
         VSO("VSO"),
-/**
- * 
- */
         VSTSRM("VSTSRM");
 
         private final String value;

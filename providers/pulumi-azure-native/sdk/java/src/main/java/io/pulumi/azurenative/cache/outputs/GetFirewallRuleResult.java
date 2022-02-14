@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFirewallRuleResult {
-/**
- * highest IP address included in the range
- */
     private final String endIP;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * lowest IP address included in the range
- */
     private final String startIP;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"endIP","id","name","startIP","type"})
@@ -44,33 +29,18 @@ public final class GetFirewallRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * highest IP address included in the range
- */
     public String getEndIP() {
         return this.endIP;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * lowest IP address included in the range
- */
     public String getStartIP() {
         return this.startIP;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

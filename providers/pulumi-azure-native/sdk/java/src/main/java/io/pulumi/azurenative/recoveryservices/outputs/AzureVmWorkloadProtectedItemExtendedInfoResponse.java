@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
-/**
- * The oldest backup copy available for this backup item.
- */
     private final @Nullable String oldestRecoveryPoint;
-/**
- * Indicates consistency of policy object and policy applied to this backup item.
- */
     private final @Nullable String policyState;
-/**
- * Number of backup copies available for this backup item.
- */
     private final @Nullable Integer recoveryPointCount;
 
     @OutputCustomType.Constructor({"oldestRecoveryPoint","policyState","recoveryPointCount"})
@@ -35,21 +26,12 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
         this.recoveryPointCount = recoveryPointCount;
     }
 
-/**
- * The oldest backup copy available for this backup item.
- */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
-/**
- * Indicates consistency of policy object and policy applied to this backup item.
- */
     public Optional<String> getPolicyState() {
         return Optional.ofNullable(this.policyState);
     }
-/**
- * Number of backup copies available for this backup item.
- */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }

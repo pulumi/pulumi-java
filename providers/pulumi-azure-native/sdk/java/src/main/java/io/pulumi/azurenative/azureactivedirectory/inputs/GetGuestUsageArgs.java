@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGuestUsageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGuestUsageArgs Empty = new GetGuestUsageArgs();
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetGuestUsageArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The initial domain name of the AAD tenant.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -16,33 +16,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobMetadataResponse {
-/**
- * Identification of a Cloud Bigtable source used in the Dataflow job.
- */
     private final List<BigTableIODetailsResponse> bigTableDetails;
-/**
- * Identification of a BigQuery source used in the Dataflow job.
- */
     private final List<BigQueryIODetailsResponse> bigqueryDetails;
-/**
- * Identification of a Datastore source used in the Dataflow job.
- */
     private final List<DatastoreIODetailsResponse> datastoreDetails;
-/**
- * Identification of a File source used in the Dataflow job.
- */
     private final List<FileIODetailsResponse> fileDetails;
-/**
- * Identification of a Pub/Sub source used in the Dataflow job.
- */
     private final List<PubSubIODetailsResponse> pubsubDetails;
-/**
- * The SDK version used to run the job.
- */
     private final SdkVersionResponse sdkVersion;
-/**
- * Identification of a Spanner source used in the Dataflow job.
- */
     private final List<SpannerIODetailsResponse> spannerDetails;
 
     @OutputCustomType.Constructor({"bigTableDetails","bigqueryDetails","datastoreDetails","fileDetails","pubsubDetails","sdkVersion","spannerDetails"})
@@ -63,45 +42,24 @@ public final class JobMetadataResponse {
         this.spannerDetails = Objects.requireNonNull(spannerDetails);
     }
 
-/**
- * Identification of a Cloud Bigtable source used in the Dataflow job.
- */
     public List<BigTableIODetailsResponse> getBigTableDetails() {
         return this.bigTableDetails;
     }
-/**
- * Identification of a BigQuery source used in the Dataflow job.
- */
     public List<BigQueryIODetailsResponse> getBigqueryDetails() {
         return this.bigqueryDetails;
     }
-/**
- * Identification of a Datastore source used in the Dataflow job.
- */
     public List<DatastoreIODetailsResponse> getDatastoreDetails() {
         return this.datastoreDetails;
     }
-/**
- * Identification of a File source used in the Dataflow job.
- */
     public List<FileIODetailsResponse> getFileDetails() {
         return this.fileDetails;
     }
-/**
- * Identification of a Pub/Sub source used in the Dataflow job.
- */
     public List<PubSubIODetailsResponse> getPubsubDetails() {
         return this.pubsubDetails;
     }
-/**
- * The SDK version used to run the job.
- */
     public SdkVersionResponse getSdkVersion() {
         return this.sdkVersion;
     }
-/**
- * Identification of a Spanner source used in the Dataflow job.
- */
     public List<SpannerIODetailsResponse> getSpannerDetails() {
         return this.spannerDetails;
     }

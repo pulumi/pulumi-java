@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityConfigResponse {
-/**
- * Map of user to service account.
- */
     private final Map<String,String> userServiceAccountMapping;
 
     @OutputCustomType.Constructor({"userServiceAccountMapping"})
@@ -20,9 +17,6 @@ public final class IdentityConfigResponse {
         this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
     }
 
-/**
- * Map of user to service account.
- */
     public Map<String,String> getUserServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A selector that chooses target cluster for jobs based on metadata.
- */
 public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterSelectorArgs Empty = new ClusterSelectorArgs();
 
-    /**
-     * The cluster labels. Cluster must have all labels to match.
-     */
     @InputImport(name="clusterLabels", required=true)
     private final Input<Map<String,String>> clusterLabels;
 
@@ -28,9 +22,6 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
         return this.clusterLabels;
     }
 
-    /**
-     * Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
-     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

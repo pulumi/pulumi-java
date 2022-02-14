@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure ML Studio Web Service linked service.
- */
 public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMLLinkedServiceArgs Empty = new AzureMLLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The API key for accessing the Azure ML model endpoint.
-     */
     @InputImport(name="apiKey", required=true)
     private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> apiKey;
 
@@ -45,9 +36,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.apiKey;
     }
 
-    /**
-     * Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="authentication")
     private final @Nullable Input<Object> authentication;
 
@@ -55,9 +43,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -65,9 +50,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -75,9 +57,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -85,9 +64,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="mlEndpoint", required=true)
     private final Input<Object> mlEndpoint;
 
@@ -95,9 +71,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.mlEndpoint;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -105,9 +78,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Input<Object> servicePrincipalId;
 
@@ -115,9 +85,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
     }
 
-    /**
-     * The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
-     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
@@ -125,9 +92,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
     }
 
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenant")
     private final @Nullable Input<Object> tenant;
 
@@ -135,10 +99,6 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.tenant == null ? Input.empty() : this.tenant;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureML'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -146,9 +106,6 @@ Expected value is 'AzureML'.
         return this.type;
     }
 
-    /**
-     * The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="updateResourceEndpoint")
     private final @Nullable Input<Object> updateResourceEndpoint;
 

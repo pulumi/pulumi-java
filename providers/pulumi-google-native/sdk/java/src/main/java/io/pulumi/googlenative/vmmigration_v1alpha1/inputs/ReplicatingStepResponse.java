@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * ReplicatingStep contains specific step details.
- */
 public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicatingStepResponse Empty = new ReplicatingStepResponse();
 
-    /**
-     * The source disks replication rate for the last 30 minutes in bytes per second.
-     */
     @InputImport(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
     private final String lastThirtyMinutesAverageBytesPerSecond;
 
@@ -25,9 +19,6 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
         return this.lastThirtyMinutesAverageBytesPerSecond;
     }
 
-    /**
-     * The source disks replication rate for the last 2 minutes in bytes per second.
-     */
     @InputImport(name="lastTwoMinutesAverageBytesPerSecond", required=true)
     private final String lastTwoMinutesAverageBytesPerSecond;
 
@@ -35,9 +26,6 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
         return this.lastTwoMinutesAverageBytesPerSecond;
     }
 
-    /**
-     * Replicated bytes in the step.
-     */
     @InputImport(name="replicatedBytes", required=true)
     private final String replicatedBytes;
 
@@ -45,9 +33,6 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
         return this.replicatedBytes;
     }
 
-    /**
-     * Total bytes to be handled in the step.
-     */
     @InputImport(name="totalBytes", required=true)
     private final String totalBytes;
 

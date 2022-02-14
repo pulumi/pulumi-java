@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of roles.
- */
     @EnumType
     public enum RoleTypes {
-/**
- * 
- */
         Admin("Admin"),
-/**
- * 
- */
         Reader("Reader"),
-/**
- * 
- */
         ManageAdmin("ManageAdmin"),
-/**
- * 
- */
         ManageReader("ManageReader"),
-/**
- * 
- */
         DataAdmin("DataAdmin"),
-/**
- * 
- */
         DataReader("DataReader");
 
         private final String value;

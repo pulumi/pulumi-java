@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A ReusableConfigWrapper describes values that may assist in creating an X.509 certificate, or a reference to a pre-defined set of values.
- */
 public final class ReusableConfigWrapperResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReusableConfigWrapperResponse Empty = new ReusableConfigWrapperResponse();
 
-    /**
-     * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
-     */
     @InputImport(name="reusableConfig", required=true)
     private final String reusableConfig;
 
@@ -26,9 +20,6 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
         return this.reusableConfig;
     }
 
-    /**
-     * A user-specified inline ReusableConfigValues.
-     */
     @InputImport(name="reusableConfigValues", required=true)
     private final ReusableConfigValuesResponse reusableConfigValues;
 

@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivatePoolV1ConfigResponse {
-/**
- * Network configuration for the pool.
- */
     private final NetworkConfigResponse networkConfig;
-/**
- * Machine configuration for the workers in the pool.
- */
     private final WorkerConfigResponse workerConfig;
 
     @OutputCustomType.Constructor({"networkConfig","workerConfig"})
@@ -27,15 +21,9 @@ public final class PrivatePoolV1ConfigResponse {
         this.workerConfig = Objects.requireNonNull(workerConfig);
     }
 
-/**
- * Network configuration for the pool.
- */
     public NetworkConfigResponse getNetworkConfig() {
         return this.networkConfig;
     }
-/**
- * Machine configuration for the workers in the pool.
- */
     public WorkerConfigResponse getWorkerConfig() {
         return this.workerConfig;
     }

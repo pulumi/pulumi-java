@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStatusResponse Empty = new JobStatusResponse();
 
-    /**
-     * Gets the number of times this job has executed.
-     */
     @InputImport(name="executionCount", required=true)
     private final Integer executionCount;
 
@@ -26,9 +20,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.executionCount;
     }
 
-    /**
-     * Gets the number of times this job has failed.
-     */
     @InputImport(name="failureCount", required=true)
     private final Integer failureCount;
 
@@ -36,9 +27,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.failureCount;
     }
 
-    /**
-     * Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
-     */
     @InputImport(name="faultedCount", required=true)
     private final Integer faultedCount;
 
@@ -46,9 +34,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.faultedCount;
     }
 
-    /**
-     * Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
-     */
     @InputImport(name="lastExecutionTime", required=true)
     private final String lastExecutionTime;
 
@@ -56,9 +41,6 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastExecutionTime;
     }
 
-    /**
-     * Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
-     */
     @InputImport(name="nextExecutionTime", required=true)
     private final String nextExecutionTime;
 

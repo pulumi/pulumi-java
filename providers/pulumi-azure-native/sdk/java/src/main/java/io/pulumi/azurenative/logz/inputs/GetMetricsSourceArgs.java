@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMetricsSourceArgs Empty = new GetMetricsSourceArgs();
 
-    /**
-     * Metrics Account resource name
-     */
     @InputImport(name="metricsSourceName", required=true)
     private final String metricsSourceName;
 
@@ -25,9 +19,6 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.metricsSourceName;
     }
 
-    /**
-     * Monitor resource name
-     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -35,9 +26,6 @@ public final class GetMetricsSourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.monitorName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

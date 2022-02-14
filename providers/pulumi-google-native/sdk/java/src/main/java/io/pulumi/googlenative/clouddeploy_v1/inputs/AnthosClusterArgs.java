@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information specifying an Anthos Cluster.
- */
 public final class AnthosClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnthosClusterArgs Empty = new AnthosClusterArgs();
 
-    /**
-     * Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
-     */
     @InputImport(name="membership")
     private final @Nullable Input<String> membership;
 

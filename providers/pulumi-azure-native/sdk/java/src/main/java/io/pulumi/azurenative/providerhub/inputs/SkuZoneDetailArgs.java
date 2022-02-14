@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuZoneDetailArgs Empty = new SkuZoneDetailArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="capabilities")
     private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
 
@@ -29,9 +23,6 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="name")
     private final @Nullable Input<List<String>> name;
 

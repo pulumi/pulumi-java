@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The assembly properties definition.
- */
 public final class AssemblyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssemblyPropertiesResponse Empty = new AssemblyPropertiesResponse();
 
-    /**
-     * The assembly culture.
-     */
     @InputImport(name="assemblyCulture")
     private final @Nullable String assemblyCulture;
 
@@ -29,9 +23,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.assemblyCulture == null ? Optional.empty() : Optional.ofNullable(this.assemblyCulture);
     }
 
-    /**
-     * The assembly name.
-     */
     @InputImport(name="assemblyName", required=true)
     private final String assemblyName;
 
@@ -39,9 +30,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.assemblyName;
     }
 
-    /**
-     * The assembly public key token.
-     */
     @InputImport(name="assemblyPublicKeyToken")
     private final @Nullable String assemblyPublicKeyToken;
 
@@ -49,9 +37,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.assemblyPublicKeyToken == null ? Optional.empty() : Optional.ofNullable(this.assemblyPublicKeyToken);
     }
 
-    /**
-     * The assembly version.
-     */
     @InputImport(name="assemblyVersion")
     private final @Nullable String assemblyVersion;
 
@@ -59,9 +44,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.assemblyVersion == null ? Optional.empty() : Optional.ofNullable(this.assemblyVersion);
     }
 
-    /**
-     * The artifact changed time.
-     */
     @InputImport(name="changedTime")
     private final @Nullable String changedTime;
 
@@ -69,9 +51,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="content")
     private final @Nullable Object content;
 
@@ -79,9 +58,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
-    /**
-     * The content link.
-     */
     @InputImport(name="contentLink")
     private final @Nullable ContentLinkResponse contentLink;
 
@@ -89,9 +65,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.contentLink == null ? Optional.empty() : Optional.ofNullable(this.contentLink);
     }
 
-    /**
-     * The content type.
-     */
     @InputImport(name="contentType")
     private final @Nullable String contentType;
 
@@ -99,9 +72,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
-    /**
-     * The artifact creation time.
-     */
     @InputImport(name="createdTime")
     private final @Nullable String createdTime;
 
@@ -109,9 +79,6 @@ public final class AssemblyPropertiesResponse extends io.pulumi.resources.Invoke
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="metadata")
     private final @Nullable Object metadata;
 

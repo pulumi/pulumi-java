@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * A message indicating if changes on the service provider require any updates on the consumer.
- */
     @EnumType
     public enum ActionsRequired {
-/**
- * 
- */
         None("None");
 
         private final String value;

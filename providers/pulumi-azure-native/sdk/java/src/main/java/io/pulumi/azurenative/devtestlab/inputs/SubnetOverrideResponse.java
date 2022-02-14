@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Property overrides on a subnet of a virtual network.
- */
 public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetOverrideResponse Empty = new SubnetOverrideResponse();
 
-    /**
-     * The name given to the subnet within the lab.
-     */
     @InputImport(name="labSubnetName")
     private final @Nullable String labSubnetName;
 
@@ -28,9 +22,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
     }
 
-    /**
-     * The resource ID of the subnet.
-     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -38,9 +29,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
-    /**
-     * Properties that virtual machines on this subnet will share.
-     */
     @InputImport(name="sharedPublicIpAddressConfiguration")
     private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
@@ -48,9 +36,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
         return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
 
-    /**
-     * Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
-     */
     @InputImport(name="useInVmCreationPermission")
     private final @Nullable String useInVmCreationPermission;
 
@@ -58,9 +43,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
         return this.useInVmCreationPermission == null ? Optional.empty() : Optional.ofNullable(this.useInVmCreationPermission);
     }
 
-    /**
-     * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
-     */
     @InputImport(name="usePublicIpAddressPermission")
     private final @Nullable String usePublicIpAddressPermission;
 
@@ -68,9 +50,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
         return this.usePublicIpAddressPermission == null ? Optional.empty() : Optional.ofNullable(this.usePublicIpAddressPermission);
     }
 
-    /**
-     * The virtual network pool associated with this subnet.
-     */
     @InputImport(name="virtualNetworkPoolName")
     private final @Nullable String virtualNetworkPoolName;
 

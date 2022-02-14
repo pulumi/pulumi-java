@@ -15,279 +15,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Definition of the source control.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a source control
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sourceControl = new AzureNative.Automation.SourceControl("sourceControl", new AzureNative.Automation.SourceControlArgs
-        {
-            AutoSync = true,
-            AutomationAccountName = "sampleAccount9",
-            Branch = "master",
-            Description = "my description",
-            FolderPath = "/folderOne/folderTwo",
-            PublishRunbook = true,
-            RepoUrl = "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
-            ResourceGroupName = "rg",
-            SecurityToken = new AzureNative.Automation.Inputs.SourceControlSecurityTokenPropertiesArgs
-            {
-                AccessToken = "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
-                TokenType = "PersonalAccessToken",
-            },
-            SourceControlName = "sampleSourceControl",
-            SourceType = "VsoGit",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewSourceControl(ctx, "sourceControl", &automation.SourceControlArgs{
-			AutoSync:              pulumi.Bool(true),
-			AutomationAccountName: pulumi.String("sampleAccount9"),
-			Branch:                pulumi.String("master"),
-			Description:           pulumi.String("my description"),
-			FolderPath:            pulumi.String("/folderOne/folderTwo"),
-			PublishRunbook:        pulumi.Bool(true),
-			RepoUrl:               pulumi.String("https://sampleUser.visualstudio.com/myProject/_git/myRepository"),
-			ResourceGroupName:     pulumi.String("rg"),
-			SecurityToken: &automation.SourceControlSecurityTokenPropertiesArgs{
-				AccessToken: pulumi.String("3a326f7a0dcd343ea58fee21f2fd5fb4c1234567"),
-				TokenType:   pulumi.String("PersonalAccessToken"),
-			},
-			SourceControlName: pulumi.String("sampleSourceControl"),
-			SourceType:        pulumi.String("VsoGit"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sourceControl = new azure_native.automation.SourceControl("sourceControl", {
-    autoSync: true,
-    automationAccountName: "sampleAccount9",
-    branch: "master",
-    description: "my description",
-    folderPath: "/folderOne/folderTwo",
-    publishRunbook: true,
-    repoUrl: "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
-    resourceGroupName: "rg",
-    securityToken: {
-        accessToken: "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
-        tokenType: "PersonalAccessToken",
-    },
-    sourceControlName: "sampleSourceControl",
-    sourceType: "VsoGit",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-source_control = azure_native.automation.SourceControl("sourceControl",
-    auto_sync=True,
-    automation_account_name="sampleAccount9",
-    branch="master",
-    description="my description",
-    folder_path="/folderOne/folderTwo",
-    publish_runbook=True,
-    repo_url="https://sampleUser.visualstudio.com/myProject/_git/myRepository",
-    resource_group_name="rg",
-    security_token=azure_native.automation.SourceControlSecurityTokenPropertiesArgs(
-        access_token="3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
-        token_type="PersonalAccessToken",
-    ),
-    source_control_name="sampleSourceControl",
-    source_type="VsoGit")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
-```
-
- */
 @ResourceType(type="azure-native:automation:SourceControl")
 public class SourceControl extends io.pulumi.resources.CustomResource {
-    /**
-     * The auto sync of the source control. Default is false.
-     */
     @OutputExport(name="autoSync", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoSync;
 
-    /**
-     * @return The auto sync of the source control. Default is false.
-     */
     public Output</* @Nullable */ Boolean> getAutoSync() {
         return this.autoSync;
     }
-    /**
-     * The repo branch of the source control. Include branch as empty string for VsoTfvc.
-     */
     @OutputExport(name="branch", type=String.class, parameters={})
     private Output</* @Nullable */ String> branch;
 
-    /**
-     * @return The repo branch of the source control. Include branch as empty string for VsoTfvc.
-     */
     public Output</* @Nullable */ String> getBranch() {
         return this.branch;
     }
-    /**
-     * The creation time.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
-    /**
-     * @return The creation time.
-     */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * The description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The folder path of the source control.
-     */
     @OutputExport(name="folderPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> folderPath;
 
-    /**
-     * @return The folder path of the source control.
-     */
     public Output</* @Nullable */ String> getFolderPath() {
         return this.folderPath;
     }
-    /**
-     * The last modified time.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
-    /**
-     * @return The last modified time.
-     */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The auto publish of the source control. Default is true.
-     */
     @OutputExport(name="publishRunbook", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publishRunbook;
 
-    /**
-     * @return The auto publish of the source control. Default is true.
-     */
     public Output</* @Nullable */ Boolean> getPublishRunbook() {
         return this.publishRunbook;
     }
-    /**
-     * The repo url of the source control.
-     */
     @OutputExport(name="repoUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repoUrl;
 
-    /**
-     * @return The repo url of the source control.
-     */
     public Output</* @Nullable */ String> getRepoUrl() {
         return this.repoUrl;
     }
-    /**
-     * The source type. Must be one of VsoGit, VsoTfvc, GitHub.
-     */
     @OutputExport(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
-    /**
-     * @return The source type. Must be one of VsoGit, VsoTfvc, GitHub.
-     */
     public Output</* @Nullable */ String> getSourceType() {
         return this.sourceType;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SourceControl(String name, SourceControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:SourceControl", name, args == null ? SourceControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -308,14 +104,6 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SourceControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SourceControl(name, id, options);
     }

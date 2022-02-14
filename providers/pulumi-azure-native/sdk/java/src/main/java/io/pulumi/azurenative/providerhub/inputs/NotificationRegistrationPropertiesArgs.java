@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotificationRegistrationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationRegistrationPropertiesArgs Empty = new NotificationRegistrationPropertiesArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="includedEvents")
     private final @Nullable Input<List<String>> includedEvents;
 
@@ -33,9 +27,6 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
         return this.includedEvents == null ? Input.empty() : this.includedEvents;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="messageScope")
     private final @Nullable Input<Either<String,MessageScope>> messageScope;
 
@@ -43,9 +34,6 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
         return this.messageScope == null ? Input.empty() : this.messageScope;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="notificationEndpoints")
     private final @Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints;
 
@@ -53,9 +41,6 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
         return this.notificationEndpoints == null ? Input.empty() : this.notificationEndpoints;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="notificationMode")
     private final @Nullable Input<Either<String,NotificationMode>> notificationMode;
 
@@ -63,9 +48,6 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
         return this.notificationMode == null ? Input.empty() : this.notificationMode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 

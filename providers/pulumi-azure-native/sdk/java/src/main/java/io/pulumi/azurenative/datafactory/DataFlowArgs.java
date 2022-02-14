@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataFlowArgs Empty = new DataFlowArgs();
 
-    /**
-     * The data flow name.
-     */
     @InputImport(name="dataFlowName")
     private final @Nullable Input<String> dataFlowName;
 
@@ -31,9 +25,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataFlowName == null ? Input.empty() : this.dataFlowName;
     }
 
-    /**
-     * The factory name.
-     */
     @InputImport(name="factoryName", required=true)
     private final Input<String> factoryName;
 
@@ -41,9 +32,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.factoryName;
     }
 
-    /**
-     * Data flow properties.
-     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -51,9 +39,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

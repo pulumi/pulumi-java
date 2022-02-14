@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * The throughput capacity configuration for each partition.
- */
 public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapacityResponse Empty = new CapacityResponse();
 
-    /**
-     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
-     */
     @InputImport(name="publishMibPerSec", required=true)
     private final Integer publishMibPerSec;
 
@@ -25,9 +19,6 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
         return this.publishMibPerSec;
     }
 
-    /**
-     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.
-     */
     @InputImport(name="subscribeMibPerSec", required=true)
     private final Integer subscribeMibPerSec;
 

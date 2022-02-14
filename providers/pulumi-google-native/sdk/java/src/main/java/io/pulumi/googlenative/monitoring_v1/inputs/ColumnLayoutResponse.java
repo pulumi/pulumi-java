@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A simplified layout that divides the available space into vertical columns and arranges a set of widgets vertically in each column.
- */
 public final class ColumnLayoutResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ColumnLayoutResponse Empty = new ColumnLayoutResponse();
 
-    /**
-     * The columns of content to display.
-     */
     @InputImport(name="columns", required=true)
     private final List<ColumnResponse> columns;
 

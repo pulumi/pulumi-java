@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The execution options of a job step.
- */
 public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobStepExecutionOptionsArgs Empty = new JobStepExecutionOptionsArgs();
 
-    /**
-     * Initial delay between retries for job step execution.
-     */
     @InputImport(name="initialRetryIntervalSeconds")
     private final @Nullable Input<Integer> initialRetryIntervalSeconds;
 
@@ -28,9 +22,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
         return this.initialRetryIntervalSeconds == null ? Input.empty() : this.initialRetryIntervalSeconds;
     }
 
-    /**
-     * The maximum amount of time to wait between retries for job step execution.
-     */
     @InputImport(name="maximumRetryIntervalSeconds")
     private final @Nullable Input<Integer> maximumRetryIntervalSeconds;
 
@@ -38,9 +29,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
         return this.maximumRetryIntervalSeconds == null ? Input.empty() : this.maximumRetryIntervalSeconds;
     }
 
-    /**
-     * Maximum number of times the job step will be reattempted if the first attempt fails.
-     */
     @InputImport(name="retryAttempts")
     private final @Nullable Input<Integer> retryAttempts;
 
@@ -48,9 +36,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
         return this.retryAttempts == null ? Input.empty() : this.retryAttempts;
     }
 
-    /**
-     * The backoff multiplier for the time between retries.
-     */
     @InputImport(name="retryIntervalBackoffMultiplier")
     private final @Nullable Input<Double> retryIntervalBackoffMultiplier;
 
@@ -58,9 +43,6 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
         return this.retryIntervalBackoffMultiplier == null ? Input.empty() : this.retryIntervalBackoffMultiplier;
     }
 
-    /**
-     * Execution timeout for the job step.
-     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 

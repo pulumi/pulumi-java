@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DiscoveryResponse {
-/**
- * Immutable. The kind of analysis that is handled by this discovery.
- */
     private final String analysisKind;
 
     @OutputCustomType.Constructor({"analysisKind"})
@@ -19,9 +16,6 @@ public final class DiscoveryResponse {
         this.analysisKind = Objects.requireNonNull(analysisKind);
     }
 
-/**
- * Immutable. The kind of analysis that is handled by this discovery.
- */
     public String getAnalysisKind() {
         return this.analysisKind;
     }

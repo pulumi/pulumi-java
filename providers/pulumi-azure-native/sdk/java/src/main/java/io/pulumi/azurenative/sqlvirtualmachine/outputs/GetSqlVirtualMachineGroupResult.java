@@ -13,53 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSqlVirtualMachineGroupResult {
-/**
- * Cluster type.
- */
     private final String clusterConfiguration;
-/**
- * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
- */
     private final String clusterManagerType;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource location.
- */
     private final String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Provisioning state to track the async operation status.
- */
     private final String provisioningState;
-/**
- * Scale type.
- */
     private final String scaleType;
-/**
- * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
- */
     private final @Nullable String sqlImageOffer;
-/**
- * SQL image sku.
- */
     private final @Nullable String sqlImageSku;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
-/**
- * Cluster Active Directory domain profile.
- */
     private final @Nullable WsfcDomainProfileResponse wsfcDomainProfile;
 
     @OutputCustomType.Constructor({"clusterConfiguration","clusterManagerType","id","location","name","provisioningState","scaleType","sqlImageOffer","sqlImageSku","tags","type","wsfcDomainProfile"})
@@ -90,75 +54,39 @@ public final class GetSqlVirtualMachineGroupResult {
         this.wsfcDomainProfile = wsfcDomainProfile;
     }
 
-/**
- * Cluster type.
- */
     public String getClusterConfiguration() {
         return this.clusterConfiguration;
     }
-/**
- * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
- */
     public String getClusterManagerType() {
         return this.clusterManagerType;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Provisioning state to track the async operation status.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Scale type.
- */
     public String getScaleType() {
         return this.scaleType;
     }
-/**
- * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
- */
     public Optional<String> getSqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
-/**
- * SQL image sku.
- */
     public Optional<String> getSqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Cluster Active Directory domain profile.
- */
     public Optional<WsfcDomainProfileResponse> getWsfcDomainProfile() {
         return Optional.ofNullable(this.wsfcDomainProfile);
     }

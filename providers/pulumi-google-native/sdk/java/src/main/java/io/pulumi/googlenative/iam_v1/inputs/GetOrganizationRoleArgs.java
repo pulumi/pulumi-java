@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetOrganizationRoleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOrganizationRoleArgs Empty = new GetOrganizationRoleArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -25,9 +19,6 @@ public final class GetOrganizationRoleArgs extends io.pulumi.resources.InvokeArg
         return this.organizationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="roleId", required=true)
     private final String roleId;
 

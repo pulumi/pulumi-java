@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Display overlay object with fade animation.
- */
 public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnimationFadeArgs Empty = new AnimationFadeArgs();
 
-    /**
-     * The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
-     */
     @InputImport(name="endTimeOffset")
     private final @Nullable Input<String> endTimeOffset;
 
@@ -29,9 +23,6 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
     }
 
-    /**
-     * Type of fade animation: `FADE_IN` or `FADE_OUT`.
-     */
     @InputImport(name="fadeType", required=true)
     private final Input<AnimationFadeFadeType> fadeType;
 
@@ -39,9 +30,6 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
         return this.fadeType;
     }
 
-    /**
-     * The time to start the fade animation, in seconds. Default: 0
-     */
     @InputImport(name="startTimeOffset")
     private final @Nullable Input<String> startTimeOffset;
 
@@ -49,9 +37,6 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
     }
 
-    /**
-     * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
-     */
     @InputImport(name="xy")
     private final @Nullable Input<NormalizedCoordinateArgs> xy;
 

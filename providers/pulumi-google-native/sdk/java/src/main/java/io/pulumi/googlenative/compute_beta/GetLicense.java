@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLicense {
-/**
- * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
- */
     public static CompletableFuture<GetLicenseResult> invokeAsync(GetLicenseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getLicense", TypeShape.of(GetLicenseResult.class), args == null ? GetLicenseArgs.Empty : args, Utilities.withVersion(options));
     }

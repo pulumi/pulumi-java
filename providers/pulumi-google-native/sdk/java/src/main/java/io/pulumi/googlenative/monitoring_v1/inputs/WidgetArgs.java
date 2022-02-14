@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Widget contains a single dashboard component and configuration of how to present the component in the dashboard.
- */
 public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WidgetArgs Empty = new WidgetArgs();
 
-    /**
-     * A chart of alert policy data.
-     */
     @InputImport(name="alertChart")
     private final @Nullable Input<AlertChartArgs> alertChart;
 
@@ -34,9 +28,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.alertChart == null ? Input.empty() : this.alertChart;
     }
 
-    /**
-     * A blank space.
-     */
     @InputImport(name="blank")
     private final @Nullable Input<EmptyArgs> blank;
 
@@ -44,9 +35,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.blank == null ? Input.empty() : this.blank;
     }
 
-    /**
-     * A widget that shows a stream of logs.
-     */
     @InputImport(name="logsPanel")
     private final @Nullable Input<LogsPanelArgs> logsPanel;
 
@@ -54,9 +42,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.logsPanel == null ? Input.empty() : this.logsPanel;
     }
 
-    /**
-     * A scorecard summarizing time series data.
-     */
     @InputImport(name="scorecard")
     private final @Nullable Input<ScorecardArgs> scorecard;
 
@@ -64,9 +49,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.scorecard == null ? Input.empty() : this.scorecard;
     }
 
-    /**
-     * A raw string or markdown displaying textual content.
-     */
     @InputImport(name="text")
     private final @Nullable Input<TextArgs> text;
 
@@ -74,9 +56,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.text == null ? Input.empty() : this.text;
     }
 
-    /**
-     * A widget that displays time series data in a tabular format.
-     */
     @InputImport(name="timeSeriesTable")
     private final @Nullable Input<TimeSeriesTableArgs> timeSeriesTable;
 
@@ -84,9 +63,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeSeriesTable == null ? Input.empty() : this.timeSeriesTable;
     }
 
-    /**
-     * Optional. The title of the widget.
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -94,9 +70,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.title == null ? Input.empty() : this.title;
     }
 
-    /**
-     * A chart of time series data.
-     */
     @InputImport(name="xyChart")
     private final @Nullable Input<XyChartArgs> xyChart;
 

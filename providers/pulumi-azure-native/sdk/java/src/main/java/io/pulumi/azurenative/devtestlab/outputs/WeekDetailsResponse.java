@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WeekDetailsResponse {
-/**
- * The time of the day the schedule will occur.
- */
     private final @Nullable String time;
-/**
- * The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
- */
     private final @Nullable List<String> weekdays;
 
     @OutputCustomType.Constructor({"time","weekdays"})
@@ -29,15 +23,9 @@ public final class WeekDetailsResponse {
         this.weekdays = weekdays;
     }
 
-/**
- * The time of the day the schedule will occur.
- */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }
-/**
- * The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
- */
     public List<String> getWeekdays() {
         return this.weekdays == null ? List.of() : this.weekdays;
     }

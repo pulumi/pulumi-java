@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The encryption options for the Cloud Composer environment and its dependencies.Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
- */
 public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 
-    /**
-     * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
-     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 

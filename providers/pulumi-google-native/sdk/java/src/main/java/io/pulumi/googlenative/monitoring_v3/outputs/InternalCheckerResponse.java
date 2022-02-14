@@ -9,29 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InternalCheckerResponse {
-/**
- * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
- */
     private final String displayName;
-/**
- * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
- */
     private final String gcpZone;
-/**
- * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
- */
     private final String name;
-/**
- * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
- */
     private final String network;
-/**
- * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
- */
     private final String peerProjectId;
-/**
- * The current operational state of the internal checker.
- */
     private final String state;
 
     @OutputCustomType.Constructor({"displayName","gcpZone","name","network","peerProjectId","state"})
@@ -50,39 +32,21 @@ public final class InternalCheckerResponse {
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
- */
     public String getGcpZone() {
         return this.gcpZone;
     }
-/**
- * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
- */
     public String getNetwork() {
         return this.network;
     }
-/**
- * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
- */
     public String getPeerProjectId() {
         return this.peerProjectId;
     }
-/**
- * The current operational state of the internal checker.
- */
     public String getState() {
         return this.state;
     }

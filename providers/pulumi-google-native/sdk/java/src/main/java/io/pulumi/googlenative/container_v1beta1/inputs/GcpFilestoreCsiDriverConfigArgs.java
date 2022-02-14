@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for the GCP Filestore CSI driver.
- */
 public final class GcpFilestoreCsiDriverConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GcpFilestoreCsiDriverConfigArgs Empty = new GcpFilestoreCsiDriverConfigArgs();
 
-    /**
-     * Whether the GCP Filestore CSI driver is enabled for this cluster.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

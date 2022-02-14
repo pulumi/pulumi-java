@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerDetailsArgs Empty = new ServerDetailsArgs();
 
-    /**
-     * A collection of AS server administrators
-     */
     @InputImport(name="asAdministrators")
     private final @Nullable Input<ServerAdministratorsArgs> asAdministrators;
 
@@ -34,9 +28,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.asAdministrators == null ? Input.empty() : this.asAdministrators;
     }
 
-    /**
-     * The SAS container URI to the backup container.
-     */
     @InputImport(name="backupBlobContainerUri")
     private final @Nullable Input<String> backupBlobContainerUri;
 
@@ -44,9 +35,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupBlobContainerUri == null ? Input.empty() : this.backupBlobContainerUri;
     }
 
-    /**
-     * The gateway details configured for the AS server.
-     */
     @InputImport(name="gatewayDetails")
     private final @Nullable Input<GatewayDetailsArgs> gatewayDetails;
 
@@ -54,9 +42,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayDetails == null ? Input.empty() : this.gatewayDetails;
     }
 
-    /**
-     * The firewall settings for the AS server.
-     */
     @InputImport(name="ipV4FirewallSettings")
     private final @Nullable Input<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
 
@@ -64,9 +49,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipV4FirewallSettings == null ? Input.empty() : this.ipV4FirewallSettings;
     }
 
-    /**
-     * Location of the Analysis Services resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -74,9 +56,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The managed mode of the server (0 = not managed, 1 = managed).
-     */
     @InputImport(name="managedMode")
     private final @Nullable Input<Integer> managedMode;
 
@@ -84,9 +63,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedMode == null ? Input.empty() : this.managedMode;
     }
 
-    /**
-     * How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
-     */
     @InputImport(name="querypoolConnectionMode")
     private final @Nullable Input<ConnectionMode> querypoolConnectionMode;
 
@@ -94,9 +70,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.querypoolConnectionMode == null ? Input.empty() : this.querypoolConnectionMode;
     }
 
-    /**
-     * The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -104,9 +77,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The server monitor mode for AS server
-     */
     @InputImport(name="serverMonitorMode")
     private final @Nullable Input<Integer> serverMonitorMode;
 
@@ -114,9 +84,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverMonitorMode == null ? Input.empty() : this.serverMonitorMode;
     }
 
-    /**
-     * The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.
-     */
     @InputImport(name="serverName")
     private final @Nullable Input<String> serverName;
 
@@ -124,9 +91,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName == null ? Input.empty() : this.serverName;
     }
 
-    /**
-     * The SKU of the Analysis Services resource.
-     */
     @InputImport(name="sku", required=true)
     private final Input<ResourceSkuArgs> sku;
 
@@ -134,9 +98,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
-    /**
-     * Key-value pairs of additional resource provisioning properties.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

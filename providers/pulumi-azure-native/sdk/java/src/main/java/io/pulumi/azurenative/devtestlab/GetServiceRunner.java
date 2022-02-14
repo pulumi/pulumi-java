@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceRunner {
-/**
- * A container for a managed identity to execute DevTest lab services.
-API Version: 2018-09-15.
- *
- * A container for a managed identity to execute DevTest lab services.
- */
     public static CompletableFuture<GetServiceRunnerResult> invokeAsync(GetServiceRunnerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getServiceRunner", TypeShape.of(GetServiceRunnerResult.class), args == null ? GetServiceRunnerArgs.Empty : args, Utilities.withVersion(options));
     }

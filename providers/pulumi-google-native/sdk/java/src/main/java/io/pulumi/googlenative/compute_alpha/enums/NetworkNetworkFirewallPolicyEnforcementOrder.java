@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum NetworkNetworkFirewallPolicyEnforcementOrder {
-/**
- * 
- */
         AfterClassicFirewall("AFTER_CLASSIC_FIREWALL"),
-/**
- * 
- */
         BeforeClassicFirewall("BEFORE_CLASSIC_FIREWALL");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a secondary IP range of a subnetwork.
- */
 public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetworkSecondaryRangeArgs Empty = new SubnetworkSecondaryRangeArgs();
 
-    /**
-     * The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed in the Valid ranges list.
-     */
     @InputImport(name="ipCidrRange")
     private final @Nullable Input<String> ipCidrRange;
 
@@ -27,9 +21,6 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
     }
 
-    /**
-     * The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.
-     */
     @InputImport(name="rangeName")
     private final @Nullable Input<String> rangeName;
 
@@ -37,9 +28,6 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
         return this.rangeName == null ? Input.empty() : this.rangeName;
     }
 
-    /**
-     * The URL of the reserved internal range.
-     */
     @InputImport(name="reservedInternalRange")
     private final @Nullable Input<String> reservedInternalRange;
 

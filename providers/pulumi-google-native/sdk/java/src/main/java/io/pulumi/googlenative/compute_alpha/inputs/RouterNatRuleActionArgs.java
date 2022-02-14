@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterNatRuleActionArgs Empty = new RouterNatRuleActionArgs();
 
-    /**
-     * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
-     */
     @InputImport(name="sourceNatActiveIps")
     private final @Nullable Input<List<String>> sourceNatActiveIps;
 
@@ -28,9 +22,6 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
         return this.sourceNatActiveIps == null ? Input.empty() : this.sourceNatActiveIps;
     }
 
-    /**
-     * A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.
-     */
     @InputImport(name="sourceNatActiveRanges")
     private final @Nullable Input<List<String>> sourceNatActiveRanges;
 
@@ -38,9 +29,6 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
         return this.sourceNatActiveRanges == null ? Input.empty() : this.sourceNatActiveRanges;
     }
 
-    /**
-     * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
-     */
     @InputImport(name="sourceNatDrainIps")
     private final @Nullable Input<List<String>> sourceNatDrainIps;
 
@@ -48,9 +36,6 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
         return this.sourceNatDrainIps == null ? Input.empty() : this.sourceNatDrainIps;
     }
 
-    /**
-     * A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.
-     */
     @InputImport(name="sourceNatDrainRanges")
     private final @Nullable Input<List<String>> sourceNatDrainRanges;
 

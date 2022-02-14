@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppFunction {
-/**
- * Function information.
-API Version: 2020-12-01.
- *
- * Function information.
- */
     public static CompletableFuture<GetWebAppFunctionResult> invokeAsync(GetWebAppFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppFunction", TypeShape.of(GetWebAppFunctionResult.class), args == null ? GetWebAppFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

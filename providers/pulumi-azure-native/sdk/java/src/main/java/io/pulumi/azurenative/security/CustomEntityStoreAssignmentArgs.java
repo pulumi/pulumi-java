@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomEntityStoreAssignmentArgs Empty = new CustomEntityStoreAssignmentArgs();
 
-    /**
-     * Name of the custom entity store assignment. Generated name is GUID.
-     */
     @InputImport(name="customEntityStoreAssignmentName")
     private final @Nullable Input<String> customEntityStoreAssignmentName;
 
@@ -27,9 +21,6 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
         return this.customEntityStoreAssignmentName == null ? Input.empty() : this.customEntityStoreAssignmentName;
     }
 
-    /**
-     * The principal assigned with entity store. If not provided, will use caller principal. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
-     */
     @InputImport(name="principal")
     private final @Nullable Input<String> principal;
 
@@ -37,9 +28,6 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
         return this.principal == null ? Input.empty() : this.principal;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

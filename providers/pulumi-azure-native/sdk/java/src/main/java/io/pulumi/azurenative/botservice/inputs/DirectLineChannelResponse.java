@@ -11,17 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Direct Line channel definition
- */
 public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DirectLineChannelResponse Empty = new DirectLineChannelResponse();
 
-    /**
-     * The channel name
-Expected value is 'DirectLineChannel'.
-     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -29,9 +22,6 @@ Expected value is 'DirectLineChannel'.
         return this.channelName;
     }
 
-    /**
-     * Entity Tag of the resource
-     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -39,9 +29,6 @@ Expected value is 'DirectLineChannel'.
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -49,9 +36,6 @@ Expected value is 'DirectLineChannel'.
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * The set of properties specific to Direct Line channel resource
-     */
     @InputImport(name="properties")
     private final @Nullable DirectLineChannelPropertiesResponse properties;
 
@@ -59,9 +43,6 @@ Expected value is 'DirectLineChannel'.
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
-    /**
-     * Provisioning state of the resource
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

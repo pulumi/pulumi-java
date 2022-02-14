@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExtendedErrorInfoResponse {
-/**
- * 
- */
     private final @Nullable List<TypedErrorInfoResponse> additionalInfo;
-/**
- * 
- */
     private final @Nullable String code;
-/**
- * 
- */
     private final @Nullable List<ExtendedErrorInfoResponse> details;
-/**
- * 
- */
     private final @Nullable String message;
-/**
- * 
- */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
@@ -48,33 +33,18 @@ public final class ExtendedErrorInfoResponse {
         this.target = target;
     }
 
-/**
- * 
- */
     public List<TypedErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo == null ? List.of() : this.additionalInfo;
     }
-/**
- * 
- */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
-/**
- * 
- */
     public List<ExtendedErrorInfoResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
-/**
- * 
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
-/**
- * 
- */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

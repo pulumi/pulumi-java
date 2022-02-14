@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.
- */
 public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayIPConfigurationArgs Empty = new ApplicationGatewayIPConfigurationArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Name of the IP configuration that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewayIPConfigurationArgs extends io.pulumi.resou
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Reference to the subnet resource. A subnet from where application gateway gets its private address.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubResourceArgs> subnet;
 

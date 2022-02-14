@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArcSettingArgs Empty = new ArcSettingArgs();
 
-    /**
-     * The name of the proxy resource holding details of HCI ArcSetting information.
-     */
     @InputImport(name="arcSettingName")
     private final @Nullable Input<String> arcSettingName;
 
@@ -29,9 +23,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.arcSettingName == null ? Input.empty() : this.arcSettingName;
     }
 
-    /**
-     * The name of the cluster.
-     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -39,9 +30,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @InputImport(name="createdAt")
     private final @Nullable Input<String> createdAt;
 
@@ -49,9 +37,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
-    /**
-     * The identity that created the resource.
-     */
     @InputImport(name="createdBy")
     private final @Nullable Input<String> createdBy;
 
@@ -59,9 +44,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
-    /**
-     * The type of identity that created the resource.
-     */
     @InputImport(name="createdByType")
     private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
@@ -69,9 +51,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
-    /**
-     * The timestamp of resource last modification (UTC)
-     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable Input<String> lastModifiedAt;
 
@@ -79,9 +58,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
-    /**
-     * The identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable Input<String> lastModifiedBy;
 
@@ -89,9 +65,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
-    /**
-     * The type of identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
@@ -99,9 +72,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

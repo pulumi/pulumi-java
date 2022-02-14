@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Load balancing algorithm for ramp up period.
- */
     @EnumType
     public enum SessionHostLoadBalancingAlgorithm {
-/**
- * 
- */
         BreadthFirst("BreadthFirst"),
-/**
- * 
- */
         DepthFirst("DepthFirst");
 
         private final String value;

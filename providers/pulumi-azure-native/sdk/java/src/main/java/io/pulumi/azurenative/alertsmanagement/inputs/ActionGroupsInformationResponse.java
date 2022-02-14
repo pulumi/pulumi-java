@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Action Groups information, used by the alert rule.
- */
 public final class ActionGroupsInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActionGroupsInformationResponse Empty = new ActionGroupsInformationResponse();
 
-    /**
-     * An optional custom email subject to use in email notifications.
-     */
     @InputImport(name="customEmailSubject")
     private final @Nullable String customEmailSubject;
 
@@ -28,9 +22,6 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
         return this.customEmailSubject == null ? Optional.empty() : Optional.ofNullable(this.customEmailSubject);
     }
 
-    /**
-     * An optional custom web-hook payload to use in web-hook notifications.
-     */
     @InputImport(name="customWebhookPayload")
     private final @Nullable String customWebhookPayload;
 
@@ -38,9 +29,6 @@ public final class ActionGroupsInformationResponse extends io.pulumi.resources.I
         return this.customWebhookPayload == null ? Optional.empty() : Optional.ofNullable(this.customWebhookPayload);
     }
 
-    /**
-     * The Action Group resource IDs.
-     */
     @InputImport(name="groupIds", required=true)
     private final List<String> groupIds;
 

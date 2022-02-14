@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Storage information about the data disks present in the custom image
- */
 public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataDiskStorageTypeInfoArgs Empty = new DataDiskStorageTypeInfoArgs();
 
-    /**
-     * Disk Lun
-     */
     @InputImport(name="lun")
     private final @Nullable Input<String> lun;
 
@@ -29,9 +23,6 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
         return this.lun == null ? Input.empty() : this.lun;
     }
 
-    /**
-     * Disk Storage Type
-     */
     @InputImport(name="storageType")
     private final @Nullable Input<Either<String,StorageType>> storageType;
 

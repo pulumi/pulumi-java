@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiReferenceResponse Empty = new ApiReferenceResponse();
 
-    /**
-     * Brand color
-     */
     @InputImport(name="brandColor")
     private final @Nullable String brandColor;
 
@@ -28,9 +22,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
     }
 
-    /**
-     * The custom API description
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -38,9 +29,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The display name
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -48,9 +36,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * The icon URI
-     */
     @InputImport(name="iconUri")
     private final @Nullable String iconUri;
 
@@ -58,9 +43,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
     }
 
-    /**
-     * Resource reference id
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -68,9 +50,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the API
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -78,9 +57,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The JSON representation of the swagger
-     */
     @InputImport(name="swagger")
     private final @Nullable Object swagger;
 
@@ -88,9 +64,6 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
     }
 
-    /**
-     * Resource reference type
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

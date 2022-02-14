@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Action rule with suppression configuration
- */
 public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SuppressionArgs Empty = new SuppressionArgs();
 
-    /**
-     * conditions on which alerts will be filtered
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<ConditionsArgs> conditions;
 
@@ -32,9 +26,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * Description of action rule
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,9 +33,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * scope on which action rule will apply
-     */
     @InputImport(name="scope")
     private final @Nullable Input<ScopeArgs> scope;
 
@@ -52,9 +40,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
-    /**
-     * Indicates if the given action rule is enabled or disabled
-     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,ActionRuleStatus>> status;
 
@@ -62,9 +47,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * suppression configuration for the action rule
-     */
     @InputImport(name="suppressionConfig", required=true)
     private final Input<SuppressionConfigArgs> suppressionConfig;
 
@@ -72,10 +54,6 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.suppressionConfig;
     }
 
-    /**
-     * Indicates type of action rule
-Expected value is 'Suppression'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

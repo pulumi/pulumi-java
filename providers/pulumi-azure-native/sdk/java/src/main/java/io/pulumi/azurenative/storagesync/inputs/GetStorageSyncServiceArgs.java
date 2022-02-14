@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStorageSyncServiceArgs Empty = new GetStorageSyncServiceArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetStorageSyncServiceArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of Storage Sync Service resource.
-     */
     @InputImport(name="storageSyncServiceName", required=true)
     private final String storageSyncServiceName;
 

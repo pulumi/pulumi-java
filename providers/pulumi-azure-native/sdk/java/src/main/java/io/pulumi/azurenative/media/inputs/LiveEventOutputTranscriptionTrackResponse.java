@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
- */
 public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LiveEventOutputTranscriptionTrackResponse Empty = new LiveEventOutputTranscriptionTrackResponse();
 
-    /**
-     * The output track name. This property is reserved for future use, any value set on this property will be ignored.
-     */
     @InputImport(name="trackName", required=true)
     private final String trackName;
 

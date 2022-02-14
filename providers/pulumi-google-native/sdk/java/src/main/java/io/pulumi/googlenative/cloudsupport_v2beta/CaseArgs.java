@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaseArgs Empty = new CaseArgs();
 
-    /**
-     * The issue classification applicable to this case.
-     */
     @InputImport(name="classification")
     private final @Nullable Input<CaseClassificationArgs> classification;
 
@@ -32,9 +26,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.classification == null ? Input.empty() : this.classification;
     }
 
-    /**
-     * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
-     */
     @InputImport(name="creator")
     private final @Nullable Input<ActorArgs> creator;
 
@@ -42,9 +33,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.creator == null ? Input.empty() : this.creator;
     }
 
-    /**
-     * A broad description of the issue.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,9 +40,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The short summary of the issue reported in this case.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -62,9 +47,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Whether the case is currently escalated.
-     */
     @InputImport(name="escalated")
     private final @Nullable Input<Boolean> escalated;
 
@@ -72,9 +54,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.escalated == null ? Input.empty() : this.escalated;
     }
 
-    /**
-     * The resource name for the case.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,9 +61,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The priority of this case. If this is set, do not set severity.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<CasePriority> priority;
 
@@ -92,9 +68,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * The email addresses to receive updates on this case.
-     */
     @InputImport(name="subscriberEmailAddresses")
     private final @Nullable Input<List<String>> subscriberEmailAddresses;
 
@@ -102,9 +75,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriberEmailAddresses == null ? Input.empty() : this.subscriberEmailAddresses;
     }
 
-    /**
-     * Whether this case was created for internal API testing and should not be acted on by the support team.
-     */
     @InputImport(name="testCase")
     private final @Nullable Input<Boolean> testCase;
 
@@ -112,9 +82,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.testCase == null ? Input.empty() : this.testCase;
     }
 
-    /**
-     * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 
@@ -122,9 +89,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeZone == null ? Input.empty() : this.timeZone;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v2betaId1", required=true)
     private final Input<String> v2betaId1;
 
@@ -132,9 +96,6 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.v2betaId1;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v2betumId", required=true)
     private final Input<String> v2betumId;
 

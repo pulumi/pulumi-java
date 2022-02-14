@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIntegrationAccountResult {
-/**
- * The resource id.
- */
     private final String id;
-/**
- * The integration service environment.
- */
     private final @Nullable ResourceReferenceResponse integrationServiceEnvironment;
-/**
- * The resource location.
- */
     private final @Nullable String location;
-/**
- * Gets the resource name.
- */
     private final String name;
-/**
- * The sku.
- */
     private final @Nullable IntegrationAccountSkuResponse sku;
-/**
- * The workflow state.
- */
     private final @Nullable String state;
-/**
- * The resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Gets the resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","integrationServiceEnvironment","location","name","sku","state","tags","type"})
@@ -67,51 +43,27 @@ public final class GetIntegrationAccountResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The resource id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The integration service environment.
- */
     public Optional<ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
-/**
- * The resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Gets the resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The sku.
- */
     public Optional<IntegrationAccountSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * The workflow state.
- */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
-/**
- * The resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Gets the resource type.
- */
     public String getType() {
         return this.type;
     }

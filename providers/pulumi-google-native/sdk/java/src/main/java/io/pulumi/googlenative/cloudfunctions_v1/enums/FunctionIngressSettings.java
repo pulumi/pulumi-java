@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The ingress settings for the function, controlling what traffic can reach it.
- */
     @EnumType
     public enum FunctionIngressSettings {
-/**
- * Unspecified.
- */
         IngressSettingsUnspecified("INGRESS_SETTINGS_UNSPECIFIED"),
-/**
- * Allow HTTP traffic from public and private sources.
- */
         AllowAll("ALLOW_ALL"),
-/**
- * Allow HTTP traffic from only private VPC sources.
- */
         AllowInternalOnly("ALLOW_INTERNAL_ONLY"),
-/**
- * Allow HTTP traffic from private VPC sources and through GCLB.
- */
         AllowInternalAndGclb("ALLOW_INTERNAL_AND_GCLB");
 
         private final String value;

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes related incident information for the bookmark
- */
 public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncidentInfoArgs Empty = new IncidentInfoArgs();
 
-    /**
-     * Incident Id
-     */
     @InputImport(name="incidentId")
     private final @Nullable Input<String> incidentId;
 
@@ -29,9 +23,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.incidentId == null ? Input.empty() : this.incidentId;
     }
 
-    /**
-     * Relation Name
-     */
     @InputImport(name="relationName")
     private final @Nullable Input<String> relationName;
 
@@ -39,9 +30,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationName == null ? Input.empty() : this.relationName;
     }
 
-    /**
-     * The severity of the incident
-     */
     @InputImport(name="severity")
     private final @Nullable Input<Either<String,IncidentSeverity>> severity;
 
@@ -49,9 +37,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity == null ? Input.empty() : this.severity;
     }
 
-    /**
-     * The title of the incident
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

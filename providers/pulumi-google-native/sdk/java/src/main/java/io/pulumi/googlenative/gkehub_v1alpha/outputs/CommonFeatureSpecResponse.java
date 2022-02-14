@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CommonFeatureSpecResponse {
-/**
- * Appdevexperience specific spec.
- */
     private final AppDevExperienceFeatureSpecResponse appdevexperience;
-/**
- * Cloud Audit Logging-specific spec.
- */
     private final CloudAuditLoggingFeatureSpecResponse cloudauditlogging;
-/**
- * Multicluster Ingress-specific spec.
- */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
     @OutputCustomType.Constructor({"appdevexperience","cloudauditlogging","multiclusteringress"})
@@ -34,21 +25,12 @@ public final class CommonFeatureSpecResponse {
         this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
     }
 
-/**
- * Appdevexperience specific spec.
- */
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
         return this.appdevexperience;
     }
-/**
- * Cloud Audit Logging-specific spec.
- */
     public CloudAuditLoggingFeatureSpecResponse getCloudauditlogging() {
         return this.cloudauditlogging;
     }
-/**
- * Multicluster Ingress-specific spec.
- */
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
         return this.multiclusteringress;
     }

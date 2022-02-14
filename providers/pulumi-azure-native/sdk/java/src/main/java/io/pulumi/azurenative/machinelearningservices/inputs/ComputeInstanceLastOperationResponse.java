@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The last operation on ComputeInstance.
- */
 public final class ComputeInstanceLastOperationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeInstanceLastOperationResponse Empty = new ComputeInstanceLastOperationResponse();
 
-    /**
-     * Name of the last operation.
-     */
     @InputImport(name="operationName")
     private final @Nullable String operationName;
 
@@ -27,9 +21,6 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
         return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
     }
 
-    /**
-     * Operation status.
-     */
     @InputImport(name="operationStatus")
     private final @Nullable String operationStatus;
 
@@ -37,9 +28,6 @@ public final class ComputeInstanceLastOperationResponse extends io.pulumi.resour
         return this.operationStatus == null ? Optional.empty() : Optional.ofNullable(this.operationStatus);
     }
 
-    /**
-     * Time of the last operation.
-     */
     @InputImport(name="operationTime")
     private final @Nullable String operationTime;
 

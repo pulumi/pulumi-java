@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of token.
- */
     @EnumType
     public enum ContentKeyPolicyRestrictionTokenType {
-/**
- * Represents a ContentKeyPolicyRestrictionTokenType that is unavailable in current API version.
- */
         Unknown("Unknown"),
-/**
- * Simple Web Token.
- */
         Swt("Swt"),
-/**
- * JSON Web Token.
- */
         Jwt("Jwt");
 
         private final String value;

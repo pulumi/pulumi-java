@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VirtualNetworkGatewaySku details.
- */
 public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkGatewaySkuResponse Empty = new VirtualNetworkGatewaySkuResponse();
 
-    /**
-     * The capacity.
-     */
     @InputImport(name="capacity", required=true)
     private final Integer capacity;
 
@@ -28,9 +22,6 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
         return this.capacity;
     }
 
-    /**
-     * Gateway SKU name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class VirtualNetworkGatewaySkuResponse extends io.pulumi.resources.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Gateway SKU tier.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

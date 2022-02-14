@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * NetworkSecurityGroup resource.
- */
 public final class NetworkSecurityGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkSecurityGroupResponse Empty = new NetworkSecurityGroupResponse();
 
-    /**
-     * The default security rules of network security group.
-     */
     @InputImport(name="defaultSecurityRules", required=true)
     private final List<SecurityRuleResponse> defaultSecurityRules;
 
@@ -33,9 +27,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.defaultSecurityRules;
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -43,9 +34,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.etag;
     }
 
-    /**
-     * A collection of references to flow log resources.
-     */
     @InputImport(name="flowLogs", required=true)
     private final List<FlowLogResponse> flowLogs;
 
@@ -53,9 +41,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.flowLogs;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -63,9 +48,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -73,9 +55,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -83,9 +62,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
-    /**
-     * A collection of references to network interfaces.
-     */
     @InputImport(name="networkInterfaces", required=true)
     private final List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -93,9 +69,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.networkInterfaces;
     }
 
-    /**
-     * The provisioning state of the network security group resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -103,9 +76,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.provisioningState;
     }
 
-    /**
-     * The resource GUID property of the network security group resource.
-     */
     @InputImport(name="resourceGuid", required=true)
     private final String resourceGuid;
 
@@ -113,9 +83,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.resourceGuid;
     }
 
-    /**
-     * A collection of security rules of the network security group.
-     */
     @InputImport(name="securityRules")
     private final @Nullable List<SecurityRuleResponse> securityRules;
 
@@ -123,9 +90,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.securityRules == null ? List.of() : this.securityRules;
     }
 
-    /**
-     * A collection of references to subnets.
-     */
     @InputImport(name="subnets", required=true)
     private final List<SubnetResponse> subnets;
 
@@ -133,9 +97,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.subnets;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -143,9 +104,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

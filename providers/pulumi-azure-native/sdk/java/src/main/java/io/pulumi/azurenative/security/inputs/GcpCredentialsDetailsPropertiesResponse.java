@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * GCP cloud account connector based service to service credentials, the credentials are composed of the organization ID and a JSON API key (write only)
- */
 public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GcpCredentialsDetailsPropertiesResponse Empty = new GcpCredentialsDetailsPropertiesResponse();
 
-    /**
-     * Auth provider x509 certificate URL field of the API key (write only)
-     */
     @InputImport(name="authProviderX509CertUrl", required=true)
     private final String authProviderX509CertUrl;
 
@@ -26,9 +20,6 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
         return this.authProviderX509CertUrl;
     }
 
-    /**
-     * Auth URI field of the API key (write only)
-     */
     @InputImport(name="authUri", required=true)
     private final String authUri;
 
@@ -36,9 +27,6 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
         return this.authUri;
     }
 
-    /**
-     * State of the multi-cloud connector
-     */
     @InputImport(name="authenticationProvisioningState", required=true)
     private final String authenticationProvisioningState;
 
@@ -46,10 +34,6 @@ public final class GcpCredentialsDetailsPropertiesResponse extends io.pulumi.res
         return this.authenticationProvisioningState;
     }
 
-    /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-Expected value is 'gcpCredentials'.
-     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -57,9 +41,6 @@ Expected value is 'gcpCredentials'.
         return this.authenticationType;
     }
 
-    /**
-     * Client email field of the API key (write only)
-     */
     @InputImport(name="clientEmail", required=true)
     private final String clientEmail;
 
@@ -67,9 +48,6 @@ Expected value is 'gcpCredentials'.
         return this.clientEmail;
     }
 
-    /**
-     * Client ID field of the API key (write only)
-     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -77,9 +55,6 @@ Expected value is 'gcpCredentials'.
         return this.clientId;
     }
 
-    /**
-     * Client x509 certificate URL field of the API key (write only)
-     */
     @InputImport(name="clientX509CertUrl", required=true)
     private final String clientX509CertUrl;
 
@@ -87,9 +62,6 @@ Expected value is 'gcpCredentials'.
         return this.clientX509CertUrl;
     }
 
-    /**
-     * The permissions detected in the cloud account.
-     */
     @InputImport(name="grantedPermissions", required=true)
     private final List<String> grantedPermissions;
 
@@ -97,9 +69,6 @@ Expected value is 'gcpCredentials'.
         return this.grantedPermissions;
     }
 
-    /**
-     * The organization ID of the GCP cloud account
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -107,9 +76,6 @@ Expected value is 'gcpCredentials'.
         return this.organizationId;
     }
 
-    /**
-     * Private key field of the API key (write only)
-     */
     @InputImport(name="privateKey", required=true)
     private final String privateKey;
 
@@ -117,9 +83,6 @@ Expected value is 'gcpCredentials'.
         return this.privateKey;
     }
 
-    /**
-     * Private key ID field of the API key (write only)
-     */
     @InputImport(name="privateKeyId", required=true)
     private final String privateKeyId;
 
@@ -127,9 +90,6 @@ Expected value is 'gcpCredentials'.
         return this.privateKeyId;
     }
 
-    /**
-     * Project ID field of the API key (write only)
-     */
     @InputImport(name="projectId", required=true)
     private final String projectId;
 
@@ -137,9 +97,6 @@ Expected value is 'gcpCredentials'.
         return this.projectId;
     }
 
-    /**
-     * Token URI field of the API key (write only)
-     */
     @InputImport(name="tokenUri", required=true)
     private final String tokenUri;
 
@@ -147,9 +104,6 @@ Expected value is 'gcpCredentials'.
         return this.tokenUri;
     }
 
-    /**
-     * Type field of the API key (write only)
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

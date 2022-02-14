@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTargetHttpProxyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTargetHttpProxyArgs Empty = new GetTargetHttpProxyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -27,9 +21,6 @@ public final class GetTargetHttpProxyArgs extends io.pulumi.resources.InvokeArgs
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="targetHttpProxy", required=true)
     private final String targetHttpProxy;
 

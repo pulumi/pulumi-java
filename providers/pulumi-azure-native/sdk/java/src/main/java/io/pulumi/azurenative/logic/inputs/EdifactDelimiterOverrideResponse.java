@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Edifact delimiter override settings.
- */
 public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactDelimiterOverrideResponse Empty = new EdifactDelimiterOverrideResponse();
 
-    /**
-     * The component separator.
-     */
     @InputImport(name="componentSeparator", required=true)
     private final Integer componentSeparator;
 
@@ -28,9 +22,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.componentSeparator;
     }
 
-    /**
-     * The data element separator.
-     */
     @InputImport(name="dataElementSeparator", required=true)
     private final Integer dataElementSeparator;
 
@@ -38,9 +29,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.dataElementSeparator;
     }
 
-    /**
-     * The decimal point indicator.
-     */
     @InputImport(name="decimalPointIndicator", required=true)
     private final String decimalPointIndicator;
 
@@ -48,9 +36,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.decimalPointIndicator;
     }
 
-    /**
-     * The message association assigned code.
-     */
     @InputImport(name="messageAssociationAssignedCode")
     private final @Nullable String messageAssociationAssignedCode;
 
@@ -58,9 +43,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.messageAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.messageAssociationAssignedCode);
     }
 
-    /**
-     * The message id.
-     */
     @InputImport(name="messageId")
     private final @Nullable String messageId;
 
@@ -68,9 +50,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
-    /**
-     * The message release.
-     */
     @InputImport(name="messageRelease")
     private final @Nullable String messageRelease;
 
@@ -78,9 +57,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.messageRelease == null ? Optional.empty() : Optional.ofNullable(this.messageRelease);
     }
 
-    /**
-     * The message version.
-     */
     @InputImport(name="messageVersion")
     private final @Nullable String messageVersion;
 
@@ -88,9 +64,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.messageVersion == null ? Optional.empty() : Optional.ofNullable(this.messageVersion);
     }
 
-    /**
-     * The release indicator.
-     */
     @InputImport(name="releaseIndicator", required=true)
     private final Integer releaseIndicator;
 
@@ -98,9 +71,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.releaseIndicator;
     }
 
-    /**
-     * The repetition separator.
-     */
     @InputImport(name="repetitionSeparator", required=true)
     private final Integer repetitionSeparator;
 
@@ -108,9 +78,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.repetitionSeparator;
     }
 
-    /**
-     * The segment terminator.
-     */
     @InputImport(name="segmentTerminator", required=true)
     private final Integer segmentTerminator;
 
@@ -118,9 +85,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.segmentTerminator;
     }
 
-    /**
-     * The segment terminator suffix.
-     */
     @InputImport(name="segmentTerminatorSuffix", required=true)
     private final String segmentTerminatorSuffix;
 
@@ -128,9 +92,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
         return this.segmentTerminatorSuffix;
     }
 
-    /**
-     * The target namespace on which this delimiter settings has to be applied.
-     */
     @InputImport(name="targetNamespace")
     private final @Nullable String targetNamespace;
 

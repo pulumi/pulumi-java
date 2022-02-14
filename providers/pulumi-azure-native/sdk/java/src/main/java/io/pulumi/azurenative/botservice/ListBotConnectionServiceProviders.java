@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBotConnectionServiceProviders {
-/**
- * The list of bot service providers response.
-API Version: 2021-03-01.
- *
- * The list of bot service providers response.
- */
     public static CompletableFuture<ListBotConnectionServiceProvidersResult> invokeAsync(@Nullable ListBotConnectionServiceProvidersArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listBotConnectionServiceProviders", TypeShape.of(ListBotConnectionServiceProvidersResult.class), args == null ? ListBotConnectionServiceProvidersArgs.Empty : args, Utilities.withVersion(options));
     }

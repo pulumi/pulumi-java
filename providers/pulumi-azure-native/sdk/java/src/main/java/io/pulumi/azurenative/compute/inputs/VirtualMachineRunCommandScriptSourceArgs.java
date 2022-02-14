@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the script sources for run command.
- */
 public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineRunCommandScriptSourceArgs Empty = new VirtualMachineRunCommandScriptSourceArgs();
 
-    /**
-     * Specifies a commandId of predefined built-in script.
-     */
     @InputImport(name="commandId")
     private final @Nullable Input<String> commandId;
 
@@ -27,9 +21,6 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
         return this.commandId == null ? Input.empty() : this.commandId;
     }
 
-    /**
-     * Specifies the script content to be executed on the VM.
-     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 
@@ -37,9 +28,6 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
         return this.script == null ? Input.empty() : this.script;
     }
 
-    /**
-     * Specifies the script download location.
-     */
     @InputImport(name="scriptUri")
     private final @Nullable Input<String> scriptUri;
 

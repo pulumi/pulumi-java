@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Event is a report of an event somewhere in the cluster.  Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.
- */
 public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventArgs Empty = new EventArgs();
 
-    /**
-     * What action was taken/failed regarding to the Regarding object.
-     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -32,9 +26,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
-    /**
-     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
-     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -42,9 +33,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
-    /**
-     * The number of times this event has occurred.
-     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -52,9 +40,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
-    /**
-     * Time when this Event was first observed.
-     */
     @InputImport(name="eventTime")
     private final @Nullable Input<String> eventTime;
 
@@ -62,9 +47,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTime == null ? Input.empty() : this.eventTime;
     }
 
-    /**
-     * The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
-     */
     @InputImport(name="firstTimestamp")
     private final @Nullable Input<String> firstTimestamp;
 
@@ -72,9 +54,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstTimestamp == null ? Input.empty() : this.firstTimestamp;
     }
 
-    /**
-     * The object that this event is about.
-     */
     @InputImport(name="involvedObject", required=true)
     private final Input<ObjectReferenceArgs> involvedObject;
 
@@ -82,9 +61,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.involvedObject;
     }
 
-    /**
-     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -92,9 +68,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The time at which the most recent occurrence of this event was recorded.
-     */
     @InputImport(name="lastTimestamp")
     private final @Nullable Input<String> lastTimestamp;
 
@@ -102,9 +75,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastTimestamp == null ? Input.empty() : this.lastTimestamp;
     }
 
-    /**
-     * A human-readable description of the status of this operation.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -112,9 +82,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     */
     @InputImport(name="metadata", required=true)
     private final Input<ObjectMetaArgs> metadata;
 
@@ -122,9 +89,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata;
     }
 
-    /**
-     * This should be a short, machine understandable string that gives the reason for the transition into the object's current status.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -132,9 +96,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
-    /**
-     * Optional secondary object for more complex actions.
-     */
     @InputImport(name="related")
     private final @Nullable Input<ObjectReferenceArgs> related;
 
@@ -142,9 +103,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.related == null ? Input.empty() : this.related;
     }
 
-    /**
-     * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
-     */
     @InputImport(name="reportingComponent")
     private final @Nullable Input<String> reportingComponent;
 
@@ -152,9 +110,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportingComponent == null ? Input.empty() : this.reportingComponent;
     }
 
-    /**
-     * ID of the controller instance, e.g. `kubelet-xyzf`.
-     */
     @InputImport(name="reportingInstance")
     private final @Nullable Input<String> reportingInstance;
 
@@ -162,9 +117,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportingInstance == null ? Input.empty() : this.reportingInstance;
     }
 
-    /**
-     * Data about the Event series this event represents or nil if it's a singleton Event.
-     */
     @InputImport(name="series")
     private final @Nullable Input<EventSeriesArgs> series;
 
@@ -172,9 +124,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.series == null ? Input.empty() : this.series;
     }
 
-    /**
-     * The component reporting this event. Should be a short machine understandable string.
-     */
     @InputImport(name="source")
     private final @Nullable Input<EventSourceArgs> source;
 
@@ -182,9 +131,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
-    /**
-     * Type of this event (Normal, Warning), new types could be added in the future
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

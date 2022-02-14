@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefaultRolloutSpecificationResponseMediumTraffic {
-/**
- * 
- */
     private final @Nullable List<String> regions;
-/**
- * 
- */
     private final @Nullable String waitDuration;
 
     @OutputCustomType.Constructor({"regions","waitDuration"})
@@ -29,15 +23,9 @@ public final class DefaultRolloutSpecificationResponseMediumTraffic {
         this.waitDuration = waitDuration;
     }
 
-/**
- * 
- */
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
-/**
- * 
- */
     public Optional<String> getWaitDuration() {
         return Optional.ofNullable(this.waitDuration);
     }

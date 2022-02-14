@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DisasterRecoveryConfigArgs Empty = new DisasterRecoveryConfigArgs();
 
-    /**
-     * The Disaster Recovery configuration name
-     */
     @InputImport(name="alias")
     private final @Nullable Input<String> alias;
 
@@ -27,9 +21,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
         return this.alias == null ? Input.empty() : this.alias;
     }
 
-    /**
-     * Alternate name specified when alias and namespace names are same.
-     */
     @InputImport(name="alternateName")
     private final @Nullable Input<String> alternateName;
 
@@ -37,9 +28,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
         return this.alternateName == null ? Input.empty() : this.alternateName;
     }
 
-    /**
-     * The Namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -47,9 +35,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
         return this.namespaceName;
     }
 
-    /**
-     * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     */
     @InputImport(name="partnerNamespace")
     private final @Nullable Input<String> partnerNamespace;
 
@@ -57,9 +42,6 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
         return this.partnerNamespace == null ? Input.empty() : this.partnerNamespace;
     }
 
-    /**
-     * Name of the resource group within the azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

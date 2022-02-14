@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FixedScaleSettingsArgs Empty = new FixedScaleSettingsArgs();
 
-    /**
-     * If omitted, the default value is Requeue.
-     */
     @InputImport(name="nodeDeallocationOption")
     private final @Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption;
 
@@ -29,9 +23,6 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.nodeDeallocationOption == null ? Input.empty() : this.nodeDeallocationOption;
     }
 
-    /**
-     * The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
-     */
     @InputImport(name="resizeTimeout")
     private final @Nullable Input<String> resizeTimeout;
 
@@ -39,9 +30,6 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.resizeTimeout == null ? Input.empty() : this.resizeTimeout;
     }
 
-    /**
-     * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
-     */
     @InputImport(name="targetDedicatedNodes")
     private final @Nullable Input<Integer> targetDedicatedNodes;
 
@@ -49,9 +37,6 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.targetDedicatedNodes == null ? Input.empty() : this.targetDedicatedNodes;
     }
 
-    /**
-     * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
-     */
     @InputImport(name="targetLowPriorityNodes")
     private final @Nullable Input<Integer> targetLowPriorityNodes;
 

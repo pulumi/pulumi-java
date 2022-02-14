@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The service endpoint properties.
- */
 public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceEndpointPropertiesFormatArgs Empty = new ServiceEndpointPropertiesFormatArgs();
 
-    /**
-     * A list of locations.
-     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -28,9 +22,6 @@ public final class ServiceEndpointPropertiesFormatArgs extends io.pulumi.resourc
         return this.locations == null ? Input.empty() : this.locations;
     }
 
-    /**
-     * The type of the endpoint service.
-     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 

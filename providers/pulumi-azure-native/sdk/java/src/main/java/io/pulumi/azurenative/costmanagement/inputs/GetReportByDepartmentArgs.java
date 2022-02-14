@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReportByDepartmentArgs Empty = new GetReportByDepartmentArgs();
 
-    /**
-     * Department ID
-     */
     @InputImport(name="departmentId", required=true)
     private final String departmentId;
 
@@ -25,9 +19,6 @@ public final class GetReportByDepartmentArgs extends io.pulumi.resources.InvokeA
         return this.departmentId;
     }
 
-    /**
-     * Report Name.
-     */
     @InputImport(name="reportName", required=true)
     private final String reportName;
 

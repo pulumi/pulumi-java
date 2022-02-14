@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTableArgs Empty = new GetTableArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -27,9 +21,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.instanceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 
@@ -47,9 +35,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.tableId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="view")
     private final @Nullable String view;
 

@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceReferenceResponse {
-/**
- * The name of the Cloud SQL instance being referenced. This does not include the project ID.
- */
     private final String name;
-/**
- * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
- */
     private final String project;
-/**
- * The region of the Cloud SQL instance being referenced.
- */
     private final String region;
 
     @OutputCustomType.Constructor({"name","project","region"})
@@ -32,21 +23,12 @@ public final class InstanceReferenceResponse {
         this.region = Objects.requireNonNull(region);
     }
 
-/**
- * The name of the Cloud SQL instance being referenced. This does not include the project ID.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * The region of the Cloud SQL instance being referenced.
- */
     public String getRegion() {
         return this.region;
     }

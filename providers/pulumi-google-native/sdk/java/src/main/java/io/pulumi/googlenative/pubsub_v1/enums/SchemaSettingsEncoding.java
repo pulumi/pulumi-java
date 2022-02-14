@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The encoding of messages validated against `schema`.
- */
     @EnumType
     public enum SchemaSettingsEncoding {
-/**
- * Unspecified
- */
         EncodingUnspecified("ENCODING_UNSPECIFIED"),
-/**
- * JSON encoding
- */
         Json("JSON"),
-/**
- * Binary encoding, as defined by the schema type. For some schema types, binary encoding may not be available.
- */
         Binary("BINARY");
 
         private final String value;

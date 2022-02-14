@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceFabricArgs Empty = new ServiceFabricArgs();
 
-    /**
-     * The resource id of the environment under which the service fabric resource is present
-     */
     @InputImport(name="environmentId")
     private final @Nullable Input<String> environmentId;
 
@@ -28,9 +22,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId == null ? Input.empty() : this.environmentId;
     }
 
-    /**
-     * The backing service fabric resource's id
-     */
     @InputImport(name="externalServiceFabricId")
     private final @Nullable Input<String> externalServiceFabricId;
 
@@ -38,9 +29,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalServiceFabricId == null ? Input.empty() : this.externalServiceFabricId;
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -48,9 +36,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -58,9 +43,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the service fabric.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,9 +50,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -78,9 +57,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -88,9 +64,6 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the user profile.
-     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

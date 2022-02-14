@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The virtual network configuration.
- */
 public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ACIServiceResponseResponseVnetConfiguration Empty = new ACIServiceResponseResponseVnetConfiguration();
 
-    /**
-     * The name of the virtual network subnet.
-     */
     @InputImport(name="subnetName")
     private final @Nullable String subnetName;
 
@@ -27,9 +21,6 @@ public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi
         return this.subnetName == null ? Optional.empty() : Optional.ofNullable(this.subnetName);
     }
 
-    /**
-     * The name of the virtual network.
-     */
     @InputImport(name="vnetName")
     private final @Nullable String vnetName;
 

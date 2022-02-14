@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListRemediationDeploymentsAtSubscriptionArgs Empty = new ListRemediationDeploymentsAtSubscriptionArgs();
 
-    /**
-     * The name of the remediation.
-     */
     @InputImport(name="remediationName", required=true)
     private final String remediationName;
 
@@ -28,9 +22,6 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
         return this.remediationName;
     }
 
-    /**
-     * Maximum number of records to return.
-     */
     @InputImport(name="top")
     private final @Nullable Integer top;
 

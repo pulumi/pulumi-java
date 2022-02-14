@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Properties describing the software upgrade state of the Cache.
- */
 public final class CacheUpgradeStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheUpgradeStatusResponse Empty = new CacheUpgradeStatusResponse();
 
-    /**
-     * Version string of the firmware currently installed on this Cache.
-     */
     @InputImport(name="currentFirmwareVersion", required=true)
     private final String currentFirmwareVersion;
 
@@ -25,9 +19,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
         return this.currentFirmwareVersion;
     }
 
-    /**
-     * Time at which the pending firmware update will automatically be installed on the Cache.
-     */
     @InputImport(name="firmwareUpdateDeadline", required=true)
     private final String firmwareUpdateDeadline;
 
@@ -35,9 +26,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
         return this.firmwareUpdateDeadline;
     }
 
-    /**
-     * True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
-     */
     @InputImport(name="firmwareUpdateStatus", required=true)
     private final String firmwareUpdateStatus;
 
@@ -45,9 +33,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
         return this.firmwareUpdateStatus;
     }
 
-    /**
-     * Time of the last successful firmware update.
-     */
     @InputImport(name="lastFirmwareUpdate", required=true)
     private final String lastFirmwareUpdate;
 
@@ -55,9 +40,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
         return this.lastFirmwareUpdate;
     }
 
-    /**
-     * When firmwareUpdateAvailable is true, this field holds the version string for the update.
-     */
     @InputImport(name="pendingFirmwareVersion", required=true)
     private final String pendingFirmwareVersion;
 

@@ -15,466 +15,111 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The connector mapping resource format.
-API Version: 2017-04-26.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ConnectorMappings_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var connectorMapping = new AzureNative.CustomerInsights.ConnectorMapping("connectorMapping", new AzureNative.CustomerInsights.ConnectorMappingArgs
-        {
-            ConnectorName = "testConnector8858",
-            Description = "Test mapping",
-            DisplayName = "testMapping12491",
-            EntityType = "Interaction",
-            EntityTypeName = "TestInteractionType2967",
-            HubName = "sdkTestHub",
-            MappingName = "testMapping12491",
-            MappingProperties = new AzureNative.CustomerInsights.Inputs.ConnectorMappingPropertiesArgs
-            {
-                Availability = new AzureNative.CustomerInsights.Inputs.ConnectorMappingAvailabilityArgs
-                {
-                    Frequency = "Hour",
-                    Interval = 5,
-                },
-                CompleteOperation = new AzureNative.CustomerInsights.Inputs.ConnectorMappingCompleteOperationArgs
-                {
-                    CompletionOperationType = "DeleteFile",
-                    DestinationFolder = "fakePath",
-                },
-                ErrorManagement = new AzureNative.CustomerInsights.Inputs.ConnectorMappingErrorManagementArgs
-                {
-                    ErrorLimit = 10,
-                    ErrorManagementType = "StopImport",
-                },
-                FileFilter = "unknown",
-                FolderPath = "http://sample.dne/file",
-                Format = new AzureNative.CustomerInsights.Inputs.ConnectorMappingFormatArgs
-                {
-                    ColumnDelimiter = "|",
-                    FormatType = "TextFormat",
-                },
-                HasHeader = false,
-                Structure = 
-                {
-                    new AzureNative.CustomerInsights.Inputs.ConnectorMappingStructureArgs
-                    {
-                        ColumnName = "unknown1",
-                        IsEncrypted = false,
-                        PropertyName = "unknwon1",
-                    },
-                    new AzureNative.CustomerInsights.Inputs.ConnectorMappingStructureArgs
-                    {
-                        ColumnName = "unknown2",
-                        IsEncrypted = true,
-                        PropertyName = "unknwon2",
-                    },
-                },
-            },
-            ResourceGroupName = "TestHubRG",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customerinsights.NewConnectorMapping(ctx, "connectorMapping", &customerinsights.ConnectorMappingArgs{
-			ConnectorName:  pulumi.String("testConnector8858"),
-			Description:    pulumi.String("Test mapping"),
-			DisplayName:    pulumi.String("testMapping12491"),
-			EntityType:     "Interaction",
-			EntityTypeName: pulumi.String("TestInteractionType2967"),
-			HubName:        pulumi.String("sdkTestHub"),
-			MappingName:    pulumi.String("testMapping12491"),
-			MappingProperties: &customerinsights.ConnectorMappingPropertiesArgs{
-				Availability: &customerinsights.ConnectorMappingAvailabilityArgs{
-					Frequency: "Hour",
-					Interval:  pulumi.Int(5),
-				},
-				CompleteOperation: &customerinsights.ConnectorMappingCompleteOperationArgs{
-					CompletionOperationType: "DeleteFile",
-					DestinationFolder:       pulumi.String("fakePath"),
-				},
-				ErrorManagement: &customerinsights.ConnectorMappingErrorManagementArgs{
-					ErrorLimit:          pulumi.Int(10),
-					ErrorManagementType: "StopImport",
-				},
-				FileFilter: pulumi.String("unknown"),
-				FolderPath: pulumi.String("http://sample.dne/file"),
-				Format: &customerinsights.ConnectorMappingFormatArgs{
-					ColumnDelimiter: pulumi.String("|"),
-					FormatType:      "TextFormat",
-				},
-				HasHeader: pulumi.Bool(false),
-				Structure: customerinsights.ConnectorMappingStructureArray{
-					&customerinsights.ConnectorMappingStructureArgs{
-						ColumnName:   pulumi.String("unknown1"),
-						IsEncrypted:  pulumi.Bool(false),
-						PropertyName: pulumi.String("unknwon1"),
-					},
-					&customerinsights.ConnectorMappingStructureArgs{
-						ColumnName:   pulumi.String("unknown2"),
-						IsEncrypted:  pulumi.Bool(true),
-						PropertyName: pulumi.String("unknwon2"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("TestHubRG"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const connectorMapping = new azure_native.customerinsights.ConnectorMapping("connectorMapping", {
-    connectorName: "testConnector8858",
-    description: "Test mapping",
-    displayName: "testMapping12491",
-    entityType: "Interaction",
-    entityTypeName: "TestInteractionType2967",
-    hubName: "sdkTestHub",
-    mappingName: "testMapping12491",
-    mappingProperties: {
-        availability: {
-            frequency: "Hour",
-            interval: 5,
-        },
-        completeOperation: {
-            completionOperationType: "DeleteFile",
-            destinationFolder: "fakePath",
-        },
-        errorManagement: {
-            errorLimit: 10,
-            errorManagementType: "StopImport",
-        },
-        fileFilter: "unknown",
-        folderPath: "http://sample.dne/file",
-        format: {
-            columnDelimiter: "|",
-            formatType: "TextFormat",
-        },
-        hasHeader: false,
-        structure: [
-            {
-                columnName: "unknown1",
-                isEncrypted: false,
-                propertyName: "unknwon1",
-            },
-            {
-                columnName: "unknown2",
-                isEncrypted: true,
-                propertyName: "unknwon2",
-            },
-        ],
-    },
-    resourceGroupName: "TestHubRG",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-connector_mapping = azure_native.customerinsights.ConnectorMapping("connectorMapping",
-    connector_name="testConnector8858",
-    description="Test mapping",
-    display_name="testMapping12491",
-    entity_type="Interaction",
-    entity_type_name="TestInteractionType2967",
-    hub_name="sdkTestHub",
-    mapping_name="testMapping12491",
-    mapping_properties=azure_native.customerinsights.ConnectorMappingPropertiesArgs(
-        availability=azure_native.customerinsights.ConnectorMappingAvailabilityArgs(
-            frequency="Hour",
-            interval=5,
-        ),
-        complete_operation=azure_native.customerinsights.ConnectorMappingCompleteOperationArgs(
-            completion_operation_type="DeleteFile",
-            destination_folder="fakePath",
-        ),
-        error_management=azure_native.customerinsights.ConnectorMappingErrorManagementArgs(
-            error_limit=10,
-            error_management_type="StopImport",
-        ),
-        file_filter="unknown",
-        folder_path="http://sample.dne/file",
-        format=azure_native.customerinsights.ConnectorMappingFormatArgs(
-            column_delimiter="|",
-            format_type="TextFormat",
-        ),
-        has_header=False,
-        structure=[
-            azure_native.customerinsights.ConnectorMappingStructureArgs(
-                column_name="unknown1",
-                is_encrypted=False,
-                property_name="unknwon1",
-            ),
-            azure_native.customerinsights.ConnectorMappingStructureArgs(
-                column_name="unknown2",
-                is_encrypted=True,
-                property_name="unknwon2",
-            ),
-        ],
-    ),
-    resource_group_name="TestHubRG")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:customerinsights:ConnectorMapping sdkTestHub/testConnector8858/testMapping12491 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/connectors/testConnector8858/mappings/testMapping12491 
-```
-
- */
 @ResourceType(type="azure-native:customerinsights:ConnectorMapping")
 public class ConnectorMapping extends io.pulumi.resources.CustomResource {
-    /**
-     * The connector mapping name
-     */
     @OutputExport(name="connectorMappingName", type=String.class, parameters={})
     private Output<String> connectorMappingName;
 
-    /**
-     * @return The connector mapping name
-     */
     public Output<String> getConnectorMappingName() {
         return this.connectorMappingName;
     }
-    /**
-     * The connector name.
-     */
     @OutputExport(name="connectorName", type=String.class, parameters={})
     private Output<String> connectorName;
 
-    /**
-     * @return The connector name.
-     */
     public Output<String> getConnectorName() {
         return this.connectorName;
     }
-    /**
-     * Type of connector.
-     */
     @OutputExport(name="connectorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorType;
 
-    /**
-     * @return Type of connector.
-     */
     public Output</* @Nullable */ String> getConnectorType() {
         return this.connectorType;
     }
-    /**
-     * The created time.
-     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
-    /**
-     * @return The created time.
-     */
     public Output<String> getCreated() {
         return this.created;
     }
-    /**
-     * The DataFormat ID.
-     */
     @OutputExport(name="dataFormatId", type=String.class, parameters={})
     private Output<String> dataFormatId;
 
-    /**
-     * @return The DataFormat ID.
-     */
     public Output<String> getDataFormatId() {
         return this.dataFormatId;
     }
-    /**
-     * The description of the connector mapping.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description of the connector mapping.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Display name for the connector mapping.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return Display name for the connector mapping.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Defines which entity type the file should map to.
-     */
     @OutputExport(name="entityType", type=String.class, parameters={})
     private Output<String> entityType;
 
-    /**
-     * @return Defines which entity type the file should map to.
-     */
     public Output<String> getEntityType() {
         return this.entityType;
     }
-    /**
-     * The mapping entity name.
-     */
     @OutputExport(name="entityTypeName", type=String.class, parameters={})
     private Output<String> entityTypeName;
 
-    /**
-     * @return The mapping entity name.
-     */
     public Output<String> getEntityTypeName() {
         return this.entityTypeName;
     }
-    /**
-     * The last modified time.
-     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
-    /**
-     * @return The last modified time.
-     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
-    /**
-     * The properties of the mapping.
-     */
     @OutputExport(name="mappingProperties", type=ConnectorMappingPropertiesResponse.class, parameters={})
     private Output<ConnectorMappingPropertiesResponse> mappingProperties;
 
-    /**
-     * @return The properties of the mapping.
-     */
     public Output<ConnectorMappingPropertiesResponse> getMappingProperties() {
         return this.mappingProperties;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The next run time based on customer's settings.
-     */
     @OutputExport(name="nextRunTime", type=String.class, parameters={})
     private Output<String> nextRunTime;
 
-    /**
-     * @return The next run time based on customer's settings.
-     */
     public Output<String> getNextRunTime() {
         return this.nextRunTime;
     }
-    /**
-     * The RunId.
-     */
     @OutputExport(name="runId", type=String.class, parameters={})
     private Output<String> runId;
 
-    /**
-     * @return The RunId.
-     */
     public Output<String> getRunId() {
         return this.runId;
     }
-    /**
-     * State of connector mapping.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return State of connector mapping.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * The hub name.
-     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
-    /**
-     * @return The hub name.
-     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ConnectorMapping(String name, ConnectorMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customerinsights:ConnectorMapping", name, args == null ? ConnectorMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -494,14 +139,6 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ConnectorMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectorMapping(name, id, options);
     }

@@ -12,38 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JsonFormatResponse {
-/**
- * Deserializer. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object deserializer;
-/**
- * The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encodingName;
-/**
- * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
- */
     private final @Nullable Object filePattern;
-/**
- * The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
- */
     private final @Nullable Object jsonNodeReference;
-/**
- * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
- */
     private final @Nullable Object jsonPathDefinition;
-/**
- * The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
- */
     private final @Nullable Object nestingSeparator;
-/**
- * Serializer. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object serializer;
-/**
- * Type of dataset storage format.
-Expected value is 'JsonFormat'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"deserializer","encodingName","filePattern","jsonNodeReference","jsonPathDefinition","nestingSeparator","serializer","type"})
@@ -66,52 +41,27 @@ Expected value is 'JsonFormat'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Deserializer. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getDeserializer() {
         return Optional.ofNullable(this.deserializer);
     }
-/**
- * The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncodingName() {
         return Optional.ofNullable(this.encodingName);
     }
-/**
- * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
- */
     public Optional<Object> getFilePattern() {
         return Optional.ofNullable(this.filePattern);
     }
-/**
- * The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
- */
     public Optional<Object> getJsonNodeReference() {
         return Optional.ofNullable(this.jsonNodeReference);
     }
-/**
- * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
- */
     public Optional<Object> getJsonPathDefinition() {
         return Optional.ofNullable(this.jsonPathDefinition);
     }
-/**
- * The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
- */
     public Optional<Object> getNestingSeparator() {
         return Optional.ofNullable(this.nestingSeparator);
     }
-/**
- * Serializer. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getSerializer() {
         return Optional.ofNullable(this.serializer);
     }
-/**
- * Type of dataset storage format.
-Expected value is 'JsonFormat'.
- */
     public String getType() {
         return this.type;
     }

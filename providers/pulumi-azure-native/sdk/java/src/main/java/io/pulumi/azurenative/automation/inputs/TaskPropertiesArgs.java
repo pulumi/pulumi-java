@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Task properties of the software update configuration.
- */
 public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskPropertiesArgs Empty = new TaskPropertiesArgs();
 
-    /**
-     * Gets or sets the parameters of the task.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 
@@ -28,9 +22,6 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Gets or sets the name of the runbook.
-     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 

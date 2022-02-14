@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetCreateRequestPathArgs Empty = new DatasetCreateRequestPathArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="dataPath")
     private final @Nullable Input<DatasetCreateRequestDataPathArgs> dataPath;
 
@@ -28,9 +22,6 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
         return this.dataPath == null ? Input.empty() : this.dataPath;
     }
 
-    /**
-     * The Http URL.
-     */
     @InputImport(name="httpUrl")
     private final @Nullable Input<String> httpUrl;
 

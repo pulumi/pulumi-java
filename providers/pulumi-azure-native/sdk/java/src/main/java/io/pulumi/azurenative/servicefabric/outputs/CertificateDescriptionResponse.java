@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateDescriptionResponse {
-/**
- * Thumbprint of the primary certificate.
- */
     private final String thumbprint;
-/**
- * Thumbprint of the secondary certificate.
- */
     private final @Nullable String thumbprintSecondary;
-/**
- * The local certificate store location.
- */
     private final @Nullable String x509StoreName;
 
     @OutputCustomType.Constructor({"thumbprint","thumbprintSecondary","x509StoreName"})
@@ -34,21 +25,12 @@ public final class CertificateDescriptionResponse {
         this.x509StoreName = x509StoreName;
     }
 
-/**
- * Thumbprint of the primary certificate.
- */
     public String getThumbprint() {
         return this.thumbprint;
     }
-/**
- * Thumbprint of the secondary certificate.
- */
     public Optional<String> getThumbprintSecondary() {
         return Optional.ofNullable(this.thumbprintSecondary);
     }
-/**
- * The local certificate store location.
- */
     public Optional<String> getX509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }

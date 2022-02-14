@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VolumeError captures an error encountered during a volume operation.
- */
 public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeErrorArgs Empty = new VolumeErrorArgs();
 
-    /**
-     * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -27,9 +21,6 @@ public final class VolumeErrorArgs extends io.pulumi.resources.ResourceArgs {
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * Time the error was encountered.
-     */
     @InputImport(name="time")
     private final @Nullable Input<String> time;
 

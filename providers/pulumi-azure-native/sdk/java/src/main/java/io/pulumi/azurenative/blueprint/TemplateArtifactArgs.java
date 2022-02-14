@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateArtifactArgs Empty = new TemplateArtifactArgs();
 
-    /**
-     * Name of the blueprint artifact.
-     */
     @InputImport(name="artifactName")
     private final @Nullable Input<String> artifactName;
 
@@ -31,9 +25,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
         return this.artifactName == null ? Input.empty() : this.artifactName;
     }
 
-    /**
-     * Name of the blueprint definition.
-     */
     @InputImport(name="blueprintName", required=true)
     private final Input<String> blueprintName;
 
@@ -41,9 +32,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
         return this.blueprintName;
     }
 
-    /**
-     * Artifacts which need to be deployed before the specified artifact.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<String>> dependsOn;
 
@@ -51,9 +39,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Multi-line explain this resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -61,9 +46,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * One-liner string explain this resource.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -71,10 +53,6 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Specifies the kind of blueprint artifact.
-Expected value is 'template'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -82,9 +60,6 @@ Expected value is 'template'.
         return this.kind;
     }
 
-    /**
-     * Resource Manager template blueprint artifact parameter values.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<Map<String,ParameterValueArgs>> parameters;
 
@@ -92,9 +67,6 @@ Expected value is 'template'.
         return this.parameters;
     }
 
-    /**
-     * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -102,9 +74,6 @@ Expected value is 'template'.
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
-    /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     */
     @InputImport(name="resourceScope", required=true)
     private final Input<String> resourceScope;
 
@@ -112,9 +81,6 @@ Expected value is 'template'.
         return this.resourceScope;
     }
 
-    /**
-     * The Resource Manager template blueprint artifact body.
-     */
     @InputImport(name="template", required=true)
     private final Input<Object> template;
 

@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the delta health policies for the cluster upgrade.
- */
 public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterUpgradeDeltaHealthPolicyResponse Empty = new ClusterUpgradeDeltaHealthPolicyResponse();
 
-    /**
-     * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
-     */
     @InputImport(name="applicationDeltaHealthPolicies")
     private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
 
@@ -30,12 +24,6 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
         return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;
     }
 
-    /**
-     * The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
-The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
-
-     */
     @InputImport(name="maxPercentDeltaUnhealthyApplications", required=true)
     private final Integer maxPercentDeltaUnhealthyApplications;
 
@@ -43,12 +31,6 @@ The check is performed after every upgrade domain upgrade completion to make sur
         return this.maxPercentDeltaUnhealthyApplications;
     }
 
-    /**
-     * The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
-
-     */
     @InputImport(name="maxPercentDeltaUnhealthyNodes", required=true)
     private final Integer maxPercentDeltaUnhealthyNodes;
 
@@ -56,12 +38,6 @@ The check is performed after every upgrade domain upgrade completion to make sur
         return this.maxPercentDeltaUnhealthyNodes;
     }
 
-    /**
-     * The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
-The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
-The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
-
-     */
     @InputImport(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
     private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 

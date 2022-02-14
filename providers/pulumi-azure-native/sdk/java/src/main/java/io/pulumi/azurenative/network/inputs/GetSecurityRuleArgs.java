@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecurityRuleArgs Empty = new GetSecurityRuleArgs();
 
-    /**
-     * The name of the network security group.
-     */
     @InputImport(name="networkSecurityGroupName", required=true)
     private final String networkSecurityGroupName;
 
@@ -25,9 +19,6 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.networkSecurityGroupName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the security rule.
-     */
     @InputImport(name="securityRuleName", required=true)
     private final String securityRuleName;
 

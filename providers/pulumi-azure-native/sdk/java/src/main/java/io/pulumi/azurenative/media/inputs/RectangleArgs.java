@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of a rectangular window applied to the input media before processing it.
- */
 public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RectangleArgs Empty = new RectangleArgs();
 
-    /**
-     * The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     */
     @InputImport(name="height")
     private final @Nullable Input<String> height;
 
@@ -27,9 +21,6 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
         return this.height == null ? Input.empty() : this.height;
     }
 
-    /**
-     * The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     */
     @InputImport(name="left")
     private final @Nullable Input<String> left;
 
@@ -37,9 +28,6 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
         return this.left == null ? Input.empty() : this.left;
     }
 
-    /**
-     * The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     */
     @InputImport(name="top")
     private final @Nullable Input<String> top;
 
@@ -47,9 +35,6 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
         return this.top == null ? Input.empty() : this.top;
     }
 
-    /**
-     * The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
-     */
     @InputImport(name="width")
     private final @Nullable Input<String> width;
 

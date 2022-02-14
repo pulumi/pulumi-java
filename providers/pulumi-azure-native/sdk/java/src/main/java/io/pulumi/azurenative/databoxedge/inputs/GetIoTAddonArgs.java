@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetIoTAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIoTAddonArgs Empty = new GetIoTAddonArgs();
 
-    /**
-     * The addon name.
-     */
     @InputImport(name="addonName", required=true)
     private final String addonName;
 
@@ -25,9 +19,6 @@ public final class GetIoTAddonArgs extends io.pulumi.resources.InvokeArgs {
         return this.addonName;
     }
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -35,9 +26,6 @@ public final class GetIoTAddonArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetIoTAddonArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The role name.
-     */
     @InputImport(name="roleName", required=true)
     private final String roleName;
 

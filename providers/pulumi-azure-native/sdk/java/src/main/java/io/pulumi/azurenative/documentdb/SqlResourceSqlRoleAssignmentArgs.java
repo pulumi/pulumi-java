@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlResourceSqlRoleAssignmentArgs Empty = new SqlResourceSqlRoleAssignmentArgs();
 
-    /**
-     * Cosmos DB database account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
-    /**
-     * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -37,9 +28,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * The GUID for the Role Assignment.
-     */
     @InputImport(name="roleAssignmentId")
     private final @Nullable Input<String> roleAssignmentId;
 
@@ -57,9 +42,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
         return this.roleAssignmentId == null ? Input.empty() : this.roleAssignmentId;
     }
 
-    /**
-     * The unique identifier for the associated Role Definition.
-     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable Input<String> roleDefinitionId;
 
@@ -67,9 +49,6 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
     }
 
-    /**
-     * The data plane resource path for which access is being granted through this Role Assignment.
-     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 

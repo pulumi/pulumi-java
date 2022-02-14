@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The specifications of dynamically generated facets.
- */
 public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse Empty = new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse();
 
-    /**
-     * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
-     */
     @InputImport(name="mode", required=true)
     private final String mode;
 

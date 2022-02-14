@@ -12,16 +12,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * A Dataproc job for running Apache Spark SQL (https://spark.apache.org/sql/) queries.
- */
 public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SparkSqlJobResponse Empty = new SparkSqlJobResponse();
 
-    /**
-     * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
-     */
     @InputImport(name="jarFileUris", required=true)
     private final List<String> jarFileUris;
 
@@ -29,9 +23,6 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.jarFileUris;
     }
 
-    /**
-     * Optional. The runtime log config for job execution.
-     */
     @InputImport(name="loggingConfig", required=true)
     private final LoggingConfigResponse loggingConfig;
 
@@ -39,9 +30,6 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.loggingConfig;
     }
 
-    /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
-     */
     @InputImport(name="properties", required=true)
     private final Map<String,String> properties;
 
@@ -49,9 +37,6 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties;
     }
 
-    /**
-     * The HCFS URI of the script that contains SQL queries.
-     */
     @InputImport(name="queryFileUri", required=true)
     private final String queryFileUri;
 
@@ -59,9 +44,6 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.queryFileUri;
     }
 
-    /**
-     * A list of queries.
-     */
     @InputImport(name="queryList", required=true)
     private final QueryListResponse queryList;
 
@@ -69,9 +51,6 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.queryList;
     }
 
-    /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
-     */
     @InputImport(name="scriptVariables", required=true)
     private final Map<String,String> scriptVariables;
 

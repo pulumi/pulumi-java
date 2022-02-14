@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MultipleActivationKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MultipleActivationKeyArgs Empty = new MultipleActivationKeyArgs();
 
-    /**
-     * Agreement number under which the key is requested.
-     */
     @InputImport(name="agreementNumber")
     private final @Nullable Input<String> agreementNumber;
 
@@ -33,9 +27,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.agreementNumber == null ? Input.empty() : this.agreementNumber;
     }
 
-    /**
-     * Number of activations/servers using the MAK key.
-     */
     @InputImport(name="installedServerNumber")
     private final @Nullable Input<Integer> installedServerNumber;
 
@@ -43,9 +34,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.installedServerNumber == null ? Input.empty() : this.installedServerNumber;
     }
 
-    /**
-     * <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
-     */
     @InputImport(name="isEligible")
     private final @Nullable Input<Boolean> isEligible;
 
@@ -53,9 +41,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.isEligible == null ? Input.empty() : this.isEligible;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,9 +48,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the MAK key.
-     */
     @InputImport(name="multipleActivationKeyName")
     private final @Nullable Input<String> multipleActivationKeyName;
 
@@ -73,9 +55,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.multipleActivationKeyName == null ? Input.empty() : this.multipleActivationKeyName;
     }
 
-    /**
-     * Type of OS for which the key is requested.
-     */
     @InputImport(name="osType")
     private final @Nullable Input<Either<String,OsType>> osType;
 
@@ -83,9 +62,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.osType == null ? Input.empty() : this.osType;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,9 +69,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Type of support
-     */
     @InputImport(name="supportType")
     private final @Nullable Input<Either<String,SupportType>> supportType;
 
@@ -103,9 +76,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         return this.supportType == null ? Input.empty() : this.supportType;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

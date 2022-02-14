@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuSettingArgs Empty = new SkuSettingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="capabilities")
     private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
 
@@ -32,9 +26,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<SkuSettingCapacityArgs> capacity;
 
@@ -42,9 +33,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="costs")
     private final @Nullable Input<List<SkuCostArgs>> costs;
 
@@ -52,9 +40,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.costs == null ? Input.empty() : this.costs;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -62,9 +47,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -72,9 +54,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="locationInfo")
     private final @Nullable Input<List<SkuLocationInfoArgs>> locationInfo;
 
@@ -82,9 +61,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationInfo == null ? Input.empty() : this.locationInfo;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -92,9 +68,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -102,9 +75,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requiredFeatures")
     private final @Nullable Input<List<String>> requiredFeatures;
 
@@ -112,9 +82,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requiredQuotaIds")
     private final @Nullable Input<List<String>> requiredQuotaIds;
 
@@ -122,9 +89,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiredQuotaIds == null ? Input.empty() : this.requiredQuotaIds;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -132,9 +96,6 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

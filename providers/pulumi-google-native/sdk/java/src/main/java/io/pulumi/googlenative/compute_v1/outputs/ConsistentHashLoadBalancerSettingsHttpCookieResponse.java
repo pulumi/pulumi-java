@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
-/**
- * Name of the cookie.
- */
     private final String name;
-/**
- * Path to set for the cookie.
- */
     private final String path;
-/**
- * Lifetime of the cookie.
- */
     private final DurationResponse ttl;
 
     @OutputCustomType.Constructor({"name","path","ttl"})
@@ -33,21 +24,12 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
         this.ttl = Objects.requireNonNull(ttl);
     }
 
-/**
- * Name of the cookie.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Path to set for the cookie.
- */
     public String getPath() {
         return this.path;
     }
-/**
- * Lifetime of the cookie.
- */
     public DurationResponse getTtl() {
         return this.ttl;
     }

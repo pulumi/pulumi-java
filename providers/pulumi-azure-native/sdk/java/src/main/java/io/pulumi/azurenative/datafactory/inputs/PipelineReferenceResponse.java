@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Pipeline reference type.
- */
 public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineReferenceResponse Empty = new PipelineReferenceResponse();
 
-    /**
-     * Reference name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Reference pipeline name.
-     */
     @InputImport(name="referenceName", required=true)
     private final String referenceName;
 
@@ -37,9 +28,6 @@ public final class PipelineReferenceResponse extends io.pulumi.resources.InvokeA
         return this.referenceName;
     }
 
-    /**
-     * Pipeline reference type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

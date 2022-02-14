@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AnnotationSourceResponse {
-/**
- * Cloud Healthcare API resource.
- */
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
 
     @OutputCustomType.Constructor({"cloudHealthcareSource"})
@@ -19,9 +16,6 @@ public final class AnnotationSourceResponse {
         this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
     }
 
-/**
- * Cloud Healthcare API resource.
- */
     public CloudHealthcareSourceResponse getCloudHealthcareSource() {
         return this.cloudHealthcareSource;
     }

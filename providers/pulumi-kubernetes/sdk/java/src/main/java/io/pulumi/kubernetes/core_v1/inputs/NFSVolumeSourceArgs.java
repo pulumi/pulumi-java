@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
- */
 public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NFSVolumeSourceArgs Empty = new NFSVolumeSourceArgs();
 
-    /**
-     * Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -28,9 +22,6 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.path;
     }
 
-    /**
-     * ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -38,9 +29,6 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
-    /**
-     * Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-     */
     @InputImport(name="server", required=true)
     private final Input<String> server;
 

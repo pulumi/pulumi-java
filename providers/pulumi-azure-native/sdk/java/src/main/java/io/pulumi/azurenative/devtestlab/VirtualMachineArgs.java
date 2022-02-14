@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineArgs Empty = new VirtualMachineArgs();
 
-    /**
-     * Indicates whether another user can take ownership of the virtual machine
-     */
     @InputImport(name="allowClaim")
     private final @Nullable Input<Boolean> allowClaim;
 
@@ -35,9 +29,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowClaim == null ? Input.empty() : this.allowClaim;
     }
 
-    /**
-     * The artifacts to be installed on the virtual machine.
-     */
     @InputImport(name="artifacts")
     private final @Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts;
 
@@ -45,9 +36,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifacts == null ? Input.empty() : this.artifacts;
     }
 
-    /**
-     * The creation date of the virtual machine.
-     */
     @InputImport(name="createdDate")
     private final @Nullable Input<String> createdDate;
 
@@ -55,9 +43,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdDate == null ? Input.empty() : this.createdDate;
     }
 
-    /**
-     * The custom image identifier of the virtual machine.
-     */
     @InputImport(name="customImageId")
     private final @Nullable Input<String> customImageId;
 
@@ -65,9 +50,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.customImageId == null ? Input.empty() : this.customImageId;
     }
 
-    /**
-     * New or existing data disks to attach to the virtual machine after creation
-     */
     @InputImport(name="dataDiskParameters")
     private final @Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
@@ -75,9 +57,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDiskParameters == null ? Input.empty() : this.dataDiskParameters;
     }
 
-    /**
-     * Indicates whether the virtual machine is to be created without a public IP address.
-     */
     @InputImport(name="disallowPublicIpAddress")
     private final @Nullable Input<Boolean> disallowPublicIpAddress;
 
@@ -85,9 +64,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.disallowPublicIpAddress == null ? Input.empty() : this.disallowPublicIpAddress;
     }
 
-    /**
-     * The resource ID of the environment that contains this virtual machine, if any.
-     */
     @InputImport(name="environmentId")
     private final @Nullable Input<String> environmentId;
 
@@ -95,9 +71,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId == null ? Input.empty() : this.environmentId;
     }
 
-    /**
-     * The expiration date for VM.
-     */
     @InputImport(name="expirationDate")
     private final @Nullable Input<String> expirationDate;
 
@@ -105,9 +78,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
     }
 
-    /**
-     * The Microsoft Azure Marketplace image reference of the virtual machine.
-     */
     @InputImport(name="galleryImageReference")
     private final @Nullable Input<GalleryImageReferenceArgs> galleryImageReference;
 
@@ -115,9 +85,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.galleryImageReference == null ? Input.empty() : this.galleryImageReference;
     }
 
-    /**
-     * Indicates whether this virtual machine uses an SSH key for authentication.
-     */
     @InputImport(name="isAuthenticationWithSshKey")
     private final @Nullable Input<Boolean> isAuthenticationWithSshKey;
 
@@ -125,9 +92,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.isAuthenticationWithSshKey == null ? Input.empty() : this.isAuthenticationWithSshKey;
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -135,9 +99,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
-    /**
-     * The lab subnet name of the virtual machine.
-     */
     @InputImport(name="labSubnetName")
     private final @Nullable Input<String> labSubnetName;
 
@@ -145,9 +106,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.labSubnetName == null ? Input.empty() : this.labSubnetName;
     }
 
-    /**
-     * The lab virtual network identifier of the virtual machine.
-     */
     @InputImport(name="labVirtualNetworkId")
     private final @Nullable Input<String> labVirtualNetworkId;
 
@@ -155,9 +113,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.labVirtualNetworkId == null ? Input.empty() : this.labVirtualNetworkId;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -165,9 +120,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the virtual machine.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -175,9 +127,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The network interface properties.
-     */
     @InputImport(name="networkInterface")
     private final @Nullable Input<NetworkInterfacePropertiesArgs> networkInterface;
 
@@ -185,9 +134,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkInterface == null ? Input.empty() : this.networkInterface;
     }
 
-    /**
-     * The notes of the virtual machine.
-     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -195,9 +141,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.notes == null ? Input.empty() : this.notes;
     }
 
-    /**
-     * The object identifier of the owner of the virtual machine.
-     */
     @InputImport(name="ownerObjectId")
     private final @Nullable Input<String> ownerObjectId;
 
@@ -205,9 +148,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.ownerObjectId == null ? Input.empty() : this.ownerObjectId;
     }
 
-    /**
-     * The user principal name of the virtual machine owner.
-     */
     @InputImport(name="ownerUserPrincipalName")
     private final @Nullable Input<String> ownerUserPrincipalName;
 
@@ -215,9 +155,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.ownerUserPrincipalName == null ? Input.empty() : this.ownerUserPrincipalName;
     }
 
-    /**
-     * The password of the virtual machine administrator.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -225,9 +162,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The id of the plan associated with the virtual machine image
-     */
     @InputImport(name="planId")
     private final @Nullable Input<String> planId;
 
@@ -235,9 +169,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.planId == null ? Input.empty() : this.planId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -245,9 +176,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Virtual Machine schedules to be created
-     */
     @InputImport(name="scheduleParameters")
     private final @Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
@@ -255,9 +183,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduleParameters == null ? Input.empty() : this.scheduleParameters;
     }
 
-    /**
-     * The size of the virtual machine.
-     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -265,9 +190,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
-    /**
-     * The SSH key of the virtual machine administrator.
-     */
     @InputImport(name="sshKey")
     private final @Nullable Input<String> sshKey;
 
@@ -275,9 +197,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.sshKey == null ? Input.empty() : this.sshKey;
     }
 
-    /**
-     * Storage type to use for virtual machine (i.e. Standard, Premium).
-     */
     @InputImport(name="storageType")
     private final @Nullable Input<String> storageType;
 
@@ -285,9 +204,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageType == null ? Input.empty() : this.storageType;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -295,9 +211,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The user name of the virtual machine.
-     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

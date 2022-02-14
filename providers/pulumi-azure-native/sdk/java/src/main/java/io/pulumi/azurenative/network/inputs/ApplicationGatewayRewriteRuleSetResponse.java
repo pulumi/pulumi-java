@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Rewrite rule set of an application gateway.
- */
 public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayRewriteRuleSetResponse Empty = new ApplicationGatewayRewriteRuleSetResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,9 +23,6 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -39,9 +30,6 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the rewrite rule set that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -49,9 +37,6 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the rewrite rule set resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -59,9 +44,6 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
         return this.provisioningState;
     }
 
-    /**
-     * Rewrite rules in the rewrite rule set.
-     */
     @InputImport(name="rewriteRules")
     private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 

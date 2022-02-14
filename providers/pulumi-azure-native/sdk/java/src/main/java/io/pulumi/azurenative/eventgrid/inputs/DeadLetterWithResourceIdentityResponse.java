@@ -11,17 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about the deadletter destination with resource identity.
- */
 public final class DeadLetterWithResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeadLetterWithResourceIdentityResponse Empty = new DeadLetterWithResourceIdentityResponse();
 
-    /**
-     * Information about the destination where events have to be delivered for the event subscription.
-Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     */
     @InputImport(name="deadLetterDestination")
     private final @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
 
@@ -29,9 +22,6 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
         return this.deadLetterDestination == null ? Optional.empty() : Optional.ofNullable(this.deadLetterDestination);
     }
 
-    /**
-     * The identity to use when dead-lettering events.
-     */
     @InputImport(name="identity")
     private final @Nullable EventSubscriptionIdentityResponse identity;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Duration based custom options to copy
- */
 public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomCopyOptionArgs Empty = new CustomCopyOptionArgs();
 
-    /**
-     * Data copied after given timespan
-     */
     @InputImport(name="duration")
     private final @Nullable Input<String> duration;
 
@@ -27,10 +21,6 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
         return this.duration == null ? Input.empty() : this.duration;
     }
 
-    /**
-     * Type of the specific object - used for deserializing
-Expected value is 'CustomCopyOption'.
-     */
     @InputImport(name="objectType", required=true)
     private final Input<String> objectType;
 

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
-    /**
-     * Settings for authentication management, these settings are relevant only for the cloud connector.
-     */
     @InputImport(name="authenticationDetails")
     private final @Nullable Input<Object> authenticationDetails;
 
@@ -32,9 +26,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationDetails == null ? Input.empty() : this.authenticationDetails;
     }
 
-    /**
-     * Name of the cloud account connector
-     */
     @InputImport(name="connectorName")
     private final @Nullable Input<String> connectorName;
 
@@ -42,9 +33,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorName == null ? Input.empty() : this.connectorName;
     }
 
-    /**
-     * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     */
     @InputImport(name="hybridComputeSettings")
     private final @Nullable Input<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 

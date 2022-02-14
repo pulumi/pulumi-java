@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the AzureFirewallRCAction.
- */
 public final class AzureFirewallRCActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFirewallRCActionArgs Empty = new AzureFirewallRCActionArgs();
 
-    /**
-     * The type of action.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,AzureFirewallRCActionType>> type;
 

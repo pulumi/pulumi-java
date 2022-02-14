@@ -10,16 +10,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * User signature.
- */
 public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SignatureResponse Empty = new SignatureResponse();
 
-    /**
-     * Optional. An image of the user's signature.
-     */
     @InputImport(name="image", required=true)
     private final ImageResponse image;
 
@@ -27,9 +21,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
         return this.image;
     }
 
-    /**
-     * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
-     */
     @InputImport(name="metadata", required=true)
     private final Map<String,String> metadata;
 
@@ -37,9 +28,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
         return this.metadata;
     }
 
-    /**
-     * Optional. Timestamp of the signature.
-     */
     @InputImport(name="signatureTime", required=true)
     private final String signatureTime;
 
@@ -47,9 +35,6 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
         return this.signatureTime;
     }
 
-    /**
-     * User's UUID provided by the client.
-     */
     @InputImport(name="userId", required=true)
     private final String userId;
 

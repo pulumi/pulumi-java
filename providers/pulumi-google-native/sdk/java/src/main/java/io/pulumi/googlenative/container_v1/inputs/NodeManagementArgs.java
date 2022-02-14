@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NodeManagement defines the set of node management services turned on for the node pool.
- */
 public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeManagementArgs Empty = new NodeManagementArgs();
 
-    /**
-     * A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
-     */
     @InputImport(name="autoRepair")
     private final @Nullable Input<Boolean> autoRepair;
 
@@ -28,9 +22,6 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
     }
 
-    /**
-     * A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
-     */
     @InputImport(name="autoUpgrade")
     private final @Nullable Input<Boolean> autoUpgrade;
 
@@ -38,9 +29,6 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
     }
 
-    /**
-     * Specifies the Auto Upgrade knobs for the node pool.
-     */
     @InputImport(name="upgradeOptions")
     private final @Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions;
 

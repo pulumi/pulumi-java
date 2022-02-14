@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
-/**
- * The probability that the treatment is better than all other treatments in the experiment
- */
     private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
-/**
- * Count value of a metric.
- */
     private final Double count;
-/**
- * Count-based metric type. Only one of type or count_type is specified in each Metric.
- */
     private final String countType;
-/**
- * Ratio value of a metric.
- */
     private final Double ratio;
-/**
- * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"confidenceInterval","count","countType","ratio","type"})
@@ -46,33 +31,18 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The probability that the treatment is better than all other treatments in the experiment
- */
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
         return this.confidenceInterval;
     }
-/**
- * Count value of a metric.
- */
     public Double getCount() {
         return this.count;
     }
-/**
- * Count-based metric type. Only one of type or count_type is specified in each Metric.
- */
     public String getCountType() {
         return this.countType;
     }
-/**
- * Ratio value of a metric.
- */
     public Double getRatio() {
         return this.ratio;
     }
-/**
- * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
- */
     public String getType() {
         return this.type;
     }

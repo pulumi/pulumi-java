@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Log policy schedule.
- */
 public final class LogSchedulePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogSchedulePolicyResponse Empty = new LogSchedulePolicyResponse();
 
-    /**
-     * Frequency of the log schedule operation of this policy in minutes.
-     */
     @InputImport(name="scheduleFrequencyInMins")
     private final @Nullable Integer scheduleFrequencyInMins;
 
@@ -28,10 +22,6 @@ public final class LogSchedulePolicyResponse extends io.pulumi.resources.InvokeA
         return this.scheduleFrequencyInMins == null ? Optional.empty() : Optional.ofNullable(this.scheduleFrequencyInMins);
     }
 
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'LogSchedulePolicy'.
-     */
     @InputImport(name="schedulePolicyType", required=true)
     private final String schedulePolicyType;
 

@@ -17,46 +17,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebTableDatasetResponse {
-/**
- * List of tags that can be used for describing the Dataset.
- */
     private final @Nullable List<Object> annotations;
-/**
- * Dataset description.
- */
     private final @Nullable String description;
-/**
- * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
- */
     private final @Nullable DatasetResponseFolder folder;
-/**
- * The zero-based index of the table in the web page. Type: integer (or Expression with resultType integer), minimum: 0.
- */
     private final Object index;
-/**
- * Linked service reference.
- */
     private final LinkedServiceReferenceResponse linkedServiceName;
-/**
- * Parameters for dataset.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * The relative URL to the web page from the linked service URL. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object path;
-/**
- * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
- */
     private final @Nullable Object schema;
-/**
- * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
- */
     private final @Nullable Object structure;
-/**
- * Type of dataset.
-Expected value is 'WebTable'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","description","folder","index","linkedServiceName","parameters","path","schema","structure","type"})
@@ -83,64 +52,33 @@ Expected value is 'WebTable'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * List of tags that can be used for describing the Dataset.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * Dataset description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
- */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
-/**
- * The zero-based index of the table in the web page. Type: integer (or Expression with resultType integer), minimum: 0.
- */
     public Object getIndex() {
         return this.index;
     }
-/**
- * Linked service reference.
- */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
-/**
- * Parameters for dataset.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * The relative URL to the web page from the linked service URL. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);
     }
-/**
- * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
- */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
-/**
- * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
- */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
-/**
- * Type of dataset.
-Expected value is 'WebTable'.
- */
     public String getType() {
         return this.type;
     }

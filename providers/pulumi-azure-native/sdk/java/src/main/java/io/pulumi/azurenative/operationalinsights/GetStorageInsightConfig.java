@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageInsightConfig {
-/**
- * The top level storage insight resource container.
-API Version: 2020-08-01.
- *
- * The top level storage insight resource container.
- */
     public static CompletableFuture<GetStorageInsightConfigResult> invokeAsync(GetStorageInsightConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getStorageInsightConfig", TypeShape.of(GetStorageInsightConfigResult.class), args == null ? GetStorageInsightConfigArgs.Empty : args, Utilities.withVersion(options));
     }

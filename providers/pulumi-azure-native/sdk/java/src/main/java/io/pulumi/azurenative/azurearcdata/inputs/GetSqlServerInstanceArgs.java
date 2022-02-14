@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlServerInstanceArgs Empty = new GetSqlServerInstanceArgs();
 
-    /**
-     * The name of the Azure resource group
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of SQL Server Instance
-     */
     @InputImport(name="sqlServerInstanceName", required=true)
     private final String sqlServerInstanceName;
 

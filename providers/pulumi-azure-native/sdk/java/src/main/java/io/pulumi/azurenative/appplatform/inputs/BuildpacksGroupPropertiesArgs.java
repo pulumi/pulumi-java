@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Buildpack group properties of the Builder
- */
 public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildpacksGroupPropertiesArgs Empty = new BuildpacksGroupPropertiesArgs();
 
-    /**
-     * Buildpacks in the buildpack group
-     */
     @InputImport(name="buildpacks")
     private final @Nullable Input<List<BuildpackPropertiesArgs>> buildpacks;
 
@@ -29,9 +23,6 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
         return this.buildpacks == null ? Input.empty() : this.buildpacks;
     }
 
-    /**
-     * Buildpack group name
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

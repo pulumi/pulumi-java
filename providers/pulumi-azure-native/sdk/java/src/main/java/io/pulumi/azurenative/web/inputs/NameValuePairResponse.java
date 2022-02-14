@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Name value pair.
- */
 public final class NameValuePairResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NameValuePairResponse Empty = new NameValuePairResponse();
 
-    /**
-     * Pair name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class NameValuePairResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Pair value.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

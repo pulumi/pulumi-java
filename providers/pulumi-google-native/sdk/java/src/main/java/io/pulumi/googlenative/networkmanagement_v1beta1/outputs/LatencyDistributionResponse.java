@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LatencyDistributionResponse {
-/**
- * Representative latency percentiles.
- */
     private final List<LatencyPercentileResponse> latencyPercentiles;
 
     @OutputCustomType.Constructor({"latencyPercentiles"})
@@ -20,9 +17,6 @@ public final class LatencyDistributionResponse {
         this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
     }
 
-/**
- * Representative latency percentiles.
- */
     public List<LatencyPercentileResponse> getLatencyPercentiles() {
         return this.latencyPercentiles;
     }

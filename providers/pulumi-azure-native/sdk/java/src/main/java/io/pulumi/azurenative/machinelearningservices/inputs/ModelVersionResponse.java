@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Model asset version details.
- */
 public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelVersionResponse Empty = new ModelVersionResponse();
 
-    /**
-     * ARM resource ID of the datastore where the asset is located.
-     */
     @InputImport(name="datastoreId")
     private final @Nullable String datastoreId;
 
@@ -30,9 +24,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -40,9 +31,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Mapping of model flavors to their properties.
-     */
     @InputImport(name="flavors")
     private final @Nullable Map<String,FlavorDataResponse> flavors;
 
@@ -50,9 +38,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.flavors == null ? Map.of() : this.flavors;
     }
 
-    /**
-     * If the name version are system generated (anonymous registration).
-     */
     @InputImport(name="isAnonymous")
     private final @Nullable Boolean isAnonymous;
 
@@ -60,9 +45,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
     }
 
-    /**
-     * The path of the file/directory in the datastore.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -70,9 +52,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.path;
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -80,9 +59,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppPremierAddOnSlotArgs Empty = new GetWebAppPremierAddOnSlotArgs();
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
         return this.name;
     }
 
-    /**
-     * Add-on name.
-     */
     @InputImport(name="premierAddOnName", required=true)
     private final String premierAddOnName;
 
@@ -35,9 +26,6 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
         return this.premierAddOnName;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API will get the named add-on for the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

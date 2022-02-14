@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Managed identity properties.
- */
 public final class IdentityPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityPropertiesResponse Empty = new IdentityPropertiesResponse();
 
-    /**
-     * Managed service identity type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,9 +22,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * User assigned identity properties.
-     */
     @InputImport(name="userAssigned")
     private final @Nullable UserAssignedPropertiesResponse userAssigned;
 

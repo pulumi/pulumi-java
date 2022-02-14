@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SwaggerSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SwaggerSpecificationArgs Empty = new SwaggerSpecificationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="apiVersions")
     private final @Nullable Input<List<String>> apiVersions;
 
@@ -28,9 +22,6 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
         return this.apiVersions == null ? Input.empty() : this.apiVersions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="swaggerSpecFolderUri")
     private final @Nullable Input<String> swaggerSpecFolderUri;
 

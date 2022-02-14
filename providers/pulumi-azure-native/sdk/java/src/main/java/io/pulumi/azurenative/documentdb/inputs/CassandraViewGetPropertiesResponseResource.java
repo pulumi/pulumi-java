@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.resources.InvokeArgs {
 
     public static final CassandraViewGetPropertiesResponseResource Empty = new CassandraViewGetPropertiesResponseResource();
 
-    /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -26,9 +20,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
         return this.etag;
     }
 
-    /**
-     * Name of the Cosmos DB Cassandra view
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,9 +27,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
         return this.id;
     }
 
-    /**
-     * A system generated property. A unique identifier.
-     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -46,9 +34,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
         return this.rid;
     }
 
-    /**
-     * A system generated property that denotes the last updated timestamp of the resource.
-     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 
@@ -56,9 +41,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
         return this.ts;
     }
 
-    /**
-     * View Definition of the Cosmos DB Cassandra view
-     */
     @InputImport(name="viewDefinition", required=true)
     private final String viewDefinition;
 

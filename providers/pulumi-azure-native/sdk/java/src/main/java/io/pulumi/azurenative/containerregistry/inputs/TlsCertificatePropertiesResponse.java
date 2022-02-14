@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The TLS certificate properties of the connected registry login server.
- */
 public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TlsCertificatePropertiesResponse Empty = new TlsCertificatePropertiesResponse();
 
-    /**
-     * Indicates the location of the certificates.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -25,9 +19,6 @@ public final class TlsCertificatePropertiesResponse extends io.pulumi.resources.
         return this.location;
     }
 
-    /**
-     * The type of certificate location.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

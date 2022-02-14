@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceSubInterfaceArgs Empty = new NetworkInterfaceSubInterfaceArgs();
 
-    /**
-     * An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -29,9 +23,6 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="ipAllocationMode")
     private final @Nullable Input<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode;
 
@@ -39,9 +30,6 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
         return this.ipAllocationMode == null ? Input.empty() : this.ipAllocationMode;
     }
 
-    /**
-     * If specified, this subnetwork must belong to the same network as that of the network interface. If not specified the subnet of network interface will be used. If you specify this property, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork 
-     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -49,9 +37,6 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
-    /**
-     * VLAN tag. Should match the VLAN(s) supported by the subnetwork to which this subinterface is connecting.
-     */
     @InputImport(name="vlan")
     private final @Nullable Input<Integer> vlan;
 

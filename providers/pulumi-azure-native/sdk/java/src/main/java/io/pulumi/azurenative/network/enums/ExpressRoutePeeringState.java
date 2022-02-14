@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The peering state.
- */
     @EnumType
     public enum ExpressRoutePeeringState {
-/**
- * 
- */
         Disabled("Disabled"),
-/**
- * 
- */
         Enabled("Enabled");
 
         private final String value;

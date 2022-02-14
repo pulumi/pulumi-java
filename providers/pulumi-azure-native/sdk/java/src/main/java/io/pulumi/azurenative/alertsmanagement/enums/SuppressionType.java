@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies when the suppression should be applied
- */
     @EnumType
     public enum SuppressionType {
-/**
- * 
- */
         Always("Always"),
-/**
- * 
- */
         Once("Once"),
-/**
- * 
- */
         Daily("Daily"),
-/**
- * 
- */
         Weekly("Weekly"),
-/**
- * 
- */
         Monthly("Monthly");
 
         private final String value;

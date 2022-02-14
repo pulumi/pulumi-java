@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * DEPRECATED 1.9 - This group version of NetworkPolicyPort is deprecated by networking/v1/NetworkPolicyPort.
- */
 public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkPolicyPortArgs Empty = new NetworkPolicyPortArgs();
 
-    /**
-     * If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Either<Integer,String>> port;
 
@@ -29,9 +23,6 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 

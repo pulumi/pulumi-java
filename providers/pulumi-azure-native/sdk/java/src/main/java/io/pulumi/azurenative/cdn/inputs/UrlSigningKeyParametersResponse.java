@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Url signing key parameters
- */
 public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UrlSigningKeyParametersResponse Empty = new UrlSigningKeyParametersResponse();
 
-    /**
-     * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
-     */
     @InputImport(name="keyId", required=true)
     private final String keyId;
 
@@ -28,9 +22,6 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
         return this.keyId;
     }
 
-    /**
-     * Resource reference to the KV secret
-     */
     @InputImport(name="secretSource", required=true)
     private final ResourceReferenceResponse secretSource;
 
@@ -38,9 +29,6 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
         return this.secretSource;
     }
 
-    /**
-     * Version of the secret to be used
-     */
     @InputImport(name="secretVersion")
     private final @Nullable String secretVersion;
 
@@ -48,10 +36,6 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
-    /**
-     * The type of the Secret to create.
-Expected value is 'UrlSigningKey'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

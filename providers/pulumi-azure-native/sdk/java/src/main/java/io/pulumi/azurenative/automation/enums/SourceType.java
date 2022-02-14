@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
- */
     @EnumType
     public enum SourceType {
-/**
- * 
- */
         VsoGit("VsoGit"),
-/**
- * 
- */
         VsoTfvc("VsoTfvc"),
-/**
- * 
- */
         GitHub("GitHub");
 
         private final String value;

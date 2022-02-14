@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Specifies a set of log entries that are filtered out by a sink. If your Google Cloud resource receives a large volume of log entries, you can use exclusions to reduce your chargeable logs. Note that exclusions on organization-level and folder-level sinks don't apply to child resources. Note also that you cannot modify the _Required sink or exclude logs from it.
- */
 public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogExclusionResponse Empty = new LogExclusionResponse();
 
-    /**
-     * The creation timestamp of the exclusion.This field may not be present for older exclusions.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -26,9 +20,6 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
         return this.createTime;
     }
 
-    /**
-     * Optional. A description of this exclusion.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -36,9 +27,6 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
-    /**
-     * Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
-     */
     @InputImport(name="disabled", required=true)
     private final Boolean disabled;
 
@@ -46,9 +34,6 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
         return this.disabled;
     }
 
-    /**
-     * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
-     */
     @InputImport(name="filter", required=true)
     private final String filter;
 
@@ -56,9 +41,6 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
         return this.filter;
     }
 
-    /**
-     * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -66,9 +48,6 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The last update timestamp of the exclusion.This field may not be present for older exclusions.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

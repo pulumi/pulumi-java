@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container for environment specification versions.
- */
 public final class EnvironmentContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentContainerArgs Empty = new EnvironmentContainerArgs();
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -38,9 +29,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

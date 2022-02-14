@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Operation parameters details.
- */
 public final class ParameterContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterContractArgs Empty = new ParameterContractArgs();
 
-    /**
-     * Default parameter value.
-     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<String> defaultValue;
 
@@ -29,9 +23,6 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
-    /**
-     * Parameter description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Parameter name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -49,9 +37,6 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
         return this.name;
     }
 
-    /**
-     * Specifies whether parameter is required or not.
-     */
     @InputImport(name="required")
     private final @Nullable Input<Boolean> required;
 
@@ -59,9 +44,6 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
         return this.required == null ? Input.empty() : this.required;
     }
 
-    /**
-     * Parameter type.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -69,9 +51,6 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
         return this.type;
     }
 
-    /**
-     * Parameter values.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RepositoryRefDefinitionResponse {
-/**
- * The git repository branch name to checkout.
- */
     private final @Nullable String branch;
-/**
- * The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
- */
     private final @Nullable String commit;
-/**
- * The semver range used to match against git repository tags. This takes precedence over tag.
- */
     private final @Nullable String semver;
-/**
- * The git repository tag name to checkout. This takes precedence over branch.
- */
     private final @Nullable String tag;
 
     @OutputCustomType.Constructor({"branch","commit","semver","tag"})
@@ -40,27 +28,15 @@ public final class RepositoryRefDefinitionResponse {
         this.tag = tag;
     }
 
-/**
- * The git repository branch name to checkout.
- */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
-/**
- * The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
- */
     public Optional<String> getCommit() {
         return Optional.ofNullable(this.commit);
     }
-/**
- * The semver range used to match against git repository tags. This takes precedence over tag.
- */
     public Optional<String> getSemver() {
         return Optional.ofNullable(this.semver);
     }
-/**
- * The git repository tag name to checkout. This takes precedence over branch.
- */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataLakeAnalyticsPropertiesArgs Empty = new DataLakeAnalyticsPropertiesArgs();
 
-    /**
-     * DataLake Store Account Name
-     */
     @InputImport(name="dataLakeStoreAccountName")
     private final @Nullable Input<String> dataLakeStoreAccountName;
 

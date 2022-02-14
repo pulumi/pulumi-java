@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Public IP Address associated with azure firewall.
- */
 public final class AzureFirewallPublicIPAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallPublicIPAddressResponse Empty = new AzureFirewallPublicIPAddressResponse();
 
-    /**
-     * Public IP Address value.
-     */
     @InputImport(name="address")
     private final @Nullable String address;
 

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The OS type.
- */
     @EnumType
     public enum OperatingSystemTypes {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Windows("Windows"),
-/**
- * 
- */
         Linux("Linux");
 
         private final String value;

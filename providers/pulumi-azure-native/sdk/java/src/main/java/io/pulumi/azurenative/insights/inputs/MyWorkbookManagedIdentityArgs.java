@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Customer Managed Identity
- */
 public final class MyWorkbookManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MyWorkbookManagedIdentityArgs Empty = new MyWorkbookManagedIdentityArgs();
 
-    /**
-     * The identity type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

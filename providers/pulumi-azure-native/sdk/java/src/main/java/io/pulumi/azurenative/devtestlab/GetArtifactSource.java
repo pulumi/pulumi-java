@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArtifactSource {
-/**
- * Properties of an artifact source.
-API Version: 2018-09-15.
- *
- * Properties of an artifact source.
- */
     public static CompletableFuture<GetArtifactSourceResult> invokeAsync(GetArtifactSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getArtifactSource", TypeShape.of(GetArtifactSourceResult.class), args == null ? GetArtifactSourceArgs.Empty : args, Utilities.withVersion(options));
     }

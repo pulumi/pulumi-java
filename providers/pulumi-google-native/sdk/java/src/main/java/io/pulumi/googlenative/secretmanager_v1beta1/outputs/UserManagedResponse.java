@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserManagedResponse {
-/**
- * The list of Replicas for this Secret. Cannot be empty.
- */
     private final List<ReplicaResponse> replicas;
 
     @OutputCustomType.Constructor({"replicas"})
@@ -20,9 +17,6 @@ public final class UserManagedResponse {
         this.replicas = Objects.requireNonNull(replicas);
     }
 
-/**
- * The list of Replicas for this Secret. Cannot be empty.
- */
     public List<ReplicaResponse> getReplicas() {
         return this.replicas;
     }

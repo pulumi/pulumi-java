@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayIPConfigurationResponse {
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Name of the IP configuration that is unique within an Application Gateway.
- */
     private final @Nullable String name;
-/**
- * The provisioning state of the application gateway IP configuration resource.
- */
     private final String provisioningState;
-/**
- * Reference to the subnet resource. A subnet from where application gateway gets its private address.
- */
     private final @Nullable SubResourceResponse subnet;
-/**
- * Type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","provisioningState","subnet","type"})
@@ -53,39 +35,21 @@ public final class ApplicationGatewayIPConfigurationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Name of the IP configuration that is unique within an Application Gateway.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The provisioning state of the application gateway IP configuration resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Reference to the subnet resource. A subnet from where application gateway gets its private address.
- */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
-/**
- * Type of the resource.
- */
     public String getType() {
         return this.type;
     }

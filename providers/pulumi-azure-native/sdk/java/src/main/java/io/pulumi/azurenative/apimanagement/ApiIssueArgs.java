@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiIssueArgs Empty = new ApiIssueArgs();
 
-    /**
-     * A resource identifier for the API the issue was created for.
-     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -29,9 +23,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
-    /**
-     * Date and time when the issue was created.
-     */
     @InputImport(name="createdDate")
     private final @Nullable Input<String> createdDate;
 
@@ -39,9 +30,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdDate == null ? Input.empty() : this.createdDate;
     }
 
-    /**
-     * Text describing the issue.
-     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -49,9 +37,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.description;
     }
 
-    /**
-     * Issue identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="issueId")
     private final @Nullable Input<String> issueId;
 
@@ -59,9 +44,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.issueId == null ? Input.empty() : this.issueId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -79,9 +58,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Status of the issue.
-     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,State>> state;
 
@@ -89,9 +65,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
-    /**
-     * The issue title.
-     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 
@@ -99,9 +72,6 @@ public final class ApiIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.title;
     }
 
-    /**
-     * A resource identifier for the user created the issue.
-     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 

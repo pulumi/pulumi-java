@@ -6,9 +6,6 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import java.util.Objects;
 
 
-/**
- * SlsaBuilder encapsulates the identity of the builder of this provenance.
- */
 public final class SlsaBuilderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SlsaBuilderResponse Empty = new SlsaBuilderResponse();

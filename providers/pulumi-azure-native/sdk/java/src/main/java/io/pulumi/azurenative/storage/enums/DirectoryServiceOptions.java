@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates the directory service used.
- */
     @EnumType
     public enum DirectoryServiceOptions {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         AADDS("AADDS"),
-/**
- * 
- */
         AD("AD");
 
         private final String value;

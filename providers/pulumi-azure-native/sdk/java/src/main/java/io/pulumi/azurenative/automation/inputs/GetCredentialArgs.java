@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCredentialArgs Empty = new GetCredentialArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -25,9 +19,6 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * The name of credential.
-     */
     @InputImport(name="credentialName", required=true)
     private final String credentialName;
 
@@ -35,9 +26,6 @@ public final class GetCredentialArgs extends io.pulumi.resources.InvokeArgs {
         return this.credentialName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

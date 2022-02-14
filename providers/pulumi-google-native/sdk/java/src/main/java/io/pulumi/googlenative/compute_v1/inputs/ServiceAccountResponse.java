@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A service account.
- */
 public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAccountResponse Empty = new ServiceAccountResponse();
 
-    /**
-     * Email address of the service account.
-     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -26,9 +20,6 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.email;
     }
 
-    /**
-     * The list of scopes to be made available for this service account.
-     */
     @InputImport(name="scopes", required=true)
     private final List<String> scopes;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties related to EventGrid.
- */
 public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventGridArgs Empty = new EventGridArgs();
 
-    /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
-     */
     @InputImport(name="accessKey1", required=true)
     private final Input<String> accessKey1;
 
@@ -29,9 +23,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessKey1;
     }
 
-    /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
-     */
     @InputImport(name="accessKey2")
     private final @Nullable Input<String> accessKey2;
 
@@ -39,9 +30,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessKey2 == null ? Input.empty() : this.accessKey2;
     }
 
-    /**
-     * Specifies the authentication type being used for connecting to the endpoint.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
@@ -49,9 +37,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
-    /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     */
     @InputImport(name="deadLetterSecret")
     private final @Nullable Input<String> deadLetterSecret;
 
@@ -59,9 +44,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterSecret == null ? Input.empty() : this.deadLetterSecret;
     }
 
-    /**
-     * Dead letter storage URL for identity-based authentication.
-     */
     @InputImport(name="deadLetterUri")
     private final @Nullable Input<String> deadLetterUri;
 
@@ -69,10 +51,6 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterUri == null ? Input.empty() : this.deadLetterUri;
     }
 
-    /**
-     * The type of Digital Twins endpoint
-Expected value is 'EventGrid'.
-     */
     @InputImport(name="endpointType", required=true)
     private final Input<String> endpointType;
 
@@ -80,9 +58,6 @@ Expected value is 'EventGrid'.
         return this.endpointType;
     }
 
-    /**
-     * EventGrid Topic Endpoint
-     */
     @InputImport(name="topicEndpoint", required=true)
     private final Input<String> topicEndpoint;
 

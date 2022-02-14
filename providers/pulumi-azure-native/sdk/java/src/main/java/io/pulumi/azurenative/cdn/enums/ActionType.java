@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes what action to be applied when rule matches
- */
     @EnumType
     public enum ActionType {
-/**
- * 
- */
         Allow("Allow"),
-/**
- * 
- */
         Block("Block"),
-/**
- * 
- */
         Log("Log"),
-/**
- * 
- */
         Redirect("Redirect");
 
         private final String value;

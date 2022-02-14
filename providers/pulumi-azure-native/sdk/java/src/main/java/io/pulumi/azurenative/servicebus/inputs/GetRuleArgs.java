@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRuleArgs Empty = new GetRuleArgs();
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -25,9 +19,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The rule name.
-     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 
@@ -45,9 +33,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.ruleName;
     }
 
-    /**
-     * The subscription name.
-     */
     @InputImport(name="subscriptionName", required=true)
     private final String subscriptionName;
 
@@ -55,9 +40,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.subscriptionName;
     }
 
-    /**
-     * The topic name.
-     */
     @InputImport(name="topicName", required=true)
     private final String topicName;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This is used to represent the various nodes of the distributed container.
- */
 public final class DistributedNodesInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributedNodesInfoArgs Empty = new DistributedNodesInfoArgs();
 
-    /**
-     * Name of the node under a distributed container.
-     */
     @InputImport(name="nodeName")
     private final @Nullable Input<String> nodeName;
 
@@ -27,10 +21,6 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
         return this.nodeName == null ? Input.empty() : this.nodeName;
     }
 
-    /**
-     * Status of this Node.
-Failed | Succeeded
-     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnlineEndpointToken {
-/**
- * Service Token
-API Version: 2021-03-01-preview.
- *
- * Service Token
- */
     public static CompletableFuture<GetOnlineEndpointTokenResult> invokeAsync(GetOnlineEndpointTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineEndpointToken", TypeShape.of(GetOnlineEndpointTokenResult.class), args == null ? GetOnlineEndpointTokenArgs.Empty : args, Utilities.withVersion(options));
     }

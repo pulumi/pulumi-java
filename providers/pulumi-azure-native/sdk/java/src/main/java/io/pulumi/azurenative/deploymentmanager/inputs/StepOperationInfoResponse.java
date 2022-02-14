@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Detailed information of a specific step run.
- */
 public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StepOperationInfoResponse Empty = new StepOperationInfoResponse();
 
-    /**
-     * Unique identifier to track the request for ARM-based resources.
-     */
     @InputImport(name="correlationId", required=true)
     private final String correlationId;
 
@@ -28,9 +22,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
         return this.correlationId;
     }
 
-    /**
-     * The name of the ARM deployment initiated as part of the step.
-     */
     @InputImport(name="deploymentName", required=true)
     private final String deploymentName;
 
@@ -38,9 +29,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
         return this.deploymentName;
     }
 
-    /**
-     * End time of the action in UTC.
-     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -48,9 +36,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
         return this.endTime;
     }
 
-    /**
-     * The errors, if any, for the action.
-     */
     @InputImport(name="error")
     private final @Nullable CloudErrorBodyResponse error;
 
@@ -58,9 +43,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
-    /**
-     * Last time in UTC this operation was updated.
-     */
     @InputImport(name="lastUpdatedTime", required=true)
     private final String lastUpdatedTime;
 
@@ -68,9 +50,6 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
         return this.lastUpdatedTime;
     }
 
-    /**
-     * Start time of the action in UTC.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

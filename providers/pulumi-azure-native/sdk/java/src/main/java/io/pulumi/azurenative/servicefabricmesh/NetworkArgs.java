@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkArgs Empty = new NetworkArgs();
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The identity of the network.
-     */
     @InputImport(name="networkResourceName")
     private final @Nullable Input<String> networkResourceName;
 
@@ -39,9 +30,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkResourceName == null ? Input.empty() : this.networkResourceName;
     }
 
-    /**
-     * Describes properties of a network resource.
-     */
     @InputImport(name="properties", required=true)
     private final Input<NetworkResourcePropertiesArgs> properties;
 
@@ -49,9 +37,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * Azure resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

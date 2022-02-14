@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HeaderActionParametersResponse {
-/**
- * Action to perform
- */
     private final String headerAction;
-/**
- * Name of the header to modify
- */
     private final String headerName;
-/**
- * 
- */
     private final String odataType;
-/**
- * Value for the specified action
- */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"headerAction","headerName","odataType","value"})
@@ -40,27 +28,15 @@ public final class HeaderActionParametersResponse {
         this.value = value;
     }
 
-/**
- * Action to perform
- */
     public String getHeaderAction() {
         return this.headerAction;
     }
-/**
- * Name of the header to modify
- */
     public String getHeaderName() {
         return this.headerName;
     }
-/**
- * 
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * Value for the specified action
- */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

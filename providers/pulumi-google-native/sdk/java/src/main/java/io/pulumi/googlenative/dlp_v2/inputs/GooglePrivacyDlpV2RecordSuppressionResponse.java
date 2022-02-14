@@ -8,16 +8,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionRes
 import java.util.Objects;
 
 
-/**
- * Configuration to suppress records whose suppression conditions evaluate to true.
- */
 public final class GooglePrivacyDlpV2RecordSuppressionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2RecordSuppressionResponse Empty = new GooglePrivacyDlpV2RecordSuppressionResponse();
 
-    /**
-     * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
-     */
     @InputImport(name="condition", required=true)
     private final GooglePrivacyDlpV2RecordConditionResponse condition;
 

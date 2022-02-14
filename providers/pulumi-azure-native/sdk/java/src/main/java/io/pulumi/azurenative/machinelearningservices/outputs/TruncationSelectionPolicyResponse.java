@@ -12,22 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TruncationSelectionPolicyResponse {
-/**
- * Number of intervals by which to delay the first evaluation.
- */
     private final @Nullable Integer delayEvaluation;
-/**
- * Interval (number of runs) between policy evaluations.
- */
     private final @Nullable Integer evaluationInterval;
-/**
- * 
-Expected value is 'TruncationSelection'.
- */
     private final String policyType;
-/**
- * The percentage of runs to cancel at each evaluation interval.
- */
     private final @Nullable Integer truncationPercentage;
 
     @OutputCustomType.Constructor({"delayEvaluation","evaluationInterval","policyType","truncationPercentage"})
@@ -42,28 +29,15 @@ Expected value is 'TruncationSelection'.
         this.truncationPercentage = truncationPercentage;
     }
 
-/**
- * Number of intervals by which to delay the first evaluation.
- */
     public Optional<Integer> getDelayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
-/**
- * Interval (number of runs) between policy evaluations.
- */
     public Optional<Integer> getEvaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
-/**
- * 
-Expected value is 'TruncationSelection'.
- */
     public String getPolicyType() {
         return this.policyType;
     }
-/**
- * The percentage of runs to cancel at each evaluation interval.
- */
     public Optional<Integer> getTruncationPercentage() {
         return Optional.ofNullable(this.truncationPercentage);
     }

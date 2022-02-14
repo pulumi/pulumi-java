@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A summary of a test suite result either parsed from XML or uploaded directly by a user. Note: the API related comments are for StepService only. This message is also being used in ExecutionService in a read only mode for the corresponding step.
- */
 public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestSuiteOverviewArgs Empty = new TestSuiteOverviewArgs();
 
-    /**
-     * Elapsed time of test suite.
-     */
     @InputImport(name="elapsedTime")
     private final @Nullable Input<DurationArgs> elapsedTime;
 
@@ -30,9 +24,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.elapsedTime == null ? Input.empty() : this.elapsedTime;
     }
 
-    /**
-     * Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
-     */
     @InputImport(name="errorCount")
     private final @Nullable Input<Integer> errorCount;
 
@@ -40,9 +31,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.errorCount == null ? Input.empty() : this.errorCount;
     }
 
-    /**
-     * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
-     */
     @InputImport(name="failureCount")
     private final @Nullable Input<Integer> failureCount;
 
@@ -50,9 +38,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.failureCount == null ? Input.empty() : this.failureCount;
     }
 
-    /**
-     * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
-     */
     @InputImport(name="flakyCount")
     private final @Nullable Input<Integer> flakyCount;
 
@@ -60,9 +45,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.flakyCount == null ? Input.empty() : this.flakyCount;
     }
 
-    /**
-     * The name of the test suite. - In create/response: always set - In update request: never
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,9 +52,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
-     */
     @InputImport(name="skippedCount")
     private final @Nullable Input<Integer> skippedCount;
 
@@ -80,9 +59,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.skippedCount == null ? Input.empty() : this.skippedCount;
     }
 
-    /**
-     * Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
-     */
     @InputImport(name="totalCount")
     private final @Nullable Input<Integer> totalCount;
 
@@ -90,9 +66,6 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
         return this.totalCount == null ? Input.empty() : this.totalCount;
     }
 
-    /**
-     * If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
-     */
     @InputImport(name="xmlSource")
     private final @Nullable Input<FileReferenceArgs> xmlSource;
 

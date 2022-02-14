@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Delivery type of Job.
- */
     @EnumType
     public enum JobDeliveryType {
-/**
- * Non Scheduled job.
- */
         NonScheduled("NonScheduled"),
-/**
- * Scheduled job.
- */
         Scheduled("Scheduled");
 
         private final String value;

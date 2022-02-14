@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The trigger that results in a scaling action.
- */
 public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricTriggerResponse Empty = new MetricTriggerResponse();
 
-    /**
-     * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
-     */
     @InputImport(name="dimensions")
     private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
 
@@ -31,9 +25,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.dimensions == null ? List.of() : this.dimensions;
     }
 
-    /**
-     * a value indicating whether metric should divide per instance.
-     */
     @InputImport(name="dividePerInstance")
     private final @Nullable Boolean dividePerInstance;
 
@@ -41,9 +32,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.dividePerInstance == null ? Optional.empty() : Optional.ofNullable(this.dividePerInstance);
     }
 
-    /**
-     * the name of the metric that defines what the rule monitors.
-     */
     @InputImport(name="metricName", required=true)
     private final String metricName;
 
@@ -51,9 +39,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.metricName;
     }
 
-    /**
-     * the namespace of the metric that defines what the rule monitors.
-     */
     @InputImport(name="metricNamespace")
     private final @Nullable String metricNamespace;
 
@@ -61,9 +46,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
-    /**
-     * the location of the resource the rule monitors.
-     */
     @InputImport(name="metricResourceLocation")
     private final @Nullable String metricResourceLocation;
 
@@ -71,9 +53,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.metricResourceLocation == null ? Optional.empty() : Optional.ofNullable(this.metricResourceLocation);
     }
 
-    /**
-     * the resource identifier of the resource the rule monitors.
-     */
     @InputImport(name="metricResourceUri", required=true)
     private final String metricResourceUri;
 
@@ -81,9 +60,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.metricResourceUri;
     }
 
-    /**
-     * the operator that is used to compare the metric data and the threshold.
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -91,9 +67,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.operator;
     }
 
-    /**
-     * the metric statistic type. How the metrics from multiple instances are combined.
-     */
     @InputImport(name="statistic", required=true)
     private final String statistic;
 
@@ -101,9 +74,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.statistic;
     }
 
-    /**
-     * the threshold of the metric that triggers the scale action.
-     */
     @InputImport(name="threshold", required=true)
     private final Double threshold;
 
@@ -111,9 +81,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.threshold;
     }
 
-    /**
-     * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
-     */
     @InputImport(name="timeAggregation", required=true)
     private final String timeAggregation;
 
@@ -121,9 +88,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.timeAggregation;
     }
 
-    /**
-     * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
-     */
     @InputImport(name="timeGrain", required=true)
     private final String timeGrain;
 
@@ -131,9 +95,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.timeGrain;
     }
 
-    /**
-     * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
-     */
     @InputImport(name="timeWindow", required=true)
     private final String timeWindow;
 

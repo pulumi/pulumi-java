@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WCFRelayArgs Empty = new WCFRelayArgs();
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -29,9 +23,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
-    /**
-     * The relay name.
-     */
     @InputImport(name="relayName")
     private final @Nullable Input<String> relayName;
 
@@ -39,9 +30,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.relayName == null ? Input.empty() : this.relayName;
     }
 
-    /**
-     * WCF relay type.
-     */
     @InputImport(name="relayType")
     private final @Nullable Input<Relaytype> relayType;
 
@@ -49,9 +37,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.relayType == null ? Input.empty() : this.relayType;
     }
 
-    /**
-     * Returns true if client authorization is needed for this relay; otherwise, false.
-     */
     @InputImport(name="requiresClientAuthorization")
     private final @Nullable Input<Boolean> requiresClientAuthorization;
 
@@ -59,9 +44,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiresClientAuthorization == null ? Input.empty() : this.requiresClientAuthorization;
     }
 
-    /**
-     * Returns true if transport security is needed for this relay; otherwise, false.
-     */
     @InputImport(name="requiresTransportSecurity")
     private final @Nullable Input<Boolean> requiresTransportSecurity;
 
@@ -69,9 +51,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiresTransportSecurity == null ? Input.empty() : this.requiresTransportSecurity;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,9 +58,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     */
     @InputImport(name="userMetadata")
     private final @Nullable Input<String> userMetadata;
 

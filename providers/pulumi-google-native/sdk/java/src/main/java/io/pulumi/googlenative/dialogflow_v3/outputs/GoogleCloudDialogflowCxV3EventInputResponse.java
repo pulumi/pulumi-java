@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3EventInputResponse {
-/**
- * Name of the event.
- */
     private final String event;
 
     @OutputCustomType.Constructor({"event"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse {
         this.event = Objects.requireNonNull(event);
     }
 
-/**
- * Name of the event.
- */
     public String getEvent() {
         return this.event;
     }

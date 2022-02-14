@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of source for the import pipeline.
- */
     @EnumType
     public enum PipelineSourceType {
-/**
- * 
- */
         AzureStorageBlobContainer("AzureStorageBlobContainer");
 
         private final String value;

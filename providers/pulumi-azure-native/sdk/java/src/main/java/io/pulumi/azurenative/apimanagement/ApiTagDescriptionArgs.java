@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiTagDescriptionArgs Empty = new ApiTagDescriptionArgs();
 
-    /**
-     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -27,9 +21,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
         return this.apiId;
     }
 
-    /**
-     * Description of the Tag.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,9 +28,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Description of the external resources describing the tag.
-     */
     @InputImport(name="externalDocsDescription")
     private final @Nullable Input<String> externalDocsDescription;
 
@@ -47,9 +35,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
         return this.externalDocsDescription == null ? Input.empty() : this.externalDocsDescription;
     }
 
-    /**
-     * Absolute URL of external resources describing the tag.
-     */
     @InputImport(name="externalDocsUrl")
     private final @Nullable Input<String> externalDocsUrl;
 
@@ -57,9 +42,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
         return this.externalDocsUrl == null ? Input.empty() : this.externalDocsUrl;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -77,9 +56,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
         return this.serviceName;
     }
 
-    /**
-     * Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
-     */
     @InputImport(name="tagDescriptionId")
     private final @Nullable Input<String> tagDescriptionId;
 

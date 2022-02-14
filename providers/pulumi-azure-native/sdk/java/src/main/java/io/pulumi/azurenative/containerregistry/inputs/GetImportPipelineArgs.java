@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetImportPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImportPipelineArgs Empty = new GetImportPipelineArgs();
 
-    /**
-     * The name of the import pipeline.
-     */
     @InputImport(name="importPipelineName", required=true)
     private final String importPipelineName;
 
@@ -25,9 +19,6 @@ public final class GetImportPipelineArgs extends io.pulumi.resources.InvokeArgs 
         return this.importPipelineName;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -35,9 +26,6 @@ public final class GetImportPipelineArgs extends io.pulumi.resources.InvokeArgs 
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

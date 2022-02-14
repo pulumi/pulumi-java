@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A file or script to execute.
- */
 public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceExecResourceExecResponse Empty = new OSPolicyResourceExecResourceExecResponse();
 
-    /**
-     * Optional arguments to pass to the source during execution.
-     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -27,9 +21,6 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
         return this.args;
     }
 
-    /**
-     * A remote or local file.
-     */
     @InputImport(name="file", required=true)
     private final OSPolicyResourceFileResponse file;
 
@@ -37,9 +28,6 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
         return this.file;
     }
 
-    /**
-     * The script interpreter to use.
-     */
     @InputImport(name="interpreter", required=true)
     private final String interpreter;
 
@@ -47,9 +35,6 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
         return this.interpreter;
     }
 
-    /**
-     * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
-     */
     @InputImport(name="outputFilePath", required=true)
     private final String outputFilePath;
 
@@ -57,9 +42,6 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
         return this.outputFilePath;
     }
 
-    /**
-     * An inline script. The size of the script is limited to 1024 characters.
-     */
     @InputImport(name="script", required=true)
     private final String script;
 

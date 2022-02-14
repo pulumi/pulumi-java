@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of managed identity for the workspace
- */
     @EnumType
     public enum ResourceIdentityType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         SystemAssigned("SystemAssigned");
 
         private final String value;

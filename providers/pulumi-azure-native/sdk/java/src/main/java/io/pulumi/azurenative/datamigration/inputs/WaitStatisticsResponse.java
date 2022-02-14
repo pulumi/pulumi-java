@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Wait statistics gathered during query batch execution
- */
 public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WaitStatisticsResponse Empty = new WaitStatisticsResponse();
 
-    /**
-     * Total no. of waits
-     */
     @InputImport(name="waitCount", required=true)
     private final Double waitCount;
 
@@ -26,9 +20,6 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
         return this.waitCount;
     }
 
-    /**
-     * Total wait time in millisecond(s)
-     */
     @InputImport(name="waitTimeMs", required=true)
     private final Double waitTimeMs;
 
@@ -36,9 +27,6 @@ public final class WaitStatisticsResponse extends io.pulumi.resources.InvokeArgs
         return this.waitTimeMs;
     }
 
-    /**
-     * Type of the Wait
-     */
     @InputImport(name="waitType", required=true)
     private final String waitType;
 

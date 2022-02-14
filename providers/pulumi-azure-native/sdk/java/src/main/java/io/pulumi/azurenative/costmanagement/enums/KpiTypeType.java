@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * KPI type (Forecast, Budget).
- */
     @EnumType
     public enum KpiTypeType {
-/**
- * 
- */
         Forecast("Forecast"),
-/**
- * 
- */
         Budget("Budget");
 
         private final String value;

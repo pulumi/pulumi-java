@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the network interface resource settings.
- */
 public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceResourceSettingsArgs Empty = new NetworkInterfaceResourceSettingsArgs();
 
-    /**
-     * Gets or sets a value indicating whether accelerated networking is enabled.
-     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
@@ -30,9 +24,6 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
     }
 
-    /**
-     * Gets or sets the IP configurations of the NIC.
-     */
     @InputImport(name="ipConfigurations")
     private final @Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
 
@@ -40,10 +31,6 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
     }
 
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Network/networkInterfaces'.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -51,9 +38,6 @@ Expected value is 'Microsoft.Network/networkInterfaces'.
         return this.resourceType;
     }
 
-    /**
-     * Gets or sets the target Resource name.
-     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 

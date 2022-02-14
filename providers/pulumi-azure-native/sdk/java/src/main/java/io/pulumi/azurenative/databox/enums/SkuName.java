@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The sku name.
- */
     @EnumType
     public enum SkuName {
-/**
- * Data Box.
- */
         DataBox("DataBox"),
-/**
- * Data Box Disk.
- */
         DataBoxDisk("DataBoxDisk"),
-/**
- * Data Box Heavy.
- */
         DataBoxHeavy("DataBoxHeavy");
 
         private final String value;

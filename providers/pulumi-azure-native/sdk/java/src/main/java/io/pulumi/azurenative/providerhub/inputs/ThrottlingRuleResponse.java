@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ThrottlingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ThrottlingRuleResponse Empty = new ThrottlingRuleResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -29,9 +23,6 @@ public final class ThrottlingRuleResponse extends io.pulumi.resources.InvokeArgs
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="metrics", required=true)
     private final List<ThrottlingMetricResponse> metrics;
 
@@ -39,9 +30,6 @@ public final class ThrottlingRuleResponse extends io.pulumi.resources.InvokeArgs
         return this.metrics;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requiredFeatures")
     private final @Nullable List<String> requiredFeatures;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The server key type like 'ServiceManaged', 'AzureKeyVault'.
- */
     @EnumType
     public enum ServerKeyType {
-/**
- * 
- */
         ServiceManaged("ServiceManaged"),
-/**
- * 
- */
         AzureKeyVault("AzureKeyVault");
 
         private final String value;

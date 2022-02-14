@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionArgs Empty = new ExtensionArgs();
 
-    /**
-     * Id of extension resource.
-     */
     @InputImport(name="extensionId")
     private final @Nullable Input<String> extensionId;
 
@@ -27,9 +21,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensionId == null ? Input.empty() : this.extensionId;
     }
 
-    /**
-     * FarmBeats resource name.
-     */
     @InputImport(name="farmBeatsResourceName", required=true)
     private final Input<String> farmBeatsResourceName;
 
@@ -37,9 +28,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.farmBeatsResourceName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

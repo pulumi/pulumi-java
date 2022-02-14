@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConditionResponse {
-/**
- * operator for a given condition
- */
     private final @Nullable String operator;
-/**
- * list of values to match for a given condition.
- */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"operator","values"})
@@ -29,15 +23,9 @@ public final class ConditionResponse {
         this.values = values;
     }
 
-/**
- * operator for a given condition
- */
     public Optional<String> getOperator() {
         return Optional.ofNullable(this.operator);
     }
-/**
- * list of values to match for a given condition.
- */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

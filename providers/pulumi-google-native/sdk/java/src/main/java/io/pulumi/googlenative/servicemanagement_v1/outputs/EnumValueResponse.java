@@ -12,17 +12,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnumValueResponse {
-/**
- * Enum value name.
- */
     private final String name;
-/**
- * Enum value number.
- */
     private final Integer number;
-/**
- * Protocol buffer options.
- */
     private final List<OptionResponse> options;
 
     @OutputCustomType.Constructor({"name","number","options"})
@@ -35,21 +26,12 @@ public final class EnumValueResponse {
         this.options = Objects.requireNonNull(options);
     }
 
-/**
- * Enum value name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Enum value number.
- */
     public Integer getNumber() {
         return this.number;
     }
-/**
- * Protocol buffer options.
- */
     public List<OptionResponse> getOptions() {
         return this.options;
     }

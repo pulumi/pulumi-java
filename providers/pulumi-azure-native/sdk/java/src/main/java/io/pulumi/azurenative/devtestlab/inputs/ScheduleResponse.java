@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A schedule.
- */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleResponse Empty = new ScheduleResponse();
 
-    /**
-     * The creation date of the schedule.
-     */
     @InputImport(name="createdDate", required=true)
     private final String createdDate;
 
@@ -32,9 +26,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdDate;
     }
 
-    /**
-     * If the schedule will occur once each day of the week, specify the daily recurrence.
-     */
     @InputImport(name="dailyRecurrence")
     private final @Nullable DayDetailsResponse dailyRecurrence;
 
@@ -42,9 +33,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
     }
 
-    /**
-     * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     */
     @InputImport(name="hourlyRecurrence")
     private final @Nullable HourDetailsResponse hourlyRecurrence;
 
@@ -52,9 +40,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
     }
 
-    /**
-     * The identifier of the resource.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -62,9 +47,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -72,9 +54,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -82,9 +61,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Notification settings.
-     */
     @InputImport(name="notificationSettings")
     private final @Nullable NotificationSettingsResponse notificationSettings;
 
@@ -92,9 +68,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
     }
 
-    /**
-     * The provisioning status of the resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -102,9 +75,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
-    /**
-     * The status of the schedule (i.e. Enabled, Disabled)
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -112,9 +82,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -122,9 +89,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * The resource ID to which the schedule belongs
-     */
     @InputImport(name="targetResourceId")
     private final @Nullable String targetResourceId;
 
@@ -132,9 +96,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
     }
 
-    /**
-     * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     */
     @InputImport(name="taskType")
     private final @Nullable String taskType;
 
@@ -142,9 +103,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
     }
 
-    /**
-     * The time zone ID (e.g. Pacific Standard time).
-     */
     @InputImport(name="timeZoneId")
     private final @Nullable String timeZoneId;
 
@@ -152,9 +110,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
     }
 
-    /**
-     * The type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -162,9 +117,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     */
     @InputImport(name="uniqueIdentifier", required=true)
     private final String uniqueIdentifier;
 
@@ -172,9 +124,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.uniqueIdentifier;
     }
 
-    /**
-     * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     */
     @InputImport(name="weeklyRecurrence")
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 

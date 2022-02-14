@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An Azure Cosmos DB Mongo DB Resource.
- */
 public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivilegeResourceArgs Empty = new PrivilegeResourceArgs();
 
-    /**
-     * The collection name the role is applied.
-     */
     @InputImport(name="collection")
     private final @Nullable Input<String> collection;
 
@@ -27,9 +21,6 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
         return this.collection == null ? Input.empty() : this.collection;
     }
 
-    /**
-     * The database name the role is applied.
-     */
     @InputImport(name="db")
     private final @Nullable Input<String> db;
 

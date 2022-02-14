@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the route.
-     */
     @InputImport(name="routeName", required=true)
     private final String routeName;
 
@@ -35,9 +26,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
         return this.routeName;
     }
 
-    /**
-     * The name of the route table.
-     */
     @InputImport(name="routeTableName", required=true)
     private final String routeTableName;
 

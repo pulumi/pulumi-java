@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the storage profile.
- */
 public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestorePointSourceVMStorageProfileResponse Empty = new RestorePointSourceVMStorageProfileResponse();
 
-    /**
-     * Gets the data disks of the VM captured at the time of the restore point creation.
-     */
     @InputImport(name="dataDisks")
     private final @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
 
@@ -29,9 +23,6 @@ public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
-    /**
-     * Gets the OS disk of the VM captured at the time of the restore point creation.
-     */
     @InputImport(name="osDisk")
     private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
- */
 public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SerialPipelineArgs Empty = new SerialPipelineArgs();
 
-    /**
-     * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
-     */
     @InputImport(name="stages")
     private final @Nullable Input<List<StageArgs>> stages;
 

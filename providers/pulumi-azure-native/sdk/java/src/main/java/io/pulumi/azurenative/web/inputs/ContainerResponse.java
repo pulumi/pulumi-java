@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App container definition.
- */
 public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerResponse Empty = new ContainerResponse();
 
-    /**
-     * Container start command arguments.
-     */
     @InputImport(name="args")
     private final @Nullable List<String> args;
 
@@ -30,9 +24,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.args == null ? List.of() : this.args;
     }
 
-    /**
-     * Container start command.
-     */
     @InputImport(name="command")
     private final @Nullable List<String> command;
 
@@ -40,9 +31,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.command == null ? List.of() : this.command;
     }
 
-    /**
-     * Container environment variables.
-     */
     @InputImport(name="env")
     private final @Nullable List<EnvironmentVarResponse> env;
 
@@ -50,9 +38,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.env == null ? List.of() : this.env;
     }
 
-    /**
-     * Container image tag.
-     */
     @InputImport(name="image")
     private final @Nullable String image;
 
@@ -60,9 +45,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
-    /**
-     * Custom container name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -70,9 +52,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Container resource requirements.
-     */
     @InputImport(name="resources")
     private final @Nullable ContainerResourcesResponse resources;
 

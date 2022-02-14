@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
-    /**
-     * An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The display name of the `Group`.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -40,9 +31,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Optional. Dynamic group metadata like queries and status.
-     */
     @InputImport(name="dynamicGroupMetadata")
     private final @Nullable Input<DynamicGroupMetadataArgs> dynamicGroupMetadata;
 
@@ -50,9 +38,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.dynamicGroupMetadata == null ? Input.empty() : this.dynamicGroupMetadata;
     }
 
-    /**
-     * The `EntityKey` of the `Group`.
-     */
     @InputImport(name="groupKey", required=true)
     private final Input<EntityKeyArgs> groupKey;
 
@@ -60,9 +45,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupKey;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="initialGroupConfig")
     private final @Nullable Input<String> initialGroupConfig;
 
@@ -70,9 +52,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialGroupConfig == null ? Input.empty() : this.initialGroupConfig;
     }
 
-    /**
-     * One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
-     */
     @InputImport(name="labels", required=true)
     private final Input<Map<String,String>> labels;
 
@@ -80,9 +59,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels;
     }
 
-    /**
-     * Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
-     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 

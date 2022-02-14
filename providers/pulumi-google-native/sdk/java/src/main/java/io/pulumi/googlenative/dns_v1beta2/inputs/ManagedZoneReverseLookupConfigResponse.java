@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ManagedZoneReverseLookupConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZoneReverseLookupConfigResponse Empty = new ManagedZoneReverseLookupConfigResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

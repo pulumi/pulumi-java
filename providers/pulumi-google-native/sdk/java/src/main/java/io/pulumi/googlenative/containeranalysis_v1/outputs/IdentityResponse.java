@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityResponse {
-/**
- * The revision number of the update.
- */
     private final Integer revision;
-/**
- * The revision independent identifier of the update.
- */
     private final String updateId;
 
     @OutputCustomType.Constructor({"revision","updateId"})
@@ -27,15 +21,9 @@ public final class IdentityResponse {
         this.updateId = Objects.requireNonNull(updateId);
     }
 
-/**
- * The revision number of the update.
- */
     public Integer getRevision() {
         return this.revision;
     }
-/**
- * The revision independent identifier of the update.
- */
     public String getUpdateId() {
         return this.updateId;
     }

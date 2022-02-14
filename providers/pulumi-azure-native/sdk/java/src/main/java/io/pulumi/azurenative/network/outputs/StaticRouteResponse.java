@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StaticRouteResponse {
-/**
- * List of all address prefixes.
- */
     private final @Nullable List<String> addressPrefixes;
-/**
- * The name of the StaticRoute that is unique within a VnetRoute.
- */
     private final @Nullable String name;
-/**
- * The ip address of the next hop.
- */
     private final @Nullable String nextHopIpAddress;
 
     @OutputCustomType.Constructor({"addressPrefixes","name","nextHopIpAddress"})
@@ -35,21 +26,12 @@ public final class StaticRouteResponse {
         this.nextHopIpAddress = nextHopIpAddress;
     }
 
-/**
- * List of all address prefixes.
- */
     public List<String> getAddressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
-/**
- * The name of the StaticRoute that is unique within a VnetRoute.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The ip address of the next hop.
- */
     public Optional<String> getNextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }

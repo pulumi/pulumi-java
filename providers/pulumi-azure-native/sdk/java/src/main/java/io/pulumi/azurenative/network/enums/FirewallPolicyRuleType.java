@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the rule.
- */
     @EnumType
     public enum FirewallPolicyRuleType {
-/**
- * 
- */
         FirewallPolicyNatRule("FirewallPolicyNatRule"),
-/**
- * 
- */
         FirewallPolicyFilterRule("FirewallPolicyFilterRule");
 
         private final String value;

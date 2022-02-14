@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * How to handle transformation errors during de-identification. A transformation error occurs when the requested transformation is incompatible with the data. For example, trying to de-identify an IP address using a `DateShift` transformation would result in a transformation error, since date info cannot be extracted from an IP address. Information about any incompatible transformations, and how they were handled, is returned in the response as part of the `TransformationOverviews`.
- */
 public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2TransformationErrorHandlingArgs Empty = new GooglePrivacyDlpV2TransformationErrorHandlingArgs();
 
-    /**
-     * Ignore errors
-     */
     @InputImport(name="leaveUntransformed")
     private final @Nullable Input<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
@@ -28,9 +22,6 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
         return this.leaveUntransformed == null ? Input.empty() : this.leaveUntransformed;
     }
 
-    /**
-     * Throw an error
-     */
     @InputImport(name="throwError")
     private final @Nullable Input<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 

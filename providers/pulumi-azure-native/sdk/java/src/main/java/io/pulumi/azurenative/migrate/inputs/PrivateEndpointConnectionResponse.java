@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A private endpoint connection for a project.
- */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
-    /**
-     * For optimistic concurrency control.
-     */
     @InputImport(name="eTag")
     private final @Nullable String eTag;
 
@@ -28,9 +22,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
     }
 
-    /**
-     * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -38,9 +29,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
-    /**
-     * Name of the private endpoint endpoint connection.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -48,9 +36,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
-    /**
-     * Properties of the private endpoint endpoint connection.
-     */
     @InputImport(name="properties", required=true)
     private final PrivateEndpointConnectionPropertiesResponse properties;
 
@@ -58,9 +43,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.properties;
     }
 
-    /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectivityGroupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectivityGroupItemResponse Empty = new ConnectivityGroupItemResponse();
 
-    /**
-     * Group connectivity type.
-     */
     @InputImport(name="groupConnectivity")
     private final @Nullable String groupConnectivity;
 
@@ -27,9 +21,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
         return this.groupConnectivity == null ? Optional.empty() : Optional.ofNullable(this.groupConnectivity);
     }
 
-    /**
-     * Flag if global is supported.
-     */
     @InputImport(name="isGlobal")
     private final @Nullable String isGlobal;
 
@@ -37,9 +28,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
     }
 
-    /**
-     * Network group Id.
-     */
     @InputImport(name="networkGroupId")
     private final @Nullable String networkGroupId;
 
@@ -47,9 +35,6 @@ public final class ConnectivityGroupItemResponse extends io.pulumi.resources.Inv
         return this.networkGroupId == null ? Optional.empty() : Optional.ofNullable(this.networkGroupId);
     }
 
-    /**
-     * Flag if need to use hub gateway.
-     */
     @InputImport(name="useHubGateway")
     private final @Nullable String useHubGateway;
 

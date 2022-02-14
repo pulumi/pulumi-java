@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The authentication client credentials of the custom Open ID Connect provider.
- */
 public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenIdConnectClientCredentialArgs Empty = new OpenIdConnectClientCredentialArgs();
 
-    /**
-     * The app setting that contains the client secret for the custom Open ID Connect provider.
-     */
     @InputImport(name="clientSecretSettingName")
     private final @Nullable Input<String> clientSecretSettingName;
 
@@ -28,9 +22,6 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
         return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
     }
 
-    /**
-     * The method that should be used to authenticate the user.
-     */
     @InputImport(name="method")
     private final @Nullable Input<ClientCredentialMethod> method;
 

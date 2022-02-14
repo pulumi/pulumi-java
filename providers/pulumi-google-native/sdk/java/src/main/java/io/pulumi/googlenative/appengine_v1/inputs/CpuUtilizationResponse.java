@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Target scaling by CPU usage.
- */
 public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CpuUtilizationResponse Empty = new CpuUtilizationResponse();
 
-    /**
-     * Period of time over which CPU utilization is calculated.
-     */
     @InputImport(name="aggregationWindowLength", required=true)
     private final String aggregationWindowLength;
 
@@ -26,9 +20,6 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
         return this.aggregationWindowLength;
     }
 
-    /**
-     * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
-     */
     @InputImport(name="targetUtilization", required=true)
     private final Double targetUtilization;
 

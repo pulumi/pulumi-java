@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListRemoteRenderingAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListRemoteRenderingAccountKeysArgs Empty = new ListRemoteRenderingAccountKeysArgs();
 
-    /**
-     * Name of an Mixed Reality Account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class ListRemoteRenderingAccountKeysArgs extends io.pulumi.resource
         return this.accountName;
     }
 
-    /**
-     * Name of an Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

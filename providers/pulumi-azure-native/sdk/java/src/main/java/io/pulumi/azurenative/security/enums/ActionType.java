@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the action that will be triggered by the Automation
- */
     @EnumType
     public enum ActionType {
-/**
- * 
- */
         LogicApp("LogicApp"),
-/**
- * 
- */
         EventHub("EventHub"),
-/**
- * 
- */
         Workspace("Workspace");
 
         private final String value;

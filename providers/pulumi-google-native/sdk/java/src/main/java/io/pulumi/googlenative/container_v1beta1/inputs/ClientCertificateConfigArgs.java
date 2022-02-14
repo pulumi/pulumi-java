@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for client certificates on the cluster.
- */
 public final class ClientCertificateConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientCertificateConfigArgs Empty = new ClientCertificateConfigArgs();
 
-    /**
-     * Issue a client certificate.
-     */
     @InputImport(name="issueClientCertificate")
     private final @Nullable Input<Boolean> issueClientCertificate;
 

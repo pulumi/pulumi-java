@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * properties for creation saas
- */
 public final class SaasCreationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SaasCreationPropertiesArgs Empty = new SaasCreationPropertiesArgs();
 
-    /**
-     * Whether the SaaS subscription will auto renew upon term end.
-     */
     @InputImport(name="autoRenew")
     private final @Nullable Input<Boolean> autoRenew;
 
@@ -32,9 +26,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
     }
 
-    /**
-     * The offer id.
-     */
     @InputImport(name="offerId")
     private final @Nullable Input<String> offerId;
 
@@ -42,9 +33,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.offerId == null ? Input.empty() : this.offerId;
     }
 
-    /**
-     * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
-     */
     @InputImport(name="paymentChannelMetadata")
     private final @Nullable Input<Map<String,String>> paymentChannelMetadata;
 
@@ -52,9 +40,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.paymentChannelMetadata == null ? Input.empty() : this.paymentChannelMetadata;
     }
 
-    /**
-     * The Payment channel for the SaasSubscription.
-     */
     @InputImport(name="paymentChannelType")
     private final @Nullable Input<Either<String,PaymentChannelType>> paymentChannelType;
 
@@ -62,9 +47,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.paymentChannelType == null ? Input.empty() : this.paymentChannelType;
     }
 
-    /**
-     * The publisher id.
-     */
     @InputImport(name="publisherId")
     private final @Nullable Input<String> publisherId;
 
@@ -72,9 +54,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.publisherId == null ? Input.empty() : this.publisherId;
     }
 
-    /**
-     * The environment in the publisher side for this resource.
-     */
     @InputImport(name="publisherTestEnvironment")
     private final @Nullable Input<String> publisherTestEnvironment;
 
@@ -82,9 +61,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.publisherTestEnvironment == null ? Input.empty() : this.publisherTestEnvironment;
     }
 
-    /**
-     * The seat count.
-     */
     @InputImport(name="quantity")
     private final @Nullable Input<Double> quantity;
 
@@ -92,9 +68,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.quantity == null ? Input.empty() : this.quantity;
     }
 
-    /**
-     * The SaaS resource name.
-     */
     @InputImport(name="saasResourceName")
     private final @Nullable Input<String> saasResourceName;
 
@@ -102,9 +75,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.saasResourceName == null ? Input.empty() : this.saasResourceName;
     }
 
-    /**
-     * The saas session id used for dev service migration request.
-     */
     @InputImport(name="saasSessionId")
     private final @Nullable Input<String> saasSessionId;
 
@@ -112,9 +82,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.saasSessionId == null ? Input.empty() : this.saasSessionId;
     }
 
-    /**
-     * The saas subscription id used for tenant to subscription level migration request.
-     */
     @InputImport(name="saasSubscriptionId")
     private final @Nullable Input<String> saasSubscriptionId;
 
@@ -122,9 +89,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.saasSubscriptionId == null ? Input.empty() : this.saasSubscriptionId;
     }
 
-    /**
-     * The plan id.
-     */
     @InputImport(name="skuId")
     private final @Nullable Input<String> skuId;
 
@@ -132,9 +96,6 @@ public final class SaasCreationPropertiesArgs extends io.pulumi.resources.Resour
         return this.skuId == null ? Input.empty() : this.skuId;
     }
 
-    /**
-     * The current Term id.
-     */
     @InputImport(name="termId")
     private final @Nullable Input<String> termId;
 

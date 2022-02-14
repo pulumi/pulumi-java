@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExpressRouteCrossConnectionPeeringArgs Empty = new GetExpressRouteCrossConnectionPeeringArgs();
 
-    /**
-     * The name of the ExpressRouteCrossConnection.
-     */
     @InputImport(name="crossConnectionName", required=true)
     private final String crossConnectionName;
 
@@ -25,9 +19,6 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
         return this.crossConnectionName;
     }
 
-    /**
-     * The name of the peering.
-     */
     @InputImport(name="peeringName", required=true)
     private final String peeringName;
 
@@ -35,9 +26,6 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends io.pulumi.r
         return this.peeringName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

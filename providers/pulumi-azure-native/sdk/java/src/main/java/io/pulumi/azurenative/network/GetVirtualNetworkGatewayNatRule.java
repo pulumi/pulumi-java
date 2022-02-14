@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayNatRule {
-/**
- * VirtualNetworkGatewayNatRule Resource.
-API Version: 2021-03-01.
- *
- * VirtualNetworkGatewayNatRule Resource.
- */
     public static CompletableFuture<GetVirtualNetworkGatewayNatRuleResult> invokeAsync(GetVirtualNetworkGatewayNatRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayNatRule", TypeShape.of(GetVirtualNetworkGatewayNatRuleResult.class), args == null ? GetVirtualNetworkGatewayNatRuleArgs.Empty : args, Utilities.withVersion(options));
     }

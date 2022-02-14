@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkRuleArgs Empty = new GetVirtualNetworkRuleArgs();
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 
@@ -35,9 +26,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
         return this.serverName;
     }
 
-    /**
-     * The name of the virtual network rule.
-     */
     @InputImport(name="virtualNetworkRuleName", required=true)
     private final String virtualNetworkRuleName;
 

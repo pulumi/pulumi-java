@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PipelineRunTargetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineRunTargetPropertiesResponse Empty = new PipelineRunTargetPropertiesResponse();
 
-    /**
-     * The name of the target.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class PipelineRunTargetPropertiesResponse extends io.pulumi.resourc
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The type of the target.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

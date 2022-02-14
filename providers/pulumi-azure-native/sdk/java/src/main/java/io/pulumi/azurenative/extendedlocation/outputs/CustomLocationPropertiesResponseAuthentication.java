@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomLocationPropertiesResponseAuthentication {
-/**
- * The type of the Custom Locations authentication
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -21,9 +18,6 @@ public final class CustomLocationPropertiesResponseAuthentication {
         this.type = type;
     }
 
-/**
- * The type of the Custom Locations authentication
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

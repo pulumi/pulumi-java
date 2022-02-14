@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes the auto scaling policy
- */
 public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoScalingPolicyResponse Empty = new AutoScalingPolicyResponse();
 
-    /**
-     * The mechanism that is used to scale when auto scaling operation is invoked.
-     */
     @InputImport(name="mechanism", required=true)
     private final AddRemoveReplicaScalingMechanismResponse mechanism;
 
@@ -27,9 +21,6 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
         return this.mechanism;
     }
 
-    /**
-     * The name of the auto scaling policy.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,9 +28,6 @@ public final class AutoScalingPolicyResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
-    /**
-     * Determines when auto scaling operation will be invoked.
-     */
     @InputImport(name="trigger", required=true)
     private final AverageLoadScalingTriggerResponse trigger;
 

@@ -16,196 +16,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Linked service.
-API Version: 2020-09-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CreateLinkedService
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var linkedService = new AzureNative.MachineLearningServices.LinkedService("linkedService", new AzureNative.MachineLearningServices.LinkedServiceArgs
-        {
-            Identity = new AzureNative.MachineLearningServices.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            LinkName = "link-1",
-            Location = "westus",
-            Name = "link-1",
-            Properties = new AzureNative.MachineLearningServices.Inputs.LinkedServicePropsArgs
-            {
-                LinkedServiceResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1",
-            },
-            ResourceGroupName = "resourceGroup-1",
-            WorkspaceName = "workspace-1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewLinkedService(ctx, "linkedService", &machinelearningservices.LinkedServiceArgs{
-			Identity: &machinelearningservices.IdentityArgs{
-				Type: "SystemAssigned",
-			},
-			LinkName: pulumi.String("link-1"),
-			Location: pulumi.String("westus"),
-			Name:     pulumi.String("link-1"),
-			Properties: &machinelearningservices.LinkedServicePropsArgs{
-				LinkedServiceResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1"),
-			},
-			ResourceGroupName: pulumi.String("resourceGroup-1"),
-			WorkspaceName:     pulumi.String("workspace-1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const linkedService = new azure_native.machinelearningservices.LinkedService("linkedService", {
-    identity: {
-        type: "SystemAssigned",
-    },
-    linkName: "link-1",
-    location: "westus",
-    name: "link-1",
-    properties: {
-        linkedServiceResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1",
-    },
-    resourceGroupName: "resourceGroup-1",
-    workspaceName: "workspace-1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-linked_service = azure_native.machinelearningservices.LinkedService("linkedService",
-    identity=azure_native.machinelearningservices.IdentityArgs(
-        type="SystemAssigned",
-    ),
-    link_name="link-1",
-    location="westus",
-    name="link-1",
-    properties=azure_native.machinelearningservices.LinkedServicePropsArgs(
-        linked_service_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1",
-    ),
-    resource_group_name="resourceGroup-1",
-    workspace_name="workspace-1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:machinelearningservices:LinkedService link-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/linkedServices/link-1 
-```
-
- */
 @ResourceType(type="azure-native:machinelearningservices:LinkedService")
 public class LinkedService extends io.pulumi.resources.CustomResource {
-    /**
-     * Identity for the resource.
-     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
-    /**
-     * @return Identity for the resource.
-     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * location of the linked service.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return location of the linked service.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Friendly name of the linked service.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Friendly name of the linked service.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * LinkedService specific properties.
-     */
     @OutputExport(name="properties", type=LinkedServicePropsResponse.class, parameters={})
     private Output<LinkedServicePropsResponse> properties;
 
-    /**
-     * @return LinkedService specific properties.
-     */
     public Output<LinkedServicePropsResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Resource type of linked service.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type of linked service.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public LinkedService(String name, LinkedServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:LinkedService", name, args == null ? LinkedServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -224,14 +67,6 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static LinkedService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedService(name, id, options);
     }

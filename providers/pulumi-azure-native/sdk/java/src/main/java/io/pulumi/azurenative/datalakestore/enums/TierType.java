@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The commitment tier to use for next month.
- */
     @EnumType
     public enum TierType {
-/**
- * 
- */
         Consumption("Consumption"),
-/**
- * 
- */
         Commitment_1TB("Commitment_1TB"),
-/**
- * 
- */
         Commitment_10TB("Commitment_10TB"),
-/**
- * 
- */
         Commitment_100TB("Commitment_100TB"),
-/**
- * 
- */
         Commitment_500TB("Commitment_500TB"),
-/**
- * 
- */
         Commitment_1PB("Commitment_1PB"),
-/**
- * 
- */
         Commitment_5PB("Commitment_5PB");
 
         private final String value;

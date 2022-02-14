@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * RouterAppliance represents a Router appliance which is specified by a VM URI and a NIC address.
- */
 public final class RouterApplianceInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterApplianceInstanceArgs Empty = new RouterApplianceInstanceArgs();
 
-    /**
-     * The IP address of the network interface to use for peering.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -27,9 +21,6 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="networkInterface")
     private final @Nullable Input<String> networkInterface;
 
@@ -37,9 +28,6 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
         return this.networkInterface == null ? Input.empty() : this.networkInterface;
     }
 
-    /**
-     * The URI of the virtual machine resource
-     */
     @InputImport(name="virtualMachine")
     private final @Nullable Input<String> virtualMachine;
 

@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A WindowsBasedSli defines good_service as the count of time windows for which the provided service was of good quality. Criteria for determining if service was good are embedded in the window_criterion.
- */
 public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WindowsBasedSliResponse Empty = new WindowsBasedSliResponse();
 
-    /**
-     * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
-     */
     @InputImport(name="goodBadMetricFilter", required=true)
     private final String goodBadMetricFilter;
 
@@ -27,9 +21,6 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
         return this.goodBadMetricFilter;
     }
 
-    /**
-     * A window is good if its performance is high enough.
-     */
     @InputImport(name="goodTotalRatioThreshold", required=true)
     private final PerformanceThresholdResponse goodTotalRatioThreshold;
 
@@ -37,9 +28,6 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
         return this.goodTotalRatioThreshold;
     }
 
-    /**
-     * A window is good if the metric's value is in a good range, averaged across returned streams.
-     */
     @InputImport(name="metricMeanInRange", required=true)
     private final MetricRangeResponse metricMeanInRange;
 
@@ -47,9 +35,6 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
         return this.metricMeanInRange;
     }
 
-    /**
-     * A window is good if the metric's value is in a good range, summed across returned streams.
-     */
     @InputImport(name="metricSumInRange", required=true)
     private final MetricRangeResponse metricSumInRange;
 
@@ -57,9 +42,6 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
         return this.metricSumInRange;
     }
 
-    /**
-     * Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
-     */
     @InputImport(name="windowPeriod", required=true)
     private final String windowPeriod;
 

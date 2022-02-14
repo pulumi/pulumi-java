@@ -9,29 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExtendedKeyUsageOptionsResponse {
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
- */
     private final Boolean clientAuth;
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
- */
     private final Boolean codeSigning;
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
- */
     private final Boolean emailProtection;
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
- */
     private final Boolean ocspSigning;
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
- */
     private final Boolean serverAuth;
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
- */
     private final Boolean timeStamping;
 
     @OutputCustomType.Constructor({"clientAuth","codeSigning","emailProtection","ocspSigning","serverAuth","timeStamping"})
@@ -50,39 +32,21 @@ public final class ExtendedKeyUsageOptionsResponse {
         this.timeStamping = Objects.requireNonNull(timeStamping);
     }
 
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
- */
     public Boolean getClientAuth() {
         return this.clientAuth;
     }
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
- */
     public Boolean getCodeSigning() {
         return this.codeSigning;
     }
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
- */
     public Boolean getEmailProtection() {
         return this.emailProtection;
     }
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
- */
     public Boolean getOcspSigning() {
         return this.ocspSigning;
     }
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
- */
     public Boolean getServerAuth() {
         return this.serverAuth;
     }
-/**
- * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
- */
     public Boolean getTimeStamping() {
         return this.timeStamping;
     }

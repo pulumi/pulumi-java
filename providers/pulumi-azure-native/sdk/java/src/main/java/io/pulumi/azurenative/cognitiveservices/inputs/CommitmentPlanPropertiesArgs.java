@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of Cognitive Services account commitment plan.
- */
 public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommitmentPlanPropertiesArgs Empty = new CommitmentPlanPropertiesArgs();
 
-    /**
-     * AutoRenew commitment plan.
-     */
     @InputImport(name="autoRenew")
     private final @Nullable Input<Boolean> autoRenew;
 
@@ -31,9 +25,6 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
     }
 
-    /**
-     * Cognitive Services account commitment period.
-     */
     @InputImport(name="current")
     private final @Nullable Input<CommitmentPeriodArgs> current;
 
@@ -41,9 +32,6 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
         return this.current == null ? Input.empty() : this.current;
     }
 
-    /**
-     * Account hosting model.
-     */
     @InputImport(name="hostingModel")
     private final @Nullable Input<Either<String,HostingModel>> hostingModel;
 
@@ -51,9 +39,6 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
         return this.hostingModel == null ? Input.empty() : this.hostingModel;
     }
 
-    /**
-     * Cognitive Services account commitment period.
-     */
     @InputImport(name="next")
     private final @Nullable Input<CommitmentPeriodArgs> next;
 
@@ -61,9 +46,6 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
         return this.next == null ? Input.empty() : this.next;
     }
 
-    /**
-     * Commitment plan type.
-     */
     @InputImport(name="planType")
     private final @Nullable Input<String> planType;
 

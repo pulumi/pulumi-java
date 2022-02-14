@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 
-    /**
-     * The canonical name of the finding. It's either "organizations/{organization_id}/sources/{source_id}", "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}", depending on the closest CRM ancestor of the resource associated with the finding.
-     */
     @InputImport(name="canonicalName")
     private final @Nullable Input<String> canonicalName;
 
@@ -27,9 +21,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.canonicalName == null ? Input.empty() : this.canonicalName;
     }
 
-    /**
-     * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web security scanner for common vulnerabilities in App Engine applications. It can automatically scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash injection, mixed content (HTTP in HTTPS), and outdated or insecure libraries."
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,9 +28,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The source's display name. A source's display name must be unique amongst its siblings, for example, two sources with the same parent can't share the same display name. The display name must have a length between 1 and 64 characters (inclusive).
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -47,9 +35,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The relative resource name of this source. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}"
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,9 +42,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

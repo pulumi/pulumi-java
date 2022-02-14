@@ -15,164 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The private endpoint connection of a workspace
-API Version: 2021-04-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Update a private endpoint connection
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateEndpointConnection = new AzureNative.Databricks.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Databricks.PrivateEndpointConnectionArgs
-        {
-            PrivateEndpointConnectionName = "myWorkspace.23456789-1111-1111-1111-111111111111",
-            Properties = new AzureNative.Databricks.Inputs.PrivateEndpointConnectionPropertiesArgs
-            {
-                PrivateLinkServiceConnectionState = new AzureNative.Databricks.Inputs.PrivateLinkServiceConnectionStateArgs
-                {
-                    Description = "Approved by databricksadmin@contoso.com",
-                    Status = "Approved",
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	databricks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databricks"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databricks.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &databricks.PrivateEndpointConnectionArgs{
-			PrivateEndpointConnectionName: pulumi.String("myWorkspace.23456789-1111-1111-1111-111111111111"),
-			Properties: &databricks.PrivateEndpointConnectionPropertiesArgs{
-				PrivateLinkServiceConnectionState: &databricks.PrivateLinkServiceConnectionStateArgs{
-					Description: pulumi.String("Approved by databricksadmin@contoso.com"),
-					Status:      pulumi.String("Approved"),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			WorkspaceName:     pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateEndpointConnection = new azure_native.databricks.PrivateEndpointConnection("privateEndpointConnection", {
-    privateEndpointConnectionName: "myWorkspace.23456789-1111-1111-1111-111111111111",
-    properties: {
-        privateLinkServiceConnectionState: {
-            description: "Approved by databricksadmin@contoso.com",
-            status: "Approved",
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_endpoint_connection = azure_native.databricks.PrivateEndpointConnection("privateEndpointConnection",
-    private_endpoint_connection_name="myWorkspace.23456789-1111-1111-1111-111111111111",
-    properties=azure_native.databricks.PrivateEndpointConnectionPropertiesArgs(
-        private_link_service_connection_state=azure_native.databricks.PrivateLinkServiceConnectionStateArgs(
-            description="Approved by databricksadmin@contoso.com",
-            status="Approved",
-        ),
-    ),
-    resource_group_name="myResourceGroup",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:databricks:PrivateEndpointConnection myWorkspace.23456789-1111-1111-1111-111111111111 /subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Databricks/workspaces/myWorkspace/PrivateEndpointConnections/myWorkspace.23456789-1111-1111-1111-111111111111 
-```
-
- */
 @ResourceType(type="azure-native:databricks:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The private endpoint connection properties.
-     */
     @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
-    /**
-     * @return The private endpoint connection properties.
-     */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databricks:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -191,14 +54,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

@@ -31,16 +31,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Corresponds to the `Response` field in the Dialogflow console.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageArgs();
 
-    /**
-     * Displays a basic card for Actions on Google.
-     */
     @InputImport(name="basicCard")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
 
@@ -48,9 +42,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.basicCard == null ? Input.empty() : this.basicCard;
     }
 
-    /**
-     * Browse carousel card for Actions on Google.
-     */
     @InputImport(name="browseCarouselCard")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
 
@@ -58,9 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.browseCarouselCard == null ? Input.empty() : this.browseCarouselCard;
     }
 
-    /**
-     * Displays a card.
-     */
     @InputImport(name="card")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
 
@@ -68,9 +56,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.card == null ? Input.empty() : this.card;
     }
 
-    /**
-     * Displays a carousel card for Actions on Google.
-     */
     @InputImport(name="carouselSelect")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
 
@@ -78,9 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.carouselSelect == null ? Input.empty() : this.carouselSelect;
     }
 
-    /**
-     * Displays an image.
-     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
@@ -88,9 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.image == null ? Input.empty() : this.image;
     }
 
-    /**
-     * Displays a link out suggestion chip for Actions on Google.
-     */
     @InputImport(name="linkOutSuggestion")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
 
@@ -98,9 +77,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.linkOutSuggestion == null ? Input.empty() : this.linkOutSuggestion;
     }
 
-    /**
-     * Displays a list card for Actions on Google.
-     */
     @InputImport(name="listSelect")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
 
@@ -108,9 +84,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.listSelect == null ? Input.empty() : this.listSelect;
     }
 
-    /**
-     * The media content card for Actions on Google.
-     */
     @InputImport(name="mediaContent")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
 
@@ -118,9 +91,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.mediaContent == null ? Input.empty() : this.mediaContent;
     }
 
-    /**
-     * A custom platform-specific response.
-     */
     @InputImport(name="payload")
     private final @Nullable Input<Map<String,String>> payload;
 
@@ -128,9 +98,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.payload == null ? Input.empty() : this.payload;
     }
 
-    /**
-     * Optional. The platform that this message is intended for.
-     */
     @InputImport(name="platform")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
 
@@ -138,9 +105,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.platform == null ? Input.empty() : this.platform;
     }
 
-    /**
-     * Displays quick replies.
-     */
     @InputImport(name="quickReplies")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
 
@@ -148,9 +112,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.quickReplies == null ? Input.empty() : this.quickReplies;
     }
 
-    /**
-     * Rich Business Messaging (RBM) carousel rich card response.
-     */
     @InputImport(name="rbmCarouselRichCard")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
 
@@ -158,9 +119,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.rbmCarouselRichCard == null ? Input.empty() : this.rbmCarouselRichCard;
     }
 
-    /**
-     * Standalone Rich Business Messaging (RBM) rich card response.
-     */
     @InputImport(name="rbmStandaloneRichCard")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
 
@@ -168,9 +126,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.rbmStandaloneRichCard == null ? Input.empty() : this.rbmStandaloneRichCard;
     }
 
-    /**
-     * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
-     */
     @InputImport(name="rbmText")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
 
@@ -178,9 +133,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.rbmText == null ? Input.empty() : this.rbmText;
     }
 
-    /**
-     * Returns a voice or text-only response for Actions on Google.
-     */
     @InputImport(name="simpleResponses")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
 
@@ -188,9 +140,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.simpleResponses == null ? Input.empty() : this.simpleResponses;
     }
 
-    /**
-     * Displays suggestion chips for Actions on Google.
-     */
     @InputImport(name="suggestions")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
 
@@ -198,9 +147,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.suggestions == null ? Input.empty() : this.suggestions;
     }
 
-    /**
-     * Table card for Actions on Google.
-     */
     @InputImport(name="tableCard")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
 
@@ -208,9 +154,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.tableCard == null ? Input.empty() : this.tableCard;
     }
 
-    /**
-     * Plays audio from a file in Telephony Gateway.
-     */
     @InputImport(name="telephonyPlayAudio")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
 
@@ -218,9 +161,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.telephonyPlayAudio == null ? Input.empty() : this.telephonyPlayAudio;
     }
 
-    /**
-     * Synthesizes speech in Telephony Gateway.
-     */
     @InputImport(name="telephonySynthesizeSpeech")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
 
@@ -228,9 +168,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.telephonySynthesizeSpeech == null ? Input.empty() : this.telephonySynthesizeSpeech;
     }
 
-    /**
-     * Transfers the call in Telephony Gateway.
-     */
     @InputImport(name="telephonyTransferCall")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
@@ -238,9 +175,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends io.pulu
         return this.telephonyTransferCall == null ? Input.empty() : this.telephonyTransferCall;
     }
 
-    /**
-     * Returns a text response.
-     */
     @InputImport(name="text")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;
 

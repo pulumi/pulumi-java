@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobAgent {
-/**
- * An Azure SQL job agent.
-API Version: 2020-11-01-preview.
- *
- * An Azure SQL job agent.
- */
     public static CompletableFuture<GetJobAgentResult> invokeAsync(GetJobAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobAgent", TypeShape.of(GetJobAgentResult.class), args == null ? GetJobAgentArgs.Empty : args, Utilities.withVersion(options));
     }

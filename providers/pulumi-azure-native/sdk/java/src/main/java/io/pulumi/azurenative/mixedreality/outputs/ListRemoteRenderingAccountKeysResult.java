@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListRemoteRenderingAccountKeysResult {
-/**
- * value of primary key.
- */
     private final String primaryKey;
-/**
- * value of secondary key.
- */
     private final String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
@@ -26,15 +20,9 @@ public final class ListRemoteRenderingAccountKeysResult {
         this.secondaryKey = Objects.requireNonNull(secondaryKey);
     }
 
-/**
- * value of primary key.
- */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
-/**
- * value of secondary key.
- */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

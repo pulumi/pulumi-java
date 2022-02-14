@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
- */
 public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeSelectorArgs Empty = new NodeSelectorArgs();
 
-    /**
-     * Required. A list of node selector terms. The terms are ORed.
-     */
     @InputImport(name="nodeSelectorTerms", required=true)
     private final Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 

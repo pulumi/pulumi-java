@@ -12,34 +12,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMCASDataConnectorResult {
-/**
- * The available data types for the connector.
- */
     private final @Nullable MCASDataConnectorDataTypesResponse dataTypes;
-/**
- * Etag of the azure resource
- */
     private final @Nullable String etag;
-/**
- * Azure resource Id
- */
     private final String id;
-/**
- * The kind of the data connector
-Expected value is 'MicrosoftCloudAppSecurity'.
- */
     private final String kind;
-/**
- * Azure resource name
- */
     private final String name;
-/**
- * The tenant id to connect to, and get the data from.
- */
     private final @Nullable String tenantId;
-/**
- * Azure resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","tenantId","type"})
@@ -60,46 +38,24 @@ Expected value is 'MicrosoftCloudAppSecurity'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The available data types for the connector.
- */
     public Optional<MCASDataConnectorDataTypesResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
-/**
- * Etag of the azure resource
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * Azure resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * The kind of the data connector
-Expected value is 'MicrosoftCloudAppSecurity'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Azure resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * The tenant id to connect to, and get the data from.
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
-/**
- * Azure resource type
- */
     public String getType() {
         return this.type;
     }

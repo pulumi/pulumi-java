@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHybridIdentityMetadatumArgs Empty = new GetHybridIdentityMetadatumArgs();
 
-    /**
-     * Name of the HybridIdentityMetadata.
-     */
     @InputImport(name="metadataName", required=true)
     private final String metadataName;
 
@@ -25,9 +19,6 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
         return this.metadataName;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the vm.
-     */
     @InputImport(name="virtualMachineName", required=true)
     private final String virtualMachineName;
 

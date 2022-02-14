@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApplicationPackageReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationPackageReferenceResponse Empty = new ApplicationPackageReferenceResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -27,9 +21,6 @@ public final class ApplicationPackageReferenceResponse extends io.pulumi.resourc
         return this.id;
     }
 
-    /**
-     * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

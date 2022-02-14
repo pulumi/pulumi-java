@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Frontend IP configuration of an application gateway.
- */
 public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayFrontendIPConfigurationResponse Empty = new ApplicationGatewayFrontendIPConfigurationResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -28,9 +22,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,9 +29,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the frontend IP configuration that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * PrivateIPAddress of the network interface IP Configuration.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -58,9 +43,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
-    /**
-     * The private IP address allocation method.
-     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable String privateIPAllocationMethod;
 
@@ -68,9 +50,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
-    /**
-     * Reference to the application gateway private link configuration.
-     */
     @InputImport(name="privateLinkConfiguration")
     private final @Nullable SubResourceResponse privateLinkConfiguration;
 
@@ -78,9 +57,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.privateLinkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.privateLinkConfiguration);
     }
 
-    /**
-     * The provisioning state of the frontend IP configuration resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -88,9 +64,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.provisioningState;
     }
 
-    /**
-     * Reference to the PublicIP resource.
-     */
     @InputImport(name="publicIPAddress")
     private final @Nullable SubResourceResponse publicIPAddress;
 
@@ -98,9 +71,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
-    /**
-     * Reference to the subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable SubResourceResponse subnet;
 
@@ -108,9 +78,6 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

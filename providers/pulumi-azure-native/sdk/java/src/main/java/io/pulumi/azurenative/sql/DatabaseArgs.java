@@ -23,16 +23,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
-    /**
-     * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
-     */
     @InputImport(name="autoPauseDelay")
     private final @Nullable Input<Integer> autoPauseDelay;
 
@@ -40,9 +34,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoPauseDelay == null ? Input.empty() : this.autoPauseDelay;
     }
 
-    /**
-     * Collation of the metadata catalog.
-     */
     @InputImport(name="catalogCollation")
     private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
 
@@ -50,9 +41,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.catalogCollation == null ? Input.empty() : this.catalogCollation;
     }
 
-    /**
-     * The collation of the database.
-     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -60,25 +48,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
-    /**
-     * Specifies the mode of database creation.
-
-Default: regular database creation.
-
-Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database.
-
-Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database.
-
-PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
-
-Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore.
-
-Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time.
-
-RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
-
-Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
-     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -86,9 +55,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -96,9 +62,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
-    /**
-     * The resource identifier of the elastic pool containing this database.
-     */
     @InputImport(name="elasticPoolId")
     private final @Nullable Input<String> elasticPoolId;
 
@@ -106,9 +69,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.elasticPoolId == null ? Input.empty() : this.elasticPoolId;
     }
 
-    /**
-     * The number of secondary replicas associated with the database that are used to provide high availability.
-     */
     @InputImport(name="highAvailabilityReplicaCount")
     private final @Nullable Input<Integer> highAvailabilityReplicaCount;
 
@@ -116,9 +76,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.highAvailabilityReplicaCount == null ? Input.empty() : this.highAvailabilityReplicaCount;
     }
 
-    /**
-     * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
-     */
     @InputImport(name="licenseType")
     private final @Nullable Input<Either<String,DatabaseLicenseType>> licenseType;
 
@@ -126,9 +83,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -136,9 +90,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource identifier of the long term retention backup associated with create operation of this database.
-     */
     @InputImport(name="longTermRetentionBackupResourceId")
     private final @Nullable Input<String> longTermRetentionBackupResourceId;
 
@@ -146,9 +97,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.longTermRetentionBackupResourceId == null ? Input.empty() : this.longTermRetentionBackupResourceId;
     }
 
-    /**
-     * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
-     */
     @InputImport(name="maintenanceConfigurationId")
     private final @Nullable Input<String> maintenanceConfigurationId;
 
@@ -156,9 +104,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
     }
 
-    /**
-     * The max size of the database expressed in bytes.
-     */
     @InputImport(name="maxSizeBytes")
     private final @Nullable Input<Double> maxSizeBytes;
 
@@ -166,9 +111,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
     }
 
-    /**
-     * Minimal capacity that database will always have allocated, if not paused
-     */
     @InputImport(name="minCapacity")
     private final @Nullable Input<Double> minCapacity;
 
@@ -176,9 +118,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.minCapacity == null ? Input.empty() : this.minCapacity;
     }
 
-    /**
-     * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
-     */
     @InputImport(name="readScale")
     private final @Nullable Input<Either<String,DatabaseReadScale>> readScale;
 
@@ -186,9 +125,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.readScale == null ? Input.empty() : this.readScale;
     }
 
-    /**
-     * The resource identifier of the recoverable database associated with create operation of this database.
-     */
     @InputImport(name="recoverableDatabaseId")
     private final @Nullable Input<String> recoverableDatabaseId;
 
@@ -196,9 +132,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
     }
 
-    /**
-     * The resource identifier of the recovery point associated with create operation of this database.
-     */
     @InputImport(name="recoveryServicesRecoveryPointId")
     private final @Nullable Input<String> recoveryServicesRecoveryPointId;
 
@@ -206,9 +139,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.recoveryServicesRecoveryPointId == null ? Input.empty() : this.recoveryServicesRecoveryPointId;
     }
 
-    /**
-     * The storage account type to be used to store backups for this database.
-     */
     @InputImport(name="requestedBackupStorageRedundancy")
     private final @Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
 
@@ -216,9 +146,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.requestedBackupStorageRedundancy == null ? Input.empty() : this.requestedBackupStorageRedundancy;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -226,9 +153,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource identifier of the restorable dropped database associated with create operation of this database.
-     */
     @InputImport(name="restorableDroppedDatabaseId")
     private final @Nullable Input<String> restorableDroppedDatabaseId;
 
@@ -236,9 +160,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.restorableDroppedDatabaseId == null ? Input.empty() : this.restorableDroppedDatabaseId;
     }
 
-    /**
-     * Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-     */
     @InputImport(name="restorePointInTime")
     private final @Nullable Input<String> restorePointInTime;
 
@@ -246,9 +167,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
     }
 
-    /**
-     * The name of the sample schema to apply when creating this database.
-     */
     @InputImport(name="sampleName")
     private final @Nullable Input<Either<String,SampleName>> sampleName;
 
@@ -256,9 +174,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.sampleName == null ? Input.empty() : this.sampleName;
     }
 
-    /**
-     * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
-     */
     @InputImport(name="secondaryType")
     private final @Nullable Input<Either<String,SecondaryType>> secondaryType;
 
@@ -266,9 +181,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.secondaryType == null ? Input.empty() : this.secondaryType;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -276,20 +188,6 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
         return this.serverName;
     }
 
-    /**
-     * The database SKU.
-
-The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
-
-```azurecli
-az sql db list-editions -l <location> -o table
-````
-
-```powershell
-Get-AzSqlServerServiceObjective -Location <location>
-````
-
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -297,9 +195,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Specifies the time that the database was deleted.
-     */
     @InputImport(name="sourceDatabaseDeletionDate")
     private final @Nullable Input<String> sourceDatabaseDeletionDate;
 
@@ -307,9 +202,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         return this.sourceDatabaseDeletionDate == null ? Input.empty() : this.sourceDatabaseDeletionDate;
     }
 
-    /**
-     * The resource identifier of the source database associated with create operation of this database.
-     */
     @InputImport(name="sourceDatabaseId")
     private final @Nullable Input<String> sourceDatabaseId;
 
@@ -317,9 +209,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -327,9 +216,6 @@ Get-AzSqlServerServiceObjective -Location <location>
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-     */
     @InputImport(name="zoneRedundant")
     private final @Nullable Input<Boolean> zoneRedundant;
 

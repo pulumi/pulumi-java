@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricSettingsResponse {
-/**
- * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
- */
     private final @Nullable String category;
-/**
- * a value indicating whether this category is enabled.
- */
     private final Boolean enabled;
-/**
- * the retention policy for this category.
- */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
-/**
- * the timegrain of the metric in ISO8601 format.
- */
     private final @Nullable String timeGrain;
 
     @OutputCustomType.Constructor({"category","enabled","retentionPolicy","timeGrain"})
@@ -42,27 +30,15 @@ public final class MetricSettingsResponse {
         this.timeGrain = timeGrain;
     }
 
-/**
- * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
- */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
-/**
- * a value indicating whether this category is enabled.
- */
     public Boolean getEnabled() {
         return this.enabled;
     }
-/**
- * the retention policy for this category.
- */
     public Optional<RetentionPolicyResponse> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
-/**
- * the timegrain of the metric in ISO8601 format.
- */
     public Optional<String> getTimeGrain() {
         return Optional.ofNullable(this.timeGrain);
     }

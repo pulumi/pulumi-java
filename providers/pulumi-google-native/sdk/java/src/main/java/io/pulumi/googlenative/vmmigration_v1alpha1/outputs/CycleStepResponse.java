@@ -12,25 +12,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CycleStepResponse {
-/**
- * The time the cycle step has ended.
- */
     private final String endTime;
-/**
- * Initializing replication step.
- */
     private final InitializingReplicationStepResponse initializingReplication;
-/**
- * Post processing step.
- */
     private final PostProcessingStepResponse postProcessing;
-/**
- * Replicating step.
- */
     private final ReplicatingStepResponse replicating;
-/**
- * The time the cycle step has started.
- */
     private final String startTime;
 
     @OutputCustomType.Constructor({"endTime","initializingReplication","postProcessing","replicating","startTime"})
@@ -47,33 +32,18 @@ public final class CycleStepResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
-/**
- * The time the cycle step has ended.
- */
     public String getEndTime() {
         return this.endTime;
     }
-/**
- * Initializing replication step.
- */
     public InitializingReplicationStepResponse getInitializingReplication() {
         return this.initializingReplication;
     }
-/**
- * Post processing step.
- */
     public PostProcessingStepResponse getPostProcessing() {
         return this.postProcessing;
     }
-/**
- * Replicating step.
- */
     public ReplicatingStepResponse getReplicating() {
         return this.replicating;
     }
-/**
- * The time the cycle step has started.
- */
     public String getStartTime() {
         return this.startTime;
     }

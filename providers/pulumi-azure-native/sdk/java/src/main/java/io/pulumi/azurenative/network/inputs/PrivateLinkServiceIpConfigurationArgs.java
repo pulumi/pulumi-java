@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The private link service ip configuration.
- */
 public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceIpConfigurationArgs Empty = new PrivateLinkServiceIpConfigurationArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -32,9 +26,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of private link service ip configuration.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,9 +33,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Whether the ip configuration is primary or not.
-     */
     @InputImport(name="primary")
     private final @Nullable Input<Boolean> primary;
 
@@ -52,9 +40,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
         return this.primary == null ? Input.empty() : this.primary;
     }
 
-    /**
-     * The private IP address of the IP configuration.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable Input<String> privateIPAddress;
 
@@ -62,9 +47,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
     }
 
-    /**
-     * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
 
@@ -72,9 +54,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
     }
 
-    /**
-     * The private IP address allocation method.
-     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
@@ -82,9 +61,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
     }
 
-    /**
-     * The reference to the subnet resource.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetArgs> subnet;
 

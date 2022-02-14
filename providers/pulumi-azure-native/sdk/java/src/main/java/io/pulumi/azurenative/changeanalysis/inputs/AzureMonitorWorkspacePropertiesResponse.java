@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration properties of an Azure Monitor workspace that receives change notifications.
- */
 public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureMonitorWorkspacePropertiesResponse Empty = new AzureMonitorWorkspacePropertiesResponse();
 
-    /**
-     * The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
-     */
     @InputImport(name="includeChangeDetails")
     private final @Nullable String includeChangeDetails;
 
@@ -27,9 +21,6 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
         return this.includeChangeDetails == null ? Optional.empty() : Optional.ofNullable(this.includeChangeDetails);
     }
 
-    /**
-     * The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
-     */
     @InputImport(name="workspaceId")
     private final @Nullable String workspaceId;
 
@@ -37,9 +28,6 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 
-    /**
-     * The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
-     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable String workspaceResourceId;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="caPoolId", required=true)
     private final Input<String> caPoolId;
 
@@ -30,9 +24,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.caPoolId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="certificateId")
     private final @Nullable Input<String> certificateId;
 
@@ -40,9 +31,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
-    /**
-     * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
-     */
     @InputImport(name="certificateTemplate")
     private final @Nullable Input<String> certificateTemplate;
 
@@ -50,9 +38,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateTemplate == null ? Input.empty() : this.certificateTemplate;
     }
 
-    /**
-     * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     */
     @InputImport(name="config")
     private final @Nullable Input<CertificateConfigArgs> config;
 
@@ -60,9 +45,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="issuingCertificateAuthorityId")
     private final @Nullable Input<String> issuingCertificateAuthorityId;
 
@@ -70,9 +52,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.issuingCertificateAuthorityId == null ? Input.empty() : this.issuingCertificateAuthorityId;
     }
 
-    /**
-     * Optional. Labels with user-defined metadata.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -80,9 +59,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     */
     @InputImport(name="lifetime", required=true)
     private final Input<String> lifetime;
 
@@ -90,9 +66,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.lifetime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -100,9 +73,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     */
     @InputImport(name="pemCsr")
     private final @Nullable Input<String> pemCsr;
 
@@ -110,9 +80,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.pemCsr == null ? Input.empty() : this.pemCsr;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -120,9 +87,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -130,9 +94,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
-     */
     @InputImport(name="subjectMode")
     private final @Nullable Input<CertificateSubjectMode> subjectMode;
 
@@ -140,9 +101,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.subjectMode == null ? Input.empty() : this.subjectMode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

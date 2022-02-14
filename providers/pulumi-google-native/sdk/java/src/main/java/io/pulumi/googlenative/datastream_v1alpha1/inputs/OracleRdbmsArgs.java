@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Oracle database structure.
- */
 public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleRdbmsArgs Empty = new OracleRdbmsArgs();
 
-    /**
-     * Oracle schemas/databases in the database server.
-     */
     @InputImport(name="oracleSchemas")
     private final @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
 

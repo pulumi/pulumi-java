@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagerExtendedInfoArgs Empty = new ManagerExtendedInfoArgs();
 
-    /**
-     * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
-     */
     @InputImport(name="algorithm", required=true)
     private final Input<String> algorithm;
 
@@ -28,9 +22,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.algorithm;
     }
 
-    /**
-     * Represents the CEK of the resource.
-     */
     @InputImport(name="encryptionKey")
     private final @Nullable Input<String> encryptionKey;
 
@@ -38,9 +29,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
     }
 
-    /**
-     * Represents the Cert thumbprint that was used to encrypt the CEK.
-     */
     @InputImport(name="encryptionKeyThumbprint")
     private final @Nullable Input<String> encryptionKeyThumbprint;
 
@@ -48,9 +36,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.encryptionKeyThumbprint == null ? Input.empty() : this.encryptionKeyThumbprint;
     }
 
-    /**
-     * Represents the CIK of the resource.
-     */
     @InputImport(name="integrityKey", required=true)
     private final Input<String> integrityKey;
 
@@ -58,9 +43,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.integrityKey;
     }
 
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     */
     @InputImport(name="kind")
     private final @Nullable Input<Kind> kind;
 
@@ -68,9 +50,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The manager name
-     */
     @InputImport(name="managerName", required=true)
     private final Input<String> managerName;
 
@@ -78,9 +57,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.managerName;
     }
 
-    /**
-     * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
-     */
     @InputImport(name="portalCertificateThumbprint")
     private final @Nullable Input<String> portalCertificateThumbprint;
 
@@ -88,9 +64,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.portalCertificateThumbprint == null ? Input.empty() : this.portalCertificateThumbprint;
     }
 
-    /**
-     * The resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -98,9 +71,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * The version of the extended info being persisted.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

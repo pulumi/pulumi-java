@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class EtwProviderConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EtwProviderConfigurationResponse Empty = new EtwProviderConfigurationResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="events", required=true)
     private final List<EtwEventConfigurationResponse> events;
 
@@ -27,9 +21,6 @@ public final class EtwProviderConfigurationResponse extends io.pulumi.resources.
         return this.events;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="id", required=true)
     private final String id;
 

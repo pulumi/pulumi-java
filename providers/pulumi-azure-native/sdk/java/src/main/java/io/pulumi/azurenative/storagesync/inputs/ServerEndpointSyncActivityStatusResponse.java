@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Sync Session status object.
- */
 public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerEndpointSyncActivityStatusResponse Empty = new ServerEndpointSyncActivityStatusResponse();
 
-    /**
-     * Applied bytes
-     */
     @InputImport(name="appliedBytes", required=true)
     private final Double appliedBytes;
 
@@ -26,9 +20,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
         return this.appliedBytes;
     }
 
-    /**
-     * Applied item count.
-     */
     @InputImport(name="appliedItemCount", required=true)
     private final Double appliedItemCount;
 
@@ -36,9 +27,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
         return this.appliedItemCount;
     }
 
-    /**
-     * Per item error count
-     */
     @InputImport(name="perItemErrorCount", required=true)
     private final Double perItemErrorCount;
 
@@ -46,9 +34,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
         return this.perItemErrorCount;
     }
 
-    /**
-     * Sync mode
-     */
     @InputImport(name="syncMode", required=true)
     private final String syncMode;
 
@@ -56,9 +41,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
         return this.syncMode;
     }
 
-    /**
-     * Timestamp when properties were updated
-     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 
@@ -66,9 +48,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
         return this.timestamp;
     }
 
-    /**
-     * Total bytes (if available)
-     */
     @InputImport(name="totalBytes", required=true)
     private final Double totalBytes;
 
@@ -76,9 +55,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
         return this.totalBytes;
     }
 
-    /**
-     * Total item count (if available)
-     */
     @InputImport(name="totalItemCount", required=true)
     private final Double totalItemCount;
 

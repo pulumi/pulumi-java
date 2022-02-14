@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StandardComponentPropertiesResponse {
-/**
- * Component Key matching componentMetadata
- */
     private final @Nullable String key;
 
     @OutputCustomType.Constructor({"key"})
@@ -21,9 +18,6 @@ public final class StandardComponentPropertiesResponse {
         this.key = key;
     }
 
-/**
- * Component Key matching componentMetadata
- */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }

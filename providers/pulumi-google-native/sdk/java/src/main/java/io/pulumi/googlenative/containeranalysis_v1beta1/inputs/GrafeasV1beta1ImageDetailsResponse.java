@@ -8,16 +8,10 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedResponse;
 import java.util.Objects;
 
 
-/**
- * Details of an image occurrence.
- */
 public final class GrafeasV1beta1ImageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1ImageDetailsResponse Empty = new GrafeasV1beta1ImageDetailsResponse();
 
-    /**
-     * Immutable. The child image derived from the base image.
-     */
     @InputImport(name="derivedImage", required=true)
     private final DerivedResponse derivedImage;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWorkloadArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkloadArgs Empty = new GetWorkloadArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -25,9 +19,6 @@ public final class GetWorkloadArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -35,9 +26,6 @@ public final class GetWorkloadArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="workloadId", required=true)
     private final String workloadId;
 

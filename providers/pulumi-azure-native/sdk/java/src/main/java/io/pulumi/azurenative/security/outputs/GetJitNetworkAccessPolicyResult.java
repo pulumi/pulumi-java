@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJitNetworkAccessPolicyResult {
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Kind of the resource
- */
     private final @Nullable String kind;
-/**
- * Location where the resource is stored
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Gets the provisioning state of the Just-in-Time policy.
- */
     private final String provisioningState;
-/**
- * 
- */
     private final @Nullable List<JitNetworkAccessRequestResponse> requests;
-/**
- * Resource type
- */
     private final String type;
-/**
- * Configurations for Microsoft.Compute/virtualMachines resource type.
- */
     private final List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines;
 
     @OutputCustomType.Constructor({"id","kind","location","name","provisioningState","requests","type","virtualMachines"})
@@ -67,51 +43,27 @@ public final class GetJitNetworkAccessPolicyResult {
         this.virtualMachines = Objects.requireNonNull(virtualMachines);
     }
 
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Kind of the resource
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Location where the resource is stored
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Gets the provisioning state of the Just-in-Time policy.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * 
- */
     public List<JitNetworkAccessRequestResponse> getRequests() {
         return this.requests == null ? List.of() : this.requests;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }
-/**
- * Configurations for Microsoft.Compute/virtualMachines resource type.
- */
     public List<JitNetworkAccessPolicyVirtualMachineResponse> getVirtualMachines() {
         return this.virtualMachines;
     }

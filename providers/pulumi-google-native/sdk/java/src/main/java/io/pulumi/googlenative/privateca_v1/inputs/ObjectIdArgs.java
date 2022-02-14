@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
- */
 public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectIdArgs Empty = new ObjectIdArgs();
 
-    /**
-     * The parts of an OID path. The most significant parts of the path come first.
-     */
     @InputImport(name="objectIdPath", required=true)
     private final Input<List<Integer>> objectIdPath;
 

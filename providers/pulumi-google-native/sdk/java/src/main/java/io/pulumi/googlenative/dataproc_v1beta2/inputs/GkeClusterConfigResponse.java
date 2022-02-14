@@ -8,16 +8,10 @@ import io.pulumi.googlenative.dataproc_v1beta2.inputs.NamespacedGkeDeploymentTar
 import java.util.Objects;
 
 
-/**
- * The GKE config for this cluster.
- */
 public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GkeClusterConfigResponse Empty = new GkeClusterConfigResponse();
 
-    /**
-     * Optional. A target for the deployment.
-     */
     @InputImport(name="namespacedGkeDeploymentTarget", required=true)
     private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTableArgs Empty = new GetTableArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the table.
-     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 
@@ -35,9 +26,6 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
         return this.tableName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

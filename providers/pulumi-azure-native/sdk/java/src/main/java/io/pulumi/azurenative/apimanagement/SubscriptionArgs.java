@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 
-    /**
-     * Determines whether tracing can be enabled
-     */
     @InputImport(name="allowTracing")
     private final @Nullable Input<Boolean> allowTracing;
 
@@ -29,9 +23,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowTracing == null ? Input.empty() : this.allowTracing;
     }
 
-    /**
-     * Determines the type of application which send the create user request. Default is legacy publisher portal.
-     */
     @InputImport(name="appType")
     private final @Nullable Input<String> appType;
 
@@ -39,9 +30,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.appType == null ? Input.empty() : this.appType;
     }
 
-    /**
-     * Subscription name.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -49,11 +37,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * Notify change in Subscription State. 
- - If false, do not send any email notification for change of state of subscription 
- - If true, send email notification of change of state of subscription 
-     */
     @InputImport(name="notify")
     private final @Nullable Input<Boolean> notify;
 
@@ -61,9 +44,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.notify == null ? Input.empty() : this.notify;
     }
 
-    /**
-     * User (user id path) for whom subscription is being created in form /users/{userId}
-     */
     @InputImport(name="ownerId")
     private final @Nullable Input<String> ownerId;
 
@@ -71,9 +51,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.ownerId == null ? Input.empty() : this.ownerId;
     }
 
-    /**
-     * Primary subscription key. If not specified during request key will be generated automatically.
-     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<String> primaryKey;
 
@@ -81,9 +58,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -91,9 +65,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Scope like /products/{productId} or /apis or /apis/{apiId}.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -101,9 +72,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope;
     }
 
-    /**
-     * Secondary subscription key. If not specified during request key will be generated automatically.
-     */
     @InputImport(name="secondaryKey")
     private final @Nullable Input<String> secondaryKey;
 
@@ -111,9 +79,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.secondaryKey == null ? Input.empty() : this.secondaryKey;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -121,9 +86,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
-     */
     @InputImport(name="sid")
     private final @Nullable Input<String> sid;
 
@@ -131,9 +93,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sid == null ? Input.empty() : this.sid;
     }
 
-    /**
-     * Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     */
     @InputImport(name="state")
     private final @Nullable Input<SubscriptionState> state;
 

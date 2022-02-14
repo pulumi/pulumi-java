@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameter definition for a module asset.
- */
 public final class ModuleAssetParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModuleAssetParameterResponse Empty = new ModuleAssetParameterResponse();
 
-    /**
-     * Definitions for nested interface parameters if this is a complex module parameter.
-     */
     @InputImport(name="modeValuesInfo")
     private final @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
 
@@ -29,9 +23,6 @@ public final class ModuleAssetParameterResponse extends io.pulumi.resources.Invo
         return this.modeValuesInfo == null ? Map.of() : this.modeValuesInfo;
     }
 
-    /**
-     * Parameter name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -39,9 +30,6 @@ public final class ModuleAssetParameterResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Parameter type.
-     */
     @InputImport(name="parameterType")
     private final @Nullable String parameterType;
 

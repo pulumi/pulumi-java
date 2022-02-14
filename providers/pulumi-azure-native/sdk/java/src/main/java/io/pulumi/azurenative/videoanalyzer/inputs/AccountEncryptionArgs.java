@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines how the Video Analyzer account is (optionally) encrypted.
- */
 public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountEncryptionArgs Empty = new AccountEncryptionArgs();
 
-    /**
-     * The Key Vault identity.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -31,9 +25,6 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The properties of the key used to encrypt the account.
-     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
@@ -41,9 +32,6 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
     }
 
-    /**
-     * The type of key used to encrypt the Account Key.
-     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,AccountEncryptionKeyType>> type;
 

@@ -12,26 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TelegramChannelResponse {
-/**
- * The channel name
-Expected value is 'TelegramChannel'.
- */
     private final String channelName;
-/**
- * Entity Tag of the resource
- */
     private final @Nullable String etag;
-/**
- * Specifies the location of the resource.
- */
     private final @Nullable String location;
-/**
- * The set of properties specific to Telegram channel resource
- */
     private final @Nullable TelegramChannelPropertiesResponse properties;
-/**
- * Provisioning state of the resource
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"channelName","etag","location","properties","provisioningState"})
@@ -48,34 +32,18 @@ Expected value is 'TelegramChannel'.
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * The channel name
-Expected value is 'TelegramChannel'.
- */
     public String getChannelName() {
         return this.channelName;
     }
-/**
- * Entity Tag of the resource
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * Specifies the location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The set of properties specific to Telegram channel resource
- */
     public Optional<TelegramChannelPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
-/**
- * Provisioning state of the resource
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
- */
     @EnumType
     public enum SSLHealthCheckProxyHeader {
-/**
- * 
- */
         None("NONE"),
-/**
- * 
- */
         ProxyV1("PROXY_V1");
 
         private final String value;

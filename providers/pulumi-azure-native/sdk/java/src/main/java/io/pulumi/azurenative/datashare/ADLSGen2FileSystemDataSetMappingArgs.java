@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ADLSGen2FileSystemDataSetMappingArgs Empty = new ADLSGen2FileSystemDataSetMappingArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
         return this.accountName;
     }
 
-    /**
-     * The id of the source data set.
-     */
     @InputImport(name="dataSetId", required=true)
     private final Input<String> dataSetId;
 
@@ -37,9 +28,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
         return this.dataSetId;
     }
 
-    /**
-     * The name of the data set mapping to be created.
-     */
     @InputImport(name="dataSetMappingName")
     private final @Nullable Input<String> dataSetMappingName;
 
@@ -47,9 +35,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
     }
 
-    /**
-     * The file system name.
-     */
     @InputImport(name="fileSystem", required=true)
     private final Input<String> fileSystem;
 
@@ -57,10 +42,6 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
         return this.fileSystem;
     }
 
-    /**
-     * Kind of data set mapping.
-Expected value is 'AdlsGen2FileSystem'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -68,9 +49,6 @@ Expected value is 'AdlsGen2FileSystem'.
         return this.kind;
     }
 
-    /**
-     * Resource group of storage account.
-     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -78,9 +56,6 @@ Expected value is 'AdlsGen2FileSystem'.
         return this.resourceGroup;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -88,9 +63,6 @@ Expected value is 'AdlsGen2FileSystem'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share subscription which will hold the data set sink.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -98,9 +70,6 @@ Expected value is 'AdlsGen2FileSystem'.
         return this.shareSubscriptionName;
     }
 
-    /**
-     * Storage account name of the source data set.
-     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 
@@ -108,9 +77,6 @@ Expected value is 'AdlsGen2FileSystem'.
         return this.storageAccountName;
     }
 
-    /**
-     * Subscription id of storage account.
-     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

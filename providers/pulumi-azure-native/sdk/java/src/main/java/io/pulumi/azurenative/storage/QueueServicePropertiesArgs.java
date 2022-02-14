@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class QueueServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueueServicePropertiesArgs Empty = new QueueServicePropertiesArgs();
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -28,9 +22,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.accountName;
     }
 
-    /**
-     * Specifies CORS rules for the Queue service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Queue service.
-     */
     @InputImport(name="cors")
     private final @Nullable Input<CorsRulesArgs> cors;
 
@@ -38,9 +29,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.cors == null ? Input.empty() : this.cors;
     }
 
-    /**
-     * The name of the Queue Service within the specified storage account. Queue Service Name must be 'default'
-     */
     @InputImport(name="queueServiceName")
     private final @Nullable Input<String> queueServiceName;
 
@@ -48,9 +36,6 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
         return this.queueServiceName == null ? Input.empty() : this.queueServiceName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

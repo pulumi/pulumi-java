@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Copy progress.
- */
 public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CopyProgressResponse Empty = new CopyProgressResponse();
 
-    /**
-     * Id of the account where the data needs to be uploaded.
-     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 
@@ -27,9 +21,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.accountId;
     }
 
-    /**
-     * To indicate bytes transferred.
-     */
     @InputImport(name="bytesProcessed", required=true)
     private final Double bytesProcessed;
 
@@ -37,9 +28,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.bytesProcessed;
     }
 
-    /**
-     * Data Account Type.
-     */
     @InputImport(name="dataAccountType", required=true)
     private final String dataAccountType;
 
@@ -47,9 +35,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataAccountType;
     }
 
-    /**
-     * To indicate directories errored out in the job.
-     */
     @InputImport(name="directoriesErroredOut", required=true)
     private final Double directoriesErroredOut;
 
@@ -57,9 +42,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.directoriesErroredOut;
     }
 
-    /**
-     * Number of files which could not be copied
-     */
     @InputImport(name="filesErroredOut", required=true)
     private final Double filesErroredOut;
 
@@ -67,9 +49,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.filesErroredOut;
     }
 
-    /**
-     * Number of files processed
-     */
     @InputImport(name="filesProcessed", required=true)
     private final Double filesProcessed;
 
@@ -77,9 +56,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.filesProcessed;
     }
 
-    /**
-     * To indicate directories renamed
-     */
     @InputImport(name="invalidDirectoriesProcessed", required=true)
     private final Double invalidDirectoriesProcessed;
 
@@ -87,9 +63,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.invalidDirectoriesProcessed;
     }
 
-    /**
-     * Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
-     */
     @InputImport(name="invalidFileBytesUploaded", required=true)
     private final Double invalidFileBytesUploaded;
 
@@ -97,9 +70,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.invalidFileBytesUploaded;
     }
 
-    /**
-     * Number of files not adhering to azure naming conventions which were processed by automatic renaming
-     */
     @InputImport(name="invalidFilesProcessed", required=true)
     private final Double invalidFilesProcessed;
 
@@ -107,10 +77,6 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
         return this.invalidFilesProcessed;
     }
 
-    /**
-     * To indicate if enumeration of data is in progress. 
-Until this is true, the TotalBytesToProcess may not be valid.
-     */
     @InputImport(name="isEnumerationInProgress", required=true)
     private final Boolean isEnumerationInProgress;
 
@@ -118,9 +84,6 @@ Until this is true, the TotalBytesToProcess may not be valid.
         return this.isEnumerationInProgress;
     }
 
-    /**
-     * Number of folders not adhering to azure naming conventions which were processed by automatic renaming
-     */
     @InputImport(name="renamedContainerCount", required=true)
     private final Double renamedContainerCount;
 
@@ -128,9 +91,6 @@ Until this is true, the TotalBytesToProcess may not be valid.
         return this.renamedContainerCount;
     }
 
-    /**
-     * Name of the storage account. This will be empty for data account types other than storage account.
-     */
     @InputImport(name="storageAccountName", required=true)
     private final String storageAccountName;
 
@@ -138,9 +98,6 @@ Until this is true, the TotalBytesToProcess may not be valid.
         return this.storageAccountName;
     }
 
-    /**
-     * Total amount of data to be processed by the job.
-     */
     @InputImport(name="totalBytesToProcess", required=true)
     private final Double totalBytesToProcess;
 
@@ -148,9 +105,6 @@ Until this is true, the TotalBytesToProcess may not be valid.
         return this.totalBytesToProcess;
     }
 
-    /**
-     * Total files to process
-     */
     @InputImport(name="totalFilesToProcess", required=true)
     private final Double totalFilesToProcess;
 
@@ -158,9 +112,6 @@ Until this is true, the TotalBytesToProcess may not be valid.
         return this.totalFilesToProcess;
     }
 
-    /**
-     * Transfer type of data
-     */
     @InputImport(name="transferType", required=true)
     private final String transferType;
 

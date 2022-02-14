@@ -13,77 +13,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCloudConnectorResult {
-/**
- * Connector billing model
- */
     private final @Nullable String billingModel;
-/**
- * Collection information
- */
     private final ConnectorCollectionInfoResponse collectionInfo;
-/**
- * Connector definition creation datetime
- */
     private final String createdOn;
-/**
- * Credentials authentication key (eg AWS ARN)
- */
     private final @Nullable String credentialsKey;
-/**
- * Number of days remaining of trial
- */
     private final Integer daysTrialRemaining;
-/**
- * Default ManagementGroupId
- */
     private final @Nullable String defaultManagementGroupId;
-/**
- * Connector DisplayName
- */
     private final @Nullable String displayName;
-/**
- * Associated ExternalBillingAccountId
- */
     private final String externalBillingAccountId;
-/**
- * Connector id
- */
     private final String id;
-/**
- * Connector kind (eg aws)
- */
     private final @Nullable String kind;
-/**
- * Connector last modified datetime
- */
     private final String modifiedOn;
-/**
- * Connector name
- */
     private final String name;
-/**
- * The display name of the providerBillingAccountId as defined on the external provider
- */
     private final String providerBillingAccountDisplayName;
-/**
- * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
- */
     private final String providerBillingAccountId;
-/**
- * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
- */
     private final @Nullable String reportId;
-/**
- * Connector status
- */
     private final String status;
-/**
- * Billing SubscriptionId
- */
     private final @Nullable String subscriptionId;
-/**
- * Connector type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"billingModel","collectionInfo","createdOn","credentialsKey","daysTrialRemaining","defaultManagementGroupId","displayName","externalBillingAccountId","id","kind","modifiedOn","name","providerBillingAccountDisplayName","providerBillingAccountId","reportId","status","subscriptionId","type"})
@@ -126,111 +72,57 @@ public final class GetCloudConnectorResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Connector billing model
- */
     public Optional<String> getBillingModel() {
         return Optional.ofNullable(this.billingModel);
     }
-/**
- * Collection information
- */
     public ConnectorCollectionInfoResponse getCollectionInfo() {
         return this.collectionInfo;
     }
-/**
- * Connector definition creation datetime
- */
     public String getCreatedOn() {
         return this.createdOn;
     }
-/**
- * Credentials authentication key (eg AWS ARN)
- */
     public Optional<String> getCredentialsKey() {
         return Optional.ofNullable(this.credentialsKey);
     }
-/**
- * Number of days remaining of trial
- */
     public Integer getDaysTrialRemaining() {
         return this.daysTrialRemaining;
     }
-/**
- * Default ManagementGroupId
- */
     public Optional<String> getDefaultManagementGroupId() {
         return Optional.ofNullable(this.defaultManagementGroupId);
     }
-/**
- * Connector DisplayName
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * Associated ExternalBillingAccountId
- */
     public String getExternalBillingAccountId() {
         return this.externalBillingAccountId;
     }
-/**
- * Connector id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Connector kind (eg aws)
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Connector last modified datetime
- */
     public String getModifiedOn() {
         return this.modifiedOn;
     }
-/**
- * Connector name
- */
     public String getName() {
         return this.name;
     }
-/**
- * The display name of the providerBillingAccountId as defined on the external provider
- */
     public String getProviderBillingAccountDisplayName() {
         return this.providerBillingAccountDisplayName;
     }
-/**
- * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
- */
     public String getProviderBillingAccountId() {
         return this.providerBillingAccountId;
     }
-/**
- * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
- */
     public Optional<String> getReportId() {
         return Optional.ofNullable(this.reportId);
     }
-/**
- * Connector status
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Billing SubscriptionId
- */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
-/**
- * Connector type
- */
     public String getType() {
         return this.type;
     }

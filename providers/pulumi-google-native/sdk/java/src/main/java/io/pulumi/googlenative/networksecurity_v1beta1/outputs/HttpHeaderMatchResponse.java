@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpHeaderMatchResponse {
-/**
- * The name of the HTTP header to match. For matching against the HTTP request's authority, use a headerMatch with the header name ":authority". For matching a request's method, use the headerName ":method".
- */
     private final String headerName;
-/**
- * The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see: en.cppreference.com/w/cpp/regex/ecmascript For matching against a port specified in the HTTP request, use a headerMatch with headerName set to Host and a regular expression that satisfies the RFC2616 Host header's port specifier.
- */
     private final String regexMatch;
 
     @OutputCustomType.Constructor({"headerName","regexMatch"})
@@ -26,15 +20,9 @@ public final class HttpHeaderMatchResponse {
         this.regexMatch = Objects.requireNonNull(regexMatch);
     }
 
-/**
- * The name of the HTTP header to match. For matching against the HTTP request's authority, use a headerMatch with the header name ":authority". For matching a request's method, use the headerName ":method".
- */
     public String getHeaderName() {
         return this.headerName;
     }
-/**
- * The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see: en.cppreference.com/w/cpp/regex/ecmascript For matching against a port specified in the HTTP request, use a headerMatch with headerName set to Host and a regular expression that satisfies the RFC2616 Host header's port specifier.
- */
     public String getRegexMatch() {
         return this.regexMatch;
     }

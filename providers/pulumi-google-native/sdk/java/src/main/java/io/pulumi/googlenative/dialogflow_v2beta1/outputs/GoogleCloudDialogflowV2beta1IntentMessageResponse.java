@@ -29,89 +29,26 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
-/**
- * Displays a basic card for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
-/**
- * Browse carousel card for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
-/**
- * Displays a card.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
-/**
- * Displays a carousel card for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
-/**
- * Displays an image.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
-/**
- * Displays a link out suggestion chip for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
-/**
- * Displays a list card for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
-/**
- * The media content card for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
-/**
- * A custom platform-specific response.
- */
     private final Map<String,String> payload;
-/**
- * Optional. The platform that this message is intended for.
- */
     private final String platform;
-/**
- * Displays quick replies.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
-/**
- * Rich Business Messaging (RBM) carousel rich card response.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
-/**
- * Standalone Rich Business Messaging (RBM) rich card response.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
-/**
- * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
-/**
- * Returns a voice or text-only response for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
-/**
- * Displays suggestion chips for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
-/**
- * Table card for Actions on Google.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
-/**
- * Plays audio from a file in Telephony Gateway.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
-/**
- * Synthesizes speech in Telephony Gateway.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
-/**
- * Transfers the call in Telephony Gateway.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
-/**
- * Returns a text response.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
 
     @OutputCustomType.Constructor({"basicCard","browseCarouselCard","card","carouselSelect","image","linkOutSuggestion","listSelect","mediaContent","payload","platform","quickReplies","rbmCarouselRichCard","rbmStandaloneRichCard","rbmText","simpleResponses","suggestions","tableCard","telephonyPlayAudio","telephonySynthesizeSpeech","telephonyTransferCall","text"})
@@ -160,129 +97,66 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
         this.text = Objects.requireNonNull(text);
     }
 
-/**
- * Displays a basic card for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse getBasicCard() {
         return this.basicCard;
     }
-/**
- * Browse carousel card for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
         return this.browseCarouselCard;
     }
-/**
- * Displays a card.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageCardResponse getCard() {
         return this.card;
     }
-/**
- * Displays a carousel card for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse getCarouselSelect() {
         return this.carouselSelect;
     }
-/**
- * Displays an image.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
     }
-/**
- * Displays a link out suggestion chip for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
         return this.linkOutSuggestion;
     }
-/**
- * Displays a list card for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse getListSelect() {
         return this.listSelect;
     }
-/**
- * The media content card for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse getMediaContent() {
         return this.mediaContent;
     }
-/**
- * A custom platform-specific response.
- */
     public Map<String,String> getPayload() {
         return this.payload;
     }
-/**
- * Optional. The platform that this message is intended for.
- */
     public String getPlatform() {
         return this.platform;
     }
-/**
- * Displays quick replies.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse getQuickReplies() {
         return this.quickReplies;
     }
-/**
- * Rich Business Messaging (RBM) carousel rich card response.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse getRbmCarouselRichCard() {
         return this.rbmCarouselRichCard;
     }
-/**
- * Standalone Rich Business Messaging (RBM) rich card response.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse getRbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard;
     }
-/**
- * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse getRbmText() {
         return this.rbmText;
     }
-/**
- * Returns a voice or text-only response for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse getSimpleResponses() {
         return this.simpleResponses;
     }
-/**
- * Displays suggestion chips for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse getSuggestions() {
         return this.suggestions;
     }
-/**
- * Table card for Actions on Google.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse getTableCard() {
         return this.tableCard;
     }
-/**
- * Plays audio from a file in Telephony Gateway.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse getTelephonyPlayAudio() {
         return this.telephonyPlayAudio;
     }
-/**
- * Synthesizes speech in Telephony Gateway.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse getTelephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech;
     }
-/**
- * Transfers the call in Telephony Gateway.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse getTelephonyTransferCall() {
         return this.telephonyTransferCall;
     }
-/**
- * Returns a text response.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageTextResponse getText() {
         return this.text;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An attribute value for a Consent or User data mapping. Each Attribute must have a corresponding AttributeDefinition in the consent store that defines the default and allowed values.
- */
 public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttributeArgs Empty = new AttributeArgs();
 
-    /**
-     * Indicates the name of an attribute defined in the consent store.
-     */
     @InputImport(name="attributeDefinitionId")
     private final @Nullable Input<String> attributeDefinitionId;
 
@@ -28,9 +22,6 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributeDefinitionId == null ? Input.empty() : this.attributeDefinitionId;
     }
 
-    /**
-     * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.
-     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

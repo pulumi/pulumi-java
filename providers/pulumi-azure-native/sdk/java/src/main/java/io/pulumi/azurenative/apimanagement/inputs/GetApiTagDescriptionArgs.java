@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiTagDescriptionArgs Empty = new GetApiTagDescriptionArgs();
 
-    /**
-     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -25,9 +19,6 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
         return this.apiId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -45,9 +33,6 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
         return this.serviceName;
     }
 
-    /**
-     * Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
-     */
     @InputImport(name="tagDescriptionId", required=true)
     private final String tagDescriptionId;
 

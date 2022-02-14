@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFluidRelayServerKeys {
-/**
- * The set of available keys for this server.
-API Version: 2021-03-12-preview.
- *
- * The set of available keys for this server.
- */
     public static CompletableFuture<GetFluidRelayServerKeysResult> invokeAsync(GetFluidRelayServerKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServerKeys", TypeShape.of(GetFluidRelayServerKeysResult.class), args == null ? GetFluidRelayServerKeysArgs.Empty : args, Utilities.withVersion(options));
     }

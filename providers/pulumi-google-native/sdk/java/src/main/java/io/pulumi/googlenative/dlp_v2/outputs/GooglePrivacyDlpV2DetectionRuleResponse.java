@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2DetectionRuleResponse {
-/**
- * Hotword-based detection rule.
- */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
     @OutputCustomType.Constructor({"hotwordRule"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
         this.hotwordRule = Objects.requireNonNull(hotwordRule);
     }
 
-/**
- * Hotword-based detection rule.
- */
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
         return this.hotwordRule;
     }

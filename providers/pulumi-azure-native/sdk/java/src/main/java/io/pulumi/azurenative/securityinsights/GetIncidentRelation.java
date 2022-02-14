@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIncidentRelation {
-/**
- * Represents a relation between two resources
-API Version: 2021-03-01-preview.
- *
- * Represents a relation between two resources
- */
     public static CompletableFuture<GetIncidentRelationResult> invokeAsync(GetIncidentRelationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentRelation", TypeShape.of(GetIncidentRelationResult.class), args == null ? GetIncidentRelationArgs.Empty : args, Utilities.withVersion(options));
     }

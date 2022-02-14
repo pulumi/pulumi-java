@@ -21,246 +21,75 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A project resource
-API Version: 2018-04-19.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Projects_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var project = new AzureNative.DataMigration.Project("project", new AzureNative.DataMigration.ProjectArgs
-        {
-            GroupName = "DmsSdkRg",
-            Location = "southcentralus",
-            ProjectName = "DmsSdkProject",
-            ServiceName = "DmsSdkService",
-            SourcePlatform = "SQL",
-            TargetPlatform = "SQLDB",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datamigration.NewProject(ctx, "project", &datamigration.ProjectArgs{
-			GroupName:      pulumi.String("DmsSdkRg"),
-			Location:       pulumi.String("southcentralus"),
-			ProjectName:    pulumi.String("DmsSdkProject"),
-			ServiceName:    pulumi.String("DmsSdkService"),
-			SourcePlatform: pulumi.String("SQL"),
-			TargetPlatform: pulumi.String("SQLDB"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const project = new azure_native.datamigration.Project("project", {
-    groupName: "DmsSdkRg",
-    location: "southcentralus",
-    projectName: "DmsSdkProject",
-    serviceName: "DmsSdkService",
-    sourcePlatform: "SQL",
-    targetPlatform: "SQLDB",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-project = azure_native.datamigration.Project("project",
-    group_name="DmsSdkRg",
-    location="southcentralus",
-    project_name="DmsSdkProject",
-    service_name="DmsSdkService",
-    source_platform="SQL",
-    target_platform="SQLDB")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datamigration:Project DmsSdkProject /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject 
-```
-
- */
 @ResourceType(type="azure-native:datamigration:Project")
 public class Project extends io.pulumi.resources.CustomResource {
-    /**
-     * UTC Date and time when project was created
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    /**
-     * @return UTC Date and time when project was created
-     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * List of DatabaseInfo
-     */
     @OutputExport(name="databasesInfo", type=List.class, parameters={DatabaseInfoResponse.class})
     private Output</* @Nullable */ List<DatabaseInfoResponse>> databasesInfo;
 
-    /**
-     * @return List of DatabaseInfo
-     */
     public Output</* @Nullable */ List<DatabaseInfoResponse>> getDatabasesInfo() {
         return this.databasesInfo;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The project's provisioning state
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The project's provisioning state
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Information for connecting to source
-     */
     @OutputExport(name="sourceConnectionInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> sourceConnectionInfo;
 
-    /**
-     * @return Information for connecting to source
-     */
     public Output</* @Nullable */ Object> getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
-    /**
-     * Source platform for the project
-     */
     @OutputExport(name="sourcePlatform", type=String.class, parameters={})
     private Output<String> sourcePlatform;
 
-    /**
-     * @return Source platform for the project
-     */
     public Output<String> getSourcePlatform() {
         return this.sourcePlatform;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Information for connecting to target
-     */
     @OutputExport(name="targetConnectionInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> targetConnectionInfo;
 
-    /**
-     * @return Information for connecting to target
-     */
     public Output</* @Nullable */ Object> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }
-    /**
-     * Target platform for the project
-     */
     @OutputExport(name="targetPlatform", type=String.class, parameters={})
     private Output<String> targetPlatform;
 
-    /**
-     * @return Target platform for the project
-     */
     public Output<String> getTargetPlatform() {
         return this.targetPlatform;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Project(String name, ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datamigration:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -285,14 +114,6 @@ public class Project extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Project get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Project(name, id, options);
     }

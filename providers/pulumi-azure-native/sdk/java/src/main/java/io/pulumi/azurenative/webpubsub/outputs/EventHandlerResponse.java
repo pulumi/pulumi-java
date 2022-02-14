@@ -13,26 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventHandlerResponse {
-/**
- * Upstream auth settings. If not set, no auth is used for upstream messages.
- */
     private final @Nullable UpstreamAuthSettingsResponse auth;
-/**
- * Gets ot sets the list of system events.
- */
     private final @Nullable List<String> systemEvents;
-/**
- * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
-For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
- */
     private final String urlTemplate;
-/**
- * Gets or sets the matching pattern for event names.
-There are 3 kind of patterns supported:
-    1. "*", it to matches any event name
-    2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
-    3. The single event name, for example, "event1", it matches "event1"
- */
     private final @Nullable String userEventPattern;
 
     @OutputCustomType.Constructor({"auth","systemEvents","urlTemplate","userEventPattern"})
@@ -47,32 +30,15 @@ There are 3 kind of patterns supported:
         this.userEventPattern = userEventPattern;
     }
 
-/**
- * Upstream auth settings. If not set, no auth is used for upstream messages.
- */
     public Optional<UpstreamAuthSettingsResponse> getAuth() {
         return Optional.ofNullable(this.auth);
     }
-/**
- * Gets ot sets the list of system events.
- */
     public List<String> getSystemEvents() {
         return this.systemEvents == null ? List.of() : this.systemEvents;
     }
-/**
- * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
-For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
- */
     public String getUrlTemplate() {
         return this.urlTemplate;
     }
-/**
- * Gets or sets the matching pattern for event names.
-There are 3 kind of patterns supported:
-    1. "*", it to matches any event name
-    2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
-    3. The single event name, for example, "event1", it matches "event1"
- */
     public Optional<String> getUserEventPattern() {
         return Optional.ofNullable(this.userEventPattern);
     }

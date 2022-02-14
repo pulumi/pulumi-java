@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Defines the conditions under which an EgressPolicy matches a request. Conditions are based on information about the ApiOperation intended to be performed on the `resources` specified. Note that if the destination of the request is also protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which allows access in order for this request to succeed. The request must match `operations` AND `resources` fields in order to be allowed egress out of the perimeter.
- */
 public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EgressToResponse Empty = new EgressToResponse();
 
-    /**
-     * A list of ApiOperations allowed to be performed by the sources specified in the corresponding EgressFrom. A request matches if it uses an operation/service in this list.
-     */
     @InputImport(name="operations", required=true)
     private final List<ApiOperationResponse> operations;
 
@@ -27,9 +21,6 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
         return this.operations;
     }
 
-    /**
-     * A list of resources, currently only projects in the form `projects/`, that are allowed to be accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is specified for `resources`, then this EgressTo rule will authorize access to all resources outside the perimeter.
-     */
     @InputImport(name="resources", required=true)
     private final List<String> resources;
 

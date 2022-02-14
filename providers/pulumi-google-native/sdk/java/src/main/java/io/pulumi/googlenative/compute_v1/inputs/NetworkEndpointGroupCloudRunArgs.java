@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for a Cloud Run network endpoint group (NEG). The service must be provided explicitly or in the URL mask. The tag is optional, may be provided explicitly or in the URL mask. Note: Cloud Run service must be in the same project and located in the same region as the Serverless NEG.
- */
 public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkEndpointGroupCloudRunArgs Empty = new NetworkEndpointGroupCloudRunArgs();
 
-    /**
-     * Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".
-     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -27,9 +21,6 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
         return this.service == null ? Input.empty() : this.service;
     }
 
-    /**
-     * Optional Cloud Run tag represents the "named-revision" to provide additional fine-grained traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035. Example value: "revision-0010".
-     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 
@@ -37,9 +28,6 @@ public final class NetworkEndpointGroupCloudRunArgs extends io.pulumi.resources.
         return this.tag == null ? Input.empty() : this.tag;
     }
 
-    /**
-     * A template to parse service and tag fields from a request URL. URL mask allows for routing to multiple Run services without having to create multiple network endpoint groups and backend services. For example, request URLs "foo1.domain.com/bar1" and "foo1.domain.com/bar2" can be backed by the same Serverless Network Endpoint Group (NEG) with URL mask ".domain.com/". The URL mask will parse them to { service="bar1", tag="foo1" } and { service="bar2", tag="foo2" } respectively.
-     */
     @InputImport(name="urlMask")
     private final @Nullable Input<String> urlMask;
 

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of managed service identity.
- */
     @EnumType
     public enum IdentityType {
-/**
- * 
- */
         SystemAssigned("SystemAssigned"),
-/**
- * 
- */
         UserAssigned("UserAssigned"),
-/**
- * 
- */
         None("None");
 
         private final String value;

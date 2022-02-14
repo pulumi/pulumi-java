@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClassItemResponse {
-/**
- * The class item's value.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"value"})
@@ -19,9 +16,6 @@ public final class ClassItemResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The class item's value.
- */
     public String getValue() {
         return this.value;
     }

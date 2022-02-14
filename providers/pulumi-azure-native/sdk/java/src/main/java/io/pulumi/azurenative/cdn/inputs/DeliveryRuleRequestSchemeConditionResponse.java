@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the RequestScheme condition for the delivery rule.
- */
 public final class DeliveryRuleRequestSchemeConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleRequestSchemeConditionResponse Empty = new DeliveryRuleRequestSchemeConditionResponse();
 
-    /**
-     * The name of the condition for the delivery rule.
-Expected value is 'RequestScheme'.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +20,6 @@ Expected value is 'RequestScheme'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the condition.
-     */
     @InputImport(name="parameters", required=true)
     private final RequestSchemeMatchConditionParametersResponse parameters;
 

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The encryption properties.
- */
 public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ACIServiceCreateRequestEncryptionPropertiesArgs Empty = new ACIServiceCreateRequestEncryptionPropertiesArgs();
 
-    /**
-     * Encryption Key name
-     */
     @InputImport(name="keyName", required=true)
     private final Input<String> keyName;
 
@@ -26,9 +20,6 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
         return this.keyName;
     }
 
-    /**
-     * Encryption Key Version
-     */
     @InputImport(name="keyVersion", required=true)
     private final Input<String> keyVersion;
 
@@ -36,9 +27,6 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
         return this.keyVersion;
     }
 
-    /**
-     * vault base Url
-     */
     @InputImport(name="vaultBaseUrl", required=true)
     private final Input<String> vaultBaseUrl;
 

@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProtectionIntentArgs Empty = new ProtectionIntentArgs();
 
-    /**
-     * Optional ETag.
-     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -33,9 +27,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
-    /**
-     * Fabric name associated with the backup item.
-     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -43,9 +34,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.fabricName;
     }
 
-    /**
-     * Intent object name.
-     */
     @InputImport(name="intentObjectName")
     private final @Nullable Input<String> intentObjectName;
 
@@ -53,9 +41,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.intentObjectName == null ? Input.empty() : this.intentObjectName;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,9 +48,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * ProtectionIntentResource properties
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -73,9 +55,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,9 +62,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -93,9 +69,6 @@ public final class ProtectionIntentArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="vaultName", required=true)
     private final Input<String> vaultName;
 

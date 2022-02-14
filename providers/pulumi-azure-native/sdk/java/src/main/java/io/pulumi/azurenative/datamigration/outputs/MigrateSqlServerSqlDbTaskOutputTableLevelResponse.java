@@ -10,50 +10,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
-/**
- * Migration end time
- */
     private final String endedOn;
-/**
- * Wildcard string prefix to use for querying all errors of the item
- */
     private final String errorPrefix;
-/**
- * Result identifier
- */
     private final String id;
-/**
- * Number of successfully completed items
- */
     private final Double itemsCompletedCount;
-/**
- * Number of items
- */
     private final Double itemsCount;
-/**
- * Name of the item
- */
     private final String objectName;
-/**
- * Wildcard string prefix to use for querying all sub-tem results of the item
- */
     private final String resultPrefix;
-/**
- * Result type
-Expected value is 'TableLevelOutput'.
- */
     private final String resultType;
-/**
- * Migration start time
- */
     private final String startedOn;
-/**
- * Current state of migration
- */
     private final String state;
-/**
- * Status message
- */
     private final String statusMessage;
 
     @OutputCustomType.Constructor({"endedOn","errorPrefix","id","itemsCompletedCount","itemsCount","objectName","resultPrefix","resultType","startedOn","state","statusMessage"})
@@ -82,70 +48,36 @@ Expected value is 'TableLevelOutput'.
         this.statusMessage = Objects.requireNonNull(statusMessage);
     }
 
-/**
- * Migration end time
- */
     public String getEndedOn() {
         return this.endedOn;
     }
-/**
- * Wildcard string prefix to use for querying all errors of the item
- */
     public String getErrorPrefix() {
         return this.errorPrefix;
     }
-/**
- * Result identifier
- */
     public String getId() {
         return this.id;
     }
-/**
- * Number of successfully completed items
- */
     public Double getItemsCompletedCount() {
         return this.itemsCompletedCount;
     }
-/**
- * Number of items
- */
     public Double getItemsCount() {
         return this.itemsCount;
     }
-/**
- * Name of the item
- */
     public String getObjectName() {
         return this.objectName;
     }
-/**
- * Wildcard string prefix to use for querying all sub-tem results of the item
- */
     public String getResultPrefix() {
         return this.resultPrefix;
     }
-/**
- * Result type
-Expected value is 'TableLevelOutput'.
- */
     public String getResultType() {
         return this.resultType;
     }
-/**
- * Migration start time
- */
     public String getStartedOn() {
         return this.startedOn;
     }
-/**
- * Current state of migration
- */
     public String getState() {
         return this.state;
     }
-/**
- * Status message
- */
     public String getStatusMessage() {
         return this.statusMessage;
     }

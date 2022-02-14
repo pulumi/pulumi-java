@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Tier of an application gateway.
- */
     @EnumType
     public enum ApplicationGatewayTier {
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         WAF("WAF"),
-/**
- * 
- */
         Standard_v2("Standard_v2"),
-/**
- * 
- */
         WAF_v2("WAF_v2");
 
         private final String value;

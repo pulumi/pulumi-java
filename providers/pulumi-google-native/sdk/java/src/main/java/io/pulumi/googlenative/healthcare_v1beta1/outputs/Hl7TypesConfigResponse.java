@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class Hl7TypesConfigResponse {
-/**
- * The HL7v2 type definitions.
- */
     private final List<TypeResponse> type;
-/**
- * The version selectors that this config applies to. A message must match ALL version sources to apply.
- */
     private final List<VersionSourceResponse> version;
 
     @OutputCustomType.Constructor({"type","version"})
@@ -28,15 +22,9 @@ public final class Hl7TypesConfigResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * The HL7v2 type definitions.
- */
     public List<TypeResponse> getType() {
         return this.type;
     }
-/**
- * The version selectors that this config applies to. A message must match ALL version sources to apply.
- */
     public List<VersionSourceResponse> getVersion() {
         return this.version;
     }

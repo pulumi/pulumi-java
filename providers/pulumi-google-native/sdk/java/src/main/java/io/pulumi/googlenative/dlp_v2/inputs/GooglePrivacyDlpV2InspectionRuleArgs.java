@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A single inspection rule to be applied to infoTypes, specified in `InspectionRuleSet`.
- */
 public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectionRuleArgs Empty = new GooglePrivacyDlpV2InspectionRuleArgs();
 
-    /**
-     * Exclusion rule.
-     */
     @InputImport(name="exclusionRule")
     private final @Nullable Input<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule;
 
@@ -28,9 +22,6 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
         return this.exclusionRule == null ? Input.empty() : this.exclusionRule;
     }
 
-    /**
-     * Hotword-based detection rule.
-     */
     @InputImport(name="hotwordRule")
     private final @Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 

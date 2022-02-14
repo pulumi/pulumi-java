@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of command content.
- */
     @EnumType
     public enum ContentType {
-/**
- * 
- */
         Inline("Inline"),
-/**
- * 
- */
         File("File"),
-/**
- * 
- */
         Path("Path");
 
         private final String value;

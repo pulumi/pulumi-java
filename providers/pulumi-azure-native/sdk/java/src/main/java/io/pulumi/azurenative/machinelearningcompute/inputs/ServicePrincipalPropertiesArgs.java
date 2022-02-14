@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The Azure service principal used by Kubernetes for configuring load balancers
- */
 public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePrincipalPropertiesArgs Empty = new ServicePrincipalPropertiesArgs();
 
-    /**
-     * The service principal client ID
-     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -26,9 +20,6 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
         return this.clientId;
     }
 
-    /**
-     * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
-     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 

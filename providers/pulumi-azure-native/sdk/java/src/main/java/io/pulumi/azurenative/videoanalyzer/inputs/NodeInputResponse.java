@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes an input signal to be used on a pipeline node.
- */
 public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeInputResponse Empty = new NodeInputResponse();
 
-    /**
-     * The name of the upstream node in the pipeline which output is used as input of the current node.
-     */
     @InputImport(name="nodeName", required=true)
     private final String nodeName;
 

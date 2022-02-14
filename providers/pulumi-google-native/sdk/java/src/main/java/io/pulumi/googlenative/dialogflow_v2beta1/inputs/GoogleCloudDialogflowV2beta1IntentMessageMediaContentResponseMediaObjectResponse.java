@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Response media object for media content card.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse();
 
-    /**
-     * Url where the media is stored.
-     */
     @InputImport(name="contentUrl", required=true)
     private final String contentUrl;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.contentUrl;
     }
 
-    /**
-     * Optional. Description of media card.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -36,9 +27,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.description;
     }
 
-    /**
-     * Optional. Icon to display above media content.
-     */
     @InputImport(name="icon", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
 
@@ -46,9 +34,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.icon;
     }
 
-    /**
-     * Optional. Image to display above media content.
-     */
     @InputImport(name="largeImage", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
 
@@ -56,9 +41,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
         return this.largeImage;
     }
 
-    /**
-     * Name of media card.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

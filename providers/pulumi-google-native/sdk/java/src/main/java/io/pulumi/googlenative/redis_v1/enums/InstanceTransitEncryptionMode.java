@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.
- */
     @EnumType
     public enum InstanceTransitEncryptionMode {
-/**
- * Not set.
- */
         TransitEncryptionModeUnspecified("TRANSIT_ENCRYPTION_MODE_UNSPECIFIED"),
-/**
- * Client to Server traffic encryption enabled with server authentication.
- */
         ServerAuthentication("SERVER_AUTHENTICATION"),
-/**
- * TLS is disabled for the instance.
- */
         Disabled("DISABLED");
 
         private final String value;

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Profile of network configuration.
- */
 public final class ContainerServiceNetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerServiceNetworkProfileResponse Empty = new ContainerServiceNetworkProfileResponse();
 
-    /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-     */
     @InputImport(name="dnsServiceIP")
     private final @Nullable String dnsServiceIP;
 
@@ -28,9 +22,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.dnsServiceIP == null ? Optional.empty() : Optional.ofNullable(this.dnsServiceIP);
     }
 
-    /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-     */
     @InputImport(name="dockerBridgeCidr")
     private final @Nullable String dockerBridgeCidr;
 
@@ -38,9 +29,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.dockerBridgeCidr == null ? Optional.empty() : Optional.ofNullable(this.dockerBridgeCidr);
     }
 
-    /**
-     * Profile of the cluster load balancer.
-     */
     @InputImport(name="loadBalancerProfile")
     private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
 
@@ -48,9 +36,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.loadBalancerProfile == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerProfile);
     }
 
-    /**
-     * The load balancer sku for the managed cluster.
-     */
     @InputImport(name="loadBalancerSku")
     private final @Nullable String loadBalancerSku;
 
@@ -58,9 +43,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.loadBalancerSku == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerSku);
     }
 
-    /**
-     * Network mode used for building Kubernetes network.
-     */
     @InputImport(name="networkMode")
     private final @Nullable String networkMode;
 
@@ -68,9 +50,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.networkMode == null ? Optional.empty() : Optional.ofNullable(this.networkMode);
     }
 
-    /**
-     * Network plugin used for building Kubernetes network.
-     */
     @InputImport(name="networkPlugin")
     private final @Nullable String networkPlugin;
 
@@ -78,9 +57,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.networkPlugin == null ? Optional.empty() : Optional.ofNullable(this.networkPlugin);
     }
 
-    /**
-     * Network policy used for building Kubernetes network.
-     */
     @InputImport(name="networkPolicy")
     private final @Nullable String networkPolicy;
 
@@ -88,9 +64,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.networkPolicy == null ? Optional.empty() : Optional.ofNullable(this.networkPolicy);
     }
 
-    /**
-     * The outbound (egress) routing method.
-     */
     @InputImport(name="outboundType")
     private final @Nullable String outboundType;
 
@@ -98,9 +71,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.outboundType == null ? Optional.empty() : Optional.ofNullable(this.outboundType);
     }
 
-    /**
-     * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
-     */
     @InputImport(name="podCidr")
     private final @Nullable String podCidr;
 
@@ -108,9 +78,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
         return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
     }
 
-    /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
-     */
     @InputImport(name="serviceCidr")
     private final @Nullable String serviceCidr;
 

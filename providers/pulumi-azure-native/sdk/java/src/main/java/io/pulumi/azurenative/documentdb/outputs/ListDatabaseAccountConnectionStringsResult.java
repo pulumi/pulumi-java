@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListDatabaseAccountConnectionStringsResult {
-/**
- * An array that contains the connection strings for the Cosmos DB account.
- */
     private final @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings;
 
     @OutputCustomType.Constructor({"connectionStrings"})
@@ -21,9 +18,6 @@ public final class ListDatabaseAccountConnectionStringsResult {
         this.connectionStrings = connectionStrings;
     }
 
-/**
- * An array that contains the connection strings for the Cosmos DB account.
- */
     public List<DatabaseAccountConnectionStringResponse> getConnectionStrings() {
         return this.connectionStrings == null ? List.of() : this.connectionStrings;
     }

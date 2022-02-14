@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for DataTransferServiceResource.
- */
 public final class DataTransferServiceResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataTransferServiceResourcePropertiesResponse Empty = new DataTransferServiceResourcePropertiesResponse();
 
-    /**
-     * Time of the last state change (ISO-8601 format).
-     */
     @InputImport(name="creationTime", required=true)
     private final String creationTime;
 
@@ -30,9 +24,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
         return this.creationTime;
     }
 
-    /**
-     * Instance count for the service.
-     */
     @InputImport(name="instanceCount")
     private final @Nullable Integer instanceCount;
 
@@ -40,9 +31,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
-    /**
-     * Instance type for the service.
-     */
     @InputImport(name="instanceSize")
     private final @Nullable String instanceSize;
 
@@ -50,9 +38,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
         return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
     }
 
-    /**
-     * An array that contains all of the locations for the service.
-     */
     @InputImport(name="locations", required=true)
     private final List<DataTransferRegionalServiceResourceResponse> locations;
 
@@ -60,10 +45,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
         return this.locations;
     }
 
-    /**
-     * ServiceType for the service.
-Expected value is 'DataTransfer'.
-     */
     @InputImport(name="serviceType", required=true)
     private final String serviceType;
 
@@ -71,9 +52,6 @@ Expected value is 'DataTransfer'.
         return this.serviceType;
     }
 
-    /**
-     * Describes the status of a service.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

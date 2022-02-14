@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SAP HANA Linked Service.
- */
 public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SapHanaLinkedServiceArgs Empty = new SapHanaLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -36,9 +30,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The authentication type to be used to connect to the SAP HANA server.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,SapHanaAuthenticationType>> authenticationType;
 
@@ -46,9 +37,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -56,9 +44,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString")
     private final @Nullable Input<Object> connectionString;
 
@@ -66,9 +51,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.connectionString == null ? Input.empty() : this.connectionString;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -76,9 +58,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -86,9 +65,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -96,9 +72,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password to access the SAP HANA server.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -106,9 +79,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Host name of the SAP HANA server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="server")
     private final @Nullable Input<Object> server;
 
@@ -116,10 +86,6 @@ public final class SapHanaLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.server == null ? Input.empty() : this.server;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'SapHana'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -127,9 +93,6 @@ Expected value is 'SapHana'.
         return this.type;
     }
 
-    /**
-     * Username to access the SAP HANA server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userName")
     private final @Nullable Input<Object> userName;
 

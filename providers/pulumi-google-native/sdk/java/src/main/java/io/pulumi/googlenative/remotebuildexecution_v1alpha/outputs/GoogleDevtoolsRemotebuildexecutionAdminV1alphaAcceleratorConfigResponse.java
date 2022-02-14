@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse {
-/**
- * The number of guest accelerator cards exposed to each VM.
- */
     private final String acceleratorCount;
-/**
- * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
- */
     private final String acceleratorType;
 
     @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
@@ -26,15 +20,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
         this.acceleratorType = Objects.requireNonNull(acceleratorType);
     }
 
-/**
- * The number of guest accelerator cards exposed to each VM.
- */
     public String getAcceleratorCount() {
         return this.acceleratorCount;
     }
-/**
- * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
- */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }

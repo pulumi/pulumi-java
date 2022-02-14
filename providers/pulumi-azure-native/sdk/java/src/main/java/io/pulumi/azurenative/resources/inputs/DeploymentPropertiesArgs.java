@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Deployment properties.
- */
 public final class DeploymentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentPropertiesArgs Empty = new DeploymentPropertiesArgs();
 
-    /**
-     * The debug setting of the deployment.
-     */
     @InputImport(name="debugSetting")
     private final @Nullable Input<DebugSettingArgs> debugSetting;
 
@@ -33,9 +27,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.debugSetting == null ? Input.empty() : this.debugSetting;
     }
 
-    /**
-     * Specifies whether template expressions are evaluated within the scope of the parent template or nested template. Only applicable to nested templates. If not specified, default value is outer.
-     */
     @InputImport(name="expressionEvaluationOptions")
     private final @Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
 
@@ -43,9 +34,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.expressionEvaluationOptions == null ? Input.empty() : this.expressionEvaluationOptions;
     }
 
-    /**
-     * The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources.
-     */
     @InputImport(name="mode", required=true)
     private final Input<DeploymentMode> mode;
 
@@ -53,9 +41,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.mode;
     }
 
-    /**
-     * The deployment on error behavior.
-     */
     @InputImport(name="onErrorDeployment")
     private final @Nullable Input<OnErrorDeploymentArgs> onErrorDeployment;
 
@@ -63,9 +48,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.onErrorDeployment == null ? Input.empty() : this.onErrorDeployment;
     }
 
-    /**
-     * Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Object> parameters;
 
@@ -73,9 +55,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both.
-     */
     @InputImport(name="parametersLink")
     private final @Nullable Input<ParametersLinkArgs> parametersLink;
 
@@ -83,9 +62,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.parametersLink == null ? Input.empty() : this.parametersLink;
     }
 
-    /**
-     * The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both.
-     */
     @InputImport(name="template")
     private final @Nullable Input<Object> template;
 
@@ -93,9 +69,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.template == null ? Input.empty() : this.template;
     }
 
-    /**
-     * The URI of the template. Use either the templateLink property or the template property, but not both.
-     */
     @InputImport(name="templateLink")
     private final @Nullable Input<TemplateLinkArgs> templateLink;
 

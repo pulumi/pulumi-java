@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the device.
- */
     @EnumType
     public enum DeviceType {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         AzureStackEdge("AzureStackEdge");
 
         private final String value;

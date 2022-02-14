@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTag {
-/**
- * Tag Contract details.
-API Version: 2020-12-01.
- *
- * Tag Contract details.
- */
     public static CompletableFuture<GetTagResult> invokeAsync(GetTagArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTag", TypeShape.of(GetTagResult.class), args == null ? GetTagArgs.Empty : args, Utilities.withVersion(options));
     }

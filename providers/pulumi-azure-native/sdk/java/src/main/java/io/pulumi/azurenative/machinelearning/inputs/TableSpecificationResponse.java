@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The swagger 2.0 schema describing a single service input or output. See Swagger specification: http://swagger.io/specification/
- */
 public final class TableSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TableSpecificationResponse Empty = new TableSpecificationResponse();
 
-    /**
-     * Swagger schema description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -29,9 +23,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The format, if 'type' is not 'object'
-     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -39,9 +30,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
-    /**
-     * The set of columns within the data table.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,ColumnSpecificationResponse> properties;
 
@@ -49,9 +37,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * Swagger schema title.
-     */
     @InputImport(name="title")
     private final @Nullable String title;
 
@@ -59,9 +44,6 @@ public final class TableSpecificationResponse extends io.pulumi.resources.Invoke
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
-    /**
-     * The type of the entity described in swagger.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

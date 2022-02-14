@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TaskSchedulingPolicyResponse {
-/**
- * 
- */
     private final String nodeFillType;
 
     @OutputCustomType.Constructor({"nodeFillType"})
@@ -19,9 +16,6 @@ public final class TaskSchedulingPolicyResponse {
         this.nodeFillType = Objects.requireNonNull(nodeFillType);
     }
 
-/**
- * 
- */
     public String getNodeFillType() {
         return this.nodeFillType;
     }

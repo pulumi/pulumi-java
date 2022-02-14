@@ -11,57 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebAppHostNameBindingSlotResult {
-/**
- * Azure resource name.
- */
     private final @Nullable String azureResourceName;
-/**
- * Azure resource type.
- */
     private final @Nullable String azureResourceType;
-/**
- * Custom DNS record type.
- */
     private final @Nullable String customHostNameDnsRecordType;
-/**
- * Fully qualified ARM domain resource URI.
- */
     private final @Nullable String domainId;
-/**
- * Hostname type.
- */
     private final @Nullable String hostNameType;
-/**
- * Resource Id.
- */
     private final String id;
-/**
- * Kind of resource.
- */
     private final @Nullable String kind;
-/**
- * Resource Name.
- */
     private final String name;
-/**
- * App Service app name.
- */
     private final @Nullable String siteName;
-/**
- * SSL type
- */
     private final @Nullable String sslState;
-/**
- * SSL certificate thumbprint
- */
     private final @Nullable String thumbprint;
-/**
- * Resource type.
- */
     private final String type;
-/**
- * Virtual IP address assigned to the hostname if IP based SSL is enabled.
- */
     private final String virtualIP;
 
     @OutputCustomType.Constructor({"azureResourceName","azureResourceType","customHostNameDnsRecordType","domainId","hostNameType","id","kind","name","siteName","sslState","thumbprint","type","virtualIP"})
@@ -94,81 +55,42 @@ public final class GetWebAppHostNameBindingSlotResult {
         this.virtualIP = Objects.requireNonNull(virtualIP);
     }
 
-/**
- * Azure resource name.
- */
     public Optional<String> getAzureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
-/**
- * Azure resource type.
- */
     public Optional<String> getAzureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
-/**
- * Custom DNS record type.
- */
     public Optional<String> getCustomHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
-/**
- * Fully qualified ARM domain resource URI.
- */
     public Optional<String> getDomainId() {
         return Optional.ofNullable(this.domainId);
     }
-/**
- * Hostname type.
- */
     public Optional<String> getHostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
-/**
- * Resource Id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Kind of resource.
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Resource Name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * App Service app name.
- */
     public Optional<String> getSiteName() {
         return Optional.ofNullable(this.siteName);
     }
-/**
- * SSL type
- */
     public Optional<String> getSslState() {
         return Optional.ofNullable(this.sslState);
     }
-/**
- * SSL certificate thumbprint
- */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Virtual IP address assigned to the hostname if IP based SSL is enabled.
- */
     public String getVirtualIP() {
         return this.virtualIP;
     }

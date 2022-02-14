@@ -18,451 +18,189 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Access Review Schedule Definition.
-API Version: 2021-03-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PutAccessReview
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var accessReviewScheduleDefinitionById = new AzureNative.Authorization.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", new AzureNative.Authorization.AccessReviewScheduleDefinitionByIdArgs
-        {
-            ScheduleDefinitionId = "fa73e90b-5bf1-45fd-a182-35ce5fc0674d",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := authorization.NewAccessReviewScheduleDefinitionById(ctx, "accessReviewScheduleDefinitionById", &authorization.AccessReviewScheduleDefinitionByIdArgs{
-			ScheduleDefinitionId: pulumi.String("fa73e90b-5bf1-45fd-a182-35ce5fc0674d"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const accessReviewScheduleDefinitionById = new azure_native.authorization.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", {scheduleDefinitionId: "fa73e90b-5bf1-45fd-a182-35ce5fc0674d"});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-access_review_schedule_definition_by_id = azure_native.authorization.AccessReviewScheduleDefinitionById("accessReviewScheduleDefinitionById", schedule_definition_id="fa73e90b-5bf1-45fd-a182-35ce5fc0674d")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:authorization:AccessReviewScheduleDefinitionById fa73e90b-5bf1-45fd-a182-35ce5fc0674d /subscriptions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d/providers/Microsoft.Authorization/accessReviewScheduleDefinitions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d 
-```
-
- */
 @ResourceType(type="azure-native:authorization:AccessReviewScheduleDefinitionById")
 public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.CustomResource {
-    /**
-     * The role assignment state eligible/active to review
-     */
     @OutputExport(name="assignmentState", type=String.class, parameters={})
     private Output<String> assignmentState;
 
-    /**
-     * @return The role assignment state eligible/active to review
-     */
     public Output<String> getAssignmentState() {
         return this.assignmentState;
     }
-    /**
-     * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
-     */
     @OutputExport(name="autoApplyDecisionsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoApplyDecisionsEnabled;
 
-    /**
-     * @return Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
-     */
     public Output</* @Nullable */ Boolean> getAutoApplyDecisionsEnabled() {
         return this.autoApplyDecisionsEnabled;
     }
-    /**
-     * This is the collection of backup reviewers.
-     */
     @OutputExport(name="backupReviewers", type=List.class, parameters={AccessReviewReviewerResponse.class})
     private Output</* @Nullable */ List<AccessReviewReviewerResponse>> backupReviewers;
 
-    /**
-     * @return This is the collection of backup reviewers.
-     */
     public Output</* @Nullable */ List<AccessReviewReviewerResponse>> getBackupReviewers() {
         return this.backupReviewers;
     }
-    /**
-     * This specifies the behavior for the autoReview feature when an access review completes.
-     */
     @OutputExport(name="defaultDecision", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultDecision;
 
-    /**
-     * @return This specifies the behavior for the autoReview feature when an access review completes.
-     */
     public Output</* @Nullable */ String> getDefaultDecision() {
         return this.defaultDecision;
     }
-    /**
-     * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
-     */
     @OutputExport(name="defaultDecisionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> defaultDecisionEnabled;
 
-    /**
-     * @return Flag to indicate whether reviewers are required to provide a justification when reviewing access.
-     */
     public Output</* @Nullable */ Boolean> getDefaultDecisionEnabled() {
         return this.defaultDecisionEnabled;
     }
-    /**
-     * The description provided by the access review creator and visible to admins.
-     */
     @OutputExport(name="descriptionForAdmins", type=String.class, parameters={})
     private Output</* @Nullable */ String> descriptionForAdmins;
 
-    /**
-     * @return The description provided by the access review creator and visible to admins.
-     */
     public Output</* @Nullable */ String> getDescriptionForAdmins() {
         return this.descriptionForAdmins;
     }
-    /**
-     * The description provided by the access review creator to be shown to reviewers.
-     */
     @OutputExport(name="descriptionForReviewers", type=String.class, parameters={})
     private Output</* @Nullable */ String> descriptionForReviewers;
 
-    /**
-     * @return The description provided by the access review creator to be shown to reviewers.
-     */
     public Output</* @Nullable */ String> getDescriptionForReviewers() {
         return this.descriptionForReviewers;
     }
-    /**
-     * The display name for the schedule definition.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The display name for the schedule definition.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The DateTime when the review is scheduled to end. Required if type is endDate
-     */
     @OutputExport(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
-    /**
-     * @return The DateTime when the review is scheduled to end. Required if type is endDate
-     */
     public Output</* @Nullable */ String> getEndDate() {
         return this.endDate;
     }
-    /**
-     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     */
     @OutputExport(name="inactiveDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> inactiveDuration;
 
-    /**
-     * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     */
     public Output</* @Nullable */ String> getInactiveDuration() {
         return this.inactiveDuration;
     }
-    /**
-     * The duration in days for an instance.
-     */
     @OutputExport(name="instanceDurationInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> instanceDurationInDays;
 
-    /**
-     * @return The duration in days for an instance.
-     */
     public Output</* @Nullable */ Integer> getInstanceDurationInDays() {
         return this.instanceDurationInDays;
     }
-    /**
-     * This is the collection of instances returned when one does an expand on it.
-     */
     @OutputExport(name="instances", type=List.class, parameters={AccessReviewInstanceResponse.class})
     private Output</* @Nullable */ List<AccessReviewInstanceResponse>> instances;
 
-    /**
-     * @return This is the collection of instances returned when one does an expand on it.
-     */
     public Output</* @Nullable */ List<AccessReviewInstanceResponse>> getInstances() {
         return this.instances;
     }
-    /**
-     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     */
     @OutputExport(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
-    /**
-     * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     */
     public Output</* @Nullable */ Integer> getInterval() {
         return this.interval;
     }
-    /**
-     * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
-     */
     @OutputExport(name="justificationRequiredOnApproval", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> justificationRequiredOnApproval;
 
-    /**
-     * @return Flag to indicate whether the reviewer is required to pass justification when recording a decision.
-     */
     public Output</* @Nullable */ Boolean> getJustificationRequiredOnApproval() {
         return this.justificationRequiredOnApproval;
     }
-    /**
-     * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
-     */
     @OutputExport(name="mailNotificationsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mailNotificationsEnabled;
 
-    /**
-     * @return Flag to indicate whether sending mails to reviewers and the review creator is enabled.
-     */
     public Output</* @Nullable */ Boolean> getMailNotificationsEnabled() {
         return this.mailNotificationsEnabled;
     }
-    /**
-     * The access review schedule definition unique id.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The access review schedule definition unique id.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     */
     @OutputExport(name="numberOfOccurrences", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfOccurrences;
 
-    /**
-     * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
-     */
     public Output</* @Nullable */ Integer> getNumberOfOccurrences() {
         return this.numberOfOccurrences;
     }
-    /**
-     * The identity id
-     */
     @OutputExport(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
-    /**
-     * @return The identity id
-     */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
-    /**
-     * The identity display name
-     */
     @OutputExport(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
-    /**
-     * @return The identity display name
-     */
     public Output<String> getPrincipalName() {
         return this.principalName;
     }
-    /**
-     * The identity type user/servicePrincipal to review
-     */
     @OutputExport(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
-    /**
-     * @return The identity type user/servicePrincipal to review
-     */
     public Output<String> getPrincipalType() {
         return this.principalType;
     }
-    /**
-     * Flag to indicate whether showing recommendations to reviewers is enabled.
-     */
     @OutputExport(name="recommendationsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recommendationsEnabled;
 
-    /**
-     * @return Flag to indicate whether showing recommendations to reviewers is enabled.
-     */
     public Output</* @Nullable */ Boolean> getRecommendationsEnabled() {
         return this.recommendationsEnabled;
     }
-    /**
-     * Flag to indicate whether sending reminder emails to reviewers are enabled.
-     */
     @OutputExport(name="reminderNotificationsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reminderNotificationsEnabled;
 
-    /**
-     * @return Flag to indicate whether sending reminder emails to reviewers are enabled.
-     */
     public Output</* @Nullable */ Boolean> getReminderNotificationsEnabled() {
         return this.reminderNotificationsEnabled;
     }
-    /**
-     * ResourceId in which this review is getting created
-     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
-    /**
-     * @return ResourceId in which this review is getting created
-     */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
-    /**
-     * This is the collection of reviewers.
-     */
     @OutputExport(name="reviewers", type=List.class, parameters={AccessReviewReviewerResponse.class})
     private Output</* @Nullable */ List<AccessReviewReviewerResponse>> reviewers;
 
-    /**
-     * @return This is the collection of reviewers.
-     */
     public Output</* @Nullable */ List<AccessReviewReviewerResponse>> getReviewers() {
         return this.reviewers;
     }
-    /**
-     * This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
-     */
     @OutputExport(name="reviewersType", type=String.class, parameters={})
     private Output<String> reviewersType;
 
-    /**
-     * @return This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
-     */
     public Output<String> getReviewersType() {
         return this.reviewersType;
     }
-    /**
-     * This is used to indicate the role being reviewed
-     */
     @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
-    /**
-     * @return This is used to indicate the role being reviewed
-     */
     public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
-    /**
-     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     */
     @OutputExport(name="startDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> startDate;
 
-    /**
-     * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     */
     public Output</* @Nullable */ String> getStartDate() {
         return this.startDate;
     }
-    /**
-     * This read-only field specifies the status of an accessReview.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return This read-only field specifies the status of an accessReview.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The user principal name(if valid)
-     */
     @OutputExport(name="userPrincipalName", type=String.class, parameters={})
     private Output<String> userPrincipalName;
 
-    /**
-     * @return The user principal name(if valid)
-     */
     public Output<String> getUserPrincipalName() {
         return this.userPrincipalName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public AccessReviewScheduleDefinitionById(String name, @Nullable AccessReviewScheduleDefinitionByIdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:AccessReviewScheduleDefinitionById", name, args == null ? AccessReviewScheduleDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -484,14 +222,6 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static AccessReviewScheduleDefinitionById get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessReviewScheduleDefinitionById(name, id, options);
     }

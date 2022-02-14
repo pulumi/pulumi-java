@@ -39,16 +39,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Volume represents a named volume in a pod that may be accessed by any container in the pod.
- */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
-    /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-     */
     @InputImport(name="awsElasticBlockStore")
     private final @Nullable Input<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
 
@@ -56,9 +50,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsElasticBlockStore == null ? Input.empty() : this.awsElasticBlockStore;
     }
 
-    /**
-     * AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-     */
     @InputImport(name="azureDisk")
     private final @Nullable Input<AzureDiskVolumeSourceArgs> azureDisk;
 
@@ -66,9 +57,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureDisk == null ? Input.empty() : this.azureDisk;
     }
 
-    /**
-     * AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-     */
     @InputImport(name="azureFile")
     private final @Nullable Input<AzureFileVolumeSourceArgs> azureFile;
 
@@ -76,9 +64,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFile == null ? Input.empty() : this.azureFile;
     }
 
-    /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
-     */
     @InputImport(name="cephfs")
     private final @Nullable Input<CephFSVolumeSourceArgs> cephfs;
 
@@ -86,9 +71,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.cephfs == null ? Input.empty() : this.cephfs;
     }
 
-    /**
-     * Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
-     */
     @InputImport(name="cinder")
     private final @Nullable Input<CinderVolumeSourceArgs> cinder;
 
@@ -96,9 +78,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.cinder == null ? Input.empty() : this.cinder;
     }
 
-    /**
-     * ConfigMap represents a configMap that should populate this volume
-     */
     @InputImport(name="configMap")
     private final @Nullable Input<ConfigMapVolumeSourceArgs> configMap;
 
@@ -106,9 +85,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.configMap == null ? Input.empty() : this.configMap;
     }
 
-    /**
-     * CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
-     */
     @InputImport(name="csi")
     private final @Nullable Input<CSIVolumeSourceArgs> csi;
 
@@ -116,9 +92,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.csi == null ? Input.empty() : this.csi;
     }
 
-    /**
-     * DownwardAPI represents downward API about the pod that should populate this volume
-     */
     @InputImport(name="downwardAPI")
     private final @Nullable Input<DownwardAPIVolumeSourceArgs> downwardAPI;
 
@@ -126,9 +99,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.downwardAPI == null ? Input.empty() : this.downwardAPI;
     }
 
-    /**
-     * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
-     */
     @InputImport(name="emptyDir")
     private final @Nullable Input<EmptyDirVolumeSourceArgs> emptyDir;
 
@@ -136,22 +106,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.emptyDir == null ? Input.empty() : this.emptyDir;
     }
 
-    /**
-     * Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
-
-Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
-   tracking are needed,
-c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through
-   a PersistentVolumeClaim (see EphemeralVolumeSource for more
-   information on the connection between this volume type
-   and PersistentVolumeClaim).
-
-Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
-
-Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
-
-A pod can use both types of ephemeral volumes and persistent volumes at the same time.
-     */
     @InputImport(name="ephemeral")
     private final @Nullable Input<EphemeralVolumeSourceArgs> ephemeral;
 
@@ -159,9 +113,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.ephemeral == null ? Input.empty() : this.ephemeral;
     }
 
-    /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
-     */
     @InputImport(name="fc")
     private final @Nullable Input<FCVolumeSourceArgs> fc;
 
@@ -169,9 +120,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.fc == null ? Input.empty() : this.fc;
     }
 
-    /**
-     * FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
-     */
     @InputImport(name="flexVolume")
     private final @Nullable Input<FlexVolumeSourceArgs> flexVolume;
 
@@ -179,9 +127,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.flexVolume == null ? Input.empty() : this.flexVolume;
     }
 
-    /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running
-     */
     @InputImport(name="flocker")
     private final @Nullable Input<FlockerVolumeSourceArgs> flocker;
 
@@ -189,9 +134,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.flocker == null ? Input.empty() : this.flocker;
     }
 
-    /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-     */
     @InputImport(name="gcePersistentDisk")
     private final @Nullable Input<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
 
@@ -199,9 +141,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.gcePersistentDisk == null ? Input.empty() : this.gcePersistentDisk;
     }
 
-    /**
-     * GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.
-     */
     @InputImport(name="gitRepo")
     private final @Nullable Input<GitRepoVolumeSourceArgs> gitRepo;
 
@@ -209,9 +148,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.gitRepo == null ? Input.empty() : this.gitRepo;
     }
 
-    /**
-     * Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
-     */
     @InputImport(name="glusterfs")
     private final @Nullable Input<GlusterfsVolumeSourceArgs> glusterfs;
 
@@ -219,9 +155,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.glusterfs == null ? Input.empty() : this.glusterfs;
     }
 
-    /**
-     * HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     */
     @InputImport(name="hostPath")
     private final @Nullable Input<HostPathVolumeSourceArgs> hostPath;
 
@@ -229,9 +162,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.hostPath == null ? Input.empty() : this.hostPath;
     }
 
-    /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
-     */
     @InputImport(name="iscsi")
     private final @Nullable Input<ISCSIVolumeSourceArgs> iscsi;
 
@@ -239,9 +169,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.iscsi == null ? Input.empty() : this.iscsi;
     }
 
-    /**
-     * Volume's name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -249,9 +176,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.name;
     }
 
-    /**
-     * NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-     */
     @InputImport(name="nfs")
     private final @Nullable Input<NFSVolumeSourceArgs> nfs;
 
@@ -259,9 +183,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.nfs == null ? Input.empty() : this.nfs;
     }
 
-    /**
-     * PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-     */
     @InputImport(name="persistentVolumeClaim")
     private final @Nullable Input<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
 
@@ -269,9 +190,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.persistentVolumeClaim == null ? Input.empty() : this.persistentVolumeClaim;
     }
 
-    /**
-     * PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
-     */
     @InputImport(name="photonPersistentDisk")
     private final @Nullable Input<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
 
@@ -279,9 +197,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.photonPersistentDisk == null ? Input.empty() : this.photonPersistentDisk;
     }
 
-    /**
-     * PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
-     */
     @InputImport(name="portworxVolume")
     private final @Nullable Input<PortworxVolumeSourceArgs> portworxVolume;
 
@@ -289,9 +204,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.portworxVolume == null ? Input.empty() : this.portworxVolume;
     }
 
-    /**
-     * Items for all in one resources secrets, configmaps, and downward API
-     */
     @InputImport(name="projected")
     private final @Nullable Input<ProjectedVolumeSourceArgs> projected;
 
@@ -299,9 +211,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.projected == null ? Input.empty() : this.projected;
     }
 
-    /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
-     */
     @InputImport(name="quobyte")
     private final @Nullable Input<QuobyteVolumeSourceArgs> quobyte;
 
@@ -309,9 +218,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.quobyte == null ? Input.empty() : this.quobyte;
     }
 
-    /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
-     */
     @InputImport(name="rbd")
     private final @Nullable Input<RBDVolumeSourceArgs> rbd;
 
@@ -319,9 +225,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.rbd == null ? Input.empty() : this.rbd;
     }
 
-    /**
-     * ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
-     */
     @InputImport(name="scaleIO")
     private final @Nullable Input<ScaleIOVolumeSourceArgs> scaleIO;
 
@@ -329,9 +232,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.scaleIO == null ? Input.empty() : this.scaleIO;
     }
 
-    /**
-     * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
-     */
     @InputImport(name="secret")
     private final @Nullable Input<SecretVolumeSourceArgs> secret;
 
@@ -339,9 +239,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.secret == null ? Input.empty() : this.secret;
     }
 
-    /**
-     * StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
-     */
     @InputImport(name="storageos")
     private final @Nullable Input<StorageOSVolumeSourceArgs> storageos;
 
@@ -349,9 +246,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
         return this.storageos == null ? Input.empty() : this.storageos;
     }
 
-    /**
-     * VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
-     */
     @InputImport(name="vsphereVolume")
     private final @Nullable Input<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
 

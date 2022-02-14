@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineResponseFolder {
-/**
- * The name of the folder that this Pipeline is in.
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -21,9 +18,6 @@ public final class PipelineResponseFolder {
         this.name = name;
     }
 
-/**
- * The name of the folder that this Pipeline is in.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

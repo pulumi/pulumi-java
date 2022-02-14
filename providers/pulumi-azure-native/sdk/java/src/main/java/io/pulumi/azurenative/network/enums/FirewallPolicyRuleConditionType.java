@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Rule Condition Type.
- */
     @EnumType
     public enum FirewallPolicyRuleConditionType {
-/**
- * 
- */
         ApplicationRuleCondition("ApplicationRuleCondition"),
-/**
- * 
- */
         NetworkRuleCondition("NetworkRuleCondition"),
-/**
- * 
- */
         NatRuleCondition("NatRuleCondition");
 
         private final String value;

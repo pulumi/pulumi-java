@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobPropertiesArgs Empty = new JobPropertiesArgs();
 
-    /**
-     * Gets or sets the job action.
-     */
     @InputImport(name="action")
     private final @Nullable Input<JobActionArgs> action;
 
@@ -30,9 +24,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
-    /**
-     * Gets or sets the job recurrence.
-     */
     @InputImport(name="recurrence")
     private final @Nullable Input<JobRecurrenceArgs> recurrence;
 
@@ -40,9 +31,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.recurrence == null ? Input.empty() : this.recurrence;
     }
 
-    /**
-     * Gets or sets the job start time.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -50,9 +38,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Gets or set the job state.
-     */
     @InputImport(name="state")
     private final @Nullable Input<JobState> state;
 

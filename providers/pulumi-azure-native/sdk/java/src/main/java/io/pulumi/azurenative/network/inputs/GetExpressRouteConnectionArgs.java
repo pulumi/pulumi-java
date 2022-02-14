@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetExpressRouteConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExpressRouteConnectionArgs Empty = new GetExpressRouteConnectionArgs();
 
-    /**
-     * The name of the ExpressRoute connection.
-     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -25,9 +19,6 @@ public final class GetExpressRouteConnectionArgs extends io.pulumi.resources.Inv
         return this.connectionName;
     }
 
-    /**
-     * The name of the ExpressRoute gateway.
-     */
     @InputImport(name="expressRouteGatewayName", required=true)
     private final String expressRouteGatewayName;
 
@@ -35,9 +26,6 @@ public final class GetExpressRouteConnectionArgs extends io.pulumi.resources.Inv
         return this.expressRouteGatewayName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

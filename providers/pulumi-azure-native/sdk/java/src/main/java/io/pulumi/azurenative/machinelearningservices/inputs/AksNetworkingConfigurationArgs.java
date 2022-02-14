@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Advance configuration for AKS networking
- */
 public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AksNetworkingConfigurationArgs Empty = new AksNetworkingConfigurationArgs();
 
-    /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-     */
     @InputImport(name="dnsServiceIP")
     private final @Nullable Input<String> dnsServiceIP;
 
@@ -27,9 +21,6 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
         return this.dnsServiceIP == null ? Input.empty() : this.dnsServiceIP;
     }
 
-    /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-     */
     @InputImport(name="dockerBridgeCidr")
     private final @Nullable Input<String> dockerBridgeCidr;
 
@@ -37,9 +28,6 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
         return this.dockerBridgeCidr == null ? Input.empty() : this.dockerBridgeCidr;
     }
 
-    /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
-     */
     @InputImport(name="serviceCidr")
     private final @Nullable Input<String> serviceCidr;
 
@@ -47,9 +35,6 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
         return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
     }
 
-    /**
-     * Virtual network subnet resource ID the compute nodes belong to
-     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 

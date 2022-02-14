@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cache identity properties.
- */
 public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheIdentityResponse Empty = new CacheIdentityResponse();
 
-    /**
-     * The principal id of the cache.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -27,9 +21,6 @@ public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs 
         return this.principalId;
     }
 
-    /**
-     * The tenant id associated with the cache.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -37,9 +28,6 @@ public final class CacheIdentityResponse extends io.pulumi.resources.InvokeArgs 
         return this.tenantId;
     }
 
-    /**
-     * The type of identity used for the cache
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

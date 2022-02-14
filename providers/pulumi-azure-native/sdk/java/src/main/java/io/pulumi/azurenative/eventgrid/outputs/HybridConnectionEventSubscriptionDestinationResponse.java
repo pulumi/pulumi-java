@@ -11,14 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HybridConnectionEventSubscriptionDestinationResponse {
-/**
- * Type of the endpoint for the event subscription destination.
-Expected value is 'HybridConnection'.
- */
     private final String endpointType;
-/**
- * The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
- */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"endpointType","resourceId"})
@@ -29,16 +22,9 @@ Expected value is 'HybridConnection'.
         this.resourceId = resourceId;
     }
 
-/**
- * Type of the endpoint for the event subscription destination.
-Expected value is 'HybridConnection'.
- */
     public String getEndpointType() {
         return this.endpointType;
     }
-/**
- * The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

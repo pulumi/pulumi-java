@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Operation parameters details.
- */
 public final class ParameterContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterContractResponse Empty = new ParameterContractResponse();
 
-    /**
-     * Default parameter value.
-     */
     @InputImport(name="defaultValue")
     private final @Nullable String defaultValue;
 
@@ -29,9 +23,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
-    /**
-     * Parameter description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,9 +30,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Parameter name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -49,9 +37,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
-    /**
-     * Specifies whether parameter is required or not.
-     */
     @InputImport(name="required")
     private final @Nullable Boolean required;
 
@@ -59,9 +44,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
     }
 
-    /**
-     * Parameter type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -69,9 +51,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
-    /**
-     * Parameter values.
-     */
     @InputImport(name="values")
     private final @Nullable List<String> values;
 

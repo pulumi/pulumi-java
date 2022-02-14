@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The zip file information for a zip deployment.
- */
 public final class ZipInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ZipInfoResponse Empty = new ZipInfoResponse();
 
-    /**
-     * An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
-     */
     @InputImport(name="filesCount", required=true)
     private final Integer filesCount;
 
@@ -26,9 +20,6 @@ public final class ZipInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.filesCount;
     }
 
-    /**
-     * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
-     */
     @InputImport(name="sourceUrl", required=true)
     private final String sourceUrl;
 

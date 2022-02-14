@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetPublicAdvertisedPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPublicAdvertisedPrefixArgs Empty = new GetPublicAdvertisedPrefixArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -27,9 +21,6 @@ public final class GetPublicAdvertisedPrefixArgs extends io.pulumi.resources.Inv
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="publicAdvertisedPrefix", required=true)
     private final String publicAdvertisedPrefix;
 

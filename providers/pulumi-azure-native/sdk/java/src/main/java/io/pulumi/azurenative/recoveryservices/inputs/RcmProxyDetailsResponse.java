@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * RCM proxy details.
- */
 public final class RcmProxyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RcmProxyDetailsResponse Empty = new RcmProxyDetailsResponse();
 
-    /**
-     * The health of the RCM proxy.
-     */
     @InputImport(name="health", required=true)
     private final String health;
 
@@ -27,9 +21,6 @@ public final class RcmProxyDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.health;
     }
 
-    /**
-     * The health errors.
-     */
     @InputImport(name="healthErrors", required=true)
     private final List<HealthErrorResponse> healthErrors;
 
@@ -37,9 +28,6 @@ public final class RcmProxyDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.healthErrors;
     }
 
-    /**
-     * The RCM proxy Id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -47,9 +35,6 @@ public final class RcmProxyDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.id;
     }
 
-    /**
-     * The last heartbeat received from the RCM proxy.
-     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -57,9 +42,6 @@ public final class RcmProxyDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.lastHeartbeatUtc;
     }
 
-    /**
-     * The RCM proxy name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -67,9 +49,6 @@ public final class RcmProxyDetailsResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
-    /**
-     * The RCM proxy version.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

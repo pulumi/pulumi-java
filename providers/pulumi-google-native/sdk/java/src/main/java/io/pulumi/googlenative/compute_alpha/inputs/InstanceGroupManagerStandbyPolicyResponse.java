@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class InstanceGroupManagerStandbyPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceGroupManagerStandbyPolicyResponse Empty = new InstanceGroupManagerStandbyPolicyResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="initialDelaySec", required=true)
     private final Integer initialDelaySec;
 

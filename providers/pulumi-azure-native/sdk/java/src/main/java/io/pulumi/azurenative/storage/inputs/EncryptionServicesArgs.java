@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A list of services that support encryption.
- */
 public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionServicesArgs Empty = new EncryptionServicesArgs();
 
-    /**
-     * The encryption function of the blob storage service.
-     */
     @InputImport(name="blob")
     private final @Nullable Input<EncryptionServiceArgs> blob;
 
@@ -27,9 +21,6 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
         return this.blob == null ? Input.empty() : this.blob;
     }
 
-    /**
-     * The encryption function of the file storage service.
-     */
     @InputImport(name="file")
     private final @Nullable Input<EncryptionServiceArgs> file;
 
@@ -37,9 +28,6 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
         return this.file == null ? Input.empty() : this.file;
     }
 
-    /**
-     * The encryption function of the queue storage service.
-     */
     @InputImport(name="queue")
     private final @Nullable Input<EncryptionServiceArgs> queue;
 
@@ -47,9 +35,6 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
         return this.queue == null ? Input.empty() : this.queue;
     }
 
-    /**
-     * The encryption function of the table storage service.
-     */
     @InputImport(name="table")
     private final @Nullable Input<EncryptionServiceArgs> table;
 

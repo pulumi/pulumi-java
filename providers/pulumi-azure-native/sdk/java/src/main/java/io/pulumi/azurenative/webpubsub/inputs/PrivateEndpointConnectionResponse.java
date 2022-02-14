@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A private endpoint connection to an azure resource
- */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
-    /**
-     * Fully qualified resource Id for the resource.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -30,9 +24,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -40,9 +31,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
-    /**
-     * Private endpoint associated with the private endpoint connection
-     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -50,9 +38,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
-    /**
-     * Connection state
-     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -60,9 +45,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
-    /**
-     * Provisioning state of the private endpoint connection
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -70,9 +52,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @InputImport(name="systemData", required=true)
     private final SystemDataResponse systemData;
 
@@ -80,9 +59,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.systemData;
     }
 
-    /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

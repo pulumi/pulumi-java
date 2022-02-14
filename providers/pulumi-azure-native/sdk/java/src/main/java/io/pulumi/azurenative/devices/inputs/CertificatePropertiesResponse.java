@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The description of an X509 CA Certificate.
- */
 public final class CertificatePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificatePropertiesResponse Empty = new CertificatePropertiesResponse();
 
-    /**
-     * base-64 representation of X509 certificate .cer file or just .pem file content.
-     */
     @InputImport(name="certificate", required=true)
     private final String certificate;
 
@@ -26,9 +20,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
         return this.certificate;
     }
 
-    /**
-     * The certificate's creation date and time.
-     */
     @InputImport(name="created", required=true)
     private final String created;
 
@@ -36,9 +27,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
         return this.created;
     }
 
-    /**
-     * The certificate's expiration date and time.
-     */
     @InputImport(name="expiry", required=true)
     private final String expiry;
 
@@ -46,9 +34,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
         return this.expiry;
     }
 
-    /**
-     * Determines whether certificate has been verified.
-     */
     @InputImport(name="isVerified", required=true)
     private final Boolean isVerified;
 
@@ -56,9 +41,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
         return this.isVerified;
     }
 
-    /**
-     * The certificate's subject name.
-     */
     @InputImport(name="subject", required=true)
     private final String subject;
 
@@ -66,9 +48,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
         return this.subject;
     }
 
-    /**
-     * The certificate's thumbprint.
-     */
     @InputImport(name="thumbprint", required=true)
     private final String thumbprint;
 
@@ -76,9 +55,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
         return this.thumbprint;
     }
 
-    /**
-     * The certificate's last update date and time.
-     */
     @InputImport(name="updated", required=true)
     private final String updated;
 

@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
- */
     private final String odataType;
-/**
- * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
- */
     private final String rawBody;
 
     @OutputCustomType.Constructor({"odataType","rawBody"})
@@ -27,16 +20,9 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
         this.rawBody = Objects.requireNonNull(rawBody);
     }
 
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
- */
     public String getRawBody() {
         return this.rawBody;
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDedicatedCloudNodeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDedicatedCloudNodeArgs Empty = new GetDedicatedCloudNodeArgs();
 
-    /**
-     * dedicated cloud node name
-     */
     @InputImport(name="dedicatedCloudNodeName", required=true)
     private final String dedicatedCloudNodeName;
 
@@ -25,9 +19,6 @@ public final class GetDedicatedCloudNodeArgs extends io.pulumi.resources.InvokeA
         return this.dedicatedCloudNodeName;
     }
 
-    /**
-     * The name of the resource group
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

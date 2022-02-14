@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * (Optional) The ID of the parent management group.
- */
 public final class EntityParentGroupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EntityParentGroupInfoResponse Empty = new EntityParentGroupInfoResponse();
 
-    /**
-     * The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

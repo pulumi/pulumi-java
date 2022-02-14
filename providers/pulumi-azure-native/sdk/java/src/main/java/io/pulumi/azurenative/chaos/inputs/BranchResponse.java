@@ -13,16 +13,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Model that represents a branch in the step.
- */
 public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BranchResponse Empty = new BranchResponse();
 
-    /**
-     * List of actions.
-     */
     @InputImport(name="actions", required=true)
     private final List<Object> actions;
 
@@ -30,9 +24,6 @@ public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
         return this.actions;
     }
 
-    /**
-     * String of the branch name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

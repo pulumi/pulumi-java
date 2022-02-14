@@ -16,33 +16,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MongoDBCollectionGetPropertiesResponseResource {
-/**
- * Analytical TTL.
- */
     private final @Nullable Integer analyticalStorageTtl;
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     private final String etag;
-/**
- * Name of the Cosmos DB MongoDB collection
- */
     private final String id;
-/**
- * List of index keys
- */
     private final @Nullable List<MongoIndexResponse> indexes;
-/**
- * A system generated property. A unique identifier.
- */
     private final String rid;
-/**
- * A key-value pair of shard keys to be applied for the request.
- */
     private final @Nullable Map<String,String> shardKey;
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     private final Double ts;
 
     @OutputCustomType.Constructor({"analyticalStorageTtl","etag","id","indexes","rid","shardKey","ts"})
@@ -63,45 +42,24 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
         this.ts = Objects.requireNonNull(ts);
     }
 
-/**
- * Analytical TTL.
- */
     public Optional<Integer> getAnalyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Name of the Cosmos DB MongoDB collection
- */
     public String getId() {
         return this.id;
     }
-/**
- * List of index keys
- */
     public List<MongoIndexResponse> getIndexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
-/**
- * A system generated property. A unique identifier.
- */
     public String getRid() {
         return this.rid;
     }
-/**
- * A key-value pair of shard keys to be applied for the request.
- */
     public Map<String,String> getShardKey() {
         return this.shardKey == null ? Map.of() : this.shardKey;
     }
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     public Double getTs() {
         return this.ts;
     }

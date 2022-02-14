@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure File Share workload-specific backup item.
- */
 public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileshareProtectedItemArgs Empty = new AzureFileshareProtectedItemArgs();
 
-    /**
-     * Type of backup management for the backed up item.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -36,9 +30,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
-    /**
-     * Name of the backup set the backup item belongs to
-     */
     @InputImport(name="backupSetName")
     private final @Nullable Input<String> backupSetName;
 
@@ -46,9 +37,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
     }
 
-    /**
-     * Unique name of container
-     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -56,9 +44,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
-    /**
-     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -66,9 +51,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
-    /**
-     * Time for deferred deletion in UTC
-     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
@@ -76,9 +58,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
     }
 
-    /**
-     * Time remaining before the DS marked for deferred delete is permanently deleted
-     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
@@ -86,9 +65,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
     }
 
-    /**
-     * Additional information with this backup item.
-     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<AzureFileshareProtectedItemExtendedInfoArgs> extendedInfo;
 
@@ -96,9 +72,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
-    /**
-     * Friendly name of the fileshare represented by this backup item.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -106,9 +79,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * Flag to identify whether the deferred deleted DS is to be purged soon
-     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
@@ -116,9 +86,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
-    /**
-     * Flag to identify that deferred deleted DS is to be moved into Pause state
-     */
     @InputImport(name="isRehydrate")
     private final @Nullable Input<Boolean> isRehydrate;
 
@@ -126,9 +93,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
     }
 
-    /**
-     * Flag to identify whether the DS is scheduled for deferred delete
-     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
@@ -136,9 +100,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
     }
 
-    /**
-     * Health details of different KPIs
-     */
     @InputImport(name="kpisHealths")
     private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
@@ -146,9 +107,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.kpisHealths == null ? Input.empty() : this.kpisHealths;
     }
 
-    /**
-     * Last backup operation status. Possible values: Healthy, Unhealthy.
-     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable Input<String> lastBackupStatus;
 
@@ -156,9 +114,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
     }
 
-    /**
-     * Timestamp of the last backup operation on this backup item.
-     */
     @InputImport(name="lastBackupTime")
     private final @Nullable Input<String> lastBackupTime;
 
@@ -166,9 +121,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
     }
 
-    /**
-     * Timestamp when the last (latest) backup copy was created for this backup item.
-     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable Input<String> lastRecoveryPoint;
 
@@ -176,9 +128,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
     }
 
-    /**
-     * ID of the backup policy with which this item is backed up.
-     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -186,10 +135,6 @@ public final class AzureFileshareProtectedItemArgs extends io.pulumi.resources.R
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
-    /**
-     * backup item type.
-Expected value is 'AzureFileShareProtectedItem'.
-     */
     @InputImport(name="protectedItemType", required=true)
     private final Input<String> protectedItemType;
 
@@ -197,9 +142,6 @@ Expected value is 'AzureFileShareProtectedItem'.
         return this.protectedItemType;
     }
 
-    /**
-     * Backup state of this backup item.
-     */
     @InputImport(name="protectionState")
     private final @Nullable Input<Either<String,ProtectionState>> protectionState;
 
@@ -207,9 +149,6 @@ Expected value is 'AzureFileShareProtectedItem'.
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
-    /**
-     * Backup status of this backup item.
-     */
     @InputImport(name="protectionStatus")
     private final @Nullable Input<String> protectionStatus;
 
@@ -217,9 +156,6 @@ Expected value is 'AzureFileShareProtectedItem'.
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
     }
 
-    /**
-     * ARM ID of the resource to be backed up.
-     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -227,9 +163,6 @@ Expected value is 'AzureFileShareProtectedItem'.
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
-    /**
-     * Type of workload this item represents.
-     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 

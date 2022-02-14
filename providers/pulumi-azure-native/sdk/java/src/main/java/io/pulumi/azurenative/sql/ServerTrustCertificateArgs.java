@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServerTrustCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerTrustCertificateArgs Empty = new ServerTrustCertificateArgs();
 
-    /**
-     * Name of of the certificate to upload.
-     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -27,9 +21,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName", required=true)
     private final Input<String> managedInstanceName;
 
@@ -37,9 +28,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
         return this.managedInstanceName;
     }
 
-    /**
-     * The certificate public blob
-     */
     @InputImport(name="publicBlob")
     private final @Nullable Input<String> publicBlob;
 
@@ -47,9 +35,6 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
         return this.publicBlob == null ? Input.empty() : this.publicBlob;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

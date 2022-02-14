@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum NetworkPerformanceConfigExternalIpEgressBandwidthTier {
-/**
- * 
- */
         Default("DEFAULT"),
-/**
- * 
- */
         Tier1("TIER_1");
 
         private final String value;

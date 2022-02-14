@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Managed identity generic object.
- */
 public final class ManagedServiceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedServiceIdentityResponse Empty = new ManagedServiceIdentityResponse();
 
-    /**
-     * ID of the Azure Active Directory.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -29,9 +23,6 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
         return this.tenantId;
     }
 
-    /**
-     * Type of the managed identity.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -39,9 +30,6 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 

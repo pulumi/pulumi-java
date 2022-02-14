@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePolicyNetworkArgs Empty = new ResponsePolicyNetworkArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -27,9 +21,6 @@ public final class ResponsePolicyNetworkArgs extends io.pulumi.resources.Resourc
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
-     */
     @InputImport(name="networkUrl")
     private final @Nullable Input<String> networkUrl;
 

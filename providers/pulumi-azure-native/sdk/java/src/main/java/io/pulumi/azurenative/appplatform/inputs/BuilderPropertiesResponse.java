@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * KPack Builder properties payload
- */
 public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuilderPropertiesResponse Empty = new BuilderPropertiesResponse();
 
-    /**
-     * Builder buildpack groups.
-     */
     @InputImport(name="buildpackGroups")
     private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
 
@@ -30,9 +24,6 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
     }
 
-    /**
-     * Builder provision status.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -40,9 +31,6 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
-    /**
-     * Builder cluster stack property.
-     */
     @InputImport(name="stack")
     private final @Nullable StackPropertiesResponse stack;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaterialArgs Empty = new MaterialArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="digest")
     private final @Nullable Input<Map<String,String>> digest;
 
@@ -28,9 +22,6 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
         return this.digest == null ? Input.empty() : this.digest;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

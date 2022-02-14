@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Defines logging behavior for conversation lifecycle events.
- */
 public final class GoogleCloudDialogflowV2LoggingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2LoggingConfigResponse Empty = new GoogleCloudDialogflowV2LoggingConfigResponse();
 
-    /**
-     * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
-     */
     @InputImport(name="enableStackdriverLogging", required=true)
     private final Boolean enableStackdriverLogging;
 

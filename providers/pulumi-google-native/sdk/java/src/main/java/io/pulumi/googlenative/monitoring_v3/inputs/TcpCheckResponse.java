@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Information required for a TCP Uptime check request.
- */
 public final class TcpCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TcpCheckResponse Empty = new TcpCheckResponse();
 
-    /**
-     * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
-     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

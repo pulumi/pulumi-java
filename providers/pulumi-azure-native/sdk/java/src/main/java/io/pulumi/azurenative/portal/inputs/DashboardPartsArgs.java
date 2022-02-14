@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A dashboard part.
- */
 public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardPartsArgs Empty = new DashboardPartsArgs();
 
-    /**
-     * The dashboard part's metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<MarkdownPartMetadataArgs> metadata;
 
@@ -28,9 +22,6 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The dashboard's part position.
-     */
     @InputImport(name="position", required=true)
     private final Input<DashboardPartsPositionArgs> position;
 

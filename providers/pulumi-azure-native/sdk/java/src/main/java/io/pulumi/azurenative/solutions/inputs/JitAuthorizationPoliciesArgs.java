@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The JIT authorization policies.
- */
 public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitAuthorizationPoliciesArgs Empty = new JitAuthorizationPoliciesArgs();
 
-    /**
-     * The the principal id that will be granted JIT access.
-     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -26,9 +20,6 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
         return this.principalId;
     }
 
-    /**
-     * The role definition id that will be granted to the Principal.
-     */
     @InputImport(name="roleDefinitionId", required=true)
     private final Input<String> roleDefinitionId;
 

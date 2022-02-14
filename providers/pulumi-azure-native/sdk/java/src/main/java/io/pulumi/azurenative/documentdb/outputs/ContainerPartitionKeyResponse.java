@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerPartitionKeyResponse {
-/**
- * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
- */
     private final @Nullable String kind;
-/**
- * List of paths using which data within the container can be partitioned
- */
     private final @Nullable List<String> paths;
-/**
- * Indicates if the container is using a system generated partition key
- */
     private final Boolean systemKey;
-/**
- * Indicates the version of the partition key definition
- */
     private final @Nullable Integer version;
 
     @OutputCustomType.Constructor({"kind","paths","systemKey","version"})
@@ -43,27 +31,15 @@ public final class ContainerPartitionKeyResponse {
         this.version = version;
     }
 
-/**
- * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * List of paths using which data within the container can be partitioned
- */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
     }
-/**
- * Indicates if the container is using a system generated partition key
- */
     public Boolean getSystemKey() {
         return this.systemKey;
     }
-/**
- * Indicates the version of the partition key definition
- */
     public Optional<Integer> getVersion() {
         return Optional.ofNullable(this.version);
     }

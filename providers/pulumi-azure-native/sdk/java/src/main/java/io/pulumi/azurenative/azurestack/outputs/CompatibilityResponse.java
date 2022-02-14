@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CompatibilityResponse {
-/**
- * Full error message if any compatibility issues are found
- */
     private final @Nullable String description;
-/**
- * Tells if product is compatible with current device
- */
     private final @Nullable Boolean isCompatible;
-/**
- * List of all issues found
- */
     private final @Nullable List<String> issues;
-/**
- * Short error message if any compatibility issues are found
- */
     private final @Nullable String message;
 
     @OutputCustomType.Constructor({"description","isCompatible","issues","message"})
@@ -42,27 +30,15 @@ public final class CompatibilityResponse {
         this.message = message;
     }
 
-/**
- * Full error message if any compatibility issues are found
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Tells if product is compatible with current device
- */
     public Optional<Boolean> getIsCompatible() {
         return Optional.ofNullable(this.isCompatible);
     }
-/**
- * List of all issues found
- */
     public List<String> getIssues() {
         return this.issues == null ? List.of() : this.issues;
     }
-/**
- * Short error message if any compatibility issues are found
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

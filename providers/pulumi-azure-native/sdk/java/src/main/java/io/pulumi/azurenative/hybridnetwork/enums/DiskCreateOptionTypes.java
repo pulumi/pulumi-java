@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies how the virtual machine should be created.
- */
     @EnumType
     public enum DiskCreateOptionTypes {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Empty("Empty");
 
         private final String value;

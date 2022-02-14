@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DomainValidationPropertiesResponse {
-/**
- * The date time that the token expires
- */
     private final String expirationDate;
-/**
- * Challenge used for DNS TXT record or file based validation
- */
     private final String validationToken;
 
     @OutputCustomType.Constructor({"expirationDate","validationToken"})
@@ -26,15 +20,9 @@ public final class DomainValidationPropertiesResponse {
         this.validationToken = Objects.requireNonNull(validationToken);
     }
 
-/**
- * The date time that the token expires
- */
     public String getExpirationDate() {
         return this.expirationDate;
     }
-/**
- * Challenge used for DNS TXT record or file based validation
- */
     public String getValidationToken() {
         return this.validationToken;
     }

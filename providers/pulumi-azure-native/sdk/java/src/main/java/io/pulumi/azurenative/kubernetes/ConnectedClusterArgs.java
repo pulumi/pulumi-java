@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectedClusterArgs Empty = new ConnectedClusterArgs();
 
-    /**
-     * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
-     */
     @InputImport(name="agentPublicKeyCertificate", required=true)
     private final Input<String> agentPublicKeyCertificate;
 
@@ -31,9 +25,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.agentPublicKeyCertificate;
     }
 
-    /**
-     * The name of the Kubernetes cluster on which get is called.
-     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -41,9 +32,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
-    /**
-     * The Kubernetes distribution running on this connected cluster.
-     */
     @InputImport(name="distribution")
     private final @Nullable Input<String> distribution;
 
@@ -51,9 +39,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.distribution == null ? Input.empty() : this.distribution;
     }
 
-    /**
-     * The identity of the connected cluster.
-     */
     @InputImport(name="identity", required=true)
     private final Input<ConnectedClusterIdentityArgs> identity;
 
@@ -61,9 +46,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.identity;
     }
 
-    /**
-     * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
-     */
     @InputImport(name="infrastructure")
     private final @Nullable Input<String> infrastructure;
 
@@ -71,9 +53,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.infrastructure == null ? Input.empty() : this.infrastructure;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Provisioning state of the connected cluster resource.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -91,9 +67,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -101,9 +74,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

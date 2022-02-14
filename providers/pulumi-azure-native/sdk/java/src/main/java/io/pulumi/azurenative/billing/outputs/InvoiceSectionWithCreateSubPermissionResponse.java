@@ -12,45 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InvoiceSectionWithCreateSubPermissionResponse {
-/**
- * The name of the billing profile for the invoice section.
- */
     private final String billingProfileDisplayName;
-/**
- * The ID of the billing profile for the invoice section.
- */
     private final String billingProfileId;
-/**
- * The billing profile spending limit.
- */
     private final String billingProfileSpendingLimit;
-/**
- * The status of the billing profile.
- */
     private final String billingProfileStatus;
-/**
- * Reason for the specified billing profile status.
- */
     private final String billingProfileStatusReasonCode;
-/**
- * The system generated unique identifier for a billing profile.
- */
     private final String billingProfileSystemId;
-/**
- * Enabled azure plans for the associated billing profile.
- */
     private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
-/**
- * The name of the invoice section.
- */
     private final String invoiceSectionDisplayName;
-/**
- * The ID of the invoice section.
- */
     private final String invoiceSectionId;
-/**
- * The system generated unique identifier for an invoice section.
- */
     private final String invoiceSectionSystemId;
 
     @OutputCustomType.Constructor({"billingProfileDisplayName","billingProfileId","billingProfileSpendingLimit","billingProfileStatus","billingProfileStatusReasonCode","billingProfileSystemId","enabledAzurePlans","invoiceSectionDisplayName","invoiceSectionId","invoiceSectionSystemId"})
@@ -77,63 +47,33 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
         this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
     }
 
-/**
- * The name of the billing profile for the invoice section.
- */
     public String getBillingProfileDisplayName() {
         return this.billingProfileDisplayName;
     }
-/**
- * The ID of the billing profile for the invoice section.
- */
     public String getBillingProfileId() {
         return this.billingProfileId;
     }
-/**
- * The billing profile spending limit.
- */
     public String getBillingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
     }
-/**
- * The status of the billing profile.
- */
     public String getBillingProfileStatus() {
         return this.billingProfileStatus;
     }
-/**
- * Reason for the specified billing profile status.
- */
     public String getBillingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
     }
-/**
- * The system generated unique identifier for a billing profile.
- */
     public String getBillingProfileSystemId() {
         return this.billingProfileSystemId;
     }
-/**
- * Enabled azure plans for the associated billing profile.
- */
     public List<AzurePlanResponse> getEnabledAzurePlans() {
         return this.enabledAzurePlans == null ? List.of() : this.enabledAzurePlans;
     }
-/**
- * The name of the invoice section.
- */
     public String getInvoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
     }
-/**
- * The ID of the invoice section.
- */
     public String getInvoiceSectionId() {
         return this.invoiceSectionId;
     }
-/**
- * The system generated unique identifier for an invoice section.
- */
     public String getInvoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
     }

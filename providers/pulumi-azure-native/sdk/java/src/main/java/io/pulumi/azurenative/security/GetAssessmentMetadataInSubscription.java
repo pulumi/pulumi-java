@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssessmentMetadataInSubscription {
-/**
- * Security assessment metadata
-API Version: 2020-01-01.
- *
- * Security assessment metadata
- */
     public static CompletableFuture<GetAssessmentMetadataInSubscriptionResult> invokeAsync(GetAssessmentMetadataInSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAssessmentMetadataInSubscription", TypeShape.of(GetAssessmentMetadataInSubscriptionResult.class), args == null ? GetAssessmentMetadataInSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

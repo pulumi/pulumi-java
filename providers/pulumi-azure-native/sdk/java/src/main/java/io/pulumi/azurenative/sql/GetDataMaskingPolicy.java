@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataMaskingPolicy {
-/**
- * Represents a database data masking policy.
-API Version: 2014-04-01.
- *
- * Represents a database data masking policy.
- */
     public static CompletableFuture<GetDataMaskingPolicyResult> invokeAsync(GetDataMaskingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDataMaskingPolicy", TypeShape.of(GetDataMaskingPolicyResult.class), args == null ? GetDataMaskingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

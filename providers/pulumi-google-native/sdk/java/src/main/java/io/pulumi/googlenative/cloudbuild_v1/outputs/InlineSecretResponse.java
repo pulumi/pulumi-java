@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InlineSecretResponse {
-/**
- * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
- */
     private final Map<String,String> envMap;
-/**
- * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
- */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"envMap","kmsKeyName"})
@@ -27,15 +21,9 @@ public final class InlineSecretResponse {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
-/**
- * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
- */
     public Map<String,String> getEnvMap() {
         return this.envMap;
     }
-/**
- * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
- */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

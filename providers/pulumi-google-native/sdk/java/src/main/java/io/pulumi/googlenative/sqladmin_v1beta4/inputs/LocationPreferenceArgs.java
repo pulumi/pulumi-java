@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Preferred location. This specifies where a Cloud SQL instance is located. Note that if the preferred location is not available, the instance will be located as close as possible within the region. Only one location may be specified.
- */
 public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationPreferenceArgs Empty = new LocationPreferenceArgs();
 
-    /**
-     * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
-     */
     @InputImport(name="followGaeApplication")
     private final @Nullable Input<String> followGaeApplication;
 
@@ -27,9 +21,6 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
         return this.followGaeApplication == null ? Input.empty() : this.followGaeApplication;
     }
 
-    /**
-     * This is always `sql#locationPreference`.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -37,9 +28,6 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
-     */
     @InputImport(name="secondaryZone")
     private final @Nullable Input<String> secondaryZone;
 
@@ -47,9 +35,6 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
         return this.secondaryZone == null ? Input.empty() : this.secondaryZone;
     }
 
-    /**
-     * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
-     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

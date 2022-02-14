@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Ad break.
- */
 public final class AdBreakArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdBreakArgs Empty = new AdBreakArgs();
 
-    /**
-     * Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
-     */
     @InputImport(name="startTimeOffset")
     private final @Nullable Input<String> startTimeOffset;
 

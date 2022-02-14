@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * CertificateTemplate (v3 Extension in X.509).
- */
 public final class CertificateTemplateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateTemplateResponse Empty = new CertificateTemplateResponse();
 
-    /**
-     * The Major version of the template. Example: 100.
-     */
     @InputImport(name="majorVersion", required=true)
     private final Integer majorVersion;
 
@@ -25,9 +19,6 @@ public final class CertificateTemplateResponse extends io.pulumi.resources.Invok
         return this.majorVersion;
     }
 
-    /**
-     * The minor version of the template. Example: 12.
-     */
     @InputImport(name="minorVersion", required=true)
     private final Integer minorVersion;
 

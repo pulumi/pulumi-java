@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWebAppFunctionKeysSlotResult {
-/**
- * Resource Id.
- */
     private final String id;
-/**
- * Kind of resource.
- */
     private final @Nullable String kind;
-/**
- * Resource Name.
- */
     private final String name;
-/**
- * Settings.
- */
     private final Map<String,String> properties;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","properties","type"})
@@ -47,33 +32,18 @@ public final class ListWebAppFunctionKeysSlotResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource Id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Kind of resource.
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Resource Name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Settings.
- */
     public Map<String,String> getProperties() {
         return this.properties;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

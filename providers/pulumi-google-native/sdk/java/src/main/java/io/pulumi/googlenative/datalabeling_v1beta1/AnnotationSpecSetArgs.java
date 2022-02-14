@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnnotationSpecSetArgs Empty = new AnnotationSpecSetArgs();
 
-    /**
-     * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
-     */
     @InputImport(name="annotationSpecs", required=true)
     private final Input<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
 
@@ -29,9 +23,6 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
         return this.annotationSpecs;
     }
 
-    /**
-     * Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -49,9 +37,6 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
         return this.displayName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

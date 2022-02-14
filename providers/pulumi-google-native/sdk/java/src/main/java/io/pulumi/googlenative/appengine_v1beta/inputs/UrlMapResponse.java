@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * URL pattern and description of how the URL should be handled. App Engine can handle URLs by executing application code or by serving static files uploaded with the version, such as images, CSS, or JavaScript.
- */
 public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UrlMapResponse Empty = new UrlMapResponse();
 
-    /**
-     * Uses API Endpoints to handle requests.
-     */
     @InputImport(name="apiEndpoint", required=true)
     private final ApiEndpointHandlerResponse apiEndpoint;
 
@@ -28,9 +22,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.apiEndpoint;
     }
 
-    /**
-     * Action to take when users access resources that require authentication. Defaults to redirect.
-     */
     @InputImport(name="authFailAction", required=true)
     private final String authFailAction;
 
@@ -38,9 +29,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.authFailAction;
     }
 
-    /**
-     * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
-     */
     @InputImport(name="login", required=true)
     private final String login;
 
@@ -48,9 +36,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.login;
     }
 
-    /**
-     * 30x code to use when performing redirects for the secure field. Defaults to 302.
-     */
     @InputImport(name="redirectHttpResponseCode", required=true)
     private final String redirectHttpResponseCode;
 
@@ -58,9 +43,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.redirectHttpResponseCode;
     }
 
-    /**
-     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
-     */
     @InputImport(name="script", required=true)
     private final ScriptHandlerResponse script;
 
@@ -68,9 +50,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.script;
     }
 
-    /**
-     * Security (HTTPS) enforcement for this URL.
-     */
     @InputImport(name="securityLevel", required=true)
     private final String securityLevel;
 
@@ -78,9 +57,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.securityLevel;
     }
 
-    /**
-     * Returns the contents of a file, such as an image, as the response.
-     */
     @InputImport(name="staticFiles", required=true)
     private final StaticFilesHandlerResponse staticFiles;
 
@@ -88,9 +64,6 @@ public final class UrlMapResponse extends io.pulumi.resources.InvokeArgs {
         return this.staticFiles;
     }
 
-    /**
-     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
-     */
     @InputImport(name="urlRegex", required=true)
     private final String urlRegex;
 

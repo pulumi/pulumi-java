@@ -15,13 +15,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
-/**
- * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
- */
     private final @Nullable String skipToken;
-/**
- * Gets a page of NetworkManagerEffectiveSecurityAdminRules
- */
     private final @Nullable List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value;
 
     @OutputCustomType.Constructor({"skipToken","value"})
@@ -32,15 +26,9 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
         this.value = value;
     }
 
-/**
- * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
- */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
-/**
- * Gets a page of NetworkManagerEffectiveSecurityAdminRules
- */
     public List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> getValue() {
         return this.value == null ? List.of() : this.value;
     }

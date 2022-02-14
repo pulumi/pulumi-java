@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Partner region information for the failover group.
- */
 public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PartnerRegionInfoResponse Empty = new PartnerRegionInfoResponse();
 
-    /**
-     * Geo location of the partner managed instances.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -27,9 +21,6 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Replication role of the partner managed instances.
-     */
     @InputImport(name="replicationRole", required=true)
     private final String replicationRole;
 

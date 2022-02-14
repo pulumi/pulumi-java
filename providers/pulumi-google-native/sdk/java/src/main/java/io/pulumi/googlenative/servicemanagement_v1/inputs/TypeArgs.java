@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A protocol buffer message type.
- */
 public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TypeArgs Empty = new TypeArgs();
 
-    /**
-     * The list of fields.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<FieldArgs>> fields;
 
@@ -32,9 +26,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
-    /**
-     * The fully qualified message name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,9 +33,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The list of types appearing in `oneof` definitions in this type.
-     */
     @InputImport(name="oneofs")
     private final @Nullable Input<List<String>> oneofs;
 
@@ -52,9 +40,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.oneofs == null ? Input.empty() : this.oneofs;
     }
 
-    /**
-     * The protocol buffer options.
-     */
     @InputImport(name="options")
     private final @Nullable Input<List<OptionArgs>> options;
 
@@ -62,9 +47,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
-    /**
-     * The source context.
-     */
     @InputImport(name="sourceContext")
     private final @Nullable Input<SourceContextArgs> sourceContext;
 
@@ -72,9 +54,6 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceContext == null ? Input.empty() : this.sourceContext;
     }
 
-    /**
-     * The source syntax.
-     */
     @InputImport(name="syntax")
     private final @Nullable Input<TypeSyntax> syntax;
 

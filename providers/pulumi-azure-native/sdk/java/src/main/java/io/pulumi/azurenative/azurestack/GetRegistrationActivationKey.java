@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistrationActivationKey {
-/**
- * The resource containing the Azure Stack activation key.
-API Version: 2017-06-01.
- *
- * The resource containing the Azure Stack activation key.
- */
     public static CompletableFuture<GetRegistrationActivationKeyResult> invokeAsync(GetRegistrationActivationKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getRegistrationActivationKey", TypeShape.of(GetRegistrationActivationKeyResult.class), args == null ? GetRegistrationActivationKeyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Resource provider information.
- */
 public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProviderResponse Empty = new ProviderResponse();
 
-    /**
-     * The provider ID.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,9 +23,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
-    /**
-     * The namespace of the resource provider.
-     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 
@@ -39,9 +30,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
-    /**
-     * The registration policy of the resource provider.
-     */
     @InputImport(name="registrationPolicy", required=true)
     private final String registrationPolicy;
 
@@ -49,9 +37,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.registrationPolicy;
     }
 
-    /**
-     * The registration state of the resource provider.
-     */
     @InputImport(name="registrationState", required=true)
     private final String registrationState;
 
@@ -59,9 +44,6 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
         return this.registrationState;
     }
 
-    /**
-     * The collection of provider resource types.
-     */
     @InputImport(name="resourceTypes", required=true)
     private final List<ProviderResourceTypeResponse> resourceTypes;
 

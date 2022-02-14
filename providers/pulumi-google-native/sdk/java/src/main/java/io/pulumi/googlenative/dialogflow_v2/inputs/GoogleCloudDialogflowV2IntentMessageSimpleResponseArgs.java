@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The simple response message containing speech or text.
- */
 public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs Empty = new GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs();
 
-    /**
-     * Optional. The text to display.
-     */
     @InputImport(name="displayText")
     private final @Nullable Input<String> displayText;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
         return this.displayText == null ? Input.empty() : this.displayText;
     }
 
-    /**
-     * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
-     */
     @InputImport(name="ssml")
     private final @Nullable Input<String> ssml;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
         return this.ssml == null ? Input.empty() : this.ssml;
     }
 
-    /**
-     * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
-     */
     @InputImport(name="textToSpeech")
     private final @Nullable Input<String> textToSpeech;
 

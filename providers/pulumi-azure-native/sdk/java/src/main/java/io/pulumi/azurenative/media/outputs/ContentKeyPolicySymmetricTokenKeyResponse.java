@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContentKeyPolicySymmetricTokenKeyResponse {
-/**
- * The key value of the key
- */
     private final String keyValue;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
- */
     private final String odataType;
 
     @OutputCustomType.Constructor({"keyValue","odataType"})
@@ -27,16 +20,9 @@ Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
         this.odataType = Objects.requireNonNull(odataType);
     }
 
-/**
- * The key value of the key
- */
     public String getKeyValue() {
         return this.keyValue;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
- */
     public String getOdataType() {
         return this.odataType;
     }

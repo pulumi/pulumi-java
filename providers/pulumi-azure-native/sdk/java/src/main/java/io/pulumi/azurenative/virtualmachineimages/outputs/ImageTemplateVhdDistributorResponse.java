@@ -11,18 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageTemplateVhdDistributorResponse {
-/**
- * Tags that will be applied to the artifact once it has been created/updated by the distributor.
- */
     private final @Nullable Map<String,String> artifactTags;
-/**
- * The name to be used for the associated RunOutput.
- */
     private final String runOutputName;
-/**
- * Type of distribution.
-Expected value is 'VHD'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"artifactTags","runOutputName","type"})
@@ -35,22 +25,12 @@ Expected value is 'VHD'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Tags that will be applied to the artifact once it has been created/updated by the distributor.
- */
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
-/**
- * The name to be used for the associated RunOutput.
- */
     public String getRunOutputName() {
         return this.runOutputName;
     }
-/**
- * Type of distribution.
-Expected value is 'VHD'.
- */
     public String getType() {
         return this.type;
     }

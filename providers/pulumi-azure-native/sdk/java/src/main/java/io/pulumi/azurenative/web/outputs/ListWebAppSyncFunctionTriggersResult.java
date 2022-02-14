@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWebAppSyncFunctionTriggersResult {
-/**
- * Secret key.
- */
     private final @Nullable String key;
-/**
- * Trigger URL.
- */
     private final @Nullable String triggerUrl;
 
     @OutputCustomType.Constructor({"key","triggerUrl"})
@@ -28,15 +22,9 @@ public final class ListWebAppSyncFunctionTriggersResult {
         this.triggerUrl = triggerUrl;
     }
 
-/**
- * Secret key.
- */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
-/**
- * Trigger URL.
- */
     public Optional<String> getTriggerUrl() {
         return Optional.ofNullable(this.triggerUrl);
     }

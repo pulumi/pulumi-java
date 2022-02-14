@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the Microsoft Teams channel.
- */
 public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MsTeamsChannelPropertiesResponse Empty = new MsTeamsChannelPropertiesResponse();
 
-    /**
-     * Whether this channel accepted terms
-     */
     @InputImport(name="acceptedTerms")
     private final @Nullable Boolean acceptedTerms;
 
@@ -28,9 +22,6 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
         return this.acceptedTerms == null ? Optional.empty() : Optional.ofNullable(this.acceptedTerms);
     }
 
-    /**
-     * Webhook for Microsoft Teams channel calls
-     */
     @InputImport(name="callingWebHook")
     private final @Nullable String callingWebHook;
 
@@ -38,9 +29,6 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
         return this.callingWebHook == null ? Optional.empty() : Optional.ofNullable(this.callingWebHook);
     }
 
-    /**
-     * Deployment environment for Microsoft Teams channel calls
-     */
     @InputImport(name="deploymentEnvironment")
     private final @Nullable String deploymentEnvironment;
 
@@ -48,9 +36,6 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
         return this.deploymentEnvironment == null ? Optional.empty() : Optional.ofNullable(this.deploymentEnvironment);
     }
 
-    /**
-     * Enable calling for Microsoft Teams channel
-     */
     @InputImport(name="enableCalling")
     private final @Nullable Boolean enableCalling;
 
@@ -58,9 +43,6 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
         return this.enableCalling == null ? Optional.empty() : Optional.ofNullable(this.enableCalling);
     }
 
-    /**
-     * Webhook for Microsoft Teams channel calls
-     */
     @InputImport(name="incomingCallRoute")
     private final @Nullable String incomingCallRoute;
 
@@ -68,9 +50,6 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
         return this.incomingCallRoute == null ? Optional.empty() : Optional.ofNullable(this.incomingCallRoute);
     }
 
-    /**
-     * Whether this channel is enabled for the bot
-     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 

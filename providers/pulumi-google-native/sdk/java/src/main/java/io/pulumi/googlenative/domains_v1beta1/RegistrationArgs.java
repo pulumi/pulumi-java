@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistrationArgs Empty = new RegistrationArgs();
 
-    /**
-     * The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
-     */
     @InputImport(name="contactNotices")
     private final @Nullable Input<List<RegistrationContactNoticesItem>> contactNotices;
 
@@ -36,9 +30,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactNotices == null ? Input.empty() : this.contactNotices;
     }
 
-    /**
-     * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
-     */
     @InputImport(name="contactSettings", required=true)
     private final Input<ContactSettingsArgs> contactSettings;
 
@@ -46,9 +37,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactSettings;
     }
 
-    /**
-     * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
-     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<DnsSettingsArgs> dnsSettings;
 
@@ -56,9 +44,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
-    /**
-     * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
-     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -66,9 +51,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
-    /**
-     * The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
-     */
     @InputImport(name="domainNotices")
     private final @Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices;
 
@@ -76,9 +58,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainNotices == null ? Input.empty() : this.domainNotices;
     }
 
-    /**
-     * Set of labels associated with the `Registration`.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -86,9 +65,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -96,9 +72,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
-     */
     @InputImport(name="managementSettings")
     private final @Nullable Input<ManagementSettingsArgs> managementSettings;
 
@@ -106,9 +79,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.managementSettings == null ? Input.empty() : this.managementSettings;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -116,9 +86,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * When true, only validation is performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation
-     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<Boolean> validateOnly;
 
@@ -126,9 +93,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
     }
 
-    /**
-     * Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.
-     */
     @InputImport(name="yearlyPrice", required=true)
     private final Input<MoneyArgs> yearlyPrice;
 

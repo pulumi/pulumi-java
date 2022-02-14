@@ -17,49 +17,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSnapshotPolicyResult {
-/**
- * Schedule for daily snapshots
- */
     private final @Nullable DailyScheduleResponse dailySchedule;
-/**
- * The property to decide policy is enabled or not
- */
     private final @Nullable Boolean enabled;
-/**
- * Schedule for hourly snapshots
- */
     private final @Nullable HourlyScheduleResponse hourlySchedule;
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Schedule for monthly snapshots
- */
     private final @Nullable MonthlyScheduleResponse monthlySchedule;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Azure lifecycle management
- */
     private final String provisioningState;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
-/**
- * Schedule for weekly snapshots
- */
     private final @Nullable WeeklyScheduleResponse weeklySchedule;
 
     @OutputCustomType.Constructor({"dailySchedule","enabled","hourlySchedule","id","location","monthlySchedule","name","provisioningState","tags","type","weeklySchedule"})
@@ -88,69 +55,36 @@ public final class GetSnapshotPolicyResult {
         this.weeklySchedule = weeklySchedule;
     }
 
-/**
- * Schedule for daily snapshots
- */
     public Optional<DailyScheduleResponse> getDailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
-/**
- * The property to decide policy is enabled or not
- */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
-/**
- * Schedule for hourly snapshots
- */
     public Optional<HourlyScheduleResponse> getHourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Schedule for monthly snapshots
- */
     public Optional<MonthlyScheduleResponse> getMonthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Azure lifecycle management
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }
-/**
- * Schedule for weekly snapshots
- */
     public Optional<WeeklyScheduleResponse> getWeeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }

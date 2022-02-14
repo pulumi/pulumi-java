@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Synchronization mode
- */
     @EnumType
     public enum SynchronizationMode {
-/**
- * 
- */
         Incremental("Incremental"),
-/**
- * 
- */
         FullSync("FullSync");
 
         private final String value;

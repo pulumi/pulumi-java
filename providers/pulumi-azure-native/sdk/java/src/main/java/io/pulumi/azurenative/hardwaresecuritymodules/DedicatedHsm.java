@@ -17,440 +17,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Resource information with extended details.
-API Version: 2018-10-31-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a new or update an existing dedicated HSM
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dedicatedHsm = new AzureNative.HardwareSecurityModules.DedicatedHsm("dedicatedHsm", new AzureNative.HardwareSecurityModules.DedicatedHsmArgs
-        {
-            Location = "westus",
-            Name = "hsm1",
-            NetworkProfile = new AzureNative.HardwareSecurityModules.Inputs.NetworkProfileArgs
-            {
-                NetworkInterfaces = 
-                {
-                    new AzureNative.HardwareSecurityModules.Inputs.NetworkInterfaceArgs
-                    {
-                        PrivateIpAddress = "1.0.0.1",
-                    },
-                },
-                Subnet = new AzureNative.HardwareSecurityModules.Inputs.ApiEntityReferenceArgs
-                {
-                    Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
-                },
-            },
-            ResourceGroupName = "hsm-group",
-            Sku = new AzureNative.HardwareSecurityModules.Inputs.SkuArgs
-            {
-                Name = "SafeNet Luna Network HSM A790",
-            },
-            StampId = "stamp01",
-            Tags = 
-            {
-                { "Dept", "hsm" },
-                { "Environment", "dogfood" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hardwaresecuritymodules"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hardwaresecuritymodules.NewDedicatedHsm(ctx, "dedicatedHsm", &hardwaresecuritymodules.DedicatedHsmArgs{
-			Location: pulumi.String("westus"),
-			Name:     pulumi.String("hsm1"),
-			NetworkProfile: &hardwaresecuritymodules.NetworkProfileArgs{
-				NetworkInterfaces: hardwaresecuritymodules.NetworkInterfaceArray{
-					&hardwaresecuritymodules.NetworkInterfaceArgs{
-						PrivateIpAddress: pulumi.String("1.0.0.1"),
-					},
-				},
-				Subnet: &hardwaresecuritymodules.ApiEntityReferenceArgs{
-					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01"),
-				},
-			},
-			ResourceGroupName: pulumi.String("hsm-group"),
-			Sku: &hardwaresecuritymodules.SkuArgs{
-				Name: pulumi.String("SafeNet Luna Network HSM A790"),
-			},
-			StampId: pulumi.String("stamp01"),
-			Tags: pulumi.StringMap{
-				"Dept":        pulumi.String("hsm"),
-				"Environment": pulumi.String("dogfood"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dedicatedHsm = new azure_native.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm", {
-    location: "westus",
-    name: "hsm1",
-    networkProfile: {
-        networkInterfaces: [{
-            privateIpAddress: "1.0.0.1",
-        }],
-        subnet: {
-            id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
-        },
-    },
-    resourceGroupName: "hsm-group",
-    sku: {
-        name: "SafeNet Luna Network HSM A790",
-    },
-    stampId: "stamp01",
-    tags: {
-        Dept: "hsm",
-        Environment: "dogfood",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-dedicated_hsm = azure_native.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm",
-    location="westus",
-    name="hsm1",
-    network_profile=azure_native.hardwaresecuritymodules.NetworkProfileArgs(
-        network_interfaces=[azure_native.hardwaresecuritymodules.NetworkInterfaceArgs(
-            private_ip_address="1.0.0.1",
-        )],
-        subnet=azure_native.hardwaresecuritymodules.ApiEntityReferenceArgs(
-            id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
-        ),
-    ),
-    resource_group_name="hsm-group",
-    sku=azure_native.hardwaresecuritymodules.SkuArgs(
-        name="SafeNet Luna Network HSM A790",
-    ),
-    stamp_id="stamp01",
-    tags={
-        "Dept": "hsm",
-        "Environment": "dogfood",
-    })
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create a new or update an existing payment HSM
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dedicatedHsm = new AzureNative.HardwareSecurityModules.DedicatedHsm("dedicatedHsm", new AzureNative.HardwareSecurityModules.DedicatedHsmArgs
-        {
-            Location = "westus",
-            Name = "hsm1",
-            NetworkProfile = new AzureNative.HardwareSecurityModules.Inputs.NetworkProfileArgs
-            {
-                NetworkInterfaces = 
-                {
-                    new AzureNative.HardwareSecurityModules.Inputs.NetworkInterfaceArgs
-                    {
-                        PrivateIpAddress = "1.0.0.1",
-                    },
-                },
-                Subnet = new AzureNative.HardwareSecurityModules.Inputs.ApiEntityReferenceArgs
-                {
-                    Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
-                },
-            },
-            ResourceGroupName = "hsm-group",
-            Sku = new AzureNative.HardwareSecurityModules.Inputs.SkuArgs
-            {
-                Name = "payShield10K_LMK1_CPS60",
-            },
-            StampId = "stamp01",
-            Tags = 
-            {
-                { "Dept", "hsm" },
-                { "Environment", "dogfood" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	hardwaresecuritymodules "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hardwaresecuritymodules"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hardwaresecuritymodules.NewDedicatedHsm(ctx, "dedicatedHsm", &hardwaresecuritymodules.DedicatedHsmArgs{
-			Location: pulumi.String("westus"),
-			Name:     pulumi.String("hsm1"),
-			NetworkProfile: &hardwaresecuritymodules.NetworkProfileArgs{
-				NetworkInterfaces: hardwaresecuritymodules.NetworkInterfaceArray{
-					&hardwaresecuritymodules.NetworkInterfaceArgs{
-						PrivateIpAddress: pulumi.String("1.0.0.1"),
-					},
-				},
-				Subnet: &hardwaresecuritymodules.ApiEntityReferenceArgs{
-					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01"),
-				},
-			},
-			ResourceGroupName: pulumi.String("hsm-group"),
-			Sku: &hardwaresecuritymodules.SkuArgs{
-				Name: pulumi.String("payShield10K_LMK1_CPS60"),
-			},
-			StampId: pulumi.String("stamp01"),
-			Tags: pulumi.StringMap{
-				"Dept":        pulumi.String("hsm"),
-				"Environment": pulumi.String("dogfood"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dedicatedHsm = new azure_native.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm", {
-    location: "westus",
-    name: "hsm1",
-    networkProfile: {
-        networkInterfaces: [{
-            privateIpAddress: "1.0.0.1",
-        }],
-        subnet: {
-            id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
-        },
-    },
-    resourceGroupName: "hsm-group",
-    sku: {
-        name: "payShield10K_LMK1_CPS60",
-    },
-    stampId: "stamp01",
-    tags: {
-        Dept: "hsm",
-        Environment: "dogfood",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-dedicated_hsm = azure_native.hardwaresecuritymodules.DedicatedHsm("dedicatedHsm",
-    location="westus",
-    name="hsm1",
-    network_profile=azure_native.hardwaresecuritymodules.NetworkProfileArgs(
-        network_interfaces=[azure_native.hardwaresecuritymodules.NetworkInterfaceArgs(
-            private_ip_address="1.0.0.1",
-        )],
-        subnet=azure_native.hardwaresecuritymodules.ApiEntityReferenceArgs(
-            id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.Network/virtualNetworks/stamp01/subnets/stamp01",
-        ),
-    ),
-    resource_group_name="hsm-group",
-    sku=azure_native.hardwaresecuritymodules.SkuArgs(
-        name="payShield10K_LMK1_CPS60",
-    ),
-    stamp_id="stamp01",
-    tags={
-        "Dept": "hsm",
-        "Environment": "dogfood",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:hardwaresecuritymodules:DedicatedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1 
-```
-
- */
 @ResourceType(type="azure-native:hardwaresecuritymodules:DedicatedHsm")
 public class DedicatedHsm extends io.pulumi.resources.CustomResource {
-    /**
-     * The supported Azure location where the dedicated HSM should be created.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The supported Azure location where the dedicated HSM should be created.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the dedicated HSM.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the dedicated HSM.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Specifies the network interfaces of the dedicated hsm.
-     */
     @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
-    /**
-     * @return Specifies the network interfaces of the dedicated hsm.
-     */
     public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
         return this.networkProfile;
     }
-    /**
-     * Provisioning state.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * SKU details
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
-    /**
-     * @return SKU details
-     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * This field will be used when RP does not support Availability zones.
-     */
     @OutputExport(name="stampId", type=String.class, parameters={})
     private Output</* @Nullable */ String> stampId;
 
-    /**
-     * @return This field will be used when RP does not support Availability zones.
-     */
     public Output</* @Nullable */ String> getStampId() {
         return this.stampId;
     }
-    /**
-     * Resource Status Message.
-     */
     @OutputExport(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
-    /**
-     * @return Resource Status Message.
-     */
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The resource type of the dedicated HSM.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type of the dedicated HSM.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The Dedicated Hsm zones.
-     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
-    /**
-     * @return The Dedicated Hsm zones.
-     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DedicatedHsm(String name, DedicatedHsmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hardwaresecuritymodules:DedicatedHsm", name, args == null ? DedicatedHsmArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -470,14 +99,6 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DedicatedHsm get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DedicatedHsm(name, id, options);
     }

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UniqueKeyPolicyResponse {
-/**
- * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
- */
     private final @Nullable List<UniqueKeyResponse> uniqueKeys;
 
     @OutputCustomType.Constructor({"uniqueKeys"})
@@ -21,9 +18,6 @@ public final class UniqueKeyPolicyResponse {
         this.uniqueKeys = uniqueKeys;
     }
 
-/**
- * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
- */
     public List<UniqueKeyResponse> getUniqueKeys() {
         return this.uniqueKeys == null ? List.of() : this.uniqueKeys;
     }

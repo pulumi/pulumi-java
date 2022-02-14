@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedZone {
-/**
- * Fetches the representation of an existing ManagedZone.
- */
     public static CompletableFuture<GetManagedZoneResult> invokeAsync(GetManagedZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args == null ? GetManagedZoneArgs.Empty : args, Utilities.withVersion(options));
     }

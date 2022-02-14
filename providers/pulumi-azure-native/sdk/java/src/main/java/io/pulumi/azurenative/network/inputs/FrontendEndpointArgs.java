@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A frontend endpoint used for routing.
- */
 public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontendEndpointArgs Empty = new FrontendEndpointArgs();
 
-    /**
-     * The host name of the frontendEndpoint. Must be a domain name.
-     */
     @InputImport(name="hostName")
     private final @Nullable Input<String> hostName;
 
@@ -31,9 +25,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.hostName == null ? Input.empty() : this.hostName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -41,9 +32,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,9 +39,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-     */
     @InputImport(name="sessionAffinityEnabledState")
     private final @Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
@@ -61,9 +46,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sessionAffinityEnabledState == null ? Input.empty() : this.sessionAffinityEnabledState;
     }
 
-    /**
-     * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
-     */
     @InputImport(name="sessionAffinityTtlSeconds")
     private final @Nullable Input<Integer> sessionAffinityTtlSeconds;
 
@@ -71,9 +53,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
         return this.sessionAffinityTtlSeconds == null ? Input.empty() : this.sessionAffinityTtlSeconds;
     }
 
-    /**
-     * Defines the Web Application Firewall policy for each host (if applicable)
-     */
     @InputImport(name="webApplicationFirewallPolicyLink")
     private final @Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 

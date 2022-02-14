@@ -17,333 +17,87 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Customer creates a spacecraft resource to schedule a contact.
-API Version: 2021-04-04-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a spacecraft
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var spacecraft = new AzureNative.Orbital.Spacecraft("spacecraft", new AzureNative.Orbital.SpacecraftArgs
-        {
-            Links = 
-            {
-                new AzureNative.Orbital.Inputs.SpacecraftLinkArgs
-                {
-                    BandwidthMHz = 0.036,
-                    CenterFrequencyMHz = 2106.4063,
-                    Direction = "uplink",
-                    Polarization = "RHCP",
-                },
-                new AzureNative.Orbital.Inputs.SpacecraftLinkArgs
-                {
-                    BandwidthMHz = 150,
-                    CenterFrequencyMHz = 8125,
-                    Direction = "downlink",
-                    Polarization = "RHCP",
-                },
-            },
-            Location = "westus",
-            NoradId = "27424",
-            ResourceGroupName = "rg1",
-            SpacecraftName = "AQUA",
-            TitleLine = "(AQUA)",
-            TleLine1 = "1 27424U 02022A   20195.59202355  .00000039  00000-0  18634-4 0  9991",
-            TleLine2 = "2 27424  98.2098 135.8486 0000176  28.4050 144.5909 14.57108832967671",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	orbital "github.com/pulumi/pulumi-azure-native/sdk/go/azure/orbital"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := orbital.NewSpacecraft(ctx, "spacecraft", &orbital.SpacecraftArgs{
-			Links: []orbital.SpacecraftLinkArgs{
-				&orbital.SpacecraftLinkArgs{
-					BandwidthMHz:       pulumi.Float64(0.036),
-					CenterFrequencyMHz: pulumi.Float64(2106.4063),
-					Direction:          pulumi.String("uplink"),
-					Polarization:       pulumi.String("RHCP"),
-				},
-				&orbital.SpacecraftLinkArgs{
-					BandwidthMHz:       pulumi.Float64(150),
-					CenterFrequencyMHz: pulumi.Float64(8125),
-					Direction:          pulumi.String("downlink"),
-					Polarization:       pulumi.String("RHCP"),
-				},
-			},
-			Location:          pulumi.String("westus"),
-			NoradId:           pulumi.String("27424"),
-			ResourceGroupName: pulumi.String("rg1"),
-			SpacecraftName:    pulumi.String("AQUA"),
-			TitleLine:         pulumi.String("(AQUA)"),
-			TleLine1:          pulumi.String("1 27424U 02022A   20195.59202355  .00000039  00000-0  18634-4 0  9991"),
-			TleLine2:          pulumi.String("2 27424  98.2098 135.8486 0000176  28.4050 144.5909 14.57108832967671"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const spacecraft = new azure_native.orbital.Spacecraft("spacecraft", {
-    links: [
-        {
-            bandwidthMHz: 0.036,
-            centerFrequencyMHz: 2106.4063,
-            direction: "uplink",
-            polarization: "RHCP",
-        },
-        {
-            bandwidthMHz: 150,
-            centerFrequencyMHz: 8125,
-            direction: "downlink",
-            polarization: "RHCP",
-        },
-    ],
-    location: "westus",
-    noradId: "27424",
-    resourceGroupName: "rg1",
-    spacecraftName: "AQUA",
-    titleLine: "(AQUA)",
-    tleLine1: "1 27424U 02022A   20195.59202355  .00000039  00000-0  18634-4 0  9991",
-    tleLine2: "2 27424  98.2098 135.8486 0000176  28.4050 144.5909 14.57108832967671",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-spacecraft = azure_native.orbital.Spacecraft("spacecraft",
-    links=[
-        azure_native.orbital.SpacecraftLinkArgs(
-            bandwidth_m_hz=0.036,
-            center_frequency_m_hz=2106.4063,
-            direction="uplink",
-            polarization="RHCP",
-        ),
-        azure_native.orbital.SpacecraftLinkArgs(
-            bandwidth_m_hz=150,
-            center_frequency_m_hz=8125,
-            direction="downlink",
-            polarization="RHCP",
-        ),
-    ],
-    location="westus",
-    norad_id="27424",
-    resource_group_name="rg1",
-    spacecraft_name="AQUA",
-    title_line="(AQUA)",
-    tle_line1="1 27424U 02022A   20195.59202355  .00000039  00000-0  18634-4 0  9991",
-    tle_line2="2 27424  98.2098 135.8486 0000176  28.4050 144.5909 14.57108832967671")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:orbital:Spacecraft AQUA /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/spacecrafts/AQUA 
-```
-
- */
 @ResourceType(type="azure-native:orbital:Spacecraft")
 public class Spacecraft extends io.pulumi.resources.CustomResource {
-    /**
-     * Authorization status of spacecraft.
-     */
     @OutputExport(name="authorizationStatus", type=String.class, parameters={})
     private Output<String> authorizationStatus;
 
-    /**
-     * @return Authorization status of spacecraft.
-     */
     public Output<String> getAuthorizationStatus() {
         return this.authorizationStatus;
     }
-    /**
-     * Details of the authorization status.
-     */
     @OutputExport(name="authorizationStatusExtended", type=String.class, parameters={})
     private Output<String> authorizationStatusExtended;
 
-    /**
-     * @return Details of the authorization status.
-     */
     public Output<String> getAuthorizationStatusExtended() {
         return this.authorizationStatusExtended;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Links of the Spacecraft
-     */
     @OutputExport(name="links", type=List.class, parameters={SpacecraftLinkResponse.class})
     private Output</* @Nullable */ List<SpacecraftLinkResponse>> links;
 
-    /**
-     * @return Links of the Spacecraft
-     */
     public Output</* @Nullable */ List<SpacecraftLinkResponse>> getLinks() {
         return this.links;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * NORAD ID of the spacecraft.
-     */
     @OutputExport(name="noradId", type=String.class, parameters={})
     private Output<String> noradId;
 
-    /**
-     * @return NORAD ID of the spacecraft.
-     */
     public Output<String> getNoradId() {
         return this.noradId;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Title line of Two Line Element (TLE).
-     */
     @OutputExport(name="titleLine", type=String.class, parameters={})
     private Output</* @Nullable */ String> titleLine;
 
-    /**
-     * @return Title line of Two Line Element (TLE).
-     */
     public Output</* @Nullable */ String> getTitleLine() {
         return this.titleLine;
     }
-    /**
-     * Line 1 of Two Line Element (TLE).
-     */
     @OutputExport(name="tleLine1", type=String.class, parameters={})
     private Output</* @Nullable */ String> tleLine1;
 
-    /**
-     * @return Line 1 of Two Line Element (TLE).
-     */
     public Output</* @Nullable */ String> getTleLine1() {
         return this.tleLine1;
     }
-    /**
-     * Line 2 of Two Line Element (TLE).
-     */
     @OutputExport(name="tleLine2", type=String.class, parameters={})
     private Output</* @Nullable */ String> tleLine2;
 
-    /**
-     * @return Line 2 of Two Line Element (TLE).
-     */
     public Output</* @Nullable */ String> getTleLine2() {
         return this.tleLine2;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Spacecraft(String name, SpacecraftArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:orbital:Spacecraft", name, args == null ? SpacecraftArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -362,14 +116,6 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Spacecraft get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Spacecraft(name, id, options);
     }

@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum SubscriptionNotificationOperation {
-/**
- * 
- */
         NotDefined("NotDefined"),
-/**
- * 
- */
         DeleteAllResources("DeleteAllResources"),
-/**
- * 
- */
         SoftDeleteAllResources("SoftDeleteAllResources"),
-/**
- * 
- */
         NoOp("NoOp"),
-/**
- * 
- */
         BillingCancellation("BillingCancellation"),
-/**
- * 
- */
         UndoSoftDelete("UndoSoftDelete");
 
         private final String value;

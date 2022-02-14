@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CryptoKeyVersionArgs Empty = new CryptoKeyVersionArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="cryptoKeyId", required=true)
     private final Input<String> cryptoKeyId;
 
@@ -29,9 +23,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
         return this.cryptoKeyId;
     }
 
-    /**
-     * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
-     */
     @InputImport(name="externalProtectionLevelOptions")
     private final @Nullable Input<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
 
@@ -39,9 +30,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
         return this.externalProtectionLevelOptions == null ? Input.empty() : this.externalProtectionLevelOptions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="keyRingId", required=true)
     private final Input<String> keyRingId;
 
@@ -49,9 +37,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
         return this.keyRingId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -69,9 +51,6 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The current state of the CryptoKeyVersion.
-     */
     @InputImport(name="state")
     private final @Nullable Input<CryptoKeyVersionState> state;
 

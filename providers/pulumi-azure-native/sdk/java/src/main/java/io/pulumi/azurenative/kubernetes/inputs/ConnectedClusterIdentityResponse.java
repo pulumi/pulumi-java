@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Identity for the connected cluster.
- */
 public final class ConnectedClusterIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectedClusterIdentityResponse Empty = new ConnectedClusterIdentityResponse();
 
-    /**
-     * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -25,9 +19,6 @@ public final class ConnectedClusterIdentityResponse extends io.pulumi.resources.
         return this.principalId;
     }
 
-    /**
-     * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -35,9 +26,6 @@ public final class ConnectedClusterIdentityResponse extends io.pulumi.resources.
         return this.tenantId;
     }
 
-    /**
-     * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

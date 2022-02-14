@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserDataMapping {
-/**
- * Gets the specified User data mapping.
- */
     public static CompletableFuture<GetUserDataMappingResult> invokeAsync(GetUserDataMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getUserDataMapping", TypeShape.of(GetUserDataMappingResult.class), args == null ? GetUserDataMappingArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListConfigurationStoreKeyValueArgs Empty = new ListConfigurationStoreKeyValueArgs();
 
-    /**
-     * The name of the configuration store.
-     */
     @InputImport(name="configStoreName", required=true)
     private final String configStoreName;
 
@@ -27,9 +21,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
         return this.configStoreName;
     }
 
-    /**
-     * The key to retrieve.
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -37,9 +28,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
         return this.key;
     }
 
-    /**
-     * The label of the key.
-     */
     @InputImport(name="label")
     private final @Nullable String label;
 
@@ -47,9 +35,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

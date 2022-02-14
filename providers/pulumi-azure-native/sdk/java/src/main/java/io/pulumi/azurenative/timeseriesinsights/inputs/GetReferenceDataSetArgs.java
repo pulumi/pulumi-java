@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReferenceDataSetArgs Empty = new GetReferenceDataSetArgs();
 
-    /**
-     * The name of the Time Series Insights environment associated with the specified resource group.
-     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -25,9 +19,6 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
         return this.environmentName;
     }
 
-    /**
-     * The name of the Time Series Insights reference data set associated with the specified environment.
-     */
     @InputImport(name="referenceDataSetName", required=true)
     private final String referenceDataSetName;
 
@@ -35,9 +26,6 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
         return this.referenceDataSetName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

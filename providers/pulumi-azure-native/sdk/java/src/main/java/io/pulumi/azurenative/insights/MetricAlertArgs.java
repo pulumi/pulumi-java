@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricAlertArgs Empty = new MetricAlertArgs();
 
-    /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     */
     @InputImport(name="actions")
     private final @Nullable Input<List<MetricAlertActionArgs>> actions;
 
@@ -36,9 +30,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
-    /**
-     * the flag that indicates whether the alert should be auto resolved or not. The default is true.
-     */
     @InputImport(name="autoMitigate")
     private final @Nullable Input<Boolean> autoMitigate;
 
@@ -46,9 +37,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoMitigate == null ? Input.empty() : this.autoMitigate;
     }
 
-    /**
-     * defines the specific alert criteria information.
-     */
     @InputImport(name="criteria", required=true)
     private final Input<Object> criteria;
 
@@ -56,9 +44,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.criteria;
     }
 
-    /**
-     * the description of the metric alert that will be included in the alert email.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -66,9 +51,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * the flag that indicates whether the metric alert is enabled.
-     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -76,9 +58,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled;
     }
 
-    /**
-     * how often the metric alert is evaluated represented in ISO 8601 duration format.
-     */
     @InputImport(name="evaluationFrequency", required=true)
     private final Input<String> evaluationFrequency;
 
@@ -86,9 +65,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.evaluationFrequency;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -96,9 +72,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -106,9 +79,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the rule.
-     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -116,9 +86,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
-    /**
-     * the list of resource id's that this metric alert is scoped to.
-     */
     @InputImport(name="scopes", required=true)
     private final Input<List<String>> scopes;
 
@@ -126,9 +93,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopes;
     }
 
-    /**
-     * Alert severity {0, 1, 2, 3, 4}
-     */
     @InputImport(name="severity", required=true)
     private final Input<Integer> severity;
 
@@ -136,9 +100,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -146,9 +107,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
-     */
     @InputImport(name="targetResourceRegion")
     private final @Nullable Input<String> targetResourceRegion;
 
@@ -156,9 +114,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetResourceRegion == null ? Input.empty() : this.targetResourceRegion;
     }
 
-    /**
-     * the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.
-     */
     @InputImport(name="targetResourceType")
     private final @Nullable Input<String> targetResourceType;
 
@@ -166,9 +121,6 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetResourceType == null ? Input.empty() : this.targetResourceType;
     }
 
-    /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.
-     */
     @InputImport(name="windowSize", required=true)
     private final Input<String> windowSize;
 

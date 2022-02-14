@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComputeInstanceCreatedByResponse {
-/**
- * Uniquely identifies the user within his/her organization.
- */
     private final String userId;
-/**
- * Name of the user.
- */
     private final String userName;
-/**
- * Uniquely identifies user' Azure Active Directory organization.
- */
     private final String userOrgId;
 
     @OutputCustomType.Constructor({"userId","userName","userOrgId"})
@@ -32,21 +23,12 @@ public final class ComputeInstanceCreatedByResponse {
         this.userOrgId = Objects.requireNonNull(userOrgId);
     }
 
-/**
- * Uniquely identifies the user within his/her organization.
- */
     public String getUserId() {
         return this.userId;
     }
-/**
- * Name of the user.
- */
     public String getUserName() {
         return this.userName;
     }
-/**
- * Uniquely identifies user' Azure Active Directory organization.
- */
     public String getUserOrgId() {
         return this.userOrgId;
     }

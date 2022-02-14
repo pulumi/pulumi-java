@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GraphQueryArgs Empty = new GraphQueryArgs();
 
-    /**
-     * The description of a graph query.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The location of the resource
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * KQL query that will be graph.
-     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -48,9 +36,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.query;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Graph Query resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -68,9 +50,6 @@ public final class GraphQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Hyper-V Replica Blue specific protection profile details.
- */
 public final class HyperVReplicaPolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HyperVReplicaPolicyDetailsResponse Empty = new HyperVReplicaPolicyDetailsResponse();
 
-    /**
-     * A value indicating the authentication type.
-     */
     @InputImport(name="allowedAuthenticationType")
     private final @Nullable Integer allowedAuthenticationType;
 
@@ -28,9 +22,6 @@ public final class HyperVReplicaPolicyDetailsResponse extends io.pulumi.resource
         return this.allowedAuthenticationType == null ? Optional.empty() : Optional.ofNullable(this.allowedAuthenticationType);
     }
 
-    /**
-     * A value indicating the application consistent frequency.
-     */
     @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
     private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
@@ -38,9 +29,6 @@ public final class HyperVReplicaPolicyDetailsResponse extends io.pulumi.resource
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Optional.empty() : Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
-    /**
-     * A value indicating whether compression has to be enabled.
-     */
     @InputImport(name="compression")
     private final @Nullable String compression;
 
@@ -48,9 +36,6 @@ public final class HyperVReplicaPolicyDetailsResponse extends io.pulumi.resource
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
-    /**
-     * A value indicating whether IR is online.
-     */
     @InputImport(name="initialReplicationMethod")
     private final @Nullable String initialReplicationMethod;
 
@@ -58,10 +43,6 @@ public final class HyperVReplicaPolicyDetailsResponse extends io.pulumi.resource
         return this.initialReplicationMethod == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationMethod);
     }
 
-    /**
-     * Gets the class type. Overridden in derived classes.
-Expected value is 'HyperVReplica2012'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -69,9 +50,6 @@ Expected value is 'HyperVReplica2012'.
         return this.instanceType;
     }
 
-    /**
-     * A value indicating the offline IR export path.
-     */
     @InputImport(name="offlineReplicationExportPath")
     private final @Nullable String offlineReplicationExportPath;
 
@@ -79,9 +57,6 @@ Expected value is 'HyperVReplica2012'.
         return this.offlineReplicationExportPath == null ? Optional.empty() : Optional.ofNullable(this.offlineReplicationExportPath);
     }
 
-    /**
-     * A value indicating the offline IR import path.
-     */
     @InputImport(name="offlineReplicationImportPath")
     private final @Nullable String offlineReplicationImportPath;
 
@@ -89,9 +64,6 @@ Expected value is 'HyperVReplica2012'.
         return this.offlineReplicationImportPath == null ? Optional.empty() : Optional.ofNullable(this.offlineReplicationImportPath);
     }
 
-    /**
-     * A value indicating the online IR start time.
-     */
     @InputImport(name="onlineReplicationStartTime")
     private final @Nullable String onlineReplicationStartTime;
 
@@ -99,9 +71,6 @@ Expected value is 'HyperVReplica2012'.
         return this.onlineReplicationStartTime == null ? Optional.empty() : Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
-    /**
-     * A value indicating the number of recovery points.
-     */
     @InputImport(name="recoveryPoints")
     private final @Nullable Integer recoveryPoints;
 
@@ -109,9 +78,6 @@ Expected value is 'HyperVReplica2012'.
         return this.recoveryPoints == null ? Optional.empty() : Optional.ofNullable(this.recoveryPoints);
     }
 
-    /**
-     * A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
-     */
     @InputImport(name="replicaDeletionOption")
     private final @Nullable String replicaDeletionOption;
 
@@ -119,9 +85,6 @@ Expected value is 'HyperVReplica2012'.
         return this.replicaDeletionOption == null ? Optional.empty() : Optional.ofNullable(this.replicaDeletionOption);
     }
 
-    /**
-     * A value indicating the recovery HTTPS port.
-     */
     @InputImport(name="replicationPort")
     private final @Nullable Integer replicationPort;
 

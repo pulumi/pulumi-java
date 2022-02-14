@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactSourceArgs Empty = new ArtifactSourceArgs();
 
-    /**
-     * The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
-     */
     @InputImport(name="artifactRoot")
     private final @Nullable Input<String> artifactRoot;
 
@@ -29,9 +23,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactRoot == null ? Input.empty() : this.artifactRoot;
     }
 
-    /**
-     * The name of the artifact source.
-     */
     @InputImport(name="artifactSourceName")
     private final @Nullable Input<String> artifactSourceName;
 
@@ -39,9 +30,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactSourceName == null ? Input.empty() : this.artifactSourceName;
     }
 
-    /**
-     * The authentication method to use to access the artifact source.
-     */
     @InputImport(name="authentication", required=true)
     private final Input<SasAuthenticationArgs> authentication;
 
@@ -49,9 +37,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The type of artifact source used.
-     */
     @InputImport(name="sourceType", required=true)
     private final Input<String> sourceType;
 
@@ -79,9 +58,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceType;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

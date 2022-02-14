@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
- */
 public final class DiagnosticsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiagnosticsProfileResponse Empty = new DiagnosticsProfileResponse();
 
-    /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
-     */
     @InputImport(name="bootDiagnostics")
     private final @Nullable BootDiagnosticsResponse bootDiagnostics;
 

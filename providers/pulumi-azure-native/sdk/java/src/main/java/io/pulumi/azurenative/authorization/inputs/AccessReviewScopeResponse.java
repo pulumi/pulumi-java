@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Descriptor for what needs to be reviewed
- */
 public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessReviewScopeResponse Empty = new AccessReviewScopeResponse();
 
-    /**
-     * The role assignment state eligible/active to review
-     */
     @InputImport(name="assignmentState", required=true)
     private final String assignmentState;
 
@@ -28,9 +22,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
         return this.assignmentState;
     }
 
-    /**
-     * Flag to indicate whether to expand nested memberships or not.
-     */
     @InputImport(name="expandNestedMemberships")
     private final @Nullable Boolean expandNestedMemberships;
 
@@ -38,9 +29,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
         return this.expandNestedMemberships == null ? Optional.empty() : Optional.ofNullable(this.expandNestedMemberships);
     }
 
-    /**
-     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     */
     @InputImport(name="inactiveDuration")
     private final @Nullable String inactiveDuration;
 
@@ -48,9 +36,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
         return this.inactiveDuration == null ? Optional.empty() : Optional.ofNullable(this.inactiveDuration);
     }
 
-    /**
-     * The identity type user/servicePrincipal to review
-     */
     @InputImport(name="principalType", required=true)
     private final String principalType;
 
@@ -58,9 +43,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
         return this.principalType;
     }
 
-    /**
-     * ResourceId in which this review is getting created
-     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 
@@ -68,9 +50,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
         return this.resourceId;
     }
 
-    /**
-     * This is used to indicate the role being reviewed
-     */
     @InputImport(name="roleDefinitionId", required=true)
     private final String roleDefinitionId;
 

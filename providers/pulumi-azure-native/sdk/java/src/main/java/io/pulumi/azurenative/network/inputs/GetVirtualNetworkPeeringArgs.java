@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkPeeringArgs Empty = new GetVirtualNetworkPeeringArgs();
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the virtual network.
-     */
     @InputImport(name="virtualNetworkName", required=true)
     private final String virtualNetworkName;
 
@@ -35,9 +26,6 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
         return this.virtualNetworkName;
     }
 
-    /**
-     * The name of the virtual network peering.
-     */
     @InputImport(name="virtualNetworkPeeringName", required=true)
     private final String virtualNetworkPeeringName;
 

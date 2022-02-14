@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * AWS cloud account connector based credentials, the credentials is composed of access key ID and secret key, for more details, refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html">Creating an IAM User in Your AWS Account (write only)</a>
- */
 public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AwsCredsAuthenticationDetailsPropertiesArgs Empty = new AwsCredsAuthenticationDetailsPropertiesArgs();
 
-    /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-Expected value is 'awsCreds'.
-     */
     @InputImport(name="authenticationType", required=true)
     private final Input<String> authenticationType;
 
@@ -27,9 +20,6 @@ Expected value is 'awsCreds'.
         return this.authenticationType;
     }
 
-    /**
-     * Public key element of the AWS credential object (write only)
-     */
     @InputImport(name="awsAccessKeyId", required=true)
     private final Input<String> awsAccessKeyId;
 
@@ -37,9 +27,6 @@ Expected value is 'awsCreds'.
         return this.awsAccessKeyId;
     }
 
-    /**
-     * Secret key element of the AWS credential object (write only)
-     */
     @InputImport(name="awsSecretAccessKey", required=true)
     private final Input<String> awsSecretAccessKey;
 

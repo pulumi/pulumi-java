@@ -12,17 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A class represent managed identities used for request and response
- */
 public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIdentityResponse Empty = new ManagedIdentityResponse();
 
-    /**
-     * Get the principal id for the system assigned identity.
-Only be used in response.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -30,10 +23,6 @@ Only be used in response.
         return this.principalId;
     }
 
-    /**
-     * Get the tenant id for the system assigned identity.
-Only be used in response
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -41,9 +30,6 @@ Only be used in response
         return this.tenantId;
     }
 
-    /**
-     * Represent the identity type: systemAssigned, userAssigned, None
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -51,9 +37,6 @@ Only be used in response
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * Get or set the user assigned identities
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities;
 

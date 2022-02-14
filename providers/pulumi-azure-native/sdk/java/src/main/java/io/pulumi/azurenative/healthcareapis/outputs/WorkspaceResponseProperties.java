@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WorkspaceResponseProperties {
-/**
- * The provisioning state.
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"provisioningState"})
@@ -19,9 +16,6 @@ public final class WorkspaceResponseProperties {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * The provisioning state.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

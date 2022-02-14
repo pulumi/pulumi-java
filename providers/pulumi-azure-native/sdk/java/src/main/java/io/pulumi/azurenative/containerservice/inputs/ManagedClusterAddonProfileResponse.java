@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A Kubernetes add-on profile for a managed cluster.
- */
 public final class ManagedClusterAddonProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterAddonProfileResponse Empty = new ManagedClusterAddonProfileResponse();
 
-    /**
-     * Key-value pairs for configuring an add-on.
-     */
     @InputImport(name="config")
     private final @Nullable Map<String,String> config;
 
@@ -30,9 +24,6 @@ public final class ManagedClusterAddonProfileResponse extends io.pulumi.resource
         return this.config == null ? Map.of() : this.config;
     }
 
-    /**
-     * Whether the add-on is enabled or not.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -40,9 +31,6 @@ public final class ManagedClusterAddonProfileResponse extends io.pulumi.resource
         return this.enabled;
     }
 
-    /**
-     * Information of user assigned identity used by this add-on.
-     */
     @InputImport(name="identity", required=true)
     private final ManagedClusterAddonProfileResponseIdentity identity;
 

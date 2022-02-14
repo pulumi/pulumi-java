@@ -15,214 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Defines the inventory item.
-API Version: 2020-10-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CreateInventoryItem
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var inventoryItem = new AzureNative.ConnectedVMwarevSphere.InventoryItem("inventoryItem", new AzureNative.ConnectedVMwarevSphere.InventoryItemArgs
-        {
-            InventoryItemName = "testItem",
-            InventoryType = "ResourcePool",
-            ResourceGroupName = "testrg",
-            VcenterName = "ContosoVCenter",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	connectedvmwarevsphere "github.com/pulumi/pulumi-azure-native/sdk/go/azure/connectedvmwarevsphere"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := connectedvmwarevsphere.NewInventoryItem(ctx, "inventoryItem", &connectedvmwarevsphere.InventoryItemArgs{
-			InventoryItemName: pulumi.String("testItem"),
-			InventoryType:     pulumi.String("ResourcePool"),
-			ResourceGroupName: pulumi.String("testrg"),
-			VcenterName:       pulumi.String("ContosoVCenter"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const inventoryItem = new azure_native.connectedvmwarevsphere.InventoryItem("inventoryItem", {
-    inventoryItemName: "testItem",
-    inventoryType: "ResourcePool",
-    resourceGroupName: "testrg",
-    vcenterName: "ContosoVCenter",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-inventory_item = azure_native.connectedvmwarevsphere.InventoryItem("inventoryItem",
-    inventory_item_name="testItem",
-    inventory_type="ResourcePool",
-    resource_group_name="testrg",
-    vcenter_name="ContosoVCenter")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:connectedvmwarevsphere:InventoryItem testItem /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter/InventoryItems/testItem 
-```
-
- */
 @ResourceType(type="azure-native:connectedvmwarevsphere:InventoryItem")
 public class InventoryItem extends io.pulumi.resources.CustomResource {
-    /**
-     * They inventory type.
-     */
     @OutputExport(name="inventoryType", type=String.class, parameters={})
     private Output<String> inventoryType;
 
-    /**
-     * @return They inventory type.
-     */
     public Output<String> getInventoryType() {
         return this.inventoryType;
     }
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Gets or sets the tracked resource id corresponding to the inventory resource.
-     */
     @OutputExport(name="managedResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceId;
 
-    /**
-     * @return Gets or sets the tracked resource id corresponding to the inventory resource.
-     */
     public Output</* @Nullable */ String> getManagedResourceId() {
         return this.managedResourceId;
     }
-    /**
-     * Gets or sets the vCenter Managed Object name for the inventory item.
-     */
     @OutputExport(name="moName", type=String.class, parameters={})
     private Output</* @Nullable */ String> moName;
 
-    /**
-     * @return Gets or sets the vCenter Managed Object name for the inventory item.
-     */
     public Output</* @Nullable */ String> getMoName() {
         return this.moName;
     }
-    /**
-     * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
-     */
     @OutputExport(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
-    /**
-     * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
-     */
     public Output</* @Nullable */ String> getMoRefId() {
         return this.moRefId;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Gets or sets the provisioning state.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Gets or sets the provisioning state.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The system data.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system data.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public InventoryItem(String name, InventoryItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:connectedvmwarevsphere:InventoryItem", name, args == null ? InventoryItemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -241,14 +90,6 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static InventoryItem get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InventoryItem(name, id, options);
     }

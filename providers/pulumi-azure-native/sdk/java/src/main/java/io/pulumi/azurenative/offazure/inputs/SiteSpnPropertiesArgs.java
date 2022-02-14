@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class for site properties.
- */
 public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SiteSpnPropertiesArgs Empty = new SiteSpnPropertiesArgs();
 
-    /**
-     * AAD Authority URL which was used to request the token for the service principal.
-     */
     @InputImport(name="aadAuthority")
     private final @Nullable Input<String> aadAuthority;
 
@@ -27,9 +21,6 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.aadAuthority == null ? Input.empty() : this.aadAuthority;
     }
 
-    /**
-     * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -37,9 +28,6 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
-    /**
-     * Intended audience for the service principal.
-     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -47,9 +35,6 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.audience == null ? Input.empty() : this.audience;
     }
 
-    /**
-     * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -57,9 +42,6 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
-    /**
-     * Raw certificate data for building certificate expiry flows.
-     */
     @InputImport(name="rawCertData")
     private final @Nullable Input<String> rawCertData;
 
@@ -67,9 +49,6 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.rawCertData == null ? Input.empty() : this.rawCertData;
     }
 
-    /**
-     * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

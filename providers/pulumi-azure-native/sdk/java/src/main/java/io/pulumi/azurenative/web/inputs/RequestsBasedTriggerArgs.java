@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger based on total requests.
- */
 public final class RequestsBasedTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RequestsBasedTriggerArgs Empty = new RequestsBasedTriggerArgs();
 
-    /**
-     * Request Count.
-     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -28,9 +22,6 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
         return this.count == null ? Input.empty() : this.count;
     }
 
-    /**
-     * Time interval.
-     */
     @InputImport(name="timeInterval")
     private final @Nullable Input<String> timeInterval;
 

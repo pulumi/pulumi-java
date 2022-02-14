@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityDetails {
-/**
- * Represents an instance of a Dedicated Capacity resource.
-API Version: 2021-01-01.
- *
- * Represents an instance of a Dedicated Capacity resource.
- */
     public static CompletableFuture<GetCapacityDetailsResult> invokeAsync(GetCapacityDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getCapacityDetails", TypeShape.of(GetCapacityDetailsResult.class), args == null ? GetCapacityDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

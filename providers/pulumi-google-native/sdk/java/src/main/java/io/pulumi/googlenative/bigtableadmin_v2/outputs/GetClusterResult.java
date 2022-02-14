@@ -12,33 +12,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetClusterResult {
-/**
- * Configuration for this cluster.
- */
     private final ClusterConfigResponse clusterConfig;
-/**
- * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
- */
     private final String defaultStorageType;
-/**
- * Immutable. The encryption configuration for CMEK-protected clusters.
- */
     private final EncryptionConfigResponse encryptionConfig;
-/**
- * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
- */
     private final String location;
-/**
- * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
- */
     private final String name;
-/**
- * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
- */
     private final Integer serveNodes;
-/**
- * The current state of the cluster.
- */
     private final String state;
 
     @OutputCustomType.Constructor({"clusterConfig","defaultStorageType","encryptionConfig","location","name","serveNodes","state"})
@@ -59,45 +38,24 @@ public final class GetClusterResult {
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * Configuration for this cluster.
- */
     public ClusterConfigResponse getClusterConfig() {
         return this.clusterConfig;
     }
-/**
- * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
- */
     public String getDefaultStorageType() {
         return this.defaultStorageType;
     }
-/**
- * Immutable. The encryption configuration for CMEK-protected clusters.
- */
     public EncryptionConfigResponse getEncryptionConfig() {
         return this.encryptionConfig;
     }
-/**
- * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
- */
     public Integer getServeNodes() {
         return this.serveNodes;
     }
-/**
- * The current state of the cluster.
- */
     public String getState() {
         return this.state;
     }

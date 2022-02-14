@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSite {
-/**
- * Gets the specified Hosting Site.
- */
     public static CompletableFuture<GetSiteResult> invokeAsync(GetSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getSite", TypeShape.of(GetSiteResult.class), args == null ? GetSiteArgs.Empty : args, Utilities.withVersion(options));
     }

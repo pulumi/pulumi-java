@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePerimeterArgs Empty = new ServicePerimeterArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="accessPolicyId", required=true)
     private final Input<String> accessPolicyId;
 
@@ -29,9 +23,6 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
         return this.accessPolicyId;
     }
 
-    /**
-     * Description of the `ServicePerimeter` and its use. Does not affect behavior.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,9 +37,6 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
-     */
     @InputImport(name="perimeterType")
     private final @Nullable Input<ServicePerimeterPerimeterType> perimeterType;
 
@@ -59,9 +44,6 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
         return this.perimeterType == null ? Input.empty() : this.perimeterType;
     }
 
-    /**
-     * Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
-     */
     @InputImport(name="status")
     private final @Nullable Input<ServicePerimeterConfigArgs> status;
 
@@ -69,9 +51,6 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * Human readable title. Must be unique within the Policy.
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

@@ -17,16 +17,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for task that validates migration input for SQL to Azure SQL Database Managed Instance
- */
 public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse Empty = new ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse();
 
-    /**
-     * Array of command properties.
-     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -34,9 +28,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
         return this.commands;
     }
 
-    /**
-     * Array of errors. This is ignored if submitted.
-     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -44,9 +35,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
         return this.errors;
     }
 
-    /**
-     * Task input
-     */
     @InputImport(name="input")
     private final @Nullable ValidateMigrationInputSqlServerSqlMITaskInputResponse input;
 
@@ -54,9 +42,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
-    /**
-     * Task output. This is ignored if submitted.
-     */
     @InputImport(name="output", required=true)
     private final List<ValidateMigrationInputSqlServerSqlMITaskOutputResponse> output;
 
@@ -64,9 +49,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
         return this.output;
     }
 
-    /**
-     * The state of the task. This is ignored if submitted.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -74,10 +56,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse ex
         return this.state;
     }
 
-    /**
-     * Task type.
-Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI'.
-     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

@@ -16,167 +16,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Custom domain of the API portal
-API Version: 2022-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiPortalCustomDomains_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var apiPortalCustomDomain = new AzureNative.AppPlatform.ApiPortalCustomDomain("apiPortalCustomDomain", new AzureNative.AppPlatform.ApiPortalCustomDomainArgs
-        {
-            ApiPortalName = "default",
-            DomainName = "myDomainName",
-            Properties = new AzureNative.AppPlatform.Inputs.ApiPortalCustomDomainPropertiesArgs
-            {
-                Thumbprint = "*",
-            },
-            ResourceGroupName = "myResourceGroup",
-            ServiceName = "myservice",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := appplatform.NewApiPortalCustomDomain(ctx, "apiPortalCustomDomain", &appplatform.ApiPortalCustomDomainArgs{
-			ApiPortalName: pulumi.String("default"),
-			DomainName:    pulumi.String("myDomainName"),
-			Properties: &appplatform.ApiPortalCustomDomainPropertiesArgs{
-				Thumbprint: pulumi.String("*"),
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ServiceName:       pulumi.String("myservice"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const apiPortalCustomDomain = new azure_native.appplatform.ApiPortalCustomDomain("apiPortalCustomDomain", {
-    apiPortalName: "default",
-    domainName: "myDomainName",
-    properties: {
-        thumbprint: "*",
-    },
-    resourceGroupName: "myResourceGroup",
-    serviceName: "myservice",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-api_portal_custom_domain = azure_native.appplatform.ApiPortalCustomDomain("apiPortalCustomDomain",
-    api_portal_name="default",
-    domain_name="myDomainName",
-    properties=azure_native.appplatform.ApiPortalCustomDomainPropertiesArgs(
-        thumbprint="*",
-    ),
-    resource_group_name="myResourceGroup",
-    service_name="myservice")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:appplatform:ApiPortalCustomDomain myDomainName /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apiPortals/default/domains/myDomainName 
-```
-
- */
 @ResourceType(type="azure-native:appplatform:ApiPortalCustomDomain")
 public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The properties of custom domain for API portal
-     */
     @OutputExport(name="properties", type=ApiPortalCustomDomainPropertiesResponse.class, parameters={})
     private Output<ApiPortalCustomDomainPropertiesResponse> properties;
 
-    /**
-     * @return The properties of custom domain for API portal
-     */
     public Output<ApiPortalCustomDomainPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ApiPortalCustomDomain(String name, ApiPortalCustomDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:ApiPortalCustomDomain", name, args == null ? ApiPortalCustomDomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -195,14 +61,6 @@ public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ApiPortalCustomDomain get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiPortalCustomDomain(name, id, options);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BiEngineReasonResponse Empty = new BiEngineReasonResponse();
 
-    /**
-     * High-level BI Engine reason for partial or disabled acceleration.
-     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -25,9 +19,6 @@ public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs
         return this.code;
     }
 
-    /**
-     * Free form human-readable reason for partial or disabled acceleration.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 

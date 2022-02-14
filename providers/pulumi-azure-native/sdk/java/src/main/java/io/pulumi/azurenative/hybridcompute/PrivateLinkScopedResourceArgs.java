@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkScopedResourceArgs Empty = new PrivateLinkScopedResourceArgs();
 
-    /**
-     * The resource id of the scoped Azure monitor resource.
-     */
     @InputImport(name="linkedResourceId")
     private final @Nullable Input<String> linkedResourceId;
 
@@ -27,9 +21,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
         return this.linkedResourceId == null ? Input.empty() : this.linkedResourceId;
     }
 
-    /**
-     * The name of the scoped resource object.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,9 +28,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Azure Arc PrivateLinkScope resource.
-     */
     @InputImport(name="scopeName", required=true)
     private final Input<String> scopeName;
 

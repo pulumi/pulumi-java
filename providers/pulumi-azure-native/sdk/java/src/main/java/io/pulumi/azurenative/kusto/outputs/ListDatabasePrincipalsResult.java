@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListDatabasePrincipalsResult {
-/**
- * The list of Kusto database principals.
- */
     private final @Nullable List<DatabasePrincipalResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -21,9 +18,6 @@ public final class ListDatabasePrincipalsResult {
         this.value = value;
     }
 
-/**
- * The list of Kusto database principals.
- */
     public List<DatabasePrincipalResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

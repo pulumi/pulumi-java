@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserArgs Empty = new UserArgs();
 
-    /**
-     * The identity of the user.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<UserIdentityArgs> identity;
 
@@ -30,9 +24,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -40,9 +31,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,9 +38,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the user profile.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,9 +45,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,9 +52,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The secret store of the user.
-     */
     @InputImport(name="secretStore")
     private final @Nullable Input<UserSecretStoreArgs> secretStore;
 
@@ -80,9 +59,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretStore == null ? Input.empty() : this.secretStore;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

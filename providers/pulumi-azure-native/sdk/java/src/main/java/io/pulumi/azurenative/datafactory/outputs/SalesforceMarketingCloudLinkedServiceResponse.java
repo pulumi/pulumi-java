@@ -19,54 +19,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SalesforceMarketingCloudLinkedServiceResponse {
-/**
- * List of tags that can be used for describing the linked service.
- */
     private final @Nullable List<Object> annotations;
-/**
- * The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object clientId;
-/**
- * The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
- */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
-/**
- * The integration runtime reference.
- */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-/**
- * Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
- */
     private final @Nullable Object connectionProperties;
-/**
- * Linked service description.
- */
     private final @Nullable String description;
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encryptedCredential;
-/**
- * Parameters for linked service.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * Type of linked service.
-Expected value is 'SalesforceMarketingCloud'.
- */
     private final String type;
-/**
- * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object useEncryptedEndpoints;
-/**
- * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object useHostVerification;
-/**
- * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object usePeerVerification;
 
     @OutputCustomType.Constructor({"annotations","clientId","clientSecret","connectVia","connectionProperties","description","encryptedCredential","parameters","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
@@ -97,76 +60,39 @@ Expected value is 'SalesforceMarketingCloud'.
         this.usePeerVerification = usePeerVerification;
     }
 
-/**
- * List of tags that can be used for describing the linked service.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * The client ID associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
-/**
- * The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).
- */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
-/**
- * The integration runtime reference.
- */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
-/**
- * Properties used to connect to Salesforce Marketing Cloud. It is mutually exclusive with any other properties in the linked service. Type: object.
- */
     public Optional<Object> getConnectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
-/**
- * Linked service description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
-/**
- * Parameters for linked service.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * Type of linked service.
-Expected value is 'SalesforceMarketingCloud'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
-/**
- * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
-/**
- * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * User Information to be passed to partners.
- */
 public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserInfoArgs Empty = new UserInfoArgs();
 
-    /**
-     * Company information of the user to be passed to partners.
-     */
     @InputImport(name="companyInfo")
     private final @Nullable Input<CompanyInfoArgs> companyInfo;
 
@@ -28,9 +22,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.companyInfo == null ? Input.empty() : this.companyInfo;
     }
 
-    /**
-     * Company name of the user
-     */
     @InputImport(name="companyName")
     private final @Nullable Input<String> companyName;
 
@@ -38,9 +29,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.companyName == null ? Input.empty() : this.companyName;
     }
 
-    /**
-     * Email of the user used by Elastic for contacting them if needed
-     */
     @InputImport(name="emailAddress")
     private final @Nullable Input<String> emailAddress;
 
@@ -48,9 +36,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
     }
 
-    /**
-     * First name of the user
-     */
     @InputImport(name="firstName")
     private final @Nullable Input<String> firstName;
 
@@ -58,9 +43,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstName == null ? Input.empty() : this.firstName;
     }
 
-    /**
-     * Last name of the user
-     */
     @InputImport(name="lastName")
     private final @Nullable Input<String> lastName;
 

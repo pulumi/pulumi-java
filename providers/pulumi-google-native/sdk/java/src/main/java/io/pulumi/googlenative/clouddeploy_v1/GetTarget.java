@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTarget {
-/**
- * Gets details of a single Target.
- */
     public static CompletableFuture<GetTargetResult> invokeAsync(GetTargetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getTarget", TypeShape.of(GetTargetResult.class), args == null ? GetTargetArgs.Empty : args, Utilities.withVersion(options));
     }

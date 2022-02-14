@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetB2CTenantResult {
-/**
- * The billing configuration for the tenant.
- */
     private final @Nullable B2CTenantResourcePropertiesResponseBillingConfig billingConfig;
-/**
- * An identifier that represents the B2C tenant resource.
- */
     private final String id;
-/**
- * The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
- */
     private final String location;
-/**
- * The name of the B2C tenant resource.
- */
     private final String name;
-/**
- * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
- */
     private final B2CResourceSKUResponse sku;
-/**
- * Resource Tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * An identifier of the B2C tenant.
- */
     private final @Nullable String tenantId;
-/**
- * The type of the B2C tenant resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"billingConfig","id","location","name","sku","tags","tenantId","type"})
@@ -67,51 +43,27 @@ public final class GetB2CTenantResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The billing configuration for the tenant.
- */
     public Optional<B2CTenantResourcePropertiesResponseBillingConfig> getBillingConfig() {
         return Optional.ofNullable(this.billingConfig);
     }
-/**
- * An identifier that represents the B2C tenant resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the B2C tenant resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
- */
     public B2CResourceSKUResponse getSku() {
         return this.sku;
     }
-/**
- * Resource Tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * An identifier of the B2C tenant.
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
-/**
- * The type of the B2C tenant resource.
- */
     public String getType() {
         return this.type;
     }

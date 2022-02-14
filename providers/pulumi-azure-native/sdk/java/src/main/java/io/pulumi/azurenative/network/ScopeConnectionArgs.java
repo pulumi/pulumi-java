@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeConnectionArgs Empty = new ScopeConnectionArgs();
 
-    /**
-     * A description of the scope connection.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,9 +21,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -37,9 +28,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -57,9 +42,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
-    /**
-     * Name for the cross-tenant connection.
-     */
     @InputImport(name="scopeConnectionName")
     private final @Nullable Input<String> scopeConnectionName;
 
@@ -67,9 +49,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
         return this.scopeConnectionName == null ? Input.empty() : this.scopeConnectionName;
     }
 
-    /**
-     * Tenant ID.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

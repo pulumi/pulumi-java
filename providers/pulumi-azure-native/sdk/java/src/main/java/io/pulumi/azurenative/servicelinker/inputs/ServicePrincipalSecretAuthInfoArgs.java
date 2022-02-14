@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The authentication info when authType is servicePrincipal secret
- */
 public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServicePrincipalSecretAuthInfoArgs Empty = new ServicePrincipalSecretAuthInfoArgs();
 
-    /**
-     * The authentication type.
-Expected value is 'servicePrincipalSecret'.
-     */
     @InputImport(name="authType", required=true)
     private final Input<String> authType;
 
@@ -27,9 +20,6 @@ Expected value is 'servicePrincipalSecret'.
         return this.authType;
     }
 
-    /**
-     * ServicePrincipal application clientId for servicePrincipal auth.
-     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -37,9 +27,6 @@ Expected value is 'servicePrincipalSecret'.
         return this.clientId;
     }
 
-    /**
-     * Principal Id for servicePrincipal auth.
-     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -47,9 +34,6 @@ Expected value is 'servicePrincipalSecret'.
         return this.principalId;
     }
 
-    /**
-     * Secret for servicePrincipal auth.
-     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 

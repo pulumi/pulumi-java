@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScanRunWarningTraceResponse {
-/**
- * Indicates the warning code.
- */
     private final String code;
 
     @OutputCustomType.Constructor({"code"})
@@ -19,9 +16,6 @@ public final class ScanRunWarningTraceResponse {
         this.code = Objects.requireNonNull(code);
     }
 
-/**
- * Indicates the warning code.
- */
     public String getCode() {
         return this.code;
     }

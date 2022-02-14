@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebhookArgs Empty = new WebhookArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -30,9 +24,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * Gets or sets the expiry time.
-     */
     @InputImport(name="expiryTime")
     private final @Nullable Input<String> expiryTime;
 
@@ -40,9 +31,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.expiryTime == null ? Input.empty() : this.expiryTime;
     }
 
-    /**
-     * Gets or sets the value of the enabled flag of webhook.
-     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -50,9 +38,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
-    /**
-     * Gets or sets the name of the webhook.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -60,9 +45,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Gets or sets the parameters of the job.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 
@@ -70,9 +52,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -80,9 +59,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Gets or sets the name of the hybrid worker group the webhook job will run on.
-     */
     @InputImport(name="runOn")
     private final @Nullable Input<String> runOn;
 
@@ -90,9 +66,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.runOn == null ? Input.empty() : this.runOn;
     }
 
-    /**
-     * Gets or sets the runbook.
-     */
     @InputImport(name="runbook")
     private final @Nullable Input<RunbookAssociationPropertyArgs> runbook;
 
@@ -100,9 +73,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.runbook == null ? Input.empty() : this.runbook;
     }
 
-    /**
-     * Gets or sets the uri.
-     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 
@@ -110,9 +80,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.uri == null ? Input.empty() : this.uri;
     }
 
-    /**
-     * The webhook name.
-     */
     @InputImport(name="webhookName")
     private final @Nullable Input<String> webhookName;
 

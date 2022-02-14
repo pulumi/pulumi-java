@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
- */
     @EnumType
     public enum HistoryTestPlatform {
-/**
- * 
- */
         UnknownPlatform("unknownPlatform"),
-/**
- * 
- */
         Android("android"),
-/**
- * 
- */
         Ios("ios");
 
         private final String value;

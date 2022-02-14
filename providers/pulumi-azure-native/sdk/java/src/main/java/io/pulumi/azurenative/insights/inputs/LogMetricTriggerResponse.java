@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A log metrics trigger descriptor.
- */
 public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogMetricTriggerResponse Empty = new LogMetricTriggerResponse();
 
-    /**
-     * Evaluation of metric on a particular column
-     */
     @InputImport(name="metricColumn")
     private final @Nullable String metricColumn;
 
@@ -28,9 +22,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.metricColumn == null ? Optional.empty() : Optional.ofNullable(this.metricColumn);
     }
 
-    /**
-     * Metric Trigger Type - 'Consecutive' or 'Total'
-     */
     @InputImport(name="metricTriggerType")
     private final @Nullable String metricTriggerType;
 
@@ -38,9 +29,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.metricTriggerType == null ? Optional.empty() : Optional.ofNullable(this.metricTriggerType);
     }
 
-    /**
-     * The threshold of the metric trigger.
-     */
     @InputImport(name="threshold")
     private final @Nullable Double threshold;
 
@@ -48,9 +36,6 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
     }
 
-    /**
-     * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
-     */
     @InputImport(name="thresholdOperator")
     private final @Nullable String thresholdOperator;
 

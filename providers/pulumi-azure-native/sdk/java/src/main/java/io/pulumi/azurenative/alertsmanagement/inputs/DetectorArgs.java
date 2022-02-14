@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The detector information. By default this is not populated, unless it's specified in expandDetector
- */
 public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorArgs Empty = new DetectorArgs();
 
-    /**
-     * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The detector id.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -40,9 +31,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.id;
     }
 
-    /**
-     * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
-     */
     @InputImport(name="imagePaths")
     private final @Nullable Input<List<String>> imagePaths;
 
@@ -50,9 +38,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.imagePaths == null ? Input.empty() : this.imagePaths;
     }
 
-    /**
-     * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -60,9 +45,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The detector's parameters.'
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,Object>> parameters;
 
@@ -70,9 +52,6 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
-     */
     @InputImport(name="supportedResourceTypes")
     private final @Nullable Input<List<String>> supportedResourceTypes;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The content of an HL7v2 message in a structured format as specified by a schema.
- */
 public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchematizedDataResponse Empty = new SchematizedDataResponse();
 
-    /**
-     * JSON output of the parser.
-     */
     @InputImport(name="data", required=true)
     private final String data;
 
@@ -25,9 +19,6 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
         return this.data;
     }
 
-    /**
-     * The error output of the parser.
-     */
     @InputImport(name="error", required=true)
     private final String error;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes external reference
- */
 public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThreatIntelligenceExternalReferenceArgs Empty = new ThreatIntelligenceExternalReferenceArgs();
 
-    /**
-     * External reference description
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * External reference ID
-     */
     @InputImport(name="externalId")
     private final @Nullable Input<String> externalId;
 
@@ -38,9 +29,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
-    /**
-     * External reference hashes
-     */
     @InputImport(name="hashes")
     private final @Nullable Input<Map<String,String>> hashes;
 
@@ -48,9 +36,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
         return this.hashes == null ? Input.empty() : this.hashes;
     }
 
-    /**
-     * External reference source name
-     */
     @InputImport(name="sourceName")
     private final @Nullable Input<String> sourceName;
 
@@ -58,9 +43,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
         return this.sourceName == null ? Input.empty() : this.sourceName;
     }
 
-    /**
-     * External reference URL
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

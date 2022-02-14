@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSourceControlSlotArgs Empty = new WebAppSourceControlSlotArgs();
 
-    /**
-     * Name of branch to use for deployment.
-     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -29,9 +23,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.branch == null ? Input.empty() : this.branch;
     }
 
-    /**
-     * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
-     */
     @InputImport(name="deploymentRollbackEnabled")
     private final @Nullable Input<Boolean> deploymentRollbackEnabled;
 
@@ -39,9 +30,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.deploymentRollbackEnabled == null ? Input.empty() : this.deploymentRollbackEnabled;
     }
 
-    /**
-     * If GitHub Action is selected, than the associated configuration.
-     */
     @InputImport(name="gitHubActionConfiguration")
     private final @Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
@@ -49,9 +37,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.gitHubActionConfiguration == null ? Input.empty() : this.gitHubActionConfiguration;
     }
 
-    /**
-     * <code>true</code> if this is deployed via GitHub action.
-     */
     @InputImport(name="isGitHubAction")
     private final @Nullable Input<Boolean> isGitHubAction;
 
@@ -59,9 +44,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.isGitHubAction == null ? Input.empty() : this.isGitHubAction;
     }
 
-    /**
-     * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
-     */
     @InputImport(name="isManualIntegration")
     private final @Nullable Input<Boolean> isManualIntegration;
 
@@ -69,9 +51,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.isManualIntegration == null ? Input.empty() : this.isManualIntegration;
     }
 
-    /**
-     * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
-     */
     @InputImport(name="isMercurial")
     private final @Nullable Input<Boolean> isMercurial;
 
@@ -79,9 +58,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.isMercurial == null ? Input.empty() : this.isMercurial;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -89,9 +65,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -99,9 +72,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
-    /**
-     * Repository or source control URL.
-     */
     @InputImport(name="repoUrl")
     private final @Nullable Input<String> repoUrl;
 
@@ -109,9 +79,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.repoUrl == null ? Input.empty() : this.repoUrl;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -119,9 +86,6 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API will update the source control configuration for the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

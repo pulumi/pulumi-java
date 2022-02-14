@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The reference to the key vault key.
- */
 public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultKeyReferenceResponse Empty = new KeyVaultKeyReferenceResponse();
 
-    /**
-     * The private key name in key vault.
-     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -28,9 +22,6 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
         return this.keyName;
     }
 
-    /**
-     * The key vault reference.
-     */
     @InputImport(name="keyVault", required=true)
     private final KeyVaultKeyReferenceResponseKeyVault keyVault;
 
@@ -38,9 +29,6 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
         return this.keyVault;
     }
 
-    /**
-     * The private key version in key vault.
-     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 

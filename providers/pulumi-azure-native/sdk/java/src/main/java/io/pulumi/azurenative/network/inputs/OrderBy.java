@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a column to sort
- */
 public final class OrderBy extends io.pulumi.resources.InvokeArgs {
 
     public static final OrderBy Empty = new OrderBy();
 
-    /**
-     * Describes the actual column name to sort by
-     */
     @InputImport(name="field")
     private final @Nullable String field;
 
@@ -27,9 +21,6 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 
-    /**
-     * Describes if results should be in ascending/descending order
-     */
     @InputImport(name="order")
     private final @Nullable String order;
 

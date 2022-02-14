@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OutputPortResponse {
-/**
- * Port data type.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -21,9 +18,6 @@ public final class OutputPortResponse {
         this.type = type;
     }
 
-/**
- * Port data type.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

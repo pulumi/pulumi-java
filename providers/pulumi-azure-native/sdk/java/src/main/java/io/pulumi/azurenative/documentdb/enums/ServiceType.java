@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * ServiceType for the service.
- */
     @EnumType
     public enum ServiceType {
-/**
- * 
- */
         SqlDedicatedGateway("SqlDedicatedGateway"),
-/**
- * 
- */
         DataTransfer("DataTransfer");
 
         private final String value;

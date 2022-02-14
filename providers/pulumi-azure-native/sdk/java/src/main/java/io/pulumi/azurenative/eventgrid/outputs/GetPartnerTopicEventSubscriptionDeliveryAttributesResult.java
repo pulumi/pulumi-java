@@ -13,9 +13,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
-/**
- * A collection of DeliveryAttributeMapping
- */
     private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -23,9 +20,6 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesResult {
         this.value = value;
     }
 
-/**
- * A collection of DeliveryAttributeMapping
- */
     public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> getValue() {
         return this.value == null ? List.of() : this.value;
     }

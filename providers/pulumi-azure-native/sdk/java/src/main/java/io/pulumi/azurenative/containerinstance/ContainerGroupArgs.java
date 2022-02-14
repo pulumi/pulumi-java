@@ -26,16 +26,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerGroupArgs Empty = new ContainerGroupArgs();
 
-    /**
-     * The name of the container group.
-     */
     @InputImport(name="containerGroupName")
     private final @Nullable Input<String> containerGroupName;
 
@@ -43,9 +37,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerGroupName == null ? Input.empty() : this.containerGroupName;
     }
 
-    /**
-     * The containers within the container group.
-     */
     @InputImport(name="containers", required=true)
     private final Input<List<ContainerArgs>> containers;
 
@@ -53,9 +44,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.containers;
     }
 
-    /**
-     * The diagnostic information for a container group.
-     */
     @InputImport(name="diagnostics")
     private final @Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics;
 
@@ -63,9 +51,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
     }
 
-    /**
-     * The DNS config information for a container group.
-     */
     @InputImport(name="dnsConfig")
     private final @Nullable Input<DnsConfigurationArgs> dnsConfig;
 
@@ -73,9 +58,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
     }
 
-    /**
-     * The encryption properties for a container group.
-     */
     @InputImport(name="encryptionProperties")
     private final @Nullable Input<EncryptionPropertiesArgs> encryptionProperties;
 
@@ -83,9 +65,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionProperties == null ? Input.empty() : this.encryptionProperties;
     }
 
-    /**
-     * The identity of the container group, if configured.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ContainerGroupIdentityArgs> identity;
 
@@ -93,9 +72,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The image registry credentials by which the container group is created from.
-     */
     @InputImport(name="imageRegistryCredentials")
     private final @Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
 
@@ -103,9 +79,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageRegistryCredentials == null ? Input.empty() : this.imageRegistryCredentials;
     }
 
-    /**
-     * The init containers for a container group.
-     */
     @InputImport(name="initContainers")
     private final @Nullable Input<List<InitContainerDefinitionArgs>> initContainers;
 
@@ -113,9 +86,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.initContainers == null ? Input.empty() : this.initContainers;
     }
 
-    /**
-     * The IP address type of the container group.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<IpAddressArgs> ipAddress;
 
@@ -123,9 +93,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -133,9 +100,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The network profile information for a container group.
-     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile;
 
@@ -143,9 +107,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
     }
 
-    /**
-     * The operating system type required by the containers in the container group.
-     */
     @InputImport(name="osType", required=true)
     private final Input<Either<String,OperatingSystemTypes>> osType;
 
@@ -153,9 +114,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.osType;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -163,13 +121,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Restart policy for all containers within the container group. 
-- `Always` Always restart
-- `OnFailure` Restart on failure
-- `Never` Never restart
-
-     */
     @InputImport(name="restartPolicy")
     private final @Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
 
@@ -177,9 +128,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.restartPolicy == null ? Input.empty() : this.restartPolicy;
     }
 
-    /**
-     * The SKU for a container group.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<Either<String,ContainerGroupSku>> sku;
 
@@ -187,9 +135,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -197,9 +142,6 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The list of volumes that can be mounted by containers in this container group.
-     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<VolumeArgs>> volumes;
 

@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Docker build step.
- */
 public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DockerBuildStepResponse Empty = new DockerBuildStepResponse();
 
-    /**
-     * The collection of override arguments to be used when executing this build step.
-     */
     @InputImport(name="arguments")
     private final @Nullable List<ArgumentResponse> arguments;
 
@@ -31,9 +25,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.arguments == null ? List.of() : this.arguments;
     }
 
-    /**
-     * List of base image dependencies for a step.
-     */
     @InputImport(name="baseImageDependencies", required=true)
     private final List<BaseImageDependencyResponse> baseImageDependencies;
 
@@ -41,9 +32,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.baseImageDependencies;
     }
 
-    /**
-     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     */
     @InputImport(name="contextAccessToken")
     private final @Nullable String contextAccessToken;
 
@@ -51,9 +39,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
     }
 
-    /**
-     * The URL(absolute or relative) of the source context for the task step.
-     */
     @InputImport(name="contextPath")
     private final @Nullable String contextPath;
 
@@ -61,9 +46,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
-    /**
-     * The Docker file path relative to the source context.
-     */
     @InputImport(name="dockerFilePath", required=true)
     private final String dockerFilePath;
 
@@ -71,9 +53,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.dockerFilePath;
     }
 
-    /**
-     * The fully qualified image names including the repository and tag.
-     */
     @InputImport(name="imageNames")
     private final @Nullable List<String> imageNames;
 
@@ -81,9 +60,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.imageNames == null ? List.of() : this.imageNames;
     }
 
-    /**
-     * The value of this property indicates whether the image built should be pushed to the registry or not.
-     */
     @InputImport(name="isPushEnabled")
     private final @Nullable Boolean isPushEnabled;
 
@@ -91,9 +67,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.isPushEnabled == null ? Optional.empty() : Optional.ofNullable(this.isPushEnabled);
     }
 
-    /**
-     * The value of this property indicates whether the image cache is enabled or not.
-     */
     @InputImport(name="noCache")
     private final @Nullable Boolean noCache;
 
@@ -101,9 +74,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.noCache == null ? Optional.empty() : Optional.ofNullable(this.noCache);
     }
 
-    /**
-     * The name of the target build stage for the docker build.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -111,10 +81,6 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
-    /**
-     * The type of the step.
-Expected value is 'Docker'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

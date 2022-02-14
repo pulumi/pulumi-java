@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterSKUResponse {
-/**
- * Name of a managed cluster SKU.
- */
     private final @Nullable String name;
-/**
- * Tier of a managed cluster SKU.
- */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -28,15 +22,9 @@ public final class ManagedClusterSKUResponse {
         this.tier = tier;
     }
 
-/**
- * Name of a managed cluster SKU.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Tier of a managed cluster SKU.
- */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

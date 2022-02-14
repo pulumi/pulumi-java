@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatabricksPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabricksPropertiesArgs Empty = new DatabricksPropertiesArgs();
 
-    /**
-     * Databricks access token
-     */
     @InputImport(name="databricksAccessToken")
     private final @Nullable Input<String> databricksAccessToken;
 
@@ -27,9 +21,6 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
         return this.databricksAccessToken == null ? Input.empty() : this.databricksAccessToken;
     }
 
-    /**
-     * Workspace Url
-     */
     @InputImport(name="workspaceUrl")
     private final @Nullable Input<String> workspaceUrl;
 

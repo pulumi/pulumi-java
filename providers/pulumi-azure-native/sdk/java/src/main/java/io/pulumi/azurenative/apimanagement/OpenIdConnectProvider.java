@@ -14,202 +14,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * OpenId Connect Provider details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateOpenIdConnectProvider
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var openIdConnectProvider = new AzureNative.ApiManagement.OpenIdConnectProvider("openIdConnectProvider", new AzureNative.ApiManagement.OpenIdConnectProviderArgs
-        {
-            ClientId = "oidprovidertemplate3",
-            ClientSecret = "x",
-            DisplayName = "templateoidprovider3",
-            MetadataEndpoint = "https://oidprovider-template3.net",
-            Opid = "templateOpenIdConnect3",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewOpenIdConnectProvider(ctx, "openIdConnectProvider", &apimanagement.OpenIdConnectProviderArgs{
-			ClientId:          pulumi.String("oidprovidertemplate3"),
-			ClientSecret:      pulumi.String("x"),
-			DisplayName:       pulumi.String("templateoidprovider3"),
-			MetadataEndpoint:  pulumi.String("https://oidprovider-template3.net"),
-			Opid:              pulumi.String("templateOpenIdConnect3"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const openIdConnectProvider = new azure_native.apimanagement.OpenIdConnectProvider("openIdConnectProvider", {
-    clientId: "oidprovidertemplate3",
-    clientSecret: "x",
-    displayName: "templateoidprovider3",
-    metadataEndpoint: "https://oidprovider-template3.net",
-    opid: "templateOpenIdConnect3",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-open_id_connect_provider = azure_native.apimanagement.OpenIdConnectProvider("openIdConnectProvider",
-    client_id="oidprovidertemplate3",
-    client_secret="x",
-    display_name="templateoidprovider3",
-    metadata_endpoint="https://oidprovider-template3.net",
-    opid="templateOpenIdConnect3",
-    resource_group_name="rg1",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:OpenIdConnectProvider templateOpenIdConnect3 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/openidConnectProviders/templateOpenIdConnect3 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:OpenIdConnectProvider")
 public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
-    /**
-     * Client ID of developer console which is the client application.
-     */
     @OutputExport(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
-    /**
-     * @return Client ID of developer console which is the client application.
-     */
     public Output<String> getClientId() {
         return this.clientId;
     }
-    /**
-     * Client Secret of developer console which is the client application.
-     */
     @OutputExport(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
-    /**
-     * @return Client Secret of developer console which is the client application.
-     */
     public Output</* @Nullable */ String> getClientSecret() {
         return this.clientSecret;
     }
-    /**
-     * User-friendly description of OpenID Connect Provider.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return User-friendly description of OpenID Connect Provider.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * User-friendly OpenID Connect Provider name.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return User-friendly OpenID Connect Provider name.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Metadata endpoint URI.
-     */
     @OutputExport(name="metadataEndpoint", type=String.class, parameters={})
     private Output<String> metadataEndpoint;
 
-    /**
-     * @return Metadata endpoint URI.
-     */
     public Output<String> getMetadataEndpoint() {
         return this.metadataEndpoint;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public OpenIdConnectProvider(String name, OpenIdConnectProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:OpenIdConnectProvider", name, args == null ? OpenIdConnectProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -240,14 +89,6 @@ public class OpenIdConnectProvider extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static OpenIdConnectProvider get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OpenIdConnectProvider(name, id, options);
     }

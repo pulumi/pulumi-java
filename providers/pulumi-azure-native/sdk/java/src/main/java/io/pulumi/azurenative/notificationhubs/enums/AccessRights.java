@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum AccessRights {
-/**
- * 
- */
         Manage("Manage"),
-/**
- * 
- */
         Send("Send"),
-/**
- * 
- */
         Listen("Listen");
 
         private final String value;

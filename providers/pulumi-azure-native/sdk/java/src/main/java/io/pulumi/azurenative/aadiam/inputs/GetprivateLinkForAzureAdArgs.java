@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetprivateLinkForAzureAdArgs Empty = new GetprivateLinkForAzureAdArgs();
 
-    /**
-     * The name of the private link policy in Azure AD.
-     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 
@@ -25,9 +19,6 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
         return this.policyName;
     }
 
-    /**
-     * Name of an Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

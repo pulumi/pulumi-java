@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
- */
     @EnumType
     public enum FullBackupFrequencyType {
-/**
- * 
- */
         Daily("Daily"),
-/**
- * 
- */
         Weekly("Weekly");
 
         private final String value;

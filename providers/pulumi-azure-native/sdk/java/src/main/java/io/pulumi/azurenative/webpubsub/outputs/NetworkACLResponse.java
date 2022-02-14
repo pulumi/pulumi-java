@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkACLResponse {
-/**
- * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     private final @Nullable List<String> allow;
-/**
- * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     private final @Nullable List<String> deny;
 
     @OutputCustomType.Constructor({"allow","deny"})
@@ -28,15 +22,9 @@ public final class NetworkACLResponse {
         this.deny = deny;
     }
 
-/**
- * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     public List<String> getAllow() {
         return this.allow == null ? List.of() : this.allow;
     }
-/**
- * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     public List<String> getDeny() {
         return this.deny == null ? List.of() : this.deny;
     }

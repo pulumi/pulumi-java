@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobFolderDataSetArgs Empty = new BlobFolderDataSetArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
         return this.accountName;
     }
 
-    /**
-     * Container that has the file path.
-     */
     @InputImport(name="containerName", required=true)
     private final Input<String> containerName;
 
@@ -37,9 +28,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
         return this.containerName;
     }
 
-    /**
-     * The name of the dataSet.
-     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -47,10 +35,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
-    /**
-     * Kind of data set.
-Expected value is 'BlobFolder'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -58,9 +42,6 @@ Expected value is 'BlobFolder'.
         return this.kind;
     }
 
-    /**
-     * Prefix for blob folder
-     */
     @InputImport(name="prefix", required=true)
     private final Input<String> prefix;
 
@@ -68,9 +49,6 @@ Expected value is 'BlobFolder'.
         return this.prefix;
     }
 
-    /**
-     * Resource group of storage account
-     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -78,9 +56,6 @@ Expected value is 'BlobFolder'.
         return this.resourceGroup;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -88,9 +63,6 @@ Expected value is 'BlobFolder'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share to add the data set to.
-     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -98,9 +70,6 @@ Expected value is 'BlobFolder'.
         return this.shareName;
     }
 
-    /**
-     * Storage account name of the source data set
-     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 
@@ -108,9 +77,6 @@ Expected value is 'BlobFolder'.
         return this.storageAccountName;
     }
 
-    /**
-     * Subscription id of storage account
-     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the login configuration for Runtime
- */
 public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeAccessConfigArgs Empty = new RuntimeAccessConfigArgs();
 
-    /**
-     * The type of access mode this instance.
-     */
     @InputImport(name="accessType")
     private final @Nullable Input<RuntimeAccessConfigAccessType> accessType;
 
@@ -28,9 +22,6 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
         return this.accessType == null ? Input.empty() : this.accessType;
     }
 
-    /**
-     * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
-     */
     @InputImport(name="runtimeOwner")
     private final @Nullable Input<String> runtimeOwner;
 

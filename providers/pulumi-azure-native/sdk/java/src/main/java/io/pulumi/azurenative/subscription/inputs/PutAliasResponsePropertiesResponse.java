@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Put subscription creation result properties.
- */
 public final class PutAliasResponsePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PutAliasResponsePropertiesResponse Empty = new PutAliasResponsePropertiesResponse();
 
-    /**
-     * The provisioning state of the resource.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -27,9 +21,6 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * Newly created subscription Id.
-     */
     @InputImport(name="subscriptionId", required=true)
     private final String subscriptionId;
 

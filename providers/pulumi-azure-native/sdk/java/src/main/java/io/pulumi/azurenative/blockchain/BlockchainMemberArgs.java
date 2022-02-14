@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlockchainMemberArgs Empty = new BlockchainMemberArgs();
 
-    /**
-     * Blockchain member name.
-     */
     @InputImport(name="blockchainMemberName")
     private final @Nullable Input<String> blockchainMemberName;
 
@@ -34,9 +28,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.blockchainMemberName == null ? Input.empty() : this.blockchainMemberName;
     }
 
-    /**
-     * Gets or sets the consortium for the blockchain member.
-     */
     @InputImport(name="consortium")
     private final @Nullable Input<String> consortium;
 
@@ -44,9 +35,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.consortium == null ? Input.empty() : this.consortium;
     }
 
-    /**
-     * Sets the managed consortium management account password.
-     */
     @InputImport(name="consortiumManagementAccountPassword")
     private final @Nullable Input<String> consortiumManagementAccountPassword;
 
@@ -54,9 +42,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.consortiumManagementAccountPassword == null ? Input.empty() : this.consortiumManagementAccountPassword;
     }
 
-    /**
-     * Gets the display name of the member in the consortium.
-     */
     @InputImport(name="consortiumMemberDisplayName")
     private final @Nullable Input<String> consortiumMemberDisplayName;
 
@@ -64,9 +49,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.consortiumMemberDisplayName == null ? Input.empty() : this.consortiumMemberDisplayName;
     }
 
-    /**
-     * Gets the role of the member in the consortium.
-     */
     @InputImport(name="consortiumRole")
     private final @Nullable Input<String> consortiumRole;
 
@@ -74,9 +56,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.consortiumRole == null ? Input.empty() : this.consortiumRole;
     }
 
-    /**
-     * Gets or sets firewall rules
-     */
     @InputImport(name="firewallRules")
     private final @Nullable Input<List<FirewallRuleArgs>> firewallRules;
 
@@ -84,9 +63,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
     }
 
-    /**
-     * The GEO location of the blockchain service.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -94,9 +70,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Sets the basic auth password of the blockchain member.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -104,9 +77,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Gets or sets the blockchain protocol.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,BlockchainProtocol>> protocol;
 
@@ -114,9 +84,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -124,9 +91,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Gets or sets the blockchain member Sku.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -134,9 +98,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Tags of the service which is a list of key value pairs that describes the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -144,9 +105,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Gets or sets the blockchain validator nodes Sku.
-     */
     @InputImport(name="validatorNodesSku")
     private final @Nullable Input<BlockchainMemberNodesSkuArgs> validatorNodesSku;
 

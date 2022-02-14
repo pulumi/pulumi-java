@@ -21,675 +21,177 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An Azure SQL managed instance.
-API Version: 2020-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create managed instance with all properties
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managedInstance = new AzureNative.Sql.ManagedInstance("managedInstance", new AzureNative.Sql.ManagedInstanceArgs
-        {
-            AdministratorLogin = "dummylogin",
-            AdministratorLoginPassword = "PLACEHOLDER",
-            Administrators = new AzureNative.Sql.Inputs.ManagedInstanceExternalAdministratorArgs
-            {
-                AzureADOnlyAuthentication = true,
-                Login = "bob@contoso.com",
-                PrincipalType = "User",
-                Sid = "00000011-1111-2222-2222-123456789111",
-                TenantId = "00000011-1111-2222-2222-123456789111",
-            },
-            Collation = "SQL_Latin1_General_CP1_CI_AS",
-            DnsZonePartner = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
-            InstancePoolId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
-            LicenseType = "LicenseIncluded",
-            Location = "Japan East",
-            MaintenanceConfigurationId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1",
-            ManagedInstanceName = "testinstance",
-            MinimalTlsVersion = "1.2",
-            ProxyOverride = "Redirect",
-            PublicDataEndpointEnabled = false,
-            ResourceGroupName = "testrg",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "GP_Gen5",
-                Tier = "GeneralPurpose",
-            },
-            StorageAccountType = "GRS",
-            StorageSizeInGB = 1024,
-            SubnetId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-            Tags = 
-            {
-                { "tagKey1", "TagValue1" },
-            },
-            TimezoneId = "UTC",
-            VCores = 8,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewManagedInstance(ctx, "managedInstance", &sql.ManagedInstanceArgs{
-			AdministratorLogin:         pulumi.String("dummylogin"),
-			AdministratorLoginPassword: pulumi.String("PLACEHOLDER"),
-			Administrators: &sql.ManagedInstanceExternalAdministratorArgs{
-				AzureADOnlyAuthentication: pulumi.Bool(true),
-				Login:                     pulumi.String("bob@contoso.com"),
-				PrincipalType:             pulumi.String("User"),
-				Sid:                       pulumi.String("00000011-1111-2222-2222-123456789111"),
-				TenantId:                  pulumi.String("00000011-1111-2222-2222-123456789111"),
-			},
-			Collation:                  pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
-			DnsZonePartner:             pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance"),
-			InstancePoolId:             pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1"),
-			LicenseType:                pulumi.String("LicenseIncluded"),
-			Location:                   pulumi.String("Japan East"),
-			MaintenanceConfigurationId: pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1"),
-			ManagedInstanceName:        pulumi.String("testinstance"),
-			MinimalTlsVersion:          pulumi.String("1.2"),
-			ProxyOverride:              pulumi.String("Redirect"),
-			PublicDataEndpointEnabled:  pulumi.Bool(false),
-			ResourceGroupName:          pulumi.String("testrg"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("GP_Gen5"),
-				Tier: pulumi.String("GeneralPurpose"),
-			},
-			StorageAccountType: pulumi.String("GRS"),
-			StorageSizeInGB:    pulumi.Int(1024),
-			SubnetId:           pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
-			Tags: pulumi.StringMap{
-				"tagKey1": pulumi.String("TagValue1"),
-			},
-			TimezoneId: pulumi.String("UTC"),
-			VCores:     pulumi.Int(8),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", {
-    administratorLogin: "dummylogin",
-    administratorLoginPassword: "PLACEHOLDER",
-    administrators: {
-        azureADOnlyAuthentication: true,
-        login: "bob@contoso.com",
-        principalType: "User",
-        sid: "00000011-1111-2222-2222-123456789111",
-        tenantId: "00000011-1111-2222-2222-123456789111",
-    },
-    collation: "SQL_Latin1_General_CP1_CI_AS",
-    dnsZonePartner: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
-    instancePoolId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
-    licenseType: "LicenseIncluded",
-    location: "Japan East",
-    maintenanceConfigurationId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1",
-    managedInstanceName: "testinstance",
-    minimalTlsVersion: "1.2",
-    proxyOverride: "Redirect",
-    publicDataEndpointEnabled: false,
-    resourceGroupName: "testrg",
-    sku: {
-        name: "GP_Gen5",
-        tier: "GeneralPurpose",
-    },
-    storageAccountType: "GRS",
-    storageSizeInGB: 1024,
-    subnetId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-    tags: {
-        tagKey1: "TagValue1",
-    },
-    timezoneId: "UTC",
-    vCores: 8,
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-managed_instance = azure_native.sql.ManagedInstance("managedInstance",
-    administrator_login="dummylogin",
-    administrator_login_password="PLACEHOLDER",
-    administrators=azure_native.sql.ManagedInstanceExternalAdministratorArgs(
-        azure_ad_only_authentication=True,
-        login="bob@contoso.com",
-        principal_type="User",
-        sid="00000011-1111-2222-2222-123456789111",
-        tenant_id="00000011-1111-2222-2222-123456789111",
-    ),
-    collation="SQL_Latin1_General_CP1_CI_AS",
-    dns_zone_partner="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance",
-    instance_pool_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1",
-    license_type="LicenseIncluded",
-    location="Japan East",
-    maintenance_configuration_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1",
-    managed_instance_name="testinstance",
-    minimal_tls_version="1.2",
-    proxy_override="Redirect",
-    public_data_endpoint_enabled=False,
-    resource_group_name="testrg",
-    sku=azure_native.sql.SkuArgs(
-        name="GP_Gen5",
-        tier="GeneralPurpose",
-    ),
-    storage_account_type="GRS",
-    storage_size_in_gb=1024,
-    subnet_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-    tags={
-        "tagKey1": "TagValue1",
-    },
-    timezone_id="UTC",
-    v_cores=8)
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create managed instance with minimal properties
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managedInstance = new AzureNative.Sql.ManagedInstance("managedInstance", new AzureNative.Sql.ManagedInstanceArgs
-        {
-            AdministratorLogin = "dummylogin",
-            AdministratorLoginPassword = "PLACEHOLDER",
-            LicenseType = "LicenseIncluded",
-            Location = "Japan East",
-            ManagedInstanceName = "testinstance",
-            ResourceGroupName = "testrg",
-            Sku = new AzureNative.Sql.Inputs.SkuArgs
-            {
-                Name = "GP_Gen4",
-                Tier = "GeneralPurpose",
-            },
-            StorageSizeInGB = 1024,
-            SubnetId = "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-            VCores = 8,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewManagedInstance(ctx, "managedInstance", &sql.ManagedInstanceArgs{
-			AdministratorLogin:         pulumi.String("dummylogin"),
-			AdministratorLoginPassword: pulumi.String("PLACEHOLDER"),
-			LicenseType:                pulumi.String("LicenseIncluded"),
-			Location:                   pulumi.String("Japan East"),
-			ManagedInstanceName:        pulumi.String("testinstance"),
-			ResourceGroupName:          pulumi.String("testrg"),
-			Sku: &sql.SkuArgs{
-				Name: pulumi.String("GP_Gen4"),
-				Tier: pulumi.String("GeneralPurpose"),
-			},
-			StorageSizeInGB: pulumi.Int(1024),
-			SubnetId:        pulumi.String("/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
-			VCores:          pulumi.Int(8),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", {
-    administratorLogin: "dummylogin",
-    administratorLoginPassword: "PLACEHOLDER",
-    licenseType: "LicenseIncluded",
-    location: "Japan East",
-    managedInstanceName: "testinstance",
-    resourceGroupName: "testrg",
-    sku: {
-        name: "GP_Gen4",
-        tier: "GeneralPurpose",
-    },
-    storageSizeInGB: 1024,
-    subnetId: "/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-    vCores: 8,
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-managed_instance = azure_native.sql.ManagedInstance("managedInstance",
-    administrator_login="dummylogin",
-    administrator_login_password="PLACEHOLDER",
-    license_type="LicenseIncluded",
-    location="Japan East",
-    managed_instance_name="testinstance",
-    resource_group_name="testrg",
-    sku=azure_native.sql.SkuArgs(
-        name="GP_Gen4",
-        tier="GeneralPurpose",
-    ),
-    storage_size_in_gb=1024,
-    subnet_id="/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
-    v_cores=8)
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
-```
-
- */
 @ResourceType(type="azure-native:sql:ManagedInstance")
 public class ManagedInstance extends io.pulumi.resources.CustomResource {
-    /**
-     * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-     */
     @OutputExport(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
-    /**
-     * @return Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-     */
     public Output</* @Nullable */ String> getAdministratorLogin() {
         return this.administratorLogin;
     }
-    /**
-     * The Azure Active Directory administrator of the server.
-     */
     @OutputExport(name="administrators", type=ManagedInstanceExternalAdministratorResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstanceExternalAdministratorResponse> administrators;
 
-    /**
-     * @return The Azure Active Directory administrator of the server.
-     */
     public Output</* @Nullable */ ManagedInstanceExternalAdministratorResponse> getAdministrators() {
         return this.administrators;
     }
-    /**
-     * Collation of the managed instance.
-     */
     @OutputExport(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
-    /**
-     * @return Collation of the managed instance.
-     */
     public Output</* @Nullable */ String> getCollation() {
         return this.collation;
     }
-    /**
-     * The Dns Zone that the managed instance is in.
-     */
     @OutputExport(name="dnsZone", type=String.class, parameters={})
     private Output<String> dnsZone;
 
-    /**
-     * @return The Dns Zone that the managed instance is in.
-     */
     public Output<String> getDnsZone() {
         return this.dnsZone;
     }
-    /**
-     * The fully qualified domain name of the managed instance.
-     */
     @OutputExport(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output<String> fullyQualifiedDomainName;
 
-    /**
-     * @return The fully qualified domain name of the managed instance.
-     */
     public Output<String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
-    /**
-     * The Azure Active Directory identity of the managed instance.
-     */
     @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
-    /**
-     * @return The Azure Active Directory identity of the managed instance.
-     */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The Id of the instance pool this managed server belongs to.
-     */
     @OutputExport(name="instancePoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instancePoolId;
 
-    /**
-     * @return The Id of the instance pool this managed server belongs to.
-     */
     public Output</* @Nullable */ String> getInstancePoolId() {
         return this.instancePoolId;
     }
-    /**
-     * A CMK URI of the key to use for encryption.
-     */
     @OutputExport(name="keyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyId;
 
-    /**
-     * @return A CMK URI of the key to use for encryption.
-     */
     public Output</* @Nullable */ String> getKeyId() {
         return this.keyId;
     }
-    /**
-     * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
-     */
     @OutputExport(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
-    /**
-     * @return The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
-     */
     public Output</* @Nullable */ String> getLicenseType() {
         return this.licenseType;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Specifies maintenance configuration id to apply to this managed instance.
-     */
     @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
-    /**
-     * @return Specifies maintenance configuration id to apply to this managed instance.
-     */
     public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
-    /**
-     * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-     */
     @OutputExport(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
-    /**
-     * @return Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-     */
     public Output</* @Nullable */ String> getMinimalTlsVersion() {
         return this.minimalTlsVersion;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource id of a user assigned identity to be used by default.
-     */
     @OutputExport(name="primaryUserAssignedIdentityId", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentityId;
 
-    /**
-     * @return The resource id of a user assigned identity to be used by default.
-     */
     public Output</* @Nullable */ String> getPrimaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId;
     }
-    /**
-     * List of private endpoint connections on a managed instance.
-     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ManagedInstancePecPropertyResponse.class})
     private Output<List<ManagedInstancePecPropertyResponse>> privateEndpointConnections;
 
-    /**
-     * @return List of private endpoint connections on a managed instance.
-     */
     public Output<List<ManagedInstancePecPropertyResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    /**
-     * 
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Connection type used for connecting to the instance.
-     */
     @OutputExport(name="proxyOverride", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxyOverride;
 
-    /**
-     * @return Connection type used for connecting to the instance.
-     */
     public Output</* @Nullable */ String> getProxyOverride() {
         return this.proxyOverride;
     }
-    /**
-     * Whether or not the public data endpoint is enabled.
-     */
     @OutputExport(name="publicDataEndpointEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publicDataEndpointEnabled;
 
-    /**
-     * @return Whether or not the public data endpoint is enabled.
-     */
     public Output</* @Nullable */ Boolean> getPublicDataEndpointEnabled() {
         return this.publicDataEndpointEnabled;
     }
-    /**
-     * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * The state of the managed instance.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return The state of the managed instance.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
-     */
     @OutputExport(name="storageAccountType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountType;
 
-    /**
-     * @return The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
-     */
     public Output</* @Nullable */ String> getStorageAccountType() {
         return this.storageAccountType;
     }
-    /**
-     * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
-     */
     @OutputExport(name="storageSizeInGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> storageSizeInGB;
 
-    /**
-     * @return Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
-     */
     public Output</* @Nullable */ Integer> getStorageSizeInGB() {
         return this.storageSizeInGB;
     }
-    /**
-     * Subnet resource ID for the managed instance.
-     */
     @OutputExport(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
-    /**
-     * @return Subnet resource ID for the managed instance.
-     */
     public Output</* @Nullable */ String> getSubnetId() {
         return this.subnetId;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Id of the timezone. Allowed values are timezones supported by Windows.
-Windows keeps details on supported timezones, including the id, in registry under
-KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
-You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
-List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
-     */
     @OutputExport(name="timezoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> timezoneId;
 
-    /**
-     * @return Id of the timezone. Allowed values are timezones supported by Windows.
-Windows keeps details on supported timezones, including the id, in registry under
-KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
-You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
-List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
-     */
     public Output</* @Nullable */ String> getTimezoneId() {
         return this.timezoneId;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
-     */
     @OutputExport(name="vCores", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vCores;
 
-    /**
-     * @return The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
-     */
     public Output</* @Nullable */ Integer> getVCores() {
         return this.vCores;
     }
-    /**
-     * Whether or not the multi-az is enabled.
-     */
     @OutputExport(name="zoneRedundant", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneRedundant;
 
-    /**
-     * @return Whether or not the multi-az is enabled.
-     */
     public Output</* @Nullable */ Boolean> getZoneRedundant() {
         return this.zoneRedundant;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ManagedInstance(String name, ManagedInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ManagedInstance", name, args == null ? ManagedInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -715,14 +217,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ManagedInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedInstance(name, id, options);
     }

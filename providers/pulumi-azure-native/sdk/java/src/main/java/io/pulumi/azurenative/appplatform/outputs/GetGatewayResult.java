@@ -14,29 +14,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGatewayResult {
-/**
- * Fully qualified resource Id for the resource.
- */
     private final String id;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * Spring Cloud Gateway properties payload
- */
     private final GatewayPropertiesResponse properties;
-/**
- * Sku of the Spring Cloud Gateway resource
- */
     private final @Nullable SkuResponse sku;
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     private final SystemDataResponse systemData;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","sku","systemData","type"})
@@ -55,39 +37,21 @@ public final class GetGatewayResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource Id for the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Spring Cloud Gateway properties payload
- */
     public GatewayPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * Sku of the Spring Cloud Gateway resource
- */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

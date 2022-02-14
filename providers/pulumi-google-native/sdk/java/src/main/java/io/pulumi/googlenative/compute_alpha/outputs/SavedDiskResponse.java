@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SavedDiskResponse {
-/**
- * Type of the resource. Always compute#savedDisk for attached disks.
- */
     private final String kind;
-/**
- * Specifies a URL of the disk attached to the source instance.
- */
     private final String sourceDisk;
-/**
- * Size of the individual disk snapshot used by this machine image.
- */
     private final String storageBytes;
-/**
- * An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
- */
     private final String storageBytesStatus;
 
     @OutputCustomType.Constructor({"kind","sourceDisk","storageBytes","storageBytesStatus"})
@@ -38,27 +26,15 @@ public final class SavedDiskResponse {
         this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
     }
 
-/**
- * Type of the resource. Always compute#savedDisk for attached disks.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Specifies a URL of the disk attached to the source instance.
- */
     public String getSourceDisk() {
         return this.sourceDisk;
     }
-/**
- * Size of the individual disk snapshot used by this machine image.
- */
     public String getStorageBytes() {
         return this.storageBytes;
     }
-/**
- * An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
- */
     public String getStorageBytesStatus() {
         return this.storageBytesStatus;
     }

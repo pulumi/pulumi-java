@@ -11,15 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VideoStreamingResponse {
-/**
- * Video streaming base URL for the video archive. When present, archived video can be played through the Azure Video Analyzer player. Alternatively, this URL can be used with compatible DASH or HLS players by appending the following to the base URL:
-
-  - HLSv4:     /manifest(format=m3u8-aapl).m3u8
-  - HLS CMAF:  /manifest(format=m3u8-cmaf)
-  - DASH CMAF: /manifest(format=mpd-time-cmaf)
-
-Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
- */
     private final @Nullable String archiveBaseUrl;
 
     @OutputCustomType.Constructor({"archiveBaseUrl"})
@@ -27,15 +18,6 @@ Moreover, an ongoing video recording can be played in "live mode" with latencies
         this.archiveBaseUrl = archiveBaseUrl;
     }
 
-/**
- * Video streaming base URL for the video archive. When present, archived video can be played through the Azure Video Analyzer player. Alternatively, this URL can be used with compatible DASH or HLS players by appending the following to the base URL:
-
-  - HLSv4:     /manifest(format=m3u8-aapl).m3u8
-  - HLS CMAF:  /manifest(format=m3u8-cmaf)
-  - DASH CMAF: /manifest(format=mpd-time-cmaf)
-
-Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
- */
     public Optional<String> getArchiveBaseUrl() {
         return Optional.ofNullable(this.archiveBaseUrl);
     }

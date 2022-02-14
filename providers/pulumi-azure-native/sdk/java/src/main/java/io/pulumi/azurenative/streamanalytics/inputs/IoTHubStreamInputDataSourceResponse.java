@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes an IoT Hub input data source that contains stream data.
- */
 public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IoTHubStreamInputDataSourceResponse Empty = new IoTHubStreamInputDataSourceResponse();
 
-    /**
-     * The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
-     */
     @InputImport(name="consumerGroupName")
     private final @Nullable String consumerGroupName;
 
@@ -27,9 +21,6 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
         return this.consumerGroupName == null ? Optional.empty() : Optional.ofNullable(this.consumerGroupName);
     }
 
-    /**
-     * The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
-     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 
@@ -37,9 +28,6 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
-    /**
-     * The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="iotHubNamespace")
     private final @Nullable String iotHubNamespace;
 
@@ -47,9 +35,6 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
         return this.iotHubNamespace == null ? Optional.empty() : Optional.ofNullable(this.iotHubNamespace);
     }
 
-    /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="sharedAccessPolicyKey")
     private final @Nullable String sharedAccessPolicyKey;
 
@@ -57,9 +42,6 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
-    /**
-     * The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="sharedAccessPolicyName")
     private final @Nullable String sharedAccessPolicyName;
 
@@ -67,10 +49,6 @@ public final class IoTHubStreamInputDataSourceResponse extends io.pulumi.resourc
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
-    /**
-     * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Microsoft.Devices/IotHubs'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClientCredentialsResponse Empty = new ClientCredentialsResponse();
 
-    /**
-     * The authority URL used for authentication.
-     */
     @InputImport(name="authorityUrl")
     private final @Nullable String authorityUrl;
 
@@ -28,9 +22,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
     }
 
-    /**
-     * The content of the certificate used for authentication.
-     */
     @InputImport(name="certificate")
     private final @Nullable String certificate;
 
@@ -38,9 +29,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
     }
 
-    /**
-     * The Client ID/Application ID
-     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -48,9 +36,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * The client secret.
-     */
     @InputImport(name="clientSecret")
     private final @Nullable String clientSecret;
 
@@ -58,9 +43,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
-    /**
-     *  Is it using certificate to authenticate. If false then use client secret.
-     */
     @InputImport(name="isCertAuth")
     private final @Nullable Boolean isCertAuth;
 
@@ -68,9 +50,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
     }
 
-    /**
-     * Resource Group.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable String resourceGroup;
 
@@ -78,9 +57,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
-    /**
-     * The resource the service principal/app has access to.
-     */
     @InputImport(name="resourceUri")
     private final @Nullable String resourceUri;
 
@@ -88,9 +64,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 
-    /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
-     */
     @InputImport(name="serviceDataAccessAuthIdentity")
     private final @Nullable String serviceDataAccessAuthIdentity;
 
@@ -98,9 +71,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
-    /**
-     * Subscription ID.
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 
@@ -108,9 +78,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
-    /**
-     * The ID of the tenant the service principal/app belongs to.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -118,9 +85,6 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
-    /**
-     * The thumbprint of the certificate above.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 

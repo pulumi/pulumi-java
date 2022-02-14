@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The liveness probe requirements.
- */
 public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AKSServiceCreateRequestLivenessProbeRequirementsArgs Empty = new AKSServiceCreateRequestLivenessProbeRequirementsArgs();
 
-    /**
-     * The number of failures to allow before returning an unhealthy status.
-     */
     @InputImport(name="failureThreshold")
     private final @Nullable Input<Integer> failureThreshold;
 
@@ -27,9 +21,6 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
     }
 
-    /**
-     * The delay before the first probe in seconds.
-     */
     @InputImport(name="initialDelaySeconds")
     private final @Nullable Input<Integer> initialDelaySeconds;
 
@@ -37,9 +28,6 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
         return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
     }
 
-    /**
-     * The length of time between probes in seconds.
-     */
     @InputImport(name="periodSeconds")
     private final @Nullable Input<Integer> periodSeconds;
 
@@ -47,9 +35,6 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
         return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
     }
 
-    /**
-     * The number of successful probes before returning a healthy status.
-     */
     @InputImport(name="successThreshold")
     private final @Nullable Input<Integer> successThreshold;
 
@@ -57,9 +42,6 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
     }
 
-    /**
-     * The probe timeout in seconds.
-     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 

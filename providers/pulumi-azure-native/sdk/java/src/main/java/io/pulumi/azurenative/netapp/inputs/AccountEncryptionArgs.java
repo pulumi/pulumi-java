@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Encryption settings
- */
 public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountEncryptionArgs Empty = new AccountEncryptionArgs();
 
-    /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
-     */
     @InputImport(name="keySource")
     private final @Nullable Input<String> keySource;
 

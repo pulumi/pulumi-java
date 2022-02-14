@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TerminalSettingsResponse {
-/**
- * Size of terminal font.
- */
     private final @Nullable String fontSize;
-/**
- * Style of terminal font.
- */
     private final @Nullable String fontStyle;
 
     @OutputCustomType.Constructor({"fontSize","fontStyle"})
@@ -28,15 +22,9 @@ public final class TerminalSettingsResponse {
         this.fontStyle = fontStyle;
     }
 
-/**
- * Size of terminal font.
- */
     public Optional<String> getFontSize() {
         return Optional.ofNullable(this.fontSize);
     }
-/**
- * Style of terminal font.
- */
     public Optional<String> getFontStyle() {
         return Optional.ofNullable(this.fontStyle);
     }

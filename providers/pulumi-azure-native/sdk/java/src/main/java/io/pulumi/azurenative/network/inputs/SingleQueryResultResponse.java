@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SingleQueryResultResponse Empty = new SingleQueryResultResponse();
 
-    /**
-     * Describes what is the signature enforces
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,9 +24,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Describes the list of destination ports related to this signature
-     */
     @InputImport(name="destinationPorts")
     private final @Nullable List<String> destinationPorts;
 
@@ -40,9 +31,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
-    /**
-     * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
-     */
     @InputImport(name="direction")
     private final @Nullable Integer direction;
 
@@ -50,9 +38,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
-    /**
-     * Describes the groups the signature belongs to
-     */
     @InputImport(name="group")
     private final @Nullable String group;
 
@@ -60,9 +45,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.group == null ? Optional.empty() : Optional.ofNullable(this.group);
     }
 
-    /**
-     * Describes if this override is inherited from base policy or not
-     */
     @InputImport(name="inheritedFromParentPolicy")
     private final @Nullable Boolean inheritedFromParentPolicy;
 
@@ -70,9 +52,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.inheritedFromParentPolicy == null ? Optional.empty() : Optional.ofNullable(this.inheritedFromParentPolicy);
     }
 
-    /**
-     * Describes the last updated time of the signature (provided from 3rd party vendor)
-     */
     @InputImport(name="lastUpdated")
     private final @Nullable String lastUpdated;
 
@@ -80,9 +59,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
     }
 
-    /**
-     * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
-     */
     @InputImport(name="mode")
     private final @Nullable Integer mode;
 
@@ -90,9 +66,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
-    /**
-     * Describes the protocol the signatures is being enforced in
-     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -100,9 +73,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
-    /**
-     * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
-     */
     @InputImport(name="severity")
     private final @Nullable Integer severity;
 
@@ -110,9 +80,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
-    /**
-     * The ID of the signature
-     */
     @InputImport(name="signatureId")
     private final @Nullable Integer signatureId;
 
@@ -120,9 +87,6 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
         return this.signatureId == null ? Optional.empty() : Optional.ofNullable(this.signatureId);
     }
 
-    /**
-     * Describes the list of source ports related to this signature
-     */
     @InputImport(name="sourcePorts")
     private final @Nullable List<String> sourcePorts;
 

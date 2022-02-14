@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Akamai access control
- */
 public final class AkamaiAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AkamaiAccessControlResponse Empty = new AkamaiAccessControlResponse();
 
-    /**
-     * authentication key list
-     */
     @InputImport(name="akamaiSignatureHeaderAuthenticationKeyList")
     private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 

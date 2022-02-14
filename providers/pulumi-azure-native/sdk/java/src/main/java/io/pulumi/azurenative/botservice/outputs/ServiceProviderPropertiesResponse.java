@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceProviderPropertiesResponse {
-/**
- * Display Name of the Service Provider
- */
     private final String devPortalUrl;
-/**
- * Display Name of the Service Provider
- */
     private final String displayName;
-/**
- * Display Name of the Service Provider
- */
     private final String iconUrl;
-/**
- * Id for Service Provider
- */
     private final String id;
-/**
- * The list of parameters for the Service Provider
- */
     private final @Nullable List<ServiceProviderParameterResponse> parameters;
-/**
- * Display Name of the Service Provider
- */
     private final String serviceProviderName;
 
     @OutputCustomType.Constructor({"devPortalUrl","displayName","iconUrl","id","parameters","serviceProviderName"})
@@ -53,39 +35,21 @@ public final class ServiceProviderPropertiesResponse {
         this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
     }
 
-/**
- * Display Name of the Service Provider
- */
     public String getDevPortalUrl() {
         return this.devPortalUrl;
     }
-/**
- * Display Name of the Service Provider
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Display Name of the Service Provider
- */
     public String getIconUrl() {
         return this.iconUrl;
     }
-/**
- * Id for Service Provider
- */
     public String getId() {
         return this.id;
     }
-/**
- * The list of parameters for the Service Provider
- */
     public List<ServiceProviderParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
-/**
- * Display Name of the Service Provider
- */
     public String getServiceProviderName() {
         return this.serviceProviderName;
     }

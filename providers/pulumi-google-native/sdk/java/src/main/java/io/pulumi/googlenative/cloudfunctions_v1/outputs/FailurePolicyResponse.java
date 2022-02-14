@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FailurePolicyResponse {
-/**
- * If specified, then the function will be retried in case of a failure.
- */
     private final RetryResponse retry;
 
     @OutputCustomType.Constructor({"retry"})
@@ -19,9 +16,6 @@ public final class FailurePolicyResponse {
         this.retry = Objects.requireNonNull(retry);
     }
 
-/**
- * If specified, then the function will be retried in case of a failure.
- */
     public RetryResponse getRetry() {
         return this.retry;
     }

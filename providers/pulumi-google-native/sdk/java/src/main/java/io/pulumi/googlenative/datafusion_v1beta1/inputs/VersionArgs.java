@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The Data Fusion version.
- */
 public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 
-    /**
-     * Represents a list of available feature names for a given version.
-     */
     @InputImport(name="availableFeatures")
     private final @Nullable Input<List<String>> availableFeatures;
 
@@ -30,9 +24,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.availableFeatures == null ? Input.empty() : this.availableFeatures;
     }
 
-    /**
-     * Whether this is currently the default version for Cloud Data Fusion
-     */
     @InputImport(name="defaultVersion")
     private final @Nullable Input<Boolean> defaultVersion;
 
@@ -40,9 +31,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
     }
 
-    /**
-     * Type represents the release availability of the version
-     */
     @InputImport(name="type")
     private final @Nullable Input<VersionType> type;
 
@@ -50,9 +38,6 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The version number of the Data Fusion instance, such as '6.0.1.0'.
-     */
     @InputImport(name="versionNumber")
     private final @Nullable Input<String> versionNumber;
 

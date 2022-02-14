@@ -11,21 +11,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetJobTargetGroupResult {
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Members of the target group.
- */
     private final List<JobTargetResponse> members;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","members","name","type"})
@@ -40,27 +28,15 @@ public final class GetJobTargetGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Members of the target group.
- */
     public List<JobTargetResponse> getMembers() {
         return this.members;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

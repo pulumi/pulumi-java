@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Disk encryption status for an instance.
- */
 public final class DiskEncryptionStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionStatusArgs Empty = new DiskEncryptionStatusArgs();
 
-    /**
-     * This is always `sql#diskEncryptionStatus`.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -27,9 +21,6 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * KMS key version used to encrypt the Cloud SQL instance resource
-     */
     @InputImport(name="kmsKeyVersionName")
     private final @Nullable Input<String> kmsKeyVersionName;
 

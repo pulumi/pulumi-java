@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBuildServiceBuildResultLogArgs Empty = new GetBuildServiceBuildResultLogArgs();
 
-    /**
-     * The name of the build resource.
-     */
     @InputImport(name="buildName", required=true)
     private final String buildName;
 
@@ -25,9 +19,6 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
         return this.buildName;
     }
 
-    /**
-     * The name of the build result resource.
-     */
     @InputImport(name="buildResultName", required=true)
     private final String buildResultName;
 
@@ -35,9 +26,6 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
         return this.buildResultName;
     }
 
-    /**
-     * The name of the build service resource.
-     */
     @InputImport(name="buildServiceName", required=true)
     private final String buildServiceName;
 
@@ -45,9 +33,6 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
         return this.buildServiceName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -55,9 +40,6 @@ public final class GetBuildServiceBuildResultLogArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

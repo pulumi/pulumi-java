@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
- */
 public final class DataFlowResponseFolder extends io.pulumi.resources.InvokeArgs {
 
     public static final DataFlowResponseFolder Empty = new DataFlowResponseFolder();
 
-    /**
-     * The name of the folder that this data flow is in.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

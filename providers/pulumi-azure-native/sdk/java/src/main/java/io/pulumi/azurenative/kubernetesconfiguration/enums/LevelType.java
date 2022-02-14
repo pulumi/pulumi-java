@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Level of the status.
- */
     @EnumType
     public enum LevelType {
-/**
- * 
- */
         Error("Error"),
-/**
- * 
- */
         Warning("Warning"),
-/**
- * 
- */
         Information("Information");
 
         private final String value;

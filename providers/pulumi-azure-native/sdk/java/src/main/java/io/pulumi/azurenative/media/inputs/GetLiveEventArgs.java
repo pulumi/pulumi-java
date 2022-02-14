@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLiveEventArgs Empty = new GetLiveEventArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the live event, maximum length is 32.
-     */
     @InputImport(name="liveEventName", required=true)
     private final String liveEventName;
 
@@ -35,9 +26,6 @@ public final class GetLiveEventArgs extends io.pulumi.resources.InvokeArgs {
         return this.liveEventName;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

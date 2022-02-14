@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterArgs Empty = new ManagedClusterArgs();
 
-    /**
-     * client certificates for the cluster.
-     */
     @InputImport(name="addonFeatures")
     private final @Nullable Input<List<String>> addonFeatures;
 
@@ -35,9 +29,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonFeatures == null ? Input.empty() : this.addonFeatures;
     }
 
-    /**
-     * vm admin user password.
-     */
     @InputImport(name="adminPassword")
     private final @Nullable Input<String> adminPassword;
 
@@ -45,9 +36,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
     }
 
-    /**
-     * vm admin user name.
-     */
     @InputImport(name="adminUserName", required=true)
     private final Input<String> adminUserName;
 
@@ -55,9 +43,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.adminUserName;
     }
 
-    /**
-     * Azure active directory.
-     */
     @InputImport(name="azureActiveDirectory")
     private final @Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory;
 
@@ -65,9 +50,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureActiveDirectory == null ? Input.empty() : this.azureActiveDirectory;
     }
 
-    /**
-     * The port used for client connections to the cluster.
-     */
     @InputImport(name="clientConnectionPort")
     private final @Nullable Input<Integer> clientConnectionPort;
 
@@ -75,9 +57,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientConnectionPort == null ? Input.empty() : this.clientConnectionPort;
     }
 
-    /**
-     * client certificates for the cluster.
-     */
     @InputImport(name="clients")
     private final @Nullable Input<List<ClientCertificateArgs>> clients;
 
@@ -85,9 +64,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clients == null ? Input.empty() : this.clients;
     }
 
-    /**
-     * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     */
     @InputImport(name="clusterCodeVersion")
     private final @Nullable Input<String> clusterCodeVersion;
 
@@ -95,9 +71,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterCodeVersion == null ? Input.empty() : this.clusterCodeVersion;
     }
 
-    /**
-     * The name of the cluster resource.
-     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -105,9 +78,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
-    /**
-     * The cluster dns name.
-     */
     @InputImport(name="dnsName", required=true)
     private final Input<String> dnsName;
 
@@ -115,9 +85,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsName;
     }
 
-    /**
-     * The list of custom fabric settings to configure the cluster.
-     */
     @InputImport(name="fabricSettings")
     private final @Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
@@ -125,9 +92,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.fabricSettings == null ? Input.empty() : this.fabricSettings;
     }
 
-    /**
-     * The port used for http connections to the cluster.
-     */
     @InputImport(name="httpGatewayConnectionPort")
     private final @Nullable Input<Integer> httpGatewayConnectionPort;
 
@@ -135,9 +99,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpGatewayConnectionPort == null ? Input.empty() : this.httpGatewayConnectionPort;
     }
 
-    /**
-     * Describes load balancing rules.
-     */
     @InputImport(name="loadBalancingRules")
     private final @Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
@@ -145,9 +106,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancingRules == null ? Input.empty() : this.loadBalancingRules;
     }
 
-    /**
-     * Azure resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -155,9 +113,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -165,9 +120,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The sku of the managed cluster
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -175,9 +127,6 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Azure resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

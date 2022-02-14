@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AzureStorageSectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureStorageSectionResponse Empty = new AzureStorageSectionResponse();
 
-    /**
-     *  Storage Account Key (Deprecated).
-     */
     @InputImport(name="accountKey")
     private final @Nullable String accountKey;
 
@@ -30,9 +24,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
-    /**
-     * Storage Account Name.
-     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 
@@ -40,9 +31,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
-    /**
-     * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
-     */
     @InputImport(name="areWorkspaceManagedIdentitiesAllowed")
     private final @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
 
@@ -50,9 +38,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.areWorkspaceManagedIdentitiesAllowed == null ? Optional.empty() : Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
 
-    /**
-     *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
-     */
     @InputImport(name="blobCacheTimeout")
     private final @Nullable Integer blobCacheTimeout;
 
@@ -60,9 +45,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.blobCacheTimeout == null ? Optional.empty() : Optional.ofNullable(this.blobCacheTimeout);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="clientCredentials")
     private final @Nullable ClientCredentialsResponse clientCredentials;
 
@@ -70,9 +52,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.clientCredentials == null ? Optional.empty() : Optional.ofNullable(this.clientCredentials);
     }
 
-    /**
-     * The storage container name.
-     */
     @InputImport(name="containerName")
     private final @Nullable String containerName;
 
@@ -80,9 +59,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
-    /**
-     * The credential.
-     */
     @InputImport(name="credential")
     private final @Nullable String credential;
 
@@ -90,9 +66,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     *  The credential type.
-     */
     @InputImport(name="credentialType")
     private final @Nullable String credentialType;
 
@@ -100,9 +73,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.credentialType == null ? Optional.empty() : Optional.ofNullable(this.credentialType);
     }
 
-    /**
-     * The host of the container.
-     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 
@@ -110,9 +80,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
-    /**
-     * Indicate if we are using SAS token or Account Key (Deprecated).
-     */
     @InputImport(name="isSas")
     private final @Nullable Boolean isSas;
 
@@ -120,9 +87,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.isSas == null ? Optional.empty() : Optional.ofNullable(this.isSas);
     }
 
-    /**
-     * The protocol to use. Defaults to https.
-     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -130,9 +94,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
-    /**
-     * Resource Group.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable String resourceGroup;
 
@@ -140,9 +101,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
-    /**
-     *  SAS Token for the container (Deprecated).
-     */
     @InputImport(name="sasToken")
     private final @Nullable String sasToken;
 
@@ -150,9 +108,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
-    /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
-     */
     @InputImport(name="serviceDataAccessAuthIdentity")
     private final @Nullable String serviceDataAccessAuthIdentity;
 
@@ -160,9 +115,6 @@ public final class AzureStorageSectionResponse extends io.pulumi.resources.Invok
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
-    /**
-     * Subscription ID.
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 

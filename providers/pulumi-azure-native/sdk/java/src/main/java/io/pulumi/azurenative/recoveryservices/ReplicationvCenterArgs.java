@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationvCenterArgs Empty = new ReplicationvCenterArgs();
 
-    /**
-     * Fabric name.
-     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -28,9 +22,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
         return this.fabricName;
     }
 
-    /**
-     * The properties of an add vCenter request.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<AddVCenterRequestPropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -58,9 +43,6 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
         return this.resourceName;
     }
 
-    /**
-     * vCenter name.
-     */
     @InputImport(name="vCenterName")
     private final @Nullable Input<String> vCenterName;
 

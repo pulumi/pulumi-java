@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Health status of protected item.
- */
     @EnumType
     public enum HealthStatus {
-/**
- * 
- */
         Passed("Passed"),
-/**
- * 
- */
         ActionRequired("ActionRequired"),
-/**
- * 
- */
         ActionSuggested("ActionSuggested"),
-/**
- * 
- */
         Invalid("Invalid");
 
         private final String value;

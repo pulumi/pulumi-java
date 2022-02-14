@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkerPoolArgs Empty = new WorkerPoolArgs();
 
-    /**
-     * Network configuration for the `WorkerPool`.
-     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
@@ -29,9 +23,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -39,9 +30,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
-     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -49,9 +37,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
-    /**
-     * Worker configuration for the `WorkerPool`.
-     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<WorkerConfigArgs> workerConfig;
 
@@ -59,9 +44,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="workerPoolId", required=true)
     private final Input<String> workerPoolId;
 

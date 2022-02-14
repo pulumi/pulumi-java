@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Write a Data Access (Gin) log
- */
 public final class DataAccessOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataAccessOptionsResponse Empty = new DataAccessOptionsResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="logMode", required=true)
     private final String logMode;
 

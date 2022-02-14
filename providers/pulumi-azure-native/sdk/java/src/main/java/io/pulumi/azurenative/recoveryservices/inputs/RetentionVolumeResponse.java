@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The retention details of the MT.
- */
 public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RetentionVolumeResponse Empty = new RetentionVolumeResponse();
 
-    /**
-     * The volume capacity.
-     */
     @InputImport(name="capacityInBytes")
     private final @Nullable Double capacityInBytes;
 
@@ -29,9 +23,6 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
         return this.capacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.capacityInBytes);
     }
 
-    /**
-     * The free space available in this volume.
-     */
     @InputImport(name="freeSpaceInBytes")
     private final @Nullable Double freeSpaceInBytes;
 
@@ -39,9 +30,6 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
         return this.freeSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.freeSpaceInBytes);
     }
 
-    /**
-     * The threshold percentage.
-     */
     @InputImport(name="thresholdPercentage")
     private final @Nullable Integer thresholdPercentage;
 
@@ -49,9 +37,6 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
         return this.thresholdPercentage == null ? Optional.empty() : Optional.ofNullable(this.thresholdPercentage);
     }
 
-    /**
-     * The volume name.
-     */
     @InputImport(name="volumeName")
     private final @Nullable String volumeName;
 

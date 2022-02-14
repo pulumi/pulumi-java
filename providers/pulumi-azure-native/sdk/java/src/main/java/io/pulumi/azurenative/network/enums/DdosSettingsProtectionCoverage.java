@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
- */
     @EnumType
     public enum DdosSettingsProtectionCoverage {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the Identity provider for MS AAD.
- */
 public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OpenShiftManagedClusterAADIdentityProviderResponse Empty = new OpenShiftManagedClusterAADIdentityProviderResponse();
 
-    /**
-     * The clientId password associated with the provider.
-     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -27,9 +21,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * The groupId to be granted cluster admin role.
-     */
     @InputImport(name="customerAdminGroupId")
     private final @Nullable String customerAdminGroupId;
 
@@ -37,10 +28,6 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
         return this.customerAdminGroupId == null ? Optional.empty() : Optional.ofNullable(this.customerAdminGroupId);
     }
 
-    /**
-     * The kind of the provider.
-Expected value is 'AADIdentityProvider'.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -48,9 +35,6 @@ Expected value is 'AADIdentityProvider'.
         return this.kind;
     }
 
-    /**
-     * The secret password associated with the provider.
-     */
     @InputImport(name="secret")
     private final @Nullable String secret;
 
@@ -58,9 +42,6 @@ Expected value is 'AADIdentityProvider'.
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 
-    /**
-     * The tenantId associated with the provider.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

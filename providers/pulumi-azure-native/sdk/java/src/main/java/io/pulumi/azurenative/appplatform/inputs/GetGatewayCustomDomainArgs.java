@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayCustomDomainArgs Empty = new GetGatewayCustomDomainArgs();
 
-    /**
-     * The name of the Spring Cloud Gateway custom domain.
-     */
     @InputImport(name="domainName", required=true)
     private final String domainName;
 
@@ -25,9 +19,6 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
         return this.domainName;
     }
 
-    /**
-     * The name of Spring Cloud Gateway.
-     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -35,9 +26,6 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
         return this.gatewayName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetGatewayCustomDomainArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

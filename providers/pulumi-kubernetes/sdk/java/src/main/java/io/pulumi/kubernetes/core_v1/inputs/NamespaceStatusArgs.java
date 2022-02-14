@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NamespaceStatus is information about the current status of a Namespace.
- */
 public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceStatusArgs Empty = new NamespaceStatusArgs();
 
-    /**
-     * Represents the latest available observations of a namespace's current state.
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<NamespaceConditionArgs>> conditions;
 
@@ -29,13 +23,6 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
-
-Possible enum values:
- - `"Active"` means the namespace is available for use in the system
- - `"Terminating"` means the namespace is undergoing graceful termination
-     */
     @InputImport(name="phase")
     private final @Nullable Input<String> phase;
 

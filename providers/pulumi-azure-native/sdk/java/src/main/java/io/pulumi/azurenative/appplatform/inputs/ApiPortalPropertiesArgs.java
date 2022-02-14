@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * API portal properties payload
- */
 public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiPortalPropertiesArgs Empty = new ApiPortalPropertiesArgs();
 
-    /**
-     * The array of resource Ids of gateway to integrate with API portal.
-     */
     @InputImport(name="gatewayIds")
     private final @Nullable Input<List<String>> gatewayIds;
 
@@ -30,9 +24,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.gatewayIds == null ? Input.empty() : this.gatewayIds;
     }
 
-    /**
-     * Indicate if only https is allowed.
-     */
     @InputImport(name="httpsOnly")
     private final @Nullable Input<Boolean> httpsOnly;
 
@@ -40,9 +31,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
     }
 
-    /**
-     * Indicates whether the API portal exposes endpoint.
-     */
     @InputImport(name="public")
     private final @Nullable Input<Boolean> $public;
 
@@ -50,9 +38,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.$public == null ? Input.empty() : this.$public;
     }
 
-    /**
-     * Collection of OpenAPI source URL locations.
-     */
     @InputImport(name="sourceUrls")
     private final @Nullable Input<List<String>> sourceUrls;
 
@@ -60,9 +45,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.sourceUrls == null ? Input.empty() : this.sourceUrls;
     }
 
-    /**
-     * Single sign-on related configuration
-     */
     @InputImport(name="ssoProperties")
     private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
 

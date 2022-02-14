@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListListUpgradableVersionPostResult {
-/**
- * 
- */
     private final @Nullable List<String> supportedPath;
 
     @OutputCustomType.Constructor({"supportedPath"})
@@ -21,9 +18,6 @@ public final class ListListUpgradableVersionPostResult {
         this.supportedPath = supportedPath;
     }
 
-/**
- * 
- */
     public List<String> getSupportedPath() {
         return this.supportedPath == null ? List.of() : this.supportedPath;
     }

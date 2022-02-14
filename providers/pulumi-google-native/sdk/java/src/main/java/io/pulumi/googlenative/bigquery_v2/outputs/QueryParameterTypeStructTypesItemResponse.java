@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryParameterTypeStructTypesItemResponse {
-/**
- * [Optional] Human-oriented description of the field.
- */
     private final String description;
-/**
- * [Optional] The name of this field.
- */
     private final String name;
-/**
- * [Required] The type of this field.
- */
     private final QueryParameterTypeResponse type;
 
     @OutputCustomType.Constructor({"description","name","type"})
@@ -33,21 +24,12 @@ public final class QueryParameterTypeStructTypesItemResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * [Optional] Human-oriented description of the field.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * [Optional] The name of this field.
- */
     public String getName() {
         return this.name;
     }
-/**
- * [Required] The type of this field.
- */
     public QueryParameterTypeResponse getType() {
         return this.type;
     }

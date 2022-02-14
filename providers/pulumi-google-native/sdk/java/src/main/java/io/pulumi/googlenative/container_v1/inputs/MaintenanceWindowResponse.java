@@ -11,16 +11,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * MaintenanceWindow defines the maintenance window to be used for the cluster.
- */
 public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MaintenanceWindowResponse Empty = new MaintenanceWindowResponse();
 
-    /**
-     * DailyMaintenanceWindow specifies a daily maintenance operation window.
-     */
     @InputImport(name="dailyMaintenanceWindow", required=true)
     private final DailyMaintenanceWindowResponse dailyMaintenanceWindow;
 
@@ -28,9 +22,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
         return this.dailyMaintenanceWindow;
     }
 
-    /**
-     * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
-     */
     @InputImport(name="maintenanceExclusions", required=true)
     private final Map<String,String> maintenanceExclusions;
 
@@ -38,9 +29,6 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
         return this.maintenanceExclusions;
     }
 
-    /**
-     * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
-     */
     @InputImport(name="recurringWindow", required=true)
     private final RecurringTimeWindowResponse recurringWindow;
 

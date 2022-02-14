@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogConfigDataAccessOptionsResponse {
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String logMode;
 
     @OutputCustomType.Constructor({"logMode"})
@@ -19,9 +16,6 @@ public final class LogConfigDataAccessOptionsResponse {
         this.logMode = Objects.requireNonNull(logMode);
     }
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getLogMode() {
         return this.logMode;
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactArgs Empty = new ArtifactArgs();
 
-    /**
-     * Name of the blueprint artifact.
-     */
     @InputImport(name="artifactName")
     private final @Nullable Input<String> artifactName;
 
@@ -29,9 +23,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactName == null ? Input.empty() : this.artifactName;
     }
 
-    /**
-     * Name of the blueprint definition.
-     */
     @InputImport(name="blueprintName", required=true)
     private final Input<String> blueprintName;
 
@@ -39,9 +30,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
         return this.blueprintName;
     }
 
-    /**
-     * Specifies the kind of blueprint artifact.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,ArtifactKind>> kind;
 
@@ -49,9 +37,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     */
     @InputImport(name="resourceScope", required=true)
     private final Input<String> resourceScope;
 

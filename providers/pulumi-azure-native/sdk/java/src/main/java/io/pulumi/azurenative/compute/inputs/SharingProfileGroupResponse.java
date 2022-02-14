@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Group of the gallery sharing profile
- */
 public final class SharingProfileGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharingProfileGroupResponse Empty = new SharingProfileGroupResponse();
 
-    /**
-     * A list of subscription/tenant ids the gallery is aimed to be shared to.
-     */
     @InputImport(name="ids")
     private final @Nullable List<String> ids;
 
@@ -28,9 +22,6 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
         return this.ids == null ? List.of() : this.ids;
     }
 
-    /**
-     * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Application Configuration Service properties payload
- */
 public final class ConfigurationServicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationServicePropertiesResponse Empty = new ConfigurationServicePropertiesResponse();
 
-    /**
-     * Collection of instances belong to Application Configuration Service.
-     */
     @InputImport(name="instances", required=true)
     private final List<ConfigurationServiceInstanceResponse> instances;
 
@@ -31,9 +25,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
         return this.instances;
     }
 
-    /**
-     * State of the Application Configuration Service.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -41,9 +32,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
         return this.provisioningState;
     }
 
-    /**
-     * The requested resource quantity for required CPU and Memory.
-     */
     @InputImport(name="resourceRequests", required=true)
     private final ConfigurationServiceResourceRequestsResponse resourceRequests;
 
@@ -51,9 +39,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
         return this.resourceRequests;
     }
 
-    /**
-     * The settings of Application Configuration Service.
-     */
     @InputImport(name="settings")
     private final @Nullable ConfigurationServiceSettingsResponse settings;
 

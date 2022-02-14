@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A rule metric data source. The discriminator value is always RuleMetricDataSource in this case.
- */
 public final class RuleMetricDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleMetricDataSourceArgs Empty = new RuleMetricDataSourceArgs();
 
-    /**
-     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     */
     @InputImport(name="legacyResourceId")
     private final @Nullable Input<String> legacyResourceId;
 
@@ -27,9 +21,6 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
         return this.legacyResourceId == null ? Input.empty() : this.legacyResourceId;
     }
 
-    /**
-     * the name of the metric that defines what the rule monitors.
-     */
     @InputImport(name="metricName")
     private final @Nullable Input<String> metricName;
 
@@ -37,9 +28,6 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
         return this.metricName == null ? Input.empty() : this.metricName;
     }
 
-    /**
-     * the namespace of the metric.
-     */
     @InputImport(name="metricNamespace")
     private final @Nullable Input<String> metricNamespace;
 
@@ -47,10 +35,6 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
         return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
     }
 
-    /**
-     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -58,9 +42,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSour
         return this.odataType;
     }
 
-    /**
-     * the location of the resource.
-     */
     @InputImport(name="resourceLocation")
     private final @Nullable Input<String> resourceLocation;
 
@@ -68,9 +49,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSour
         return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
     }
 
-    /**
-     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     */
     @InputImport(name="resourceUri")
     private final @Nullable Input<String> resourceUri;
 

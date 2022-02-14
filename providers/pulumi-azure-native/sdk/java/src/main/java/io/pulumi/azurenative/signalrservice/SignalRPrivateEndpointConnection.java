@@ -16,192 +16,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A private endpoint connection to SignalR resource
-API Version: 2020-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### SignalRPrivateEndpointConnections_Update
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var signalRPrivateEndpointConnection = new AzureNative.SignalRService.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", new AzureNative.SignalRService.SignalRPrivateEndpointConnectionArgs
-        {
-            PrivateEndpoint = new AzureNative.SignalRService.Inputs.PrivateEndpointArgs
-            {
-                Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
-            },
-            PrivateEndpointConnectionName = "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-            PrivateLinkServiceConnectionState = new AzureNative.SignalRService.Inputs.PrivateLinkServiceConnectionStateArgs
-            {
-                ActionsRequired = "None",
-                Status = "Approved",
-            },
-            ResourceGroupName = "myResourceGroup",
-            ResourceName = "mySignalRService",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	signalrservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/signalrservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := signalrservice.NewSignalRPrivateEndpointConnection(ctx, "signalRPrivateEndpointConnection", &signalrservice.SignalRPrivateEndpointConnectionArgs{
-			PrivateEndpoint: &signalrservice.PrivateEndpointArgs{
-				Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint"),
-			},
-			PrivateEndpointConnectionName: pulumi.String("mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e"),
-			PrivateLinkServiceConnectionState: &signalrservice.PrivateLinkServiceConnectionStateArgs{
-				ActionsRequired: pulumi.String("None"),
-				Status:          pulumi.String("Approved"),
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ResourceName:      pulumi.String("mySignalRService"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const signalRPrivateEndpointConnection = new azure_native.signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection", {
-    privateEndpoint: {
-        id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
-    },
-    privateEndpointConnectionName: "mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-    privateLinkServiceConnectionState: {
-        actionsRequired: "None",
-        status: "Approved",
-    },
-    resourceGroupName: "myResourceGroup",
-    resourceName: "mySignalRService",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-signal_r_private_endpoint_connection = azure_native.signalrservice.SignalRPrivateEndpointConnection("signalRPrivateEndpointConnection",
-    private_endpoint=azure_native.signalrservice.PrivateEndpointArgs(
-        id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpoint",
-    ),
-    private_endpoint_connection_name="mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e",
-    private_link_service_connection_state=azure_native.signalrservice.PrivateLinkServiceConnectionStateArgs(
-        actions_required="None",
-        status="Approved",
-    ),
-    resource_group_name="myResourceGroup",
-    resource_name="mySignalRService")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:signalrservice:SignalRPrivateEndpointConnection mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService/privateEndpointConnections/mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e 
-```
-
- */
 @ResourceType(type="azure-native:signalrservice:SignalRPrivateEndpointConnection")
 public class SignalRPrivateEndpointConnection extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Private endpoint associated with the private endpoint connection
-     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
-    /**
-     * @return Private endpoint associated with the private endpoint connection
-     */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
-    /**
-     * Connection state
-     */
     @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
-    /**
-     * @return Connection state
-     */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
-    /**
-     * Provisioning state of the private endpoint connection
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the private endpoint connection
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SignalRPrivateEndpointConnection(String name, SignalRPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:signalrservice:SignalRPrivateEndpointConnection", name, args == null ? SignalRPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -225,14 +72,6 @@ public class SignalRPrivateEndpointConnection extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SignalRPrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SignalRPrivateEndpointConnection(name, id, options);
     }

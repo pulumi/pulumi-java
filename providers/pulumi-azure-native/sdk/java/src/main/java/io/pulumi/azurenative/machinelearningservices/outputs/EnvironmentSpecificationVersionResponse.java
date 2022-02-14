@@ -17,39 +17,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvironmentSpecificationVersionResponse {
-/**
- * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-<see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
- */
     private final @Nullable String condaFile;
-/**
- * The asset description text.
- */
     private final @Nullable String description;
-/**
- * Configuration settings for Docker.
- */
     private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
-/**
- * Environment specification is either user managed or curated by the Azure ML service
-<see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
- */
     private final String environmentSpecificationType;
-/**
- * Defines configuration specific to inference.
- */
     private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
-/**
- * If the name version are system generated (anonymous registration).
- */
     private final @Nullable Boolean isAnonymous;
-/**
- * The asset property dictionary.
- */
     private final @Nullable Map<String,String> properties;
-/**
- * Tag dictionary. Tags can be added, removed, and updated.
- */
     private final @Nullable Map<String,String> tags;
 
     @OutputCustomType.Constructor({"condaFile","description","docker","environmentSpecificationType","inferenceContainerProperties","isAnonymous","properties","tags"})
@@ -72,53 +46,27 @@ public final class EnvironmentSpecificationVersionResponse {
         this.tags = tags;
     }
 
-/**
- * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-<see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
- */
     public Optional<String> getCondaFile() {
         return Optional.ofNullable(this.condaFile);
     }
-/**
- * The asset description text.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Configuration settings for Docker.
- */
     public Optional<Either<DockerBuildResponse,DockerImageResponse>> getDocker() {
         return Optional.ofNullable(this.docker);
     }
-/**
- * Environment specification is either user managed or curated by the Azure ML service
-<see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
- */
     public String getEnvironmentSpecificationType() {
         return this.environmentSpecificationType;
     }
-/**
- * Defines configuration specific to inference.
- */
     public Optional<InferenceContainerPropertiesResponse> getInferenceContainerProperties() {
         return Optional.ofNullable(this.inferenceContainerProperties);
     }
-/**
- * If the name version are system generated (anonymous registration).
- */
     public Optional<Boolean> getIsAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
-/**
- * The asset property dictionary.
- */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * Tag dictionary. Tags can be added, removed, and updated.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1ReportPropertyResponse {
-/**
- * name of the property
- */
     private final String property;
-/**
- * property values
- */
     private final List<GoogleCloudApigeeV1AttributeResponse> value;
 
     @OutputCustomType.Constructor({"property","value"})
@@ -28,15 +22,9 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * name of the property
- */
     public String getProperty() {
         return this.property;
     }
-/**
- * property values
- */
     public List<GoogleCloudApigeeV1AttributeResponse> getValue() {
         return this.value;
     }

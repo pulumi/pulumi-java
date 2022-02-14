@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The JIT scheduling policies.
- */
 public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitSchedulingPolicyArgs Empty = new JitSchedulingPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="duration", required=true)
     private final Input<String> duration;
 
@@ -26,9 +20,6 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
         return this.duration;
     }
 
-    /**
-     * The start time of the request.
-     */
     @InputImport(name="startTime", required=true)
     private final Input<String> startTime;
 

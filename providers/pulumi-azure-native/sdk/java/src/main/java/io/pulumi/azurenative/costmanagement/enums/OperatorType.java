@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The operator to use for comparison.
- */
     @EnumType
     public enum OperatorType {
-/**
- * 
- */
         In("In"),
-/**
- * 
- */
         Contains("Contains");
 
         private final String value;

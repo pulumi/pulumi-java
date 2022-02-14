@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of an a image to use during Skaffold rendering.
- */
 public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildArtifactArgs Empty = new BuildArtifactArgs();
 
-    /**
-     * Image name in Skaffold configuration.
-     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -27,9 +21,6 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
         return this.image == null ? Input.empty() : this.image;
     }
 
-    /**
-     * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
-     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 

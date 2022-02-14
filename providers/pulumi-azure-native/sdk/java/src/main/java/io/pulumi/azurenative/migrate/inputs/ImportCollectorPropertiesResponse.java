@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ImportCollectorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImportCollectorPropertiesResponse Empty = new ImportCollectorPropertiesResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="createdTimestamp", required=true)
     private final String createdTimestamp;
 
@@ -27,9 +21,6 @@ public final class ImportCollectorPropertiesResponse extends io.pulumi.resources
         return this.createdTimestamp;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="discoverySiteId")
     private final @Nullable String discoverySiteId;
 
@@ -37,9 +28,6 @@ public final class ImportCollectorPropertiesResponse extends io.pulumi.resources
         return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="updatedTimestamp", required=true)
     private final String updatedTimestamp;
 

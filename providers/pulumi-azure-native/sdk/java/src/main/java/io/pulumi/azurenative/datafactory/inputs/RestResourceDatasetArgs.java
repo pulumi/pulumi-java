@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A Rest service dataset.
- */
 public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestResourceDatasetArgs Empty = new RestResourceDatasetArgs();
 
-    /**
-     * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Input<Object> additionalHeaders;
 
@@ -33,9 +27,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
     }
 
-    /**
-     * List of tags that can be used for describing the Dataset.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -43,9 +34,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Dataset description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -53,9 +41,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     */
     @InputImport(name="folder")
     private final @Nullable Input<DatasetFolderArgs> folder;
 
@@ -63,9 +48,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.folder == null ? Input.empty() : this.folder;
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -73,9 +55,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.linkedServiceName;
     }
 
-    /**
-     * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="paginationRules")
     private final @Nullable Input<Object> paginationRules;
 
@@ -83,9 +62,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.paginationRules == null ? Input.empty() : this.paginationRules;
     }
 
-    /**
-     * Parameters for dataset.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -93,9 +69,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="relativeUrl")
     private final @Nullable Input<Object> relativeUrl;
 
@@ -103,9 +76,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.relativeUrl == null ? Input.empty() : this.relativeUrl;
     }
 
-    /**
-     * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="requestBody")
     private final @Nullable Input<Object> requestBody;
 
@@ -113,9 +83,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.requestBody == null ? Input.empty() : this.requestBody;
     }
 
-    /**
-     * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="requestMethod")
     private final @Nullable Input<Object> requestMethod;
 
@@ -123,9 +90,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
     }
 
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 
@@ -133,9 +97,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.schema == null ? Input.empty() : this.schema;
     }
 
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     */
     @InputImport(name="structure")
     private final @Nullable Input<Object> structure;
 
@@ -143,10 +104,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
         return this.structure == null ? Input.empty() : this.structure;
     }
 
-    /**
-     * Type of dataset.
-Expected value is 'RestResource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

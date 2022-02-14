@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     @EnumType
     public enum SignalRRequestType {
-/**
- * 
- */
         ClientConnection("ClientConnection"),
-/**
- * 
- */
         ServerConnection("ServerConnection"),
-/**
- * 
- */
         RESTAPI("RESTAPI"),
-/**
- * 
- */
         Trace("Trace");
 
         private final String value;

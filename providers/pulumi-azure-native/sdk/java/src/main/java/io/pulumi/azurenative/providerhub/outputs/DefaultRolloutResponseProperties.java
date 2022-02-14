@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefaultRolloutResponseProperties {
-/**
- * 
- */
     private final @Nullable String provisioningState;
-/**
- * 
- */
     private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
-/**
- * 
- */
     private final @Nullable DefaultRolloutPropertiesResponseStatus status;
 
     @OutputCustomType.Constructor({"provisioningState","specification","status"})
@@ -36,21 +27,12 @@ public final class DefaultRolloutResponseProperties {
         this.status = status;
     }
 
-/**
- * 
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * 
- */
     public Optional<DefaultRolloutPropertiesResponseSpecification> getSpecification() {
         return Optional.ofNullable(this.specification);
     }
-/**
- * 
- */
     public Optional<DefaultRolloutPropertiesResponseStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

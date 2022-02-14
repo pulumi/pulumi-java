@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataPoolArgs Empty = new DataPoolArgs();
 
-    /**
-     * The name of the ADP account
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the Data Pool
-     */
     @InputImport(name="dataPoolName")
     private final @Nullable Input<String> dataPoolName;
 
@@ -39,9 +30,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataPoolName == null ? Input.empty() : this.dataPoolName;
     }
 
-    /**
-     * Gets or sets the collection of locations where Data Pool resources should be created
-     */
     @InputImport(name="locations", required=true)
     private final Input<List<DataPoolLocationArgs>> locations;
 
@@ -49,9 +37,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the resource properties.
- */
 public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkProfileResponse Empty = new NetworkProfileResponse();
 
-    /**
-     * Gets or sets the list of network interfaces associated with the virtual machine.
-     */
     @InputImport(name="networkInterfaces")
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 

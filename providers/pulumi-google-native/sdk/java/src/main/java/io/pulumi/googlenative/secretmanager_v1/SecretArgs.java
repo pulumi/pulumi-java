@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 
-    /**
-     * Optional. Etag of the currently stored Secret.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -32,9 +26,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
-     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 
@@ -42,9 +33,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
-    /**
-     * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -52,9 +40,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -62,9 +47,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
-     */
     @InputImport(name="replication", required=true)
     private final Input<ReplicationArgs> replication;
 
@@ -72,9 +54,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.replication;
     }
 
-    /**
-     * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
-     */
     @InputImport(name="rotation")
     private final @Nullable Input<RotationArgs> rotation;
 
@@ -82,9 +61,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.rotation == null ? Input.empty() : this.rotation;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="secretId", required=true)
     private final Input<String> secretId;
 
@@ -92,9 +68,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretId;
     }
 
-    /**
-     * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
-     */
     @InputImport(name="topics")
     private final @Nullable Input<List<TopicArgs>> topics;
 
@@ -102,9 +75,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.topics == null ? Input.empty() : this.topics;
     }
 
-    /**
-     * Input only. The TTL for the Secret.
-     */
     @InputImport(name="ttl")
     private final @Nullable Input<String> ttl;
 

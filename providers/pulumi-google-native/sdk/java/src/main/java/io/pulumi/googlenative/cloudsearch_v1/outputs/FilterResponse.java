@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FilterResponse {
-/**
- * 
- */
     private final CompositeFilterResponse compositeFilter;
-/**
- * 
- */
     private final ValueFilterResponse valueFilter;
 
     @OutputCustomType.Constructor({"compositeFilter","valueFilter"})
@@ -27,15 +21,9 @@ public final class FilterResponse {
         this.valueFilter = Objects.requireNonNull(valueFilter);
     }
 
-/**
- * 
- */
     public CompositeFilterResponse getCompositeFilter() {
         return this.compositeFilter;
     }
-/**
- * 
- */
     public ValueFilterResponse getValueFilter() {
         return this.valueFilter;
     }

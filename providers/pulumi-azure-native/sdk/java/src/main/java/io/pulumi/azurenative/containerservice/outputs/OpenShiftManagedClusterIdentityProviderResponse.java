@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenShiftManagedClusterIdentityProviderResponse {
-/**
- * Name of the provider.
- */
     private final @Nullable String name;
-/**
- * Configuration of the provider.
- */
     private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
 
     @OutputCustomType.Constructor({"name","provider"})
@@ -29,15 +23,9 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
         this.provider = provider;
     }
 
-/**
- * Name of the provider.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Configuration of the provider.
- */
     public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> getProvider() {
         return Optional.ofNullable(this.provider);
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the load balancer.
- */
     @EnumType
     public enum LoadBalancerType {
-/**
- * 
- */
         BreadthFirst("BreadthFirst"),
-/**
- * 
- */
         DepthFirst("DepthFirst"),
-/**
- * 
- */
         Persistent("Persistent");
 
         private final String value;

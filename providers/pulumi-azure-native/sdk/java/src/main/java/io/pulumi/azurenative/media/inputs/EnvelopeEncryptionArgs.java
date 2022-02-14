@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class for EnvelopeEncryption encryption scheme
- */
 public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvelopeEncryptionArgs Empty = new EnvelopeEncryptionArgs();
 
-    /**
-     * Representing which tracks should not be encrypted
-     */
     @InputImport(name="clearTracks")
     private final @Nullable Input<List<TrackSelectionArgs>> clearTracks;
 
@@ -31,9 +25,6 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
         return this.clearTracks == null ? Input.empty() : this.clearTracks;
     }
 
-    /**
-     * Representing default content key for each encryption scheme and separate content keys for specific tracks
-     */
     @InputImport(name="contentKeys")
     private final @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
 
@@ -41,9 +32,6 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
         return this.contentKeys == null ? Input.empty() : this.contentKeys;
     }
 
-    /**
-     * Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
-     */
     @InputImport(name="customKeyAcquisitionUrlTemplate")
     private final @Nullable Input<String> customKeyAcquisitionUrlTemplate;
 
@@ -51,9 +39,6 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
         return this.customKeyAcquisitionUrlTemplate == null ? Input.empty() : this.customKeyAcquisitionUrlTemplate;
     }
 
-    /**
-     * Representing supported protocols
-     */
     @InputImport(name="enabledProtocols")
     private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
 

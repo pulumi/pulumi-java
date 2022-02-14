@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KikChannelPropertiesResponse {
-/**
- * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
- */
     private final @Nullable String apiKey;
-/**
- * Whether this channel is enabled for the bot
- */
     private final Boolean isEnabled;
-/**
- * Whether this channel is validated for the bot
- */
     private final @Nullable Boolean isValidated;
-/**
- * The Kik user name
- */
     private final String userName;
 
     @OutputCustomType.Constructor({"apiKey","isEnabled","isValidated","userName"})
@@ -41,27 +29,15 @@ public final class KikChannelPropertiesResponse {
         this.userName = Objects.requireNonNull(userName);
     }
 
-/**
- * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
- */
     public Optional<String> getApiKey() {
         return Optional.ofNullable(this.apiKey);
     }
-/**
- * Whether this channel is enabled for the bot
- */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
-/**
- * Whether this channel is validated for the bot
- */
     public Optional<Boolean> getIsValidated() {
         return Optional.ofNullable(this.isValidated);
     }
-/**
- * The Kik user name
- */
     public String getUserName() {
         return this.userName;
     }

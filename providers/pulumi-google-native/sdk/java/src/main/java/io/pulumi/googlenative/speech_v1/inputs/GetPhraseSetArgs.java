@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetPhraseSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPhraseSetArgs Empty = new GetPhraseSetArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetPhraseSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="phraseSetId", required=true)
     private final String phraseSetId;
 
@@ -37,9 +28,6 @@ public final class GetPhraseSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.phraseSetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

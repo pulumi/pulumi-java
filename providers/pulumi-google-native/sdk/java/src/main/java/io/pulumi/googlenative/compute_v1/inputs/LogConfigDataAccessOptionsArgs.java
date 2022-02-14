@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
 public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogConfigDataAccessOptionsArgs Empty = new LogConfigDataAccessOptionsArgs();
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="logMode")
     private final @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
 

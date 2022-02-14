@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings of the login flow of the custom Open ID Connect provider.
- */
 public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenIdConnectLoginArgs Empty = new OpenIdConnectLoginArgs();
 
-    /**
-     * The name of the claim that contains the users name.
-     */
     @InputImport(name="nameClaimType")
     private final @Nullable Input<String> nameClaimType;
 
@@ -28,9 +22,6 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
         return this.nameClaimType == null ? Input.empty() : this.nameClaimType;
     }
 
-    /**
-     * A list of the scopes that should be requested while authenticating.
-     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<String>> scopes;
 

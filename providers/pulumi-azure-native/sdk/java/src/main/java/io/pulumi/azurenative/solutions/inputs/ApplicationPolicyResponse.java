@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Managed application policy.
- */
 public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationPolicyResponse Empty = new ApplicationPolicyResponse();
 
-    /**
-     * The policy name
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The policy parameters.
-     */
     @InputImport(name="parameters")
     private final @Nullable String parameters;
 
@@ -37,9 +28,6 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
     }
 
-    /**
-     * The policy definition Id.
-     */
     @InputImport(name="policyDefinitionId")
     private final @Nullable String policyDefinitionId;
 

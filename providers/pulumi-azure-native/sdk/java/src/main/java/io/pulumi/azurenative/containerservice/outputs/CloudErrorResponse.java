@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudErrorResponse {
-/**
- * Details about the error.
- */
     private final @Nullable CloudErrorBodyResponse error;
 
     @OutputCustomType.Constructor({"error"})
@@ -21,9 +18,6 @@ public final class CloudErrorResponse {
         this.error = error;
     }
 
-/**
- * Details about the error.
- */
     public Optional<CloudErrorBodyResponse> getError() {
         return Optional.ofNullable(this.error);
     }

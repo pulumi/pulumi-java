@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTriggerEventSubscriptionStatus {
-/**
- * Defines the response of a trigger subscription operation.
-API Version: 2018-06-01.
- *
- * Defines the response of a trigger subscription operation.
- */
     public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> invokeAsync(GetTriggerEventSubscriptionStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getTriggerEventSubscriptionStatus", TypeShape.of(GetTriggerEventSubscriptionStatusResult.class), args == null ? GetTriggerEventSubscriptionStatusArgs.Empty : args, Utilities.withVersion(options));
     }

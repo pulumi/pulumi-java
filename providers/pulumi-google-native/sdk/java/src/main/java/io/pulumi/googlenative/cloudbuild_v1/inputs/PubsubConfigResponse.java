@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published.
- */
 public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PubsubConfigResponse Empty = new PubsubConfigResponse();
 
-    /**
-     * Service account that will make the push request.
-     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final String serviceAccountEmail;
 
@@ -25,9 +19,6 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceAccountEmail;
     }
 
-    /**
-     * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -35,9 +26,6 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.state;
     }
 
-    /**
-     * Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
-     */
     @InputImport(name="subscription", required=true)
     private final String subscription;
 
@@ -45,9 +33,6 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.subscription;
     }
 
-    /**
-     * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
-     */
     @InputImport(name="topic", required=true)
     private final String topic;
 

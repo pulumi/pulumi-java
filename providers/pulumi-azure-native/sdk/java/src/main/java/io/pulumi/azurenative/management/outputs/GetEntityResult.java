@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEntityResult {
-/**
- * Total count of records that match the filter
- */
     private final Integer count;
-/**
- * The URL to use for getting the next set of results.
- */
     private final String nextLink;
-/**
- * The list of entities.
- */
     private final @Nullable List<EntityInfoResponse> value;
 
     @OutputCustomType.Constructor({"count","nextLink","value"})
@@ -36,21 +27,12 @@ public final class GetEntityResult {
         this.value = value;
     }
 
-/**
- * Total count of records that match the filter
- */
     public Integer getCount() {
         return this.count;
     }
-/**
- * The URL to use for getting the next set of results.
- */
     public String getNextLink() {
         return this.nextLink;
     }
-/**
- * The list of entities.
- */
     public List<EntityInfoResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

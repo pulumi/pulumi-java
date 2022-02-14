@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMoveResourceArgs Empty = new GetMoveResourceArgs();
 
-    /**
-     * The Move Collection Name.
-     */
     @InputImport(name="moveCollectionName", required=true)
     private final String moveCollectionName;
 
@@ -25,9 +19,6 @@ public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.moveCollectionName;
     }
 
-    /**
-     * The Move Resource Name.
-     */
     @InputImport(name="moveResourceName", required=true)
     private final String moveResourceName;
 
@@ -35,9 +26,6 @@ public final class GetMoveResourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.moveResourceName;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

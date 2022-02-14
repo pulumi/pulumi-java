@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of single sign on Secret Type.
- */
     @EnumType
     public enum SSOSecretType {
-/**
- * 
- */
         SharedKey("SharedKey"),
-/**
- * 
- */
         Certificate("Certificate"),
-/**
- * 
- */
         SharedKeyInKeyVault("SharedKeyInKeyVault"),
-/**
- * 
- */
         CertificateInKeyVault("CertificateInKeyVault");
 
         private final String value;

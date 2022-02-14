@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetScopeAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetScopeAssignmentArgs Empty = new GetScopeAssignmentArgs();
 
-    /**
-     * The base resource of the scope assignment.
-     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -25,9 +19,6 @@ public final class GetScopeAssignmentArgs extends io.pulumi.resources.InvokeArgs
         return this.scope;
     }
 
-    /**
-     * The name of the scope assignment to get.
-     */
     @InputImport(name="scopeAssignmentName", required=true)
     private final String scopeAssignmentName;
 

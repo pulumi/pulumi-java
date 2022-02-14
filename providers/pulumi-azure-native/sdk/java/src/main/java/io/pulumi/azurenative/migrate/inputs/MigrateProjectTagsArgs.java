@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Gets or sets the tags.
- */
 public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateProjectTagsArgs Empty = new MigrateProjectTagsArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="additionalProperties")
     private final @Nullable Input<String> additionalProperties;
 

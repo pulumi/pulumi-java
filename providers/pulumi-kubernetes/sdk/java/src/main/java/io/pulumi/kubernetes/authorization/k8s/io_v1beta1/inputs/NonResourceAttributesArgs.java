@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface
- */
 public final class NonResourceAttributesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NonResourceAttributesArgs Empty = new NonResourceAttributesArgs();
 
-    /**
-     * Path is the URL path of the request
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -27,9 +21,6 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
         return this.path == null ? Input.empty() : this.path;
     }
 
-    /**
-     * Verb is the standard HTTP verb
-     */
     @InputImport(name="verb")
     private final @Nullable Input<String> verb;
 

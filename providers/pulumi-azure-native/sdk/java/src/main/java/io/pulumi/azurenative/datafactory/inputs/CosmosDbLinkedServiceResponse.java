@@ -19,16 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Microsoft Azure Cosmos Database (CosmosDB) linked service.
- */
 public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CosmosDbLinkedServiceResponse Empty = new CosmosDbLinkedServiceResponse();
 
-    /**
-     * The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="accountEndpoint")
     private final @Nullable Object accountEndpoint;
 
@@ -36,9 +30,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.accountEndpoint == null ? Optional.empty() : Optional.ofNullable(this.accountEndpoint);
     }
 
-    /**
-     * The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="accountKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
 
@@ -46,9 +37,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.accountKey == null ? null : this.accountKey;
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -56,9 +44,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="azureCloudType")
     private final @Nullable Object azureCloudType;
 
@@ -66,9 +51,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -76,9 +58,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="connectionMode")
     private final @Nullable String connectionMode;
 
@@ -86,9 +65,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectionMode == null ? Optional.empty() : Optional.ofNullable(this.connectionMode);
     }
 
-    /**
-     * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString")
     private final @Nullable Object connectionString;
 
@@ -96,9 +72,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -106,9 +79,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     * The name of the database. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="database")
     private final @Nullable Object database;
 
@@ -116,9 +86,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -126,9 +93,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -136,9 +100,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -146,9 +107,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     */
     @InputImport(name="servicePrincipalCredential")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
@@ -156,9 +114,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
     }
 
-    /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalCredentialType")
     private final @Nullable String servicePrincipalCredentialType;
 
@@ -166,9 +121,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
-    /**
-     * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -176,9 +128,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenant")
     private final @Nullable Object tenant;
 
@@ -186,10 +135,6 @@ public final class CosmosDbLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'CosmosDb'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The information of AAD security group.
- */
 public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientGroupInfoArgs Empty = new ClientGroupInfoArgs();
 
-    /**
-     * The AAD security group id.
-     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -27,9 +21,6 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
-    /**
-     * The AAD security group name.
-     */
     @InputImport(name="groupName")
     private final @Nullable Input<String> groupName;
 

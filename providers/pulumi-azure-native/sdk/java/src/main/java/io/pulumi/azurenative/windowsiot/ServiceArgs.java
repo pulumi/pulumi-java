@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
-    /**
-     * Windows IoT Device Service OEM AAD domain
-     */
     @InputImport(name="adminDomainName")
     private final @Nullable Input<String> adminDomainName;
 
@@ -29,9 +23,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.adminDomainName == null ? Input.empty() : this.adminDomainName;
     }
 
-    /**
-     * Windows IoT Device Service ODM AAD domain
-     */
     @InputImport(name="billingDomainName")
     private final @Nullable Input<String> billingDomainName;
 
@@ -39,9 +30,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingDomainName == null ? Input.empty() : this.billingDomainName;
     }
 
-    /**
-     * The name of the Windows IoT Device Service.
-     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -49,9 +37,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
-    /**
-     * The Azure Region where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Windows IoT Device Service notes.
-     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -69,9 +51,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.notes == null ? Input.empty() : this.notes;
     }
 
-    /**
-     * Windows IoT Device Service device allocation,
-     */
     @InputImport(name="quantity")
     private final @Nullable Input<Double> quantity;
 
@@ -79,9 +58,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.quantity == null ? Input.empty() : this.quantity;
     }
 
-    /**
-     * The name of the resource group that contains the Windows IoT Device Service.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -89,9 +65,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobStatisticsReservationUsageItemResponse {
-/**
- * Reservation name or "unreserved" for on-demand resources usage.
- */
     private final String name;
-/**
- * Slot-milliseconds the job spent in the given reservation.
- */
     private final String slotMs;
 
     @OutputCustomType.Constructor({"name","slotMs"})
@@ -26,15 +20,9 @@ public final class JobStatisticsReservationUsageItemResponse {
         this.slotMs = Objects.requireNonNull(slotMs);
     }
 
-/**
- * Reservation name or "unreserved" for on-demand resources usage.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Slot-milliseconds the job spent in the given reservation.
- */
     public String getSlotMs() {
         return this.slotMs;
     }

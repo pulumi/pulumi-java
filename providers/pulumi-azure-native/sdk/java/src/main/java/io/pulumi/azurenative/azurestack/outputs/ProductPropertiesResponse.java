@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProductPropertiesResponse {
-/**
- * The version.
- */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"version"})
@@ -21,9 +18,6 @@ public final class ProductPropertiesResponse {
         this.version = version;
     }
 
-/**
- * The version.
- */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

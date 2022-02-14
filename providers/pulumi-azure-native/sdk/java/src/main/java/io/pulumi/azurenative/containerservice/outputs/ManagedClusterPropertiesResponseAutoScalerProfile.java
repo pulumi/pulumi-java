@@ -11,73 +11,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterPropertiesResponseAutoScalerProfile {
-/**
- * 
- */
     private final @Nullable String balanceSimilarNodeGroups;
-/**
- * 
- */
     private final @Nullable String expander;
-/**
- * 
- */
     private final @Nullable String maxEmptyBulkDelete;
-/**
- * 
- */
     private final @Nullable String maxGracefulTerminationSec;
-/**
- * 
- */
     private final @Nullable String maxNodeProvisionTime;
-/**
- * 
- */
     private final @Nullable String maxTotalUnreadyPercentage;
-/**
- * 
- */
     private final @Nullable String newPodScaleUpDelay;
-/**
- * 
- */
     private final @Nullable String okTotalUnreadyCount;
-/**
- * 
- */
     private final @Nullable String scaleDownDelayAfterAdd;
-/**
- * 
- */
     private final @Nullable String scaleDownDelayAfterDelete;
-/**
- * 
- */
     private final @Nullable String scaleDownDelayAfterFailure;
-/**
- * 
- */
     private final @Nullable String scaleDownUnneededTime;
-/**
- * 
- */
     private final @Nullable String scaleDownUnreadyTime;
-/**
- * 
- */
     private final @Nullable String scaleDownUtilizationThreshold;
-/**
- * 
- */
     private final @Nullable String scanInterval;
-/**
- * 
- */
     private final @Nullable String skipNodesWithLocalStorage;
-/**
- * 
- */
     private final @Nullable String skipNodesWithSystemPods;
 
     @OutputCustomType.Constructor({"balanceSimilarNodeGroups","expander","maxEmptyBulkDelete","maxGracefulTerminationSec","maxNodeProvisionTime","maxTotalUnreadyPercentage","newPodScaleUpDelay","okTotalUnreadyCount","scaleDownDelayAfterAdd","scaleDownDelayAfterDelete","scaleDownDelayAfterFailure","scaleDownUnneededTime","scaleDownUnreadyTime","scaleDownUtilizationThreshold","scanInterval","skipNodesWithLocalStorage","skipNodesWithSystemPods"})
@@ -118,105 +67,54 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile {
         this.skipNodesWithSystemPods = skipNodesWithSystemPods;
     }
 
-/**
- * 
- */
     public Optional<String> getBalanceSimilarNodeGroups() {
         return Optional.ofNullable(this.balanceSimilarNodeGroups);
     }
-/**
- * 
- */
     public Optional<String> getExpander() {
         return Optional.ofNullable(this.expander);
     }
-/**
- * 
- */
     public Optional<String> getMaxEmptyBulkDelete() {
         return Optional.ofNullable(this.maxEmptyBulkDelete);
     }
-/**
- * 
- */
     public Optional<String> getMaxGracefulTerminationSec() {
         return Optional.ofNullable(this.maxGracefulTerminationSec);
     }
-/**
- * 
- */
     public Optional<String> getMaxNodeProvisionTime() {
         return Optional.ofNullable(this.maxNodeProvisionTime);
     }
-/**
- * 
- */
     public Optional<String> getMaxTotalUnreadyPercentage() {
         return Optional.ofNullable(this.maxTotalUnreadyPercentage);
     }
-/**
- * 
- */
     public Optional<String> getNewPodScaleUpDelay() {
         return Optional.ofNullable(this.newPodScaleUpDelay);
     }
-/**
- * 
- */
     public Optional<String> getOkTotalUnreadyCount() {
         return Optional.ofNullable(this.okTotalUnreadyCount);
     }
-/**
- * 
- */
     public Optional<String> getScaleDownDelayAfterAdd() {
         return Optional.ofNullable(this.scaleDownDelayAfterAdd);
     }
-/**
- * 
- */
     public Optional<String> getScaleDownDelayAfterDelete() {
         return Optional.ofNullable(this.scaleDownDelayAfterDelete);
     }
-/**
- * 
- */
     public Optional<String> getScaleDownDelayAfterFailure() {
         return Optional.ofNullable(this.scaleDownDelayAfterFailure);
     }
-/**
- * 
- */
     public Optional<String> getScaleDownUnneededTime() {
         return Optional.ofNullable(this.scaleDownUnneededTime);
     }
-/**
- * 
- */
     public Optional<String> getScaleDownUnreadyTime() {
         return Optional.ofNullable(this.scaleDownUnreadyTime);
     }
-/**
- * 
- */
     public Optional<String> getScaleDownUtilizationThreshold() {
         return Optional.ofNullable(this.scaleDownUtilizationThreshold);
     }
-/**
- * 
- */
     public Optional<String> getScanInterval() {
         return Optional.ofNullable(this.scanInterval);
     }
-/**
- * 
- */
     public Optional<String> getSkipNodesWithLocalStorage() {
         return Optional.ofNullable(this.skipNodesWithLocalStorage);
     }
-/**
- * 
- */
     public Optional<String> getSkipNodesWithSystemPods() {
         return Optional.ofNullable(this.skipNodesWithSystemPods);
     }

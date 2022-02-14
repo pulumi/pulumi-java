@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App container scaling rule.
- */
 public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleRuleArgs Empty = new ScaleRuleArgs();
 
-    /**
-     * Azure Queue based scaling.
-     */
     @InputImport(name="azureQueue")
     private final @Nullable Input<QueueScaleRuleArgs> azureQueue;
 
@@ -30,9 +24,6 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureQueue == null ? Input.empty() : this.azureQueue;
     }
 
-    /**
-     * Custom scale rule.
-     */
     @InputImport(name="custom")
     private final @Nullable Input<CustomScaleRuleArgs> custom;
 
@@ -40,9 +31,6 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.custom == null ? Input.empty() : this.custom;
     }
 
-    /**
-     * HTTP requests based scaling.
-     */
     @InputImport(name="http")
     private final @Nullable Input<HttpScaleRuleArgs> http;
 
@@ -50,9 +38,6 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.http == null ? Input.empty() : this.http;
     }
 
-    /**
-     * Scale Rule Name
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

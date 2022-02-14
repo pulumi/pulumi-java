@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CIFSMountConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CIFSMountConfigurationArgs Empty = new CIFSMountConfigurationArgs();
 
-    /**
-     * These are 'net use' options in Windows and 'mount' options in Linux.
-     */
     @InputImport(name="mountOptions")
     private final @Nullable Input<String> mountOptions;
 
@@ -27,9 +21,6 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -37,9 +28,6 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
         return this.password;
     }
 
-    /**
-     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-     */
     @InputImport(name="relativeMountPath", required=true)
     private final Input<String> relativeMountPath;
 
@@ -47,9 +35,6 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
         return this.relativeMountPath;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 
@@ -57,9 +42,6 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
         return this.source;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

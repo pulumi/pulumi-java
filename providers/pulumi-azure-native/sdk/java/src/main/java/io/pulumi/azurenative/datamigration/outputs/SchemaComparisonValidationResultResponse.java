@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SchemaComparisonValidationResultResponse {
-/**
- * List of schema differences between the source and target databases
- */
     private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
-/**
- * Count of source database objects
- */
     private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
-/**
- * Count of target database objects
- */
     private final @Nullable Map<String,Double> targetDatabaseObjectCount;
-/**
- * List of errors that happened while performing schema compare validation
- */
     private final ValidationErrorResponse validationErrors;
 
     @OutputCustomType.Constructor({"schemaDifferences","sourceDatabaseObjectCount","targetDatabaseObjectCount","validationErrors"})
@@ -43,27 +31,15 @@ public final class SchemaComparisonValidationResultResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
-/**
- * List of schema differences between the source and target databases
- */
     public SchemaComparisonValidationResultTypeResponse getSchemaDifferences() {
         return this.schemaDifferences;
     }
-/**
- * Count of source database objects
- */
     public Map<String,Double> getSourceDatabaseObjectCount() {
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
     }
-/**
- * Count of target database objects
- */
     public Map<String,Double> getTargetDatabaseObjectCount() {
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
     }
-/**
- * List of errors that happened while performing schema compare validation
- */
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
     }

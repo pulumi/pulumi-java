@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SecurityPolicyAssociationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyAssociationResponse Empty = new SecurityPolicyAssociationResponse();
 
-    /**
-     * The resource that the security policy is attached to.
-     */
     @InputImport(name="attachmentId", required=true)
     private final String attachmentId;
 
@@ -25,9 +19,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
         return this.attachmentId;
     }
 
-    /**
-     * The display name of the security policy of the association.
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -35,9 +26,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
         return this.displayName;
     }
 
-    /**
-     * The name for an association.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -45,9 +33,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
         return this.name;
     }
 
-    /**
-     * The security policy ID of the association.
-     */
     @InputImport(name="securityPolicyId", required=true)
     private final String securityPolicyId;
 

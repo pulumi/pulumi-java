@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class Int64RangeMatchResponse {
-/**
- * The end of the range (exclusive) in signed long integer format.
- */
     private final String rangeEnd;
-/**
- * The start of the range (inclusive) in signed long integer format.
- */
     private final String rangeStart;
 
     @OutputCustomType.Constructor({"rangeEnd","rangeStart"})
@@ -26,15 +20,9 @@ public final class Int64RangeMatchResponse {
         this.rangeStart = Objects.requireNonNull(rangeStart);
     }
 
-/**
- * The end of the range (exclusive) in signed long integer format.
- */
     public String getRangeEnd() {
         return this.rangeEnd;
     }
-/**
- * The start of the range (inclusive) in signed long integer format.
- */
     public String getRangeStart() {
         return this.rangeStart;
     }

@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedInstanceArgs Empty = new ManagedInstanceArgs();
 
-    /**
-     * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
-     */
     @InputImport(name="administratorLogin")
     private final @Nullable Input<String> administratorLogin;
 
@@ -38,9 +32,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.administratorLogin == null ? Input.empty() : this.administratorLogin;
     }
 
-    /**
-     * The administrator login password (required for managed instance creation).
-     */
     @InputImport(name="administratorLoginPassword")
     private final @Nullable Input<String> administratorLoginPassword;
 
@@ -48,9 +39,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.administratorLoginPassword == null ? Input.empty() : this.administratorLoginPassword;
     }
 
-    /**
-     * The Azure Active Directory administrator of the server.
-     */
     @InputImport(name="administrators")
     private final @Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators;
 
@@ -58,9 +46,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.administrators == null ? Input.empty() : this.administrators;
     }
 
-    /**
-     * Collation of the managed instance.
-     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -68,9 +53,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.collation == null ? Input.empty() : this.collation;
     }
 
-    /**
-     * The resource id of another managed instance whose DNS zone this managed instance will share after creation.
-     */
     @InputImport(name="dnsZonePartner")
     private final @Nullable Input<String> dnsZonePartner;
 
@@ -78,9 +60,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.dnsZonePartner == null ? Input.empty() : this.dnsZonePartner;
     }
 
-    /**
-     * The Azure Active Directory identity of the managed instance.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -88,9 +67,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The Id of the instance pool this managed server belongs to.
-     */
     @InputImport(name="instancePoolId")
     private final @Nullable Input<String> instancePoolId;
 
@@ -98,9 +74,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.instancePoolId == null ? Input.empty() : this.instancePoolId;
     }
 
-    /**
-     * A CMK URI of the key to use for encryption.
-     */
     @InputImport(name="keyId")
     private final @Nullable Input<String> keyId;
 
@@ -108,9 +81,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.keyId == null ? Input.empty() : this.keyId;
     }
 
-    /**
-     * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
-     */
     @InputImport(name="licenseType")
     private final @Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType;
 
@@ -118,9 +88,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -128,9 +95,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Specifies maintenance configuration id to apply to this managed instance.
-     */
     @InputImport(name="maintenanceConfigurationId")
     private final @Nullable Input<String> maintenanceConfigurationId;
 
@@ -138,13 +102,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
     }
 
-    /**
-     * Specifies the mode of database creation.
-
-Default: Regular instance creation.
-
-Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
-     */
     @InputImport(name="managedInstanceCreateMode")
     private final @Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
 
@@ -152,9 +109,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.managedInstanceCreateMode == null ? Input.empty() : this.managedInstanceCreateMode;
     }
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName")
     private final @Nullable Input<String> managedInstanceName;
 
@@ -162,9 +116,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.managedInstanceName == null ? Input.empty() : this.managedInstanceName;
     }
 
-    /**
-     * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
-     */
     @InputImport(name="minimalTlsVersion")
     private final @Nullable Input<String> minimalTlsVersion;
 
@@ -172,9 +123,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
     }
 
-    /**
-     * The resource id of a user assigned identity to be used by default.
-     */
     @InputImport(name="primaryUserAssignedIdentityId")
     private final @Nullable Input<String> primaryUserAssignedIdentityId;
 
@@ -182,9 +130,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.primaryUserAssignedIdentityId == null ? Input.empty() : this.primaryUserAssignedIdentityId;
     }
 
-    /**
-     * Connection type used for connecting to the instance.
-     */
     @InputImport(name="proxyOverride")
     private final @Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
 
@@ -192,9 +137,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.proxyOverride == null ? Input.empty() : this.proxyOverride;
     }
 
-    /**
-     * Whether or not the public data endpoint is enabled.
-     */
     @InputImport(name="publicDataEndpointEnabled")
     private final @Nullable Input<Boolean> publicDataEndpointEnabled;
 
@@ -202,9 +144,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.publicDataEndpointEnabled == null ? Input.empty() : this.publicDataEndpointEnabled;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -212,9 +151,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.resourceGroupName;
     }
 
-    /**
-     * Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-     */
     @InputImport(name="restorePointInTime")
     private final @Nullable Input<String> restorePointInTime;
 
@@ -222,9 +158,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
     }
 
-    /**
-     * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -232,9 +165,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The resource identifier of the source managed instance associated with create operation of this instance.
-     */
     @InputImport(name="sourceManagedInstanceId")
     private final @Nullable Input<String> sourceManagedInstanceId;
 
@@ -242,9 +172,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.sourceManagedInstanceId == null ? Input.empty() : this.sourceManagedInstanceId;
     }
 
-    /**
-     * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
-     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
@@ -252,9 +179,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
     }
 
-    /**
-     * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
-     */
     @InputImport(name="storageSizeInGB")
     private final @Nullable Input<Integer> storageSizeInGB;
 
@@ -262,9 +186,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.storageSizeInGB == null ? Input.empty() : this.storageSizeInGB;
     }
 
-    /**
-     * Subnet resource ID for the managed instance.
-     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -272,9 +193,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -282,14 +200,6 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Id of the timezone. Allowed values are timezones supported by Windows.
-Windows keeps details on supported timezones, including the id, in registry under
-KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
-You can get those registry values via SQL Server by querying SELECT name AS timezone_id FROM sys.time_zone_info.
-List of Ids can also be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
-An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
-     */
     @InputImport(name="timezoneId")
     private final @Nullable Input<String> timezoneId;
 
@@ -297,9 +207,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
         return this.timezoneId == null ? Input.empty() : this.timezoneId;
     }
 
-    /**
-     * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
-     */
     @InputImport(name="vCores")
     private final @Nullable Input<Integer> vCores;
 
@@ -307,9 +214,6 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
         return this.vCores == null ? Input.empty() : this.vCores;
     }
 
-    /**
-     * Whether or not the multi-az is enabled.
-     */
     @InputImport(name="zoneRedundant")
     private final @Nullable Input<Boolean> zoneRedundant;
 

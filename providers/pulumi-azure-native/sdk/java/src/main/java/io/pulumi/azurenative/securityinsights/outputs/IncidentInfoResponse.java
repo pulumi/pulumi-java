@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IncidentInfoResponse {
-/**
- * Incident Id
- */
     private final @Nullable String incidentId;
-/**
- * Relation Name
- */
     private final @Nullable String relationName;
-/**
- * The severity of the incident
- */
     private final @Nullable String severity;
-/**
- * The title of the incident
- */
     private final @Nullable String title;
 
     @OutputCustomType.Constructor({"incidentId","relationName","severity","title"})
@@ -40,27 +28,15 @@ public final class IncidentInfoResponse {
         this.title = title;
     }
 
-/**
- * Incident Id
- */
     public Optional<String> getIncidentId() {
         return Optional.ofNullable(this.incidentId);
     }
-/**
- * Relation Name
- */
     public Optional<String> getRelationName() {
         return Optional.ofNullable(this.relationName);
     }
-/**
- * The severity of the incident
- */
     public Optional<String> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
-/**
- * The title of the incident
- */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }

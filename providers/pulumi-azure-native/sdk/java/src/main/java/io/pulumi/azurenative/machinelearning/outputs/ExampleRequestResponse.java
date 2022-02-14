@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExampleRequestResponse {
-/**
- * Sample input data for the web service's global parameters
- */
     private final @Nullable Map<String,Object> globalParameters;
-/**
- * Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
- */
     private final @Nullable Map<String,List<List<Object>>> inputs;
 
     @OutputCustomType.Constructor({"globalParameters","inputs"})
@@ -30,15 +24,9 @@ public final class ExampleRequestResponse {
         this.inputs = inputs;
     }
 
-/**
- * Sample input data for the web service's global parameters
- */
     public Map<String,Object> getGlobalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
-/**
- * Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
- */
     public Map<String,List<List<Object>>> getInputs() {
         return this.inputs == null ? Map.of() : this.inputs;
     }

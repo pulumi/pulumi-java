@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains information about the Microsoft datacenter to which the drives should be shipped.
- */
 public final class ShippingInformationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShippingInformationArgs Empty = new ShippingInformationArgs();
 
-    /**
-     * The city name to use when returning the drives.
-     */
     @InputImport(name="city")
     private final @Nullable Input<String> city;
 
@@ -27,9 +21,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.city == null ? Input.empty() : this.city;
     }
 
-    /**
-     * The country or region to use when returning the drives. 
-     */
     @InputImport(name="countryOrRegion")
     private final @Nullable Input<String> countryOrRegion;
 
@@ -37,9 +28,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.countryOrRegion == null ? Input.empty() : this.countryOrRegion;
     }
 
-    /**
-     * Phone number of the recipient of the returned drives.
-     */
     @InputImport(name="phone")
     private final @Nullable Input<String> phone;
 
@@ -47,9 +35,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.phone == null ? Input.empty() : this.phone;
     }
 
-    /**
-     * The postal code to use when returning the drives.
-     */
     @InputImport(name="postalCode")
     private final @Nullable Input<String> postalCode;
 
@@ -57,9 +42,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.postalCode == null ? Input.empty() : this.postalCode;
     }
 
-    /**
-     * The name of the recipient who will receive the hard drives when they are returned. 
-     */
     @InputImport(name="recipientName")
     private final @Nullable Input<String> recipientName;
 
@@ -67,9 +49,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.recipientName == null ? Input.empty() : this.recipientName;
     }
 
-    /**
-     * The state or province to use when returning the drives.
-     */
     @InputImport(name="stateOrProvince")
     private final @Nullable Input<String> stateOrProvince;
 
@@ -77,9 +56,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.stateOrProvince == null ? Input.empty() : this.stateOrProvince;
     }
 
-    /**
-     * The first line of the street address to use when returning the drives. 
-     */
     @InputImport(name="streetAddress1")
     private final @Nullable Input<String> streetAddress1;
 
@@ -87,9 +63,6 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
         return this.streetAddress1 == null ? Input.empty() : this.streetAddress1;
     }
 
-    /**
-     * The second line of the street address to use when returning the drives. 
-     */
     @InputImport(name="streetAddress2")
     private final @Nullable Input<String> streetAddress2;
 

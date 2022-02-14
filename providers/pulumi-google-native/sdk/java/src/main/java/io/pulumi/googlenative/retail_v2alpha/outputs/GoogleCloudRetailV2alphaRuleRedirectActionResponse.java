@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse {
-/**
- * URL must have length equal or less than 2000 characters.
- */
     private final String redirectUri;
 
     @OutputCustomType.Constructor({"redirectUri"})
@@ -19,9 +16,6 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse {
         this.redirectUri = Objects.requireNonNull(redirectUri);
     }
 
-/**
- * URL must have length equal or less than 2000 characters.
- */
     public String getRedirectUri() {
         return this.redirectUri;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional information about Azure File Share backup item.
- */
 public final class AzureFileshareProtectedItemExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFileshareProtectedItemExtendedInfoResponse Empty = new AzureFileshareProtectedItemExtendedInfoResponse();
 
-    /**
-     * The oldest backup copy available for this item in the service.
-     */
     @InputImport(name="oldestRecoveryPoint")
     private final @Nullable String oldestRecoveryPoint;
 
@@ -28,9 +22,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends io.pu
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
-    /**
-     * Indicates consistency of policy object and policy applied to this backup item.
-     */
     @InputImport(name="policyState")
     private final @Nullable String policyState;
 
@@ -38,9 +29,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends io.pu
         return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
     }
 
-    /**
-     * Number of available backup copies associated with this backup item.
-     */
     @InputImport(name="recoveryPointCount")
     private final @Nullable Integer recoveryPointCount;
 
@@ -48,9 +36,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends io.pu
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
     }
 
-    /**
-     * Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
-     */
     @InputImport(name="resourceState", required=true)
     private final String resourceState;
 
@@ -58,9 +43,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends io.pu
         return this.resourceState;
     }
 
-    /**
-     * The resource state sync time for this backup item.
-     */
     @InputImport(name="resourceStateSyncTime", required=true)
     private final String resourceStateSyncTime;
 

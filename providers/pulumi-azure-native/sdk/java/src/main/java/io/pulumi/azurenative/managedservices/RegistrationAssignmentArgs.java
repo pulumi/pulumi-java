@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegistrationAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistrationAssignmentArgs Empty = new RegistrationAssignmentArgs();
 
-    /**
-     * Properties of a registration assignment.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<RegistrationAssignmentPropertiesArgs> properties;
 
@@ -28,9 +22,6 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Guid of the registration assignment.
-     */
     @InputImport(name="registrationAssignmentId")
     private final @Nullable Input<String> registrationAssignmentId;
 
@@ -38,9 +29,6 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
         return this.registrationAssignmentId == null ? Input.empty() : this.registrationAssignmentId;
     }
 
-    /**
-     * Scope of the resource.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

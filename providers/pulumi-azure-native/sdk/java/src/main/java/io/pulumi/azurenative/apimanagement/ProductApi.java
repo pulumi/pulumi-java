@@ -18,346 +18,129 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Api details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateProductApi
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var productApi = new AzureNative.ApiManagement.ProductApi("productApi", new AzureNative.ApiManagement.ProductApiArgs
-        {
-            ApiId = "echo-api",
-            ProductId = "testproduct",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewProductApi(ctx, "productApi", &apimanagement.ProductApiArgs{
-			ApiId:             pulumi.String("echo-api"),
-			ProductId:         pulumi.String("testproduct"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const productApi = new azure_native.apimanagement.ProductApi("productApi", {
-    apiId: "echo-api",
-    productId: "testproduct",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-product_api = azure_native.apimanagement.ProductApi("productApi",
-    api_id="echo-api",
-    product_id="testproduct",
-    resource_group_name="rg1",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:ProductApi 5931a75ae4bbd512a88c680b /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5931a75ae4bbd512a88c680b 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:ProductApi")
 public class ProductApi extends io.pulumi.resources.CustomResource {
-    /**
-     * Describes the Revision of the Api. If no value is provided, default revision 1 is created
-     */
     @OutputExport(name="apiRevision", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiRevision;
 
-    /**
-     * @return Describes the Revision of the Api. If no value is provided, default revision 1 is created
-     */
     public Output</* @Nullable */ String> getApiRevision() {
         return this.apiRevision;
     }
-    /**
-     * Description of the Api Revision.
-     */
     @OutputExport(name="apiRevisionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiRevisionDescription;
 
-    /**
-     * @return Description of the Api Revision.
-     */
     public Output</* @Nullable */ String> getApiRevisionDescription() {
         return this.apiRevisionDescription;
     }
-    /**
-     * Type of API.
-     */
     @OutputExport(name="apiType", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiType;
 
-    /**
-     * @return Type of API.
-     */
     public Output</* @Nullable */ String> getApiType() {
         return this.apiType;
     }
-    /**
-     * Indicates the Version identifier of the API if the API is versioned
-     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
-    /**
-     * @return Indicates the Version identifier of the API if the API is versioned
-     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
-    /**
-     * Description of the Api Version.
-     */
     @OutputExport(name="apiVersionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersionDescription;
 
-    /**
-     * @return Description of the Api Version.
-     */
     public Output</* @Nullable */ String> getApiVersionDescription() {
         return this.apiVersionDescription;
     }
-    /**
-     * Version set details
-     */
     @OutputExport(name="apiVersionSet", type=ApiVersionSetContractDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ApiVersionSetContractDetailsResponse> apiVersionSet;
 
-    /**
-     * @return Version set details
-     */
     public Output</* @Nullable */ ApiVersionSetContractDetailsResponse> getApiVersionSet() {
         return this.apiVersionSet;
     }
-    /**
-     * A resource identifier for the related ApiVersionSet.
-     */
     @OutputExport(name="apiVersionSetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersionSetId;
 
-    /**
-     * @return A resource identifier for the related ApiVersionSet.
-     */
     public Output</* @Nullable */ String> getApiVersionSetId() {
         return this.apiVersionSetId;
     }
-    /**
-     * Collection of authentication settings included into this API.
-     */
     @OutputExport(name="authenticationSettings", type=AuthenticationSettingsContractResponse.class, parameters={})
     private Output</* @Nullable */ AuthenticationSettingsContractResponse> authenticationSettings;
 
-    /**
-     * @return Collection of authentication settings included into this API.
-     */
     public Output</* @Nullable */ AuthenticationSettingsContractResponse> getAuthenticationSettings() {
         return this.authenticationSettings;
     }
-    /**
-     * Description of the API. May include HTML formatting tags.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Description of the API. May include HTML formatting tags.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * API name. Must be 1 to 300 characters long.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return API name. Must be 1 to 300 characters long.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Indicates if API revision is current api revision.
-     */
     @OutputExport(name="isCurrent", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isCurrent;
 
-    /**
-     * @return Indicates if API revision is current api revision.
-     */
     public Output</* @Nullable */ Boolean> getIsCurrent() {
         return this.isCurrent;
     }
-    /**
-     * Indicates if API revision is accessible via the gateway.
-     */
     @OutputExport(name="isOnline", type=Boolean.class, parameters={})
     private Output<Boolean> isOnline;
 
-    /**
-     * @return Indicates if API revision is accessible via the gateway.
-     */
     public Output<Boolean> getIsOnline() {
         return this.isOnline;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-     */
     @OutputExport(name="path", type=String.class, parameters={})
     private Output<String> path;
 
-    /**
-     * @return Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
-     */
     public Output<String> getPath() {
         return this.path;
     }
-    /**
-     * Describes on which protocols the operations in this API can be invoked.
-     */
     @OutputExport(name="protocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> protocols;
 
-    /**
-     * @return Describes on which protocols the operations in this API can be invoked.
-     */
     public Output</* @Nullable */ List<String>> getProtocols() {
         return this.protocols;
     }
-    /**
-     * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-     */
     @OutputExport(name="serviceUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceUrl;
 
-    /**
-     * @return Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-     */
     public Output</* @Nullable */ String> getServiceUrl() {
         return this.serviceUrl;
     }
-    /**
-     * API identifier of the source API.
-     */
     @OutputExport(name="sourceApiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceApiId;
 
-    /**
-     * @return API identifier of the source API.
-     */
     public Output</* @Nullable */ String> getSourceApiId() {
         return this.sourceApiId;
     }
-    /**
-     * Protocols over which API is made available.
-     */
     @OutputExport(name="subscriptionKeyParameterNames", type=SubscriptionKeyParameterNamesContractResponse.class, parameters={})
     private Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> subscriptionKeyParameterNames;
 
-    /**
-     * @return Protocols over which API is made available.
-     */
     public Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> getSubscriptionKeyParameterNames() {
         return this.subscriptionKeyParameterNames;
     }
-    /**
-     * Specifies whether an API or Product subscription is required for accessing the API.
-     */
     @OutputExport(name="subscriptionRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> subscriptionRequired;
 
-    /**
-     * @return Specifies whether an API or Product subscription is required for accessing the API.
-     */
     public Output</* @Nullable */ Boolean> getSubscriptionRequired() {
         return this.subscriptionRequired;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ProductApi(String name, ProductApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ProductApi", name, args == null ? ProductApiArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -386,14 +169,6 @@ public class ProductApi extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ProductApi get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProductApi(name, id, options);
     }

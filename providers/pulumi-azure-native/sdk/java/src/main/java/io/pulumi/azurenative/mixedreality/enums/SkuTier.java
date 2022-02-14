@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
- */
     @EnumType
     public enum SkuTier {
-/**
- * 
- */
         Free("Free"),
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium");
 
         private final String value;

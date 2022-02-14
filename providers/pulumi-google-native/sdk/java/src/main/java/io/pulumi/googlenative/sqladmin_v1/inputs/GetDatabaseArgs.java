@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatabaseArgs Empty = new GetDatabaseArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="database", required=true)
     private final String database;
 
@@ -27,9 +21,6 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.database;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -37,9 +28,6 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.instance;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

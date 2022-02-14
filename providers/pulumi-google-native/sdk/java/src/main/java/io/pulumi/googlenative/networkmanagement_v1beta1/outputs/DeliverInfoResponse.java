@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliverInfoResponse {
-/**
- * URI of the resource that the packet is delivered to.
- */
     private final String resourceUri;
-/**
- * Target type where the packet is delivered to.
- */
     private final String target;
 
     @OutputCustomType.Constructor({"resourceUri","target"})
@@ -26,15 +20,9 @@ public final class DeliverInfoResponse {
         this.target = Objects.requireNonNull(target);
     }
 
-/**
- * URI of the resource that the packet is delivered to.
- */
     public String getResourceUri() {
         return this.resourceUri;
     }
-/**
- * Target type where the packet is delivered to.
- */
     public String getTarget() {
         return this.target;
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The access endpoint type.
- */
     @EnumType
     public enum IntegrationServiceEnvironmentAccessEndpointType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         External("External"),
-/**
- * 
- */
         Internal("Internal");
 
         private final String value;

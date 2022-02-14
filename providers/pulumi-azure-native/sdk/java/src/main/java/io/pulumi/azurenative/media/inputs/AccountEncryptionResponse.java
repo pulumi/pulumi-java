@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountEncryptionResponse Empty = new AccountEncryptionResponse();
 
-    /**
-     * The properties of the key used to encrypt the account.
-     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
@@ -28,9 +22,6 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
     }
 
-    /**
-     * The type of key used to encrypt the Account Key.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The name of the sample schema to apply when creating this database.
- */
     @EnumType
     public enum SampleName {
-/**
- * 
- */
         AdventureWorksLT("AdventureWorksLT"),
-/**
- * 
- */
         WideWorldImportersStd("WideWorldImportersStd"),
-/**
- * 
- */
         WideWorldImportersFull("WideWorldImportersFull");
 
         private final String value;

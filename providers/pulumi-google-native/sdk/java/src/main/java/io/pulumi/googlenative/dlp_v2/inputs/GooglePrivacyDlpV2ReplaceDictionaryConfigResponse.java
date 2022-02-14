@@ -8,16 +8,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListResponse;
 import java.util.Objects;
 
 
-/**
- * Replace each input value with a value randomly selected from the dictionary.
- */
 public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ReplaceDictionaryConfigResponse Empty = new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse();
 
-    /**
-     * A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
-     */
     @InputImport(name="wordList", required=true)
     private final GooglePrivacyDlpV2WordListResponse wordList;
 

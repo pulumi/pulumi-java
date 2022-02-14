@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityQueryArgs Empty = new EntityQueryArgs();
 
-    /**
-     * entity query ID
-     */
     @InputImport(name="entityQueryId")
     private final @Nullable Input<String> entityQueryId;
 
@@ -29,9 +23,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.entityQueryId == null ? Input.empty() : this.entityQueryId;
     }
 
-    /**
-     * the entity query kind
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,CustomEntityQueryKind>> kind;
 
@@ -39,9 +30,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -49,9 +37,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceControlArgs Empty = new SourceControlArgs();
 
-    /**
-     * Array of source control content types.
-     */
     @InputImport(name="contentTypes", required=true)
     private final Input<List<Either<String,ContentType>>> contentTypes;
 
@@ -33,9 +27,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentTypes;
     }
 
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @InputImport(name="createdAt")
     private final @Nullable Input<String> createdAt;
 
@@ -43,9 +34,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
-    /**
-     * The identity that created the resource.
-     */
     @InputImport(name="createdBy")
     private final @Nullable Input<String> createdBy;
 
@@ -53,9 +41,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
-    /**
-     * The type of identity that created the resource.
-     */
     @InputImport(name="createdByType")
     private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
@@ -63,9 +48,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
-    /**
-     * A description of the source control
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -73,9 +55,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The display name of the source control
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -83,9 +62,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * The id (a Guid) of the source control
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -93,9 +69,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The timestamp of resource last modification (UTC)
-     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable Input<String> lastModifiedAt;
 
@@ -103,9 +76,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
-    /**
-     * The identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable Input<String> lastModifiedBy;
 
@@ -113,9 +83,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
-    /**
-     * The type of identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
@@ -123,9 +90,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
     }
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -133,9 +97,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The repository type of the source control
-     */
     @InputImport(name="repoType", required=true)
     private final Input<Either<String,RepoType>> repoType;
 
@@ -143,9 +104,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.repoType;
     }
 
-    /**
-     * Repository metadata.
-     */
     @InputImport(name="repository", required=true)
     private final Input<RepositoryArgs> repository;
 
@@ -153,9 +111,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.repository;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -163,9 +118,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Source control Id
-     */
     @InputImport(name="sourceControlId")
     private final @Nullable Input<String> sourceControlId;
 
@@ -173,9 +125,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceControlId == null ? Input.empty() : this.sourceControlId;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

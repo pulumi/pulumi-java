@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * KPack ClusterStack properties payload
- */
 public final class StackPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StackPropertiesArgs Empty = new StackPropertiesArgs();
 
-    /**
-     * Id of the ClusterStack.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -27,9 +21,6 @@ public final class StackPropertiesArgs extends io.pulumi.resources.ResourceArgs 
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Version of the ClusterStack
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

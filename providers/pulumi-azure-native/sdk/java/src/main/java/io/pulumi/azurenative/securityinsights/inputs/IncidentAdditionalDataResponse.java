@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Incident additional data property bag.
- */
 public final class IncidentAdditionalDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IncidentAdditionalDataResponse Empty = new IncidentAdditionalDataResponse();
 
-    /**
-     * List of product names of alerts in the incident
-     */
     @InputImport(name="alertProductNames", required=true)
     private final List<String> alertProductNames;
 
@@ -27,9 +21,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
         return this.alertProductNames;
     }
 
-    /**
-     * The number of alerts in the incident
-     */
     @InputImport(name="alertsCount", required=true)
     private final Integer alertsCount;
 
@@ -37,9 +28,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
         return this.alertsCount;
     }
 
-    /**
-     * The number of bookmarks in the incident
-     */
     @InputImport(name="bookmarksCount", required=true)
     private final Integer bookmarksCount;
 
@@ -47,9 +35,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
         return this.bookmarksCount;
     }
 
-    /**
-     * The number of comments in the incident
-     */
     @InputImport(name="commentsCount", required=true)
     private final Integer commentsCount;
 
@@ -57,9 +42,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
         return this.commentsCount;
     }
 
-    /**
-     * The tactics associated with incident
-     */
     @InputImport(name="tactics", required=true)
     private final List<String> tactics;
 

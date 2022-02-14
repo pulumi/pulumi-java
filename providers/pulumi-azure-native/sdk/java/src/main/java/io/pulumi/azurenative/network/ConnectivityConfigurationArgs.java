@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectivityConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectivityConfigurationArgs Empty = new ConnectivityConfigurationArgs();
 
-    /**
-     * Groups for configuration
-     */
     @InputImport(name="appliesToGroups")
     private final @Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups;
 
@@ -34,9 +28,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.appliesToGroups == null ? Input.empty() : this.appliesToGroups;
     }
 
-    /**
-     * The name of the network manager connectivity configuration.
-     */
     @InputImport(name="configurationName")
     private final @Nullable Input<String> configurationName;
 
@@ -44,9 +35,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.configurationName == null ? Input.empty() : this.configurationName;
     }
 
-    /**
-     * Connectivity topology type.
-     */
     @InputImport(name="connectivityTopology", required=true)
     private final Input<Either<String,ConnectivityTopology>> connectivityTopology;
 
@@ -54,9 +42,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.connectivityTopology;
     }
 
-    /**
-     * Flag if need to remove current existing peerings.
-     */
     @InputImport(name="deleteExistingPeering")
     private final @Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering;
 
@@ -64,9 +49,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.deleteExistingPeering == null ? Input.empty() : this.deleteExistingPeering;
     }
 
-    /**
-     * A description of the connectivity configuration.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -74,9 +56,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * A friendly name for the resource.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -84,9 +63,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * List of hubItems
-     */
     @InputImport(name="hubs")
     private final @Nullable Input<List<HubArgs>> hubs;
 
@@ -94,9 +70,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.hubs == null ? Input.empty() : this.hubs;
     }
 
-    /**
-     * Flag if global mesh is supported.
-     */
     @InputImport(name="isGlobal")
     private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
 
@@ -104,9 +77,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.isGlobal == null ? Input.empty() : this.isGlobal;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -114,9 +84,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

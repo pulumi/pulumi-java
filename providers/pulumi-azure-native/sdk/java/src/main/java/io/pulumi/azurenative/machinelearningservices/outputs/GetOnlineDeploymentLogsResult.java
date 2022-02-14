@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOnlineDeploymentLogsResult {
-/**
- * The retrieved online deployment logs.
- */
     private final @Nullable String content;
 
     @OutputCustomType.Constructor({"content"})
@@ -21,9 +18,6 @@ public final class GetOnlineDeploymentLogsResult {
         this.content = content;
     }
 
-/**
- * The retrieved online deployment logs.
- */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }

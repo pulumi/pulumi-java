@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the customer managed key associated with the workspace
- */
 public final class CustomerManagedKeyDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerManagedKeyDetailsArgs Empty = new CustomerManagedKeyDetailsArgs();
 
-    /**
-     * The key object of the workspace
-     */
     @InputImport(name="key")
     private final @Nullable Input<WorkspaceKeyDetailsArgs> key;
 

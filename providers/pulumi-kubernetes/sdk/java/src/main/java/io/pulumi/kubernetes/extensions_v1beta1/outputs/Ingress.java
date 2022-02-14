@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Ingress {
-/**
- * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
- */
     private final @Nullable String apiVersion;
-/**
- * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     private final @Nullable String kind;
-/**
- * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
- */
     private final @Nullable ObjectMeta metadata;
-/**
- * Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
- */
     private final @Nullable IngressSpec spec;
-/**
- * Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
- */
     private final @Nullable IngressStatus status;
 
     @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
@@ -49,33 +34,18 @@ public final class Ingress {
         this.status = status;
     }
 
-/**
- * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
- */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
-/**
- * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
- */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
-/**
- * Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
- */
     public Optional<IngressSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
-/**
- * Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
- */
     public Optional<IngressStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

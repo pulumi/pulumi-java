@@ -16,200 +16,33 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * SaaS REST API resource definition.
-API Version: 2018-03-01-beta.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create subscription level SaaS resource
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var saasSubscriptionLevel = new AzureNative.SaaS.SaasSubscriptionLevel("saasSubscriptionLevel", new AzureNative.SaaS.SaasSubscriptionLevelArgs
-        {
-            Location = "global",
-            Name = "MyContosoSubscription",
-            Properties = new AzureNative.SaaS.Inputs.SaasCreationPropertiesArgs
-            {
-                OfferId = "contosoOffer",
-                PaymentChannelMetadata = 
-                {
-                    { "AzureSubscriptionId", "155af98a-3205-47e7-883b-a2ab9db9f88d" },
-                },
-                PaymentChannelType = "SubscriptionDelegated",
-                PublisherId = "microsoft-contoso",
-                SaasResourceName = "MyContosoSubscription",
-                SkuId = "free",
-                TermId = "hjdtn7tfnxcy",
-            },
-            ResourceGroupName = "my-saas-rg",
-            ResourceName = "MyContosoSubscription",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	saas "github.com/pulumi/pulumi-azure-native/sdk/go/azure/saas"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := saas.NewSaasSubscriptionLevel(ctx, "saasSubscriptionLevel", &saas.SaasSubscriptionLevelArgs{
-			Location: pulumi.String("global"),
-			Name:     pulumi.String("MyContosoSubscription"),
-			Properties: &saas.SaasCreationPropertiesArgs{
-				OfferId: pulumi.String("contosoOffer"),
-				PaymentChannelMetadata: pulumi.StringMap{
-					"AzureSubscriptionId": pulumi.String("155af98a-3205-47e7-883b-a2ab9db9f88d"),
-				},
-				PaymentChannelType: pulumi.String("SubscriptionDelegated"),
-				PublisherId:        pulumi.String("microsoft-contoso"),
-				SaasResourceName:   pulumi.String("MyContosoSubscription"),
-				SkuId:              pulumi.String("free"),
-				TermId:             pulumi.String("hjdtn7tfnxcy"),
-			},
-			ResourceGroupName: pulumi.String("my-saas-rg"),
-			ResourceName:      pulumi.String("MyContosoSubscription"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasSubscriptionLevel", {
-    location: "global",
-    name: "MyContosoSubscription",
-    properties: {
-        offerId: "contosoOffer",
-        paymentChannelMetadata: {
-            AzureSubscriptionId: "155af98a-3205-47e7-883b-a2ab9db9f88d",
-        },
-        paymentChannelType: "SubscriptionDelegated",
-        publisherId: "microsoft-contoso",
-        saasResourceName: "MyContosoSubscription",
-        skuId: "free",
-        termId: "hjdtn7tfnxcy",
-    },
-    resourceGroupName: "my-saas-rg",
-    resourceName: "MyContosoSubscription",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-saas_subscription_level = azure_native.saas.SaasSubscriptionLevel("saasSubscriptionLevel",
-    location="global",
-    name="MyContosoSubscription",
-    properties=azure_native.saas.SaasCreationPropertiesArgs(
-        offer_id="contosoOffer",
-        payment_channel_metadata={
-            "AzureSubscriptionId": "155af98a-3205-47e7-883b-a2ab9db9f88d",
-        },
-        payment_channel_type="SubscriptionDelegated",
-        publisher_id="microsoft-contoso",
-        saas_resource_name="MyContosoSubscription",
-        sku_id="free",
-        term_id="hjdtn7tfnxcy",
-    ),
-    resource_group_name="my-saas-rg",
-    resource_name="MyContosoSubscription")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:saas:SaasSubscriptionLevel MyContosoSubscription /subscriptions/c825645b-e31b-9cf4-1cee-2aba9e58bc7c/resourceGroups/my-saas-rg/providers/Microsoft.SaaS/resources/MyContosoSubscription 
-```
-
- */
 @ResourceType(type="azure-native:saas:SaasSubscriptionLevel")
 public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * saas properties
-     */
     @OutputExport(name="properties", type=SaasResourceResponseProperties.class, parameters={})
     private Output<SaasResourceResponseProperties> properties;
 
-    /**
-     * @return saas properties
-     */
     public Output<SaasResourceResponseProperties> getProperties() {
         return this.properties;
     }
-    /**
-     * the resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return the resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SaasSubscriptionLevel(String name, SaasSubscriptionLevelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:saas:SaasSubscriptionLevel", name, args == null ? SaasSubscriptionLevelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -228,14 +61,6 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SaasSubscriptionLevel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SaasSubscriptionLevel(name, id, options);
     }

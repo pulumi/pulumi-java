@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomImagePropertiesFromPlanResponse {
-/**
- * The id of the plan, equivalent to name of the plan
- */
     private final @Nullable String id;
-/**
- * The offer for the plan from the marketplace image the custom image is derived from
- */
     private final @Nullable String offer;
-/**
- * The publisher for the plan from the marketplace image the custom image is derived from
- */
     private final @Nullable String publisher;
 
     @OutputCustomType.Constructor({"id","offer","publisher"})
@@ -34,21 +25,12 @@ public final class CustomImagePropertiesFromPlanResponse {
         this.publisher = publisher;
     }
 
-/**
- * The id of the plan, equivalent to name of the plan
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * The offer for the plan from the marketplace image the custom image is derived from
- */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
-/**
- * The publisher for the plan from the marketplace image the custom image is derived from
- */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }

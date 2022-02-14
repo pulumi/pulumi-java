@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Minimum version of Ssl protocol to be supported on application gateway.
- */
     @EnumType
     public enum ApplicationGatewaySslProtocol {
-/**
- * 
- */
         TLSv1_0("TLSv1_0"),
-/**
- * 
- */
         TLSv1_1("TLSv1_1"),
-/**
- * 
- */
         TLSv1_2("TLSv1_2");
 
         private final String value;

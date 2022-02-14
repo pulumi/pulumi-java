@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum CVSSAuthentication {
-/**
- * 
- */
         AuthenticationUnspecified("AUTHENTICATION_UNSPECIFIED"),
-/**
- * 
- */
         AuthenticationMultiple("AUTHENTICATION_MULTIPLE"),
-/**
- * 
- */
         AuthenticationSingle("AUTHENTICATION_SINGLE"),
-/**
- * 
- */
         AuthenticationNone("AUTHENTICATION_NONE");
 
         private final String value;

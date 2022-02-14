@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An update history of the ImmutabilityPolicy of a blob container.
- */
 public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UpdateHistoryPropertyResponse Empty = new UpdateHistoryPropertyResponse();
 
-    /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
-     */
     @InputImport(name="immutabilityPeriodSinceCreationInDays", required=true)
     private final Integer immutabilityPeriodSinceCreationInDays;
 
@@ -26,9 +20,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
         return this.immutabilityPeriodSinceCreationInDays;
     }
 
-    /**
-     * Returns the Object ID of the user who updated the ImmutabilityPolicy.
-     */
     @InputImport(name="objectIdentifier", required=true)
     private final String objectIdentifier;
 
@@ -36,9 +27,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
         return this.objectIdentifier;
     }
 
-    /**
-     * Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -46,9 +34,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
         return this.tenantId;
     }
 
-    /**
-     * Returns the date and time the ImmutabilityPolicy was updated.
-     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 
@@ -56,9 +41,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
         return this.timestamp;
     }
 
-    /**
-     * The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
-     */
     @InputImport(name="update", required=true)
     private final String update;
 
@@ -66,9 +48,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
         return this.update;
     }
 
-    /**
-     * Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
-     */
     @InputImport(name="upn", required=true)
     private final String upn;
 

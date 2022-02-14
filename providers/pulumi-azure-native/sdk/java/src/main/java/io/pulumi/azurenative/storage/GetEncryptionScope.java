@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEncryptionScope {
-/**
- * The Encryption Scope resource.
-API Version: 2021-02-01.
- *
- * The Encryption Scope resource.
- */
     public static CompletableFuture<GetEncryptionScopeResult> invokeAsync(GetEncryptionScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getEncryptionScope", TypeShape.of(GetEncryptionScopeResult.class), args == null ? GetEncryptionScopeArgs.Empty : args, Utilities.withVersion(options));
     }

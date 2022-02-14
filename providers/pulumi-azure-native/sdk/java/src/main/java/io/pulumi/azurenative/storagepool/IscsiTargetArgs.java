@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IscsiTargetArgs Empty = new IscsiTargetArgs();
 
-    /**
-     * The name of the Disk pool.
-     */
     @InputImport(name="diskPoolName", required=true)
     private final Input<String> diskPoolName;
 
@@ -29,9 +23,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskPoolName;
     }
 
-    /**
-     * The name of the iSCSI target.
-     */
     @InputImport(name="iscsiTargetName")
     private final @Nullable Input<String> iscsiTargetName;
 
@@ -39,9 +30,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.iscsiTargetName == null ? Input.empty() : this.iscsiTargetName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-     */
     @InputImport(name="targetIqn")
     private final @Nullable Input<String> targetIqn;
 
@@ -59,9 +44,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetIqn == null ? Input.empty() : this.targetIqn;
     }
 
-    /**
-     * List of iSCSI target portal groups. Can have 1 portal group at most.
-     */
     @InputImport(name="tpgs", required=true)
     private final Input<List<TargetPortalGroupCreateArgs>> tpgs;
 

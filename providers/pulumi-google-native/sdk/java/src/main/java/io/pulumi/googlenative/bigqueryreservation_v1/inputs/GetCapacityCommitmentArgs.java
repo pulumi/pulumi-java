@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCapacityCommitmentArgs Empty = new GetCapacityCommitmentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="capacityCommitmentId", required=true)
     private final String capacityCommitmentId;
 
@@ -27,9 +21,6 @@ public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeA
         return this.capacityCommitmentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeA
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

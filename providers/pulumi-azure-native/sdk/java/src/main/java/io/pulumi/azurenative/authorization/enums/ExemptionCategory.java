@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The policy exemption category. Possible values are Waiver and Mitigated.
- */
     @EnumType
     public enum ExemptionCategory {
-/**
- * This category of exemptions usually means the scope is not applicable for the policy.
- */
         Waiver("Waiver"),
-/**
- * This category of exemptions usually means the mitigation actions have been applied to the scope.
- */
         Mitigated("Mitigated");
 
         private final String value;

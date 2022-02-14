@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
     @EnumType
     public enum ConditionOp {
-/**
- * This is deprecated and has no effect. Do not use.
- */
         Discharged("DISCHARGED"),
-/**
- * This is deprecated and has no effect. Do not use.
- */
         Equals("EQUALS"),
-/**
- * This is deprecated and has no effect. Do not use.
- */
         In("IN"),
-/**
- * This is deprecated and has no effect. Do not use.
- */
         NotEquals("NOT_EQUALS"),
-/**
- * This is deprecated and has no effect. Do not use.
- */
         NotIn("NOT_IN"),
-/**
- * This is deprecated and has no effect. Do not use.
- */
         NoOp("NO_OP");
 
         private final String value;

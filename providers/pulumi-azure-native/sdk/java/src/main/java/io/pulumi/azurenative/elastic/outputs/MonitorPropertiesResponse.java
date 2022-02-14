@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitorPropertiesResponse {
-/**
- * Elastic cloud properties.
- */
     private final @Nullable ElasticPropertiesResponse elasticProperties;
-/**
- * 
- */
     private final String liftrResourceCategory;
-/**
- * The priority of the resource.
- */
     private final Integer liftrResourcePreference;
-/**
- * Flag specifying if the resource monitoring is enabled or disabled.
- */
     private final @Nullable String monitoringStatus;
-/**
- * Provisioning state of the monitor resource.
- */
     private final @Nullable String provisioningState;
 
     @OutputCustomType.Constructor({"elasticProperties","liftrResourceCategory","liftrResourcePreference","monitoringStatus","provisioningState"})
@@ -48,33 +33,18 @@ public final class MonitorPropertiesResponse {
         this.provisioningState = provisioningState;
     }
 
-/**
- * Elastic cloud properties.
- */
     public Optional<ElasticPropertiesResponse> getElasticProperties() {
         return Optional.ofNullable(this.elasticProperties);
     }
-/**
- * 
- */
     public String getLiftrResourceCategory() {
         return this.liftrResourceCategory;
     }
-/**
- * The priority of the resource.
- */
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
-/**
- * Flag specifying if the resource monitoring is enabled or disabled.
- */
     public Optional<String> getMonitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
-/**
- * Provisioning state of the monitor resource.
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

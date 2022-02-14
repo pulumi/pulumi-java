@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlMigrationService {
-/**
- * A SQL Migration Service.
-API Version: 2021-10-30-preview.
- *
- * A SQL Migration Service.
- */
     public static CompletableFuture<GetSqlMigrationServiceResult> invokeAsync(GetSqlMigrationServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getSqlMigrationService", TypeShape.of(GetSqlMigrationServiceResult.class), args == null ? GetSqlMigrationServiceArgs.Empty : args, Utilities.withVersion(options));
     }

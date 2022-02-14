@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the automation rule action
- */
     @EnumType
     public enum AutomationRuleActionType {
-/**
- * Modify an object's properties
- */
         ModifyProperties("ModifyProperties"),
-/**
- * Run a playbook on an object
- */
         RunPlaybook("RunPlaybook");
 
         private final String value;

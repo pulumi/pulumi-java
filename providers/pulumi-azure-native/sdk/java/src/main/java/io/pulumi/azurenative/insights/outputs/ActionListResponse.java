@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActionListResponse {
-/**
- * The list of the Action Groups.
- */
     private final @Nullable List<ActionGroupResponse> actionGroups;
 
     @OutputCustomType.Constructor({"actionGroups"})
@@ -21,9 +18,6 @@ public final class ActionListResponse {
         this.actionGroups = actionGroups;
     }
 
-/**
- * The list of the Action Groups.
- */
     public List<ActionGroupResponse> getActionGroups() {
         return this.actionGroups == null ? List.of() : this.actionGroups;
     }

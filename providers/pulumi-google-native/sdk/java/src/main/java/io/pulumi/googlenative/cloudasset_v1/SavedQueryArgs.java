@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SavedQueryArgs Empty = new SavedQueryArgs();
 
-    /**
-     * The query content.
-     */
     @InputImport(name="content")
     private final @Nullable Input<QueryContentArgs> content;
 
@@ -29,9 +23,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The description of this saved query. This value should be fewer than 255 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -49,9 +37,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,9 +44,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="savedQueryId", required=true)
     private final Input<String> savedQueryId;
 
@@ -69,9 +51,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.savedQueryId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v1Id", required=true)
     private final Input<String> v1Id;
 
@@ -79,9 +58,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.v1Id;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v1Id1", required=true)
     private final Input<String> v1Id1;
 

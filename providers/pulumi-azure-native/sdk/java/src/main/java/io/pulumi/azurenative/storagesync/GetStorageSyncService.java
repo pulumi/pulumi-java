@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageSyncService {
-/**
- * Storage Sync Service object.
-API Version: 2020-03-01.
- *
- * Storage Sync Service object.
- */
     public static CompletableFuture<GetStorageSyncServiceResult> invokeAsync(GetStorageSyncServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getStorageSyncService", TypeShape.of(GetStorageSyncServiceResult.class), args == null ? GetStorageSyncServiceArgs.Empty : args, Utilities.withVersion(options));
     }

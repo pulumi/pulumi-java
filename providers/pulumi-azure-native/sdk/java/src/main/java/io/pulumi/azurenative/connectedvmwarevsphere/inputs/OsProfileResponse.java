@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the resource properties.
- */
 public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OsProfileResponse Empty = new OsProfileResponse();
 
-    /**
-     * Gets or sets administrator username.
-     */
     @InputImport(name="adminUsername")
     private final @Nullable String adminUsername;
 
@@ -27,9 +21,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
     }
 
-    /**
-     * Gets or sets computer name.
-     */
     @InputImport(name="computerName")
     private final @Nullable String computerName;
 
@@ -37,9 +28,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
     }
 
-    /**
-     * Gets or sets os name.
-     */
     @InputImport(name="osName", required=true)
     private final String osName;
 
@@ -47,9 +35,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.osName;
     }
 
-    /**
-     * Gets or sets the type of the os.
-     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -57,9 +42,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
-    /**
-     * Gets or sets the current running status of VMware Tools running in the guest operating system.
-     */
     @InputImport(name="toolsRunningStatus", required=true)
     private final String toolsRunningStatus;
 
@@ -67,9 +49,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.toolsRunningStatus;
     }
 
-    /**
-     * Gets or sets the current version of VMware Tools.
-     */
     @InputImport(name="toolsVersion", required=true)
     private final String toolsVersion;
 
@@ -77,9 +56,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
         return this.toolsVersion;
     }
 
-    /**
-     * Gets or sets the current version status of VMware Tools installed in the guest operating system.
-     */
     @InputImport(name="toolsVersionStatus", required=true)
     private final String toolsVersionStatus;
 

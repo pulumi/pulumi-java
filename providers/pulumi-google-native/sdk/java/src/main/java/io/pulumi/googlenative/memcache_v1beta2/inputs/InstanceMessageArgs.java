@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceMessageArgs Empty = new InstanceMessageArgs();
 
-    /**
-     * A code that correspond to one type of user-facing message.
-     */
     @InputImport(name="code")
     private final @Nullable Input<InstanceMessageCode> code;
 
@@ -28,9 +22,6 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.code == null ? Input.empty() : this.code;
     }
 
-    /**
-     * Message on memcached instance which will be exposed to users.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

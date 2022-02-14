@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The target of the event.
- */
 public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TargetResponse Empty = new TargetResponse();
 
-    /**
-     * The digest of the content, as defined by the Registry V2 HTTP API Specification.
-     */
     @InputImport(name="digest")
     private final @Nullable String digest;
 
@@ -28,9 +22,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
-    /**
-     * The number of bytes of the content. Same as Size field.
-     */
     @InputImport(name="length")
     private final @Nullable Double length;
 
@@ -38,9 +29,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.length == null ? Optional.empty() : Optional.ofNullable(this.length);
     }
 
-    /**
-     * The MIME type of the referenced object.
-     */
     @InputImport(name="mediaType")
     private final @Nullable String mediaType;
 
@@ -48,9 +36,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
     }
 
-    /**
-     * The name of the artifact.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -58,9 +43,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The repository name.
-     */
     @InputImport(name="repository")
     private final @Nullable String repository;
 
@@ -68,9 +50,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
     }
 
-    /**
-     * The number of bytes of the content. Same as Length field.
-     */
     @InputImport(name="size")
     private final @Nullable Double size;
 
@@ -78,9 +57,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
-    /**
-     * The tag name.
-     */
     @InputImport(name="tag")
     private final @Nullable String tag;
 
@@ -88,9 +64,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 
-    /**
-     * The direct URL to the content.
-     */
     @InputImport(name="url")
     private final @Nullable String url;
 
@@ -98,9 +71,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 
-    /**
-     * The version of the artifact.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

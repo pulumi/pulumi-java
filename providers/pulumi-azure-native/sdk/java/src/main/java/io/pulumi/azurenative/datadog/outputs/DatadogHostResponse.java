@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatadogHostResponse {
-/**
- * The aliases for the host.
- */
     private final @Nullable List<String> aliases;
-/**
- * The Datadog integrations reporting metrics for the host.
- */
     private final @Nullable List<String> apps;
-/**
- * 
- */
     private final @Nullable DatadogHostMetadataResponse meta;
-/**
- * The name of the host.
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"aliases","apps","meta","name"})
@@ -42,27 +30,15 @@ public final class DatadogHostResponse {
         this.name = name;
     }
 
-/**
- * The aliases for the host.
- */
     public List<String> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
-/**
- * The Datadog integrations reporting metrics for the host.
- */
     public List<String> getApps() {
         return this.apps == null ? List.of() : this.apps;
     }
-/**
- * 
- */
     public Optional<DatadogHostMetadataResponse> getMeta() {
         return Optional.ofNullable(this.meta);
     }
-/**
- * The name of the host.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

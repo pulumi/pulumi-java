@@ -10,16 +10,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransformationErro
 import java.util.Objects;
 
 
-/**
- * The configuration that controls how the data will change.
- */
 public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2DeidentifyConfigResponse Empty = new GooglePrivacyDlpV2DeidentifyConfigResponse();
 
-    /**
-     * Treat the dataset as free-form text and apply the same free text transformation everywhere.
-     */
     @InputImport(name="infoTypeTransformations", required=true)
     private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
@@ -27,9 +21,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
         return this.infoTypeTransformations;
     }
 
-    /**
-     * Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
-     */
     @InputImport(name="recordTransformations", required=true)
     private final GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
 
@@ -37,9 +28,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
         return this.recordTransformations;
     }
 
-    /**
-     * Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
-     */
     @InputImport(name="transformationErrorHandling", required=true)
     private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 

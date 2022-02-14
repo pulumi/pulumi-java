@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDdosCustomPolicyArgs Empty = new GetDdosCustomPolicyArgs();
 
-    /**
-     * The name of the DDoS custom policy.
-     */
     @InputImport(name="ddosCustomPolicyName", required=true)
     private final String ddosCustomPolicyName;
 
@@ -25,9 +19,6 @@ public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.ddosCustomPolicyName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

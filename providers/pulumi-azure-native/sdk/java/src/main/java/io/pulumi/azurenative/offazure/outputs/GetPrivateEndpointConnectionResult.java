@@ -11,29 +11,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
-/**
- * Gets the tag for optimistic concurrency control.
- */
     private final String eTag;
-/**
- * Relative URL to get this Sites.
- */
     private final String id;
-/**
- * Gets the name of the resource.
- */
     private final String name;
-/**
- * Gets the properties of the object.
- */
     private final PrivateEndpointConnectionPropertiesResponse properties;
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     private final SystemDataResponse systemData;
-/**
- * Gets the resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","name","properties","systemData","type"})
@@ -52,39 +34,21 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Gets the tag for optimistic concurrency control.
- */
     public String getETag() {
         return this.eTag;
     }
-/**
- * Relative URL to get this Sites.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Gets the name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Gets the properties of the object.
- */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Gets the resource type.
- */
     public String getType() {
         return this.type;
     }

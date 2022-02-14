@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamingbufferResponse Empty = new StreamingbufferResponse();
 
-    /**
-     * A lower-bound estimate of the number of bytes currently in the streaming buffer.
-     */
     @InputImport(name="estimatedBytes", required=true)
     private final String estimatedBytes;
 
@@ -25,9 +19,6 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
         return this.estimatedBytes;
     }
 
-    /**
-     * A lower-bound estimate of the number of rows currently in the streaming buffer.
-     */
     @InputImport(name="estimatedRows", required=true)
     private final String estimatedRows;
 
@@ -35,9 +26,6 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
         return this.estimatedRows;
     }
 
-    /**
-     * Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
-     */
     @InputImport(name="oldestEntryTime", required=true)
     private final String oldestEntryTime;
 

@@ -15,57 +15,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCustomLocationResult {
-/**
- * This is optional input that contains the authentication that should be used to generate the namespace.
- */
     private final @Nullable CustomLocationPropertiesResponseAuthentication authentication;
-/**
- * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
- */
     private final @Nullable List<String> clusterExtensionIds;
-/**
- * Display name for the Custom Locations location.
- */
     private final @Nullable String displayName;
-/**
- * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
- */
     private final @Nullable String hostResourceId;
-/**
- * Type of host the Custom Locations is referencing (Kubernetes, etc...).
- */
     private final @Nullable String hostType;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Kubernetes namespace that will be created on the specified cluster.
- */
     private final @Nullable String namespace;
-/**
- * Provisioning State for the Custom Location.
- */
     private final @Nullable String provisioningState;
-/**
- * Metadata pertaining to creation and last modification of the resource
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"authentication","clusterExtensionIds","displayName","hostResourceId","hostType","id","location","name","namespace","provisioningState","systemData","tags","type"})
@@ -98,81 +59,42 @@ public final class GetCustomLocationResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * This is optional input that contains the authentication that should be used to generate the namespace.
- */
     public Optional<CustomLocationPropertiesResponseAuthentication> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
-/**
- * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
- */
     public List<String> getClusterExtensionIds() {
         return this.clusterExtensionIds == null ? List.of() : this.clusterExtensionIds;
     }
-/**
- * Display name for the Custom Locations location.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
- */
     public Optional<String> getHostResourceId() {
         return Optional.ofNullable(this.hostResourceId);
     }
-/**
- * Type of host the Custom Locations is referencing (Kubernetes, etc...).
- */
     public Optional<String> getHostType() {
         return Optional.ofNullable(this.hostType);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Kubernetes namespace that will be created on the specified cluster.
- */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
-/**
- * Provisioning State for the Custom Location.
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * Metadata pertaining to creation and last modification of the resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

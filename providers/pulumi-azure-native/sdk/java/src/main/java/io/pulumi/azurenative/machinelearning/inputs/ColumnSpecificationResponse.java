@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Swagger 2.0 schema for a column within the data table representing a web service input or output. See Swagger specification: http://swagger.io/specification/
- */
 public final class ColumnSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ColumnSpecificationResponse Empty = new ColumnSpecificationResponse();
 
-    /**
-     * If the data type is categorical, this provides the list of accepted categories.
-     */
     @InputImport(name="enum")
     private final @Nullable List<Object> $enum;
 
@@ -30,9 +24,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
         return this.$enum == null ? List.of() : this.$enum;
     }
 
-    /**
-     * Additional format information for the data type.
-     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -40,9 +31,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
-    /**
-     * Data type of the column.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -50,9 +38,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
         return this.type;
     }
 
-    /**
-     * Flag indicating if the type supports null values or not.
-     */
     @InputImport(name="xMsIsnullable")
     private final @Nullable Boolean xMsIsnullable;
 
@@ -60,9 +45,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
         return this.xMsIsnullable == null ? Optional.empty() : Optional.ofNullable(this.xMsIsnullable);
     }
 
-    /**
-     * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
-     */
     @InputImport(name="xMsIsordered")
     private final @Nullable Boolean xMsIsordered;
 

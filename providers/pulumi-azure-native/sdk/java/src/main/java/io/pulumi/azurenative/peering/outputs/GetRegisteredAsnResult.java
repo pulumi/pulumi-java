@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegisteredAsnResult {
-/**
- * The customer's ASN from which traffic originates.
- */
     private final @Nullable Integer asn;
-/**
- * The ID of the resource.
- */
     private final String id;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The peering service prefix key that is to be shared with the customer.
- */
     private final String peeringServicePrefixKey;
-/**
- * The provisioning state of the resource.
- */
     private final String provisioningState;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"asn","id","name","peeringServicePrefixKey","provisioningState","type"})
@@ -53,39 +35,21 @@ public final class GetRegisteredAsnResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The customer's ASN from which traffic originates.
- */
     public Optional<Integer> getAsn() {
         return Optional.ofNullable(this.asn);
     }
-/**
- * The ID of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The peering service prefix key that is to be shared with the customer.
- */
     public String getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
-/**
- * The provisioning state of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllowedConfigListArgs Empty = new AllowedConfigListArgs();
 
-    /**
-     * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
-     */
     @InputImport(name="allowedConfigValues", required=true)
     private final Input<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 

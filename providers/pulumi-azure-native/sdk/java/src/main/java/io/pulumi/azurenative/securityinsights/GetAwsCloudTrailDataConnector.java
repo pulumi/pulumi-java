@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAwsCloudTrailDataConnector {
-/**
- * Represents Amazon Web Services CloudTrail data connector.
-API Version: 2020-01-01.
- *
- * Represents Amazon Web Services CloudTrail data connector.
- */
     public static CompletableFuture<GetAwsCloudTrailDataConnectorResult> invokeAsync(GetAwsCloudTrailDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAwsCloudTrailDataConnector", TypeShape.of(GetAwsCloudTrailDataConnectorResult.class), args == null ? GetAwsCloudTrailDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

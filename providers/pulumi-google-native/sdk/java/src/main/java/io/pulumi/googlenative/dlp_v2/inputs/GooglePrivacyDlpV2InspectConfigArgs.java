@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration description of the scanning process. When used with redactContent only info_types and min_likelihood are currently used.
- */
 public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectConfigArgs Empty = new GooglePrivacyDlpV2InspectConfigArgs();
 
-    /**
-     * CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
-     */
     @InputImport(name="customInfoTypes")
     private final @Nullable Input<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
 
@@ -33,9 +27,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
         return this.customInfoTypes == null ? Input.empty() : this.customInfoTypes;
     }
 
-    /**
-     * When true, excludes type information of the findings. This is not used for data profiling.
-     */
     @InputImport(name="excludeInfoTypes")
     private final @Nullable Input<Boolean> excludeInfoTypes;
 
@@ -43,9 +34,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
     }
 
-    /**
-     * When true, a contextual quote from the data that triggered a finding is included in the response; see Finding.quote. This is not used for data profiling.
-     */
     @InputImport(name="includeQuote")
     private final @Nullable Input<Boolean> includeQuote;
 
@@ -53,9 +41,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
         return this.includeQuote == null ? Input.empty() : this.includeQuote;
     }
 
-    /**
-     * Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.
-     */
     @InputImport(name="infoTypes")
     private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
@@ -63,9 +48,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
     }
 
-    /**
-     * Configuration to control the number of findings returned. This is not used for data profiling.
-     */
     @InputImport(name="limits")
     private final @Nullable Input<GooglePrivacyDlpV2FindingLimitsArgs> limits;
 
@@ -73,9 +55,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
         return this.limits == null ? Input.empty() : this.limits;
     }
 
-    /**
-     * Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
-     */
     @InputImport(name="minLikelihood")
     private final @Nullable Input<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
 
@@ -83,9 +62,6 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
         return this.minLikelihood == null ? Input.empty() : this.minLikelihood;
     }
 
-    /**
-     * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.
-     */
     @InputImport(name="ruleSet")
     private final @Nullable Input<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
 

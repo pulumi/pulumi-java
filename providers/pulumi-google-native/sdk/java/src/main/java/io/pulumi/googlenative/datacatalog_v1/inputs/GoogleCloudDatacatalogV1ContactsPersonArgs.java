@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A contact person for the entry.
- */
 public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1ContactsPersonArgs Empty = new GoogleCloudDatacatalogV1ContactsPersonArgs();
 
-    /**
-     * Designation of the person, for example, Data Steward.
-     */
     @InputImport(name="designation")
     private final @Nullable Input<String> designation;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
         return this.designation == null ? Input.empty() : this.designation;
     }
 
-    /**
-     * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
-     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 

@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OperationsDefinitionResponseDisplay {
-/**
- * 
- */
     private final String description;
-/**
- * 
- */
     private final String operation;
-/**
- * 
- */
     private final String provider;
-/**
- * 
- */
     private final String resource;
 
     @OutputCustomType.Constructor({"description","operation","provider","resource"})
@@ -38,27 +26,15 @@ public final class OperationsDefinitionResponseDisplay {
         this.resource = Objects.requireNonNull(resource);
     }
 
-/**
- * 
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * 
- */
     public String getOperation() {
         return this.operation;
     }
-/**
- * 
- */
     public String getProvider() {
         return this.provider;
     }
-/**
- * 
- */
     public String getResource() {
         return this.resource;
     }

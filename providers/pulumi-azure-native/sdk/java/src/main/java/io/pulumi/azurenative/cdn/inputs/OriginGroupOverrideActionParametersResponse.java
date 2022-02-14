@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the parameters for the origin group override action.
- */
 public final class OriginGroupOverrideActionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginGroupOverrideActionParametersResponse Empty = new OriginGroupOverrideActionParametersResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -26,9 +20,6 @@ public final class OriginGroupOverrideActionParametersResponse extends io.pulumi
         return this.odataType;
     }
 
-    /**
-     * defines the OriginGroup that would override the DefaultOriginGroup.
-     */
     @InputImport(name="originGroup", required=true)
     private final ResourceReferenceResponse originGroup;
 

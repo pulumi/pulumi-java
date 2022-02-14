@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LocalObjectReferenceResponse {
-/**
- * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
- */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -19,9 +16,6 @@ public final class LocalObjectReferenceResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
- */
     public String getName() {
         return this.name;
     }

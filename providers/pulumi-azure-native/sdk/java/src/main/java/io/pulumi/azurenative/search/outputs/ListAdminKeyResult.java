@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListAdminKeyResult {
-/**
- * The primary admin API key of the search service.
- */
     private final String primaryKey;
-/**
- * The secondary admin API key of the search service.
- */
     private final String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
@@ -26,15 +20,9 @@ public final class ListAdminKeyResult {
         this.secondaryKey = Objects.requireNonNull(secondaryKey);
     }
 
-/**
- * The primary admin API key of the search service.
- */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
-/**
- * The secondary admin API key of the search service.
- */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

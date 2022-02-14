@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualNetworkRuleResult {
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * Create firewall rule before the virtual network has vnet service endpoint enabled.
- */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Virtual Network Rule State
- */
     private final String state;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
-/**
- * The ARM resource id of the virtual network subnet.
- */
     private final String virtualNetworkSubnetId;
 
     @OutputCustomType.Constructor({"id","ignoreMissingVnetServiceEndpoint","name","state","type","virtualNetworkSubnetId"})
@@ -53,39 +35,21 @@ public final class GetVirtualNetworkRuleResult {
         this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
     }
 
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Create firewall rule before the virtual network has vnet service endpoint enabled.
- */
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Virtual Network Rule State
- */
     public String getState() {
         return this.state;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }
-/**
- * The ARM resource id of the virtual network subnet.
- */
     public String getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }

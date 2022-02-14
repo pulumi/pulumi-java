@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterPrincipalAssignmentArgs Empty = new GetClusterPrincipalAssignmentArgs();
 
-    /**
-     * The name of the Kusto cluster.
-     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -25,9 +19,6 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
         return this.clusterName;
     }
 
-    /**
-     * The name of the Kusto principalAssignment.
-     */
     @InputImport(name="principalAssignmentName", required=true)
     private final String principalAssignmentName;
 
@@ -35,9 +26,6 @@ public final class GetClusterPrincipalAssignmentArgs extends io.pulumi.resources
         return this.principalAssignmentName;
     }
 
-    /**
-     * The name of the resource group containing the Kusto cluster.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

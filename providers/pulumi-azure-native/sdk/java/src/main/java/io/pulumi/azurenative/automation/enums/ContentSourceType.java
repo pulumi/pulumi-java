@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the content source type.
- */
     @EnumType
     public enum ContentSourceType {
-/**
- * 
- */
         EmbeddedContent("embeddedContent"),
-/**
- * 
- */
         Uri("uri");
 
         private final String value;

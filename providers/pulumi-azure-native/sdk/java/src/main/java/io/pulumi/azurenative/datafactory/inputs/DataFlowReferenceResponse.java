@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Data flow reference type.
- */
 public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataFlowReferenceResponse Empty = new DataFlowReferenceResponse();
 
-    /**
-     * Reference data flow parameters from dataset.
-     */
     @InputImport(name="datasetParameters")
     private final @Nullable Object datasetParameters;
 
@@ -29,9 +23,6 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
         return this.datasetParameters == null ? Optional.empty() : Optional.ofNullable(this.datasetParameters);
     }
 
-    /**
-     * Data flow parameters
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,Object> parameters;
 
@@ -39,9 +30,6 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Reference data flow name.
-     */
     @InputImport(name="referenceName", required=true)
     private final String referenceName;
 
@@ -49,9 +37,6 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
         return this.referenceName;
     }
 
-    /**
-     * Data flow reference type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

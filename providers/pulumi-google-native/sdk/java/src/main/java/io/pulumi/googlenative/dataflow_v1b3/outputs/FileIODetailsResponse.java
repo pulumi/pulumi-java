@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FileIODetailsResponse {
-/**
- * File Pattern used to access files by the connector.
- */
     private final String filePattern;
 
     @OutputCustomType.Constructor({"filePattern"})
@@ -19,9 +16,6 @@ public final class FileIODetailsResponse {
         this.filePattern = Objects.requireNonNull(filePattern);
     }
 
-/**
- * File Pattern used to access files by the connector.
- */
     public String getFilePattern() {
         return this.filePattern;
     }

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of table in sync group schema.
- */
 public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SyncGroupSchemaTableResponse Empty = new SyncGroupSchemaTableResponse();
 
-    /**
-     * List of columns in sync group schema.
-     */
     @InputImport(name="columns")
     private final @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
 
@@ -29,9 +23,6 @@ public final class SyncGroupSchemaTableResponse extends io.pulumi.resources.Invo
         return this.columns == null ? List.of() : this.columns;
     }
 
-    /**
-     * Quoted name of sync group schema table.
-     */
     @InputImport(name="quotedName")
     private final @Nullable String quotedName;
 

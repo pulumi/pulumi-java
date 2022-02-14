@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListSecretValueArgs Empty = new ListSecretValueArgs();
 
-    /**
-     * Azure resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the secret resource.
-     */
     @InputImport(name="secretResourceName", required=true)
     private final String secretResourceName;
 
@@ -35,9 +26,6 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
         return this.secretResourceName;
     }
 
-    /**
-     * The name of the secret resource value which is typically the version identifier for the value.
-     */
     @InputImport(name="secretValueResourceName", required=true)
     private final String secretValueResourceName;
 

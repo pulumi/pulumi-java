@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceEndpointPolicy {
-/**
- * Service End point policy resource.
-API Version: 2020-11-01.
- *
- * Service End point policy resource.
- */
     public static CompletableFuture<GetServiceEndpointPolicyResult> invokeAsync(GetServiceEndpointPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getServiceEndpointPolicy", TypeShape.of(GetServiceEndpointPolicyResult.class), args == null ? GetServiceEndpointPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

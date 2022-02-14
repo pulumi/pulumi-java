@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers. More information could be found at: https://cloud.google.com/dialogflow/docs/fulfillment-configure.
- */
 public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs Empty = new GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs();
 
-    /**
-     * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
-     */
     @InputImport(name="isCloudFunction")
     private final @Nullable Input<Boolean> isCloudFunction;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
         return this.isCloudFunction == null ? Input.empty() : this.isCloudFunction;
     }
 
-    /**
-     * Optional. The password for HTTP Basic authentication.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Optional. The HTTP request headers to send together with fulfillment requests.
-     */
     @InputImport(name="requestHeaders")
     private final @Nullable Input<Map<String,String>> requestHeaders;
 
@@ -49,9 +37,6 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
         return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
     }
 
-    /**
-     * The fulfillment URI for receiving POST requests. It must use https protocol.
-     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 
@@ -59,9 +44,6 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
         return this.uri;
     }
 
-    /**
-     * Optional. The user name for HTTP Basic authentication.
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterBgpArgs Empty = new RouterBgpArgs();
 
-    /**
-     * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.
-     */
     @InputImport(name="advertiseMode")
     private final @Nullable Input<RouterBgpAdvertiseMode> advertiseMode;
 
@@ -31,9 +25,6 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
     }
 
-    /**
-     * User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
-     */
     @InputImport(name="advertisedGroups")
     private final @Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
 
@@ -41,9 +32,6 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
     }
 
-    /**
-     * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
-     */
     @InputImport(name="advertisedIpRanges")
     private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
@@ -51,9 +39,6 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
     }
 
-    /**
-     * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.
-     */
     @InputImport(name="asn")
     private final @Nullable Input<Integer> asn;
 
@@ -61,9 +46,6 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
         return this.asn == null ? Input.empty() : this.asn;
     }
 
-    /**
-     * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer. BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
-     */
     @InputImport(name="keepaliveInterval")
     private final @Nullable Input<Integer> keepaliveInterval;
 

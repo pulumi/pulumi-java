@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
-/**
- * Type of Human Agent Assistant API feature to request.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Type of Human Agent Assistant API feature to request.
- */
     public String getType() {
         return this.type;
     }

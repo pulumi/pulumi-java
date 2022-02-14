@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Postgres Instance properties.
- */
 public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PostgresInstancePropertiesArgs Empty = new PostgresInstancePropertiesArgs();
 
-    /**
-     * The instance admin
-     */
     @InputImport(name="admin")
     private final @Nullable Input<String> admin;
 
@@ -29,9 +23,6 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
         return this.admin == null ? Input.empty() : this.admin;
     }
 
-    /**
-     * Username and password for basic authentication.
-     */
     @InputImport(name="basicLoginInformation")
     private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
 
@@ -39,9 +30,6 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
         return this.basicLoginInformation == null ? Input.empty() : this.basicLoginInformation;
     }
 
-    /**
-     * The data controller id
-     */
     @InputImport(name="dataControllerId")
     private final @Nullable Input<String> dataControllerId;
 
@@ -49,9 +37,6 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
         return this.dataControllerId == null ? Input.empty() : this.dataControllerId;
     }
 
-    /**
-     * The raw kubernetes information
-     */
     @InputImport(name="k8sRaw")
     private final @Nullable Input<Object> k8sRaw;
 
@@ -59,9 +44,6 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
         return this.k8sRaw == null ? Input.empty() : this.k8sRaw;
     }
 
-    /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     */
     @InputImport(name="lastUploadedDate")
     private final @Nullable Input<String> lastUploadedDate;
 

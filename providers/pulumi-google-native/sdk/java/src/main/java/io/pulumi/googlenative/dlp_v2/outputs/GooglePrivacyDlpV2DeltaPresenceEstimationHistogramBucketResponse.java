@@ -12,25 +12,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse {
-/**
- * Number of records within these probability bounds.
- */
     private final String bucketSize;
-/**
- * Total number of distinct quasi-identifier tuple values in this bucket.
- */
     private final String bucketValueCount;
-/**
- * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
- */
     private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
-/**
- * Always greater than or equal to min_probability.
- */
     private final Double maxProbability;
-/**
- * Between 0 and 1.
- */
     private final Double minProbability;
 
     @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","maxProbability","minProbability"})
@@ -47,33 +32,18 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
         this.minProbability = Objects.requireNonNull(minProbability);
     }
 
-/**
- * Number of records within these probability bounds.
- */
     public String getBucketSize() {
         return this.bucketSize;
     }
-/**
- * Total number of distinct quasi-identifier tuple values in this bucket.
- */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
-/**
- * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
- */
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> getBucketValues() {
         return this.bucketValues;
     }
-/**
- * Always greater than or equal to min_probability.
- */
     public Double getMaxProbability() {
         return this.maxProbability;
     }
-/**
- * Between 0 and 1.
- */
     public Double getMinProbability() {
         return this.minProbability;
     }

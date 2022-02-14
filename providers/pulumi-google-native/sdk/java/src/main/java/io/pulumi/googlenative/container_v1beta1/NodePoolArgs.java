@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodePoolArgs Empty = new NodePoolArgs();
 
-    /**
-     * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
-     */
     @InputImport(name="autoscaling")
     private final @Nullable Input<NodePoolAutoscalingArgs> autoscaling;
 
@@ -37,9 +31,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="clusterId", required=true)
     private final Input<String> clusterId;
 
@@ -47,9 +38,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterId;
     }
 
-    /**
-     * Which conditions caused the current node pool state.
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<StatusConditionArgs>> conditions;
 
@@ -57,9 +45,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * The node configuration of the pool.
-     */
     @InputImport(name="config")
     private final @Nullable Input<NodeConfigArgs> config;
 
@@ -67,9 +52,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
-    /**
-     * The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
-     */
     @InputImport(name="initialNodeCount")
     private final @Nullable Input<Integer> initialNodeCount;
 
@@ -77,9 +59,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -87,9 +66,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
-     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -97,9 +73,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
-    /**
-     * NodeManagement configuration for this NodePool.
-     */
     @InputImport(name="management")
     private final @Nullable Input<NodeManagementArgs> management;
 
@@ -107,9 +80,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.management == null ? Input.empty() : this.management;
     }
 
-    /**
-     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
-     */
     @InputImport(name="maxPodsConstraint")
     private final @Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint;
 
@@ -117,9 +87,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxPodsConstraint == null ? Input.empty() : this.maxPodsConstraint;
     }
 
-    /**
-     * The name of the node pool.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -127,9 +94,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
-     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<NodeNetworkConfigArgs> networkConfig;
 
@@ -137,9 +101,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
-    /**
-     * The parent (project, location, cluster name) where the node pool will be created. Specified in the format `projects/*{@literal /}locations/*{@literal /}clusters/*`.
-     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -147,9 +108,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
-    /**
-     * Specifies the node placement policy.
-     */
     @InputImport(name="placementPolicy")
     private final @Nullable Input<PlacementPolicyArgs> placementPolicy;
 
@@ -157,9 +115,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.placementPolicy == null ? Input.empty() : this.placementPolicy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -167,9 +122,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Upgrade settings control disruption and speed of the upgrade.
-     */
     @InputImport(name="upgradeSettings")
     private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
 
@@ -177,9 +129,6 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
     }
 
-    /**
-     * The version of the Kubernetes of this node.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

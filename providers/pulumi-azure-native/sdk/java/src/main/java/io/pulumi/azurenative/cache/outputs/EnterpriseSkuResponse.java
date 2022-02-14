@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnterpriseSkuResponse {
-/**
- * The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
- */
     private final @Nullable Integer capacity;
-/**
- * The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
- */
     private final String name;
 
     @OutputCustomType.Constructor({"capacity","name"})
@@ -29,15 +23,9 @@ public final class EnterpriseSkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
- */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
-/**
- * The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
- */
     public String getName() {
         return this.name;
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Mount target properties
- */
 public final class MountTargetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MountTargetPropertiesResponse Empty = new MountTargetPropertiesResponse();
 
-    /**
-     * UUID v4 used to identify the MountTarget
-     */
     @InputImport(name="fileSystemId", required=true)
     private final String fileSystemId;
 
@@ -27,9 +21,6 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
         return this.fileSystemId;
     }
 
-    /**
-     * The mount target's IPv4 address
-     */
     @InputImport(name="ipAddress", required=true)
     private final String ipAddress;
 
@@ -37,9 +28,6 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
         return this.ipAddress;
     }
 
-    /**
-     * UUID v4 used to identify the MountTarget
-     */
     @InputImport(name="mountTargetId", required=true)
     private final String mountTargetId;
 
@@ -47,9 +35,6 @@ public final class MountTargetPropertiesResponse extends io.pulumi.resources.Inv
         return this.mountTargetId;
     }
 
-    /**
-     * The SMB server's Fully Qualified Domain Name, FQDN
-     */
     @InputImport(name="smbServerFqdn")
     private final @Nullable String smbServerFqdn;
 

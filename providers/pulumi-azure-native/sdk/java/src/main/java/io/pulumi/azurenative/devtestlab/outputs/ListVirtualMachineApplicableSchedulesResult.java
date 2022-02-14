@@ -13,33 +13,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListVirtualMachineApplicableSchedulesResult {
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
- */
     private final @Nullable ScheduleResponse labVmsShutdown;
-/**
- * The auto-startup schedule, if one has been set at the lab or lab resource level.
- */
     private final @Nullable ScheduleResponse labVmsStartup;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","labVmsShutdown","labVmsStartup","location","name","tags","type"})
@@ -60,45 +39,24 @@ public final class ListVirtualMachineApplicableSchedulesResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
- */
     public Optional<ScheduleResponse> getLabVmsShutdown() {
         return Optional.ofNullable(this.labVmsShutdown);
     }
-/**
- * The auto-startup schedule, if one has been set at the lab or lab resource level.
- */
     public Optional<ScheduleResponse> getLabVmsStartup() {
         return Optional.ofNullable(this.labVmsStartup);
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

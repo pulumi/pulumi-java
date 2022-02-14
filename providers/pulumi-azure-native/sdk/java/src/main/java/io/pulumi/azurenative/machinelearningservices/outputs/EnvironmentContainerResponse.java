@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvironmentContainerResponse {
-/**
- * The asset description text.
- */
     private final @Nullable String description;
-/**
- * The asset property dictionary.
- */
     private final @Nullable Map<String,String> properties;
-/**
- * Tag dictionary. Tags can be added, removed, and updated.
- */
     private final @Nullable Map<String,String> tags;
 
     @OutputCustomType.Constructor({"description","properties","tags"})
@@ -35,21 +26,12 @@ public final class EnvironmentContainerResponse {
         this.tags = tags;
     }
 
-/**
- * The asset description text.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The asset property dictionary.
- */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * Tag dictionary. Tags can be added, removed, and updated.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

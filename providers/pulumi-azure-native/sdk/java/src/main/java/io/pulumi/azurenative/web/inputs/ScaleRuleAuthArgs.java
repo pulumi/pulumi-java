@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Auth Secrets for Container App Scale Rule
- */
 public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleRuleAuthArgs Empty = new ScaleRuleAuthArgs();
 
-    /**
-     * Name of the Container App secret from which to pull the auth params.
-     */
     @InputImport(name="secretRef")
     private final @Nullable Input<String> secretRef;
 
@@ -27,9 +21,6 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretRef == null ? Input.empty() : this.secretRef;
     }
 
-    /**
-     * Trigger Parameter that uses the secret
-     */
     @InputImport(name="triggerParameter")
     private final @Nullable Input<String> triggerParameter;
 

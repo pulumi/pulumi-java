@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
- */
 public final class LocalTimestampTimeZoneOffsetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalTimestampTimeZoneOffsetArgs Empty = new LocalTimestampTimeZoneOffsetArgs();
 
-    /**
-     * The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00)
-     */
     @InputImport(name="propertyName")
     private final @Nullable Input<String> propertyName;
 

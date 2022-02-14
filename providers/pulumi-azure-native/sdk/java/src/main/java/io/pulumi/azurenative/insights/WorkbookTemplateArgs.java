@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkbookTemplateArgs Empty = new WorkbookTemplateArgs();
 
-    /**
-     * Information about the author of the workbook template.
-     */
     @InputImport(name="author")
     private final @Nullable Input<String> author;
 
@@ -33,9 +27,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.author == null ? Input.empty() : this.author;
     }
 
-    /**
-     * Workbook galleries supported by the template.
-     */
     @InputImport(name="galleries", required=true)
     private final Input<List<WorkbookTemplateGalleryArgs>> galleries;
 
@@ -43,9 +34,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.galleries;
     }
 
-    /**
-     * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
-     */
     @InputImport(name="localized")
     private final @Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
@@ -53,9 +41,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.localized == null ? Input.empty() : this.localized;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,9 +48,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -73,9 +55,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,9 +62,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -93,9 +69,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -103,9 +76,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Valid JSON object containing workbook template payload.
-     */
     @InputImport(name="templateData", required=true)
     private final Input<Object> templateData;
 

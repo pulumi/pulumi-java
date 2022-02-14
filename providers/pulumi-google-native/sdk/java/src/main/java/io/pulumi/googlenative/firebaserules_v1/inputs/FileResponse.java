@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * `File` containing source content.
- */
 public final class FileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileResponse Empty = new FileResponse();
 
-    /**
-     * Textual Content.
-     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -25,9 +19,6 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
         return this.content;
     }
 
-    /**
-     * Fingerprint (e.g. github sha) associated with the `File`.
-     */
     @InputImport(name="fingerprint", required=true)
     private final String fingerprint;
 
@@ -35,9 +26,6 @@ public final class FileResponse extends io.pulumi.resources.InvokeArgs {
         return this.fingerprint;
     }
 
-    /**
-     * File name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

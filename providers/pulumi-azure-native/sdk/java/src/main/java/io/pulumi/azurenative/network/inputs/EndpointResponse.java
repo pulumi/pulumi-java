@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Class representing a Traffic Manager endpoint.
- */
 public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointResponse Empty = new EndpointResponse();
 
-    /**
-     * List of custom headers.
-     */
     @InputImport(name="customHeaders")
     private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
 
@@ -31,9 +25,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
 
-    /**
-     * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
-     */
     @InputImport(name="endpointLocation")
     private final @Nullable String endpointLocation;
 
@@ -41,9 +32,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpointLocation == null ? Optional.empty() : Optional.ofNullable(this.endpointLocation);
     }
 
-    /**
-     * The monitoring status of the endpoint.
-     */
     @InputImport(name="endpointMonitorStatus")
     private final @Nullable String endpointMonitorStatus;
 
@@ -51,9 +39,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpointMonitorStatus == null ? Optional.empty() : Optional.ofNullable(this.endpointMonitorStatus);
     }
 
-    /**
-     * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
-     */
     @InputImport(name="endpointStatus")
     private final @Nullable String endpointStatus;
 
@@ -61,9 +46,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpointStatus == null ? Optional.empty() : Optional.ofNullable(this.endpointStatus);
     }
 
-    /**
-     * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
-     */
     @InputImport(name="geoMapping")
     private final @Nullable List<String> geoMapping;
 
@@ -71,9 +53,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.geoMapping == null ? List.of() : this.geoMapping;
     }
 
-    /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -81,9 +60,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     @InputImport(name="minChildEndpoints")
     private final @Nullable Double minChildEndpoints;
 
@@ -91,9 +67,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.minChildEndpoints == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpoints);
     }
 
-    /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     @InputImport(name="minChildEndpointsIPv4")
     private final @Nullable Double minChildEndpointsIPv4;
 
@@ -101,9 +74,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.minChildEndpointsIPv4 == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpointsIPv4);
     }
 
-    /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     */
     @InputImport(name="minChildEndpointsIPv6")
     private final @Nullable Double minChildEndpointsIPv6;
 
@@ -111,9 +81,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.minChildEndpointsIPv6 == null ? Optional.empty() : Optional.ofNullable(this.minChildEndpointsIPv6);
     }
 
-    /**
-     * The name of the resource
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -121,9 +88,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
-     */
     @InputImport(name="priority")
     private final @Nullable Double priority;
 
@@ -131,9 +95,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
-    /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
-     */
     @InputImport(name="subnets")
     private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
 
@@ -141,9 +102,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.subnets == null ? List.of() : this.subnets;
     }
 
-    /**
-     * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -151,9 +109,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
-    /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
-     */
     @InputImport(name="targetResourceId")
     private final @Nullable String targetResourceId;
 
@@ -161,9 +116,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
     }
 
-    /**
-     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -171,9 +123,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
-     */
     @InputImport(name="weight")
     private final @Nullable Double weight;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Staging info for execute data flow activity.
- */
 public final class DataFlowStagingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataFlowStagingInfoResponse Empty = new DataFlowStagingInfoResponse();
 
-    /**
-     * Folder path for staging blob. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="folderPath")
     private final @Nullable Object folderPath;
 
@@ -28,9 +22,6 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
-    /**
-     * Staging linked service reference.
-     */
     @InputImport(name="linkedService")
     private final @Nullable LinkedServiceReferenceResponse linkedService;
 

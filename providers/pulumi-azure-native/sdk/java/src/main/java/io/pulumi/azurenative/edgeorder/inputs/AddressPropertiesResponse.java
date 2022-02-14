@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Address Properties
- */
 public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AddressPropertiesResponse Empty = new AddressPropertiesResponse();
 
-    /**
-     * Status of address validation
-     */
     @InputImport(name="addressValidationStatus", required=true)
     private final String addressValidationStatus;
 
@@ -29,9 +23,6 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.addressValidationStatus;
     }
 
-    /**
-     * Contact details for the address
-     */
     @InputImport(name="contactDetails", required=true)
     private final ContactDetailsResponse contactDetails;
 
@@ -39,9 +30,6 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.contactDetails;
     }
 
-    /**
-     * Shipping details for the address
-     */
     @InputImport(name="shippingAddress")
     private final @Nullable ShippingAddressResponse shippingAddress;
 

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRegistryCredentialsResult {
-/**
- * The administrator password.
- */
     private final @Nullable String password;
-/**
- * The administrator username.
- */
     private final @Nullable String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -28,15 +22,9 @@ public final class GetRegistryCredentialsResult {
         this.username = username;
     }
 
-/**
- * The administrator password.
- */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * The administrator username.
- */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

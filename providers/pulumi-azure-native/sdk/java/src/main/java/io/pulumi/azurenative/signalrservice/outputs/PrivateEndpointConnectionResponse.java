@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionResponse {
-/**
- * Fully qualified resource Id for the resource.
- */
     private final String id;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * Private endpoint associated with the private endpoint connection
- */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-/**
- * Connection state
- */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-/**
- * Provisioning state of the private endpoint connection
- */
     private final String provisioningState;
-/**
- * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
@@ -54,39 +36,21 @@ public final class PrivateEndpointConnectionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource Id for the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Private endpoint associated with the private endpoint connection
- */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
-/**
- * Connection state
- */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-/**
- * Provisioning state of the private endpoint connection
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
- */
     public String getType() {
         return this.type;
     }

@@ -15,89 +15,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetServerEndpointResult {
-/**
- * Cloud Tiering.
- */
     private final @Nullable String cloudTiering;
-/**
- * Cloud tiering status. Only populated if cloud tiering is enabled.
- */
     private final ServerEndpointCloudTieringStatusResponse cloudTieringStatus;
-/**
- * Friendly Name
- */
     private final @Nullable String friendlyName;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * Policy for how namespace and files are recalled during FastDr.
- */
     private final @Nullable String initialDownloadPolicy;
-/**
- * Resource Last Operation Name
- */
     private final String lastOperationName;
-/**
- * ServerEndpoint lastWorkflowId
- */
     private final String lastWorkflowId;
-/**
- * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
- */
     private final @Nullable String localCacheMode;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Offline data transfer
- */
     private final @Nullable String offlineDataTransfer;
-/**
- * Offline data transfer share name
- */
     private final @Nullable String offlineDataTransferShareName;
-/**
- * Offline data transfer storage account resource ID
- */
     private final String offlineDataTransferStorageAccountResourceId;
-/**
- * Offline data transfer storage account tenant ID
- */
     private final String offlineDataTransferStorageAccountTenantId;
-/**
- * ServerEndpoint Provisioning State
- */
     private final String provisioningState;
-/**
- * Recall status. Only populated if cloud tiering is enabled.
- */
     private final ServerEndpointRecallStatusResponse recallStatus;
-/**
- * Server Local path.
- */
     private final @Nullable String serverLocalPath;
-/**
- * Server Resource Id.
- */
     private final @Nullable String serverResourceId;
-/**
- * Server Endpoint sync status
- */
     private final ServerEndpointSyncStatusResponse syncStatus;
-/**
- * Tier files older than days.
- */
     private final @Nullable Integer tierFilesOlderThanDays;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
-/**
- * Level of free space to be maintained by Cloud Tiering if it is enabled.
- */
     private final @Nullable Integer volumeFreeSpacePercent;
 
     @OutputCustomType.Constructor({"cloudTiering","cloudTieringStatus","friendlyName","id","initialDownloadPolicy","lastOperationName","lastWorkflowId","localCacheMode","name","offlineDataTransfer","offlineDataTransferShareName","offlineDataTransferStorageAccountResourceId","offlineDataTransferStorageAccountTenantId","provisioningState","recallStatus","serverLocalPath","serverResourceId","syncStatus","tierFilesOlderThanDays","type","volumeFreeSpacePercent"})
@@ -146,129 +83,66 @@ public final class GetServerEndpointResult {
         this.volumeFreeSpacePercent = volumeFreeSpacePercent;
     }
 
-/**
- * Cloud Tiering.
- */
     public Optional<String> getCloudTiering() {
         return Optional.ofNullable(this.cloudTiering);
     }
-/**
- * Cloud tiering status. Only populated if cloud tiering is enabled.
- */
     public ServerEndpointCloudTieringStatusResponse getCloudTieringStatus() {
         return this.cloudTieringStatus;
     }
-/**
- * Friendly Name
- */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Policy for how namespace and files are recalled during FastDr.
- */
     public Optional<String> getInitialDownloadPolicy() {
         return Optional.ofNullable(this.initialDownloadPolicy);
     }
-/**
- * Resource Last Operation Name
- */
     public String getLastOperationName() {
         return this.lastOperationName;
     }
-/**
- * ServerEndpoint lastWorkflowId
- */
     public String getLastWorkflowId() {
         return this.lastWorkflowId;
     }
-/**
- * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
- */
     public Optional<String> getLocalCacheMode() {
         return Optional.ofNullable(this.localCacheMode);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Offline data transfer
- */
     public Optional<String> getOfflineDataTransfer() {
         return Optional.ofNullable(this.offlineDataTransfer);
     }
-/**
- * Offline data transfer share name
- */
     public Optional<String> getOfflineDataTransferShareName() {
         return Optional.ofNullable(this.offlineDataTransferShareName);
     }
-/**
- * Offline data transfer storage account resource ID
- */
     public String getOfflineDataTransferStorageAccountResourceId() {
         return this.offlineDataTransferStorageAccountResourceId;
     }
-/**
- * Offline data transfer storage account tenant ID
- */
     public String getOfflineDataTransferStorageAccountTenantId() {
         return this.offlineDataTransferStorageAccountTenantId;
     }
-/**
- * ServerEndpoint Provisioning State
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Recall status. Only populated if cloud tiering is enabled.
- */
     public ServerEndpointRecallStatusResponse getRecallStatus() {
         return this.recallStatus;
     }
-/**
- * Server Local path.
- */
     public Optional<String> getServerLocalPath() {
         return Optional.ofNullable(this.serverLocalPath);
     }
-/**
- * Server Resource Id.
- */
     public Optional<String> getServerResourceId() {
         return Optional.ofNullable(this.serverResourceId);
     }
-/**
- * Server Endpoint sync status
- */
     public ServerEndpointSyncStatusResponse getSyncStatus() {
         return this.syncStatus;
     }
-/**
- * Tier files older than days.
- */
     public Optional<Integer> getTierFilesOlderThanDays() {
         return Optional.ofNullable(this.tierFilesOlderThanDays);
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }
-/**
- * Level of free space to be maintained by Cloud Tiering if it is enabled.
- */
     public Optional<Integer> getVolumeFreeSpacePercent() {
         return Optional.ofNullable(this.volumeFreeSpacePercent);
     }

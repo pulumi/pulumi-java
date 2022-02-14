@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A condition to be met.
- */
 public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 
-    /**
-     * Trusted attributes supplied by the IAM system.
-     */
     @InputImport(name="iam")
     private final @Nullable Input<ConditionIam> iam;
 
@@ -31,9 +25,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.iam == null ? Input.empty() : this.iam;
     }
 
-    /**
-     * An operator to apply the subject with.
-     */
     @InputImport(name="op")
     private final @Nullable Input<ConditionOp> op;
 
@@ -41,9 +32,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.op == null ? Input.empty() : this.op;
     }
 
-    /**
-     * Trusted attributes discharged by the service.
-     */
     @InputImport(name="svc")
     private final @Nullable Input<String> svc;
 
@@ -51,9 +39,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.svc == null ? Input.empty() : this.svc;
     }
 
-    /**
-     * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
-     */
     @InputImport(name="sys")
     private final @Nullable Input<ConditionSys> sys;
 
@@ -61,9 +46,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.sys == null ? Input.empty() : this.sys;
     }
 
-    /**
-     * The objects of the condition.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AvailabilitySetArgs Empty = new AvailabilitySetArgs();
 
-    /**
-     * The name of the availability set.
-     */
     @InputImport(name="availabilitySetName")
     private final @Nullable Input<String> availabilitySetName;
 
@@ -32,9 +26,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.availabilitySetName == null ? Input.empty() : this.availabilitySetName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,9 +33,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Fault Domain count.
-     */
     @InputImport(name="platformFaultDomainCount")
     private final @Nullable Input<Integer> platformFaultDomainCount;
 
@@ -52,9 +40,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.platformFaultDomainCount == null ? Input.empty() : this.platformFaultDomainCount;
     }
 
-    /**
-     * Update Domain count.
-     */
     @InputImport(name="platformUpdateDomainCount")
     private final @Nullable Input<Integer> platformUpdateDomainCount;
 
@@ -62,9 +47,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.platformUpdateDomainCount == null ? Input.empty() : this.platformUpdateDomainCount;
     }
 
-    /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
-     */
     @InputImport(name="proximityPlacementGroup")
     private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
 
@@ -72,9 +54,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,9 +61,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -92,9 +68,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -102,9 +75,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * A list of references to all virtual machines in the availability set.
-     */
     @InputImport(name="virtualMachines")
     private final @Nullable Input<List<SubResourceArgs>> virtualMachines;
 

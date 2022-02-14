@@ -16,271 +16,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The storage account credential.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### SACPut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageAccountCredential = new AzureNative.DataBoxEdge.StorageAccountCredential("storageAccountCredential", new AzureNative.DataBoxEdge.StorageAccountCredentialArgs
-        {
-            AccountKey = new AzureNative.DataBoxEdge.Inputs.AsymmetricEncryptedSecretArgs
-            {
-                EncryptionAlgorithm = "AES256",
-                EncryptionCertThumbprint = "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
-                Value = "lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA==",
-            },
-            AccountType = "BlobStorage",
-            Alias = "sac1",
-            DeviceName = "testedgedevice",
-            Name = "sac1",
-            ResourceGroupName = "GroupForEdgeAutomation",
-            SslStatus = "Disabled",
-            UserName = "cisbvt",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewStorageAccountCredential(ctx, "storageAccountCredential", &databoxedge.StorageAccountCredentialArgs{
-			AccountKey: &databoxedge.AsymmetricEncryptedSecretArgs{
-				EncryptionAlgorithm:      pulumi.String("AES256"),
-				EncryptionCertThumbprint: pulumi.String("2A9D8D6BE51574B5461230AEF02F162C5F01AD31"),
-				Value:                    pulumi.String("lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA=="),
-			},
-			AccountType:       pulumi.String("BlobStorage"),
-			Alias:             pulumi.String("sac1"),
-			DeviceName:        pulumi.String("testedgedevice"),
-			Name:              pulumi.String("sac1"),
-			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
-			SslStatus:         pulumi.String("Disabled"),
-			UserName:          pulumi.String("cisbvt"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageAccountCredential = new azure_native.databoxedge.StorageAccountCredential("storageAccountCredential", {
-    accountKey: {
-        encryptionAlgorithm: "AES256",
-        encryptionCertThumbprint: "2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
-        value: "lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA==",
-    },
-    accountType: "BlobStorage",
-    alias: "sac1",
-    deviceName: "testedgedevice",
-    name: "sac1",
-    resourceGroupName: "GroupForEdgeAutomation",
-    sslStatus: "Disabled",
-    userName: "cisbvt",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_account_credential = azure_native.databoxedge.StorageAccountCredential("storageAccountCredential",
-    account_key=azure_native.databoxedge.AsymmetricEncryptedSecretArgs(
-        encryption_algorithm="AES256",
-        encryption_cert_thumbprint="2A9D8D6BE51574B5461230AEF02F162C5F01AD31",
-        value="lAeZEYi6rNP1/EyNaVUYmTSZEYyaIaWmwUsGwek0+xiZj54GM9Ue9/UA2ed/ClC03wuSit2XzM/cLRU5eYiFBwks23rGwiQOr3sruEL2a74EjPD050xYjA6M1I2hu/w2yjVHhn5j+DbXS4Xzi+rHHNZK3DgfDO3PkbECjPck+PbpSBjy9+6Mrjcld5DIZhUAeMlMHrFlg+WKRKB14o/og56u5/xX6WKlrMLEQ+y6E18dUwvWs2elTNoVO8PBE8SM/CfooX4AMNvaNdSObNBPdP+F6Lzc556nFNWXrBLRt0vC7s9qTiVRO4x/qCNaK/B4y7IqXMllwQFf4Np9UQ2ECA==",
-    ),
-    account_type="BlobStorage",
-    alias="sac1",
-    device_name="testedgedevice",
-    name="sac1",
-    resource_group_name="GroupForEdgeAutomation",
-    ssl_status="Disabled",
-    user_name="cisbvt")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:databoxedge:StorageAccountCredential sac1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1 
-```
-
- */
 @ResourceType(type="azure-native:databoxedge:StorageAccountCredential")
 public class StorageAccountCredential extends io.pulumi.resources.CustomResource {
-    /**
-     * Encrypted storage key.
-     */
     @OutputExport(name="accountKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accountKey;
 
-    /**
-     * @return Encrypted storage key.
-     */
     public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getAccountKey() {
         return this.accountKey;
     }
-    /**
-     * Type of storage accessed on the storage account.
-     */
     @OutputExport(name="accountType", type=String.class, parameters={})
     private Output<String> accountType;
 
-    /**
-     * @return Type of storage accessed on the storage account.
-     */
     public Output<String> getAccountType() {
         return this.accountType;
     }
-    /**
-     * Alias for the storage account.
-     */
     @OutputExport(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
-    /**
-     * @return Alias for the storage account.
-     */
     public Output<String> getAlias() {
         return this.alias;
     }
-    /**
-     * Blob end point for private clouds.
-     */
     @OutputExport(name="blobDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> blobDomainName;
 
-    /**
-     * @return Blob end point for private clouds.
-     */
     public Output</* @Nullable */ String> getBlobDomainName() {
         return this.blobDomainName;
     }
-    /**
-     * Connection string for the storage account. Use this string if username and account key are not specified.
-     */
     @OutputExport(name="connectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionString;
 
-    /**
-     * @return Connection string for the storage account. Use this string if username and account key are not specified.
-     */
     public Output</* @Nullable */ String> getConnectionString() {
         return this.connectionString;
     }
-    /**
-     * The object name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The object name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Signifies whether SSL needs to be enabled or not.
-     */
     @OutputExport(name="sslStatus", type=String.class, parameters={})
     private Output<String> sslStatus;
 
-    /**
-     * @return Signifies whether SSL needs to be enabled or not.
-     */
     public Output<String> getSslStatus() {
         return this.sslStatus;
     }
-    /**
-     * Id of the storage account.
-     */
     @OutputExport(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
-    /**
-     * @return Id of the storage account.
-     */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
-    /**
-     * StorageAccountCredential object
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return StorageAccountCredential object
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The hierarchical type of the object.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The hierarchical type of the object.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Username for the storage account.
-     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
-    /**
-     * @return Username for the storage account.
-     */
     public Output</* @Nullable */ String> getUserName() {
         return this.userName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StorageAccountCredential(String name, StorageAccountCredentialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:StorageAccountCredential", name, args == null ? StorageAccountCredentialArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -309,14 +113,6 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StorageAccountCredential get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageAccountCredential(name, id, options);
     }

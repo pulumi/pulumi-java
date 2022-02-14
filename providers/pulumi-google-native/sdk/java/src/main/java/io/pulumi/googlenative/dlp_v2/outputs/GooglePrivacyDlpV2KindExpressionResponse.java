@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2KindExpressionResponse {
-/**
- * The name of the kind.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The name of the kind.
- */
     public String getName() {
         return this.name;
     }

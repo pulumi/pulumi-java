@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionClusterIamPolicyArgs Empty = new GetRegionClusterIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="clusterId", required=true)
     private final String clusterId;
 
@@ -27,9 +21,6 @@ public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.Inv
         return this.clusterId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.Inv
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="regionId", required=true)
     private final String regionId;
 

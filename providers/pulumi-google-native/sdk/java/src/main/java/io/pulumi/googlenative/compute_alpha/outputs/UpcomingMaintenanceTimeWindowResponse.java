@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpcomingMaintenanceTimeWindowResponse {
-/**
- * 
- */
     private final String earliest;
-/**
- * 
- */
     private final String latest;
 
     @OutputCustomType.Constructor({"earliest","latest"})
@@ -26,15 +20,9 @@ public final class UpcomingMaintenanceTimeWindowResponse {
         this.latest = Objects.requireNonNull(latest);
     }
 
-/**
- * 
- */
     public String getEarliest() {
         return this.earliest;
     }
-/**
- * 
- */
     public String getLatest() {
         return this.latest;
     }

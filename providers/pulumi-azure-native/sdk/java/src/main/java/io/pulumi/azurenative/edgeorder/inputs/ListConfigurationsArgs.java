@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListConfigurationsArgs Empty = new ListConfigurationsArgs();
 
-    /**
-     * Holds details about product hierarchy information and filterable property.
-     */
     @InputImport(name="configurationFilters", required=true)
     private final List<ConfigurationFilters> configurationFilters;
 
@@ -30,9 +24,6 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
         return this.configurationFilters;
     }
 
-    /**
-     * Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
-     */
     @InputImport(name="customerSubscriptionDetails")
     private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
@@ -40,9 +31,6 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
         return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
-    /**
-     * $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
-     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The network interface definition.
- */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 
-    /**
-     * Private Ip address of the interface
-     */
     @InputImport(name="privateIpAddress")
     private final @Nullable Input<String> privateIpAddress;
 

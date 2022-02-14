@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The state of a private link service connection.
- */
 public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceConnectionStateResponse Empty = new PrivateLinkServiceConnectionStateResponse();
 
-    /**
-     * A message indicating if changes on the service provider require any updates on the consumer.
-     */
     @InputImport(name="actionsRequired")
     private final @Nullable String actionsRequired;
 
@@ -27,9 +21,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
         return this.actionsRequired == null ? Optional.empty() : Optional.ofNullable(this.actionsRequired);
     }
 
-    /**
-     * The description for connection status. For example if connection is rejected it can indicate reason for rejection.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -37,9 +28,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The private link service connection status.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

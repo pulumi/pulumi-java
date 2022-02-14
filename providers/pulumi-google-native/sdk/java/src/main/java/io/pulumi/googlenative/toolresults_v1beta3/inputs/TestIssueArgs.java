@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An issue detected occurring during a test execution.
- */
 public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestIssueArgs Empty = new TestIssueArgs();
 
-    /**
-     * Category of issue. Required.
-     */
     @InputImport(name="category")
     private final @Nullable Input<TestIssueCategory> category;
 
@@ -31,9 +25,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.category == null ? Input.empty() : this.category;
     }
 
-    /**
-     * A brief human-readable message describing the issue. Required.
-     */
     @InputImport(name="errorMessage")
     private final @Nullable Input<String> errorMessage;
 
@@ -41,9 +32,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.errorMessage == null ? Input.empty() : this.errorMessage;
     }
 
-    /**
-     * Severity of issue. Required.
-     */
     @InputImport(name="severity")
     private final @Nullable Input<TestIssueSeverity> severity;
 
@@ -51,9 +39,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity == null ? Input.empty() : this.severity;
     }
 
-    /**
-     * Type of issue. Required.
-     */
     @InputImport(name="type")
     private final @Nullable Input<TestIssueType> type;
 
@@ -61,9 +46,6 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
-     */
     @InputImport(name="warning")
     private final @Nullable Input<AnyArgs> warning;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the network interface ip settings.
- */
 public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NicIPSettingsArgs Empty = new NicIPSettingsArgs();
 
-    /**
-     * Gets or sets the nic allocation method.
-     */
     @InputImport(name="allocationMethod")
     private final @Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
@@ -30,9 +24,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.allocationMethod == null ? Input.empty() : this.allocationMethod;
     }
 
-    /**
-     * Gets or sets the dns servers.
-     */
     @InputImport(name="dnsServers")
     private final @Nullable Input<List<String>> dnsServers;
 
@@ -40,9 +31,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
     }
 
-    /**
-     * Gets or sets the gateway.
-     */
     @InputImport(name="gateway")
     private final @Nullable Input<List<String>> gateway;
 
@@ -50,9 +38,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.gateway == null ? Input.empty() : this.gateway;
     }
 
-    /**
-     * Gets or sets the ip address for the nic.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -60,9 +45,6 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * Gets or sets the mask.
-     */
     @InputImport(name="subnetMask")
     private final @Nullable Input<String> subnetMask;
 

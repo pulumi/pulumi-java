@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ControllerConnectionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ControllerConnectionDetailsResponse Empty = new ControllerConnectionDetailsResponse();
 
-    /**
-     * Base class for types that supply values used to connect to container orchestrators
-     */
     @InputImport(name="orchestratorSpecificConnectionDetails")
     private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 

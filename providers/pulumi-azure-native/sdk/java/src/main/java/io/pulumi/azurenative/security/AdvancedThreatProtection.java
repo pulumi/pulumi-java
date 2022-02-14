@@ -15,138 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The Advanced Threat Protection resource.
-API Version: 2019-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates or updates the Advanced Threat Protection settings on a specified resource.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var advancedThreatProtection = new AzureNative.Security.AdvancedThreatProtection("advancedThreatProtection", new AzureNative.Security.AdvancedThreatProtectionArgs
-        {
-            IsEnabled = true,
-            ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount",
-            SettingName = "current",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewAdvancedThreatProtection(ctx, "advancedThreatProtection", &security.AdvancedThreatProtectionArgs{
-			IsEnabled:   pulumi.Bool(true),
-			ResourceId:  pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount"),
-			SettingName: pulumi.String("current"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const advancedThreatProtection = new azure_native.security.AdvancedThreatProtection("advancedThreatProtection", {
-    isEnabled: true,
-    resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount",
-    settingName: "current",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-advanced_threat_protection = azure_native.security.AdvancedThreatProtection("advancedThreatProtection",
-    is_enabled=True,
-    resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount",
-    setting_name="current")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:security:AdvancedThreatProtection current /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount/providers/Microsoft.Security/advancedThreatProtectionSettings/current 
-```
-
- */
 @ResourceType(type="azure-native:security:AdvancedThreatProtection")
 public class AdvancedThreatProtection extends io.pulumi.resources.CustomResource {
-    /**
-     * Indicates whether Advanced Threat Protection is enabled.
-     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
-    /**
-     * @return Indicates whether Advanced Threat Protection is enabled.
-     */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public AdvancedThreatProtection(String name, AdvancedThreatProtectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:AdvancedThreatProtection", name, args == null ? AdvancedThreatProtectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -166,14 +55,6 @@ public class AdvancedThreatProtection extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static AdvancedThreatProtection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AdvancedThreatProtection(name, id, options);
     }

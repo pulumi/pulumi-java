@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An entry for an Access Control list.
- */
 public final class AclEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AclEntryResponse Empty = new AclEntryResponse();
 
-    /**
-     * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
-     */
     @InputImport(name="expirationTime", required=true)
     private final String expirationTime;
 
@@ -25,9 +19,6 @@ public final class AclEntryResponse extends io.pulumi.resources.InvokeArgs {
         return this.expirationTime;
     }
 
-    /**
-     * This is always `sql#aclEntry`.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -35,9 +26,6 @@ public final class AclEntryResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind;
     }
 
-    /**
-     * Optional. A label to identify this entry.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -45,9 +33,6 @@ public final class AclEntryResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The allowlisted value for the access control list.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

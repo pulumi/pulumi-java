@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedAccessCheckResponse Empty = new LinkedAccessCheckResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="actionName")
     private final @Nullable String actionName;
 
@@ -27,9 +21,6 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
         return this.actionName == null ? Optional.empty() : Optional.ofNullable(this.actionName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedAction")
     private final @Nullable String linkedAction;
 
@@ -37,9 +28,6 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
         return this.linkedAction == null ? Optional.empty() : Optional.ofNullable(this.linkedAction);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedActionVerb")
     private final @Nullable String linkedActionVerb;
 
@@ -47,9 +35,6 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
         return this.linkedActionVerb == null ? Optional.empty() : Optional.ofNullable(this.linkedActionVerb);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedProperty")
     private final @Nullable String linkedProperty;
 
@@ -57,9 +42,6 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
         return this.linkedProperty == null ? Optional.empty() : Optional.ofNullable(this.linkedProperty);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="linkedType")
     private final @Nullable String linkedType;
 

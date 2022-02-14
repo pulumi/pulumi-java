@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines reference to a public IP.
- */
 public final class PublicIpReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicIpReferenceArgs Empty = new PublicIpReferenceArgs();
 
-    /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
-     */
     @InputImport(name="sourceArmResourceId", required=true)
     private final Input<String> sourceArmResourceId;
 

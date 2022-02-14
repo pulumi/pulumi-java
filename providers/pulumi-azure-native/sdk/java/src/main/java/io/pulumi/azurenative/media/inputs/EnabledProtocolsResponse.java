@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Class to specify which protocols are enabled
- */
 public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnabledProtocolsResponse Empty = new EnabledProtocolsResponse();
 
-    /**
-     * Enable DASH protocol or not
-     */
     @InputImport(name="dash", required=true)
     private final Boolean dash;
 
@@ -25,9 +19,6 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
         return this.dash;
     }
 
-    /**
-     * Enable Download protocol or not
-     */
     @InputImport(name="download", required=true)
     private final Boolean download;
 
@@ -35,9 +26,6 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
         return this.download;
     }
 
-    /**
-     * Enable HLS protocol or not
-     */
     @InputImport(name="hls", required=true)
     private final Boolean hls;
 
@@ -45,9 +33,6 @@ public final class EnabledProtocolsResponse extends io.pulumi.resources.InvokeAr
         return this.hls;
     }
 
-    /**
-     * Enable SmoothStreaming protocol or not
-     */
     @InputImport(name="smoothStreaming", required=true)
     private final Boolean smoothStreaming;
 

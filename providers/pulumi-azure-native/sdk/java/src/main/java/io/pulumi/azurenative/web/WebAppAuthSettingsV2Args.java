@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppAuthSettingsV2Args Empty = new WebAppAuthSettingsV2Args();
 
-    /**
-     * The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
-     */
     @InputImport(name="globalValidation")
     private final @Nullable Input<GlobalValidationArgs> globalValidation;
 
@@ -32,9 +26,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.globalValidation == null ? Input.empty() : this.globalValidation;
     }
 
-    /**
-     * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
-     */
     @InputImport(name="httpSettings")
     private final @Nullable Input<HttpSettingsArgs> httpSettings;
 
@@ -42,9 +33,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.httpSettings == null ? Input.empty() : this.httpSettings;
     }
 
-    /**
-     * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
-     */
     @InputImport(name="identityProviders")
     private final @Nullable Input<IdentityProvidersArgs> identityProviders;
 
@@ -52,9 +40,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.identityProviders == null ? Input.empty() : this.identityProviders;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -62,9 +47,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The configuration settings of the login flow of users using App Service Authentication/Authorization.
-     */
     @InputImport(name="login")
     private final @Nullable Input<LoginArgs> login;
 
@@ -72,9 +54,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.login == null ? Input.empty() : this.login;
     }
 
-    /**
-     * Name of web app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -82,9 +61,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.name;
     }
 
-    /**
-     * The configuration settings of the platform of App Service Authentication/Authorization.
-     */
     @InputImport(name="platform")
     private final @Nullable Input<AuthPlatformArgs> platform;
 
@@ -92,9 +68,6 @@ public final class WebAppAuthSettingsV2Args extends io.pulumi.resources.Resource
         return this.platform == null ? Input.empty() : this.platform;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

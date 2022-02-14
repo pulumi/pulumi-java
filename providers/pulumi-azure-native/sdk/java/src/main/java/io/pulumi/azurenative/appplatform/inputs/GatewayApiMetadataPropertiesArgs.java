@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * API metadata property for Spring Cloud Gateway
- */
 public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayApiMetadataPropertiesArgs Empty = new GatewayApiMetadataPropertiesArgs();
 
-    /**
-     * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -27,9 +21,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Location of additional documentation for the APIs available on the Gateway instance
-     */
     @InputImport(name="documentation")
     private final @Nullable Input<String> documentation;
 
@@ -37,9 +28,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
         return this.documentation == null ? Input.empty() : this.documentation;
     }
 
-    /**
-     * Base URL that API consumers will use to access APIs on the Gateway instance.
-     */
     @InputImport(name="serverUrl")
     private final @Nullable Input<String> serverUrl;
 
@@ -47,9 +35,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
         return this.serverUrl == null ? Input.empty() : this.serverUrl;
     }
 
-    /**
-     * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -57,9 +42,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
         return this.title == null ? Input.empty() : this.title;
     }
 
-    /**
-     * Version of APIs available on this Gateway instance (default: `unspecified`).
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

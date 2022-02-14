@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse {
-/**
- * Card content.
- */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
-/**
- * Orientation of the card.
- */
     private final String cardOrientation;
-/**
- * Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
- */
     private final String thumbnailImageAlignment;
 
     @OutputCustomType.Constructor({"cardContent","cardOrientation","thumbnailImageAlignment"})
@@ -33,21 +24,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
         this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
     }
 
-/**
- * Card content.
- */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse getCardContent() {
         return this.cardContent;
     }
-/**
- * Orientation of the card.
- */
     public String getCardOrientation() {
         return this.cardOrientation;
     }
-/**
- * Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
- */
     public String getThumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
     }

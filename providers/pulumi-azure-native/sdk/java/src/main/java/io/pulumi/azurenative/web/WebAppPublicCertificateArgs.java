@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppPublicCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppPublicCertificateArgs Empty = new WebAppPublicCertificateArgs();
 
-    /**
-     * Public Certificate byte array
-     */
     @InputImport(name="blob")
     private final @Nullable Input<String> blob;
 
@@ -28,9 +22,6 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
         return this.blob == null ? Input.empty() : this.blob;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -38,9 +29,6 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -48,9 +36,6 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
-    /**
-     * Public Certificate Location
-     */
     @InputImport(name="publicCertificateLocation")
     private final @Nullable Input<PublicCertificateLocation> publicCertificateLocation;
 
@@ -58,9 +43,6 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
         return this.publicCertificateLocation == null ? Input.empty() : this.publicCertificateLocation;
     }
 
-    /**
-     * Public certificate name.
-     */
     @InputImport(name="publicCertificateName")
     private final @Nullable Input<String> publicCertificateName;
 
@@ -68,9 +50,6 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
         return this.publicCertificateName == null ? Input.empty() : this.publicCertificateName;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

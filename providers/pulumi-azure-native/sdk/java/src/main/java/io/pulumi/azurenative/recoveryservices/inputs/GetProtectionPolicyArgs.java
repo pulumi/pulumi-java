@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProtectionPolicyArgs Empty = new GetProtectionPolicyArgs();
 
-    /**
-     * Backup policy information to be fetched.
-     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 
@@ -25,9 +19,6 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.policyName;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileContentBufferArgs Empty = new FileContentBufferArgs();
 
-    /**
-     * The raw content in the secure keys file.
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -28,9 +22,6 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The file type of source file.
-     */
     @InputImport(name="fileType")
     private final @Nullable Input<FileContentBufferFileType> fileType;
 

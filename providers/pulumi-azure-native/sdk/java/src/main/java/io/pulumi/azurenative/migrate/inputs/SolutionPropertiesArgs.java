@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class for solution properties.
- */
 public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SolutionPropertiesArgs Empty = new SolutionPropertiesArgs();
 
-    /**
-     * Gets or sets the cleanup state of the solution.
-     */
     @InputImport(name="cleanupState")
     private final @Nullable Input<String> cleanupState;
 
@@ -28,9 +22,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.cleanupState == null ? Input.empty() : this.cleanupState;
     }
 
-    /**
-     * Gets or sets the details of the solution.
-     */
     @InputImport(name="details")
     private final @Nullable Input<SolutionDetailsArgs> details;
 
@@ -38,9 +29,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.details == null ? Input.empty() : this.details;
     }
 
-    /**
-     * Gets or sets the goal of the solution.
-     */
     @InputImport(name="goal")
     private final @Nullable Input<String> goal;
 
@@ -48,9 +36,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.goal == null ? Input.empty() : this.goal;
     }
 
-    /**
-     * Gets or sets the purpose of the solution.
-     */
     @InputImport(name="purpose")
     private final @Nullable Input<String> purpose;
 
@@ -58,9 +43,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.purpose == null ? Input.empty() : this.purpose;
     }
 
-    /**
-     * Gets or sets the current status of the solution.
-     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -68,9 +50,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * Gets or sets the tool being used in the solution.
-     */
     @InputImport(name="tool")
     private final @Nullable Input<String> tool;
 

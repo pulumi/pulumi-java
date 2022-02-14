@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Identification for an API Operation.
- */
 public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiOperationArgs Empty = new ApiOperationArgs();
 
-    /**
-     * API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
-     */
     @InputImport(name="methodSelectors")
     private final @Nullable Input<List<MethodSelectorArgs>> methodSelectors;
 
@@ -29,9 +23,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
         return this.methodSelectors == null ? Input.empty() : this.methodSelectors;
     }
 
-    /**
-     * The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.
-     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceAccount {
-/**
- * Gets a ServiceAccount.
- */
     public static CompletableFuture<GetServiceAccountResult> invokeAsync(GetServiceAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getServiceAccount", TypeShape.of(GetServiceAccountResult.class), args == null ? GetServiceAccountArgs.Empty : args, Utilities.withVersion(options));
     }

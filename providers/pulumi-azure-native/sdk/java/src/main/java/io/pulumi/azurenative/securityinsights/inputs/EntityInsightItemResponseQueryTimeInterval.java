@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Time interval that the query actually executed on.
- */
 public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.resources.InvokeArgs {
 
     public static final EntityInsightItemResponseQueryTimeInterval Empty = new EntityInsightItemResponseQueryTimeInterval();
 
-    /**
-     * Insight query end time
-     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -27,9 +21,6 @@ public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
-    /**
-     * Insight query start time
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 

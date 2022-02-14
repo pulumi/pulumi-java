@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The plan object in Azure Resource Manager, represents a marketplace plan.
- */
 public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArmPlanResponse Empty = new ArmPlanResponse();
 
-    /**
-     * The name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The product.
-     */
     @InputImport(name="product")
     private final @Nullable String product;
 
@@ -37,9 +28,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
     }
 
-    /**
-     * The promotion code.
-     */
     @InputImport(name="promotionCode")
     private final @Nullable String promotionCode;
 
@@ -47,9 +35,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
-    /**
-     * The publisher.
-     */
     @InputImport(name="publisher")
     private final @Nullable String publisher;
 
@@ -57,9 +42,6 @@ public final class ArmPlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
-    /**
-     * Version of product.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

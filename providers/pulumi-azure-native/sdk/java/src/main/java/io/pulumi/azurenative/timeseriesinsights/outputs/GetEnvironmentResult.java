@@ -12,33 +12,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
-/**
- * Resource Id
- */
     private final String id;
-/**
- * The kind of the environment.
- */
     private final String kind;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
- */
     private final SkuResponse sku;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","location","name","sku","tags","type"})
@@ -59,45 +38,24 @@ public final class GetEnvironmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * The kind of the environment.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
- */
     public SkuResponse getSku() {
         return this.sku;
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

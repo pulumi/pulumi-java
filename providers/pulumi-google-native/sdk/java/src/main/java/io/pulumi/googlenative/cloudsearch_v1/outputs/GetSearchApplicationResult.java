@@ -17,49 +17,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSearchApplicationResult {
-/**
- * Retrictions applied to the configurations. The maximum number of elements is 10.
- */
     private final List<DataSourceRestrictionResponse> dataSourceRestrictions;
-/**
- * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
- */
     private final List<FacetOptionsResponse> defaultFacetOptions;
-/**
- * The default options for sorting the search results
- */
     private final SortOptionsResponse defaultSortOptions;
-/**
- * Display name of the Search Application. The maximum length is 300 characters.
- */
     private final String displayName;
-/**
- * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
- */
     private final Boolean enableAuditLog;
-/**
- * Name of the Search Application. Format: searchapplications/{application_id}.
- */
     private final String name;
-/**
- * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
- */
     private final List<String> operationIds;
-/**
- * The default options for query interpretation
- */
     private final QueryInterpretationConfigResponse queryInterpretationConfig;
-/**
- * With each result we should return the URI for its thumbnail (when applicable)
- */
     private final Boolean returnResultThumbnailUrls;
-/**
- * Configuration for ranking results.
- */
     private final ScoringConfigResponse scoringConfig;
-/**
- * Configuration for a sources specified in data_source_restrictions.
- */
     private final List<SourceConfigResponse> sourceConfig;
 
     @OutputCustomType.Constructor({"dataSourceRestrictions","defaultFacetOptions","defaultSortOptions","displayName","enableAuditLog","name","operationIds","queryInterpretationConfig","returnResultThumbnailUrls","scoringConfig","sourceConfig"})
@@ -88,69 +55,36 @@ public final class GetSearchApplicationResult {
         this.sourceConfig = Objects.requireNonNull(sourceConfig);
     }
 
-/**
- * Retrictions applied to the configurations. The maximum number of elements is 10.
- */
     public List<DataSourceRestrictionResponse> getDataSourceRestrictions() {
         return this.dataSourceRestrictions;
     }
-/**
- * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
- */
     public List<FacetOptionsResponse> getDefaultFacetOptions() {
         return this.defaultFacetOptions;
     }
-/**
- * The default options for sorting the search results
- */
     public SortOptionsResponse getDefaultSortOptions() {
         return this.defaultSortOptions;
     }
-/**
- * Display name of the Search Application. The maximum length is 300 characters.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
- */
     public Boolean getEnableAuditLog() {
         return this.enableAuditLog;
     }
-/**
- * Name of the Search Application. Format: searchapplications/{application_id}.
- */
     public String getName() {
         return this.name;
     }
-/**
- * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
- */
     public List<String> getOperationIds() {
         return this.operationIds;
     }
-/**
- * The default options for query interpretation
- */
     public QueryInterpretationConfigResponse getQueryInterpretationConfig() {
         return this.queryInterpretationConfig;
     }
-/**
- * With each result we should return the URI for its thumbnail (when applicable)
- */
     public Boolean getReturnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls;
     }
-/**
- * Configuration for ranking results.
- */
     public ScoringConfigResponse getScoringConfig() {
         return this.scoringConfig;
     }
-/**
- * Configuration for a sources specified in data_source_restrictions.
- */
     public List<SourceConfigResponse> getSourceConfig() {
         return this.sourceConfig;
     }

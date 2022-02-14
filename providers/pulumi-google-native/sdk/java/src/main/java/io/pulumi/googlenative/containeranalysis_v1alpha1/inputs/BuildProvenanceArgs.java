@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Provenance of a build. Contains all information needed to verify the full details about the build from source to completion.
- */
 public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildProvenanceArgs Empty = new BuildProvenanceArgs();
 
-    /**
-     * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
-     */
     @InputImport(name="buildOptions")
     private final @Nullable Input<Map<String,String>> buildOptions;
 
@@ -32,9 +26,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.buildOptions == null ? Input.empty() : this.buildOptions;
     }
 
-    /**
-     * Version string of the builder at the time this build was executed.
-     */
     @InputImport(name="builderVersion")
     private final @Nullable Input<String> builderVersion;
 
@@ -42,9 +33,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.builderVersion == null ? Input.empty() : this.builderVersion;
     }
 
-    /**
-     * Output of the build.
-     */
     @InputImport(name="builtArtifacts")
     private final @Nullable Input<List<ArtifactArgs>> builtArtifacts;
 
@@ -52,9 +40,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.builtArtifacts == null ? Input.empty() : this.builtArtifacts;
     }
 
-    /**
-     * Commands requested by the build.
-     */
     @InputImport(name="commands")
     private final @Nullable Input<List<CommandArgs>> commands;
 
@@ -62,9 +47,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.commands == null ? Input.empty() : this.commands;
     }
 
-    /**
-     * Time at which the build was created.
-     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -72,9 +54,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
-    /**
-     * E-mail address of the user who initiated this build. Note that this was the user's e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
-     */
     @InputImport(name="creator")
     private final @Nullable Input<String> creator;
 
@@ -82,9 +61,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.creator == null ? Input.empty() : this.creator;
     }
 
-    /**
-     * Time at which execution of the build was finished.
-     */
     @InputImport(name="finishTime")
     private final @Nullable Input<String> finishTime;
 
@@ -92,9 +68,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.finishTime == null ? Input.empty() : this.finishTime;
     }
 
-    /**
-     * Unique identifier of the build.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -102,9 +75,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Google Cloud Storage bucket where logs were written.
-     */
     @InputImport(name="logsBucket")
     private final @Nullable Input<String> logsBucket;
 
@@ -112,9 +82,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.logsBucket == null ? Input.empty() : this.logsBucket;
     }
 
-    /**
-     * ID of the project.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -122,9 +89,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Details of the Source input to the build.
-     */
     @InputImport(name="sourceProvenance")
     private final @Nullable Input<SourceArgs> sourceProvenance;
 
@@ -132,9 +96,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceProvenance == null ? Input.empty() : this.sourceProvenance;
     }
 
-    /**
-     * Time at which execution of the build was started.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -142,9 +103,6 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Trigger identifier if the build was triggered automatically; empty if not.
-     */
     @InputImport(name="triggerId")
     private final @Nullable Input<String> triggerId;
 

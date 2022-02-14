@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VpnSiteLink Resource.
- */
 public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnSiteLinkResponse Empty = new VpnSiteLinkResponse();
 
-    /**
-     * The set of bgp properties.
-     */
     @InputImport(name="bgpProperties")
     private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
 
@@ -29,9 +23,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.bgpProperties == null ? Optional.empty() : Optional.ofNullable(this.bgpProperties);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -39,9 +30,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
-    /**
-     * FQDN of vpn-site-link.
-     */
     @InputImport(name="fqdn")
     private final @Nullable String fqdn;
 
@@ -49,9 +37,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -59,9 +44,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The ip-address for the vpn-site-link.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -69,9 +51,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
-    /**
-     * The link provider properties.
-     */
     @InputImport(name="linkProperties")
     private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
 
@@ -79,9 +58,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkProperties == null ? Optional.empty() : Optional.ofNullable(this.linkProperties);
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -89,9 +65,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the VPN site link resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -99,9 +72,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

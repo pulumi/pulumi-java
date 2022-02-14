@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationAccountSchemaArgs Empty = new IntegrationAccountSchemaArgs();
 
-    /**
-     * The content.
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -31,9 +25,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The content type.
-     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -41,9 +32,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
-    /**
-     * The document name.
-     */
     @InputImport(name="documentName")
     private final @Nullable Input<String> documentName;
 
@@ -51,9 +39,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.documentName == null ? Input.empty() : this.documentName;
     }
 
-    /**
-     * The file name.
-     */
     @InputImport(name="fileName")
     private final @Nullable Input<String> fileName;
 
@@ -61,9 +46,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
-    /**
-     * The integration account name.
-     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -71,9 +53,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.integrationAccountName;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -91,9 +67,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -101,9 +74,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
-    /**
-     * The integration account schema name.
-     */
     @InputImport(name="schemaName")
     private final @Nullable Input<String> schemaName;
 
@@ -111,9 +81,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.schemaName == null ? Input.empty() : this.schemaName;
     }
 
-    /**
-     * The schema type.
-     */
     @InputImport(name="schemaType", required=true)
     private final Input<Either<String,SchemaType>> schemaType;
 
@@ -121,9 +88,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.schemaType;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -131,9 +95,6 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The target namespace of the schema.
-     */
     @InputImport(name="targetNamespace")
     private final @Nullable Input<String> targetNamespace;
 

@@ -12,25 +12,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse {
-/**
- * Optional. The collection of card buttons.
- */
     private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
-/**
- * Required, unless image is present. The body text of the card.
- */
     private final String formattedText;
-/**
- * Optional. The image for the card.
- */
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
-/**
- * Optional. The subtitle of the card.
- */
     private final String subtitle;
-/**
- * Optional. The title of the card.
- */
     private final String title;
 
     @OutputCustomType.Constructor({"buttons","formattedText","image","subtitle","title"})
@@ -47,33 +32,18 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse {
         this.title = Objects.requireNonNull(title);
     }
 
-/**
- * Optional. The collection of card buttons.
- */
     public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
         return this.buttons;
     }
-/**
- * Required, unless image is present. The body text of the card.
- */
     public String getFormattedText() {
         return this.formattedText;
     }
-/**
- * Optional. The image for the card.
- */
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
     }
-/**
- * Optional. The subtitle of the card.
- */
     public String getSubtitle() {
         return this.subtitle;
     }
-/**
- * Optional. The title of the card.
- */
     public String getTitle() {
         return this.title;
     }

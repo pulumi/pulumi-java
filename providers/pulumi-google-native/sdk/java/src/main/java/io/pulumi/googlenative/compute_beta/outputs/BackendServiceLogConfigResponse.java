@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackendServiceLogConfigResponse {
-/**
- * This field denotes whether to enable logging for the load balancer traffic served by this backend service.
- */
     private final Boolean enable;
-/**
- * This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.
- */
     private final Double sampleRate;
 
     @OutputCustomType.Constructor({"enable","sampleRate"})
@@ -27,15 +21,9 @@ public final class BackendServiceLogConfigResponse {
         this.sampleRate = Objects.requireNonNull(sampleRate);
     }
 
-/**
- * This field denotes whether to enable logging for the load balancer traffic served by this backend service.
- */
     public Boolean getEnable() {
         return this.enable;
     }
-/**
- * This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.
- */
     public Double getSampleRate() {
         return this.sampleRate;
     }

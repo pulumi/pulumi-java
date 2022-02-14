@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * API Definitions
- */
 public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiResourceDefinitionsResponse Empty = new ApiResourceDefinitionsResponse();
 
-    /**
-     * The modified swagger URL
-     */
     @InputImport(name="modifiedSwaggerUrl")
     private final @Nullable String modifiedSwaggerUrl;
 
@@ -27,9 +21,6 @@ public final class ApiResourceDefinitionsResponse extends io.pulumi.resources.In
         return this.modifiedSwaggerUrl == null ? Optional.empty() : Optional.ofNullable(this.modifiedSwaggerUrl);
     }
 
-    /**
-     * The original swagger URL
-     */
     @InputImport(name="originalSwaggerUrl")
     private final @Nullable String originalSwaggerUrl;
 

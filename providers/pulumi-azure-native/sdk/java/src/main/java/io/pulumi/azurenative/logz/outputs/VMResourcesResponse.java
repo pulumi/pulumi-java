@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VMResourcesResponse {
-/**
- * Version of the Logz agent installed on the VM.
- */
     private final @Nullable String agentVersion;
-/**
- * Request of a list vm host update operation.
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"agentVersion","id"})
@@ -28,15 +22,9 @@ public final class VMResourcesResponse {
         this.id = id;
     }
 
-/**
- * Version of the Logz agent installed on the VM.
- */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
-/**
- * Request of a list vm host update operation.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

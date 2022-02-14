@@ -17,351 +17,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The Managed Network resource
-API Version: 2019-06-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ManagedNetworksPut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managedNetwork = new AzureNative.ManagedNetwork.ManagedNetwork("managedNetwork", new AzureNative.ManagedNetwork.ManagedNetworkArgs
-        {
-            Location = "eastus",
-            ManagedNetworkName = "myManagedNetwork",
-            ResourceGroupName = "myResourceGroup",
-            Scope = new AzureNative.ManagedNetwork.Inputs.ScopeArgs
-            {
-                ManagementGroups = 
-                {
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
-                    },
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
-                    },
-                },
-                Subnets = 
-                {
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
-                    },
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
-                    },
-                },
-                Subscriptions = 
-                {
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "subscriptionA",
-                    },
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "subscriptionB",
-                    },
-                },
-                VirtualNetworks = 
-                {
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-                    },
-                    new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                    {
-                        Id = "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-                    },
-                },
-            },
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	managednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managednetwork"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := managednetwork.NewManagedNetwork(ctx, "managedNetwork", &managednetwork.ManagedNetworkArgs{
-			Location:           pulumi.String("eastus"),
-			ManagedNetworkName: pulumi.String("myManagedNetwork"),
-			ResourceGroupName:  pulumi.String("myResourceGroup"),
-			Scope: &managednetwork.ScopeArgs{
-				ManagementGroups: managednetwork.ResourceIdArray{
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000"),
-					},
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000"),
-					},
-				},
-				Subnets: managednetwork.ResourceIdArray{
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA"),
-					},
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB"),
-					},
-				},
-				Subscriptions: managednetwork.ResourceIdArray{
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("subscriptionA"),
-					},
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("subscriptionB"),
-					},
-				},
-				VirtualNetworks: managednetwork.ResourceIdArray{
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA"),
-					},
-					&managednetwork.ResourceIdArgs{
-						Id: pulumi.String("/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB"),
-					},
-				},
-			},
-			Tags: nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNetwork", {
-    location: "eastus",
-    managedNetworkName: "myManagedNetwork",
-    resourceGroupName: "myResourceGroup",
-    scope: {
-        managementGroups: [
-            {
-                id: "/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
-            },
-            {
-                id: "/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
-            },
-        ],
-        subnets: [
-            {
-                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
-            },
-            {
-                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
-            },
-        ],
-        subscriptions: [
-            {
-                id: "subscriptionA",
-            },
-            {
-                id: "subscriptionB",
-            },
-        ],
-        virtualNetworks: [
-            {
-                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-            },
-            {
-                id: "/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-            },
-        ],
-    },
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-managed_network = azure_native.managednetwork.ManagedNetwork("managedNetwork",
-    location="eastus",
-    managed_network_name="myManagedNetwork",
-    resource_group_name="myResourceGroup",
-    scope=azure_native.managednetwork.ScopeArgs(
-        management_groups=[
-            azure_native.managednetwork.ResourceIdArgs(
-                id="/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000",
-            ),
-            azure_native.managednetwork.ResourceIdArgs(
-                id="/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000",
-            ),
-        ],
-        subnets=[
-            azure_native.managednetwork.ResourceIdArgs(
-                id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA",
-            ),
-            azure_native.managednetwork.ResourceIdArgs(
-                id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB",
-            ),
-        ],
-        subscriptions=[
-            azure_native.managednetwork.ResourceIdArgs(
-                id="subscriptionA",
-            ),
-            azure_native.managednetwork.ResourceIdArgs(
-                id="subscriptionB",
-            ),
-        ],
-        virtual_networks=[
-            azure_native.managednetwork.ResourceIdArgs(
-                id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-            ),
-            azure_native.managednetwork.ResourceIdArgs(
-                id="/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-            ),
-        ],
-    ),
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:managednetwork:ManagedNetwork myManagedNetwork /subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork 
-```
-
- */
 @ResourceType(type="azure-native:managednetwork:ManagedNetwork")
 public class ManagedNetwork extends io.pulumi.resources.CustomResource {
-    /**
-     * The collection of groups and policies concerned with connectivity
-     */
     @OutputExport(name="connectivity", type=ConnectivityCollectionResponse.class, parameters={})
     private Output<ConnectivityCollectionResponse> connectivity;
 
-    /**
-     * @return The collection of groups and policies concerned with connectivity
-     */
     public Output<ConnectivityCollectionResponse> getConnectivity() {
         return this.connectivity;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state of the ManagedNetwork resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the ManagedNetwork resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
-     */
     @OutputExport(name="scope", type=ScopeResponse.class, parameters={})
     private Output</* @Nullable */ ScopeResponse> scope;
 
-    /**
-     * @return The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
-     */
     public Output</* @Nullable */ ScopeResponse> getScope() {
         return this.scope;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ManagedNetwork(String name, ManagedNetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:managednetwork:ManagedNetwork", name, args == null ? ManagedNetworkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -380,14 +86,6 @@ public class ManagedNetwork extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ManagedNetwork get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedNetwork(name, id, options);
     }

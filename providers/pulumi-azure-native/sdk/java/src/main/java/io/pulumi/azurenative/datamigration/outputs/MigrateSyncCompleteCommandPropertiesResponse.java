@@ -15,26 +15,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateSyncCompleteCommandPropertiesResponse {
-/**
- * Command type.
-Expected value is 'Migrate.Sync.Complete.Database'.
- */
     private final String commandType;
-/**
- * Array of errors. This is ignored if submitted.
- */
     private final List<ODataErrorResponse> errors;
-/**
- * Command input
- */
     private final @Nullable MigrateSyncCompleteCommandInputResponse input;
-/**
- * Command output. This is ignored if submitted.
- */
     private final MigrateSyncCompleteCommandOutputResponse output;
-/**
- * The state of the command. This is ignored if submitted.
- */
     private final String state;
 
     @OutputCustomType.Constructor({"commandType","errors","input","output","state"})
@@ -51,34 +35,18 @@ Expected value is 'Migrate.Sync.Complete.Database'.
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * Command type.
-Expected value is 'Migrate.Sync.Complete.Database'.
- */
     public String getCommandType() {
         return this.commandType;
     }
-/**
- * Array of errors. This is ignored if submitted.
- */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
-/**
- * Command input
- */
     public Optional<MigrateSyncCompleteCommandInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
-/**
- * Command output. This is ignored if submitted.
- */
     public MigrateSyncCompleteCommandOutputResponse getOutput() {
         return this.output;
     }
-/**
- * The state of the command. This is ignored if submitted.
- */
     public String getState() {
         return this.state;
     }

@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIotDpsResourceResult {
-/**
- * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
- */
     private final @Nullable String etag;
-/**
- * The resource identifier.
- */
     private final String id;
-/**
- * The resource location.
- */
     private final String location;
-/**
- * The resource name.
- */
     private final String name;
-/**
- * Service specific properties for a provisioning service
- */
     private final IotDpsPropertiesDescriptionResponse properties;
-/**
- * Sku info for a provisioning Service.
- */
     private final IotDpsSkuInfoResponse sku;
-/**
- * The resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","properties","sku","tags","type"})
@@ -67,51 +43,27 @@ public final class GetIotDpsResourceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * The resource identifier.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The resource location.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Service specific properties for a provisioning service
- */
     public IotDpsPropertiesDescriptionResponse getProperties() {
         return this.properties;
     }
-/**
- * Sku info for a provisioning Service.
- */
     public IotDpsSkuInfoResponse getSku() {
         return this.sku;
     }
-/**
- * The resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The resource type.
- */
     public String getType() {
         return this.type;
     }

@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceMetricStatus {
-/**
- * current contains the current value for the given metric
- */
     private final MetricValueStatus current;
-/**
- * Name is the name of the resource in question.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"current","name"})
@@ -27,15 +21,9 @@ public final class ResourceMetricStatus {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * current contains the current value for the given metric
- */
     public MetricValueStatus getCurrent() {
         return this.current;
     }
-/**
- * Name is the name of the resource in question.
- */
     public String getName() {
         return this.name;
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTagTemplateIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagTemplateIamPolicyArgs Empty = new GetTagTemplateIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetTagTemplateIamPolicyArgs extends io.pulumi.resources.Invok
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetTagTemplateIamPolicyArgs extends io.pulumi.resources.Invok
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tagTemplateId", required=true)
     private final String tagTemplateId;
 

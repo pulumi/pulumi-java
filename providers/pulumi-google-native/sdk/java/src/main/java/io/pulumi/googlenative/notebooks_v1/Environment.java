@@ -14,103 +14,51 @@ import io.pulumi.googlenative.notebooks_v1.outputs.VmImageResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new Environment.
-Auto-naming is currently not supported for this resource.
- */
 @ResourceType(type="google-native:notebooks/v1:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
-    /**
-     * Use a container image to start the notebook instance.
-     */
     @OutputExport(name="containerImage", type=ContainerImageResponse.class, parameters={})
     private Output<ContainerImageResponse> containerImage;
 
-    /**
-     * @return Use a container image to start the notebook instance.
-     */
     public Output<ContainerImageResponse> getContainerImage() {
         return this.containerImage;
     }
-    /**
-     * The time at which this environment was created.
-     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    /**
-     * @return The time at which this environment was created.
-     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    /**
-     * A brief description of this environment.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return A brief description of this environment.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * Display name of this environment for the UI.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return Display name of this environment for the UI.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
-     */
     @OutputExport(name="postStartupScript", type=String.class, parameters={})
     private Output<String> postStartupScript;
 
-    /**
-     * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
-     */
     public Output<String> getPostStartupScript() {
         return this.postStartupScript;
     }
-    /**
-     * Use a Compute Engine VM image to start the notebook instance.
-     */
     @OutputExport(name="vmImage", type=VmImageResponse.class, parameters={})
     private Output<VmImageResponse> vmImage;
 
-    /**
-     * @return Use a Compute Engine VM image to start the notebook instance.
-     */
     public Output<VmImageResponse> getVmImage() {
         return this.vmImage;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:notebooks/v1:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -126,14 +74,6 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Environment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Environment(name, id, options);
     }

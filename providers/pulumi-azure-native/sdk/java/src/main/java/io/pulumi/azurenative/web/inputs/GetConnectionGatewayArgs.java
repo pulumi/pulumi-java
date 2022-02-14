@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectionGatewayArgs Empty = new GetConnectionGatewayArgs();
 
-    /**
-     * The connection gateway name
-     */
     @InputImport(name="connectionGatewayName", required=true)
     private final String connectionGatewayName;
 
@@ -27,9 +21,6 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
         return this.connectionGatewayName;
     }
 
-    /**
-     * The resource group
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class GetConnectionGatewayArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
-    /**
-     * Subscription Id
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 

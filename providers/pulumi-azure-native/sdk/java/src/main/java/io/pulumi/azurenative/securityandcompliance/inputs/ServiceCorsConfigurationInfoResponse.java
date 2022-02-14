@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The settings for the CORS configuration of the service instance.
- */
 public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceCorsConfigurationInfoResponse Empty = new ServiceCorsConfigurationInfoResponse();
 
-    /**
-     * If credentials are allowed via CORS.
-     */
     @InputImport(name="allowCredentials")
     private final @Nullable Boolean allowCredentials;
 
@@ -30,9 +24,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
         return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
     }
 
-    /**
-     * The headers to be allowed via CORS.
-     */
     @InputImport(name="headers")
     private final @Nullable List<String> headers;
 
@@ -40,9 +31,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
         return this.headers == null ? List.of() : this.headers;
     }
 
-    /**
-     * The max age to be allowed via CORS.
-     */
     @InputImport(name="maxAge")
     private final @Nullable Double maxAge;
 
@@ -50,9 +38,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
         return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
     }
 
-    /**
-     * The methods to be allowed via CORS.
-     */
     @InputImport(name="methods")
     private final @Nullable List<String> methods;
 
@@ -60,9 +45,6 @@ public final class ServiceCorsConfigurationInfoResponse extends io.pulumi.resour
         return this.methods == null ? List.of() : this.methods;
     }
 
-    /**
-     * The origins to be allowed via CORS.
-     */
     @InputImport(name="origins")
     private final @Nullable List<String> origins;
 

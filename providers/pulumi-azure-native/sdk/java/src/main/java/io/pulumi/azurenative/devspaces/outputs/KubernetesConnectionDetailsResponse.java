@@ -11,14 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KubernetesConnectionDetailsResponse {
-/**
- * Gets the Instance type.
-Expected value is 'Kubernetes'.
- */
     private final String instanceType;
-/**
- * Gets the kubeconfig for the cluster.
- */
     private final @Nullable String kubeConfig;
 
     @OutputCustomType.Constructor({"instanceType","kubeConfig"})
@@ -29,16 +22,9 @@ Expected value is 'Kubernetes'.
         this.kubeConfig = kubeConfig;
     }
 
-/**
- * Gets the Instance type.
-Expected value is 'Kubernetes'.
- */
     public String getInstanceType() {
         return this.instanceType;
     }
-/**
- * Gets the kubeconfig for the cluster.
- */
     public Optional<String> getKubeConfig() {
         return Optional.ofNullable(this.kubeConfig);
     }

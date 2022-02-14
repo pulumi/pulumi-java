@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ConditionsResponse {
-/**
- * A collection of conditions.
- */
     private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
     @OutputCustomType.Constructor({"conditions"})
@@ -20,9 +17,6 @@ public final class GooglePrivacyDlpV2ConditionsResponse {
         this.conditions = Objects.requireNonNull(conditions);
     }
 
-/**
- * A collection of conditions.
- */
     public List<GooglePrivacyDlpV2ConditionResponse> getConditions() {
         return this.conditions;
     }

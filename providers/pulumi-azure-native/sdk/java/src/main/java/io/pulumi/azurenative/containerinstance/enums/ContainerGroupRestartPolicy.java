@@ -8,26 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Restart policy for all containers within the container group. 
-- `Always` Always restart
-- `OnFailure` Restart on failure
-- `Never` Never restart
-
- */
     @EnumType
     public enum ContainerGroupRestartPolicy {
-/**
- * 
- */
         Always("Always"),
-/**
- * 
- */
         OnFailure("OnFailure"),
-/**
- * 
- */
         Never("Never");
 
         private final String value;

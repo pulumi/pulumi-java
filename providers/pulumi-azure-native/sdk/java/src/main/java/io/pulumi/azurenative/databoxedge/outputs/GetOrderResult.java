@@ -16,49 +16,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOrderResult {
-/**
- * The contact details.
- */
     private final ContactDetailsResponse contactInformation;
-/**
- * Current status of the order.
- */
     private final OrderStatusResponse currentStatus;
-/**
- * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
- */
     private final List<TrackingInfoResponse> deliveryTrackingInfo;
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * The object name.
- */
     private final String name;
-/**
- * List of status changes in the order.
- */
     private final List<OrderStatusResponse> orderHistory;
-/**
- * Tracking information for the package returned from the customer whether it has an original or a replacement device.
- */
     private final List<TrackingInfoResponse> returnTrackingInfo;
-/**
- * Serial number of the device.
- */
     private final String serialNumber;
-/**
- * ShipmentType of the order
- */
     private final @Nullable String shipmentType;
-/**
- * The shipping address.
- */
     private final @Nullable AddressResponse shippingAddress;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"contactInformation","currentStatus","deliveryTrackingInfo","id","name","orderHistory","returnTrackingInfo","serialNumber","shipmentType","shippingAddress","type"})
@@ -87,69 +54,36 @@ public final class GetOrderResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The contact details.
- */
     public ContactDetailsResponse getContactInformation() {
         return this.contactInformation;
     }
-/**
- * Current status of the order.
- */
     public OrderStatusResponse getCurrentStatus() {
         return this.currentStatus;
     }
-/**
- * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
- */
     public List<TrackingInfoResponse> getDeliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * List of status changes in the order.
- */
     public List<OrderStatusResponse> getOrderHistory() {
         return this.orderHistory;
     }
-/**
- * Tracking information for the package returned from the customer whether it has an original or a replacement device.
- */
     public List<TrackingInfoResponse> getReturnTrackingInfo() {
         return this.returnTrackingInfo;
     }
-/**
- * Serial number of the device.
- */
     public String getSerialNumber() {
         return this.serialNumber;
     }
-/**
- * ShipmentType of the order
- */
     public Optional<String> getShipmentType() {
         return Optional.ofNullable(this.shipmentType);
     }
-/**
- * The shipping address.
- */
     public Optional<AddressResponse> getShippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }

@@ -11,33 +11,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEnvironmentResult {
-/**
- * Configuration parameters for this environment.
- */
     private final EnvironmentConfigResponse config;
-/**
- * The time at which this environment was created.
- */
     private final String createTime;
-/**
- * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
- */
     private final Map<String,String> labels;
-/**
- * The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
- */
     private final String name;
-/**
- * The current state of the environment.
- */
     private final String state;
-/**
- * The time at which this environment was last modified.
- */
     private final String updateTime;
-/**
- * The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
- */
     private final String uuid;
 
     @OutputCustomType.Constructor({"config","createTime","labels","name","state","updateTime","uuid"})
@@ -58,45 +37,24 @@ public final class GetEnvironmentResult {
         this.uuid = Objects.requireNonNull(uuid);
     }
 
-/**
- * Configuration parameters for this environment.
- */
     public EnvironmentConfigResponse getConfig() {
         return this.config;
     }
-/**
- * The time at which this environment was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The current state of the environment.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The time at which this environment was last modified.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }
-/**
- * The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
- */
     public String getUuid() {
         return this.uuid;
     }

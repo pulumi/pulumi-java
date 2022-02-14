@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectedRegistryArgs Empty = new ConnectedRegistryArgs();
 
-    /**
-     * The list of the ACR token resource IDs used to authenticate clients to the connected registry.
-     */
     @InputImport(name="clientTokenIds")
     private final @Nullable Input<List<String>> clientTokenIds;
 
@@ -32,9 +26,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.clientTokenIds == null ? Input.empty() : this.clientTokenIds;
     }
 
-    /**
-     * The name of the connected registry.
-     */
     @InputImport(name="connectedRegistryName")
     private final @Nullable Input<String> connectedRegistryName;
 
@@ -42,9 +33,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.connectedRegistryName == null ? Input.empty() : this.connectedRegistryName;
     }
 
-    /**
-     * The logging properties of the connected registry.
-     */
     @InputImport(name="logging")
     private final @Nullable Input<LoggingPropertiesArgs> logging;
 
@@ -52,9 +40,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.logging == null ? Input.empty() : this.logging;
     }
 
-    /**
-     * The mode of the connected registry resource that indicates the permissions of the registry.
-     */
     @InputImport(name="mode", required=true)
     private final Input<Either<String,ConnectedRegistryMode>> mode;
 
@@ -62,9 +47,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.mode;
     }
 
-    /**
-     * The parent of the connected registry.
-     */
     @InputImport(name="parent", required=true)
     private final Input<ParentPropertiesArgs> parent;
 
@@ -72,9 +54,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.parent;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -82,9 +61,6 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

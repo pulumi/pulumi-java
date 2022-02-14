@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneReverseLookupConfigArgs Empty = new ManagedZoneReverseLookupConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

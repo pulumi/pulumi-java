@@ -113,16 +113,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedServiceArgs Empty = new LinkedServiceArgs();
 
-    /**
-     * The factory name.
-     */
     @InputImport(name="factoryName", required=true)
     private final Input<String> factoryName;
 
@@ -130,9 +124,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.factoryName;
     }
 
-    /**
-     * The linked service name.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<String> linkedServiceName;
 
@@ -140,9 +131,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
-    /**
-     * Properties of linked service.
-     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -150,9 +138,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

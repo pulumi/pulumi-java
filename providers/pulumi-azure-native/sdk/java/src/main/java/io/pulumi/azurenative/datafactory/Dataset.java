@@ -110,347 +110,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Dataset resource type.
-API Version: 2018-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Datasets_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataset = new AzureNative.DataFactory.Dataset("dataset", new AzureNative.DataFactory.DatasetArgs
-        {
-            DatasetName = "exampleDataset",
-            FactoryName = "exampleFactoryName",
-            Properties = new AzureNative.DataFactory.Inputs.AzureBlobDatasetArgs
-            {
-                FileName = 
-                {
-                    { "type", "Expression" },
-                    { "value", "@dataset().MyFileName" },
-                },
-                FolderPath = 
-                {
-                    { "type", "Expression" },
-                    { "value", "@dataset().MyFolderPath" },
-                },
-                Format = new AzureNative.DataFactory.Inputs.TextFormatArgs
-                {
-                    Type = "TextFormat",
-                },
-                LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
-                {
-                    ReferenceName = "exampleLinkedService",
-                    Type = "LinkedServiceReference",
-                },
-                Parameters = 
-                {
-                    { "MyFileName", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
-                    {
-                        Type = "String",
-                    } },
-                    { "MyFolderPath", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
-                    {
-                        Type = "String",
-                    } },
-                },
-                Type = "AzureBlob",
-            },
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dataset = new azure_native.datafactory.Dataset("dataset", {
-    datasetName: "exampleDataset",
-    factoryName: "exampleFactoryName",
-    properties: {
-        fileName: {
-            type: "Expression",
-            value: "@dataset().MyFileName",
-        },
-        folderPath: {
-            type: "Expression",
-            value: "@dataset().MyFolderPath",
-        },
-        format: {
-            type: "TextFormat",
-        },
-        linkedServiceName: {
-            referenceName: "exampleLinkedService",
-            type: "LinkedServiceReference",
-        },
-        parameters: {
-            MyFileName: {
-                type: "String",
-            },
-            MyFolderPath: {
-                type: "String",
-            },
-        },
-        type: "AzureBlob",
-    },
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-dataset = azure_native.datafactory.Dataset("dataset",
-    dataset_name="exampleDataset",
-    factory_name="exampleFactoryName",
-    properties=azure_native.datafactory.AzureBlobDatasetArgs(
-        file_name={
-            "type": "Expression",
-            "value": "@dataset().MyFileName",
-        },
-        folder_path={
-            "type": "Expression",
-            "value": "@dataset().MyFolderPath",
-        },
-        format=azure_native.datafactory.TextFormatArgs(
-            type="TextFormat",
-        ),
-        linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
-            reference_name="exampleLinkedService",
-            type="LinkedServiceReference",
-        ),
-        parameters={
-            "MyFileName": azure_native.datafactory.ParameterSpecificationArgs(
-                type="String",
-            ),
-            "MyFolderPath": azure_native.datafactory.ParameterSpecificationArgs(
-                type="String",
-            ),
-        },
-        type="AzureBlob",
-    ),
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Datasets_Update
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataset = new AzureNative.DataFactory.Dataset("dataset", new AzureNative.DataFactory.DatasetArgs
-        {
-            DatasetName = "exampleDataset",
-            FactoryName = "exampleFactoryName",
-            Properties = new AzureNative.DataFactory.Inputs.AzureBlobDatasetArgs
-            {
-                Description = "Example description",
-                FileName = 
-                {
-                    { "type", "Expression" },
-                    { "value", "@dataset().MyFileName" },
-                },
-                FolderPath = 
-                {
-                    { "type", "Expression" },
-                    { "value", "@dataset().MyFolderPath" },
-                },
-                Format = new AzureNative.DataFactory.Inputs.TextFormatArgs
-                {
-                    Type = "TextFormat",
-                },
-                LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
-                {
-                    ReferenceName = "exampleLinkedService",
-                    Type = "LinkedServiceReference",
-                },
-                Parameters = 
-                {
-                    { "MyFileName", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
-                    {
-                        Type = "String",
-                    } },
-                    { "MyFolderPath", new AzureNative.DataFactory.Inputs.ParameterSpecificationArgs
-                    {
-                        Type = "String",
-                    } },
-                },
-                Type = "AzureBlob",
-            },
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dataset = new azure_native.datafactory.Dataset("dataset", {
-    datasetName: "exampleDataset",
-    factoryName: "exampleFactoryName",
-    properties: {
-        description: "Example description",
-        fileName: {
-            type: "Expression",
-            value: "@dataset().MyFileName",
-        },
-        folderPath: {
-            type: "Expression",
-            value: "@dataset().MyFolderPath",
-        },
-        format: {
-            type: "TextFormat",
-        },
-        linkedServiceName: {
-            referenceName: "exampleLinkedService",
-            type: "LinkedServiceReference",
-        },
-        parameters: {
-            MyFileName: {
-                type: "String",
-            },
-            MyFolderPath: {
-                type: "String",
-            },
-        },
-        type: "AzureBlob",
-    },
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-dataset = azure_native.datafactory.Dataset("dataset",
-    dataset_name="exampleDataset",
-    factory_name="exampleFactoryName",
-    properties=azure_native.datafactory.AzureBlobDatasetArgs(
-        description="Example description",
-        file_name={
-            "type": "Expression",
-            "value": "@dataset().MyFileName",
-        },
-        folder_path={
-            "type": "Expression",
-            "value": "@dataset().MyFolderPath",
-        },
-        format=azure_native.datafactory.TextFormatArgs(
-            type="TextFormat",
-        ),
-        linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
-            reference_name="exampleLinkedService",
-            type="LinkedServiceReference",
-        ),
-        parameters={
-            "MyFileName": azure_native.datafactory.ParameterSpecificationArgs(
-                type="String",
-            ),
-            "MyFolderPath": azure_native.datafactory.ParameterSpecificationArgs(
-                type="String",
-            ),
-        },
-        type="AzureBlob",
-    ),
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datafactory:Dataset exampleDataset /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/datasets/exampleDataset 
-```
-
- */
 @ResourceType(type="azure-native:datafactory:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
-    /**
-     * Etag identifies change in the resource.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Etag identifies change in the resource.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Dataset properties.
-     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
-    /**
-     * @return Dataset properties.
-     */
     public Output<Object> getProperties() {
         return this.properties;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Dataset(String name, DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datafactory:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -470,14 +156,6 @@ public class Dataset extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Dataset get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Dataset(name, id, options);
     }

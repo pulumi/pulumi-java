@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAppServiceEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppServiceEnvironmentArgs Empty = new GetAppServiceEnvironmentArgs();
 
-    /**
-     * Name of the App Service Environment.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetAppServiceEnvironmentArgs extends io.pulumi.resources.Invo
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

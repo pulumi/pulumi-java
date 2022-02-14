@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved instances for examples.
- */
     @EnumType
     public enum ReservationAffinityConsumeReservationType {
-/**
- * Consume any allocation available.
- */
         AnyReservation("ANY_RESERVATION"),
-/**
- * Do not consume from any allocated capacity.
- */
         NoReservation("NO_RESERVATION"),
-/**
- * Must consume from a specific reservation. Must specify key value fields for specifying the reservations.
- */
         SpecificReservation("SPECIFIC_RESERVATION"),
-/**
- * Prefer to consume from a specific reservation, but still consume any reservation available if the specified reservation is not available or exhausted. Must specify key value fields for specifying the reservations.
- */
         SpecificThenAnyReservation("SPECIFIC_THEN_ANY_RESERVATION"),
-/**
- * 
- */
         Unspecified("UNSPECIFIED");
 
         private final String value;

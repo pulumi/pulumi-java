@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * LimitRangeItem defines a min/max usage limit for any resource that matches on kind.
- */
 public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LimitRangeItemArgs Empty = new LimitRangeItemArgs();
 
-    /**
-     * Default resource requirement limit value by resource name if resource limit is omitted.
-     */
     @InputImport(name="default")
     private final @Nullable Input<Map<String,String>> $default;
 
@@ -28,9 +22,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.$default == null ? Input.empty() : this.$default;
     }
 
-    /**
-     * DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
-     */
     @InputImport(name="defaultRequest")
     private final @Nullable Input<Map<String,String>> defaultRequest;
 
@@ -38,9 +29,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultRequest == null ? Input.empty() : this.defaultRequest;
     }
 
-    /**
-     * Max usage constraints on this kind by resource name.
-     */
     @InputImport(name="max")
     private final @Nullable Input<Map<String,String>> max;
 
@@ -48,9 +36,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.max == null ? Input.empty() : this.max;
     }
 
-    /**
-     * MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
-     */
     @InputImport(name="maxLimitRequestRatio")
     private final @Nullable Input<Map<String,String>> maxLimitRequestRatio;
 
@@ -58,9 +43,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxLimitRequestRatio == null ? Input.empty() : this.maxLimitRequestRatio;
     }
 
-    /**
-     * Min usage constraints on this kind by resource name.
-     */
     @InputImport(name="min")
     private final @Nullable Input<Map<String,String>> min;
 
@@ -68,14 +50,6 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.min == null ? Input.empty() : this.min;
     }
 
-    /**
-     * Type of resource that this limit applies to.
-
-Possible enum values:
- - `"Container"` Limit that applies to all containers in a namespace
- - `"PersistentVolumeClaim"` Limit that applies to all persistent volume claims in a namespace
- - `"Pod"` Limit that applies to all pods in a namespace
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

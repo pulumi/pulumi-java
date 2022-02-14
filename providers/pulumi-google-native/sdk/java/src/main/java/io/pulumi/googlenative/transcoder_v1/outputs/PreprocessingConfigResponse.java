@@ -14,29 +14,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreprocessingConfigResponse {
-/**
- * Audio preprocessing configuration.
- */
     private final AudioResponse audio;
-/**
- * Color preprocessing configuration.
- */
     private final ColorResponse color;
-/**
- * Specify the video cropping configuration.
- */
     private final CropResponse crop;
-/**
- * Deblock preprocessing configuration.
- */
     private final DeblockResponse deblock;
-/**
- * Denoise preprocessing configuration.
- */
     private final DenoiseResponse denoise;
-/**
- * Specify the video pad filter configuration.
- */
     private final PadResponse pad;
 
     @OutputCustomType.Constructor({"audio","color","crop","deblock","denoise","pad"})
@@ -55,39 +37,21 @@ public final class PreprocessingConfigResponse {
         this.pad = Objects.requireNonNull(pad);
     }
 
-/**
- * Audio preprocessing configuration.
- */
     public AudioResponse getAudio() {
         return this.audio;
     }
-/**
- * Color preprocessing configuration.
- */
     public ColorResponse getColor() {
         return this.color;
     }
-/**
- * Specify the video cropping configuration.
- */
     public CropResponse getCrop() {
         return this.crop;
     }
-/**
- * Deblock preprocessing configuration.
- */
     public DeblockResponse getDeblock() {
         return this.deblock;
     }
-/**
- * Denoise preprocessing configuration.
- */
     public DenoiseResponse getDenoise() {
         return this.denoise;
     }
-/**
- * Specify the video pad filter configuration.
- */
     public PadResponse getPad() {
         return this.pad;
     }

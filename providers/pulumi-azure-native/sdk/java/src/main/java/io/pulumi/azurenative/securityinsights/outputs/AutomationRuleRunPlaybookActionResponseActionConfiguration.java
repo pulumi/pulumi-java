@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
-/**
- * The resource id of the playbook resource
- */
     private final @Nullable String logicAppResourceId;
-/**
- * The tenant id of the playbook resource
- */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"logicAppResourceId","tenantId"})
@@ -28,15 +22,9 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
         this.tenantId = tenantId;
     }
 
-/**
- * The resource id of the playbook resource
- */
     public Optional<String> getLogicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
-/**
- * The tenant id of the playbook resource
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

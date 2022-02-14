@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
- */
 public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatefulSetUpdateStrategyArgs Empty = new StatefulSetUpdateStrategyArgs();
 
-    /**
-     * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
-     */
     @InputImport(name="rollingUpdate")
     private final @Nullable Input<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
@@ -28,13 +22,6 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
     }
 
-    /**
-     * Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
-
-Possible enum values:
- - `"OnDelete"` triggers the legacy behavior. Version tracking and ordered rolling restarts are disabled. Pods are recreated from the StatefulSetSpec when they are manually deleted. When a scale operation is performed with this strategy,specification version indicated by the StatefulSet's currentRevision.
- - `"RollingUpdate"` indicates that update will be applied to all Pods in the StatefulSet with respect to the StatefulSet ordering constraints. When a scale operation is performed with this strategy, new Pods will be created from the specification version indicated by the StatefulSet's updateRevision.
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFluidRelayServerKeysResult {
-/**
- * The primary key for this server
- */
     private final String key1;
-/**
- * The secondary key for this server
- */
     private final String key2;
 
     @OutputCustomType.Constructor({"key1","key2"})
@@ -26,15 +20,9 @@ public final class GetFluidRelayServerKeysResult {
         this.key2 = Objects.requireNonNull(key2);
     }
 
-/**
- * The primary key for this server
- */
     public String getKey1() {
         return this.key1;
     }
-/**
- * The secondary key for this server
- */
     public String getKey2() {
         return this.key2;
     }

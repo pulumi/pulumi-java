@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppArgs Empty = new AppArgs();
 
-    /**
-     * List of API products associated with the developer app.
-     */
     @InputImport(name="apiProducts")
     private final @Nullable Input<List<String>> apiProducts;
 
@@ -29,9 +23,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiProducts == null ? Input.empty() : this.apiProducts;
     }
 
-    /**
-     * Developer app family.
-     */
     @InputImport(name="appFamily")
     private final @Nullable Input<String> appFamily;
 
@@ -39,9 +30,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appFamily == null ? Input.empty() : this.appFamily;
     }
 
-    /**
-     * ID of the developer app.
-     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -49,9 +37,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
-    /**
-     * List of attributes for the developer app.
-     */
     @InputImport(name="attributes")
     private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
@@ -59,9 +44,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
-    /**
-     * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
-     */
     @InputImport(name="callbackUrl")
     private final @Nullable Input<String> callbackUrl;
 
@@ -69,9 +51,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.callbackUrl == null ? Input.empty() : this.callbackUrl;
     }
 
-    /**
-     * ID of the developer.
-     */
     @InputImport(name="developerId", required=true)
     private final Input<String> developerId;
 
@@ -79,9 +58,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.developerId;
     }
 
-    /**
-     * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
-     */
     @InputImport(name="keyExpiresIn")
     private final @Nullable Input<String> keyExpiresIn;
 
@@ -89,9 +65,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyExpiresIn == null ? Input.empty() : this.keyExpiresIn;
     }
 
-    /**
-     * Name of the developer app.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -99,9 +72,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -109,9 +79,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
-     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<String>> scopes;
 
@@ -119,9 +86,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
-    /**
-     * Status of the credential. Valid values include `approved` or `revoked`.
-     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

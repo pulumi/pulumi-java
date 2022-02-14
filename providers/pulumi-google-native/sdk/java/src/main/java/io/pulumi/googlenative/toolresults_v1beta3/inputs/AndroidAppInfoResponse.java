@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Android app information.
- */
 public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AndroidAppInfoResponse Empty = new AndroidAppInfoResponse();
 
-    /**
-     * The name of the app. Optional
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * The package name of the app. Required.
-     */
     @InputImport(name="packageName", required=true)
     private final String packageName;
 
@@ -35,9 +26,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.packageName;
     }
 
-    /**
-     * The internal version code of the app. Optional.
-     */
     @InputImport(name="versionCode", required=true)
     private final String versionCode;
 
@@ -45,9 +33,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.versionCode;
     }
 
-    /**
-     * The version name of the app. Optional.
-     */
     @InputImport(name="versionName", required=true)
     private final String versionName;
 

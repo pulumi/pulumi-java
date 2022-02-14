@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListLocationConsortiumsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListLocationConsortiumsArgs Empty = new ListLocationConsortiumsArgs();
 
-    /**
-     * Location Name.
-     */
     @InputImport(name="locationName", required=true)
     private final String locationName;
 

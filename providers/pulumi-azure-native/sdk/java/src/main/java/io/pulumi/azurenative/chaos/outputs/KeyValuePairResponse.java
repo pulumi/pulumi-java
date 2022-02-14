@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyValuePairResponse {
-/**
- * The name of the setting for the action.
- */
     private final String key;
-/**
- * The value of the setting for the action.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -26,15 +20,9 @@ public final class KeyValuePairResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The name of the setting for the action.
- */
     public String getKey() {
         return this.key;
     }
-/**
- * The value of the setting for the action.
- */
     public String getValue() {
         return this.value;
     }

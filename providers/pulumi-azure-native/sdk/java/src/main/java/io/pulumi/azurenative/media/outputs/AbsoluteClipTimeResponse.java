@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AbsoluteClipTimeResponse {
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.AbsoluteClipTime'.
- */
     private final String odataType;
-/**
- * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
- */
     private final String time;
 
     @OutputCustomType.Constructor({"odataType","time"})
@@ -27,16 +20,9 @@ Expected value is '#Microsoft.Media.AbsoluteClipTime'.
         this.time = Objects.requireNonNull(time);
     }
 
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.AbsoluteClipTime'.
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
- */
     public String getTime() {
         return this.time;
     }

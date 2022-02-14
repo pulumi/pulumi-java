@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
- */
 public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PurchasePlanResponse Empty = new PurchasePlanResponse();
 
-    /**
-     * The plan ID.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +21,6 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
-     */
     @InputImport(name="product", required=true)
     private final String product;
 
@@ -37,9 +28,6 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.product;
     }
 
-    /**
-     * The Offer Promotion Code.
-     */
     @InputImport(name="promotionCode")
     private final @Nullable String promotionCode;
 
@@ -47,9 +35,6 @@ public final class PurchasePlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
-    /**
-     * The publisher ID.
-     */
     @InputImport(name="publisher", required=true)
     private final String publisher;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a sub PublicDelegatedPrefix.
- */
 public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicDelegatedPrefixPublicDelegatedSubPrefixArgs Empty = new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs();
 
-    /**
-     * Name of the project scoping this PublicDelegatedSubPrefix.
-     */
     @InputImport(name="delegateeProject")
     private final @Nullable Input<String> delegateeProject;
 
@@ -28,9 +22,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
         return this.delegateeProject == null ? Input.empty() : this.delegateeProject;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,9 +29,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
-     */
     @InputImport(name="ipCidrRange")
     private final @Nullable Input<String> ipCidrRange;
 
@@ -48,9 +36,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
     }
 
-    /**
-     * Whether the sub prefix is delegated to create Address resources in the delegatee project.
-     */
     @InputImport(name="isAddress")
     private final @Nullable Input<Boolean> isAddress;
 
@@ -58,9 +43,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
         return this.isAddress == null ? Input.empty() : this.isAddress;
     }
 
-    /**
-     * The name of the sub public delegated prefix.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

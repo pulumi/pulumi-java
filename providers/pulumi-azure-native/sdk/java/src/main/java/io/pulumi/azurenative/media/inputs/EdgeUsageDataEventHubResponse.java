@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdgeUsageDataEventHubResponse Empty = new EdgeUsageDataEventHubResponse();
 
-    /**
-     * Name of the Event Hub where usage will be reported.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Namespace of the Event Hub where usage will be reported.
-     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 
@@ -37,9 +28,6 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
-    /**
-     * SAS token needed to interact with Event Hub.
-     */
     @InputImport(name="token")
     private final @Nullable String token;
 

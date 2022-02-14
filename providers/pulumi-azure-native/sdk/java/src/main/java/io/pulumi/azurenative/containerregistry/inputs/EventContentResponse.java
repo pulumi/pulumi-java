@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The content of the event request message.
- */
 public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventContentResponse Empty = new EventContentResponse();
 
-    /**
-     * The action that encompasses the provided event.
-     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -31,9 +25,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
-    /**
-     * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
-     */
     @InputImport(name="actor")
     private final @Nullable ActorResponse actor;
 
@@ -41,9 +32,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
         return this.actor == null ? Optional.empty() : Optional.ofNullable(this.actor);
     }
 
-    /**
-     * The event ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -51,9 +39,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The request that generated the event.
-     */
     @InputImport(name="request")
     private final @Nullable RequestResponse request;
 
@@ -61,9 +46,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
     }
 
-    /**
-     * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
-     */
     @InputImport(name="source")
     private final @Nullable SourceResponse source;
 
@@ -71,9 +53,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
-    /**
-     * The target of the event.
-     */
     @InputImport(name="target")
     private final @Nullable TargetResponse target;
 
@@ -81,9 +60,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
-    /**
-     * The time at which the event occurred.
-     */
     @InputImport(name="timestamp")
     private final @Nullable String timestamp;
 

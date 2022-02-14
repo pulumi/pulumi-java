@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Msi identity details of the resource
- */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceIdentityResponse Empty = new ResourceIdentityResponse();
 
-    /**
-     * Service Principal Id backing the Msi
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -29,9 +23,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.principalId;
     }
 
-    /**
-     * Home Tenant Id
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -39,9 +30,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.tenantId;
     }
 
-    /**
-     * Identity type
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -49,9 +37,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * User Assigned Identities
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 

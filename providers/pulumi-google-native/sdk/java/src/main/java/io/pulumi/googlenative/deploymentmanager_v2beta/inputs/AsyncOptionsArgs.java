@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Async options that determine when a resource should finish.
- */
 public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AsyncOptionsArgs Empty = new AsyncOptionsArgs();
 
-    /**
-     * Method regex where this policy will apply.
-     */
     @InputImport(name="methodMatch")
     private final @Nullable Input<String> methodMatch;
 
@@ -28,9 +22,6 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.methodMatch == null ? Input.empty() : this.methodMatch;
     }
 
-    /**
-     * Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
-     */
     @InputImport(name="pollingOptions")
     private final @Nullable Input<PollingOptionsArgs> pollingOptions;
 

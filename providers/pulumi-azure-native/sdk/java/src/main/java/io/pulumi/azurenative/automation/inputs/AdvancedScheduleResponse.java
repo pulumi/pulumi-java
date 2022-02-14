@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the create Advanced Schedule.
- */
 public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdvancedScheduleResponse Empty = new AdvancedScheduleResponse();
 
-    /**
-     * Days of the month that the job should execute on. Must be between 1 and 31.
-     */
     @InputImport(name="monthDays")
     private final @Nullable List<Integer> monthDays;
 
@@ -30,9 +24,6 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
         return this.monthDays == null ? List.of() : this.monthDays;
     }
 
-    /**
-     * Occurrences of days within a month.
-     */
     @InputImport(name="monthlyOccurrences")
     private final @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
@@ -40,9 +31,6 @@ public final class AdvancedScheduleResponse extends io.pulumi.resources.InvokeAr
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
 
-    /**
-     * Days of the week that the job should execute on.
-     */
     @InputImport(name="weekDays")
     private final @Nullable List<String> weekDays;
 

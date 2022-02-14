@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionSslCertificate {
-/**
- * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
- */
     public static CompletableFuture<GetRegionSslCertificateResult> invokeAsync(GetRegionSslCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args == null ? GetRegionSslCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

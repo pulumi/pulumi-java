@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * ForZone provides information about which zones should consume this endpoint.
- */
 public final class ForZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ForZoneArgs Empty = new ForZoneArgs();
 
-    /**
-     * name represents the name of the zone.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

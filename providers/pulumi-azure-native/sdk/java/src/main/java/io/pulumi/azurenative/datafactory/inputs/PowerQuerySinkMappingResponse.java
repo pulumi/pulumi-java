@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Map Power Query mashup query to sink dataset(s).
- */
 public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PowerQuerySinkMappingResponse Empty = new PowerQuerySinkMappingResponse();
 
-    /**
-     * List of sinks mapped to Power Query mashup query.
-     */
     @InputImport(name="dataflowSinks")
     private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
 
@@ -29,9 +23,6 @@ public final class PowerQuerySinkMappingResponse extends io.pulumi.resources.Inv
         return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
     }
 
-    /**
-     * Name of the query in Power Query mashup document.
-     */
     @InputImport(name="queryName")
     private final @Nullable String queryName;
 

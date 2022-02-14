@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: AADDataConnector, AATPDataConnector, ASCDataConnector, AwsCloudTrailDataConnector, MCASDataConnector, MDATPDataConnector, OfficeDataConnector, TIDataConnector. */
 public class GetDataConnector {
-/**
- * Data connector.
-API Version: 2020-01-01.
- *
- * Data connector.
- */
     public static CompletableFuture<GetDataConnectorResult> invokeAsync(GetDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getDataConnector", TypeShape.of(GetDataConnectorResult.class), args == null ? GetDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

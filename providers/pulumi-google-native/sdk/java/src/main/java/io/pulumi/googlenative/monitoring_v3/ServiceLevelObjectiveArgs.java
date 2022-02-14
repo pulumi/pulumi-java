@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceLevelObjectiveArgs Empty = new ServiceLevelObjectiveArgs();
 
-    /**
-     * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
-     */
     @InputImport(name="calendarPeriod")
     private final @Nullable Input<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
@@ -31,9 +25,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.calendarPeriod == null ? Input.empty() : this.calendarPeriod;
     }
 
-    /**
-     * Name used for UI elements listing this SLO.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -41,9 +32,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
-     */
     @InputImport(name="goal")
     private final @Nullable Input<Double> goal;
 
@@ -51,9 +39,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.goal == null ? Input.empty() : this.goal;
     }
 
-    /**
-     * Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME] 
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,9 +46,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
-     */
     @InputImport(name="rollingPeriod")
     private final @Nullable Input<String> rollingPeriod;
 
@@ -71,9 +53,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.rollingPeriod == null ? Input.empty() : this.rollingPeriod;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceId", required=true)
     private final Input<String> serviceId;
 
@@ -81,9 +60,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.serviceId;
     }
 
-    /**
-     * The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
-     */
     @InputImport(name="serviceLevelIndicator")
     private final @Nullable Input<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
@@ -91,9 +67,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.serviceLevelIndicator == null ? Input.empty() : this.serviceLevelIndicator;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceLevelObjectiveId")
     private final @Nullable Input<String> serviceLevelObjectiveId;
 
@@ -101,9 +74,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.serviceLevelObjectiveId == null ? Input.empty() : this.serviceLevelObjectiveId;
     }
 
-    /**
-     * Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
-     */
     @InputImport(name="userLabels")
     private final @Nullable Input<Map<String,String>> userLabels;
 
@@ -111,9 +81,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.userLabels == null ? Input.empty() : this.userLabels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v3Id", required=true)
     private final Input<String> v3Id;
 
@@ -121,9 +88,6 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
         return this.v3Id;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v3Id1", required=true)
     private final Input<String> v3Id1;
 

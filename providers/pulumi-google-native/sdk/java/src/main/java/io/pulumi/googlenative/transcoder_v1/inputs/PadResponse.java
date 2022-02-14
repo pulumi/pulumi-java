@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Pad filter configuration for the input video. The padded input video is scaled after padding with black to match the output resolution.
- */
 public final class PadResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PadResponse Empty = new PadResponse();
 
-    /**
-     * The number of pixels to add to the bottom. The default is 0.
-     */
     @InputImport(name="bottomPixels", required=true)
     private final Integer bottomPixels;
 
@@ -25,9 +19,6 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
         return this.bottomPixels;
     }
 
-    /**
-     * The number of pixels to add to the left. The default is 0.
-     */
     @InputImport(name="leftPixels", required=true)
     private final Integer leftPixels;
 
@@ -35,9 +26,6 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
         return this.leftPixels;
     }
 
-    /**
-     * The number of pixels to add to the right. The default is 0.
-     */
     @InputImport(name="rightPixels", required=true)
     private final Integer rightPixels;
 
@@ -45,9 +33,6 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
         return this.rightPixels;
     }
 
-    /**
-     * The number of pixels to add to the top. The default is 0.
-     */
     @InputImport(name="topPixels", required=true)
     private final Integer topPixels;
 

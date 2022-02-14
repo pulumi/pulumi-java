@@ -13,37 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionProxyResult {
-/**
- * ETag from NRP.
- */
     private final String eTag;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The provisioning state of the private endpoint connection proxy resource.
- */
     private final String provisioningState;
-/**
- * Remote private endpoint details.
- */
     private final @Nullable RemotePrivateEndpointResponse remotePrivateEndpoint;
-/**
- * Operation status.
- */
     private final @Nullable String status;
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     private final SystemDataResponse systemData;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","name","provisioningState","remotePrivateEndpoint","status","systemData","type"})
@@ -66,51 +42,27 @@ public final class GetPrivateEndpointConnectionProxyResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * ETag from NRP.
- */
     public String getETag() {
         return this.eTag;
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state of the private endpoint connection proxy resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Remote private endpoint details.
- */
     public Optional<RemotePrivateEndpointResponse> getRemotePrivateEndpoint() {
         return Optional.ofNullable(this.remotePrivateEndpoint);
     }
-/**
- * Operation status.
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

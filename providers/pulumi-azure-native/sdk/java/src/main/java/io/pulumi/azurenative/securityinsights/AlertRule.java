@@ -14,305 +14,34 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Alert rule.
-API Version: 2020-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates or updates a Fusion alert rule.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var alertRule = new AzureNative.SecurityInsights.AlertRule("alertRule", new AzureNative.SecurityInsights.AlertRuleArgs
-        {
-            Kind = "Fusion",
-            ResourceGroupName = "myRg",
-            RuleId = "myFirstFusionRule",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewAlertRule(ctx, "alertRule", &securityinsights.AlertRuleArgs{
-			Kind:              pulumi.String("Fusion"),
-			ResourceGroupName: pulumi.String("myRg"),
-			RuleId:            pulumi.String("myFirstFusionRule"),
-			WorkspaceName:     pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const alertRule = new azure_native.securityinsights.AlertRule("alertRule", {
-    kind: "Fusion",
-    resourceGroupName: "myRg",
-    ruleId: "myFirstFusionRule",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-alert_rule = azure_native.securityinsights.AlertRule("alertRule",
-    kind="Fusion",
-    resource_group_name="myRg",
-    rule_id="myFirstFusionRule",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Creates or updates a MicrosoftSecurityIncidentCreation rule.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var alertRule = new AzureNative.SecurityInsights.AlertRule("alertRule", new AzureNative.SecurityInsights.AlertRuleArgs
-        {
-            Kind = "MicrosoftSecurityIncidentCreation",
-            ResourceGroupName = "myRg",
-            RuleId = "microsoftSecurityIncidentCreationRuleExample",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewAlertRule(ctx, "alertRule", &securityinsights.AlertRuleArgs{
-			Kind:              pulumi.String("MicrosoftSecurityIncidentCreation"),
-			ResourceGroupName: pulumi.String("myRg"),
-			RuleId:            pulumi.String("microsoftSecurityIncidentCreationRuleExample"),
-			WorkspaceName:     pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const alertRule = new azure_native.securityinsights.AlertRule("alertRule", {
-    kind: "MicrosoftSecurityIncidentCreation",
-    resourceGroupName: "myRg",
-    ruleId: "microsoftSecurityIncidentCreationRuleExample",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-alert_rule = azure_native.securityinsights.AlertRule("alertRule",
-    kind="MicrosoftSecurityIncidentCreation",
-    resource_group_name="myRg",
-    rule_id="microsoftSecurityIncidentCreationRuleExample",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Creates or updates a Scheduled alert rule.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var alertRule = new AzureNative.SecurityInsights.AlertRule("alertRule", new AzureNative.SecurityInsights.AlertRuleArgs
-        {
-            Kind = "Scheduled",
-            ResourceGroupName = "myRg",
-            RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewAlertRule(ctx, "alertRule", &securityinsights.AlertRuleArgs{
-			Kind:              pulumi.String("Scheduled"),
-			ResourceGroupName: pulumi.String("myRg"),
-			RuleId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			WorkspaceName:     pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const alertRule = new azure_native.securityinsights.AlertRule("alertRule", {
-    kind: "Scheduled",
-    resourceGroupName: "myRg",
-    ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-alert_rule = azure_native.securityinsights.AlertRule("alertRule",
-    kind="Scheduled",
-    resource_group_name="myRg",
-    rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:securityinsights:AlertRule 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
-```
-
- * @deprecated
- * Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule.
- */
 @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
 @ResourceType(type="azure-native:securityinsights:AlertRule")
 public class AlertRule extends io.pulumi.resources.CustomResource {
-    /**
-     * Etag of the azure resource
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Etag of the azure resource
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * The alert rule kind
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return The alert rule kind
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public AlertRule(String name, AlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:AlertRule", name, args == null ? AlertRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -334,14 +63,6 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static AlertRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AlertRule(name, id, options);
     }

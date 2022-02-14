@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetAccessPolicyResult {
-/**
- * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
- */
     private final String name;
-/**
- * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
- */
     private final String parent;
-/**
- * Human readable title. Does not affect behavior.
- */
     private final String title;
 
     @OutputCustomType.Constructor({"name","parent","title"})
@@ -32,21 +23,12 @@ public final class GetAccessPolicyResult {
         this.title = Objects.requireNonNull(title);
     }
 
-/**
- * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
- */
     public String getName() {
         return this.name;
     }
-/**
- * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
- */
     public String getParent() {
         return this.parent;
     }
-/**
- * Human readable title. Does not affect behavior.
- */
     public String getTitle() {
         return this.title;
     }

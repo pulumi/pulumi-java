@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An initial split point for a newly created table.
- */
 public final class SplitArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SplitArgs Empty = new SplitArgs();
 
-    /**
-     * Row key to use as an initial tablet boundary.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 

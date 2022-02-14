@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
-/**
- * Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
- */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
     @OutputCustomType.Constructor({"field"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
         this.field = Objects.requireNonNull(field);
     }
 
-/**
- * Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
- */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }

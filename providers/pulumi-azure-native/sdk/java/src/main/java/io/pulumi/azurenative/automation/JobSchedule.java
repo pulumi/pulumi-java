@@ -17,229 +17,51 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Definition of the job schedule.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a job schedule
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var jobSchedule = new AzureNative.Automation.JobSchedule("jobSchedule", new AzureNative.Automation.JobScheduleArgs
-        {
-            AutomationAccountName = "ContoseAutomationAccount",
-            JobScheduleId = "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
-            Parameters = 
-            {
-                { "jobscheduletag01", "jobschedulevalue01" },
-                { "jobscheduletag02", "jobschedulevalue02" },
-            },
-            ResourceGroupName = "rg",
-            Runbook = new AzureNative.Automation.Inputs.RunbookAssociationPropertyArgs
-            {
-                Name = "TestRunbook",
-            },
-            Schedule = new AzureNative.Automation.Inputs.ScheduleAssociationPropertyArgs
-            {
-                Name = "ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewJobSchedule(ctx, "jobSchedule", &automation.JobScheduleArgs{
-			AutomationAccountName: pulumi.String("ContoseAutomationAccount"),
-			JobScheduleId:         pulumi.String("0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc"),
-			Parameters: pulumi.StringMap{
-				"jobscheduletag01": pulumi.String("jobschedulevalue01"),
-				"jobscheduletag02": pulumi.String("jobschedulevalue02"),
-			},
-			ResourceGroupName: pulumi.String("rg"),
-			Runbook: &automation.RunbookAssociationPropertyArgs{
-				Name: pulumi.String("TestRunbook"),
-			},
-			Schedule: &automation.ScheduleAssociationPropertyArgs{
-				Name: pulumi.String("ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const jobSchedule = new azure_native.automation.JobSchedule("jobSchedule", {
-    automationAccountName: "ContoseAutomationAccount",
-    jobScheduleId: "0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
-    parameters: {
-        jobscheduletag01: "jobschedulevalue01",
-        jobscheduletag02: "jobschedulevalue02",
-    },
-    resourceGroupName: "rg",
-    runbook: {
-        name: "TestRunbook",
-    },
-    schedule: {
-        name: "ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-job_schedule = azure_native.automation.JobSchedule("jobSchedule",
-    automation_account_name="ContoseAutomationAccount",
-    job_schedule_id="0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc",
-    parameters={
-        "jobscheduletag01": "jobschedulevalue01",
-        "jobscheduletag02": "jobschedulevalue02",
-    },
-    resource_group_name="rg",
-    runbook=azure_native.automation.RunbookAssociationPropertyArgs(
-        name="TestRunbook",
-    ),
-    schedule=azure_native.automation.ScheduleAssociationPropertyArgs(
-        name="ScheduleNameGoesHere332204b5-debe-4348-a5c7-6357457189f2",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:JobSchedule myresource1 /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/jobSchedules/0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc 
-```
-
- */
 @ResourceType(type="azure-native:automation:JobSchedule")
 public class JobSchedule extends io.pulumi.resources.CustomResource {
-    /**
-     * Gets or sets the id of job schedule.
-     */
     @OutputExport(name="jobScheduleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobScheduleId;
 
-    /**
-     * @return Gets or sets the id of job schedule.
-     */
     public Output</* @Nullable */ String> getJobScheduleId() {
         return this.jobScheduleId;
     }
-    /**
-     * Gets the name of the variable.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Gets the name of the variable.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Gets or sets the parameters of the job schedule.
-     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
-    /**
-     * @return Gets or sets the parameters of the job schedule.
-     */
     public Output</* @Nullable */ Map<String,String>> getParameters() {
         return this.parameters;
     }
-    /**
-     * Gets or sets the hybrid worker group that the scheduled job should run on.
-     */
     @OutputExport(name="runOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> runOn;
 
-    /**
-     * @return Gets or sets the hybrid worker group that the scheduled job should run on.
-     */
     public Output</* @Nullable */ String> getRunOn() {
         return this.runOn;
     }
-    /**
-     * Gets or sets the runbook.
-     */
     @OutputExport(name="runbook", type=RunbookAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook;
 
-    /**
-     * @return Gets or sets the runbook.
-     */
     public Output</* @Nullable */ RunbookAssociationPropertyResponse> getRunbook() {
         return this.runbook;
     }
-    /**
-     * Gets or sets the schedule.
-     */
     @OutputExport(name="schedule", type=ScheduleAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ ScheduleAssociationPropertyResponse> schedule;
 
-    /**
-     * @return Gets or sets the schedule.
-     */
     public Output</* @Nullable */ ScheduleAssociationPropertyResponse> getSchedule() {
         return this.schedule;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public JobSchedule(String name, JobScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:JobSchedule", name, args == null ? JobScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -260,14 +82,6 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static JobSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobSchedule(name, id, options);
     }

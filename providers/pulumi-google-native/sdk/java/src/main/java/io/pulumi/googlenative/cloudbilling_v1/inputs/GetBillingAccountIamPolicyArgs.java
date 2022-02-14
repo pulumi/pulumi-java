@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetBillingAccountIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBillingAccountIamPolicyArgs Empty = new GetBillingAccountIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="billingAccountId", required=true)
     private final String billingAccountId;
 
@@ -27,9 +21,6 @@ public final class GetBillingAccountIamPolicyArgs extends io.pulumi.resources.In
         return this.billingAccountId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 

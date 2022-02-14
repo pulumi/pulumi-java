@@ -13,49 +13,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSpokeResult {
-/**
- * The time the spoke was created.
- */
     private final String createTime;
-/**
- * An optional description of the spoke.
- */
     private final String description;
-/**
- * Immutable. The name of the hub that this spoke is attached to.
- */
     private final String hub;
-/**
- * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
- */
     private final Map<String,String> labels;
-/**
- * VLAN attachments that are associated with the spoke.
- */
     private final LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments;
-/**
- * Router appliance instances that are associated with the spoke.
- */
     private final LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances;
-/**
- * VPN tunnels that are associated with the spoke.
- */
     private final LinkedVpnTunnelsResponse linkedVpnTunnels;
-/**
- * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
- */
     private final String name;
-/**
- * The current lifecycle state of this spoke.
- */
     private final String state;
-/**
- * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
- */
     private final String uniqueId;
-/**
- * The time the spoke was last updated.
- */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","description","hub","labels","linkedInterconnectAttachments","linkedRouterApplianceInstances","linkedVpnTunnels","name","state","uniqueId","updateTime"})
@@ -84,69 +51,36 @@ public final class GetSpokeResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
-/**
- * The time the spoke was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * An optional description of the spoke.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Immutable. The name of the hub that this spoke is attached to.
- */
     public String getHub() {
         return this.hub;
     }
-/**
- * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * VLAN attachments that are associated with the spoke.
- */
     public LinkedInterconnectAttachmentsResponse getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
-/**
- * Router appliance instances that are associated with the spoke.
- */
     public LinkedRouterApplianceInstancesResponse getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
-/**
- * VPN tunnels that are associated with the spoke.
- */
     public LinkedVpnTunnelsResponse getLinkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
-/**
- * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
- */
     public String getName() {
         return this.name;
     }
-/**
- * The current lifecycle state of this spoke.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
- */
     public String getUniqueId() {
         return this.uniqueId;
     }
-/**
- * The time the spoke was last updated.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container for the workloads running inside Azure Compute or Classic Compute.
- */
 public final class AzureWorkloadContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureWorkloadContainerResponse Empty = new AzureWorkloadContainerResponse();
 
-    /**
-     * Type of backup management for the container.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -28,13 +22,6 @@ public final class AzureWorkloadContainerResponse extends io.pulumi.resources.In
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
-    /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'AzureWorkloadContainer'.
-     */
     @InputImport(name="containerType", required=true)
     private final String containerType;
 
@@ -42,9 +29,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.containerType;
     }
 
-    /**
-     * Additional details of a workload container.
-     */
     @InputImport(name="extendedInfo")
     private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
 
@@ -52,9 +36,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
-    /**
-     * Friendly name of the container.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -62,9 +43,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * Status of health of the container.
-     */
     @InputImport(name="healthStatus")
     private final @Nullable String healthStatus;
 
@@ -72,9 +50,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
-    /**
-     * Time stamp when this container was updated.
-     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable String lastUpdatedTime;
 
@@ -82,9 +57,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
-    /**
-     * Re-Do Operation
-     */
     @InputImport(name="operationType")
     private final @Nullable String operationType;
 
@@ -92,9 +64,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.operationType == null ? Optional.empty() : Optional.ofNullable(this.operationType);
     }
 
-    /**
-     * Status of registration of the container with the Recovery Services Vault.
-     */
     @InputImport(name="registrationStatus")
     private final @Nullable String registrationStatus;
 
@@ -102,9 +71,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 
-    /**
-     * ARM ID of the virtual machine represented by this Azure Workload Container
-     */
     @InputImport(name="sourceResourceId")
     private final @Nullable String sourceResourceId;
 
@@ -112,9 +78,6 @@ Expected value is 'AzureWorkloadContainer'.
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
-    /**
-     * Workload type for which registration was sent.
-     */
     @InputImport(name="workloadType")
     private final @Nullable String workloadType;
 

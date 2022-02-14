@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubscriptionFeatureRegistrationArgs Empty = new GetSubscriptionFeatureRegistrationArgs();
 
-    /**
-     * The feature name.
-     */
     @InputImport(name="featureName", required=true)
     private final String featureName;
 
@@ -25,9 +19,6 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
         return this.featureName;
     }
 
-    /**
-     * The provider namespace.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final String providerNamespace;
 

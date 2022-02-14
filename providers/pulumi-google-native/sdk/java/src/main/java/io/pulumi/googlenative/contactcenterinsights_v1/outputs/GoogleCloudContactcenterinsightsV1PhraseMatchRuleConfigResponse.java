@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse {
-/**
- * The configuration for the exact match rule.
- */
     private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
     @OutputCustomType.Constructor({"exactMatchConfig"})
@@ -19,9 +16,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
         this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig);
     }
 
-/**
- * The configuration for the exact match rule.
- */
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse getExactMatchConfig() {
         return this.exactMatchConfig;
     }

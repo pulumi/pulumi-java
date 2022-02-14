@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An array of administrator user identities.
- */
 public final class ServerAdministratorsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerAdministratorsResponse Empty = new ServerAdministratorsResponse();
 
-    /**
-     * An array of administrator user identities.
-     */
     @InputImport(name="members")
     private final @Nullable List<String> members;
 

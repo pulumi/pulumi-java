@@ -16,201 +16,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * API connection
-API Version: 2016-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Replace a connection
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var connection = new AzureNative.Web.Connection("connection", new AzureNative.Web.ConnectionArgs
-        {
-            ConnectionName = "testManagedApi",
-            Properties = new AzureNative.Web.Inputs.ApiConnectionDefinitionPropertiesArgs
-            {
-                Api = new AzureNative.Web.Inputs.ApiReferenceArgs
-                {
-                    Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
-                },
-                CustomParameterValues = ,
-                DisplayName = "testManagedApi",
-                ParameterValues = ,
-            },
-            ResourceGroupName = "testResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := web.NewConnection(ctx, "connection", &web.ConnectionArgs{
-			ConnectionName: pulumi.String("testManagedApi"),
-			Properties: &web.ApiConnectionDefinitionPropertiesArgs{
-				Api: &web.ApiReferenceArgs{
-					Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi"),
-				},
-				CustomParameterValues: nil,
-				DisplayName:           pulumi.String("testManagedApi"),
-				ParameterValues:       nil,
-			},
-			ResourceGroupName: pulumi.String("testResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const connection = new azure_native.web.Connection("connection", {
-    connectionName: "testManagedApi",
-    properties: {
-        api: {
-            id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
-        },
-        customParameterValues: {},
-        displayName: "testManagedApi",
-        parameterValues: {},
-    },
-    resourceGroupName: "testResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-connection = azure_native.web.Connection("connection",
-    connection_name="testManagedApi",
-    properties=azure_native.web.ApiConnectionDefinitionPropertiesArgs(
-        api=azure_native.web.ApiReferenceArgs(
-            id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
-        ),
-        custom_parameter_values={},
-        display_name="testManagedApi",
-        parameter_values={},
-    ),
-    resource_group_name="testResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:web:Connection testManagedApi-1 /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Web/connections/testManagedApi-1 
-```
-
- */
 @ResourceType(type="azure-native:web:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource ETag
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Resource ETag
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="properties", type=ApiConnectionDefinitionResponseProperties.class, parameters={})
     private Output<ApiConnectionDefinitionResponseProperties> properties;
 
     public Output<ApiConnectionDefinitionResponseProperties> getProperties() {
         return this.properties;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Connection(String name, ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -230,14 +74,6 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Connection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connection(name, id, options);
     }

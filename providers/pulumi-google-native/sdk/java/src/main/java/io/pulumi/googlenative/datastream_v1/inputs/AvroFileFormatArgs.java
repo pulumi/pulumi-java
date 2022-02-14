@@ -6,9 +6,6 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 import java.util.Objects;
 
 
-/**
- * AVRO file format configuration.
- */
 public final class AvroFileFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AvroFileFormatArgs Empty = new AvroFileFormatArgs();

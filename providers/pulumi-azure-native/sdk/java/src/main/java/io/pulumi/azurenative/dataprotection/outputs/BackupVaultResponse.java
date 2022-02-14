@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackupVaultResponse {
-/**
- * Provisioning state of the BackupVault resource
- */
     private final String provisioningState;
-/**
- * Storage Settings
- */
     private final List<StorageSettingResponse> storageSettings;
 
     @OutputCustomType.Constructor({"provisioningState","storageSettings"})
@@ -28,15 +22,9 @@ public final class BackupVaultResponse {
         this.storageSettings = Objects.requireNonNull(storageSettings);
     }
 
-/**
- * Provisioning state of the BackupVault resource
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Storage Settings
- */
     public List<StorageSettingResponse> getStorageSettings() {
         return this.storageSettings;
     }

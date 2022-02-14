@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity for the resource.
- */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 
-    /**
-     * The identity type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ResourceIdentityType>> type;
 

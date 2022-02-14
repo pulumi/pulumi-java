@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TransactionInfoResponse {
-/**
- * // [Alpha] Id of the transaction.
- */
     private final String transactionId;
 
     @OutputCustomType.Constructor({"transactionId"})
@@ -19,9 +16,6 @@ public final class TransactionInfoResponse {
         this.transactionId = Objects.requireNonNull(transactionId);
     }
 
-/**
- * // [Alpha] Id of the transaction.
- */
     public String getTransactionId() {
         return this.transactionId;
     }

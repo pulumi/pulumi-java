@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of a NotificationHub WnsCredential.
- */
 public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WnsCredentialResponse Empty = new WnsCredentialResponse();
 
-    /**
-     * The package ID for this credential.
-     */
     @InputImport(name="packageSid")
     private final @Nullable String packageSid;
 
@@ -27,9 +21,6 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
         return this.packageSid == null ? Optional.empty() : Optional.ofNullable(this.packageSid);
     }
 
-    /**
-     * The secret key.
-     */
     @InputImport(name="secretKey")
     private final @Nullable String secretKey;
 
@@ -37,9 +28,6 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
         return this.secretKey == null ? Optional.empty() : Optional.ofNullable(this.secretKey);
     }
 
-    /**
-     * The Windows Live endpoint.
-     */
     @InputImport(name="windowsLiveEndpoint")
     private final @Nullable String windowsLiveEndpoint;
 

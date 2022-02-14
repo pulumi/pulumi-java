@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrationEligibilityInfoResponse {
-/**
- * Whether object is eligible for migration or not.
- */
     private final Boolean isEligibleForMigration;
-/**
- * Information about eligibility failure for the server object.
- */
     private final List<String> validationMessages;
 
     @OutputCustomType.Constructor({"isEligibleForMigration","validationMessages"})
@@ -28,15 +22,9 @@ public final class MigrationEligibilityInfoResponse {
         this.validationMessages = Objects.requireNonNull(validationMessages);
     }
 
-/**
- * Whether object is eligible for migration or not.
- */
     public Boolean getIsEligibleForMigration() {
         return this.isEligibleForMigration;
     }
-/**
- * Information about eligibility failure for the server object.
- */
     public List<String> getValidationMessages() {
         return this.validationMessages;
     }

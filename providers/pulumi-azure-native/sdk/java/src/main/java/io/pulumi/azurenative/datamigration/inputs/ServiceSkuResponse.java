@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An Azure SKU instance
- */
 public final class ServiceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceSkuResponse Empty = new ServiceSkuResponse();
 
-    /**
-     * The capacity of the SKU, if it supports scaling
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class ServiceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines
-     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -38,9 +29,6 @@ public final class ServiceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
-    /**
-     * The unique name of the SKU, such as 'P3'
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class ServiceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines
-     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -58,9 +43,6 @@ public final class ServiceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
-    /**
-     * The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

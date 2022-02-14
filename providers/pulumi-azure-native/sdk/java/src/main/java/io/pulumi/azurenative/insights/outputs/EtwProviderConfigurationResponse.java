@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EtwProviderConfigurationResponse {
-/**
- * 
- */
     private final List<EtwEventConfigurationResponse> events;
-/**
- * 
- */
     private final String id;
 
     @OutputCustomType.Constructor({"events","id"})
@@ -28,15 +22,9 @@ public final class EtwProviderConfigurationResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * 
- */
     public List<EtwEventConfigurationResponse> getEvents() {
         return this.events;
     }
-/**
- * 
- */
     public String getId() {
         return this.id;
     }

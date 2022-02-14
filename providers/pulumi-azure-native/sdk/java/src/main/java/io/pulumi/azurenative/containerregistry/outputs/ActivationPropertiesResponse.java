@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ActivationPropertiesResponse {
-/**
- * The activation status of the connected registry.
- */
     private final String status;
 
     @OutputCustomType.Constructor({"status"})
@@ -19,9 +16,6 @@ public final class ActivationPropertiesResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * The activation status of the connected registry.
- */
     public String getStatus() {
         return this.status;
     }

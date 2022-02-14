@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB indexing policy
- */
 public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IndexingPolicyResponse Empty = new IndexingPolicyResponse();
 
-    /**
-     * Indicates if the indexing policy is automatic
-     */
     @InputImport(name="automatic")
     private final @Nullable Boolean automatic;
 
@@ -33,9 +27,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.automatic == null ? Optional.empty() : Optional.ofNullable(this.automatic);
     }
 
-    /**
-     * List of composite path list
-     */
     @InputImport(name="compositeIndexes")
     private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
@@ -43,9 +34,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }
 
-    /**
-     * List of paths to exclude from indexing
-     */
     @InputImport(name="excludedPaths")
     private final @Nullable List<ExcludedPathResponse> excludedPaths;
 
@@ -53,9 +41,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
 
-    /**
-     * List of paths to include in the indexing
-     */
     @InputImport(name="includedPaths")
     private final @Nullable List<IncludedPathResponse> includedPaths;
 
@@ -63,9 +48,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
 
-    /**
-     * Indicates the indexing mode.
-     */
     @InputImport(name="indexingMode")
     private final @Nullable String indexingMode;
 
@@ -73,9 +55,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.indexingMode == null ? Optional.empty() : Optional.ofNullable(this.indexingMode);
     }
 
-    /**
-     * List of spatial specifics
-     */
     @InputImport(name="spatialIndexes")
     private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 

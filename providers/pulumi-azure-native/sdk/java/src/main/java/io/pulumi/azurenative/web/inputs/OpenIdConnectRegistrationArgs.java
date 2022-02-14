@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings of the app registration for the custom Open ID Connect provider.
- */
 public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenIdConnectRegistrationArgs Empty = new OpenIdConnectRegistrationArgs();
 
-    /**
-     * The authentication credentials of the custom Open ID Connect provider.
-     */
     @InputImport(name="clientCredential")
     private final @Nullable Input<OpenIdConnectClientCredentialArgs> clientCredential;
 
@@ -29,9 +23,6 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
         return this.clientCredential == null ? Input.empty() : this.clientCredential;
     }
 
-    /**
-     * The client id of the custom Open ID Connect provider.
-     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -39,9 +30,6 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
-    /**
-     * The configuration settings of the endpoints used for the custom Open ID Connect provider.
-     */
     @InputImport(name="openIdConnectConfiguration")
     private final @Nullable Input<OpenIdConnectConfigArgs> openIdConnectConfiguration;
 

@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterContractResponse {
-/**
- * Default parameter value.
- */
     private final @Nullable String defaultValue;
-/**
- * Parameter description.
- */
     private final @Nullable String description;
-/**
- * Parameter name.
- */
     private final String name;
-/**
- * Specifies whether parameter is required or not.
- */
     private final @Nullable Boolean required;
-/**
- * Parameter type.
- */
     private final String type;
-/**
- * Parameter values.
- */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"defaultValue","description","name","required","type","values"})
@@ -54,39 +36,21 @@ public final class ParameterContractResponse {
         this.values = values;
     }
 
-/**
- * Default parameter value.
- */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
-/**
- * Parameter description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Parameter name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Specifies whether parameter is required or not.
- */
     public Optional<Boolean> getRequired() {
         return Optional.ofNullable(this.required);
     }
-/**
- * Parameter type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Parameter values.
- */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

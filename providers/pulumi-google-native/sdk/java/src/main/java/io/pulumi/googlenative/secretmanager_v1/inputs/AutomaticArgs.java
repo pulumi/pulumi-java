@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A replication policy that replicates the Secret payload without any restrictions.
- */
 public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomaticArgs Empty = new AutomaticArgs();
 
-    /**
-     * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
-     */
     @InputImport(name="customerManagedEncryption")
     private final @Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption;
 

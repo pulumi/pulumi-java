@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Custom static error page to be served when an error occurs.
- */
 public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ErrorHandlerArgs Empty = new ErrorHandlerArgs();
 
-    /**
-     * Error condition this handler applies to.
-     */
     @InputImport(name="errorCode")
     private final @Nullable Input<ErrorHandlerErrorCode> errorCode;
 
@@ -28,9 +22,6 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
         return this.errorCode == null ? Input.empty() : this.errorCode;
     }
 
-    /**
-     * MIME type of file. Defaults to text/html.
-     */
     @InputImport(name="mimeType")
     private final @Nullable Input<String> mimeType;
 
@@ -38,9 +29,6 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
         return this.mimeType == null ? Input.empty() : this.mimeType;
     }
 
-    /**
-     * Static file content to be served for this error.
-     */
     @InputImport(name="staticFile")
     private final @Nullable Input<String> staticFile;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebPubSubHub {
-/**
- * A hub setting
-API Version: 2021-10-01.
- *
- * A hub setting
- */
     public static CompletableFuture<GetWebPubSubHubResult> invokeAsync(GetWebPubSubHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubHub", TypeShape.of(GetWebPubSubHubResult.class), args == null ? GetWebPubSubHubArgs.Empty : args, Utilities.withVersion(options));
     }

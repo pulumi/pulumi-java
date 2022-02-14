@@ -13,23 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GlobalValidationResponse {
-/**
- * The paths for which unauthenticated flow would not be redirected to the login page.
- */
     private final @Nullable List<String> excludedPaths;
-/**
- * The default authentication provider to use when multiple providers are configured.
-This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".
- */
     private final @Nullable String redirectToProvider;
-/**
- * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
- */
     private final @Nullable Boolean requireAuthentication;
-/**
- * The action to take when an unauthenticated client attempts to access the app.
- */
     private final @Nullable String unauthenticatedClientAction;
 
     @OutputCustomType.Constructor({"excludedPaths","redirectToProvider","requireAuthentication","unauthenticatedClientAction"})
@@ -44,29 +30,15 @@ action is set to "RedirectToLoginPage".
         this.unauthenticatedClientAction = unauthenticatedClientAction;
     }
 
-/**
- * The paths for which unauthenticated flow would not be redirected to the login page.
- */
     public List<String> getExcludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
-/**
- * The default authentication provider to use when multiple providers are configured.
-This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".
- */
     public Optional<String> getRedirectToProvider() {
         return Optional.ofNullable(this.redirectToProvider);
     }
-/**
- * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
- */
     public Optional<Boolean> getRequireAuthentication() {
         return Optional.ofNullable(this.requireAuthentication);
     }
-/**
- * The action to take when an unauthenticated client attempts to access the app.
- */
     public Optional<String> getUnauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }

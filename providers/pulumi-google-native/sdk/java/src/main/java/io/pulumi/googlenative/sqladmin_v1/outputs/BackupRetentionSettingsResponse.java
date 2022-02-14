@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackupRetentionSettingsResponse {
-/**
- * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
- */
     private final Integer retainedBackups;
-/**
- * The unit that 'retained_backups' represents.
- */
     private final String retentionUnit;
 
     @OutputCustomType.Constructor({"retainedBackups","retentionUnit"})
@@ -27,15 +21,9 @@ public final class BackupRetentionSettingsResponse {
         this.retentionUnit = Objects.requireNonNull(retentionUnit);
     }
 
-/**
- * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
- */
     public Integer getRetainedBackups() {
         return this.retainedBackups;
     }
-/**
- * The unit that 'retained_backups' represents.
- */
     public String getRetentionUnit() {
         return this.retentionUnit;
     }

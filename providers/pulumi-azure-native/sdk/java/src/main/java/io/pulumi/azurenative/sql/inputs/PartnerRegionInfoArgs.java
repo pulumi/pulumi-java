@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Partner region information for the failover group.
- */
 public final class PartnerRegionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PartnerRegionInfoArgs Empty = new PartnerRegionInfoArgs();
 
-    /**
-     * Geo location of the partner managed instances.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 

@@ -9,16 +9,10 @@ import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConf
 import java.util.Objects;
 
 
-/**
- * Configuration for Automated Early Stopping of Trials. If no implementation_config is set, automated early stopping will not be run.
- */
 public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__AutomatedStoppingConfigResponse Empty = new GoogleCloudMlV1__AutomatedStoppingConfigResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="decayCurveStoppingConfig", required=true)
     private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends io.p
         return this.decayCurveStoppingConfig;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="medianAutomatedStoppingConfig", required=true)
     private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 

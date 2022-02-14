@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalPublicDelegatedPrefix {
-/**
- * Returns the specified global PublicDelegatedPrefix resource.
- */
     public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> invokeAsync(GetGlobalPublicDelegatedPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getGlobalPublicDelegatedPrefix", TypeShape.of(GetGlobalPublicDelegatedPrefixResult.class), args == null ? GetGlobalPublicDelegatedPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -16,247 +16,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Schedule for automatically turning virtual machines in a lab on and off at specified times.
-API Version: 2021-10-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### putSchedule
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var schedule = new AzureNative.LabServices.Schedule("schedule", new AzureNative.LabServices.ScheduleArgs
-        {
-            LabName = "testlab",
-            Notes = "Schedule 1 for students",
-            RecurrencePattern = new AzureNative.LabServices.Inputs.RecurrencePatternArgs
-            {
-                ExpirationDate = "2020-08-14",
-                Frequency = "Daily",
-                Interval = 2,
-            },
-            ResourceGroupName = "testrg123",
-            ScheduleName = "schedule1",
-            StartAt = "2020-05-26T12:00:00Z",
-            StopAt = "2020-05-26T18:00:00Z",
-            TimeZoneId = "America/Los_Angeles",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	labservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/labservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := labservices.NewSchedule(ctx, "schedule", &labservices.ScheduleArgs{
-			LabName: pulumi.String("testlab"),
-			Notes:   pulumi.String("Schedule 1 for students"),
-			RecurrencePattern: &labservices.RecurrencePatternArgs{
-				ExpirationDate: pulumi.String("2020-08-14"),
-				Frequency:      "Daily",
-				Interval:       pulumi.Int(2),
-			},
-			ResourceGroupName: pulumi.String("testrg123"),
-			ScheduleName:      pulumi.String("schedule1"),
-			StartAt:           pulumi.String("2020-05-26T12:00:00Z"),
-			StopAt:            pulumi.String("2020-05-26T18:00:00Z"),
-			TimeZoneId:        pulumi.String("America/Los_Angeles"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const schedule = new azure_native.labservices.Schedule("schedule", {
-    labName: "testlab",
-    notes: "Schedule 1 for students",
-    recurrencePattern: {
-        expirationDate: "2020-08-14",
-        frequency: "Daily",
-        interval: 2,
-    },
-    resourceGroupName: "testrg123",
-    scheduleName: "schedule1",
-    startAt: "2020-05-26T12:00:00Z",
-    stopAt: "2020-05-26T18:00:00Z",
-    timeZoneId: "America/Los_Angeles",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-schedule = azure_native.labservices.Schedule("schedule",
-    lab_name="testlab",
-    notes="Schedule 1 for students",
-    recurrence_pattern=azure_native.labservices.RecurrencePatternArgs(
-        expiration_date="2020-08-14",
-        frequency="Daily",
-        interval=2,
-    ),
-    resource_group_name="testrg123",
-    schedule_name="schedule1",
-    start_at="2020-05-26T12:00:00Z",
-    stop_at="2020-05-26T18:00:00Z",
-    time_zone_id="America/Los_Angeles")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:labservices:Schedule schedule1 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.LabServices/labs/testlab/schedules/schedule1 
-```
-
- */
 @ResourceType(type="azure-native:labservices:Schedule")
 public class Schedule extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Notes for this schedule.
-     */
     @OutputExport(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
-    /**
-     * @return Notes for this schedule.
-     */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
-    /**
-     * Current provisioning state of the schedule.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Current provisioning state of the schedule.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The recurrence pattern of the scheduled actions.
-     */
     @OutputExport(name="recurrencePattern", type=RecurrencePatternResponse.class, parameters={})
     private Output</* @Nullable */ RecurrencePatternResponse> recurrencePattern;
 
-    /**
-     * @return The recurrence pattern of the scheduled actions.
-     */
     public Output</* @Nullable */ RecurrencePatternResponse> getRecurrencePattern() {
         return this.recurrencePattern;
     }
-    /**
-     * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
-     */
     @OutputExport(name="startAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> startAt;
 
-    /**
-     * @return When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
-     */
     public Output</* @Nullable */ String> getStartAt() {
         return this.startAt;
     }
-    /**
-     * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
-     */
     @OutputExport(name="stopAt", type=String.class, parameters={})
     private Output<String> stopAt;
 
-    /**
-     * @return When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
-     */
     public Output<String> getStopAt() {
         return this.stopAt;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the schedule.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the schedule.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The IANA timezone id for the schedule.
-     */
     @OutputExport(name="timeZoneId", type=String.class, parameters={})
     private Output<String> timeZoneId;
 
-    /**
-     * @return The IANA timezone id for the schedule.
-     */
     public Output<String> getTimeZoneId() {
         return this.timeZoneId;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Schedule(String name, ScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:labservices:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -276,14 +92,6 @@ public class Schedule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Schedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Schedule(name, id, options);
     }

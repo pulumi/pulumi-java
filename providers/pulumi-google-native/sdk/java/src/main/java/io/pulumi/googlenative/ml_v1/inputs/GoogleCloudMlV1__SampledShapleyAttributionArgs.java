@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
- */
 public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__SampledShapleyAttributionArgs Empty = new GoogleCloudMlV1__SampledShapleyAttributionArgs();
 
-    /**
-     * The number of feature permutations to consider when approximating the Shapley values.
-     */
     @InputImport(name="numPaths")
     private final @Nullable Input<Integer> numPaths;
 

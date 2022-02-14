@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridIdentityMetadatum {
-/**
- * Defines the HybridIdentityMetadata.
-API Version: 2020-10-01-preview.
- *
- * Defines the HybridIdentityMetadata.
- */
     public static CompletableFuture<GetHybridIdentityMetadatumResult> invokeAsync(GetHybridIdentityMetadatumArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHybridIdentityMetadatum", TypeShape.of(GetHybridIdentityMetadatumResult.class), args == null ? GetHybridIdentityMetadatumArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Export operation configuration information
- */
 public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceExportConfigurationInfoArgs Empty = new ServiceExportConfigurationInfoArgs();
 
-    /**
-     * The name of the default export storage account.
-     */
     @InputImport(name="storageAccountName")
     private final @Nullable Input<String> storageAccountName;
 

@@ -16,256 +16,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The policy exemption.
-API Version: 2020-07-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a policy exemption
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyExemption = new AzureNative.Authorization.PolicyExemption("policyExemption", new AzureNative.Authorization.PolicyExemptionArgs
-        {
-            Description = "Exempt demo cluster from limit sku",
-            DisplayName = "Exempt demo cluster",
-            ExemptionCategory = "Waiver",
-            Metadata = 
-            {
-                { "reason", "Temporary exemption for a expensive VM demo" },
-            },
-            PolicyAssignmentId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement",
-            PolicyDefinitionReferenceIds = 
-            {
-                "Limit_Skus",
-            },
-            PolicyExemptionName = "DemoExpensiveVM",
-            Scope = "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := authorization.NewPolicyExemption(ctx, "policyExemption", &authorization.PolicyExemptionArgs{
-			Description:       pulumi.String("Exempt demo cluster from limit sku"),
-			DisplayName:       pulumi.String("Exempt demo cluster"),
-			ExemptionCategory: pulumi.String("Waiver"),
-			Metadata: pulumi.Any{
-				Reason: "Temporary exemption for a expensive VM demo",
-			},
-			PolicyAssignmentId: pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement"),
-			PolicyDefinitionReferenceIds: pulumi.StringArray{
-				pulumi.String("Limit_Skus"),
-			},
-			PolicyExemptionName: pulumi.String("DemoExpensiveVM"),
-			Scope:               pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyExemption = new azure_native.authorization.PolicyExemption("policyExemption", {
-    description: "Exempt demo cluster from limit sku",
-    displayName: "Exempt demo cluster",
-    exemptionCategory: "Waiver",
-    metadata: {
-        reason: "Temporary exemption for a expensive VM demo",
-    },
-    policyAssignmentId: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement",
-    policyDefinitionReferenceIds: ["Limit_Skus"],
-    policyExemptionName: "DemoExpensiveVM",
-    scope: "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_exemption = azure_native.authorization.PolicyExemption("policyExemption",
-    description="Exempt demo cluster from limit sku",
-    display_name="Exempt demo cluster",
-    exemption_category="Waiver",
-    metadata={
-        "reason": "Temporary exemption for a expensive VM demo",
-    },
-    policy_assignment_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement",
-    policy_definition_reference_ids=["Limit_Skus"],
-    policy_exemption_name="DemoExpensiveVM",
-    scope="subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:authorization:PolicyExemption DemoExpensiveVM /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/resourceGroups/demoCluster/providers/Microsoft.Authorization/policyExemptions/DemoExpensiveVM 
-```
-
- */
 @ResourceType(type="azure-native:authorization:PolicyExemption")
 public class PolicyExemption extends io.pulumi.resources.CustomResource {
-    /**
-     * The description of the policy exemption.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description of the policy exemption.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The display name of the policy exemption.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The display name of the policy exemption.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The policy exemption category. Possible values are Waiver and Mitigated.
-     */
     @OutputExport(name="exemptionCategory", type=String.class, parameters={})
     private Output<String> exemptionCategory;
 
-    /**
-     * @return The policy exemption category. Possible values are Waiver and Mitigated.
-     */
     public Output<String> getExemptionCategory() {
         return this.exemptionCategory;
     }
-    /**
-     * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
-     */
     @OutputExport(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
-    /**
-     * @return The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
-     */
     public Output</* @Nullable */ String> getExpiresOn() {
         return this.expiresOn;
     }
-    /**
-     * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
-    /**
-     * @return The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
-    /**
-     * The name of the policy exemption.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the policy exemption.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The ID of the policy assignment that is being exempted.
-     */
     @OutputExport(name="policyAssignmentId", type=String.class, parameters={})
     private Output<String> policyAssignmentId;
 
-    /**
-     * @return The ID of the policy assignment that is being exempted.
-     */
     public Output<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
-    /**
-     * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
-     */
     @OutputExport(name="policyDefinitionReferenceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> policyDefinitionReferenceIds;
 
-    /**
-     * @return The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
-     */
     public Output</* @Nullable */ List<String>> getPolicyDefinitionReferenceIds() {
         return this.policyDefinitionReferenceIds;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource (Microsoft.Authorization/policyExemptions).
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource (Microsoft.Authorization/policyExemptions).
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PolicyExemption(String name, PolicyExemptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:PolicyExemption", name, args == null ? PolicyExemptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -284,14 +97,6 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PolicyExemption get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicyExemption(name, id, options);
     }

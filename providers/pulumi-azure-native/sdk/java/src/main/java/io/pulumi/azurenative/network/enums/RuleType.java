@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes type of rule.
- */
     @EnumType
     public enum RuleType {
-/**
- * 
- */
         MatchRule("MatchRule"),
-/**
- * 
- */
         RateLimitRule("RateLimitRule");
 
         private final String value;

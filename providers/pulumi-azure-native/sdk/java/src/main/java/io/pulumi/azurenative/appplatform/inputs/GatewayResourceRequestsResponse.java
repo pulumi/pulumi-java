@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Resource request payload of Spring Cloud Gateway.
- */
 public final class GatewayResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayResourceRequestsResponse Empty = new GatewayResourceRequestsResponse();
 
-    /**
-     * Cpu allocated to each Spring Cloud Gateway instance.
-     */
     @InputImport(name="cpu")
     private final @Nullable String cpu;
 
@@ -27,9 +21,6 @@ public final class GatewayResourceRequestsResponse extends io.pulumi.resources.I
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
-    /**
-     * Memory allocated to each Spring Cloud Gateway instance.
-     */
     @InputImport(name="memory")
     private final @Nullable String memory;
 

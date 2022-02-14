@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Metadata for a Spanner connector used by the job.
- */
 public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpannerIODetailsArgs Empty = new SpannerIODetailsArgs();
 
-    /**
-     * DatabaseId accessed in the connection.
-     */
     @InputImport(name="databaseId")
     private final @Nullable Input<String> databaseId;
 
@@ -27,9 +21,6 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
         return this.databaseId == null ? Input.empty() : this.databaseId;
     }
 
-    /**
-     * InstanceId accessed in the connection.
-     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -37,9 +28,6 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
-    /**
-     * ProjectId accessed in the connection.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Position contains source position information about the stack trace element such as line number, column number and length of the code block in bytes.
- */
 public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PositionResponse Empty = new PositionResponse();
 
-    /**
-     * The source code column position (of the line) the current instruction was generated from.
-     */
     @InputImport(name="column", required=true)
     private final String column;
 
@@ -25,9 +19,6 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
         return this.column;
     }
 
-    /**
-     * The number of bytes of source code making up this stack trace element.
-     */
     @InputImport(name="length", required=true)
     private final String length;
 
@@ -35,9 +26,6 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
         return this.length;
     }
 
-    /**
-     * The source code line number the current instruction was generated from.
-     */
     @InputImport(name="line", required=true)
     private final String line;
 

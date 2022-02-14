@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class NetworkPerformanceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkPerformanceConfigResponse Empty = new NetworkPerformanceConfigResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="totalEgressBandwidthTier", required=true)
     private final String totalEgressBandwidthTier;
 

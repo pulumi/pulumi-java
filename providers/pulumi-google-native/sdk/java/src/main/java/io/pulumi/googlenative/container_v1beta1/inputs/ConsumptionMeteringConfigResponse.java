@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Parameters for controlling consumption metering.
- */
 public final class ConsumptionMeteringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsumptionMeteringConfigResponse Empty = new ConsumptionMeteringConfigResponse();
 
-    /**
-     * Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

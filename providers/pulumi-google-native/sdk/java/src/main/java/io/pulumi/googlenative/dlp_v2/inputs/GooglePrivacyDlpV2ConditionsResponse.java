@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A collection of conditions.
- */
 public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ConditionsResponse Empty = new GooglePrivacyDlpV2ConditionsResponse();
 
-    /**
-     * A collection of conditions.
-     */
     @InputImport(name="conditions", required=true)
     private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
 

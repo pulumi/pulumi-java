@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PullRequestFilter contains filter properties for matching GitHub Pull Requests.
- */
 public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PullRequestFilterArgs Empty = new PullRequestFilterArgs();
 
-    /**
-     * Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
-     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -29,9 +23,6 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
         return this.branch == null ? Input.empty() : this.branch;
     }
 
-    /**
-     * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
-     */
     @InputImport(name="commentControl")
     private final @Nullable Input<PullRequestFilterCommentControl> commentControl;
 
@@ -39,9 +30,6 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
         return this.commentControl == null ? Input.empty() : this.commentControl;
     }
 
-    /**
-     * If true, branches that do NOT match the git_ref will trigger a build.
-     */
     @InputImport(name="invertRegex")
     private final @Nullable Input<Boolean> invertRegex;
 

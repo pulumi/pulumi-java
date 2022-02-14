@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The X12 message filter for odata query.
- */
 public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X12MessageFilterArgs Empty = new X12MessageFilterArgs();
 
-    /**
-     * The message filter type.
-     */
     @InputImport(name="messageFilterType", required=true)
     private final Input<Either<String,MessageFilterType>> messageFilterType;
 

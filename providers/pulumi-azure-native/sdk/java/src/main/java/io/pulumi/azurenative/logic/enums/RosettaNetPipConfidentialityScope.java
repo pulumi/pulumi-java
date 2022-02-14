@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The persistent confidentiality encryption scope.
- */
     @EnumType
     public enum RosettaNetPipConfidentialityScope {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Payload("Payload"),
-/**
- * 
- */
         PayloadContainer("PayloadContainer");
 
         private final String value;

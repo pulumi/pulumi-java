@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IosXcTestResponse {
-/**
- * Bundle ID of the app.
- */
     private final String bundleId;
-/**
- * Xcode version that the test was run with.
- */
     private final String xcodeVersion;
 
     @OutputCustomType.Constructor({"bundleId","xcodeVersion"})
@@ -26,15 +20,9 @@ public final class IosXcTestResponse {
         this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
     }
 
-/**
- * Bundle ID of the app.
- */
     public String getBundleId() {
         return this.bundleId;
     }
-/**
- * Xcode version that the test was run with.
- */
     public String getXcodeVersion() {
         return this.xcodeVersion;
     }

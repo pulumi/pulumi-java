@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies an artifact available as a Google Cloud Storage object.
- */
 public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareRecipeArtifactGcsArgs Empty = new SoftwareRecipeArtifactGcsArgs();
 
-    /**
-     * Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
-     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -27,9 +21,6 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
-    /**
-     * Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.
-     */
     @InputImport(name="generation")
     private final @Nullable Input<String> generation;
 
@@ -37,9 +28,6 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
         return this.generation == null ? Input.empty() : this.generation;
     }
 
-    /**
-     * Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.
-     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 

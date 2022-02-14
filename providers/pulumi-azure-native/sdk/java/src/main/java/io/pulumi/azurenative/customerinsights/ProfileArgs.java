@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProfileArgs Empty = new ProfileArgs();
 
-    /**
-     * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-     */
     @InputImport(name="apiEntitySetName")
     private final @Nullable Input<String> apiEntitySetName;
 
@@ -33,9 +27,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiEntitySetName == null ? Input.empty() : this.apiEntitySetName;
     }
 
-    /**
-     * The attributes for the Type.
-     */
     @InputImport(name="attributes")
     private final @Nullable Input<Map<String,List<String>>> attributes;
 
@@ -43,9 +34,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
-    /**
-     * Localized descriptions for the property.
-     */
     @InputImport(name="description")
     private final @Nullable Input<Map<String,String>> description;
 
@@ -53,9 +41,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Localized display names for the property.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<Map<String,String>> displayName;
 
@@ -63,9 +48,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Type of entity.
-     */
     @InputImport(name="entityType")
     private final @Nullable Input<EntityTypes> entityType;
 
@@ -73,9 +55,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.entityType == null ? Input.empty() : this.entityType;
     }
 
-    /**
-     * The properties of the Profile.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<PropertyDefinitionArgs>> fields;
 
@@ -83,9 +62,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -93,9 +69,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName;
     }
 
-    /**
-     * The instance count.
-     */
     @InputImport(name="instancesCount")
     private final @Nullable Input<Integer> instancesCount;
 
@@ -103,9 +76,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.instancesCount == null ? Input.empty() : this.instancesCount;
     }
 
-    /**
-     * Large Image associated with the Property or EntityType.
-     */
     @InputImport(name="largeImage")
     private final @Nullable Input<String> largeImage;
 
@@ -113,9 +83,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.largeImage == null ? Input.empty() : this.largeImage;
     }
 
-    /**
-     * Any custom localized attributes for the Type.
-     */
     @InputImport(name="localizedAttributes")
     private final @Nullable Input<Map<String,Map<String,String>>> localizedAttributes;
 
@@ -123,9 +90,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.localizedAttributes == null ? Input.empty() : this.localizedAttributes;
     }
 
-    /**
-     * Medium Image associated with the Property or EntityType.
-     */
     @InputImport(name="mediumImage")
     private final @Nullable Input<String> mediumImage;
 
@@ -133,9 +97,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.mediumImage == null ? Input.empty() : this.mediumImage;
     }
 
-    /**
-     * The name of the profile.
-     */
     @InputImport(name="profileName")
     private final @Nullable Input<String> profileName;
 
@@ -143,9 +104,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName == null ? Input.empty() : this.profileName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -153,9 +111,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The schema org link. This helps ACI identify and suggest semantic models.
-     */
     @InputImport(name="schemaItemTypeLink")
     private final @Nullable Input<String> schemaItemTypeLink;
 
@@ -163,9 +118,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaItemTypeLink == null ? Input.empty() : this.schemaItemTypeLink;
     }
 
-    /**
-     * Small Image associated with the Property or EntityType.
-     */
     @InputImport(name="smallImage")
     private final @Nullable Input<String> smallImage;
 
@@ -173,9 +125,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.smallImage == null ? Input.empty() : this.smallImage;
     }
 
-    /**
-     * The strong IDs.
-     */
     @InputImport(name="strongIds")
     private final @Nullable Input<List<StrongIdArgs>> strongIds;
 
@@ -183,9 +132,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.strongIds == null ? Input.empty() : this.strongIds;
     }
 
-    /**
-     * The timestamp property name. Represents the time when the interaction or profile update happened.
-     */
     @InputImport(name="timestampFieldName")
     private final @Nullable Input<String> timestampFieldName;
 
@@ -193,9 +139,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.timestampFieldName == null ? Input.empty() : this.timestampFieldName;
     }
 
-    /**
-     * The name of the entity.
-     */
     @InputImport(name="typeName")
     private final @Nullable Input<String> typeName;
 

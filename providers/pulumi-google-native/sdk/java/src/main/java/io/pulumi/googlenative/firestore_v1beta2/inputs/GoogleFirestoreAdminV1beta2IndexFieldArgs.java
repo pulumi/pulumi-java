@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A field in an index. The field_path describes which field is indexed, the value_mode describes how the field value is indexed.
- */
 public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleFirestoreAdminV1beta2IndexFieldArgs Empty = new GoogleFirestoreAdminV1beta2IndexFieldArgs();
 
-    /**
-     * Indicates that this field supports operations on `array_value`s.
-     */
     @InputImport(name="arrayConfig")
     private final @Nullable Input<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig> arrayConfig;
 
@@ -29,9 +23,6 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.r
         return this.arrayConfig == null ? Input.empty() : this.arrayConfig;
     }
 
-    /**
-     * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
-     */
     @InputImport(name="fieldPath")
     private final @Nullable Input<String> fieldPath;
 
@@ -39,9 +30,6 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.r
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
     }
 
-    /**
-     * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
-     */
     @InputImport(name="order")
     private final @Nullable Input<GoogleFirestoreAdminV1beta2IndexFieldOrder> order;
 

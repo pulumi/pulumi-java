@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkusNestedResourceTypeSecondArgs Empty = new SkusNestedResourceTypeSecondArgs();
 
-    /**
-     * The first child resource type.
-     */
     @InputImport(name="nestedResourceTypeFirst", required=true)
     private final Input<String> nestedResourceTypeFirst;
 
@@ -28,9 +22,6 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
         return this.nestedResourceTypeFirst;
     }
 
-    /**
-     * The second child resource type.
-     */
     @InputImport(name="nestedResourceTypeSecond", required=true)
     private final Input<String> nestedResourceTypeSecond;
 
@@ -38,9 +29,6 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
         return this.nestedResourceTypeSecond;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<SkuResourcePropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource provider hosted within ProviderHub.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 
@@ -58,9 +43,6 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
         return this.providerNamespace;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -68,9 +50,6 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
         return this.resourceType;
     }
 
-    /**
-     * The SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBatchAccount {
-/**
- * Contains information about an Azure Batch account.
-API Version: 2021-01-01.
- *
- * Contains information about an Azure Batch account.
- */
     public static CompletableFuture<GetBatchAccountResult> invokeAsync(GetBatchAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getBatchAccount", TypeShape.of(GetBatchAccountResult.class), args == null ? GetBatchAccountArgs.Empty : args, Utilities.withVersion(options));
     }

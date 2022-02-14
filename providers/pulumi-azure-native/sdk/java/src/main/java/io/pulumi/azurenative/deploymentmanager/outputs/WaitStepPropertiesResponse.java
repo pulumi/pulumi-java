@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WaitStepPropertiesResponse {
-/**
- * The Wait attributes
- */
     private final WaitStepAttributesResponse attributes;
-/**
- * The type of step.
-Expected value is 'Wait'.
- */
     private final String stepType;
 
     @OutputCustomType.Constructor({"attributes","stepType"})
@@ -28,16 +21,9 @@ Expected value is 'Wait'.
         this.stepType = Objects.requireNonNull(stepType);
     }
 
-/**
- * The Wait attributes
- */
     public WaitStepAttributesResponse getAttributes() {
         return this.attributes;
     }
-/**
- * The type of step.
-Expected value is 'Wait'.
- */
     public String getStepType() {
         return this.stepType;
     }

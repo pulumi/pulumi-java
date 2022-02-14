@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the load balancer resource settings.
- */
 public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerResourceSettingsResponse Empty = new LoadBalancerResourceSettingsResponse();
 
-    /**
-     * Gets or sets the backend address pools of the load balancer.
-     */
     @InputImport(name="backendAddressPools")
     private final @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
 
@@ -30,9 +24,6 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
     }
 
-    /**
-     * Gets or sets the frontend IP configurations of the load balancer.
-     */
     @InputImport(name="frontendIPConfigurations")
     private final @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
 
@@ -40,10 +31,6 @@ public final class LoadBalancerResourceSettingsResponse extends io.pulumi.resour
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
     }
 
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Network/loadBalancers'.
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -51,9 +38,6 @@ Expected value is 'Microsoft.Network/loadBalancers'.
         return this.resourceType;
     }
 
-    /**
-     * Gets or sets load balancer sku (Basic/Standard).
-     */
     @InputImport(name="sku")
     private final @Nullable String sku;
 
@@ -61,9 +45,6 @@ Expected value is 'Microsoft.Network/loadBalancers'.
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
-    /**
-     * Gets or sets the target Resource name.
-     */
     @InputImport(name="targetResourceName", required=true)
     private final String targetResourceName;
 
@@ -71,10 +52,6 @@ Expected value is 'Microsoft.Network/loadBalancers'.
         return this.targetResourceName;
     }
 
-    /**
-     * Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
- precedence only if frontend IP configurations settings are not present.
-     */
     @InputImport(name="zones")
     private final @Nullable String zones;
 

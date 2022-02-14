@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Asset File Storage encryption metadata.
- */
 public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetFileEncryptionMetadataResponse Empty = new AssetFileEncryptionMetadataResponse();
 
-    /**
-     * The Asset File Id.
-     */
     @InputImport(name="assetFileId", required=true)
     private final String assetFileId;
 
@@ -27,9 +21,6 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
         return this.assetFileId;
     }
 
-    /**
-     * The Asset File name.
-     */
     @InputImport(name="assetFileName")
     private final @Nullable String assetFileName;
 
@@ -37,9 +28,6 @@ public final class AssetFileEncryptionMetadataResponse extends io.pulumi.resourc
         return this.assetFileName == null ? Optional.empty() : Optional.ofNullable(this.assetFileName);
     }
 
-    /**
-     * The Asset File initialization vector.
-     */
     @InputImport(name="initializationVector")
     private final @Nullable String initializationVector;
 

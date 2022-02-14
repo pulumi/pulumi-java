@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListWebAppSiteBackupsSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppSiteBackupsSlotArgs Empty = new ListWebAppSiteBackupsSlotArgs();
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ListWebAppSiteBackupsSlotArgs extends io.pulumi.resources.Inv
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class ListWebAppSiteBackupsSlotArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API will get backups of the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The settings for the Cosmos DB database backing the service.
- */
 public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceCosmosDbConfigurationInfoResponse Empty = new ServiceCosmosDbConfigurationInfoResponse();
 
-    /**
-     * The URI of the customer-managed key for the backing database.
-     */
     @InputImport(name="keyVaultKeyUri")
     private final @Nullable String keyVaultKeyUri;
 
@@ -28,9 +22,6 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
         return this.keyVaultKeyUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultKeyUri);
     }
 
-    /**
-     * The provisioned throughput for the backing database.
-     */
     @InputImport(name="offerThroughput")
     private final @Nullable Double offerThroughput;
 

@@ -14,22 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataboxJobSecretsResponse {
-/**
- * Dc Access Security Code for Customer Managed Shipping
- */
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
-/**
- * Error while fetching the secrets.
- */
     private final CloudErrorResponse error;
-/**
- * Used to indicate what type of job secrets object.
-Expected value is 'DataBox'.
- */
     private final String jobSecretsType;
-/**
- * Contains the list of secret objects for a job.
- */
     private final @Nullable List<DataBoxSecretResponse> podSecrets;
 
     @OutputCustomType.Constructor({"dcAccessSecurityCode","error","jobSecretsType","podSecrets"})
@@ -44,28 +31,15 @@ Expected value is 'DataBox'.
         this.podSecrets = podSecrets;
     }
 
-/**
- * Dc Access Security Code for Customer Managed Shipping
- */
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
-/**
- * Error while fetching the secrets.
- */
     public CloudErrorResponse getError() {
         return this.error;
     }
-/**
- * Used to indicate what type of job secrets object.
-Expected value is 'DataBox'.
- */
     public String getJobSecretsType() {
         return this.jobSecretsType;
     }
-/**
- * Contains the list of secret objects for a job.
- */
     public List<DataBoxSecretResponse> getPodSecrets() {
         return this.podSecrets == null ? List.of() : this.podSecrets;
     }

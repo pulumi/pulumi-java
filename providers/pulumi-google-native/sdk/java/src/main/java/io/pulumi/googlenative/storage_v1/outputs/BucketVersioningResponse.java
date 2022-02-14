@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketVersioningResponse {
-/**
- * While set to true, versioning is fully enabled for this bucket.
- */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -19,9 +16,6 @@ public final class BucketVersioningResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
-/**
- * While set to true, versioning is fully enabled for this bucket.
- */
     public Boolean getEnabled() {
         return this.enabled;
     }

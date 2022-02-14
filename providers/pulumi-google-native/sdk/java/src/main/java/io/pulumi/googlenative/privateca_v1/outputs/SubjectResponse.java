@@ -9,37 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubjectResponse {
-/**
- * The "common name" of the subject.
- */
     private final String commonName;
-/**
- * The country code of the subject.
- */
     private final String countryCode;
-/**
- * The locality or city of the subject.
- */
     private final String locality;
-/**
- * The organization of the subject.
- */
     private final String organization;
-/**
- * The organizational_unit of the subject.
- */
     private final String organizationalUnit;
-/**
- * The postal code of the subject.
- */
     private final String postalCode;
-/**
- * The province, territory, or regional state of the subject.
- */
     private final String province;
-/**
- * The street address of the subject.
- */
     private final String streetAddress;
 
     @OutputCustomType.Constructor({"commonName","countryCode","locality","organization","organizationalUnit","postalCode","province","streetAddress"})
@@ -62,51 +38,27 @@ public final class SubjectResponse {
         this.streetAddress = Objects.requireNonNull(streetAddress);
     }
 
-/**
- * The "common name" of the subject.
- */
     public String getCommonName() {
         return this.commonName;
     }
-/**
- * The country code of the subject.
- */
     public String getCountryCode() {
         return this.countryCode;
     }
-/**
- * The locality or city of the subject.
- */
     public String getLocality() {
         return this.locality;
     }
-/**
- * The organization of the subject.
- */
     public String getOrganization() {
         return this.organization;
     }
-/**
- * The organizational_unit of the subject.
- */
     public String getOrganizationalUnit() {
         return this.organizationalUnit;
     }
-/**
- * The postal code of the subject.
- */
     public String getPostalCode() {
         return this.postalCode;
     }
-/**
- * The province, territory, or regional state of the subject.
- */
     public String getProvince() {
         return this.province;
     }
-/**
- * The street address of the subject.
- */
     public String getStreetAddress() {
         return this.streetAddress;
     }

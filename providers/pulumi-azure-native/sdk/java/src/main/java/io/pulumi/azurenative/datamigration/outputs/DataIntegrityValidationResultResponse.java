@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataIntegrityValidationResultResponse {
-/**
- * List of failed table names of source and target pair
- */
     private final Map<String,String> failedObjects;
-/**
- * List of errors that happened while performing data integrity validation
- */
     private final ValidationErrorResponse validationErrors;
 
     @OutputCustomType.Constructor({"failedObjects","validationErrors"})
@@ -28,15 +22,9 @@ public final class DataIntegrityValidationResultResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
-/**
- * List of failed table names of source and target pair
- */
     public Map<String,String> getFailedObjects() {
         return this.failedObjects;
     }
-/**
- * List of errors that happened while performing data integrity validation
- */
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
     }

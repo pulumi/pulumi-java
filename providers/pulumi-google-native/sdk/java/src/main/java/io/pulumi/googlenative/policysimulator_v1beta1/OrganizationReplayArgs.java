@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrganizationReplayArgs Empty = new OrganizationReplayArgs();
 
-    /**
-     * The configuration used for the `Replay`.
-     */
     @InputImport(name="config", required=true)
     private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
@@ -28,9 +22,6 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
         return this.config;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

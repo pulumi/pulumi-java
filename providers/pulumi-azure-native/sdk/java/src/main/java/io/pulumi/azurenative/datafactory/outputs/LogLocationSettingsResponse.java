@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LogLocationSettingsResponse {
-/**
- * Log storage linked service reference.
- */
     private final LinkedServiceReferenceResponse linkedServiceName;
-/**
- * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object path;
 
     @OutputCustomType.Constructor({"linkedServiceName","path"})
@@ -29,15 +23,9 @@ public final class LogLocationSettingsResponse {
         this.path = path;
     }
 
-/**
- * Log storage linked service reference.
- */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
-/**
- * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);
     }

@@ -11,10 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DestinationsSpecResponseAzureMonitorMetrics {
-/**
- * A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -22,10 +18,6 @@ This name should be unique across all destinations (regardless of type) within t
         this.name = name;
     }
 
-/**
- * A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

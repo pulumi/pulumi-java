@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrefixArgs Empty = new PrefixArgs();
 
-    /**
-     * The name of the peering service.
-     */
     @InputImport(name="peeringServiceName", required=true)
     private final Input<String> peeringServiceName;
 
@@ -27,9 +21,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringServiceName;
     }
 
-    /**
-     * The peering service prefix key
-     */
     @InputImport(name="peeringServicePrefixKey")
     private final @Nullable Input<String> peeringServicePrefixKey;
 
@@ -37,9 +28,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringServicePrefixKey == null ? Input.empty() : this.peeringServicePrefixKey;
     }
 
-    /**
-     * The prefix from which your traffic originates.
-     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -47,9 +35,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
-    /**
-     * The name of the prefix.
-     */
     @InputImport(name="prefixName")
     private final @Nullable Input<String> prefixName;
 
@@ -57,9 +42,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.prefixName == null ? Input.empty() : this.prefixName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

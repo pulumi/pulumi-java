@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The inputs for the Azure Machine Learning web service endpoint.
- */
 public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMachineLearningWebServiceInputsArgs Empty = new AzureMachineLearningWebServiceInputsArgs();
 
-    /**
-     * A list of input columns for the Azure Machine Learning web service endpoint.
-     */
     @InputImport(name="columnNames")
     private final @Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
@@ -29,9 +23,6 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
         return this.columnNames == null ? Input.empty() : this.columnNames;
     }
 
-    /**
-     * The name of the input. This is the name provided while authoring the endpoint.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

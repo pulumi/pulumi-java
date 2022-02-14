@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Information of user assigned identity used by this add-on.
- */
 public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterAddonProfileResponseIdentity Empty = new ManagedClusterAddonProfileResponseIdentity();
 
-    /**
-     * The client id of the user assigned identity.
-     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -27,9 +21,6 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * The object id of the user assigned identity.
-     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -37,9 +28,6 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
-    /**
-     * The resource id of the user assigned identity.
-     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

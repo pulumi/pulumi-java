@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkTap {
-/**
- * Virtual Network Tap resource.
-API Version: 2020-11-01.
- *
- * Virtual Network Tap resource.
- */
     public static CompletableFuture<GetVirtualNetworkTapResult> invokeAsync(GetVirtualNetworkTapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkTap", TypeShape.of(GetVirtualNetworkTapResult.class), args == null ? GetVirtualNetworkTapArgs.Empty : args, Utilities.withVersion(options));
     }

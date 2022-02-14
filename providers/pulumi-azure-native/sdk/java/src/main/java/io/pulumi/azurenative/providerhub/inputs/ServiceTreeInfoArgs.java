@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceTreeInfoArgs Empty = new ServiceTreeInfoArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="componentId")
     private final @Nullable Input<String> componentId;
 
@@ -27,9 +21,6 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.componentId == null ? Input.empty() : this.componentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceId")
     private final @Nullable Input<String> serviceId;
 

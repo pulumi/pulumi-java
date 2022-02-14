@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Importance of the source.
- */
     @EnumType
     public enum SourceScoringConfigSourceImportance {
-/**
- * 
- */
         Default("DEFAULT"),
-/**
- * 
- */
         Low("LOW"),
-/**
- * 
- */
         High("HIGH");
 
         private final String value;

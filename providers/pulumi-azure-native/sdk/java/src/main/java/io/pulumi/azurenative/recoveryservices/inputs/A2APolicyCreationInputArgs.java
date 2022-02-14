@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A2A Policy creation input.
- */
 public final class A2APolicyCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final A2APolicyCreationInputArgs Empty = new A2APolicyCreationInputArgs();
 
-    /**
-     * The app consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
@@ -30,9 +24,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The crash consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
@@ -40,10 +31,6 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The class type.
-Expected value is 'A2A'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -51,9 +38,6 @@ Expected value is 'A2A'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
-     */
     @InputImport(name="multiVmSyncStatus", required=true)
     private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
@@ -61,9 +45,6 @@ Expected value is 'A2A'.
         return this.multiVmSyncStatus;
     }
 
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     */
     @InputImport(name="recoveryPointHistory")
     private final @Nullable Input<Integer> recoveryPointHistory;
 

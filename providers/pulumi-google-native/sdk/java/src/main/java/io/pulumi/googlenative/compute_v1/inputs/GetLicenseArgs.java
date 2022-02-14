@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLicenseArgs Empty = new GetLicenseArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="license", required=true)
     private final String license;
 
@@ -27,9 +21,6 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
         return this.license;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

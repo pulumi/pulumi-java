@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a VHD in the lab.
- */
 public final class LabVhdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabVhdResponse Empty = new LabVhdResponse();
 
-    /**
-     * The URI to the VHD.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

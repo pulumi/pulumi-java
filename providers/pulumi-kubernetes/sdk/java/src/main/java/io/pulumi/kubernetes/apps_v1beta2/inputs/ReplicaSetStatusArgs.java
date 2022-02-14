@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ReplicaSetStatus represents the current status of a ReplicaSet.
- */
 public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicaSetStatusArgs Empty = new ReplicaSetStatusArgs();
 
-    /**
-     * The number of available replicas (ready for at least minReadySeconds) for this replica set.
-     */
     @InputImport(name="availableReplicas")
     private final @Nullable Input<Integer> availableReplicas;
 
@@ -29,9 +23,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.availableReplicas == null ? Input.empty() : this.availableReplicas;
     }
 
-    /**
-     * Represents the latest available observations of a replica set's current state.
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<ReplicaSetConditionArgs>> conditions;
 
@@ -39,9 +30,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * The number of pods that have labels matching the labels of the pod template of the replicaset.
-     */
     @InputImport(name="fullyLabeledReplicas")
     private final @Nullable Input<Integer> fullyLabeledReplicas;
 
@@ -49,9 +37,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.fullyLabeledReplicas == null ? Input.empty() : this.fullyLabeledReplicas;
     }
 
-    /**
-     * ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
-     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -59,9 +44,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
-    /**
-     * The number of ready replicas for this replica set.
-     */
     @InputImport(name="readyReplicas")
     private final @Nullable Input<Integer> readyReplicas;
 
@@ -69,9 +51,6 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
         return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
     }
 
-    /**
-     * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
-     */
     @InputImport(name="replicas", required=true)
     private final Input<Integer> replicas;
 

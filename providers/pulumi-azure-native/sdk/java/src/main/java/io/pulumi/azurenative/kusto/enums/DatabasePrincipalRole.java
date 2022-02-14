@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Database principal role.
- */
     @EnumType
     public enum DatabasePrincipalRole {
-/**
- * 
- */
         Admin("Admin"),
-/**
- * 
- */
         Ingestor("Ingestor"),
-/**
- * 
- */
         Monitor("Monitor"),
-/**
- * 
- */
         User("User"),
-/**
- * 
- */
         UnrestrictedViewer("UnrestrictedViewer"),
-/**
- * 
- */
         Viewer("Viewer");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnvironmentSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentSettingResponse Empty = new EnvironmentSettingResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +21,6 @@ public final class EnvironmentSettingResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

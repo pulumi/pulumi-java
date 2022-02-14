@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueryPackArgs Empty = new QueryPackArgs();
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,9 +22,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the Log Analytics QueryPack resource.
-     */
     @InputImport(name="queryPackName")
     private final @Nullable Input<String> queryPackName;
 
@@ -38,9 +29,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryPackName == null ? Input.empty() : this.queryPackName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class QueryPackArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

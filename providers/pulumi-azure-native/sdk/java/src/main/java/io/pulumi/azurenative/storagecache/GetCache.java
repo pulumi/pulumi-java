@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCache {
-/**
- * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
-API Version: 2021-03-01.
- *
- * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
- */
     public static CompletableFuture<GetCacheResult> invokeAsync(GetCacheArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagecache:getCache", TypeShape.of(GetCacheResult.class), args == null ? GetCacheArgs.Empty : args, Utilities.withVersion(options));
     }

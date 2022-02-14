@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Issue contract Update Properties.
- */
 public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultLastAccessStatusContractPropertiesResponse Empty = new KeyVaultLastAccessStatusContractPropertiesResponse();
 
-    /**
-     * Last status code for sync and refresh of secret from key vault.
-     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -27,9 +21,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
-    /**
-     * Details of the error else empty.
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -37,10 +28,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-
-     */
     @InputImport(name="timeStampUtc")
     private final @Nullable String timeStampUtc;
 

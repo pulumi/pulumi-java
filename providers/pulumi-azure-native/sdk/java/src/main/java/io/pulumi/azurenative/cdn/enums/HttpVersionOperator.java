@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes operator to be matched
- */
     @EnumType
     public enum HttpVersionOperator {
-/**
- * 
- */
         Equal("Equal");
 
         private final String value;

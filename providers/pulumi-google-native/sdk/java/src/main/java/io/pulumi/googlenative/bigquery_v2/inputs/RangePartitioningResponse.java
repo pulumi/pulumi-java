@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class RangePartitioningResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RangePartitioningResponse Empty = new RangePartitioningResponse();
 
-    /**
-     * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
-     */
     @InputImport(name="field", required=true)
     private final String field;
 
@@ -26,9 +20,6 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
         return this.field;
     }
 
-    /**
-     * [TrustedTester] [Required] Defines the ranges for range partitioning.
-     */
     @InputImport(name="range", required=true)
     private final RangePartitioningRangeResponse range;
 

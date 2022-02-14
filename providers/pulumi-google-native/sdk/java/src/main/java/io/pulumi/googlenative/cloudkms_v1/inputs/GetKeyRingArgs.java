@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetKeyRingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyRingArgs Empty = new GetKeyRingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="keyRingId", required=true)
     private final String keyRingId;
 
@@ -27,9 +21,6 @@ public final class GetKeyRingArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyRingId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetKeyRingArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

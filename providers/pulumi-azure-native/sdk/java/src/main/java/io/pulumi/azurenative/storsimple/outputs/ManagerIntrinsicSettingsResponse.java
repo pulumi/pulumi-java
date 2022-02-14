@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagerIntrinsicSettingsResponse {
-/**
- * The type of StorSimple Manager.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -19,9 +16,6 @@ public final class ManagerIntrinsicSettingsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The type of StorSimple Manager.
- */
     public String getType() {
         return this.type;
     }

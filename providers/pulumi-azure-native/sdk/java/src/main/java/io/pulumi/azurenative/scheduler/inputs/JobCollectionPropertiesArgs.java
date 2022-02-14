@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobCollectionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobCollectionPropertiesArgs Empty = new JobCollectionPropertiesArgs();
 
-    /**
-     * Gets or sets the job collection quota.
-     */
     @InputImport(name="quota")
     private final @Nullable Input<JobCollectionQuotaArgs> quota;
 
@@ -29,9 +23,6 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
         return this.quota == null ? Input.empty() : this.quota;
     }
 
-    /**
-     * Gets or sets the SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -39,9 +30,6 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Gets or sets the state.
-     */
     @InputImport(name="state")
     private final @Nullable Input<JobCollectionState> state;
 

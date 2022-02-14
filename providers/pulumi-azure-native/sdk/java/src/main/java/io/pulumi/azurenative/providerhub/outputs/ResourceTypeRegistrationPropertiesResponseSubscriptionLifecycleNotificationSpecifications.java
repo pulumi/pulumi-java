@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications {
-/**
- * 
- */
     private final @Nullable String softDeleteTTL;
-/**
- * 
- */
     private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
     @OutputCustomType.Constructor({"softDeleteTTL","subscriptionStateOverrideActions"})
@@ -30,15 +24,9 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
         this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
     }
 
-/**
- * 
- */
     public Optional<String> getSoftDeleteTTL() {
         return Optional.ofNullable(this.softDeleteTTL);
     }
-/**
- * 
- */
     public List<SubscriptionStateOverrideActionResponse> getSubscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? List.of() : this.subscriptionStateOverrideActions;
     }

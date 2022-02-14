@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
- */
 public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharedPrivateLinkResourcePropertiesResponse Empty = new SharedPrivateLinkResourcePropertiesResponse();
 
-    /**
-     * The group id from the provider of resource the shared private link resource is for.
-     */
     @InputImport(name="groupId")
     private final @Nullable String groupId;
 
@@ -27,9 +21,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
-    /**
-     * The resource id of the resource the shared private link resource is for.
-     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable String privateLinkResourceId;
 
@@ -37,9 +28,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
     }
 
-    /**
-     * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -47,9 +35,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * The request message for requesting approval of the shared private link resource.
-     */
     @InputImport(name="requestMessage")
     private final @Nullable String requestMessage;
 
@@ -57,9 +42,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
-    /**
-     * Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
-     */
     @InputImport(name="resourceRegion")
     private final @Nullable String resourceRegion;
 
@@ -67,9 +49,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.resourceRegion == null ? Optional.empty() : Optional.ofNullable(this.resourceRegion);
     }
 
-    /**
-     * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

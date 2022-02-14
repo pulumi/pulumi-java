@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The filters that will be applied to determine which resources to remediate.
- */
 public final class RemediationFiltersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RemediationFiltersArgs Empty = new RemediationFiltersArgs();
 
-    /**
-     * The resource locations that will be remediated.
-     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 

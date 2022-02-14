@@ -31,1065 +31,231 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The storage account.
-API Version: 2021-02-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### NfsV3AccountCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageAccount = new AzureNative.Storage.StorageAccount("storageAccount", new AzureNative.Storage.StorageAccountArgs
-        {
-            AccountName = "sto4445",
-            EnableHttpsTrafficOnly = false,
-            EnableNfsV3 = true,
-            IsHnsEnabled = true,
-            Kind = "BlockBlobStorage",
-            Location = "eastus",
-            NetworkRuleSet = new AzureNative.Storage.Inputs.NetworkRuleSetArgs
-            {
-                Bypass = "AzureServices",
-                DefaultAction = "Allow",
-                IpRules = {},
-                VirtualNetworkRules = 
-                {
-                    new AzureNative.Storage.Inputs.VirtualNetworkRuleArgs
-                    {
-                        VirtualNetworkResourceId = "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Network/virtualNetworks/net123/subnets/subnet12",
-                    },
-                },
-            },
-            ResourceGroupName = "res9101",
-            Sku = new AzureNative.Storage.Inputs.SkuArgs
-            {
-                Name = "Premium_LRS",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewStorageAccount(ctx, "storageAccount", &storage.StorageAccountArgs{
-			AccountName:            pulumi.String("sto4445"),
-			EnableHttpsTrafficOnly: pulumi.Bool(false),
-			EnableNfsV3:            pulumi.Bool(true),
-			IsHnsEnabled:           pulumi.Bool(true),
-			Kind:                   pulumi.String("BlockBlobStorage"),
-			Location:               pulumi.String("eastus"),
-			NetworkRuleSet: &storage.NetworkRuleSetArgs{
-				Bypass:        pulumi.String("AzureServices"),
-				DefaultAction: "Allow",
-				IpRules:       storage.IPRuleArray{},
-				VirtualNetworkRules: storage.VirtualNetworkRuleArray{
-					&storage.VirtualNetworkRuleArgs{
-						VirtualNetworkResourceId: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Network/virtualNetworks/net123/subnets/subnet12"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("res9101"),
-			Sku: &storage.SkuArgs{
-				Name: pulumi.String("Premium_LRS"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageAccount = new azure_native.storage.StorageAccount("storageAccount", {
-    accountName: "sto4445",
-    enableHttpsTrafficOnly: false,
-    enableNfsV3: true,
-    isHnsEnabled: true,
-    kind: "BlockBlobStorage",
-    location: "eastus",
-    networkRuleSet: {
-        bypass: "AzureServices",
-        defaultAction: "Allow",
-        ipRules: [],
-        virtualNetworkRules: [{
-            virtualNetworkResourceId: "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Network/virtualNetworks/net123/subnets/subnet12",
-        }],
-    },
-    resourceGroupName: "res9101",
-    sku: {
-        name: "Premium_LRS",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_account = azure_native.storage.StorageAccount("storageAccount",
-    account_name="sto4445",
-    enable_https_traffic_only=False,
-    enable_nfs_v3=True,
-    is_hns_enabled=True,
-    kind="BlockBlobStorage",
-    location="eastus",
-    network_rule_set=azure_native.storage.NetworkRuleSetArgs(
-        bypass="AzureServices",
-        default_action="Allow",
-        ip_rules=[],
-        virtual_network_rules=[azure_native.storage.VirtualNetworkRuleArgs(
-            virtual_network_resource_id="/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Network/virtualNetworks/net123/subnets/subnet12",
-        )],
-    ),
-    resource_group_name="res9101",
-    sku=azure_native.storage.SkuArgs(
-        name="Premium_LRS",
-    ))
-
-```
-
-{{% /example %}}
-{{% example %}}
-### StorageAccountCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageAccount = new AzureNative.Storage.StorageAccount("storageAccount", new AzureNative.Storage.StorageAccountArgs
-        {
-            AccountName = "sto4445",
-            AllowBlobPublicAccess = false,
-            AllowSharedKeyAccess = true,
-            Encryption = new AzureNative.Storage.Inputs.EncryptionArgs
-            {
-                KeySource = "Microsoft.Storage",
-                RequireInfrastructureEncryption = false,
-                Services = new AzureNative.Storage.Inputs.EncryptionServicesArgs
-                {
-                    Blob = new AzureNative.Storage.Inputs.EncryptionServiceArgs
-                    {
-                        Enabled = true,
-                        KeyType = "Account",
-                    },
-                    File = new AzureNative.Storage.Inputs.EncryptionServiceArgs
-                    {
-                        Enabled = true,
-                        KeyType = "Account",
-                    },
-                },
-            },
-            ExtendedLocation = new AzureNative.Storage.Inputs.ExtendedLocationArgs
-            {
-                Name = "losangeles001",
-                Type = "EdgeZone",
-            },
-            IsHnsEnabled = true,
-            KeyPolicy = new AzureNative.Storage.Inputs.KeyPolicyArgs
-            {
-                KeyExpirationPeriodInDays = 20,
-            },
-            Kind = "Storage",
-            Location = "eastus",
-            MinimumTlsVersion = "TLS1_2",
-            ResourceGroupName = "res9101",
-            RoutingPreference = new AzureNative.Storage.Inputs.RoutingPreferenceArgs
-            {
-                PublishInternetEndpoints = true,
-                PublishMicrosoftEndpoints = true,
-                RoutingChoice = "MicrosoftRouting",
-            },
-            SasPolicy = new AzureNative.Storage.Inputs.SasPolicyArgs
-            {
-                ExpirationAction = "Log",
-                SasExpirationPeriod = "1.15:59:59",
-            },
-            Sku = new AzureNative.Storage.Inputs.SkuArgs
-            {
-                Name = "Standard_GRS",
-            },
-            Tags = 
-            {
-                { "key1", "value1" },
-                { "key2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewStorageAccount(ctx, "storageAccount", &storage.StorageAccountArgs{
-			AccountName:           pulumi.String("sto4445"),
-			AllowBlobPublicAccess: pulumi.Bool(false),
-			AllowSharedKeyAccess:  pulumi.Bool(true),
-			Encryption: &storage.EncryptionArgs{
-				KeySource:                       pulumi.String("Microsoft.Storage"),
-				RequireInfrastructureEncryption: pulumi.Bool(false),
-				Services: &storage.EncryptionServicesArgs{
-					Blob: &storage.EncryptionServiceArgs{
-						Enabled: pulumi.Bool(true),
-						KeyType: pulumi.String("Account"),
-					},
-					File: &storage.EncryptionServiceArgs{
-						Enabled: pulumi.Bool(true),
-						KeyType: pulumi.String("Account"),
-					},
-				},
-			},
-			ExtendedLocation: &storage.ExtendedLocationArgs{
-				Name: pulumi.String("losangeles001"),
-				Type: pulumi.String("EdgeZone"),
-			},
-			IsHnsEnabled: pulumi.Bool(true),
-			KeyPolicy: &storage.KeyPolicyArgs{
-				KeyExpirationPeriodInDays: pulumi.Int(20),
-			},
-			Kind:              pulumi.String("Storage"),
-			Location:          pulumi.String("eastus"),
-			MinimumTlsVersion: pulumi.String("TLS1_2"),
-			ResourceGroupName: pulumi.String("res9101"),
-			RoutingPreference: &storage.RoutingPreferenceArgs{
-				PublishInternetEndpoints:  pulumi.Bool(true),
-				PublishMicrosoftEndpoints: pulumi.Bool(true),
-				RoutingChoice:             pulumi.String("MicrosoftRouting"),
-			},
-			SasPolicy: &storage.SasPolicyArgs{
-				ExpirationAction:    pulumi.String("Log"),
-				SasExpirationPeriod: pulumi.String("1.15:59:59"),
-			},
-			Sku: &storage.SkuArgs{
-				Name: pulumi.String("Standard_GRS"),
-			},
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("value1"),
-				"key2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageAccount = new azure_native.storage.StorageAccount("storageAccount", {
-    accountName: "sto4445",
-    allowBlobPublicAccess: false,
-    allowSharedKeyAccess: true,
-    encryption: {
-        keySource: "Microsoft.Storage",
-        requireInfrastructureEncryption: false,
-        services: {
-            blob: {
-                enabled: true,
-                keyType: "Account",
-            },
-            file: {
-                enabled: true,
-                keyType: "Account",
-            },
-        },
-    },
-    extendedLocation: {
-        name: "losangeles001",
-        type: "EdgeZone",
-    },
-    isHnsEnabled: true,
-    keyPolicy: {
-        keyExpirationPeriodInDays: 20,
-    },
-    kind: "Storage",
-    location: "eastus",
-    minimumTlsVersion: "TLS1_2",
-    resourceGroupName: "res9101",
-    routingPreference: {
-        publishInternetEndpoints: true,
-        publishMicrosoftEndpoints: true,
-        routingChoice: "MicrosoftRouting",
-    },
-    sasPolicy: {
-        expirationAction: "Log",
-        sasExpirationPeriod: "1.15:59:59",
-    },
-    sku: {
-        name: "Standard_GRS",
-    },
-    tags: {
-        key1: "value1",
-        key2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_account = azure_native.storage.StorageAccount("storageAccount",
-    account_name="sto4445",
-    allow_blob_public_access=False,
-    allow_shared_key_access=True,
-    encryption=azure_native.storage.EncryptionArgs(
-        key_source="Microsoft.Storage",
-        require_infrastructure_encryption=False,
-        services=azure_native.storage.EncryptionServicesArgs(
-            blob=azure_native.storage.EncryptionServiceArgs(
-                enabled=True,
-                key_type="Account",
-            ),
-            file=azure_native.storage.EncryptionServiceArgs(
-                enabled=True,
-                key_type="Account",
-            ),
-        ),
-    ),
-    extended_location=azure_native.storage.ExtendedLocationArgs(
-        name="losangeles001",
-        type="EdgeZone",
-    ),
-    is_hns_enabled=True,
-    key_policy=azure_native.storage.KeyPolicyArgs(
-        key_expiration_period_in_days=20,
-    ),
-    kind="Storage",
-    location="eastus",
-    minimum_tls_version="TLS1_2",
-    resource_group_name="res9101",
-    routing_preference=azure_native.storage.RoutingPreferenceArgs(
-        publish_internet_endpoints=True,
-        publish_microsoft_endpoints=True,
-        routing_choice="MicrosoftRouting",
-    ),
-    sas_policy=azure_native.storage.SasPolicyArgs(
-        expiration_action="Log",
-        sas_expiration_period="1.15:59:59",
-    ),
-    sku=azure_native.storage.SkuArgs(
-        name="Standard_GRS",
-    ),
-    tags={
-        "key1": "value1",
-        "key2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% example %}}
-### StorageAccountCreateUserAssignedEncryptionIdentityWithCMK
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageAccount = new AzureNative.Storage.StorageAccount("storageAccount", new AzureNative.Storage.StorageAccountArgs
-        {
-            AccountName = "sto4445",
-            Encryption = new AzureNative.Storage.Inputs.EncryptionArgs
-            {
-                EncryptionIdentity = new AzureNative.Storage.Inputs.EncryptionIdentityArgs
-                {
-                    EncryptionUserAssignedIdentity = "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}",
-                },
-                KeySource = "Microsoft.Keyvault",
-                KeyVaultProperties = new AzureNative.Storage.Inputs.KeyVaultPropertiesArgs
-                {
-                    KeyName = "wrappingKey",
-                    KeyVaultUri = "https://myvault8569.vault.azure.net",
-                    KeyVersion = "",
-                },
-                Services = new AzureNative.Storage.Inputs.EncryptionServicesArgs
-                {
-                    Blob = new AzureNative.Storage.Inputs.EncryptionServiceArgs
-                    {
-                        Enabled = true,
-                        KeyType = "Account",
-                    },
-                    File = new AzureNative.Storage.Inputs.EncryptionServiceArgs
-                    {
-                        Enabled = true,
-                        KeyType = "Account",
-                    },
-                },
-            },
-            Identity = new AzureNative.Storage.Inputs.IdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}",  },
-                },
-            },
-            Kind = "Storage",
-            Location = "eastus",
-            ResourceGroupName = "res9101",
-            Sku = new AzureNative.Storage.Inputs.SkuArgs
-            {
-                Name = "Standard_LRS",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewStorageAccount(ctx, "storageAccount", &storage.StorageAccountArgs{
-			AccountName: pulumi.String("sto4445"),
-			Encryption: &storage.EncryptionArgs{
-				EncryptionIdentity: &storage.EncryptionIdentityArgs{
-					EncryptionUserAssignedIdentity: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}"),
-				},
-				KeySource: pulumi.String("Microsoft.Keyvault"),
-				KeyVaultProperties: &storage.KeyVaultPropertiesArgs{
-					KeyName:     pulumi.String("wrappingKey"),
-					KeyVaultUri: pulumi.String("https://myvault8569.vault.azure.net"),
-					KeyVersion:  pulumi.String(""),
-				},
-				Services: &storage.EncryptionServicesArgs{
-					Blob: &storage.EncryptionServiceArgs{
-						Enabled: pulumi.Bool(true),
-						KeyType: pulumi.String("Account"),
-					},
-					File: &storage.EncryptionServiceArgs{
-						Enabled: pulumi.Bool(true),
-						KeyType: pulumi.String("Account"),
-					},
-				},
-			},
-			Identity: &storage.IdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}": nil,
-				},
-			},
-			Kind:              pulumi.String("Storage"),
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("res9101"),
-			Sku: &storage.SkuArgs{
-				Name: pulumi.String("Standard_LRS"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageAccount = new azure_native.storage.StorageAccount("storageAccount", {
-    accountName: "sto4445",
-    encryption: {
-        encryptionIdentity: {
-            encryptionUserAssignedIdentity: "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}",
-        },
-        keySource: "Microsoft.Keyvault",
-        keyVaultProperties: {
-            keyName: "wrappingKey",
-            keyVaultUri: "https://myvault8569.vault.azure.net",
-            keyVersion: "",
-        },
-        services: {
-            blob: {
-                enabled: true,
-                keyType: "Account",
-            },
-            file: {
-                enabled: true,
-                keyType: "Account",
-            },
-        },
-    },
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}": {},
-        },
-    },
-    kind: "Storage",
-    location: "eastus",
-    resourceGroupName: "res9101",
-    sku: {
-        name: "Standard_LRS",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_account = azure_native.storage.StorageAccount("storageAccount",
-    account_name="sto4445",
-    encryption=azure_native.storage.EncryptionArgs(
-        encryption_identity=azure_native.storage.EncryptionIdentityArgs(
-            encryption_user_assigned_identity="/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}",
-        ),
-        key_source="Microsoft.Keyvault",
-        key_vault_properties=azure_native.storage.KeyVaultPropertiesArgs(
-            key_name="wrappingKey",
-            key_vault_uri="https://myvault8569.vault.azure.net",
-            key_version="",
-        ),
-        services=azure_native.storage.EncryptionServicesArgs(
-            blob=azure_native.storage.EncryptionServiceArgs(
-                enabled=True,
-                key_type="Account",
-            ),
-            file=azure_native.storage.EncryptionServiceArgs(
-                enabled=True,
-                key_type="Account",
-            ),
-        ),
-    ),
-    identity=azure_native.storage.IdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}": {},
-        },
-    ),
-    kind="Storage",
-    location="eastus",
-    resource_group_name="res9101",
-    sku=azure_native.storage.SkuArgs(
-        name="Standard_LRS",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:storage:StorageAccount sto4445 /subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Storage/storageAccounts/sto4445 
-```
-
- */
 @ResourceType(type="azure-native:storage:StorageAccount")
 public class StorageAccount extends io.pulumi.resources.CustomResource {
-    /**
-     * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
-     */
     @OutputExport(name="accessTier", type=String.class, parameters={})
     private Output<String> accessTier;
 
-    /**
-     * @return Required for storage accounts where kind = BlobStorage. The access tier used for billing.
-     */
     public Output<String> getAccessTier() {
         return this.accessTier;
     }
-    /**
-     * Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
-     */
     @OutputExport(name="allowBlobPublicAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBlobPublicAccess;
 
-    /**
-     * @return Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
-     */
     public Output</* @Nullable */ Boolean> getAllowBlobPublicAccess() {
         return this.allowBlobPublicAccess;
     }
-    /**
-     * Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
-     */
     @OutputExport(name="allowSharedKeyAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowSharedKeyAccess;
 
-    /**
-     * @return Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
-     */
     public Output</* @Nullable */ Boolean> getAllowSharedKeyAccess() {
         return this.allowSharedKeyAccess;
     }
-    /**
-     * Provides the identity based authentication settings for Azure Files.
-     */
     @OutputExport(name="azureFilesIdentityBasedAuthentication", type=AzureFilesIdentityBasedAuthenticationResponse.class, parameters={})
     private Output</* @Nullable */ AzureFilesIdentityBasedAuthenticationResponse> azureFilesIdentityBasedAuthentication;
 
-    /**
-     * @return Provides the identity based authentication settings for Azure Files.
-     */
     public Output</* @Nullable */ AzureFilesIdentityBasedAuthenticationResponse> getAzureFilesIdentityBasedAuthentication() {
         return this.azureFilesIdentityBasedAuthentication;
     }
-    /**
-     * Blob restore status
-     */
     @OutputExport(name="blobRestoreStatus", type=BlobRestoreStatusResponse.class, parameters={})
     private Output<BlobRestoreStatusResponse> blobRestoreStatus;
 
-    /**
-     * @return Blob restore status
-     */
     public Output<BlobRestoreStatusResponse> getBlobRestoreStatus() {
         return this.blobRestoreStatus;
     }
-    /**
-     * Gets the creation date and time of the storage account in UTC.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    /**
-     * @return Gets the creation date and time of the storage account in UTC.
-     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * Gets the custom domain the user assigned to this storage account.
-     */
     @OutputExport(name="customDomain", type=CustomDomainResponse.class, parameters={})
     private Output<CustomDomainResponse> customDomain;
 
-    /**
-     * @return Gets the custom domain the user assigned to this storage account.
-     */
     public Output<CustomDomainResponse> getCustomDomain() {
         return this.customDomain;
     }
-    /**
-     * Allows https traffic only to storage service if sets to true.
-     */
     @OutputExport(name="enableHttpsTrafficOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHttpsTrafficOnly;
 
-    /**
-     * @return Allows https traffic only to storage service if sets to true.
-     */
     public Output</* @Nullable */ Boolean> getEnableHttpsTrafficOnly() {
         return this.enableHttpsTrafficOnly;
     }
-    /**
-     * NFS 3.0 protocol support enabled if set to true.
-     */
     @OutputExport(name="enableNfsV3", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableNfsV3;
 
-    /**
-     * @return NFS 3.0 protocol support enabled if set to true.
-     */
     public Output</* @Nullable */ Boolean> getEnableNfsV3() {
         return this.enableNfsV3;
     }
-    /**
-     * Gets the encryption settings on the account. If unspecified, the account is unencrypted.
-     */
     @OutputExport(name="encryption", type=EncryptionResponse.class, parameters={})
     private Output<EncryptionResponse> encryption;
 
-    /**
-     * @return Gets the encryption settings on the account. If unspecified, the account is unencrypted.
-     */
     public Output<EncryptionResponse> getEncryption() {
         return this.encryption;
     }
-    /**
-     * The extendedLocation of the resource.
-     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
-    /**
-     * @return The extendedLocation of the resource.
-     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
-    /**
-     * If the failover is in progress, the value will be true, otherwise, it will be null.
-     */
     @OutputExport(name="failoverInProgress", type=Boolean.class, parameters={})
     private Output<Boolean> failoverInProgress;
 
-    /**
-     * @return If the failover is in progress, the value will be true, otherwise, it will be null.
-     */
     public Output<Boolean> getFailoverInProgress() {
         return this.failoverInProgress;
     }
-    /**
-     * Geo Replication Stats
-     */
     @OutputExport(name="geoReplicationStats", type=GeoReplicationStatsResponse.class, parameters={})
     private Output<GeoReplicationStatsResponse> geoReplicationStats;
 
-    /**
-     * @return Geo Replication Stats
-     */
     public Output<GeoReplicationStatsResponse> getGeoReplicationStats() {
         return this.geoReplicationStats;
     }
-    /**
-     * The identity of the resource.
-     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
-    /**
-     * @return The identity of the resource.
-     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * Account HierarchicalNamespace enabled if sets to true.
-     */
     @OutputExport(name="isHnsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isHnsEnabled;
 
-    /**
-     * @return Account HierarchicalNamespace enabled if sets to true.
-     */
     public Output</* @Nullable */ Boolean> getIsHnsEnabled() {
         return this.isHnsEnabled;
     }
-    /**
-     * Storage account keys creation time.
-     */
     @OutputExport(name="keyCreationTime", type=KeyCreationTimeResponse.class, parameters={})
     private Output<KeyCreationTimeResponse> keyCreationTime;
 
-    /**
-     * @return Storage account keys creation time.
-     */
     public Output<KeyCreationTimeResponse> getKeyCreationTime() {
         return this.keyCreationTime;
     }
-    /**
-     * KeyPolicy assigned to the storage account.
-     */
     @OutputExport(name="keyPolicy", type=KeyPolicyResponse.class, parameters={})
     private Output<KeyPolicyResponse> keyPolicy;
 
-    /**
-     * @return KeyPolicy assigned to the storage account.
-     */
     public Output<KeyPolicyResponse> getKeyPolicy() {
         return this.keyPolicy;
     }
-    /**
-     * Gets the Kind.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Gets the Kind.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
-     */
     @OutputExport(name="largeFileSharesState", type=String.class, parameters={})
     private Output</* @Nullable */ String> largeFileSharesState;
 
-    /**
-     * @return Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
-     */
     public Output</* @Nullable */ String> getLargeFileSharesState() {
         return this.largeFileSharesState;
     }
-    /**
-     * Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-     */
     @OutputExport(name="lastGeoFailoverTime", type=String.class, parameters={})
     private Output<String> lastGeoFailoverTime;
 
-    /**
-     * @return Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-     */
     public Output<String> getLastGeoFailoverTime() {
         return this.lastGeoFailoverTime;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
-     */
     @OutputExport(name="minimumTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimumTlsVersion;
 
-    /**
-     * @return Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
-     */
     public Output</* @Nullable */ String> getMinimumTlsVersion() {
         return this.minimumTlsVersion;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Network rule set
-     */
     @OutputExport(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
     private Output<NetworkRuleSetResponse> networkRuleSet;
 
-    /**
-     * @return Network rule set
-     */
     public Output<NetworkRuleSetResponse> getNetworkRuleSet() {
         return this.networkRuleSet;
     }
-    /**
-     * Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
-     */
     @OutputExport(name="primaryEndpoints", type=EndpointsResponse.class, parameters={})
     private Output<EndpointsResponse> primaryEndpoints;
 
-    /**
-     * @return Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
-     */
     public Output<EndpointsResponse> getPrimaryEndpoints() {
         return this.primaryEndpoints;
     }
-    /**
-     * Gets the location of the primary data center for the storage account.
-     */
     @OutputExport(name="primaryLocation", type=String.class, parameters={})
     private Output<String> primaryLocation;
 
-    /**
-     * @return Gets the location of the primary data center for the storage account.
-     */
     public Output<String> getPrimaryLocation() {
         return this.primaryLocation;
     }
-    /**
-     * List of private endpoint connection associated with the specified storage account
-     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    /**
-     * @return List of private endpoint connection associated with the specified storage account
-     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    /**
-     * Gets the status of the storage account at the time the operation was called.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Gets the status of the storage account at the time the operation was called.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Maintains information about the network routing choice opted by the user for data transfer
-     */
     @OutputExport(name="routingPreference", type=RoutingPreferenceResponse.class, parameters={})
     private Output</* @Nullable */ RoutingPreferenceResponse> routingPreference;
 
-    /**
-     * @return Maintains information about the network routing choice opted by the user for data transfer
-     */
     public Output</* @Nullable */ RoutingPreferenceResponse> getRoutingPreference() {
         return this.routingPreference;
     }
-    /**
-     * SasPolicy assigned to the storage account.
-     */
     @OutputExport(name="sasPolicy", type=SasPolicyResponse.class, parameters={})
     private Output<SasPolicyResponse> sasPolicy;
 
-    /**
-     * @return SasPolicy assigned to the storage account.
-     */
     public Output<SasPolicyResponse> getSasPolicy() {
         return this.sasPolicy;
     }
-    /**
-     * Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.
-     */
     @OutputExport(name="secondaryEndpoints", type=EndpointsResponse.class, parameters={})
     private Output<EndpointsResponse> secondaryEndpoints;
 
-    /**
-     * @return Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.
-     */
     public Output<EndpointsResponse> getSecondaryEndpoints() {
         return this.secondaryEndpoints;
     }
-    /**
-     * Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-     */
     @OutputExport(name="secondaryLocation", type=String.class, parameters={})
     private Output<String> secondaryLocation;
 
-    /**
-     * @return Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
-     */
     public Output<String> getSecondaryLocation() {
         return this.secondaryLocation;
     }
-    /**
-     * Gets the SKU.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
-    /**
-     * @return Gets the SKU.
-     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Gets the status indicating whether the primary location of the storage account is available or unavailable.
-     */
     @OutputExport(name="statusOfPrimary", type=String.class, parameters={})
     private Output<String> statusOfPrimary;
 
-    /**
-     * @return Gets the status indicating whether the primary location of the storage account is available or unavailable.
-     */
     public Output<String> getStatusOfPrimary() {
         return this.statusOfPrimary;
     }
-    /**
-     * Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
-     */
     @OutputExport(name="statusOfSecondary", type=String.class, parameters={})
     private Output<String> statusOfSecondary;
 
-    /**
-     * @return Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
-     */
     public Output<String> getStatusOfSecondary() {
         return this.statusOfSecondary;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StorageAccount(String name, StorageAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:StorageAccount", name, args == null ? StorageAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -1126,14 +292,6 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StorageAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageAccount(name, id, options);
     }

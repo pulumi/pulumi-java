@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGuestUsage {
-/**
- * Guest Usages Resource
-API Version: 2020-05-01-preview.
- *
- * Guest Usages Resource
- */
     public static CompletableFuture<GetGuestUsageResult> invokeAsync(GetGuestUsageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getGuestUsage", TypeShape.of(GetGuestUsageResult.class), args == null ? GetGuestUsageArgs.Empty : args, Utilities.withVersion(options));
     }

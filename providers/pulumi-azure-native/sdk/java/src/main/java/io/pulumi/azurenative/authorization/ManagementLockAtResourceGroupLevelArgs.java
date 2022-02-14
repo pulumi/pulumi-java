@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementLockAtResourceGroupLevelArgs Empty = new ManagementLockAtResourceGroupLevelArgs();
 
-    /**
-     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     */
     @InputImport(name="level", required=true)
     private final Input<Either<String,LockLevel>> level;
 
@@ -31,9 +25,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
         return this.level;
     }
 
-    /**
-     * The lock name. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.
-     */
     @InputImport(name="lockName")
     private final @Nullable Input<String> lockName;
 
@@ -41,9 +32,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
         return this.lockName == null ? Input.empty() : this.lockName;
     }
 
-    /**
-     * Notes about the lock. Maximum of 512 characters.
-     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -51,9 +39,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
         return this.notes == null ? Input.empty() : this.notes;
     }
 
-    /**
-     * The owners of the lock.
-     */
     @InputImport(name="owners")
     private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 
@@ -61,9 +46,6 @@ public final class ManagementLockAtResourceGroupLevelArgs extends io.pulumi.reso
         return this.owners == null ? Input.empty() : this.owners;
     }
 
-    /**
-     * The name of the resource group to lock.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

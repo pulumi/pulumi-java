@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Virtual disk model
- */
 public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualDiskResponse Empty = new VirtualDiskResponse();
 
-    /**
-     * Disk's Controller id
-     */
     @InputImport(name="controllerId", required=true)
     private final String controllerId;
 
@@ -28,9 +22,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.controllerId;
     }
 
-    /**
-     * Disk's independence mode type
-     */
     @InputImport(name="independenceMode", required=true)
     private final String independenceMode;
 
@@ -38,9 +29,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.independenceMode;
     }
 
-    /**
-     * Disk's total size
-     */
     @InputImport(name="totalSize", required=true)
     private final Integer totalSize;
 
@@ -48,9 +36,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.totalSize;
     }
 
-    /**
-     * Disk's id
-     */
     @InputImport(name="virtualDiskId")
     private final @Nullable String virtualDiskId;
 
@@ -58,9 +43,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.virtualDiskId == null ? Optional.empty() : Optional.ofNullable(this.virtualDiskId);
     }
 
-    /**
-     * Disk's display name
-     */
     @InputImport(name="virtualDiskName", required=true)
     private final String virtualDiskName;
 

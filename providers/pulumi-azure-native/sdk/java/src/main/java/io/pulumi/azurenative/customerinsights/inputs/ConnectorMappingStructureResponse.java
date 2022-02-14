@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Connector mapping property structure.
- */
 public final class ConnectorMappingStructureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorMappingStructureResponse Empty = new ConnectorMappingStructureResponse();
 
-    /**
-     * The column name of the import file.
-     */
     @InputImport(name="columnName", required=true)
     private final String columnName;
 
@@ -28,9 +22,6 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
         return this.columnName;
     }
 
-    /**
-     * Custom format specifier for input parsing.
-     */
     @InputImport(name="customFormatSpecifier")
     private final @Nullable String customFormatSpecifier;
 
@@ -38,9 +29,6 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
         return this.customFormatSpecifier == null ? Optional.empty() : Optional.ofNullable(this.customFormatSpecifier);
     }
 
-    /**
-     * Indicates if the column is encrypted.
-     */
     @InputImport(name="isEncrypted")
     private final @Nullable Boolean isEncrypted;
 
@@ -48,9 +36,6 @@ public final class ConnectorMappingStructureResponse extends io.pulumi.resources
         return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
     }
 
-    /**
-     * The property name of the mapping entity.
-     */
     @InputImport(name="propertyName", required=true)
     private final String propertyName;
 

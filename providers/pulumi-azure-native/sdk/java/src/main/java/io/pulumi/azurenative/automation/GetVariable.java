@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVariable {
-/**
- * Definition of the variable.
-API Version: 2019-06-01.
- *
- * Definition of the variable.
- */
     public static CompletableFuture<GetVariableResult> invokeAsync(GetVariableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getVariable", TypeShape.of(GetVariableResult.class), args == null ? GetVariableArgs.Empty : args, Utilities.withVersion(options));
     }

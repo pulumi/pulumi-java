@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LiveEventInputTrackSelectionResponse {
-/**
- * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
- */
     private final @Nullable String operation;
-/**
- * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
- */
     private final @Nullable String property;
-/**
- * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
- */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"operation","property","value"})
@@ -34,21 +25,12 @@ public final class LiveEventInputTrackSelectionResponse {
         this.value = value;
     }
 
-/**
- * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
- */
     public Optional<String> getOperation() {
         return Optional.ofNullable(this.operation);
     }
-/**
- * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
- */
     public Optional<String> getProperty() {
         return Optional.ofNullable(this.property);
     }
-/**
- * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
- */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

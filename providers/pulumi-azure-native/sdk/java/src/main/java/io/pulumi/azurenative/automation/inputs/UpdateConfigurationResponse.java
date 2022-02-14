@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Update specific properties of the software update configuration.
- */
 public final class UpdateConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UpdateConfigurationResponse Empty = new UpdateConfigurationResponse();
 
-    /**
-     * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-     */
     @InputImport(name="azureVirtualMachines")
     private final @Nullable List<String> azureVirtualMachines;
 
@@ -31,9 +25,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
     }
 
-    /**
-     * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-     */
     @InputImport(name="duration")
     private final @Nullable String duration;
 
@@ -41,9 +32,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 
-    /**
-     * Linux specific update configuration.
-     */
     @InputImport(name="linux")
     private final @Nullable LinuxPropertiesResponse linux;
 
@@ -51,9 +39,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
         return this.linux == null ? Optional.empty() : Optional.ofNullable(this.linux);
     }
 
-    /**
-     * List of names of non-azure machines targeted by the software update configuration.
-     */
     @InputImport(name="nonAzureComputerNames")
     private final @Nullable List<String> nonAzureComputerNames;
 
@@ -61,9 +46,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
     }
 
-    /**
-     * operating system of target machines
-     */
     @InputImport(name="operatingSystem", required=true)
     private final String operatingSystem;
 
@@ -71,9 +53,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
         return this.operatingSystem;
     }
 
-    /**
-     * Group targets for the software update configuration.
-     */
     @InputImport(name="targets")
     private final @Nullable TargetPropertiesResponse targets;
 
@@ -81,9 +60,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
         return this.targets == null ? Optional.empty() : Optional.ofNullable(this.targets);
     }
 
-    /**
-     * Windows specific update configuration.
-     */
     @InputImport(name="windows")
     private final @Nullable WindowsPropertiesResponse windows;
 

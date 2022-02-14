@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceGroupManagerAutoHealingPolicyArgs Empty = new InstanceGroupManagerAutoHealingPolicyArgs();
 
-    /**
-     * Restricts what triggers autohealing.
-     */
     @InputImport(name="autoHealingTriggers")
     private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers;
 
@@ -31,9 +25,6 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
         return this.autoHealingTriggers == null ? Input.empty() : this.autoHealingTriggers;
     }
 
-    /**
-     * The URL for the health check that signals autohealing.
-     */
     @InputImport(name="healthCheck")
     private final @Nullable Input<String> healthCheck;
 
@@ -41,9 +32,6 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
         return this.healthCheck == null ? Input.empty() : this.healthCheck;
     }
 
-    /**
-     * The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
-     */
     @InputImport(name="initialDelaySec")
     private final @Nullable Input<Integer> initialDelaySec;
 
@@ -51,9 +39,6 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
         return this.initialDelaySec == null ? Input.empty() : this.initialDelaySec;
     }
 
-    /**
-     * Maximum number of instances that can be unavailable when autohealing. When 'percent' is used, the value is rounded if necessary. The instance is considered available if all of the following conditions are satisfied: 1. Instance's status is RUNNING. 2. Instance's currentAction is NONE (in particular its liveness health check result was observed to be HEALTHY at least once as it passed VERIFYING). 3. There is no outgoing action on an instance triggered by IGM. By default, number of concurrently autohealed instances is smaller than the managed instance group target size. However, if a zonal managed instance group has only one instance, or a regional managed instance group has only one instance per zone, autohealing will recreate these instances when they become unhealthy.
-     */
     @InputImport(name="maxUnavailable")
     private final @Nullable Input<FixedOrPercentArgs> maxUnavailable;
 
@@ -61,9 +46,6 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="updateInstances")
     private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances;
 

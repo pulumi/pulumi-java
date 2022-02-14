@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Details for an outcome with a SUCCESS outcome summary. LINT.IfChange
- */
 public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SuccessDetailResponse Empty = new SuccessDetailResponse();
 
-    /**
-     * If a native process other than the app crashed.
-     */
     @InputImport(name="otherNativeCrash", required=true)
     private final Boolean otherNativeCrash;
 

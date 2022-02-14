@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A package managed by APT. - install: `apt-get update && apt-get -y install [name]` - remove: `apt-get -y remove [name]`
- */
 public final class OSPolicyResourcePackageResourceAPTArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceAPTArgs Empty = new OSPolicyResourcePackageResourceAPTArgs();
 
-    /**
-     * Package name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

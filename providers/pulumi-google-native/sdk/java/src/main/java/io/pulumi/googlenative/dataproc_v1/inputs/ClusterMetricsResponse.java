@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Contains cluster daemon metrics, such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
- */
 public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterMetricsResponse Empty = new ClusterMetricsResponse();
 
-    /**
-     * The HDFS metrics.
-     */
     @InputImport(name="hdfsMetrics", required=true)
     private final Map<String,String> hdfsMetrics;
 
@@ -26,9 +20,6 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
         return this.hdfsMetrics;
     }
 
-    /**
-     * The YARN metrics.
-     */
     @InputImport(name="yarnMetrics", required=true)
     private final Map<String,String> yarnMetrics;
 

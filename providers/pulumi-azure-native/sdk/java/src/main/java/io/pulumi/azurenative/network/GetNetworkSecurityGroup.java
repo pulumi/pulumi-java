@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkSecurityGroup {
-/**
- * NetworkSecurityGroup resource.
-API Version: 2020-11-01.
- *
- * NetworkSecurityGroup resource.
- */
     public static CompletableFuture<GetNetworkSecurityGroupResult> invokeAsync(GetNetworkSecurityGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args == null ? GetNetworkSecurityGroupArgs.Empty : args, Utilities.withVersion(options));
     }

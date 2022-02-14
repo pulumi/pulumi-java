@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSchemaRegistryArgs Empty = new GetSchemaRegistryArgs();
 
-    /**
-     * The Namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -25,9 +19,6 @@ public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs 
         return this.namespaceName;
     }
 
-    /**
-     * Name of the resource group within the azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The Schema Group name 
-     */
     @InputImport(name="schemaGroupName", required=true)
     private final String schemaGroupName;
 

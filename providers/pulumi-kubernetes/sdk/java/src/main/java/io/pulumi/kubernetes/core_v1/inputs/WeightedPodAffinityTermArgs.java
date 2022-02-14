@@ -10,16 +10,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)
- */
 public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WeightedPodAffinityTermArgs Empty = new WeightedPodAffinityTermArgs();
 
-    /**
-     * Required. A pod affinity term, associated with the corresponding weight.
-     */
     @InputImport(name="podAffinityTerm", required=true)
     private final Input<PodAffinityTermArgs> podAffinityTerm;
 
@@ -27,9 +21,6 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
         return this.podAffinityTerm;
     }
 
-    /**
-     * weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
-     */
     @InputImport(name="weight", required=true)
     private final Input<Integer> weight;
 

@@ -16,656 +16,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Blueprint artifact that applies a Policy assignment.
-API Version: 2018-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### MG-ARMTemplateArtifact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignmentArtifact = new AzureNative.Blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", new AzureNative.Blueprint.PolicyAssignmentArtifactArgs
-        {
-            ArtifactName = "storageTemplate",
-            BlueprintName = "simpleBlueprint",
-            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewPolicyAssignmentArtifact(ctx, "policyAssignmentArtifact", &blueprint.PolicyAssignmentArtifactArgs{
-			ArtifactName:  pulumi.String("storageTemplate"),
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignmentArtifact = new azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", {
-    artifactName: "storageTemplate",
-    blueprintName: "simpleBlueprint",
-    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact",
-    artifact_name="storageTemplate",
-    blueprint_name="simpleBlueprint",
-    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### MG-PolicyAssignmentArtifact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignmentArtifact = new AzureNative.Blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", new AzureNative.Blueprint.PolicyAssignmentArtifactArgs
-        {
-            ArtifactName = "costCenterPolicy",
-            BlueprintName = "simpleBlueprint",
-            DisplayName = "force costCenter tag on all resources",
-            Kind = "policyAssignment",
-            Parameters = 
-            {
-                { "tagName", new AzureNative.Blueprint.Inputs.ParameterValueArgs
-                {
-                    Value = "costCenter",
-                } },
-                { "tagValue", new AzureNative.Blueprint.Inputs.ParameterValueArgs
-                {
-                    Value = "[parameter('costCenter')]",
-                } },
-            },
-            PolicyDefinitionId = "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
-            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewPolicyAssignmentArtifact(ctx, "policyAssignmentArtifact", &blueprint.PolicyAssignmentArtifactArgs{
-			ArtifactName:  pulumi.String("costCenterPolicy"),
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			DisplayName:   pulumi.String("force costCenter tag on all resources"),
-			Kind:          pulumi.String("policyAssignment"),
-			Parameters: blueprint.ParameterValueMap{
-				"tagName": &blueprint.ParameterValueArgs{
-					Value: pulumi.Any("costCenter"),
-				},
-				"tagValue": &blueprint.ParameterValueArgs{
-					Value: pulumi.Any("[parameter('costCenter')]"),
-				},
-			},
-			PolicyDefinitionId: pulumi.String("/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62"),
-			ResourceScope:      pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignmentArtifact = new azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", {
-    artifactName: "costCenterPolicy",
-    blueprintName: "simpleBlueprint",
-    displayName: "force costCenter tag on all resources",
-    kind: "policyAssignment",
-    parameters: {
-        tagName: {
-            value: "costCenter",
-        },
-        tagValue: {
-            value: "[parameter('costCenter')]",
-        },
-    },
-    policyDefinitionId: "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
-    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact",
-    artifact_name="costCenterPolicy",
-    blueprint_name="simpleBlueprint",
-    display_name="force costCenter tag on all resources",
-    kind="policyAssignment",
-    parameters={
-        "tagName": azure_native.blueprint.ParameterValueArgs(
-            value="costCenter",
-        ),
-        "tagValue": azure_native.blueprint.ParameterValueArgs(
-            value="[parameter('costCenter')]",
-        ),
-    },
-    policy_definition_id="/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
-    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### MG-RoleAssignmentArtifact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignmentArtifact = new AzureNative.Blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", new AzureNative.Blueprint.PolicyAssignmentArtifactArgs
-        {
-            ArtifactName = "ownerAssignment",
-            BlueprintName = "simpleBlueprint",
-            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewPolicyAssignmentArtifact(ctx, "policyAssignmentArtifact", &blueprint.PolicyAssignmentArtifactArgs{
-			ArtifactName:  pulumi.String("ownerAssignment"),
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignmentArtifact = new azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", {
-    artifactName: "ownerAssignment",
-    blueprintName: "simpleBlueprint",
-    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact",
-    artifact_name="ownerAssignment",
-    blueprint_name="simpleBlueprint",
-    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Sub-ARMTemplateArtifact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignmentArtifact = new AzureNative.Blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", new AzureNative.Blueprint.PolicyAssignmentArtifactArgs
-        {
-            ArtifactName = "storageTemplate",
-            BlueprintName = "simpleBlueprint",
-            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewPolicyAssignmentArtifact(ctx, "policyAssignmentArtifact", &blueprint.PolicyAssignmentArtifactArgs{
-			ArtifactName:  pulumi.String("storageTemplate"),
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignmentArtifact = new azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", {
-    artifactName: "storageTemplate",
-    blueprintName: "simpleBlueprint",
-    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact",
-    artifact_name="storageTemplate",
-    blueprint_name="simpleBlueprint",
-    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Sub-PolicyAssignmentArtifact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignmentArtifact = new AzureNative.Blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", new AzureNative.Blueprint.PolicyAssignmentArtifactArgs
-        {
-            ArtifactName = "costCenterPolicy",
-            BlueprintName = "simpleBlueprint",
-            DisplayName = "force costCenter tag on all resources",
-            Kind = "policyAssignment",
-            Parameters = 
-            {
-                { "tagName", new AzureNative.Blueprint.Inputs.ParameterValueArgs
-                {
-                    Value = "costCenter",
-                } },
-                { "tagValue", new AzureNative.Blueprint.Inputs.ParameterValueArgs
-                {
-                    Value = "[parameter('costCenter')]",
-                } },
-            },
-            PolicyDefinitionId = "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
-            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewPolicyAssignmentArtifact(ctx, "policyAssignmentArtifact", &blueprint.PolicyAssignmentArtifactArgs{
-			ArtifactName:  pulumi.String("costCenterPolicy"),
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			DisplayName:   pulumi.String("force costCenter tag on all resources"),
-			Kind:          pulumi.String("policyAssignment"),
-			Parameters: blueprint.ParameterValueMap{
-				"tagName": &blueprint.ParameterValueArgs{
-					Value: pulumi.Any("costCenter"),
-				},
-				"tagValue": &blueprint.ParameterValueArgs{
-					Value: pulumi.Any("[parameter('costCenter')]"),
-				},
-			},
-			PolicyDefinitionId: pulumi.String("/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62"),
-			ResourceScope:      pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignmentArtifact = new azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", {
-    artifactName: "costCenterPolicy",
-    blueprintName: "simpleBlueprint",
-    displayName: "force costCenter tag on all resources",
-    kind: "policyAssignment",
-    parameters: {
-        tagName: {
-            value: "costCenter",
-        },
-        tagValue: {
-            value: "[parameter('costCenter')]",
-        },
-    },
-    policyDefinitionId: "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
-    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact",
-    artifact_name="costCenterPolicy",
-    blueprint_name="simpleBlueprint",
-    display_name="force costCenter tag on all resources",
-    kind="policyAssignment",
-    parameters={
-        "tagName": azure_native.blueprint.ParameterValueArgs(
-            value="costCenter",
-        ),
-        "tagValue": azure_native.blueprint.ParameterValueArgs(
-            value="[parameter('costCenter')]",
-        ),
-    },
-    policy_definition_id="/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
-    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Sub-RoleAssignmentArtifact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignmentArtifact = new AzureNative.Blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", new AzureNative.Blueprint.PolicyAssignmentArtifactArgs
-        {
-            ArtifactName = "ownerAssignment",
-            BlueprintName = "simpleBlueprint",
-            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewPolicyAssignmentArtifact(ctx, "policyAssignmentArtifact", &blueprint.PolicyAssignmentArtifactArgs{
-			ArtifactName:  pulumi.String("ownerAssignment"),
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignmentArtifact = new azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact", {
-    artifactName: "ownerAssignment",
-    blueprintName: "simpleBlueprint",
-    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("policyAssignmentArtifact",
-    artifact_name="ownerAssignment",
-    blueprint_name="simpleBlueprint",
-    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:blueprint:PolicyAssignmentArtifact ownerAssignment /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint/artifacts/ownerAssignment 
-```
-
- */
 @ResourceType(type="azure-native:blueprint:PolicyAssignmentArtifact")
 public class PolicyAssignmentArtifact extends io.pulumi.resources.CustomResource {
-    /**
-     * Artifacts which need to be deployed before the specified artifact.
-     */
     @OutputExport(name="dependsOn", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dependsOn;
 
-    /**
-     * @return Artifacts which need to be deployed before the specified artifact.
-     */
     public Output</* @Nullable */ List<String>> getDependsOn() {
         return this.dependsOn;
     }
-    /**
-     * Multi-line explain this resource.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Multi-line explain this resource.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * One-liner string explain this resource.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return One-liner string explain this resource.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Specifies the kind of blueprint artifact.
-Expected value is 'policyAssignment'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Specifies the kind of blueprint artifact.
-Expected value is 'policyAssignment'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Name of this resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of this resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Parameter values for the policy definition.
-     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterValueResponse.class})
     private Output<Map<String,ParameterValueResponse>> parameters;
 
-    /**
-     * @return Parameter values for the policy definition.
-     */
     public Output<Map<String,ParameterValueResponse>> getParameters() {
         return this.parameters;
     }
-    /**
-     * Azure resource ID of the policy definition.
-     */
     @OutputExport(name="policyDefinitionId", type=String.class, parameters={})
     private Output<String> policyDefinitionId;
 
-    /**
-     * @return Azure resource ID of the policy definition.
-     */
     public Output<String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
-    /**
-     * Name of the resource group placeholder to which the policy will be assigned.
-     */
     @OutputExport(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
-    /**
-     * @return Name of the resource group placeholder to which the policy will be assigned.
-     */
     public Output</* @Nullable */ String> getResourceGroup() {
         return this.resourceGroup;
     }
-    /**
-     * Type of this resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of this resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PolicyAssignmentArtifact(String name, PolicyAssignmentArtifactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:blueprint:PolicyAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -691,14 +98,6 @@ Expected value is 'policyAssignment'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PolicyAssignmentArtifact get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicyAssignmentArtifact(name, id, options);
     }

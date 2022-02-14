@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvelopeSignatureArgs Empty = new EnvelopeSignatureArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="keyid")
     private final @Nullable Input<String> keyid;
 
@@ -27,9 +21,6 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
         return this.keyid == null ? Input.empty() : this.keyid;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sig")
     private final @Nullable Input<String> sig;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An SRV record.
- */
 public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SrvRecordResponse Empty = new SrvRecordResponse();
 
-    /**
-     * The port value for this SRV record.
-     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -28,9 +22,6 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * The priority value for this SRV record.
-     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -38,9 +29,6 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
-    /**
-     * The target domain name for this SRV record.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -48,9 +36,6 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
-    /**
-     * The weight value for this SRV record.
-     */
     @InputImport(name="weight")
     private final @Nullable Integer weight;
 

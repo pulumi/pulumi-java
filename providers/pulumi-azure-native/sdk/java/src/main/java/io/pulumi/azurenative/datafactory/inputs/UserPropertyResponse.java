@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * User property.
- */
 public final class UserPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserPropertyResponse Empty = new UserPropertyResponse();
 
-    /**
-     * User property name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,9 +20,6 @@ public final class UserPropertyResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * User property value. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="value", required=true)
     private final Object value;
 

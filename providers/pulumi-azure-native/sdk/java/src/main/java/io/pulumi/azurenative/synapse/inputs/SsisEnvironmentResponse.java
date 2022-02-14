@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Ssis environment.
- */
 public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisEnvironmentResponse Empty = new SsisEnvironmentResponse();
 
-    /**
-     * Metadata description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,9 +24,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Folder id which contains environment.
-     */
     @InputImport(name="folderId")
     private final @Nullable Double folderId;
 
@@ -40,9 +31,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
         return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
     }
 
-    /**
-     * Metadata id.
-     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -50,9 +38,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Metadata name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -60,10 +45,6 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The type of SSIS object metadata.
-Expected value is 'Environment'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -71,9 +52,6 @@ Expected value is 'Environment'.
         return this.type;
     }
 
-    /**
-     * Variable in environment
-     */
     @InputImport(name="variables")
     private final @Nullable List<SsisVariableResponse> variables;
 

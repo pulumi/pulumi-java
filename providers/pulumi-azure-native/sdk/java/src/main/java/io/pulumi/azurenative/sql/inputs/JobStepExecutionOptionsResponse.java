@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The execution options of a job step.
- */
 public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStepExecutionOptionsResponse Empty = new JobStepExecutionOptionsResponse();
 
-    /**
-     * Initial delay between retries for job step execution.
-     */
     @InputImport(name="initialRetryIntervalSeconds")
     private final @Nullable Integer initialRetryIntervalSeconds;
 
@@ -28,9 +22,6 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
         return this.initialRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
 
-    /**
-     * The maximum amount of time to wait between retries for job step execution.
-     */
     @InputImport(name="maximumRetryIntervalSeconds")
     private final @Nullable Integer maximumRetryIntervalSeconds;
 
@@ -38,9 +29,6 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
         return this.maximumRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
 
-    /**
-     * Maximum number of times the job step will be reattempted if the first attempt fails.
-     */
     @InputImport(name="retryAttempts")
     private final @Nullable Integer retryAttempts;
 
@@ -48,9 +36,6 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
         return this.retryAttempts == null ? Optional.empty() : Optional.ofNullable(this.retryAttempts);
     }
 
-    /**
-     * The backoff multiplier for the time between retries.
-     */
     @InputImport(name="retryIntervalBackoffMultiplier")
     private final @Nullable Double retryIntervalBackoffMultiplier;
 
@@ -58,9 +43,6 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
         return this.retryIntervalBackoffMultiplier == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
 
-    /**
-     * Execution timeout for the job step.
-     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Integer timeoutSeconds;
 

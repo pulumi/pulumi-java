@@ -12,38 +12,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
-/**
- * Source agent jobs as a map from agent job name to id.
- */
     private final Map<String,String> agentJobs;
-/**
- * Source databases as a map from database name to database id
- */
     private final Map<String,String> databases;
-/**
- * Result identifier
- */
     private final String id;
-/**
- * Source logins as a map from login name to login id.
- */
     private final Map<String,String> logins;
-/**
- * Type of result - database level or task level
-Expected value is 'TaskLevelOutput'.
- */
     private final String resultType;
-/**
- * Source server brand version
- */
     private final String sourceServerBrandVersion;
-/**
- * Source server version
- */
     private final String sourceServerVersion;
-/**
- * Validation errors
- */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @OutputCustomType.Constructor({"agentJobs","databases","id","logins","resultType","sourceServerBrandVersion","sourceServerVersion","validationErrors"})
@@ -66,52 +41,27 @@ Expected value is 'TaskLevelOutput'.
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
-/**
- * Source agent jobs as a map from agent job name to id.
- */
     public Map<String,String> getAgentJobs() {
         return this.agentJobs;
     }
-/**
- * Source databases as a map from database name to database id
- */
     public Map<String,String> getDatabases() {
         return this.databases;
     }
-/**
- * Result identifier
- */
     public String getId() {
         return this.id;
     }
-/**
- * Source logins as a map from login name to login id.
- */
     public Map<String,String> getLogins() {
         return this.logins;
     }
-/**
- * Type of result - database level or task level
-Expected value is 'TaskLevelOutput'.
- */
     public String getResultType() {
         return this.resultType;
     }
-/**
- * Source server brand version
- */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
-/**
- * Source server version
- */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
-/**
- * Validation errors
- */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

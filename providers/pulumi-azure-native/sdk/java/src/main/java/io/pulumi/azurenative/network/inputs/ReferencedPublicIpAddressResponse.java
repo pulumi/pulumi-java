@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Reference to a public IP address.
- */
 public final class ReferencedPublicIpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReferencedPublicIpAddressResponse Empty = new ReferencedPublicIpAddressResponse();
 
-    /**
-     * The PublicIPAddress Reference.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

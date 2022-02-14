@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontDoorArgs Empty = new FrontDoorArgs();
 
-    /**
-     * Backend pools available to routing rules.
-     */
     @InputImport(name="backendPools")
     private final @Nullable Input<List<BackendPoolArgs>> backendPools;
 
@@ -37,9 +31,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendPools == null ? Input.empty() : this.backendPools;
     }
 
-    /**
-     * Settings for all backendPools
-     */
     @InputImport(name="backendPoolsSettings")
     private final @Nullable Input<BackendPoolsSettingsArgs> backendPoolsSettings;
 
@@ -47,9 +38,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendPoolsSettings == null ? Input.empty() : this.backendPoolsSettings;
     }
 
-    /**
-     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
-     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,FrontDoorEnabledState>> enabledState;
 
@@ -57,9 +45,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
-    /**
-     * A friendly name for the frontDoor
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -67,9 +52,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * Name of the Front Door which is globally unique.
-     */
     @InputImport(name="frontDoorName")
     private final @Nullable Input<String> frontDoorName;
 
@@ -77,9 +59,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontDoorName == null ? Input.empty() : this.frontDoorName;
     }
 
-    /**
-     * Frontend endpoints available to routing rules.
-     */
     @InputImport(name="frontendEndpoints")
     private final @Nullable Input<List<FrontendEndpointArgs>> frontendEndpoints;
 
@@ -87,9 +66,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendEndpoints == null ? Input.empty() : this.frontendEndpoints;
     }
 
-    /**
-     * Health probe settings associated with this Front Door instance.
-     */
     @InputImport(name="healthProbeSettings")
     private final @Nullable Input<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
@@ -97,9 +73,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthProbeSettings == null ? Input.empty() : this.healthProbeSettings;
     }
 
-    /**
-     * Load balancing settings associated with this Front Door instance.
-     */
     @InputImport(name="loadBalancingSettings")
     private final @Nullable Input<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
@@ -107,9 +80,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancingSettings == null ? Input.empty() : this.loadBalancingSettings;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -117,9 +87,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -127,9 +94,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Routing rules associated with this Front Door.
-     */
     @InputImport(name="routingRules")
     private final @Nullable Input<List<RoutingRuleArgs>> routingRules;
 
@@ -137,9 +101,6 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingRules == null ? Input.empty() : this.routingRules;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

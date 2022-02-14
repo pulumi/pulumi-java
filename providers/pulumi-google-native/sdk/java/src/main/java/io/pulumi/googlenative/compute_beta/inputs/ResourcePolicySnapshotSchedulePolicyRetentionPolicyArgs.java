@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Policy for retention of scheduled snapshots.
- */
 public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs Empty = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs();
 
-    /**
-     * Maximum age of the snapshot that is allowed to be kept.
-     */
     @InputImport(name="maxRetentionDays")
     private final @Nullable Input<Integer> maxRetentionDays;
 
@@ -28,9 +22,6 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
         return this.maxRetentionDays == null ? Input.empty() : this.maxRetentionDays;
     }
 
-    /**
-     * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
-     */
     @InputImport(name="onSourceDiskDelete")
     private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
 

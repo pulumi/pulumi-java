@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional information on Backup engine specific backup item.
- */
 public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DPMProtectedItemArgs Empty = new DPMProtectedItemArgs();
 
-    /**
-     * Backup Management server protecting this backup item
-     */
     @InputImport(name="backupEngineName")
     private final @Nullable Input<String> backupEngineName;
 
@@ -34,9 +28,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.backupEngineName == null ? Input.empty() : this.backupEngineName;
     }
 
-    /**
-     * Type of backup management for the backed up item.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -44,9 +35,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
-    /**
-     * Name of the backup set the backup item belongs to
-     */
     @InputImport(name="backupSetName")
     private final @Nullable Input<String> backupSetName;
 
@@ -54,9 +42,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
     }
 
-    /**
-     * Unique name of container
-     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -64,9 +49,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
-    /**
-     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -74,9 +56,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
-    /**
-     * Time for deferred deletion in UTC
-     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
@@ -84,9 +63,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
     }
 
-    /**
-     * Time remaining before the DS marked for deferred delete is permanently deleted
-     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
@@ -94,9 +70,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
     }
 
-    /**
-     * Extended info of the backup item.
-     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<DPMProtectedItemExtendedInfoArgs> extendedInfo;
 
@@ -104,9 +77,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
-    /**
-     * Friendly name of the managed item
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -114,9 +84,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * Flag to identify whether the deferred deleted DS is to be purged soon
-     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
@@ -124,9 +91,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
-    /**
-     * Flag to identify that deferred deleted DS is to be moved into Pause state
-     */
     @InputImport(name="isRehydrate")
     private final @Nullable Input<Boolean> isRehydrate;
 
@@ -134,9 +98,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
     }
 
-    /**
-     * Flag to identify whether the DS is scheduled for deferred delete
-     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
@@ -144,9 +105,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
     }
 
-    /**
-     * Timestamp when the last (latest) backup copy was created for this backup item.
-     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable Input<String> lastRecoveryPoint;
 
@@ -154,9 +112,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
     }
 
-    /**
-     * ID of the backup policy with which this item is backed up.
-     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -164,10 +119,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
-    /**
-     * backup item type.
-Expected value is 'DPMProtectedItem'.
-     */
     @InputImport(name="protectedItemType", required=true)
     private final Input<String> protectedItemType;
 
@@ -175,9 +126,6 @@ Expected value is 'DPMProtectedItem'.
         return this.protectedItemType;
     }
 
-    /**
-     * Protection state of the backup engine
-     */
     @InputImport(name="protectionState")
     private final @Nullable Input<Either<String,ProtectedItemState>> protectionState;
 
@@ -185,9 +133,6 @@ Expected value is 'DPMProtectedItem'.
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
-    /**
-     * ARM ID of the resource to be backed up.
-     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -195,9 +140,6 @@ Expected value is 'DPMProtectedItem'.
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
-    /**
-     * Type of workload this item represents.
-     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 

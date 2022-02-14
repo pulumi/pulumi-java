@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvVarSource {
-/**
- * Selects a key of a ConfigMap.
- */
     private final @Nullable ConfigMapKeySelector configMapKeyRef;
-/**
- * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
- */
     private final @Nullable ObjectFieldSelector fieldRef;
-/**
- * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
- */
     private final @Nullable ResourceFieldSelector resourceFieldRef;
-/**
- * Selects a key of a secret in the pod's namespace
- */
     private final @Nullable SecretKeySelector secretKeyRef;
 
     @OutputCustomType.Constructor({"configMapKeyRef","fieldRef","resourceFieldRef","secretKeyRef"})
@@ -43,27 +31,15 @@ public final class EnvVarSource {
         this.secretKeyRef = secretKeyRef;
     }
 
-/**
- * Selects a key of a ConfigMap.
- */
     public Optional<ConfigMapKeySelector> getConfigMapKeyRef() {
         return Optional.ofNullable(this.configMapKeyRef);
     }
-/**
- * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
- */
     public Optional<ObjectFieldSelector> getFieldRef() {
         return Optional.ofNullable(this.fieldRef);
     }
-/**
- * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
- */
     public Optional<ResourceFieldSelector> getResourceFieldRef() {
         return Optional.ofNullable(this.resourceFieldRef);
     }
-/**
- * Selects a key of a secret in the pod's namespace
- */
     public Optional<SecretKeySelector> getSecretKeyRef() {
         return Optional.ofNullable(this.secretKeyRef);
     }

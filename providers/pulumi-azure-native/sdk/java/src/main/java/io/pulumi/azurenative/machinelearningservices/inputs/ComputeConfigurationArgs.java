@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for compute binding.
- */
 public final class ComputeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComputeConfigurationArgs Empty = new ComputeConfigurationArgs();
 
-    /**
-     * Number of instances or nodes.
-     */
     @InputImport(name="instanceCount")
     private final @Nullable Input<Integer> instanceCount;
 
@@ -30,9 +24,6 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
     }
 
-    /**
-     * SKU type to run on.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -40,9 +31,6 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * Set to true for jobs running on local compute.
-     */
     @InputImport(name="isLocal")
     private final @Nullable Input<Boolean> isLocal;
 
@@ -50,9 +38,6 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
         return this.isLocal == null ? Input.empty() : this.isLocal;
     }
 
-    /**
-     * Location for virtual cluster run.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,9 +45,6 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Additional properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -70,9 +52,6 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * ARM resource ID of the compute resource.
-     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Metadata for a BigQuery connector used by the job.
- */
 public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BigQueryIODetailsResponse Empty = new BigQueryIODetailsResponse();
 
-    /**
-     * Dataset accessed in the connection.
-     */
     @InputImport(name="dataset", required=true)
     private final String dataset;
 
@@ -25,9 +19,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
         return this.dataset;
     }
 
-    /**
-     * Project accessed in the connection.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -35,9 +26,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
         return this.project;
     }
 
-    /**
-     * Query used to access data in the connection.
-     */
     @InputImport(name="query", required=true)
     private final String query;
 
@@ -45,9 +33,6 @@ public final class BigQueryIODetailsResponse extends io.pulumi.resources.InvokeA
         return this.query;
     }
 
-    /**
-     * Table accessed in the connection.
-     */
     @InputImport(name="table", required=true)
     private final String table;
 

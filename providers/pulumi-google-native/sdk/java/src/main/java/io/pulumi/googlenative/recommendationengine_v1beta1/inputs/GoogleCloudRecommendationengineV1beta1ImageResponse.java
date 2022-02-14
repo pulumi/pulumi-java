@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Catalog item thumbnail/detail image.
- */
 public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ImageResponse Empty = new GoogleCloudRecommendationengineV1beta1ImageResponse();
 
-    /**
-     * Optional. Height of the image in number of pixels.
-     */
     @InputImport(name="height", required=true)
     private final Integer height;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
         return this.height;
     }
 
-    /**
-     * URL of the image with a length limit of 5 KiB.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 
@@ -36,9 +27,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
         return this.uri;
     }
 
-    /**
-     * Optional. Width of the image in number of pixels.
-     */
     @InputImport(name="width", required=true)
     private final Integer width;
 

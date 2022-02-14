@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SandboxConfig contains configurations of the sandbox to use for the node.
- */
 public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SandboxConfigArgs Empty = new SandboxConfigArgs();
 
-    /**
-     * Type of the sandbox to use for the node (e.g. 'gvisor')
-     */
     @InputImport(name="sandboxType")
     private final @Nullable Input<String> sandboxType;
 
@@ -28,9 +22,6 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.sandboxType == null ? Input.empty() : this.sandboxType;
     }
 
-    /**
-     * Type of the sandbox to use for the node.
-     */
     @InputImport(name="type")
     private final @Nullable Input<SandboxConfigType> type;
 

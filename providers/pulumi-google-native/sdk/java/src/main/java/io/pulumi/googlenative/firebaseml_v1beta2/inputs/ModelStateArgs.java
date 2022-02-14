@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * State common to all model types. Includes publishing and validation information.
- */
 public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelStateArgs Empty = new ModelStateArgs();
 
-    /**
-     * Indicates if this model has been published.
-     */
     @InputImport(name="published")
     private final @Nullable Input<Boolean> published;
 

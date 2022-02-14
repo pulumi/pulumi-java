@@ -17,45 +17,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestSpecificationResponse {
-/**
- * An Android instrumentation test.
- */
     private final AndroidInstrumentationTestResponse androidInstrumentationTest;
-/**
- * An Android robo test.
- */
     private final AndroidRoboTestResponse androidRoboTest;
-/**
- * An Android Application with a Test Loop.
- */
     private final AndroidTestLoopResponse androidTestLoop;
-/**
- * Disables performance metrics recording. May reduce test latency.
- */
     private final Boolean disablePerformanceMetrics;
-/**
- * Disables video recording. May reduce test latency.
- */
     private final Boolean disableVideoRecording;
-/**
- * An iOS application with a test loop.
- */
     private final IosTestLoopResponse iosTestLoop;
-/**
- * Test setup requirements for iOS.
- */
     private final IosTestSetupResponse iosTestSetup;
-/**
- * An iOS XCTest, via an .xctestrun file.
- */
     private final IosXcTestResponse iosXcTest;
-/**
- * Test setup requirements for Android e.g. files to install, bootstrap scripts.
- */
     private final TestSetupResponse testSetup;
-/**
- * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
- */
     private final String testTimeout;
 
     @OutputCustomType.Constructor({"androidInstrumentationTest","androidRoboTest","androidTestLoop","disablePerformanceMetrics","disableVideoRecording","iosTestLoop","iosTestSetup","iosXcTest","testSetup","testTimeout"})
@@ -82,63 +52,33 @@ public final class TestSpecificationResponse {
         this.testTimeout = Objects.requireNonNull(testTimeout);
     }
 
-/**
- * An Android instrumentation test.
- */
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
-/**
- * An Android robo test.
- */
     public AndroidRoboTestResponse getAndroidRoboTest() {
         return this.androidRoboTest;
     }
-/**
- * An Android Application with a Test Loop.
- */
     public AndroidTestLoopResponse getAndroidTestLoop() {
         return this.androidTestLoop;
     }
-/**
- * Disables performance metrics recording. May reduce test latency.
- */
     public Boolean getDisablePerformanceMetrics() {
         return this.disablePerformanceMetrics;
     }
-/**
- * Disables video recording. May reduce test latency.
- */
     public Boolean getDisableVideoRecording() {
         return this.disableVideoRecording;
     }
-/**
- * An iOS application with a test loop.
- */
     public IosTestLoopResponse getIosTestLoop() {
         return this.iosTestLoop;
     }
-/**
- * Test setup requirements for iOS.
- */
     public IosTestSetupResponse getIosTestSetup() {
         return this.iosTestSetup;
     }
-/**
- * An iOS XCTest, via an .xctestrun file.
- */
     public IosXcTestResponse getIosXcTest() {
         return this.iosXcTest;
     }
-/**
- * Test setup requirements for Android e.g. files to install, bootstrap scripts.
- */
     public TestSetupResponse getTestSetup() {
         return this.testSetup;
     }
-/**
- * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
- */
     public String getTestTimeout() {
         return this.testTimeout;
     }

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendService {
-/**
- * Returns the specified BackendService resource. Gets a list of available backend services.
- */
     public static CompletableFuture<GetBackendServiceResult> invokeAsync(GetBackendServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getBackendService", TypeShape.of(GetBackendServiceResult.class), args == null ? GetBackendServiceArgs.Empty : args, Utilities.withVersion(options));
     }

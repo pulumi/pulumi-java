@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SshProfileResponse {
-/**
- * The list of SSH public keys.
- */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
     @OutputCustomType.Constructor({"publicKeys"})
@@ -21,9 +18,6 @@ public final class SshProfileResponse {
         this.publicKeys = publicKeys;
     }
 
-/**
- * The list of SSH public keys.
- */
     public List<SshPublicKeyResponse> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

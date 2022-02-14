@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Normal BigQuery table spec.
- */
 public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1beta1TableSpecResponse Empty = new GoogleCloudDatacatalogV1beta1TableSpecResponse();
 
-    /**
-     * If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.
-     */
     @InputImport(name="groupedEntry", required=true)
     private final String groupedEntry;
 

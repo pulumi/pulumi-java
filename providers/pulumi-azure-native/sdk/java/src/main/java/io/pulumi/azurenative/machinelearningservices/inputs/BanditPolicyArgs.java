@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines an early termination policy based on slack criteria, and a frequency and delay interval for evaluation.
- */
 public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BanditPolicyArgs Empty = new BanditPolicyArgs();
 
-    /**
-     * Number of intervals by which to delay the first evaluation.
-     */
     @InputImport(name="delayEvaluation")
     private final @Nullable Input<Integer> delayEvaluation;
 
@@ -29,9 +23,6 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.delayEvaluation == null ? Input.empty() : this.delayEvaluation;
     }
 
-    /**
-     * Interval (number of runs) between policy evaluations.
-     */
     @InputImport(name="evaluationInterval")
     private final @Nullable Input<Integer> evaluationInterval;
 
@@ -39,10 +30,6 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
     }
 
-    /**
-     * 
-Expected value is 'Bandit'.
-     */
     @InputImport(name="policyType", required=true)
     private final Input<String> policyType;
 
@@ -50,9 +37,6 @@ Expected value is 'Bandit'.
         return this.policyType;
     }
 
-    /**
-     * Absolute distance allowed from the best performing run.
-     */
     @InputImport(name="slackAmount")
     private final @Nullable Input<Double> slackAmount;
 
@@ -60,9 +44,6 @@ Expected value is 'Bandit'.
         return this.slackAmount == null ? Input.empty() : this.slackAmount;
     }
 
-    /**
-     * Ratio of the allowed distance from the best performing run.
-     */
     @InputImport(name="slackFactor")
     private final @Nullable Input<Double> slackFactor;
 

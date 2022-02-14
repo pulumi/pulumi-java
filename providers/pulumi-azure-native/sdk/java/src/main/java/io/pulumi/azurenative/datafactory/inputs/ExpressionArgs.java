@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Azure Data Factory expression definition.
- */
 public final class ExpressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressionArgs Empty = new ExpressionArgs();
 
-    /**
-     * Expression type.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -26,9 +20,6 @@ public final class ExpressionArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
-    /**
-     * Expression value.
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

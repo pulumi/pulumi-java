@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlacementPolicyArgs Empty = new PlacementPolicyArgs();
 
-    /**
-     * Name of the cluster in the private cloud
-     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -30,9 +24,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.clusterName;
     }
 
-    /**
-     * Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
-     */
     @InputImport(name="placementPolicyName")
     private final @Nullable Input<String> placementPolicyName;
 
@@ -40,9 +31,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.placementPolicyName == null ? Input.empty() : this.placementPolicyName;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -50,9 +38,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.privateCloudName;
     }
 
-    /**
-     * placement policy properties
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
@@ -60,9 +45,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

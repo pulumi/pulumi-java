@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdminRuleArgs Empty = new AdminRuleArgs();
 
-    /**
-     * The name of the network manager security Configuration.
-     */
     @InputImport(name="configurationName", required=true)
     private final Input<String> configurationName;
 
@@ -29,9 +23,6 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.configurationName;
     }
 
-    /**
-     * Whether the rule is custom or default.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,AdminRuleKind>> kind;
 
@@ -39,9 +30,6 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -49,9 +37,6 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the network manager security Configuration rule collection.
-     */
     @InputImport(name="ruleCollectionName", required=true)
     private final Input<String> ruleCollectionName;
 
@@ -69,9 +51,6 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleCollectionName;
     }
 
-    /**
-     * The name of the rule.
-     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 

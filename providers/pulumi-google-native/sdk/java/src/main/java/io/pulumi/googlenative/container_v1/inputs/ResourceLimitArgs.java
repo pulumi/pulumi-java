@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains information about amount of some resource in the cluster. For memory, value should be in GB.
- */
 public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceLimitArgs Empty = new ResourceLimitArgs();
 
-    /**
-     * Maximum amount of the resource in the cluster.
-     */
     @InputImport(name="maximum")
     private final @Nullable Input<String> maximum;
 
@@ -27,9 +21,6 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximum == null ? Input.empty() : this.maximum;
     }
 
-    /**
-     * Minimum amount of the resource in the cluster.
-     */
     @InputImport(name="minimum")
     private final @Nullable Input<String> minimum;
 
@@ -37,9 +28,6 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimum == null ? Input.empty() : this.minimum;
     }
 
-    /**
-     * Resource name "cpu", "memory" or gpu-specific string.
-     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 

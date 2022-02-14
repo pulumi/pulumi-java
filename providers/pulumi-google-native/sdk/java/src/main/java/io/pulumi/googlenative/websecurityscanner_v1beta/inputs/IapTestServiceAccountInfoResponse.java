@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
- */
 public final class IapTestServiceAccountInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IapTestServiceAccountInfoResponse Empty = new IapTestServiceAccountInfoResponse();
 
-    /**
-     * Describes OAuth2 Client ID of resources protected by Identity-Aware-Proxy(IAP).
-     */
     @InputImport(name="targetAudienceClientId", required=true)
     private final String targetAudienceClientId;
 

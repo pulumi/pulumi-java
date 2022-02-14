@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataCollectionRuleAssociationArgs Empty = new DataCollectionRuleAssociationArgs();
 
-    /**
-     * The name of the association. The name is case insensitive.
-     */
     @InputImport(name="associationName")
     private final @Nullable Input<String> associationName;
 
@@ -27,9 +21,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
         return this.associationName == null ? Input.empty() : this.associationName;
     }
 
-    /**
-     * The resource ID of the data collection rule that is to be associated.
-     */
     @InputImport(name="dataCollectionRuleId")
     private final @Nullable Input<String> dataCollectionRuleId;
 
@@ -37,9 +28,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
         return this.dataCollectionRuleId == null ? Input.empty() : this.dataCollectionRuleId;
     }
 
-    /**
-     * Description of the association.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,9 +35,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The identifier of the resource.
-     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 

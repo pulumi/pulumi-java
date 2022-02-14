@@ -11,37 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobStepOutputResponse {
-/**
- * The resource ID of the credential to use to connect to the output destination.
- */
     private final String credential;
-/**
- * The output destination database.
- */
     private final String databaseName;
-/**
- * The output destination resource group.
- */
     private final @Nullable String resourceGroupName;
-/**
- * The output destination schema.
- */
     private final @Nullable String schemaName;
-/**
- * The output destination server name.
- */
     private final String serverName;
-/**
- * The output destination subscription id.
- */
     private final @Nullable String subscriptionId;
-/**
- * The output destination table.
- */
     private final String tableName;
-/**
- * The output destination type.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"credential","databaseName","resourceGroupName","schemaName","serverName","subscriptionId","tableName","type"})
@@ -64,51 +40,27 @@ public final class JobStepOutputResponse {
         this.type = type;
     }
 
-/**
- * The resource ID of the credential to use to connect to the output destination.
- */
     public String getCredential() {
         return this.credential;
     }
-/**
- * The output destination database.
- */
     public String getDatabaseName() {
         return this.databaseName;
     }
-/**
- * The output destination resource group.
- */
     public Optional<String> getResourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
-/**
- * The output destination schema.
- */
     public Optional<String> getSchemaName() {
         return Optional.ofNullable(this.schemaName);
     }
-/**
- * The output destination server name.
- */
     public String getServerName() {
         return this.serverName;
     }
-/**
- * The output destination subscription id.
- */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
-/**
- * The output destination table.
- */
     public String getTableName() {
         return this.tableName;
     }
-/**
- * The output destination type.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

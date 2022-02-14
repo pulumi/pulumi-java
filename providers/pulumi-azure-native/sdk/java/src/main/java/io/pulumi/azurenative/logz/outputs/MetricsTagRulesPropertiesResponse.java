@@ -15,21 +15,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricsTagRulesPropertiesResponse {
-/**
- * 
- */
     private final @Nullable List<MetricRulesResponse> metricRules;
-/**
- * Flag specifying if the resource provisioning state as tracked by ARM.
- */
     private final String provisioningState;
-/**
- * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
- */
     private final @Nullable Boolean sendMetrics;
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     private final SystemDataResponse systemData;
 
     @OutputCustomType.Constructor({"metricRules","provisioningState","sendMetrics","systemData"})
@@ -44,27 +32,15 @@ public final class MetricsTagRulesPropertiesResponse {
         this.systemData = Objects.requireNonNull(systemData);
     }
 
-/**
- * 
- */
     public List<MetricRulesResponse> getMetricRules() {
         return this.metricRules == null ? List.of() : this.metricRules;
     }
-/**
- * Flag specifying if the resource provisioning state as tracked by ARM.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
- */
     public Optional<Boolean> getSendMetrics() {
         return Optional.ofNullable(this.sendMetrics);
     }
-/**
- * Metadata pertaining to creation and last modification of the resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuCostResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuCostResponse Empty = new SkuCostResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="extendedUnit")
     private final @Nullable String extendedUnit;
 
@@ -28,9 +22,6 @@ public final class SkuCostResponse extends io.pulumi.resources.InvokeArgs {
         return this.extendedUnit == null ? Optional.empty() : Optional.ofNullable(this.extendedUnit);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="meterId", required=true)
     private final String meterId;
 
@@ -38,9 +29,6 @@ public final class SkuCostResponse extends io.pulumi.resources.InvokeArgs {
         return this.meterId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="quantity")
     private final @Nullable Integer quantity;
 

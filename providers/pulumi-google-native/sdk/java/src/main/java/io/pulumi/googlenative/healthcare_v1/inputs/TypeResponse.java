@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A type definition for some HL7v2 type (incl. Segments and Datatypes).
- */
 public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TypeResponse Empty = new TypeResponse();
 
-    /**
-     * The (sub) fields this type has (if not primitive).
-     */
     @InputImport(name="fields", required=true)
     private final List<FieldResponse> fields;
 
@@ -27,9 +21,6 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.fields;
     }
 
-    /**
-     * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,9 +28,6 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
-     */
     @InputImport(name="primitive", required=true)
     private final String primitive;
 

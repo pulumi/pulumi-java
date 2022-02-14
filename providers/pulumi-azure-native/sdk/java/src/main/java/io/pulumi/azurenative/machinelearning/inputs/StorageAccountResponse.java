@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Access information for a storage account.
- */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountResponse Empty = new StorageAccountResponse();
 
-    /**
-     * Specifies the key used to access the storage account.
-     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -27,9 +21,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
-    /**
-     * Specifies the name of the storage account.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

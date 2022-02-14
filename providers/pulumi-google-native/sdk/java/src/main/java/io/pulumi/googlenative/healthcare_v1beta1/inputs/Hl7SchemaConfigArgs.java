@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Root config message for HL7v2 schema. This contains a schema structure of groups and segments, and filters that determine which messages to apply the schema structure to.
- */
 public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Hl7SchemaConfigArgs Empty = new Hl7SchemaConfigArgs();
 
-    /**
-     * Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
-     */
     @InputImport(name="messageSchemaConfigs")
     private final @Nullable Input<Map<String,String>> messageSchemaConfigs;
 
@@ -30,9 +24,6 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.messageSchemaConfigs == null ? Input.empty() : this.messageSchemaConfigs;
     }
 
-    /**
-     * Each VersionSource is tested and only if they all match is the schema used for the message.
-     */
     @InputImport(name="version")
     private final @Nullable Input<List<VersionSourceArgs>> version;
 

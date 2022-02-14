@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Output for the task that validates connection to SQL DB and target server requirements
- */
 public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetSqlDbTaskOutputResponse Empty = new ConnectToTargetSqlDbTaskOutputResponse();
 
-    /**
-     * Source databases as a map from database name to database id
-     */
     @InputImport(name="databases", required=true)
     private final Map<String,String> databases;
 
@@ -26,9 +20,6 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
         return this.databases;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,9 +27,6 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
         return this.id;
     }
 
-    /**
-     * Target server brand version
-     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -46,9 +34,6 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
         return this.targetServerBrandVersion;
     }
 
-    /**
-     * Version of the target server
-     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

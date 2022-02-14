@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the types of hardware accelerators that can be used. Definition of the types of hardware accelerators that can be used. See [Compute Engine AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes). Examples: * `nvidia-tesla-k80` * `nvidia-tesla-p100` * `nvidia-tesla-v100` * `nvidia-tesla-p4` * `nvidia-tesla-t4` * `nvidia-tesla-a100`
- */
 public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeAcceleratorConfigArgs Empty = new RuntimeAcceleratorConfigArgs();
 
-    /**
-     * Count of cores of this accelerator.
-     */
     @InputImport(name="coreCount")
     private final @Nullable Input<String> coreCount;
 
@@ -28,9 +22,6 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
         return this.coreCount == null ? Input.empty() : this.coreCount;
     }
 
-    /**
-     * Accelerator model.
-     */
     @InputImport(name="type")
     private final @Nullable Input<RuntimeAcceleratorConfigType> type;
 

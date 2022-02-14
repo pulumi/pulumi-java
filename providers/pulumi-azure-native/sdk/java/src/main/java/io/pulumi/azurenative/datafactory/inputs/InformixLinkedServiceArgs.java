@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Informix linked service.
- */
 public final class InformixLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InformixLinkedServiceArgs Empty = new InformixLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Type of authentication used to connect to the Informix as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Object> authenticationType;
 
@@ -45,9 +36,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -55,9 +43,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString", required=true)
     private final Input<Object> connectionString;
 
@@ -65,9 +50,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.connectionString;
     }
 
-    /**
-     * The access credential portion of the connection string specified in driver-specific property-value format.
-     */
     @InputImport(name="credential")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential;
 
@@ -75,9 +57,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.credential == null ? Input.empty() : this.credential;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -85,9 +64,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -95,9 +71,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -105,9 +78,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password for Basic authentication.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -115,10 +85,6 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Informix'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -126,9 +92,6 @@ Expected value is 'Informix'.
         return this.type;
     }
 
-    /**
-     * User name for Basic authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="userName")
     private final @Nullable Input<Object> userName;
 

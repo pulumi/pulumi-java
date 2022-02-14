@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Certificate configuration which consist of non-trusted intermediates and root certificates.
- */
 public final class CertificateConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateConfigurationResponse Empty = new CertificateConfigurationResponse();
 
-    /**
-     * Certificate information.
-     */
     @InputImport(name="certificate")
     private final @Nullable CertificateInformationResponse certificate;
 
@@ -28,9 +22,6 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
     }
 
-    /**
-     * Certificate Password.
-     */
     @InputImport(name="certificatePassword")
     private final @Nullable String certificatePassword;
 
@@ -38,9 +29,6 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
         return this.certificatePassword == null ? Optional.empty() : Optional.ofNullable(this.certificatePassword);
     }
 
-    /**
-     * Base64 Encoded certificate.
-     */
     @InputImport(name="encodedCertificate")
     private final @Nullable String encodedCertificate;
 
@@ -48,9 +36,6 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
         return this.encodedCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedCertificate);
     }
 
-    /**
-     * The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
-     */
     @InputImport(name="storeName", required=true)
     private final String storeName;
 

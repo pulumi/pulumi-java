@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionPreferencesResponse {
-/**
- * Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
- */
     private final @Nullable String doubleEncryptionStatus;
 
     @OutputCustomType.Constructor({"doubleEncryptionStatus"})
@@ -21,9 +18,6 @@ public final class EncryptionPreferencesResponse {
         this.doubleEncryptionStatus = doubleEncryptionStatus;
     }
 
-/**
- * Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
- */
     public Optional<String> getDoubleEncryptionStatus() {
         return Optional.ofNullable(this.doubleEncryptionStatus);
     }

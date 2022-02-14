@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Describes the named partition scheme of the service.
- */
 public final class NamedPartitionSchemeDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NamedPartitionSchemeDescriptionResponse Empty = new NamedPartitionSchemeDescriptionResponse();
 
-    /**
-     * The number of partitions.
-     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -27,9 +21,6 @@ public final class NamedPartitionSchemeDescriptionResponse extends io.pulumi.res
         return this.count;
     }
 
-    /**
-     * Array of size specified by the ‘count’ parameter, for the names of the partitions.
-     */
     @InputImport(name="names", required=true)
     private final List<String> names;
 
@@ -37,10 +28,6 @@ public final class NamedPartitionSchemeDescriptionResponse extends io.pulumi.res
         return this.names;
     }
 
-    /**
-     * Enumerates the ways that a service can be partitioned.
-Expected value is 'Named'.
-     */
     @InputImport(name="partitionScheme", required=true)
     private final String partitionScheme;
 

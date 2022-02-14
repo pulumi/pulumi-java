@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * a plain text value execution parameter
- */
 public final class ScriptSecureStringExecutionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScriptSecureStringExecutionParameterResponse Empty = new ScriptSecureStringExecutionParameterResponse();
 
-    /**
-     * The parameter name
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +21,6 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
         return this.name;
     }
 
-    /**
-     * A secure value for the passed parameter, not to be stored in logs
-     */
     @InputImport(name="secureValue")
     private final @Nullable String secureValue;
 
@@ -37,10 +28,6 @@ public final class ScriptSecureStringExecutionParameterResponse extends io.pulum
         return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
     }
 
-    /**
-     * The type of execution parameter
-Expected value is 'SecureValue'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

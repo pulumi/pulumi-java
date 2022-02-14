@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagementLockAtSubscriptionLevelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementLockAtSubscriptionLevelArgs Empty = new GetManagementLockAtSubscriptionLevelArgs();
 
-    /**
-     * The name of the lock to get.
-     */
     @InputImport(name="lockName", required=true)
     private final String lockName;
 

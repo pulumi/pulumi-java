@@ -8,16 +8,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleRespons
 import java.util.Objects;
 
 
-/**
- * Deprecated; use `InspectionRuleSet` instead. Rule for modifying a `CustomInfoType` to alter behavior under certain circumstances, depending on the specific details of the rule. Not supported for the `surrogate_type` custom infoType.
- */
 public final class GooglePrivacyDlpV2DetectionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2DetectionRuleResponse Empty = new GooglePrivacyDlpV2DetectionRuleResponse();
 
-    /**
-     * Hotword-based detection rule.
-     */
     @InputImport(name="hotwordRule", required=true)
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 

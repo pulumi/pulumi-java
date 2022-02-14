@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Label object for TypeProviders
- */
 public final class TypeProviderLabelEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TypeProviderLabelEntryResponse Empty = new TypeProviderLabelEntryResponse();
 
-    /**
-     * Key of the label
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -25,9 +19,6 @@ public final class TypeProviderLabelEntryResponse extends io.pulumi.resources.In
         return this.key;
     }
 
-    /**
-     * Value of the label
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

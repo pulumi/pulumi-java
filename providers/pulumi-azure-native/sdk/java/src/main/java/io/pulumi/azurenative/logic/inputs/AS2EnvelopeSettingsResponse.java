@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The AS2 agreement envelope settings.
- */
 public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AS2EnvelopeSettingsResponse Empty = new AS2EnvelopeSettingsResponse();
 
-    /**
-     * The value indicating whether to auto generate file name.
-     */
     @InputImport(name="autogenerateFileName", required=true)
     private final Boolean autogenerateFileName;
 
@@ -26,9 +20,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
         return this.autogenerateFileName;
     }
 
-    /**
-     * The template for file name.
-     */
     @InputImport(name="fileNameTemplate", required=true)
     private final String fileNameTemplate;
 
@@ -36,9 +27,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
         return this.fileNameTemplate;
     }
 
-    /**
-     * The message content type.
-     */
     @InputImport(name="messageContentType", required=true)
     private final String messageContentType;
 
@@ -46,9 +34,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
         return this.messageContentType;
     }
 
-    /**
-     * The value indicating whether to suspend message on file name generation error.
-     */
     @InputImport(name="suspendMessageOnFileNameGenerationError", required=true)
     private final Boolean suspendMessageOnFileNameGenerationError;
 
@@ -56,9 +41,6 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
         return this.suspendMessageOnFileNameGenerationError;
     }
 
-    /**
-     * The value indicating whether to transmit file name in mime header.
-     */
     @InputImport(name="transmitFileNameInMimeHeader", required=true)
     private final Boolean transmitFileNameInMimeHeader;
 

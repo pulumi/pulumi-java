@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrialArgs Empty = new TrialArgs();
 
-    /**
-     * The final measurement containing the objective value.
-     */
     @InputImport(name="finalMeasurement")
     private final @Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
@@ -31,9 +25,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
         return this.finalMeasurement == null ? Input.empty() : this.finalMeasurement;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
-     */
     @InputImport(name="measurements")
     private final @Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
@@ -51,9 +39,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
         return this.measurements == null ? Input.empty() : this.measurements;
     }
 
-    /**
-     * The parameters of the trial.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
@@ -61,9 +46,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -71,9 +53,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The detailed state of a trial.
-     */
     @InputImport(name="state")
     private final @Nullable Input<TrialState> state;
 
@@ -81,9 +60,6 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="studyId", required=true)
     private final Input<String> studyId;
 

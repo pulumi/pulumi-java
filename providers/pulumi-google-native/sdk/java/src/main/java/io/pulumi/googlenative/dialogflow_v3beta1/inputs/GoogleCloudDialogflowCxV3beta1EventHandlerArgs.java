@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An event handler specifies an event that can be handled during a session. When the specified event happens, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the event, it will be called. * If there is a `target_page` associated with the event, the session will transition into the specified page. * If there is a `target_flow` associated with the event, the session will transition into the specified flow.
- */
 public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EventHandlerArgs Empty = new GoogleCloudDialogflowCxV3beta1EventHandlerArgs();
 
-    /**
-     * The name of the event to handle.
-     */
     @InputImport(name="event", required=true)
     private final Input<String> event;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
         return this.event;
     }
 
-    /**
-     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
-     */
     @InputImport(name="targetFlow")
     private final @Nullable Input<String> targetFlow;
 
@@ -38,9 +29,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
     }
 
-    /**
-     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
-     */
     @InputImport(name="targetPage")
     private final @Nullable Input<String> targetPage;
 
@@ -48,9 +36,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends io.pul
         return this.targetPage == null ? Input.empty() : this.targetPage;
     }
 
-    /**
-     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
-     */
     @InputImport(name="triggerFulfillment")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 

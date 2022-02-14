@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIncidentCommentArgs Empty = new GetIncidentCommentArgs();
 
-    /**
-     * Incident comment ID
-     */
     @InputImport(name="incidentCommentId", required=true)
     private final String incidentCommentId;
 
@@ -25,9 +19,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.incidentCommentId;
     }
 
-    /**
-     * Incident ID
-     */
     @InputImport(name="incidentId", required=true)
     private final String incidentId;
 
@@ -35,9 +26,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.incidentId;
     }
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -45,9 +33,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -55,9 +40,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

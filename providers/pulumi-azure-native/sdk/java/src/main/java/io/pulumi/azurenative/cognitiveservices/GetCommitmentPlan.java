@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCommitmentPlan {
-/**
- * Cognitive Services account commitment plan.
-API Version: 2021-10-01.
- *
- * Cognitive Services account commitment plan.
- */
     public static CompletableFuture<GetCommitmentPlanResult> invokeAsync(GetCommitmentPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args == null ? GetCommitmentPlanArgs.Empty : args, Utilities.withVersion(options));
     }

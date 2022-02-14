@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Network details of the environment
- */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceResponse Empty = new NetworkInterfaceResponse();
 
-    /**
-     * PrivateIp address of the Compute VM
-     */
     @InputImport(name="privateIpAddress", required=true)
     private final String privateIpAddress;
 
@@ -25,9 +19,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.privateIpAddress;
     }
 
-    /**
-     * Connection information for Windows
-     */
     @InputImport(name="rdpAuthority", required=true)
     private final String rdpAuthority;
 
@@ -35,9 +26,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.rdpAuthority;
     }
 
-    /**
-     * Connection information for Linux
-     */
     @InputImport(name="sshAuthority", required=true)
     private final String sshAuthority;
 
@@ -45,9 +33,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.sshAuthority;
     }
 
-    /**
-     * Username of the VM
-     */
     @InputImport(name="username", required=true)
     private final String username;
 

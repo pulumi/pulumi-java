@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlueprint {
-/**
- * Represents a Blueprint definition.
-API Version: 2018-11-01-preview.
- *
- * Represents a Blueprint definition.
- */
     public static CompletableFuture<GetBlueprintResult> invokeAsync(GetBlueprintArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getBlueprint", TypeShape.of(GetBlueprintResult.class), args == null ? GetBlueprintArgs.Empty : args, Utilities.withVersion(options));
     }

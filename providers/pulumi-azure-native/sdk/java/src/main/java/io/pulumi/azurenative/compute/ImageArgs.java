@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 
-    /**
-     * The extended location of the Image.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -33,9 +27,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
-     */
     @InputImport(name="hyperVGeneration")
     private final @Nullable Input<Either<String,HyperVGenerationTypes>> hyperVGeneration;
 
@@ -43,9 +34,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
     }
 
-    /**
-     * The name of the image.
-     */
     @InputImport(name="imageName")
     private final @Nullable Input<String> imageName;
 
@@ -53,9 +41,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageName == null ? Input.empty() : this.imageName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,9 +48,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,9 +55,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The source virtual machine from which Image is created.
-     */
     @InputImport(name="sourceVirtualMachine")
     private final @Nullable Input<SubResourceArgs> sourceVirtualMachine;
 
@@ -83,9 +62,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceVirtualMachine == null ? Input.empty() : this.sourceVirtualMachine;
     }
 
-    /**
-     * Specifies the storage settings for the virtual machine disks.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<ImageStorageProfileArgs> storageProfile;
 
@@ -93,9 +69,6 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PodsMetricSource {
-/**
- * metric identifies the target metric by name and selector
- */
     private final MetricIdentifier metric;
-/**
- * target specifies the target value for the given metric
- */
     private final MetricTarget target;
 
     @OutputCustomType.Constructor({"metric","target"})
@@ -27,15 +21,9 @@ public final class PodsMetricSource {
         this.target = Objects.requireNonNull(target);
     }
 
-/**
- * metric identifies the target metric by name and selector
- */
     public MetricIdentifier getMetric() {
         return this.metric;
     }
-/**
- * target specifies the target value for the given metric
- */
     public MetricTarget getTarget() {
         return this.target;
     }

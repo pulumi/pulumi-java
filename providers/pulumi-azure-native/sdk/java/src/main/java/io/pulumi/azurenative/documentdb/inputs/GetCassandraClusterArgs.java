@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCassandraClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCassandraClusterArgs Empty = new GetCassandraClusterArgs();
 
-    /**
-     * Managed Cassandra cluster name.
-     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -25,9 +19,6 @@ public final class GetCassandraClusterArgs extends io.pulumi.resources.InvokeArg
         return this.clusterName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Subscriber detail
- */
 public final class OrganizationResourcePropertiesResponseUserDetail extends io.pulumi.resources.InvokeArgs {
 
     public static final OrganizationResourcePropertiesResponseUserDetail Empty = new OrganizationResourcePropertiesResponseUserDetail();
 
-    /**
-     * Email address
-     */
     @InputImport(name="emailAddress")
     private final @Nullable String emailAddress;
 
@@ -27,9 +21,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
-    /**
-     * First name
-     */
     @InputImport(name="firstName")
     private final @Nullable String firstName;
 
@@ -37,9 +28,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
     }
 
-    /**
-     * Last name
-     */
     @InputImport(name="lastName")
     private final @Nullable String lastName;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebhookCallbackConfig {
-/**
- * The configuration of service URI and custom headers for the webhook.
-API Version: 2019-05-01.
- *
- * The configuration of service URI and custom headers for the webhook.
- */
     public static CompletableFuture<GetWebhookCallbackConfigResult> invokeAsync(GetWebhookCallbackConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getWebhookCallbackConfig", TypeShape.of(GetWebhookCallbackConfigResult.class), args == null ? GetWebhookCallbackConfigArgs.Empty : args, Utilities.withVersion(options));
     }

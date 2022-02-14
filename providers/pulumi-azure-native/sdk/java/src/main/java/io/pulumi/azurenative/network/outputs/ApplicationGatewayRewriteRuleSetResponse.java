@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayRewriteRuleSetResponse {
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Name of the rewrite rule set that is unique within an Application Gateway.
- */
     private final @Nullable String name;
-/**
- * The provisioning state of the rewrite rule set resource.
- */
     private final String provisioningState;
-/**
- * Rewrite rules in the rewrite rule set.
- */
     private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
     @OutputCustomType.Constructor({"etag","id","name","provisioningState","rewriteRules"})
@@ -48,33 +33,18 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
         this.rewriteRules = rewriteRules;
     }
 
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Name of the rewrite rule set that is unique within an Application Gateway.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The provisioning state of the rewrite rule set resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Rewrite rules in the rewrite rule set.
- */
     public List<ApplicationGatewayRewriteRuleResponse> getRewriteRules() {
         return this.rewriteRules == null ? List.of() : this.rewriteRules;
     }

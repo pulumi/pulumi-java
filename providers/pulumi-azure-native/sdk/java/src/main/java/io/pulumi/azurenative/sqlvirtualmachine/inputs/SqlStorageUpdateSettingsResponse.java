@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Set disk storage settings for SQL Server.
- */
 public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlStorageUpdateSettingsResponse Empty = new SqlStorageUpdateSettingsResponse();
 
-    /**
-     * Disk configuration to apply to SQL Server.
-     */
     @InputImport(name="diskConfigurationType")
     private final @Nullable String diskConfigurationType;
 
@@ -28,9 +22,6 @@ public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.
         return this.diskConfigurationType == null ? Optional.empty() : Optional.ofNullable(this.diskConfigurationType);
     }
 
-    /**
-     * Virtual machine disk count.
-     */
     @InputImport(name="diskCount")
     private final @Nullable Integer diskCount;
 
@@ -38,9 +29,6 @@ public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.
         return this.diskCount == null ? Optional.empty() : Optional.ofNullable(this.diskCount);
     }
 
-    /**
-     * Device id of the first disk to be updated.
-     */
     @InputImport(name="startingDeviceId")
     private final @Nullable Integer startingDeviceId;
 

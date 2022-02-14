@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TCPSocketAction {
-/**
- * Optional: Host name to connect to, defaults to the pod IP.
- */
     private final @Nullable String host;
-/**
- * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
- */
     private final Either<Integer,String> port;
 
     @OutputCustomType.Constructor({"host","port"})
@@ -30,15 +24,9 @@ public final class TCPSocketAction {
         this.port = Objects.requireNonNull(port);
     }
 
-/**
- * Optional: Host name to connect to, defaults to the pod IP.
- */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
-/**
- * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
- */
     public Either<Integer,String> getPort() {
         return this.port;
     }

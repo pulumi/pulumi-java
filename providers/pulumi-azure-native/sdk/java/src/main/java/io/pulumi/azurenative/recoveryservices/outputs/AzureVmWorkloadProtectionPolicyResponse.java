@@ -16,30 +16,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureVmWorkloadProtectionPolicyResponse {
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureWorkload'.
- */
     private final String backupManagementType;
-/**
- * Fix the policy inconsistency
- */
     private final @Nullable Boolean makePolicyConsistent;
-/**
- * Number of items associated with this policy.
- */
     private final @Nullable Integer protectedItemsCount;
-/**
- * Common settings for the backup management
- */
     private final @Nullable SettingsResponse settings;
-/**
- * List of sub-protection policies which includes schedule and retention
- */
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
-/**
- * Type of workload for the backup management
- */
     private final @Nullable String workLoadType;
 
     @OutputCustomType.Constructor({"backupManagementType","makePolicyConsistent","protectedItemsCount","settings","subProtectionPolicy","workLoadType"})
@@ -58,40 +39,21 @@ Expected value is 'AzureWorkload'.
         this.workLoadType = workLoadType;
     }
 
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureWorkload'.
- */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
-/**
- * Fix the policy inconsistency
- */
     public Optional<Boolean> getMakePolicyConsistent() {
         return Optional.ofNullable(this.makePolicyConsistent);
     }
-/**
- * Number of items associated with this policy.
- */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
-/**
- * Common settings for the backup management
- */
     public Optional<SettingsResponse> getSettings() {
         return Optional.ofNullable(this.settings);
     }
-/**
- * List of sub-protection policies which includes schedule and retention
- */
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
-/**
- * Type of workload for the backup management
- */
     public Optional<String> getWorkLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }

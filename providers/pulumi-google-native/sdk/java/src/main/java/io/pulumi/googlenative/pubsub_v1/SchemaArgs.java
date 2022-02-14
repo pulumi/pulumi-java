@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaArgs Empty = new SchemaArgs();
 
-    /**
-     * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
-     */
     @InputImport(name="definition")
     private final @Nullable Input<String> definition;
 
@@ -28,9 +22,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition == null ? Input.empty() : this.definition;
     }
 
-    /**
-     * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -48,9 +36,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="schemaId")
     private final @Nullable Input<String> schemaId;
 
@@ -58,9 +43,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemaId == null ? Input.empty() : this.schemaId;
     }
 
-    /**
-     * The type of the schema definition.
-     */
     @InputImport(name="type")
     private final @Nullable Input<SchemaType> type;
 

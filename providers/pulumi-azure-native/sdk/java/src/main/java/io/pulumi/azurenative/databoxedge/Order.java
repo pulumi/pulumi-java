@@ -18,285 +18,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The order details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### OrderPut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var order = new AzureNative.DataBoxEdge.Order("order", new AzureNative.DataBoxEdge.OrderArgs
-        {
-            ContactInformation = new AzureNative.DataBoxEdge.Inputs.ContactDetailsArgs
-            {
-                CompanyName = "Microsoft",
-                ContactPerson = "John Mcclane",
-                EmailList = 
-                {
-                    "john@microsoft.com",
-                },
-                Phone = "(800) 426-9400",
-            },
-            DeviceName = "testedgedevice",
-            ResourceGroupName = "GroupForEdgeAutomation",
-            ShippingAddress = new AzureNative.DataBoxEdge.Inputs.AddressArgs
-            {
-                AddressLine1 = "Microsoft Corporation",
-                AddressLine2 = "One Microsoft Way",
-                AddressLine3 = "Redmond",
-                City = "WA",
-                Country = "USA",
-                PostalCode = "98052",
-                State = "WA",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewOrder(ctx, "order", &databoxedge.OrderArgs{
-			ContactInformation: &databoxedge.ContactDetailsArgs{
-				CompanyName:   pulumi.String("Microsoft"),
-				ContactPerson: pulumi.String("John Mcclane"),
-				EmailList: pulumi.StringArray{
-					pulumi.String("john@microsoft.com"),
-				},
-				Phone: pulumi.String("(800) 426-9400"),
-			},
-			DeviceName:        pulumi.String("testedgedevice"),
-			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
-			ShippingAddress: &databoxedge.AddressArgs{
-				AddressLine1: pulumi.String("Microsoft Corporation"),
-				AddressLine2: pulumi.String("One Microsoft Way"),
-				AddressLine3: pulumi.String("Redmond"),
-				City:         pulumi.String("WA"),
-				Country:      pulumi.String("USA"),
-				PostalCode:   pulumi.String("98052"),
-				State:        pulumi.String("WA"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const order = new azure_native.databoxedge.Order("order", {
-    contactInformation: {
-        companyName: "Microsoft",
-        contactPerson: "John Mcclane",
-        emailList: ["john@microsoft.com"],
-        phone: "(800) 426-9400",
-    },
-    deviceName: "testedgedevice",
-    resourceGroupName: "GroupForEdgeAutomation",
-    shippingAddress: {
-        addressLine1: "Microsoft Corporation",
-        addressLine2: "One Microsoft Way",
-        addressLine3: "Redmond",
-        city: "WA",
-        country: "USA",
-        postalCode: "98052",
-        state: "WA",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-order = azure_native.databoxedge.Order("order",
-    contact_information=azure_native.databoxedge.ContactDetailsArgs(
-        company_name="Microsoft",
-        contact_person="John Mcclane",
-        email_list=["john@microsoft.com"],
-        phone="(800) 426-9400",
-    ),
-    device_name="testedgedevice",
-    resource_group_name="GroupForEdgeAutomation",
-    shipping_address=azure_native.databoxedge.AddressArgs(
-        address_line1="Microsoft Corporation",
-        address_line2="One Microsoft Way",
-        address_line3="Redmond",
-        city="WA",
-        country="USA",
-        postal_code="98052",
-        state="WA",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:databoxedge:Order default /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/orders/default 
-```
-
- */
 @ResourceType(type="azure-native:databoxedge:Order")
 public class Order extends io.pulumi.resources.CustomResource {
-    /**
-     * The contact details.
-     */
     @OutputExport(name="contactInformation", type=ContactDetailsResponse.class, parameters={})
     private Output<ContactDetailsResponse> contactInformation;
 
-    /**
-     * @return The contact details.
-     */
     public Output<ContactDetailsResponse> getContactInformation() {
         return this.contactInformation;
     }
-    /**
-     * Current status of the order.
-     */
     @OutputExport(name="currentStatus", type=OrderStatusResponse.class, parameters={})
     private Output<OrderStatusResponse> currentStatus;
 
-    /**
-     * @return Current status of the order.
-     */
     public Output<OrderStatusResponse> getCurrentStatus() {
         return this.currentStatus;
     }
-    /**
-     * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
-     */
     @OutputExport(name="deliveryTrackingInfo", type=List.class, parameters={TrackingInfoResponse.class})
     private Output<List<TrackingInfoResponse>> deliveryTrackingInfo;
 
-    /**
-     * @return Tracking information for the package delivered to the customer whether it has an original or a replacement device.
-     */
     public Output<List<TrackingInfoResponse>> getDeliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
-    /**
-     * The object name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The object name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of status changes in the order.
-     */
     @OutputExport(name="orderHistory", type=List.class, parameters={OrderStatusResponse.class})
     private Output<List<OrderStatusResponse>> orderHistory;
 
-    /**
-     * @return List of status changes in the order.
-     */
     public Output<List<OrderStatusResponse>> getOrderHistory() {
         return this.orderHistory;
     }
-    /**
-     * Tracking information for the package returned from the customer whether it has an original or a replacement device.
-     */
     @OutputExport(name="returnTrackingInfo", type=List.class, parameters={TrackingInfoResponse.class})
     private Output<List<TrackingInfoResponse>> returnTrackingInfo;
 
-    /**
-     * @return Tracking information for the package returned from the customer whether it has an original or a replacement device.
-     */
     public Output<List<TrackingInfoResponse>> getReturnTrackingInfo() {
         return this.returnTrackingInfo;
     }
-    /**
-     * Serial number of the device.
-     */
     @OutputExport(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
-    /**
-     * @return Serial number of the device.
-     */
     public Output<String> getSerialNumber() {
         return this.serialNumber;
     }
-    /**
-     * ShipmentType of the order
-     */
     @OutputExport(name="shipmentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> shipmentType;
 
-    /**
-     * @return ShipmentType of the order
-     */
     public Output</* @Nullable */ String> getShipmentType() {
         return this.shipmentType;
     }
-    /**
-     * The shipping address.
-     */
     @OutputExport(name="shippingAddress", type=AddressResponse.class, parameters={})
     private Output</* @Nullable */ AddressResponse> shippingAddress;
 
-    /**
-     * @return The shipping address.
-     */
     public Output</* @Nullable */ AddressResponse> getShippingAddress() {
         return this.shippingAddress;
     }
-    /**
-     * The hierarchical type of the object.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The hierarchical type of the object.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Order(String name, OrderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:Order", name, args == null ? OrderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -325,14 +109,6 @@ public class Order extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Order get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Order(name, id, options);
     }

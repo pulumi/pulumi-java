@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity HDFS source.
- */
 public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HdfsSourceResponse Empty = new HdfsSourceResponse();
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -29,9 +23,6 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
-    /**
-     * Specifies Distcp-related settings.
-     */
     @InputImport(name="distcpSettings")
     private final @Nullable DistcpSettingsResponse distcpSettings;
 
@@ -39,9 +30,6 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.distcpSettings == null ? Optional.empty() : Optional.ofNullable(this.distcpSettings);
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -49,9 +37,6 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
-    /**
-     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="recursive")
     private final @Nullable Object recursive;
 
@@ -59,9 +44,6 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -69,9 +51,6 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -79,10 +58,6 @@ public final class HdfsSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
-    /**
-     * Copy source type.
-Expected value is 'HdfsSource'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

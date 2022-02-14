@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Rich Business Messaging (RBM) Card content
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse();
 
-    /**
-     * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
         return this.description;
     }
 
-    /**
-     * Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
-     */
     @InputImport(name="media", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
 
@@ -38,9 +29,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
         return this.media;
     }
 
-    /**
-     * Optional. List of suggestions to include in the card.
-     */
     @InputImport(name="suggestions", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
 
@@ -48,9 +36,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
         return this.suggestions;
     }
 
-    /**
-     * Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
-     */
     @InputImport(name="title", required=true)
     private final String title;
 

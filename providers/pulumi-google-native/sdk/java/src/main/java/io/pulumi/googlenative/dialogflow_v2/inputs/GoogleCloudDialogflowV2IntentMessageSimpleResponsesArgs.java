@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The collection of simple response candidates. This message in `QueryResult.fulfillment_messages` and `WebhookResponse.fulfillment_messages` should contain only one `SimpleResponse`.
- */
 public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs Empty = new GoogleCloudDialogflowV2IntentMessageSimpleResponsesArgs();
 
-    /**
-     * The list of simple responses.
-     */
     @InputImport(name="simpleResponses", required=true)
     private final Input<List<GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs>> simpleResponses;
 

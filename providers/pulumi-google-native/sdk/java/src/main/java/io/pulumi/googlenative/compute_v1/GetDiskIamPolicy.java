@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- */
     public static CompletableFuture<GetDiskIamPolicyResult> invokeAsync(GetDiskIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getDiskIamPolicy", TypeShape.of(GetDiskIamPolicyResult.class), args == null ? GetDiskIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

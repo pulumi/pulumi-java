@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
-/**
- * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
- */
     private final String parameterId;
-/**
- * The text for this part.
- */
     private final String text;
 
     @OutputCustomType.Constructor({"parameterId","text"})
@@ -26,15 +20,9 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
         this.text = Objects.requireNonNull(text);
     }
 
-/**
- * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
- */
     public String getParameterId() {
         return this.parameterId;
     }
-/**
- * The text for this part.
- */
     public String getText() {
         return this.text;
     }

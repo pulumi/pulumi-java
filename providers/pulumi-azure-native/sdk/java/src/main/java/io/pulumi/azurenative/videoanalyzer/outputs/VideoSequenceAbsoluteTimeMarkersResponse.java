@@ -9,14 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VideoSequenceAbsoluteTimeMarkersResponse {
-/**
- * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
- */
     private final String ranges;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"ranges","type"})
@@ -27,16 +20,9 @@ Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
- */
     public String getRanges() {
         return this.ranges;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
- */
     public String getType() {
         return this.type;
     }

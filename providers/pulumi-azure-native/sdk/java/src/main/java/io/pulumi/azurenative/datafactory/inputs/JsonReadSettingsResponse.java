@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Json read settings.
- */
 public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JsonReadSettingsResponse Empty = new JsonReadSettingsResponse();
 
-    /**
-     * Compression settings.
-     */
     @InputImport(name="compressionProperties")
     private final @Nullable Object compressionProperties;
 
@@ -31,10 +25,6 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.compressionProperties == null ? null : this.compressionProperties;
     }
 
-    /**
-     * The read setting type.
-Expected value is 'JsonReadSettings'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

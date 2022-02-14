@@ -18,389 +18,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The local user associated with the storage accounts.
-API Version: 2021-08-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CreateLocalUser
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var localUser = new AzureNative.Storage.LocalUser("localUser", new AzureNative.Storage.LocalUserArgs
-        {
-            AccountName = "sto2527",
-            HasSshPassword = true,
-            HomeDirectory = "homedirectory",
-            PermissionScopes = 
-            {
-                new AzureNative.Storage.Inputs.PermissionScopeArgs
-                {
-                    Permissions = "rwd",
-                    ResourceName = "share1",
-                    Service = "file",
-                },
-                new AzureNative.Storage.Inputs.PermissionScopeArgs
-                {
-                    Permissions = "rw",
-                    ResourceName = "share2",
-                    Service = "file",
-                },
-            },
-            ResourceGroupName = "res6977",
-            SshAuthorizedKeys = 
-            {
-                new AzureNative.Storage.Inputs.SshPublicKeyArgs
-                {
-                    Description = "key name",
-                    Key = "ssh-rsa keykeykeykeykey=",
-                },
-            },
-            Username = "user1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewLocalUser(ctx, "localUser", &storage.LocalUserArgs{
-			AccountName:    pulumi.String("sto2527"),
-			HasSshPassword: pulumi.Bool(true),
-			HomeDirectory:  pulumi.String("homedirectory"),
-			PermissionScopes: []storage.PermissionScopeArgs{
-				&storage.PermissionScopeArgs{
-					Permissions:  pulumi.String("rwd"),
-					ResourceName: pulumi.String("share1"),
-					Service:      pulumi.String("file"),
-				},
-				&storage.PermissionScopeArgs{
-					Permissions:  pulumi.String("rw"),
-					ResourceName: pulumi.String("share2"),
-					Service:      pulumi.String("file"),
-				},
-			},
-			ResourceGroupName: pulumi.String("res6977"),
-			SshAuthorizedKeys: []storage.SshPublicKeyArgs{
-				&storage.SshPublicKeyArgs{
-					Description: pulumi.String("key name"),
-					Key:         pulumi.String("ssh-rsa keykeykeykeykey="),
-				},
-			},
-			Username: pulumi.String("user1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const localUser = new azure_native.storage.LocalUser("localUser", {
-    accountName: "sto2527",
-    hasSshPassword: true,
-    homeDirectory: "homedirectory",
-    permissionScopes: [
-        {
-            permissions: "rwd",
-            resourceName: "share1",
-            service: "file",
-        },
-        {
-            permissions: "rw",
-            resourceName: "share2",
-            service: "file",
-        },
-    ],
-    resourceGroupName: "res6977",
-    sshAuthorizedKeys: [{
-        description: "key name",
-        key: "ssh-rsa keykeykeykeykey=",
-    }],
-    username: "user1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-local_user = azure_native.storage.LocalUser("localUser",
-    account_name="sto2527",
-    has_ssh_password=True,
-    home_directory="homedirectory",
-    permission_scopes=[
-        azure_native.storage.PermissionScopeArgs(
-            permissions="rwd",
-            resource_name="share1",
-            service="file",
-        ),
-        azure_native.storage.PermissionScopeArgs(
-            permissions="rw",
-            resource_name="share2",
-            service="file",
-        ),
-    ],
-    resource_group_name="res6977",
-    ssh_authorized_keys=[azure_native.storage.SshPublicKeyArgs(
-        description="key name",
-        key="ssh-rsa keykeykeykeykey=",
-    )],
-    username="user1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### UpdateLocalUser
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var localUser = new AzureNative.Storage.LocalUser("localUser", new AzureNative.Storage.LocalUserArgs
-        {
-            AccountName = "sto2527",
-            HasSharedKey = false,
-            HasSshKey = false,
-            HasSshPassword = false,
-            HomeDirectory = "homedirectory2",
-            ResourceGroupName = "res6977",
-            Username = "user1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.NewLocalUser(ctx, "localUser", &storage.LocalUserArgs{
-			AccountName:       pulumi.String("sto2527"),
-			HasSharedKey:      pulumi.Bool(false),
-			HasSshKey:         pulumi.Bool(false),
-			HasSshPassword:    pulumi.Bool(false),
-			HomeDirectory:     pulumi.String("homedirectory2"),
-			ResourceGroupName: pulumi.String("res6977"),
-			Username:          pulumi.String("user1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const localUser = new azure_native.storage.LocalUser("localUser", {
-    accountName: "sto2527",
-    hasSharedKey: false,
-    hasSshKey: false,
-    hasSshPassword: false,
-    homeDirectory: "homedirectory2",
-    resourceGroupName: "res6977",
-    username: "user1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-local_user = azure_native.storage.LocalUser("localUser",
-    account_name="sto2527",
-    has_shared_key=False,
-    has_ssh_key=False,
-    has_ssh_password=False,
-    home_directory="homedirectory2",
-    resource_group_name="res6977",
-    username="user1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:storage:LocalUser user1 /subscriptions/{subscription-id}/resourceGroups/res6977/providers/Microsoft.Storage/storageAccounts/sto2527/loalUsers/user1 
-```
-
- */
 @ResourceType(type="azure-native:storage:LocalUser")
 public class LocalUser extends io.pulumi.resources.CustomResource {
-    /**
-     * Indicates whether shared key exists. Set it to false to remove existing shared key.
-     */
     @OutputExport(name="hasSharedKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hasSharedKey;
 
-    /**
-     * @return Indicates whether shared key exists. Set it to false to remove existing shared key.
-     */
     public Output</* @Nullable */ Boolean> getHasSharedKey() {
         return this.hasSharedKey;
     }
-    /**
-     * Indicates whether ssh key exists. Set it to false to remove existing SSH key.
-     */
     @OutputExport(name="hasSshKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hasSshKey;
 
-    /**
-     * @return Indicates whether ssh key exists. Set it to false to remove existing SSH key.
-     */
     public Output</* @Nullable */ Boolean> getHasSshKey() {
         return this.hasSshKey;
     }
-    /**
-     * Indicates whether ssh password exists. Set it to false to remove existing SSH password.
-     */
     @OutputExport(name="hasSshPassword", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hasSshPassword;
 
-    /**
-     * @return Indicates whether ssh password exists. Set it to false to remove existing SSH password.
-     */
     public Output</* @Nullable */ Boolean> getHasSshPassword() {
         return this.hasSshPassword;
     }
-    /**
-     * Optional, local user home directory.
-     */
     @OutputExport(name="homeDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> homeDirectory;
 
-    /**
-     * @return Optional, local user home directory.
-     */
     public Output</* @Nullable */ String> getHomeDirectory() {
         return this.homeDirectory;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The permission scopes of the local user.
-     */
     @OutputExport(name="permissionScopes", type=List.class, parameters={PermissionScopeResponse.class})
     private Output</* @Nullable */ List<PermissionScopeResponse>> permissionScopes;
 
-    /**
-     * @return The permission scopes of the local user.
-     */
     public Output</* @Nullable */ List<PermissionScopeResponse>> getPermissionScopes() {
         return this.permissionScopes;
     }
-    /**
-     * A unique Security Identifier that is generated by the server.
-     */
     @OutputExport(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
-    /**
-     * @return A unique Security Identifier that is generated by the server.
-     */
     public Output<String> getSid() {
         return this.sid;
     }
-    /**
-     * Optional, local user ssh authorized keys for SFTP.
-     */
     @OutputExport(name="sshAuthorizedKeys", type=List.class, parameters={SshPublicKeyResponse.class})
     private Output</* @Nullable */ List<SshPublicKeyResponse>> sshAuthorizedKeys;
 
-    /**
-     * @return Optional, local user ssh authorized keys for SFTP.
-     */
     public Output</* @Nullable */ List<SshPublicKeyResponse>> getSshAuthorizedKeys() {
         return this.sshAuthorizedKeys;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public LocalUser(String name, LocalUserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:LocalUser", name, args == null ? LocalUserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -419,14 +99,6 @@ public class LocalUser extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static LocalUser get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocalUser(name, id, options);
     }

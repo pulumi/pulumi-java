@@ -10,17 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the url rewrite action for the delivery rule.
- */
 public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlRewriteActionArgs Empty = new UrlRewriteActionArgs();
 
-    /**
-     * The name of the action for the delivery rule.
-Expected value is 'UrlRewrite'.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +21,6 @@ Expected value is 'UrlRewrite'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the action.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<UrlRewriteActionParametersArgs> parameters;
 

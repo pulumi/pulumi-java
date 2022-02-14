@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HTTP2HealthCheckArgs Empty = new HTTP2HealthCheckArgs();
 
-    /**
-     * The value of the host header in the HTTP/2 health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -31,9 +25,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -41,9 +32,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
-     */
     @InputImport(name="portName")
     private final @Nullable Input<String> portName;
 
@@ -51,9 +39,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.portName == null ? Input.empty() : this.portName;
     }
 
-    /**
-     * Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTP2 health check follows behavior specified in port and portName fields.
-     */
     @InputImport(name="portSpecification")
     private final @Nullable Input<HTTP2HealthCheckPortSpecification> portSpecification;
 
@@ -61,9 +46,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.portSpecification == null ? Input.empty() : this.portSpecification;
     }
 
-    /**
-     * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
-     */
     @InputImport(name="proxyHeader")
     private final @Nullable Input<HTTP2HealthCheckProxyHeader> proxyHeader;
 
@@ -71,9 +53,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
     }
 
-    /**
-     * The request path of the HTTP/2 health check request. The default value is /.
-     */
     @InputImport(name="requestPath")
     private final @Nullable Input<String> requestPath;
 
@@ -81,9 +60,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.requestPath == null ? Input.empty() : this.requestPath;
     }
 
-    /**
-     * The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
-     */
     @InputImport(name="response")
     private final @Nullable Input<String> response;
 
@@ -91,9 +67,6 @@ public final class HTTP2HealthCheckArgs extends io.pulumi.resources.ResourceArgs
         return this.response == null ? Input.empty() : this.response;
     }
 
-    /**
-     * Weight report mode. used for weighted Load Balancing.
-     */
     @InputImport(name="weightReportMode")
     private final @Nullable Input<HTTP2HealthCheckWeightReportMode> weightReportMode;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Subject describes parts of a distinguished name that, in turn, describes the subject of the certificate.
- */
 public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubjectResponse Empty = new SubjectResponse();
 
-    /**
-     * The "common name" of the subject.
-     */
     @InputImport(name="commonName", required=true)
     private final String commonName;
 
@@ -25,9 +19,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.commonName;
     }
 
-    /**
-     * The country code of the subject.
-     */
     @InputImport(name="countryCode", required=true)
     private final String countryCode;
 
@@ -35,9 +26,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.countryCode;
     }
 
-    /**
-     * The locality or city of the subject.
-     */
     @InputImport(name="locality", required=true)
     private final String locality;
 
@@ -45,9 +33,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.locality;
     }
 
-    /**
-     * The organization of the subject.
-     */
     @InputImport(name="organization", required=true)
     private final String organization;
 
@@ -55,9 +40,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.organization;
     }
 
-    /**
-     * The organizational_unit of the subject.
-     */
     @InputImport(name="organizationalUnit", required=true)
     private final String organizationalUnit;
 
@@ -65,9 +47,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.organizationalUnit;
     }
 
-    /**
-     * The postal code of the subject.
-     */
     @InputImport(name="postalCode", required=true)
     private final String postalCode;
 
@@ -75,9 +54,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.postalCode;
     }
 
-    /**
-     * The province, territory, or regional state of the subject.
-     */
     @InputImport(name="province", required=true)
     private final String province;
 
@@ -85,9 +61,6 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
         return this.province;
     }
 
-    /**
-     * The street address of the subject.
-     */
     @InputImport(name="streetAddress", required=true)
     private final String streetAddress;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionInstantSnapshotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionInstantSnapshotArgs Empty = new GetRegionInstantSnapshotArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="instantSnapshot", required=true)
     private final String instantSnapshot;
 
@@ -27,9 +21,6 @@ public final class GetRegionInstantSnapshotArgs extends io.pulumi.resources.Invo
         return this.instantSnapshot;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionInstantSnapshotArgs extends io.pulumi.resources.Invo
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

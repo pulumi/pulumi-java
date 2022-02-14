@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of an Azure Resource Manager template parameter.
- */
 public final class ArmTemplateParameterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArmTemplateParameterPropertiesArgs Empty = new ArmTemplateParameterPropertiesArgs();
 
-    /**
-     * The name of the template parameter.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class ArmTemplateParameterPropertiesArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The value of the template parameter.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

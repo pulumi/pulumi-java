@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Actions which to take by the auto-heal module when a rule is triggered.
- */
 public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoHealActionsArgs Empty = new AutoHealActionsArgs();
 
-    /**
-     * Predefined action to be taken.
-     */
     @InputImport(name="actionType")
     private final @Nullable Input<AutoHealActionType> actionType;
 
@@ -29,9 +23,6 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
         return this.actionType == null ? Input.empty() : this.actionType;
     }
 
-    /**
-     * Custom action to be taken.
-     */
     @InputImport(name="customAction")
     private final @Nullable Input<AutoHealCustomActionArgs> customAction;
 
@@ -39,10 +30,6 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
         return this.customAction == null ? Input.empty() : this.customAction;
     }
 
-    /**
-     * Minimum time the process must execute
-before taking the action
-     */
     @InputImport(name="minProcessExecutionTime")
     private final @Nullable Input<String> minProcessExecutionTime;
 

@@ -13,68 +13,33 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new participant in a conversation.
-Note - this resource's API doesn't support deletion. When deleted, the resource will persist
-on Google Cloud even though it will be deleted from Pulumi state.
- */
 @ResourceType(type="google-native:dialogflow/v2beta1:Participant")
 public class Participant extends io.pulumi.resources.CustomResource {
-    /**
-     * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ``` documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
-     */
     @OutputExport(name="documentsMetadataFilters", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> documentsMetadataFilters;
 
-    /**
-     * @return Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ``` documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
-     */
     public Output<Map<String,String>> getDocumentsMetadataFilters() {
         return this.documentsMetadataFilters;
     }
-    /**
-     * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Optional. Obfuscated user id that should be associated with the created participant. You can specify a user id as follows: 1. If you set this field in CreateParticipantRequest or UpdateParticipantRequest, Dialogflow adds the obfuscated user id with the participant. 2. If you set this field in AnalyzeContent or StreamingAnalyzeContent, Dialogflow will update Participant.obfuscated_external_user_id. Dialogflow uses this user id for following purposes: 1) Billing and measurement. If user with the same obfuscated_external_user_id is created in a later conversation, dialogflow will know it's the same user. 2) Agent assist suggestion personalization. For example, Dialogflow can use it to provide personalized smart reply suggestions for this user. Note: * Please never pass raw user ids to Dialogflow. Always obfuscate your user id first. * Dialogflow only accepts a UTF-8 encoded string, e.g., a hex digest of a hash function like SHA-512. * The length of the user id must be <= 256 characters.
-     */
     @OutputExport(name="obfuscatedExternalUserId", type=String.class, parameters={})
     private Output<String> obfuscatedExternalUserId;
 
-    /**
-     * @return Optional. Obfuscated user id that should be associated with the created participant. You can specify a user id as follows: 1. If you set this field in CreateParticipantRequest or UpdateParticipantRequest, Dialogflow adds the obfuscated user id with the participant. 2. If you set this field in AnalyzeContent or StreamingAnalyzeContent, Dialogflow will update Participant.obfuscated_external_user_id. Dialogflow uses this user id for following purposes: 1) Billing and measurement. If user with the same obfuscated_external_user_id is created in a later conversation, dialogflow will know it's the same user. 2) Agent assist suggestion personalization. For example, Dialogflow can use it to provide personalized smart reply suggestions for this user. Note: * Please never pass raw user ids to Dialogflow. Always obfuscate your user id first. * Dialogflow only accepts a UTF-8 encoded string, e.g., a hex digest of a hash function like SHA-512. * The length of the user id must be <= 256 characters.
-     */
     public Output<String> getObfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
-    /**
-     * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
-     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    /**
-     * @return Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
-     */
     public Output<String> getRole() {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Participant(String name, ParticipantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v2beta1:Participant", name, args == null ? ParticipantArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -90,14 +55,6 @@ public class Participant extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Participant get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Participant(name, id, options);
     }

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * TLS configuration information for virtual hosts and TargetServers.
- */
 public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1TlsInfoArgs Empty = new GoogleCloudApigeeV1TlsInfoArgs();
 
-    /**
-     * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
-     */
     @InputImport(name="ciphers")
     private final @Nullable Input<List<String>> ciphers;
 
@@ -30,9 +24,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.ciphers == null ? Input.empty() : this.ciphers;
     }
 
-    /**
-     * Optional. Enables two-way TLS.
-     */
     @InputImport(name="clientAuthEnabled")
     private final @Nullable Input<Boolean> clientAuthEnabled;
 
@@ -40,9 +31,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.clientAuthEnabled == null ? Input.empty() : this.clientAuthEnabled;
     }
 
-    /**
-     * The TLS Common Name of the certificate.
-     */
     @InputImport(name="commonName")
     private final @Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
 
@@ -50,9 +38,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
-    /**
-     * Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
-     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -60,9 +45,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.enabled;
     }
 
-    /**
-     * If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
-     */
     @InputImport(name="ignoreValidationErrors")
     private final @Nullable Input<Boolean> ignoreValidationErrors;
 
@@ -70,9 +52,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.ignoreValidationErrors == null ? Input.empty() : this.ignoreValidationErrors;
     }
 
-    /**
-     * Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
-     */
     @InputImport(name="keyAlias")
     private final @Nullable Input<String> keyAlias;
 
@@ -80,9 +59,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.keyAlias == null ? Input.empty() : this.keyAlias;
     }
 
-    /**
-     * Required if `client_auth_enabled` is true. The resource ID of the keystore.
-     */
     @InputImport(name="keyStore")
     private final @Nullable Input<String> keyStore;
 
@@ -90,9 +66,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.keyStore == null ? Input.empty() : this.keyStore;
     }
 
-    /**
-     * The TLS versioins to be used.
-     */
     @InputImport(name="protocols")
     private final @Nullable Input<List<String>> protocols;
 
@@ -100,9 +73,6 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
         return this.protocols == null ? Input.empty() : this.protocols;
     }
 
-    /**
-     * The resource ID of the truststore.
-     */
     @InputImport(name="trustStore")
     private final @Nullable Input<String> trustStore;
 

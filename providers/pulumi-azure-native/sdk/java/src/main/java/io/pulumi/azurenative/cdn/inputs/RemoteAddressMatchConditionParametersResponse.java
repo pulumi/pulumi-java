@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the parameters for RemoteAddress match conditions
- */
 public final class RemoteAddressMatchConditionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RemoteAddressMatchConditionParametersResponse Empty = new RemoteAddressMatchConditionParametersResponse();
 
-    /**
-     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-     */
     @InputImport(name="matchValues")
     private final @Nullable List<String> matchValues;
 
@@ -29,9 +23,6 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
         return this.matchValues == null ? List.of() : this.matchValues;
     }
 
-    /**
-     * Describes if this is negate condition or not
-     */
     @InputImport(name="negateCondition")
     private final @Nullable Boolean negateCondition;
 
@@ -39,9 +30,6 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -49,9 +37,6 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
         return this.odataType;
     }
 
-    /**
-     * Describes operator to be matched
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -59,9 +44,6 @@ public final class RemoteAddressMatchConditionParametersResponse extends io.pulu
         return this.operator;
     }
 
-    /**
-     * List of transforms
-     */
     @InputImport(name="transforms")
     private final @Nullable List<String> transforms;
 

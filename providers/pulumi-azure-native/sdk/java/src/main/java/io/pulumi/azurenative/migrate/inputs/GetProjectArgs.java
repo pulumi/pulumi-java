@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
-    /**
-     * Name of the Azure Migrate project.
-     */
     @InputImport(name="projectName", required=true)
     private final String projectName;
 
@@ -25,9 +19,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.projectName;
     }
 
-    /**
-     * Name of the Azure Resource Group that project is part of.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

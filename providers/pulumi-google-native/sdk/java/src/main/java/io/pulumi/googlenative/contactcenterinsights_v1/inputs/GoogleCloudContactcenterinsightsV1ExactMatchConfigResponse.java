@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Exact match configuration.
- */
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse Empty = new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse();
 
-    /**
-     * Whether to consider case sensitivity when performing an exact match.
-     */
     @InputImport(name="caseSensitive", required=true)
     private final Boolean caseSensitive;
 

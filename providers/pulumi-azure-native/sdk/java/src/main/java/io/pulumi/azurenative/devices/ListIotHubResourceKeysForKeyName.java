@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIotHubResourceKeysForKeyName {
-/**
- * The properties of an IoT hub shared access policy.
-API Version: 2020-08-31.
- *
- * The properties of an IoT hub shared access policy.
- */
     public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> invokeAsync(ListIotHubResourceKeysForKeyNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeysForKeyName", TypeShape.of(ListIotHubResourceKeysForKeyNameResult.class), args == null ? ListIotHubResourceKeysForKeyNameArgs.Empty : args, Utilities.withVersion(options));
     }

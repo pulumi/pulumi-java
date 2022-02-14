@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DedicatedHostGroupInstanceViewResponse {
-/**
- * List of instance view of the dedicated hosts under the dedicated host group.
- */
     private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
     @OutputCustomType.Constructor({"hosts"})
@@ -21,9 +18,6 @@ public final class DedicatedHostGroupInstanceViewResponse {
         this.hosts = hosts;
     }
 
-/**
- * List of instance view of the dedicated hosts under the dedicated host group.
- */
     public List<DedicatedHostInstanceViewWithNameResponse> getHosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }

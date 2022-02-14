@@ -16,196 +16,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Properties of the PrivateEndpointConnection.
-API Version: 2018-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### NameSpacePrivateEndPointConnectionCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateEndpointConnection = new AzureNative.ServiceBus.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.ServiceBus.PrivateEndpointConnectionArgs
-        {
-            NamespaceName = "sdk-Namespace-2924",
-            PrivateEndpoint = new AzureNative.ServiceBus.Inputs.PrivateEndpointArgs
-            {
-                Id = "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
-            },
-            PrivateEndpointConnectionName = "privateEndpointConnectionName",
-            PrivateLinkServiceConnectionState = new AzureNative.ServiceBus.Inputs.ConnectionStateArgs
-            {
-                Description = "testing",
-                Status = "Rejected",
-            },
-            ProvisioningState = "Succeeded",
-            ResourceGroupName = "ArunMonocle",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &servicebus.PrivateEndpointConnectionArgs{
-			NamespaceName: pulumi.String("sdk-Namespace-2924"),
-			PrivateEndpoint: &servicebus.PrivateEndpointArgs{
-				Id: pulumi.String("/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847"),
-			},
-			PrivateEndpointConnectionName: pulumi.String("privateEndpointConnectionName"),
-			PrivateLinkServiceConnectionState: &servicebus.ConnectionStateArgs{
-				Description: pulumi.String("testing"),
-				Status:      pulumi.String("Rejected"),
-			},
-			ProvisioningState: pulumi.String("Succeeded"),
-			ResourceGroupName: pulumi.String("ArunMonocle"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateEndpointConnection = new azure_native.servicebus.PrivateEndpointConnection("privateEndpointConnection", {
-    namespaceName: "sdk-Namespace-2924",
-    privateEndpoint: {
-        id: "/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
-    },
-    privateEndpointConnectionName: "privateEndpointConnectionName",
-    privateLinkServiceConnectionState: {
-        description: "testing",
-        status: "Rejected",
-    },
-    provisioningState: "Succeeded",
-    resourceGroupName: "ArunMonocle",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_endpoint_connection = azure_native.servicebus.PrivateEndpointConnection("privateEndpointConnection",
-    namespace_name="sdk-Namespace-2924",
-    private_endpoint=azure_native.servicebus.PrivateEndpointArgs(
-        id="/subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-8396/providers/Microsoft.Network/privateEndpoints/sdk-Namespace-2847",
-    ),
-    private_endpoint_connection_name="privateEndpointConnectionName",
-    private_link_service_connection_state=azure_native.servicebus.ConnectionStateArgs(
-        description="testing",
-        status="Rejected",
-    ),
-    provisioning_state="Succeeded",
-    resource_group_name="ArunMonocle")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:servicebus:PrivateEndpointConnection 928c44d5-b7c6-423b-b6fa-811e0c27b3e0 /subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-ServiceBus-4794/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-5828/privateEndpointConnections/928c44d5-b7c6-423b-b6fa-811e0c27b3e0 
-```
-
- */
 @ResourceType(type="azure-native:servicebus:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The Private Endpoint resource for this Connection.
-     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
-    /**
-     * @return The Private Endpoint resource for this Connection.
-     */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
-    /**
-     * Details about the state of the connection.
-     */
     @OutputExport(name="privateLinkServiceConnectionState", type=ConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState;
 
-    /**
-     * @return Details about the state of the connection.
-     */
     public Output</* @Nullable */ ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
-    /**
-     * Provisioning state of the Private Endpoint Connection.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
-    /**
-     * @return Provisioning state of the Private Endpoint Connection.
-     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicebus:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -227,14 +70,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

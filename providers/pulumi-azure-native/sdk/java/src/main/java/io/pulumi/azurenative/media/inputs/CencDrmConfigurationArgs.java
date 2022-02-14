@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Class to specify DRM configurations of CommonEncryptionCenc scheme in Streaming Policy
- */
 public final class CencDrmConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CencDrmConfigurationArgs Empty = new CencDrmConfigurationArgs();
 
-    /**
-     * PlayReady configurations
-     */
     @InputImport(name="playReady")
     private final @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
@@ -28,9 +22,6 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
         return this.playReady == null ? Input.empty() : this.playReady;
     }
 
-    /**
-     * Widevine configurations
-     */
     @InputImport(name="widevine")
     private final @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
 

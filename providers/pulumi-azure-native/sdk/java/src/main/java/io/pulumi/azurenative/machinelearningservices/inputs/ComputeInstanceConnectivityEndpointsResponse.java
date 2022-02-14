@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines all connectivity endpoints and properties for an ComputeInstance.
- */
 public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeInstanceConnectivityEndpointsResponse Empty = new ComputeInstanceConnectivityEndpointsResponse();
 
-    /**
-     * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
-     */
     @InputImport(name="privateIpAddress", required=true)
     private final String privateIpAddress;
 
@@ -25,9 +19,6 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulum
         return this.privateIpAddress;
     }
 
-    /**
-     * Public IP Address of this ComputeInstance.
-     */
     @InputImport(name="publicIpAddress", required=true)
     private final String publicIpAddress;
 

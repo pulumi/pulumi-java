@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionStateRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionStateRuleArgs Empty = new SubscriptionStateRuleArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="allowedActions")
     private final @Nullable Input<List<String>> allowedActions;
 
@@ -30,9 +24,6 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
         return this.allowedActions == null ? Input.empty() : this.allowedActions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,SubscriptionState>> state;
 

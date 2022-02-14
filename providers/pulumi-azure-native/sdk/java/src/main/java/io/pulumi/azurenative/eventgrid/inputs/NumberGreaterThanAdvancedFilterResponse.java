@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * NumberGreaterThan Advanced Filter.
- */
 public final class NumberGreaterThanAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NumberGreaterThanAdvancedFilterResponse Empty = new NumberGreaterThanAdvancedFilterResponse();
 
-    /**
-     * The field/property in the event based on which you want to filter.
-     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -28,10 +22,6 @@ public final class NumberGreaterThanAdvancedFilterResponse extends io.pulumi.res
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
-    /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'NumberGreaterThan'.
-     */
     @InputImport(name="operatorType", required=true)
     private final String operatorType;
 
@@ -39,9 +29,6 @@ Expected value is 'NumberGreaterThan'.
         return this.operatorType;
     }
 
-    /**
-     * The filter value.
-     */
     @InputImport(name="value")
     private final @Nullable Double value;
 

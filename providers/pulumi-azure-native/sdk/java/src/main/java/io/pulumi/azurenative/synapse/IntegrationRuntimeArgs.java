@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationRuntimeArgs Empty = new IntegrationRuntimeArgs();
 
-    /**
-     * Integration runtime name
-     */
     @InputImport(name="integrationRuntimeName")
     private final @Nullable Input<String> integrationRuntimeName;
 
@@ -30,9 +24,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
         return this.integrationRuntimeName == null ? Input.empty() : this.integrationRuntimeName;
     }
 
-    /**
-     * Integration runtime properties.
-     */
     @InputImport(name="properties", required=true)
     private final Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
@@ -40,9 +31,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
         return this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,9 +38,6 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

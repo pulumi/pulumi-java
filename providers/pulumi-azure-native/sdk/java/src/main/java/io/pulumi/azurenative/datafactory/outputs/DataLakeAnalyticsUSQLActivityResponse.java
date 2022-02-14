@@ -18,62 +18,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataLakeAnalyticsUSQLActivityResponse {
-/**
- * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object compilationMode;
-/**
- * The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
- */
     private final @Nullable Object degreeOfParallelism;
-/**
- * Activity depends on condition.
- */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-/**
- * Activity description.
- */
     private final @Nullable String description;
-/**
- * Linked service reference.
- */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-/**
- * Activity name.
- */
     private final String name;
-/**
- * Parameters for U-SQL job request.
- */
     private final @Nullable Map<String,Object> parameters;
-/**
- * Activity policy.
- */
     private final @Nullable ActivityPolicyResponse policy;
-/**
- * Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
- */
     private final @Nullable Object priority;
-/**
- * Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object runtimeVersion;
-/**
- * Script linked service reference.
- */
     private final LinkedServiceReferenceResponse scriptLinkedService;
-/**
- * Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
- */
     private final Object scriptPath;
-/**
- * Type of activity.
-Expected value is 'DataLakeAnalyticsU-SQL'.
- */
     private final String type;
-/**
- * Activity user properties.
- */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"compilationMode","degreeOfParallelism","dependsOn","description","linkedServiceName","name","parameters","policy","priority","runtimeVersion","scriptLinkedService","scriptPath","type","userProperties"})
@@ -108,88 +65,45 @@ Expected value is 'DataLakeAnalyticsU-SQL'.
         this.userProperties = userProperties;
     }
 
-/**
- * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getCompilationMode() {
         return Optional.ofNullable(this.compilationMode);
     }
-/**
- * The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
- */
     public Optional<Object> getDegreeOfParallelism() {
         return Optional.ofNullable(this.degreeOfParallelism);
     }
-/**
- * Activity depends on condition.
- */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Activity description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Linked service reference.
- */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
-/**
- * Activity name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Parameters for U-SQL job request.
- */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * Activity policy.
- */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
-/**
- * Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
- */
     public Optional<Object> getPriority() {
         return Optional.ofNullable(this.priority);
     }
-/**
- * Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
-/**
- * Script linked service reference.
- */
     public LinkedServiceReferenceResponse getScriptLinkedService() {
         return this.scriptLinkedService;
     }
-/**
- * Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
- */
     public Object getScriptPath() {
         return this.scriptPath;
     }
-/**
- * Type of activity.
-Expected value is 'DataLakeAnalyticsU-SQL'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Activity user properties.
- */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

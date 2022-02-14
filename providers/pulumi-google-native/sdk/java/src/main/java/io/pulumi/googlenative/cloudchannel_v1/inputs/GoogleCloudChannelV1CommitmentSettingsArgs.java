@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Commitment settings for commitment-based offers.
- */
 public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudChannelV1CommitmentSettingsArgs Empty = new GoogleCloudChannelV1CommitmentSettingsArgs();
 
-    /**
-     * Optional. Renewal settings applicable for a commitment-based Offer.
-     */
     @InputImport(name="renewalSettings")
     private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 

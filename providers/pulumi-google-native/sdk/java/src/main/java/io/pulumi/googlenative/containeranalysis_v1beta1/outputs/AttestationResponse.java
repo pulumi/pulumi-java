@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AttestationResponse {
-/**
- * 
- */
     private final GenericSignedAttestationResponse genericSignedAttestation;
-/**
- * A PGP signed attestation.
- */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
     @OutputCustomType.Constructor({"genericSignedAttestation","pgpSignedAttestation"})
@@ -27,15 +21,9 @@ public final class AttestationResponse {
         this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
     }
 
-/**
- * 
- */
     public GenericSignedAttestationResponse getGenericSignedAttestation() {
         return this.genericSignedAttestation;
     }
-/**
- * A PGP signed attestation.
- */
     public PgpSignedAttestationResponse getPgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }

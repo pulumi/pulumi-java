@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Describes the hostname properties for http routing.
- */
 public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpHostConfigArgs Empty = new HttpHostConfigArgs();
 
-    /**
-     * http hostname config name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +22,6 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
-     */
     @InputImport(name="routes", required=true)
     private final Input<List<HttpRouteConfigArgs>> routes;
 

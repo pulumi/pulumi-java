@@ -15,37 +15,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitorPropertiesResponse {
-/**
- * 
- */
     private final String liftrResourceCategory;
-/**
- * The priority of the resource.
- */
     private final Integer liftrResourcePreference;
-/**
- * 
- */
     private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
-/**
- * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
- */
     private final @Nullable String marketplaceSubscriptionStatus;
-/**
- * Flag specifying if the resource monitoring is enabled or disabled.
- */
     private final @Nullable String monitoringStatus;
-/**
- * 
- */
     private final @Nullable PlanDataResponse planData;
-/**
- * Flag specifying if the resource provisioning state as tracked by ARM.
- */
     private final String provisioningState;
-/**
- * 
- */
     private final @Nullable UserInfoResponse userInfo;
 
     @OutputCustomType.Constructor({"liftrResourceCategory","liftrResourcePreference","logzOrganizationProperties","marketplaceSubscriptionStatus","monitoringStatus","planData","provisioningState","userInfo"})
@@ -68,51 +44,27 @@ public final class MonitorPropertiesResponse {
         this.userInfo = userInfo;
     }
 
-/**
- * 
- */
     public String getLiftrResourceCategory() {
         return this.liftrResourceCategory;
     }
-/**
- * The priority of the resource.
- */
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
-/**
- * 
- */
     public Optional<LogzOrganizationPropertiesResponse> getLogzOrganizationProperties() {
         return Optional.ofNullable(this.logzOrganizationProperties);
     }
-/**
- * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
- */
     public Optional<String> getMarketplaceSubscriptionStatus() {
         return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
-/**
- * Flag specifying if the resource monitoring is enabled or disabled.
- */
     public Optional<String> getMonitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
-/**
- * 
- */
     public Optional<PlanDataResponse> getPlanData() {
         return Optional.ofNullable(this.planData);
     }
-/**
- * Flag specifying if the resource provisioning state as tracked by ARM.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * 
- */
     public Optional<UserInfoResponse> getUserInfo() {
         return Optional.ofNullable(this.userInfo);
     }

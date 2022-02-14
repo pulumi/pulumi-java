@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The endpoint details.
- */
 public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointResponse Empty = new EndpointResponse();
 
-    /**
-     * The URL of the endpoint.
-     */
     @InputImport(name="endpointUrl")
     private final @Nullable String endpointUrl;
 
@@ -27,9 +21,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
     }
 
-    /**
-     * The type of the endpoint.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

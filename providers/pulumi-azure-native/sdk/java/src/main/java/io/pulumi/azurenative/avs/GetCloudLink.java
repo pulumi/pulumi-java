@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudLink {
-/**
- * A cloud link resource
-API Version: 2021-06-01.
- *
- * A cloud link resource
- */
     public static CompletableFuture<GetCloudLinkResult> invokeAsync(GetCloudLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getCloudLink", TypeShape.of(GetCloudLinkResult.class), args == null ? GetCloudLinkArgs.Empty : args, Utilities.withVersion(options));
     }

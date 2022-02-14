@@ -13,49 +13,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetBillingAccountSinkResult {
-/**
- * Optional. Options that affect sinks exporting data to BigQuery.
- */
     private final BigQueryOptionsResponse bigqueryOptions;
-/**
- * The creation timestamp of the sink.This field may not be present for older sinks.
- */
     private final String createTime;
-/**
- * Optional. A description of this sink.The maximum length of the description is 8000 characters.
- */
     private final String description;
-/**
- * The export destination: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set when the sink is created, must have permission to write to the destination or else the log entries are not exported. For more information, see Exporting Logs with Sinks (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
- */
     private final String destination;
-/**
- * Optional. If set to true, then this sink is disabled and it does not export any log entries.
- */
     private final Boolean disabled;
-/**
- * Optional. Log entries that match any of these exclusion filters will not be exported.If a log entry is matched by both filter and one of exclusion_filters it will not be exported.
- */
     private final List<LogExclusionResponse> exclusions;
-/**
- * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries). The only exported log entries are those that are in the resource owning the sink and that match the filter.For example:logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
- */
     private final String filter;
-/**
- * Optional. This field applies only to sinks owned by organizations and folders. If the field is false, the default, only the logs owned by the sink's parent resource are available for export. If the field is true, then log entries from all the projects, folders, and billing accounts contained in the sink's parent resource are also available for export. Whether a particular log entry from the children is exported depends on the sink's filter expression.For example, if this field is true, then the filter resource.type=gce_instance would export all Compute Engine VM instance log entries from all projects in the sink's parent.To only export entries from certain child projects, filter on the project part of the log name:logName:("projects/test-project1/" OR "projects/test-project2/") AND resource.type=gce_instance
- */
     private final Boolean includeChildren;
-/**
- * The client-assigned sink identifier, unique within the project.For example: "my-syslog-errors-to-pubsub". Sink identifiers are limited to 100 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First character has to be alphanumeric.
- */
     private final String name;
-/**
- * The last update timestamp of the sink.This field may not be present for older sinks.
- */
     private final String updateTime;
-/**
- * An IAM identity—a service account or group—under which Cloud Logging writes the exported log entries to the sink's destination. This field is set by sinks.create and sinks.update based on the value of unique_writer_identity in those methods.Until you grant this identity write-access to the destination, log entry exports from this sink will fail. For more information, see Granting Access for a Resource (https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). Consult the destination service's documentation to determine the appropriate IAM roles to assign to the identity.Sinks that have a destination that is a log bucket in the same project as the sink do not have a writer_identity and no additional permissions are required.
- */
     private final String writerIdentity;
 
     @OutputCustomType.Constructor({"bigqueryOptions","createTime","description","destination","disabled","exclusions","filter","includeChildren","name","updateTime","writerIdentity"})
@@ -84,69 +51,36 @@ public final class GetBillingAccountSinkResult {
         this.writerIdentity = Objects.requireNonNull(writerIdentity);
     }
 
-/**
- * Optional. Options that affect sinks exporting data to BigQuery.
- */
     public BigQueryOptionsResponse getBigqueryOptions() {
         return this.bigqueryOptions;
     }
-/**
- * The creation timestamp of the sink.This field may not be present for older sinks.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Optional. A description of this sink.The maximum length of the description is 8000 characters.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The export destination: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set when the sink is created, must have permission to write to the destination or else the log entries are not exported. For more information, see Exporting Logs with Sinks (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
- */
     public String getDestination() {
         return this.destination;
     }
-/**
- * Optional. If set to true, then this sink is disabled and it does not export any log entries.
- */
     public Boolean getDisabled() {
         return this.disabled;
     }
-/**
- * Optional. Log entries that match any of these exclusion filters will not be exported.If a log entry is matched by both filter and one of exclusion_filters it will not be exported.
- */
     public List<LogExclusionResponse> getExclusions() {
         return this.exclusions;
     }
-/**
- * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries). The only exported log entries are those that are in the resource owning the sink and that match the filter.For example:logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
- */
     public String getFilter() {
         return this.filter;
     }
-/**
- * Optional. This field applies only to sinks owned by organizations and folders. If the field is false, the default, only the logs owned by the sink's parent resource are available for export. If the field is true, then log entries from all the projects, folders, and billing accounts contained in the sink's parent resource are also available for export. Whether a particular log entry from the children is exported depends on the sink's filter expression.For example, if this field is true, then the filter resource.type=gce_instance would export all Compute Engine VM instance log entries from all projects in the sink's parent.To only export entries from certain child projects, filter on the project part of the log name:logName:("projects/test-project1/" OR "projects/test-project2/") AND resource.type=gce_instance
- */
     public Boolean getIncludeChildren() {
         return this.includeChildren;
     }
-/**
- * The client-assigned sink identifier, unique within the project.For example: "my-syslog-errors-to-pubsub". Sink identifiers are limited to 100 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First character has to be alphanumeric.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The last update timestamp of the sink.This field may not be present for older sinks.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }
-/**
- * An IAM identity—a service account or group—under which Cloud Logging writes the exported log entries to the sink's destination. This field is set by sinks.create and sinks.update based on the value of unique_writer_identity in those methods.Until you grant this identity write-access to the destination, log entry exports from this sink will fail. For more information, see Granting Access for a Resource (https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). Consult the destination service's documentation to determine the appropriate IAM roles to assign to the identity.Sinks that have a destination that is a log bucket in the same project as the sink do not have a writer_identity and no additional permissions are required.
- */
     public String getWriterIdentity() {
         return this.writerIdentity;
     }

@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTopicResult {
-/**
- * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
- */
     private final String name;
-/**
- * The settings for this topic's partitions.
- */
     private final PartitionConfigResponse partitionConfig;
-/**
- * The settings for this topic's Reservation usage.
- */
     private final ReservationConfigResponse reservationConfig;
-/**
- * The settings for this topic's message retention.
- */
     private final RetentionConfigResponse retentionConfig;
 
     @OutputCustomType.Constructor({"name","partitionConfig","reservationConfig","retentionConfig"})
@@ -41,27 +29,15 @@ public final class GetTopicResult {
         this.retentionConfig = Objects.requireNonNull(retentionConfig);
     }
 
-/**
- * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
- */
     public String getName() {
         return this.name;
     }
-/**
- * The settings for this topic's partitions.
- */
     public PartitionConfigResponse getPartitionConfig() {
         return this.partitionConfig;
     }
-/**
- * The settings for this topic's Reservation usage.
- */
     public ReservationConfigResponse getReservationConfig() {
         return this.reservationConfig;
     }
-/**
- * The settings for this topic's message retention.
- */
     public RetentionConfigResponse getRetentionConfig() {
         return this.retentionConfig;
     }

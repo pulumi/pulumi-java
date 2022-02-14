@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Managed application notification endpoint.
- */
 public final class ApplicationNotificationEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationNotificationEndpointResponse Empty = new ApplicationNotificationEndpointResponse();
 
-    /**
-     * The managed application notification endpoint uri.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

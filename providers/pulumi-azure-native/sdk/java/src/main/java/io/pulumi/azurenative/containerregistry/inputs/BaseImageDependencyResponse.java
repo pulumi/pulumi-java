@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties that describe a base image dependency.
- */
 public final class BaseImageDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BaseImageDependencyResponse Empty = new BaseImageDependencyResponse();
 
-    /**
-     * The sha256-based digest of the image manifest.
-     */
     @InputImport(name="digest")
     private final @Nullable String digest;
 
@@ -27,9 +21,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
-    /**
-     * The registry login server.
-     */
     @InputImport(name="registry")
     private final @Nullable String registry;
 
@@ -37,9 +28,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
     }
 
-    /**
-     * The repository name.
-     */
     @InputImport(name="repository")
     private final @Nullable String repository;
 
@@ -47,9 +35,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
     }
 
-    /**
-     * The tag name.
-     */
     @InputImport(name="tag")
     private final @Nullable String tag;
 
@@ -57,9 +42,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 
-    /**
-     * The type of the base image dependency.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

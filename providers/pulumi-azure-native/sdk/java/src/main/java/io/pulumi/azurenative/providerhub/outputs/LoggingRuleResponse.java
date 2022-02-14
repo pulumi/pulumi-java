@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoggingRuleResponse {
-/**
- * 
- */
     private final String action;
-/**
- * 
- */
     private final String detailLevel;
-/**
- * 
- */
     private final String direction;
-/**
- * 
- */
     private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
 
     @OutputCustomType.Constructor({"action","detailLevel","direction","hiddenPropertyPaths"})
@@ -41,27 +29,15 @@ public final class LoggingRuleResponse {
         this.hiddenPropertyPaths = hiddenPropertyPaths;
     }
 
-/**
- * 
- */
     public String getAction() {
         return this.action;
     }
-/**
- * 
- */
     public String getDetailLevel() {
         return this.detailLevel;
     }
-/**
- * 
- */
     public String getDirection() {
         return this.direction;
     }
-/**
- * 
- */
     public Optional<LoggingRuleResponseHiddenPropertyPaths> getHiddenPropertyPaths() {
         return Optional.ofNullable(this.hiddenPropertyPaths);
     }

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The policies for a container registry.
- */
 public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PoliciesResponse Empty = new PoliciesResponse();
 
-    /**
-     * The quarantine policy for a container registry.
-     */
     @InputImport(name="quarantinePolicy")
     private final @Nullable QuarantinePolicyResponse quarantinePolicy;
 
@@ -29,9 +23,6 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
         return this.quarantinePolicy == null ? Optional.empty() : Optional.ofNullable(this.quarantinePolicy);
     }
 
-    /**
-     * The retention policy for a container registry.
-     */
     @InputImport(name="retentionPolicy")
     private final @Nullable RetentionPolicyResponse retentionPolicy;
 
@@ -39,9 +30,6 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
     }
 
-    /**
-     * The content trust policy for a container registry.
-     */
     @InputImport(name="trustPolicy")
     private final @Nullable TrustPolicyResponse trustPolicy;
 

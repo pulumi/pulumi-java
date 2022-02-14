@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoggingRuleResponse Empty = new LoggingRuleResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -28,9 +22,6 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="detailLevel", required=true)
     private final String detailLevel;
 
@@ -38,9 +29,6 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.detailLevel;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -48,9 +36,6 @@ public final class LoggingRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.direction;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="hiddenPropertyPaths")
     private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
 

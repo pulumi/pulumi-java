@@ -18,621 +18,81 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Definition of ARM tracked top level resource.
-API Version: 2019-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update data collection rule
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataCollectionRule = new AzureNative.Insights.DataCollectionRule("dataCollectionRule", new AzureNative.Insights.DataCollectionRuleArgs
-        {
-            DataCollectionRuleName = "myCollectionRule",
-            DataFlows = 
-            {
-                new AzureNative.Insights.Inputs.DataFlowArgs
-                {
-                    Destinations = 
-                    {
-                        "centralWorkspace",
-                    },
-                    Streams = 
-                    {
-                        "Microsoft-Perf",
-                        "Microsoft-Syslog",
-                        "Microsoft-WindowsEvent",
-                    },
-                },
-            },
-            DataSources = new AzureNative.Insights.Inputs.DataCollectionRuleDataSourcesArgs
-            {
-                PerformanceCounters = 
-                {
-                    new AzureNative.Insights.Inputs.PerfCounterDataSourceArgs
-                    {
-                        CounterSpecifiers = 
-                        {
-                            "\\Processor(_Total)\\% Processor Time",
-                            "\\Memory\\Committed Bytes",
-                            "\\LogicalDisk(_Total)\\Free Megabytes",
-                            "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length",
-                        },
-                        Name = "cloudTeamCoreCounters",
-                        SamplingFrequencyInSeconds = 15,
-                        Streams = 
-                        {
-                            "Microsoft-Perf",
-                        },
-                    },
-                    new AzureNative.Insights.Inputs.PerfCounterDataSourceArgs
-                    {
-                        CounterSpecifiers = 
-                        {
-                            "\\Process(_Total)\\Thread Count",
-                        },
-                        Name = "appTeamExtraCounters",
-                        SamplingFrequencyInSeconds = 30,
-                        Streams = 
-                        {
-                            "Microsoft-Perf",
-                        },
-                    },
-                },
-                Syslog = 
-                {
-                    new AzureNative.Insights.Inputs.SyslogDataSourceArgs
-                    {
-                        FacilityNames = 
-                        {
-                            "cron",
-                        },
-                        LogLevels = 
-                        {
-                            "Debug",
-                            "Critical",
-                            "Emergency",
-                        },
-                        Name = "cronSyslog",
-                        Streams = 
-                        {
-                            "Microsoft-Syslog",
-                        },
-                    },
-                    new AzureNative.Insights.Inputs.SyslogDataSourceArgs
-                    {
-                        FacilityNames = 
-                        {
-                            "syslog",
-                        },
-                        LogLevels = 
-                        {
-                            "Alert",
-                            "Critical",
-                            "Emergency",
-                        },
-                        Name = "syslogBase",
-                        Streams = 
-                        {
-                            "Microsoft-Syslog",
-                        },
-                    },
-                },
-                WindowsEventLogs = 
-                {
-                    new AzureNative.Insights.Inputs.WindowsEventLogDataSourceArgs
-                    {
-                        Name = "cloudSecurityTeamEvents",
-                        Streams = 
-                        {
-                            "Microsoft-WindowsEvent",
-                        },
-                        XPathQueries = 
-                        {
-                            "Security!",
-                        },
-                    },
-                    new AzureNative.Insights.Inputs.WindowsEventLogDataSourceArgs
-                    {
-                        Name = "appTeam1AppEvents",
-                        Streams = 
-                        {
-                            "Microsoft-WindowsEvent",
-                        },
-                        XPathQueries = 
-                        {
-                            "System![System[(Level = 1 or Level = 2 or Level = 3)]]",
-                            "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]",
-                        },
-                    },
-                },
-            },
-            Destinations = new AzureNative.Insights.Inputs.DataCollectionRuleDestinationsArgs
-            {
-                LogAnalytics = 
-                {
-                    new AzureNative.Insights.Inputs.LogAnalyticsDestinationArgs
-                    {
-                        Name = "centralWorkspace",
-                        WorkspaceResourceId = "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
-                    },
-                },
-            },
-            Location = "eastus",
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewDataCollectionRule(ctx, "dataCollectionRule", &insights.DataCollectionRuleArgs{
-			DataCollectionRuleName: pulumi.String("myCollectionRule"),
-			DataFlows: []insights.DataFlowArgs{
-				&insights.DataFlowArgs{
-					Destinations: pulumi.StringArray{
-						pulumi.String("centralWorkspace"),
-					},
-					Streams: pulumi.StringArray{
-						pulumi.String("Microsoft-Perf"),
-						pulumi.String("Microsoft-Syslog"),
-						pulumi.String("Microsoft-WindowsEvent"),
-					},
-				},
-			},
-			DataSources: &insights.DataCollectionRuleDataSourcesArgs{
-				PerformanceCounters: insights.PerfCounterDataSourceArray{
-					&insights.PerfCounterDataSourceArgs{
-						CounterSpecifiers: pulumi.StringArray{
-							pulumi.String(fmt.Sprintf("%v%v%v", "\\Processor(_Total)\\", "%", " Processor Time")),
-							pulumi.String("\\Memory\\Committed Bytes"),
-							pulumi.String("\\LogicalDisk(_Total)\\Free Megabytes"),
-							pulumi.String("\\PhysicalDisk(_Total)\\Avg. Disk Queue Length"),
-						},
-						Name:                       pulumi.String("cloudTeamCoreCounters"),
-						SamplingFrequencyInSeconds: pulumi.Int(15),
-						Streams: pulumi.StringArray{
-							pulumi.String("Microsoft-Perf"),
-						},
-					},
-					&insights.PerfCounterDataSourceArgs{
-						CounterSpecifiers: pulumi.StringArray{
-							pulumi.String("\\Process(_Total)\\Thread Count"),
-						},
-						Name:                       pulumi.String("appTeamExtraCounters"),
-						SamplingFrequencyInSeconds: pulumi.Int(30),
-						Streams: pulumi.StringArray{
-							pulumi.String("Microsoft-Perf"),
-						},
-					},
-				},
-				Syslog: insights.SyslogDataSourceArray{
-					&insights.SyslogDataSourceArgs{
-						FacilityNames: pulumi.StringArray{
-							pulumi.String("cron"),
-						},
-						LogLevels: pulumi.StringArray{
-							pulumi.String("Debug"),
-							pulumi.String("Critical"),
-							pulumi.String("Emergency"),
-						},
-						Name: pulumi.String("cronSyslog"),
-						Streams: pulumi.StringArray{
-							pulumi.String("Microsoft-Syslog"),
-						},
-					},
-					&insights.SyslogDataSourceArgs{
-						FacilityNames: pulumi.StringArray{
-							pulumi.String("syslog"),
-						},
-						LogLevels: pulumi.StringArray{
-							pulumi.String("Alert"),
-							pulumi.String("Critical"),
-							pulumi.String("Emergency"),
-						},
-						Name: pulumi.String("syslogBase"),
-						Streams: pulumi.StringArray{
-							pulumi.String("Microsoft-Syslog"),
-						},
-					},
-				},
-				WindowsEventLogs: insights.WindowsEventLogDataSourceArray{
-					&insights.WindowsEventLogDataSourceArgs{
-						Name: pulumi.String("cloudSecurityTeamEvents"),
-						Streams: pulumi.StringArray{
-							pulumi.String("Microsoft-WindowsEvent"),
-						},
-						XPathQueries: pulumi.StringArray{
-							pulumi.String("Security!"),
-						},
-					},
-					&insights.WindowsEventLogDataSourceArgs{
-						Name: pulumi.String("appTeam1AppEvents"),
-						Streams: pulumi.StringArray{
-							pulumi.String("Microsoft-WindowsEvent"),
-						},
-						XPathQueries: pulumi.StringArray{
-							pulumi.String("System![System[(Level = 1 or Level = 2 or Level = 3)]]"),
-							pulumi.String("Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]"),
-						},
-					},
-				},
-			},
-			Destinations: &insights.DataCollectionRuleDestinationsArgs{
-				LogAnalytics: insights.LogAnalyticsDestinationArray{
-					&insights.LogAnalyticsDestinationArgs{
-						Name:                pulumi.String("centralWorkspace"),
-						WorkspaceResourceId: pulumi.String("/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace"),
-					},
-				},
-			},
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dataCollectionRule = new azure_native.insights.DataCollectionRule("dataCollectionRule", {
-    dataCollectionRuleName: "myCollectionRule",
-    dataFlows: [{
-        destinations: ["centralWorkspace"],
-        streams: [
-            "Microsoft-Perf",
-            "Microsoft-Syslog",
-            "Microsoft-WindowsEvent",
-        ],
-    }],
-    dataSources: {
-        performanceCounters: [
-            {
-                counterSpecifiers: [
-                    `\Processor(_Total)\% Processor Time`,
-                    "\\Memory\\Committed Bytes",
-                    "\\LogicalDisk(_Total)\\Free Megabytes",
-                    "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length",
-                ],
-                name: "cloudTeamCoreCounters",
-                samplingFrequencyInSeconds: 15,
-                streams: ["Microsoft-Perf"],
-            },
-            {
-                counterSpecifiers: ["\\Process(_Total)\\Thread Count"],
-                name: "appTeamExtraCounters",
-                samplingFrequencyInSeconds: 30,
-                streams: ["Microsoft-Perf"],
-            },
-        ],
-        syslog: [
-            {
-                facilityNames: ["cron"],
-                logLevels: [
-                    "Debug",
-                    "Critical",
-                    "Emergency",
-                ],
-                name: "cronSyslog",
-                streams: ["Microsoft-Syslog"],
-            },
-            {
-                facilityNames: ["syslog"],
-                logLevels: [
-                    "Alert",
-                    "Critical",
-                    "Emergency",
-                ],
-                name: "syslogBase",
-                streams: ["Microsoft-Syslog"],
-            },
-        ],
-        windowsEventLogs: [
-            {
-                name: "cloudSecurityTeamEvents",
-                streams: ["Microsoft-WindowsEvent"],
-                xPathQueries: ["Security!"],
-            },
-            {
-                name: "appTeam1AppEvents",
-                streams: ["Microsoft-WindowsEvent"],
-                xPathQueries: [
-                    "System![System[(Level = 1 or Level = 2 or Level = 3)]]",
-                    "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]",
-                ],
-            },
-        ],
-    },
-    destinations: {
-        logAnalytics: [{
-            name: "centralWorkspace",
-            workspaceResourceId: "/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
-        }],
-    },
-    location: "eastus",
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-data_collection_rule = azure_native.insights.DataCollectionRule("dataCollectionRule",
-    data_collection_rule_name="myCollectionRule",
-    data_flows=[azure_native.insights.DataFlowArgs(
-        destinations=["centralWorkspace"],
-        streams=[
-            "Microsoft-Perf",
-            "Microsoft-Syslog",
-            "Microsoft-WindowsEvent",
-        ],
-    )],
-    data_sources=azure_native.insights.DataCollectionRuleDataSourcesArgs(
-        performance_counters=[
-            azure_native.insights.PerfCounterDataSourceArgs(
-                counter_specifiers=[
-                    "\\Processor(_Total)\\% Processor Time",
-                    "\\Memory\\Committed Bytes",
-                    "\\LogicalDisk(_Total)\\Free Megabytes",
-                    "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length",
-                ],
-                name="cloudTeamCoreCounters",
-                sampling_frequency_in_seconds=15,
-                streams=["Microsoft-Perf"],
-            ),
-            azure_native.insights.PerfCounterDataSourceArgs(
-                counter_specifiers=["\\Process(_Total)\\Thread Count"],
-                name="appTeamExtraCounters",
-                sampling_frequency_in_seconds=30,
-                streams=["Microsoft-Perf"],
-            ),
-        ],
-        syslog=[
-            azure_native.insights.SyslogDataSourceArgs(
-                facility_names=["cron"],
-                log_levels=[
-                    "Debug",
-                    "Critical",
-                    "Emergency",
-                ],
-                name="cronSyslog",
-                streams=["Microsoft-Syslog"],
-            ),
-            azure_native.insights.SyslogDataSourceArgs(
-                facility_names=["syslog"],
-                log_levels=[
-                    "Alert",
-                    "Critical",
-                    "Emergency",
-                ],
-                name="syslogBase",
-                streams=["Microsoft-Syslog"],
-            ),
-        ],
-        windows_event_logs=[
-            azure_native.insights.WindowsEventLogDataSourceArgs(
-                name="cloudSecurityTeamEvents",
-                streams=["Microsoft-WindowsEvent"],
-                x_path_queries=["Security!"],
-            ),
-            azure_native.insights.WindowsEventLogDataSourceArgs(
-                name="appTeam1AppEvents",
-                streams=["Microsoft-WindowsEvent"],
-                x_path_queries=[
-                    "System![System[(Level = 1 or Level = 2 or Level = 3)]]",
-                    "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]",
-                ],
-            ),
-        ],
-    ),
-    destinations=azure_native.insights.DataCollectionRuleDestinationsArgs(
-        log_analytics=[azure_native.insights.LogAnalyticsDestinationArgs(
-            name="centralWorkspace",
-            workspace_resource_id="/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace",
-        )],
-    ),
-    location="eastus",
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:DataCollectionRule myCollectionRule /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule 
-```
-
- */
 @ResourceType(type="azure-native:insights:DataCollectionRule")
 public class DataCollectionRule extends io.pulumi.resources.CustomResource {
-    /**
-     * The specification of data flows.
-     */
     @OutputExport(name="dataFlows", type=List.class, parameters={DataFlowResponse.class})
     private Output</* @Nullable */ List<DataFlowResponse>> dataFlows;
 
-    /**
-     * @return The specification of data flows.
-     */
     public Output</* @Nullable */ List<DataFlowResponse>> getDataFlows() {
         return this.dataFlows;
     }
-    /**
-     * The specification of data sources. 
-This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
-     */
     @OutputExport(name="dataSources", type=DataCollectionRuleResponseDataSources.class, parameters={})
     private Output</* @Nullable */ DataCollectionRuleResponseDataSources> dataSources;
 
-    /**
-     * @return The specification of data sources. 
-This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
-     */
     public Output</* @Nullable */ DataCollectionRuleResponseDataSources> getDataSources() {
         return this.dataSources;
     }
-    /**
-     * Description of the data collection rule.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Description of the data collection rule.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The specification of destinations.
-     */
     @OutputExport(name="destinations", type=DataCollectionRuleResponseDestinations.class, parameters={})
     private Output</* @Nullable */ DataCollectionRuleResponseDestinations> destinations;
 
-    /**
-     * @return The specification of destinations.
-     */
     public Output</* @Nullable */ DataCollectionRuleResponseDestinations> getDestinations() {
         return this.destinations;
     }
-    /**
-     * Resource entity tag (ETag).
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Resource entity tag (ETag).
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The immutable ID of this data collection rule. This property is READ-ONLY.
-     */
     @OutputExport(name="immutableId", type=String.class, parameters={})
     private Output<String> immutableId;
 
-    /**
-     * @return The immutable ID of this data collection rule. This property is READ-ONLY.
-     */
     public Output<String> getImmutableId() {
         return this.immutableId;
     }
-    /**
-     * The kind of the resource.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return The kind of the resource.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * The geo-location where the resource lives.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource provisioning state.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The resource provisioning state.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DataCollectionRule(String name, DataCollectionRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:DataCollectionRule", name, args == null ? DataCollectionRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -652,14 +112,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DataCollectionRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataCollectionRule(name, id, options);
     }

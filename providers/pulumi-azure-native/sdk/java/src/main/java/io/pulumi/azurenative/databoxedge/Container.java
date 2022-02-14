@@ -16,194 +16,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Represents a container on the  Data Box Edge/Gateway device.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ContainerPut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var container = new AzureNative.DataBoxEdge.Container("container", new AzureNative.DataBoxEdge.ContainerArgs
-        {
-            ContainerName = "blobcontainer1",
-            DataFormat = "BlockBlob",
-            DeviceName = "testedgedevice",
-            ResourceGroupName = "GroupForEdgeAutomation",
-            StorageAccountName = "storageaccount1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewContainer(ctx, "container", &databoxedge.ContainerArgs{
-			ContainerName:      pulumi.String("blobcontainer1"),
-			DataFormat:         pulumi.String("BlockBlob"),
-			DeviceName:         pulumi.String("testedgedevice"),
-			ResourceGroupName:  pulumi.String("GroupForEdgeAutomation"),
-			StorageAccountName: pulumi.String("storageaccount1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const container = new azure_native.databoxedge.Container("container", {
-    containerName: "blobcontainer1",
-    dataFormat: "BlockBlob",
-    deviceName: "testedgedevice",
-    resourceGroupName: "GroupForEdgeAutomation",
-    storageAccountName: "storageaccount1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-container = azure_native.databoxedge.Container("container",
-    container_name="blobcontainer1",
-    data_format="BlockBlob",
-    device_name="testedgedevice",
-    resource_group_name="GroupForEdgeAutomation",
-    storage_account_name="storageaccount1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:databoxedge:Container blobcontainer-5e155efe /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccounts/storageaccount1/containers/blobcontainer1 
-```
-
- */
 @ResourceType(type="azure-native:databoxedge:Container")
 public class Container extends io.pulumi.resources.CustomResource {
-    /**
-     * Current status of the container.
-     */
     @OutputExport(name="containerStatus", type=String.class, parameters={})
     private Output<String> containerStatus;
 
-    /**
-     * @return Current status of the container.
-     */
     public Output<String> getContainerStatus() {
         return this.containerStatus;
     }
-    /**
-     * The UTC time when container got created.
-     */
     @OutputExport(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
-    /**
-     * @return The UTC time when container got created.
-     */
     public Output<String> getCreatedDateTime() {
         return this.createdDateTime;
     }
-    /**
-     * DataFormat for Container
-     */
     @OutputExport(name="dataFormat", type=String.class, parameters={})
     private Output<String> dataFormat;
 
-    /**
-     * @return DataFormat for Container
-     */
     public Output<String> getDataFormat() {
         return this.dataFormat;
     }
-    /**
-     * The object name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The object name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Details of the refresh job on this container.
-     */
     @OutputExport(name="refreshDetails", type=RefreshDetailsResponse.class, parameters={})
     private Output<RefreshDetailsResponse> refreshDetails;
 
-    /**
-     * @return Details of the refresh job on this container.
-     */
     public Output<RefreshDetailsResponse> getRefreshDetails() {
         return this.refreshDetails;
     }
-    /**
-     * Container in DataBoxEdge Resource
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Container in DataBoxEdge Resource
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The hierarchical type of the object.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The hierarchical type of the object.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Container(String name, ContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -230,14 +87,6 @@ public class Container extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Container get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Container(name, id, options);
     }

@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of backup policy type
- */
     @EnumType
     public enum PolicyType {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         Full("Full"),
-/**
- * 
- */
         Differential("Differential"),
-/**
- * 
- */
         Log("Log"),
-/**
- * 
- */
         CopyOnlyFull("CopyOnlyFull"),
-/**
- * 
- */
         Incremental("Incremental");
 
         private final String value;

@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Direction of port mirroring profile.
- */
     @EnumType
     public enum PortMirroringDirectionEnum {
-/**
- * 
- */
         INGRESS_EGRESS_BIDIRECTIONAL("INGRESS, EGRESS, BIDIRECTIONAL");
 
         private final String value;

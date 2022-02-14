@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse {
-/**
- * Optional. Settings for displaying the image. Applies to every image in items.
- */
     private final String imageDisplayOptions;
-/**
- * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
- */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
     @OutputCustomType.Constructor({"imageDisplayOptions","items"})
@@ -28,15 +22,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
         this.items = Objects.requireNonNull(items);
     }
 
-/**
- * Optional. Settings for displaying the image. Applies to every image in items.
- */
     public String getImageDisplayOptions() {
         return this.imageDisplayOptions;
     }
-/**
- * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
- */
     public List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> getItems() {
         return this.items;
     }

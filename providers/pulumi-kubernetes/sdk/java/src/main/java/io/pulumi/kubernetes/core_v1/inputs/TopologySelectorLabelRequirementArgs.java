@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.
- */
 public final class TopologySelectorLabelRequirementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopologySelectorLabelRequirementArgs Empty = new TopologySelectorLabelRequirementArgs();
 
-    /**
-     * The label key that the selector applies to.
-     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -27,9 +21,6 @@ public final class TopologySelectorLabelRequirementArgs extends io.pulumi.resour
         return this.key;
     }
 
-    /**
-     * An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
-     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

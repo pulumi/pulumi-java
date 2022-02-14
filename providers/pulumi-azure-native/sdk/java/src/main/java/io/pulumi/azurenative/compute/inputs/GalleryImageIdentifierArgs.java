@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * This is the gallery image definition identifier.
- */
 public final class GalleryImageIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageIdentifierArgs Empty = new GalleryImageIdentifierArgs();
 
-    /**
-     * The name of the gallery image definition offer.
-     */
     @InputImport(name="offer", required=true)
     private final Input<String> offer;
 
@@ -26,9 +20,6 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
         return this.offer;
     }
 
-    /**
-     * The name of the gallery image definition publisher.
-     */
     @InputImport(name="publisher", required=true)
     private final Input<String> publisher;
 
@@ -36,9 +27,6 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
         return this.publisher;
     }
 
-    /**
-     * The name of the gallery image definition SKU.
-     */
     @InputImport(name="sku", required=true)
     private final Input<String> sku;
 

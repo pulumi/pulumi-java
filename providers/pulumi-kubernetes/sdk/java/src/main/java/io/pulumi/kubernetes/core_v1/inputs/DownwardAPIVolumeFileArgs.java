@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * DownwardAPIVolumeFile represents information to create the file containing the pod field
- */
 public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DownwardAPIVolumeFileArgs Empty = new DownwardAPIVolumeFileArgs();
 
-    /**
-     * Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.
-     */
     @InputImport(name="fieldRef")
     private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
 
@@ -30,9 +24,6 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
         return this.fieldRef == null ? Input.empty() : this.fieldRef;
     }
 
-    /**
-     * Optional: mode bits used to set permissions on this file, must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Integer> mode;
 
@@ -40,9 +31,6 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
         return this.mode == null ? Input.empty() : this.mode;
     }
 
-    /**
-     * Required: Path is  the relative path name of the file to be created. Must not be absolute or contain the '..' path. Must be utf-8 encoded. The first item of the relative path must not start with '..'
-     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -50,9 +38,6 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
         return this.path;
     }
 
-    /**
-     * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.
-     */
     @InputImport(name="resourceFieldRef")
     private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
 

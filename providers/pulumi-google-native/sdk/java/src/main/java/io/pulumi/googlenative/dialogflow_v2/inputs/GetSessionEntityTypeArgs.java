@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSessionEntityTypeArgs Empty = new GetSessionEntityTypeArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="entityTypeId", required=true)
     private final String entityTypeId;
 
@@ -27,9 +21,6 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
         return this.entityTypeId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -37,9 +28,6 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
         return this.environmentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -57,9 +42,6 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sessionId", required=true)
     private final String sessionId;
 
@@ -67,9 +49,6 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
         return this.sessionId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="userId", required=true)
     private final String userId;
 

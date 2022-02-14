@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
- */
 public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkBgpCommunitiesResponse Empty = new VirtualNetworkBgpCommunitiesResponse();
 
-    /**
-     * The BGP community associated with the region of the virtual network.
-     */
     @InputImport(name="regionalCommunity", required=true)
     private final String regionalCommunity;
 
@@ -25,9 +19,6 @@ public final class VirtualNetworkBgpCommunitiesResponse extends io.pulumi.resour
         return this.regionalCommunity;
     }
 
-    /**
-     * The BGP community associated with the virtual network.
-     */
     @InputImport(name="virtualNetworkCommunity", required=true)
     private final String virtualNetworkCommunity;
 

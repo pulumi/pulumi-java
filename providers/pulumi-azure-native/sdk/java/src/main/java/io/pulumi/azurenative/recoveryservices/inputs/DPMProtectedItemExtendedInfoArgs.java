@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional information of DPM Protected item.
- */
 public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DPMProtectedItemExtendedInfoArgs Empty = new DPMProtectedItemExtendedInfoArgs();
 
-    /**
-     * Used Disk storage in bytes.
-     */
     @InputImport(name="diskStorageUsedInBytes")
     private final @Nullable Input<String> diskStorageUsedInBytes;
 
@@ -30,9 +24,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.diskStorageUsedInBytes == null ? Input.empty() : this.diskStorageUsedInBytes;
     }
 
-    /**
-     * To check if backup item is collocated.
-     */
     @InputImport(name="isCollocated")
     private final @Nullable Input<Boolean> isCollocated;
 
@@ -40,9 +31,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.isCollocated == null ? Input.empty() : this.isCollocated;
     }
 
-    /**
-     * To check if backup item is cloud protected.
-     */
     @InputImport(name="isPresentOnCloud")
     private final @Nullable Input<Boolean> isPresentOnCloud;
 
@@ -50,9 +38,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.isPresentOnCloud == null ? Input.empty() : this.isPresentOnCloud;
     }
 
-    /**
-     * Last backup status information on backup item.
-     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable Input<String> lastBackupStatus;
 
@@ -60,9 +45,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
     }
 
-    /**
-     * Last refresh time on backup item.
-     */
     @InputImport(name="lastRefreshedAt")
     private final @Nullable Input<String> lastRefreshedAt;
 
@@ -70,9 +52,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
     }
 
-    /**
-     * Oldest cloud recovery point time.
-     */
     @InputImport(name="oldestRecoveryPoint")
     private final @Nullable Input<String> oldestRecoveryPoint;
 
@@ -80,9 +59,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
     }
 
-    /**
-     * latest disk recovery point time.
-     */
     @InputImport(name="onPremiseLatestRecoveryPoint")
     private final @Nullable Input<String> onPremiseLatestRecoveryPoint;
 
@@ -90,9 +66,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.onPremiseLatestRecoveryPoint == null ? Input.empty() : this.onPremiseLatestRecoveryPoint;
     }
 
-    /**
-     * Oldest disk recovery point time.
-     */
     @InputImport(name="onPremiseOldestRecoveryPoint")
     private final @Nullable Input<String> onPremiseOldestRecoveryPoint;
 
@@ -100,9 +73,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.onPremiseOldestRecoveryPoint == null ? Input.empty() : this.onPremiseOldestRecoveryPoint;
     }
 
-    /**
-     * disk recovery point count.
-     */
     @InputImport(name="onPremiseRecoveryPointCount")
     private final @Nullable Input<Integer> onPremiseRecoveryPointCount;
 
@@ -110,9 +80,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.onPremiseRecoveryPointCount == null ? Input.empty() : this.onPremiseRecoveryPointCount;
     }
 
-    /**
-     * Attribute to provide information on various DBs.
-     */
     @InputImport(name="protectableObjectLoadPath")
     private final @Nullable Input<Map<String,String>> protectableObjectLoadPath;
 
@@ -120,9 +87,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.protectableObjectLoadPath == null ? Input.empty() : this.protectableObjectLoadPath;
     }
 
-    /**
-     * To check if backup item is disk protected.
-     */
     @InputImport(name="protected")
     private final @Nullable Input<Boolean> $protected;
 
@@ -130,9 +94,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.$protected == null ? Input.empty() : this.$protected;
     }
 
-    /**
-     * Protection group name of the backup item.
-     */
     @InputImport(name="protectionGroupName")
     private final @Nullable Input<String> protectionGroupName;
 
@@ -140,9 +101,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.protectionGroupName == null ? Input.empty() : this.protectionGroupName;
     }
 
-    /**
-     * cloud recovery point count.
-     */
     @InputImport(name="recoveryPointCount")
     private final @Nullable Input<Integer> recoveryPointCount;
 
@@ -150,9 +108,6 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
     }
 
-    /**
-     * total Disk storage in bytes.
-     */
     @InputImport(name="totalDiskStorageSizeInBytes")
     private final @Nullable Input<String> totalDiskStorageSizeInBytes;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of the namespace.
- */
 public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SBSkuResponse Empty = new SBSkuResponse();
 
-    /**
-     * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * Name of this SKU.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,9 +29,6 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The billing tier of this particular SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

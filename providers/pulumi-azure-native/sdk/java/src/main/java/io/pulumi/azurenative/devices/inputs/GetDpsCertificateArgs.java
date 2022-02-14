@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDpsCertificateArgs Empty = new GetDpsCertificateArgs();
 
-    /**
-     * Name of the certificate to retrieve.
-     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -25,9 +19,6 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
         return this.certificateName;
     }
 
-    /**
-     * Name of the provisioning service the certificate is associated with.
-     */
     @InputImport(name="provisioningServiceName", required=true)
     private final String provisioningServiceName;
 
@@ -35,9 +26,6 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
         return this.provisioningServiceName;
     }
 
-    /**
-     * Resource group identifier.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

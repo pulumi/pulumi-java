@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CloudServiceVaultAndSecretReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudServiceVaultAndSecretReferenceResponse Empty = new CloudServiceVaultAndSecretReferenceResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="secretUrl")
     private final @Nullable String secretUrl;
 
@@ -28,9 +22,6 @@ public final class CloudServiceVaultAndSecretReferenceResponse extends io.pulumi
         return this.secretUrl == null ? Optional.empty() : Optional.ofNullable(this.secretUrl);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sourceVault")
     private final @Nullable SubResourceResponse sourceVault;
 

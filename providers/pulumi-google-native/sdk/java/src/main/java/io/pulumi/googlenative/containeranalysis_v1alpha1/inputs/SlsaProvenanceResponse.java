@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * SlsaProvenance is the slsa provenance as defined by the slsa spec.
- */
 public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SlsaProvenanceResponse Empty = new SlsaProvenanceResponse();
 
-    /**
-     * builder is the builder of this provenance
-     */
     @InputImport(name="builder", required=true)
     private final SlsaBuilderResponse builder;
 
@@ -29,9 +23,6 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
         return this.builder;
     }
 
-    /**
-     * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
-     */
     @InputImport(name="materials", required=true)
     private final List<MaterialResponse> materials;
 
@@ -39,9 +30,6 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
         return this.materials;
     }
 
-    /**
-     * metadata is the metadata of the provenance
-     */
     @InputImport(name="metadata", required=true)
     private final SlsaMetadataResponse metadata;
 
@@ -49,9 +37,6 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
         return this.metadata;
     }
 
-    /**
-     * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible).
-     */
     @InputImport(name="recipe", required=true)
     private final SlsaRecipeResponse recipe;
 

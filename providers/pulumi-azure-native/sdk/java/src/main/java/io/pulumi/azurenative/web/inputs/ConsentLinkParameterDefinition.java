@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Consent link definition
- */
 public final class ConsentLinkParameterDefinition extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsentLinkParameterDefinition Empty = new ConsentLinkParameterDefinition();
 
-    /**
-     * AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
-     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -27,9 +21,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
-    /**
-     * Name of the parameter in the connection provider's OAuth settings
-     */
     @InputImport(name="parameterName")
     private final @Nullable String parameterName;
 
@@ -37,9 +28,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
         return this.parameterName == null ? Optional.empty() : Optional.ofNullable(this.parameterName);
     }
 
-    /**
-     * Name of the parameter in the connection provider's OAuth settings
-     */
     @InputImport(name="redirectUrl")
     private final @Nullable String redirectUrl;
 
@@ -47,9 +35,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
         return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
     }
 
-    /**
-     * The tenant id
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetPeeringArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPeeringArgs Empty = new GetPeeringArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="peeringId", required=true)
     private final String peeringId;
 
@@ -27,9 +21,6 @@ public final class GetPeeringArgs extends io.pulumi.resources.InvokeArgs {
         return this.peeringId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -14,16 +14,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * An intent represents a user's intent to interact with a conversational agent. You can provide information for the Dialogflow API to use to match user input to an intent by adding training phrases (i.e., examples of user input) to your intent.
- */
 public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1IntentResponse Empty = new GoogleCloudDialogflowCxV3beta1IntentResponse();
 
-    /**
-     * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -31,9 +25,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.description;
     }
 
-    /**
-     * The human-readable name of the intent, unique within the agent.
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -41,9 +32,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.displayName;
     }
 
-    /**
-     * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
-     */
     @InputImport(name="isFallback", required=true)
     private final Boolean isFallback;
 
@@ -51,9 +39,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.isFallback;
     }
 
-    /**
-     * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.
-     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -61,9 +46,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.labels;
     }
 
-    /**
-     * The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -71,9 +53,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.name;
     }
 
-    /**
-     * The collection of parameters associated with the intent.
-     */
     @InputImport(name="parameters", required=true)
     private final List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters;
 
@@ -81,9 +60,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.parameters;
     }
 
-    /**
-     * The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
-     */
     @InputImport(name="priority", required=true)
     private final Integer priority;
 
@@ -91,9 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
         return this.priority;
     }
 
-    /**
-     * The collection of training phrases the agent is trained on to identify the intent.
-     */
     @InputImport(name="trainingPhrases", required=true)
     private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases;
 

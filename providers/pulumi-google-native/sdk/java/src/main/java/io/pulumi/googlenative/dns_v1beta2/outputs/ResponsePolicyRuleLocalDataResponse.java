@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResponsePolicyRuleLocalDataResponse {
-/**
- * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
- */
     private final List<ResourceRecordSetResponse> localDatas;
 
     @OutputCustomType.Constructor({"localDatas"})
@@ -20,9 +17,6 @@ public final class ResponsePolicyRuleLocalDataResponse {
         this.localDatas = Objects.requireNonNull(localDatas);
     }
 
-/**
- * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
- */
     public List<ResourceRecordSetResponse> getLocalDatas() {
         return this.localDatas;
     }

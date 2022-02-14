@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A set of Shielded VM options.
- */
 public final class ShieldedVmConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShieldedVmConfigArgs Empty = new ShieldedVmConfigArgs();
 
-    /**
-     * Defines whether the instance has integrity monitoring enabled.
-     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -27,9 +21,6 @@ public final class ShieldedVmConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
-    /**
-     * Defines whether the instance has Secure Boot enabled.
-     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 
@@ -37,9 +28,6 @@ public final class ShieldedVmConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
     }
 
-    /**
-     * Defines whether the instance has the vTPM enabled.
-     */
     @InputImport(name="enableVtpm")
     private final @Nullable Input<Boolean> enableVtpm;
 

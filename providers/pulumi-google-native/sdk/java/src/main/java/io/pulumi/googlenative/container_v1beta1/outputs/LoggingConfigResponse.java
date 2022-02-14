@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoggingConfigResponse {
-/**
- * Logging components configuration
- */
     private final LoggingComponentConfigResponse componentConfig;
 
     @OutputCustomType.Constructor({"componentConfig"})
@@ -19,9 +16,6 @@ public final class LoggingConfigResponse {
         this.componentConfig = Objects.requireNonNull(componentConfig);
     }
 
-/**
- * Logging components configuration
- */
     public LoggingComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
-/**
- * The key used by the hash function.
- */
     private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     @OutputCustomType.Constructor({"cryptoKey"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
         this.cryptoKey = Objects.requireNonNull(cryptoKey);
     }
 
-/**
- * The key used by the hash function.
- */
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
     }

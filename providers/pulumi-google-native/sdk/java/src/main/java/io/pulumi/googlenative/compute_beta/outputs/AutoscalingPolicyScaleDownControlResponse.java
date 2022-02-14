@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutoscalingPolicyScaleDownControlResponse {
-/**
- * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
- */
     private final FixedOrPercentResponse maxScaledDownReplicas;
-/**
- * How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
- */
     private final Integer timeWindowSec;
 
     @OutputCustomType.Constructor({"maxScaledDownReplicas","timeWindowSec"})
@@ -27,15 +21,9 @@ public final class AutoscalingPolicyScaleDownControlResponse {
         this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
     }
 
-/**
- * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
- */
     public FixedOrPercentResponse getMaxScaledDownReplicas() {
         return this.maxScaledDownReplicas;
     }
-/**
- * How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
- */
     public Integer getTimeWindowSec() {
         return this.timeWindowSec;
     }

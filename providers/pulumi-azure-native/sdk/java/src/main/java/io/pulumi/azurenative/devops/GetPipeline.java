@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
-API Version: 2020-07-13-preview.
- *
- * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
- */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devops:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

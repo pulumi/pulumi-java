@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallRule {
-/**
- * Data Lake Store firewall rule information.
-API Version: 2016-11-01.
- *
- * Data Lake Store firewall rule information.
- */
     public static CompletableFuture<GetFirewallRuleResult> invokeAsync(GetFirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args == null ? GetFirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

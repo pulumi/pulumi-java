@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The direction in which this rule applies.
- */
     @EnumType
     public enum FirewallPolicyRuleDirection {
-/**
- * 
- */
         Egress("EGRESS"),
-/**
- * 
- */
         Ingress("INGRESS");
 
         private final String value;

@@ -12,45 +12,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkloadNetworkPortMirroringResult {
-/**
- * Destination VM Group.
- */
     private final @Nullable String destination;
-/**
- * Direction of port mirroring profile.
- */
     private final @Nullable String direction;
-/**
- * Display name of the port mirroring profile.
- */
     private final @Nullable String displayName;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The provisioning state
- */
     private final String provisioningState;
-/**
- * NSX revision number.
- */
     private final @Nullable Double revision;
-/**
- * Source VM Group.
- */
     private final @Nullable String source;
-/**
- * Port Mirroring Status.
- */
     private final String status;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"destination","direction","displayName","id","name","provisioningState","revision","source","status","type"})
@@ -77,63 +47,33 @@ public final class GetWorkloadNetworkPortMirroringResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Destination VM Group.
- */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
-/**
- * Direction of port mirroring profile.
- */
     public Optional<String> getDirection() {
         return Optional.ofNullable(this.direction);
     }
-/**
- * Display name of the port mirroring profile.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * NSX revision number.
- */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
-/**
- * Source VM Group.
- */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
-/**
- * Port Mirroring Status.
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

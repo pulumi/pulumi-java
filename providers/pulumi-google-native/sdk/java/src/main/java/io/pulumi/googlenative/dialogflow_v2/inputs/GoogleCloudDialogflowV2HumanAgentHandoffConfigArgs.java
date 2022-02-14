@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the hand off to a live agent, typically on which external agent service provider to connect to a conversation. Currently, this feature is not general available, please contact Google to get access.
- */
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs();
 
-    /**
-     * Uses LivePerson (https://www.liveperson.com).
-     */
     @InputImport(name="livePersonConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
         return this.livePersonConfig == null ? Input.empty() : this.livePersonConfig;
     }
 
-    /**
-     * Uses Salesforce Live Agent.
-     */
     @InputImport(name="salesforceLiveAgentConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig;
 

@@ -17,16 +17,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The request parameters for a scheduling run against a task file.
- */
 public final class FileTaskRunRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileTaskRunRequestResponse Empty = new FileTaskRunRequestResponse();
 
-    /**
-     * The machine configuration of the run agent.
-     */
     @InputImport(name="agentConfiguration")
     private final @Nullable AgentPropertiesResponse agentConfiguration;
 
@@ -34,9 +28,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
     }
 
-    /**
-     * The dedicated agent pool for the run.
-     */
     @InputImport(name="agentPoolName")
     private final @Nullable String agentPoolName;
 
@@ -44,9 +35,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
-    /**
-     * The properties that describes a set of credentials that will be used when this run is invoked.
-     */
     @InputImport(name="credentials")
     private final @Nullable CredentialsResponse credentials;
 
@@ -54,9 +42,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
-    /**
-     * The value that indicates whether archiving is enabled for the run or not.
-     */
     @InputImport(name="isArchiveEnabled")
     private final @Nullable Boolean isArchiveEnabled;
 
@@ -64,9 +49,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
-    /**
-     * The template that describes the repository and tag information for run log artifact.
-     */
     @InputImport(name="logTemplate")
     private final @Nullable String logTemplate;
 
@@ -74,9 +56,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
     }
 
-    /**
-     * The platform properties against which the run has to happen.
-     */
     @InputImport(name="platform", required=true)
     private final PlatformPropertiesResponse platform;
 
@@ -84,10 +63,6 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
         return this.platform;
     }
 
-    /**
-     * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
-If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-     */
     @InputImport(name="sourceLocation")
     private final @Nullable String sourceLocation;
 
@@ -95,9 +70,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
         return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
     }
 
-    /**
-     * The template/definition file path relative to the source.
-     */
     @InputImport(name="taskFilePath", required=true)
     private final String taskFilePath;
 
@@ -105,9 +77,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
         return this.taskFilePath;
     }
 
-    /**
-     * Run timeout in seconds.
-     */
     @InputImport(name="timeout")
     private final @Nullable Integer timeout;
 
@@ -115,10 +84,6 @@ If it is relative URL, the relative path should be obtained from calling listBui
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
-    /**
-     * The type of the run request.
-Expected value is 'FileTaskRunRequest'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -126,9 +91,6 @@ Expected value is 'FileTaskRunRequest'.
         return this.type;
     }
 
-    /**
-     * The collection of overridable values that can be passed when running a task.
-     */
     @InputImport(name="values")
     private final @Nullable List<SetValueResponse> values;
 
@@ -136,9 +98,6 @@ Expected value is 'FileTaskRunRequest'.
         return this.values == null ? List.of() : this.values;
     }
 
-    /**
-     * The values/parameters file path relative to the source.
-     */
     @InputImport(name="valuesFilePath")
     private final @Nullable String valuesFilePath;
 

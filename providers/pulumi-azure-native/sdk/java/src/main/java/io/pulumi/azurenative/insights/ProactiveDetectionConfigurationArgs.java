@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProactiveDetectionConfigurationArgs Empty = new ProactiveDetectionConfigurationArgs();
 
-    /**
-     * The ProactiveDetection configuration ID. This is unique within a Application Insights component.
-     */
     @InputImport(name="configurationId")
     private final @Nullable Input<String> configurationId;
 
@@ -30,9 +24,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.configurationId == null ? Input.empty() : this.configurationId;
     }
 
-    /**
-     * Custom email addresses for this rule notifications
-     */
     @InputImport(name="customEmails")
     private final @Nullable Input<List<String>> customEmails;
 
@@ -40,9 +31,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.customEmails == null ? Input.empty() : this.customEmails;
     }
 
-    /**
-     * A flag that indicates whether this rule is enabled by the user
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -50,9 +38,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * The last time this rule was updated
-     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -60,9 +45,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
     }
 
-    /**
-     * The rule name
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,9 +52,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -80,9 +59,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -90,9 +66,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.resourceName;
     }
 
-    /**
-     * Static definitions of the ProactiveDetection configuration rule (same values for all components).
-     */
     @InputImport(name="ruleDefinitions")
     private final @Nullable Input<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
@@ -100,9 +73,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
         return this.ruleDefinitions == null ? Input.empty() : this.ruleDefinitions;
     }
 
-    /**
-     * A flag that indicated whether notifications on this rule should be sent to subscription owners
-     */
     @InputImport(name="sendEmailsToSubscriptionOwners")
     private final @Nullable Input<Boolean> sendEmailsToSubscriptionOwners;
 

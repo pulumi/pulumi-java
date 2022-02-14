@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCommitmentPlanResult {
-/**
- * An entity tag used to enforce optimistic concurrency.
- */
     private final @Nullable String etag;
-/**
- * Resource Id.
- */
     private final String id;
-/**
- * Resource location.
- */
     private final String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The commitment plan properties.
- */
     private final CommitmentPlanPropertiesResponse properties;
-/**
- * The commitment plan SKU.
- */
     private final @Nullable ResourceSkuResponse sku;
-/**
- * User-defined tags for the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","properties","sku","tags","type"})
@@ -67,51 +43,27 @@ public final class GetCommitmentPlanResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * An entity tag used to enforce optimistic concurrency.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * Resource Id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The commitment plan properties.
- */
     public CommitmentPlanPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * The commitment plan SKU.
- */
     public Optional<ResourceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * User-defined tags for the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

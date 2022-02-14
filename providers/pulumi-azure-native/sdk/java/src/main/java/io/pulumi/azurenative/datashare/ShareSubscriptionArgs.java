@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShareSubscriptionArgs Empty = new ShareSubscriptionArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.accountName;
     }
 
-    /**
-     * The expiration date of the share subscription.
-     */
     @InputImport(name="expirationDate")
     private final @Nullable Input<String> expirationDate;
 
@@ -37,9 +28,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
     }
 
-    /**
-     * The invitation id.
-     */
     @InputImport(name="invitationId", required=true)
     private final Input<String> invitationId;
 
@@ -47,9 +35,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.invitationId;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the shareSubscription.
-     */
     @InputImport(name="shareSubscriptionName")
     private final @Nullable Input<String> shareSubscriptionName;
 
@@ -67,9 +49,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.shareSubscriptionName == null ? Input.empty() : this.shareSubscriptionName;
     }
 
-    /**
-     * Source share location.
-     */
     @InputImport(name="sourceShareLocation", required=true)
     private final Input<String> sourceShareLocation;
 

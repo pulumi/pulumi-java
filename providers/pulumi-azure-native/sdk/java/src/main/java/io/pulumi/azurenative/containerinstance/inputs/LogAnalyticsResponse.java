@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container group log analytics information.
- */
 public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogAnalyticsResponse Empty = new LogAnalyticsResponse();
 
-    /**
-     * The log type to be used.
-     */
     @InputImport(name="logType")
     private final @Nullable String logType;
 
@@ -28,9 +22,6 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
         return this.logType == null ? Optional.empty() : Optional.ofNullable(this.logType);
     }
 
-    /**
-     * Metadata for log analytics.
-     */
     @InputImport(name="metadata")
     private final @Nullable Map<String,String> metadata;
 
@@ -38,9 +29,6 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
-    /**
-     * The workspace id for log analytics
-     */
     @InputImport(name="workspaceId", required=true)
     private final String workspaceId;
 
@@ -48,9 +36,6 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
         return this.workspaceId;
     }
 
-    /**
-     * The workspace key for log analytics
-     */
     @InputImport(name="workspaceKey", required=true)
     private final String workspaceKey;
 
@@ -58,9 +43,6 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
         return this.workspaceKey;
     }
 
-    /**
-     * The workspace resource id for log analytics
-     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable Map<String,String> workspaceResourceId;
 

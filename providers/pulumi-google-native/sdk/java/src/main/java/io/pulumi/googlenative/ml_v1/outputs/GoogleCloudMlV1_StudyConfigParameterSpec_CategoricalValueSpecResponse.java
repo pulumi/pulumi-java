@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse {
-/**
- * Must be specified if type is `CATEGORICAL`. The list of possible categories.
- */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"values"})
@@ -20,9 +17,6 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
         this.values = Objects.requireNonNull(values);
     }
 
-/**
- * Must be specified if type is `CATEGORICAL`. The list of possible categories.
- */
     public List<String> getValues() {
         return this.values;
     }

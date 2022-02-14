@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsole {
-/**
- * Cloud shell console
-API Version: 2018-10-01.
- *
- * Cloud shell console
- */
     public static CompletableFuture<GetConsoleResult> invokeAsync(GetConsoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsole", TypeShape.of(GetConsoleResult.class), args == null ? GetConsoleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,46 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of backup management for the backed up item.
- */
     @EnumType
     public enum BackupManagementType {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         AzureIaasVM("AzureIaasVM"),
-/**
- * 
- */
         MAB("MAB"),
-/**
- * 
- */
         DPM("DPM"),
-/**
- * 
- */
         AzureBackupServer("AzureBackupServer"),
-/**
- * 
- */
         AzureSql("AzureSql"),
-/**
- * 
- */
         AzureStorage("AzureStorage"),
-/**
- * 
- */
         AzureWorkload("AzureWorkload"),
-/**
- * 
- */
         DefaultBackup("DefaultBackup");
 
         private final String value;

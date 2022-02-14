@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse {
-/**
- * The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
- */
     private final String agent;
 
     @OutputCustomType.Constructor({"agent"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
         this.agent = Objects.requireNonNull(agent);
     }
 
-/**
- * The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
- */
     public String getAgent() {
         return this.agent;
     }

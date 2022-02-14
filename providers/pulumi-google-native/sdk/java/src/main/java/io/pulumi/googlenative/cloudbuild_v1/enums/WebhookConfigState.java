@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
- */
     @EnumType
     public enum WebhookConfigState {
-/**
- * The webhook auth configuration not been checked.
- */
         StateUnspecified("STATE_UNSPECIFIED"),
-/**
- * The auth configuration is properly setup.
- */
         Ok("OK"),
-/**
- * The secret provided in auth_method has been deleted.
- */
         SecretDeleted("SECRET_DELETED");
 
         private final String value;

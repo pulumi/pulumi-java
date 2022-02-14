@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Billing type PAV2 meter details
- */
 public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final Pav2MeterDetailsResponse Empty = new Pav2MeterDetailsResponse();
 
-    /**
-     * Represents billing type.
-Expected value is 'Pav2'.
-     */
     @InputImport(name="billingType", required=true)
     private final String billingType;
 
@@ -27,9 +20,6 @@ Expected value is 'Pav2'.
         return this.billingType;
     }
 
-    /**
-     * Charging type.
-     */
     @InputImport(name="chargingType", required=true)
     private final String chargingType;
 
@@ -37,9 +27,6 @@ Expected value is 'Pav2'.
         return this.chargingType;
     }
 
-    /**
-     * Validation status of requested data center and transport.
-     */
     @InputImport(name="meterGuid", required=true)
     private final String meterGuid;
 
@@ -47,9 +34,6 @@ Expected value is 'Pav2'.
         return this.meterGuid;
     }
 
-    /**
-     * Billing unit applicable for Pav2 billing
-     */
     @InputImport(name="multiplier", required=true)
     private final Double multiplier;
 

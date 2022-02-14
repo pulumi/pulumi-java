@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VMResponse {
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * Resource location.
- */
     private final @Nullable String location;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","tags","type"})
@@ -47,33 +32,18 @@ public final class VMResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Resource location.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

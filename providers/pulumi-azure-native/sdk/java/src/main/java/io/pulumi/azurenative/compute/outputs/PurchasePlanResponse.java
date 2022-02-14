@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PurchasePlanResponse {
-/**
- * The plan ID.
- */
     private final String name;
-/**
- * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
- */
     private final String product;
-/**
- * The Offer Promotion Code.
- */
     private final @Nullable String promotionCode;
-/**
- * The publisher ID.
- */
     private final String publisher;
 
     @OutputCustomType.Constructor({"name","product","promotionCode","publisher"})
@@ -40,27 +28,15 @@ public final class PurchasePlanResponse {
         this.publisher = Objects.requireNonNull(publisher);
     }
 
-/**
- * The plan ID.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
- */
     public String getProduct() {
         return this.product;
     }
-/**
- * The Offer Promotion Code.
- */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
-/**
- * The publisher ID.
- */
     public String getPublisher() {
         return this.publisher;
     }

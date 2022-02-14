@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlDWTableDataSet {
-/**
- * A SQL DW table data set.
-API Version: 2020-09-01.
- *
- * A SQL DW table data set.
- */
     public static CompletableFuture<GetSqlDWTableDataSetResult> invokeAsync(GetSqlDWTableDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSqlDWTableDataSet", TypeShape.of(GetSqlDWTableDataSetResult.class), args == null ? GetSqlDWTableDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

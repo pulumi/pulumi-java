@@ -11,41 +11,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStaticSiteCustomDomainResult {
-/**
- * The date and time on which the custom domain was created for the static site.
- */
     private final String createdOn;
-/**
- * The domain name for the static site custom domain.
- */
     private final String domainName;
-/**
- * 
- */
     private final String errorMessage;
-/**
- * Resource Id.
- */
     private final String id;
-/**
- * Kind of resource.
- */
     private final @Nullable String kind;
-/**
- * Resource Name.
- */
     private final String name;
-/**
- * The status of the custom domain
- */
     private final String status;
-/**
- * Resource type.
- */
     private final String type;
-/**
- * The TXT record validation token
- */
     private final String validationToken;
 
     @OutputCustomType.Constructor({"createdOn","domainName","errorMessage","id","kind","name","status","type","validationToken"})
@@ -70,57 +43,30 @@ public final class GetStaticSiteCustomDomainResult {
         this.validationToken = Objects.requireNonNull(validationToken);
     }
 
-/**
- * The date and time on which the custom domain was created for the static site.
- */
     public String getCreatedOn() {
         return this.createdOn;
     }
-/**
- * The domain name for the static site custom domain.
- */
     public String getDomainName() {
         return this.domainName;
     }
-/**
- * 
- */
     public String getErrorMessage() {
         return this.errorMessage;
     }
-/**
- * Resource Id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Kind of resource.
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * Resource Name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The status of the custom domain
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The TXT record validation token
- */
     public String getValidationToken() {
         return this.validationToken;
     }

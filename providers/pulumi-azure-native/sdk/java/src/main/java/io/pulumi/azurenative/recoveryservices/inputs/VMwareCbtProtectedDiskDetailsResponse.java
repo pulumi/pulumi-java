@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VMwareCbt protected disk details.
- */
 public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMwareCbtProtectedDiskDetailsResponse Empty = new VMwareCbtProtectedDiskDetailsResponse();
 
-    /**
-     * The disk capacity in bytes.
-     */
     @InputImport(name="capacityInBytes", required=true)
     private final Double capacityInBytes;
 
@@ -28,9 +22,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.capacityInBytes;
     }
 
-    /**
-     * The disk id.
-     */
     @InputImport(name="diskId", required=true)
     private final String diskId;
 
@@ -38,9 +29,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.diskId;
     }
 
-    /**
-     * The disk name.
-     */
     @InputImport(name="diskName", required=true)
     private final String diskName;
 
@@ -48,9 +36,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.diskName;
     }
 
-    /**
-     * The disk path.
-     */
     @InputImport(name="diskPath", required=true)
     private final String diskPath;
 
@@ -58,9 +43,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.diskPath;
     }
 
-    /**
-     * The disk type.
-     */
     @InputImport(name="diskType")
     private final @Nullable String diskType;
 
@@ -68,9 +50,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
     }
 
-    /**
-     * A value indicating whether the disk is the OS disk.
-     */
     @InputImport(name="isOSDisk", required=true)
     private final String isOSDisk;
 
@@ -78,9 +57,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.isOSDisk;
     }
 
-    /**
-     * The log storage account ARM Id.
-     */
     @InputImport(name="logStorageAccountId", required=true)
     private final String logStorageAccountId;
 
@@ -88,9 +64,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.logStorageAccountId;
     }
 
-    /**
-     * The key vault secret name of the log storage account.
-     */
     @InputImport(name="logStorageAccountSasSecretName", required=true)
     private final String logStorageAccountSasSecretName;
 
@@ -98,9 +71,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.logStorageAccountSasSecretName;
     }
 
-    /**
-     * The ARM Id of the seed managed disk.
-     */
     @InputImport(name="seedManagedDiskId", required=true)
     private final String seedManagedDiskId;
 
@@ -108,9 +78,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
         return this.seedManagedDiskId;
     }
 
-    /**
-     * The ARM Id of the target managed disk.
-     */
     @InputImport(name="targetManagedDiskId", required=true)
     private final String targetManagedDiskId;
 

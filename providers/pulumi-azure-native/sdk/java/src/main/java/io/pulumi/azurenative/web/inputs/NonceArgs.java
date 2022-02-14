@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings of the nonce used in the login flow.
- */
 public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NonceArgs Empty = new NonceArgs();
 
-    /**
-     * The time after the request is made when the nonce should expire.
-     */
     @InputImport(name="nonceExpirationInterval")
     private final @Nullable Input<String> nonceExpirationInterval;
 
@@ -28,9 +22,6 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
         return this.nonceExpirationInterval == null ? Input.empty() : this.nonceExpirationInterval;
     }
 
-    /**
-     * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
-     */
     @InputImport(name="validateNonce")
     private final @Nullable Input<Boolean> validateNonce;
 

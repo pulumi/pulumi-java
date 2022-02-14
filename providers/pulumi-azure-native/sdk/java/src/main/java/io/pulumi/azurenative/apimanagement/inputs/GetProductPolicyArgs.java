@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProductPolicyArgs Empty = new GetProductPolicyArgs();
 
-    /**
-     * Policy Export Format.
-     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -27,9 +21,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
-    /**
-     * The identifier of the Policy.
-     */
     @InputImport(name="policyId", required=true)
     private final String policyId;
 
@@ -37,9 +28,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.policyId;
     }
 
-    /**
-     * Product identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="productId", required=true)
     private final String productId;
 
@@ -47,9 +35,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.productId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

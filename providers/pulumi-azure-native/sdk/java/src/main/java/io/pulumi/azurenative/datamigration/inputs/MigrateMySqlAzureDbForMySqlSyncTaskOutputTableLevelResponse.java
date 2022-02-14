@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse Empty = new MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse();
 
-    /**
-     * Number of applied deletes
-     */
     @InputImport(name="cdcDeleteCounter", required=true)
     private final String cdcDeleteCounter;
 
@@ -26,9 +20,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.cdcDeleteCounter;
     }
 
-    /**
-     * Number of applied inserts
-     */
     @InputImport(name="cdcInsertCounter", required=true)
     private final String cdcInsertCounter;
 
@@ -36,9 +27,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.cdcInsertCounter;
     }
 
-    /**
-     * Number of applied updates
-     */
     @InputImport(name="cdcUpdateCounter", required=true)
     private final String cdcUpdateCounter;
 
@@ -46,9 +34,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.cdcUpdateCounter;
     }
 
-    /**
-     * Number of data errors occurred
-     */
     @InputImport(name="dataErrorsCounter", required=true)
     private final Double dataErrorsCounter;
 
@@ -56,9 +41,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.dataErrorsCounter;
     }
 
-    /**
-     * Name of the database
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -66,9 +48,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.databaseName;
     }
 
-    /**
-     * Full load end time
-     */
     @InputImport(name="fullLoadEndedOn", required=true)
     private final String fullLoadEndedOn;
 
@@ -76,9 +55,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.fullLoadEndedOn;
     }
 
-    /**
-     * Estimate to finish full load
-     */
     @InputImport(name="fullLoadEstFinishTime", required=true)
     private final String fullLoadEstFinishTime;
 
@@ -86,9 +62,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.fullLoadEstFinishTime;
     }
 
-    /**
-     * Full load start time
-     */
     @InputImport(name="fullLoadStartedOn", required=true)
     private final String fullLoadStartedOn;
 
@@ -96,9 +69,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.fullLoadStartedOn;
     }
 
-    /**
-     * Number of rows applied in full load
-     */
     @InputImport(name="fullLoadTotalRows", required=true)
     private final Double fullLoadTotalRows;
 
@@ -106,9 +76,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.fullLoadTotalRows;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -116,9 +83,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.id;
     }
 
-    /**
-     * Last modified time on target
-     */
     @InputImport(name="lastModifiedTime", required=true)
     private final String lastModifiedTime;
 
@@ -126,10 +90,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
         return this.lastModifiedTime;
     }
 
-    /**
-     * Result type
-Expected value is 'TableLevelOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -137,9 +97,6 @@ Expected value is 'TableLevelOutput'.
         return this.resultType;
     }
 
-    /**
-     * Current state of the table migration
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -147,9 +104,6 @@ Expected value is 'TableLevelOutput'.
         return this.state;
     }
 
-    /**
-     * Name of the table
-     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 
@@ -157,9 +111,6 @@ Expected value is 'TableLevelOutput'.
         return this.tableName;
     }
 
-    /**
-     * Total number of applied changes
-     */
     @InputImport(name="totalChangesApplied", required=true)
     private final Double totalChangesApplied;
 

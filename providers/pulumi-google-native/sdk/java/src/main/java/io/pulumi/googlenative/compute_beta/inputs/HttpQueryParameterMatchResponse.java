@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * HttpRouteRuleMatch criteria for a request's query parameter.
- */
 public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpQueryParameterMatchResponse Empty = new HttpQueryParameterMatchResponse();
 
-    /**
-     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set. 
-     */
     @InputImport(name="exactMatch", required=true)
     private final String exactMatch;
 
@@ -26,9 +20,6 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
         return this.exactMatch;
     }
 
-    /**
-     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,9 +27,6 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
         return this.name;
     }
 
-    /**
-     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set. 
-     */
     @InputImport(name="presentMatch", required=true)
     private final Boolean presentMatch;
 
@@ -46,9 +34,6 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
         return this.presentMatch;
     }
 
-    /**
-     * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED. 
-     */
     @InputImport(name="regexMatch", required=true)
     private final String regexMatch;
 

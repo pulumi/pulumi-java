@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Temporary disk payload
- */
 public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemporaryDiskArgs Empty = new TemporaryDiskArgs();
 
-    /**
-     * Mount path of the temporary disk
-     */
     @InputImport(name="mountPath")
     private final @Nullable Input<String> mountPath;
 
@@ -28,9 +22,6 @@ public final class TemporaryDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountPath == null ? Input.empty() : this.mountPath;
     }
 
-    /**
-     * Size of the temporary disk in GB
-     */
     @InputImport(name="sizeInGB")
     private final @Nullable Input<Integer> sizeInGB;
 

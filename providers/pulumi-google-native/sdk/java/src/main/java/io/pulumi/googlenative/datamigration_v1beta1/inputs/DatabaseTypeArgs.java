@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A message defining the database engine and provider.
- */
 public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseTypeArgs Empty = new DatabaseTypeArgs();
 
-    /**
-     * The database engine.
-     */
     @InputImport(name="engine")
     private final @Nullable Input<DatabaseTypeEngine> engine;
 
@@ -28,9 +22,6 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.engine == null ? Input.empty() : this.engine;
     }
 
-    /**
-     * The database provider.
-     */
     @InputImport(name="provider")
     private final @Nullable Input<DatabaseTypeProvider> provider;
 

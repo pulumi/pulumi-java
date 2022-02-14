@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResponse {
-/**
- * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
- */
     private final String dialogflowParticipantName;
-/**
- * Obfuscated user ID from Dialogflow.
- */
     private final String obfuscatedExternalUserId;
-/**
- * The role of the participant.
- */
     private final String role;
-/**
- * A user-specified ID representing the participant.
- */
     private final String userId;
 
     @OutputCustomType.Constructor({"dialogflowParticipantName","obfuscatedExternalUserId","role","userId"})
@@ -38,27 +26,15 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
         this.userId = Objects.requireNonNull(userId);
     }
 
-/**
- * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
- */
     public String getDialogflowParticipantName() {
         return this.dialogflowParticipantName;
     }
-/**
- * Obfuscated user ID from Dialogflow.
- */
     public String getObfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
-/**
- * The role of the participant.
- */
     public String getRole() {
         return this.role;
     }
-/**
- * A user-specified ID representing the participant.
- */
     public String getUserId() {
         return this.userId;
     }

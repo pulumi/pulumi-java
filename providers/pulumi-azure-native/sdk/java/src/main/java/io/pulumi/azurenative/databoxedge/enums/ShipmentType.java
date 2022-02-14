@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * ShipmentType of the order
- */
     @EnumType
     public enum ShipmentType {
-/**
- * 
- */
         NotApplicable("NotApplicable"),
-/**
- * 
- */
         ShippedToCustomer("ShippedToCustomer"),
-/**
- * 
- */
         SelfPickup("SelfPickup");
 
         private final String value;

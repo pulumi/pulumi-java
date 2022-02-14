@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Postgres Instance properties.
- */
 public final class PostgresInstancePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PostgresInstancePropertiesResponse Empty = new PostgresInstancePropertiesResponse();
 
-    /**
-     * The instance admin
-     */
     @InputImport(name="admin")
     private final @Nullable String admin;
 
@@ -29,9 +23,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
         return this.admin == null ? Optional.empty() : Optional.ofNullable(this.admin);
     }
 
-    /**
-     * Username and password for basic authentication.
-     */
     @InputImport(name="basicLoginInformation")
     private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
@@ -39,9 +30,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
         return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
     }
 
-    /**
-     * The data controller id
-     */
     @InputImport(name="dataControllerId")
     private final @Nullable String dataControllerId;
 
@@ -49,9 +37,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
         return this.dataControllerId == null ? Optional.empty() : Optional.ofNullable(this.dataControllerId);
     }
 
-    /**
-     * The raw kubernetes information
-     */
     @InputImport(name="k8sRaw")
     private final @Nullable Object k8sRaw;
 
@@ -59,9 +44,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
         return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
     }
 
-    /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     */
     @InputImport(name="lastUploadedDate")
     private final @Nullable String lastUploadedDate;
 
@@ -69,9 +51,6 @@ public final class PostgresInstancePropertiesResponse extends io.pulumi.resource
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

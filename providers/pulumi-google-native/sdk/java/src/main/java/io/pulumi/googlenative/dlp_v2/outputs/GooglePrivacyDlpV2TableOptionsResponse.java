@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2TableOptionsResponse {
-/**
- * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
- */
     private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
     @OutputCustomType.Constructor({"identifyingFields"})
@@ -20,9 +17,6 @@ public final class GooglePrivacyDlpV2TableOptionsResponse {
         this.identifyingFields = Objects.requireNonNull(identifyingFields);
     }
 
-/**
- * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
- */
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {
         return this.identifyingFields;
     }

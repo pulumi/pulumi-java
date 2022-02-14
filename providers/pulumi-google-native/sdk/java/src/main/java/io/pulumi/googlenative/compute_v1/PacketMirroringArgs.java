@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketMirroringArgs Empty = new PacketMirroringArgs();
 
-    /**
-     * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
-     */
     @InputImport(name="collectorIlb")
     private final @Nullable Input<PacketMirroringForwardingRuleInfoArgs> collectorIlb;
 
@@ -33,9 +27,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.collectorIlb == null ? Input.empty() : this.collectorIlb;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,9 +34,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
-     */
     @InputImport(name="enable")
     private final @Nullable Input<PacketMirroringEnable> enable;
 
@@ -53,9 +41,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.enable == null ? Input.empty() : this.enable;
     }
 
-    /**
-     * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
-     */
     @InputImport(name="filter")
     private final @Nullable Input<PacketMirroringFilterArgs> filter;
 
@@ -63,9 +48,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.filter == null ? Input.empty() : this.filter;
     }
 
-    /**
-     * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
-     */
     @InputImport(name="mirroredResources")
     private final @Nullable Input<PacketMirroringMirroredResourceInfoArgs> mirroredResources;
 
@@ -73,9 +55,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.mirroredResources == null ? Input.empty() : this.mirroredResources;
     }
 
-    /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -83,9 +62,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
-     */
     @InputImport(name="network")
     private final @Nullable Input<PacketMirroringNetworkInfoArgs> network;
 
@@ -93,9 +69,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.network == null ? Input.empty() : this.network;
     }
 
-    /**
-     * The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -103,9 +76,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -113,9 +83,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -123,9 +90,6 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
         return this.region;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 

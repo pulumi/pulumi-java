@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppServiceCertificateOrderArgs Empty = new AppServiceCertificateOrderArgs();
 
-    /**
-     * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
-     */
     @InputImport(name="autoRenew")
     private final @Nullable Input<Boolean> autoRenew;
 
@@ -32,9 +26,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
     }
 
-    /**
-     * Name of the certificate order.
-     */
     @InputImport(name="certificateOrderName")
     private final @Nullable Input<String> certificateOrderName;
 
@@ -42,9 +33,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.certificateOrderName == null ? Input.empty() : this.certificateOrderName;
     }
 
-    /**
-     * State of the Key Vault secret.
-     */
     @InputImport(name="certificates")
     private final @Nullable Input<Map<String,AppServiceCertificateArgs>> certificates;
 
@@ -52,9 +40,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.certificates == null ? Input.empty() : this.certificates;
     }
 
-    /**
-     * Last CSR that was created for this order.
-     */
     @InputImport(name="csr")
     private final @Nullable Input<String> csr;
 
@@ -62,9 +47,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.csr == null ? Input.empty() : this.csr;
     }
 
-    /**
-     * Certificate distinguished name.
-     */
     @InputImport(name="distinguishedName")
     private final @Nullable Input<String> distinguishedName;
 
@@ -72,9 +54,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.distinguishedName == null ? Input.empty() : this.distinguishedName;
     }
 
-    /**
-     * Certificate key size.
-     */
     @InputImport(name="keySize")
     private final @Nullable Input<Integer> keySize;
 
@@ -82,9 +61,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.keySize == null ? Input.empty() : this.keySize;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -92,9 +68,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Resource Location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -102,9 +75,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Certificate product type.
-     */
     @InputImport(name="productType", required=true)
     private final Input<CertificateProductType> productType;
 
@@ -112,9 +82,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.productType;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -122,9 +89,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -132,9 +96,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Duration in years (must be between 1 and 3).
-     */
     @InputImport(name="validityInYears")
     private final @Nullable Input<Integer> validityInYears;
 

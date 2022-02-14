@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A site for the channel
- */
 public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SiteResponse Empty = new SiteResponse();
 
-    /**
-     * Entity Tag
-     */
     @InputImport(name="eTag")
     private final @Nullable String eTag;
 
@@ -29,9 +23,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.eTag == null ? Optional.empty() : Optional.ofNullable(this.eTag);
     }
 
-    /**
-     * Whether this site is enabled for block user upload.
-     */
     @InputImport(name="isBlockUserUploadEnabled")
     private final @Nullable Boolean isBlockUserUploadEnabled;
 
@@ -39,9 +30,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isBlockUserUploadEnabled == null ? Optional.empty() : Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
 
-    /**
-     * Whether this site is enabled for DirectLine channel.
-     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -49,9 +37,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isEnabled;
     }
 
-    /**
-     * Whether this site is enabled for authentication with Bot Framework.
-     */
     @InputImport(name="isSecureSiteEnabled")
     private final @Nullable Boolean isSecureSiteEnabled;
 
@@ -59,9 +44,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isSecureSiteEnabled == null ? Optional.empty() : Optional.ofNullable(this.isSecureSiteEnabled);
     }
 
-    /**
-     * Whether this site is token enabled for channel
-     */
     @InputImport(name="isTokenEnabled")
     private final @Nullable Boolean isTokenEnabled;
 
@@ -69,9 +51,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isTokenEnabled == null ? Optional.empty() : Optional.ofNullable(this.isTokenEnabled);
     }
 
-    /**
-     * Whether this site is enabled for Bot Framework V1 protocol.
-     */
     @InputImport(name="isV1Enabled", required=true)
     private final Boolean isV1Enabled;
 
@@ -79,9 +58,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isV1Enabled;
     }
 
-    /**
-     * Whether this site is enabled for Bot Framework V1 protocol.
-     */
     @InputImport(name="isV3Enabled", required=true)
     private final Boolean isV3Enabled;
 
@@ -89,9 +65,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isV3Enabled;
     }
 
-    /**
-     * Whether this site is enabled for preview versions of Webchat
-     */
     @InputImport(name="isWebchatPreviewEnabled", required=true)
     private final Boolean isWebchatPreviewEnabled;
 
@@ -99,9 +72,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.isWebchatPreviewEnabled;
     }
 
-    /**
-     * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -109,9 +79,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
-    /**
-     * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
-     */
     @InputImport(name="key2", required=true)
     private final String key2;
 
@@ -119,9 +86,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.key2;
     }
 
-    /**
-     * Site Id
-     */
     @InputImport(name="siteId", required=true)
     private final String siteId;
 
@@ -129,9 +93,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.siteId;
     }
 
-    /**
-     * Site name
-     */
     @InputImport(name="siteName", required=true)
     private final String siteName;
 
@@ -139,9 +100,6 @@ public final class SiteResponse extends io.pulumi.resources.InvokeArgs {
         return this.siteName;
     }
 
-    /**
-     * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
-     */
     @InputImport(name="trustedOrigins")
     private final @Nullable List<String> trustedOrigins;
 

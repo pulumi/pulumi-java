@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBatchDeployment {
-/**
- * 
-API Version: 2021-03-01-preview.
- */
     public static CompletableFuture<GetBatchDeploymentResult> invokeAsync(GetBatchDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getBatchDeployment", TypeShape.of(GetBatchDeploymentResult.class), args == null ? GetBatchDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

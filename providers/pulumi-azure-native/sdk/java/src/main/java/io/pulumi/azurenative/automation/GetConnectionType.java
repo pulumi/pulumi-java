@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionType {
-/**
- * Definition of the connection type.
-API Version: 2019-06-01.
- *
- * Definition of the connection type.
- */
     public static CompletableFuture<GetConnectionTypeResult> invokeAsync(GetConnectionTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getConnectionType", TypeShape.of(GetConnectionTypeResult.class), args == null ? GetConnectionTypeArgs.Empty : args, Utilities.withVersion(options));
     }

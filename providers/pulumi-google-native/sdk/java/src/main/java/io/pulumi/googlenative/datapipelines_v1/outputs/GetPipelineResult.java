@@ -13,49 +13,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPipelineResult {
-/**
- * Immutable. The timestamp when the pipeline was initially created. Set by the Data Pipelines service.
- */
     private final String createTime;
-/**
- * The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
- */
     private final String displayName;
-/**
- * Number of jobs.
- */
     private final Integer jobCount;
-/**
- * Immutable. The timestamp when the pipeline was last modified. Set by the Data Pipelines service.
- */
     private final String lastUpdateTime;
-/**
- * The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
- */
     private final String name;
-/**
- * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
- */
     private final Map<String,String> pipelineSources;
-/**
- * Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
- */
     private final GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo;
-/**
- * Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
- */
     private final String schedulerServiceAccountEmail;
-/**
- * The state of the pipeline. When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
- */
     private final String state;
-/**
- * The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
- */
     private final String type;
-/**
- * Workload information for creating new jobs.
- */
     private final GoogleCloudDatapipelinesV1WorkloadResponse workload;
 
     @OutputCustomType.Constructor({"createTime","displayName","jobCount","lastUpdateTime","name","pipelineSources","scheduleInfo","schedulerServiceAccountEmail","state","type","workload"})
@@ -84,69 +51,36 @@ public final class GetPipelineResult {
         this.workload = Objects.requireNonNull(workload);
     }
 
-/**
- * Immutable. The timestamp when the pipeline was initially created. Set by the Data Pipelines service.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Number of jobs.
- */
     public Integer getJobCount() {
         return this.jobCount;
     }
-/**
- * Immutable. The timestamp when the pipeline was last modified. Set by the Data Pipelines service.
- */
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
     }
-/**
- * The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
- */
     public Map<String,String> getPipelineSources() {
         return this.pipelineSources;
     }
-/**
- * Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
- */
     public GoogleCloudDatapipelinesV1ScheduleSpecResponse getScheduleInfo() {
         return this.scheduleInfo;
     }
-/**
- * Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
- */
     public String getSchedulerServiceAccountEmail() {
         return this.schedulerServiceAccountEmail;
     }
-/**
- * The state of the pipeline. When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Workload information for creating new jobs.
- */
     public GoogleCloudDatapipelinesV1WorkloadResponse getWorkload() {
         return this.workload;
     }

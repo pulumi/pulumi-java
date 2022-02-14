@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="domainmappingId", required=true)
     private final String domainmappingId;
 
@@ -27,9 +21,6 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
         return this.domainmappingId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

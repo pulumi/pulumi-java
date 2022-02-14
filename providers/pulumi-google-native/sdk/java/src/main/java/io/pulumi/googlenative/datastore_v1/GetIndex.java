@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIndex {
-/**
- * Gets an index.
- */
     public static CompletableFuture<GetIndexResult> invokeAsync(GetIndexArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastore/v1:getIndex", TypeShape.of(GetIndexResult.class), args == null ? GetIndexArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a ContentKeyPolicyConfiguration that is unavailable in the current API version.
- */
 public final class ContentKeyPolicyUnknownConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyUnknownConfigurationArgs Empty = new ContentKeyPolicyUnknownConfigurationArgs();
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

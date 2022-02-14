@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
- */
     @EnumType
     public enum AndroidInstrumentationTestOrchestratorOption {
-/**
- * Default value: the server will choose the mode. Currently implies that the test will run without the orchestrator. In the future, all instrumentation tests will be run with the orchestrator. Using the orchestrator is highly encouraged because of all the benefits it offers.
- */
         OrchestratorOptionUnspecified("ORCHESTRATOR_OPTION_UNSPECIFIED"),
-/**
- * Run test using orchestrator. ** Only compatible with AndroidJUnitRunner version 1.1 or higher! ** Recommended.
- */
         UseOrchestrator("USE_ORCHESTRATOR"),
-/**
- * Run test without using orchestrator.
- */
         DoNotUseOrchestrator("DO_NOT_USE_ORCHESTRATOR");
 
         private final String value;

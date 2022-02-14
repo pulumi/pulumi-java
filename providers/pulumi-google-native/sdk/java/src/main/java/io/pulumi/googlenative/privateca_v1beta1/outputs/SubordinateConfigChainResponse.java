@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubordinateConfigChainResponse {
-/**
- * Expected to be in leaf-to-root order according to RFC 5246.
- */
     private final List<String> pemCertificates;
 
     @OutputCustomType.Constructor({"pemCertificates"})
@@ -20,9 +17,6 @@ public final class SubordinateConfigChainResponse {
         this.pemCertificates = Objects.requireNonNull(pemCertificates);
     }
 
-/**
- * Expected to be in leaf-to-root order according to RFC 5246.
- */
     public List<String> getPemCertificates() {
         return this.pemCertificates;
     }

@@ -9,18 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecureIotDeviceRemoteTunnelResponse {
-/**
- * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
- */
     private final String deviceId;
-/**
- * Name of the IoT Hub.
- */
     private final String iotHubName;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"deviceId","iotHubName","type"})
@@ -33,22 +23,12 @@ Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
- */
     public String getDeviceId() {
         return this.deviceId;
     }
-/**
- * Name of the IoT Hub.
- */
     public String getIotHubName() {
         return this.iotHubName;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
- */
     public String getType() {
         return this.type;
     }

@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRulePostArgsConditionResponse {
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'PostArgs'.
- */
     private final String name;
-/**
- * Defines the parameters for the condition.
- */
     private final PostArgsMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -28,16 +21,9 @@ Expected value is 'PostArgs'.
         this.parameters = Objects.requireNonNull(parameters);
     }
 
-/**
- * The name of the condition for the delivery rule.
-Expected value is 'PostArgs'.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines the parameters for the condition.
- */
     public PostArgsMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

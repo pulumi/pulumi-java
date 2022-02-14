@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the operation.
- */
     @EnumType
     public enum AccountResourceRequestOperationType {
-/**
- * 
- */
         Unknown("unknown"),
-/**
- * 
- */
         Create("create"),
-/**
- * 
- */
         Update("update"),
-/**
- * 
- */
         Link("link");
 
         private final String value;

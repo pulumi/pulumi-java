@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Health status of the backup item, evaluated based on last heartbeat received
- */
     @EnumType
     public enum ProtectedItemHealthStatus {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         Healthy("Healthy"),
-/**
- * 
- */
         Unhealthy("Unhealthy"),
-/**
- * 
- */
         NotReachable("NotReachable"),
-/**
- * 
- */
         IRPending("IRPending");
 
         private final String value;

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ConnectionPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionPropertyResponse Empty = new ConnectionPropertyResponse();
 
-    /**
-     * [Required] Name of the connection property to set.
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -25,9 +19,6 @@ public final class ConnectionPropertyResponse extends io.pulumi.resources.Invoke
         return this.key;
     }
 
-    /**
-     * [Required] Value of the connection property.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

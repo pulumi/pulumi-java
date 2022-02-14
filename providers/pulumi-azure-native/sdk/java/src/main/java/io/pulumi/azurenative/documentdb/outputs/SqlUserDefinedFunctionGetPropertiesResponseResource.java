@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
-/**
- * Body of the User Defined Function
- */
     private final @Nullable String body;
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     private final String etag;
-/**
- * Name of the Cosmos DB SQL userDefinedFunction
- */
     private final String id;
-/**
- * A system generated property. A unique identifier.
- */
     private final String rid;
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     private final Double ts;
 
     @OutputCustomType.Constructor({"body","etag","id","rid","ts"})
@@ -47,33 +32,18 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
         this.ts = Objects.requireNonNull(ts);
     }
 
-/**
- * Body of the User Defined Function
- */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Name of the Cosmos DB SQL userDefinedFunction
- */
     public String getId() {
         return this.id;
     }
-/**
- * A system generated property. A unique identifier.
- */
     public String getRid() {
         return this.rid;
     }
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     public Double getTs() {
         return this.ts;
     }

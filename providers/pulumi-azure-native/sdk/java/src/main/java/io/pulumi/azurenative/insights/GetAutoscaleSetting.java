@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutoscaleSetting {
-/**
- * The autoscale setting resource.
-API Version: 2015-04-01.
- *
- * The autoscale setting resource.
- */
     public static CompletableFuture<GetAutoscaleSettingResult> invokeAsync(GetAutoscaleSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getAutoscaleSetting", TypeShape.of(GetAutoscaleSettingResult.class), args == null ? GetAutoscaleSettingArgs.Empty : args, Utilities.withVersion(options));
     }

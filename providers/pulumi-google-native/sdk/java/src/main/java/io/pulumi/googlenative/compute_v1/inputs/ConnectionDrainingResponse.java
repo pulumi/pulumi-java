@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Message containing connection draining configuration.
- */
 public final class ConnectionDrainingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionDrainingResponse Empty = new ConnectionDrainingResponse();
 
-    /**
-     * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
-     */
     @InputImport(name="drainingTimeoutSec", required=true)
     private final Integer drainingTimeoutSec;
 

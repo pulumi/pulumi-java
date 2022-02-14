@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * An Activity Log Alert rule condition that is met when all its member conditions are met.
- */
 public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertRuleAllOfConditionArgs Empty = new AlertRuleAllOfConditionArgs();
 
-    /**
-     * The list of Activity Log Alert rule conditions.
-     */
     @InputImport(name="allOf", required=true)
     private final Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 

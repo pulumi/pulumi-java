@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the SKU instances being reserved. Next ID: 9
- */
 public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllocationSpecificSKUAllocationReservedInstancePropertiesArgs Empty = new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs();
 
-    /**
-     * Specifies accelerator type and count.
-     */
     @InputImport(name="guestAccelerators")
     private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
 
@@ -32,9 +26,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
         return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
     }
 
-    /**
-     * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
-     */
     @InputImport(name="localSsds")
     private final @Nullable Input<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
@@ -42,9 +33,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
         return this.localSsds == null ? Input.empty() : this.localSsds;
     }
 
-    /**
-     * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
-     */
     @InputImport(name="locationHint")
     private final @Nullable Input<String> locationHint;
 
@@ -52,9 +40,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
         return this.locationHint == null ? Input.empty() : this.locationHint;
     }
 
-    /**
-     * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
-     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -62,9 +47,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
-    /**
-     * Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.
-     */
     @InputImport(name="maintenanceFreezeDurationHours")
     private final @Nullable Input<Integer> maintenanceFreezeDurationHours;
 
@@ -72,9 +54,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
         return this.maintenanceFreezeDurationHours == null ? Input.empty() : this.maintenanceFreezeDurationHours;
     }
 
-    /**
-     * For more information about maintenance intervals, see Setting maintenance intervals.
-     */
     @InputImport(name="maintenanceInterval")
     private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
 
@@ -82,9 +61,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
         return this.maintenanceInterval == null ? Input.empty() : this.maintenanceInterval;
     }
 
-    /**
-     * Minimum cpu platform the reservation.
-     */
     @InputImport(name="minCpuPlatform")
     private final @Nullable Input<String> minCpuPlatform;
 

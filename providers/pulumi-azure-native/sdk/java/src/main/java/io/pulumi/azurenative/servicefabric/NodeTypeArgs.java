@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeTypeArgs Empty = new NodeTypeArgs();
 
-    /**
-     * The range of ports from which cluster assigned port to Service Fabric applications.
-     */
     @InputImport(name="applicationPorts")
     private final @Nullable Input<EndpointRangeDescriptionArgs> applicationPorts;
 
@@ -34,9 +28,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationPorts == null ? Input.empty() : this.applicationPorts;
     }
 
-    /**
-     * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-     */
     @InputImport(name="capacities")
     private final @Nullable Input<Map<String,String>> capacities;
 
@@ -44,9 +35,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacities == null ? Input.empty() : this.capacities;
     }
 
-    /**
-     * The name of the cluster resource.
-     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -54,9 +42,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
-    /**
-     * Disk size for each vm in the node type in GBs.
-     */
     @InputImport(name="dataDiskSizeGB", required=true)
     private final Input<Integer> dataDiskSizeGB;
 
@@ -64,9 +49,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDiskSizeGB;
     }
 
-    /**
-     * The range of ephemeral ports that nodes in this node type should be configured with.
-     */
     @InputImport(name="ephemeralPorts")
     private final @Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts;
 
@@ -74,9 +56,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.ephemeralPorts == null ? Input.empty() : this.ephemeralPorts;
     }
 
-    /**
-     * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-     */
     @InputImport(name="isPrimary", required=true)
     private final Input<Boolean> isPrimary;
 
@@ -84,9 +63,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.isPrimary;
     }
 
-    /**
-     * The name of the node type.
-     */
     @InputImport(name="nodeTypeName")
     private final @Nullable Input<String> nodeTypeName;
 
@@ -94,9 +70,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeTypeName == null ? Input.empty() : this.nodeTypeName;
     }
 
-    /**
-     * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-     */
     @InputImport(name="placementProperties")
     private final @Nullable Input<Map<String,String>> placementProperties;
 
@@ -104,9 +77,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.placementProperties == null ? Input.empty() : this.placementProperties;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -114,9 +84,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Azure resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -124,9 +91,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Set of extensions that should be installed onto the virtual machines.
-     */
     @InputImport(name="vmExtensions")
     private final @Nullable Input<List<VMSSExtensionArgs>> vmExtensions;
 
@@ -134,9 +98,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmExtensions == null ? Input.empty() : this.vmExtensions;
     }
 
-    /**
-     * The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.
-     */
     @InputImport(name="vmImageOffer")
     private final @Nullable Input<String> vmImageOffer;
 
@@ -144,9 +105,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmImageOffer == null ? Input.empty() : this.vmImageOffer;
     }
 
-    /**
-     * The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.
-     */
     @InputImport(name="vmImagePublisher")
     private final @Nullable Input<String> vmImagePublisher;
 
@@ -154,9 +112,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmImagePublisher == null ? Input.empty() : this.vmImagePublisher;
     }
 
-    /**
-     * The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.
-     */
     @InputImport(name="vmImageSku")
     private final @Nullable Input<String> vmImageSku;
 
@@ -164,9 +119,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmImageSku == null ? Input.empty() : this.vmImageSku;
     }
 
-    /**
-     * The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
-     */
     @InputImport(name="vmImageVersion")
     private final @Nullable Input<String> vmImageVersion;
 
@@ -174,9 +126,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmImageVersion == null ? Input.empty() : this.vmImageVersion;
     }
 
-    /**
-     * The number of nodes in the node type.
-     */
     @InputImport(name="vmInstanceCount", required=true)
     private final Input<Integer> vmInstanceCount;
 
@@ -184,9 +133,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmInstanceCount;
     }
 
-    /**
-     * The secrets to install in the virtual machines.
-     */
     @InputImport(name="vmSecrets")
     private final @Nullable Input<List<VaultSecretGroupArgs>> vmSecrets;
 
@@ -194,9 +140,6 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.vmSecrets == null ? Input.empty() : this.vmSecrets;
     }
 
-    /**
-     * The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.
-     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

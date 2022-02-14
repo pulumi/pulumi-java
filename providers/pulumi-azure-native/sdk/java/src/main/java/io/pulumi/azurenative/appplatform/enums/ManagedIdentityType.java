@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the managed identity
- */
     @EnumType
     public enum ManagedIdentityType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         SystemAssigned("SystemAssigned"),
-/**
- * 
- */
         UserAssigned("UserAssigned"),
-/**
- * 
- */
         SystemAssigned_UserAssigned("SystemAssigned,UserAssigned");
 
         private final String value;

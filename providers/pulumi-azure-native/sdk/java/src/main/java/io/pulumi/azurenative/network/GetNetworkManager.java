@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkManager {
-/**
- * The Managed Network resource
-API Version: 2021-02-01-preview.
- *
- * The Managed Network resource
- */
     public static CompletableFuture<GetNetworkManagerResult> invokeAsync(GetNetworkManagerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkManager", TypeShape.of(GetNetworkManagerResult.class), args == null ? GetNetworkManagerArgs.Empty : args, Utilities.withVersion(options));
     }

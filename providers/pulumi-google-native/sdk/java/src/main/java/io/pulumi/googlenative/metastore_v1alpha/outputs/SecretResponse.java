@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecretResponse {
-/**
- * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
- */
     private final String cloudSecret;
 
     @OutputCustomType.Constructor({"cloudSecret"})
@@ -19,9 +16,6 @@ public final class SecretResponse {
         this.cloudSecret = Objects.requireNonNull(cloudSecret);
     }
 
-/**
- * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
- */
     public String getCloudSecret() {
         return this.cloudSecret;
     }

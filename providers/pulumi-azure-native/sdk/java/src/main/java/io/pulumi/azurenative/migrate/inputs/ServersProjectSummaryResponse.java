@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Class representing the servers project summary.
- */
 public final class ServersProjectSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServersProjectSummaryResponse Empty = new ServersProjectSummaryResponse();
 
-    /**
-     * Gets or sets the count of entities assessed.
-     */
     @InputImport(name="assessedCount")
     private final @Nullable Integer assessedCount;
 
@@ -29,9 +23,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
         return this.assessedCount == null ? Optional.empty() : Optional.ofNullable(this.assessedCount);
     }
 
-    /**
-     * Gets or sets the count of entities discovered.
-     */
     @InputImport(name="discoveredCount")
     private final @Nullable Integer discoveredCount;
 
@@ -39,9 +30,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
         return this.discoveredCount == null ? Optional.empty() : Optional.ofNullable(this.discoveredCount);
     }
 
-    /**
-     * Gets or sets the extended summary.
-     */
     @InputImport(name="extendedSummary")
     private final @Nullable Map<String,String> extendedSummary;
 
@@ -49,10 +37,6 @@ public final class ServersProjectSummaryResponse extends io.pulumi.resources.Inv
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
 
-    /**
-     * Gets the Instance type.
-Expected value is 'Servers'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -60,9 +44,6 @@ Expected value is 'Servers'.
         return this.instanceType;
     }
 
-    /**
-     * Gets or sets the time when summary was last refreshed.
-     */
     @InputImport(name="lastSummaryRefreshedTime")
     private final @Nullable String lastSummaryRefreshedTime;
 
@@ -70,9 +51,6 @@ Expected value is 'Servers'.
         return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
 
-    /**
-     * Gets or sets the count of entities migrated.
-     */
     @InputImport(name="migratedCount")
     private final @Nullable Integer migratedCount;
 
@@ -80,9 +58,6 @@ Expected value is 'Servers'.
         return this.migratedCount == null ? Optional.empty() : Optional.ofNullable(this.migratedCount);
     }
 
-    /**
-     * Gets or sets the state of refresh summary.
-     */
     @InputImport(name="refreshSummaryState")
     private final @Nullable String refreshSummaryState;
 
@@ -90,9 +65,6 @@ Expected value is 'Servers'.
         return this.refreshSummaryState == null ? Optional.empty() : Optional.ofNullable(this.refreshSummaryState);
     }
 
-    /**
-     * Gets or sets the count of entities being replicated.
-     */
     @InputImport(name="replicatingCount")
     private final @Nullable Integer replicatingCount;
 
@@ -100,9 +72,6 @@ Expected value is 'Servers'.
         return this.replicatingCount == null ? Optional.empty() : Optional.ofNullable(this.replicatingCount);
     }
 
-    /**
-     * Gets or sets the count of entities test migrated.
-     */
     @InputImport(name="testMigratedCount")
     private final @Nullable Integer testMigratedCount;
 

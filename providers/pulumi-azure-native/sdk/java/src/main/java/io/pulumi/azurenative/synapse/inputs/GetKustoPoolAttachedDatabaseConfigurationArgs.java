@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKustoPoolAttachedDatabaseConfigurationArgs Empty = new GetKustoPoolAttachedDatabaseConfigurationArgs();
 
-    /**
-     * The name of the attached database configuration.
-     */
     @InputImport(name="attachedDatabaseConfigurationName", required=true)
     private final String attachedDatabaseConfigurationName;
 
@@ -25,9 +19,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
         return this.attachedDatabaseConfigurationName;
     }
 
-    /**
-     * The name of the Kusto pool.
-     */
     @InputImport(name="kustoPoolName", required=true)
     private final String kustoPoolName;
 
@@ -35,9 +26,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
         return this.kustoPoolName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

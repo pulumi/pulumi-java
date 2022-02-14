@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes a change made to a configuration.
- */
 public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MutationRecordResponse Empty = new MutationRecordResponse();
 
-    /**
-     * When the change occurred.
-     */
     @InputImport(name="mutateTime", required=true)
     private final String mutateTime;
 
@@ -25,9 +19,6 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
         return this.mutateTime;
     }
 
-    /**
-     * The email address of the user making the change.
-     */
     @InputImport(name="mutatedBy", required=true)
     private final String mutatedBy;
 

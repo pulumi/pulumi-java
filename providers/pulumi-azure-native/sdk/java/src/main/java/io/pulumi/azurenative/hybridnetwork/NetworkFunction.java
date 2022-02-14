@@ -18,448 +18,99 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Network function resource response.
-API Version: 2020-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create network function resource
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var networkFunction = new AzureNative.HybridNetwork.NetworkFunction("networkFunction", new AzureNative.HybridNetwork.NetworkFunctionArgs
-        {
-            Device = new AzureNative.HybridNetwork.Inputs.SubResourceArgs
-            {
-                Id = "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
-            },
-            Location = "eastus",
-            ManagedApplicationParameters = ,
-            NetworkFunctionName = "testNf",
-            NetworkFunctionUserConfigurations = 
-            {
-                new AzureNative.HybridNetwork.Inputs.NetworkFunctionUserConfigurationArgs
-                {
-                    NetworkInterfaces = 
-                    {
-                        new AzureNative.HybridNetwork.Inputs.NetworkInterfaceArgs
-                        {
-                            IpConfigurations = 
-                            {
-                                new AzureNative.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
-                                {
-                                    Gateway = "",
-                                    IpAddress = "",
-                                    IpAllocationMethod = "Dynamic",
-                                    IpVersion = "IPv4",
-                                    Subnet = "",
-                                },
-                            },
-                            MacAddress = "",
-                            NetworkInterfaceName = "nic1",
-                            VmSwitchType = "Management",
-                        },
-                        new AzureNative.HybridNetwork.Inputs.NetworkInterfaceArgs
-                        {
-                            IpConfigurations = 
-                            {
-                                new AzureNative.HybridNetwork.Inputs.NetworkInterfaceIPConfigurationArgs
-                                {
-                                    Gateway = "",
-                                    IpAddress = "",
-                                    IpAllocationMethod = "Dynamic",
-                                    IpVersion = "IPv4",
-                                    Subnet = "",
-                                },
-                            },
-                            MacAddress = "DC-97-F8-79-16-7D",
-                            NetworkInterfaceName = "nic2",
-                            VmSwitchType = "Wan",
-                        },
-                    },
-                    RoleName = "testRole",
-                    UserDataParameters = ,
-                },
-            },
-            ResourceGroupName = "rg",
-            SkuName = "testSku",
-            VendorName = "testVendor",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := hybridnetwork.NewNetworkFunction(ctx, "networkFunction", &hybridnetwork.NetworkFunctionArgs{
-			Device: &hybridnetwork.SubResourceArgs{
-				Id: pulumi.String("/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice"),
-			},
-			Location:                     pulumi.String("eastus"),
-			ManagedApplicationParameters: nil,
-			NetworkFunctionName:          pulumi.String("testNf"),
-			NetworkFunctionUserConfigurations: []hybridnetwork.NetworkFunctionUserConfigurationArgs{
-				&hybridnetwork.NetworkFunctionUserConfigurationArgs{
-					NetworkInterfaces: hybridnetwork.NetworkInterfaceArray{
-						&hybridnetwork.NetworkInterfaceArgs{
-							IpConfigurations: hybridnetwork.NetworkInterfaceIPConfigurationArray{
-								&hybridnetwork.NetworkInterfaceIPConfigurationArgs{
-									Gateway:            pulumi.String(""),
-									IpAddress:          pulumi.String(""),
-									IpAllocationMethod: pulumi.String("Dynamic"),
-									IpVersion:          pulumi.String("IPv4"),
-									Subnet:             pulumi.String(""),
-								},
-							},
-							MacAddress:           pulumi.String(""),
-							NetworkInterfaceName: pulumi.String("nic1"),
-							VmSwitchType:         pulumi.String("Management"),
-						},
-						&hybridnetwork.NetworkInterfaceArgs{
-							IpConfigurations: hybridnetwork.NetworkInterfaceIPConfigurationArray{
-								&hybridnetwork.NetworkInterfaceIPConfigurationArgs{
-									Gateway:            pulumi.String(""),
-									IpAddress:          pulumi.String(""),
-									IpAllocationMethod: pulumi.String("Dynamic"),
-									IpVersion:          pulumi.String("IPv4"),
-									Subnet:             pulumi.String(""),
-								},
-							},
-							MacAddress:           pulumi.String("DC-97-F8-79-16-7D"),
-							NetworkInterfaceName: pulumi.String("nic2"),
-							VmSwitchType:         pulumi.String("Wan"),
-						},
-					},
-					RoleName:           pulumi.String("testRole"),
-					UserDataParameters: nil,
-				},
-			},
-			ResourceGroupName: pulumi.String("rg"),
-			SkuName:           pulumi.String("testSku"),
-			VendorName:        pulumi.String("testVendor"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const networkFunction = new azure_native.hybridnetwork.NetworkFunction("networkFunction", {
-    device: {
-        id: "/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
-    },
-    location: "eastus",
-    managedApplicationParameters: {},
-    networkFunctionName: "testNf",
-    networkFunctionUserConfigurations: [{
-        networkInterfaces: [
-            {
-                ipConfigurations: [{
-                    gateway: "",
-                    ipAddress: "",
-                    ipAllocationMethod: "Dynamic",
-                    ipVersion: "IPv4",
-                    subnet: "",
-                }],
-                macAddress: "",
-                networkInterfaceName: "nic1",
-                vmSwitchType: "Management",
-            },
-            {
-                ipConfigurations: [{
-                    gateway: "",
-                    ipAddress: "",
-                    ipAllocationMethod: "Dynamic",
-                    ipVersion: "IPv4",
-                    subnet: "",
-                }],
-                macAddress: "DC-97-F8-79-16-7D",
-                networkInterfaceName: "nic2",
-                vmSwitchType: "Wan",
-            },
-        ],
-        roleName: "testRole",
-        userDataParameters: {},
-    }],
-    resourceGroupName: "rg",
-    skuName: "testSku",
-    vendorName: "testVendor",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-network_function = azure_native.hybridnetwork.NetworkFunction("networkFunction",
-    device=azure_native.hybridnetwork.SubResourceArgs(
-        id="/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice",
-    ),
-    location="eastus",
-    managed_application_parameters={},
-    network_function_name="testNf",
-    network_function_user_configurations=[azure_native.hybridnetwork.NetworkFunctionUserConfigurationArgs(
-        network_interfaces=[
-            azure_native.hybridnetwork.NetworkInterfaceArgs(
-                ip_configurations=[azure_native.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
-                    gateway="",
-                    ip_address="",
-                    ip_allocation_method="Dynamic",
-                    ip_version="IPv4",
-                    subnet="",
-                )],
-                mac_address="",
-                network_interface_name="nic1",
-                vm_switch_type="Management",
-            ),
-            azure_native.hybridnetwork.NetworkInterfaceArgs(
-                ip_configurations=[azure_native.hybridnetwork.NetworkInterfaceIPConfigurationArgs(
-                    gateway="",
-                    ip_address="",
-                    ip_allocation_method="Dynamic",
-                    ip_version="IPv4",
-                    subnet="",
-                )],
-                mac_address="DC-97-F8-79-16-7D",
-                network_interface_name="nic2",
-                vm_switch_type="Wan",
-            ),
-        ],
-        role_name="testRole",
-        user_data_parameters={},
-    )],
-    resource_group_name="rg",
-    sku_name="testSku",
-    vendor_name="testVendor")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:hybridnetwork:NetworkFunction testNf /subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/networkFunctions/testNf 
-```
-
- */
 @ResourceType(type="azure-native:hybridnetwork:NetworkFunction")
 public class NetworkFunction extends io.pulumi.resources.CustomResource {
-    /**
-     * The reference to the device resource.
-     */
     @OutputExport(name="device", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> device;
 
-    /**
-     * @return The reference to the device resource.
-     */
     public Output</* @Nullable */ SubResourceResponse> getDevice() {
         return this.device;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The resource URI of the managed application.
-     */
     @OutputExport(name="managedApplication", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> managedApplication;
 
-    /**
-     * @return The resource URI of the managed application.
-     */
     public Output<SubResourceResponse> getManagedApplication() {
         return this.managedApplication;
     }
-    /**
-     * The parameters for the managed application.
-     */
     @OutputExport(name="managedApplicationParameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationParameters;
 
-    /**
-     * @return The parameters for the managed application.
-     */
     public Output</* @Nullable */ Object> getManagedApplicationParameters() {
         return this.managedApplicationParameters;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The network function configurations from the user.
-     */
     @OutputExport(name="networkFunctionUserConfigurations", type=List.class, parameters={NetworkFunctionUserConfigurationResponse.class})
     private Output</* @Nullable */ List<NetworkFunctionUserConfigurationResponse>> networkFunctionUserConfigurations;
 
-    /**
-     * @return The network function configurations from the user.
-     */
     public Output</* @Nullable */ List<NetworkFunctionUserConfigurationResponse>> getNetworkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations;
     }
-    /**
-     * The provisioning state of the network function resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the network function resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The service key for the network function resource.
-     */
     @OutputExport(name="serviceKey", type=String.class, parameters={})
     private Output<String> serviceKey;
 
-    /**
-     * @return The service key for the network function resource.
-     */
     public Output<String> getServiceKey() {
         return this.serviceKey;
     }
-    /**
-     * The sku name for the network function.
-     */
     @OutputExport(name="skuName", type=String.class, parameters={})
     private Output</* @Nullable */ String> skuName;
 
-    /**
-     * @return The sku name for the network function.
-     */
     public Output</* @Nullable */ String> getSkuName() {
         return this.skuName;
     }
-    /**
-     * The sku type for the network function.
-     */
     @OutputExport(name="skuType", type=String.class, parameters={})
     private Output<String> skuType;
 
-    /**
-     * @return The sku type for the network function.
-     */
     public Output<String> getSkuType() {
         return this.skuType;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The vendor name for the network function.
-     */
     @OutputExport(name="vendorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> vendorName;
 
-    /**
-     * @return The vendor name for the network function.
-     */
     public Output</* @Nullable */ String> getVendorName() {
         return this.vendorName;
     }
-    /**
-     * The vendor provisioning state for the network function resource.
-     */
     @OutputExport(name="vendorProvisioningState", type=String.class, parameters={})
     private Output<String> vendorProvisioningState;
 
-    /**
-     * @return The vendor provisioning state for the network function resource.
-     */
     public Output<String> getVendorProvisioningState() {
         return this.vendorProvisioningState;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public NetworkFunction(String name, NetworkFunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridnetwork:NetworkFunction", name, args == null ? NetworkFunctionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -479,14 +130,6 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static NetworkFunction get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkFunction(name, id, options);
     }

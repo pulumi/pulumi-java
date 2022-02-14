@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of orchestrator
- */
 public final class SubnetDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetDetailsArgs Empty = new SubnetDetailsArgs();
 
-    /**
-     * subnet arm resource id
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

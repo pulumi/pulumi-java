@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The comparison operator.
- */
     @EnumType
     public enum OperatorType {
-/**
- * 
- */
         EqualTo("EqualTo"),
-/**
- * 
- */
         GreaterThan("GreaterThan"),
-/**
- * 
- */
         GreaterThanOrEqualTo("GreaterThanOrEqualTo");
 
         private final String value;

@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The sku name.
- */
     @EnumType
     public enum IntegrationAccountSkuName {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Free("Free"),
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

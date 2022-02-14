@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SwaggerSpecificationResponse {
-/**
- * 
- */
     private final @Nullable List<String> apiVersions;
-/**
- * 
- */
     private final @Nullable String swaggerSpecFolderUri;
 
     @OutputCustomType.Constructor({"apiVersions","swaggerSpecFolderUri"})
@@ -29,15 +23,9 @@ public final class SwaggerSpecificationResponse {
         this.swaggerSpecFolderUri = swaggerSpecFolderUri;
     }
 
-/**
- * 
- */
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
-/**
- * 
- */
     public Optional<String> getSwaggerSpecFolderUri() {
         return Optional.ofNullable(this.swaggerSpecFolderUri);
     }

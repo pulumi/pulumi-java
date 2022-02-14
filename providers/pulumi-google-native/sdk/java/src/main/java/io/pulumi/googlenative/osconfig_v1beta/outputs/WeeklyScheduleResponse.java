@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WeeklyScheduleResponse {
-/**
- * Day of the week.
- */
     private final String dayOfWeek;
 
     @OutputCustomType.Constructor({"dayOfWeek"})
@@ -19,9 +16,6 @@ public final class WeeklyScheduleResponse {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
     }
 
-/**
- * Day of the week.
- */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }

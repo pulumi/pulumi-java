@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the virtual network resource settings.
- */
 public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkResourceSettingsArgs Empty = new VirtualNetworkResourceSettingsArgs();
 
-    /**
-     * Gets or sets the address prefixes for the virtual network.
-     */
     @InputImport(name="addressSpace")
     private final @Nullable Input<List<String>> addressSpace;
 
@@ -30,10 +24,6 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
         return this.addressSpace == null ? Input.empty() : this.addressSpace;
     }
 
-    /**
-     * Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
-deployed in the virtual network.
-     */
     @InputImport(name="dnsServers")
     private final @Nullable Input<List<String>> dnsServers;
 
@@ -41,10 +31,6 @@ deployed in the virtual network.
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
     }
 
-    /**
-     * Gets or sets a value indicating whether gets or sets whether the
-DDOS protection should be switched on.
-     */
     @InputImport(name="enableDdosProtection")
     private final @Nullable Input<Boolean> enableDdosProtection;
 
@@ -52,10 +38,6 @@ DDOS protection should be switched on.
         return this.enableDdosProtection == null ? Input.empty() : this.enableDdosProtection;
     }
 
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Network/virtualNetworks'.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -63,9 +45,6 @@ Expected value is 'Microsoft.Network/virtualNetworks'.
         return this.resourceType;
     }
 
-    /**
-     * Gets or sets List of subnets in a VirtualNetwork.
-     */
     @InputImport(name="subnets")
     private final @Nullable Input<List<SubnetResourceSettingsArgs>> subnets;
 
@@ -73,9 +52,6 @@ Expected value is 'Microsoft.Network/virtualNetworks'.
         return this.subnets == null ? Input.empty() : this.subnets;
     }
 
-    /**
-     * Gets or sets the target Resource name.
-     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 

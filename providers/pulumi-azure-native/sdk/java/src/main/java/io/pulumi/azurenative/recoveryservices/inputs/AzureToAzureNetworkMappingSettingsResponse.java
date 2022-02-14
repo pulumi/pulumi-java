@@ -10,17 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A2A Network Mapping fabric specific settings.
- */
 public final class AzureToAzureNetworkMappingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureToAzureNetworkMappingSettingsResponse Empty = new AzureToAzureNetworkMappingSettingsResponse();
 
-    /**
-     * Gets the Instance type.
-Expected value is 'AzureToAzure'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -28,9 +21,6 @@ Expected value is 'AzureToAzure'.
         return this.instanceType;
     }
 
-    /**
-     * The primary fabric location.
-     */
     @InputImport(name="primaryFabricLocation")
     private final @Nullable String primaryFabricLocation;
 
@@ -38,9 +28,6 @@ Expected value is 'AzureToAzure'.
         return this.primaryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricLocation);
     }
 
-    /**
-     * The recovery fabric location.
-     */
     @InputImport(name="recoveryFabricLocation")
     private final @Nullable String recoveryFabricLocation;
 

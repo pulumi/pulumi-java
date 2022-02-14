@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Storage Profile properties of a server
- */
 public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 
-    /**
-     * Backup retention days for the server.
-     */
     @InputImport(name="backupRetentionDays")
     private final @Nullable Input<Integer> backupRetentionDays;
 
@@ -31,9 +25,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupRetentionDays == null ? Input.empty() : this.backupRetentionDays;
     }
 
-    /**
-     * Enable Geo-redundant or not for server backup.
-     */
     @InputImport(name="geoRedundantBackup")
     private final @Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup;
 
@@ -41,9 +32,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.geoRedundantBackup == null ? Input.empty() : this.geoRedundantBackup;
     }
 
-    /**
-     * Enable Storage Auto Grow.
-     */
     @InputImport(name="storageAutogrow")
     private final @Nullable Input<Either<String,StorageAutogrow>> storageAutogrow;
 
@@ -51,9 +39,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAutogrow == null ? Input.empty() : this.storageAutogrow;
     }
 
-    /**
-     * Max storage allowed for a server.
-     */
     @InputImport(name="storageMB")
     private final @Nullable Input<Integer> storageMB;
 

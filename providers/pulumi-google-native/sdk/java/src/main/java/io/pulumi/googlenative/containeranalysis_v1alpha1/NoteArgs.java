@@ -26,16 +26,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NoteArgs Empty = new NoteArgs();
 
-    /**
-     * A note describing an attestation role.
-     */
     @InputImport(name="attestationAuthority")
     private final @Nullable Input<AttestationAuthorityArgs> attestationAuthority;
 
@@ -43,9 +37,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.attestationAuthority == null ? Input.empty() : this.attestationAuthority;
     }
 
-    /**
-     * A note describing a base image.
-     */
     @InputImport(name="baseImage")
     private final @Nullable Input<BasisArgs> baseImage;
 
@@ -53,9 +44,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.baseImage == null ? Input.empty() : this.baseImage;
     }
 
-    /**
-     * Build provenance type for a verifiable build.
-     */
     @InputImport(name="buildType")
     private final @Nullable Input<BuildTypeArgs> buildType;
 
@@ -63,9 +51,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.buildType == null ? Input.empty() : this.buildType;
     }
 
-    /**
-     * A note describing a compliance check.
-     */
     @InputImport(name="compliance")
     private final @Nullable Input<ComplianceNoteArgs> compliance;
 
@@ -73,9 +58,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.compliance == null ? Input.empty() : this.compliance;
     }
 
-    /**
-     * A note describing something that can be deployed.
-     */
     @InputImport(name="deployable")
     private final @Nullable Input<DeployableArgs> deployable;
 
@@ -83,9 +65,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.deployable == null ? Input.empty() : this.deployable;
     }
 
-    /**
-     * A note describing a provider/analysis type.
-     */
     @InputImport(name="discovery")
     private final @Nullable Input<DiscoveryArgs> discovery;
 
@@ -93,9 +72,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.discovery == null ? Input.empty() : this.discovery;
     }
 
-    /**
-     * A note describing a dsse attestation note.
-     */
     @InputImport(name="dsseAttestation")
     private final @Nullable Input<DSSEAttestationNoteArgs> dsseAttestation;
 
@@ -103,9 +79,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.dsseAttestation == null ? Input.empty() : this.dsseAttestation;
     }
 
-    /**
-     * Time of expiration for this note, null if note does not expire.
-     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -113,9 +86,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
-    /**
-     * A detailed description of this `Note`.
-     */
     @InputImport(name="longDescription")
     private final @Nullable Input<String> longDescription;
 
@@ -123,9 +93,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.longDescription == null ? Input.empty() : this.longDescription;
     }
 
-    /**
-     * The name of the note in the form "projects/{provider_project_id}/notes/{NOTE_ID}"
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -133,9 +100,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="noteId")
     private final @Nullable Input<String> noteId;
 
@@ -143,9 +107,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.noteId == null ? Input.empty() : this.noteId;
     }
 
-    /**
-     * A note describing a package hosted by various package managers.
-     */
     @InputImport(name="package")
     private final @Nullable Input<PackageArgs> $package;
 
@@ -153,9 +114,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.$package == null ? Input.empty() : this.$package;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -163,9 +121,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * URLs associated with this note
-     */
     @InputImport(name="relatedUrl")
     private final @Nullable Input<List<RelatedUrlArgs>> relatedUrl;
 
@@ -173,9 +128,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.relatedUrl == null ? Input.empty() : this.relatedUrl;
     }
 
-    /**
-     * A note describing a software bill of materials.
-     */
     @InputImport(name="sbom")
     private final @Nullable Input<DocumentNoteArgs> sbom;
 
@@ -183,9 +135,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.sbom == null ? Input.empty() : this.sbom;
     }
 
-    /**
-     * A one sentence description of this `Note`.
-     */
     @InputImport(name="shortDescription")
     private final @Nullable Input<String> shortDescription;
 
@@ -193,9 +142,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.shortDescription == null ? Input.empty() : this.shortDescription;
     }
 
-    /**
-     * A note describing an SPDX File.
-     */
     @InputImport(name="spdxFile")
     private final @Nullable Input<FileNoteArgs> spdxFile;
 
@@ -203,9 +149,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.spdxFile == null ? Input.empty() : this.spdxFile;
     }
 
-    /**
-     * A note describing an SPDX Package.
-     */
     @InputImport(name="spdxPackage")
     private final @Nullable Input<PackageInfoNoteArgs> spdxPackage;
 
@@ -213,9 +156,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.spdxPackage == null ? Input.empty() : this.spdxPackage;
     }
 
-    /**
-     * A note describing a relationship between SPDX elements.
-     */
     @InputImport(name="spdxRelationship")
     private final @Nullable Input<RelationshipNoteArgs> spdxRelationship;
 
@@ -223,9 +163,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.spdxRelationship == null ? Input.empty() : this.spdxRelationship;
     }
 
-    /**
-     * A note describing an upgrade.
-     */
     @InputImport(name="upgrade")
     private final @Nullable Input<UpgradeNoteArgs> upgrade;
 
@@ -233,9 +170,6 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.upgrade == null ? Input.empty() : this.upgrade;
     }
 
-    /**
-     * A package vulnerability type of note.
-     */
     @InputImport(name="vulnerabilityType")
     private final @Nullable Input<VulnerabilityTypeArgs> vulnerabilityType;
 

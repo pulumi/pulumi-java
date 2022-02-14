@@ -18,590 +18,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Software update configuration properties.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create software update configuration
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var softwareUpdateConfigurationByName = new AzureNative.Automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNative.Automation.SoftwareUpdateConfigurationByNameArgs
-        {
-            AutomationAccountName = "myaccount",
-            ResourceGroupName = "mygroup",
-            ScheduleInfo = new AzureNative.Automation.Inputs.SUCSchedulePropertiesArgs
-            {
-                AdvancedSchedule = new AzureNative.Automation.Inputs.AdvancedScheduleArgs
-                {
-                    WeekDays = 
-                    {
-                        "Monday",
-                        "Thursday",
-                    },
-                },
-                ExpiryTime = "2018-11-09T11:22:57+00:00",
-                Frequency = "Hour",
-                Interval = 1,
-                StartTime = "2017-10-19T12:22:57+00:00",
-                TimeZone = "America/Los_Angeles",
-            },
-            SoftwareUpdateConfigurationName = "testpatch",
-            Tasks = new AzureNative.Automation.Inputs.SoftwareUpdateConfigurationTasksArgs
-            {
-                PostTask = new AzureNative.Automation.Inputs.TaskPropertiesArgs
-                {
-                    Source = "GetCache",
-                },
-                PreTask = new AzureNative.Automation.Inputs.TaskPropertiesArgs
-                {
-                    Parameters = 
-                    {
-                        { "COMPUTERNAME", "Computer1" },
-                    },
-                    Source = "HelloWorld",
-                },
-            },
-            UpdateConfiguration = new AzureNative.Automation.Inputs.UpdateConfigurationArgs
-            {
-                AzureVirtualMachines = 
-                {
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
-                },
-                Duration = "PT2H0M",
-                NonAzureComputerNames = 
-                {
-                    "box1.contoso.com",
-                    "box2.contoso.com",
-                },
-                OperatingSystem = "Windows",
-                Targets = new AzureNative.Automation.Inputs.TargetPropertiesArgs
-                {
-                    AzureQueries = 
-                    {
-                        new AzureNative.Automation.Inputs.AzureQueryPropertiesArgs
-                        {
-                            Locations = 
-                            {
-                                "Japan East",
-                                "UK South",
-                            },
-                            Scope = 
-                            {
-                                "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
-                                "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
-                            },
-                            TagSettings = new AzureNative.Automation.Inputs.TagSettingsPropertiesArgs
-                            {
-                                FilterOperator = "All",
-                                Tags = 
-                                {
-                                    { "tag1", 
-                                    {
-                                        "tag1Value1",
-                                        "tag1Value2",
-                                        "tag1Value3",
-                                    } },
-                                    { "tag2", 
-                                    {
-                                        "tag2Value1",
-                                        "tag2Value2",
-                                        "tag2Value3",
-                                    } },
-                                },
-                            },
-                        },
-                    },
-                    NonAzureQueries = 
-                    {
-                        new AzureNative.Automation.Inputs.NonAzureQueryPropertiesArgs
-                        {
-                            FunctionAlias = "SavedSearch1",
-                            WorkspaceId = "WorkspaceId1",
-                        },
-                        new AzureNative.Automation.Inputs.NonAzureQueryPropertiesArgs
-                        {
-                            FunctionAlias = "SavedSearch2",
-                            WorkspaceId = "WorkspaceId2",
-                        },
-                    },
-                },
-                Windows = new AzureNative.Automation.Inputs.WindowsPropertiesArgs
-                {
-                    ExcludedKbNumbers = 
-                    {
-                        "168934",
-                        "168973",
-                    },
-                    IncludedUpdateClassifications = "Critical",
-                    RebootSetting = "IfRequired",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewSoftwareUpdateConfigurationByName(ctx, "softwareUpdateConfigurationByName", &automation.SoftwareUpdateConfigurationByNameArgs{
-			AutomationAccountName: pulumi.String("myaccount"),
-			ResourceGroupName:     pulumi.String("mygroup"),
-			ScheduleInfo: &automation.SUCSchedulePropertiesArgs{
-				AdvancedSchedule: &automation.AdvancedScheduleArgs{
-					WeekDays: pulumi.StringArray{
-						pulumi.String("Monday"),
-						pulumi.String("Thursday"),
-					},
-				},
-				ExpiryTime: pulumi.String("2018-11-09T11:22:57+00:00"),
-				Frequency:  pulumi.String("Hour"),
-				Interval:   pulumi.Float64(1),
-				StartTime:  pulumi.String("2017-10-19T12:22:57+00:00"),
-				TimeZone:   pulumi.String("America/Los_Angeles"),
-			},
-			SoftwareUpdateConfigurationName: pulumi.String("testpatch"),
-			Tasks: &automation.SoftwareUpdateConfigurationTasksArgs{
-				PostTask: &automation.TaskPropertiesArgs{
-					Source: pulumi.String("GetCache"),
-				},
-				PreTask: &automation.TaskPropertiesArgs{
-					Parameters: pulumi.StringMap{
-						"COMPUTERNAME": pulumi.String("Computer1"),
-					},
-					Source: pulumi.String("HelloWorld"),
-				},
-			},
-			UpdateConfiguration: &automation.UpdateConfigurationArgs{
-				AzureVirtualMachines: pulumi.StringArray{
-					pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01"),
-					pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02"),
-					pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03"),
-				},
-				Duration: pulumi.String("PT2H0M"),
-				NonAzureComputerNames: pulumi.StringArray{
-					pulumi.String("box1.contoso.com"),
-					pulumi.String("box2.contoso.com"),
-				},
-				OperatingSystem: "Windows",
-				Targets: &automation.TargetPropertiesArgs{
-					AzureQueries: automation.AzureQueryPropertiesArray{
-						&automation.AzureQueryPropertiesArgs{
-							Locations: pulumi.StringArray{
-								pulumi.String("Japan East"),
-								pulumi.String("UK South"),
-							},
-							Scope: pulumi.StringArray{
-								pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources"),
-								pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067"),
-							},
-							TagSettings: &automation.TagSettingsPropertiesArgs{
-								FilterOperator: "All",
-								Tags: pulumi.StringArrayMap{
-									"tag1": pulumi.StringArray{
-										pulumi.String("tag1Value1"),
-										pulumi.String("tag1Value2"),
-										pulumi.String("tag1Value3"),
-									},
-									"tag2": pulumi.StringArray{
-										pulumi.String("tag2Value1"),
-										pulumi.String("tag2Value2"),
-										pulumi.String("tag2Value3"),
-									},
-								},
-							},
-						},
-					},
-					NonAzureQueries: automation.NonAzureQueryPropertiesArray{
-						&automation.NonAzureQueryPropertiesArgs{
-							FunctionAlias: pulumi.String("SavedSearch1"),
-							WorkspaceId:   pulumi.String("WorkspaceId1"),
-						},
-						&automation.NonAzureQueryPropertiesArgs{
-							FunctionAlias: pulumi.String("SavedSearch2"),
-							WorkspaceId:   pulumi.String("WorkspaceId2"),
-						},
-					},
-				},
-				Windows: &automation.WindowsPropertiesArgs{
-					ExcludedKbNumbers: pulumi.StringArray{
-						pulumi.String("168934"),
-						pulumi.String("168973"),
-					},
-					IncludedUpdateClassifications: pulumi.String("Critical"),
-					RebootSetting:                 pulumi.String("IfRequired"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const softwareUpdateConfigurationByName = new azure_native.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
-    automationAccountName: "myaccount",
-    resourceGroupName: "mygroup",
-    scheduleInfo: {
-        advancedSchedule: {
-            weekDays: [
-                "Monday",
-                "Thursday",
-            ],
-        },
-        expiryTime: "2018-11-09T11:22:57+00:00",
-        frequency: "Hour",
-        interval: 1,
-        startTime: "2017-10-19T12:22:57+00:00",
-        timeZone: "America/Los_Angeles",
-    },
-    softwareUpdateConfigurationName: "testpatch",
-    tasks: {
-        postTask: {
-            source: "GetCache",
-        },
-        preTask: {
-            parameters: {
-                COMPUTERNAME: "Computer1",
-            },
-            source: "HelloWorld",
-        },
-    },
-    updateConfiguration: {
-        azureVirtualMachines: [
-            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
-            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
-            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
-        ],
-        duration: "PT2H0M",
-        nonAzureComputerNames: [
-            "box1.contoso.com",
-            "box2.contoso.com",
-        ],
-        operatingSystem: "Windows",
-        targets: {
-            azureQueries: [{
-                locations: [
-                    "Japan East",
-                    "UK South",
-                ],
-                scope: [
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
-                ],
-                tagSettings: {
-                    filterOperator: "All",
-                    tags: {
-                        tag1: [
-                            "tag1Value1",
-                            "tag1Value2",
-                            "tag1Value3",
-                        ],
-                        tag2: [
-                            "tag2Value1",
-                            "tag2Value2",
-                            "tag2Value3",
-                        ],
-                    },
-                },
-            }],
-            nonAzureQueries: [
-                {
-                    functionAlias: "SavedSearch1",
-                    workspaceId: "WorkspaceId1",
-                },
-                {
-                    functionAlias: "SavedSearch2",
-                    workspaceId: "WorkspaceId2",
-                },
-            ],
-        },
-        windows: {
-            excludedKbNumbers: [
-                "168934",
-                "168973",
-            ],
-            includedUpdateClassifications: "Critical",
-            rebootSetting: "IfRequired",
-        },
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-software_update_configuration_by_name = azure_native.automation.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
-    automation_account_name="myaccount",
-    resource_group_name="mygroup",
-    schedule_info=azure_native.automation.SUCSchedulePropertiesArgs(
-        advanced_schedule=azure_native.automation.AdvancedScheduleArgs(
-            week_days=[
-                "Monday",
-                "Thursday",
-            ],
-        ),
-        expiry_time="2018-11-09T11:22:57+00:00",
-        frequency="Hour",
-        interval=1,
-        start_time="2017-10-19T12:22:57+00:00",
-        time_zone="America/Los_Angeles",
-    ),
-    software_update_configuration_name="testpatch",
-    tasks=azure_native.automation.SoftwareUpdateConfigurationTasksArgs(
-        post_task=azure_native.automation.TaskPropertiesArgs(
-            source="GetCache",
-        ),
-        pre_task=azure_native.automation.TaskPropertiesArgs(
-            parameters={
-                "COMPUTERNAME": "Computer1",
-            },
-            source="HelloWorld",
-        ),
-    ),
-    update_configuration=azure_native.automation.UpdateConfigurationArgs(
-        azure_virtual_machines=[
-            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
-            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
-            "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03",
-        ],
-        duration="PT2H0M",
-        non_azure_computer_names=[
-            "box1.contoso.com",
-            "box2.contoso.com",
-        ],
-        operating_system="Windows",
-        targets=azure_native.automation.TargetPropertiesArgs(
-            azure_queries=[azure_native.automation.AzureQueryPropertiesArgs(
-                locations=[
-                    "Japan East",
-                    "UK South",
-                ],
-                scope=[
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
-                    "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
-                ],
-                tag_settings=azure_native.automation.TagSettingsPropertiesArgs(
-                    filter_operator="All",
-                    tags={
-                        "tag1": [
-                            "tag1Value1",
-                            "tag1Value2",
-                            "tag1Value3",
-                        ],
-                        "tag2": [
-                            "tag2Value1",
-                            "tag2Value2",
-                            "tag2Value3",
-                        ],
-                    },
-                ),
-            )],
-            non_azure_queries=[
-                azure_native.automation.NonAzureQueryPropertiesArgs(
-                    function_alias="SavedSearch1",
-                    workspace_id="WorkspaceId1",
-                ),
-                azure_native.automation.NonAzureQueryPropertiesArgs(
-                    function_alias="SavedSearch2",
-                    workspace_id="WorkspaceId2",
-                ),
-            ],
-        ),
-        windows=azure_native.automation.WindowsPropertiesArgs(
-            excluded_kb_numbers=[
-                "168934",
-                "168973",
-            ],
-            included_update_classifications="Critical",
-            reboot_setting="IfRequired",
-        ),
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
-```
-
- */
 @ResourceType(type="azure-native:automation:SoftwareUpdateConfigurationByName")
 public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.CustomResource {
-    /**
-     * CreatedBy property, which only appears in the response.
-     */
     @OutputExport(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
-    /**
-     * @return CreatedBy property, which only appears in the response.
-     */
     public Output<String> getCreatedBy() {
         return this.createdBy;
     }
-    /**
-     * Creation time of the resource, which only appears in the response.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    /**
-     * @return Creation time of the resource, which only appears in the response.
-     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * Details of provisioning error
-     */
     @OutputExport(name="error", type=ErrorResponseResponse.class, parameters={})
     private Output</* @Nullable */ ErrorResponseResponse> error;
 
-    /**
-     * @return Details of provisioning error
-     */
     public Output</* @Nullable */ ErrorResponseResponse> getError() {
         return this.error;
     }
-    /**
-     * LastModifiedBy property, which only appears in the response.
-     */
     @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
-    /**
-     * @return LastModifiedBy property, which only appears in the response.
-     */
     public Output<String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    /**
-     * Last time resource was modified, which only appears in the response.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    /**
-     * @return Last time resource was modified, which only appears in the response.
-     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state for the software update configuration, which only appears in the response.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state for the software update configuration, which only appears in the response.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Schedule information for the Software update configuration
-     */
     @OutputExport(name="scheduleInfo", type=SUCSchedulePropertiesResponse.class, parameters={})
     private Output<SUCSchedulePropertiesResponse> scheduleInfo;
 
-    /**
-     * @return Schedule information for the Software update configuration
-     */
     public Output<SUCSchedulePropertiesResponse> getScheduleInfo() {
         return this.scheduleInfo;
     }
-    /**
-     * Tasks information for the Software update configuration.
-     */
     @OutputExport(name="tasks", type=SoftwareUpdateConfigurationTasksResponse.class, parameters={})
     private Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> tasks;
 
-    /**
-     * @return Tasks information for the Software update configuration.
-     */
     public Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> getTasks() {
         return this.tasks;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * update specific properties for the Software update configuration
-     */
     @OutputExport(name="updateConfiguration", type=UpdateConfigurationResponse.class, parameters={})
     private Output<UpdateConfigurationResponse> updateConfiguration;
 
-    /**
-     * @return update specific properties for the Software update configuration
-     */
     public Output<UpdateConfigurationResponse> getUpdateConfiguration() {
         return this.updateConfiguration;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SoftwareUpdateConfigurationByName(String name, SoftwareUpdateConfigurationByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:SoftwareUpdateConfigurationByName", name, args == null ? SoftwareUpdateConfigurationByNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -621,14 +106,6 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SoftwareUpdateConfigurationByName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SoftwareUpdateConfigurationByName(name, id, options);
     }

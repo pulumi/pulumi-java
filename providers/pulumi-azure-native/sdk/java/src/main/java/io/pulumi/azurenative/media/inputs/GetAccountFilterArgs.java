@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccountFilterArgs Empty = new GetAccountFilterArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The Account Filter name
-     */
     @InputImport(name="filterName", required=true)
     private final String filterName;
 
@@ -35,9 +26,6 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
         return this.filterName;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

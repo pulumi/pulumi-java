@@ -14,166 +14,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
-API Version: 2021-05-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create server trust certificate.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serverTrustCertificate = new AzureNative.Sql.ServerTrustCertificate("serverTrustCertificate", new AzureNative.Sql.ServerTrustCertificateArgs
-        {
-            CertificateName = "customerCertificateName",
-            ManagedInstanceName = "testcl",
-            PublicBlob = "308203AE30820296A0030201020210",
-            ResourceGroupName = "testrg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewServerTrustCertificate(ctx, "serverTrustCertificate", &sql.ServerTrustCertificateArgs{
-			CertificateName:     pulumi.String("customerCertificateName"),
-			ManagedInstanceName: pulumi.String("testcl"),
-			PublicBlob:          pulumi.String("308203AE30820296A0030201020210"),
-			ResourceGroupName:   pulumi.String("testrg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const serverTrustCertificate = new azure_native.sql.ServerTrustCertificate("serverTrustCertificate", {
-    certificateName: "customerCertificateName",
-    managedInstanceName: "testcl",
-    publicBlob: "308203AE30820296A0030201020210",
-    resourceGroupName: "testrg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-server_trust_certificate = azure_native.sql.ServerTrustCertificate("serverTrustCertificate",
-    certificate_name="customerCertificateName",
-    managed_instance_name="testcl",
-    public_blob="308203AE30820296A0030201020210",
-    resource_group_name="testrg")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:ServerTrustCertificate customerCertificateName /subscriptions/0574222d-5c7f-489c-a172-b3013eafab53/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testcl/serverTrustCertificates/customerCertificateName 
-```
-
- */
 @ResourceType(type="azure-native:sql:ServerTrustCertificate")
 public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
-    /**
-     * The certificate name
-     */
     @OutputExport(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
-    /**
-     * @return The certificate name
-     */
     public Output<String> getCertificateName() {
         return this.certificateName;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The certificate public blob
-     */
     @OutputExport(name="publicBlob", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicBlob;
 
-    /**
-     * @return The certificate public blob
-     */
     public Output</* @Nullable */ String> getPublicBlob() {
         return this.publicBlob;
     }
-    /**
-     * The certificate thumbprint
-     */
     @OutputExport(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
-    /**
-     * @return The certificate thumbprint
-     */
     public Output<String> getThumbprint() {
         return this.thumbprint;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ServerTrustCertificate(String name, ServerTrustCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ServerTrustCertificate", name, args == null ? ServerTrustCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -193,14 +66,6 @@ public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ServerTrustCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerTrustCertificate(name, id, options);
     }

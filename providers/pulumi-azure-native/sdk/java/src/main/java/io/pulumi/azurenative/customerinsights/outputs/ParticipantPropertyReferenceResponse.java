@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ParticipantPropertyReferenceResponse {
-/**
- * The source property that maps to the target property.
- */
     private final String sourcePropertyName;
-/**
- * The target property that maps to the source property.
- */
     private final String targetPropertyName;
 
     @OutputCustomType.Constructor({"sourcePropertyName","targetPropertyName"})
@@ -26,15 +20,9 @@ public final class ParticipantPropertyReferenceResponse {
         this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
     }
 
-/**
- * The source property that maps to the target property.
- */
     public String getSourcePropertyName() {
         return this.sourcePropertyName;
     }
-/**
- * The target property that maps to the source property.
- */
     public String getTargetPropertyName() {
         return this.targetPropertyName;
     }

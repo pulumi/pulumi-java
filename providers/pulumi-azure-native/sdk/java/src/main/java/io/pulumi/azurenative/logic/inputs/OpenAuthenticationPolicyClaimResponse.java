@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Open authentication policy claim.
- */
 public final class OpenAuthenticationPolicyClaimResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OpenAuthenticationPolicyClaimResponse Empty = new OpenAuthenticationPolicyClaimResponse();
 
-    /**
-     * The name of the claim.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class OpenAuthenticationPolicyClaimResponse extends io.pulumi.resou
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The value of the claim.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

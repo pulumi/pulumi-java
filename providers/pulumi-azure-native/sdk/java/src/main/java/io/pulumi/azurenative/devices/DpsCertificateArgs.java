@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DpsCertificateArgs Empty = new DpsCertificateArgs();
 
-    /**
-     * Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
-     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 
@@ -28,9 +22,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificate == null ? Input.empty() : this.certificate;
     }
 
-    /**
-     * The name of the certificate create or update.
-     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -38,9 +29,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
-    /**
-     * True indicates that the certificate will be created in verified state and proof of possession will not be required.
-     */
     @InputImport(name="isVerified")
     private final @Nullable Input<Boolean> isVerified;
 
@@ -48,9 +36,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.isVerified == null ? Input.empty() : this.isVerified;
     }
 
-    /**
-     * The name of the provisioning service.
-     */
     @InputImport(name="provisioningServiceName", required=true)
     private final Input<String> provisioningServiceName;
 
@@ -58,9 +43,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningServiceName;
     }
 
-    /**
-     * Resource group identifier.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

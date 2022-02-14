@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
-    /**
-     * The description of the details or intents of the Experiment
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,9 +25,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The state of the Experiment
-     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,State>> enabledState;
 
@@ -41,9 +32,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
-    /**
-     * The endpoint A of an experiment
-     */
     @InputImport(name="endpointA")
     private final @Nullable Input<ExperimentEndpointArgs> endpointA;
 
@@ -51,9 +39,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointA == null ? Input.empty() : this.endpointA;
     }
 
-    /**
-     * The endpoint B of an experiment
-     */
     @InputImport(name="endpointB")
     private final @Nullable Input<ExperimentEndpointArgs> endpointB;
 
@@ -61,9 +46,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointB == null ? Input.empty() : this.endpointB;
     }
 
-    /**
-     * The Experiment identifier associated with the Experiment
-     */
     @InputImport(name="experimentName")
     private final @Nullable Input<String> experimentName;
 
@@ -71,9 +53,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.experimentName == null ? Input.empty() : this.experimentName;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The Profile identifier associated with the Tenant and Partner
-     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -91,9 +67,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -101,9 +74,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

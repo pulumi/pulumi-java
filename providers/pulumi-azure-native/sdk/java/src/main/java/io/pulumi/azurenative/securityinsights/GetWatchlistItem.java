@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWatchlistItem {
-/**
- * Represents a Watchlist item in Azure Security Insights.
-API Version: 2021-03-01-preview.
- *
- * Represents a Watchlist item in Azure Security Insights.
- */
     public static CompletableFuture<GetWatchlistItemResult> invokeAsync(GetWatchlistItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getWatchlistItem", TypeShape.of(GetWatchlistItemResult.class), args == null ? GetWatchlistItemArgs.Empty : args, Utilities.withVersion(options));
     }

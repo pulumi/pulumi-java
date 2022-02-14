@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The partner type.
- */
     @EnumType
     public enum PartnerType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         B2B("B2B");
 
         private final String value;

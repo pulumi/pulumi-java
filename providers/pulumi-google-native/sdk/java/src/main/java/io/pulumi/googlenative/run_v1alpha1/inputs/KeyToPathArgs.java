@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Maps a string key to a path within a volume.
- */
 public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyToPathArgs Empty = new KeyToPathArgs();
 
-    /**
-     * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -28,9 +22,6 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * (Optional) Mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Integer> mode;
 
@@ -38,9 +29,6 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
-    /**
-     * The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

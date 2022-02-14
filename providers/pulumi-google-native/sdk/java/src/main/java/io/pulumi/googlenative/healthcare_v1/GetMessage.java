@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMessage {
-/**
- * Gets an HL7v2 message.
- */
     public static CompletableFuture<GetMessageResult> invokeAsync(GetMessageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getMessage", TypeShape.of(GetMessageResult.class), args == null ? GetMessageArgs.Empty : args, Utilities.withVersion(options));
     }

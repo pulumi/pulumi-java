@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAdvancedThreatProtectionArgs Empty = new GetAdvancedThreatProtectionArgs();
 
-    /**
-     * The identifier of the resource.
-     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 
@@ -25,9 +19,6 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
         return this.resourceId;
     }
 
-    /**
-     * Advanced Threat Protection setting name.
-     */
     @InputImport(name="settingName", required=true)
     private final String settingName;
 

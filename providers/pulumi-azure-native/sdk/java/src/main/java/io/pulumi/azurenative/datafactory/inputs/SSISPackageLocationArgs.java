@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SSIS package location.
- */
 public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SSISPackageLocationArgs Empty = new SSISPackageLocationArgs();
 
-    /**
-     * The package access credential.
-     */
     @InputImport(name="accessCredential")
     private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
 
@@ -35,9 +29,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.accessCredential == null ? Input.empty() : this.accessCredential;
     }
 
-    /**
-     * The embedded child package list.
-     */
     @InputImport(name="childPackages")
     private final @Nullable Input<List<SSISChildPackageArgs>> childPackages;
 
@@ -45,9 +36,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.childPackages == null ? Input.empty() : this.childPackages;
     }
 
-    /**
-     * The configuration file access credential.
-     */
     @InputImport(name="configurationAccessCredential")
     private final @Nullable Input<SSISAccessCredentialArgs> configurationAccessCredential;
 
@@ -55,9 +43,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.configurationAccessCredential == null ? Input.empty() : this.configurationAccessCredential;
     }
 
-    /**
-     * The configuration file of the package execution. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="configurationPath")
     private final @Nullable Input<Object> configurationPath;
 
@@ -65,9 +50,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.configurationPath == null ? Input.empty() : this.configurationPath;
     }
 
-    /**
-     * The embedded package content. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="packageContent")
     private final @Nullable Input<Object> packageContent;
 
@@ -75,9 +57,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.packageContent == null ? Input.empty() : this.packageContent;
     }
 
-    /**
-     * The embedded package last modified date.
-     */
     @InputImport(name="packageLastModifiedDate")
     private final @Nullable Input<String> packageLastModifiedDate;
 
@@ -85,9 +64,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.packageLastModifiedDate == null ? Input.empty() : this.packageLastModifiedDate;
     }
 
-    /**
-     * The package name.
-     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 
@@ -95,9 +71,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
-    /**
-     * Password of the package.
-     */
     @InputImport(name="packagePassword")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
 
@@ -105,9 +78,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.packagePassword == null ? Input.empty() : this.packagePassword;
     }
 
-    /**
-     * The SSIS package path. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="packagePath")
     private final @Nullable Input<Object> packagePath;
 
@@ -115,9 +85,6 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
         return this.packagePath == null ? Input.empty() : this.packagePath;
     }
 
-    /**
-     * The type of SSIS package location.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,SsisPackageLocationType>> type;
 

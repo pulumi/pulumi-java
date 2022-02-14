@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Input for command that completes sync migration for a database.
- */
 public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSyncCompleteCommandInputResponse Empty = new MigrateSyncCompleteCommandInputResponse();
 
-    /**
-     * Time stamp to complete
-     */
     @InputImport(name="commitTimeStamp")
     private final @Nullable String commitTimeStamp;
 
@@ -27,9 +21,6 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
         return this.commitTimeStamp == null ? Optional.empty() : Optional.ofNullable(this.commitTimeStamp);
     }
 
-    /**
-     * Name of database
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 

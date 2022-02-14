@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
-    /**
-     * Used to activate the workspace after a customer managed key is provided.
-     */
     @InputImport(name="isActiveCMK")
     private final @Nullable Input<Boolean> isActiveCMK;
 
@@ -28,9 +22,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.isActiveCMK == null ? Input.empty() : this.isActiveCMK;
     }
 
-    /**
-     * The name of the workspace key
-     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -38,9 +29,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
-    /**
-     * The Key Vault Url of the workspace key.
-     */
     @InputImport(name="keyVaultUrl")
     private final @Nullable Input<String> keyVaultUrl;
 
@@ -48,9 +36,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultUrl == null ? Input.empty() : this.keyVaultUrl;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

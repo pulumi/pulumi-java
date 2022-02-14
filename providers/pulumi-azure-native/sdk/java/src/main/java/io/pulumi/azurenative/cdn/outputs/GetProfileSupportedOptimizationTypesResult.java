@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetProfileSupportedOptimizationTypesResult {
-/**
- * Supported optimization types for a profile.
- */
     private final List<String> supportedOptimizationTypes;
 
     @OutputCustomType.Constructor({"supportedOptimizationTypes"})
@@ -20,9 +17,6 @@ public final class GetProfileSupportedOptimizationTypesResult {
         this.supportedOptimizationTypes = Objects.requireNonNull(supportedOptimizationTypes);
     }
 
-/**
- * Supported optimization types for a profile.
- */
     public List<String> getSupportedOptimizationTypes() {
         return this.supportedOptimizationTypes;
     }

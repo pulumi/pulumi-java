@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A Cloud Storage source of conversation data.
- */
 public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1GcsSourceResponse Empty = new GoogleCloudContactcenterinsightsV1GcsSourceResponse();
 
-    /**
-     * Cloud Storage URI that points to a file that contains the conversation audio.
-     */
     @InputImport(name="audioUri", required=true)
     private final String audioUri;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
         return this.audioUri;
     }
 
-    /**
-     * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
-     */
     @InputImport(name="transcriptUri", required=true)
     private final String transcriptUri;
 

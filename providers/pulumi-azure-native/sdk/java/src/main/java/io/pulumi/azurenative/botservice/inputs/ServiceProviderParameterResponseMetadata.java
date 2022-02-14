@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Meta data for the Service Provider
- */
 public final class ServiceProviderParameterResponseMetadata extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceProviderParameterResponseMetadata Empty = new ServiceProviderParameterResponseMetadata();
 
-    /**
-     * the constraints of the bot meta data.
-     */
     @InputImport(name="constraints")
     private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 

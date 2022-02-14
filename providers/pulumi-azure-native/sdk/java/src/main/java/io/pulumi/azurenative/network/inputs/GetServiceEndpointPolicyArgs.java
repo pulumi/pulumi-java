@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceEndpointPolicyArgs Empty = new GetServiceEndpointPolicyArgs();
 
-    /**
-     * Expands referenced resources.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the service endpoint policy.
-     */
     @InputImport(name="serviceEndpointPolicyName", required=true)
     private final String serviceEndpointPolicyName;
 

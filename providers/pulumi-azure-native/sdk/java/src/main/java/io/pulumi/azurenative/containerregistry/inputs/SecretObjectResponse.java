@@ -10,17 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of a secret object value.
- */
 public final class SecretObjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretObjectResponse Empty = new SecretObjectResponse();
 
-    /**
-     * The type of the secret object which determines how the value of the secret object has to be
-interpreted.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,11 +21,6 @@ interpreted.
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The value of the secret. The format of this value will be determined
-based on the type of the secret object. If the type is Opaque, the value will be
-used as is without any modification.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

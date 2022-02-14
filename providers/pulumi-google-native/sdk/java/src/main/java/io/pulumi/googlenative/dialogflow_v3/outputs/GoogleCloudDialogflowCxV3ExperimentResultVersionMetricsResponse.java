@@ -12,17 +12,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse {
-/**
- * The metrics and corresponding confidence intervals in the inference result.
- */
     private final List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
-/**
- * Number of sessions that were allocated to this version.
- */
     private final Integer sessionCount;
-/**
- * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
- */
     private final String version;
 
     @OutputCustomType.Constructor({"metrics","sessionCount","version"})
@@ -35,21 +26,12 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * The metrics and corresponding confidence intervals in the inference result.
- */
     public List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> getMetrics() {
         return this.metrics;
     }
-/**
- * Number of sessions that were allocated to this version.
- */
     public Integer getSessionCount() {
         return this.sessionCount;
     }
-/**
- * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
- */
     public String getVersion() {
         return this.version;
     }

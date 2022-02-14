@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Define a system parameter rule mapping system parameter definitions to methods.
- */
 public final class SystemParameterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SystemParameterRuleResponse Empty = new SystemParameterRuleResponse();
 
-    /**
-     * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
-     */
     @InputImport(name="parameters", required=true)
     private final List<SystemParameterResponse> parameters;
 
@@ -27,9 +21,6 @@ public final class SystemParameterRuleResponse extends io.pulumi.resources.Invok
         return this.parameters;
     }
 
-    /**
-     * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
-     */
     @InputImport(name="selector", required=true)
     private final String selector;
 

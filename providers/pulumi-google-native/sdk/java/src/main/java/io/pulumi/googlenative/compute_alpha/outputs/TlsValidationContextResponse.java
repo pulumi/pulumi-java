@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TlsValidationContextResponse {
-/**
- * The path to the file holding the CA certificate to validate the client or server certificate.
- */
     private final String certificatePath;
-/**
- * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
- */
     private final SdsConfigResponse sdsConfig;
-/**
- * Defines how TLS certificates are obtained.
- */
     private final String validationSource;
 
     @OutputCustomType.Constructor({"certificatePath","sdsConfig","validationSource"})
@@ -33,21 +24,12 @@ public final class TlsValidationContextResponse {
         this.validationSource = Objects.requireNonNull(validationSource);
     }
 
-/**
- * The path to the file holding the CA certificate to validate the client or server certificate.
- */
     public String getCertificatePath() {
         return this.certificatePath;
     }
-/**
- * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
- */
     public SdsConfigResponse getSdsConfig() {
         return this.sdsConfig;
     }
-/**
- * Defines how TLS certificates are obtained.
- */
     public String getValidationSource() {
         return this.validationSource;
     }

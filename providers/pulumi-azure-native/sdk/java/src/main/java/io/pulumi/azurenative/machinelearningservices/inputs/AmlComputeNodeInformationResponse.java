@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Compute node information related to a AmlCompute.
- */
 public final class AmlComputeNodeInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AmlComputeNodeInformationResponse Empty = new AmlComputeNodeInformationResponse();
 
-    /**
-     * ID of the compute node.
-     */
     @InputImport(name="nodeId", required=true)
     private final String nodeId;
 
@@ -26,9 +20,6 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
         return this.nodeId;
     }
 
-    /**
-     * State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.
-     */
     @InputImport(name="nodeState", required=true)
     private final String nodeState;
 
@@ -36,9 +27,6 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
         return this.nodeState;
     }
 
-    /**
-     * SSH port number of the node.
-     */
     @InputImport(name="port", required=true)
     private final Double port;
 
@@ -46,9 +34,6 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
         return this.port;
     }
 
-    /**
-     * Private IP address of the compute node.
-     */
     @InputImport(name="privateIpAddress", required=true)
     private final String privateIpAddress;
 
@@ -56,9 +41,6 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
         return this.privateIpAddress;
     }
 
-    /**
-     * Public IP address of the compute node.
-     */
     @InputImport(name="publicIpAddress", required=true)
     private final String publicIpAddress;
 
@@ -66,9 +48,6 @@ public final class AmlComputeNodeInformationResponse extends io.pulumi.resources
         return this.publicIpAddress;
     }
 
-    /**
-     * ID of the Experiment running on the node, if any else null.
-     */
     @InputImport(name="runId", required=true)
     private final String runId;
 

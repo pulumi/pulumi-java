@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPartnerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPartnerArgs Empty = new GetPartnerArgs();
 
-    /**
-     * Id of the Partner
-     */
     @InputImport(name="partnerId", required=true)
     private final String partnerId;
 

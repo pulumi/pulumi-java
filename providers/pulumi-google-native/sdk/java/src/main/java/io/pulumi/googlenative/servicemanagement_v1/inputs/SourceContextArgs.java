@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * `SourceContext` represents information about the source of a protobuf element, like the file in which it is defined.
- */
 public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceContextArgs Empty = new SourceContextArgs();
 
-    /**
-     * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
-     */
     @InputImport(name="fileName")
     private final @Nullable Input<String> fileName;
 

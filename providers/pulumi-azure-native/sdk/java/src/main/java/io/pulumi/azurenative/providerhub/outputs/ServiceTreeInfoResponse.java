@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceTreeInfoResponse {
-/**
- * 
- */
     private final @Nullable String componentId;
-/**
- * 
- */
     private final @Nullable String serviceId;
 
     @OutputCustomType.Constructor({"componentId","serviceId"})
@@ -28,15 +22,9 @@ public final class ServiceTreeInfoResponse {
         this.serviceId = serviceId;
     }
 
-/**
- * 
- */
     public Optional<String> getComponentId() {
         return Optional.ofNullable(this.componentId);
     }
-/**
- * 
- */
     public Optional<String> getServiceId() {
         return Optional.ofNullable(this.serviceId);
     }

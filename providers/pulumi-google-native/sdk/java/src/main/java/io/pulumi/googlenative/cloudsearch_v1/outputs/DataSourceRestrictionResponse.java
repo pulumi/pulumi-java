@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceRestrictionResponse {
-/**
- * Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.
- */
     private final List<FilterOptionsResponse> filterOptions;
-/**
- * The source of restriction.
- */
     private final SourceResponse source;
 
     @OutputCustomType.Constructor({"filterOptions","source"})
@@ -28,15 +22,9 @@ public final class DataSourceRestrictionResponse {
         this.source = Objects.requireNonNull(source);
     }
 
-/**
- * Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.
- */
     public List<FilterOptionsResponse> getFilterOptions() {
         return this.filterOptions;
     }
-/**
- * The source of restriction.
- */
     public SourceResponse getSource() {
         return this.source;
     }

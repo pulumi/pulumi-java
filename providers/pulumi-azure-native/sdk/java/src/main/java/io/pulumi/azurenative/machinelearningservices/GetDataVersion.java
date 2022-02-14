@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataVersion {
-/**
- * Azure Resource Manager resource envelope.
-API Version: 2021-03-01-preview.
- *
- * Azure Resource Manager resource envelope.
- */
     public static CompletableFuture<GetDataVersionResult> invokeAsync(GetDataVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getDataVersion", TypeShape.of(GetDataVersionResult.class), args == null ? GetDataVersionArgs.Empty : args, Utilities.withVersion(options));
     }

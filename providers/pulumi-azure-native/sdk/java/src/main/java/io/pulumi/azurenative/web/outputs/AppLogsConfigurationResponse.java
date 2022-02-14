@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppLogsConfigurationResponse {
-/**
- * 
- */
     private final @Nullable String destination;
-/**
- * 
- */
     private final @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
 
     @OutputCustomType.Constructor({"destination","logAnalyticsConfiguration"})
@@ -29,15 +23,9 @@ public final class AppLogsConfigurationResponse {
         this.logAnalyticsConfiguration = logAnalyticsConfiguration;
     }
 
-/**
- * 
- */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
-/**
- * 
- */
     public Optional<LogAnalyticsConfigurationResponse> getLogAnalyticsConfiguration() {
         return Optional.ofNullable(this.logAnalyticsConfiguration);
     }

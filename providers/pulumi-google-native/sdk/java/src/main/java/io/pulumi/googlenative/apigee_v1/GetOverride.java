@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOverride {
-/**
- * Gets a trace configuration override.
- */
     public static CompletableFuture<GetOverrideResult> invokeAsync(GetOverrideArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getOverride", TypeShape.of(GetOverrideResult.class), args == null ? GetOverrideArgs.Empty : args, Utilities.withVersion(options));
     }

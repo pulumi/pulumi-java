@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the parameters for the cache expiration action.
- */
 public final class CacheExpirationActionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheExpirationActionParametersResponse Empty = new CacheExpirationActionParametersResponse();
 
-    /**
-     * Caching behavior for the requests
-     */
     @InputImport(name="cacheBehavior", required=true)
     private final String cacheBehavior;
 
@@ -27,9 +21,6 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
         return this.cacheBehavior;
     }
 
-    /**
-     * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-     */
     @InputImport(name="cacheDuration")
     private final @Nullable String cacheDuration;
 
@@ -37,9 +28,6 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
         return this.cacheDuration == null ? Optional.empty() : Optional.ofNullable(this.cacheDuration);
     }
 
-    /**
-     * The level at which the content needs to be cached.
-     */
     @InputImport(name="cacheType", required=true)
     private final String cacheType;
 
@@ -47,9 +35,6 @@ public final class CacheExpirationActionParametersResponse extends io.pulumi.res
         return this.cacheType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

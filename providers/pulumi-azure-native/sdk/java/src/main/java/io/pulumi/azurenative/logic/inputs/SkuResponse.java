@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The sku type.
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * The name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,9 +22,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The reference to plan.
-     */
     @InputImport(name="plan")
     private final @Nullable ResourceReferenceResponse plan;
 

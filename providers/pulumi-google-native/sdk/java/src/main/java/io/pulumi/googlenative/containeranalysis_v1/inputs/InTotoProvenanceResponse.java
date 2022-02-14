@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InTotoProvenanceResponse Empty = new InTotoProvenanceResponse();
 
-    /**
-     * required
-     */
     @InputImport(name="builderConfig", required=true)
     private final BuilderConfigResponse builderConfig;
 
@@ -29,9 +23,6 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
         return this.builderConfig;
     }
 
-    /**
-     * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
-     */
     @InputImport(name="materials", required=true)
     private final List<String> materials;
 
@@ -39,9 +30,6 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
         return this.materials;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="metadata", required=true)
     private final MetadataResponse metadata;
 
@@ -49,9 +37,6 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
         return this.metadata;
     }
 
-    /**
-     * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
-     */
     @InputImport(name="recipe", required=true)
     private final RecipeResponse recipe;
 

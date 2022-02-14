@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The data stored in text format.
- */
 public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TextFormatArgs Empty = new TextFormatArgs();
 
-    /**
-     * The column delimiter. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="columnDelimiter")
     private final @Nullable Input<Object> columnDelimiter;
 
@@ -28,9 +22,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.columnDelimiter == null ? Input.empty() : this.columnDelimiter;
     }
 
-    /**
-     * Deserializer. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="deserializer")
     private final @Nullable Input<Object> deserializer;
 
@@ -38,9 +29,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.deserializer == null ? Input.empty() : this.deserializer;
     }
 
-    /**
-     * The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encodingName")
     private final @Nullable Input<Object> encodingName;
 
@@ -48,9 +36,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.encodingName == null ? Input.empty() : this.encodingName;
     }
 
-    /**
-     * The escape character. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="escapeChar")
     private final @Nullable Input<Object> escapeChar;
 
@@ -58,9 +43,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.escapeChar == null ? Input.empty() : this.escapeChar;
     }
 
-    /**
-     * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="firstRowAsHeader")
     private final @Nullable Input<Object> firstRowAsHeader;
 
@@ -68,9 +50,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstRowAsHeader == null ? Input.empty() : this.firstRowAsHeader;
     }
 
-    /**
-     * The null value string. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="nullValue")
     private final @Nullable Input<Object> nullValue;
 
@@ -78,9 +57,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.nullValue == null ? Input.empty() : this.nullValue;
     }
 
-    /**
-     * The quote character. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="quoteChar")
     private final @Nullable Input<Object> quoteChar;
 
@@ -88,9 +64,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.quoteChar == null ? Input.empty() : this.quoteChar;
     }
 
-    /**
-     * The row delimiter. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="rowDelimiter")
     private final @Nullable Input<Object> rowDelimiter;
 
@@ -98,9 +71,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.rowDelimiter == null ? Input.empty() : this.rowDelimiter;
     }
 
-    /**
-     * Serializer. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="serializer")
     private final @Nullable Input<Object> serializer;
 
@@ -108,9 +78,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.serializer == null ? Input.empty() : this.serializer;
     }
 
-    /**
-     * The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="skipLineCount")
     private final @Nullable Input<Object> skipLineCount;
 
@@ -118,9 +85,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.skipLineCount == null ? Input.empty() : this.skipLineCount;
     }
 
-    /**
-     * Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="treatEmptyAsNull")
     private final @Nullable Input<Object> treatEmptyAsNull;
 
@@ -128,10 +92,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.treatEmptyAsNull == null ? Input.empty() : this.treatEmptyAsNull;
     }
 
-    /**
-     * Type of dataset storage format.
-Expected value is 'TextFormat'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

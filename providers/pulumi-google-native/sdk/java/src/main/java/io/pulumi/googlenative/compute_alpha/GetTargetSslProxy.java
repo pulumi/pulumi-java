@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetSslProxy {
-/**
- * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
- */
     public static CompletableFuture<GetTargetSslProxyResult> invokeAsync(GetTargetSslProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetSslProxy", TypeShape.of(GetTargetSslProxyResult.class), args == null ? GetTargetSslProxyArgs.Empty : args, Utilities.withVersion(options));
     }

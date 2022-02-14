@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIoTAddon {
-/**
- * IoT Addon.
-API Version: 2020-12-01.
- *
- * IoT Addon.
- */
     public static CompletableFuture<GetIoTAddonResult> invokeAsync(GetIoTAddonArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTAddon", TypeShape.of(GetIoTAddonResult.class), args == null ? GetIoTAddonArgs.Empty : args, Utilities.withVersion(options));
     }

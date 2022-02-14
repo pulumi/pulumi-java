@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Configuration for a risk analysis job. See https://cloud.google.com/dlp/docs/concepts-risk-analysis to learn more.
- */
 public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse Empty = new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse();
 
-    /**
-     * Actions to execute at the completion of the job. Are executed in the order provided.
-     */
     @InputImport(name="actions", required=true)
     private final List<GooglePrivacyDlpV2ActionResponse> actions;
 
@@ -28,9 +22,6 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends io.pu
         return this.actions;
     }
 
-    /**
-     * Privacy metric to compute.
-     */
     @InputImport(name="privacyMetric", required=true)
     private final GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
 
@@ -38,9 +29,6 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends io.pu
         return this.privacyMetric;
     }
 
-    /**
-     * Input dataset to compute metrics over.
-     */
     @InputImport(name="sourceTable", required=true)
     private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 

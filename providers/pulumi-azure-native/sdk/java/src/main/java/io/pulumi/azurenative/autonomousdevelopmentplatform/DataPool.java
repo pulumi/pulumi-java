@@ -16,217 +16,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * ADP Data Pool
-API Version: 2021-02-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Put Data Pool
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dataPool = new AzureNative.AutonomousDevelopmentPlatform.DataPool("dataPool", new AzureNative.AutonomousDevelopmentPlatform.DataPoolArgs
-        {
-            AccountName = "sampleacct",
-            DataPoolName = "sampledp",
-            Locations = 
-            {
-                new AzureNative.AutonomousDevelopmentPlatform.Inputs.DataPoolLocationArgs
-                {
-                    Encryption = new AzureNative.AutonomousDevelopmentPlatform.Inputs.DataPoolEncryptionArgs
-                    {
-                        KeyName = "key1",
-                        KeyVaultUri = "https://vaulturi",
-                        KeyVersion = "123",
-                        UserAssignedIdentity = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",
-                    },
-                    Name = "westus",
-                },
-            },
-            ResourceGroupName = "adpClient",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	autonomousdevelopmentplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/autonomousdevelopmentplatform"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := autonomousdevelopmentplatform.NewDataPool(ctx, "dataPool", &autonomousdevelopmentplatform.DataPoolArgs{
-			AccountName:  pulumi.String("sampleacct"),
-			DataPoolName: pulumi.String("sampledp"),
-			Locations: autonomousdevelopmentplatform.DataPoolLocationArray{
-				&autonomousdevelopmentplatform.DataPoolLocationArgs{
-					Encryption: &autonomousdevelopmentplatform.DataPoolEncryptionArgs{
-						KeyName:              pulumi.String("key1"),
-						KeyVaultUri:          pulumi.String("https://vaulturi"),
-						KeyVersion:           pulumi.String("123"),
-						UserAssignedIdentity: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1"),
-					},
-					Name: pulumi.String("westus"),
-				},
-			},
-			ResourceGroupName: pulumi.String("adpClient"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dataPool = new azure_native.autonomousdevelopmentplatform.DataPool("dataPool", {
-    accountName: "sampleacct",
-    dataPoolName: "sampledp",
-    locations: [{
-        encryption: {
-            keyName: "key1",
-            keyVaultUri: "https://vaulturi",
-            keyVersion: "123",
-            userAssignedIdentity: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",
-        },
-        name: "westus",
-    }],
-    resourceGroupName: "adpClient",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-data_pool = azure_native.autonomousdevelopmentplatform.DataPool("dataPool",
-    account_name="sampleacct",
-    data_pool_name="sampledp",
-    locations=[azure_native.autonomousdevelopmentplatform.DataPoolLocationArgs(
-        encryption=azure_native.autonomousdevelopmentplatform.DataPoolEncryptionArgs(
-            key_name="key1",
-            key_vault_uri="https://vaulturi",
-            key_version="123",
-            user_assigned_identity="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",
-        ),
-        name="westus",
-    )],
-    resource_group_name="adpClient")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:autonomousdevelopmentplatform:DataPool dp1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.AutonomousDevelopmentPlatform/accounts/adp1/dataPools/dp1 
-```
-
- */
 @ResourceType(type="azure-native:autonomousdevelopmentplatform:DataPool")
 public class DataPool extends io.pulumi.resources.CustomResource {
-    /**
-     * The Data Pool's data-plane ID
-     */
     @OutputExport(name="dataPoolId", type=String.class, parameters={})
     private Output<String> dataPoolId;
 
-    /**
-     * @return The Data Pool's data-plane ID
-     */
     public Output<String> getDataPoolId() {
         return this.dataPoolId;
     }
-    /**
-     * Gets or sets the collection of locations where Data Pool resources should be created
-     */
     @OutputExport(name="locations", type=List.class, parameters={DataPoolLocationResponse.class})
     private Output<List<DataPoolLocationResponse>> locations;
 
-    /**
-     * @return Gets or sets the collection of locations where Data Pool resources should be created
-     */
     public Output<List<DataPoolLocationResponse>> getLocations() {
         return this.locations;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Gets the status of the data pool at the time the operation was called
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Gets the status of the data pool at the time the operation was called
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The system meta data relating to this resource
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system meta data relating to this resource
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DataPool(String name, DataPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:autonomousdevelopmentplatform:DataPool", name, args == null ? DataPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -247,14 +75,6 @@ public class DataPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DataPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataPool(name, id, options);
     }

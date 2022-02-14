@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Retention duration type of retention policy.
- */
     @EnumType
     public enum RetentionDurationType {
-/**
- * 
- */
         Invalid("Invalid"),
-/**
- * 
- */
         Days("Days"),
-/**
- * 
- */
         Weeks("Weeks"),
-/**
- * 
- */
         Months("Months"),
-/**
- * 
- */
         Years("Years");
 
         private final String value;

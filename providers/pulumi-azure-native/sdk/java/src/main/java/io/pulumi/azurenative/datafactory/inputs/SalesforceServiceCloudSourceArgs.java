@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity Salesforce Service Cloud source.
- */
 public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SalesforceServiceCloudSourceArgs Empty = new SalesforceServiceCloudSourceArgs();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -30,9 +24,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -40,9 +31,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -50,9 +38,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * Database query. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="query")
     private final @Nullable Input<Object> query;
 
@@ -60,9 +45,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.query == null ? Input.empty() : this.query;
     }
 
-    /**
-     * The read behavior for the operation. Default is Query.
-     */
     @InputImport(name="readBehavior")
     private final @Nullable Input<Either<String,SalesforceSourceReadBehavior>> readBehavior;
 
@@ -70,9 +52,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.readBehavior == null ? Input.empty() : this.readBehavior;
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -80,9 +59,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -90,10 +66,6 @@ public final class SalesforceServiceCloudSourceArgs extends io.pulumi.resources.
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
-    /**
-     * Copy source type.
-Expected value is 'SalesforceServiceCloudSource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

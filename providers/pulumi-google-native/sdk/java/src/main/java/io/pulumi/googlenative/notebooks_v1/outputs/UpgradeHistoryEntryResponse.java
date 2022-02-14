@@ -9,45 +9,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpgradeHistoryEntryResponse {
-/**
- * Action. Rolloback or Upgrade.
- */
     private final String action;
-/**
- * The container image before this instance upgrade.
- */
     private final String containerImage;
-/**
- * The time that this instance upgrade history entry is created.
- */
     private final String createTime;
-/**
- * The framework of this notebook instance.
- */
     private final String framework;
-/**
- * The snapshot of the boot disk of this notebook instance before upgrade.
- */
     private final String snapshot;
-/**
- * The state of this instance upgrade history entry.
- */
     private final String state;
-/**
- * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
- */
     private final String targetImage;
-/**
- * Target VM Version, like m63.
- */
     private final String targetVersion;
-/**
- * The version of the notebook instance before this upgrade.
- */
     private final String version;
-/**
- * The VM image before this instance upgrade.
- */
     private final String vmImage;
 
     @OutputCustomType.Constructor({"action","containerImage","createTime","framework","snapshot","state","targetImage","targetVersion","version","vmImage"})
@@ -74,63 +44,33 @@ public final class UpgradeHistoryEntryResponse {
         this.vmImage = Objects.requireNonNull(vmImage);
     }
 
-/**
- * Action. Rolloback or Upgrade.
- */
     public String getAction() {
         return this.action;
     }
-/**
- * The container image before this instance upgrade.
- */
     public String getContainerImage() {
         return this.containerImage;
     }
-/**
- * The time that this instance upgrade history entry is created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * The framework of this notebook instance.
- */
     public String getFramework() {
         return this.framework;
     }
-/**
- * The snapshot of the boot disk of this notebook instance before upgrade.
- */
     public String getSnapshot() {
         return this.snapshot;
     }
-/**
- * The state of this instance upgrade history entry.
- */
     public String getState() {
         return this.state;
     }
-/**
- * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
- */
     public String getTargetImage() {
         return this.targetImage;
     }
-/**
- * Target VM Version, like m63.
- */
     public String getTargetVersion() {
         return this.targetVersion;
     }
-/**
- * The version of the notebook instance before this upgrade.
- */
     public String getVersion() {
         return this.version;
     }
-/**
- * The VM image before this instance upgrade.
- */
     public String getVmImage() {
         return this.vmImage;
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompositeTypeArgs Empty = new CompositeTypeArgs();
 
-    /**
-     * An optional textual description of the resource; provided by the client when the resource is created.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,9 +25,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -41,9 +32,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<List<CompositeTypeLabelEntryArgs>> labels;
 
@@ -51,9 +39,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,9 +46,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -71,9 +53,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="status")
     private final @Nullable Input<CompositeTypeStatus> status;
 
@@ -81,9 +60,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * Files for the template type.
-     */
     @InputImport(name="templateContents")
     private final @Nullable Input<TemplateContentsArgs> templateContents;
 

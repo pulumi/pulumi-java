@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Address prefix type.
- */
     @EnumType
     public enum AddressPrefixType {
-/**
- * 
- */
         IPPrefix("IPPrefix"),
-/**
- * 
- */
         ServiceTag("ServiceTag");
 
         private final String value;

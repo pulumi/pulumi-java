@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
- */
     @EnumType
     public enum ResourcePolicyWeeklyCycleDayOfWeekDay {
-/**
- * 
- */
         Friday("FRIDAY"),
-/**
- * 
- */
         Invalid("INVALID"),
-/**
- * 
- */
         Monday("MONDAY"),
-/**
- * 
- */
         Saturday("SATURDAY"),
-/**
- * 
- */
         Sunday("SUNDAY"),
-/**
- * 
- */
         Thursday("THURSDAY"),
-/**
- * 
- */
         Tuesday("TUESDAY"),
-/**
- * 
- */
         Wednesday("WEDNESDAY");
 
         private final String value;

@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Responsys linked service.
- */
 public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResponsysLinkedServiceResponse Empty = new ResponsysLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -35,9 +29,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The client ID associated with the Responsys application. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="clientId", required=true)
     private final Object clientId;
 
@@ -45,9 +36,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.clientId;
     }
 
-    /**
-     * The client secret associated with the Responsys application. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="clientSecret")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
@@ -55,9 +43,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.clientSecret == null ? null : this.clientSecret;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -65,9 +50,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -75,9 +57,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -85,9 +64,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * The endpoint of the Responsys server.
-     */
     @InputImport(name="endpoint", required=true)
     private final Object endpoint;
 
@@ -95,9 +71,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.endpoint;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -105,10 +78,6 @@ public final class ResponsysLinkedServiceResponse extends io.pulumi.resources.In
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Responsys'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -116,9 +85,6 @@ Expected value is 'Responsys'.
         return this.type;
     }
 
-    /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Object useEncryptedEndpoints;
 
@@ -126,9 +92,6 @@ Expected value is 'Responsys'.
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
-    /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="useHostVerification")
     private final @Nullable Object useHostVerification;
 
@@ -136,9 +99,6 @@ Expected value is 'Responsys'.
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
     }
 
-    /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Object usePeerVerification;
 

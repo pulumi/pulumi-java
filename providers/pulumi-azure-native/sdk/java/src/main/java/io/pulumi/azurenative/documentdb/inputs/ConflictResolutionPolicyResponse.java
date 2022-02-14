@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The conflict resolution policy for the container.
- */
 public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConflictResolutionPolicyResponse Empty = new ConflictResolutionPolicyResponse();
 
-    /**
-     * The conflict resolution path in the case of LastWriterWins mode.
-     */
     @InputImport(name="conflictResolutionPath")
     private final @Nullable String conflictResolutionPath;
 
@@ -27,9 +21,6 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
         return this.conflictResolutionPath == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPath);
     }
 
-    /**
-     * The procedure to resolve conflicts in the case of custom mode.
-     */
     @InputImport(name="conflictResolutionProcedure")
     private final @Nullable String conflictResolutionProcedure;
 
@@ -37,9 +28,6 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
         return this.conflictResolutionProcedure == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionProcedure);
     }
 
-    /**
-     * Indicates the conflict resolution mode.
-     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 

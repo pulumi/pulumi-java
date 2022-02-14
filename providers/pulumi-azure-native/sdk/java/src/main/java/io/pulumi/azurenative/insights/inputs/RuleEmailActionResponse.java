@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the action to send email when the rule condition is evaluated. The discriminator is always RuleEmailAction in this case.
- */
 public final class RuleEmailActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleEmailActionResponse Empty = new RuleEmailActionResponse();
 
-    /**
-     * the list of administrator's custom email addresses to notify of the activation of the alert.
-     */
     @InputImport(name="customEmails")
     private final @Nullable List<String> customEmails;
 
@@ -29,10 +23,6 @@ public final class RuleEmailActionResponse extends io.pulumi.resources.InvokeArg
         return this.customEmails == null ? List.of() : this.customEmails;
     }
 
-    /**
-     * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -40,9 +30,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
         return this.odataType;
     }
 
-    /**
-     * Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
-     */
     @InputImport(name="sendToServiceOwners")
     private final @Nullable Boolean sendToServiceOwners;
 

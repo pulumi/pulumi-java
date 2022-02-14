@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a tool results history resource.
- */
 public final class ToolResultsHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ToolResultsHistoryResponse Empty = new ToolResultsHistoryResponse();
 
-    /**
-     * A tool results history ID.
-     */
     @InputImport(name="historyId", required=true)
     private final String historyId;
 
@@ -25,9 +19,6 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
         return this.historyId;
     }
 
-    /**
-     * The cloud project that owns the tool results history.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 

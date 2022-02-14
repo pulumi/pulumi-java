@@ -13,16 +13,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * An X509Parameters is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
- */
 public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X509ParametersResponse Empty = new X509ParametersResponse();
 
-    /**
-     * Optional. Describes custom X.509 extensions.
-     */
     @InputImport(name="additionalExtensions", required=true)
     private final List<X509ExtensionResponse> additionalExtensions;
 
@@ -30,9 +24,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
         return this.additionalExtensions;
     }
 
-    /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
-     */
     @InputImport(name="aiaOcspServers", required=true)
     private final List<String> aiaOcspServers;
 
@@ -40,9 +31,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
         return this.aiaOcspServers;
     }
 
-    /**
-     * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
-     */
     @InputImport(name="caOptions", required=true)
     private final CaOptionsResponse caOptions;
 
@@ -50,9 +38,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
         return this.caOptions;
     }
 
-    /**
-     * Optional. Indicates the intended use for keys that correspond to a certificate.
-     */
     @InputImport(name="keyUsage", required=true)
     private final KeyUsageResponse keyUsage;
 
@@ -60,9 +45,6 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
         return this.keyUsage;
     }
 
-    /**
-     * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-     */
     @InputImport(name="policyIds", required=true)
     private final List<ObjectIdResponse> policyIds;
 

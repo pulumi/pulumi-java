@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This represents the details about a lab that the User is in, and its state.
- */
 public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabDetailsResponse Empty = new LabDetailsResponse();
 
-    /**
-     * The Id of the lab.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -27,9 +21,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the lab
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,9 +28,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the lab.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -47,9 +35,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * The maximum duration a user can use a VM in this lab.
-     */
     @InputImport(name="usageQuota", required=true)
     private final String usageQuota;
 

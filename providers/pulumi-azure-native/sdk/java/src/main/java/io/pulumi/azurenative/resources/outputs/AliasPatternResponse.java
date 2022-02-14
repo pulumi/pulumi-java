@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AliasPatternResponse {
-/**
- * The alias pattern phrase.
- */
     private final @Nullable String phrase;
-/**
- * The type of alias pattern
- */
     private final @Nullable String type;
-/**
- * The alias pattern variable.
- */
     private final @Nullable String variable;
 
     @OutputCustomType.Constructor({"phrase","type","variable"})
@@ -34,21 +25,12 @@ public final class AliasPatternResponse {
         this.variable = variable;
     }
 
-/**
- * The alias pattern phrase.
- */
     public Optional<String> getPhrase() {
         return Optional.ofNullable(this.phrase);
     }
-/**
- * The type of alias pattern
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
-/**
- * The alias pattern variable.
- */
     public Optional<String> getVariable() {
         return Optional.ofNullable(this.variable);
     }

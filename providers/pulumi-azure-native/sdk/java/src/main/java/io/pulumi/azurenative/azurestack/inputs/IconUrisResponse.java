@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Links to product icons.
- */
 public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IconUrisResponse Empty = new IconUrisResponse();
 
-    /**
-     * URI to hero icon.
-     */
     @InputImport(name="hero")
     private final @Nullable String hero;
 
@@ -27,9 +21,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
         return this.hero == null ? Optional.empty() : Optional.ofNullable(this.hero);
     }
 
-    /**
-     * URI to large icon.
-     */
     @InputImport(name="large")
     private final @Nullable String large;
 
@@ -37,9 +28,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
         return this.large == null ? Optional.empty() : Optional.ofNullable(this.large);
     }
 
-    /**
-     * URI to medium icon.
-     */
     @InputImport(name="medium")
     private final @Nullable String medium;
 
@@ -47,9 +35,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
         return this.medium == null ? Optional.empty() : Optional.ofNullable(this.medium);
     }
 
-    /**
-     * URI to small icon.
-     */
     @InputImport(name="small")
     private final @Nullable String small;
 
@@ -57,9 +42,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
         return this.small == null ? Optional.empty() : Optional.ofNullable(this.small);
     }
 
-    /**
-     * URI to wide icon.
-     */
     @InputImport(name="wide")
     private final @Nullable String wide;
 

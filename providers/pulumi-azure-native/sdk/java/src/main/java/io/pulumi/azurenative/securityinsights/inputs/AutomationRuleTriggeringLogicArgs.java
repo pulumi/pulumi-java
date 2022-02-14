@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes automation rule triggering logic
- */
 public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRuleTriggeringLogicArgs Empty = new AutomationRuleTriggeringLogicArgs();
 
-    /**
-     * The conditions to evaluate to determine if the automation rule should be triggered on a given object
-     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
@@ -33,9 +27,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
-    /**
-     * Determines when the automation rule should automatically expire and be disabled.
-     */
     @InputImport(name="expirationTimeUtc")
     private final @Nullable Input<String> expirationTimeUtc;
 
@@ -43,9 +34,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
         return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
     }
 
-    /**
-     * Determines whether the automation rule is enabled or disabled.
-     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -53,9 +41,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
         return this.isEnabled;
     }
 
-    /**
-     * The type of object the automation rule triggers on
-     */
     @InputImport(name="triggersOn", required=true)
     private final Input<Either<String,TriggersOn>> triggersOn;
 
@@ -63,9 +48,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
         return this.triggersOn;
     }
 
-    /**
-     * The type of event the automation rule triggers on
-     */
     @InputImport(name="triggersWhen", required=true)
     private final Input<Either<String,TriggersWhen>> triggersWhen;
 

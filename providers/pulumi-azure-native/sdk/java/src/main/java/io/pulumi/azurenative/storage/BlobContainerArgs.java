@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobContainerArgs Empty = new BlobContainerArgs();
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -30,9 +24,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -40,9 +31,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
-    /**
-     * Default the container to use specified encryption scope for all writes.
-     */
     @InputImport(name="defaultEncryptionScope")
     private final @Nullable Input<String> defaultEncryptionScope;
 
@@ -50,9 +38,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultEncryptionScope == null ? Input.empty() : this.defaultEncryptionScope;
     }
 
-    /**
-     * Block override of encryption scope from the container default.
-     */
     @InputImport(name="denyEncryptionScopeOverride")
     private final @Nullable Input<Boolean> denyEncryptionScopeOverride;
 
@@ -60,9 +45,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.denyEncryptionScopeOverride == null ? Input.empty() : this.denyEncryptionScopeOverride;
     }
 
-    /**
-     * A name-value pair to associate with the container as metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -70,9 +52,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * Specifies whether data in the container may be accessed publicly and the level of access.
-     */
     @InputImport(name="publicAccess")
     private final @Nullable Input<PublicAccess> publicAccess;
 
@@ -80,9 +59,6 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicAccess == null ? Input.empty() : this.publicAccess;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetHyperVSiteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHyperVSiteArgs Empty = new GetHyperVSiteArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetHyperVSiteArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Site name.
-     */
     @InputImport(name="siteName", required=true)
     private final String siteName;
 

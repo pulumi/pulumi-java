@@ -18,382 +18,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Backup Vault Resource
-API Version: 2021-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create BackupVault
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupVault = new AzureNative.DataProtection.BackupVault("backupVault", new AzureNative.DataProtection.BackupVaultArgs
-        {
-            Identity = new AzureNative.DataProtection.Inputs.DppIdentityDetailsArgs
-            {
-                Type = "None",
-            },
-            Location = "WestUS",
-            Properties = new AzureNative.DataProtection.Inputs.BackupVaultArgs
-            {
-                StorageSettings = 
-                {
-                    new AzureNative.DataProtection.Inputs.StorageSettingArgs
-                    {
-                        DatastoreType = "VaultStore",
-                        Type = "LocallyRedundant",
-                    },
-                },
-            },
-            ResourceGroupName = "SampleResourceGroup",
-            Tags = 
-            {
-                { "key1", "val1" },
-            },
-            VaultName = "swaggerExample",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	dataprotection "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dataprotection"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dataprotection.NewBackupVault(ctx, "backupVault", &dataprotection.BackupVaultArgs{
-			Identity: &dataprotection.DppIdentityDetailsArgs{
-				Type: pulumi.String("None"),
-			},
-			Location: pulumi.String("WestUS"),
-			Properties: &dataprotection.BackupVaultArgs{
-				StorageSettings: dataprotection.StorageSettingArray{
-					&dataprotection.StorageSettingArgs{
-						DatastoreType: pulumi.String("VaultStore"),
-						Type:          pulumi.String("LocallyRedundant"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("val1"),
-			},
-			VaultName: pulumi.String("swaggerExample"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const backupVault = new azure_native.dataprotection.BackupVault("backupVault", {
-    identity: {
-        type: "None",
-    },
-    location: "WestUS",
-    properties: {
-        storageSettings: [{
-            datastoreType: "VaultStore",
-            type: "LocallyRedundant",
-        }],
-    },
-    resourceGroupName: "SampleResourceGroup",
-    tags: {
-        key1: "val1",
-    },
-    vaultName: "swaggerExample",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-backup_vault = azure_native.dataprotection.BackupVault("backupVault",
-    identity=azure_native.dataprotection.DppIdentityDetailsArgs(
-        type="None",
-    ),
-    location="WestUS",
-    properties=azure_native.dataprotection.BackupVaultArgs(
-        storage_settings=[azure_native.dataprotection.StorageSettingArgs(
-            datastore_type="VaultStore",
-            type="LocallyRedundant",
-        )],
-    ),
-    resource_group_name="SampleResourceGroup",
-    tags={
-        "key1": "val1",
-    },
-    vault_name="swaggerExample")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create BackupVault With MSI
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupVault = new AzureNative.DataProtection.BackupVault("backupVault", new AzureNative.DataProtection.BackupVaultArgs
-        {
-            Identity = new AzureNative.DataProtection.Inputs.DppIdentityDetailsArgs
-            {
-                Type = "systemAssigned",
-            },
-            Location = "WestUS",
-            Properties = new AzureNative.DataProtection.Inputs.BackupVaultArgs
-            {
-                StorageSettings = 
-                {
-                    new AzureNative.DataProtection.Inputs.StorageSettingArgs
-                    {
-                        DatastoreType = "VaultStore",
-                        Type = "LocallyRedundant",
-                    },
-                },
-            },
-            ResourceGroupName = "SampleResourceGroup",
-            Tags = 
-            {
-                { "key1", "val1" },
-            },
-            VaultName = "swaggerExample",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	dataprotection "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dataprotection"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := dataprotection.NewBackupVault(ctx, "backupVault", &dataprotection.BackupVaultArgs{
-			Identity: &dataprotection.DppIdentityDetailsArgs{
-				Type: pulumi.String("systemAssigned"),
-			},
-			Location: pulumi.String("WestUS"),
-			Properties: &dataprotection.BackupVaultArgs{
-				StorageSettings: dataprotection.StorageSettingArray{
-					&dataprotection.StorageSettingArgs{
-						DatastoreType: pulumi.String("VaultStore"),
-						Type:          pulumi.String("LocallyRedundant"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			Tags: pulumi.StringMap{
-				"key1": pulumi.String("val1"),
-			},
-			VaultName: pulumi.String("swaggerExample"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const backupVault = new azure_native.dataprotection.BackupVault("backupVault", {
-    identity: {
-        type: "systemAssigned",
-    },
-    location: "WestUS",
-    properties: {
-        storageSettings: [{
-            datastoreType: "VaultStore",
-            type: "LocallyRedundant",
-        }],
-    },
-    resourceGroupName: "SampleResourceGroup",
-    tags: {
-        key1: "val1",
-    },
-    vaultName: "swaggerExample",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-backup_vault = azure_native.dataprotection.BackupVault("backupVault",
-    identity=azure_native.dataprotection.DppIdentityDetailsArgs(
-        type="systemAssigned",
-    ),
-    location="WestUS",
-    properties=azure_native.dataprotection.BackupVaultArgs(
-        storage_settings=[azure_native.dataprotection.StorageSettingArgs(
-            datastore_type="VaultStore",
-            type="LocallyRedundant",
-        )],
-    ),
-    resource_group_name="SampleResourceGroup",
-    tags={
-        "key1": "val1",
-    },
-    vault_name="swaggerExample")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:dataprotection:BackupVault swaggerExample /subscriptions/0b352192-dcac-4cc7-992e-a96190ccc68c/resourceGroups/SampleResourceGroup/providers/Microsoft.DataProtection/Backupvaults/swaggerExample 
-```
-
- */
 @ResourceType(type="azure-native:dataprotection:BackupVault")
 public class BackupVault extends io.pulumi.resources.CustomResource {
-    /**
-     * Optional ETag.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    /**
-     * @return Optional ETag.
-     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    /**
-     * Input Managed Identity Details
-     */
     @OutputExport(name="identity", type=DppIdentityDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DppIdentityDetailsResponse> identity;
 
-    /**
-     * @return Input Managed Identity Details
-     */
     public Output</* @Nullable */ DppIdentityDetailsResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name associated with the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name associated with the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * BackupVaultResource properties
-     */
     @OutputExport(name="properties", type=BackupVaultResponse.class, parameters={})
     private Output<BackupVaultResponse> properties;
 
-    /**
-     * @return BackupVaultResource properties
-     */
     public Output<BackupVaultResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public BackupVault(String name, BackupVaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dataprotection:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -417,14 +92,6 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static BackupVault get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupVault(name, id, options);
     }

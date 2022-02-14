@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Principal type.
- */
     @EnumType
     public enum PrincipalType {
-/**
- * 
- */
         App("App"),
-/**
- * 
- */
         Group("Group"),
-/**
- * 
- */
         User("User");
 
         private final String value;

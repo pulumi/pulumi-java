@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CollectorBodyAgentSpnPropertiesArgs Empty = new CollectorBodyAgentSpnPropertiesArgs();
 
-    /**
-     * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -27,9 +21,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
-    /**
-     * Intended audience for the service principal.
-     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -37,9 +28,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
         return this.audience == null ? Input.empty() : this.audience;
     }
 
-    /**
-     * AAD Authority URL which was used to request the token for the service principal.
-     */
     @InputImport(name="authority")
     private final @Nullable Input<String> authority;
 
@@ -47,9 +35,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
         return this.authority == null ? Input.empty() : this.authority;
     }
 
-    /**
-     * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -57,9 +42,6 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
-    /**
-     * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

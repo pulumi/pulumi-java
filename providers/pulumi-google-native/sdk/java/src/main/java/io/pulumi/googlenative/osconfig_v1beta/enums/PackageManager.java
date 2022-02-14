@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of package manager that can be used to install this package. If a system does not have the package manager, the package is not installed or removed no error message is returned. By default, or if you specify `ANY`, the agent attempts to install and remove this package using the default package manager. This is useful when creating a policy that applies to different types of systems. The default behavior is ANY.
- */
     @EnumType
     public enum PackageManager {
-/**
- * The default behavior is ANY.
- */
         ManagerUnspecified("MANAGER_UNSPECIFIED"),
-/**
- * Apply this package config using the default system package manager.
- */
         Any("ANY"),
-/**
- * Apply this package config only if Apt is available on the system.
- */
         Apt("APT"),
-/**
- * Apply this package config only if Yum is available on the system.
- */
         Yum("YUM"),
-/**
- * Apply this package config only if Zypper is available on the system.
- */
         Zypper("ZYPPER"),
-/**
- * Apply this package config only if GooGet is available on the system.
- */
         Goo("GOO");
 
         private final String value;

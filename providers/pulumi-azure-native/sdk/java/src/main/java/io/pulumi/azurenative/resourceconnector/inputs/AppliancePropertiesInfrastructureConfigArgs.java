@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains infrastructure information about the Appliance
- */
 public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppliancePropertiesInfrastructureConfigArgs Empty = new AppliancePropertiesInfrastructureConfigArgs();
 
-    /**
-     * Information about the connected appliance.
-     */
     @InputImport(name="provider")
     private final @Nullable Input<Either<String,Provider>> provider;
 

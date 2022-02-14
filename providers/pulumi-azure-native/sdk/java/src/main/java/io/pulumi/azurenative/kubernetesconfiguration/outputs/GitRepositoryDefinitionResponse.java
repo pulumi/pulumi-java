@@ -13,37 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GitRepositoryDefinitionResponse {
-/**
- * Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
- */
     private final @Nullable String httpsCAFile;
-/**
- * Base64-encoded HTTPS username used to access private git repositories over HTTPS
- */
     private final @Nullable String httpsUser;
-/**
- * Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
- */
     private final @Nullable String localAuthRef;
-/**
- * The source reference for the GitRepository object.
- */
     private final @Nullable RepositoryRefDefinitionResponse repositoryRef;
-/**
- * Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
- */
     private final @Nullable String sshKnownHosts;
-/**
- * The interval at which to re-reconcile the cluster git repository source with the remote.
- */
     private final @Nullable Double syncIntervalInSeconds;
-/**
- * The maximum time to attempt to reconcile the cluster git repository source with the remote.
- */
     private final @Nullable Double timeoutInSeconds;
-/**
- * The URL to sync for the flux configuration git repository.
- */
     private final @Nullable String url;
 
     @OutputCustomType.Constructor({"httpsCAFile","httpsUser","localAuthRef","repositoryRef","sshKnownHosts","syncIntervalInSeconds","timeoutInSeconds","url"})
@@ -66,51 +42,27 @@ public final class GitRepositoryDefinitionResponse {
         this.url = url;
     }
 
-/**
- * Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
- */
     public Optional<String> getHttpsCAFile() {
         return Optional.ofNullable(this.httpsCAFile);
     }
-/**
- * Base64-encoded HTTPS username used to access private git repositories over HTTPS
- */
     public Optional<String> getHttpsUser() {
         return Optional.ofNullable(this.httpsUser);
     }
-/**
- * Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
- */
     public Optional<String> getLocalAuthRef() {
         return Optional.ofNullable(this.localAuthRef);
     }
-/**
- * The source reference for the GitRepository object.
- */
     public Optional<RepositoryRefDefinitionResponse> getRepositoryRef() {
         return Optional.ofNullable(this.repositoryRef);
     }
-/**
- * Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
- */
     public Optional<String> getSshKnownHosts() {
         return Optional.ofNullable(this.sshKnownHosts);
     }
-/**
- * The interval at which to re-reconcile the cluster git repository source with the remote.
- */
     public Optional<Double> getSyncIntervalInSeconds() {
         return Optional.ofNullable(this.syncIntervalInSeconds);
     }
-/**
- * The maximum time to attempt to reconcile the cluster git repository source with the remote.
- */
     public Optional<Double> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
-/**
- * The URL to sync for the flux configuration git repository.
- */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

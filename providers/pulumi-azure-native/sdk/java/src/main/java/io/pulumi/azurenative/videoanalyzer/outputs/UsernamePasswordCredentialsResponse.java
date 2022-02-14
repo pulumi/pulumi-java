@@ -9,18 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UsernamePasswordCredentialsResponse {
-/**
- * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
- */
     private final String password;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
- */
     private final String type;
-/**
- * Username to be presented as part of the credentials.
- */
     private final String username;
 
     @OutputCustomType.Constructor({"password","type","username"})
@@ -33,22 +23,12 @@ Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Username to be presented as part of the credentials.
- */
     public String getUsername() {
         return this.username;
     }

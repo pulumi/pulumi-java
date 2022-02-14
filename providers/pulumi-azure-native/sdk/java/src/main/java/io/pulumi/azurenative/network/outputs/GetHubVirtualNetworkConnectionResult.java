@@ -14,41 +14,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetHubVirtualNetworkConnectionResult {
-/**
- * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
- */
     private final @Nullable Boolean allowHubToRemoteVnetTransit;
-/**
- * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
- */
     private final @Nullable Boolean allowRemoteVnetToUseHubVnetGateways;
-/**
- * Enable internet security.
- */
     private final @Nullable Boolean enableInternetSecurity;
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * The name of the resource that is unique within a resource group. This name can be used to access the resource.
- */
     private final @Nullable String name;
-/**
- * The provisioning state of the hub virtual network connection resource.
- */
     private final String provisioningState;
-/**
- * Reference to the remote virtual network.
- */
     private final @Nullable SubResourceResponse remoteVirtualNetwork;
-/**
- * The Routing Configuration indicating the associated and propagated route tables on this connection.
- */
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
     @OutputCustomType.Constructor({"allowHubToRemoteVnetTransit","allowRemoteVnetToUseHubVnetGateways","enableInternetSecurity","etag","id","name","provisioningState","remoteVirtualNetwork","routingConfiguration"})
@@ -73,57 +46,30 @@ public final class GetHubVirtualNetworkConnectionResult {
         this.routingConfiguration = routingConfiguration;
     }
 
-/**
- * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
- */
     public Optional<Boolean> getAllowHubToRemoteVnetTransit() {
         return Optional.ofNullable(this.allowHubToRemoteVnetTransit);
     }
-/**
- * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
- */
     public Optional<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
         return Optional.ofNullable(this.allowRemoteVnetToUseHubVnetGateways);
     }
-/**
- * Enable internet security.
- */
     public Optional<Boolean> getEnableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * The name of the resource that is unique within a resource group. This name can be used to access the resource.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The provisioning state of the hub virtual network connection resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Reference to the remote virtual network.
- */
     public Optional<SubResourceResponse> getRemoteVirtualNetwork() {
         return Optional.ofNullable(this.remoteVirtualNetwork);
     }
-/**
- * The Routing Configuration indicating the associated and propagated route tables on this connection.
- */
     public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }

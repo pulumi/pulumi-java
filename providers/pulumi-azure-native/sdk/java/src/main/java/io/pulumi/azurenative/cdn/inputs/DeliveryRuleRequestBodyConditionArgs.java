@@ -10,17 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the RequestBody condition for the delivery rule.
- */
 public final class DeliveryRuleRequestBodyConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleRequestBodyConditionArgs Empty = new DeliveryRuleRequestBodyConditionArgs();
 
-    /**
-     * The name of the condition for the delivery rule.
-Expected value is 'RequestBody'.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +21,6 @@ Expected value is 'RequestBody'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the condition.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<RequestBodyMatchConditionParametersArgs> parameters;
 

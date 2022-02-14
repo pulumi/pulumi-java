@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity provider details.
- */
 public final class IdentityProviderDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityProviderDetailsResponse Empty = new IdentityProviderDetailsResponse();
 
-    /**
-     * The base authority for Azure Active Directory authentication.
-     */
     @InputImport(name="aadAuthority")
     private final @Nullable String aadAuthority;
 
@@ -27,9 +21,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
         return this.aadAuthority == null ? Optional.empty() : Optional.ofNullable(this.aadAuthority);
     }
 
-    /**
-     * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="applicationId")
     private final @Nullable String applicationId;
 
@@ -37,9 +28,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
-    /**
-     * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="audience")
     private final @Nullable String audience;
 
@@ -47,9 +35,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
-    /**
-     * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -57,9 +42,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
-    /**
-     * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Schedule for a given suppression configuration.
- */
 public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SuppressionScheduleArgs Empty = new SuppressionScheduleArgs();
 
-    /**
-     * End date for suppression
-     */
     @InputImport(name="endDate")
     private final @Nullable Input<String> endDate;
 
@@ -29,9 +23,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
         return this.endDate == null ? Input.empty() : this.endDate;
     }
 
-    /**
-     * End date for suppression
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -39,9 +30,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * Specifies the values for recurrence pattern
-     */
     @InputImport(name="recurrenceValues")
     private final @Nullable Input<List<Integer>> recurrenceValues;
 
@@ -49,9 +37,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
         return this.recurrenceValues == null ? Input.empty() : this.recurrenceValues;
     }
 
-    /**
-     * Start date for suppression
-     */
     @InputImport(name="startDate")
     private final @Nullable Input<String> startDate;
 
@@ -59,9 +44,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
         return this.startDate == null ? Input.empty() : this.startDate;
     }
 
-    /**
-     * Start time for suppression
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

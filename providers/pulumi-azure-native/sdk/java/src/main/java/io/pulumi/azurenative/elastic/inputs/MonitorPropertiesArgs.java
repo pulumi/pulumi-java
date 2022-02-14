@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties specific to the monitor resource.
- */
 public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 
-    /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
-     */
     @InputImport(name="monitoringStatus")
     private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
 
@@ -31,9 +25,6 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
     }
 
-    /**
-     * Provisioning state of the monitor resource.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -41,9 +32,6 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * User information.
-     */
     @InputImport(name="userInfo")
     private final @Nullable Input<UserInfoArgs> userInfo;
 

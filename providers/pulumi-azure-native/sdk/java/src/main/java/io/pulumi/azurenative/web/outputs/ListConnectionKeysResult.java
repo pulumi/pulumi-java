@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListConnectionKeysResult {
-/**
- * Connection Key
- */
     private final @Nullable String connectionKey;
-/**
- * Tokens/Claim
- */
     private final @Nullable Map<String,Object> parameterValues;
 
     @OutputCustomType.Constructor({"connectionKey","parameterValues"})
@@ -30,15 +24,9 @@ public final class ListConnectionKeysResult {
         this.parameterValues = parameterValues;
     }
 
-/**
- * Connection Key
- */
     public Optional<String> getConnectionKey() {
         return Optional.ofNullable(this.connectionKey);
     }
-/**
- * Tokens/Claim
- */
     public Map<String,Object> getParameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }

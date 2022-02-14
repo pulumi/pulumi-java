@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SSH configuration for Linux based VMs running on Azure
- */
 public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SshConfigurationArgs Empty = new SshConfigurationArgs();
 
-    /**
-     * The list of SSH public keys used to authenticate with linux based VMs.
-     */
     @InputImport(name="publicKeys")
     private final @Nullable Input<List<SshPublicKeyArgs>> publicKeys;
 

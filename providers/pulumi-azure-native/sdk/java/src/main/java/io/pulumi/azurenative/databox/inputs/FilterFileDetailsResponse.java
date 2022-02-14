@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Details of the filter files to be used for data transfer.
- */
 public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterFileDetailsResponse Empty = new FilterFileDetailsResponse();
 
-    /**
-     * Path of the file that contains the details of all items to transfer.
-     */
     @InputImport(name="filterFilePath", required=true)
     private final String filterFilePath;
 
@@ -25,9 +19,6 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
         return this.filterFilePath;
     }
 
-    /**
-     * Type of the filter file.
-     */
     @InputImport(name="filterFileType", required=true)
     private final String filterFileType;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Symmetric key for authentication.
- */
 public final class SymmetricKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SymmetricKeyResponse Empty = new SymmetricKeyResponse();
 
-    /**
-     * Connection string based on the symmetric key.
-     */
     @InputImport(name="connectionString")
     private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
 

@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Jira Service linked service.
- */
 public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JiraLinkedServiceArgs Empty = new JiraLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -45,9 +36,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,9 +43,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -65,9 +50,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * The IP address or host name of the Jira service. (e.g. jira.example.com)
-     */
     @InputImport(name="host", required=true)
     private final Input<Object> host;
 
@@ -75,9 +57,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.host;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -85,9 +64,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The password corresponding to the user name that you provided in the username field.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -95,9 +71,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The TCP port that the Jira server uses to listen for client connections. The default value is 443 if connecting through HTTPS, or 8080 if connecting through HTTP.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Object> port;
 
@@ -105,10 +78,6 @@ public final class JiraLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Jira'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -116,9 +85,6 @@ Expected value is 'Jira'.
         return this.type;
     }
 
-    /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Input<Object> useEncryptedEndpoints;
 
@@ -126,9 +92,6 @@ Expected value is 'Jira'.
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
     }
 
-    /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     */
     @InputImport(name="useHostVerification")
     private final @Nullable Input<Object> useHostVerification;
 
@@ -136,9 +99,6 @@ Expected value is 'Jira'.
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
     }
 
-    /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Input<Object> usePeerVerification;
 
@@ -146,9 +106,6 @@ Expected value is 'Jira'.
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
     }
 
-    /**
-     * The user name that you use to access Jira Service.
-     */
     @InputImport(name="username", required=true)
     private final Input<Object> username;
 

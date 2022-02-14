@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for the Advanced API Ops add-on.
- */
 public final class GoogleCloudApigeeV1AdvancedApiOpsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1AdvancedApiOpsConfigArgs Empty = new GoogleCloudApigeeV1AdvancedApiOpsConfigArgs();
 
-    /**
-     * Flag that specifies whether the Advanced API Ops add-on is enabled.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

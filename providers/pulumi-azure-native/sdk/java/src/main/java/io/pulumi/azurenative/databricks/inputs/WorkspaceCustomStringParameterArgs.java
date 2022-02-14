@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The Value.
- */
 public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceCustomStringParameterArgs Empty = new WorkspaceCustomStringParameterArgs();
 
-    /**
-     * The value which should be used for this field.
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

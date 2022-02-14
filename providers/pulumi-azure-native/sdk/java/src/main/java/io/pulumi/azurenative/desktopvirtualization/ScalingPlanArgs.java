@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScalingPlanArgs Empty = new ScalingPlanArgs();
 
-    /**
-     * Description of scaling plan.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,9 +31,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Exclusion tag for scaling plan.
-     */
     @InputImport(name="exclusionTag")
     private final @Nullable Input<String> exclusionTag;
 
@@ -47,9 +38,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.exclusionTag == null ? Input.empty() : this.exclusionTag;
     }
 
-    /**
-     * User friendly name of scaling plan.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -57,9 +45,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * List of ScalingHostPoolReference definitions.
-     */
     @InputImport(name="hostPoolReferences")
     private final @Nullable Input<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
 
@@ -67,9 +52,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPoolReferences == null ? Input.empty() : this.hostPoolReferences;
     }
 
-    /**
-     * HostPool type for desktop.
-     */
     @InputImport(name="hostPoolType")
     private final @Nullable Input<Either<String,HostPoolType>> hostPoolType;
 
@@ -77,9 +59,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPoolType == null ? Input.empty() : this.hostPoolType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
@@ -87,9 +66,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -97,9 +73,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -107,9 +80,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -117,9 +87,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="plan")
     private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
@@ -127,9 +94,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -137,9 +101,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The ring number of scaling plan.
-     */
     @InputImport(name="ring")
     private final @Nullable Input<Integer> ring;
 
@@ -147,9 +108,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.ring == null ? Input.empty() : this.ring;
     }
 
-    /**
-     * The name of the scaling plan.
-     */
     @InputImport(name="scalingPlanName")
     private final @Nullable Input<String> scalingPlanName;
 
@@ -157,9 +115,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.scalingPlanName == null ? Input.empty() : this.scalingPlanName;
     }
 
-    /**
-     * List of ScalingSchedule definitions.
-     */
     @InputImport(name="schedules")
     private final @Nullable Input<List<ScalingScheduleArgs>> schedules;
 
@@ -167,9 +122,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedules == null ? Input.empty() : this.schedules;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sku")
     private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
@@ -177,9 +129,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -187,9 +136,6 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Timezone of the scaling plan.
-     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

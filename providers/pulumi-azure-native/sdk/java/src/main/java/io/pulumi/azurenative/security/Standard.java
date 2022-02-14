@@ -17,289 +17,81 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Security Standard on a resource
-API Version: 2021-08-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a security standard on a specified scope
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var standard = new AzureNative.Security.Standard("standard", new AzureNative.Security.StandardArgs
-        {
-            Category = "SecurityCenter",
-            Components = 
-            {
-                new AzureNative.Security.Inputs.StandardComponentPropertiesArgs
-                {
-                    Key = "1195afff-c881-495e-9bc5-1486211ae03f",
-                },
-                new AzureNative.Security.Inputs.StandardComponentPropertiesArgs
-                {
-                    Key = "dbd0cb49-b563-45e7-9724-889e799fa648",
-                },
-            },
-            Description = "description of Azure Test Security Standard 1",
-            DisplayName = "Azure Test Security Standard 1",
-            ResourceGroupName = "myResourceGroup",
-            StandardId = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewStandard(ctx, "standard", &security.StandardArgs{
-			Category: pulumi.String("SecurityCenter"),
-			Components: []security.StandardComponentPropertiesArgs{
-				&security.StandardComponentPropertiesArgs{
-					Key: pulumi.String("1195afff-c881-495e-9bc5-1486211ae03f"),
-				},
-				&security.StandardComponentPropertiesArgs{
-					Key: pulumi.String("dbd0cb49-b563-45e7-9724-889e799fa648"),
-				},
-			},
-			Description:       pulumi.String("description of Azure Test Security Standard 1"),
-			DisplayName:       pulumi.String("Azure Test Security Standard 1"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StandardId:        pulumi.String("8bb8be0a-6010-4789-812f-e4d661c4ed0e"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const standard = new azure_native.security.Standard("standard", {
-    category: "SecurityCenter",
-    components: [
-        {
-            key: "1195afff-c881-495e-9bc5-1486211ae03f",
-        },
-        {
-            key: "dbd0cb49-b563-45e7-9724-889e799fa648",
-        },
-    ],
-    description: "description of Azure Test Security Standard 1",
-    displayName: "Azure Test Security Standard 1",
-    resourceGroupName: "myResourceGroup",
-    standardId: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-standard = azure_native.security.Standard("standard",
-    category="SecurityCenter",
-    components=[
-        azure_native.security.StandardComponentPropertiesArgs(
-            key="1195afff-c881-495e-9bc5-1486211ae03f",
-        ),
-        azure_native.security.StandardComponentPropertiesArgs(
-            key="dbd0cb49-b563-45e7-9724-889e799fa648",
-        ),
-    ],
-    description="description of Azure Test Security Standard 1",
-    display_name="Azure Test Security Standard 1",
-    resource_group_name="myResourceGroup",
-    standard_id="8bb8be0a-6010-4789-812f-e4d661c4ed0e")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:security:Standard 8bb8be0a-6010-4789-812f-e4d661c4ed0e /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myResourceGroup/provider/Microsoft.Security/standards/8bb8be0a-6010-4789-812f-e4d661c4ed0e 
-```
-
- */
 @ResourceType(type="azure-native:security:Standard")
 public class Standard extends io.pulumi.resources.CustomResource {
-    /**
-     * category of the standard provided
-     */
     @OutputExport(name="category", type=String.class, parameters={})
     private Output</* @Nullable */ String> category;
 
-    /**
-     * @return category of the standard provided
-     */
     public Output</* @Nullable */ String> getCategory() {
         return this.category;
     }
-    /**
-     * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
-     */
     @OutputExport(name="components", type=List.class, parameters={StandardComponentPropertiesResponse.class})
     private Output</* @Nullable */ List<StandardComponentPropertiesResponse>> components;
 
-    /**
-     * @return List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
-     */
     public Output</* @Nullable */ List<StandardComponentPropertiesResponse>> getComponents() {
         return this.components;
     }
-    /**
-     * description of the standard
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return description of the standard
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * display name of the standard, equivalent to the standardId
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return display name of the standard, equivalent to the standardId
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Entity tag is used for comparing two or more entities from the same requested resource.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Entity tag is used for comparing two or more entities from the same requested resource.
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * Kind of the resource
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Kind of the resource
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Location where the resource is stored
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Location where the resource is stored
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * standard type (Custom or BuiltIn only currently)
-     */
     @OutputExport(name="standardType", type=String.class, parameters={})
     private Output<String> standardType;
 
-    /**
-     * @return standard type (Custom or BuiltIn only currently)
-     */
     public Output<String> getStandardType() {
         return this.standardType;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * A list of key value pairs that describe the resource.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return A list of key value pairs that describe the resource.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Standard(String name, StandardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:Standard", name, args == null ? StandardArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -318,14 +110,6 @@ public class Standard extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Standard get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Standard(name, id, options);
     }

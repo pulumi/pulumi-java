@@ -11,50 +11,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetIoTAddonResult {
-/**
- * Host OS supported by the IoT addon.
- */
     private final String hostPlatform;
-/**
- * Platform where the runtime is hosted.
- */
     private final String hostPlatformType;
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * IoT device metadata to which appliance needs to be connected.
- */
     private final IoTDeviceInfoResponse ioTDeviceDetails;
-/**
- * IoT edge device to which the IoT Addon needs to be configured.
- */
     private final IoTDeviceInfoResponse ioTEdgeDeviceDetails;
-/**
- * Addon type.
-Expected value is 'IotEdge'.
- */
     private final String kind;
-/**
- * The object name.
- */
     private final String name;
-/**
- * Addon Provisioning State
- */
     private final String provisioningState;
-/**
- * Addon type
- */
     private final SystemDataResponse systemData;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
-/**
- * Version of IoT running on the appliance.
- */
     private final String version;
 
     @OutputCustomType.Constructor({"hostPlatform","hostPlatformType","id","ioTDeviceDetails","ioTEdgeDeviceDetails","kind","name","provisioningState","systemData","type","version"})
@@ -83,70 +49,36 @@ Expected value is 'IotEdge'.
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * Host OS supported by the IoT addon.
- */
     public String getHostPlatform() {
         return this.hostPlatform;
     }
-/**
- * Platform where the runtime is hosted.
- */
     public String getHostPlatformType() {
         return this.hostPlatformType;
     }
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * IoT device metadata to which appliance needs to be connected.
- */
     public IoTDeviceInfoResponse getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
-/**
- * IoT edge device to which the IoT Addon needs to be configured.
- */
     public IoTDeviceInfoResponse getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
-/**
- * Addon type.
-Expected value is 'IotEdge'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Addon Provisioning State
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Addon type
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Version of IoT running on the appliance.
- */
     public String getVersion() {
         return this.version;
     }

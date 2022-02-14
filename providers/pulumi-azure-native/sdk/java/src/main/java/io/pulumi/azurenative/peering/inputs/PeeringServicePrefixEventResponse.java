@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The details of the event associated with a prefix.
- */
 public final class PeeringServicePrefixEventResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PeeringServicePrefixEventResponse Empty = new PeeringServicePrefixEventResponse();
 
-    /**
-     * The description of the event associated with a prefix.
-     */
     @InputImport(name="eventDescription", required=true)
     private final String eventDescription;
 
@@ -25,9 +19,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
         return this.eventDescription;
     }
 
-    /**
-     * The level of the event associated with a prefix.
-     */
     @InputImport(name="eventLevel", required=true)
     private final String eventLevel;
 
@@ -35,9 +26,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
         return this.eventLevel;
     }
 
-    /**
-     * The summary of the event associated with a prefix.
-     */
     @InputImport(name="eventSummary", required=true)
     private final String eventSummary;
 
@@ -45,9 +33,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
         return this.eventSummary;
     }
 
-    /**
-     * The timestamp of the event associated with a prefix.
-     */
     @InputImport(name="eventTimestamp", required=true)
     private final String eventTimestamp;
 
@@ -55,9 +40,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
         return this.eventTimestamp;
     }
 
-    /**
-     * The type of the event associated with a prefix.
-     */
     @InputImport(name="eventType", required=true)
     private final String eventType;
 

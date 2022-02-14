@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelPartnerLinkArgs Empty = new ChannelPartnerLinkArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -27,9 +21,6 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
         return this.accountId;
     }
 
-    /**
-     * State of the channel partner link.
-     */
     @InputImport(name="linkState", required=true)
     private final Input<ChannelPartnerLinkLinkState> linkState;
 
@@ -37,9 +28,6 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
         return this.linkState;
     }
 
-    /**
-     * Cloud Identity ID of the linked reseller.
-     */
     @InputImport(name="resellerCloudIdentityId", required=true)
     private final Input<String> resellerCloudIdentityId;
 

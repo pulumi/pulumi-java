@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Auto-pausing properties of a Big Data pool powered by Apache Spark
- */
 public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoPausePropertiesArgs Empty = new AutoPausePropertiesArgs();
 
-    /**
-     * Number of minutes of idle time before the Big Data pool is automatically paused.
-     */
     @InputImport(name="delayInMinutes")
     private final @Nullable Input<Integer> delayInMinutes;
 
@@ -28,9 +22,6 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
         return this.delayInMinutes == null ? Input.empty() : this.delayInMinutes;
     }
 
-    /**
-     * Whether auto-pausing is enabled for the Big Data pool.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

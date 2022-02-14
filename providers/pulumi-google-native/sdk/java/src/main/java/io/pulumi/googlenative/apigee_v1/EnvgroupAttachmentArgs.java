@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvgroupAttachmentArgs Empty = new EnvgroupAttachmentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="envgroupId", required=true)
     private final Input<String> envgroupId;
 
@@ -27,9 +21,6 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.envgroupId;
     }
 
-    /**
-     * ID of the attached environment.
-     */
     @InputImport(name="environment", required=true)
     private final Input<String> environment;
 
@@ -37,9 +28,6 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.environment;
     }
 
-    /**
-     * ID of the environment group attachment.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,9 +35,6 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

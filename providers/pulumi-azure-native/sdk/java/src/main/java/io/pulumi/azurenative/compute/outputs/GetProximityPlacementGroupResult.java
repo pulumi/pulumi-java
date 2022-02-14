@@ -15,45 +15,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetProximityPlacementGroupResult {
-/**
- * A list of references to all availability sets in the proximity placement group.
- */
     private final List<SubResourceWithColocationStatusResponse> availabilitySets;
-/**
- * Describes colocation status of the Proximity Placement Group.
- */
     private final @Nullable InstanceViewStatusResponse colocationStatus;
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
- */
     private final @Nullable String proximityPlacementGroupType;
-/**
- * Resource tags
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
-/**
- * A list of references to all virtual machine scale sets in the proximity placement group.
- */
     private final List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets;
-/**
- * A list of references to all virtual machines in the proximity placement group.
- */
     private final List<SubResourceWithColocationStatusResponse> virtualMachines;
 
     @OutputCustomType.Constructor({"availabilitySets","colocationStatus","id","location","name","proximityPlacementGroupType","tags","type","virtualMachineScaleSets","virtualMachines"})
@@ -80,63 +50,33 @@ public final class GetProximityPlacementGroupResult {
         this.virtualMachines = Objects.requireNonNull(virtualMachines);
     }
 
-/**
- * A list of references to all availability sets in the proximity placement group.
- */
     public List<SubResourceWithColocationStatusResponse> getAvailabilitySets() {
         return this.availabilitySets;
     }
-/**
- * Describes colocation status of the Proximity Placement Group.
- */
     public Optional<InstanceViewStatusResponse> getColocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
- */
     public Optional<String> getProximityPlacementGroupType() {
         return Optional.ofNullable(this.proximityPlacementGroupType);
     }
-/**
- * Resource tags
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }
-/**
- * A list of references to all virtual machine scale sets in the proximity placement group.
- */
     public List<SubResourceWithColocationStatusResponse> getVirtualMachineScaleSets() {
         return this.virtualMachineScaleSets;
     }
-/**
- * A list of references to all virtual machines in the proximity placement group.
- */
     public List<SubResourceWithColocationStatusResponse> getVirtualMachines() {
         return this.virtualMachines;
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetIdentityAwareProxyClientArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIdentityAwareProxyClientArgs Empty = new GetIdentityAwareProxyClientArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="brandId", required=true)
     private final String brandId;
 
@@ -27,9 +21,6 @@ public final class GetIdentityAwareProxyClientArgs extends io.pulumi.resources.I
         return this.brandId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="identityAwareProxyClientId", required=true)
     private final String identityAwareProxyClientId;
 
@@ -37,9 +28,6 @@ public final class GetIdentityAwareProxyClientArgs extends io.pulumi.resources.I
         return this.identityAwareProxyClientId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

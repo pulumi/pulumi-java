@@ -15,218 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The peering service prefix class.
-API Version: 2021-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a prefix for the peering service
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var prefix = new AzureNative.Peering.Prefix("prefix", new AzureNative.Peering.PrefixArgs
-        {
-            PeeringServiceName = "peeringServiceName",
-            PeeringServicePrefixKey = "00000000-0000-0000-0000-000000000000",
-            Prefix = "192.168.1.0/24",
-            PrefixName = "peeringServicePrefixName",
-            ResourceGroupName = "rgName",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := peering.NewPrefix(ctx, "prefix", &peering.PrefixArgs{
-			PeeringServiceName:      pulumi.String("peeringServiceName"),
-			PeeringServicePrefixKey: pulumi.String("00000000-0000-0000-0000-000000000000"),
-			Prefix:                  pulumi.String("192.168.1.0/24"),
-			PrefixName:              pulumi.String("peeringServicePrefixName"),
-			ResourceGroupName:       pulumi.String("rgName"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const prefix = new azure_native.peering.Prefix("prefix", {
-    peeringServiceName: "peeringServiceName",
-    peeringServicePrefixKey: "00000000-0000-0000-0000-000000000000",
-    prefix: "192.168.1.0/24",
-    prefixName: "peeringServicePrefixName",
-    resourceGroupName: "rgName",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-prefix = azure_native.peering.Prefix("prefix",
-    peering_service_name="peeringServiceName",
-    peering_service_prefix_key="00000000-0000-0000-0000-000000000000",
-    prefix="192.168.1.0/24",
-    prefix_name="peeringServicePrefixName",
-    resource_group_name="rgName")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:peering:Prefix peeringServicePrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName/prefixes/peeringServicePrefixName 
-```
-
- */
 @ResourceType(type="azure-native:peering:Prefix")
 public class Prefix extends io.pulumi.resources.CustomResource {
-    /**
-     * The error message for validation state
-     */
     @OutputExport(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
-    /**
-     * @return The error message for validation state
-     */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
-    /**
-     * The list of events for peering service prefix
-     */
     @OutputExport(name="events", type=List.class, parameters={PeeringServicePrefixEventResponse.class})
     private Output<List<PeeringServicePrefixEventResponse>> events;
 
-    /**
-     * @return The list of events for peering service prefix
-     */
     public Output<List<PeeringServicePrefixEventResponse>> getEvents() {
         return this.events;
     }
-    /**
-     * The prefix learned type
-     */
     @OutputExport(name="learnedType", type=String.class, parameters={})
     private Output<String> learnedType;
 
-    /**
-     * @return The prefix learned type
-     */
     public Output<String> getLearnedType() {
         return this.learnedType;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The peering service prefix key
-     */
     @OutputExport(name="peeringServicePrefixKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringServicePrefixKey;
 
-    /**
-     * @return The peering service prefix key
-     */
     public Output</* @Nullable */ String> getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
-    /**
-     * The prefix from which your traffic originates.
-     */
     @OutputExport(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
-    /**
-     * @return The prefix from which your traffic originates.
-     */
     public Output</* @Nullable */ String> getPrefix() {
         return this.prefix;
     }
-    /**
-     * The prefix validation state
-     */
     @OutputExport(name="prefixValidationState", type=String.class, parameters={})
     private Output<String> prefixValidationState;
 
-    /**
-     * @return The prefix validation state
-     */
     public Output<String> getPrefixValidationState() {
         return this.prefixValidationState;
     }
-    /**
-     * The provisioning state of the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Prefix(String name, PrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:peering:Prefix", name, args == null ? PrefixArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -251,14 +96,6 @@ public class Prefix extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Prefix get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Prefix(name, id, options);
     }

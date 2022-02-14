@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateProjectResponseTags {
-/**
- * 
- */
     private final @Nullable String additionalProperties;
 
     @OutputCustomType.Constructor({"additionalProperties"})
@@ -21,9 +18,6 @@ public final class MigrateProjectResponseTags {
         this.additionalProperties = additionalProperties;
     }
 
-/**
- * 
- */
     public Optional<String> getAdditionalProperties() {
         return Optional.ofNullable(this.additionalProperties);
     }

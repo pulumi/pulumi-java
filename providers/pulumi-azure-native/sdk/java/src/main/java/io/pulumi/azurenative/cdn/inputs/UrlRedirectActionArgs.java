@@ -10,17 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the url redirect action for the delivery rule.
- */
 public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlRedirectActionArgs Empty = new UrlRedirectActionArgs();
 
-    /**
-     * The name of the action for the delivery rule.
-Expected value is 'UrlRedirect'.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +21,6 @@ Expected value is 'UrlRedirect'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the action.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<UrlRedirectActionParametersArgs> parameters;
 

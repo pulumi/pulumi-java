@@ -12,33 +12,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WindowsUpdateResponse {
-/**
- * The list of categories to which the update belongs.
- */
     private final List<CategoryResponse> categories;
-/**
- * The localized description of the update.
- */
     private final String description;
-/**
- * Required - The unique identifier for the update.
- */
     private final IdentityResponse identity;
-/**
- * The Microsoft Knowledge Base article IDs that are associated with the update.
- */
     private final List<String> kbArticleIds;
-/**
- * The last published timestamp of the update.
- */
     private final String lastPublishedTimestamp;
-/**
- * The hyperlink to the support information for the update.
- */
     private final String supportUrl;
-/**
- * The localized title of the update.
- */
     private final String title;
 
     @OutputCustomType.Constructor({"categories","description","identity","kbArticleIds","lastPublishedTimestamp","supportUrl","title"})
@@ -59,45 +38,24 @@ public final class WindowsUpdateResponse {
         this.title = Objects.requireNonNull(title);
     }
 
-/**
- * The list of categories to which the update belongs.
- */
     public List<CategoryResponse> getCategories() {
         return this.categories;
     }
-/**
- * The localized description of the update.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Required - The unique identifier for the update.
- */
     public IdentityResponse getIdentity() {
         return this.identity;
     }
-/**
- * The Microsoft Knowledge Base article IDs that are associated with the update.
- */
     public List<String> getKbArticleIds() {
         return this.kbArticleIds;
     }
-/**
- * The last published timestamp of the update.
- */
     public String getLastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
     }
-/**
- * The hyperlink to the support information for the update.
- */
     public String getSupportUrl() {
         return this.supportUrl;
     }
-/**
- * The localized title of the update.
- */
     public String getTitle() {
         return this.title;
     }

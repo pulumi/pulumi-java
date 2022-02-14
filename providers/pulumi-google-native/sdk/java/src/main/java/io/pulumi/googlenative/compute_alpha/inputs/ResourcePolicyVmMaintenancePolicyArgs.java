@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyVmMaintenancePolicyArgs Empty = new ResourcePolicyVmMaintenancePolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="concurrencyControlGroup")
     private final @Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
 
@@ -28,9 +22,6 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
         return this.concurrencyControlGroup == null ? Input.empty() : this.concurrencyControlGroup;
     }
 
-    /**
-     * Maintenance windows that are applied to VMs covered by this policy.
-     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 

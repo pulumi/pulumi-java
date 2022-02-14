@@ -15,53 +15,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStorageSyncServiceResult {
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * Incoming Traffic Policy
- */
     private final @Nullable String incomingTrafficPolicy;
-/**
- * Resource Last Operation Name
- */
     private final String lastOperationName;
-/**
- * StorageSyncService lastWorkflowId
- */
     private final String lastWorkflowId;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * List of private endpoint connection associated with the specified storage sync service
- */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-/**
- * StorageSyncService Provisioning State
- */
     private final String provisioningState;
-/**
- * Storage Sync service status.
- */
     private final Integer storageSyncServiceStatus;
-/**
- * Storage Sync service Uid
- */
     private final String storageSyncServiceUid;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","incomingTrafficPolicy","lastOperationName","lastWorkflowId","location","name","privateEndpointConnections","provisioningState","storageSyncServiceStatus","storageSyncServiceUid","tags","type"})
@@ -92,75 +56,39 @@ public final class GetStorageSyncServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Incoming Traffic Policy
- */
     public Optional<String> getIncomingTrafficPolicy() {
         return Optional.ofNullable(this.incomingTrafficPolicy);
     }
-/**
- * Resource Last Operation Name
- */
     public String getLastOperationName() {
         return this.lastOperationName;
     }
-/**
- * StorageSyncService lastWorkflowId
- */
     public String getLastWorkflowId() {
         return this.lastWorkflowId;
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * List of private endpoint connection associated with the specified storage sync service
- */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-/**
- * StorageSyncService Provisioning State
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Storage Sync service status.
- */
     public Integer getStorageSyncServiceStatus() {
         return this.storageSyncServiceStatus;
     }
-/**
- * Storage Sync service Uid
- */
     public String getStorageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

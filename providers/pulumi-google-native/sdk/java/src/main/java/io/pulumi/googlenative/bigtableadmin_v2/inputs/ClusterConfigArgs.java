@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for a cluster.
- */
 public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterConfigArgs Empty = new ClusterConfigArgs();
 
-    /**
-     * Autoscaling configuration for this cluster.
-     */
     @InputImport(name="clusterAutoscalingConfig")
     private final @Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 

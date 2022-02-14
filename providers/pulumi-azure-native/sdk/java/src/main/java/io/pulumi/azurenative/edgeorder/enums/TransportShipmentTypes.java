@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates Shipment Logistics type that the customer preferred.
- */
     @EnumType
     public enum TransportShipmentTypes {
-/**
- * Shipment Logistics is handled by the customer.
- */
         CustomerManaged("CustomerManaged"),
-/**
- * Shipment Logistics is handled by Microsoft.
- */
         MicrosoftManaged("MicrosoftManaged");
 
         private final String value;

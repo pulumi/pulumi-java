@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainTopicArgs Empty = new DomainTopicArgs();
 
-    /**
-     * Name of the domain.
-     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -27,9 +21,6 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
-    /**
-     * Name of the domain topic.
-     */
     @InputImport(name="domainTopicName")
     private final @Nullable Input<String> domainTopicName;
 
@@ -37,9 +28,6 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainTopicName == null ? Input.empty() : this.domainTopicName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Provisioning state of the Private Endpoint Connection.
- */
     @EnumType
     public enum EndPointProvisioningState {
-/**
- * 
- */
         Creating("Creating"),
-/**
- * 
- */
         Updating("Updating"),
-/**
- * 
- */
         Deleting("Deleting"),
-/**
- * 
- */
         Succeeded("Succeeded"),
-/**
- * 
- */
         Canceled("Canceled"),
-/**
- * 
- */
         Failed("Failed");
 
         private final String value;

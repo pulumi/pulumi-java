@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneForwardingConfigArgs Empty = new ManagedZoneForwardingConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -29,9 +23,6 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
-     */
     @InputImport(name="targetNameServers")
     private final @Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
 

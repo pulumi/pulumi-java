@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Managed application management policy.
- */
 public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationManagementPolicyArgs Empty = new ApplicationManagementPolicyArgs();
 
-    /**
-     * The managed application management mode.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,ApplicationManagementMode>> mode;
 

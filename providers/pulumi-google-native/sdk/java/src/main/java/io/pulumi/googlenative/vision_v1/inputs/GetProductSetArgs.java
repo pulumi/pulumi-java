@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetProductSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProductSetArgs Empty = new GetProductSetArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetProductSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="productSetId", required=true)
     private final String productSetId;
 
@@ -37,9 +28,6 @@ public final class GetProductSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.productSetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

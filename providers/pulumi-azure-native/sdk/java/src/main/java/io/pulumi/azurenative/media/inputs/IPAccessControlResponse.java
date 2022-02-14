@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The IP access control.
- */
 public final class IPAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPAccessControlResponse Empty = new IPAccessControlResponse();
 
-    /**
-     * The IP allow list.
-     */
     @InputImport(name="allow")
     private final @Nullable List<IPRangeResponse> allow;
 

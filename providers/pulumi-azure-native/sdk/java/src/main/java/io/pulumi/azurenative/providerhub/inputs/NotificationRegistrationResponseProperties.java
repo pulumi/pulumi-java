@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotificationRegistrationResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationRegistrationResponseProperties Empty = new NotificationRegistrationResponseProperties();
 
-    /**
-     * 
-     */
     @InputImport(name="includedEvents")
     private final @Nullable List<String> includedEvents;
 
@@ -29,9 +23,6 @@ public final class NotificationRegistrationResponseProperties extends io.pulumi.
         return this.includedEvents == null ? List.of() : this.includedEvents;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="messageScope")
     private final @Nullable String messageScope;
 
@@ -39,9 +30,6 @@ public final class NotificationRegistrationResponseProperties extends io.pulumi.
         return this.messageScope == null ? Optional.empty() : Optional.ofNullable(this.messageScope);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="notificationEndpoints")
     private final @Nullable List<NotificationEndpointResponse> notificationEndpoints;
 
@@ -49,9 +37,6 @@ public final class NotificationRegistrationResponseProperties extends io.pulumi.
         return this.notificationEndpoints == null ? List.of() : this.notificationEndpoints;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="notificationMode")
     private final @Nullable String notificationMode;
 
@@ -59,9 +44,6 @@ public final class NotificationRegistrationResponseProperties extends io.pulumi.
         return this.notificationMode == null ? Optional.empty() : Optional.ofNullable(this.notificationMode);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 

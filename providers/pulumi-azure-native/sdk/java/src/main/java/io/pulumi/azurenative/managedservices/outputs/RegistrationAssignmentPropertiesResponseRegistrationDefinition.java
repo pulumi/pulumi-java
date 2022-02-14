@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegistrationAssignmentPropertiesResponseRegistrationDefinition {
-/**
- * Fully qualified path of the registration definition.
- */
     private final String id;
-/**
- * Name of the registration definition.
- */
     private final String name;
-/**
- * Plan details for the managed services.
- */
     private final @Nullable PlanResponse plan;
-/**
- * Properties of registration definition inside registration assignment.
- */
     private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
-/**
- * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","plan","properties","type"})
@@ -48,33 +33,18 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified path of the registration definition.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Name of the registration definition.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Plan details for the managed services.
- */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
-/**
- * Properties of registration definition inside registration assignment.
- */
     public Optional<RegistrationAssignmentPropertiesResponseProperties> getProperties() {
         return Optional.ofNullable(this.properties);
     }
-/**
- * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
- */
     public String getType() {
         return this.type;
     }

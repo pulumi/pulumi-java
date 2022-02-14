@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Storage Configurations for SQL Data, Log and TempDb.
- */
 public final class StorageConfigurationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageConfigurationSettingsResponse Empty = new StorageConfigurationSettingsResponse();
 
-    /**
-     * Disk configuration to apply to SQL Server.
-     */
     @InputImport(name="diskConfigurationType")
     private final @Nullable String diskConfigurationType;
 
@@ -28,9 +22,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
         return this.diskConfigurationType == null ? Optional.empty() : Optional.ofNullable(this.diskConfigurationType);
     }
 
-    /**
-     * SQL Server Data Storage Settings.
-     */
     @InputImport(name="sqlDataSettings")
     private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
 
@@ -38,9 +29,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
         return this.sqlDataSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlDataSettings);
     }
 
-    /**
-     * SQL Server Log Storage Settings.
-     */
     @InputImport(name="sqlLogSettings")
     private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
 
@@ -48,9 +36,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
         return this.sqlLogSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlLogSettings);
     }
 
-    /**
-     * SQL Server TempDb Storage Settings.
-     */
     @InputImport(name="sqlTempDbSettings")
     private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
 
@@ -58,9 +43,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
         return this.sqlTempDbSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlTempDbSettings);
     }
 
-    /**
-     * Storage workload type.
-     */
     @InputImport(name="storageWorkloadType")
     private final @Nullable String storageWorkloadType;
 

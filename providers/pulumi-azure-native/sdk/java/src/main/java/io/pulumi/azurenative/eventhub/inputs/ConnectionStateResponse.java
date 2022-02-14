@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * ConnectionState information.
- */
 public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionStateResponse Empty = new ConnectionStateResponse();
 
-    /**
-     * Description of the connection state.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -27,9 +21,6 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Status of the connection.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

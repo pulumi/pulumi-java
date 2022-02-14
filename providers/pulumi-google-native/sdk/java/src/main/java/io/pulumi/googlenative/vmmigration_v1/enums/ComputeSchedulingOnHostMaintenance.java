@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
- */
     @EnumType
     public enum ComputeSchedulingOnHostMaintenance {
-/**
- * An unknown, unexpected behavior.
- */
         OnHostMaintenanceUnspecified("ON_HOST_MAINTENANCE_UNSPECIFIED"),
-/**
- * Terminate the instance when the host machine undergoes maintenance.
- */
         Terminate("TERMINATE"),
-/**
- * Migrate the instance when the host machine undergoes maintenance.
- */
         Migrate("MIGRATE");
 
         private final String value;

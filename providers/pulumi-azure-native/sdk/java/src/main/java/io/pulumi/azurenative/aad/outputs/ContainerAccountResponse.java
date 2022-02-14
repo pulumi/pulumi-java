@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerAccountResponse {
-/**
- * The account name
- */
     private final @Nullable String accountName;
-/**
- * The account password
- */
     private final @Nullable String password;
-/**
- * The account spn
- */
     private final @Nullable String spn;
 
     @OutputCustomType.Constructor({"accountName","password","spn"})
@@ -34,21 +25,12 @@ public final class ContainerAccountResponse {
         this.spn = spn;
     }
 
-/**
- * The account name
- */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
-/**
- * The account password
- */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * The account spn
- */
     public Optional<String> getSpn() {
         return Optional.ofNullable(this.spn);
     }

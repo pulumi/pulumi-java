@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceAccessRuleResponse {
-/**
- * Resource Id
- */
     private final @Nullable String resourceId;
-/**
- * Tenant Id
- */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"resourceId","tenantId"})
@@ -28,15 +22,9 @@ public final class ResourceAccessRuleResponse {
         this.tenantId = tenantId;
     }
 
-/**
- * Resource Id
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
-/**
- * Tenant Id
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

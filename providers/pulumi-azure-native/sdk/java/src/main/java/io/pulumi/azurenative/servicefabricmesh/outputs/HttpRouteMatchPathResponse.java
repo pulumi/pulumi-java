@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HttpRouteMatchPathResponse {
-/**
- * replacement string for matched part of the Uri.
- */
     private final @Nullable String rewrite;
-/**
- * how to match value in the Uri
- */
     private final String type;
-/**
- * Uri path to match for request.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"rewrite","type","value"})
@@ -34,21 +25,12 @@ public final class HttpRouteMatchPathResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * replacement string for matched part of the Uri.
- */
     public Optional<String> getRewrite() {
         return Optional.ofNullable(this.rewrite);
     }
-/**
- * how to match value in the Uri
- */
     public String getType() {
         return this.type;
     }
-/**
- * Uri path to match for request.
- */
     public String getValue() {
         return this.value;
     }

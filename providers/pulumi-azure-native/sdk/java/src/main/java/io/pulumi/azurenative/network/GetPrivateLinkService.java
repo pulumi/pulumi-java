@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkService {
-/**
- * Private link service resource.
-API Version: 2020-11-01.
- *
- * Private link service resource.
- */
     public static CompletableFuture<GetPrivateLinkServiceResult> invokeAsync(GetPrivateLinkServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateLinkService", TypeShape.of(GetPrivateLinkServiceResult.class), args == null ? GetPrivateLinkServiceArgs.Empty : args, Utilities.withVersion(options));
     }

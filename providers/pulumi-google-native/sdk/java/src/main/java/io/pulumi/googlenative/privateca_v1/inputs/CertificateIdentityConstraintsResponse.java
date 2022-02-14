@@ -9,16 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Describes constraints on a Certificate's Subject and SubjectAltNames.
- */
 public final class CertificateIdentityConstraintsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateIdentityConstraintsResponse Empty = new CertificateIdentityConstraintsResponse();
 
-    /**
-     * If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
-     */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
     private final Boolean allowSubjectAltNamesPassthrough;
 
@@ -26,9 +20,6 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
         return this.allowSubjectAltNamesPassthrough;
     }
 
-    /**
-     * If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
-     */
     @InputImport(name="allowSubjectPassthrough", required=true)
     private final Boolean allowSubjectPassthrough;
 
@@ -36,9 +27,6 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
         return this.allowSubjectPassthrough;
     }
 
-    /**
-     * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
-     */
     @InputImport(name="celExpression", required=true)
     private final ExprResponse celExpression;
 

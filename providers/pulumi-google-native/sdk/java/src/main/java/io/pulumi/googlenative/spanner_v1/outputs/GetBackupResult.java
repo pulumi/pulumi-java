@@ -11,45 +11,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetBackupResult {
-/**
- * The time the CreateBackup request is received. If the request does not specify `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
- */
     private final String createTime;
-/**
- * Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
- */
     private final String database;
-/**
- * The database dialect information for the backup.
- */
     private final String databaseDialect;
-/**
- * The encryption information for the backup.
- */
     private final EncryptionInfoResponse encryptionInfo;
-/**
- * Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
- */
     private final String expireTime;
-/**
- * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
- */
     private final String name;
-/**
- * The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
- */
     private final List<String> referencingDatabases;
-/**
- * Size of the backup in bytes.
- */
     private final String sizeBytes;
-/**
- * The current state of the backup.
- */
     private final String state;
-/**
- * The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
- */
     private final String versionTime;
 
     @OutputCustomType.Constructor({"createTime","database","databaseDialect","encryptionInfo","expireTime","name","referencingDatabases","sizeBytes","state","versionTime"})
@@ -76,63 +46,33 @@ public final class GetBackupResult {
         this.versionTime = Objects.requireNonNull(versionTime);
     }
 
-/**
- * The time the CreateBackup request is received. If the request does not specify `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
- */
     public String getDatabase() {
         return this.database;
     }
-/**
- * The database dialect information for the backup.
- */
     public String getDatabaseDialect() {
         return this.databaseDialect;
     }
-/**
- * The encryption information for the backup.
- */
     public EncryptionInfoResponse getEncryptionInfo() {
         return this.encryptionInfo;
     }
-/**
- * Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
- */
     public String getExpireTime() {
         return this.expireTime;
     }
-/**
- * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
- */
     public List<String> getReferencingDatabases() {
         return this.referencingDatabases;
     }
-/**
- * Size of the backup in bytes.
- */
     public String getSizeBytes() {
         return this.sizeBytes;
     }
-/**
- * The current state of the backup.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
- */
     public String getVersionTime() {
         return this.versionTime;
     }

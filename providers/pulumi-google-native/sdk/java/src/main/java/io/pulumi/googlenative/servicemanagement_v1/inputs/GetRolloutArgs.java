@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="rolloutId", required=true)
     private final String rolloutId;
 
@@ -25,9 +19,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
         return this.rolloutId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

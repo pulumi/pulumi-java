@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Results of the configuration analysis from the last run of the test.
- */
 public final class ReachabilityDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReachabilityDetailsResponse Empty = new ReachabilityDetailsResponse();
 
-    /**
-     * The details of a failure or a cancellation of reachability analysis.
-     */
     @InputImport(name="error", required=true)
     private final StatusResponse error;
 
@@ -28,9 +22,6 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
         return this.error;
     }
 
-    /**
-     * The overall result of the test's configuration analysis.
-     */
     @InputImport(name="result", required=true)
     private final String result;
 
@@ -38,9 +29,6 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
         return this.result;
     }
 
-    /**
-     * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
-     */
     @InputImport(name="traces", required=true)
     private final List<TraceResponse> traces;
 
@@ -48,9 +36,6 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
         return this.traces;
     }
 
-    /**
-     * The time of the configuration analysis.
-     */
     @InputImport(name="verifyTime", required=true)
     private final String verifyTime;
 

@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateCloudArgs Empty = new PrivateCloudArgs();
 
-    /**
-     * vCenter Single Sign On Identity Sources
-     */
     @InputImport(name="identitySources")
     private final @Nullable Input<List<IdentitySourceArgs>> identitySources;
 
@@ -34,9 +28,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.identitySources == null ? Input.empty() : this.identitySources;
     }
 
-    /**
-     * Connectivity to internet is enabled or disabled
-     */
     @InputImport(name="internet")
     private final @Nullable Input<Either<String,InternetEnum>> internet;
 
@@ -44,9 +35,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.internet == null ? Input.empty() : this.internet;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,9 +42,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The default cluster used for management
-     */
     @InputImport(name="managementCluster", required=true)
     private final Input<ManagementClusterArgs> managementCluster;
 
@@ -64,9 +49,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.managementCluster;
     }
 
-    /**
-     * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
-     */
     @InputImport(name="networkBlock", required=true)
     private final Input<String> networkBlock;
 
@@ -74,9 +56,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkBlock;
     }
 
-    /**
-     * Optionally, set the NSX-T Manager password when the private cloud is created
-     */
     @InputImport(name="nsxtPassword")
     private final @Nullable Input<String> nsxtPassword;
 
@@ -84,9 +63,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.nsxtPassword == null ? Input.empty() : this.nsxtPassword;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName")
     private final @Nullable Input<String> privateCloudName;
 
@@ -94,9 +70,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudName == null ? Input.empty() : this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -104,9 +77,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The private cloud SKU
-     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -114,9 +84,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -124,9 +91,6 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Optionally, set the vCenter admin password when the private cloud is created
-     */
     @InputImport(name="vcenterPassword")
     private final @Nullable Input<String> vcenterPassword;
 

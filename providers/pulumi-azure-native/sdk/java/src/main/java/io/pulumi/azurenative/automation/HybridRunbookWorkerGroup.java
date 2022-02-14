@@ -17,187 +17,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Definition of hybrid runbook worker group.
-API Version: 2021-06-22.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a hybrid worker group
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var hybridRunbookWorkerGroup = new AzureNative.Automation.HybridRunbookWorkerGroup("hybridRunbookWorkerGroup", new AzureNative.Automation.HybridRunbookWorkerGroupArgs
-        {
-            AutomationAccountName = "testaccount",
-            Credential = new AzureNative.Automation.Inputs.RunAsCredentialAssociationPropertyArgs
-            {
-                Name = "myRunAsCredentialName",
-            },
-            HybridRunbookWorkerGroupName = "TestHybridGroup",
-            ResourceGroupName = "rg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewHybridRunbookWorkerGroup(ctx, "hybridRunbookWorkerGroup", &automation.HybridRunbookWorkerGroupArgs{
-			AutomationAccountName: pulumi.String("testaccount"),
-			Credential: &automation.RunAsCredentialAssociationPropertyArgs{
-				Name: pulumi.String("myRunAsCredentialName"),
-			},
-			HybridRunbookWorkerGroupName: pulumi.String("TestHybridGroup"),
-			ResourceGroupName:            pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const hybridRunbookWorkerGroup = new azure_native.automation.HybridRunbookWorkerGroup("hybridRunbookWorkerGroup", {
-    automationAccountName: "testaccount",
-    credential: {
-        name: "myRunAsCredentialName",
-    },
-    hybridRunbookWorkerGroupName: "TestHybridGroup",
-    resourceGroupName: "rg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-hybrid_runbook_worker_group = azure_native.automation.HybridRunbookWorkerGroup("hybridRunbookWorkerGroup",
-    automation_account_name="testaccount",
-    credential=azure_native.automation.RunAsCredentialAssociationPropertyArgs(
-        name="myRunAsCredentialName",
-    ),
-    hybrid_runbook_worker_group_name="TestHybridGroup",
-    resource_group_name="rg")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:HybridRunbookWorkerGroup TestHybridGroup /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/testaccount/hybridRunbookWorkerGroups/TestHybridGroup 
-```
-
- */
 @ResourceType(type="azure-native:automation:HybridRunbookWorkerGroup")
 public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * Sets the credential of a worker group.
-     */
     @OutputExport(name="credential", type=RunAsCredentialAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> credential;
 
-    /**
-     * @return Sets the credential of a worker group.
-     */
     public Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> getCredential() {
         return this.credential;
     }
-    /**
-     * Type of the HybridWorkerGroup.
-     */
     @OutputExport(name="groupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupType;
 
-    /**
-     * @return Type of the HybridWorkerGroup.
-     */
     public Output</* @Nullable */ String> getGroupType() {
         return this.groupType;
     }
-    /**
-     * Gets or sets the list of hybrid runbook workers.
-     */
     @OutputExport(name="hybridRunbookWorkers", type=List.class, parameters={HybridRunbookWorkerLegacyResponse.class})
     private Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> hybridRunbookWorkers;
 
-    /**
-     * @return Gets or sets the list of hybrid runbook workers.
-     */
     public Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> getHybridRunbookWorkers() {
         return this.hybridRunbookWorkers;
     }
-    /**
-     * Gets or sets the name of the group.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return Gets or sets the name of the group.
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * Resource system metadata.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Resource system metadata.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public HybridRunbookWorkerGroup(String name, HybridRunbookWorkerGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:HybridRunbookWorkerGroup", name, args == null ? HybridRunbookWorkerGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -216,14 +74,6 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static HybridRunbookWorkerGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HybridRunbookWorkerGroup(name, id, options);
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specify which kustomizations must succeed reconciliation on the cluster prior to reconciling this kustomization
- */
 public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DependsOnDefinitionArgs Empty = new DependsOnDefinitionArgs();
 
-    /**
-     * Name of the kustomization to claim dependency on
-     */
     @InputImport(name="kustomizationName")
     private final @Nullable Input<String> kustomizationName;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArcAddon {
-/**
- * Arc Addon.
-API Version: 2020-12-01.
- *
- * Arc Addon.
- */
     public static CompletableFuture<GetArcAddonResult> invokeAsync(GetArcAddonArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getArcAddon", TypeShape.of(GetArcAddonResult.class), args == null ? GetArcAddonArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnergyServiceArgs Empty = new EnergyServiceArgs();
 
-    /**
-     * Geo-location where the resource lives.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<EnergyServicePropertiesArgs> properties;
 
@@ -39,9 +30,6 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource name.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -59,9 +44,6 @@ public final class EnergyServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

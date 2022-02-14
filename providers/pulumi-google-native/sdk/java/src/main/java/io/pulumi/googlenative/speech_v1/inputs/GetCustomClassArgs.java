@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetCustomClassArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomClassArgs Empty = new GetCustomClassArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="customClassId", required=true)
     private final String customClassId;
 
@@ -27,9 +21,6 @@ public final class GetCustomClassArgs extends io.pulumi.resources.InvokeArgs {
         return this.customClassId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetCustomClassArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

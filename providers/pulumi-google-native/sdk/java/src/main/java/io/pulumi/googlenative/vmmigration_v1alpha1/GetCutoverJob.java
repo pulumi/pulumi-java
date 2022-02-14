@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCutoverJob {
-/**
- * Gets details of a single CutoverJob.
- */
     public static CompletableFuture<GetCutoverJobResult> invokeAsync(GetCutoverJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getCutoverJob", TypeShape.of(GetCutoverJobResult.class), args == null ? GetCutoverJobArgs.Empty : args, Utilities.withVersion(options));
     }

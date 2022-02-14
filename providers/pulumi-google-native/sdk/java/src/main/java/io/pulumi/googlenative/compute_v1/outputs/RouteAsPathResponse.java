@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RouteAsPathResponse {
-/**
- * The AS numbers of the AS Path.
- */
     private final List<Integer> asLists;
-/**
- * The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed 
- */
     private final String pathSegmentType;
 
     @OutputCustomType.Constructor({"asLists","pathSegmentType"})
@@ -28,15 +22,9 @@ public final class RouteAsPathResponse {
         this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
     }
 
-/**
- * The AS numbers of the AS Path.
- */
     public List<Integer> getAsLists() {
         return this.asLists;
     }
-/**
- * The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed 
- */
     public String getPathSegmentType() {
         return this.pathSegmentType;
     }

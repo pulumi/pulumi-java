@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties specific to the monitor resource.
- */
 public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitorPropertiesResponse Empty = new MonitorPropertiesResponse();
 
-    /**
-     * Elastic cloud properties.
-     */
     @InputImport(name="elasticProperties")
     private final @Nullable ElasticPropertiesResponse elasticProperties;
 
@@ -29,9 +23,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.elasticProperties == null ? Optional.empty() : Optional.ofNullable(this.elasticProperties);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="liftrResourceCategory", required=true)
     private final String liftrResourceCategory;
 
@@ -39,9 +30,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.liftrResourceCategory;
     }
 
-    /**
-     * The priority of the resource.
-     */
     @InputImport(name="liftrResourcePreference", required=true)
     private final Integer liftrResourcePreference;
 
@@ -49,9 +37,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.liftrResourcePreference;
     }
 
-    /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
-     */
     @InputImport(name="monitoringStatus")
     private final @Nullable String monitoringStatus;
 
@@ -59,9 +44,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
-    /**
-     * Provisioning state of the monitor resource.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 

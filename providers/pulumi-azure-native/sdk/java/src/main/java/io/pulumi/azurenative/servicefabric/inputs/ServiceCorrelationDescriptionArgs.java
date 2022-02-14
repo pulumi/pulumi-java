@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Creates a particular correlation between services.
- */
 public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceCorrelationDescriptionArgs Empty = new ServiceCorrelationDescriptionArgs();
 
-    /**
-     * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
-     */
     @InputImport(name="scheme", required=true)
     private final Input<Either<String,ServiceCorrelationScheme>> scheme;
 
@@ -28,9 +22,6 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
         return this.scheme;
     }
 
-    /**
-     * The name of the service that the correlation relationship is established with.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

@@ -10,18 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents the health policy used to evaluate the health of services belonging to a service type.
-
- */
 public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArmServiceTypeHealthPolicyArgs Empty = new ArmServiceTypeHealthPolicyArgs();
 
-    /**
-     * The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
-
-     */
     @InputImport(name="maxPercentUnhealthyPartitionsPerService")
     private final @Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService;
 
@@ -29,10 +21,6 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
         return this.maxPercentUnhealthyPartitionsPerService == null ? Input.empty() : this.maxPercentUnhealthyPartitionsPerService;
     }
 
-    /**
-     * The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
-
-     */
     @InputImport(name="maxPercentUnhealthyReplicasPerPartition")
     private final @Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition;
 
@@ -40,10 +28,6 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
         return this.maxPercentUnhealthyReplicasPerPartition == null ? Input.empty() : this.maxPercentUnhealthyReplicasPerPartition;
     }
 
-    /**
-     * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
-     */
     @InputImport(name="maxPercentUnhealthyServices")
     private final @Nullable Input<Integer> maxPercentUnhealthyServices;
 

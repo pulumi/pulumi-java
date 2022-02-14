@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServerAzureADOnlyAuthenticationResult {
-/**
- * Azure Active Directory only Authentication enabled.
- */
     private final Boolean azureADOnlyAuthentication;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"azureADOnlyAuthentication","id","name","type"})
@@ -39,27 +27,15 @@ public final class GetServerAzureADOnlyAuthenticationResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Azure Active Directory only Authentication enabled.
- */
     public Boolean getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

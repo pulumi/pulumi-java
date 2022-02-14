@@ -19,593 +19,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Represents a Blueprint definition.
-API Version: 2018-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ManagementGroupBlueprint
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blueprint = new AzureNative.Blueprint.Blueprint("blueprint", new AzureNative.Blueprint.BlueprintArgs
-        {
-            BlueprintName = "simpleBlueprint",
-            Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
-            Parameters = 
-            {
-                { "costCenter", new AzureNative.Blueprint.Inputs.ParameterDefinitionArgs
-                {
-                    DisplayName = "force cost center tag for all resources under given subscription.",
-                    Type = "string",
-                } },
-                { "owners", new AzureNative.Blueprint.Inputs.ParameterDefinitionArgs
-                {
-                    DisplayName = "assign owners to subscription along with blueprint assignment.",
-                    Type = "array",
-                } },
-                { "storageAccountType", new AzureNative.Blueprint.Inputs.ParameterDefinitionArgs
-                {
-                    DisplayName = "storage account type.",
-                    Type = "string",
-                } },
-            },
-            ResourceGroups = 
-            {
-                { "storageRG", new AzureNative.Blueprint.Inputs.ResourceGroupDefinitionArgs
-                {
-                    Description = "Contains storageAccounts that collect all shoebox logs.",
-                    DisplayName = "storage resource group",
-                } },
-            },
-            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-            TargetScope = "subscription",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewBlueprint(ctx, "blueprint", &blueprint.BlueprintArgs{
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			Description:   pulumi.String("blueprint contains all artifact kinds {'template', 'rbac', 'policy'}"),
-			Parameters: blueprint.ParameterDefinitionMap{
-				"costCenter": &blueprint.ParameterDefinitionArgs{
-					DisplayName: pulumi.String("force cost center tag for all resources under given subscription."),
-					Type:        pulumi.String("string"),
-				},
-				"owners": &blueprint.ParameterDefinitionArgs{
-					DisplayName: pulumi.String("assign owners to subscription along with blueprint assignment."),
-					Type:        pulumi.String("array"),
-				},
-				"storageAccountType": &blueprint.ParameterDefinitionArgs{
-					DisplayName: pulumi.String("storage account type."),
-					Type:        pulumi.String("string"),
-				},
-			},
-			ResourceGroups: blueprint.ResourceGroupDefinitionMap{
-				"storageRG": &blueprint.ResourceGroupDefinitionArgs{
-					Description: pulumi.String("Contains storageAccounts that collect all shoebox logs."),
-					DisplayName: pulumi.String("storage resource group"),
-				},
-			},
-			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
-			TargetScope:   pulumi.String("subscription"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blueprint = new azure_native.blueprint.Blueprint("blueprint", {
-    blueprintName: "simpleBlueprint",
-    description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
-    parameters: {
-        costCenter: {
-            displayName: "force cost center tag for all resources under given subscription.",
-            type: "string",
-        },
-        owners: {
-            displayName: "assign owners to subscription along with blueprint assignment.",
-            type: "array",
-        },
-        storageAccountType: {
-            displayName: "storage account type.",
-            type: "string",
-        },
-    },
-    resourceGroups: {
-        storageRG: {
-            description: "Contains storageAccounts that collect all shoebox logs.",
-            displayName: "storage resource group",
-        },
-    },
-    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-    targetScope: "subscription",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blueprint = azure_native.blueprint.Blueprint("blueprint",
-    blueprint_name="simpleBlueprint",
-    description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
-    parameters={
-        "costCenter": azure_native.blueprint.ParameterDefinitionArgs(
-            display_name="force cost center tag for all resources under given subscription.",
-            type="string",
-        ),
-        "owners": azure_native.blueprint.ParameterDefinitionArgs(
-            display_name="assign owners to subscription along with blueprint assignment.",
-            type="array",
-        ),
-        "storageAccountType": azure_native.blueprint.ParameterDefinitionArgs(
-            display_name="storage account type.",
-            type="string",
-        ),
-    },
-    resource_groups={
-        "storageRG": azure_native.blueprint.ResourceGroupDefinitionArgs(
-            description="Contains storageAccounts that collect all shoebox logs.",
-            display_name="storage resource group",
-        ),
-    },
-    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
-    target_scope="subscription")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### ResourceGroupWithTags
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blueprint = new AzureNative.Blueprint.Blueprint("blueprint", new AzureNative.Blueprint.BlueprintArgs
-        {
-            BlueprintName = "simpleBlueprint",
-            Description = "An example blueprint containing an RG with two tags.",
-            ResourceGroups = 
-            {
-                { "myRGName", new AzureNative.Blueprint.Inputs.ResourceGroupDefinitionArgs
-                {
-                    DisplayName = "My Resource Group",
-                    Location = "westus",
-                    Name = "myRGName",
-                    Tags = 
-                    {
-                        { "costcenter", "123456" },
-                        { "nameOnlyTag", "" },
-                    },
-                } },
-            },
-            ResourceScope = "providers/Microsoft.Management/managementGroups/{ManagementGroupId}",
-            TargetScope = "subscription",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewBlueprint(ctx, "blueprint", &blueprint.BlueprintArgs{
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			Description:   pulumi.String("An example blueprint containing an RG with two tags."),
-			ResourceGroups: blueprint.ResourceGroupDefinitionMap{
-				"myRGName": &blueprint.ResourceGroupDefinitionArgs{
-					DisplayName: pulumi.String("My Resource Group"),
-					Location:    pulumi.String("westus"),
-					Name:        pulumi.String("myRGName"),
-					Tags: pulumi.StringMap{
-						"costcenter":  pulumi.String("123456"),
-						"nameOnlyTag": pulumi.String(""),
-					},
-				},
-			},
-			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/{ManagementGroupId}"),
-			TargetScope:   pulumi.String("subscription"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blueprint = new azure_native.blueprint.Blueprint("blueprint", {
-    blueprintName: "simpleBlueprint",
-    description: "An example blueprint containing an RG with two tags.",
-    resourceGroups: {
-        myRGName: {
-            displayName: "My Resource Group",
-            location: "westus",
-            name: "myRGName",
-            tags: {
-                costcenter: "123456",
-                nameOnlyTag: "",
-            },
-        },
-    },
-    resourceScope: "providers/Microsoft.Management/managementGroups/{ManagementGroupId}",
-    targetScope: "subscription",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blueprint = azure_native.blueprint.Blueprint("blueprint",
-    blueprint_name="simpleBlueprint",
-    description="An example blueprint containing an RG with two tags.",
-    resource_groups={
-        "myRGName": azure_native.blueprint.ResourceGroupDefinitionArgs(
-            display_name="My Resource Group",
-            location="westus",
-            name="myRGName",
-            tags={
-                "costcenter": "123456",
-                "nameOnlyTag": "",
-            },
-        ),
-    },
-    resource_scope="providers/Microsoft.Management/managementGroups/{ManagementGroupId}",
-    target_scope="subscription")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### SubscriptionBlueprint
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blueprint = new AzureNative.Blueprint.Blueprint("blueprint", new AzureNative.Blueprint.BlueprintArgs
-        {
-            BlueprintName = "simpleBlueprint",
-            Description = "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
-            Parameters = 
-            {
-                { "costCenter", new AzureNative.Blueprint.Inputs.ParameterDefinitionArgs
-                {
-                    DisplayName = "force cost center tag for all resources under given subscription.",
-                    Type = "string",
-                } },
-                { "owners", new AzureNative.Blueprint.Inputs.ParameterDefinitionArgs
-                {
-                    DisplayName = "assign owners to subscription along with blueprint assignment.",
-                    Type = "array",
-                } },
-                { "storageAccountType", new AzureNative.Blueprint.Inputs.ParameterDefinitionArgs
-                {
-                    DisplayName = "storage account type.",
-                    Type = "string",
-                } },
-            },
-            ResourceGroups = 
-            {
-                { "storageRG", new AzureNative.Blueprint.Inputs.ResourceGroupDefinitionArgs
-                {
-                    Description = "Contains storageAccounts that collect all shoebox logs.",
-                    DisplayName = "storage resource group",
-                } },
-            },
-            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
-            TargetScope = "subscription",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := blueprint.NewBlueprint(ctx, "blueprint", &blueprint.BlueprintArgs{
-			BlueprintName: pulumi.String("simpleBlueprint"),
-			Description:   pulumi.String("blueprint contains all artifact kinds {'template', 'rbac', 'policy'}"),
-			Parameters: blueprint.ParameterDefinitionMap{
-				"costCenter": &blueprint.ParameterDefinitionArgs{
-					DisplayName: pulumi.String("force cost center tag for all resources under given subscription."),
-					Type:        pulumi.String("string"),
-				},
-				"owners": &blueprint.ParameterDefinitionArgs{
-					DisplayName: pulumi.String("assign owners to subscription along with blueprint assignment."),
-					Type:        pulumi.String("array"),
-				},
-				"storageAccountType": &blueprint.ParameterDefinitionArgs{
-					DisplayName: pulumi.String("storage account type."),
-					Type:        pulumi.String("string"),
-				},
-			},
-			ResourceGroups: blueprint.ResourceGroupDefinitionMap{
-				"storageRG": &blueprint.ResourceGroupDefinitionArgs{
-					Description: pulumi.String("Contains storageAccounts that collect all shoebox logs."),
-					DisplayName: pulumi.String("storage resource group"),
-				},
-			},
-			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
-			TargetScope:   pulumi.String("subscription"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blueprint = new azure_native.blueprint.Blueprint("blueprint", {
-    blueprintName: "simpleBlueprint",
-    description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
-    parameters: {
-        costCenter: {
-            displayName: "force cost center tag for all resources under given subscription.",
-            type: "string",
-        },
-        owners: {
-            displayName: "assign owners to subscription along with blueprint assignment.",
-            type: "array",
-        },
-        storageAccountType: {
-            displayName: "storage account type.",
-            type: "string",
-        },
-    },
-    resourceGroups: {
-        storageRG: {
-            description: "Contains storageAccounts that collect all shoebox logs.",
-            displayName: "storage resource group",
-        },
-    },
-    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
-    targetScope: "subscription",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blueprint = azure_native.blueprint.Blueprint("blueprint",
-    blueprint_name="simpleBlueprint",
-    description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
-    parameters={
-        "costCenter": azure_native.blueprint.ParameterDefinitionArgs(
-            display_name="force cost center tag for all resources under given subscription.",
-            type="string",
-        ),
-        "owners": azure_native.blueprint.ParameterDefinitionArgs(
-            display_name="assign owners to subscription along with blueprint assignment.",
-            type="array",
-        ),
-        "storageAccountType": azure_native.blueprint.ParameterDefinitionArgs(
-            display_name="storage account type.",
-            type="string",
-        ),
-    },
-    resource_groups={
-        "storageRG": azure_native.blueprint.ResourceGroupDefinitionArgs(
-            description="Contains storageAccounts that collect all shoebox logs.",
-            display_name="storage resource group",
-        ),
-    },
-    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
-    target_scope="subscription")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:blueprint:Blueprint simpleBlueprint /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
-```
-
- */
 @ResourceType(type="azure-native:blueprint:Blueprint")
 public class Blueprint extends io.pulumi.resources.CustomResource {
-    /**
-     * Multi-line explain this resource.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Multi-line explain this resource.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * One-liner string explain this resource.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return One-liner string explain this resource.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Layout view of the blueprint definition for UI reference.
-     */
     @OutputExport(name="layout", type=Object.class, parameters={})
     private Output<Object> layout;
 
-    /**
-     * @return Layout view of the blueprint definition for UI reference.
-     */
     public Output<Object> getLayout() {
         return this.layout;
     }
-    /**
-     * Name of this resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of this resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Parameters required by this blueprint definition.
-     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> parameters;
 
-    /**
-     * @return Parameters required by this blueprint definition.
-     */
     public Output</* @Nullable */ Map<String,ParameterDefinitionResponse>> getParameters() {
         return this.parameters;
     }
-    /**
-     * Resource group placeholders defined by this blueprint definition.
-     */
     @OutputExport(name="resourceGroups", type=Map.class, parameters={String.class, ResourceGroupDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> resourceGroups;
 
-    /**
-     * @return Resource group placeholders defined by this blueprint definition.
-     */
     public Output</* @Nullable */ Map<String,ResourceGroupDefinitionResponse>> getResourceGroups() {
         return this.resourceGroups;
     }
-    /**
-     * Status of the blueprint. This field is readonly.
-     */
     @OutputExport(name="status", type=BlueprintStatusResponse.class, parameters={})
     private Output<BlueprintStatusResponse> status;
 
-    /**
-     * @return Status of the blueprint. This field is readonly.
-     */
     public Output<BlueprintStatusResponse> getStatus() {
         return this.status;
     }
-    /**
-     * The scope where this blueprint definition can be assigned.
-     */
     @OutputExport(name="targetScope", type=String.class, parameters={})
     private Output<String> targetScope;
 
-    /**
-     * @return The scope where this blueprint definition can be assigned.
-     */
     public Output<String> getTargetScope() {
         return this.targetScope;
     }
-    /**
-     * Type of this resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of this resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Published versions of this blueprint definition.
-     */
     @OutputExport(name="versions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> versions;
 
-    /**
-     * @return Published versions of this blueprint definition.
-     */
     public Output</* @Nullable */ Object> getVersions() {
         return this.versions;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Blueprint(String name, BlueprintArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:blueprint:Blueprint", name, args == null ? BlueprintArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -624,14 +100,6 @@ public class Blueprint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Blueprint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Blueprint(name, id, options);
     }

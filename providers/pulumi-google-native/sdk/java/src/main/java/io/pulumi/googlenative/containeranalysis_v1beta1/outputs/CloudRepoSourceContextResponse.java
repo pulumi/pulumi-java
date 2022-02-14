@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudRepoSourceContextResponse {
-/**
- * An alias, which may be a branch or tag.
- */
     private final AliasContextResponse aliasContext;
-/**
- * The ID of the repo.
- */
     private final RepoIdResponse repoId;
-/**
- * A revision ID.
- */
     private final String revisionId;
 
     @OutputCustomType.Constructor({"aliasContext","repoId","revisionId"})
@@ -34,21 +25,12 @@ public final class CloudRepoSourceContextResponse {
         this.revisionId = Objects.requireNonNull(revisionId);
     }
 
-/**
- * An alias, which may be a branch or tag.
- */
     public AliasContextResponse getAliasContext() {
         return this.aliasContext;
     }
-/**
- * The ID of the repo.
- */
     public RepoIdResponse getRepoId() {
         return this.repoId;
     }
-/**
- * A revision ID.
- */
     public String getRevisionId() {
         return this.revisionId;
     }

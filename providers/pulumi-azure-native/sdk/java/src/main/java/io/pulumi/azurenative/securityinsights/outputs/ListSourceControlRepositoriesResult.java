@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListSourceControlRepositoriesResult {
-/**
- * URL to fetch the next set of repositories.
- */
     private final String nextLink;
-/**
- * Array of repositories.
- */
     private final List<RepoResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -28,15 +22,9 @@ public final class ListSourceControlRepositoriesResult {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * URL to fetch the next set of repositories.
- */
     public String getNextLink() {
         return this.nextLink;
     }
-/**
- * Array of repositories.
- */
     public List<RepoResponse> getValue() {
         return this.value;
     }

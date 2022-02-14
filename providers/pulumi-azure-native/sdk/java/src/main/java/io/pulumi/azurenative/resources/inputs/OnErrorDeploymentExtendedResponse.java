@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Deployment on error behavior with additional details.
- */
 public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OnErrorDeploymentExtendedResponse Empty = new OnErrorDeploymentExtendedResponse();
 
-    /**
-     * The deployment to be used on error case.
-     */
     @InputImport(name="deploymentName")
     private final @Nullable String deploymentName;
 
@@ -27,9 +21,6 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
         return this.deploymentName == null ? Optional.empty() : Optional.ofNullable(this.deploymentName);
     }
 
-    /**
-     * The state of the provisioning for the on error deployment.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -37,9 +28,6 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
-    /**
-     * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenShiftManagedClusterMasterPoolProfileResponse {
-/**
- * Number of masters (VMs) to host docker containers. The default value is 3.
- */
     private final Integer count;
-/**
- * Unique name of the master pool profile in the context of the subscription and resource group.
- */
     private final @Nullable String name;
-/**
- * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
- */
     private final @Nullable String osType;
-/**
- * Subnet CIDR for the peering.
- */
     private final @Nullable String subnetCidr;
-/**
- * Size of agent VMs.
- */
     private final String vmSize;
 
     @OutputCustomType.Constructor({"count","name","osType","subnetCidr","vmSize"})
@@ -47,33 +32,18 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
         this.vmSize = Objects.requireNonNull(vmSize);
     }
 
-/**
- * Number of masters (VMs) to host docker containers. The default value is 3.
- */
     public Integer getCount() {
         return this.count;
     }
-/**
- * Unique name of the master pool profile in the context of the subscription and resource group.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
- */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
-/**
- * Subnet CIDR for the peering.
- */
     public Optional<String> getSubnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
-/**
- * Size of agent VMs.
- */
     public String getVmSize() {
         return this.vmSize;
     }

@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTagAtScopeResult {
-/**
- * The ID of the tags wrapper resource.
- */
     private final String id;
-/**
- * The name of the tags wrapper resource.
- */
     private final String name;
-/**
- * The set of tags.
- */
     private final TagsResponse properties;
-/**
- * The type of the tags wrapper resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -39,27 +27,15 @@ public final class GetTagAtScopeResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The ID of the tags wrapper resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the tags wrapper resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The set of tags.
- */
     public TagsResponse getProperties() {
         return this.properties;
     }
-/**
- * The type of the tags wrapper resource.
- */
     public String getType() {
         return this.type;
     }

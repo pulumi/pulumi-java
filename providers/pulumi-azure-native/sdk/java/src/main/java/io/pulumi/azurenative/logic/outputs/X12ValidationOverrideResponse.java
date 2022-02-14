@@ -10,33 +10,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class X12ValidationOverrideResponse {
-/**
- * The value indicating whether to allow leading and trailing spaces and zeroes.
- */
     private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
-/**
- * The message id on which the validation settings has to be applied.
- */
     private final String messageId;
-/**
- * The trailing separator policy.
- */
     private final String trailingSeparatorPolicy;
-/**
- * The value indicating whether to trim leading and trailing spaces and zeroes.
- */
     private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
-/**
- * The value indicating whether to validate character Set.
- */
     private final Boolean validateCharacterSet;
-/**
- * The value indicating whether to validate EDI types.
- */
     private final Boolean validateEDITypes;
-/**
- * The value indicating whether to validate XSD types.
- */
     private final Boolean validateXSDTypes;
 
     @OutputCustomType.Constructor({"allowLeadingAndTrailingSpacesAndZeroes","messageId","trailingSeparatorPolicy","trimLeadingAndTrailingSpacesAndZeroes","validateCharacterSet","validateEDITypes","validateXSDTypes"})
@@ -57,45 +36,24 @@ public final class X12ValidationOverrideResponse {
         this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
     }
 
-/**
- * The value indicating whether to allow leading and trailing spaces and zeroes.
- */
     public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
-/**
- * The message id on which the validation settings has to be applied.
- */
     public String getMessageId() {
         return this.messageId;
     }
-/**
- * The trailing separator policy.
- */
     public String getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
-/**
- * The value indicating whether to trim leading and trailing spaces and zeroes.
- */
     public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
-/**
- * The value indicating whether to validate character Set.
- */
     public Boolean getValidateCharacterSet() {
         return this.validateCharacterSet;
     }
-/**
- * The value indicating whether to validate EDI types.
- */
     public Boolean getValidateEDITypes() {
         return this.validateEDITypes;
     }
-/**
- * The value indicating whether to validate XSD types.
- */
     public Boolean getValidateXSDTypes() {
         return this.validateXSDTypes;
     }

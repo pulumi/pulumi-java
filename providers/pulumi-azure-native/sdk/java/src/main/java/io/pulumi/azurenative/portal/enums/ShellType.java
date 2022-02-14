@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The shell type of the cloud shell.
- */
     @EnumType
     public enum ShellType {
-/**
- * 
- */
         Bash("bash"),
-/**
- * 
- */
         Pwsh("pwsh"),
-/**
- * 
- */
         Powershell("powershell");
 
         private final String value;

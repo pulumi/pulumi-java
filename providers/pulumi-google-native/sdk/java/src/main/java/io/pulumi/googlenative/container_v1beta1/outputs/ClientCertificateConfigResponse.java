@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClientCertificateConfigResponse {
-/**
- * Issue a client certificate.
- */
     private final Boolean issueClientCertificate;
 
     @OutputCustomType.Constructor({"issueClientCertificate"})
@@ -19,9 +16,6 @@ public final class ClientCertificateConfigResponse {
         this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
     }
 
-/**
- * Issue a client certificate.
- */
     public Boolean getIssueClientCertificate() {
         return this.issueClientCertificate;
     }

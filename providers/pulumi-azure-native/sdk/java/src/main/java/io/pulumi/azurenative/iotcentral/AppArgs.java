@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppArgs Empty = new AppArgs();
 
-    /**
-     * The display name of the application.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,9 +23,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,9 +30,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group that contains the IoT Central application.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The ARM resource name of the IoT Central application.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -59,9 +44,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * A valid instance SKU.
-     */
     @InputImport(name="sku", required=true)
     private final Input<AppSkuInfoArgs> sku;
 
@@ -69,9 +51,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
-    /**
-     * The subdomain of the application.
-     */
     @InputImport(name="subdomain")
     private final @Nullable Input<String> subdomain;
 
@@ -79,9 +58,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.subdomain == null ? Input.empty() : this.subdomain;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -89,9 +65,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
-     */
     @InputImport(name="template")
     private final @Nullable Input<String> template;
 

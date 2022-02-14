@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBigDataPool {
-/**
- * A Big Data pool
-API Version: 2021-03-01.
- *
- * A Big Data pool
- */
     public static CompletableFuture<GetBigDataPoolResult> invokeAsync(GetBigDataPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getBigDataPool", TypeShape.of(GetBigDataPoolResult.class), args == null ? GetBigDataPoolArgs.Empty : args, Utilities.withVersion(options));
     }

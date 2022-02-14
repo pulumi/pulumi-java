@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceRegistry {
-/**
- * Service Registry resource
-API Version: 2022-01-01-preview.
- *
- * Service Registry resource
- */
     public static CompletableFuture<GetServiceRegistryResult> invokeAsync(GetServiceRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getServiceRegistry", TypeShape.of(GetServiceRegistryResult.class), args == null ? GetServiceRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

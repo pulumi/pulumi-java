@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Descriptor for what needs to be reviewed
- */
 public final class AccessReviewReviewerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessReviewReviewerResponse Empty = new AccessReviewReviewerResponse();
 
-    /**
-     * The id of the reviewer(user/servicePrincipal)
-     */
     @InputImport(name="principalId")
     private final @Nullable String principalId;
 
@@ -27,9 +21,6 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
-    /**
-     * The identity type : user/servicePrincipal
-     */
     @InputImport(name="principalType", required=true)
     private final String principalType;
 

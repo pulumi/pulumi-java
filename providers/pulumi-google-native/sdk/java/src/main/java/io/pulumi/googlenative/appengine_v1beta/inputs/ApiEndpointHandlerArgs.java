@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Uses Google Cloud Endpoints to handle requests.
- */
 public final class ApiEndpointHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiEndpointHandlerArgs Empty = new ApiEndpointHandlerArgs();
 
-    /**
-     * Path to the script from the application root directory.
-     */
     @InputImport(name="scriptPath")
     private final @Nullable Input<String> scriptPath;
 

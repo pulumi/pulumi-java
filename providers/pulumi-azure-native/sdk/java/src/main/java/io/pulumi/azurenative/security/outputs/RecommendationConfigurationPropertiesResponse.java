@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RecommendationConfigurationPropertiesResponse {
-/**
- * 
- */
     private final String name;
-/**
- * The type of IoT Security recommendation.
- */
     private final String recommendationType;
-/**
- * Recommendation status. When the recommendation status is disabled recommendations are not generated.
- */
     private final String status;
 
     @OutputCustomType.Constructor({"name","recommendationType","status"})
@@ -32,21 +23,12 @@ public final class RecommendationConfigurationPropertiesResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * 
- */
     public String getName() {
         return this.name;
     }
-/**
- * The type of IoT Security recommendation.
- */
     public String getRecommendationType() {
         return this.recommendationType;
     }
-/**
- * Recommendation status. When the recommendation status is disabled recommendations are not generated.
- */
     public String getStatus() {
         return this.status;
     }

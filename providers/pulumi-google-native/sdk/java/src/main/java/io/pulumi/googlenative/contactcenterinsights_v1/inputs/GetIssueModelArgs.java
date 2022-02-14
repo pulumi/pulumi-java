@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetIssueModelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIssueModelArgs Empty = new GetIssueModelArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="issueModelId", required=true)
     private final String issueModelId;
 
@@ -27,9 +21,6 @@ public final class GetIssueModelArgs extends io.pulumi.resources.InvokeArgs {
         return this.issueModelId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetIssueModelArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

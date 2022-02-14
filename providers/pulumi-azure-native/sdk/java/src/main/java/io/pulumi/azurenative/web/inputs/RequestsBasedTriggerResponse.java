@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger based on total requests.
- */
 public final class RequestsBasedTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RequestsBasedTriggerResponse Empty = new RequestsBasedTriggerResponse();
 
-    /**
-     * Request Count.
-     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -28,9 +22,6 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
-    /**
-     * Time interval.
-     */
     @InputImport(name="timeInterval")
     private final @Nullable String timeInterval;
 

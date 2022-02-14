@@ -11,21 +11,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ParserConfigResponse {
-/**
- * Determines whether messages with no header are allowed.
- */
     private final Boolean allowNullHeader;
-/**
- * Schemas used to parse messages in this store, if schematized parsing is desired.
- */
     private final SchemaPackageResponse schema;
-/**
- * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
- */
     private final String segmentTerminator;
-/**
- * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
- */
     private final String version;
 
     @OutputCustomType.Constructor({"allowNullHeader","schema","segmentTerminator","version"})
@@ -40,27 +28,15 @@ public final class ParserConfigResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * Determines whether messages with no header are allowed.
- */
     public Boolean getAllowNullHeader() {
         return this.allowNullHeader;
     }
-/**
- * Schemas used to parse messages in this store, if schematized parsing is desired.
- */
     public SchemaPackageResponse getSchema() {
         return this.schema;
     }
-/**
- * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
- */
     public String getSegmentTerminator() {
         return this.segmentTerminator;
     }
-/**
- * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
- */
     public String getVersion() {
         return this.version;
     }

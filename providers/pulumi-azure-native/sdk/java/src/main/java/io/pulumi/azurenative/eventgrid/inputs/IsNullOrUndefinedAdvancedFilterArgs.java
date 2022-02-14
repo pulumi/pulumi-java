@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IsNullOrUndefined Advanced Filter.
- */
 public final class IsNullOrUndefinedAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IsNullOrUndefinedAdvancedFilterArgs Empty = new IsNullOrUndefinedAdvancedFilterArgs();
 
-    /**
-     * The field/property in the event based on which you want to filter.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -27,10 +21,6 @@ public final class IsNullOrUndefinedAdvancedFilterArgs extends io.pulumi.resourc
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'IsNullOrUndefined'.
-     */
     @InputImport(name="operatorType", required=true)
     private final Input<String> operatorType;
 

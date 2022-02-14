@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAssetStreamingLocators {
-/**
- * The Streaming Locators associated with this Asset.
-API Version: 2020-05-01.
- *
- * The Streaming Locators associated with this Asset.
- */
     public static CompletableFuture<ListAssetStreamingLocatorsResult> invokeAsync(ListAssetStreamingLocatorsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listAssetStreamingLocators", TypeShape.of(ListAssetStreamingLocatorsResult.class), args == null ? ListAssetStreamingLocatorsArgs.Empty : args, Utilities.withVersion(options));
     }

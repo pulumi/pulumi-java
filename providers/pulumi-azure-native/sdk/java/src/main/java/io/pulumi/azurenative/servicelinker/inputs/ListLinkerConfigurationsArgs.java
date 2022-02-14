@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListLinkerConfigurationsArgs Empty = new ListLinkerConfigurationsArgs();
 
-    /**
-     * The name Linker resource.
-     */
     @InputImport(name="linkerName", required=true)
     private final String linkerName;
 
@@ -25,9 +19,6 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
         return this.linkerName;
     }
 
-    /**
-     * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

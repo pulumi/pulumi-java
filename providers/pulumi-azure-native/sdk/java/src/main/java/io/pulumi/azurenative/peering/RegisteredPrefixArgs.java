@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegisteredPrefixArgs Empty = new RegisteredPrefixArgs();
 
-    /**
-     * The name of the peering.
-     */
     @InputImport(name="peeringName", required=true)
     private final Input<String> peeringName;
 
@@ -27,9 +21,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
         return this.peeringName;
     }
 
-    /**
-     * The customer's prefix from which traffic originates.
-     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -37,9 +28,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
-    /**
-     * The name of the registered prefix.
-     */
     @InputImport(name="registeredPrefixName")
     private final @Nullable Input<String> registeredPrefixName;
 
@@ -47,9 +35,6 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
         return this.registeredPrefixName == null ? Input.empty() : this.registeredPrefixName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

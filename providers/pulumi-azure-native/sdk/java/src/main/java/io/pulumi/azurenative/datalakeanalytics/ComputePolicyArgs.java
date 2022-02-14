@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComputePolicyArgs Empty = new ComputePolicyArgs();
 
-    /**
-     * The name of the Data Lake Analytics account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -30,9 +24,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the compute policy to create or update.
-     */
     @InputImport(name="computePolicyName")
     private final @Nullable Input<String> computePolicyName;
 
@@ -40,9 +31,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.computePolicyName == null ? Input.empty() : this.computePolicyName;
     }
 
-    /**
-     * The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
-     */
     @InputImport(name="maxDegreeOfParallelismPerJob")
     private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
 
@@ -50,9 +38,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
-    /**
-     * The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
-     */
     @InputImport(name="minPriorityPerJob")
     private final @Nullable Input<Integer> minPriorityPerJob;
 
@@ -60,9 +45,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
     }
 
-    /**
-     * The AAD object identifier for the entity to create a policy for.
-     */
     @InputImport(name="objectId", required=true)
     private final Input<String> objectId;
 
@@ -70,9 +52,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectId;
     }
 
-    /**
-     * The type of AAD object the object identifier refers to.
-     */
     @InputImport(name="objectType", required=true)
     private final Input<Either<String,AADObjectType>> objectType;
 
@@ -80,9 +59,6 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectType;
     }
 
-    /**
-     * The name of the Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

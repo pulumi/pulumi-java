@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service Perimeter configuration.
- */
 public final class ServicePerimeterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServicePerimeterConfigResponse Empty = new ServicePerimeterConfigResponse();
 
-    /**
-     * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.
-     */
     @InputImport(name="accessLevels", required=true)
     private final List<String> accessLevels;
 
@@ -29,9 +23,6 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
         return this.accessLevels;
     }
 
-    /**
-     * List of EgressPolicies to apply to the perimeter. A perimeter may have multiple EgressPolicies, each of which is evaluated separately. Access is granted if any EgressPolicy grants it. Must be empty for a perimeter bridge.
-     */
     @InputImport(name="egressPolicies", required=true)
     private final List<EgressPolicyResponse> egressPolicies;
 
@@ -39,9 +30,6 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
         return this.egressPolicies;
     }
 
-    /**
-     * List of IngressPolicies to apply to the perimeter. A perimeter may have multiple IngressPolicies, each of which is evaluated separately. Access is granted if any Ingress Policy grants it. Must be empty for a perimeter bridge.
-     */
     @InputImport(name="ingressPolicies", required=true)
     private final List<IngressPolicyResponse> ingressPolicies;
 
@@ -49,9 +37,6 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
         return this.ingressPolicies;
     }
 
-    /**
-     * A list of Google Cloud resources that are inside of the service perimeter. Currently only projects are allowed. Format: `projects/{project_number}`
-     */
     @InputImport(name="resources", required=true)
     private final List<String> resources;
 
@@ -59,9 +44,6 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
         return this.resources;
     }
 
-    /**
-     * Google Cloud services that are subject to the Service Perimeter restrictions. For example, if `storage.googleapis.com` is specified, access to the storage buckets inside the perimeter must meet the perimeter's access restrictions.
-     */
     @InputImport(name="restrictedServices", required=true)
     private final List<String> restrictedServices;
 
@@ -69,9 +51,6 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
         return this.restrictedServices;
     }
 
-    /**
-     * Configuration for APIs allowed within Perimeter.
-     */
     @InputImport(name="vpcAccessibleServices", required=true)
     private final VpcAccessibleServicesResponse vpcAccessibleServices;
 

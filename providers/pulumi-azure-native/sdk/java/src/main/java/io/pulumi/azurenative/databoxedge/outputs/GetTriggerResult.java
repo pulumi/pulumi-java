@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTriggerResult {
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * Trigger Kind.
- */
     private final String kind;
-/**
- * The object name.
- */
     private final String name;
-/**
- * Trigger in DataBoxEdge Resource
- */
     private final SystemDataResponse systemData;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","systemData","type"})
@@ -45,33 +30,18 @@ public final class GetTriggerResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Trigger Kind.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Trigger in DataBoxEdge Resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }

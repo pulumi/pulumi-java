@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse();
 
-    /**
-     * Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
-     */
     @InputImport(name="values", required=true)
     private final List<Double> values;
 

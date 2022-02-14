@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity AmazonRdsForOracle source.
- */
 public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AmazonRdsForOracleSourceArgs Empty = new AmazonRdsForOracleSourceArgs();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -29,9 +23,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -39,9 +30,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -49,9 +37,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="oracleReaderQuery")
     private final @Nullable Input<Object> oracleReaderQuery;
 
@@ -59,9 +44,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.oracleReaderQuery == null ? Input.empty() : this.oracleReaderQuery;
     }
 
-    /**
-     * The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="partitionOption")
     private final @Nullable Input<Object> partitionOption;
 
@@ -69,9 +51,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.partitionOption == null ? Input.empty() : this.partitionOption;
     }
 
-    /**
-     * The settings that will be leveraged for AmazonRdsForOracle source partitioning.
-     */
     @InputImport(name="partitionSettings")
     private final @Nullable Input<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
 
@@ -79,9 +58,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.partitionSettings == null ? Input.empty() : this.partitionSettings;
     }
 
-    /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="queryTimeout")
     private final @Nullable Input<Object> queryTimeout;
 
@@ -89,9 +65,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -99,9 +72,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -109,10 +79,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
-    /**
-     * Copy source type.
-Expected value is 'AmazonRdsForOracleSource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The access type of the rule.
- */
     @EnumType
     public enum Access {
-/**
- * 
- */
         Allow("Allow"),
-/**
- * 
- */
         Deny("Deny");
 
         private final String value;

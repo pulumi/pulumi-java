@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotebookProxyArgs Empty = new NotebookProxyArgs();
 
-    /**
-     * The friendly string identifier of the creator of the NotebookProxy resource.
-     */
     @InputImport(name="hostname")
     private final @Nullable Input<String> hostname;
 
@@ -28,9 +22,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
-    /**
-     * The public DNS name
-     */
     @InputImport(name="publicDns")
     private final @Nullable Input<String> publicDns;
 
@@ -38,9 +29,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicDns == null ? Input.empty() : this.publicDns;
     }
 
-    /**
-     * Allow public network access on a V-Net locked notebook resource
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<String> publicNetworkAccess;
 
@@ -48,9 +36,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * The region of the NotebookProxy resource.
-     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -58,9 +43,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +50,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -78,9 +57,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * The alternate application ID used for auth token request in the data plane
-     */
     @InputImport(name="secondaryAppId")
     private final @Nullable Input<String> secondaryAppId;
 
@@ -88,9 +64,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
         return this.secondaryAppId == null ? Input.empty() : this.secondaryAppId;
     }
 
-    /**
-     * System data for notebook resource
-     */
     @InputImport(name="systemData")
     private final @Nullable Input<NotebookResourceSystemDataArgs> systemData;
 

@@ -8,17 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Copy on Expiry Option
- */
 public final class CopyOnExpiryOptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CopyOnExpiryOptionResponse Empty = new CopyOnExpiryOptionResponse();
 
-    /**
-     * Type of the specific object - used for deserializing
-Expected value is 'CopyOnExpiryOption'.
-     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 

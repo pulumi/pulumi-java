@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketLifecycleRuleItemResponse {
-/**
- * The action to take.
- */
     private final BucketLifecycleRuleItemActionResponse action;
-/**
- * The condition(s) under which the action will be taken.
- */
     private final BucketLifecycleRuleItemConditionResponse condition;
 
     @OutputCustomType.Constructor({"action","condition"})
@@ -27,15 +21,9 @@ public final class BucketLifecycleRuleItemResponse {
         this.condition = Objects.requireNonNull(condition);
     }
 
-/**
- * The action to take.
- */
     public BucketLifecycleRuleItemActionResponse getAction() {
         return this.action;
     }
-/**
- * The condition(s) under which the action will be taken.
- */
     public BucketLifecycleRuleItemConditionResponse getCondition() {
         return this.condition;
     }

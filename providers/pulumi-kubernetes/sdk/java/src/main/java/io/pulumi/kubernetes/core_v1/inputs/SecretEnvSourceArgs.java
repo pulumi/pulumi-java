@@ -11,18 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SecretEnvSource selects a Secret to populate the environment variables with.
-
-The contents of the target Secret's Data field will represent the key-value pairs as environment variables.
- */
 public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretEnvSourceArgs Empty = new SecretEnvSourceArgs();
 
-    /**
-     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,9 +22,6 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Specify whether the Secret must be defined
-     */
     @InputImport(name="optional")
     private final @Nullable Input<Boolean> optional;
 

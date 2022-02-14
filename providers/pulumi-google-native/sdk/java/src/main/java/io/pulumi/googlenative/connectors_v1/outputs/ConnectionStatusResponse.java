@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectionStatusResponse {
-/**
- * Description.
- */
     private final String description;
-/**
- * State.
- */
     private final String state;
-/**
- * Status provides detailed information for the state.
- */
     private final String status;
 
     @OutputCustomType.Constructor({"description","state","status"})
@@ -32,21 +23,12 @@ public final class ConnectionStatusResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * Description.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * State.
- */
     public String getState() {
         return this.state;
     }
-/**
- * Status provides detailed information for the state.
- */
     public String getStatus() {
         return this.status;
     }

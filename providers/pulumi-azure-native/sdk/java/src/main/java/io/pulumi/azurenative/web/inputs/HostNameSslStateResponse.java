@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SSL-enabled hostname.
- */
 public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HostNameSslStateResponse Empty = new HostNameSslStateResponse();
 
-    /**
-     * Indicates whether the hostname is a standard or repository hostname.
-     */
     @InputImport(name="hostType")
     private final @Nullable String hostType;
 
@@ -28,9 +22,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
         return this.hostType == null ? Optional.empty() : Optional.ofNullable(this.hostType);
     }
 
-    /**
-     * Hostname.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * SSL type.
-     */
     @InputImport(name="sslState")
     private final @Nullable String sslState;
 
@@ -48,9 +36,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
         return this.sslState == null ? Optional.empty() : Optional.ofNullable(this.sslState);
     }
 
-    /**
-     * SSL certificate thumbprint.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 
@@ -58,9 +43,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 
-    /**
-     * Set to <code>true</code> to update existing hostname.
-     */
     @InputImport(name="toUpdate")
     private final @Nullable Boolean toUpdate;
 
@@ -68,9 +50,6 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
         return this.toUpdate == null ? Optional.empty() : Optional.ofNullable(this.toUpdate);
     }
 
-    /**
-     * Virtual IP address assigned to the hostname if IP based SSL is enabled.
-     */
     @InputImport(name="virtualIP")
     private final @Nullable String virtualIP;
 

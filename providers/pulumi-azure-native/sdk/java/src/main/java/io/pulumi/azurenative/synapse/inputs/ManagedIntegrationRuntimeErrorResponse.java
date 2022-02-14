@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Error definition for managed integration runtime.
- */
 public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIntegrationRuntimeErrorResponse Empty = new ManagedIntegrationRuntimeErrorResponse();
 
-    /**
-     * Error code.
-     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -26,9 +20,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
         return this.code;
     }
 
-    /**
-     * Error message.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -36,9 +27,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
         return this.message;
     }
 
-    /**
-     * Managed integration runtime error parameters.
-     */
     @InputImport(name="parameters", required=true)
     private final List<String> parameters;
 
@@ -46,9 +34,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
         return this.parameters;
     }
 
-    /**
-     * The time when the error occurred.
-     */
     @InputImport(name="time", required=true)
     private final String time;
 

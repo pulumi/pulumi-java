@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the properties for a TagRules resource.
- */
 public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricsTagRulesPropertiesArgs Empty = new MetricsTagRulesPropertiesArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="metricRules")
     private final @Nullable Input<List<MetricRulesArgs>> metricRules;
 
@@ -29,9 +23,6 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
         return this.metricRules == null ? Input.empty() : this.metricRules;
     }
 
-    /**
-     * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
-     */
     @InputImport(name="sendMetrics")
     private final @Nullable Input<Boolean> sendMetrics;
 

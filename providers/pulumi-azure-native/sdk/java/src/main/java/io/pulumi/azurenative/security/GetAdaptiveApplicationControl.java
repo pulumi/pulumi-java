@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAdaptiveApplicationControl {
-/**
- * 
-API Version: 2020-01-01.
- */
     public static CompletableFuture<GetAdaptiveApplicationControlResult> invokeAsync(GetAdaptiveApplicationControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAdaptiveApplicationControl", TypeShape.of(GetAdaptiveApplicationControlResult.class), args == null ? GetAdaptiveApplicationControlArgs.Empty : args, Utilities.withVersion(options));
     }

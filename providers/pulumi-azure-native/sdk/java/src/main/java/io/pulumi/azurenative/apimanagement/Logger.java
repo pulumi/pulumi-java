@@ -16,304 +16,51 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Logger details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateAILogger
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var logger = new AzureNative.ApiManagement.Logger("logger", new AzureNative.ApiManagement.LoggerArgs
-        {
-            Credentials = 
-            {
-                { "instrumentationKey", "11................a1" },
-            },
-            Description = "adding a new logger",
-            LoggerId = "loggerId",
-            LoggerType = "applicationInsights",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewLogger(ctx, "logger", &apimanagement.LoggerArgs{
-			Credentials: pulumi.StringMap{
-				"instrumentationKey": pulumi.String("11................a1"),
-			},
-			Description:       pulumi.String("adding a new logger"),
-			LoggerId:          pulumi.String("loggerId"),
-			LoggerType:        pulumi.String("applicationInsights"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const logger = new azure_native.apimanagement.Logger("logger", {
-    credentials: {
-        instrumentationKey: "11................a1",
-    },
-    description: "adding a new logger",
-    loggerId: "loggerId",
-    loggerType: "applicationInsights",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-logger = azure_native.apimanagement.Logger("logger",
-    credentials={
-        "instrumentationKey": "11................a1",
-    },
-    description="adding a new logger",
-    logger_id="loggerId",
-    logger_type="applicationInsights",
-    resource_group_name="rg1",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### ApiManagementCreateEHLogger
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var logger = new AzureNative.ApiManagement.Logger("logger", new AzureNative.ApiManagement.LoggerArgs
-        {
-            Credentials = 
-            {
-                { "connectionString", "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=" },
-                { "name", "hydraeventhub" },
-            },
-            Description = "adding a new logger",
-            LoggerId = "eh1",
-            LoggerType = "azureEventHub",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewLogger(ctx, "logger", &apimanagement.LoggerArgs{
-			Credentials: pulumi.StringMap{
-				"connectionString": pulumi.String("Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********="),
-				"name":             pulumi.String("hydraeventhub"),
-			},
-			Description:       pulumi.String("adding a new logger"),
-			LoggerId:          pulumi.String("eh1"),
-			LoggerType:        pulumi.String("azureEventHub"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const logger = new azure_native.apimanagement.Logger("logger", {
-    credentials: {
-        connectionString: "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
-        name: "hydraeventhub",
-    },
-    description: "adding a new logger",
-    loggerId: "eh1",
-    loggerType: "azureEventHub",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-logger = azure_native.apimanagement.Logger("logger",
-    credentials={
-        "connectionString": "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
-        "name": "hydraeventhub",
-    },
-    description="adding a new logger",
-    logger_id="eh1",
-    logger_type="azureEventHub",
-    resource_group_name="rg1",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:Logger eh1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/loggers/eh1 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:Logger")
 public class Logger extends io.pulumi.resources.CustomResource {
-    /**
-     * The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.
-     */
     @OutputExport(name="credentials", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> credentials;
 
-    /**
-     * @return The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.
-     */
     public Output</* @Nullable */ Map<String,String>> getCredentials() {
         return this.credentials;
     }
-    /**
-     * Logger description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Logger description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     */
     @OutputExport(name="isBuffered", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isBuffered;
 
-    /**
-     * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     */
     public Output</* @Nullable */ Boolean> getIsBuffered() {
         return this.isBuffered;
     }
-    /**
-     * Logger type.
-     */
     @OutputExport(name="loggerType", type=String.class, parameters={})
     private Output<String> loggerType;
 
-    /**
-     * @return Logger type.
-     */
     public Output<String> getLoggerType() {
         return this.loggerType;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
-     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
-    /**
-     * @return Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
-     */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Logger(String name, LoggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Logger", name, args == null ? LoggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -344,14 +91,6 @@ Instrumentation key for applicationInsights logger.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Logger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Logger(name, id, options);
     }

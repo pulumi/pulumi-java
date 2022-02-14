@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabelingJob {
-/**
- * Machine Learning labeling job object wrapped into ARM resource envelope.
-API Version: 2020-09-01-preview.
- *
- * Machine Learning labeling job object wrapped into ARM resource envelope.
- */
     public static CompletableFuture<GetLabelingJobResult> invokeAsync(GetLabelingJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getLabelingJob", TypeShape.of(GetLabelingJobResult.class), args == null ? GetLabelingJobArgs.Empty : args, Utilities.withVersion(options));
     }

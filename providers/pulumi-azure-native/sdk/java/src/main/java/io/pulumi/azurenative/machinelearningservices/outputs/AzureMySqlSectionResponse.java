@@ -12,77 +12,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureMySqlSectionResponse {
-/**
- * The authority URL used for authentication.
- */
     private final @Nullable String authorityUrl;
-/**
- * The content of the certificate used for authentication.
- */
     private final @Nullable String certificate;
-/**
- * The Client ID/Application ID
- */
     private final @Nullable String clientId;
-/**
- * The client secret.
- */
     private final @Nullable String clientSecret;
-/**
- * Sql Authentication type.
- */
     private final @Nullable String credentialType;
-/**
- * The Azure SQL database name.
- */
     private final @Nullable String databaseName;
-/**
- * The server host endpoint.
- */
     private final @Nullable String endpoint;
-/**
- *  Is it using certificate to authenticate. If false then use client secret.
- */
     private final @Nullable Boolean isCertAuth;
-/**
- * / The Azure SQL port number.
- */
     private final @Nullable String portNumber;
-/**
- * Resource Group.
- */
     private final @Nullable String resourceGroup;
-/**
- * The resource the service principal/app has access to.
- */
     private final @Nullable String resourceUri;
-/**
- * The Azure SQL server name.
- */
     private final @Nullable String serverName;
-/**
- * Indicates which identity to use to authenticate service data access to customer's storage.
- */
     private final @Nullable String serviceDataAccessAuthIdentity;
-/**
- * Subscription ID.
- */
     private final @Nullable String subscriptionId;
-/**
- * The ID of the tenant the service principal/app belongs to.
- */
     private final @Nullable String tenantId;
-/**
- * The thumbprint of the certificate above.
- */
     private final @Nullable String thumbprint;
-/**
- * The Azure SQL user id.
- */
     private final @Nullable String userId;
-/**
- * The Azure SQL user password.
- */
     private final @Nullable String userPassword;
 
     @OutputCustomType.Constructor({"authorityUrl","certificate","clientId","clientSecret","credentialType","databaseName","endpoint","isCertAuth","portNumber","resourceGroup","resourceUri","serverName","serviceDataAccessAuthIdentity","subscriptionId","tenantId","thumbprint","userId","userPassword"})
@@ -125,111 +71,57 @@ public final class AzureMySqlSectionResponse {
         this.userPassword = userPassword;
     }
 
-/**
- * The authority URL used for authentication.
- */
     public Optional<String> getAuthorityUrl() {
         return Optional.ofNullable(this.authorityUrl);
     }
-/**
- * The content of the certificate used for authentication.
- */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
-/**
- * The Client ID/Application ID
- */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
-/**
- * The client secret.
- */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
-/**
- * Sql Authentication type.
- */
     public Optional<String> getCredentialType() {
         return Optional.ofNullable(this.credentialType);
     }
-/**
- * The Azure SQL database name.
- */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
-/**
- * The server host endpoint.
- */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
-/**
- *  Is it using certificate to authenticate. If false then use client secret.
- */
     public Optional<Boolean> getIsCertAuth() {
         return Optional.ofNullable(this.isCertAuth);
     }
-/**
- * / The Azure SQL port number.
- */
     public Optional<String> getPortNumber() {
         return Optional.ofNullable(this.portNumber);
     }
-/**
- * Resource Group.
- */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
-/**
- * The resource the service principal/app has access to.
- */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
-/**
- * The Azure SQL server name.
- */
     public Optional<String> getServerName() {
         return Optional.ofNullable(this.serverName);
     }
-/**
- * Indicates which identity to use to authenticate service data access to customer's storage.
- */
     public Optional<String> getServiceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
-/**
- * Subscription ID.
- */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
-/**
- * The ID of the tenant the service principal/app belongs to.
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
-/**
- * The thumbprint of the certificate above.
- */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
-/**
- * The Azure SQL user id.
- */
     public Optional<String> getUserId() {
         return Optional.ofNullable(this.userId);
     }
-/**
- * The Azure SQL user password.
- */
     public Optional<String> getUserPassword() {
         return Optional.ofNullable(this.userPassword);
     }

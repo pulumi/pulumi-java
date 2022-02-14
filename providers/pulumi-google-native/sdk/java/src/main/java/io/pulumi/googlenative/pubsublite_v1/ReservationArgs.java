@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationArgs Empty = new ReservationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -27,9 +21,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,9 +28,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -47,9 +35,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="reservationId", required=true)
     private final Input<String> reservationId;
 
@@ -57,9 +42,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationId;
     }
 
-    /**
-     * The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
-     */
     @InputImport(name="throughputCapacity")
     private final @Nullable Input<String> throughputCapacity;
 

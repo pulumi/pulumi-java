@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironmentSpecificationVersion {
-/**
- * Azure Resource Manager resource envelope.
-API Version: 2021-03-01-preview.
- *
- * Azure Resource Manager resource envelope.
- */
     public static CompletableFuture<GetEnvironmentSpecificationVersionResult> invokeAsync(GetEnvironmentSpecificationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getEnvironmentSpecificationVersion", TypeShape.of(GetEnvironmentSpecificationVersionResult.class), args == null ? GetEnvironmentSpecificationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

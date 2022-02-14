@@ -14,182 +14,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * ApiRelease details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateApiRelease
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var apiRelease = new AzureNative.ApiManagement.ApiRelease("apiRelease", new AzureNative.ApiManagement.ApiReleaseArgs
-        {
-            ApiId = "a1",
-            Notes = "yahooagain",
-            ReleaseId = "testrev",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewApiRelease(ctx, "apiRelease", &apimanagement.ApiReleaseArgs{
-			ApiId:             pulumi.String("a1"),
-			Notes:             pulumi.String("yahooagain"),
-			ReleaseId:         pulumi.String("testrev"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const apiRelease = new azure_native.apimanagement.ApiRelease("apiRelease", {
-    apiId: "a1",
-    notes: "yahooagain",
-    releaseId: "testrev",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-api_release = azure_native.apimanagement.ApiRelease("apiRelease",
-    api_id="a1",
-    notes="yahooagain",
-    release_id="testrev",
-    resource_group_name="rg1",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:ApiRelease testrev /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/a1/releases/testrev 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:ApiRelease")
 public class ApiRelease extends io.pulumi.resources.CustomResource {
-    /**
-     * Identifier of the API the release belongs to.
-     */
     @OutputExport(name="apiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiId;
 
-    /**
-     * @return Identifier of the API the release belongs to.
-     */
     public Output</* @Nullable */ String> getApiId() {
         return this.apiId;
     }
-    /**
-     * The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
-     */
     @OutputExport(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
-    /**
-     * @return The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
-     */
     public Output<String> getCreatedDateTime() {
         return this.createdDateTime;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Release Notes
-     */
     @OutputExport(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
-    /**
-     * @return Release Notes
-     */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The time the API release was updated.
-     */
     @OutputExport(name="updatedDateTime", type=String.class, parameters={})
     private Output<String> updatedDateTime;
 
-    /**
-     * @return The time the API release was updated.
-     */
     public Output<String> getUpdatedDateTime() {
         return this.updatedDateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ApiRelease(String name, ApiReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiRelease", name, args == null ? ApiReleaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -218,14 +81,6 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ApiRelease get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiRelease(name, id, options);
     }

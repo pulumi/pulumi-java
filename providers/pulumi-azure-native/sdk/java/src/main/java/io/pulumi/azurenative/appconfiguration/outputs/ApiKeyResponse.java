@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiKeyResponse {
-/**
- * A connection string that can be used by supporting clients for authentication.
- */
     private final String connectionString;
-/**
- * The key ID.
- */
     private final String id;
-/**
- * The last time any of the key's properties were modified.
- */
     private final String lastModified;
-/**
- * A name for the key describing its usage.
- */
     private final String name;
-/**
- * Whether this key can only be used for read operations.
- */
     private final Boolean readOnly;
-/**
- * The value of the key that is used for authentication purposes.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"connectionString","id","lastModified","name","readOnly","value"})
@@ -51,39 +33,21 @@ public final class ApiKeyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * A connection string that can be used by supporting clients for authentication.
- */
     public String getConnectionString() {
         return this.connectionString;
     }
-/**
- * The key ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The last time any of the key's properties were modified.
- */
     public String getLastModified() {
         return this.lastModified;
     }
-/**
- * A name for the key describing its usage.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Whether this key can only be used for read operations.
- */
     public Boolean getReadOnly() {
         return this.readOnly;
     }
-/**
- * The value of the key that is used for authentication purposes.
- */
     public String getValue() {
         return this.value;
     }

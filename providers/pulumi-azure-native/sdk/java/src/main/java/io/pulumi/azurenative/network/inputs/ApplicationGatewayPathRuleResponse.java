@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Path rule of URL path map of an application gateway.
- */
 public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayPathRuleResponse Empty = new ApplicationGatewayPathRuleResponse();
 
-    /**
-     * Backend address pool resource of URL path map path rule.
-     */
     @InputImport(name="backendAddressPool")
     private final @Nullable SubResourceResponse backendAddressPool;
 
@@ -29,9 +23,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
-    /**
-     * Backend http settings resource of URL path map path rule.
-     */
     @InputImport(name="backendHttpSettings")
     private final @Nullable SubResourceResponse backendHttpSettings;
 
@@ -39,9 +30,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -49,9 +37,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.etag;
     }
 
-    /**
-     * Reference to the FirewallPolicy resource.
-     */
     @InputImport(name="firewallPolicy")
     private final @Nullable SubResourceResponse firewallPolicy;
 
@@ -59,9 +44,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -69,9 +51,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Name of the path rule that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -79,9 +58,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Path rules of URL path map.
-     */
     @InputImport(name="paths")
     private final @Nullable List<String> paths;
 
@@ -89,9 +65,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.paths == null ? List.of() : this.paths;
     }
 
-    /**
-     * The provisioning state of the path rule resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -99,9 +72,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.provisioningState;
     }
 
-    /**
-     * Redirect configuration resource of URL path map path rule.
-     */
     @InputImport(name="redirectConfiguration")
     private final @Nullable SubResourceResponse redirectConfiguration;
 
@@ -109,9 +79,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.redirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.redirectConfiguration);
     }
 
-    /**
-     * Rewrite rule set resource of URL path map path rule.
-     */
     @InputImport(name="rewriteRuleSet")
     private final @Nullable SubResourceResponse rewriteRuleSet;
 
@@ -119,9 +86,6 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
         return this.rewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.rewriteRuleSet);
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

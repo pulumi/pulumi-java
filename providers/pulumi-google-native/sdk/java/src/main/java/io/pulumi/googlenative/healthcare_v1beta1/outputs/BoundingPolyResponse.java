@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BoundingPolyResponse {
-/**
- * A description of this polygon.
- */
     private final String label;
-/**
- * List of the vertices of this polygon.
- */
     private final List<VertexResponse> vertices;
 
     @OutputCustomType.Constructor({"label","vertices"})
@@ -28,15 +22,9 @@ public final class BoundingPolyResponse {
         this.vertices = Objects.requireNonNull(vertices);
     }
 
-/**
- * A description of this polygon.
- */
     public String getLabel() {
         return this.label;
     }
-/**
- * List of the vertices of this polygon.
- */
     public List<VertexResponse> getVertices() {
         return this.vertices;
     }

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Sftp read settings.
- */
 public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpReadSettingsResponse Empty = new HttpReadSettingsResponse();
 
-    /**
-     * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Object additionalHeaders;
 
@@ -29,9 +23,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -39,9 +30,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
-    /**
-     * Indicates whether to enable partition discovery.
-     */
     @InputImport(name="enablePartitionDiscovery")
     private final @Nullable Boolean enablePartitionDiscovery;
 
@@ -49,9 +37,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -59,9 +44,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
-    /**
-     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="partitionRootPath")
     private final @Nullable Object partitionRootPath;
 
@@ -69,9 +51,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
     }
 
-    /**
-     * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="requestBody")
     private final @Nullable Object requestBody;
 
@@ -79,9 +58,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
     }
 
-    /**
-     * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="requestMethod")
     private final @Nullable Object requestMethod;
 
@@ -89,9 +65,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
     }
 
-    /**
-     * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
-     */
     @InputImport(name="requestTimeout")
     private final @Nullable Object requestTimeout;
 
@@ -99,10 +72,6 @@ public final class HttpReadSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
     }
 
-    /**
-     * The read setting type.
-Expected value is 'HttpReadSettings'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

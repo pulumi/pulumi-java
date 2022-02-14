@@ -16,198 +16,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A DDoS protection plan in a resource group.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create DDoS protection plan
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ddosProtectionPlan = new AzureNative.Network.DdosProtectionPlan("ddosProtectionPlan", new AzureNative.Network.DdosProtectionPlanArgs
-        {
-            DdosProtectionPlanName = "test-plan",
-            Location = "westus",
-            ResourceGroupName = "rg1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewDdosProtectionPlan(ctx, "ddosProtectionPlan", &network.DdosProtectionPlanArgs{
-			DdosProtectionPlanName: pulumi.String("test-plan"),
-			Location:               pulumi.String("westus"),
-			ResourceGroupName:      pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const ddosProtectionPlan = new azure_native.network.DdosProtectionPlan("ddosProtectionPlan", {
-    ddosProtectionPlanName: "test-plan",
-    location: "westus",
-    resourceGroupName: "rg1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-ddos_protection_plan = azure_native.network.DdosProtectionPlan("ddosProtectionPlan",
-    ddos_protection_plan_name="test-plan",
-    location="westus",
-    resource_group_name="rg1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:DdosProtectionPlan test-plan /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ddosProtectionPlans/test-plan 
-```
-
- */
 @ResourceType(type="azure-native:network:DdosProtectionPlan")
 public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the DDoS protection plan resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the DDoS protection plan resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The resource GUID property of the DDoS protection plan resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
-     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
-    /**
-     * @return The resource GUID property of the DDoS protection plan resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
-     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.
-     */
     @OutputExport(name="virtualNetworks", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualNetworks;
 
-    /**
-     * @return The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.
-     */
     public Output<List<SubResourceResponse>> getVirtualNetworks() {
         return this.virtualNetworks;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DdosProtectionPlan(String name, DdosProtectionPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:DdosProtectionPlan", name, args == null ? DdosProtectionPlanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -251,14 +110,6 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DdosProtectionPlan get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DdosProtectionPlan(name, id, options);
     }

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRollout {
-/**
- * Gets details of a single Rollout.
- */
     public static CompletableFuture<GetRolloutResult> invokeAsync(GetRolloutArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getRollout", TypeShape.of(GetRolloutResult.class), args == null ? GetRolloutArgs.Empty : args, Utilities.withVersion(options));
     }

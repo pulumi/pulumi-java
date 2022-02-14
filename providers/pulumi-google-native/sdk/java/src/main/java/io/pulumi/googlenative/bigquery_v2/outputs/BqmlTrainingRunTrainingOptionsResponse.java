@@ -11,41 +11,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BqmlTrainingRunTrainingOptionsResponse {
-/**
- * 
- */
     private final Boolean earlyStop;
-/**
- * 
- */
     private final Double l1Reg;
-/**
- * 
- */
     private final Double l2Reg;
-/**
- * 
- */
     private final Double learnRate;
-/**
- * 
- */
     private final String learnRateStrategy;
-/**
- * 
- */
     private final Double lineSearchInitLearnRate;
-/**
- * 
- */
     private final String maxIteration;
-/**
- * 
- */
     private final Double minRelProgress;
-/**
- * 
- */
     private final Boolean warmStart;
 
     @OutputCustomType.Constructor({"earlyStop","l1Reg","l2Reg","learnRate","learnRateStrategy","lineSearchInitLearnRate","maxIteration","minRelProgress","warmStart"})
@@ -70,57 +43,30 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
         this.warmStart = Objects.requireNonNull(warmStart);
     }
 
-/**
- * 
- */
     public Boolean getEarlyStop() {
         return this.earlyStop;
     }
-/**
- * 
- */
     public Double getL1Reg() {
         return this.l1Reg;
     }
-/**
- * 
- */
     public Double getL2Reg() {
         return this.l2Reg;
     }
-/**
- * 
- */
     public Double getLearnRate() {
         return this.learnRate;
     }
-/**
- * 
- */
     public String getLearnRateStrategy() {
         return this.learnRateStrategy;
     }
-/**
- * 
- */
     public Double getLineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate;
     }
-/**
- * 
- */
     public String getMaxIteration() {
         return this.maxIteration;
     }
-/**
- * 
- */
     public Double getMinRelProgress() {
         return this.minRelProgress;
     }
-/**
- * 
- */
     public Boolean getWarmStart() {
         return this.warmStart;
     }

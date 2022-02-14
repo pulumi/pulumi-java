@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
- */
 public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketIamConfigurationBucketPolicyOnlyResponse Empty = new BucketIamConfigurationBucketPolicyOnlyResponse();
 
-    /**
-     * If set, access is controlled only by bucket-level or above IAM policies.
-     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -26,9 +20,6 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
         return this.enabled;
     }
 
-    /**
-     * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
-     */
     @InputImport(name="lockedTime", required=true)
     private final String lockedTime;
 

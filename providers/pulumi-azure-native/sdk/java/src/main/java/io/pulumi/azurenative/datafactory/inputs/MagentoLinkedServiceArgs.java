@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Magento server linked service.
- */
 public final class MagentoLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MagentoLinkedServiceArgs Empty = new MagentoLinkedServiceArgs();
 
-    /**
-     * The access token from Magento.
-     */
     @InputImport(name="accessToken")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
@@ -35,9 +29,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -45,9 +36,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -55,9 +43,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,9 +50,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -75,9 +57,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * The URL of the Magento instance. (i.e. 192.168.222.110/magento3)
-     */
     @InputImport(name="host", required=true)
     private final Input<Object> host;
 
@@ -85,9 +64,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.host;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -95,10 +71,6 @@ public final class MagentoLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Magento'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -106,9 +78,6 @@ Expected value is 'Magento'.
         return this.type;
     }
 
-    /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Input<Object> useEncryptedEndpoints;
 
@@ -116,9 +85,6 @@ Expected value is 'Magento'.
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
     }
 
-    /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     */
     @InputImport(name="useHostVerification")
     private final @Nullable Input<Object> useHostVerification;
 
@@ -126,9 +92,6 @@ Expected value is 'Magento'.
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
     }
 
-    /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Input<Object> usePeerVerification;
 

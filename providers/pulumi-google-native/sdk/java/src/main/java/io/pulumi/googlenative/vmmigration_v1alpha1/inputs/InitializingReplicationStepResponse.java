@@ -6,9 +6,6 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 import java.util.Objects;
 
 
-/**
- * InitializingReplicationStep contains specific step details.
- */
 public final class InitializingReplicationStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InitializingReplicationStepResponse Empty = new InitializingReplicationStepResponse();

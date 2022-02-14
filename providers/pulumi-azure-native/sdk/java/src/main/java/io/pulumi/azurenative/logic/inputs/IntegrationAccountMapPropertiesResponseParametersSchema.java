@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters schema of integration account map.
- */
 public final class IntegrationAccountMapPropertiesResponseParametersSchema extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationAccountMapPropertiesResponseParametersSchema Empty = new IntegrationAccountMapPropertiesResponseParametersSchema();
 
-    /**
-     * The reference name.
-     */
     @InputImport(name="ref")
     private final @Nullable String ref;
 

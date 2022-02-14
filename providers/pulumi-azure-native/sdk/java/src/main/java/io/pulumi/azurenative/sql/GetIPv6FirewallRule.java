@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPv6FirewallRule {
-/**
- * An IPv6 server firewall rule.
-API Version: 2021-08-01-preview.
- *
- * An IPv6 server firewall rule.
- */
     public static CompletableFuture<GetIPv6FirewallRuleResult> invokeAsync(GetIPv6FirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getIPv6FirewallRule", TypeShape.of(GetIPv6FirewallRuleResult.class), args == null ? GetIPv6FirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

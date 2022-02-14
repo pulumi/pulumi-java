@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Configures a RRSetRoutingPolicy that routes in a weighted round robin fashion.
- */
 public final class RRSetRoutingPolicyWrrPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RRSetRoutingPolicyWrrPolicyResponse Empty = new RRSetRoutingPolicyWrrPolicyResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="items", required=true)
     private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
 
@@ -27,9 +21,6 @@ public final class RRSetRoutingPolicyWrrPolicyResponse extends io.pulumi.resourc
         return this.items;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. Day of the week.
- */
     @EnumType
     public enum WeeklyScheduleDayOfWeek {
-/**
- * The day of the week is unspecified.
- */
         DayOfWeekUnspecified("DAY_OF_WEEK_UNSPECIFIED"),
-/**
- * Monday
- */
         Monday("MONDAY"),
-/**
- * Tuesday
- */
         Tuesday("TUESDAY"),
-/**
- * Wednesday
- */
         Wednesday("WEDNESDAY"),
-/**
- * Thursday
- */
         Thursday("THURSDAY"),
-/**
- * Friday
- */
         Friday("FRIDAY"),
-/**
- * Saturday
- */
         Saturday("SATURDAY"),
-/**
- * Sunday
- */
         Sunday("SUNDAY");
 
         private final String value;

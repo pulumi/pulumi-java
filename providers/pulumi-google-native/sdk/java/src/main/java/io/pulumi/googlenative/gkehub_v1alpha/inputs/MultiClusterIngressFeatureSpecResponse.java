@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
- */
 public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MultiClusterIngressFeatureSpecResponse Empty = new MultiClusterIngressFeatureSpecResponse();
 
-    /**
-     * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
-     */
     @InputImport(name="configMembership", required=true)
     private final String configMembership;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Virtual disk controller model
- */
 public final class VirtualDiskControllerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualDiskControllerResponse Empty = new VirtualDiskControllerResponse();
 
-    /**
-     * Controller's id
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -25,9 +19,6 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
         return this.id;
     }
 
-    /**
-     * The display name of Controller
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
-    /**
-     * dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
-     */
     @InputImport(name="subType", required=true)
     private final String subType;
 
@@ -45,9 +33,6 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
         return this.subType;
     }
 
-    /**
-     * disk controller type (SCSI)
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

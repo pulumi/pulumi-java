@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the parameters of a ScaleSet managed disk.
- */
 public final class VirtualMachineScaleSetManagedDiskParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineScaleSetManagedDiskParametersResponse Empty = new VirtualMachineScaleSetManagedDiskParametersResponse();
 
-    /**
-     * Specifies the customer managed disk encryption set resource id for the managed disk.
-     */
     @InputImport(name="diskEncryptionSet")
     private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
@@ -28,9 +22,6 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends i
         return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
     }
 
-    /**
-     * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     */
     @InputImport(name="storageAccountType")
     private final @Nullable String storageAccountType;
 

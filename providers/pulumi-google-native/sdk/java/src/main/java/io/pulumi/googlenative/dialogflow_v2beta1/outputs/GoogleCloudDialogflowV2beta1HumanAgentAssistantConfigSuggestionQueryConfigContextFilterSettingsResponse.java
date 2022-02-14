@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse {
-/**
- * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
- */
     private final Boolean dropHandoffMessages;
-/**
- * If set to true, all messages from ivr stage are dropped.
- */
     private final Boolean dropIvrMessages;
-/**
- * If set to true, all messages from virtual agent are dropped.
- */
     private final Boolean dropVirtualAgentMessages;
 
     @OutputCustomType.Constructor({"dropHandoffMessages","dropIvrMessages","dropVirtualAgentMessages"})
@@ -32,21 +23,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
     }
 
-/**
- * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
- */
     public Boolean getDropHandoffMessages() {
         return this.dropHandoffMessages;
     }
-/**
- * If set to true, all messages from ivr stage are dropped.
- */
     public Boolean getDropIvrMessages() {
         return this.dropIvrMessages;
     }
-/**
- * If set to true, all messages from virtual agent are dropped.
- */
     public Boolean getDropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages;
     }

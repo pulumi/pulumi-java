@@ -21,16 +21,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for the task that validates connection to SQL Server and also validates source server requirements
- */
 public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerTaskPropertiesResponse Empty = new ConnectToSourceSqlServerTaskPropertiesResponse();
 
-    /**
-     * Array of command properties.
-     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -38,9 +32,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
         return this.commands;
     }
 
-    /**
-     * Array of errors. This is ignored if submitted.
-     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -48,9 +39,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
         return this.errors;
     }
 
-    /**
-     * Task input
-     */
     @InputImport(name="input")
     private final @Nullable ConnectToSourceSqlServerTaskInputResponse input;
 
@@ -58,9 +46,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
-    /**
-     * Task output. This is ignored if submitted.
-     */
     @InputImport(name="output", required=true)
     private final List<Object> output;
 
@@ -68,9 +53,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
         return this.output;
     }
 
-    /**
-     * The state of the task. This is ignored if submitted.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -78,10 +60,6 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse extends io.pul
         return this.state;
     }
 
-    /**
-     * Task type.
-Expected value is 'ConnectToSource.SqlServer'.
-     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

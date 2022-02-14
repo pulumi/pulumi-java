@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataDiskImageEncryptionResponse {
-/**
- * A relative URI containing the resource ID of the disk encryption set.
- */
     private final @Nullable String diskEncryptionSetId;
-/**
- * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
- */
     private final Integer lun;
 
     @OutputCustomType.Constructor({"diskEncryptionSetId","lun"})
@@ -29,15 +23,9 @@ public final class DataDiskImageEncryptionResponse {
         this.lun = Objects.requireNonNull(lun);
     }
 
-/**
- * A relative URI containing the resource ID of the disk encryption set.
- */
     public Optional<String> getDiskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
-/**
- * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
- */
     public Integer getLun() {
         return this.lun;
     }

@@ -14,17 +14,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureWorkloadContainerExtendedInfoResponse {
-/**
- * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
- */
     private final @Nullable String hostServerName;
-/**
- * Inquiry Status for the container.
- */
     private final @Nullable InquiryInfoResponse inquiryInfo;
-/**
- * List of the nodes in case of distributed container.
- */
     private final @Nullable List<DistributedNodesInfoResponse> nodesList;
 
     @OutputCustomType.Constructor({"hostServerName","inquiryInfo","nodesList"})
@@ -37,21 +28,12 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
         this.nodesList = nodesList;
     }
 
-/**
- * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
- */
     public Optional<String> getHostServerName() {
         return Optional.ofNullable(this.hostServerName);
     }
-/**
- * Inquiry Status for the container.
- */
     public Optional<InquiryInfoResponse> getInquiryInfo() {
         return Optional.ofNullable(this.inquiryInfo);
     }
-/**
- * List of the nodes in case of distributed container.
- */
     public List<DistributedNodesInfoResponse> getNodesList() {
         return this.nodesList == null ? List.of() : this.nodesList;
     }

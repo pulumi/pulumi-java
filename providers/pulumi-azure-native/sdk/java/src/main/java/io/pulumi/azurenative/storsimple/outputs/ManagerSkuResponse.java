@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagerSkuResponse {
-/**
- * Refers to the sku name which should be "Standard"
- */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -19,9 +16,6 @@ public final class ManagerSkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Refers to the sku name which should be "Standard"
- */
     public String getName() {
         return this.name;
     }

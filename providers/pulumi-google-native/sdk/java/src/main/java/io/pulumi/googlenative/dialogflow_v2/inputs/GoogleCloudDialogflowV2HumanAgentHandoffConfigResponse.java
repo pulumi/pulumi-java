@@ -9,16 +9,10 @@ import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanA
 import java.util.Objects;
 
 
-/**
- * Defines the hand off to a live agent, typically on which external agent service provider to connect to a conversation. Currently, this feature is not general available, please contact Google to get access.
- */
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse Empty = new GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse();
 
-    /**
-     * Uses LivePerson (https://www.liveperson.com).
-     */
     @InputImport(name="livePersonConfig", required=true)
     private final GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
         return this.livePersonConfig;
     }
 
-    /**
-     * Uses Salesforce Live Agent.
-     */
     @InputImport(name="salesforceLiveAgentConfig", required=true)
     private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 

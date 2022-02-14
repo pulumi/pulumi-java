@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetAccessEntryArgs Empty = new DatasetAccessEntryArgs();
 
-    /**
-     * [Required] The dataset this entry applies to.
-     */
     @InputImport(name="dataset")
     private final @Nullable Input<DatasetReferenceArgs> dataset;
 
@@ -29,9 +23,6 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="targetTypes")
     private final @Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 

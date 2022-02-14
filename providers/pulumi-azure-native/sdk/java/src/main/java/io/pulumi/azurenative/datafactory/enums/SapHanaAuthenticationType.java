@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The authentication type to be used to connect to the SAP HANA server.
- */
     @EnumType
     public enum SapHanaAuthenticationType {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Windows("Windows");
 
         private final String value;

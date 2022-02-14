@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAgentPoolArgs Empty = new GetAgentPoolArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentPoolId", required=true)
     private final String agentPoolId;
 
@@ -27,9 +21,6 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.agentPoolId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

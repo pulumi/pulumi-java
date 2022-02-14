@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1ColumnSchemaResponse {
-/**
- * Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
- */
     private final String column;
-/**
- * Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
- */
     private final String description;
-/**
- * Optional. A column's mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
- */
     private final String mode;
-/**
- * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
- */
     private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns;
-/**
- * Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"column","description","mode","subcolumns","type"})
@@ -45,33 +30,18 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
- */
     public String getColumn() {
         return this.column;
     }
-/**
- * Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Optional. A column's mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
- */
     public String getMode() {
         return this.mode;
     }
-/**
- * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
- */
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> getSubcolumns() {
         return this.subcolumns;
     }
-/**
- * Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
- */
     public String getType() {
         return this.type;
     }

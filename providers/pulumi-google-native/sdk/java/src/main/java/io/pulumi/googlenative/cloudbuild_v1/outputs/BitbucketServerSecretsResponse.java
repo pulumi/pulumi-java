@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BitbucketServerSecretsResponse {
-/**
- * The resource name for the admin access token's secret version.
- */
     private final String adminAccessTokenVersionName;
-/**
- * The resource name for the read access token's secret version.
- */
     private final String readAccessTokenVersionName;
-/**
- * Immutable. The resource name for the webhook secret's secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
- */
     private final String webhookSecretVersionName;
 
     @OutputCustomType.Constructor({"adminAccessTokenVersionName","readAccessTokenVersionName","webhookSecretVersionName"})
@@ -32,21 +23,12 @@ public final class BitbucketServerSecretsResponse {
         this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
     }
 
-/**
- * The resource name for the admin access token's secret version.
- */
     public String getAdminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
     }
-/**
- * The resource name for the read access token's secret version.
- */
     public String getReadAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
     }
-/**
- * Immutable. The resource name for the webhook secret's secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
- */
     public String getWebhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }

@@ -14,41 +14,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetUserRuleCollectionResult {
-/**
- * Groups for configuration
- */
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> appliesToGroups;
-/**
- * A description of the rule collection.
- */
     private final @Nullable String description;
-/**
- * A display name of the rule collection.
- */
     private final @Nullable String displayName;
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The provisioning state of the resource.
- */
     private final String provisioningState;
-/**
- * The system metadata related to this resource.
- */
     private final SystemDataResponse systemData;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"appliesToGroups","description","displayName","etag","id","name","provisioningState","systemData","type"})
@@ -73,57 +46,30 @@ public final class GetUserRuleCollectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Groups for configuration
- */
     public List<NetworkManagerSecurityGroupItemResponse> getAppliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
-/**
- * A description of the rule collection.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * A display name of the rule collection.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The system metadata related to this resource.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

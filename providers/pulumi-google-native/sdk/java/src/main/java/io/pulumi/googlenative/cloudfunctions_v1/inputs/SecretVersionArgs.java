@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for a single version.
- */
 public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretVersionArgs Empty = new SecretVersionArgs();
 
-    /**
-     * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as '/etc/secrets' and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -27,9 +21,6 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
-    /**
-     * Version of the secret (version number or the string 'latest'). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

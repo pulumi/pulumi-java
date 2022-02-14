@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiPortalInstanceResponse {
-/**
- * Name of the API portal instance
- */
     private final String name;
-/**
- * Status of the API portal instance
- */
     private final String status;
 
     @OutputCustomType.Constructor({"name","status"})
@@ -26,15 +20,9 @@ public final class ApiPortalInstanceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * Name of the API portal instance
- */
     public String getName() {
         return this.name;
     }
-/**
- * Status of the API portal instance
- */
     public String getStatus() {
         return this.status;
     }

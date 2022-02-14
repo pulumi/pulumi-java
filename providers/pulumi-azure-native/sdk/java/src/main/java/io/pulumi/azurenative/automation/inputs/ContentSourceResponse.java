@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the content source.
- */
 public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentSourceResponse Empty = new ContentSourceResponse();
 
-    /**
-     * Gets or sets the hash.
-     */
     @InputImport(name="hash")
     private final @Nullable ContentHashResponse hash;
 
@@ -28,9 +22,6 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.hash == null ? Optional.empty() : Optional.ofNullable(this.hash);
     }
 
-    /**
-     * Gets or sets the content source type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -38,9 +29,6 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * Gets or sets the value of the content. This is based on the content source type.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 
@@ -48,9 +36,6 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 
-    /**
-     * Gets or sets the version of the content.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

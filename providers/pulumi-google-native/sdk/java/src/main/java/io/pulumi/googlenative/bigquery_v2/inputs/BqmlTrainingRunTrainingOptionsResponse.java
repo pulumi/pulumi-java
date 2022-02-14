@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
- */
 public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BqmlTrainingRunTrainingOptionsResponse Empty = new BqmlTrainingRunTrainingOptionsResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="earlyStop", required=true)
     private final Boolean earlyStop;
 
@@ -27,9 +21,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.earlyStop;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="l1Reg", required=true)
     private final Double l1Reg;
 
@@ -37,9 +28,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.l1Reg;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="l2Reg", required=true)
     private final Double l2Reg;
 
@@ -47,9 +35,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.l2Reg;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="learnRate", required=true)
     private final Double learnRate;
 
@@ -57,9 +42,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.learnRate;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="learnRateStrategy", required=true)
     private final String learnRateStrategy;
 
@@ -67,9 +49,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.learnRateStrategy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lineSearchInitLearnRate", required=true)
     private final Double lineSearchInitLearnRate;
 
@@ -77,9 +56,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.lineSearchInitLearnRate;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maxIteration", required=true)
     private final String maxIteration;
 
@@ -87,9 +63,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.maxIteration;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="minRelProgress", required=true)
     private final Double minRelProgress;
 
@@ -97,9 +70,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
         return this.minRelProgress;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="warmStart", required=true)
     private final Boolean warmStart;
 

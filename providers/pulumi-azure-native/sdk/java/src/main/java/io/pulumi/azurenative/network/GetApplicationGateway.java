@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationGateway {
-/**
- * Application gateway resource.
-API Version: 2020-11-01.
- *
- * Application gateway resource.
- */
     public static CompletableFuture<GetApplicationGatewayResult> invokeAsync(GetApplicationGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGateway", TypeShape.of(GetApplicationGatewayResult.class), args == null ? GetApplicationGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

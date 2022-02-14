@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Status of the rule
- */
     @EnumType
     public enum RuleStatus {
-/**
- * Rule is saved but not used to allocate costs.
- */
         NotActive("NotActive"),
-/**
- * Rule is saved and impacting cost allocation.
- */
         Active("Active"),
-/**
- * Rule is saved and cost allocation is being updated. Readonly value that cannot be submitted in a put request.
- */
         Processing("Processing");
 
         private final String value;

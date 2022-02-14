@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RCranPackageResponse Empty = new RCranPackageResponse();
 
-    /**
-     * The package name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The repository name.
-     */
     @InputImport(name="repository")
     private final @Nullable String repository;
 

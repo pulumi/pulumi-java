@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionFeatureRegistrationPropertiesArgs Empty = new SubscriptionFeatureRegistrationPropertiesArgs();
 
-    /**
-     * The feature description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,9 +25,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Key-value pairs for meta data.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -41,9 +32,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * Indicates whether feature should be displayed in Portal.
-     */
     @InputImport(name="shouldFeatureDisplayInPortal")
     private final @Nullable Input<Boolean> shouldFeatureDisplayInPortal;
 
@@ -51,9 +39,6 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
         return this.shouldFeatureDisplayInPortal == null ? Input.empty() : this.shouldFeatureDisplayInPortal;
     }
 
-    /**
-     * The state.
-     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state;
 

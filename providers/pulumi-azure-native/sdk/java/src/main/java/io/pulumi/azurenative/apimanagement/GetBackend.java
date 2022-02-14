@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackend {
-/**
- * Backend details.
-API Version: 2020-12-01.
- *
- * Backend details.
- */
     public static CompletableFuture<GetBackendResult> invokeAsync(GetBackendArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getBackend", TypeShape.of(GetBackendResult.class), args == null ? GetBackendArgs.Empty : args, Utilities.withVersion(options));
     }

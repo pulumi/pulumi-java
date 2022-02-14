@@ -14,41 +14,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
-/**
- * Modified whenever there is a change in the state of private endpoint connection.
- */
     private final @Nullable String etag;
-/**
- * Fully qualified identifier of the key vault resource.
- */
     private final String id;
-/**
- * Azure location of the key vault resource.
- */
     private final String location;
-/**
- * Name of the key vault resource.
- */
     private final String name;
-/**
- * Properties of the private endpoint object.
- */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-/**
- * Approval state of the private link connection.
- */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-/**
- * Provisioning state of the private endpoint connection.
- */
     private final String provisioningState;
-/**
- * Tags assigned to the key vault resource.
- */
     private final Map<String,String> tags;
-/**
- * Resource type of the key vault resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","tags","type"})
@@ -73,57 +46,30 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Modified whenever there is a change in the state of private endpoint connection.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * Fully qualified identifier of the key vault resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Azure location of the key vault resource.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Name of the key vault resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Properties of the private endpoint object.
- */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
-/**
- * Approval state of the private link connection.
- */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-/**
- * Provisioning state of the private endpoint connection.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Tags assigned to the key vault resource.
- */
     public Map<String,String> getTags() {
         return this.tags;
     }
-/**
- * Resource type of the key vault resource.
- */
     public String getType() {
         return this.type;
     }

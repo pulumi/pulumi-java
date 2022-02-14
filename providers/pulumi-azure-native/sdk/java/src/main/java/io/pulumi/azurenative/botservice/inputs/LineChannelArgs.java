@@ -11,17 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Line channel definition
- */
 public final class LineChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LineChannelArgs Empty = new LineChannelArgs();
 
-    /**
-     * The channel name
-Expected value is 'LineChannel'.
-     */
     @InputImport(name="channelName", required=true)
     private final Input<String> channelName;
 
@@ -29,9 +22,6 @@ Expected value is 'LineChannel'.
         return this.channelName;
     }
 
-    /**
-     * Entity Tag of the resource
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -39,9 +29,6 @@ Expected value is 'LineChannel'.
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +36,6 @@ Expected value is 'LineChannel'.
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The set of properties specific to line channel resource
-     */
     @InputImport(name="properties")
     private final @Nullable Input<LineChannelPropertiesArgs> properties;
 

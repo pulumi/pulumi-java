@@ -8,54 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The operator to be matched.
- */
     @EnumType
     public enum WebApplicationFirewallOperator {
-/**
- * 
- */
         IPMatch("IPMatch"),
-/**
- * 
- */
         Equal("Equal"),
-/**
- * 
- */
         Contains("Contains"),
-/**
- * 
- */
         LessThan("LessThan"),
-/**
- * 
- */
         GreaterThan("GreaterThan"),
-/**
- * 
- */
         LessThanOrEqual("LessThanOrEqual"),
-/**
- * 
- */
         GreaterThanOrEqual("GreaterThanOrEqual"),
-/**
- * 
- */
         BeginsWith("BeginsWith"),
-/**
- * 
- */
         EndsWith("EndsWith"),
-/**
- * 
- */
         Regex("Regex"),
-/**
- * 
- */
         GeoMatch("GeoMatch");
 
         private final String value;

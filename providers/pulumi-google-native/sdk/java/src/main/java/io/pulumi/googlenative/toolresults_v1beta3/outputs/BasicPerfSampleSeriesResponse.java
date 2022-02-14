@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BasicPerfSampleSeriesResponse {
-/**
- * 
- */
     private final String perfMetricType;
-/**
- * 
- */
     private final String perfUnit;
-/**
- * 
- */
     private final String sampleSeriesLabel;
 
     @OutputCustomType.Constructor({"perfMetricType","perfUnit","sampleSeriesLabel"})
@@ -32,21 +23,12 @@ public final class BasicPerfSampleSeriesResponse {
         this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
     }
 
-/**
- * 
- */
     public String getPerfMetricType() {
         return this.perfMetricType;
     }
-/**
- * 
- */
     public String getPerfUnit() {
         return this.perfUnit;
     }
-/**
- * 
- */
     public String getSampleSeriesLabel() {
         return this.sampleSeriesLabel;
     }

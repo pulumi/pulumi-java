@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
- */
 public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Gen2StorageConfigurationInputArgs Empty = new Gen2StorageConfigurationInputArgs();
 
-    /**
-     * The name of the storage account that will hold the environment's Gen2 data.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -26,9 +20,6 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
         return this.accountName;
     }
 
-    /**
-     * The value of the management key that grants the Time Series Insights service write access to the storage account. This property is not shown in environment responses.
-     */
     @InputImport(name="managementKey", required=true)
     private final Input<String> managementKey;
 

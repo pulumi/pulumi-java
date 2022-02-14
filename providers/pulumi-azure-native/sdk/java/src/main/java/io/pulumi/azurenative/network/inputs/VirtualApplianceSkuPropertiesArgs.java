@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Network Virtual Appliance Sku Properties.
- */
 public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualApplianceSkuPropertiesArgs Empty = new VirtualApplianceSkuPropertiesArgs();
 
-    /**
-     * Virtual Appliance Scale Unit.
-     */
     @InputImport(name="bundledScaleUnit")
     private final @Nullable Input<String> bundledScaleUnit;
 
@@ -27,9 +21,6 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
         return this.bundledScaleUnit == null ? Input.empty() : this.bundledScaleUnit;
     }
 
-    /**
-     * Virtual Appliance Version.
-     */
     @InputImport(name="marketPlaceVersion")
     private final @Nullable Input<String> marketPlaceVersion;
 
@@ -37,9 +28,6 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
         return this.marketPlaceVersion == null ? Input.empty() : this.marketPlaceVersion;
     }
 
-    /**
-     * Virtual Appliance Vendor.
-     */
     @InputImport(name="vendor")
     private final @Nullable Input<String> vendor;
 

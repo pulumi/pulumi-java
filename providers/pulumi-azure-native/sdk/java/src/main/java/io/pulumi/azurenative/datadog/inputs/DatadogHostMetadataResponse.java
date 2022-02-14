@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatadogHostMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatadogHostMetadataResponse Empty = new DatadogHostMetadataResponse();
 
-    /**
-     * The agent version.
-     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -29,9 +23,6 @@ public final class DatadogHostMetadataResponse extends io.pulumi.resources.Invok
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="installMethod")
     private final @Nullable DatadogInstallMethodResponse installMethod;
 
@@ -39,9 +30,6 @@ public final class DatadogHostMetadataResponse extends io.pulumi.resources.Invok
         return this.installMethod == null ? Optional.empty() : Optional.ofNullable(this.installMethod);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="logsAgent")
     private final @Nullable DatadogLogsAgentResponse logsAgent;
 

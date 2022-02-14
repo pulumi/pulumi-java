@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The format of the report being delivered.
- */
     @EnumType
     public enum FormatType {
-/**
- * 
- */
         Csv("Csv");
 
         private final String value;

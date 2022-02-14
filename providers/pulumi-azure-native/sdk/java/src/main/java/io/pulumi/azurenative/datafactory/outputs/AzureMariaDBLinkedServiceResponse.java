@@ -17,38 +17,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureMariaDBLinkedServiceResponse {
-/**
- * List of tags that can be used for describing the linked service.
- */
     private final @Nullable List<Object> annotations;
-/**
- * The integration runtime reference.
- */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-/**
- * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
- */
     private final @Nullable Object connectionString;
-/**
- * Linked service description.
- */
     private final @Nullable String description;
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encryptedCredential;
-/**
- * Parameters for linked service.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * The Azure key vault secret reference of password in connection string.
- */
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
-/**
- * Type of linked service.
-Expected value is 'AzureMariaDB'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","connectVia","connectionString","description","encryptedCredential","parameters","pwd","type"})
@@ -71,52 +46,27 @@ Expected value is 'AzureMariaDB'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * List of tags that can be used for describing the linked service.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * The integration runtime reference.
- */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
-/**
- * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
- */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
-/**
- * Linked service description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
-/**
- * Parameters for linked service.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * The Azure key vault secret reference of password in connection string.
- */
     public Optional<AzureKeyVaultSecretReferenceResponse> getPwd() {
         return Optional.ofNullable(this.pwd);
     }
-/**
- * Type of linked service.
-Expected value is 'AzureMariaDB'.
- */
     public String getType() {
         return this.type;
     }

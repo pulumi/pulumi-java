@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepoArgs Empty = new RepoArgs();
 
-    /**
-     * How this repository mirrors a repository managed by another service. Read-only field.
-     */
     @InputImport(name="mirrorConfig")
     private final @Nullable Input<MirrorConfigArgs> mirrorConfig;
 
@@ -29,9 +23,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
         return this.mirrorConfig == null ? Input.empty() : this.mirrorConfig;
     }
 
-    /**
-     * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,9 +30,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -49,9 +37,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
-     */
     @InputImport(name="pubsubConfigs")
     private final @Nullable Input<Map<String,String>> pubsubConfigs;
 
@@ -59,9 +44,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
         return this.pubsubConfigs == null ? Input.empty() : this.pubsubConfigs;
     }
 
-    /**
-     * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
-     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -69,9 +51,6 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
-    /**
-     * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

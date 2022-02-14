@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobAgentArgs Empty = new JobAgentArgs();
 
-    /**
-     * Resource ID of the database to store job metadata in.
-     */
     @InputImport(name="databaseId", required=true)
     private final Input<String> databaseId;
 
@@ -29,9 +23,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseId;
     }
 
-    /**
-     * The name of the job agent to be created or updated.
-     */
     @InputImport(name="jobAgentName")
     private final @Nullable Input<String> jobAgentName;
 
@@ -39,9 +30,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobAgentName == null ? Input.empty() : this.jobAgentName;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -69,9 +51,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
-    /**
-     * The name and tier of the SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -79,9 +58,6 @@ public final class JobAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

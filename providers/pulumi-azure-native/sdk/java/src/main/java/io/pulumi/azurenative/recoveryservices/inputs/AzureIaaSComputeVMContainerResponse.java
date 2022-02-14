@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * IaaS VM workload-specific backup item representing an Azure Resource Manager virtual machine.
- */
 public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureIaaSComputeVMContainerResponse Empty = new AzureIaaSComputeVMContainerResponse();
 
-    /**
-     * Type of backup management for the container.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -27,13 +21,6 @@ public final class AzureIaaSComputeVMContainerResponse extends io.pulumi.resourc
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
-    /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'Microsoft.Compute/virtualMachines'.
-     */
     @InputImport(name="containerType", required=true)
     private final String containerType;
 
@@ -41,9 +28,6 @@ Expected value is 'Microsoft.Compute/virtualMachines'.
         return this.containerType;
     }
 
-    /**
-     * Friendly name of the container.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -51,9 +35,6 @@ Expected value is 'Microsoft.Compute/virtualMachines'.
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * Status of health of the container.
-     */
     @InputImport(name="healthStatus")
     private final @Nullable String healthStatus;
 
@@ -61,9 +42,6 @@ Expected value is 'Microsoft.Compute/virtualMachines'.
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
-    /**
-     * Status of registration of the container with the Recovery Services Vault.
-     */
     @InputImport(name="registrationStatus")
     private final @Nullable String registrationStatus;
 
@@ -71,9 +49,6 @@ Expected value is 'Microsoft.Compute/virtualMachines'.
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 
-    /**
-     * Resource group name of Recovery Services Vault.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable String resourceGroup;
 
@@ -81,9 +56,6 @@ Expected value is 'Microsoft.Compute/virtualMachines'.
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
-    /**
-     * Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
-     */
     @InputImport(name="virtualMachineId")
     private final @Nullable String virtualMachineId;
 
@@ -91,9 +63,6 @@ Expected value is 'Microsoft.Compute/virtualMachines'.
         return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
     }
 
-    /**
-     * Specifies whether the container represents a Classic or an Azure Resource Manager VM.
-     */
     @InputImport(name="virtualMachineVersion")
     private final @Nullable String virtualMachineVersion;
 

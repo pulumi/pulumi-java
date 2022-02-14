@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupInstance {
-/**
- * BackupInstance Resource
-API Version: 2021-01-01.
- *
- * BackupInstance Resource
- */
     public static CompletableFuture<GetBackupInstanceResult> invokeAsync(GetBackupInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupInstance", TypeShape.of(GetBackupInstanceResult.class), args == null ? GetBackupInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

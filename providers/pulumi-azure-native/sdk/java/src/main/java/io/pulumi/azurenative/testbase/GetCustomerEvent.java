@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomerEvent {
-/**
- * The Customer Notification Event resource.
-API Version: 2020-12-16-preview.
- *
- * The Customer Notification Event resource.
- */
     public static CompletableFuture<GetCustomerEventResult> invokeAsync(GetCustomerEventArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getCustomerEvent", TypeShape.of(GetCustomerEventResult.class), args == null ? GetCustomerEventArgs.Empty : args, Utilities.withVersion(options));
     }

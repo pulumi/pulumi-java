@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HostNameSslStateResponse {
-/**
- * Indicates whether the hostname is a standard or repository hostname.
- */
     private final @Nullable String hostType;
-/**
- * Hostname.
- */
     private final @Nullable String name;
-/**
- * SSL type.
- */
     private final @Nullable String sslState;
-/**
- * SSL certificate thumbprint.
- */
     private final @Nullable String thumbprint;
-/**
- * Set to <code>true</code> to update existing hostname.
- */
     private final @Nullable Boolean toUpdate;
-/**
- * Virtual IP address assigned to the hostname if IP based SSL is enabled.
- */
     private final @Nullable String virtualIP;
 
     @OutputCustomType.Constructor({"hostType","name","sslState","thumbprint","toUpdate","virtualIP"})
@@ -53,39 +35,21 @@ public final class HostNameSslStateResponse {
         this.virtualIP = virtualIP;
     }
 
-/**
- * Indicates whether the hostname is a standard or repository hostname.
- */
     public Optional<String> getHostType() {
         return Optional.ofNullable(this.hostType);
     }
-/**
- * Hostname.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * SSL type.
- */
     public Optional<String> getSslState() {
         return Optional.ofNullable(this.sslState);
     }
-/**
- * SSL certificate thumbprint.
- */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
-/**
- * Set to <code>true</code> to update existing hostname.
- */
     public Optional<Boolean> getToUpdate() {
         return Optional.ofNullable(this.toUpdate);
     }
-/**
- * Virtual IP address assigned to the hostname if IP based SSL is enabled.
- */
     public Optional<String> getVirtualIP() {
         return Optional.ofNullable(this.virtualIP);
     }

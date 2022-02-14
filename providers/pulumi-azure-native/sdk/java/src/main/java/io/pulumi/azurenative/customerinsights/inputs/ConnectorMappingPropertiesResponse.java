@@ -17,16 +17,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The connector mapping properties.
- */
 public final class ConnectorMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorMappingPropertiesResponse Empty = new ConnectorMappingPropertiesResponse();
 
-    /**
-     * The availability of mapping property.
-     */
     @InputImport(name="availability", required=true)
     private final ConnectorMappingAvailabilityResponse availability;
 
@@ -34,9 +28,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.availability;
     }
 
-    /**
-     * The operation after import is done.
-     */
     @InputImport(name="completeOperation", required=true)
     private final ConnectorMappingCompleteOperationResponse completeOperation;
 
@@ -44,9 +35,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.completeOperation;
     }
 
-    /**
-     * The error management setting for the mapping.
-     */
     @InputImport(name="errorManagement", required=true)
     private final ConnectorMappingErrorManagementResponse errorManagement;
 
@@ -54,9 +42,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.errorManagement;
     }
 
-    /**
-     * The file filter for the mapping.
-     */
     @InputImport(name="fileFilter")
     private final @Nullable String fileFilter;
 
@@ -64,9 +49,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.fileFilter == null ? Optional.empty() : Optional.ofNullable(this.fileFilter);
     }
 
-    /**
-     * The folder path for the mapping.
-     */
     @InputImport(name="folderPath")
     private final @Nullable String folderPath;
 
@@ -74,9 +56,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
-    /**
-     * The format of mapping property.
-     */
     @InputImport(name="format", required=true)
     private final ConnectorMappingFormatResponse format;
 
@@ -84,9 +63,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.format;
     }
 
-    /**
-     * If the file contains a header or not.
-     */
     @InputImport(name="hasHeader")
     private final @Nullable Boolean hasHeader;
 
@@ -94,9 +70,6 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
         return this.hasHeader == null ? Optional.empty() : Optional.ofNullable(this.hasHeader);
     }
 
-    /**
-     * Ingestion mapping information at property level.
-     */
     @InputImport(name="structure", required=true)
     private final List<ConnectorMappingStructureResponse> structure;
 

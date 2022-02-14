@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum PossibleOperationsDirections {
-/**
- * 
- */
         PrimaryToRecovery("PrimaryToRecovery"),
-/**
- * 
- */
         RecoveryToPrimary("RecoveryToPrimary");
 
         private final String value;

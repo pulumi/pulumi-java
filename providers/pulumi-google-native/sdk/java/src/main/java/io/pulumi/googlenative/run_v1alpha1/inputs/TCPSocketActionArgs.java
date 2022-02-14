@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Not supported by Cloud Run TCPSocketAction describes an action based on opening a socket
- */
 public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TCPSocketActionArgs Empty = new TCPSocketActionArgs();
 
-    /**
-     * (Optional) Optional: Host name to connect to, defaults to the pod IP.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -28,9 +22,6 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 

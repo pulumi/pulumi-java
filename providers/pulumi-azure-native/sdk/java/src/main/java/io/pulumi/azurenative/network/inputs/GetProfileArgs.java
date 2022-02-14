@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProfileArgs Empty = new GetProfileArgs();
 
-    /**
-     * The name of the Traffic Manager profile.
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -25,9 +19,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
-    /**
-     * The name of the resource group containing the Traffic Manager profile.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Health Details for backup items.
- */
 public final class ResourceHealthDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceHealthDetailsResponse Empty = new ResourceHealthDetailsResponse();
 
-    /**
-     * Health Code
-     */
     @InputImport(name="code", required=true)
     private final Integer code;
 
@@ -27,9 +21,6 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
         return this.code;
     }
 
-    /**
-     * Health Message
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -37,9 +28,6 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
         return this.message;
     }
 
-    /**
-     * Health Recommended Actions
-     */
     @InputImport(name="recommendations", required=true)
     private final List<String> recommendations;
 
@@ -47,9 +35,6 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
         return this.recommendations;
     }
 
-    /**
-     * Health Title
-     */
     @InputImport(name="title", required=true)
     private final String title;
 

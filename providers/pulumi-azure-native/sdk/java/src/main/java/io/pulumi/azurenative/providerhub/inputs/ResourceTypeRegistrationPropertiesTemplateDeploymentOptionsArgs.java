@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs Empty = new ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="preflightOptions")
     private final @Nullable Input<List<Either<String,PreflightOption>>> preflightOptions;
 
@@ -31,9 +25,6 @@ public final class ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsAr
         return this.preflightOptions == null ? Input.empty() : this.preflightOptions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="preflightSupported")
     private final @Nullable Input<Boolean> preflightSupported;
 

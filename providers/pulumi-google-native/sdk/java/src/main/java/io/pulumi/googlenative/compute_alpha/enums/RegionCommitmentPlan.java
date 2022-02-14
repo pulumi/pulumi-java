@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
- */
     @EnumType
     public enum RegionCommitmentPlan {
-/**
- * 
- */
         Invalid("INVALID"),
-/**
- * 
- */
         ThirtySixMonth("THIRTY_SIX_MONTH"),
-/**
- * 
- */
         TwelveMonth("TWELVE_MONTH");
 
         private final String value;

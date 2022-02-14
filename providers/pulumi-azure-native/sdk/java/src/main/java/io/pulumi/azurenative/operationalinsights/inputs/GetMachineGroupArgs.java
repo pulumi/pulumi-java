@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMachineGroupArgs Empty = new GetMachineGroupArgs();
 
-    /**
-     * UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
-     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -27,9 +21,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
-    /**
-     * Machine Group resource name.
-     */
     @InputImport(name="machineGroupName", required=true)
     private final String machineGroupName;
 
@@ -37,9 +28,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.machineGroupName;
     }
 
-    /**
-     * Resource group name within the specified subscriptionId.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -57,9 +42,6 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
-    /**
-     * OMS workspace containing the resources of interest.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetClusterResult {
-/**
- * The current entity tag for the cluster. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
- */
     private final String etag;
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final @Nullable String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The properties associated with a Stream Analytics cluster.
- */
     private final ClusterPropertiesResponse properties;
-/**
- * The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
- */
     private final @Nullable ClusterSkuResponse sku;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","properties","sku","tags","type"})
@@ -67,51 +43,27 @@ public final class GetClusterResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The current entity tag for the cluster. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The properties associated with a Stream Analytics cluster.
- */
     public ClusterPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
- */
     public Optional<ClusterSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     public String getType() {
         return this.type;
     }

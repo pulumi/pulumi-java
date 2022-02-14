@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class Uint128Response {
-/**
- * 
- */
     private final String high;
-/**
- * 
- */
     private final String low;
 
     @OutputCustomType.Constructor({"high","low"})
@@ -26,15 +20,9 @@ public final class Uint128Response {
         this.low = Objects.requireNonNull(low);
     }
 
-/**
- * 
- */
     public String getHigh() {
         return this.high;
     }
-/**
- * 
- */
     public String getLow() {
         return this.low;
     }

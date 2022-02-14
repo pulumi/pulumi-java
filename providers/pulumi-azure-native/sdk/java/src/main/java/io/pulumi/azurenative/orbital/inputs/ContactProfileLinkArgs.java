@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contact Profile link
- */
 public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactProfileLinkArgs Empty = new ContactProfileLinkArgs();
 
-    /**
-     * Contact Profile Link Channel
-     */
     @InputImport(name="channels", required=true)
     private final Input<List<ContactProfileLinkChannelArgs>> channels;
 
@@ -33,9 +27,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
         return this.channels;
     }
 
-    /**
-     * Direction (uplink or downlink)
-     */
     @InputImport(name="direction", required=true)
     private final Input<Either<String,Direction>> direction;
 
@@ -43,9 +34,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
         return this.direction;
     }
 
-    /**
-     * Effective Isotropic Radiated Power (EIRP) in dBW.
-     */
     @InputImport(name="eirpdBW")
     private final @Nullable Input<Double> eirpdBW;
 
@@ -53,9 +41,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
         return this.eirpdBW == null ? Input.empty() : this.eirpdBW;
     }
 
-    /**
-     * Gain To Noise Temperature in db/K.
-     */
     @InputImport(name="gainOverTemperature")
     private final @Nullable Input<Double> gainOverTemperature;
 
@@ -63,9 +48,6 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
         return this.gainOverTemperature == null ? Input.empty() : this.gainOverTemperature;
     }
 
-    /**
-     * polarization. eg (RHCP, LHCP)
-     */
     @InputImport(name="polarization", required=true)
     private final Input<Either<String,Polarization>> polarization;
 

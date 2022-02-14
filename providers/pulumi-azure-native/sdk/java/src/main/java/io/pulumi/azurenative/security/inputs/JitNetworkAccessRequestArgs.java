@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitNetworkAccessRequestArgs Empty = new JitNetworkAccessRequestArgs();
 
-    /**
-     * The justification for making the initiate request
-     */
     @InputImport(name="justification")
     private final @Nullable Input<String> justification;
 
@@ -29,9 +23,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
         return this.justification == null ? Input.empty() : this.justification;
     }
 
-    /**
-     * The identity of the person who made the request
-     */
     @InputImport(name="requestor", required=true)
     private final Input<String> requestor;
 
@@ -39,9 +30,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
         return this.requestor;
     }
 
-    /**
-     * The start time of the request in UTC
-     */
     @InputImport(name="startTimeUtc", required=true)
     private final Input<String> startTimeUtc;
 
@@ -49,9 +37,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
         return this.startTimeUtc;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="virtualMachines", required=true)
     private final Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
 

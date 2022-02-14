@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatapipelinesV1WorkloadResponse {
-/**
- * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
- */
     private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
-/**
- * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
- */
     private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
     @OutputCustomType.Constructor({"dataflowFlexTemplateRequest","dataflowLaunchTemplateRequest"})
@@ -27,15 +21,9 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
         this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
     }
 
-/**
- * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
- */
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse getDataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
     }
-/**
- * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
- */
     public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse getDataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
     }

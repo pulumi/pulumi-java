@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscalingPolicyArgs Empty = new AutoscalingPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="basicAlgorithm")
     private final @Nullable Input<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
 
@@ -29,9 +23,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.basicAlgorithm == null ? Input.empty() : this.basicAlgorithm;
     }
 
-    /**
-     * The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -39,9 +30,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.id;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,9 +44,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Optional. Describes how the autoscaler will operate for secondary workers.
-     */
     @InputImport(name="secondaryWorkerConfig")
     private final @Nullable Input<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
 
@@ -69,9 +51,6 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
     }
 
-    /**
-     * Describes how the autoscaler will operate for primary workers.
-     */
     @InputImport(name="workerConfig", required=true)
     private final Input<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
 

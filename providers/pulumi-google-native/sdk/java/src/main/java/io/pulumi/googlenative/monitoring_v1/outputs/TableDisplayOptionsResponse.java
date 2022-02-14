@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableDisplayOptionsResponse {
-/**
- * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
- */
     private final List<String> shownColumns;
 
     @OutputCustomType.Constructor({"shownColumns"})
@@ -20,9 +17,6 @@ public final class TableDisplayOptionsResponse {
         this.shownColumns = Objects.requireNonNull(shownColumns);
     }
 
-/**
- * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
- */
     public List<String> getShownColumns() {
         return this.shownColumns;
     }

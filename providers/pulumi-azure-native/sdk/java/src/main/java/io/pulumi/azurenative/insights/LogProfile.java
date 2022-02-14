@@ -16,265 +16,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The log profile resource.
-API Version: 2016-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a log profile
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var logProfile = new AzureNative.Insights.LogProfile("logProfile", new AzureNative.Insights.LogProfileArgs
-        {
-            Categories = 
-            {
-                "Write",
-                "Delete",
-                "Action",
-            },
-            Location = "",
-            Locations = 
-            {
-                "global",
-            },
-            LogProfileName = "Rac46PostSwapRG",
-            RetentionPolicy = new AzureNative.Insights.Inputs.RetentionPolicyArgs
-            {
-                Days = 3,
-                Enabled = true,
-            },
-            ServiceBusRuleId = "",
-            StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewLogProfile(ctx, "logProfile", &insights.LogProfileArgs{
-			Categories: pulumi.StringArray{
-				pulumi.String("Write"),
-				pulumi.String("Delete"),
-				pulumi.String("Action"),
-			},
-			Location: pulumi.String(""),
-			Locations: pulumi.StringArray{
-				pulumi.String("global"),
-			},
-			LogProfileName: pulumi.String("Rac46PostSwapRG"),
-			RetentionPolicy: &insights.RetentionPolicyArgs{
-				Days:    pulumi.Int(3),
-				Enabled: pulumi.Bool(true),
-			},
-			ServiceBusRuleId: pulumi.String(""),
-			StorageAccountId: pulumi.String("/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162"),
-			Tags:             nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const logProfile = new azure_native.insights.LogProfile("logProfile", {
-    categories: [
-        "Write",
-        "Delete",
-        "Action",
-    ],
-    location: "",
-    locations: ["global"],
-    logProfileName: "Rac46PostSwapRG",
-    retentionPolicy: {
-        days: 3,
-        enabled: true,
-    },
-    serviceBusRuleId: "",
-    storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162",
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-log_profile = azure_native.insights.LogProfile("logProfile",
-    categories=[
-        "Write",
-        "Delete",
-        "Action",
-    ],
-    location="",
-    locations=["global"],
-    log_profile_name="Rac46PostSwapRG",
-    retention_policy=azure_native.insights.RetentionPolicyArgs(
-        days=3,
-        enabled=True,
-    ),
-    service_bus_rule_id="",
-    storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162",
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:LogProfile default /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/providers/microsoft.insights/logprofiles/default 
-```
-
- */
 @ResourceType(type="azure-native:insights:LogProfile")
 public class LogProfile extends io.pulumi.resources.CustomResource {
-    /**
-     * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
-     */
     @OutputExport(name="categories", type=List.class, parameters={String.class})
     private Output<List<String>> categories;
 
-    /**
-     * @return the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
-     */
     public Output<List<String>> getCategories() {
         return this.categories;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
-     */
     @OutputExport(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
-    /**
-     * @return List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
-     */
     public Output<List<String>> getLocations() {
         return this.locations;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * the retention policy for the events in the log.
-     */
     @OutputExport(name="retentionPolicy", type=RetentionPolicyResponse.class, parameters={})
     private Output<RetentionPolicyResponse> retentionPolicy;
 
-    /**
-     * @return the retention policy for the events in the log.
-     */
     public Output<RetentionPolicyResponse> getRetentionPolicy() {
         return this.retentionPolicy;
     }
-    /**
-     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
-     */
     @OutputExport(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
-    /**
-     * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
-     */
     public Output</* @Nullable */ String> getServiceBusRuleId() {
         return this.serviceBusRuleId;
     }
-    /**
-     * the resource id of the storage account to which you would like to send the Activity Log.
-     */
     @OutputExport(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
-    /**
-     * @return the resource id of the storage account to which you would like to send the Activity Log.
-     */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public LogProfile(String name, LogProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:LogProfile", name, args == null ? LogProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -293,14 +91,6 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static LogProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LogProfile(name, id, options);
     }

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the fallback route. IoT Hub uses these properties when it routes messages to the fallback endpoint.
- */
 public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FallbackRoutePropertiesResponse Empty = new FallbackRoutePropertiesResponse();
 
-    /**
-     * The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
-     */
     @InputImport(name="condition")
     private final @Nullable String condition;
 
@@ -29,9 +23,6 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
     }
 
-    /**
-     * The list of endpoints to which the messages that satisfy the condition are routed to. Currently only 1 endpoint is allowed.
-     */
     @InputImport(name="endpointNames", required=true)
     private final List<String> endpointNames;
 
@@ -39,9 +30,6 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
         return this.endpointNames;
     }
 
-    /**
-     * Used to specify whether the fallback route is enabled.
-     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -49,9 +37,6 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
         return this.isEnabled;
     }
 
-    /**
-     * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -59,9 +44,6 @@ public final class FallbackRoutePropertiesResponse extends io.pulumi.resources.I
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The source to which the routing rule is to be applied to. For example, DeviceMessages
-     */
     @InputImport(name="source", required=true)
     private final String source;
 

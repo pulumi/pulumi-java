@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * The name of the NetApp account
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -31,9 +25,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * Active Directories
-     */
     @InputImport(name="activeDirectories")
     private final @Nullable Input<List<ActiveDirectoryArgs>> activeDirectories;
 
@@ -41,9 +32,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.activeDirectories == null ? Input.empty() : this.activeDirectories;
     }
 
-    /**
-     * Encryption settings
-     */
     @InputImport(name="encryption")
     private final @Nullable Input<AccountEncryptionArgs> encryption;
 
@@ -51,9 +39,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,9 +46,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,9 +53,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

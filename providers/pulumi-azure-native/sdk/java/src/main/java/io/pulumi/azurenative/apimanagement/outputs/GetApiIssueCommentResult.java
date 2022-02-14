@@ -11,29 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiIssueCommentResult {
-/**
- * Date and time when the comment was created.
- */
     private final @Nullable String createdDate;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Comment text.
- */
     private final String text;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
-/**
- * A resource identifier for the user who left the comment.
- */
     private final String userId;
 
     @OutputCustomType.Constructor({"createdDate","id","name","text","type","userId"})
@@ -52,39 +34,21 @@ public final class GetApiIssueCommentResult {
         this.userId = Objects.requireNonNull(userId);
     }
 
-/**
- * Date and time when the comment was created.
- */
     public Optional<String> getCreatedDate() {
         return Optional.ofNullable(this.createdDate);
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Comment text.
- */
     public String getText() {
         return this.text;
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * A resource identifier for the user who left the comment.
- */
     public String getUserId() {
         return this.userId;
     }

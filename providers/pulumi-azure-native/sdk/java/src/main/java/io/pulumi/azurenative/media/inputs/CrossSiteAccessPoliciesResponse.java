@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The client access policy.
- */
 public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CrossSiteAccessPoliciesResponse Empty = new CrossSiteAccessPoliciesResponse();
 
-    /**
-     * The content of clientaccesspolicy.xml used by Silverlight.
-     */
     @InputImport(name="clientAccessPolicy")
     private final @Nullable String clientAccessPolicy;
 
@@ -27,9 +21,6 @@ public final class CrossSiteAccessPoliciesResponse extends io.pulumi.resources.I
         return this.clientAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.clientAccessPolicy);
     }
 
-    /**
-     * The content of crossdomain.xml used by Silverlight.
-     */
     @InputImport(name="crossDomainPolicy")
     private final @Nullable String crossDomainPolicy;
 

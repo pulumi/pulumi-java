@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotebookWorkspaceConnectionInfo {
-/**
- * The connection info for the given notebook workspace
-API Version: 2021-03-15.
- *
- * The connection info for the given notebook workspace
- */
     public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> invokeAsync(ListNotebookWorkspaceConnectionInfoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listNotebookWorkspaceConnectionInfo", TypeShape.of(ListNotebookWorkspaceConnectionInfoResult.class), args == null ? ListNotebookWorkspaceConnectionInfoArgs.Empty : args, Utilities.withVersion(options));
     }

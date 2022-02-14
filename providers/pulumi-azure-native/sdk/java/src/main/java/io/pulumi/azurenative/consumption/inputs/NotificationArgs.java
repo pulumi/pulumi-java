@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The notification associated with a budget.
- */
 public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationArgs Empty = new NotificationArgs();
 
-    /**
-     * Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
-     */
     @InputImport(name="contactEmails", required=true)
     private final Input<List<String>> contactEmails;
 
@@ -34,9 +28,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactEmails;
     }
 
-    /**
-     * Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.
-     */
     @InputImport(name="contactGroups")
     private final @Nullable Input<List<String>> contactGroups;
 
@@ -44,9 +35,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactGroups == null ? Input.empty() : this.contactGroups;
     }
 
-    /**
-     * Contact roles to send the budget notification to when the threshold is exceeded.
-     */
     @InputImport(name="contactRoles")
     private final @Nullable Input<List<String>> contactRoles;
 
@@ -54,9 +42,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactRoles == null ? Input.empty() : this.contactRoles;
     }
 
-    /**
-     * The notification is enabled or not.
-     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -64,9 +49,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled;
     }
 
-    /**
-     * Language in which the recipient will receive the notification
-     */
     @InputImport(name="locale")
     private final @Nullable Input<Either<String,CultureCode>> locale;
 
@@ -74,9 +56,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.locale == null ? Input.empty() : this.locale;
     }
 
-    /**
-     * The comparison operator.
-     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,OperatorType>> operator;
 
@@ -84,9 +63,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.operator;
     }
 
-    /**
-     * Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.
-     */
     @InputImport(name="threshold", required=true)
     private final Input<Double> threshold;
 
@@ -94,9 +70,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.threshold;
     }
 
-    /**
-     * The type of threshold
-     */
     @InputImport(name="thresholdType")
     private final @Nullable Input<Either<String,ThresholdType>> thresholdType;
 

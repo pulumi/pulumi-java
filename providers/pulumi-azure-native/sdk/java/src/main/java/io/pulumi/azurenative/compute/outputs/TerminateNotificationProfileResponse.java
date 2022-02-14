@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TerminateNotificationProfileResponse {
-/**
- * Specifies whether the Terminate Scheduled event is enabled or disabled.
- */
     private final @Nullable Boolean enable;
-/**
- * Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
- */
     private final @Nullable String notBeforeTimeout;
 
     @OutputCustomType.Constructor({"enable","notBeforeTimeout"})
@@ -29,15 +23,9 @@ public final class TerminateNotificationProfileResponse {
         this.notBeforeTimeout = notBeforeTimeout;
     }
 
-/**
- * Specifies whether the Terminate Scheduled event is enabled or disabled.
- */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
-/**
- * Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
- */
     public Optional<String> getNotBeforeTimeout() {
         return Optional.ofNullable(this.notBeforeTimeout);
     }

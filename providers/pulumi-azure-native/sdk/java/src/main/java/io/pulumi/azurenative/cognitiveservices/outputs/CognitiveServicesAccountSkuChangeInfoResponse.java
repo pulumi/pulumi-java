@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CognitiveServicesAccountSkuChangeInfoResponse {
-/**
- * Gets the count of downgrades.
- */
     private final Double countOfDowngrades;
-/**
- * Gets the count of upgrades after downgrades.
- */
     private final Double countOfUpgradesAfterDowngrades;
-/**
- * Gets the last change date.
- */
     private final String lastChangeDate;
 
     @OutputCustomType.Constructor({"countOfDowngrades","countOfUpgradesAfterDowngrades","lastChangeDate"})
@@ -33,21 +24,12 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
         this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
     }
 
-/**
- * Gets the count of downgrades.
- */
     public Double getCountOfDowngrades() {
         return this.countOfDowngrades;
     }
-/**
- * Gets the count of upgrades after downgrades.
- */
     public Double getCountOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
     }
-/**
- * Gets the last change date.
- */
     public String getLastChangeDate() {
         return this.lastChangeDate;
     }

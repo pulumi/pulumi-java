@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    /**
-     * If present, the name of the kubeconfig cluster to use.
-     */
     @InputImport(name="cluster", json=true)
     private final @Nullable Input<String> cluster;
 
@@ -31,9 +25,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.cluster == null ? Input.empty() : this.cluster;
     }
 
-    /**
-     * If present, the name of the kubeconfig context to use.
-     */
     @InputImport(name="context", json=true)
     private final @Nullable Input<String> context;
 
@@ -41,10 +32,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.context == null ? Input.empty() : this.context;
     }
 
-    /**
-     * BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default.
-     */
     @InputImport(name="enableDryRun", json=true)
     private final @Nullable Input<Boolean> enableDryRun;
 
@@ -52,10 +39,6 @@ This feature is in developer preview, and is disabled by default.
         return this.enableDryRun == null ? Input.empty() : this.enableDryRun;
     }
 
-    /**
-     * BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
-This feature is in developer preview, and is disabled by default.
-     */
     @InputImport(name="enableReplaceCRD", json=true)
     private final @Nullable Input<Boolean> enableReplaceCRD;
 
@@ -63,9 +46,6 @@ This feature is in developer preview, and is disabled by default.
         return this.enableReplaceCRD == null ? Input.empty() : this.enableReplaceCRD;
     }
 
-    /**
-     * Options to configure the Helm Release resource.
-     */
     @InputImport(name="helmReleaseSettings", json=true)
     private final @Nullable Input<HelmReleaseSettingsArgs> helmReleaseSettings;
 
@@ -73,9 +53,6 @@ This feature is in developer preview, and is disabled by default.
         return this.helmReleaseSettings == null ? Input.empty() : this.helmReleaseSettings;
     }
 
-    /**
-     * Options for tuning the Kubernetes client used by a Provider.
-     */
     @InputImport(name="kubeClientSettings", json=true)
     private final @Nullable Input<KubeClientSettingsArgs> kubeClientSettings;
 
@@ -83,9 +60,6 @@ This feature is in developer preview, and is disabled by default.
         return this.kubeClientSettings == null ? Input.empty() : this.kubeClientSettings;
     }
 
-    /**
-     * The contents of a kubeconfig file or the path to a kubeconfig file.
-     */
     @InputImport(name="kubeconfig", json=true)
     private final @Nullable Input<String> kubeconfig;
 
@@ -93,14 +67,6 @@ This feature is in developer preview, and is disabled by default.
         return this.kubeconfig == null ? Input.empty() : this.kubeconfig;
     }
 
-    /**
-     * If present, the default namespace to use. This flag is ignored for cluster-scoped resources.
-
-A namespace can be specified in multiple places, and the precedence is as follows:
-1. `.metadata.namespace` set on the resource.
-2. This `namespace` parameter.
-3. `namespace` set for the active context in the kubeconfig.
-     */
     @InputImport(name="namespace", json=true)
     private final @Nullable Input<String> namespace;
 
@@ -108,16 +74,6 @@ A namespace can be specified in multiple places, and the precedence is as follow
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
-    /**
-     * BETA FEATURE - If present, render resource manifests to this directory. In this mode, resources will not
-be created on a Kubernetes cluster, but the rendered manifests will be kept in sync with changes
-to the Pulumi program. This feature is in developer preview, and is disabled by default.
-
-Note that some computed Outputs such as status fields will not be populated
-since the resources are not created on a Kubernetes cluster. These Output values will remain undefined,
-and may result in an error if they are referenced by other resources. Also note that any secret values
-used in these resources will be rendered in plaintext to the resulting YAML.
-     */
     @InputImport(name="renderYamlToDirectory", json=true)
     private final @Nullable Input<String> renderYamlToDirectory;
 
@@ -125,9 +81,6 @@ used in these resources will be rendered in plaintext to the resulting YAML.
         return this.renderYamlToDirectory == null ? Input.empty() : this.renderYamlToDirectory;
     }
 
-    /**
-     * If present and set to true, suppress apiVersion deprecation warnings from the CLI.
-     */
     @InputImport(name="suppressDeprecationWarnings", json=true)
     private final @Nullable Input<Boolean> suppressDeprecationWarnings;
 
@@ -135,9 +88,6 @@ used in these resources will be rendered in plaintext to the resulting YAML.
         return this.suppressDeprecationWarnings == null ? Input.empty() : this.suppressDeprecationWarnings;
     }
 
-    /**
-     * If present and set to true, suppress unsupported Helm hook warnings from the CLI.
-     */
     @InputImport(name="suppressHelmHookWarnings", json=true)
     private final @Nullable Input<Boolean> suppressHelmHookWarnings;
 

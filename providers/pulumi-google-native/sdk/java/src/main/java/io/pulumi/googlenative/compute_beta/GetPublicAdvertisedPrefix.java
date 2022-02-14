@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicAdvertisedPrefix {
-/**
- * Returns the specified PublicAdvertisedPrefix resource.
- */
     public static CompletableFuture<GetPublicAdvertisedPrefixResult> invokeAsync(GetPublicAdvertisedPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getPublicAdvertisedPrefix", TypeShape.of(GetPublicAdvertisedPrefixResult.class), args == null ? GetPublicAdvertisedPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

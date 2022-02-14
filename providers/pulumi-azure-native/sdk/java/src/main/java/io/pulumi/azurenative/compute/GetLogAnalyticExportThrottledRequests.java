@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogAnalyticExportThrottledRequests {
-/**
- * LogAnalytics operation status response
-API Version: 2020-12-01.
- *
- * LogAnalytics operation status response
- */
     public static CompletableFuture<GetLogAnalyticExportThrottledRequestsResult> invokeAsync(GetLogAnalyticExportThrottledRequestsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getLogAnalyticExportThrottledRequests", TypeShape.of(GetLogAnalyticExportThrottledRequestsResult.class), args == null ? GetLogAnalyticExportThrottledRequestsArgs.Empty : args, Utilities.withVersion(options));
     }

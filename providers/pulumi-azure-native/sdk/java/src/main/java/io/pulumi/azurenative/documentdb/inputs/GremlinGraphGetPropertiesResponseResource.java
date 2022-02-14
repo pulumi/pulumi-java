@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.resources.InvokeArgs {
 
     public static final GremlinGraphGetPropertiesResponseResource Empty = new GremlinGraphGetPropertiesResponseResource();
 
-    /**
-     * The conflict resolution policy for the graph.
-     */
     @InputImport(name="conflictResolutionPolicy")
     private final @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
 
@@ -33,9 +27,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.conflictResolutionPolicy == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPolicy);
     }
 
-    /**
-     * Default time to live
-     */
     @InputImport(name="defaultTtl")
     private final @Nullable Integer defaultTtl;
 
@@ -43,9 +34,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
     }
 
-    /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -53,9 +41,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.etag;
     }
 
-    /**
-     * Name of the Cosmos DB Gremlin graph
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -63,9 +48,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.id;
     }
 
-    /**
-     * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
-     */
     @InputImport(name="indexingPolicy")
     private final @Nullable IndexingPolicyResponse indexingPolicy;
 
@@ -73,9 +55,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.indexingPolicy == null ? Optional.empty() : Optional.ofNullable(this.indexingPolicy);
     }
 
-    /**
-     * The configuration of the partition key to be used for partitioning data into multiple partitions
-     */
     @InputImport(name="partitionKey")
     private final @Nullable ContainerPartitionKeyResponse partitionKey;
 
@@ -83,9 +62,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
-    /**
-     * A system generated property. A unique identifier.
-     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -93,9 +69,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.rid;
     }
 
-    /**
-     * A system generated property that denotes the last updated timestamp of the resource.
-     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 
@@ -103,9 +76,6 @@ public final class GremlinGraphGetPropertiesResponseResource extends io.pulumi.r
         return this.ts;
     }
 
-    /**
-     * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
-     */
     @InputImport(name="uniqueKeyPolicy")
     private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 

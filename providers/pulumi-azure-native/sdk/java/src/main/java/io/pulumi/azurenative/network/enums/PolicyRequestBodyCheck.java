@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes if policy managed rules will inspect the request body content.
- */
     @EnumType
     public enum PolicyRequestBodyCheck {
-/**
- * 
- */
         Disabled("Disabled"),
-/**
- * 
- */
         Enabled("Enabled");
 
         private final String value;

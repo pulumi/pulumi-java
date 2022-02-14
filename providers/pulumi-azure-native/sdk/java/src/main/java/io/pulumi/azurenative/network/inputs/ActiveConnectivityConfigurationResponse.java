@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Active connectivity configuration.
- */
 public final class ActiveConnectivityConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActiveConnectivityConfigurationResponse Empty = new ActiveConnectivityConfigurationResponse();
 
-    /**
-     * Groups for configuration
-     */
     @InputImport(name="appliesToGroups")
     private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
@@ -31,9 +25,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
 
-    /**
-     * Deployment time string.
-     */
     @InputImport(name="commitTime")
     private final @Nullable String commitTime;
 
@@ -41,9 +32,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
-    /**
-     * Effective configuration groups.
-     */
     @InputImport(name="configurationGroups")
     private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
@@ -51,9 +39,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
     }
 
-    /**
-     * Connectivity topology type.
-     */
     @InputImport(name="connectivityTopology", required=true)
     private final String connectivityTopology;
 
@@ -61,9 +46,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.connectivityTopology;
     }
 
-    /**
-     * Flag if need to remove current existing peerings.
-     */
     @InputImport(name="deleteExistingPeering")
     private final @Nullable String deleteExistingPeering;
 
@@ -71,9 +53,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.deleteExistingPeering == null ? Optional.empty() : Optional.ofNullable(this.deleteExistingPeering);
     }
 
-    /**
-     * A description of the connectivity configuration.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -81,9 +60,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * A friendly name for the resource.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -91,9 +67,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * List of hubItems
-     */
     @InputImport(name="hubs")
     private final @Nullable List<HubResponse> hubs;
 
@@ -101,9 +74,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.hubs == null ? List.of() : this.hubs;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -111,9 +81,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Flag if global mesh is supported.
-     */
     @InputImport(name="isGlobal")
     private final @Nullable String isGlobal;
 
@@ -121,9 +88,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
     }
 
-    /**
-     * The provisioning state of the connectivity configuration resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -131,9 +95,6 @@ public final class ActiveConnectivityConfigurationResponse extends io.pulumi.res
         return this.provisioningState;
     }
 
-    /**
-     * Deployment region.
-     */
     @InputImport(name="region")
     private final @Nullable String region;
 

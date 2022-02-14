@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ResourceTypeEndpointResponseFeaturesRule extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeEndpointResponseFeaturesRule Empty = new ResourceTypeEndpointResponseFeaturesRule();
 
-    /**
-     * 
-     */
     @InputImport(name="requiredFeaturesPolicy", required=true)
     private final String requiredFeaturesPolicy;
 

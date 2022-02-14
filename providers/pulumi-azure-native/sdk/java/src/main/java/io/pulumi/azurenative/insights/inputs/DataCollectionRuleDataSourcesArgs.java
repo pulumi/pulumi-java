@@ -14,17 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The specification of data sources. 
-This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
- */
 public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataCollectionRuleDataSourcesArgs Empty = new DataCollectionRuleDataSourcesArgs();
 
-    /**
-     * The list of Azure VM extension data source configurations.
-     */
     @InputImport(name="extensions")
     private final @Nullable Input<List<ExtensionDataSourceArgs>> extensions;
 
@@ -32,9 +25,6 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
-    /**
-     * The list of performance counter data source configurations.
-     */
     @InputImport(name="performanceCounters")
     private final @Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters;
 
@@ -42,9 +32,6 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
         return this.performanceCounters == null ? Input.empty() : this.performanceCounters;
     }
 
-    /**
-     * The list of Syslog data source configurations.
-     */
     @InputImport(name="syslog")
     private final @Nullable Input<List<SyslogDataSourceArgs>> syslog;
 
@@ -52,9 +39,6 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
         return this.syslog == null ? Input.empty() : this.syslog;
     }
 
-    /**
-     * The list of Windows Event Log data source configurations.
-     */
     @InputImport(name="windowsEventLogs")
     private final @Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 

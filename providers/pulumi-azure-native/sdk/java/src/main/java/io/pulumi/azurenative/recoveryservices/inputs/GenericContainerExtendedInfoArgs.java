@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container extended information
- */
 public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GenericContainerExtendedInfoArgs Empty = new GenericContainerExtendedInfoArgs();
 
-    /**
-     * Container identity information
-     */
     @InputImport(name="containerIdentityInfo")
     private final @Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo;
 
@@ -29,9 +23,6 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
         return this.containerIdentityInfo == null ? Input.empty() : this.containerIdentityInfo;
     }
 
-    /**
-     * Public key of container cert
-     */
     @InputImport(name="rawCertData")
     private final @Nullable Input<String> rawCertData;
 
@@ -39,9 +30,6 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
         return this.rawCertData == null ? Input.empty() : this.rawCertData;
     }
 
-    /**
-     * Azure Backup Service Endpoints for the container
-     */
     @InputImport(name="serviceEndpoints")
     private final @Nullable Input<Map<String,String>> serviceEndpoints;
 

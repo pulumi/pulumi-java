@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for returning group information from authenticators.
- */
 public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthenticatorGroupsConfigArgs Empty = new AuthenticatorGroupsConfigArgs();
 
-    /**
-     * Whether this cluster should return group membership lookups during authentication using a group of security groups.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -28,9 +22,6 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * The name of the security group-of-groups to be used. Only relevant if enabled = true.
-     */
     @InputImport(name="securityGroup")
     private final @Nullable Input<String> securityGroup;
 

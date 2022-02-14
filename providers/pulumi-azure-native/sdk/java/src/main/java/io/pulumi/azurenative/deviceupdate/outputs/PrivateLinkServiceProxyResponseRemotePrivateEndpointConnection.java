@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection {
-/**
- * Remote private endpoint connection ID.
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * Remote private endpoint connection ID.
- */
     public String getId() {
         return this.id;
     }

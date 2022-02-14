@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Tier of a load balancer SKU.
- */
     @EnumType
     public enum LoadBalancerSkuTier {
-/**
- * 
- */
         Regional("Regional"),
-/**
- * 
- */
         Global("Global");
 
         private final String value;

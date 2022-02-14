@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Utilization metrics values for a single VM.
- */
 public final class VmUtilizationMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmUtilizationMetricsArgs Empty = new VmUtilizationMetricsArgs();
 
-    /**
-     * Average CPU usage, percent.
-     */
     @InputImport(name="cpuAveragePercent")
     private final @Nullable Input<Integer> cpuAveragePercent;
 
@@ -28,9 +22,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.cpuAveragePercent == null ? Input.empty() : this.cpuAveragePercent;
     }
 
-    /**
-     * Max CPU usage, percent.
-     */
     @InputImport(name="cpuMaxPercent")
     private final @Nullable Input<Integer> cpuMaxPercent;
 
@@ -38,9 +29,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.cpuMaxPercent == null ? Input.empty() : this.cpuMaxPercent;
     }
 
-    /**
-     * Average disk IO rate, in kilobytes per second.
-     */
     @InputImport(name="diskIoRateAverageKbps")
     private final @Nullable Input<String> diskIoRateAverageKbps;
 
@@ -48,9 +36,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.diskIoRateAverageKbps == null ? Input.empty() : this.diskIoRateAverageKbps;
     }
 
-    /**
-     * Max disk IO rate, in kilobytes per second.
-     */
     @InputImport(name="diskIoRateMaxKbps")
     private final @Nullable Input<String> diskIoRateMaxKbps;
 
@@ -58,9 +43,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.diskIoRateMaxKbps == null ? Input.empty() : this.diskIoRateMaxKbps;
     }
 
-    /**
-     * Average memory usage, percent.
-     */
     @InputImport(name="memoryAveragePercent")
     private final @Nullable Input<Integer> memoryAveragePercent;
 
@@ -68,9 +50,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.memoryAveragePercent == null ? Input.empty() : this.memoryAveragePercent;
     }
 
-    /**
-     * Max memory usage, percent.
-     */
     @InputImport(name="memoryMaxPercent")
     private final @Nullable Input<Integer> memoryMaxPercent;
 
@@ -78,9 +57,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.memoryMaxPercent == null ? Input.empty() : this.memoryMaxPercent;
     }
 
-    /**
-     * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     */
     @InputImport(name="networkThroughputAverageKbps")
     private final @Nullable Input<String> networkThroughputAverageKbps;
 
@@ -88,9 +64,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.networkThroughputAverageKbps == null ? Input.empty() : this.networkThroughputAverageKbps;
     }
 
-    /**
-     * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
-     */
     @InputImport(name="networkThroughputMaxKbps")
     private final @Nullable Input<String> networkThroughputMaxKbps;
 

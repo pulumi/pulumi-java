@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DFPInstanceAdministratorsResponse {
-/**
- * An array of administrator user identities.
- */
     private final @Nullable List<String> members;
 
     @OutputCustomType.Constructor({"members"})
@@ -21,9 +18,6 @@ public final class DFPInstanceAdministratorsResponse {
         this.members = members;
     }
 
-/**
- * An array of administrator user identities.
- */
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
     }

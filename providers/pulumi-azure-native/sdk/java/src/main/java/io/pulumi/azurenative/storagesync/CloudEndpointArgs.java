@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudEndpointArgs Empty = new CloudEndpointArgs();
 
-    /**
-     * Azure file share name
-     */
     @InputImport(name="azureFileShareName")
     private final @Nullable Input<String> azureFileShareName;
 
@@ -27,9 +21,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFileShareName == null ? Input.empty() : this.azureFileShareName;
     }
 
-    /**
-     * Name of Cloud Endpoint object.
-     */
     @InputImport(name="cloudEndpointName")
     private final @Nullable Input<String> cloudEndpointName;
 
@@ -37,9 +28,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudEndpointName == null ? Input.empty() : this.cloudEndpointName;
     }
 
-    /**
-     * Friendly Name
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -47,9 +35,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Storage Account Resource Id
-     */
     @InputImport(name="storageAccountResourceId")
     private final @Nullable Input<String> storageAccountResourceId;
 
@@ -67,9 +49,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountResourceId == null ? Input.empty() : this.storageAccountResourceId;
     }
 
-    /**
-     * Storage Account Tenant Id
-     */
     @InputImport(name="storageAccountTenantId")
     private final @Nullable Input<String> storageAccountTenantId;
 
@@ -77,9 +56,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountTenantId == null ? Input.empty() : this.storageAccountTenantId;
     }
 
-    /**
-     * Name of Storage Sync Service resource.
-     */
     @InputImport(name="storageSyncServiceName", required=true)
     private final Input<String> storageSyncServiceName;
 
@@ -87,9 +63,6 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageSyncServiceName;
     }
 
-    /**
-     * Name of Sync Group resource.
-     */
     @InputImport(name="syncGroupName", required=true)
     private final Input<String> syncGroupName;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NoEncryptionResponse {
-/**
- * Representing supported protocols
- */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     @OutputCustomType.Constructor({"enabledProtocols"})
@@ -21,9 +18,6 @@ public final class NoEncryptionResponse {
         this.enabledProtocols = enabledProtocols;
     }
 
-/**
- * Representing supported protocols
- */
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }

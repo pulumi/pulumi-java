@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EndpointResponse {
-/**
- * The URL of the endpoint.
- */
     private final @Nullable String endpointUrl;
-/**
- * The type of the endpoint.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"endpointUrl","type"})
@@ -28,15 +22,9 @@ public final class EndpointResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The URL of the endpoint.
- */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
-/**
- * The type of the endpoint.
- */
     public String getType() {
         return this.type;
     }

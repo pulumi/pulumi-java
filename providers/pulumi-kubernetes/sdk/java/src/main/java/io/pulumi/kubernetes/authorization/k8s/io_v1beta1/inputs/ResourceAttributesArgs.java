@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface
- */
 public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceAttributesArgs Empty = new ResourceAttributesArgs();
 
-    /**
-     * Group is the API Group of the Resource.  "*" means all.
-     */
     @InputImport(name="group")
     private final @Nullable Input<String> group;
 
@@ -27,9 +21,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
         return this.group == null ? Input.empty() : this.group;
     }
 
-    /**
-     * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,9 +28,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
-     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -47,9 +35,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
-    /**
-     * Resource is one of the existing resource types.  "*" means all.
-     */
     @InputImport(name="resource")
     private final @Nullable Input<String> resource;
 
@@ -57,9 +42,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
         return this.resource == null ? Input.empty() : this.resource;
     }
 
-    /**
-     * Subresource is one of the existing resource types.  "" means none.
-     */
     @InputImport(name="subresource")
     private final @Nullable Input<String> subresource;
 
@@ -67,9 +49,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
         return this.subresource == null ? Input.empty() : this.subresource;
     }
 
-    /**
-     * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
-     */
     @InputImport(name="verb")
     private final @Nullable Input<String> verb;
 
@@ -77,9 +56,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
         return this.verb == null ? Input.empty() : this.verb;
     }
 
-    /**
-     * Version is the API Version of the Resource.  "*" means all.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

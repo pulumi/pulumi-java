@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IntegrationAccountMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationAccountMapArgs Empty = new IntegrationAccountMapArgs();
 
-    /**
-     * The content.
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -32,9 +26,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The content type.
-     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -42,9 +33,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
-    /**
-     * The integration account name.
-     */
     @InputImport(name="integrationAccountName", required=true)
     private final Input<String> integrationAccountName;
 
@@ -52,9 +40,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.integrationAccountName;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -62,9 +47,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The integration account map name.
-     */
     @InputImport(name="mapName")
     private final @Nullable Input<String> mapName;
 
@@ -72,9 +54,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.mapName == null ? Input.empty() : this.mapName;
     }
 
-    /**
-     * The map type.
-     */
     @InputImport(name="mapType", required=true)
     private final Input<Either<String,MapType>> mapType;
 
@@ -82,9 +61,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.mapType;
     }
 
-    /**
-     * The metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -92,9 +68,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The parameters schema of integration account map.
-     */
     @InputImport(name="parametersSchema")
     private final @Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
@@ -102,9 +75,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.parametersSchema == null ? Input.empty() : this.parametersSchema;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -112,9 +82,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

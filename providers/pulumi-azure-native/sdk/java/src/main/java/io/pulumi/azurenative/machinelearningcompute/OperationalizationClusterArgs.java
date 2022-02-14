@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OperationalizationClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OperationalizationClusterArgs Empty = new OperationalizationClusterArgs();
 
-    /**
-     * AppInsights configuration.
-     */
     @InputImport(name="appInsights")
     private final @Nullable Input<AppInsightsPropertiesArgs> appInsights;
 
@@ -35,9 +29,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.appInsights == null ? Input.empty() : this.appInsights;
     }
 
-    /**
-     * The name of the cluster.
-     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -45,9 +36,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
-    /**
-     * The cluster type.
-     */
     @InputImport(name="clusterType", required=true)
     private final Input<Either<String,ClusterType>> clusterType;
 
@@ -55,9 +43,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.clusterType;
     }
 
-    /**
-     * Container Registry properties.
-     */
     @InputImport(name="containerRegistry")
     private final @Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry;
 
@@ -65,9 +50,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.containerRegistry == null ? Input.empty() : this.containerRegistry;
     }
 
-    /**
-     * Parameters for the Azure Container Service cluster.
-     */
     @InputImport(name="containerService")
     private final @Nullable Input<AcsClusterPropertiesArgs> containerService;
 
@@ -75,9 +57,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.containerService == null ? Input.empty() : this.containerService;
     }
 
-    /**
-     * The description of the cluster.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -85,9 +64,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Contains global configuration for the web services in the cluster.
-     */
     @InputImport(name="globalServiceConfiguration")
     private final @Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
@@ -95,9 +71,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.globalServiceConfiguration == null ? Input.empty() : this.globalServiceConfiguration;
     }
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -105,9 +78,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the resource group in which the cluster is located.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -115,9 +85,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * Storage Account properties.
-     */
     @InputImport(name="storageAccount")
     private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
 
@@ -125,9 +92,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
     }
 
-    /**
-     * Contains resource tags defined as key/value pairs.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

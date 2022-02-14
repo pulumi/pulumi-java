@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Sql DW upsert option settings
- */
 public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlDWUpsertSettingsResponse Empty = new SqlDWUpsertSettingsResponse();
 
-    /**
-     * Schema name for interim table. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="interimSchemaName")
     private final @Nullable Object interimSchemaName;
 
@@ -27,9 +21,6 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
         return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
     }
 
-    /**
-     * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
-     */
     @InputImport(name="keys")
     private final @Nullable Object keys;
 

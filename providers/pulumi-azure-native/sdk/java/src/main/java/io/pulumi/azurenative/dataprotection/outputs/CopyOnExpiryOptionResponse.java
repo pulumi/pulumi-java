@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CopyOnExpiryOptionResponse {
-/**
- * Type of the specific object - used for deserializing
-Expected value is 'CopyOnExpiryOption'.
- */
     private final String objectType;
 
     @OutputCustomType.Constructor({"objectType"})
@@ -20,10 +16,6 @@ Expected value is 'CopyOnExpiryOption'.
         this.objectType = Objects.requireNonNull(objectType);
     }
 
-/**
- * Type of the specific object - used for deserializing
-Expected value is 'CopyOnExpiryOption'.
- */
     public String getObjectType() {
         return this.objectType;
     }

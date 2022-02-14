@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityTypeArgs Empty = new EntityTypeArgs();
 
-    /**
-     * Optional. Indicates whether the entity type can be automatically expanded.
-     */
     @InputImport(name="autoExpansionMode")
     private final @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode;
 
@@ -32,9 +26,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoExpansionMode == null ? Input.empty() : this.autoExpansionMode;
     }
 
-    /**
-     * The name of the entity type.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -42,9 +33,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * Optional. Enables fuzzy entity extraction during classification.
-     */
     @InputImport(name="enableFuzzyExtraction")
     private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
@@ -52,9 +40,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
     }
 
-    /**
-     * Optional. The collection of entity entries associated with the entity type.
-     */
     @InputImport(name="entities")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
 
@@ -62,9 +47,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.entities == null ? Input.empty() : this.entities;
     }
 
-    /**
-     * Indicates the kind of entity type.
-     */
     @InputImport(name="kind", required=true)
     private final Input<EntityTypeKind> kind;
 
@@ -72,9 +54,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -82,9 +61,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -92,9 +68,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -102,9 +75,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

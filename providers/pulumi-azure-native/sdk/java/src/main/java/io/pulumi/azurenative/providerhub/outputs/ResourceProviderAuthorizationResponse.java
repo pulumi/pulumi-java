@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceProviderAuthorizationResponse {
-/**
- * 
- */
     private final @Nullable String applicationId;
-/**
- * 
- */
     private final @Nullable String managedByRoleDefinitionId;
-/**
- * 
- */
     private final @Nullable String roleDefinitionId;
 
     @OutputCustomType.Constructor({"applicationId","managedByRoleDefinitionId","roleDefinitionId"})
@@ -34,21 +25,12 @@ public final class ResourceProviderAuthorizationResponse {
         this.roleDefinitionId = roleDefinitionId;
     }
 
-/**
- * 
- */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
-/**
- * 
- */
     public Optional<String> getManagedByRoleDefinitionId() {
         return Optional.ofNullable(this.managedByRoleDefinitionId);
     }
-/**
- * 
- */
     public Optional<String> getRoleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }

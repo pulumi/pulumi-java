@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration of preserved resources.
- */
 public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatefulPolicyPreservedStateArgs Empty = new StatefulPolicyPreservedStateArgs();
 
-    /**
-     * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
-     */
     @InputImport(name="disks")
     private final @Nullable Input<Map<String,String>> disks;
 
@@ -28,9 +22,6 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
         return this.disks == null ? Input.empty() : this.disks;
     }
 
-    /**
-     * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
-     */
     @InputImport(name="externalIPs")
     private final @Nullable Input<Map<String,String>> externalIPs;
 
@@ -38,9 +29,6 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
         return this.externalIPs == null ? Input.empty() : this.externalIPs;
     }
 
-    /**
-     * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
-     */
     @InputImport(name="internalIPs")
     private final @Nullable Input<Map<String,String>> internalIPs;
 

@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TimeSeriesRatioResponse {
-/**
- * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
- */
     private final String badServiceFilter;
-/**
- * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
- */
     private final String goodServiceFilter;
-/**
- * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
- */
     private final String totalServiceFilter;
 
     @OutputCustomType.Constructor({"badServiceFilter","goodServiceFilter","totalServiceFilter"})
@@ -32,21 +23,12 @@ public final class TimeSeriesRatioResponse {
         this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
     }
 
-/**
- * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
- */
     public String getBadServiceFilter() {
         return this.badServiceFilter;
     }
-/**
- * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
- */
     public String getGoodServiceFilter() {
         return this.goodServiceFilter;
     }
-/**
- * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
- */
     public String getTotalServiceFilter() {
         return this.totalServiceFilter;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Permissions the identity has for keys, secrets, certificates and storage.
- */
 public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PermissionsResponse Empty = new PermissionsResponse();
 
-    /**
-     * Permissions to certificates
-     */
     @InputImport(name="certificates")
     private final @Nullable List<String> certificates;
 
@@ -28,9 +22,6 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.certificates == null ? List.of() : this.certificates;
     }
 
-    /**
-     * Permissions to keys
-     */
     @InputImport(name="keys")
     private final @Nullable List<String> keys;
 
@@ -38,9 +29,6 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.keys == null ? List.of() : this.keys;
     }
 
-    /**
-     * Permissions to secrets
-     */
     @InputImport(name="secrets")
     private final @Nullable List<String> secrets;
 
@@ -48,9 +36,6 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.secrets == null ? List.of() : this.secrets;
     }
 
-    /**
-     * Permissions to storage accounts
-     */
     @InputImport(name="storage")
     private final @Nullable List<String> storage;
 

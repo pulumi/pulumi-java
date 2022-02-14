@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListAgentPoolQueueStatusArgs Empty = new ListAgentPoolQueueStatusArgs();
 
-    /**
-     * The name of the agent pool.
-     */
     @InputImport(name="agentPoolName", required=true)
     private final String agentPoolName;
 
@@ -25,9 +19,6 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
         return this.agentPoolName;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -35,9 +26,6 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

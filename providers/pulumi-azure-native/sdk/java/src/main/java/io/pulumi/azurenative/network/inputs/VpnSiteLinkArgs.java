@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VpnSiteLink Resource.
- */
 public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnSiteLinkArgs Empty = new VpnSiteLinkArgs();
 
-    /**
-     * The set of bgp properties.
-     */
     @InputImport(name="bgpProperties")
     private final @Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties;
 
@@ -29,9 +23,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgpProperties == null ? Input.empty() : this.bgpProperties;
     }
 
-    /**
-     * FQDN of vpn-site-link.
-     */
     @InputImport(name="fqdn")
     private final @Nullable Input<String> fqdn;
 
@@ -39,9 +30,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.fqdn == null ? Input.empty() : this.fqdn;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -49,9 +37,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The ip-address for the vpn-site-link.
-     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -59,9 +44,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
-    /**
-     * The link provider properties.
-     */
     @InputImport(name="linkProperties")
     private final @Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties;
 
@@ -69,9 +51,6 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkProperties == null ? Input.empty() : this.linkProperties;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

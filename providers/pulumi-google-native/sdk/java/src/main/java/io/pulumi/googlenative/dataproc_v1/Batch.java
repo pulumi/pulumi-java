@@ -22,223 +22,111 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Creates a batch workload that executes asynchronously.
-Auto-naming is currently not supported for this resource.
- */
 @ResourceType(type="google-native:dataproc/v1:Batch")
 public class Batch extends io.pulumi.resources.CustomResource {
-    /**
-     * The time when the batch was created.
-     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    /**
-     * @return The time when the batch was created.
-     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    /**
-     * The email address of the user who created the batch.
-     */
     @OutputExport(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
-    /**
-     * @return The email address of the user who created the batch.
-     */
     public Output<String> getCreator() {
         return this.creator;
     }
-    /**
-     * Optional. Environment configuration for the batch execution.
-     */
     @OutputExport(name="environmentConfig", type=EnvironmentConfigResponse.class, parameters={})
     private Output<EnvironmentConfigResponse> environmentConfig;
 
-    /**
-     * @return Optional. Environment configuration for the batch execution.
-     */
     public Output<EnvironmentConfigResponse> getEnvironmentConfig() {
         return this.environmentConfig;
     }
-    /**
-     * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
-     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
-    /**
-     * @return Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
-     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
-    /**
-     * The resource name of the batch.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name of the batch.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource name of the operation associated with this batch.
-     */
     @OutputExport(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
-    /**
-     * @return The resource name of the operation associated with this batch.
-     */
     public Output<String> getOperation() {
         return this.operation;
     }
-    /**
-     * Optional. PySpark batch config.
-     */
     @OutputExport(name="pysparkBatch", type=PySparkBatchResponse.class, parameters={})
     private Output<PySparkBatchResponse> pysparkBatch;
 
-    /**
-     * @return Optional. PySpark batch config.
-     */
     public Output<PySparkBatchResponse> getPysparkBatch() {
         return this.pysparkBatch;
     }
-    /**
-     * Optional. Runtime configuration for the batch execution.
-     */
     @OutputExport(name="runtimeConfig", type=RuntimeConfigResponse.class, parameters={})
     private Output<RuntimeConfigResponse> runtimeConfig;
 
-    /**
-     * @return Optional. Runtime configuration for the batch execution.
-     */
     public Output<RuntimeConfigResponse> getRuntimeConfig() {
         return this.runtimeConfig;
     }
-    /**
-     * Runtime information about batch execution.
-     */
     @OutputExport(name="runtimeInfo", type=RuntimeInfoResponse.class, parameters={})
     private Output<RuntimeInfoResponse> runtimeInfo;
 
-    /**
-     * @return Runtime information about batch execution.
-     */
     public Output<RuntimeInfoResponse> getRuntimeInfo() {
         return this.runtimeInfo;
     }
-    /**
-     * Optional. Spark batch config.
-     */
     @OutputExport(name="sparkBatch", type=SparkBatchResponse.class, parameters={})
     private Output<SparkBatchResponse> sparkBatch;
 
-    /**
-     * @return Optional. Spark batch config.
-     */
     public Output<SparkBatchResponse> getSparkBatch() {
         return this.sparkBatch;
     }
-    /**
-     * Optional. SparkR batch config.
-     */
     @OutputExport(name="sparkRBatch", type=SparkRBatchResponse.class, parameters={})
     private Output<SparkRBatchResponse> sparkRBatch;
 
-    /**
-     * @return Optional. SparkR batch config.
-     */
     public Output<SparkRBatchResponse> getSparkRBatch() {
         return this.sparkRBatch;
     }
-    /**
-     * Optional. SparkSql batch config.
-     */
     @OutputExport(name="sparkSqlBatch", type=SparkSqlBatchResponse.class, parameters={})
     private Output<SparkSqlBatchResponse> sparkSqlBatch;
 
-    /**
-     * @return Optional. SparkSql batch config.
-     */
     public Output<SparkSqlBatchResponse> getSparkSqlBatch() {
         return this.sparkSqlBatch;
     }
-    /**
-     * The state of the batch.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return The state of the batch.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * Historical state information for the batch.
-     */
     @OutputExport(name="stateHistory", type=List.class, parameters={StateHistoryResponse.class})
     private Output<List<StateHistoryResponse>> stateHistory;
 
-    /**
-     * @return Historical state information for the batch.
-     */
     public Output<List<StateHistoryResponse>> getStateHistory() {
         return this.stateHistory;
     }
-    /**
-     * Batch state details, such as a failure description if the state is FAILED.
-     */
     @OutputExport(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
-    /**
-     * @return Batch state details, such as a failure description if the state is FAILED.
-     */
     public Output<String> getStateMessage() {
         return this.stateMessage;
     }
-    /**
-     * The time when the batch entered a current state.
-     */
     @OutputExport(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
-    /**
-     * @return The time when the batch entered a current state.
-     */
     public Output<String> getStateTime() {
         return this.stateTime;
     }
-    /**
-     * A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
-     */
     @OutputExport(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
-    /**
-     * @return A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
-     */
     public Output<String> getUuid() {
         return this.uuid;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Batch(String name, @Nullable BatchArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dataproc/v1:Batch", name, args == null ? BatchArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -254,14 +142,6 @@ public class Batch extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Batch get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Batch(name, id, options);
     }

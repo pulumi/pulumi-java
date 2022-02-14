@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Settings related to speech recognition.
- */
 public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse Empty = new GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse();
 
-    /**
-     * Whether to use speech adaptation for speech recognition.
-     */
     @InputImport(name="enableSpeechAdaptation", required=true)
     private final Boolean enableSpeechAdaptation;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
- */
     @EnumType
     public enum NetworkRuleBypassOptions {
-/**
- * 
- */
         AzureServices("AzureServices"),
-/**
- * 
- */
         None("None");
 
         private final String value;

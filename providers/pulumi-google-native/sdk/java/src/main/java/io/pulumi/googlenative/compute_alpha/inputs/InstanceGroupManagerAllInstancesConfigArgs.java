@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceGroupManagerAllInstancesConfigArgs Empty = new InstanceGroupManagerAllInstancesConfigArgs();
 
-    /**
-     * Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<InstancePropertiesPatchArgs> properties;
 

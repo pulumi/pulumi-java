@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfig {
-/**
- * Gets information about a RuntimeConfig resource.
- */
     public static CompletableFuture<GetConfigResult> invokeAsync(GetConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getConfig", TypeShape.of(GetConfigResult.class), args == null ? GetConfigArgs.Empty : args, Utilities.withVersion(options));
     }

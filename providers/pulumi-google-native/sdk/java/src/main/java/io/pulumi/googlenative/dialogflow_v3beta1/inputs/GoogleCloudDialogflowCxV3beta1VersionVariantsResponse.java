@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A list of flow version variants.
- */
 public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse Empty = new GoogleCloudDialogflowCxV3beta1VersionVariantsResponse();
 
-    /**
-     * A list of flow version variants.
-     */
     @InputImport(name="variants", required=true)
     private final List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobRecurrenceScheduleArgs Empty = new JobRecurrenceScheduleArgs();
 
-    /**
-     * Gets or sets the hours of the day that the job should execute at.
-     */
     @InputImport(name="hours")
     private final @Nullable Input<List<Integer>> hours;
 
@@ -30,9 +24,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
         return this.hours == null ? Input.empty() : this.hours;
     }
 
-    /**
-     * Gets or sets the minutes of the hour that the job should execute at.
-     */
     @InputImport(name="minutes")
     private final @Nullable Input<List<Integer>> minutes;
 
@@ -40,9 +31,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
         return this.minutes == null ? Input.empty() : this.minutes;
     }
 
-    /**
-     * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
-     */
     @InputImport(name="monthDays")
     private final @Nullable Input<List<Integer>> monthDays;
 
@@ -50,9 +38,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
         return this.monthDays == null ? Input.empty() : this.monthDays;
     }
 
-    /**
-     * Gets or sets the occurrences of days within a month.
-     */
     @InputImport(name="monthlyOccurrences")
     private final @Nullable Input<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
@@ -60,9 +45,6 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
         return this.monthlyOccurrences == null ? Input.empty() : this.monthlyOccurrences;
     }
 
-    /**
-     * Gets or sets the days of the week that the job should execute on.
-     */
     @InputImport(name="weekDays")
     private final @Nullable Input<List<DayOfWeek>> weekDays;
 

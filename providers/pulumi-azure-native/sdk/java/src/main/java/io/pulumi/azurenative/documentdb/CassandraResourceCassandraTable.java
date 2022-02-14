@@ -17,272 +17,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An Azure Cosmos DB Cassandra table.
-API Version: 2021-03-15.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CosmosDBCassandraTableCreateUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cassandraResourceCassandraTable = new AzureNative.DocumentDB.CassandraResourceCassandraTable("cassandraResourceCassandraTable", new AzureNative.DocumentDB.CassandraResourceCassandraTableArgs
-        {
-            AccountName = "ddb1",
-            KeyspaceName = "keyspaceName",
-            Location = "West US",
-            Options = ,
-            Resource = new AzureNative.DocumentDB.Inputs.CassandraTableResourceArgs
-            {
-                DefaultTtl = 100,
-                Id = "tableName",
-                Schema = new AzureNative.DocumentDB.Inputs.CassandraSchemaArgs
-                {
-                    ClusterKeys = 
-                    {
-                        new AzureNative.DocumentDB.Inputs.ClusterKeyArgs
-                        {
-                            Name = "columnA",
-                            OrderBy = "Asc",
-                        },
-                    },
-                    Columns = 
-                    {
-                        new AzureNative.DocumentDB.Inputs.ColumnArgs
-                        {
-                            Name = "columnA",
-                            Type = "Ascii",
-                        },
-                    },
-                    PartitionKeys = 
-                    {
-                        new AzureNative.DocumentDB.Inputs.CassandraPartitionKeyArgs
-                        {
-                            Name = "columnA",
-                        },
-                    },
-                },
-            },
-            ResourceGroupName = "rg1",
-            TableName = "tableName",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := documentdb.NewCassandraResourceCassandraTable(ctx, "cassandraResourceCassandraTable", &documentdb.CassandraResourceCassandraTableArgs{
-			AccountName:  pulumi.String("ddb1"),
-			KeyspaceName: pulumi.String("keyspaceName"),
-			Location:     pulumi.String("West US"),
-			Options:      nil,
-			Resource: &documentdb.CassandraTableResourceArgs{
-				DefaultTtl: pulumi.Int(100),
-				Id:         pulumi.String("tableName"),
-				Schema: &documentdb.CassandraSchemaArgs{
-					ClusterKeys: documentdb.ClusterKeyArray{
-						&documentdb.ClusterKeyArgs{
-							Name:    pulumi.String("columnA"),
-							OrderBy: pulumi.String("Asc"),
-						},
-					},
-					Columns: documentdb.ColumnArray{
-						&documentdb.ColumnArgs{
-							Name: pulumi.String("columnA"),
-							Type: pulumi.String("Ascii"),
-						},
-					},
-					PartitionKeys: documentdb.CassandraPartitionKeyArray{
-						&documentdb.CassandraPartitionKeyArgs{
-							Name: pulumi.String("columnA"),
-						},
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			TableName:         pulumi.String("tableName"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const cassandraResourceCassandraTable = new azure_native.documentdb.CassandraResourceCassandraTable("cassandraResourceCassandraTable", {
-    accountName: "ddb1",
-    keyspaceName: "keyspaceName",
-    location: "West US",
-    options: {},
-    resource: {
-        defaultTtl: 100,
-        id: "tableName",
-        schema: {
-            clusterKeys: [{
-                name: "columnA",
-                orderBy: "Asc",
-            }],
-            columns: [{
-                name: "columnA",
-                type: "Ascii",
-            }],
-            partitionKeys: [{
-                name: "columnA",
-            }],
-        },
-    },
-    resourceGroupName: "rg1",
-    tableName: "tableName",
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-cassandra_resource_cassandra_table = azure_native.documentdb.CassandraResourceCassandraTable("cassandraResourceCassandraTable",
-    account_name="ddb1",
-    keyspace_name="keyspaceName",
-    location="West US",
-    options=azure_native.documentdb.CreateUpdateOptionsArgs(),
-    resource=azure_native.documentdb.CassandraTableResourceArgs(
-        default_ttl=100,
-        id="tableName",
-        schema=azure_native.documentdb.CassandraSchemaArgs(
-            cluster_keys=[azure_native.documentdb.ClusterKeyArgs(
-                name="columnA",
-                order_by="Asc",
-            )],
-            columns=[azure_native.documentdb.ColumnArgs(
-                name="columnA",
-                type="Ascii",
-            )],
-            partition_keys=[azure_native.documentdb.CassandraPartitionKeyArgs(
-                name="columnA",
-            )],
-        ),
-    ),
-    resource_group_name="rg1",
-    table_name="tableName",
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:documentdb:CassandraResourceCassandraTable tableName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspaceName/cassandraTables/tableName 
-```
-
- */
 @ResourceType(type="azure-native:documentdb:CassandraResourceCassandraTable")
 public class CassandraResourceCassandraTable extends io.pulumi.resources.CustomResource {
-    /**
-     * The location of the resource group to which the resource belongs.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource group to which the resource belongs.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the ARM resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the ARM resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="options", type=CassandraTableGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ CassandraTableGetPropertiesResponseOptions> options;
 
     public Output</* @Nullable */ CassandraTableGetPropertiesResponseOptions> getOptions() {
         return this.options;
     }
-    /**
-     * 
-     */
     @OutputExport(name="resource", type=CassandraTableGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ CassandraTableGetPropertiesResponseResource> resource;
 
     public Output</* @Nullable */ CassandraTableGetPropertiesResponseResource> getResource() {
         return this.resource;
     }
-    /**
-     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of Azure resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of Azure resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public CassandraResourceCassandraTable(String name, CassandraResourceCassandraTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:CassandraResourceCassandraTable", name, args == null ? CassandraResourceCassandraTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -321,14 +94,6 @@ public class CassandraResourceCassandraTable extends io.pulumi.resources.CustomR
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static CassandraResourceCassandraTable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CassandraResourceCassandraTable(name, id, options);
     }

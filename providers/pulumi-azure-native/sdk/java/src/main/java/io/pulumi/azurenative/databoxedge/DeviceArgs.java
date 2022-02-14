@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 
-    /**
-     * The status of the Data Box Edge/Gateway device.
-     */
     @InputImport(name="dataBoxEdgeDeviceStatus")
     private final @Nullable Input<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
 
@@ -32,9 +26,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataBoxEdgeDeviceStatus == null ? Input.empty() : this.dataBoxEdgeDeviceStatus;
     }
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -42,9 +33,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
-    /**
-     * Msi identity of the resource
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -52,9 +40,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -62,9 +47,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,9 +54,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The SKU type.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -82,9 +61,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

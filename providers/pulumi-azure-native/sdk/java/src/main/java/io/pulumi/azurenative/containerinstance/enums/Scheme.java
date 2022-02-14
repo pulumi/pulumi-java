@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The scheme.
- */
     @EnumType
     public enum Scheme {
-/**
- * 
- */
         Http("http"),
-/**
- * 
- */
         Https("https");
 
         private final String value;

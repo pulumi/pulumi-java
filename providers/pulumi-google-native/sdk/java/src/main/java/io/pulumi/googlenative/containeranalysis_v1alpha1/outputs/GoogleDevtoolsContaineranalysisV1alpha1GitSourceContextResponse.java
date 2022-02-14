@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse {
-/**
- * Git commit hash.
- */
     private final String revisionId;
-/**
- * Git repository URL.
- */
     private final String url;
 
     @OutputCustomType.Constructor({"revisionId","url"})
@@ -26,15 +20,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
         this.url = Objects.requireNonNull(url);
     }
 
-/**
- * Git commit hash.
- */
     public String getRevisionId() {
         return this.revisionId;
     }
-/**
- * Git repository URL.
- */
     public String getUrl() {
         return this.url;
     }

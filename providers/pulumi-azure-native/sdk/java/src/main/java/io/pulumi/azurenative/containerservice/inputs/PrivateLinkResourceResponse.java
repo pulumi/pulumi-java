@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A private link resource
- */
 public final class PrivateLinkResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkResourceResponse Empty = new PrivateLinkResourceResponse();
 
-    /**
-     * The group ID of the resource.
-     */
     @InputImport(name="groupId")
     private final @Nullable String groupId;
 
@@ -28,9 +22,6 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
-    /**
-     * The ID of the private link resource.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,9 +29,6 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the private link resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The private link service ID of the resource, this field is exposed only to NRP internally.
-     */
     @InputImport(name="privateLinkServiceID", required=true)
     private final String privateLinkServiceID;
 
@@ -58,9 +43,6 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
         return this.privateLinkServiceID;
     }
 
-    /**
-     * RequiredMembers of the resource
-     */
     @InputImport(name="requiredMembers")
     private final @Nullable List<String> requiredMembers;
 
@@ -68,9 +50,6 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
         return this.requiredMembers == null ? List.of() : this.requiredMembers;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

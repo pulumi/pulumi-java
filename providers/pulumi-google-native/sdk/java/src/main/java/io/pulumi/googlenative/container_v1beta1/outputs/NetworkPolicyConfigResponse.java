@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkPolicyConfigResponse {
-/**
- * Whether NetworkPolicy is enabled for this cluster.
- */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"disabled"})
@@ -19,9 +16,6 @@ public final class NetworkPolicyConfigResponse {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
-/**
- * Whether NetworkPolicy is enabled for this cluster.
- */
     public Boolean getDisabled() {
         return this.disabled;
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatastoreArgs Empty = new DatastoreArgs();
 
-    /**
-     * Name of the cluster in the private cloud
-     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -29,9 +23,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
-    /**
-     * Name of the datastore in the private cloud cluster
-     */
     @InputImport(name="datastoreName")
     private final @Nullable Input<String> datastoreName;
 
@@ -39,9 +30,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
     }
 
-    /**
-     * An iSCSI volume
-     */
     @InputImport(name="diskPoolVolume")
     private final @Nullable Input<DiskPoolVolumeArgs> diskPoolVolume;
 
@@ -49,9 +37,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskPoolVolume == null ? Input.empty() : this.diskPoolVolume;
     }
 
-    /**
-     * An Azure NetApp Files volume
-     */
     @InputImport(name="netAppVolume")
     private final @Nullable Input<NetAppVolumeArgs> netAppVolume;
 
@@ -59,9 +44,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.netAppVolume == null ? Input.empty() : this.netAppVolume;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -69,9 +51,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

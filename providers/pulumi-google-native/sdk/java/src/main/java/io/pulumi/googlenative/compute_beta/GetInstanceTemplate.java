@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceTemplate {
-/**
- * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
- */
     public static CompletableFuture<GetInstanceTemplateResult> invokeAsync(GetInstanceTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args == null ? GetInstanceTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

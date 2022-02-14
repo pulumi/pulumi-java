@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueryContentResponse {
-/**
- * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
- */
     private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
     @OutputCustomType.Constructor({"iamPolicyAnalysisQuery"})
@@ -19,9 +16,6 @@ public final class QueryContentResponse {
         this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
     }
 
-/**
- * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
- */
     public IamPolicyAnalysisQueryResponse getIamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery;
     }

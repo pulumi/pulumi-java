@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Dynamics CRM linked service.
- */
 public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DynamicsCrmLinkedServiceArgs Empty = new DynamicsCrmLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The authentication type to connect to Dynamics CRM server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="authenticationType", required=true)
     private final Input<Object> authenticationType;
 
@@ -45,9 +36,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.authenticationType;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -55,9 +43,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * The deployment type of the Dynamics CRM instance. 'Online' for Dynamics CRM Online and 'OnPremisesWithIfd' for Dynamics CRM on-premises with Ifd. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="deploymentType", required=true)
     private final Input<Object> deploymentType;
 
@@ -65,9 +50,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.deploymentType;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -75,9 +57,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -85,9 +64,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * The host name of the on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="hostName")
     private final @Nullable Input<Object> hostName;
 
@@ -95,9 +71,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.hostName == null ? Input.empty() : this.hostName;
     }
 
-    /**
-     * The organization name of the Dynamics CRM instance. The property is required for on-prem and required for online when there are more than one Dynamics CRM instances associated with the user. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="organizationName")
     private final @Nullable Input<Object> organizationName;
 
@@ -105,9 +78,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.organizationName == null ? Input.empty() : this.organizationName;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -115,9 +85,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password to access the Dynamics CRM instance.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -125,9 +92,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The port of on-premises Dynamics CRM server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Object> port;
 
@@ -135,9 +99,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     */
     @InputImport(name="servicePrincipalCredential")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
@@ -145,9 +106,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.servicePrincipalCredential == null ? Input.empty() : this.servicePrincipalCredential;
     }
 
-    /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalCredentialType")
     private final @Nullable Input<Object> servicePrincipalCredentialType;
 
@@ -155,9 +113,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.servicePrincipalCredentialType == null ? Input.empty() : this.servicePrincipalCredentialType;
     }
 
-    /**
-     * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Input<Object> servicePrincipalId;
 
@@ -165,9 +120,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
     }
 
-    /**
-     * The URL to the Microsoft Dynamics CRM server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="serviceUri")
     private final @Nullable Input<Object> serviceUri;
 
@@ -175,10 +127,6 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
         return this.serviceUri == null ? Input.empty() : this.serviceUri;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'DynamicsCrm'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -186,9 +134,6 @@ Expected value is 'DynamicsCrm'.
         return this.type;
     }
 
-    /**
-     * User name to access the Dynamics CRM instance. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

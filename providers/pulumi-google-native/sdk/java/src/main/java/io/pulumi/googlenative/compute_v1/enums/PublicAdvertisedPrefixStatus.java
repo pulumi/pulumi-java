@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed. 
- */
     @EnumType
     public enum PublicAdvertisedPrefixStatus {
-/**
- * RPKI validation is complete.
- */
         Initial("INITIAL"),
-/**
- * The prefix is fully configured.
- */
         PrefixConfigurationComplete("PREFIX_CONFIGURATION_COMPLETE"),
-/**
- * The prefix is being configured.
- */
         PrefixConfigurationInProgress("PREFIX_CONFIGURATION_IN_PROGRESS"),
-/**
- * The prefix is being removed.
- */
         PrefixRemovalInProgress("PREFIX_REMOVAL_IN_PROGRESS"),
-/**
- * User has configured the PTR.
- */
         PtrConfigured("PTR_CONFIGURED"),
-/**
- * Reverse DNS lookup failed.
- */
         ReverseDnsLookupFailed("REVERSE_DNS_LOOKUP_FAILED"),
-/**
- * Reverse DNS lookup is successful.
- */
         Validated("VALIDATED");
 
         private final String value;

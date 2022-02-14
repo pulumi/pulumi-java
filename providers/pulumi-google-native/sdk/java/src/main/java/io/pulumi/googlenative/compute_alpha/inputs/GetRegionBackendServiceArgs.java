@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionBackendServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionBackendServiceArgs Empty = new GetRegionBackendServiceArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="backendService", required=true)
     private final String backendService;
 
@@ -27,9 +21,6 @@ public final class GetRegionBackendServiceArgs extends io.pulumi.resources.Invok
         return this.backendService;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionBackendServiceArgs extends io.pulumi.resources.Invok
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

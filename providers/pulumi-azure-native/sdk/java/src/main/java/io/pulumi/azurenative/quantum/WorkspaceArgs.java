@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceArgs Empty = new WorkspaceArgs();
 
-    /**
-     * Managed Identity information.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<QuantumWorkspaceIdentityArgs> identity;
 
@@ -31,9 +25,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * List of Providers selected for this Workspace
-     */
     @InputImport(name="providers")
     private final @Nullable Input<List<ProviderArgs>> providers;
 
@@ -51,9 +39,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.providers == null ? Input.empty() : this.providers;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,9 +46,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * ARM Resource Id of the storage account associated with this workspace.
-     */
     @InputImport(name="storageAccount")
     private final @Nullable Input<String> storageAccount;
 
@@ -71,9 +53,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -81,9 +60,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of the quantum workspace resource.
-     */
     @InputImport(name="workspaceName")
     private final @Nullable Input<String> workspaceName;
 

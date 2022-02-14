@@ -18,250 +18,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A manifest file that defines the custom resource provider resources.
-API Version: 2018-09-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update the custom resource provider
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var customResourceProvider = new AzureNative.CustomProviders.CustomResourceProvider("customResourceProvider", new AzureNative.CustomProviders.CustomResourceProviderArgs
-        {
-            Actions = 
-            {
-                new AzureNative.CustomProviders.Inputs.CustomRPActionRouteDefinitionArgs
-                {
-                    Endpoint = "https://mytestendpoint/",
-                    Name = "TestAction",
-                    RoutingType = "Proxy",
-                },
-            },
-            Location = "eastus",
-            ResourceGroupName = "testRG",
-            ResourceProviderName = "newrp",
-            ResourceTypes = 
-            {
-                new AzureNative.CustomProviders.Inputs.CustomRPResourceTypeRouteDefinitionArgs
-                {
-                    Endpoint = "https://mytestendpoint2/",
-                    Name = "TestResource",
-                    RoutingType = "Proxy,Cache",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	customproviders "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customproviders"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := customproviders.NewCustomResourceProvider(ctx, "customResourceProvider", &customproviders.CustomResourceProviderArgs{
-			Actions: []customproviders.CustomRPActionRouteDefinitionArgs{
-				&customproviders.CustomRPActionRouteDefinitionArgs{
-					Endpoint:    pulumi.String("https://mytestendpoint/"),
-					Name:        pulumi.String("TestAction"),
-					RoutingType: pulumi.String("Proxy"),
-				},
-			},
-			Location:             pulumi.String("eastus"),
-			ResourceGroupName:    pulumi.String("testRG"),
-			ResourceProviderName: pulumi.String("newrp"),
-			ResourceTypes: []customproviders.CustomRPResourceTypeRouteDefinitionArgs{
-				&customproviders.CustomRPResourceTypeRouteDefinitionArgs{
-					Endpoint:    pulumi.String("https://mytestendpoint2/"),
-					Name:        pulumi.String("TestResource"),
-					RoutingType: pulumi.String("Proxy,Cache"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const customResourceProvider = new azure_native.customproviders.CustomResourceProvider("customResourceProvider", {
-    actions: [{
-        endpoint: "https://mytestendpoint/",
-        name: "TestAction",
-        routingType: "Proxy",
-    }],
-    location: "eastus",
-    resourceGroupName: "testRG",
-    resourceProviderName: "newrp",
-    resourceTypes: [{
-        endpoint: "https://mytestendpoint2/",
-        name: "TestResource",
-        routingType: "Proxy,Cache",
-    }],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-custom_resource_provider = azure_native.customproviders.CustomResourceProvider("customResourceProvider",
-    actions=[azure_native.customproviders.CustomRPActionRouteDefinitionArgs(
-        endpoint="https://mytestendpoint/",
-        name="TestAction",
-        routing_type="Proxy",
-    )],
-    location="eastus",
-    resource_group_name="testRG",
-    resource_provider_name="newrp",
-    resource_types=[azure_native.customproviders.CustomRPResourceTypeRouteDefinitionArgs(
-        endpoint="https://mytestendpoint2/",
-        name="TestResource",
-        routing_type="Proxy,Cache",
-    )])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:customproviders:CustomResourceProvider newrp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.CustomProviders/resourceProviders/newrp 
-```
-
- */
 @ResourceType(type="azure-native:customproviders:CustomResourceProvider")
 public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
-    /**
-     * A list of actions that the custom resource provider implements.
-     */
     @OutputExport(name="actions", type=List.class, parameters={CustomRPActionRouteDefinitionResponse.class})
     private Output</* @Nullable */ List<CustomRPActionRouteDefinitionResponse>> actions;
 
-    /**
-     * @return A list of actions that the custom resource provider implements.
-     */
     public Output</* @Nullable */ List<CustomRPActionRouteDefinitionResponse>> getActions() {
         return this.actions;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the resource provider.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the resource provider.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * A list of resource types that the custom resource provider implements.
-     */
     @OutputExport(name="resourceTypes", type=List.class, parameters={CustomRPResourceTypeRouteDefinitionResponse.class})
     private Output</* @Nullable */ List<CustomRPResourceTypeRouteDefinitionResponse>> resourceTypes;
 
-    /**
-     * @return A list of resource types that the custom resource provider implements.
-     */
     public Output</* @Nullable */ List<CustomRPResourceTypeRouteDefinitionResponse>> getResourceTypes() {
         return this.resourceTypes;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * A list of validations to run on the custom resource provider's requests.
-     */
     @OutputExport(name="validations", type=List.class, parameters={CustomRPValidationsResponse.class})
     private Output</* @Nullable */ List<CustomRPValidationsResponse>> validations;
 
-    /**
-     * @return A list of validations to run on the custom resource provider's requests.
-     */
     public Output</* @Nullable */ List<CustomRPValidationsResponse>> getValidations() {
         return this.validations;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public CustomResourceProvider(String name, CustomResourceProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customproviders:CustomResourceProvider", name, args == null ? CustomResourceProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -280,14 +87,6 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static CustomResourceProvider get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomResourceProvider(name, id, options);
     }

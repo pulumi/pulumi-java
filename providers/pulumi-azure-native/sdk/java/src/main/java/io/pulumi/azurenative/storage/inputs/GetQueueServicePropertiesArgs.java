@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetQueueServicePropertiesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueueServicePropertiesArgs Empty = new GetQueueServicePropertiesArgs();
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetQueueServicePropertiesArgs extends io.pulumi.resources.Inv
         return this.accountName;
     }
 
-    /**
-     * The name of the Queue Service within the specified storage account. Queue Service Name must be 'default'
-     */
     @InputImport(name="queueServiceName", required=true)
     private final String queueServiceName;
 
@@ -35,9 +26,6 @@ public final class GetQueueServicePropertiesArgs extends io.pulumi.resources.Inv
         return this.queueServiceName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

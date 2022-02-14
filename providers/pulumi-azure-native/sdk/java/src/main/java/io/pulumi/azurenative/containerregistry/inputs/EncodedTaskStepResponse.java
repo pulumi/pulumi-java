@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of a encoded task step.
- */
 public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncodedTaskStepResponse Empty = new EncodedTaskStepResponse();
 
-    /**
-     * List of base image dependencies for a step.
-     */
     @InputImport(name="baseImageDependencies", required=true)
     private final List<BaseImageDependencyResponse> baseImageDependencies;
 
@@ -30,9 +24,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
         return this.baseImageDependencies;
     }
 
-    /**
-     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     */
     @InputImport(name="contextAccessToken")
     private final @Nullable String contextAccessToken;
 
@@ -40,9 +31,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
     }
 
-    /**
-     * The URL(absolute or relative) of the source context for the task step.
-     */
     @InputImport(name="contextPath")
     private final @Nullable String contextPath;
 
@@ -50,9 +38,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
-    /**
-     * Base64 encoded value of the template/definition file content.
-     */
     @InputImport(name="encodedTaskContent", required=true)
     private final String encodedTaskContent;
 
@@ -60,9 +45,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
         return this.encodedTaskContent;
     }
 
-    /**
-     * Base64 encoded value of the parameters/values file content.
-     */
     @InputImport(name="encodedValuesContent")
     private final @Nullable String encodedValuesContent;
 
@@ -70,10 +52,6 @@ public final class EncodedTaskStepResponse extends io.pulumi.resources.InvokeArg
         return this.encodedValuesContent == null ? Optional.empty() : Optional.ofNullable(this.encodedValuesContent);
     }
 
-    /**
-     * The type of the step.
-Expected value is 'EncodedTask'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -81,9 +59,6 @@ Expected value is 'EncodedTask'.
         return this.type;
     }
 
-    /**
-     * The collection of overridable values that can be passed when running a task.
-     */
     @InputImport(name="values")
     private final @Nullable List<SetValueResponse> values;
 

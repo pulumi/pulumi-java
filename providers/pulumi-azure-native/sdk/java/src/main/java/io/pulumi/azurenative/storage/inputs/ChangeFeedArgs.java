@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The blob service properties for change feed events.
- */
 public final class ChangeFeedArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChangeFeedArgs Empty = new ChangeFeedArgs();
 
-    /**
-     * Indicates whether change feed event logging is enabled for the Blob service.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -28,9 +22,6 @@ public final class ChangeFeedArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.
-     */
     @InputImport(name="retentionInDays")
     private final @Nullable Input<Integer> retentionInDays;
 

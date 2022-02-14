@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Disk input details.
- */
 public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageAzureV2DiskInputDetailsArgs Empty = new InMageAzureV2DiskInputDetailsArgs();
 
-    /**
-     * The DiskEncryptionSet ARM ID.
-     */
     @InputImport(name="diskEncryptionSetId")
     private final @Nullable Input<String> diskEncryptionSetId;
 
@@ -29,9 +23,6 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
     }
 
-    /**
-     * The DiskId.
-     */
     @InputImport(name="diskId")
     private final @Nullable Input<String> diskId;
 
@@ -39,9 +30,6 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
         return this.diskId == null ? Input.empty() : this.diskId;
     }
 
-    /**
-     * The DiskType.
-     */
     @InputImport(name="diskType")
     private final @Nullable Input<Either<String,DiskAccountType>> diskType;
 
@@ -49,9 +37,6 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
-    /**
-     * The LogStorageAccountId.
-     */
     @InputImport(name="logStorageAccountId")
     private final @Nullable Input<String> logStorageAccountId;
 

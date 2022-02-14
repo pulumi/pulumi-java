@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BandwidthSettingArgs Empty = new BandwidthSettingArgs();
 
-    /**
-     * The bandwidth setting name.
-     */
     @InputImport(name="bandwidthSettingName")
     private final @Nullable Input<String> bandwidthSettingName;
 
@@ -30,9 +24,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
         return this.bandwidthSettingName == null ? Input.empty() : this.bandwidthSettingName;
     }
 
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     */
     @InputImport(name="kind")
     private final @Nullable Input<Kind> kind;
 
@@ -40,9 +31,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The manager name
-     */
     @InputImport(name="managerName", required=true)
     private final Input<String> managerName;
 
@@ -50,9 +38,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
         return this.managerName;
     }
 
-    /**
-     * The resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The schedules.
-     */
     @InputImport(name="schedules", required=true)
     private final Input<List<BandwidthScheduleArgs>> schedules;
 

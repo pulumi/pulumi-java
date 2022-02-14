@@ -15,17 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of which syslog data will be collected and how it will be collected.
-Only collected from Linux machines.
- */
 public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SyslogDataSourceArgs Empty = new SyslogDataSourceArgs();
 
-    /**
-     * The list of facility names.
-     */
     @InputImport(name="facilityNames")
     private final @Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
@@ -33,9 +26,6 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.facilityNames == null ? Input.empty() : this.facilityNames;
     }
 
-    /**
-     * The log levels to collect.
-     */
     @InputImport(name="logLevels")
     private final @Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
@@ -43,10 +33,6 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.logLevels == null ? Input.empty() : this.logLevels;
     }
 
-    /**
-     * A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,10 +40,6 @@ This name should be unique across all data sources (regardless of type) within t
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     */
     @InputImport(name="streams")
     private final @Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 

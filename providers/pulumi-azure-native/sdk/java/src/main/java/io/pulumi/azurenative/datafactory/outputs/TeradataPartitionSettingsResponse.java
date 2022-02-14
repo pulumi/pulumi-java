@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TeradataPartitionSettingsResponse {
-/**
- * The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object partitionColumnName;
-/**
- * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object partitionLowerBound;
-/**
- * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object partitionUpperBound;
 
     @OutputCustomType.Constructor({"partitionColumnName","partitionLowerBound","partitionUpperBound"})
@@ -34,21 +25,12 @@ public final class TeradataPartitionSettingsResponse {
         this.partitionUpperBound = partitionUpperBound;
     }
 
-/**
- * The name of the column that will be used for proceeding range or hash partitioning. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getPartitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
-/**
- * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getPartitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
-/**
- * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getPartitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }

@@ -9,29 +9,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ActiveDirectoryPropertiesResponse {
-/**
- * Specifies the security identifier (SID) for Azure Storage.
- */
     private final String azureStorageSid;
-/**
- * Specifies the domain GUID.
- */
     private final String domainGuid;
-/**
- * Specifies the primary domain that the AD DNS server is authoritative for.
- */
     private final String domainName;
-/**
- * Specifies the security identifier (SID).
- */
     private final String domainSid;
-/**
- * Specifies the Active Directory forest to get.
- */
     private final String forestName;
-/**
- * Specifies the NetBIOS domain name.
- */
     private final String netBiosDomainName;
 
     @OutputCustomType.Constructor({"azureStorageSid","domainGuid","domainName","domainSid","forestName","netBiosDomainName"})
@@ -50,39 +32,21 @@ public final class ActiveDirectoryPropertiesResponse {
         this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
     }
 
-/**
- * Specifies the security identifier (SID) for Azure Storage.
- */
     public String getAzureStorageSid() {
         return this.azureStorageSid;
     }
-/**
- * Specifies the domain GUID.
- */
     public String getDomainGuid() {
         return this.domainGuid;
     }
-/**
- * Specifies the primary domain that the AD DNS server is authoritative for.
- */
     public String getDomainName() {
         return this.domainName;
     }
-/**
- * Specifies the security identifier (SID).
- */
     public String getDomainSid() {
         return this.domainSid;
     }
-/**
- * Specifies the Active Directory forest to get.
- */
     public String getForestName() {
         return this.forestName;
     }
-/**
- * Specifies the NetBIOS domain name.
- */
     public String getNetBiosDomainName() {
         return this.netBiosDomainName;
     }

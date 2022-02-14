@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for SqlDedicatedGatewayServiceResource.
- */
 public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlDedicatedGatewayServiceResourcePropertiesResponse Empty = new SqlDedicatedGatewayServiceResourcePropertiesResponse();
 
-    /**
-     * Time of the last state change (ISO-8601 format).
-     */
     @InputImport(name="creationTime", required=true)
     private final String creationTime;
 
@@ -30,9 +24,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
         return this.creationTime;
     }
 
-    /**
-     * Instance count for the service.
-     */
     @InputImport(name="instanceCount")
     private final @Nullable Integer instanceCount;
 
@@ -40,9 +31,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
-    /**
-     * Instance type for the service.
-     */
     @InputImport(name="instanceSize")
     private final @Nullable String instanceSize;
 
@@ -50,9 +38,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
         return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
     }
 
-    /**
-     * An array that contains all of the locations for the service.
-     */
     @InputImport(name="locations", required=true)
     private final List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations;
 
@@ -60,10 +45,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
         return this.locations;
     }
 
-    /**
-     * ServiceType for the service.
-Expected value is 'SqlDedicatedGateway'.
-     */
     @InputImport(name="serviceType", required=true)
     private final String serviceType;
 
@@ -71,9 +52,6 @@ Expected value is 'SqlDedicatedGateway'.
         return this.serviceType;
     }
 
-    /**
-     * SqlDedicatedGateway endpoint for the service.
-     */
     @InputImport(name="sqlDedicatedGatewayEndpoint")
     private final @Nullable String sqlDedicatedGatewayEndpoint;
 
@@ -81,9 +59,6 @@ Expected value is 'SqlDedicatedGateway'.
         return this.sqlDedicatedGatewayEndpoint == null ? Optional.empty() : Optional.ofNullable(this.sqlDedicatedGatewayEndpoint);
     }
 
-    /**
-     * Describes the status of a service.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

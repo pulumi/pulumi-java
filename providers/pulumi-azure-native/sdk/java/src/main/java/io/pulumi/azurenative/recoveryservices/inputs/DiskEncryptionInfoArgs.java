@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Recovery disk encryption info (BEK and KEK).
- */
 public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionInfoArgs Empty = new DiskEncryptionInfoArgs();
 
-    /**
-     * The recovery KeyVault reference for secret.
-     */
     @InputImport(name="diskEncryptionKeyInfo")
     private final @Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
@@ -28,9 +22,6 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
         return this.diskEncryptionKeyInfo == null ? Input.empty() : this.diskEncryptionKeyInfo;
     }
 
-    /**
-     * The recovery KeyVault reference for key.
-     */
     @InputImport(name="keyEncryptionKeyInfo")
     private final @Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 

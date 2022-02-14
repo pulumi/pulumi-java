@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Monthly Schedule properties
- */
 public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonthlyScheduleArgs Empty = new MonthlyScheduleArgs();
 
-    /**
-     * Indicates which days of the month snapshot should be taken. A comma delimited string.
-     */
     @InputImport(name="daysOfMonth")
     private final @Nullable Input<String> daysOfMonth;
 
@@ -29,9 +23,6 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
         return this.daysOfMonth == null ? Input.empty() : this.daysOfMonth;
     }
 
-    /**
-     * Indicates which hour in UTC timezone a snapshot should be taken
-     */
     @InputImport(name="hour")
     private final @Nullable Input<Integer> hour;
 
@@ -39,9 +30,6 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
         return this.hour == null ? Input.empty() : this.hour;
     }
 
-    /**
-     * Indicates which minute snapshot should be taken
-     */
     @InputImport(name="minute")
     private final @Nullable Input<Integer> minute;
 
@@ -49,9 +37,6 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
         return this.minute == null ? Input.empty() : this.minute;
     }
 
-    /**
-     * Monthly snapshot count to keep
-     */
     @InputImport(name="snapshotsToKeep")
     private final @Nullable Input<Integer> snapshotsToKeep;
 
@@ -59,9 +44,6 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
         return this.snapshotsToKeep == null ? Input.empty() : this.snapshotsToKeep;
     }
 
-    /**
-     * Resource size in bytes, current storage usage for the volume in bytes
-     */
     @InputImport(name="usedBytes")
     private final @Nullable Input<Double> usedBytes;
 

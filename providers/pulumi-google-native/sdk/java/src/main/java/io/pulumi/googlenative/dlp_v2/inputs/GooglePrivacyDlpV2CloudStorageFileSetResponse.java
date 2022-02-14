@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Message representing a set of files in Cloud Storage.
- */
 public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2CloudStorageFileSetResponse Empty = new GooglePrivacyDlpV2CloudStorageFileSetResponse();
 
-    /**
-     * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
-     */
     @InputImport(name="url", required=true)
     private final String url;
 

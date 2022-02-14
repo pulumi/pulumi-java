@@ -8,70 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum StoragePermissions {
-/**
- * 
- */
         All("all"),
-/**
- * 
- */
         Get("get"),
-/**
- * 
- */
         List("list"),
-/**
- * 
- */
         Delete("delete"),
-/**
- * 
- */
         Set("set"),
-/**
- * 
- */
         Update("update"),
-/**
- * 
- */
         Regeneratekey("regeneratekey"),
-/**
- * 
- */
         Recover("recover"),
-/**
- * 
- */
         Purge("purge"),
-/**
- * 
- */
         Backup("backup"),
-/**
- * 
- */
         Restore("restore"),
-/**
- * 
- */
         Setsas("setsas"),
-/**
- * 
- */
         Listsas("listsas"),
-/**
- * 
- */
         Getsas("getsas"),
-/**
- * 
- */
         Deletesas("deletesas");
 
         private final String value;

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostQuery {
-/**
- * Get status of a query submitted at host level. If the query is still in progress, the `state` is set to "running" After the query has completed successfully, `state` is set to "completed"
- */
     public static CompletableFuture<GetHostQueryResult> invokeAsync(GetHostQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getHostQuery", TypeShape.of(GetHostQueryResult.class), args == null ? GetHostQueryArgs.Empty : args, Utilities.withVersion(options));
     }

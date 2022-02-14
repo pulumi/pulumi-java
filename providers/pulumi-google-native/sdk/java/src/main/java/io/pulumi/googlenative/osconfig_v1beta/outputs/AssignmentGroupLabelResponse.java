@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AssignmentGroupLabelResponse {
-/**
- * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
- */
     private final Map<String,String> labels;
 
     @OutputCustomType.Constructor({"labels"})
@@ -20,9 +17,6 @@ public final class AssignmentGroupLabelResponse {
         this.labels = Objects.requireNonNull(labels);
     }
 
-/**
- * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }

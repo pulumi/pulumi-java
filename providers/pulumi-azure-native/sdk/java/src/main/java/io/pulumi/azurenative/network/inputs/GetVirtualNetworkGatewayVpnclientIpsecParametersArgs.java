@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkGatewayVpnclientIpsecParametersArgs Empty = new GetVirtualNetworkGatewayVpnclientIpsecParametersArgs();
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersArgs extends 
         return this.resourceGroupName;
     }
 
-    /**
-     * The virtual network gateway name.
-     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final String virtualNetworkGatewayName;
 

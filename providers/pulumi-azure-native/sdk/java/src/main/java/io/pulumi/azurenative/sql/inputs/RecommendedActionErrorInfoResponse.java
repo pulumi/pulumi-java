@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Contains error information for an Azure SQL Database, Server or Elastic Pool Recommended Action.
- */
 public final class RecommendedActionErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecommendedActionErrorInfoResponse Empty = new RecommendedActionErrorInfoResponse();
 
-    /**
-     * Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
-     */
     @InputImport(name="errorCode", required=true)
     private final String errorCode;
 
@@ -25,9 +19,6 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
         return this.errorCode;
     }
 
-    /**
-     * Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
-     */
     @InputImport(name="isRetryable", required=true)
     private final String isRetryable;
 

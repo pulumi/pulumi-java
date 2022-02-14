@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters used in Vertex AI JobType executions.
- */
 public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VertexAIParametersArgs Empty = new VertexAIParametersArgs();
 
-    /**
-     * Environment variables. At most 100 environment variables can be specified and unique. Example: GCP_BUCKET=gs://my-bucket/samples/
-     */
     @InputImport(name="env")
     private final @Nullable Input<Map<String,String>> env;
 
@@ -28,9 +22,6 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
         return this.env == null ? Input.empty() : this.env;
     }
 
-    /**
-     * The full name of the Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the Job should be peered. For example, `projects/12345/global/networks/myVPC`. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert) is of the form `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in `12345`, and {network} is a network name. Private services access must already be configured for the network. If left unspecified, the job is not peered with any network.
-     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 

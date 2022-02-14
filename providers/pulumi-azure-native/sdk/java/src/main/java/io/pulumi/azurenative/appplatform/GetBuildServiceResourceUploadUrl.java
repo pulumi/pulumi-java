@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildServiceResourceUploadUrl {
-/**
- * Resource upload definition payload
-API Version: 2022-01-01-preview.
- *
- * Resource upload definition payload
- */
     public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> invokeAsync(GetBuildServiceResourceUploadUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceResourceUploadUrl", TypeShape.of(GetBuildServiceResourceUploadUrlResult.class), args == null ? GetBuildServiceResourceUploadUrlArgs.Empty : args, Utilities.withVersion(options));
     }

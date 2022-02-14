@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogConfigResponse {
-/**
- * Cloud audit options.
- */
     private final CloudAuditOptionsResponse cloudAudit;
-/**
- * Counter options.
- */
     private final CounterOptionsResponse counter;
-/**
- * Data access options.
- */
     private final DataAccessOptionsResponse dataAccess;
 
     @OutputCustomType.Constructor({"cloudAudit","counter","dataAccess"})
@@ -34,21 +25,12 @@ public final class LogConfigResponse {
         this.dataAccess = Objects.requireNonNull(dataAccess);
     }
 
-/**
- * Cloud audit options.
- */
     public CloudAuditOptionsResponse getCloudAudit() {
         return this.cloudAudit;
     }
-/**
- * Counter options.
- */
     public CounterOptionsResponse getCounter() {
         return this.counter;
     }
-/**
- * Data access options.
- */
     public DataAccessOptionsResponse getDataAccess() {
         return this.dataAccess;
     }

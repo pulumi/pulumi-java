@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of application being monitored.
- */
     @EnumType
     public enum ApplicationType {
-/**
- * 
- */
         Web("web"),
-/**
- * 
- */
         Other("other");
 
         private final String value;

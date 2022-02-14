@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The SKU (tier) of a workspace.
- */
 public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceSkuResponse Empty = new WorkspaceSkuResponse();
 
-    /**
-     * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
-     */
     @InputImport(name="capacityReservationLevel")
     private final @Nullable Integer capacityReservationLevel;
 
@@ -28,9 +22,6 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacityReservationLevel == null ? Optional.empty() : Optional.ofNullable(this.capacityReservationLevel);
     }
 
-    /**
-     * The last time when the sku was updated.
-     */
     @InputImport(name="lastSkuUpdate", required=true)
     private final String lastSkuUpdate;
 
@@ -38,9 +29,6 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastSkuUpdate;
     }
 
-    /**
-     * The name of the SKU.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

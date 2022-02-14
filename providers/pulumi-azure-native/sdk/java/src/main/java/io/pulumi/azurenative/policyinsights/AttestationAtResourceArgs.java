@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AttestationAtResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttestationAtResourceArgs Empty = new AttestationAtResourceArgs();
 
-    /**
-     * The name of the attestation.
-     */
     @InputImport(name="attestationName")
     private final @Nullable Input<String> attestationName;
 
@@ -31,9 +25,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.attestationName == null ? Input.empty() : this.attestationName;
     }
 
-    /**
-     * Comments describing why this attestation was created.
-     */
     @InputImport(name="comments")
     private final @Nullable Input<String> comments;
 
@@ -41,9 +32,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.comments == null ? Input.empty() : this.comments;
     }
 
-    /**
-     * The compliance state that should be set on the resource.
-     */
     @InputImport(name="complianceState")
     private final @Nullable Input<Either<String,ComplianceState>> complianceState;
 
@@ -51,9 +39,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.complianceState == null ? Input.empty() : this.complianceState;
     }
 
-    /**
-     * The evidence supporting the compliance state set in this attestation.
-     */
     @InputImport(name="evidence")
     private final @Nullable Input<List<AttestationEvidenceArgs>> evidence;
 
@@ -61,9 +46,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.evidence == null ? Input.empty() : this.evidence;
     }
 
-    /**
-     * The time the compliance state should expire.
-     */
     @InputImport(name="expiresOn")
     private final @Nullable Input<String> expiresOn;
 
@@ -71,9 +53,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
     }
 
-    /**
-     * The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
-     */
     @InputImport(name="owner")
     private final @Nullable Input<String> owner;
 
@@ -81,9 +60,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.owner == null ? Input.empty() : this.owner;
     }
 
-    /**
-     * The resource ID of the policy assignment that the attestation is setting the state for.
-     */
     @InputImport(name="policyAssignmentId", required=true)
     private final Input<String> policyAssignmentId;
 
@@ -91,9 +67,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.policyAssignmentId;
     }
 
-    /**
-     * The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
-     */
     @InputImport(name="policyDefinitionReferenceId")
     private final @Nullable Input<String> policyDefinitionReferenceId;
 
@@ -101,9 +74,6 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 

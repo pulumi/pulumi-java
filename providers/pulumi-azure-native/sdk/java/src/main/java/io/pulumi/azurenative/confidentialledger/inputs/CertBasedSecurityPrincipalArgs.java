@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cert based security principal with Ledger RoleName
- */
 public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertBasedSecurityPrincipalArgs Empty = new CertBasedSecurityPrincipalArgs();
 
-    /**
-     * Base64 encoded public key of the user cert (.pem or .cer)
-     */
     @InputImport(name="cert")
     private final @Nullable Input<String> cert;
 
@@ -29,9 +23,6 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
         return this.cert == null ? Input.empty() : this.cert;
     }
 
-    /**
-     * LedgerRole associated with the Security Principal of Ledger
-     */
     @InputImport(name="ledgerRoleName")
     private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
 

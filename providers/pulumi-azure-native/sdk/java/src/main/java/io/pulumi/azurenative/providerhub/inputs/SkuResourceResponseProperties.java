@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuResourceResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResourceResponseProperties Empty = new SkuResourceResponseProperties();
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -29,9 +23,6 @@ public final class SkuResourceResponseProperties extends io.pulumi.resources.Inv
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="skuSettings", required=true)
     private final List<SkuSettingResponse> skuSettings;
 

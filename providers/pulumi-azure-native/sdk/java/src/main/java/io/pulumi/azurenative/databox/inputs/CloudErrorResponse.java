@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cloud error.
- */
 public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudErrorResponse Empty = new CloudErrorResponse();
 
-    /**
-     * Cloud error additional info.
-     */
     @InputImport(name="additionalInfo", required=true)
     private final List<AdditionalErrorInfoResponse> additionalInfo;
 
@@ -29,9 +23,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.additionalInfo;
     }
 
-    /**
-     * Cloud error code.
-     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -39,9 +30,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
-    /**
-     * Cloud error details.
-     */
     @InputImport(name="details", required=true)
     private final List<CloudErrorResponse> details;
 
@@ -49,9 +37,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.details;
     }
 
-    /**
-     * Cloud error message.
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -59,9 +44,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Cloud error target.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 

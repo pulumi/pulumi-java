@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HybridRunbookWorkerGroupArgs Empty = new HybridRunbookWorkerGroupArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -28,9 +22,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
         return this.automationAccountName;
     }
 
-    /**
-     * Sets the credential of a worker group.
-     */
     @InputImport(name="credential")
     private final @Nullable Input<RunAsCredentialAssociationPropertyArgs> credential;
 
@@ -38,9 +29,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
         return this.credential == null ? Input.empty() : this.credential;
     }
 
-    /**
-     * The hybrid runbook worker group name
-     */
     @InputImport(name="hybridRunbookWorkerGroupName")
     private final @Nullable Input<String> hybridRunbookWorkerGroupName;
 
@@ -48,9 +36,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
         return this.hybridRunbookWorkerGroupName == null ? Input.empty() : this.hybridRunbookWorkerGroupName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppArgs Empty = new GetAppArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final String appId;
 

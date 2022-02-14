@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CompositeFilterResponse Empty = new CompositeFilterResponse();
 
-    /**
-     * The logic operator of the sub filter.
-     */
     @InputImport(name="logicOperator", required=true)
     private final String logicOperator;
 
@@ -27,9 +21,6 @@ public final class CompositeFilterResponse extends io.pulumi.resources.InvokeArg
         return this.logicOperator;
     }
 
-    /**
-     * Sub filters.
-     */
     @InputImport(name="subFilters", required=true)
     private final List<FilterResponse> subFilters;
 

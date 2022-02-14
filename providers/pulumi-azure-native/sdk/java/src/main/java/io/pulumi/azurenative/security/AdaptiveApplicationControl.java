@@ -18,595 +18,68 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * 
-API Version: 2020-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Update an application control machine group by adding a new application
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var adaptiveApplicationControl = new AzureNative.Security.AdaptiveApplicationControl("adaptiveApplicationControl", new AzureNative.Security.AdaptiveApplicationControlArgs
-        {
-            AscLocation = "centralus",
-            EnforcementMode = "Audit",
-            GroupName = "ERELGROUP1",
-            PathRecommendations = 
-            {
-                new AzureNative.Security.Inputs.PathRecommendationArgs
-                {
-                    Action = "Recommended",
-                    Common = true,
-                    ConfigurationStatus = "Configured",
-                    FileType = "Exe",
-                    Path = "[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0",
-                    PublisherInfo = new AzureNative.Security.Inputs.PublisherInfoArgs
-                    {
-                        BinaryName = "*",
-                        ProductName = "*",
-                        PublisherName = "O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US",
-                        Version = "0.0.0.0",
-                    },
-                    Type = "PublisherSignature",
-                    UserSids = 
-                    {
-                        "S-1-1-0",
-                    },
-                    Usernames = 
-                    {
-                        new AzureNative.Security.Inputs.UserRecommendationArgs
-                        {
-                            RecommendationAction = "Recommended",
-                            Username = "Everyone",
-                        },
-                    },
-                },
-                new AzureNative.Security.Inputs.PathRecommendationArgs
-                {
-                    Action = "Recommended",
-                    Common = true,
-                    ConfigurationStatus = "Configured",
-                    FileType = "Exe",
-                    Path = "%OSDRIVE%\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE",
-                    PublisherInfo = new AzureNative.Security.Inputs.PublisherInfoArgs
-                    {
-                        BinaryName = "*",
-                        ProductName = "MICROSOFT® COREXT",
-                        PublisherName = "CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                        Version = "0.0.0.0",
-                    },
-                    Type = "ProductSignature",
-                    UserSids = 
-                    {
-                        "S-1-1-0",
-                    },
-                    Usernames = 
-                    {
-                        new AzureNative.Security.Inputs.UserRecommendationArgs
-                        {
-                            RecommendationAction = "Recommended",
-                            Username = "NT AUTHORITY\\SYSTEM",
-                        },
-                    },
-                },
-                new AzureNative.Security.Inputs.PathRecommendationArgs
-                {
-                    Action = "Recommended",
-                    Common = true,
-                    ConfigurationStatus = "Configured",
-                    FileType = "Exe",
-                    Path = "%OSDRIVE%\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE",
-                    PublisherInfo = new AzureNative.Security.Inputs.PublisherInfoArgs
-                    {
-                        BinaryName = "*",
-                        ProductName = "*",
-                        PublisherName = "CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                        Version = "0.0.0.0",
-                    },
-                    Type = "PublisherSignature",
-                    UserSids = 
-                    {
-                        "S-1-1-0",
-                    },
-                    Usernames = 
-                    {
-                        new AzureNative.Security.Inputs.UserRecommendationArgs
-                        {
-                            RecommendationAction = "Recommended",
-                            Username = "NT AUTHORITY\\SYSTEM",
-                        },
-                    },
-                },
-                new AzureNative.Security.Inputs.PathRecommendationArgs
-                {
-                    Action = "Add",
-                    Common = true,
-                    Path = "C:\\directory\\file.exe",
-                    Type = "File",
-                },
-            },
-            ProtectionMode = new AzureNative.Security.Inputs.ProtectionModeArgs
-            {
-                Exe = "Audit",
-                Msi = "None",
-                Script = "None",
-            },
-            VmRecommendations = 
-            {
-                new AzureNative.Security.Inputs.VmRecommendationArgs
-                {
-                    ConfigurationStatus = "Configured",
-                    EnforcementSupport = "Supported",
-                    RecommendationAction = "Recommended",
-                    ResourceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090",
-                },
-                new AzureNative.Security.Inputs.VmRecommendationArgs
-                {
-                    ConfigurationStatus = "Configured",
-                    EnforcementSupport = "Supported",
-                    RecommendationAction = "Recommended",
-                    ResourceId = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewAdaptiveApplicationControl(ctx, "adaptiveApplicationControl", &security.AdaptiveApplicationControlArgs{
-			AscLocation:     pulumi.String("centralus"),
-			EnforcementMode: pulumi.String("Audit"),
-			GroupName:       pulumi.String("ERELGROUP1"),
-			PathRecommendations: []security.PathRecommendationArgs{
-				&security.PathRecommendationArgs{
-					Action:              pulumi.String("Recommended"),
-					Common:              pulumi.Bool(true),
-					ConfigurationStatus: pulumi.String("Configured"),
-					FileType:            pulumi.String("Exe"),
-					Path:                pulumi.String("[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0"),
-					PublisherInfo: &security.PublisherInfoArgs{
-						BinaryName:    pulumi.String("*"),
-						ProductName:   pulumi.String("*"),
-						PublisherName: pulumi.String("O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US"),
-						Version:       pulumi.String("0.0.0.0"),
-					},
-					Type: pulumi.String("PublisherSignature"),
-					UserSids: pulumi.StringArray{
-						pulumi.String("S-1-1-0"),
-					},
-					Usernames: security.UserRecommendationArray{
-						&security.UserRecommendationArgs{
-							RecommendationAction: pulumi.String("Recommended"),
-							Username:             pulumi.String("Everyone"),
-						},
-					},
-				},
-				&security.PathRecommendationArgs{
-					Action:              pulumi.String("Recommended"),
-					Common:              pulumi.Bool(true),
-					ConfigurationStatus: pulumi.String("Configured"),
-					FileType:            pulumi.String("Exe"),
-					Path:                pulumi.String(fmt.Sprintf("%v%v%v%v", "%", "OSDRIVE", "%", "\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE")),
-					PublisherInfo: &security.PublisherInfoArgs{
-						BinaryName:    pulumi.String("*"),
-						ProductName:   pulumi.String("MICROSOFT® COREXT"),
-						PublisherName: pulumi.String("CN=MICROSOFT AZURE DEPENDENCY CODE SIGN"),
-						Version:       pulumi.String("0.0.0.0"),
-					},
-					Type: pulumi.String("ProductSignature"),
-					UserSids: pulumi.StringArray{
-						pulumi.String("S-1-1-0"),
-					},
-					Usernames: security.UserRecommendationArray{
-						&security.UserRecommendationArgs{
-							RecommendationAction: pulumi.String("Recommended"),
-							Username:             pulumi.String("NT AUTHORITY\\SYSTEM"),
-						},
-					},
-				},
-				&security.PathRecommendationArgs{
-					Action:              pulumi.String("Recommended"),
-					Common:              pulumi.Bool(true),
-					ConfigurationStatus: pulumi.String("Configured"),
-					FileType:            pulumi.String("Exe"),
-					Path:                pulumi.String(fmt.Sprintf("%v%v%v%v", "%", "OSDRIVE", "%", "\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE")),
-					PublisherInfo: &security.PublisherInfoArgs{
-						BinaryName:    pulumi.String("*"),
-						ProductName:   pulumi.String("*"),
-						PublisherName: pulumi.String("CN=MICROSOFT AZURE DEPENDENCY CODE SIGN"),
-						Version:       pulumi.String("0.0.0.0"),
-					},
-					Type: pulumi.String("PublisherSignature"),
-					UserSids: pulumi.StringArray{
-						pulumi.String("S-1-1-0"),
-					},
-					Usernames: security.UserRecommendationArray{
-						&security.UserRecommendationArgs{
-							RecommendationAction: pulumi.String("Recommended"),
-							Username:             pulumi.String("NT AUTHORITY\\SYSTEM"),
-						},
-					},
-				},
-				&security.PathRecommendationArgs{
-					Action: pulumi.String("Add"),
-					Common: pulumi.Bool(true),
-					Path:   pulumi.String("C:\\directory\\file.exe"),
-					Type:   pulumi.String("File"),
-				},
-			},
-			ProtectionMode: &security.ProtectionModeArgs{
-				Exe:    pulumi.String("Audit"),
-				Msi:    pulumi.String("None"),
-				Script: pulumi.String("None"),
-			},
-			VmRecommendations: []security.VmRecommendationArgs{
-				&security.VmRecommendationArgs{
-					ConfigurationStatus:  pulumi.String("Configured"),
-					EnforcementSupport:   pulumi.String("Supported"),
-					RecommendationAction: pulumi.String("Recommended"),
-					ResourceId:           pulumi.String("/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090"),
-				},
-				&security.VmRecommendationArgs{
-					ConfigurationStatus:  pulumi.String("Configured"),
-					EnforcementSupport:   pulumi.String("Supported"),
-					RecommendationAction: pulumi.String("Recommended"),
-					ResourceId:           pulumi.String("/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const adaptiveApplicationControl = new azure_native.security.AdaptiveApplicationControl("adaptiveApplicationControl", {
-    ascLocation: "centralus",
-    enforcementMode: "Audit",
-    groupName: "ERELGROUP1",
-    pathRecommendations: [
-        {
-            action: "Recommended",
-            common: true,
-            configurationStatus: "Configured",
-            fileType: "Exe",
-            path: "[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0",
-            publisherInfo: {
-                binaryName: "*",
-                productName: "*",
-                publisherName: "O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US",
-                version: "0.0.0.0",
-            },
-            type: "PublisherSignature",
-            userSids: ["S-1-1-0"],
-            usernames: [{
-                recommendationAction: "Recommended",
-                username: "Everyone",
-            }],
-        },
-        {
-            action: "Recommended",
-            common: true,
-            configurationStatus: "Configured",
-            fileType: "Exe",
-            path: `%OSDRIVE%\WINDOWSAZURE\SECAGENT\WASECAGENTPROV.EXE`,
-            publisherInfo: {
-                binaryName: "*",
-                productName: "MICROSOFT® COREXT",
-                publisherName: "CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                version: "0.0.0.0",
-            },
-            type: "ProductSignature",
-            userSids: ["S-1-1-0"],
-            usernames: [{
-                recommendationAction: "Recommended",
-                username: "NT AUTHORITY\\SYSTEM",
-            }],
-        },
-        {
-            action: "Recommended",
-            common: true,
-            configurationStatus: "Configured",
-            fileType: "Exe",
-            path: `%OSDRIVE%\WINDOWSAZURE\PACKAGES_201973_7415\COLLECTGUESTLOGS.EXE`,
-            publisherInfo: {
-                binaryName: "*",
-                productName: "*",
-                publisherName: "CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                version: "0.0.0.0",
-            },
-            type: "PublisherSignature",
-            userSids: ["S-1-1-0"],
-            usernames: [{
-                recommendationAction: "Recommended",
-                username: "NT AUTHORITY\\SYSTEM",
-            }],
-        },
-        {
-            action: "Add",
-            common: true,
-            path: "C:\\directory\\file.exe",
-            type: "File",
-        },
-    ],
-    protectionMode: {
-        exe: "Audit",
-        msi: "None",
-        script: "None",
-    },
-    vmRecommendations: [
-        {
-            configurationStatus: "Configured",
-            enforcementSupport: "Supported",
-            recommendationAction: "Recommended",
-            resourceId: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090",
-        },
-        {
-            configurationStatus: "Configured",
-            enforcementSupport: "Supported",
-            recommendationAction: "Recommended",
-            resourceId: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19",
-        },
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-adaptive_application_control = azure_native.security.AdaptiveApplicationControl("adaptiveApplicationControl",
-    asc_location="centralus",
-    enforcement_mode="Audit",
-    group_name="ERELGROUP1",
-    path_recommendations=[
-        azure_native.security.PathRecommendationArgs(
-            action="Recommended",
-            common=True,
-            configuration_status="Configured",
-            file_type="Exe",
-            path="[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0",
-            publisher_info=azure_native.security.PublisherInfoArgs(
-                binary_name="*",
-                product_name="*",
-                publisher_name="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US",
-                version="0.0.0.0",
-            ),
-            type="PublisherSignature",
-            user_sids=["S-1-1-0"],
-            usernames=[azure_native.security.UserRecommendationArgs(
-                recommendation_action="Recommended",
-                username="Everyone",
-            )],
-        ),
-        azure_native.security.PathRecommendationArgs(
-            action="Recommended",
-            common=True,
-            configuration_status="Configured",
-            file_type="Exe",
-            path="%OSDRIVE%\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE",
-            publisher_info=azure_native.security.PublisherInfoArgs(
-                binary_name="*",
-                product_name="MICROSOFT® COREXT",
-                publisher_name="CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                version="0.0.0.0",
-            ),
-            type="ProductSignature",
-            user_sids=["S-1-1-0"],
-            usernames=[azure_native.security.UserRecommendationArgs(
-                recommendation_action="Recommended",
-                username="NT AUTHORITY\\SYSTEM",
-            )],
-        ),
-        azure_native.security.PathRecommendationArgs(
-            action="Recommended",
-            common=True,
-            configuration_status="Configured",
-            file_type="Exe",
-            path="%OSDRIVE%\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE",
-            publisher_info=azure_native.security.PublisherInfoArgs(
-                binary_name="*",
-                product_name="*",
-                publisher_name="CN=MICROSOFT AZURE DEPENDENCY CODE SIGN",
-                version="0.0.0.0",
-            ),
-            type="PublisherSignature",
-            user_sids=["S-1-1-0"],
-            usernames=[azure_native.security.UserRecommendationArgs(
-                recommendation_action="Recommended",
-                username="NT AUTHORITY\\SYSTEM",
-            )],
-        ),
-        azure_native.security.PathRecommendationArgs(
-            action="Add",
-            common=True,
-            path="C:\\directory\\file.exe",
-            type="File",
-        ),
-    ],
-    protection_mode=azure_native.security.ProtectionModeArgs(
-        exe="Audit",
-        msi="None",
-        script="None",
-    ),
-    vm_recommendations=[
-        azure_native.security.VmRecommendationArgs(
-            configuration_status="Configured",
-            enforcement_support="Supported",
-            recommendation_action="Recommended",
-            resource_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090",
-        ),
-        azure_native.security.VmRecommendationArgs(
-            configuration_status="Configured",
-            enforcement_support="Supported",
-            recommendation_action="Recommended",
-            resource_id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19",
-        ),
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:security:AdaptiveApplicationControl ERELGROUP1 /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/locations/centralus/applicationWhitelistings/ERELGROUP1 
-```
-
- */
 @ResourceType(type="azure-native:security:AdaptiveApplicationControl")
 public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResource {
-    /**
-     * The configuration status of the machines group or machine or rule
-     */
     @OutputExport(name="configurationStatus", type=String.class, parameters={})
     private Output<String> configurationStatus;
 
-    /**
-     * @return The configuration status of the machines group or machine or rule
-     */
     public Output<String> getConfigurationStatus() {
         return this.configurationStatus;
     }
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     */
     @OutputExport(name="enforcementMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> enforcementMode;
 
-    /**
-     * @return The application control policy enforcement/protection mode of the machine group
-     */
     public Output</* @Nullable */ String> getEnforcementMode() {
         return this.enforcementMode;
     }
-    /**
-     * 
-     */
     @OutputExport(name="issues", type=List.class, parameters={AdaptiveApplicationControlIssueSummaryResponse.class})
     private Output<List<AdaptiveApplicationControlIssueSummaryResponse>> issues;
 
     public Output<List<AdaptiveApplicationControlIssueSummaryResponse>> getIssues() {
         return this.issues;
     }
-    /**
-     * Location where the resource is stored
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Location where the resource is stored
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="pathRecommendations", type=List.class, parameters={PathRecommendationResponse.class})
     private Output</* @Nullable */ List<PathRecommendationResponse>> pathRecommendations;
 
     public Output</* @Nullable */ List<PathRecommendationResponse>> getPathRecommendations() {
         return this.pathRecommendations;
     }
-    /**
-     * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     */
     @OutputExport(name="protectionMode", type=ProtectionModeResponse.class, parameters={})
     private Output</* @Nullable */ ProtectionModeResponse> protectionMode;
 
-    /**
-     * @return The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     */
     public Output</* @Nullable */ ProtectionModeResponse> getProtectionMode() {
         return this.protectionMode;
     }
-    /**
-     * The initial recommendation status of the machine group or machine
-     */
     @OutputExport(name="recommendationStatus", type=String.class, parameters={})
     private Output<String> recommendationStatus;
 
-    /**
-     * @return The initial recommendation status of the machine group or machine
-     */
     public Output<String> getRecommendationStatus() {
         return this.recommendationStatus;
     }
-    /**
-     * The source type of the machine group
-     */
     @OutputExport(name="sourceSystem", type=String.class, parameters={})
     private Output<String> sourceSystem;
 
-    /**
-     * @return The source type of the machine group
-     */
     public Output<String> getSourceSystem() {
         return this.sourceSystem;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * 
-     */
     @OutputExport(name="vmRecommendations", type=List.class, parameters={VmRecommendationResponse.class})
     private Output</* @Nullable */ List<VmRecommendationResponse>> vmRecommendations;
 
@@ -614,12 +87,6 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
         return this.vmRecommendations;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public AdaptiveApplicationControl(String name, AdaptiveApplicationControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:AdaptiveApplicationControl", name, args == null ? AdaptiveApplicationControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -639,14 +106,6 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static AdaptiveApplicationControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AdaptiveApplicationControl(name, id, options);
     }

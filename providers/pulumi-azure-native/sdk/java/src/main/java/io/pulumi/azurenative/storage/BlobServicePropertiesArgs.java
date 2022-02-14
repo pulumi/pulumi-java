@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BlobServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobServicePropertiesArgs Empty = new BlobServicePropertiesArgs();
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -33,9 +27,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.accountName;
     }
 
-    /**
-     * Deprecated in favor of isVersioningEnabled property.
-     */
     @InputImport(name="automaticSnapshotPolicyEnabled")
     private final @Nullable Input<Boolean> automaticSnapshotPolicyEnabled;
 
@@ -43,9 +34,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.automaticSnapshotPolicyEnabled == null ? Input.empty() : this.automaticSnapshotPolicyEnabled;
     }
 
-    /**
-     * The name of the blob Service within the specified storage account. Blob Service Name must be 'default'
-     */
     @InputImport(name="blobServicesName")
     private final @Nullable Input<String> blobServicesName;
 
@@ -53,9 +41,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.blobServicesName == null ? Input.empty() : this.blobServicesName;
     }
 
-    /**
-     * The blob service properties for change feed events.
-     */
     @InputImport(name="changeFeed")
     private final @Nullable Input<ChangeFeedArgs> changeFeed;
 
@@ -63,9 +48,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.changeFeed == null ? Input.empty() : this.changeFeed;
     }
 
-    /**
-     * The blob service properties for container soft delete.
-     */
     @InputImport(name="containerDeleteRetentionPolicy")
     private final @Nullable Input<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
 
@@ -73,9 +55,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.containerDeleteRetentionPolicy == null ? Input.empty() : this.containerDeleteRetentionPolicy;
     }
 
-    /**
-     * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
-     */
     @InputImport(name="cors")
     private final @Nullable Input<CorsRulesArgs> cors;
 
@@ -83,9 +62,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.cors == null ? Input.empty() : this.cors;
     }
 
-    /**
-     * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
-     */
     @InputImport(name="defaultServiceVersion")
     private final @Nullable Input<String> defaultServiceVersion;
 
@@ -93,9 +69,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.defaultServiceVersion == null ? Input.empty() : this.defaultServiceVersion;
     }
 
-    /**
-     * The blob service properties for blob soft delete.
-     */
     @InputImport(name="deleteRetentionPolicy")
     private final @Nullable Input<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
 
@@ -103,9 +76,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.deleteRetentionPolicy == null ? Input.empty() : this.deleteRetentionPolicy;
     }
 
-    /**
-     * Versioning is enabled if set to true.
-     */
     @InputImport(name="isVersioningEnabled")
     private final @Nullable Input<Boolean> isVersioningEnabled;
 
@@ -113,9 +83,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.isVersioningEnabled == null ? Input.empty() : this.isVersioningEnabled;
     }
 
-    /**
-     * The blob service property to configure last access time based tracking policy.
-     */
     @InputImport(name="lastAccessTimeTrackingPolicy")
     private final @Nullable Input<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
 
@@ -123,9 +90,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.lastAccessTimeTrackingPolicy == null ? Input.empty() : this.lastAccessTimeTrackingPolicy;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -133,9 +97,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The blob service properties for blob restore policy.
-     */
     @InputImport(name="restorePolicy")
     private final @Nullable Input<RestorePolicyPropertiesArgs> restorePolicy;
 

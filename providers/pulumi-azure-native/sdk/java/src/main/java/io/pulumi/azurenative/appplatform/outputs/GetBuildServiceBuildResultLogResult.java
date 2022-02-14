@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBuildServiceBuildResultLogResult {
-/**
- * The public download URL of this build result log
- */
     private final @Nullable String blobUrl;
 
     @OutputCustomType.Constructor({"blobUrl"})
@@ -21,9 +18,6 @@ public final class GetBuildServiceBuildResultLogResult {
         this.blobUrl = blobUrl;
     }
 
-/**
- * The public download URL of this build result log
- */
     public Optional<String> getBlobUrl() {
         return Optional.ofNullable(this.blobUrl);
     }

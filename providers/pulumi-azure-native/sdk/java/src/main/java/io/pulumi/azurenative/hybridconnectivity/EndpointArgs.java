@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointArgs Empty = new EndpointArgs();
 
-    /**
-     * The timestamp of resource creation (UTC).
-     */
     @InputImport(name="createdAt")
     private final @Nullable Input<String> createdAt;
 
@@ -30,9 +24,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
-    /**
-     * The identity that created the resource.
-     */
     @InputImport(name="createdBy")
     private final @Nullable Input<String> createdBy;
 
@@ -40,9 +31,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
-    /**
-     * The type of identity that created the resource.
-     */
     @InputImport(name="createdByType")
     private final @Nullable Input<Either<String,CreatedByType>> createdByType;
 
@@ -50,9 +38,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdByType == null ? Input.empty() : this.createdByType;
     }
 
-    /**
-     * The endpoint name.
-     */
     @InputImport(name="endpointName")
     private final @Nullable Input<String> endpointName;
 
@@ -60,9 +45,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointName == null ? Input.empty() : this.endpointName;
     }
 
-    /**
-     * The timestamp of resource last modification (UTC)
-     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable Input<String> lastModifiedAt;
 
@@ -70,9 +52,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
     }
 
-    /**
-     * The identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable Input<String> lastModifiedBy;
 
@@ -80,9 +59,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
     }
 
-    /**
-     * The type of identity that last modified the resource.
-     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
 
@@ -90,9 +66,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
     }
 
-    /**
-     * The resource Id of the connectivity endpoint (optional).
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -100,9 +73,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
-    /**
-     * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 
@@ -110,9 +80,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceUri;
     }
 
-    /**
-     * The type of endpoint.
-     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,Type>> type;
 

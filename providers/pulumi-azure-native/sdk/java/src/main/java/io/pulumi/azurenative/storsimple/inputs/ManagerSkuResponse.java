@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The Sku.
- */
 public final class ManagerSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagerSkuResponse Empty = new ManagerSkuResponse();
 
-    /**
-     * Refers to the sku name which should be "Standard"
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

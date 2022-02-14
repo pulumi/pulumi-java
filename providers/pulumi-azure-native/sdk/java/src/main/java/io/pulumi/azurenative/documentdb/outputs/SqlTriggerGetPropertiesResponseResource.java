@@ -12,33 +12,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlTriggerGetPropertiesResponseResource {
-/**
- * Body of the Trigger
- */
     private final @Nullable String body;
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     private final String etag;
-/**
- * Name of the Cosmos DB SQL trigger
- */
     private final String id;
-/**
- * A system generated property. A unique identifier.
- */
     private final String rid;
-/**
- * The operation the trigger is associated with
- */
     private final @Nullable String triggerOperation;
-/**
- * Type of the Trigger
- */
     private final @Nullable String triggerType;
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     private final Double ts;
 
     @OutputCustomType.Constructor({"body","etag","id","rid","triggerOperation","triggerType","ts"})
@@ -59,45 +38,24 @@ public final class SqlTriggerGetPropertiesResponseResource {
         this.ts = Objects.requireNonNull(ts);
     }
 
-/**
- * Body of the Trigger
- */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Name of the Cosmos DB SQL trigger
- */
     public String getId() {
         return this.id;
     }
-/**
- * A system generated property. A unique identifier.
- */
     public String getRid() {
         return this.rid;
     }
-/**
- * The operation the trigger is associated with
- */
     public Optional<String> getTriggerOperation() {
         return Optional.ofNullable(this.triggerOperation);
     }
-/**
- * Type of the Trigger
- */
     public Optional<String> getTriggerType() {
         return Optional.ofNullable(this.triggerType);
     }
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     public Double getTs() {
         return this.ts;
     }

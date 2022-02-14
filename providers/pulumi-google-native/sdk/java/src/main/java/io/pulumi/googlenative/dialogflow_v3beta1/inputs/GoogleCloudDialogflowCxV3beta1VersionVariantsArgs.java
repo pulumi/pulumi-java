@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A list of flow version variants.
- */
 public final class GoogleCloudDialogflowCxV3beta1VersionVariantsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1VersionVariantsArgs Empty = new GoogleCloudDialogflowCxV3beta1VersionVariantsArgs();
 
-    /**
-     * A list of flow version variants.
-     */
     @InputImport(name="variants")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs>> variants;
 

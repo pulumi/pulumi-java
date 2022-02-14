@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Filter First Quality
- */
 public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirstQualityArgs Empty = new FirstQualityArgs();
 
-    /**
-     * The first quality bitrate.
-     */
     @InputImport(name="bitrate", required=true)
     private final Input<Integer> bitrate;
 

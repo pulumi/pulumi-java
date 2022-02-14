@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The pair of customer secret.
- */
 public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerSecretArgs Empty = new CustomerSecretArgs();
 
-    /**
-     * The encryption algorithm used to encrypt data.
-     */
     @InputImport(name="algorithm", required=true)
     private final Input<SupportedAlgorithm> algorithm;
 
@@ -27,9 +21,6 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.algorithm;
     }
 
-    /**
-     * The identifier to the data service input object which this secret corresponds to.
-     */
     @InputImport(name="keyIdentifier", required=true)
     private final Input<String> keyIdentifier;
 
@@ -37,9 +28,6 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyIdentifier;
     }
 
-    /**
-     * It contains the encrypted customer secret.
-     */
     @InputImport(name="keyValue", required=true)
     private final Input<String> keyValue;
 

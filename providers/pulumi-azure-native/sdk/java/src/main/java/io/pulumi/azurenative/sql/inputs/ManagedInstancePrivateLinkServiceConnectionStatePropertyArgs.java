@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs Empty = new ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs();
 
-    /**
-     * The private link service connection description.
-     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -26,9 +20,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
         return this.description;
     }
 
-    /**
-     * The private link service connection status.
-     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 

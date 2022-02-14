@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Redirects a shopper to a specific page. * Rule Condition: - Must specify Condition. * Action Input: Request Query * Action Result: Redirects shopper to provided uri.
- */
 public final class GoogleCloudRetailV2betaRuleRedirectActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2betaRuleRedirectActionResponse Empty = new GoogleCloudRetailV2betaRuleRedirectActionResponse();
 
-    /**
-     * URL must have length equal or less than 2000 characters.
-     */
     @InputImport(name="redirectUri", required=true)
     private final String redirectUri;
 

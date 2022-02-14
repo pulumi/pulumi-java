@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInterface {
-/**
- * A network interface in a resource group.
-API Version: 2020-11-01.
- *
- * A network interface in a resource group.
- */
     public static CompletableFuture<GetNetworkInterfaceResult> invokeAsync(GetNetworkInterfaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args == null ? GetNetworkInterfaceArgs.Empty : args, Utilities.withVersion(options));
     }

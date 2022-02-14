@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
 public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthorizationLoggingOptionsResponse Empty = new AuthorizationLoggingOptionsResponse();
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="permissionType", required=true)
     private final String permissionType;
 

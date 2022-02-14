@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
- */
     @EnumType
     public enum MatchProcessingBehavior {
-/**
- * 
- */
         Continue("Continue"),
-/**
- * 
- */
         Stop("Stop");
 
         private final String value;

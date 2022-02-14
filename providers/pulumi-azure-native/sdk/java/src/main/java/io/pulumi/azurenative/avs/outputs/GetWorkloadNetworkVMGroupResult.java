@@ -13,37 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkloadNetworkVMGroupResult {
-/**
- * Display name of the VM group.
- */
     private final @Nullable String displayName;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Virtual machine members of this group.
- */
     private final @Nullable List<String> members;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The provisioning state
- */
     private final String provisioningState;
-/**
- * NSX revision number.
- */
     private final @Nullable Double revision;
-/**
- * VM Group status.
- */
     private final String status;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"displayName","id","members","name","provisioningState","revision","status","type"})
@@ -66,51 +42,27 @@ public final class GetWorkloadNetworkVMGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Display name of the VM group.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Virtual machine members of this group.
- */
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * NSX revision number.
- */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
-/**
- * VM Group status.
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about the formal API definition for the app.
- */
 public final class ApiDefinitionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiDefinitionInfoArgs Empty = new ApiDefinitionInfoArgs();
 
-    /**
-     * The URL of the API definition.
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

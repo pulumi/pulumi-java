@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Desired outbound IP Prefix resources for the cluster load balancer.
- */
 public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs Empty = new ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs();
 
-    /**
-     * A list of public IP prefix resources.
-     */
     @InputImport(name="publicIPPrefixes")
     private final @Nullable Input<List<ResourceReferenceArgs>> publicIPPrefixes;
 

@@ -12,18 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureDataLakeStoreLocationResponse {
-/**
- * Specify the file name of dataset. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object fileName;
-/**
- * Specify the folder path of dataset. Type: string (or Expression with resultType string)
- */
     private final @Nullable Object folderPath;
-/**
- * Type of dataset storage location.
-Expected value is 'AzureDataLakeStoreLocation'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"fileName","folderPath","type"})
@@ -36,22 +26,12 @@ Expected value is 'AzureDataLakeStoreLocation'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Specify the file name of dataset. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
-/**
- * Specify the folder path of dataset. Type: string (or Expression with resultType string)
- */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
-/**
- * Type of dataset storage location.
-Expected value is 'AzureDataLakeStoreLocation'.
- */
     public String getType() {
         return this.type;
     }

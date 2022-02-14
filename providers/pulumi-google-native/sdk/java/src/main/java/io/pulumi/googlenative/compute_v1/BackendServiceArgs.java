@@ -30,16 +30,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendServiceArgs Empty = new BackendServiceArgs();
 
-    /**
-     * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     */
     @InputImport(name="affinityCookieTtlSec")
     private final @Nullable Input<Integer> affinityCookieTtlSec;
 
@@ -47,9 +41,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.affinityCookieTtlSec == null ? Input.empty() : this.affinityCookieTtlSec;
     }
 
-    /**
-     * The list of backends that serve this BackendService.
-     */
     @InputImport(name="backends")
     private final @Nullable Input<List<BackendArgs>> backends;
 
@@ -57,9 +48,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.backends == null ? Input.empty() : this.backends;
     }
 
-    /**
-     * Cloud CDN configuration for this BackendService. Only available for specified load balancer types.
-     */
     @InputImport(name="cdnPolicy")
     private final @Nullable Input<BackendServiceCdnPolicyArgs> cdnPolicy;
 
@@ -67,9 +55,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="circuitBreakers")
     private final @Nullable Input<CircuitBreakersArgs> circuitBreakers;
 
@@ -77,9 +62,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.circuitBreakers == null ? Input.empty() : this.circuitBreakers;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="connectionDraining")
     private final @Nullable Input<ConnectionDrainingArgs> connectionDraining;
 
@@ -87,9 +69,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionDraining == null ? Input.empty() : this.connectionDraining;
     }
 
-    /**
-     * Connection Tracking configuration for this BackendService. Connection tracking policy settings are only available for Network Load Balancing and Internal TCP/UDP Load Balancing.
-     */
     @InputImport(name="connectionTrackingPolicy")
     private final @Nullable Input<BackendServiceConnectionTrackingPolicyArgs> connectionTrackingPolicy;
 
@@ -97,9 +76,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionTrackingPolicy == null ? Input.empty() : this.connectionTrackingPolicy;
     }
 
-    /**
-     * Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. 
-     */
     @InputImport(name="consistentHash")
     private final @Nullable Input<ConsistentHashLoadBalancerSettingsArgs> consistentHash;
 
@@ -107,9 +83,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.consistentHash == null ? Input.empty() : this.consistentHash;
     }
 
-    /**
-     * Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
-     */
     @InputImport(name="customRequestHeaders")
     private final @Nullable Input<List<String>> customRequestHeaders;
 
@@ -117,9 +90,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.customRequestHeaders == null ? Input.empty() : this.customRequestHeaders;
     }
 
-    /**
-     * Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
-     */
     @InputImport(name="customResponseHeaders")
     private final @Nullable Input<List<String>> customResponseHeaders;
 
@@ -127,9 +97,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.customResponseHeaders == null ? Input.empty() : this.customResponseHeaders;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -137,9 +104,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * If true, enables Cloud CDN for the backend service of an external HTTP(S) load balancer.
-     */
     @InputImport(name="enableCDN")
     private final @Nullable Input<Boolean> enableCDN;
 
@@ -147,9 +111,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableCDN == null ? Input.empty() : this.enableCDN;
     }
 
-    /**
-     * Requires at least one backend instance group to be defined as a backup (failover) backend. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
-     */
     @InputImport(name="failoverPolicy")
     private final @Nullable Input<BackendServiceFailoverPolicyArgs> failoverPolicy;
 
@@ -157,9 +118,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.failoverPolicy == null ? Input.empty() : this.failoverPolicy;
     }
 
-    /**
-     * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check. Backend services with internet or serverless NEG backends must not have a health check.
-     */
     @InputImport(name="healthChecks")
     private final @Nullable Input<List<String>> healthChecks;
 
@@ -167,9 +125,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
     }
 
-    /**
-     * The configurations for Identity-Aware Proxy on this resource. Not available for Internal TCP/UDP Load Balancing and Network Load Balancing.
-     */
     @InputImport(name="iap")
     private final @Nullable Input<BackendServiceIAPArgs> iap;
 
@@ -177,9 +132,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.iap == null ? Input.empty() : this.iap;
     }
 
-    /**
-     * Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
-     */
     @InputImport(name="loadBalancingScheme")
     private final @Nullable Input<BackendServiceLoadBalancingScheme> loadBalancingScheme;
 
@@ -187,9 +139,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
     }
 
-    /**
-     * The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     */
     @InputImport(name="localityLbPolicy")
     private final @Nullable Input<BackendServiceLocalityLbPolicy> localityLbPolicy;
 
@@ -197,9 +146,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.localityLbPolicy == null ? Input.empty() : this.localityLbPolicy;
     }
 
-    /**
-     * This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.
-     */
     @InputImport(name="logConfig")
     private final @Nullable Input<BackendServiceLogConfigArgs> logConfig;
 
@@ -207,9 +153,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
-    /**
-     * Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
-     */
     @InputImport(name="maxStreamDuration")
     private final @Nullable Input<DurationArgs> maxStreamDuration;
 
@@ -217,9 +160,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxStreamDuration == null ? Input.empty() : this.maxStreamDuration;
     }
 
-    /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -227,9 +167,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The URL of the network to which this backend service belongs. This field can only be specified when the load balancing scheme is set to INTERNAL.
-     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -237,9 +174,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
-    /**
-     * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the backend service. If not set, this feature is considered disabled. This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
-     */
     @InputImport(name="outlierDetection")
     private final @Nullable Input<OutlierDetectionArgs> outlierDetection;
 
@@ -247,9 +181,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.outlierDetection == null ? Input.empty() : this.outlierDetection;
     }
 
-    /**
-     * A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
-     */
     @InputImport(name="portName")
     private final @Nullable Input<String> portName;
 
@@ -257,9 +188,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.portName == null ? Input.empty() : this.portName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -267,9 +195,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<BackendServiceProtocol> protocol;
 
@@ -277,9 +202,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -287,9 +209,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * This field specifies the security settings that apply to this backend service. This field is applicable to a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
-     */
     @InputImport(name="securitySettings")
     private final @Nullable Input<SecuritySettingsArgs> securitySettings;
 
@@ -297,9 +216,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
     }
 
-    /**
-     * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
-     */
     @InputImport(name="sessionAffinity")
     private final @Nullable Input<BackendServiceSessionAffinity> sessionAffinity;
 
@@ -307,9 +223,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="subsetting")
     private final @Nullable Input<SubsettingArgs> subsetting;
 
@@ -317,9 +230,6 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.subsetting == null ? Input.empty() : this.subsetting;
     }
 
-    /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
-     */
     @InputImport(name="timeoutSec")
     private final @Nullable Input<Integer> timeoutSec;
 

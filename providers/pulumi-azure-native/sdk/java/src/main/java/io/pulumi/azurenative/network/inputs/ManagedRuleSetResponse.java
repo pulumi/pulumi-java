@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines a managed rule set.
- */
 public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedRuleSetResponse Empty = new ManagedRuleSetResponse();
 
-    /**
-     * Defines the rule group overrides to apply to the rule set.
-     */
     @InputImport(name="ruleGroupOverrides")
     private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
@@ -29,9 +23,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
 
-    /**
-     * Defines the rule set type to use.
-     */
     @InputImport(name="ruleSetType", required=true)
     private final String ruleSetType;
 
@@ -39,9 +30,6 @@ public final class ManagedRuleSetResponse extends io.pulumi.resources.InvokeArgs
         return this.ruleSetType;
     }
 
-    /**
-     * Defines the version of the rule set to use.
-     */
     @InputImport(name="ruleSetVersion", required=true)
     private final String ruleSetVersion;
 

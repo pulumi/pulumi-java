@@ -11,46 +11,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventHubResponse {
-/**
- * Specifies the authentication type being used for connecting to the endpoint.
- */
     private final @Nullable String authenticationType;
-/**
- * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
- */
     private final @Nullable String connectionStringPrimaryKey;
-/**
- * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
- */
     private final @Nullable String connectionStringSecondaryKey;
-/**
- * Time when the Endpoint was added to DigitalTwinsInstance.
- */
     private final String createdTime;
-/**
- * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
- */
     private final @Nullable String deadLetterSecret;
-/**
- * Dead letter storage URL for identity-based authentication.
- */
     private final @Nullable String deadLetterUri;
-/**
- * The type of Digital Twins endpoint
-Expected value is 'EventHub'.
- */
     private final String endpointType;
-/**
- * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
- */
     private final @Nullable String endpointUri;
-/**
- * The EventHub name in the EventHub namespace for identity-based authentication.
- */
     private final @Nullable String entityPath;
-/**
- * The provisioning state.
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"authenticationType","connectionStringPrimaryKey","connectionStringSecondaryKey","createdTime","deadLetterSecret","deadLetterUri","endpointType","endpointUri","entityPath","provisioningState"})
@@ -77,64 +46,33 @@ Expected value is 'EventHub'.
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * Specifies the authentication type being used for connecting to the endpoint.
- */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
-/**
- * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
- */
     public Optional<String> getConnectionStringPrimaryKey() {
         return Optional.ofNullable(this.connectionStringPrimaryKey);
     }
-/**
- * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
- */
     public Optional<String> getConnectionStringSecondaryKey() {
         return Optional.ofNullable(this.connectionStringSecondaryKey);
     }
-/**
- * Time when the Endpoint was added to DigitalTwinsInstance.
- */
     public String getCreatedTime() {
         return this.createdTime;
     }
-/**
- * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
- */
     public Optional<String> getDeadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
-/**
- * Dead letter storage URL for identity-based authentication.
- */
     public Optional<String> getDeadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
-/**
- * The type of Digital Twins endpoint
-Expected value is 'EventHub'.
- */
     public String getEndpointType() {
         return this.endpointType;
     }
-/**
- * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
- */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
-/**
- * The EventHub name in the EventHub namespace for identity-based authentication.
- */
     public Optional<String> getEntityPath() {
         return Optional.ofNullable(this.entityPath);
     }
-/**
- * The provisioning state.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

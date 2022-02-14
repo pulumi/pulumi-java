@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of deployment scaling algorithm
- */
     @EnumType
     public enum ScaleType {
-/**
- * 
- */
         Auto("Auto"),
-/**
- * 
- */
         Manual("Manual");
 
         private final String value;

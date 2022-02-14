@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of direct peering.
- */
     @EnumType
     public enum DirectPeeringType {
-/**
- * 
- */
         Edge("Edge"),
-/**
- * 
- */
         Transit("Transit"),
-/**
- * 
- */
         Cdn("Cdn"),
-/**
- * 
- */
         Internal("Internal"),
-/**
- * 
- */
         Ix("Ix"),
-/**
- * 
- */
         IxRs("IxRs"),
-/**
- * 
- */
         Voice("Voice");
 
         private final String value;

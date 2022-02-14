@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIscsiTarget {
-/**
- * Response for iSCSI target requests.
-API Version: 2020-03-15-preview.
- *
- * Response for iSCSI target requests.
- */
     public static CompletableFuture<GetIscsiTargetResult> invokeAsync(GetIscsiTargetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getIscsiTarget", TypeShape.of(GetIscsiTargetResult.class), args == null ? GetIscsiTargetArgs.Empty : args, Utilities.withVersion(options));
     }

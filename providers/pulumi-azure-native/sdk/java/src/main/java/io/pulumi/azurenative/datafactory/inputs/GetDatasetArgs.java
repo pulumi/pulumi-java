@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatasetArgs Empty = new GetDatasetArgs();
 
-    /**
-     * The dataset name.
-     */
     @InputImport(name="datasetName", required=true)
     private final String datasetName;
 
@@ -25,9 +19,6 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetName;
     }
 
-    /**
-     * The factory name.
-     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -35,9 +26,6 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
         return this.factoryName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

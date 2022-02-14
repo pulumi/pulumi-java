@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Linked service for Amazon Redshift.
- */
 public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AmazonRedshiftLinkedServiceArgs Empty = new AmazonRedshiftLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -45,9 +36,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="database", required=true)
     private final Input<Object> database;
 
@@ -55,9 +43,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.database;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,9 +50,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -75,9 +57,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -85,9 +64,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The password of the Amazon Redshift source.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -95,9 +71,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="port")
     private final @Nullable Input<Object> port;
 
@@ -105,9 +78,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="server", required=true)
     private final Input<Object> server;
 
@@ -115,10 +85,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
         return this.server;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AmazonRedshift'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -126,9 +92,6 @@ Expected value is 'AmazonRedshift'.
         return this.type;
     }
 
-    /**
-     * The username of the Amazon Redshift source. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

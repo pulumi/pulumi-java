@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties related to EventGrid.
- */
 public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventGridResponse Empty = new EventGridResponse();
 
-    /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
-     */
     @InputImport(name="accessKey1", required=true)
     private final String accessKey1;
 
@@ -27,9 +21,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
         return this.accessKey1;
     }
 
-    /**
-     * EventGrid secondary accesskey. Will be obfuscated during read.
-     */
     @InputImport(name="accessKey2")
     private final @Nullable String accessKey2;
 
@@ -37,9 +28,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
         return this.accessKey2 == null ? Optional.empty() : Optional.ofNullable(this.accessKey2);
     }
 
-    /**
-     * Specifies the authentication type being used for connecting to the endpoint.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -47,9 +35,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
-    /**
-     * Time when the Endpoint was added to DigitalTwinsInstance.
-     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -57,9 +42,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdTime;
     }
 
-    /**
-     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     */
     @InputImport(name="deadLetterSecret")
     private final @Nullable String deadLetterSecret;
 
@@ -67,9 +49,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
         return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
     }
 
-    /**
-     * Dead letter storage URL for identity-based authentication.
-     */
     @InputImport(name="deadLetterUri")
     private final @Nullable String deadLetterUri;
 
@@ -77,10 +56,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
         return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
     }
 
-    /**
-     * The type of Digital Twins endpoint
-Expected value is 'EventGrid'.
-     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -88,9 +63,6 @@ Expected value is 'EventGrid'.
         return this.endpointType;
     }
 
-    /**
-     * The provisioning state.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -98,9 +70,6 @@ Expected value is 'EventGrid'.
         return this.provisioningState;
     }
 
-    /**
-     * EventGrid Topic Endpoint
-     */
     @InputImport(name="topicEndpoint", required=true)
     private final String topicEndpoint;
 

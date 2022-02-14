@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * DataProtection type volumes include an object containing details of the replication
- */
 public final class VolumePropertiesResponseDataProtection extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumePropertiesResponseDataProtection Empty = new VolumePropertiesResponseDataProtection();
 
-    /**
-     * Backup Properties
-     */
     @InputImport(name="backup")
     private final @Nullable VolumeBackupPropertiesResponse backup;
 
@@ -29,9 +23,6 @@ public final class VolumePropertiesResponseDataProtection extends io.pulumi.reso
         return this.backup == null ? Optional.empty() : Optional.ofNullable(this.backup);
     }
 
-    /**
-     * Replication properties
-     */
     @InputImport(name="replication")
     private final @Nullable ReplicationObjectResponse replication;
 
@@ -39,9 +30,6 @@ public final class VolumePropertiesResponseDataProtection extends io.pulumi.reso
         return this.replication == null ? Optional.empty() : Optional.ofNullable(this.replication);
     }
 
-    /**
-     * Snapshot properties.
-     */
     @InputImport(name="snapshot")
     private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
 

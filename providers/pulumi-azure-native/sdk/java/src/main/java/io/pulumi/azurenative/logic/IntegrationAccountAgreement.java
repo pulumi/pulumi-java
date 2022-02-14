@@ -18,893 +18,87 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The integration account agreement.
-API Version: 2019-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update an agreement
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var integrationAccountAgreement = new AzureNative.Logic.IntegrationAccountAgreement("integrationAccountAgreement", new AzureNative.Logic.IntegrationAccountAgreementArgs
-        {
-            AgreementName = "testAgreement",
-            AgreementType = "AS2",
-            Content = new AzureNative.Logic.Inputs.AgreementContentArgs
-            {
-                AS2 = new AzureNative.Logic.Inputs.AS2AgreementContentArgs
-                {
-                    ReceiveAgreement = new AzureNative.Logic.Inputs.AS2OneWayAgreementArgs
-                    {
-                        ProtocolSettings = new AzureNative.Logic.Inputs.AS2ProtocolSettingsArgs
-                        {
-                            AcknowledgementConnectionSettings = new AzureNative.Logic.Inputs.AS2AcknowledgementConnectionSettingsArgs
-                            {
-                                IgnoreCertificateNameMismatch = true,
-                                KeepHttpConnectionAlive = true,
-                                SupportHttpStatusCodeContinue = true,
-                                UnfoldHttpHeaders = true,
-                            },
-                            EnvelopeSettings = new AzureNative.Logic.Inputs.AS2EnvelopeSettingsArgs
-                            {
-                                AutogenerateFileName = true,
-                                FileNameTemplate = "Test",
-                                MessageContentType = "text/plain",
-                                SuspendMessageOnFileNameGenerationError = true,
-                                TransmitFileNameInMimeHeader = true,
-                            },
-                            ErrorSettings = new AzureNative.Logic.Inputs.AS2ErrorSettingsArgs
-                            {
-                                ResendIfMDNNotReceived = true,
-                                SuspendDuplicateMessage = true,
-                            },
-                            MdnSettings = new AzureNative.Logic.Inputs.AS2MdnSettingsArgs
-                            {
-                                DispositionNotificationTo = "http://tempuri.org",
-                                MdnText = "Sample",
-                                MicHashingAlgorithm = "SHA1",
-                                NeedMDN = true,
-                                ReceiptDeliveryUrl = "http://tempuri.org",
-                                SendInboundMDNToMessageBox = true,
-                                SendMDNAsynchronously = true,
-                                SignMDN = true,
-                                SignOutboundMDNIfOptional = true,
-                            },
-                            MessageConnectionSettings = new AzureNative.Logic.Inputs.AS2MessageConnectionSettingsArgs
-                            {
-                                IgnoreCertificateNameMismatch = true,
-                                KeepHttpConnectionAlive = true,
-                                SupportHttpStatusCodeContinue = true,
-                                UnfoldHttpHeaders = true,
-                            },
-                            SecuritySettings = new AzureNative.Logic.Inputs.AS2SecuritySettingsArgs
-                            {
-                                EnableNRRForInboundDecodedMessages = true,
-                                EnableNRRForInboundEncodedMessages = true,
-                                EnableNRRForInboundMDN = true,
-                                EnableNRRForOutboundDecodedMessages = true,
-                                EnableNRRForOutboundEncodedMessages = true,
-                                EnableNRRForOutboundMDN = true,
-                                OverrideGroupSigningCertificate = false,
-                            },
-                            ValidationSettings = new AzureNative.Logic.Inputs.AS2ValidationSettingsArgs
-                            {
-                                CheckCertificateRevocationListOnReceive = true,
-                                CheckCertificateRevocationListOnSend = true,
-                                CheckDuplicateMessage = true,
-                                CompressMessage = true,
-                                EncryptMessage = false,
-                                EncryptionAlgorithm = "AES128",
-                                InterchangeDuplicatesValidityDays = 100,
-                                OverrideMessageProperties = true,
-                                SignMessage = false,
-                            },
-                        },
-                        ReceiverBusinessIdentity = new AzureNative.Logic.Inputs.BusinessIdentityArgs
-                        {
-                            Qualifier = "ZZ",
-                            Value = "ZZ",
-                        },
-                        SenderBusinessIdentity = new AzureNative.Logic.Inputs.BusinessIdentityArgs
-                        {
-                            Qualifier = "AA",
-                            Value = "AA",
-                        },
-                    },
-                    SendAgreement = new AzureNative.Logic.Inputs.AS2OneWayAgreementArgs
-                    {
-                        ProtocolSettings = new AzureNative.Logic.Inputs.AS2ProtocolSettingsArgs
-                        {
-                            AcknowledgementConnectionSettings = new AzureNative.Logic.Inputs.AS2AcknowledgementConnectionSettingsArgs
-                            {
-                                IgnoreCertificateNameMismatch = true,
-                                KeepHttpConnectionAlive = true,
-                                SupportHttpStatusCodeContinue = true,
-                                UnfoldHttpHeaders = true,
-                            },
-                            EnvelopeSettings = new AzureNative.Logic.Inputs.AS2EnvelopeSettingsArgs
-                            {
-                                AutogenerateFileName = true,
-                                FileNameTemplate = "Test",
-                                MessageContentType = "text/plain",
-                                SuspendMessageOnFileNameGenerationError = true,
-                                TransmitFileNameInMimeHeader = true,
-                            },
-                            ErrorSettings = new AzureNative.Logic.Inputs.AS2ErrorSettingsArgs
-                            {
-                                ResendIfMDNNotReceived = true,
-                                SuspendDuplicateMessage = true,
-                            },
-                            MdnSettings = new AzureNative.Logic.Inputs.AS2MdnSettingsArgs
-                            {
-                                DispositionNotificationTo = "http://tempuri.org",
-                                MdnText = "Sample",
-                                MicHashingAlgorithm = "SHA1",
-                                NeedMDN = true,
-                                ReceiptDeliveryUrl = "http://tempuri.org",
-                                SendInboundMDNToMessageBox = true,
-                                SendMDNAsynchronously = true,
-                                SignMDN = true,
-                                SignOutboundMDNIfOptional = true,
-                            },
-                            MessageConnectionSettings = new AzureNative.Logic.Inputs.AS2MessageConnectionSettingsArgs
-                            {
-                                IgnoreCertificateNameMismatch = true,
-                                KeepHttpConnectionAlive = true,
-                                SupportHttpStatusCodeContinue = true,
-                                UnfoldHttpHeaders = true,
-                            },
-                            SecuritySettings = new AzureNative.Logic.Inputs.AS2SecuritySettingsArgs
-                            {
-                                EnableNRRForInboundDecodedMessages = true,
-                                EnableNRRForInboundEncodedMessages = true,
-                                EnableNRRForInboundMDN = true,
-                                EnableNRRForOutboundDecodedMessages = true,
-                                EnableNRRForOutboundEncodedMessages = true,
-                                EnableNRRForOutboundMDN = true,
-                                OverrideGroupSigningCertificate = false,
-                            },
-                            ValidationSettings = new AzureNative.Logic.Inputs.AS2ValidationSettingsArgs
-                            {
-                                CheckCertificateRevocationListOnReceive = true,
-                                CheckCertificateRevocationListOnSend = true,
-                                CheckDuplicateMessage = true,
-                                CompressMessage = true,
-                                EncryptMessage = false,
-                                EncryptionAlgorithm = "AES128",
-                                InterchangeDuplicatesValidityDays = 100,
-                                OverrideMessageProperties = true,
-                                SignMessage = false,
-                            },
-                        },
-                        ReceiverBusinessIdentity = new AzureNative.Logic.Inputs.BusinessIdentityArgs
-                        {
-                            Qualifier = "AA",
-                            Value = "AA",
-                        },
-                        SenderBusinessIdentity = new AzureNative.Logic.Inputs.BusinessIdentityArgs
-                        {
-                            Qualifier = "ZZ",
-                            Value = "ZZ",
-                        },
-                    },
-                },
-            },
-            GuestIdentity = new AzureNative.Logic.Inputs.BusinessIdentityArgs
-            {
-                Qualifier = "AA",
-                Value = "AA",
-            },
-            GuestPartner = "GuestPartner",
-            HostIdentity = new AzureNative.Logic.Inputs.BusinessIdentityArgs
-            {
-                Qualifier = "ZZ",
-                Value = "ZZ",
-            },
-            HostPartner = "HostPartner",
-            IntegrationAccountName = "testIntegrationAccount",
-            Location = "westus",
-            Metadata = ,
-            ResourceGroupName = "testResourceGroup",
-            Tags = 
-            {
-                { "IntegrationAccountAgreement", "<IntegrationAccountAgreementName>" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewIntegrationAccountAgreement(ctx, "integrationAccountAgreement", &logic.IntegrationAccountAgreementArgs{
-			AgreementName: pulumi.String("testAgreement"),
-			AgreementType: "AS2",
-			Content: &logic.AgreementContentArgs{
-				AS2: &logic.AS2AgreementContentArgs{
-					ReceiveAgreement: &logic.AS2OneWayAgreementArgs{
-						ProtocolSettings: &logic.AS2ProtocolSettingsArgs{
-							AcknowledgementConnectionSettings: &logic.AS2AcknowledgementConnectionSettingsArgs{
-								IgnoreCertificateNameMismatch: pulumi.Bool(true),
-								KeepHttpConnectionAlive:       pulumi.Bool(true),
-								SupportHttpStatusCodeContinue: pulumi.Bool(true),
-								UnfoldHttpHeaders:             pulumi.Bool(true),
-							},
-							EnvelopeSettings: &logic.AS2EnvelopeSettingsArgs{
-								AutogenerateFileName:                    pulumi.Bool(true),
-								FileNameTemplate:                        pulumi.String("Test"),
-								MessageContentType:                      pulumi.String("text/plain"),
-								SuspendMessageOnFileNameGenerationError: pulumi.Bool(true),
-								TransmitFileNameInMimeHeader:            pulumi.Bool(true),
-							},
-							ErrorSettings: &logic.AS2ErrorSettingsArgs{
-								ResendIfMDNNotReceived:  pulumi.Bool(true),
-								SuspendDuplicateMessage: pulumi.Bool(true),
-							},
-							MdnSettings: &logic.AS2MdnSettingsArgs{
-								DispositionNotificationTo:  pulumi.String("http://tempuri.org"),
-								MdnText:                    pulumi.String("Sample"),
-								MicHashingAlgorithm:        pulumi.String("SHA1"),
-								NeedMDN:                    pulumi.Bool(true),
-								ReceiptDeliveryUrl:         pulumi.String("http://tempuri.org"),
-								SendInboundMDNToMessageBox: pulumi.Bool(true),
-								SendMDNAsynchronously:      pulumi.Bool(true),
-								SignMDN:                    pulumi.Bool(true),
-								SignOutboundMDNIfOptional:  pulumi.Bool(true),
-							},
-							MessageConnectionSettings: &logic.AS2MessageConnectionSettingsArgs{
-								IgnoreCertificateNameMismatch: pulumi.Bool(true),
-								KeepHttpConnectionAlive:       pulumi.Bool(true),
-								SupportHttpStatusCodeContinue: pulumi.Bool(true),
-								UnfoldHttpHeaders:             pulumi.Bool(true),
-							},
-							SecuritySettings: &logic.AS2SecuritySettingsArgs{
-								EnableNRRForInboundDecodedMessages:  pulumi.Bool(true),
-								EnableNRRForInboundEncodedMessages:  pulumi.Bool(true),
-								EnableNRRForInboundMDN:              pulumi.Bool(true),
-								EnableNRRForOutboundDecodedMessages: pulumi.Bool(true),
-								EnableNRRForOutboundEncodedMessages: pulumi.Bool(true),
-								EnableNRRForOutboundMDN:             pulumi.Bool(true),
-								OverrideGroupSigningCertificate:     pulumi.Bool(false),
-							},
-							ValidationSettings: &logic.AS2ValidationSettingsArgs{
-								CheckCertificateRevocationListOnReceive: pulumi.Bool(true),
-								CheckCertificateRevocationListOnSend:    pulumi.Bool(true),
-								CheckDuplicateMessage:                   pulumi.Bool(true),
-								CompressMessage:                         pulumi.Bool(true),
-								EncryptMessage:                          pulumi.Bool(false),
-								EncryptionAlgorithm:                     pulumi.String("AES128"),
-								InterchangeDuplicatesValidityDays:       pulumi.Int(100),
-								OverrideMessageProperties:               pulumi.Bool(true),
-								SignMessage:                             pulumi.Bool(false),
-							},
-						},
-						ReceiverBusinessIdentity: &logic.BusinessIdentityArgs{
-							Qualifier: pulumi.String("ZZ"),
-							Value:     pulumi.String("ZZ"),
-						},
-						SenderBusinessIdentity: &logic.BusinessIdentityArgs{
-							Qualifier: pulumi.String("AA"),
-							Value:     pulumi.String("AA"),
-						},
-					},
-					SendAgreement: &logic.AS2OneWayAgreementArgs{
-						ProtocolSettings: &logic.AS2ProtocolSettingsArgs{
-							AcknowledgementConnectionSettings: &logic.AS2AcknowledgementConnectionSettingsArgs{
-								IgnoreCertificateNameMismatch: pulumi.Bool(true),
-								KeepHttpConnectionAlive:       pulumi.Bool(true),
-								SupportHttpStatusCodeContinue: pulumi.Bool(true),
-								UnfoldHttpHeaders:             pulumi.Bool(true),
-							},
-							EnvelopeSettings: &logic.AS2EnvelopeSettingsArgs{
-								AutogenerateFileName:                    pulumi.Bool(true),
-								FileNameTemplate:                        pulumi.String("Test"),
-								MessageContentType:                      pulumi.String("text/plain"),
-								SuspendMessageOnFileNameGenerationError: pulumi.Bool(true),
-								TransmitFileNameInMimeHeader:            pulumi.Bool(true),
-							},
-							ErrorSettings: &logic.AS2ErrorSettingsArgs{
-								ResendIfMDNNotReceived:  pulumi.Bool(true),
-								SuspendDuplicateMessage: pulumi.Bool(true),
-							},
-							MdnSettings: &logic.AS2MdnSettingsArgs{
-								DispositionNotificationTo:  pulumi.String("http://tempuri.org"),
-								MdnText:                    pulumi.String("Sample"),
-								MicHashingAlgorithm:        pulumi.String("SHA1"),
-								NeedMDN:                    pulumi.Bool(true),
-								ReceiptDeliveryUrl:         pulumi.String("http://tempuri.org"),
-								SendInboundMDNToMessageBox: pulumi.Bool(true),
-								SendMDNAsynchronously:      pulumi.Bool(true),
-								SignMDN:                    pulumi.Bool(true),
-								SignOutboundMDNIfOptional:  pulumi.Bool(true),
-							},
-							MessageConnectionSettings: &logic.AS2MessageConnectionSettingsArgs{
-								IgnoreCertificateNameMismatch: pulumi.Bool(true),
-								KeepHttpConnectionAlive:       pulumi.Bool(true),
-								SupportHttpStatusCodeContinue: pulumi.Bool(true),
-								UnfoldHttpHeaders:             pulumi.Bool(true),
-							},
-							SecuritySettings: &logic.AS2SecuritySettingsArgs{
-								EnableNRRForInboundDecodedMessages:  pulumi.Bool(true),
-								EnableNRRForInboundEncodedMessages:  pulumi.Bool(true),
-								EnableNRRForInboundMDN:              pulumi.Bool(true),
-								EnableNRRForOutboundDecodedMessages: pulumi.Bool(true),
-								EnableNRRForOutboundEncodedMessages: pulumi.Bool(true),
-								EnableNRRForOutboundMDN:             pulumi.Bool(true),
-								OverrideGroupSigningCertificate:     pulumi.Bool(false),
-							},
-							ValidationSettings: &logic.AS2ValidationSettingsArgs{
-								CheckCertificateRevocationListOnReceive: pulumi.Bool(true),
-								CheckCertificateRevocationListOnSend:    pulumi.Bool(true),
-								CheckDuplicateMessage:                   pulumi.Bool(true),
-								CompressMessage:                         pulumi.Bool(true),
-								EncryptMessage:                          pulumi.Bool(false),
-								EncryptionAlgorithm:                     pulumi.String("AES128"),
-								InterchangeDuplicatesValidityDays:       pulumi.Int(100),
-								OverrideMessageProperties:               pulumi.Bool(true),
-								SignMessage:                             pulumi.Bool(false),
-							},
-						},
-						ReceiverBusinessIdentity: &logic.BusinessIdentityArgs{
-							Qualifier: pulumi.String("AA"),
-							Value:     pulumi.String("AA"),
-						},
-						SenderBusinessIdentity: &logic.BusinessIdentityArgs{
-							Qualifier: pulumi.String("ZZ"),
-							Value:     pulumi.String("ZZ"),
-						},
-					},
-				},
-			},
-			GuestIdentity: &logic.BusinessIdentityArgs{
-				Qualifier: pulumi.String("AA"),
-				Value:     pulumi.String("AA"),
-			},
-			GuestPartner: pulumi.String("GuestPartner"),
-			HostIdentity: &logic.BusinessIdentityArgs{
-				Qualifier: pulumi.String("ZZ"),
-				Value:     pulumi.String("ZZ"),
-			},
-			HostPartner:            pulumi.String("HostPartner"),
-			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
-			Location:               pulumi.String("westus"),
-			Metadata:               nil,
-			ResourceGroupName:      pulumi.String("testResourceGroup"),
-			Tags: pulumi.StringMap{
-				"IntegrationAccountAgreement": pulumi.String("<IntegrationAccountAgreementName>"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgreement("integrationAccountAgreement", {
-    agreementName: "testAgreement",
-    agreementType: "AS2",
-    content: {
-        aS2: {
-            receiveAgreement: {
-                protocolSettings: {
-                    acknowledgementConnectionSettings: {
-                        ignoreCertificateNameMismatch: true,
-                        keepHttpConnectionAlive: true,
-                        supportHttpStatusCodeContinue: true,
-                        unfoldHttpHeaders: true,
-                    },
-                    envelopeSettings: {
-                        autogenerateFileName: true,
-                        fileNameTemplate: "Test",
-                        messageContentType: "text/plain",
-                        suspendMessageOnFileNameGenerationError: true,
-                        transmitFileNameInMimeHeader: true,
-                    },
-                    errorSettings: {
-                        resendIfMDNNotReceived: true,
-                        suspendDuplicateMessage: true,
-                    },
-                    mdnSettings: {
-                        dispositionNotificationTo: "http://tempuri.org",
-                        mdnText: "Sample",
-                        micHashingAlgorithm: "SHA1",
-                        needMDN: true,
-                        receiptDeliveryUrl: "http://tempuri.org",
-                        sendInboundMDNToMessageBox: true,
-                        sendMDNAsynchronously: true,
-                        signMDN: true,
-                        signOutboundMDNIfOptional: true,
-                    },
-                    messageConnectionSettings: {
-                        ignoreCertificateNameMismatch: true,
-                        keepHttpConnectionAlive: true,
-                        supportHttpStatusCodeContinue: true,
-                        unfoldHttpHeaders: true,
-                    },
-                    securitySettings: {
-                        enableNRRForInboundDecodedMessages: true,
-                        enableNRRForInboundEncodedMessages: true,
-                        enableNRRForInboundMDN: true,
-                        enableNRRForOutboundDecodedMessages: true,
-                        enableNRRForOutboundEncodedMessages: true,
-                        enableNRRForOutboundMDN: true,
-                        overrideGroupSigningCertificate: false,
-                    },
-                    validationSettings: {
-                        checkCertificateRevocationListOnReceive: true,
-                        checkCertificateRevocationListOnSend: true,
-                        checkDuplicateMessage: true,
-                        compressMessage: true,
-                        encryptMessage: false,
-                        encryptionAlgorithm: "AES128",
-                        interchangeDuplicatesValidityDays: 100,
-                        overrideMessageProperties: true,
-                        signMessage: false,
-                    },
-                },
-                receiverBusinessIdentity: {
-                    qualifier: "ZZ",
-                    value: "ZZ",
-                },
-                senderBusinessIdentity: {
-                    qualifier: "AA",
-                    value: "AA",
-                },
-            },
-            sendAgreement: {
-                protocolSettings: {
-                    acknowledgementConnectionSettings: {
-                        ignoreCertificateNameMismatch: true,
-                        keepHttpConnectionAlive: true,
-                        supportHttpStatusCodeContinue: true,
-                        unfoldHttpHeaders: true,
-                    },
-                    envelopeSettings: {
-                        autogenerateFileName: true,
-                        fileNameTemplate: "Test",
-                        messageContentType: "text/plain",
-                        suspendMessageOnFileNameGenerationError: true,
-                        transmitFileNameInMimeHeader: true,
-                    },
-                    errorSettings: {
-                        resendIfMDNNotReceived: true,
-                        suspendDuplicateMessage: true,
-                    },
-                    mdnSettings: {
-                        dispositionNotificationTo: "http://tempuri.org",
-                        mdnText: "Sample",
-                        micHashingAlgorithm: "SHA1",
-                        needMDN: true,
-                        receiptDeliveryUrl: "http://tempuri.org",
-                        sendInboundMDNToMessageBox: true,
-                        sendMDNAsynchronously: true,
-                        signMDN: true,
-                        signOutboundMDNIfOptional: true,
-                    },
-                    messageConnectionSettings: {
-                        ignoreCertificateNameMismatch: true,
-                        keepHttpConnectionAlive: true,
-                        supportHttpStatusCodeContinue: true,
-                        unfoldHttpHeaders: true,
-                    },
-                    securitySettings: {
-                        enableNRRForInboundDecodedMessages: true,
-                        enableNRRForInboundEncodedMessages: true,
-                        enableNRRForInboundMDN: true,
-                        enableNRRForOutboundDecodedMessages: true,
-                        enableNRRForOutboundEncodedMessages: true,
-                        enableNRRForOutboundMDN: true,
-                        overrideGroupSigningCertificate: false,
-                    },
-                    validationSettings: {
-                        checkCertificateRevocationListOnReceive: true,
-                        checkCertificateRevocationListOnSend: true,
-                        checkDuplicateMessage: true,
-                        compressMessage: true,
-                        encryptMessage: false,
-                        encryptionAlgorithm: "AES128",
-                        interchangeDuplicatesValidityDays: 100,
-                        overrideMessageProperties: true,
-                        signMessage: false,
-                    },
-                },
-                receiverBusinessIdentity: {
-                    qualifier: "AA",
-                    value: "AA",
-                },
-                senderBusinessIdentity: {
-                    qualifier: "ZZ",
-                    value: "ZZ",
-                },
-            },
-        },
-    },
-    guestIdentity: {
-        qualifier: "AA",
-        value: "AA",
-    },
-    guestPartner: "GuestPartner",
-    hostIdentity: {
-        qualifier: "ZZ",
-        value: "ZZ",
-    },
-    hostPartner: "HostPartner",
-    integrationAccountName: "testIntegrationAccount",
-    location: "westus",
-    metadata: {},
-    resourceGroupName: "testResourceGroup",
-    tags: {
-        IntegrationAccountAgreement: "<IntegrationAccountAgreementName>",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-integration_account_agreement = azure_native.logic.IntegrationAccountAgreement("integrationAccountAgreement",
-    agreement_name="testAgreement",
-    agreement_type="AS2",
-    content=azure_native.logic.AgreementContentArgs(
-        a_s2=azure_native.logic.AS2AgreementContentArgs(
-            receive_agreement=azure_native.logic.AS2OneWayAgreementArgs(
-                protocol_settings=azure_native.logic.AS2ProtocolSettingsArgs(
-                    acknowledgement_connection_settings=azure_native.logic.AS2AcknowledgementConnectionSettingsArgs(
-                        ignore_certificate_name_mismatch=True,
-                        keep_http_connection_alive=True,
-                        support_http_status_code_continue=True,
-                        unfold_http_headers=True,
-                    ),
-                    envelope_settings=azure_native.logic.AS2EnvelopeSettingsArgs(
-                        autogenerate_file_name=True,
-                        file_name_template="Test",
-                        message_content_type="text/plain",
-                        suspend_message_on_file_name_generation_error=True,
-                        transmit_file_name_in_mime_header=True,
-                    ),
-                    error_settings=azure_native.logic.AS2ErrorSettingsArgs(
-                        resend_if_mdn_not_received=True,
-                        suspend_duplicate_message=True,
-                    ),
-                    mdn_settings=azure_native.logic.AS2MdnSettingsArgs(
-                        disposition_notification_to="http://tempuri.org",
-                        mdn_text="Sample",
-                        mic_hashing_algorithm="SHA1",
-                        need_mdn=True,
-                        receipt_delivery_url="http://tempuri.org",
-                        send_inbound_mdn_to_message_box=True,
-                        send_mdnasynchronously=True,
-                        sign_mdn=True,
-                        sign_outbound_mdn_if_optional=True,
-                    ),
-                    message_connection_settings=azure_native.logic.AS2MessageConnectionSettingsArgs(
-                        ignore_certificate_name_mismatch=True,
-                        keep_http_connection_alive=True,
-                        support_http_status_code_continue=True,
-                        unfold_http_headers=True,
-                    ),
-                    security_settings=azure_native.logic.AS2SecuritySettingsArgs(
-                        enable_nrr_for_inbound_decoded_messages=True,
-                        enable_nrr_for_inbound_encoded_messages=True,
-                        enable_nrr_for_inbound_mdn=True,
-                        enable_nrr_for_outbound_decoded_messages=True,
-                        enable_nrr_for_outbound_encoded_messages=True,
-                        enable_nrr_for_outbound_mdn=True,
-                        override_group_signing_certificate=False,
-                    ),
-                    validation_settings=azure_native.logic.AS2ValidationSettingsArgs(
-                        check_certificate_revocation_list_on_receive=True,
-                        check_certificate_revocation_list_on_send=True,
-                        check_duplicate_message=True,
-                        compress_message=True,
-                        encrypt_message=False,
-                        encryption_algorithm="AES128",
-                        interchange_duplicates_validity_days=100,
-                        override_message_properties=True,
-                        sign_message=False,
-                    ),
-                ),
-                receiver_business_identity=azure_native.logic.BusinessIdentityArgs(
-                    qualifier="ZZ",
-                    value="ZZ",
-                ),
-                sender_business_identity=azure_native.logic.BusinessIdentityArgs(
-                    qualifier="AA",
-                    value="AA",
-                ),
-            ),
-            send_agreement=azure_native.logic.AS2OneWayAgreementArgs(
-                protocol_settings=azure_native.logic.AS2ProtocolSettingsArgs(
-                    acknowledgement_connection_settings=azure_native.logic.AS2AcknowledgementConnectionSettingsArgs(
-                        ignore_certificate_name_mismatch=True,
-                        keep_http_connection_alive=True,
-                        support_http_status_code_continue=True,
-                        unfold_http_headers=True,
-                    ),
-                    envelope_settings=azure_native.logic.AS2EnvelopeSettingsArgs(
-                        autogenerate_file_name=True,
-                        file_name_template="Test",
-                        message_content_type="text/plain",
-                        suspend_message_on_file_name_generation_error=True,
-                        transmit_file_name_in_mime_header=True,
-                    ),
-                    error_settings=azure_native.logic.AS2ErrorSettingsArgs(
-                        resend_if_mdn_not_received=True,
-                        suspend_duplicate_message=True,
-                    ),
-                    mdn_settings=azure_native.logic.AS2MdnSettingsArgs(
-                        disposition_notification_to="http://tempuri.org",
-                        mdn_text="Sample",
-                        mic_hashing_algorithm="SHA1",
-                        need_mdn=True,
-                        receipt_delivery_url="http://tempuri.org",
-                        send_inbound_mdn_to_message_box=True,
-                        send_mdnasynchronously=True,
-                        sign_mdn=True,
-                        sign_outbound_mdn_if_optional=True,
-                    ),
-                    message_connection_settings=azure_native.logic.AS2MessageConnectionSettingsArgs(
-                        ignore_certificate_name_mismatch=True,
-                        keep_http_connection_alive=True,
-                        support_http_status_code_continue=True,
-                        unfold_http_headers=True,
-                    ),
-                    security_settings=azure_native.logic.AS2SecuritySettingsArgs(
-                        enable_nrr_for_inbound_decoded_messages=True,
-                        enable_nrr_for_inbound_encoded_messages=True,
-                        enable_nrr_for_inbound_mdn=True,
-                        enable_nrr_for_outbound_decoded_messages=True,
-                        enable_nrr_for_outbound_encoded_messages=True,
-                        enable_nrr_for_outbound_mdn=True,
-                        override_group_signing_certificate=False,
-                    ),
-                    validation_settings=azure_native.logic.AS2ValidationSettingsArgs(
-                        check_certificate_revocation_list_on_receive=True,
-                        check_certificate_revocation_list_on_send=True,
-                        check_duplicate_message=True,
-                        compress_message=True,
-                        encrypt_message=False,
-                        encryption_algorithm="AES128",
-                        interchange_duplicates_validity_days=100,
-                        override_message_properties=True,
-                        sign_message=False,
-                    ),
-                ),
-                receiver_business_identity=azure_native.logic.BusinessIdentityArgs(
-                    qualifier="AA",
-                    value="AA",
-                ),
-                sender_business_identity=azure_native.logic.BusinessIdentityArgs(
-                    qualifier="ZZ",
-                    value="ZZ",
-                ),
-            ),
-        ),
-    ),
-    guest_identity=azure_native.logic.BusinessIdentityArgs(
-        qualifier="AA",
-        value="AA",
-    ),
-    guest_partner="GuestPartner",
-    host_identity=azure_native.logic.BusinessIdentityArgs(
-        qualifier="ZZ",
-        value="ZZ",
-    ),
-    host_partner="HostPartner",
-    integration_account_name="testIntegrationAccount",
-    location="westus",
-    metadata={},
-    resource_group_name="testResourceGroup",
-    tags={
-        "IntegrationAccountAgreement": "<IntegrationAccountAgreementName>",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:logic:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
-```
-
- */
 @ResourceType(type="azure-native:logic:IntegrationAccountAgreement")
 public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResource {
-    /**
-     * The agreement type.
-     */
     @OutputExport(name="agreementType", type=String.class, parameters={})
     private Output<String> agreementType;
 
-    /**
-     * @return The agreement type.
-     */
     public Output<String> getAgreementType() {
         return this.agreementType;
     }
-    /**
-     * The changed time.
-     */
     @OutputExport(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
-    /**
-     * @return The changed time.
-     */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
-    /**
-     * The agreement content.
-     */
     @OutputExport(name="content", type=AgreementContentResponse.class, parameters={})
     private Output<AgreementContentResponse> content;
 
-    /**
-     * @return The agreement content.
-     */
     public Output<AgreementContentResponse> getContent() {
         return this.content;
     }
-    /**
-     * The created time.
-     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    /**
-     * @return The created time.
-     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    /**
-     * The business identity of the guest partner.
-     */
     @OutputExport(name="guestIdentity", type=BusinessIdentityResponse.class, parameters={})
     private Output<BusinessIdentityResponse> guestIdentity;
 
-    /**
-     * @return The business identity of the guest partner.
-     */
     public Output<BusinessIdentityResponse> getGuestIdentity() {
         return this.guestIdentity;
     }
-    /**
-     * The integration account partner that is set as guest partner for this agreement.
-     */
     @OutputExport(name="guestPartner", type=String.class, parameters={})
     private Output<String> guestPartner;
 
-    /**
-     * @return The integration account partner that is set as guest partner for this agreement.
-     */
     public Output<String> getGuestPartner() {
         return this.guestPartner;
     }
-    /**
-     * The business identity of the host partner.
-     */
     @OutputExport(name="hostIdentity", type=BusinessIdentityResponse.class, parameters={})
     private Output<BusinessIdentityResponse> hostIdentity;
 
-    /**
-     * @return The business identity of the host partner.
-     */
     public Output<BusinessIdentityResponse> getHostIdentity() {
         return this.hostIdentity;
     }
-    /**
-     * The integration account partner that is set as host partner for this agreement.
-     */
     @OutputExport(name="hostPartner", type=String.class, parameters={})
     private Output<String> hostPartner;
 
-    /**
-     * @return The integration account partner that is set as host partner for this agreement.
-     */
     public Output<String> getHostPartner() {
         return this.hostPartner;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The metadata.
-     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
-    /**
-     * @return The metadata.
-     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
-    /**
-     * Gets the resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Gets the resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Gets the resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Gets the resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public IntegrationAccountAgreement(String name, IntegrationAccountAgreementArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccountAgreement", name, args == null ? IntegrationAccountAgreementArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -926,14 +120,6 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static IntegrationAccountAgreement get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccountAgreement(name, id, options);
     }

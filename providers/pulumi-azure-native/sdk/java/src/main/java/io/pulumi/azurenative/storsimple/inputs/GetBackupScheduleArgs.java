@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupScheduleArgs Empty = new GetBackupScheduleArgs();
 
-    /**
-     * The backup policy name.
-     */
     @InputImport(name="backupPolicyName", required=true)
     private final String backupPolicyName;
 
@@ -25,9 +19,6 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
         return this.backupPolicyName;
     }
 
-    /**
-     * The name of the backup schedule to be fetched
-     */
     @InputImport(name="backupScheduleName", required=true)
     private final String backupScheduleName;
 
@@ -35,9 +26,6 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
         return this.backupScheduleName;
     }
 
-    /**
-     * The device name
-     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -45,9 +33,6 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
         return this.deviceName;
     }
 
-    /**
-     * The manager name
-     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -55,9 +40,6 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
         return this.managerName;
     }
 
-    /**
-     * The resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

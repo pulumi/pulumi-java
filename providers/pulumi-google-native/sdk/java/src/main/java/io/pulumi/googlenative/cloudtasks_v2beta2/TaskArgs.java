@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskArgs Empty = new TaskArgs();
 
-    /**
-     * App Engine HTTP request that is sent to the task's target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.
-     */
     @InputImport(name="appEngineHttpRequest")
     private final @Nullable Input<AppEngineHttpRequestArgs> appEngineHttpRequest;
 
@@ -30,9 +24,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.appEngineHttpRequest == null ? Input.empty() : this.appEngineHttpRequest;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,9 +31,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,9 +38,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -60,9 +45,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * LeaseTasks to process the task. Can be set only if pull_target is set on the queue. A pull task is a task that has PullMessage set.
-     */
     @InputImport(name="pullMessage")
     private final @Nullable Input<PullMessageArgs> pullMessage;
 
@@ -70,9 +52,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.pullMessage == null ? Input.empty() : this.pullMessage;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="queueId", required=true)
     private final Input<String> queueId;
 
@@ -80,9 +59,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.queueId;
     }
 
-    /**
-     * The response_view specifies which subset of the Task will be returned. By default response_view is BASIC; not all information is retrieved by default because some data, such as payloads, might be desirable to return only when needed because of its large size or because of the sensitivity of data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/) permission on the Task resource.
-     */
     @InputImport(name="responseView")
     private final @Nullable Input<TaskResponseView> responseView;
 
@@ -90,9 +66,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.responseView == null ? Input.empty() : this.responseView;
     }
 
-    /**
-     * The time when the task is scheduled to be attempted. For App Engine queues, this is when the task will be attempted or retried. For pull queues, this is the time when the task is available to be leased; if a task is currently leased, this is the time when the current lease expires, that is, the time that the task was leased plus the lease_duration. `schedule_time` will be truncated to the nearest microsecond.
-     */
     @InputImport(name="scheduleTime")
     private final @Nullable Input<String> scheduleTime;
 

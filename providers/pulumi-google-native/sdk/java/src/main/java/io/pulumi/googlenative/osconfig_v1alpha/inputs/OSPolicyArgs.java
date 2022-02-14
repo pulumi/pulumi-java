@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An OS policy defines the desired state configuration for a VM.
- */
 public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyArgs Empty = new OSPolicyArgs();
 
-    /**
-     * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
-     */
     @InputImport(name="allowNoResourceGroupMatch")
     private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
 
@@ -31,9 +25,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowNoResourceGroupMatch == null ? Input.empty() : this.allowNoResourceGroupMatch;
     }
 
-    /**
-     * Policy description. Length of the description is limited to 1024 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,9 +32,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -51,9 +39,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.id;
     }
 
-    /**
-     * Policy mode
-     */
     @InputImport(name="mode", required=true)
     private final Input<OSPolicyMode> mode;
 
@@ -61,9 +46,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.mode;
     }
 
-    /**
-     * List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
-     */
     @InputImport(name="resourceGroups", required=true)
     private final Input<List<OSPolicyResourceGroupArgs>> resourceGroups;
 

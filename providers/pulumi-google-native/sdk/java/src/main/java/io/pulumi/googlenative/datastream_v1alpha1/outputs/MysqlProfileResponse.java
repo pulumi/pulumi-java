@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlProfileResponse {
-/**
- * Hostname for the MySQL connection.
- */
     private final String hostname;
-/**
- * Input only. Password for the MySQL connection.
- */
     private final String password;
-/**
- * Port for the MySQL connection, default value is 3306.
- */
     private final Integer port;
-/**
- * SSL configuration for the MySQL connection.
- */
     private final MysqlSslConfigResponse sslConfig;
-/**
- * Username for the MySQL connection.
- */
     private final String username;
 
     @OutputCustomType.Constructor({"hostname","password","port","sslConfig","username"})
@@ -46,33 +31,18 @@ public final class MysqlProfileResponse {
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * Hostname for the MySQL connection.
- */
     public String getHostname() {
         return this.hostname;
     }
-/**
- * Input only. Password for the MySQL connection.
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * Port for the MySQL connection, default value is 3306.
- */
     public Integer getPort() {
         return this.port;
     }
-/**
- * SSL configuration for the MySQL connection.
- */
     public MysqlSslConfigResponse getSslConfig() {
         return this.sslConfig;
     }
-/**
- * Username for the MySQL connection.
- */
     public String getUsername() {
         return this.username;
     }

@@ -9,37 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GitHubEnterpriseSecretsResponse {
-/**
- * The resource name for the OAuth client ID secret in Secret Manager.
- */
     private final String oauthClientIdName;
-/**
- * The resource name for the OAuth client ID secret version in Secret Manager.
- */
     private final String oauthClientIdVersionName;
-/**
- * The resource name for the OAuth secret in Secret Manager.
- */
     private final String oauthSecretName;
-/**
- * The resource name for the OAuth secret secret version in Secret Manager.
- */
     private final String oauthSecretVersionName;
-/**
- * The resource name for the private key secret.
- */
     private final String privateKeyName;
-/**
- * The resource name for the private key secret version.
- */
     private final String privateKeyVersionName;
-/**
- * The resource name for the webhook secret in Secret Manager.
- */
     private final String webhookSecretName;
-/**
- * The resource name for the webhook secret secret version in Secret Manager.
- */
     private final String webhookSecretVersionName;
 
     @OutputCustomType.Constructor({"oauthClientIdName","oauthClientIdVersionName","oauthSecretName","oauthSecretVersionName","privateKeyName","privateKeyVersionName","webhookSecretName","webhookSecretVersionName"})
@@ -62,51 +38,27 @@ public final class GitHubEnterpriseSecretsResponse {
         this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
     }
 
-/**
- * The resource name for the OAuth client ID secret in Secret Manager.
- */
     public String getOauthClientIdName() {
         return this.oauthClientIdName;
     }
-/**
- * The resource name for the OAuth client ID secret version in Secret Manager.
- */
     public String getOauthClientIdVersionName() {
         return this.oauthClientIdVersionName;
     }
-/**
- * The resource name for the OAuth secret in Secret Manager.
- */
     public String getOauthSecretName() {
         return this.oauthSecretName;
     }
-/**
- * The resource name for the OAuth secret secret version in Secret Manager.
- */
     public String getOauthSecretVersionName() {
         return this.oauthSecretVersionName;
     }
-/**
- * The resource name for the private key secret.
- */
     public String getPrivateKeyName() {
         return this.privateKeyName;
     }
-/**
- * The resource name for the private key secret version.
- */
     public String getPrivateKeyVersionName() {
         return this.privateKeyVersionName;
     }
-/**
- * The resource name for the webhook secret in Secret Manager.
- */
     public String getWebhookSecretName() {
         return this.webhookSecretName;
     }
-/**
- * The resource name for the webhook secret secret version in Secret Manager.
- */
     public String getWebhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }

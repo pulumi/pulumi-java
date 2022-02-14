@@ -19,16 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Databricks Delta Lake linked service.
- */
 public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDatabricksDeltaLakeLinkedServiceResponse Empty = new AzureDatabricksDeltaLakeLinkedServiceResponse();
 
-    /**
-     * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="accessToken")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
@@ -36,9 +30,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.accessToken == null ? null : this.accessToken;
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -46,9 +37,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The id of an existing interactive cluster that will be used for all runs of this job. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="clusterId")
     private final @Nullable Object clusterId;
 
@@ -56,9 +44,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -66,9 +51,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -76,9 +58,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -86,9 +65,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="domain", required=true)
     private final Object domain;
 
@@ -96,9 +72,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.domain;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -106,9 +79,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -116,10 +86,6 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse extends io.pulu
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureDatabricksDeltaLake'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -127,9 +93,6 @@ Expected value is 'AzureDatabricksDeltaLake'.
         return this.type;
     }
 
-    /**
-     * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable Object workspaceResourceId;
 

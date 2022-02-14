@@ -16,17 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties used to create a new server by restoring from a backup.
- */
 public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerPropertiesForRestoreArgs Empty = new ServerPropertiesForRestoreArgs();
 
-    /**
-     * The mode to create a new server.
-Expected value is 'PointInTimeRestore'.
-     */
     @InputImport(name="createMode", required=true)
     private final Input<String> createMode;
 
@@ -34,9 +27,6 @@ Expected value is 'PointInTimeRestore'.
         return this.createMode;
     }
 
-    /**
-     * Enforce a minimal Tls version for the server.
-     */
     @InputImport(name="minimalTlsVersion")
     private final @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
@@ -44,9 +34,6 @@ Expected value is 'PointInTimeRestore'.
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
     }
 
-    /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
@@ -54,9 +41,6 @@ Expected value is 'PointInTimeRestore'.
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * Restore point creation time (ISO8601 format), specifying the time to restore from.
-     */
     @InputImport(name="restorePointInTime", required=true)
     private final Input<String> restorePointInTime;
 
@@ -64,9 +48,6 @@ Expected value is 'PointInTimeRestore'.
         return this.restorePointInTime;
     }
 
-    /**
-     * The source server id to restore from.
-     */
     @InputImport(name="sourceServerId", required=true)
     private final Input<String> sourceServerId;
 
@@ -74,9 +55,6 @@ Expected value is 'PointInTimeRestore'.
         return this.sourceServerId;
     }
 
-    /**
-     * Enable ssl enforcement or not when connect to server.
-     */
     @InputImport(name="sslEnforcement")
     private final @Nullable Input<SslEnforcementEnum> sslEnforcement;
 
@@ -84,9 +62,6 @@ Expected value is 'PointInTimeRestore'.
         return this.sslEnforcement == null ? Input.empty() : this.sslEnforcement;
     }
 
-    /**
-     * Storage profile of a server.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<StorageProfileArgs> storageProfile;
 
@@ -94,9 +69,6 @@ Expected value is 'PointInTimeRestore'.
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
-    /**
-     * Server version.
-     */
     @InputImport(name="version")
     private final @Nullable Input<Either<String,ServerVersion>> version;
 

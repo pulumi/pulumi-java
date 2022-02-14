@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
-    /**
-     * The clusters to be created within the instance, mapped by desired cluster ID, e.g., just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`. Fields marked `OutputOnly` must be left blank. Currently, at most four clusters can be specified.
-     */
     @InputImport(name="clusters", required=true)
     private final Input<Map<String,String>> clusters;
 
@@ -29,9 +23,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusters;
     }
 
-    /**
-     * The descriptive name for this instance as it appears in UIs. Can be changed at any time, but should be kept globally unique to avoid confusion.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -39,9 +30,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * The ID to be used when referring to the new instance within its project, e.g., just `myinstance` rather than `projects/myproject/instances/myinstance`.
-     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -49,9 +37,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
-    /**
-     * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer's organizational needs and deployment strategies. They can be used to filter resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must conform to the regular expression: `\p{Ll}\p{Lo}{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`. * No more than 64 labels can be associated with a given resource. * Keys and values must both be under 128 bytes.
-     */
     @InputImport(name="labels", required=true)
     private final Input<Map<String,String>> labels;
 
@@ -59,9 +44,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels;
     }
 
-    /**
-     * The unique name of the instance. Values are of the form `projects/{project}/instances/a-z+[a-z0-9]`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -69,9 +51,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The unique name of the project in which to create the new instance. Values are of the form `projects/{project}`.
-     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -79,9 +58,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -89,9 +65,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The type of the instance. Defaults to `PRODUCTION`.
-     */
     @InputImport(name="type", required=true)
     private final Input<InstanceType> type;
 

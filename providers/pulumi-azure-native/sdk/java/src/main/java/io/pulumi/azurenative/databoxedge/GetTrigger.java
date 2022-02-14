@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
 public class GetTrigger {
-/**
- * Trigger details.
-API Version: 2020-12-01.
- *
- * Trigger details.
- */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

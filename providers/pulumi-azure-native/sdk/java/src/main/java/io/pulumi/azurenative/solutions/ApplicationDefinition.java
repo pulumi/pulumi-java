@@ -25,380 +25,129 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Information about managed application definition.
-API Version: 2019-07-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update managed application definition
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var applicationDefinition = new AzureNative.Solutions.ApplicationDefinition("applicationDefinition", new AzureNative.Solutions.ApplicationDefinitionArgs
-        {
-            ApplicationDefinitionName = "myManagedApplicationDef",
-            Authorizations = 
-            {
-                new AzureNative.Solutions.Inputs.ApplicationAuthorizationArgs
-                {
-                    PrincipalId = "validprincipalguid",
-                    RoleDefinitionId = "validroleguid",
-                },
-            },
-            Description = "myManagedApplicationDef description",
-            DisplayName = "myManagedApplicationDef",
-            Location = "East US 2",
-            LockLevel = "None",
-            PackageFileUri = "https://path/to/packagezipfile",
-            ResourceGroupName = "rg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	solutions "github.com/pulumi/pulumi-azure-native/sdk/go/azure/solutions"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := solutions.NewApplicationDefinition(ctx, "applicationDefinition", &solutions.ApplicationDefinitionArgs{
-			ApplicationDefinitionName: pulumi.String("myManagedApplicationDef"),
-			Authorizations: []solutions.ApplicationAuthorizationArgs{
-				&solutions.ApplicationAuthorizationArgs{
-					PrincipalId:      pulumi.String("validprincipalguid"),
-					RoleDefinitionId: pulumi.String("validroleguid"),
-				},
-			},
-			Description:       pulumi.String("myManagedApplicationDef description"),
-			DisplayName:       pulumi.String("myManagedApplicationDef"),
-			Location:          pulumi.String("East US 2"),
-			LockLevel:         "None",
-			PackageFileUri:    pulumi.String("https://path/to/packagezipfile"),
-			ResourceGroupName: pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const applicationDefinition = new azure_native.solutions.ApplicationDefinition("applicationDefinition", {
-    applicationDefinitionName: "myManagedApplicationDef",
-    authorizations: [{
-        principalId: "validprincipalguid",
-        roleDefinitionId: "validroleguid",
-    }],
-    description: "myManagedApplicationDef description",
-    displayName: "myManagedApplicationDef",
-    location: "East US 2",
-    lockLevel: "None",
-    packageFileUri: "https://path/to/packagezipfile",
-    resourceGroupName: "rg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-application_definition = azure_native.solutions.ApplicationDefinition("applicationDefinition",
-    application_definition_name="myManagedApplicationDef",
-    authorizations=[azure_native.solutions.ApplicationAuthorizationArgs(
-        principal_id="validprincipalguid",
-        role_definition_id="validroleguid",
-    )],
-    description="myManagedApplicationDef description",
-    display_name="myManagedApplicationDef",
-    location="East US 2",
-    lock_level="None",
-    package_file_uri="https://path/to/packagezipfile",
-    resource_group_name="rg")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:solutions:ApplicationDefinition myManagedApplicationDef /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myManagedApplicationDef 
-```
-
- */
 @ResourceType(type="azure-native:solutions:ApplicationDefinition")
 public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
-    /**
-     * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
-     */
     @OutputExport(name="artifacts", type=List.class, parameters={ApplicationDefinitionArtifactResponse.class})
     private Output</* @Nullable */ List<ApplicationDefinitionArtifactResponse>> artifacts;
 
-    /**
-     * @return The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
-     */
     public Output</* @Nullable */ List<ApplicationDefinitionArtifactResponse>> getArtifacts() {
         return this.artifacts;
     }
-    /**
-     * The managed application provider authorizations.
-     */
     @OutputExport(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
     private Output</* @Nullable */ List<ApplicationAuthorizationResponse>> authorizations;
 
-    /**
-     * @return The managed application provider authorizations.
-     */
     public Output</* @Nullable */ List<ApplicationAuthorizationResponse>> getAuthorizations() {
         return this.authorizations;
     }
-    /**
-     * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
-     */
     @OutputExport(name="createUiDefinition", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> createUiDefinition;
 
-    /**
-     * @return The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
-     */
     public Output</* @Nullable */ Object> getCreateUiDefinition() {
         return this.createUiDefinition;
     }
-    /**
-     * The managed application deployment policy.
-     */
     @OutputExport(name="deploymentPolicy", type=ApplicationDeploymentPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationDeploymentPolicyResponse> deploymentPolicy;
 
-    /**
-     * @return The managed application deployment policy.
-     */
     public Output</* @Nullable */ ApplicationDeploymentPolicyResponse> getDeploymentPolicy() {
         return this.deploymentPolicy;
     }
-    /**
-     * The managed application definition description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The managed application definition description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The managed application definition display name.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The managed application definition display name.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * A value indicating whether the package is enabled or not.
-     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
-    /**
-     * @return A value indicating whether the package is enabled or not.
-     */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
-    /**
-     * Resource location
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The managed application lock level.
-     */
     @OutputExport(name="lockLevel", type=String.class, parameters={})
     private Output<String> lockLevel;
 
-    /**
-     * @return The managed application lock level.
-     */
     public Output<String> getLockLevel() {
         return this.lockLevel;
     }
-    /**
-     * The managed application locking policy.
-     */
     @OutputExport(name="lockingPolicy", type=ApplicationPackageLockingPolicyDefinitionResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationPackageLockingPolicyDefinitionResponse> lockingPolicy;
 
-    /**
-     * @return The managed application locking policy.
-     */
     public Output</* @Nullable */ ApplicationPackageLockingPolicyDefinitionResponse> getLockingPolicy() {
         return this.lockingPolicy;
     }
-    /**
-     * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
-     */
     @OutputExport(name="mainTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> mainTemplate;
 
-    /**
-     * @return The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
-     */
     public Output</* @Nullable */ Object> getMainTemplate() {
         return this.mainTemplate;
     }
-    /**
-     * ID of the resource that manages this resource.
-     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
-    /**
-     * @return ID of the resource that manages this resource.
-     */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
-    /**
-     * The managed application management policy that determines publisher's access to the managed resource group.
-     */
     @OutputExport(name="managementPolicy", type=ApplicationManagementPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationManagementPolicyResponse> managementPolicy;
 
-    /**
-     * @return The managed application management policy that determines publisher's access to the managed resource group.
-     */
     public Output</* @Nullable */ ApplicationManagementPolicyResponse> getManagementPolicy() {
         return this.managementPolicy;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The managed application notification policy.
-     */
     @OutputExport(name="notificationPolicy", type=ApplicationNotificationPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationNotificationPolicyResponse> notificationPolicy;
 
-    /**
-     * @return The managed application notification policy.
-     */
     public Output</* @Nullable */ ApplicationNotificationPolicyResponse> getNotificationPolicy() {
         return this.notificationPolicy;
     }
-    /**
-     * The managed application definition package file Uri. Use this element
-     */
     @OutputExport(name="packageFileUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageFileUri;
 
-    /**
-     * @return The managed application definition package file Uri. Use this element
-     */
     public Output</* @Nullable */ String> getPackageFileUri() {
         return this.packageFileUri;
     }
-    /**
-     * The managed application provider policies.
-     */
     @OutputExport(name="policies", type=List.class, parameters={ApplicationPolicyResponse.class})
     private Output</* @Nullable */ List<ApplicationPolicyResponse>> policies;
 
-    /**
-     * @return The managed application provider policies.
-     */
     public Output</* @Nullable */ List<ApplicationPolicyResponse>> getPolicies() {
         return this.policies;
     }
-    /**
-     * The SKU of the resource.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return The SKU of the resource.
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Resource tags
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ApplicationDefinition(String name, ApplicationDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:solutions:ApplicationDefinition", name, args == null ? ApplicationDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -422,14 +171,6 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ApplicationDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationDefinition(name, id, options);
     }

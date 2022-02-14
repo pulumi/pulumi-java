@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * metadata of a repository.
- */
 public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
-    /**
-     * Branch name of repository.
-     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -29,9 +23,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.branch == null ? Input.empty() : this.branch;
     }
 
-    /**
-     * Url to access repository action logs.
-     */
     @InputImport(name="deploymentLogsUrl")
     private final @Nullable Input<String> deploymentLogsUrl;
 
@@ -39,9 +30,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentLogsUrl == null ? Input.empty() : this.deploymentLogsUrl;
     }
 
-    /**
-     * Display url of repository.
-     */
     @InputImport(name="displayUrl")
     private final @Nullable Input<String> displayUrl;
 
@@ -49,9 +37,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayUrl == null ? Input.empty() : this.displayUrl;
     }
 
-    /**
-     * Dictionary of source control content type and path mapping.
-     */
     @InputImport(name="pathMapping")
     private final @Nullable Input<List<ContentPathMapArgs>> pathMapping;
 
@@ -59,9 +44,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.pathMapping == null ? Input.empty() : this.pathMapping;
     }
 
-    /**
-     * Url of repository.
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

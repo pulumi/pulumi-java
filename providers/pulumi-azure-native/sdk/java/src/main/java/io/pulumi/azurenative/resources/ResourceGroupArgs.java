@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceGroupArgs Empty = new ResourceGroupArgs();
 
-    /**
-     * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,9 +22,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The ID of the resource that manages this resource group.
-     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -38,9 +29,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
-    /**
-     * The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.
-     */
     @InputImport(name="resourceGroupName")
     private final @Nullable Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
     }
 
-    /**
-     * The tags attached to the resource group.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

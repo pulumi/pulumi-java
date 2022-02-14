@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddonArgs Empty = new AddonArgs();
 
-    /**
-     * Name of the addon for the private cloud
-     */
     @InputImport(name="addonName")
     private final @Nullable Input<String> addonName;
 
@@ -29,9 +23,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonName == null ? Input.empty() : this.addonName;
     }
 
-    /**
-     * The type of private cloud addon
-     */
     @InputImport(name="addonType")
     private final @Nullable Input<Either<String,AddonType>> addonType;
 
@@ -39,9 +30,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonType == null ? Input.empty() : this.addonType;
     }
 
-    /**
-     * The SRM license
-     */
     @InputImport(name="licenseKey")
     private final @Nullable Input<String> licenseKey;
 
@@ -49,9 +37,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenseKey == null ? Input.empty() : this.licenseKey;
     }
 
-    /**
-     * The name of the private cloud.
-     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -59,9 +44,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

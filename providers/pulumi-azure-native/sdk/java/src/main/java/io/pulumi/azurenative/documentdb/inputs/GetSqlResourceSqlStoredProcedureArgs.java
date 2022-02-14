@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlResourceSqlStoredProcedureArgs Empty = new GetSqlResourceSqlStoredProcedureArgs();
 
-    /**
-     * Cosmos DB database account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
         return this.accountName;
     }
 
-    /**
-     * Cosmos DB container name.
-     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -35,9 +26,6 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
         return this.containerName;
     }
 
-    /**
-     * Cosmos DB database name.
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -45,9 +33,6 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
         return this.databaseName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -55,9 +40,6 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
-    /**
-     * Cosmos DB storedProcedure name.
-     */
     @InputImport(name="storedProcedureName", required=true)
     private final String storedProcedureName;
 

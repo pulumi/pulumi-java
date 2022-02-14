@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteTable {
-/**
- * Route table resource.
-API Version: 2020-11-01.
- *
- * Route table resource.
- */
     public static CompletableFuture<GetRouteTableResult> invokeAsync(GetRouteTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteTable", TypeShape.of(GetRouteTableResult.class), args == null ? GetRouteTableArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Scheduling properties of a job.
- */
 public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobScheduleArgs Empty = new JobScheduleArgs();
 
-    /**
-     * Whether or not the schedule is enabled.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -29,9 +23,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Schedule end time.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -39,9 +30,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
-     */
     @InputImport(name="interval")
     private final @Nullable Input<String> interval;
 
@@ -49,9 +37,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
-    /**
-     * Schedule start time.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -59,9 +44,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Schedule interval type
-     */
     @InputImport(name="type")
     private final @Nullable Input<JobScheduleType> type;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNodeTemplateArgs Empty = new GetNodeTemplateArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="nodeTemplate", required=true)
     private final String nodeTemplate;
 
@@ -27,9 +21,6 @@ public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
         return this.nodeTemplate;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

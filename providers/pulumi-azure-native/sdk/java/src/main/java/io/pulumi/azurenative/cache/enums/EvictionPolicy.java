@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Redis eviction policy - default is VolatileLRU
- */
     @EnumType
     public enum EvictionPolicy {
-/**
- * 
- */
         AllKeysLFU("AllKeysLFU"),
-/**
- * 
- */
         AllKeysLRU("AllKeysLRU"),
-/**
- * 
- */
         AllKeysRandom("AllKeysRandom"),
-/**
- * 
- */
         VolatileLRU("VolatileLRU"),
-/**
- * 
- */
         VolatileLFU("VolatileLFU"),
-/**
- * 
- */
         VolatileTTL("VolatileTTL"),
-/**
- * 
- */
         VolatileRandom("VolatileRandom"),
-/**
- * 
- */
         NoEviction("NoEviction");
 
         private final String value;

@@ -17,261 +17,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
-API Version: 2021-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a pipeline job
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipelineJob = new AzureNative.VideoAnalyzer.PipelineJob("pipelineJob", new AzureNative.VideoAnalyzer.PipelineJobArgs
-        {
-            AccountName = "testaccount2",
-            Description = "Pipeline Job 1 Dsecription",
-            Parameters = 
-            {
-                new AzureNative.VideoAnalyzer.Inputs.ParameterDefinitionArgs
-                {
-                    Name = "timesequences",
-                    Value = "[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]",
-                },
-                new AzureNative.VideoAnalyzer.Inputs.ParameterDefinitionArgs
-                {
-                    Name = "videoSourceName",
-                    Value = "camera001",
-                },
-            },
-            PipelineJobName = "pipelineJob1",
-            ResourceGroupName = "testrg",
-            TopologyName = "pipelinetopology1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	videoanalyzer "github.com/pulumi/pulumi-azure-native/sdk/go/azure/videoanalyzer"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := videoanalyzer.NewPipelineJob(ctx, "pipelineJob", &videoanalyzer.PipelineJobArgs{
-			AccountName: pulumi.String("testaccount2"),
-			Description: pulumi.String("Pipeline Job 1 Dsecription"),
-			Parameters: []videoanalyzer.ParameterDefinitionArgs{
-				&videoanalyzer.ParameterDefinitionArgs{
-					Name:  pulumi.String("timesequences"),
-					Value: pulumi.String("[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]"),
-				},
-				&videoanalyzer.ParameterDefinitionArgs{
-					Name:  pulumi.String("videoSourceName"),
-					Value: pulumi.String("camera001"),
-				},
-			},
-			PipelineJobName:   pulumi.String("pipelineJob1"),
-			ResourceGroupName: pulumi.String("testrg"),
-			TopologyName:      pulumi.String("pipelinetopology1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const pipelineJob = new azure_native.videoanalyzer.PipelineJob("pipelineJob", {
-    accountName: "testaccount2",
-    description: "Pipeline Job 1 Dsecription",
-    parameters: [
-        {
-            name: "timesequences",
-            value: "[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]",
-        },
-        {
-            name: "videoSourceName",
-            value: "camera001",
-        },
-    ],
-    pipelineJobName: "pipelineJob1",
-    resourceGroupName: "testrg",
-    topologyName: "pipelinetopology1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-pipeline_job = azure_native.videoanalyzer.PipelineJob("pipelineJob",
-    account_name="testaccount2",
-    description="Pipeline Job 1 Dsecription",
-    parameters=[
-        azure_native.videoanalyzer.ParameterDefinitionArgs(
-            name="timesequences",
-            value="[[\"2020-10-05T03:30:00Z\", \"2020-10-05T04:30:00Z\"]]",
-        ),
-        azure_native.videoanalyzer.ParameterDefinitionArgs(
-            name="videoSourceName",
-            value="camera001",
-        ),
-    ],
-    pipeline_job_name="pipelineJob1",
-    resource_group_name="testrg",
-    topology_name="pipelinetopology1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:videoanalyzer:PipelineJob pipelineJob1 /subscriptions/591e76c3-3e97-44db-879c-3e2b12961b62/resourceGroups/testrg/providers/Microsoft.Media/videoAnalyzers/testaccount2/pipelineJobs/pipelineJob1 
-```
-
- */
 @ResourceType(type="azure-native:videoanalyzer:PipelineJob")
 public class PipelineJob extends io.pulumi.resources.CustomResource {
-    /**
-     * An optional description for the pipeline.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return An optional description for the pipeline.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Details about the error, in case the pipeline job fails.
-     */
     @OutputExport(name="error", type=PipelineJobErrorResponse.class, parameters={})
     private Output<PipelineJobErrorResponse> error;
 
-    /**
-     * @return Details about the error, in case the pipeline job fails.
-     */
     public Output<PipelineJobErrorResponse> getError() {
         return this.error;
     }
-    /**
-     * The date-time by when this pipeline job will be automatically deleted from your account.
-     */
     @OutputExport(name="expiration", type=String.class, parameters={})
     private Output<String> expiration;
 
-    /**
-     * @return The date-time by when this pipeline job will be automatically deleted from your account.
-     */
     public Output<String> getExpiration() {
         return this.expiration;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
-     */
     @OutputExport(name="parameters", type=List.class, parameters={ParameterDefinitionResponse.class})
     private Output</* @Nullable */ List<ParameterDefinitionResponse>> parameters;
 
-    /**
-     * @return List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
-     */
     public Output</* @Nullable */ List<ParameterDefinitionResponse>> getParameters() {
         return this.parameters;
     }
-    /**
-     * Current state of the pipeline (read-only).
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return Current state of the pipeline (read-only).
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
-     */
     @OutputExport(name="topologyName", type=String.class, parameters={})
     private Output<String> topologyName;
 
-    /**
-     * @return Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
-     */
     public Output<String> getTopologyName() {
         return this.topologyName;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PipelineJob(String name, PipelineJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:videoanalyzer:PipelineJob", name, args == null ? PipelineJobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -290,14 +92,6 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PipelineJob get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PipelineJob(name, id, options);
     }

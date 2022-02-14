@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Input for the task that migrates MySQL databases to Azure Database for MySQL for online migrations
- */
 public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskInputResponse Empty = new MigrateMySqlAzureDbForMySqlSyncTaskInputResponse();
 
-    /**
-     * Databases to migrate
-     */
     @InputImport(name="selectedDatabases", required=true)
     private final List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
 
@@ -27,9 +21,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
         return this.selectedDatabases;
     }
 
-    /**
-     * Connection information for source MySQL
-     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -37,9 +28,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
         return this.sourceConnectionInfo;
     }
 
-    /**
-     * Connection information for target Azure Database for MySQL
-     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final MySqlConnectionInfoResponse targetConnectionInfo;
 

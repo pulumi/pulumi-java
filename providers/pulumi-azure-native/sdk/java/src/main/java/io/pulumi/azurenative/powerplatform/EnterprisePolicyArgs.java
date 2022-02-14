@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnterprisePolicyArgs Empty = new EnterprisePolicyArgs();
 
-    /**
-     * The encryption settings for a configuration store.
-     */
     @InputImport(name="encryption")
     private final @Nullable Input<PropertiesEncryptionArgs> encryption;
 
@@ -34,9 +28,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
-    /**
-     * Name of the EnterprisePolicy.
-     */
     @InputImport(name="enterprisePolicyName")
     private final @Nullable Input<String> enterprisePolicyName;
 
@@ -44,9 +35,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.enterprisePolicyName == null ? Input.empty() : this.enterprisePolicyName;
     }
 
-    /**
-     * The identity of the EnterprisePolicy.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<EnterprisePolicyIdentityArgs> identity;
 
@@ -54,9 +42,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The kind (type) of Enterprise Policy.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,EnterprisePolicyKind>> kind;
 
@@ -64,9 +49,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.kind;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -74,9 +56,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Settings concerning lockbox.
-     */
     @InputImport(name="lockbox")
     private final @Nullable Input<PropertiesLockboxArgs> lockbox;
 
@@ -84,9 +63,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.lockbox == null ? Input.empty() : this.lockbox;
     }
 
-    /**
-     * Settings concerning network injection.
-     */
     @InputImport(name="networkInjection")
     private final @Nullable Input<PropertiesNetworkInjectionArgs> networkInjection;
 
@@ -94,9 +70,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.networkInjection == null ? Input.empty() : this.networkInjection;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -104,9 +77,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListGlobalUserLabsResult {
-/**
- * List of all the labs
- */
     private final @Nullable List<LabDetailsResponse> labs;
 
     @OutputCustomType.Constructor({"labs"})
@@ -21,9 +18,6 @@ public final class ListGlobalUserLabsResult {
         this.labs = labs;
     }
 
-/**
- * List of all the labs
- */
     public List<LabDetailsResponse> getLabs() {
         return this.labs == null ? List.of() : this.labs;
     }

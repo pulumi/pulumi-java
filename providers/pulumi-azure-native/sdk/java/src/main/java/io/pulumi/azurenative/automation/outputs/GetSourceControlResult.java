@@ -12,53 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSourceControlResult {
-/**
- * The auto sync of the source control. Default is false.
- */
     private final @Nullable Boolean autoSync;
-/**
- * The repo branch of the source control. Include branch as empty string for VsoTfvc.
- */
     private final @Nullable String branch;
-/**
- * The creation time.
- */
     private final @Nullable String creationTime;
-/**
- * The description.
- */
     private final @Nullable String description;
-/**
- * The folder path of the source control.
- */
     private final @Nullable String folderPath;
-/**
- * Fully qualified resource Id for the resource
- */
     private final String id;
-/**
- * The last modified time.
- */
     private final @Nullable String lastModifiedTime;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The auto publish of the source control. Default is true.
- */
     private final @Nullable Boolean publishRunbook;
-/**
- * The repo url of the source control.
- */
     private final @Nullable String repoUrl;
-/**
- * The source type. Must be one of VsoGit, VsoTfvc, GitHub.
- */
     private final @Nullable String sourceType;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"autoSync","branch","creationTime","description","folderPath","id","lastModifiedTime","name","publishRunbook","repoUrl","sourceType","type"})
@@ -89,75 +53,39 @@ public final class GetSourceControlResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The auto sync of the source control. Default is false.
- */
     public Optional<Boolean> getAutoSync() {
         return Optional.ofNullable(this.autoSync);
     }
-/**
- * The repo branch of the source control. Include branch as empty string for VsoTfvc.
- */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
-/**
- * The creation time.
- */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
-/**
- * The description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The folder path of the source control.
- */
     public Optional<String> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
-/**
- * Fully qualified resource Id for the resource
- */
     public String getId() {
         return this.id;
     }
-/**
- * The last modified time.
- */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The auto publish of the source control. Default is true.
- */
     public Optional<Boolean> getPublishRunbook() {
         return Optional.ofNullable(this.publishRunbook);
     }
-/**
- * The repo url of the source control.
- */
     public Optional<String> getRepoUrl() {
         return Optional.ofNullable(this.repoUrl);
     }
-/**
- * The source type. Must be one of VsoGit, VsoTfvc, GitHub.
- */
     public Optional<String> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

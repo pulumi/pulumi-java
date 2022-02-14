@@ -9,22 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServicePrincipalSecretAuthInfoResponse {
-/**
- * The authentication type.
-Expected value is 'servicePrincipalSecret'.
- */
     private final String authType;
-/**
- * ServicePrincipal application clientId for servicePrincipal auth.
- */
     private final String clientId;
-/**
- * Principal Id for servicePrincipal auth.
- */
     private final String principalId;
-/**
- * Secret for servicePrincipal auth.
- */
     private final String secret;
 
     @OutputCustomType.Constructor({"authType","clientId","principalId","secret"})
@@ -39,28 +26,15 @@ Expected value is 'servicePrincipalSecret'.
         this.secret = Objects.requireNonNull(secret);
     }
 
-/**
- * The authentication type.
-Expected value is 'servicePrincipalSecret'.
- */
     public String getAuthType() {
         return this.authType;
     }
-/**
- * ServicePrincipal application clientId for servicePrincipal auth.
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * Principal Id for servicePrincipal auth.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * Secret for servicePrincipal auth.
- */
     public String getSecret() {
         return this.secret;
     }

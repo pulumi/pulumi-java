@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a single zypper package repository. These are added to a repo file that is managed at `/etc/zypp/repos.d/google_osconfig.repo`.
- */
 public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceZypperRepositoryArgs Empty = new OSPolicyResourceRepositoryResourceZypperRepositoryArgs();
 
-    /**
-     * The location of the repository directory.
-     */
     @InputImport(name="baseUrl", required=true)
     private final Input<String> baseUrl;
 
@@ -28,9 +22,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
         return this.baseUrl;
     }
 
-    /**
-     * The display name of the repository.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -38,9 +29,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * URIs of GPG keys.
-     */
     @InputImport(name="gpgKeys")
     private final @Nullable Input<List<String>> gpgKeys;
 
@@ -48,9 +36,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
         return this.gpgKeys == null ? Input.empty() : this.gpgKeys;
     }
 
-    /**
-     * A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

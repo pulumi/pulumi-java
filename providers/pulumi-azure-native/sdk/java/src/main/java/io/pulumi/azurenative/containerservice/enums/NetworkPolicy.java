@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Network policy used for building Kubernetes network.
- */
     @EnumType
     public enum NetworkPolicy {
-/**
- * 
- */
         Calico("calico"),
-/**
- * 
- */
         Azure("azure");
 
         private final String value;

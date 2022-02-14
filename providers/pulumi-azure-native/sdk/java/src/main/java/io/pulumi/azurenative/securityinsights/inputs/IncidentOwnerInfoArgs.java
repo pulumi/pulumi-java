@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information on the user an incident is assigned to
- */
 public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncidentOwnerInfoArgs Empty = new IncidentOwnerInfoArgs();
 
-    /**
-     * The name of the user the incident is assigned to.
-     */
     @InputImport(name="assignedTo")
     private final @Nullable Input<String> assignedTo;
 
@@ -27,9 +21,6 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
         return this.assignedTo == null ? Input.empty() : this.assignedTo;
     }
 
-    /**
-     * The email of the user the incident is assigned to.
-     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -37,9 +28,6 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
         return this.email == null ? Input.empty() : this.email;
     }
 
-    /**
-     * The object id of the user the incident is assigned to.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -47,9 +35,6 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
-    /**
-     * The user principal name of the user the incident is assigned to.
-     */
     @InputImport(name="userPrincipalName")
     private final @Nullable Input<String> userPrincipalName;
 

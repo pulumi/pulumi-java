@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFirewallPolicyArgs Empty = new GetFirewallPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="firewallPolicy", required=true)
     private final String firewallPolicy;
 

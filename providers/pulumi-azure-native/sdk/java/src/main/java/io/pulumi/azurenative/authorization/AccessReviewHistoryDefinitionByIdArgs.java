@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessReviewHistoryDefinitionByIdArgs Empty = new AccessReviewHistoryDefinitionByIdArgs();
 
-    /**
-     * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
-     */
     @InputImport(name="decisions")
     private final @Nullable Input<List<Either<String,AccessReviewResult>>> decisions;
 
@@ -34,9 +28,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.decisions == null ? Input.empty() : this.decisions;
     }
 
-    /**
-     * The display name for the history definition.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -44,9 +35,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The DateTime when the review is scheduled to end. Required if type is endDate
-     */
     @InputImport(name="endDate")
     private final @Nullable Input<String> endDate;
 
@@ -54,9 +42,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.endDate == null ? Input.empty() : this.endDate;
     }
 
-    /**
-     * The id of the access review history definition.
-     */
     @InputImport(name="historyDefinitionId")
     private final @Nullable Input<String> historyDefinitionId;
 
@@ -64,9 +49,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.historyDefinitionId == null ? Input.empty() : this.historyDefinitionId;
     }
 
-    /**
-     * Set of access review history instances for this history definition.
-     */
     @InputImport(name="instances")
     private final @Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances;
 
@@ -74,9 +56,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.instances == null ? Input.empty() : this.instances;
     }
 
-    /**
-     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -84,9 +63,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.interval == null ? Input.empty() : this.interval;
     }
 
-    /**
-     * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     */
     @InputImport(name="numberOfOccurrences")
     private final @Nullable Input<Integer> numberOfOccurrences;
 
@@ -94,9 +70,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.numberOfOccurrences == null ? Input.empty() : this.numberOfOccurrences;
     }
 
-    /**
-     * A collection of scopes used when selecting review history data
-     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<AccessReviewScopeArgs>> scopes;
 
@@ -104,9 +77,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
-    /**
-     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     */
     @InputImport(name="startDate")
     private final @Nullable Input<String> startDate;
 
@@ -114,9 +84,6 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
         return this.startDate == null ? Input.empty() : this.startDate;
     }
 
-    /**
-     * The recurrence range type. The possible values are: endDate, noEnd, numbered.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type;
 

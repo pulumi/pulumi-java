@@ -18,338 +18,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * 
-API Version: 2021-03-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CreateOrUpdate Batch Endpoint.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var batchEndpoint = new AzureNative.MachineLearningServices.BatchEndpoint("batchEndpoint", new AzureNative.MachineLearningServices.BatchEndpointArgs
-        {
-            EndpointName = "testBatchEndpoint",
-            Identity = new AzureNative.MachineLearningServices.Inputs.ResourceIdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity", new AzureNative.MachineLearningServices.Inputs.UserAssignedIdentityMetaArgs
-                    {
-                        ClientId = "string",
-                        PrincipalId = "string",
-                    } },
-                },
-            },
-            Kind = "string",
-            Location = "string",
-            Properties = new AzureNative.MachineLearningServices.Inputs.BatchEndpointArgs
-            {
-                AuthMode = "AMLToken",
-                Description = "string",
-                Keys = new AzureNative.MachineLearningServices.Inputs.EndpointAuthKeysArgs
-                {
-                    PrimaryKey = "string",
-                    SecondaryKey = "string",
-                },
-                Properties = 
-                {
-                    { "additionalProp1", "string" },
-                    { "additionalProp2", "string" },
-                    { "additionalProp3", "string" },
-                },
-                Traffic = 
-                {
-                    { "myDeployment1", 0 },
-                    { "myDeployment2", 1 },
-                },
-            },
-            ResourceGroupName = "resourceGroup-1234",
-            Tags = 
-            {
-                { "additionalProp1", "string" },
-                { "additionalProp2", "string" },
-                { "additionalProp3", "string" },
-            },
-            WorkspaceName = "testworkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewBatchEndpoint(ctx, "batchEndpoint", &machinelearningservices.BatchEndpointArgs{
-			EndpointName: pulumi.String("testBatchEndpoint"),
-			Identity: &machinelearningservices.ResourceIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
-					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
-						ClientId:    pulumi.String("string"),
-						PrincipalId: pulumi.String("string"),
-					},
-				},
-			},
-			Kind:     pulumi.String("string"),
-			Location: pulumi.String("string"),
-			Properties: &machinelearningservices.BatchEndpointArgs{
-				AuthMode:    pulumi.String("AMLToken"),
-				Description: pulumi.String("string"),
-				Keys: &machinelearningservices.EndpointAuthKeysArgs{
-					PrimaryKey:   pulumi.String("string"),
-					SecondaryKey: pulumi.String("string"),
-				},
-				Properties: pulumi.StringMap{
-					"additionalProp1": pulumi.String("string"),
-					"additionalProp2": pulumi.String("string"),
-					"additionalProp3": pulumi.String("string"),
-				},
-				Traffic: pulumi.IntMap{
-					"myDeployment1": pulumi.Int(0),
-					"myDeployment2": pulumi.Int(1),
-				},
-			},
-			ResourceGroupName: pulumi.String("resourceGroup-1234"),
-			Tags: pulumi.StringMap{
-				"additionalProp1": pulumi.String("string"),
-				"additionalProp2": pulumi.String("string"),
-				"additionalProp3": pulumi.String("string"),
-			},
-			WorkspaceName: pulumi.String("testworkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const batchEndpoint = new azure_native.machinelearningservices.BatchEndpoint("batchEndpoint", {
-    endpointName: "testBatchEndpoint",
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": {
-                clientId: "string",
-                principalId: "string",
-            },
-        },
-    },
-    kind: "string",
-    location: "string",
-    properties: {
-        authMode: "AMLToken",
-        description: "string",
-        keys: {
-            primaryKey: "string",
-            secondaryKey: "string",
-        },
-        properties: {
-            additionalProp1: "string",
-            additionalProp2: "string",
-            additionalProp3: "string",
-        },
-        traffic: {
-            myDeployment1: 0,
-            myDeployment2: 1,
-        },
-    },
-    resourceGroupName: "resourceGroup-1234",
-    tags: {
-        additionalProp1: "string",
-        additionalProp2: "string",
-        additionalProp3: "string",
-    },
-    workspaceName: "testworkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-batch_endpoint = azure_native.machinelearningservices.BatchEndpoint("batchEndpoint",
-    endpoint_name="testBatchEndpoint",
-    identity=azure_native.machinelearningservices.ResourceIdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": azure_native.machinelearningservices.UserAssignedIdentityMetaArgs(
-                client_id="string",
-                principal_id="string",
-            ),
-        },
-    ),
-    kind="string",
-    location="string",
-    properties=azure_native.machinelearningservices.BatchEndpointArgs(
-        auth_mode="AMLToken",
-        description="string",
-        keys=azure_native.machinelearningservices.EndpointAuthKeysArgs(
-            primary_key="string",
-            secondary_key="string",
-        ),
-        properties={
-            "additionalProp1": "string",
-            "additionalProp2": "string",
-            "additionalProp3": "string",
-        },
-        traffic={
-            "myDeployment1": 0,
-            "myDeployment2": 1,
-        },
-    ),
-    resource_group_name="resourceGroup-1234",
-    tags={
-        "additionalProp1": "string",
-        "additionalProp2": "string",
-        "additionalProp3": "string",
-    },
-    workspace_name="testworkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:machinelearningservices:BatchEndpoint testBatchEndpoint /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/batchEndpoints/testBatchEndpoint 
-```
-
- */
 @ResourceType(type="azure-native:machinelearningservices:BatchEndpoint")
 public class BatchEndpoint extends io.pulumi.resources.CustomResource {
-    /**
-     * Service identity associated with a resource.
-     */
     @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
-    /**
-     * @return Service identity associated with a resource.
-     */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Additional attributes of the entity.
-     */
     @OutputExport(name="properties", type=BatchEndpointResponse.class, parameters={})
     private Output<BatchEndpointResponse> properties;
 
-    /**
-     * @return Additional attributes of the entity.
-     */
     public Output<BatchEndpointResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * System data associated with resource provider
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return System data associated with resource provider
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public BatchEndpoint(String name, BatchEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:BatchEndpoint", name, args == null ? BatchEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -368,14 +87,6 @@ public class BatchEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static BatchEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BatchEndpoint(name, id, options);
     }

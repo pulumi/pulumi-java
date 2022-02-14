@@ -12,41 +12,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCertificateResult {
-/**
- * Gets the creation time.
- */
     private final String creationTime;
-/**
- * Gets or sets the description.
- */
     private final @Nullable String description;
-/**
- * Gets the expiry time of the certificate.
- */
     private final String expiryTime;
-/**
- * Fully qualified resource Id for the resource
- */
     private final String id;
-/**
- * Gets the is exportable flag of the certificate.
- */
     private final Boolean isExportable;
-/**
- * Gets the last modified time.
- */
     private final String lastModifiedTime;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Gets the thumbprint of the certificate.
- */
     private final String thumbprint;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"creationTime","description","expiryTime","id","isExportable","lastModifiedTime","name","thumbprint","type"})
@@ -71,57 +44,30 @@ public final class GetCertificateResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Gets the creation time.
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * Gets or sets the description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Gets the expiry time of the certificate.
- */
     public String getExpiryTime() {
         return this.expiryTime;
     }
-/**
- * Fully qualified resource Id for the resource
- */
     public String getId() {
         return this.id;
     }
-/**
- * Gets the is exportable flag of the certificate.
- */
     public Boolean getIsExportable() {
         return this.isExportable;
     }
-/**
- * Gets the last modified time.
- */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Gets the thumbprint of the certificate.
- */
     public String getThumbprint() {
         return this.thumbprint;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

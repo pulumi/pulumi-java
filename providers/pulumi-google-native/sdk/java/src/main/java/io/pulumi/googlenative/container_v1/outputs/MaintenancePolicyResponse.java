@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MaintenancePolicyResponse {
-/**
- * A hash identifying the version of this policy, so that updates to fields of the policy won't accidentally undo intermediate changes (and so that users of the API unaware of some fields won't accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
- */
     private final String resourceVersion;
-/**
- * Specifies the maintenance window in which maintenance may be performed.
- */
     private final MaintenanceWindowResponse window;
 
     @OutputCustomType.Constructor({"resourceVersion","window"})
@@ -27,15 +21,9 @@ public final class MaintenancePolicyResponse {
         this.window = Objects.requireNonNull(window);
     }
 
-/**
- * A hash identifying the version of this policy, so that updates to fields of the policy won't accidentally undo intermediate changes (and so that users of the API unaware of some fields won't accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
- */
     public String getResourceVersion() {
         return this.resourceVersion;
     }
-/**
- * Specifies the maintenance window in which maintenance may be performed.
- */
     public MaintenanceWindowResponse getWindow() {
         return this.window;
     }

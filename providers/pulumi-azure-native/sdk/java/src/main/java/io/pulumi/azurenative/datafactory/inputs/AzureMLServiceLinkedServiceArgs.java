@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure ML Service linked service.
- */
 public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMLServiceLinkedServiceArgs Empty = new AzureMLServiceLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -45,9 +36,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,9 +43,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -65,9 +50,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Azure ML Service workspace name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="mlWorkspaceName", required=true)
     private final Input<Object> mlWorkspaceName;
 
@@ -75,9 +57,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.mlWorkspaceName;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -85,9 +64,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<Object> resourceGroupName;
 
@@ -95,9 +71,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
-    /**
-     * The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Input<Object> servicePrincipalId;
 
@@ -105,9 +78,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
     }
 
-    /**
-     * The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.
-     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
@@ -115,9 +85,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
     }
 
-    /**
-     * Azure ML Service workspace subscription ID. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<Object> subscriptionId;
 
@@ -125,9 +92,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.subscriptionId;
     }
 
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenant")
     private final @Nullable Input<Object> tenant;
 
@@ -135,10 +99,6 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
         return this.tenant == null ? Input.empty() : this.tenant;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureMLService'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

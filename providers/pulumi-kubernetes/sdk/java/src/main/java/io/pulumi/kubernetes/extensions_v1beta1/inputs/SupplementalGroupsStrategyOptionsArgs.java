@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy. Deprecated: use SupplementalGroupsStrategyOptions from policy API Group instead.
- */
 public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SupplementalGroupsStrategyOptionsArgs Empty = new SupplementalGroupsStrategyOptionsArgs();
 
-    /**
-     * ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.
-     */
     @InputImport(name="ranges")
     private final @Nullable Input<List<IDRangeArgs>> ranges;
 
@@ -29,9 +23,6 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
         return this.ranges == null ? Input.empty() : this.ranges;
     }
 
-    /**
-     * rule is the strategy that will dictate what supplemental groups is used in the SecurityContext.
-     */
     @InputImport(name="rule")
     private final @Nullable Input<String> rule;
 

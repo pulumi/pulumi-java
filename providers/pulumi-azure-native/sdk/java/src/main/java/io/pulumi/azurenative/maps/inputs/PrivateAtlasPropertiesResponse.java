@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Private Atlas resource properties
- */
 public final class PrivateAtlasPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateAtlasPropertiesResponse Empty = new PrivateAtlasPropertiesResponse();
 
-    /**
-     * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 

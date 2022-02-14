@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="configId", required=true)
     private final Input<String> configId;
 
@@ -31,9 +25,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.configId;
     }
 
-    /**
-     * The description of the game server config.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,9 +32,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
-     */
     @InputImport(name="fleetConfigs")
     private final @Nullable Input<List<FleetConfigArgs>> fleetConfigs;
 
@@ -51,9 +39,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.fleetConfigs == null ? Input.empty() : this.fleetConfigs;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="gameServerDeploymentId", required=true)
     private final Input<String> gameServerDeploymentId;
 
@@ -61,9 +46,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gameServerDeploymentId;
     }
 
-    /**
-     * The labels associated with this game server config. Each label is a key-value pair.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -71,9 +53,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -91,9 +67,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -101,9 +74,6 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The autoscaling settings.
-     */
     @InputImport(name="scalingConfigs")
     private final @Nullable Input<List<ScalingConfigArgs>> scalingConfigs;
 

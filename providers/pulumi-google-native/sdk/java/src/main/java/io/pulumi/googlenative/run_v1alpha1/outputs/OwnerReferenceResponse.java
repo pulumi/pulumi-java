@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OwnerReferenceResponse {
-/**
- * API version of the referent.
- */
     private final String apiVersion;
-/**
- * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
- */
     private final Boolean blockOwnerDeletion;
-/**
- * If true, this reference points to the managing controller. +optional
- */
     private final Boolean controller;
-/**
- * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     private final String kind;
-/**
- * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
- */
     private final String name;
-/**
- * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
- */
     private final String uid;
 
     @OutputCustomType.Constructor({"apiVersion","blockOwnerDeletion","controller","kind","name","uid"})
@@ -51,39 +33,21 @@ public final class OwnerReferenceResponse {
         this.uid = Objects.requireNonNull(uid);
     }
 
-/**
- * API version of the referent.
- */
     public String getApiVersion() {
         return this.apiVersion;
     }
-/**
- * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
- */
     public Boolean getBlockOwnerDeletion() {
         return this.blockOwnerDeletion;
     }
-/**
- * If true, this reference points to the managing controller. +optional
- */
     public Boolean getController() {
         return this.controller;
     }
-/**
- * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
- */
     public String getName() {
         return this.name;
     }
-/**
- * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
- */
     public String getUid() {
         return this.uid;
     }

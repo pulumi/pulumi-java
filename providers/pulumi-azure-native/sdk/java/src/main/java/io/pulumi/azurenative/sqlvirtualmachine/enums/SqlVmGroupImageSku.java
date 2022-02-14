@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SQL image sku.
- */
     @EnumType
     public enum SqlVmGroupImageSku {
-/**
- * 
- */
         Developer("Developer"),
-/**
- * 
- */
         Enterprise("Enterprise");
 
         private final String value;

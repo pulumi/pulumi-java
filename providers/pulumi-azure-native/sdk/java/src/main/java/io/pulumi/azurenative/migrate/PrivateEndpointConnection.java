@@ -15,180 +15,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A private endpoint connection for a project.
-API Version: 2019-10-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PrivateEndpointConnections_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateEndpointConnection = new AzureNative.Migrate.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Migrate.PrivateEndpointConnectionArgs
-        {
-            ETag = "\"00009300-0000-0300-0000-602b967b0000\"",
-            PrivateEndpointConnectionName = "custestpece80project3980pe.7e35576b-3df4-478e-9759-f64351cf4f43",
-            ProjectName = "abgoyalWEselfhostb72bproject",
-            Properties = new AzureNative.Migrate.Inputs.PrivateEndpointConnectionPropertiesArgs
-            {
-                PrivateLinkServiceConnectionState = new AzureNative.Migrate.Inputs.PrivateLinkServiceConnectionStateArgs
-                {
-                    ActionsRequired = "",
-                    Status = "Approved",
-                },
-            },
-            ResourceGroupName = "abgoyal-westEurope",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := migrate.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &migrate.PrivateEndpointConnectionArgs{
-			ETag:                          pulumi.String("\"00009300-0000-0300-0000-602b967b0000\""),
-			PrivateEndpointConnectionName: pulumi.String("custestpece80project3980pe.7e35576b-3df4-478e-9759-f64351cf4f43"),
-			ProjectName:                   pulumi.String("abgoyalWEselfhostb72bproject"),
-			Properties: &migrate.PrivateEndpointConnectionPropertiesArgs{
-				PrivateLinkServiceConnectionState: &migrate.PrivateLinkServiceConnectionStateArgs{
-					ActionsRequired: pulumi.String(""),
-					Status:          pulumi.String("Approved"),
-				},
-			},
-			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateEndpointConnection = new azure_native.migrate.PrivateEndpointConnection("privateEndpointConnection", {
-    eTag: "\"00009300-0000-0300-0000-602b967b0000\"",
-    privateEndpointConnectionName: "custestpece80project3980pe.7e35576b-3df4-478e-9759-f64351cf4f43",
-    projectName: "abgoyalWEselfhostb72bproject",
-    properties: {
-        privateLinkServiceConnectionState: {
-            actionsRequired: "",
-            status: "Approved",
-        },
-    },
-    resourceGroupName: "abgoyal-westEurope",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_endpoint_connection = azure_native.migrate.PrivateEndpointConnection("privateEndpointConnection",
-    e_tag="\"00009300-0000-0300-0000-602b967b0000\"",
-    private_endpoint_connection_name="custestpece80project3980pe.7e35576b-3df4-478e-9759-f64351cf4f43",
-    project_name="abgoyalWEselfhostb72bproject",
-    properties=azure_native.migrate.PrivateEndpointConnectionPropertiesArgs(
-        private_link_service_connection_state=azure_native.migrate.PrivateLinkServiceConnectionStateArgs(
-            actions_required="",
-            status="Approved",
-        ),
-    ),
-    resource_group_name="abgoyal-westEurope")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:migrate:PrivateEndpointConnection custestpece80project3980pe.7e35576b-3df4-478e-9759-f64351cf4f43 /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/madhavicus/providers/Microsoft.Migrate/assessmentprojects/custestpece80project/privateEndpointConnections/custestpece80project3980pe.7e35576b-3df4-478e-9759-f64351cf4f43 
-```
-
- */
 @ResourceType(type="azure-native:migrate:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
-    /**
-     * For optimistic concurrency control.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    /**
-     * @return For optimistic concurrency control.
-     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    /**
-     * Name of the private endpoint endpoint connection.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the private endpoint endpoint connection.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of the private endpoint endpoint connection.
-     */
     @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
-    /**
-     * @return Properties of the private endpoint endpoint connection.
-     */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -207,14 +60,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

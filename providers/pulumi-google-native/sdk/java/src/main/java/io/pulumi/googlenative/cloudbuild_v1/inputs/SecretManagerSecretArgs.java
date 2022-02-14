@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Pairs a secret environment variable with a SecretVersion in Secret Manager.
- */
 public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretManagerSecretArgs Empty = new SecretManagerSecretArgs();
 
-    /**
-     * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.
-     */
     @InputImport(name="env")
     private final @Nullable Input<String> env;
 
@@ -27,9 +21,6 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
         return this.env == null ? Input.empty() : this.env;
     }
 
-    /**
-     * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
-     */
     @InputImport(name="versionName")
     private final @Nullable Input<String> versionName;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of resources contained in this cost allocation rule
- */
     @EnumType
     public enum CostAllocationResourceType {
-/**
- * Indicates an Azure dimension such as a subscription id or resource group name is being used for allocation.
- */
         Dimension("Dimension"),
-/**
- * Allocates cost based on Azure Tag key value pairs.
- */
         Tag("Tag");
 
         private final String value;

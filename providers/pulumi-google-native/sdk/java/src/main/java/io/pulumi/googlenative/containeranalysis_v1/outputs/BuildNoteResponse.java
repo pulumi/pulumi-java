@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BuildNoteResponse {
-/**
- * Immutable. Version of the builder which produced this build.
- */
     private final String builderVersion;
 
     @OutputCustomType.Constructor({"builderVersion"})
@@ -19,9 +16,6 @@ public final class BuildNoteResponse {
         this.builderVersion = Objects.requireNonNull(builderVersion);
     }
 
-/**
- * Immutable. Version of the builder which produced this build.
- */
     public String getBuilderVersion() {
         return this.builderVersion;
     }

@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TriggerDependencyReferenceResponse {
-/**
- * Referenced trigger.
- */
     private final TriggerReferenceResponse referenceTrigger;
-/**
- * The type of dependency reference.
-Expected value is 'TriggerDependencyReference'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"referenceTrigger","type"})
@@ -28,16 +21,9 @@ Expected value is 'TriggerDependencyReference'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Referenced trigger.
- */
     public TriggerReferenceResponse getReferenceTrigger() {
         return this.referenceTrigger;
     }
-/**
- * The type of dependency reference.
-Expected value is 'TriggerDependencyReference'.
- */
     public String getType() {
         return this.type;
     }

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DownwardAPIProjection {
-/**
- * Items is a list of DownwardAPIVolume file
- */
     private final @Nullable List<DownwardAPIVolumeFile> items;
 
     @OutputCustomType.Constructor({"items"})
@@ -21,9 +18,6 @@ public final class DownwardAPIProjection {
         this.items = items;
     }
 
-/**
- * Items is a list of DownwardAPIVolume file
- */
     public List<DownwardAPIVolumeFile> getItems() {
         return this.items == null ? List.of() : this.items;
     }

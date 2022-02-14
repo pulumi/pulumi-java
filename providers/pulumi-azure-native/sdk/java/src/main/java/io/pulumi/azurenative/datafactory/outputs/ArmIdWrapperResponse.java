@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ArmIdWrapperResponse {
-/**
- * 
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class ArmIdWrapperResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * 
- */
     public String getId() {
         return this.id;
     }

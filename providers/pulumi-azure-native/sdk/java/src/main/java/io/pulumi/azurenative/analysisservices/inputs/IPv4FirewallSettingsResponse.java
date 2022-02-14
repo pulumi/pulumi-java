@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An array of firewall rules.
- */
 public final class IPv4FirewallSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPv4FirewallSettingsResponse Empty = new IPv4FirewallSettingsResponse();
 
-    /**
-     * The indicator of enabling PBI service.
-     */
     @InputImport(name="enablePowerBIService")
     private final @Nullable Boolean enablePowerBIService;
 
@@ -29,9 +23,6 @@ public final class IPv4FirewallSettingsResponse extends io.pulumi.resources.Invo
         return this.enablePowerBIService == null ? Optional.empty() : Optional.ofNullable(this.enablePowerBIService);
     }
 
-    /**
-     * An array of firewall rules.
-     */
     @InputImport(name="firewallRules")
     private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 

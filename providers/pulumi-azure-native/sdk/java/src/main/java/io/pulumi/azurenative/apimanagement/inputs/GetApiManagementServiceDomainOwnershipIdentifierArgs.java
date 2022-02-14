@@ -6,9 +6,6 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetApiManagementServiceDomainOwnershipIdentifierArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiManagementServiceDomainOwnershipIdentifierArgs Empty = new GetApiManagementServiceDomainOwnershipIdentifierArgs();

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of IPConfigurationBgpPeeringAddress.
- */
 public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPConfigurationBgpPeeringAddressArgs Empty = new IPConfigurationBgpPeeringAddressArgs();
 
-    /**
-     * The list of custom BGP peering addresses which belong to IP configuration.
-     */
     @InputImport(name="customBgpIpAddresses")
     private final @Nullable Input<List<String>> customBgpIpAddresses;
 
@@ -28,9 +22,6 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
         return this.customBgpIpAddresses == null ? Input.empty() : this.customBgpIpAddresses;
     }
 
-    /**
-     * The ID of IP configuration which belongs to gateway.
-     */
     @InputImport(name="ipconfigurationId")
     private final @Nullable Input<String> ipconfigurationId;
 

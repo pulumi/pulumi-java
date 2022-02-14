@@ -14,321 +14,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Schema Contract details.
-API Version: 2021-04-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateSchema1
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var schema = new AzureNative.ApiManagement.Schema("schema", new AzureNative.ApiManagement.SchemaArgs
-        {
-            Description = "sample schema description",
-            ResourceGroupName = "rg1",
-            SchemaId = "schema1",
-            SchemaType = "xml",
-            ServiceName = "apimService1",
-            Value = @"<xsd:schema xmlns:xsd=""http://www.w3.org/2001/XMLSchema""
-           xmlns:tns=""http://tempuri.org/PurchaseOrderSchema.xsd""
-           targetNamespace=""http://tempuri.org/PurchaseOrderSchema.xsd""
-           elementFormDefault=""qualified"">
- <xsd:element name=""PurchaseOrder"" type=""tns:PurchaseOrderType""/>
- <xsd:complexType name=""PurchaseOrderType"">
-  <xsd:sequence>
-   <xsd:element name=""ShipTo"" type=""tns:USAddress"" maxOccurs=""2""/>
-   <xsd:element name=""BillTo"" type=""tns:USAddress""/>
-  </xsd:sequence>
-  <xsd:attribute name=""OrderDate"" type=""xsd:date""/>
- </xsd:complexType>
-
- <xsd:complexType name=""USAddress"">
-  <xsd:sequence>
-   <xsd:element name=""name""   type=""xsd:string""/>
-   <xsd:element name=""street"" type=""xsd:string""/>
-   <xsd:element name=""city""   type=""xsd:string""/>
-   <xsd:element name=""state""  type=""xsd:string""/>
-   <xsd:element name=""zip""    type=""xsd:integer""/>
-  </xsd:sequence>
-  <xsd:attribute name=""country"" type=""xsd:NMTOKEN"" fixed=""US""/>
- </xsd:complexType>
-</xsd:schema>",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewSchema(ctx, "schema", &apimanagement.SchemaArgs{
-			Description:       pulumi.String("sample schema description"),
-			ResourceGroupName: pulumi.String("rg1"),
-			SchemaId:          pulumi.String("schema1"),
-			SchemaType:        pulumi.String("xml"),
-			ServiceName:       pulumi.String("apimService1"),
-			Value: pulumi.String("<xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n           xmlns:tns=\"http://tempuri.org/PurchaseOrderSchema.xsd\"\n           targetNamespace=\"http://tempuri.org/PurchaseOrderSchema.xsd\"\n           elementFormDefault=\"qualified\">\n <xsd:element name=\"PurchaseOrder\" type=\"tns:PurchaseOrderType\"/>\n <xsd:complexType name=\"PurchaseOrderType\">\n  <xsd:sequence>\n   <xsd:element name=\"ShipTo\" type=\"tns:USAddress\" maxOccurs=\"2\"/>\n   <xsd:element name=\"BillTo\" type=\"tns:USAddress\"/>\n  </xsd:sequence>\n  <xsd:attribute name=\"OrderDate\" type=\"xsd:date\"/>\n </xsd:complexType>\n\n <xsd:complexType name=\"USAddress\">\n  <xsd:sequence>\n   <xsd:element name=\"name\"   type=\"xsd:string\"/>\n   <xsd:element name=\"street\" type=\"xsd:string\"/>\n   <xsd:element name=\"city\"   type=\"xsd:string\"/>\n   <xsd:element name=\"state\"  type=\"xsd:string\"/>\n   <xsd:element name=\"zip\"    type=\"xsd:integer\"/>\n  </xsd:sequence>\n  <xsd:attribute name=\"country\" type=\"xsd:NMTOKEN\" fixed=\"US\"/>\n </xsd:complexType>\n</xsd:schema>"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const schema = new azure_native.apimanagement.Schema("schema", {
-    description: "sample schema description",
-    resourceGroupName: "rg1",
-    schemaId: "schema1",
-    schemaType: "xml",
-    serviceName: "apimService1",
-    value: `<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://tempuri.org/PurchaseOrderSchema.xsd"
-           targetNamespace="http://tempuri.org/PurchaseOrderSchema.xsd"
-           elementFormDefault="qualified">
- <xsd:element name="PurchaseOrder" type="tns:PurchaseOrderType"/>
- <xsd:complexType name="PurchaseOrderType">
-  <xsd:sequence>
-   <xsd:element name="ShipTo" type="tns:USAddress" maxOccurs="2"/>
-   <xsd:element name="BillTo" type="tns:USAddress"/>
-  </xsd:sequence>
-  <xsd:attribute name="OrderDate" type="xsd:date"/>
- </xsd:complexType>
-
- <xsd:complexType name="USAddress">
-  <xsd:sequence>
-   <xsd:element name="name"   type="xsd:string"/>
-   <xsd:element name="street" type="xsd:string"/>
-   <xsd:element name="city"   type="xsd:string"/>
-   <xsd:element name="state"  type="xsd:string"/>
-   <xsd:element name="zip"    type="xsd:integer"/>
-  </xsd:sequence>
-  <xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>
- </xsd:complexType>
-</xsd:schema>`,
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-schema = azure_native.apimanagement.Schema("schema",
-    description="sample schema description",
-    resource_group_name="rg1",
-    schema_id="schema1",
-    schema_type="xml",
-    service_name="apimService1",
-    value="""<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://tempuri.org/PurchaseOrderSchema.xsd"
-           targetNamespace="http://tempuri.org/PurchaseOrderSchema.xsd"
-           elementFormDefault="qualified">
- <xsd:element name="PurchaseOrder" type="tns:PurchaseOrderType"/>
- <xsd:complexType name="PurchaseOrderType">
-  <xsd:sequence>
-   <xsd:element name="ShipTo" type="tns:USAddress" maxOccurs="2"/>
-   <xsd:element name="BillTo" type="tns:USAddress"/>
-  </xsd:sequence>
-  <xsd:attribute name="OrderDate" type="xsd:date"/>
- </xsd:complexType>
-
- <xsd:complexType name="USAddress">
-  <xsd:sequence>
-   <xsd:element name="name"   type="xsd:string"/>
-   <xsd:element name="street" type="xsd:string"/>
-   <xsd:element name="city"   type="xsd:string"/>
-   <xsd:element name="state"  type="xsd:string"/>
-   <xsd:element name="zip"    type="xsd:integer"/>
-  </xsd:sequence>
-  <xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>
- </xsd:complexType>
-</xsd:schema>""")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### ApiManagementCreateSchema2
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var schema = new AzureNative.ApiManagement.Schema("schema", new AzureNative.ApiManagement.SchemaArgs
-        {
-            Description = "sample schema description",
-            ResourceGroupName = "rg1",
-            SchemaId = "schema1",
-            SchemaType = "json",
-            ServiceName = "apimService1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewSchema(ctx, "schema", &apimanagement.SchemaArgs{
-			Description:       pulumi.String("sample schema description"),
-			ResourceGroupName: pulumi.String("rg1"),
-			SchemaId:          pulumi.String("schema1"),
-			SchemaType:        pulumi.String("json"),
-			ServiceName:       pulumi.String("apimService1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const schema = new azure_native.apimanagement.Schema("schema", {
-    description: "sample schema description",
-    resourceGroupName: "rg1",
-    schemaId: "schema1",
-    schemaType: "json",
-    serviceName: "apimService1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-schema = azure_native.apimanagement.Schema("schema",
-    description="sample schema description",
-    resource_group_name="rg1",
-    schema_id="schema1",
-    schema_type="json",
-    service_name="apimService1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:Schema schema1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/schemas/schema1 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:Schema")
 public class Schema extends io.pulumi.resources.CustomResource {
-    /**
-     * Free-form schema entity description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Free-form schema entity description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Schema Type. Immutable.
-     */
     @OutputExport(name="schemaType", type=String.class, parameters={})
     private Output<String> schemaType;
 
-    /**
-     * @return Schema Type. Immutable.
-     */
     public Output<String> getSchemaType() {
         return this.schemaType;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Json-encoded string for non json-based schema.
-     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
-    /**
-     * @return Json-encoded string for non json-based schema.
-     */
     public Output</* @Nullable */ String> getValue() {
         return this.value;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Schema(String name, SchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -348,14 +66,6 @@ public class Schema extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Schema get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Schema(name, id, options);
     }

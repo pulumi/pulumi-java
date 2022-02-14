@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZoneForwardingConfigNameServerTargetResponse {
-/**
- * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
- */
     private final String forwardingPath;
-/**
- * IPv4 address of a target name server.
- */
     private final String ipv4Address;
-/**
- * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.
- */
     private final String ipv6Address;
-/**
- * 
- */
     private final String kind;
 
     @OutputCustomType.Constructor({"forwardingPath","ipv4Address","ipv6Address","kind"})
@@ -38,27 +26,15 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
-/**
- * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
- */
     public String getForwardingPath() {
         return this.forwardingPath;
     }
-/**
- * IPv4 address of a target name server.
- */
     public String getIpv4Address() {
         return this.ipv4Address;
     }
-/**
- * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being populated.
- */
     public String getIpv6Address() {
         return this.ipv6Address;
     }
-/**
- * 
- */
     public String getKind() {
         return this.kind;
     }

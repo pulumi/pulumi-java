@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualHubBgpConnection {
-/**
- * Virtual Appliance Site resource.
-API Version: 2020-11-01.
- *
- * Virtual Appliance Site resource.
- */
     public static CompletableFuture<GetVirtualHubBgpConnectionResult> invokeAsync(GetVirtualHubBgpConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualHubBgpConnection", TypeShape.of(GetVirtualHubBgpConnectionResult.class), args == null ? GetVirtualHubBgpConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

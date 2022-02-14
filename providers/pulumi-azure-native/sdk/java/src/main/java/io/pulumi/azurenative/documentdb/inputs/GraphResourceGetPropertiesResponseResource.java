@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GraphResourceGetPropertiesResponseResource extends io.pulumi.resources.InvokeArgs {
 
     public static final GraphResourceGetPropertiesResponseResource Empty = new GraphResourceGetPropertiesResponseResource();
 
-    /**
-     * Name of the Cosmos DB Graph
-     */
     @InputImport(name="id", required=true)
     private final String id;
 

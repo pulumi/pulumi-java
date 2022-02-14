@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectionPolicy {
-/**
- * Base class for backup policy. Workload-specific backup policies are derived from this class.
-API Version: 2021-02-01.
- *
- * Base class for backup policy. Workload-specific backup policies are derived from this class.
- */
     public static CompletableFuture<GetProtectionPolicyResult> invokeAsync(GetProtectionPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionPolicy", TypeShape.of(GetProtectionPolicyResult.class), args == null ? GetProtectionPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

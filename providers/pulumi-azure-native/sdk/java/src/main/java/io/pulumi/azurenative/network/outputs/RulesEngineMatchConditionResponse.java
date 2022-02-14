@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RulesEngineMatchConditionResponse {
-/**
- * Describes if this is negate condition or not
- */
     private final @Nullable Boolean negateCondition;
-/**
- * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
- */
     private final List<String> rulesEngineMatchValue;
-/**
- * Match Variable
- */
     private final String rulesEngineMatchVariable;
-/**
- * Describes operator to apply to the match condition.
- */
     private final String rulesEngineOperator;
-/**
- * Name of selector in RequestHeader or RequestBody to be matched
- */
     private final @Nullable String selector;
-/**
- * List of transforms
- */
     private final @Nullable List<String> transforms;
 
     @OutputCustomType.Constructor({"negateCondition","rulesEngineMatchValue","rulesEngineMatchVariable","rulesEngineOperator","selector","transforms"})
@@ -54,39 +36,21 @@ public final class RulesEngineMatchConditionResponse {
         this.transforms = transforms;
     }
 
-/**
- * Describes if this is negate condition or not
- */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
-/**
- * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
- */
     public List<String> getRulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
-/**
- * Match Variable
- */
     public String getRulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
-/**
- * Describes operator to apply to the match condition.
- */
     public String getRulesEngineOperator() {
         return this.rulesEngineOperator;
     }
-/**
- * Name of selector in RequestHeader or RequestBody to be matched
- */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
-/**
- * List of transforms
- */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

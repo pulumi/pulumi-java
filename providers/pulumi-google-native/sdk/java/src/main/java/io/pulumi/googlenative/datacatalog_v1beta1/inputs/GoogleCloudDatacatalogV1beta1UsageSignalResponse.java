@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * The set of all usage signals that we store in Data Catalog.
- */
 public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1beta1UsageSignalResponse Empty = new GoogleCloudDatacatalogV1beta1UsageSignalResponse();
 
-    /**
-     * The timestamp of the end of the usage statistics duration.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse extends io.p
         return this.updateTime;
     }
 
-    /**
-     * Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {"24H", "7D", "30D"}.
-     */
     @InputImport(name="usageWithinTimeRange", required=true)
     private final Map<String,String> usageWithinTimeRange;
 

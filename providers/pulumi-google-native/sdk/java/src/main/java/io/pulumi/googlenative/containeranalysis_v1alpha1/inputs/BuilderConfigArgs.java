@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BuilderConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuilderConfigArgs Empty = new BuilderConfigArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

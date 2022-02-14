@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
-/**
- * A virtual network rule.
-API Version: 2020-11-01-preview.
- *
- * A virtual network rule.
- */
     public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(GetVirtualNetworkRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args == null ? GetVirtualNetworkRuleArgs.Empty : args, Utilities.withVersion(options));
     }

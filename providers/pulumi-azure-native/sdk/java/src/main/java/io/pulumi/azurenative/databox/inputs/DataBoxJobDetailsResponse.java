@@ -25,16 +25,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Databox Job Details
- */
 public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxJobDetailsResponse Empty = new DataBoxJobDetailsResponse();
 
-    /**
-     * Shared access key to download the chain of custody logs
-     */
     @InputImport(name="chainOfCustodySasKey", required=true)
     private final String chainOfCustodySasKey;
 
@@ -42,9 +36,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.chainOfCustodySasKey;
     }
 
-    /**
-     * Contact details for notification and shipping.
-     */
     @InputImport(name="contactDetails", required=true)
     private final ContactDetailsResponse contactDetails;
 
@@ -52,9 +43,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.contactDetails;
     }
 
-    /**
-     * List of copy log details.
-     */
     @InputImport(name="copyLogDetails", required=true)
     private final List<Object> copyLogDetails;
 
@@ -62,9 +50,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.copyLogDetails;
     }
 
-    /**
-     * Copy progress per storage account.
-     */
     @InputImport(name="copyProgress", required=true)
     private final List<CopyProgressResponse> copyProgress;
 
@@ -72,9 +57,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.copyProgress;
     }
 
-    /**
-     * Details of the data to be exported from azure.
-     */
     @InputImport(name="dataExportDetails")
     private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
@@ -82,9 +64,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
     }
 
-    /**
-     * Details of the data to be imported into azure.
-     */
     @InputImport(name="dataImportDetails")
     private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
@@ -92,9 +71,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
     }
 
-    /**
-     * Delivery package shipping details.
-     */
     @InputImport(name="deliveryPackage", required=true)
     private final PackageShippingDetailsResponse deliveryPackage;
 
@@ -102,9 +78,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.deliveryPackage;
     }
 
-    /**
-     * Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
-     */
     @InputImport(name="devicePassword")
     private final @Nullable String devicePassword;
 
@@ -112,9 +85,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.devicePassword == null ? Optional.empty() : Optional.ofNullable(this.devicePassword);
     }
 
-    /**
-     * The expected size of the data, which needs to be transferred in this job, in terabytes.
-     */
     @InputImport(name="expectedDataSizeInTeraBytes")
     private final @Nullable Integer expectedDataSizeInTeraBytes;
 
@@ -122,10 +92,6 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.expectedDataSizeInTeraBytes == null ? Optional.empty() : Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
 
-    /**
-     * Indicates the type of job details.
-Expected value is 'DataBox'.
-     */
     @InputImport(name="jobDetailsType", required=true)
     private final String jobDetailsType;
 
@@ -133,9 +99,6 @@ Expected value is 'DataBox'.
         return this.jobDetailsType;
     }
 
-    /**
-     * List of stages that run in the job.
-     */
     @InputImport(name="jobStages", required=true)
     private final List<JobStagesResponse> jobStages;
 
@@ -143,9 +106,6 @@ Expected value is 'DataBox'.
         return this.jobStages;
     }
 
-    /**
-     * Details about which key encryption type is being used.
-     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
@@ -153,9 +113,6 @@ Expected value is 'DataBox'.
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
     }
 
-    /**
-     * Preferences for the order.
-     */
     @InputImport(name="preferences")
     private final @Nullable PreferencesResponse preferences;
 
@@ -163,9 +120,6 @@ Expected value is 'DataBox'.
         return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
     }
 
-    /**
-     * Return package shipping details.
-     */
     @InputImport(name="returnPackage", required=true)
     private final PackageShippingDetailsResponse returnPackage;
 
@@ -173,9 +127,6 @@ Expected value is 'DataBox'.
         return this.returnPackage;
     }
 
-    /**
-     * Shared access key to download the return shipment label
-     */
     @InputImport(name="reverseShipmentLabelSasKey", required=true)
     private final String reverseShipmentLabelSasKey;
 
@@ -183,9 +134,6 @@ Expected value is 'DataBox'.
         return this.reverseShipmentLabelSasKey;
     }
 
-    /**
-     * Shipping address of the customer.
-     */
     @InputImport(name="shippingAddress")
     private final @Nullable ShippingAddressResponse shippingAddress;
 

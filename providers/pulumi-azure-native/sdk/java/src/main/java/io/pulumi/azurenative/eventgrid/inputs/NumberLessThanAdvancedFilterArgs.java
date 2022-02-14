@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NumberLessThan Advanced Filter.
- */
 public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NumberLessThanAdvancedFilterArgs Empty = new NumberLessThanAdvancedFilterArgs();
 
-    /**
-     * The field/property in the event based on which you want to filter.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -28,10 +22,6 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'NumberLessThan'.
-     */
     @InputImport(name="operatorType", required=true)
     private final Input<String> operatorType;
 
@@ -39,9 +29,6 @@ Expected value is 'NumberLessThan'.
         return this.operatorType;
     }
 
-    /**
-     * The filter value.
-     */
     @InputImport(name="value")
     private final @Nullable Input<Double> value;
 

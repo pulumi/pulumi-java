@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyAssignment {
-/**
- * The policy assignment.
-API Version: 2020-09-01.
- *
- * The policy assignment.
- */
     public static CompletableFuture<GetPolicyAssignmentResult> invokeAsync(GetPolicyAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyAssignment", TypeShape.of(GetPolicyAssignmentResult.class), args == null ? GetPolicyAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

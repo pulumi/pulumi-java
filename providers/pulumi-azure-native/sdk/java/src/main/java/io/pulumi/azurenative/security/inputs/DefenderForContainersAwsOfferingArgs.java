@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The Defender for Containers AWS offering configurations
- */
 public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefenderForContainersAwsOfferingArgs Empty = new DefenderForContainersAwsOfferingArgs();
 
-    /**
-     * The cloudwatch to kinesis connection configuration
-     */
     @InputImport(name="cloudWatchToKinesis")
     private final @Nullable Input<DefenderForContainersAwsOfferingCloudWatchToKinesisArgs> cloudWatchToKinesis;
 
@@ -31,9 +25,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
         return this.cloudWatchToKinesis == null ? Input.empty() : this.cloudWatchToKinesis;
     }
 
-    /**
-     * The kinesis to s3 connection configuration
-     */
     @InputImport(name="kinesisToS3")
     private final @Nullable Input<DefenderForContainersAwsOfferingKinesisToS3Args> kinesisToS3;
 
@@ -41,9 +32,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
         return this.kinesisToS3 == null ? Input.empty() : this.kinesisToS3;
     }
 
-    /**
-     * The kubernetes to scuba connection configuration
-     */
     @InputImport(name="kubernetesScubaReader")
     private final @Nullable Input<DefenderForContainersAwsOfferingKubernetesScubaReaderArgs> kubernetesScubaReader;
 
@@ -51,9 +39,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
         return this.kubernetesScubaReader == null ? Input.empty() : this.kubernetesScubaReader;
     }
 
-    /**
-     * The kubernetes service connection configuration
-     */
     @InputImport(name="kubernetesService")
     private final @Nullable Input<DefenderForContainersAwsOfferingKubernetesServiceArgs> kubernetesService;
 
@@ -61,10 +46,6 @@ public final class DefenderForContainersAwsOfferingArgs extends io.pulumi.resour
         return this.kubernetesService == null ? Input.empty() : this.kubernetesService;
     }
 
-    /**
-     * The type of the security offering.
-Expected value is 'DefenderForContainersAws'.
-     */
     @InputImport(name="offeringType", required=true)
     private final Input<String> offeringType;
 

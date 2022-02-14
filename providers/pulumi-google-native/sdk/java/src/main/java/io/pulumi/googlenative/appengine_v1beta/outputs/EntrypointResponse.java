@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EntrypointResponse {
-/**
- * The format should be a shell command that can be fed to bash -c.
- */
     private final String shell;
 
     @OutputCustomType.Constructor({"shell"})
@@ -19,9 +16,6 @@ public final class EntrypointResponse {
         this.shell = Objects.requireNonNull(shell);
     }
 
-/**
- * The format should be a shell command that can be fed to bash -c.
- */
     public String getShell() {
         return this.shell;
     }

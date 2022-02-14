@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional error info.
- */
 public final class AdditionalErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdditionalErrorInfoResponse Empty = new AdditionalErrorInfoResponse();
 
-    /**
-     * Additional error info.
-     */
     @InputImport(name="info")
     private final @Nullable Object info;
 
@@ -28,9 +22,6 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
         return this.info == null ? Optional.empty() : Optional.ofNullable(this.info);
     }
 
-    /**
-     * Additional error type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

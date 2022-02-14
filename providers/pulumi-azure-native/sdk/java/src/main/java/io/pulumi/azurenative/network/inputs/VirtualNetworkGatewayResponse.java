@@ -20,16 +20,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A common class for general resource information.
- */
 public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkGatewayResponse Empty = new VirtualNetworkGatewayResponse();
 
-    /**
-     * ActiveActive flag.
-     */
     @InputImport(name="activeActive")
     private final @Nullable Boolean activeActive;
 
@@ -37,9 +31,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.activeActive == null ? Optional.empty() : Optional.ofNullable(this.activeActive);
     }
 
-    /**
-     * Virtual network gateway's BGP speaker settings.
-     */
     @InputImport(name="bgpSettings")
     private final @Nullable BgpSettingsResponse bgpSettings;
 
@@ -47,9 +38,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.bgpSettings == null ? Optional.empty() : Optional.ofNullable(this.bgpSettings);
     }
 
-    /**
-     * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
-     */
     @InputImport(name="customRoutes")
     private final @Nullable AddressSpaceResponse customRoutes;
 
@@ -57,9 +45,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.customRoutes == null ? Optional.empty() : Optional.ofNullable(this.customRoutes);
     }
 
-    /**
-     * Whether BGP is enabled for this virtual network gateway or not.
-     */
     @InputImport(name="enableBgp")
     private final @Nullable Boolean enableBgp;
 
@@ -67,9 +52,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.enableBgp == null ? Optional.empty() : Optional.ofNullable(this.enableBgp);
     }
 
-    /**
-     * Whether dns forwarding is enabled or not.
-     */
     @InputImport(name="enableDnsForwarding")
     private final @Nullable Boolean enableDnsForwarding;
 
@@ -77,9 +59,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.enableDnsForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableDnsForwarding);
     }
 
-    /**
-     * Whether private IP needs to be enabled on this gateway for connections or not.
-     */
     @InputImport(name="enablePrivateIpAddress")
     private final @Nullable Boolean enablePrivateIpAddress;
 
@@ -87,9 +66,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.enablePrivateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.enablePrivateIpAddress);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -97,9 +73,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.etag;
     }
 
-    /**
-     * The extended location of type local virtual network gateway.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable ExtendedLocationResponse extendedLocation;
 
@@ -107,9 +80,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
     }
 
-    /**
-     * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
-     */
     @InputImport(name="gatewayDefaultSite")
     private final @Nullable SubResourceResponse gatewayDefaultSite;
 
@@ -117,9 +87,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.gatewayDefaultSite == null ? Optional.empty() : Optional.ofNullable(this.gatewayDefaultSite);
     }
 
-    /**
-     * The type of this virtual network gateway.
-     */
     @InputImport(name="gatewayType")
     private final @Nullable String gatewayType;
 
@@ -127,9 +94,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.gatewayType == null ? Optional.empty() : Optional.ofNullable(this.gatewayType);
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -137,9 +101,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The IP address allocated by the gateway to which dns requests can be sent.
-     */
     @InputImport(name="inboundDnsForwardingEndpoint", required=true)
     private final String inboundDnsForwardingEndpoint;
 
@@ -147,9 +108,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.inboundDnsForwardingEndpoint;
     }
 
-    /**
-     * IP configurations for virtual network gateway.
-     */
     @InputImport(name="ipConfigurations")
     private final @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations;
 
@@ -157,9 +115,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -167,9 +122,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -177,9 +129,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
-    /**
-     * The provisioning state of the virtual network gateway resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -187,9 +136,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.provisioningState;
     }
 
-    /**
-     * The resource GUID property of the virtual network gateway resource.
-     */
     @InputImport(name="resourceGuid", required=true)
     private final String resourceGuid;
 
@@ -197,9 +143,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.resourceGuid;
     }
 
-    /**
-     * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
-     */
     @InputImport(name="sku")
     private final @Nullable VirtualNetworkGatewaySkuResponse sku;
 
@@ -207,9 +150,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -217,9 +157,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -227,9 +164,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.type;
     }
 
-    /**
-     * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
-     */
     @InputImport(name="vNetExtendedLocationResourceId")
     private final @Nullable String vNetExtendedLocationResourceId;
 
@@ -237,9 +171,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.vNetExtendedLocationResourceId == null ? Optional.empty() : Optional.ofNullable(this.vNetExtendedLocationResourceId);
     }
 
-    /**
-     * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
-     */
     @InputImport(name="vpnClientConfiguration")
     private final @Nullable VpnClientConfigurationResponse vpnClientConfiguration;
 
@@ -247,9 +178,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.vpnClientConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpnClientConfiguration);
     }
 
-    /**
-     * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
-     */
     @InputImport(name="vpnGatewayGeneration")
     private final @Nullable String vpnGatewayGeneration;
 
@@ -257,9 +185,6 @@ public final class VirtualNetworkGatewayResponse extends io.pulumi.resources.Inv
         return this.vpnGatewayGeneration == null ? Optional.empty() : Optional.ofNullable(this.vpnGatewayGeneration);
     }
 
-    /**
-     * The type of this virtual network gateway.
-     */
     @InputImport(name="vpnType")
     private final @Nullable String vpnType;
 

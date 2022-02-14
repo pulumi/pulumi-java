@@ -16,37 +16,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlMITaskInputResponse {
-/**
- * SAS URI of Azure Storage Account Container to be used for storing backup files.
- */
     private final BlobShareResponse backupBlobShare;
-/**
- * Backup file share information for all selected databases.
- */
     private final @Nullable FileShareResponse backupFileShare;
-/**
- * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
- */
     private final @Nullable String backupMode;
-/**
- * Agent Jobs to migrate.
- */
     private final @Nullable List<String> selectedAgentJobs;
-/**
- * Databases to migrate
- */
     private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
-/**
- * Logins to migrate.
- */
     private final @Nullable List<String> selectedLogins;
-/**
- * Information for connecting to source
- */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
-/**
- * Information for connecting to target
- */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @OutputCustomType.Constructor({"backupBlobShare","backupFileShare","backupMode","selectedAgentJobs","selectedDatabases","selectedLogins","sourceConnectionInfo","targetConnectionInfo"})
@@ -69,51 +45,27 @@ public final class MigrateSqlServerSqlMITaskInputResponse {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
     }
 
-/**
- * SAS URI of Azure Storage Account Container to be used for storing backup files.
- */
     public BlobShareResponse getBackupBlobShare() {
         return this.backupBlobShare;
     }
-/**
- * Backup file share information for all selected databases.
- */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
-/**
- * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
- */
     public Optional<String> getBackupMode() {
         return Optional.ofNullable(this.backupMode);
     }
-/**
- * Agent Jobs to migrate.
- */
     public List<String> getSelectedAgentJobs() {
         return this.selectedAgentJobs == null ? List.of() : this.selectedAgentJobs;
     }
-/**
- * Databases to migrate
- */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
-/**
- * Logins to migrate.
- */
     public List<String> getSelectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
     }
-/**
- * Information for connecting to source
- */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
-/**
- * Information for connecting to target
- */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

@@ -13,34 +13,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureDatabricksDeltaLakeSourceResponse {
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object disableMetricsCollection;
-/**
- * Azure Databricks Delta Lake export settings.
- */
     private final @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings;
-/**
- * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object maxConcurrentConnections;
-/**
- * Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object query;
-/**
- * Source retry count. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object sourceRetryCount;
-/**
- * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object sourceRetryWait;
-/**
- * Copy source type.
-Expected value is 'AzureDatabricksDeltaLakeSource'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"disableMetricsCollection","exportSettings","maxConcurrentConnections","query","sourceRetryCount","sourceRetryWait","type"})
@@ -61,46 +39,24 @@ Expected value is 'AzureDatabricksDeltaLakeSource'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
-/**
- * Azure Databricks Delta Lake export settings.
- */
     public Optional<AzureDatabricksDeltaLakeExportCommandResponse> getExportSettings() {
         return Optional.ofNullable(this.exportSettings);
     }
-/**
- * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
-/**
- * Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
-/**
- * Source retry count. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
-/**
- * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
-/**
- * Copy source type.
-Expected value is 'AzureDatabricksDeltaLakeSource'.
- */
     public String getType() {
         return this.type;
     }

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllowedConfigListResponse {
-/**
- * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
- */
     private final List<ReusableConfigWrapperResponse> allowedConfigValues;
 
     @OutputCustomType.Constructor({"allowedConfigValues"})
@@ -20,9 +17,6 @@ public final class AllowedConfigListResponse {
         this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
     }
 
-/**
- * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
- */
     public List<ReusableConfigWrapperResponse> getAllowedConfigValues() {
         return this.allowedConfigValues;
     }

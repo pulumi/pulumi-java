@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FleetArgs Empty = new FleetArgs();
 
-    /**
-     * Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -27,9 +21,6 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for "生产环境")
-     */
     @InputImport(name="fleetName")
     private final @Nullable Input<String> fleetName;
 
@@ -37,9 +28,6 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.fleetName == null ? Input.empty() : this.fleetName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,9 +35,6 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

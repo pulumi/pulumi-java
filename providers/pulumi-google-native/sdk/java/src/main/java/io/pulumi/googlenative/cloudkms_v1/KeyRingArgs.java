@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyRingArgs Empty = new KeyRingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="keyRingId", required=true)
     private final Input<String> keyRingId;
 
@@ -27,9 +21,6 @@ public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyRingId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,9 +28,6 @@ public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

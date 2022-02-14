@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-document This is a message we will try to use for storing multiple versions of CVSS. The intention is that as new versions of CVSS scores get added, we will be able to modify this message rather than adding new protos for each new version of the score.
- */
 public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CVSSResponse Empty = new CVSSResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="attackComplexity", required=true)
     private final String attackComplexity;
 
@@ -26,9 +20,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.attackComplexity;
     }
 
-    /**
-     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
-     */
     @InputImport(name="attackVector", required=true)
     private final String attackVector;
 
@@ -36,9 +27,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.attackVector;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="authentication", required=true)
     private final String authentication;
 
@@ -46,9 +34,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.authentication;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="availabilityImpact", required=true)
     private final String availabilityImpact;
 
@@ -56,9 +41,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.availabilityImpact;
     }
 
-    /**
-     * The base score is a function of the base metric scores.
-     */
     @InputImport(name="baseScore", required=true)
     private final Double baseScore;
 
@@ -66,9 +48,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.baseScore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="confidentialityImpact", required=true)
     private final String confidentialityImpact;
 
@@ -76,9 +55,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.confidentialityImpact;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="exploitabilityScore", required=true)
     private final Double exploitabilityScore;
 
@@ -86,9 +62,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.exploitabilityScore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="impactScore", required=true)
     private final Double impactScore;
 
@@ -96,9 +69,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.impactScore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="integrityImpact", required=true)
     private final String integrityImpact;
 
@@ -106,9 +76,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.integrityImpact;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="privilegesRequired", required=true)
     private final String privilegesRequired;
 
@@ -116,9 +83,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.privilegesRequired;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -126,9 +90,6 @@ public final class CVSSResponse extends io.pulumi.resources.InvokeArgs {
         return this.scope;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="userInteraction", required=true)
     private final String userInteraction;
 

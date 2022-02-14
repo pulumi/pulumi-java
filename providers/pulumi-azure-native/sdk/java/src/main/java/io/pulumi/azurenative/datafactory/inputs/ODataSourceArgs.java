@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity source for OData source.
- */
 public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ODataSourceArgs Empty = new ODataSourceArgs();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -28,9 +22,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -38,9 +29,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="httpRequestTimeout")
     private final @Nullable Input<Object> httpRequestTimeout;
 
@@ -48,9 +36,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpRequestTimeout == null ? Input.empty() : this.httpRequestTimeout;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -58,9 +43,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * OData query. For example, "$top=1". Type: string (or Expression with resultType string).
-     */
     @InputImport(name="query")
     private final @Nullable Input<Object> query;
 
@@ -68,9 +50,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.query == null ? Input.empty() : this.query;
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -78,9 +57,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -88,10 +64,6 @@ public final class ODataSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
-    /**
-     * Copy source type.
-Expected value is 'ODataSource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

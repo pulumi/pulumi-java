@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RepoSourceResponse {
-/**
- * Name of the branch to build.
- */
     private final String branchName;
-/**
- * Explicit commit SHA to build.
- */
     private final String commitSha;
-/**
- * ID of the project that owns the repo.
- */
     private final String project;
-/**
- * Name of the repo.
- */
     private final String repoName;
-/**
- * Name of the tag to build.
- */
     private final String tagName;
 
     @OutputCustomType.Constructor({"branchName","commitSha","project","repoName","tagName"})
@@ -44,33 +29,18 @@ public final class RepoSourceResponse {
         this.tagName = Objects.requireNonNull(tagName);
     }
 
-/**
- * Name of the branch to build.
- */
     public String getBranchName() {
         return this.branchName;
     }
-/**
- * Explicit commit SHA to build.
- */
     public String getCommitSha() {
         return this.commitSha;
     }
-/**
- * ID of the project that owns the repo.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * Name of the repo.
- */
     public String getRepoName() {
         return this.repoName;
     }
-/**
- * Name of the tag to build.
- */
     public String getTagName() {
         return this.tagName;
     }

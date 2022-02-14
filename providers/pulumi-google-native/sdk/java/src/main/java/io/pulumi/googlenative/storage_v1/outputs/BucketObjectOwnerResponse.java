@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketObjectOwnerResponse {
-/**
- * The entity, in the form user-userId.
- */
     private final String entity;
-/**
- * The ID for the entity.
- */
     private final String entityId;
 
     @OutputCustomType.Constructor({"entity","entityId"})
@@ -26,15 +20,9 @@ public final class BucketObjectOwnerResponse {
         this.entityId = Objects.requireNonNull(entityId);
     }
 
-/**
- * The entity, in the form user-userId.
- */
     public String getEntity() {
         return this.entity;
     }
-/**
- * The ID for the entity.
- */
     public String getEntityId() {
         return this.entityId;
     }

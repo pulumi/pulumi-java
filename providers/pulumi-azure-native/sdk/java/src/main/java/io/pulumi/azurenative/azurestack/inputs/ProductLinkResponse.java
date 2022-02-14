@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Link with additional information about a product.
- */
 public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProductLinkResponse Empty = new ProductLinkResponse();
 
-    /**
-     * The description of the link.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -27,9 +21,6 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * The URI corresponding to the link.
-     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

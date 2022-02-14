@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Reference to an asset via its path in a datastore.
- */
 public final class DataPathAssetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataPathAssetReferenceResponse Empty = new DataPathAssetReferenceResponse();
 
-    /**
-     * ARM resource ID of the datastore where the asset is located.
-     */
     @InputImport(name="datastoreId")
     private final @Nullable String datastoreId;
 
@@ -27,9 +21,6 @@ public final class DataPathAssetReferenceResponse extends io.pulumi.resources.In
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
-    /**
-     * The path of the file/directory in the datastore.
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -37,10 +28,6 @@ public final class DataPathAssetReferenceResponse extends io.pulumi.resources.In
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * Enum to determine which reference method to use for an asset.
-Expected value is 'DataPath'.
-     */
     @InputImport(name="referenceType", required=true)
     private final String referenceType;
 

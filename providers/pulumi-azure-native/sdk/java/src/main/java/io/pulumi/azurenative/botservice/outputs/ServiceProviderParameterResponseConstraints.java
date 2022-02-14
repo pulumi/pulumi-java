@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceProviderParameterResponseConstraints {
-/**
- * Whether required the constraints of the bot meta data.
- */
     private final @Nullable Boolean required;
 
     @OutputCustomType.Constructor({"required"})
@@ -21,9 +18,6 @@ public final class ServiceProviderParameterResponseConstraints {
         this.required = required;
     }
 
-/**
- * Whether required the constraints of the bot meta data.
- */
     public Optional<Boolean> getRequired() {
         return Optional.ofNullable(this.required);
     }

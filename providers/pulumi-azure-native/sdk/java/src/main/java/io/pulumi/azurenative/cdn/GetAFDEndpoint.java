@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAFDEndpoint {
-/**
- * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
-API Version: 2020-09-01.
- *
- * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
- */
     public static CompletableFuture<GetAFDEndpointResult> invokeAsync(GetAFDEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDEndpoint", TypeShape.of(GetAFDEndpointResult.class), args == null ? GetAFDEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

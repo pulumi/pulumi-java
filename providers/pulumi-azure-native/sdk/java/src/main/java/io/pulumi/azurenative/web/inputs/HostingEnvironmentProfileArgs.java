@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specification for an App Service Environment to use for this resource.
- */
 public final class HostingEnvironmentProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostingEnvironmentProfileArgs Empty = new HostingEnvironmentProfileArgs();
 
-    /**
-     * Resource ID of the App Service Environment.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

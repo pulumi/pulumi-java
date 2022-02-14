@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouter {
-/**
- * Returns the specified Router resource. Gets a list of available routers by making a list() request.
- */
     public static CompletableFuture<GetRouterResult> invokeAsync(GetRouterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRouter", TypeShape.of(GetRouterResult.class), args == null ? GetRouterArgs.Empty : args, Utilities.withVersion(options));
     }

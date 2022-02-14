@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Managed identity generic object.
- */
 public final class ManagedServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedServiceIdentityArgs Empty = new ManagedServiceIdentityArgs();
 
-    /**
-     * Azure Active Directory principal ID associated with this Identity.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -31,9 +25,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * ID of the Azure Active Directory.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -41,9 +32,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * Type of the managed identity.
-     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ManagedServiceIdentityType>> type;
 
@@ -51,9 +39,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
         return this.type;
     }
 
-    /**
-     * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 

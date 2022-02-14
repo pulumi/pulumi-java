@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTestBaseAccountArgs Empty = new GetTestBaseAccountArgs();
 
-    /**
-     * The name of the resource group that contains the resource.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource name of the Test Base Account.
-     */
     @InputImport(name="testBaseAccountName", required=true)
     private final String testBaseAccountName;
 

@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a virtual machine network profile's IP configuration.
- */
 public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineNetworkInterfaceIPConfigurationResponse Empty = new VirtualMachineNetworkInterfaceIPConfigurationResponse();
 
-    /**
-     * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
-     */
     @InputImport(name="applicationGatewayBackendAddressPools")
     private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
@@ -31,9 +25,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
 
-    /**
-     * Specifies an array of references to application security group.
-     */
     @InputImport(name="applicationSecurityGroups")
     private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
@@ -41,9 +32,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
 
-    /**
-     * Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
-     */
     @InputImport(name="loadBalancerBackendAddressPools")
     private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
@@ -51,9 +39,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
 
-    /**
-     * The IP configuration name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -61,9 +46,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.name;
     }
 
-    /**
-     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     */
     @InputImport(name="primary")
     private final @Nullable Boolean primary;
 
@@ -71,9 +53,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
-    /**
-     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
-     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable String privateIPAddressVersion;
 
@@ -81,9 +60,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
-    /**
-     * The publicIPAddressConfiguration.
-     */
     @InputImport(name="publicIPAddressConfiguration")
     private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
@@ -91,9 +67,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
-    /**
-     * Specifies the identifier of the subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable SubResourceResponse subnet;
 

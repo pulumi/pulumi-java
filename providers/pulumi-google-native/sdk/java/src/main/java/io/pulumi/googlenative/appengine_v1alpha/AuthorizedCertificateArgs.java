@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AuthorizedCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizedCertificateArgs Empty = new AuthorizedCertificateArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final Input<String> appId;
 
@@ -28,9 +22,6 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
         return this.appId;
     }
 
-    /**
-     * The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
-     */
     @InputImport(name="certificateRawData")
     private final @Nullable Input<CertificateRawDataArgs> certificateRawData;
 
@@ -38,9 +29,6 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
         return this.certificateRawData == null ? Input.empty() : this.certificateRawData;
     }
 
-    /**
-     * The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 

@@ -8,66 +8,21 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Name of the pricing tier.
- */
     @EnumType
     public enum SkuName {
-/**
- * 
- */
         Standard_Verizon("Standard_Verizon"),
-/**
- * 
- */
         Premium_Verizon("Premium_Verizon"),
-/**
- * 
- */
         Custom_Verizon("Custom_Verizon"),
-/**
- * 
- */
         Standard_Akamai("Standard_Akamai"),
-/**
- * 
- */
         Standard_ChinaCdn("Standard_ChinaCdn"),
-/**
- * 
- */
         Standard_Microsoft("Standard_Microsoft"),
-/**
- * 
- */
         Premium_ChinaCdn("Premium_ChinaCdn"),
-/**
- * 
- */
         Standard_AzureFrontDoor("Standard_AzureFrontDoor"),
-/**
- * 
- */
         Premium_AzureFrontDoor("Premium_AzureFrontDoor"),
-/**
- * 
- */
         Standard_955BandWidth_ChinaCdn("Standard_955BandWidth_ChinaCdn"),
-/**
- * 
- */
         Standard_AvgBandWidth_ChinaCdn("Standard_AvgBandWidth_ChinaCdn"),
-/**
- * 
- */
         StandardPlus_ChinaCdn("StandardPlus_ChinaCdn"),
-/**
- * 
- */
         StandardPlus_955BandWidth_ChinaCdn("StandardPlus_955BandWidth_ChinaCdn"),
-/**
- * 
- */
         StandardPlus_AvgBandWidth_ChinaCdn("StandardPlus_AvgBandWidth_ChinaCdn");
 
         private final String value;

@@ -22,16 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApiManagementServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiManagementServiceArgs Empty = new ApiManagementServiceArgs();
 
-    /**
-     * Additional datacenter locations of the API Management service.
-     */
     @InputImport(name="additionalLocations")
     private final @Nullable Input<List<AdditionalLocationArgs>> additionalLocations;
 
@@ -39,9 +33,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.additionalLocations == null ? Input.empty() : this.additionalLocations;
     }
 
-    /**
-     * Control Plane Apis version constraint for the API Management service.
-     */
     @InputImport(name="apiVersionConstraint")
     private final @Nullable Input<ApiVersionConstraintArgs> apiVersionConstraint;
 
@@ -49,9 +40,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.apiVersionConstraint == null ? Input.empty() : this.apiVersionConstraint;
     }
 
-    /**
-     * List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
-     */
     @InputImport(name="certificates")
     private final @Nullable Input<List<CertificateConfigurationArgs>> certificates;
 
@@ -59,9 +47,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.certificates == null ? Input.empty() : this.certificates;
     }
 
-    /**
-     * Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
-     */
     @InputImport(name="customProperties")
     private final @Nullable Input<Map<String,String>> customProperties;
 
@@ -69,9 +54,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.customProperties == null ? Input.empty() : this.customProperties;
     }
 
-    /**
-     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
-     */
     @InputImport(name="disableGateway")
     private final @Nullable Input<Boolean> disableGateway;
 
@@ -79,9 +61,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.disableGateway == null ? Input.empty() : this.disableGateway;
     }
 
-    /**
-     * Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
-     */
     @InputImport(name="enableClientCertificate")
     private final @Nullable Input<Boolean> enableClientCertificate;
 
@@ -89,9 +68,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.enableClientCertificate == null ? Input.empty() : this.enableClientCertificate;
     }
 
-    /**
-     * Custom hostname configuration of the API Management service.
-     */
     @InputImport(name="hostnameConfigurations")
     private final @Nullable Input<List<HostnameConfigurationArgs>> hostnameConfigurations;
 
@@ -99,9 +75,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.hostnameConfigurations == null ? Input.empty() : this.hostnameConfigurations;
     }
 
-    /**
-     * Managed service identity of the Api Management service.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ApiManagementServiceIdentityArgs> identity;
 
@@ -109,9 +82,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -119,9 +89,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Email address from which the notification will be sent.
-     */
     @InputImport(name="notificationSenderEmail")
     private final @Nullable Input<String> notificationSenderEmail;
 
@@ -129,9 +96,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.notificationSenderEmail == null ? Input.empty() : this.notificationSenderEmail;
     }
 
-    /**
-     * Publisher email.
-     */
     @InputImport(name="publisherEmail", required=true)
     private final Input<String> publisherEmail;
 
@@ -139,9 +103,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.publisherEmail;
     }
 
-    /**
-     * Publisher name.
-     */
     @InputImport(name="publisherName", required=true)
     private final Input<String> publisherName;
 
@@ -149,9 +110,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.publisherName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -159,9 +117,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
-    /**
-     * Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
-     */
     @InputImport(name="restore")
     private final @Nullable Input<Boolean> restore;
 
@@ -169,9 +124,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.restore == null ? Input.empty() : this.restore;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -179,9 +131,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
-    /**
-     * SKU properties of the API Management service.
-     */
     @InputImport(name="sku", required=true)
     private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
 
@@ -189,9 +138,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -199,9 +145,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Virtual network configuration of the API Management service.
-     */
     @InputImport(name="virtualNetworkConfiguration")
     private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
@@ -209,9 +152,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
     }
 
-    /**
-     * The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
-     */
     @InputImport(name="virtualNetworkType")
     private final @Nullable Input<Either<String,VirtualNetworkType>> virtualNetworkType;
 
@@ -219,9 +159,6 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         return this.virtualNetworkType == null ? Input.empty() : this.virtualNetworkType;
     }
 
-    /**
-     * A list of availability zones denoting where the resource needs to come from.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

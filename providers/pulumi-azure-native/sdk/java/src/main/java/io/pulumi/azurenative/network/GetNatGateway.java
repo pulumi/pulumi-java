@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNatGateway {
-/**
- * Nat Gateway resource.
-API Version: 2020-11-01.
- *
- * Nat Gateway resource.
- */
     public static CompletableFuture<GetNatGatewayResult> invokeAsync(GetNatGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args == null ? GetNatGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

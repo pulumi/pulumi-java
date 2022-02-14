@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * String mnemonic specifying the DNSSEC algorithm of this key.
- */
     @EnumType
     public enum DnsKeySpecAlgorithm {
-/**
- * 
- */
         Rsasha1("rsasha1"),
-/**
- * 
- */
         Rsasha256("rsasha256"),
-/**
- * 
- */
         Rsasha512("rsasha512"),
-/**
- * 
- */
         Ecdsap256sha256("ecdsap256sha256"),
-/**
- * 
- */
         Ecdsap384sha384("ecdsap384sha384");
 
         private final String value;

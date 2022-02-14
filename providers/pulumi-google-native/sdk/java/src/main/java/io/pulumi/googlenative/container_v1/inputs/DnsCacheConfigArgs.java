@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for NodeLocal DNSCache
- */
 public final class DnsCacheConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DnsCacheConfigArgs Empty = new DnsCacheConfigArgs();
 
-    /**
-     * Whether NodeLocal DNSCache is enabled for this cluster.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

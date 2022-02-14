@@ -16,18 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Environment specification version details.
-<see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
- */
 public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentSpecificationVersionArgs Empty = new EnvironmentSpecificationVersionArgs();
 
-    /**
-     * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
-<see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
-     */
     @InputImport(name="condaFile")
     private final @Nullable Input<String> condaFile;
 
@@ -35,9 +27,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.condaFile == null ? Input.empty() : this.condaFile;
     }
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,9 +34,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Configuration settings for Docker.
-     */
     @InputImport(name="docker")
     private final @Nullable Input<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
@@ -55,9 +41,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.docker == null ? Input.empty() : this.docker;
     }
 
-    /**
-     * Defines configuration specific to inference.
-     */
     @InputImport(name="inferenceContainerProperties")
     private final @Nullable Input<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
@@ -65,9 +48,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.inferenceContainerProperties == null ? Input.empty() : this.inferenceContainerProperties;
     }
 
-    /**
-     * If the name version are system generated (anonymous registration).
-     */
     @InputImport(name="isAnonymous")
     private final @Nullable Input<Boolean> isAnonymous;
 
@@ -75,9 +55,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -85,9 +62,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

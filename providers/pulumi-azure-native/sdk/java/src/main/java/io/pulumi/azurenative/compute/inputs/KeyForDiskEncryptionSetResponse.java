@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Key Vault Key Url to be used for server side encryption of Managed Disks and Snapshots
- */
 public final class KeyForDiskEncryptionSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyForDiskEncryptionSetResponse Empty = new KeyForDiskEncryptionSetResponse();
 
-    /**
-     * Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
-     */
     @InputImport(name="keyUrl", required=true)
     private final String keyUrl;
 
@@ -28,9 +22,6 @@ public final class KeyForDiskEncryptionSetResponse extends io.pulumi.resources.I
         return this.keyUrl;
     }
 
-    /**
-     * Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
-     */
     @InputImport(name="sourceVault")
     private final @Nullable SourceVaultResponse sourceVault;
 

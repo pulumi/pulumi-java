@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSuppression {
-/**
- * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
-API Version: 2020-01-01.
- *
- * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
- */
     public static CompletableFuture<GetSuppressionResult> invokeAsync(GetSuppressionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:advisor:getSuppression", TypeShape.of(GetSuppressionResult.class), args == null ? GetSuppressionArgs.Empty : args, Utilities.withVersion(options));
     }

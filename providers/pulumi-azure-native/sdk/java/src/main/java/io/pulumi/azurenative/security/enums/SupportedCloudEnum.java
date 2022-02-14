@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Relevant cloud for the custom assessment automation.
- */
     @EnumType
     public enum SupportedCloudEnum {
-/**
- * 
- */
         AWS("AWS");
 
         private final String value;

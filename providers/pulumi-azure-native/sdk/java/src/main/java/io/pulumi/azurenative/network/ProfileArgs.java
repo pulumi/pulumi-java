@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProfileArgs Empty = new ProfileArgs();
 
-    /**
-     * The list of allowed endpoint record types.
-     */
     @InputImport(name="allowedEndpointRecordTypes")
     private final @Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
@@ -38,9 +32,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedEndpointRecordTypes == null ? Input.empty() : this.allowedEndpointRecordTypes;
     }
 
-    /**
-     * The DNS settings of the Traffic Manager profile.
-     */
     @InputImport(name="dnsConfig")
     private final @Nullable Input<DnsConfigArgs> dnsConfig;
 
@@ -48,9 +39,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
     }
 
-    /**
-     * The list of endpoints in the Traffic Manager profile.
-     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<EndpointArgs>> endpoints;
 
@@ -58,9 +46,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
-    /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -68,9 +53,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The Azure Region where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -78,9 +60,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Maximum number of endpoints to be returned for MultiValue routing type.
-     */
     @InputImport(name="maxReturn")
     private final @Nullable Input<Double> maxReturn;
 
@@ -88,9 +67,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxReturn == null ? Input.empty() : this.maxReturn;
     }
 
-    /**
-     * The endpoint monitoring settings of the Traffic Manager profile.
-     */
     @InputImport(name="monitorConfig")
     private final @Nullable Input<MonitorConfigArgs> monitorConfig;
 
@@ -98,9 +74,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorConfig == null ? Input.empty() : this.monitorConfig;
     }
 
-    /**
-     * The name of the resource
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -108,9 +81,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The name of the Traffic Manager profile.
-     */
     @InputImport(name="profileName")
     private final @Nullable Input<String> profileName;
 
@@ -118,9 +88,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName == null ? Input.empty() : this.profileName;
     }
 
-    /**
-     * The status of the Traffic Manager profile.
-     */
     @InputImport(name="profileStatus")
     private final @Nullable Input<Either<String,ProfileStatus>> profileStatus;
 
@@ -128,9 +95,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileStatus == null ? Input.empty() : this.profileStatus;
     }
 
-    /**
-     * The name of the resource group containing the Traffic Manager profile.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -138,9 +102,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -148,9 +109,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The traffic routing method of the Traffic Manager profile.
-     */
     @InputImport(name="trafficRoutingMethod")
     private final @Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
@@ -158,9 +116,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.trafficRoutingMethod == null ? Input.empty() : this.trafficRoutingMethod;
     }
 
-    /**
-     * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
-     */
     @InputImport(name="trafficViewEnrollmentStatus")
     private final @Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
@@ -168,9 +123,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.trafficViewEnrollmentStatus == null ? Input.empty() : this.trafficViewEnrollmentStatus;
     }
 
-    /**
-     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

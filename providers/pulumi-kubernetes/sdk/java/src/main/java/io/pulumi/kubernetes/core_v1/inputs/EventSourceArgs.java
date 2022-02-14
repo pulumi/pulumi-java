@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * EventSource contains information for an event.
- */
 public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventSourceArgs Empty = new EventSourceArgs();
 
-    /**
-     * Component from which the event is generated.
-     */
     @InputImport(name="component")
     private final @Nullable Input<String> component;
 
@@ -27,9 +21,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.component == null ? Input.empty() : this.component;
     }
 
-    /**
-     * Node name on which the event is generated.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 

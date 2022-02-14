@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Restore parameters.
- */
 public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestoredLogsResponse Empty = new RestoredLogsResponse();
 
-    /**
-     * The timestamp to end the restore by (UTC).
-     */
     @InputImport(name="endRestoreTime")
     private final @Nullable String endRestoreTime;
 
@@ -27,9 +21,6 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
         return this.endRestoreTime == null ? Optional.empty() : Optional.ofNullable(this.endRestoreTime);
     }
 
-    /**
-     * The table to restore data from.
-     */
     @InputImport(name="sourceTable", required=true)
     private final String sourceTable;
 
@@ -37,9 +28,6 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceTable;
     }
 
-    /**
-     * The timestamp to start the restore from (UTC).
-     */
     @InputImport(name="startRestoreTime")
     private final @Nullable String startRestoreTime;
 

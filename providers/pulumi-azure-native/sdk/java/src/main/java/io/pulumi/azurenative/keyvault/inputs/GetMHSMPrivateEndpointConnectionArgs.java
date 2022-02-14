@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMHSMPrivateEndpointConnectionArgs Empty = new GetMHSMPrivateEndpointConnectionArgs();
 
-    /**
-     * Name of the managed HSM Pool
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resour
         return this.name;
     }
 
-    /**
-     * Name of the private endpoint connection associated with the managed hsm pool.
-     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -35,9 +26,6 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resour
         return this.privateEndpointConnectionName;
     }
 
-    /**
-     * Name of the resource group that contains the managed HSM pool.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

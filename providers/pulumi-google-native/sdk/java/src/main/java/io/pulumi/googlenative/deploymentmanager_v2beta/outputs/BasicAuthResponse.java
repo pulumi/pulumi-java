@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BasicAuthResponse {
-/**
- * 
- */
     private final String password;
-/**
- * 
- */
     private final String user;
 
     @OutputCustomType.Constructor({"password","user"})
@@ -26,15 +20,9 @@ public final class BasicAuthResponse {
         this.user = Objects.requireNonNull(user);
     }
 
-/**
- * 
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * 
- */
     public String getUser() {
         return this.user;
     }

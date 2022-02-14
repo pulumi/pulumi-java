@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The subscription role receiver value.
- */
 public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionReceiverValueArgs Empty = new SubscriptionReceiverValueArgs();
 
-    /**
-     * The role of the notification receiver.
-     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
@@ -27,9 +21,6 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
         return this.role == null ? Input.empty() : this.role;
     }
 
-    /**
-     * The subscription id of the notification receiver.
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
@@ -37,9 +28,6 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
-    /**
-     * The subscription name of the notification receiver.
-     */
     @InputImport(name="subscriptionName")
     private final @Nullable Input<String> subscriptionName;
 

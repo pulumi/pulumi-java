@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of an artifact deployment.
- */
 public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArtifactDeploymentStatusPropertiesResponse Empty = new ArtifactDeploymentStatusPropertiesResponse();
 
-    /**
-     * The total count of the artifacts that were successfully applied.
-     */
     @InputImport(name="artifactsApplied")
     private final @Nullable Integer artifactsApplied;
 
@@ -28,9 +22,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
         return this.artifactsApplied == null ? Optional.empty() : Optional.ofNullable(this.artifactsApplied);
     }
 
-    /**
-     * The deployment status of the artifact.
-     */
     @InputImport(name="deploymentStatus")
     private final @Nullable String deploymentStatus;
 
@@ -38,9 +29,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
         return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
     }
 
-    /**
-     * The total count of the artifacts that were tentatively applied.
-     */
     @InputImport(name="totalArtifacts")
     private final @Nullable Integer totalArtifacts;
 

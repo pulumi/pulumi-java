@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A tuple of values for the quasi-identifier columns.
- */
 public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse Empty = new GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse();
 
-    /**
-     * The estimated anonymity for these quasi-identifier values.
-     */
     @InputImport(name="estimatedAnonymity", required=true)
     private final String estimatedAnonymity;
 
@@ -27,9 +21,6 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
         return this.estimatedAnonymity;
     }
 
-    /**
-     * The quasi-identifier values.
-     */
     @InputImport(name="quasiIdsValues", required=true)
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 

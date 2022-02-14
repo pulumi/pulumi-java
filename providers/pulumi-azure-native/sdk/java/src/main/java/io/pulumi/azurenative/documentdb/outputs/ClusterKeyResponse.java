@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterKeyResponse {
-/**
- * Name of the Cosmos DB Cassandra table cluster key
- */
     private final @Nullable String name;
-/**
- * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
- */
     private final @Nullable String orderBy;
 
     @OutputCustomType.Constructor({"name","orderBy"})
@@ -28,15 +22,9 @@ public final class ClusterKeyResponse {
         this.orderBy = orderBy;
     }
 
-/**
- * Name of the Cosmos DB Cassandra table cluster key
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
- */
     public Optional<String> getOrderBy() {
         return Optional.ofNullable(this.orderBy);
     }

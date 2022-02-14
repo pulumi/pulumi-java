@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * Kind of synchronization on trigger.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,TriggerKind>> kind;
 
@@ -39,9 +30,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share subscription which will hold the data set sink.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -59,9 +44,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareSubscriptionName;
     }
 
-    /**
-     * The name of the trigger.
-     */
     @InputImport(name="triggerName")
     private final @Nullable Input<String> triggerName;
 

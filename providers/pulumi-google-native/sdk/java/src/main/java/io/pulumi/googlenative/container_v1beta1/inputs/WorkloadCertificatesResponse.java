@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
- */
 public final class WorkloadCertificatesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkloadCertificatesResponse Empty = new WorkloadCertificatesResponse();
 
-    /**
-     * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
-     */
     @InputImport(name="enableCertificates", required=true)
     private final Boolean enableCertificates;
 

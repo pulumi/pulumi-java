@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The network properties.
- */
 public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkPropertiesResponse Empty = new NetworkPropertiesResponse();
 
-    /**
-     * Indicates whether or not private link is enabled.
-     */
     @InputImport(name="privateLink")
     private final @Nullable String privateLink;
 
@@ -27,9 +21,6 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
     }
 
-    /**
-     * The direction for the resource provider connection.
-     */
     @InputImport(name="resourceProviderConnection")
     private final @Nullable String resourceProviderConnection;
 

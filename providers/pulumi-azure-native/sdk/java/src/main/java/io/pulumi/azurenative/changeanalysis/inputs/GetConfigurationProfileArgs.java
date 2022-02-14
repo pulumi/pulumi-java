@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetConfigurationProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigurationProfileArgs Empty = new GetConfigurationProfileArgs();
 
-    /**
-     * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TokenClaimResponse {
-/**
- * Name of the claim which must be present on the token.
- */
     private final String name;
-/**
- * Expected value of the claim to be present on the token.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -26,15 +20,9 @@ public final class TokenClaimResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * Name of the claim which must be present on the token.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Expected value of the claim to be present on the token.
- */
     public String getValue() {
         return this.value;
     }

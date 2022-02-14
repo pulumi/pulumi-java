@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The frequency to update.
- */
     @EnumType
     public enum FrequencyTypes {
-/**
- * 
- */
         Minute("Minute"),
-/**
- * 
- */
         Hour("Hour"),
-/**
- * 
- */
         Day("Day"),
-/**
- * 
- */
         Week("Week"),
-/**
- * 
- */
         Month("Month");
 
         private final String value;

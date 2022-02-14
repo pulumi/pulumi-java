@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTagValueIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagValueIamPolicyArgs Empty = new GetTagValueIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="tagValueId", required=true)
     private final String tagValueId;
 

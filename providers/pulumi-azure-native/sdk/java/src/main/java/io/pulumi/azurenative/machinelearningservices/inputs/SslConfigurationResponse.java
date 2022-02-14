@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The ssl configuration for scoring
- */
 public final class SslConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SslConfigurationResponse Empty = new SslConfigurationResponse();
 
-    /**
-     * Cert data
-     */
     @InputImport(name="cert")
     private final @Nullable String cert;
 
@@ -27,9 +21,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
     }
 
-    /**
-     * CNAME of the cert
-     */
     @InputImport(name="cname")
     private final @Nullable String cname;
 
@@ -37,9 +28,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
     }
 
-    /**
-     * Key data
-     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -47,9 +35,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
-    /**
-     * Enable or disable ssl for scoring
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

@@ -8,16 +8,10 @@ import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaInte
 import java.util.Objects;
 
 
-/**
- * The price range of all variant Product having the same Product.primary_product_id.
- */
 public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse Empty = new GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse();
 
-    /**
-     * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
-     */
     @InputImport(name="originalPrice", required=true)
     private final GoogleCloudRetailV2alphaIntervalResponse originalPrice;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends i
         return this.originalPrice;
     }
 
-    /**
-     * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
-     */
     @InputImport(name="price", required=true)
     private final GoogleCloudRetailV2alphaIntervalResponse price;
 

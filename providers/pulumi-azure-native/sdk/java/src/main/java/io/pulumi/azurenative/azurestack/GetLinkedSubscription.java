@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedSubscription {
-/**
- * Linked Subscription information.
-API Version: 2020-06-01-preview.
- *
- * Linked Subscription information.
- */
     public static CompletableFuture<GetLinkedSubscriptionResult> invokeAsync(GetLinkedSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getLinkedSubscription", TypeShape.of(GetLinkedSubscriptionResult.class), args == null ? GetLinkedSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

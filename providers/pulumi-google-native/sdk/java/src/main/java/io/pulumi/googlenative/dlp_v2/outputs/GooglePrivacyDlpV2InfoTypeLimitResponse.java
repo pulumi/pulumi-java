@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
-/**
- * Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
- */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
-/**
- * Max findings limit for the given infoType.
- */
     private final Integer maxFindings;
 
     @OutputCustomType.Constructor({"infoType","maxFindings"})
@@ -27,15 +21,9 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
         this.maxFindings = Objects.requireNonNull(maxFindings);
     }
 
-/**
- * Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.
- */
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
     }
-/**
- * Max findings limit for the given infoType.
- */
     public Integer getMaxFindings() {
         return this.maxFindings;
     }

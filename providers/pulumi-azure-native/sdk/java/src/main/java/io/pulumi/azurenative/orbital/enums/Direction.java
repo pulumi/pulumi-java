@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Direction (uplink or downlink)
- */
     @EnumType
     public enum Direction {
-/**
- * 
- */
         Uplink("uplink"),
-/**
- * 
- */
         Downlink("downlink");
 
         private final String value;

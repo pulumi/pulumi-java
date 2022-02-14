@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeploymentModelResponse {
-/**
- * Deployment model format.
- */
     private final @Nullable String format;
-/**
- * Deployment model name.
- */
     private final @Nullable String name;
-/**
- * Deployment model version.
- */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"format","name","version"})
@@ -34,21 +25,12 @@ public final class DeploymentModelResponse {
         this.version = version;
     }
 
-/**
- * Deployment model format.
- */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
-/**
- * Deployment model name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Deployment model version.
- */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

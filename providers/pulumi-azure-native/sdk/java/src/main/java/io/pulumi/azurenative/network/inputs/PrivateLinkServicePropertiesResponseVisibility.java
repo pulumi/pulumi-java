@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The visibility list of the private link service.
- */
 public final class PrivateLinkServicePropertiesResponseVisibility extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServicePropertiesResponseVisibility Empty = new PrivateLinkServicePropertiesResponseVisibility();
 
-    /**
-     * The list of subscriptions.
-     */
     @InputImport(name="subscriptions")
     private final @Nullable List<String> subscriptions;
 

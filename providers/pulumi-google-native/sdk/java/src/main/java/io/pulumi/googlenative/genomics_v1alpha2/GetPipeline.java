@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Retrieves a pipeline based on ID. Caller must have READ permission to the project.
- */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:genomics/v1alpha2:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

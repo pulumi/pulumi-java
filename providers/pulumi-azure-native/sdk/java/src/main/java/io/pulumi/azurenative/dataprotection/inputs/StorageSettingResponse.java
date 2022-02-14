@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Storage setting
- */
 public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageSettingResponse Empty = new StorageSettingResponse();
 
-    /**
-     * Gets or sets the type of the datastore.
-     */
     @InputImport(name="datastoreType")
     private final @Nullable String datastoreType;
 
@@ -27,9 +21,6 @@ public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs
         return this.datastoreType == null ? Optional.empty() : Optional.ofNullable(this.datastoreType);
     }
 
-    /**
-     * Gets or sets the type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

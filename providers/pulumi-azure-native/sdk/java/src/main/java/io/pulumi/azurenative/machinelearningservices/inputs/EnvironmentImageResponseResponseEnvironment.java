@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The details of the AZURE ML environment.
- */
 public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentImageResponseResponseEnvironment Empty = new EnvironmentImageResponseResponseEnvironment();
 
-    /**
-     * The definition of a Docker container.
-     */
     @InputImport(name="docker")
     private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
 
@@ -32,9 +26,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.docker == null ? Optional.empty() : Optional.ofNullable(this.docker);
     }
 
-    /**
-     * Definition of environment variables to be defined in the environment.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable Map<String,String> environmentVariables;
 
@@ -42,9 +33,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
-    /**
-     * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-     */
     @InputImport(name="inferencingStackVersion")
     private final @Nullable String inferencingStackVersion;
 
@@ -52,9 +40,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.inferencingStackVersion == null ? Optional.empty() : Optional.ofNullable(this.inferencingStackVersion);
     }
 
-    /**
-     * The name of the environment.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -62,9 +47,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Settings for a Python environment.
-     */
     @InputImport(name="python")
     private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
 
@@ -72,9 +54,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.python == null ? Optional.empty() : Optional.ofNullable(this.python);
     }
 
-    /**
-     * Settings for a R environment.
-     */
     @InputImport(name="r")
     private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
 
@@ -82,9 +61,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.r == null ? Optional.empty() : Optional.ofNullable(this.r);
     }
 
-    /**
-     * The configuration for a Spark environment.
-     */
     @InputImport(name="spark")
     private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
 
@@ -92,9 +68,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
         return this.spark == null ? Optional.empty() : Optional.ofNullable(this.spark);
     }
 
-    /**
-     * The environment version.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

@@ -27,16 +27,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineImageTemplateArgs Empty = new VirtualMachineImageTemplateArgs();
 
-    /**
-     * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
-     */
     @InputImport(name="buildTimeoutInMinutes")
     private final @Nullable Input<Integer> buildTimeoutInMinutes;
 
@@ -44,9 +38,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.buildTimeoutInMinutes == null ? Input.empty() : this.buildTimeoutInMinutes;
     }
 
-    /**
-     * Specifies the properties used to describe the customization steps of the image, like Image source etc
-     */
     @InputImport(name="customize")
     private final @Nullable Input<List<Object>> customize;
 
@@ -54,9 +45,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.customize == null ? Input.empty() : this.customize;
     }
 
-    /**
-     * The distribution targets where the image output needs to go to.
-     */
     @InputImport(name="distribute", required=true)
     private final Input<List<Object>> distribute;
 
@@ -64,9 +52,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.distribute;
     }
 
-    /**
-     * The identity of the image template, if configured.
-     */
     @InputImport(name="identity", required=true)
     private final Input<ImageTemplateIdentityArgs> identity;
 
@@ -74,9 +59,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.identity;
     }
 
-    /**
-     * The name of the image Template
-     */
     @InputImport(name="imageTemplateName")
     private final @Nullable Input<String> imageTemplateName;
 
@@ -84,9 +66,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.imageTemplateName == null ? Input.empty() : this.imageTemplateName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -94,9 +73,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -104,9 +80,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
-    /**
-     * Specifies the properties used to describe the source image.
-     */
     @InputImport(name="source", required=true)
     private final Input<Object> source;
 
@@ -114,9 +87,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.source;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -124,9 +94,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Describes how virtual machine is set up to build images
-     */
     @InputImport(name="vmProfile")
     private final @Nullable Input<ImageTemplateVmProfileArgs> vmProfile;
 

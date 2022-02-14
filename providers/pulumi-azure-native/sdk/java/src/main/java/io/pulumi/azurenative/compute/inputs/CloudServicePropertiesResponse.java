@@ -15,17 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cloud service properties
- */
 public final class CloudServicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudServicePropertiesResponse Empty = new CloudServicePropertiesResponse();
 
-    /**
-     * (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
-The default value is `false`.
-     */
     @InputImport(name="allowModelOverride")
     private final @Nullable Boolean allowModelOverride;
 
@@ -33,9 +26,6 @@ The default value is `false`.
         return this.allowModelOverride == null ? Optional.empty() : Optional.ofNullable(this.allowModelOverride);
     }
 
-    /**
-     * Specifies the XML service configuration (.cscfg) for the cloud service.
-     */
     @InputImport(name="configuration")
     private final @Nullable String configuration;
 
@@ -43,10 +33,6 @@ The default value is `false`.
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
-    /**
-     * Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
-This is a write-only property and is not returned in GET calls.
-     */
     @InputImport(name="configurationUrl")
     private final @Nullable String configurationUrl;
 
@@ -54,9 +40,6 @@ This is a write-only property and is not returned in GET calls.
         return this.configurationUrl == null ? Optional.empty() : Optional.ofNullable(this.configurationUrl);
     }
 
-    /**
-     * Describes a cloud service extension profile.
-     */
     @InputImport(name="extensionProfile")
     private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
 
@@ -64,9 +47,6 @@ This is a write-only property and is not returned in GET calls.
         return this.extensionProfile == null ? Optional.empty() : Optional.ofNullable(this.extensionProfile);
     }
 
-    /**
-     * Network Profile for the cloud service.
-     */
     @InputImport(name="networkProfile")
     private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
 
@@ -74,9 +54,6 @@ This is a write-only property and is not returned in GET calls.
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
     }
 
-    /**
-     * Describes the OS profile for the cloud service.
-     */
     @InputImport(name="osProfile")
     private final @Nullable CloudServiceOsProfileResponse osProfile;
 
@@ -84,10 +61,6 @@ This is a write-only property and is not returned in GET calls.
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
-    /**
-     * Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
-This is a write-only property and is not returned in GET calls.
-     */
     @InputImport(name="packageUrl")
     private final @Nullable String packageUrl;
 
@@ -95,9 +68,6 @@ This is a write-only property and is not returned in GET calls.
         return this.packageUrl == null ? Optional.empty() : Optional.ofNullable(this.packageUrl);
     }
 
-    /**
-     * The provisioning state, which only appears in the response.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -105,9 +75,6 @@ This is a write-only property and is not returned in GET calls.
         return this.provisioningState;
     }
 
-    /**
-     * Describes the role profile for the cloud service.
-     */
     @InputImport(name="roleProfile")
     private final @Nullable CloudServiceRoleProfileResponse roleProfile;
 
@@ -115,10 +82,6 @@ This is a write-only property and is not returned in GET calls.
         return this.roleProfile == null ? Optional.empty() : Optional.ofNullable(this.roleProfile);
     }
 
-    /**
-     * (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
-If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
-     */
     @InputImport(name="startCloudService")
     private final @Nullable Boolean startCloudService;
 
@@ -126,9 +89,6 @@ If false, the service model is still deployed, but the code is not run immediate
         return this.startCloudService == null ? Optional.empty() : Optional.ofNullable(this.startCloudService);
     }
 
-    /**
-     * The unique identifier for the cloud service.
-     */
     @InputImport(name="uniqueId", required=true)
     private final String uniqueId;
 
@@ -136,11 +96,6 @@ If false, the service model is still deployed, but the code is not run immediate
         return this.uniqueId;
     }
 
-    /**
-     * Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
-Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
-If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
-     */
     @InputImport(name="upgradeMode")
     private final @Nullable String upgradeMode;
 

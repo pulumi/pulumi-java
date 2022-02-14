@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of an ImmutabilityPolicy of a blob container.
- */
 public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImmutabilityPolicyPropertiesResponse Empty = new ImmutabilityPolicyPropertiesResponse();
 
-    /**
-     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     */
     @InputImport(name="allowProtectedAppendWrites")
     private final @Nullable Boolean allowProtectedAppendWrites;
 
@@ -31,9 +25,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
         return this.allowProtectedAppendWrites == null ? Optional.empty() : Optional.ofNullable(this.allowProtectedAppendWrites);
     }
 
-    /**
-     * ImmutabilityPolicy Etag.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -41,9 +32,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
         return this.etag;
     }
 
-    /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
-     */
     @InputImport(name="immutabilityPeriodSinceCreationInDays")
     private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
 
@@ -51,9 +39,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
         return this.immutabilityPeriodSinceCreationInDays == null ? Optional.empty() : Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
 
-    /**
-     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -61,9 +46,6 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
         return this.state;
     }
 
-    /**
-     * The ImmutabilityPolicy update history of the blob container.
-     */
     @InputImport(name="updateHistory", required=true)
     private final List<UpdateHistoryPropertyResponse> updateHistory;
 

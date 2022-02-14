@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectorMappingArgs Empty = new GetConnectorMappingArgs();
 
-    /**
-     * The name of the connector.
-     */
     @InputImport(name="connectorName", required=true)
     private final String connectorName;
 
@@ -25,9 +19,6 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
         return this.connectorName;
     }
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -35,9 +26,6 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
         return this.hubName;
     }
 
-    /**
-     * The name of the connector mapping.
-     */
     @InputImport(name="mappingName", required=true)
     private final String mappingName;
 
@@ -45,9 +33,6 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
         return this.mappingName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseTypeResponse {
-/**
- * The database engine.
- */
     private final String engine;
-/**
- * The database provider.
- */
     private final String provider;
 
     @OutputCustomType.Constructor({"engine","provider"})
@@ -26,15 +20,9 @@ public final class DatabaseTypeResponse {
         this.provider = Objects.requireNonNull(provider);
     }
 
-/**
- * The database engine.
- */
     public String getEngine() {
         return this.engine;
     }
-/**
- * The database provider.
- */
     public String getProvider() {
         return this.provider;
     }

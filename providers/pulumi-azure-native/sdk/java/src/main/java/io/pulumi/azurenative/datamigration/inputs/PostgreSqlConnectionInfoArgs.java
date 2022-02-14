@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information for connecting to PostgreSQL server
- */
 public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PostgreSqlConnectionInfoArgs Empty = new PostgreSqlConnectionInfoArgs();
 
-    /**
-     * Name of the database
-     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -28,9 +22,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
-    /**
-     * Password credential.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -38,9 +29,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Port for Server
-     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -48,9 +36,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
         return this.port;
     }
 
-    /**
-     * Name of the server
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -58,10 +43,6 @@ public final class PostgreSqlConnectionInfoArgs extends io.pulumi.resources.Reso
         return this.serverName;
     }
 
-    /**
-     * Type of connection info
-Expected value is 'PostgreSqlConnectionInfo'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -69,9 +50,6 @@ Expected value is 'PostgreSqlConnectionInfo'.
         return this.type;
     }
 
-    /**
-     * User name
-     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

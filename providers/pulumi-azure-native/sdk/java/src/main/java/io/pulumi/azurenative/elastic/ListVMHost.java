@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListVMHost {
-/**
- * Response of a list operation.
-API Version: 2020-07-01.
- *
- * Response of a list operation.
- */
     public static CompletableFuture<ListVMHostResult> invokeAsync(ListVMHostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listVMHost", TypeShape.of(ListVMHostResult.class), args == null ? ListVMHostArgs.Empty : args, Utilities.withVersion(options));
     }

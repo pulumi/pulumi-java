@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
- */
     @EnumType
     public enum ActionAfterReboot {
-/**
- * 
- */
         ContinueConfiguration("ContinueConfiguration"),
-/**
- * 
- */
         StopConfiguration("StopConfiguration");
 
         private final String value;

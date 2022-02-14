@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Response for checking user's role for Logz.io account.
- */
 public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserRoleResponseResponse Empty = new UserRoleResponseResponse();
 
-    /**
-     * User roles on configured in Logz.io account.
-     */
     @InputImport(name="role")
     private final @Nullable String role;
 

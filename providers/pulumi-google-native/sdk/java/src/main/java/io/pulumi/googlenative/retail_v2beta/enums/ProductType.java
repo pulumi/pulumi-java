@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Immutable. The type of the product. Default to Catalog.product_level_config.ingestion_product_type if unset.
- */
     @EnumType
     public enum ProductType {
-/**
- * Default value. Default to Catalog.product_level_config.ingestion_product_type if unset.
- */
         TypeUnspecified("TYPE_UNSPECIFIED"),
-/**
- * The primary type. As the primary unit for predicting, indexing and search serving, a Type.PRIMARY Product is grouped with multiple Type.VARIANT Products.
- */
         Primary("PRIMARY"),
-/**
- * The variant type. Type.VARIANT Products usually share some common attributes on the same Type.PRIMARY Products, but they have variant attributes like different colors, sizes and prices, etc.
- */
         Variant("VARIANT"),
-/**
- * The collection type. Collection products are bundled Type.PRIMARY Products or Type.VARIANT Products that are sold together, such as a jewelry set with necklaces, earrings and rings, etc.
- */
         Collection("COLLECTION");
 
         private final String value;

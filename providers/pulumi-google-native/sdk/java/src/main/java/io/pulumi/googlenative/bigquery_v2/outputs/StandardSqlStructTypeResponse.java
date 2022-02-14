@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StandardSqlStructTypeResponse {
-/**
- * 
- */
     private final List<StandardSqlFieldResponse> fields;
 
     @OutputCustomType.Constructor({"fields"})
@@ -20,9 +17,6 @@ public final class StandardSqlStructTypeResponse {
         this.fields = Objects.requireNonNull(fields);
     }
 
-/**
- * 
- */
     public List<StandardSqlFieldResponse> getFields() {
         return this.fields;
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of an hourly schedule.
- */
 public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HourDetailsArgs Empty = new HourDetailsArgs();
 
-    /**
-     * Minutes of the hour the schedule will run.
-     */
     @InputImport(name="minute")
     private final @Nullable Input<Integer> minute;
 

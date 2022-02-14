@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The metric counter
- */
 public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricCounterArgs Empty = new MetricCounterArgs();
 
-    /**
-     * The additional dimensions to be added to metric.
-     */
     @InputImport(name="additionalDimensions")
     private final @Nullable Input<List<MetricDimensionArgs>> additionalDimensions;
 
@@ -29,9 +23,6 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalDimensions == null ? Input.empty() : this.additionalDimensions;
     }
 
-    /**
-     * The dimension filter.
-     */
     @InputImport(name="dimensionFilter")
     private final @Nullable Input<List<MetricDimensionArgs>> dimensionFilter;
 
@@ -39,9 +30,6 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
         return this.dimensionFilter == null ? Input.empty() : this.dimensionFilter;
     }
 
-    /**
-     * The instance from which counter should be collected.
-     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -49,9 +37,6 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
-    /**
-     * The counter name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

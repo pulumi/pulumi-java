@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Trigger Kind.
- */
     @EnumType
     public enum TriggerEventType {
-/**
- * 
- */
         FileEvent("FileEvent"),
-/**
- * 
- */
         PeriodicTimerEvent("PeriodicTimerEvent");
 
         private final String value;

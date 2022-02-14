@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration of the HTTP bridge for a device registry.
- */
 public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpConfigArgs Empty = new HttpConfigArgs();
 
-    /**
-     * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
-     */
     @InputImport(name="httpEnabledState")
     private final @Nullable Input<HttpConfigHttpEnabledState> httpEnabledState;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkConfigResponse {
-/**
- * Option to configure network egress for the workers.
- */
     private final String egressOption;
-/**
- * Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
- */
     private final String peeredNetwork;
 
     @OutputCustomType.Constructor({"egressOption","peeredNetwork"})
@@ -26,15 +20,9 @@ public final class NetworkConfigResponse {
         this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
     }
 
-/**
- * Option to configure network egress for the workers.
- */
     public String getEgressOption() {
         return this.egressOption;
     }
-/**
- * Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
- */
     public String getPeeredNetwork() {
         return this.peeredNetwork;
     }

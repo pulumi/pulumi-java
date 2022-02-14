@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a BigQuery table.
- */
 public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs Empty = new GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs();
 
-    /**
-     * Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
-     */
     @InputImport(name="tableSpec")
     private final @Nullable Input<GoogleCloudDatacatalogV1beta1TableSpecArgs> tableSpec;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
         return this.tableSpec == null ? Input.empty() : this.tableSpec;
     }
 
-    /**
-     * Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
-     */
     @InputImport(name="viewSpec")
     private final @Nullable Input<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec;
 

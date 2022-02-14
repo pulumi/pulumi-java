@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterIdentityResponseUserAssignedIdentities {
-/**
- * The client id of user assigned identity.
- */
     private final String clientId;
-/**
- * The principal id of user assigned identity.
- */
     private final String principalId;
-/**
- * The tenant id of user assigned identity.
- */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"clientId","principalId","tenantId"})
@@ -34,21 +25,12 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
         this.tenantId = tenantId;
     }
 
-/**
- * The client id of user assigned identity.
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * The principal id of user assigned identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant id of user assigned identity.
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

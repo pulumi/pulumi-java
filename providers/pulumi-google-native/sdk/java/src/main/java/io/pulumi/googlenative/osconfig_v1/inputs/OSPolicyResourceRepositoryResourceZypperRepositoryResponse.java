@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents a single zypper package repository. These are added to a repo file that is managed at `/etc/zypp/repos.d/google_osconfig.repo`.
- */
 public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceRepositoryResourceZypperRepositoryResponse Empty = new OSPolicyResourceRepositoryResourceZypperRepositoryResponse();
 
-    /**
-     * The location of the repository directory.
-     */
     @InputImport(name="baseUrl", required=true)
     private final String baseUrl;
 
@@ -26,9 +20,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
         return this.baseUrl;
     }
 
-    /**
-     * The display name of the repository.
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -36,9 +27,6 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
         return this.displayName;
     }
 
-    /**
-     * URIs of GPG keys.
-     */
     @InputImport(name="gpgKeys", required=true)
     private final List<String> gpgKeys;
 

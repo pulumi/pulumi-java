@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A policy that specifies how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer doesn't wait for responses from the shadow service. Before sending traffic to the shadow service, the host or authority header is suffixed with -shadow.
- */
 public final class RequestMirrorPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RequestMirrorPolicyResponse Empty = new RequestMirrorPolicyResponse();
 
-    /**
-     * The full or partial URL to the BackendService resource being mirrored to.
-     */
     @InputImport(name="backendService", required=true)
     private final String backendService;
 

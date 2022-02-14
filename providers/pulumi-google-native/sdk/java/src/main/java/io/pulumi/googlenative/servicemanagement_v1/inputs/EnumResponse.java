@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Enum type definition.
- */
 public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnumResponse Empty = new EnumResponse();
 
-    /**
-     * Enum value definitions.
-     */
     @InputImport(name="enumvalue", required=true)
     private final List<EnumValueResponse> enumvalue;
 
@@ -29,9 +23,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
         return this.enumvalue;
     }
 
-    /**
-     * Enum type name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -39,9 +30,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Protocol buffer options.
-     */
     @InputImport(name="options", required=true)
     private final List<OptionResponse> options;
 
@@ -49,9 +37,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
         return this.options;
     }
 
-    /**
-     * The source context.
-     */
     @InputImport(name="sourceContext", required=true)
     private final SourceContextResponse sourceContext;
 
@@ -59,9 +44,6 @@ public final class EnumResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceContext;
     }
 
-    /**
-     * The source syntax.
-     */
     @InputImport(name="syntax", required=true)
     private final String syntax;
 

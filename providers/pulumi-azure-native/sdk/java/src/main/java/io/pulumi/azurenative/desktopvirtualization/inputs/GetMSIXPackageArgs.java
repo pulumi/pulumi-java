@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMSIXPackageArgs Empty = new GetMSIXPackageArgs();
 
-    /**
-     * The name of the host pool within the specified resource group
-     */
     @InputImport(name="hostPoolName", required=true)
     private final String hostPoolName;
 
@@ -25,9 +19,6 @@ public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
         return this.hostPoolName;
     }
 
-    /**
-     * The version specific package full name of the MSIX package within specified hostpool
-     */
     @InputImport(name="msixPackageFullName", required=true)
     private final String msixPackageFullName;
 
@@ -35,9 +26,6 @@ public final class GetMSIXPackageArgs extends io.pulumi.resources.InvokeArgs {
         return this.msixPackageFullName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

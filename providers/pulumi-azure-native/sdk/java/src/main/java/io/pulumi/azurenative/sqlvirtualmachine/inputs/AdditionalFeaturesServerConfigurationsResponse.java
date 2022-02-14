@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional SQL Server feature settings.
- */
 public final class AdditionalFeaturesServerConfigurationsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdditionalFeaturesServerConfigurationsResponse Empty = new AdditionalFeaturesServerConfigurationsResponse();
 
-    /**
-     * Enable or disable R services (SQL 2016 onwards).
-     */
     @InputImport(name="isRServicesEnabled")
     private final @Nullable Boolean isRServicesEnabled;
 

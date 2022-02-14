@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListManagerActivationKeyResult {
-/**
- * The activation key for the device.
- */
     private final String activationKey;
 
     @OutputCustomType.Constructor({"activationKey"})
@@ -19,9 +16,6 @@ public final class ListManagerActivationKeyResult {
         this.activationKey = Objects.requireNonNull(activationKey);
     }
 
-/**
- * The activation key for the device.
- */
     public String getActivationKey() {
         return this.activationKey;
     }

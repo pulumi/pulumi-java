@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Name of the resource.
- */
     @EnumType
     public enum AutoScalingResourceMetricName {
-/**
- * Indicates that the resource is CPU cores.
- */
         Cpu("cpu"),
-/**
- * Indicates that the resource is memory in GB.
- */
         MemoryInGB("memoryInGB");
 
         private final String value;

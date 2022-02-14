@@ -21,16 +21,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Edifact agreement protocol settings.
- */
 public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactProtocolSettingsResponse Empty = new EdifactProtocolSettingsResponse();
 
-    /**
-     * The EDIFACT acknowledgement settings.
-     */
     @InputImport(name="acknowledgementSettings", required=true)
     private final EdifactAcknowledgementSettingsResponse acknowledgementSettings;
 
@@ -38,9 +32,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.acknowledgementSettings;
     }
 
-    /**
-     * The EDIFACT delimiter override settings.
-     */
     @InputImport(name="edifactDelimiterOverrides")
     private final @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
 
@@ -48,9 +39,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
     }
 
-    /**
-     * The EDIFACT envelope override settings.
-     */
     @InputImport(name="envelopeOverrides")
     private final @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
 
@@ -58,9 +46,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
 
-    /**
-     * The EDIFACT envelope settings.
-     */
     @InputImport(name="envelopeSettings", required=true)
     private final EdifactEnvelopeSettingsResponse envelopeSettings;
 
@@ -68,9 +53,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.envelopeSettings;
     }
 
-    /**
-     * The EDIFACT framing settings.
-     */
     @InputImport(name="framingSettings", required=true)
     private final EdifactFramingSettingsResponse framingSettings;
 
@@ -78,9 +60,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.framingSettings;
     }
 
-    /**
-     * The EDIFACT message filter.
-     */
     @InputImport(name="messageFilter", required=true)
     private final EdifactMessageFilterResponse messageFilter;
 
@@ -88,9 +67,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.messageFilter;
     }
 
-    /**
-     * The EDIFACT message filter list.
-     */
     @InputImport(name="messageFilterList")
     private final @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
 
@@ -98,9 +74,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
 
-    /**
-     * The EDIFACT processing Settings.
-     */
     @InputImport(name="processingSettings", required=true)
     private final EdifactProcessingSettingsResponse processingSettings;
 
@@ -108,9 +81,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.processingSettings;
     }
 
-    /**
-     * The EDIFACT schema references.
-     */
     @InputImport(name="schemaReferences", required=true)
     private final List<EdifactSchemaReferenceResponse> schemaReferences;
 
@@ -118,9 +88,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.schemaReferences;
     }
 
-    /**
-     * The EDIFACT validation override settings.
-     */
     @InputImport(name="validationOverrides")
     private final @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
 
@@ -128,9 +95,6 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
 
-    /**
-     * The EDIFACT validation settings.
-     */
     @InputImport(name="validationSettings", required=true)
     private final EdifactValidationSettingsResponse validationSettings;
 

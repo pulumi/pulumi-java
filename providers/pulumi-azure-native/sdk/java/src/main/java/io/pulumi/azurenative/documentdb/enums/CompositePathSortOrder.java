@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Sort order for composite paths.
- */
     @EnumType
     public enum CompositePathSortOrder {
-/**
- * 
- */
         Ascending("ascending"),
-/**
- * 
- */
         Descending("descending");
 
         private final String value;

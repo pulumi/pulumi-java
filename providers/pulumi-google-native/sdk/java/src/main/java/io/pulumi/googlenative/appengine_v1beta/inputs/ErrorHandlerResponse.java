@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Custom static error page to be served when an error occurs.
- */
 public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorHandlerResponse Empty = new ErrorHandlerResponse();
 
-    /**
-     * Error condition this handler applies to.
-     */
     @InputImport(name="errorCode", required=true)
     private final String errorCode;
 
@@ -25,9 +19,6 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
         return this.errorCode;
     }
 
-    /**
-     * MIME type of file. Defaults to text/html.
-     */
     @InputImport(name="mimeType", required=true)
     private final String mimeType;
 
@@ -35,9 +26,6 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
         return this.mimeType;
     }
 
-    /**
-     * Static file content to be served for this error.
-     */
     @InputImport(name="staticFile", required=true)
     private final String staticFile;
 

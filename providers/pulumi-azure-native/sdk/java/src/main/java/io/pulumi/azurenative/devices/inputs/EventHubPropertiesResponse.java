@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the provisioned Event Hub-compatible endpoint used by the IoT hub.
- */
 public final class EventHubPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventHubPropertiesResponse Empty = new EventHubPropertiesResponse();
 
-    /**
-     * The Event Hub-compatible endpoint.
-     */
     @InputImport(name="endpoint", required=true)
     private final String endpoint;
 
@@ -30,9 +24,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
         return this.endpoint;
     }
 
-    /**
-     * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
-     */
     @InputImport(name="partitionCount")
     private final @Nullable Integer partitionCount;
 
@@ -40,9 +31,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
         return this.partitionCount == null ? Optional.empty() : Optional.ofNullable(this.partitionCount);
     }
 
-    /**
-     * The partition ids in the Event Hub-compatible endpoint.
-     */
     @InputImport(name="partitionIds", required=true)
     private final List<String> partitionIds;
 
@@ -50,9 +38,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
         return this.partitionIds;
     }
 
-    /**
-     * The Event Hub-compatible name.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -60,9 +45,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
         return this.path;
     }
 
-    /**
-     * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
-     */
     @InputImport(name="retentionTimeInDays")
     private final @Nullable Double retentionTimeInDays;
 

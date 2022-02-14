@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An item in the carousel.
- */
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs Empty = new GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs();
 
-    /**
-     * Optional. The body text of the card.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs ex
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Optional. The image to display.
-     */
     @InputImport(name="image")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs ex
         return this.image == null ? Input.empty() : this.image;
     }
 
-    /**
-     * Additional info about the option item.
-     */
     @InputImport(name="info", required=true)
     private final Input<GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs> info;
 
@@ -49,9 +37,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs ex
         return this.info;
     }
 
-    /**
-     * Title of the carousel item.
-     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

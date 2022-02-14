@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TlsCertificateResponse {
-/**
- * PEM representation.
- */
     private final String cert;
-/**
- * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
- */
     private final String createTime;
-/**
- * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
- */
     private final String expireTime;
-/**
- * Serial number, as extracted from the certificate.
- */
     private final String serialNumber;
-/**
- * Sha1 Fingerprint of the certificate.
- */
     private final String sha1Fingerprint;
 
     @OutputCustomType.Constructor({"cert","createTime","expireTime","serialNumber","sha1Fingerprint"})
@@ -44,33 +29,18 @@ public final class TlsCertificateResponse {
         this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
     }
 
-/**
- * PEM representation.
- */
     public String getCert() {
         return this.cert;
     }
-/**
- * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
- */
     public String getExpireTime() {
         return this.expireTime;
     }
-/**
- * Serial number, as extracted from the certificate.
- */
     public String getSerialNumber() {
         return this.serialNumber;
     }
-/**
- * Sha1 Fingerprint of the certificate.
- */
     public String getSha1Fingerprint() {
         return this.sha1Fingerprint;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The Upgrade Distribution represents metadata about the Upgrade for each operating system (CPE). Some distributions have additional metadata around updates, classifying them into various categories and severities.
- */
 public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UpgradeDistributionArgs Empty = new UpgradeDistributionArgs();
 
-    /**
-     * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
-     */
     @InputImport(name="classification")
     private final @Nullable Input<String> classification;
 
@@ -28,9 +22,6 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
         return this.classification == null ? Input.empty() : this.classification;
     }
 
-    /**
-     * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
-     */
     @InputImport(name="cpeUri")
     private final @Nullable Input<String> cpeUri;
 
@@ -38,9 +29,6 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
         return this.cpeUri == null ? Input.empty() : this.cpeUri;
     }
 
-    /**
-     * The cve tied to this Upgrade.
-     */
     @InputImport(name="cve")
     private final @Nullable Input<List<String>> cve;
 
@@ -48,9 +36,6 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
         return this.cve == null ? Input.empty() : this.cve;
     }
 
-    /**
-     * The severity as specified by the upstream operating system.
-     */
     @InputImport(name="severity")
     private final @Nullable Input<String> severity;
 

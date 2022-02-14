@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDatasetAnnotationStoreIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatasetAnnotationStoreIamPolicyArgs Empty = new GetDatasetAnnotationStoreIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="annotationStoreId", required=true)
     private final String annotationStoreId;
 
@@ -27,9 +21,6 @@ public final class GetDatasetAnnotationStoreIamPolicyArgs extends io.pulumi.reso
         return this.annotationStoreId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -37,9 +28,6 @@ public final class GetDatasetAnnotationStoreIamPolicyArgs extends io.pulumi.reso
         return this.datasetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetDatasetAnnotationStoreIamPolicyArgs extends io.pulumi.reso
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -57,9 +42,6 @@ public final class GetDatasetAnnotationStoreIamPolicyArgs extends io.pulumi.reso
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

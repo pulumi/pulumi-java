@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityForCmkResponse {
-/**
- * The ArmId of the user assigned identity that will be used to access the customer managed key vault
- */
     private final String userAssignedIdentity;
 
     @OutputCustomType.Constructor({"userAssignedIdentity"})
@@ -19,9 +16,6 @@ public final class IdentityForCmkResponse {
         this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
     }
 
-/**
- * The ArmId of the user assigned identity that will be used to access the customer managed key vault
- */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;
     }

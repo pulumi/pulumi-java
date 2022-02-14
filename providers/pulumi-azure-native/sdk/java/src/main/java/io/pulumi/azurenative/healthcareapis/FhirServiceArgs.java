@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FhirServiceArgs Empty = new FhirServiceArgs();
 
-    /**
-     * Fhir Service access policies.
-     */
     @InputImport(name="accessPolicies")
     private final @Nullable Input<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
 
@@ -37,9 +31,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
     }
 
-    /**
-     * Fhir Service Azure container registry configuration.
-     */
     @InputImport(name="acrConfiguration")
     private final @Nullable Input<FhirServiceAcrConfigurationArgs> acrConfiguration;
 
@@ -47,9 +38,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.acrConfiguration == null ? Input.empty() : this.acrConfiguration;
     }
 
-    /**
-     * Fhir Service authentication configuration.
-     */
     @InputImport(name="authenticationConfiguration")
     private final @Nullable Input<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
@@ -57,9 +45,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationConfiguration == null ? Input.empty() : this.authenticationConfiguration;
     }
 
-    /**
-     * Fhir Service Cors configuration.
-     */
     @InputImport(name="corsConfiguration")
     private final @Nullable Input<FhirServiceCorsConfigurationArgs> corsConfiguration;
 
@@ -67,9 +52,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
     }
 
-    /**
-     * Fhir Service export configuration.
-     */
     @InputImport(name="exportConfiguration")
     private final @Nullable Input<FhirServiceExportConfigurationArgs> exportConfiguration;
 
@@ -77,9 +59,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.exportConfiguration == null ? Input.empty() : this.exportConfiguration;
     }
 
-    /**
-     * The name of FHIR Service resource.
-     */
     @InputImport(name="fhirServiceName")
     private final @Nullable Input<String> fhirServiceName;
 
@@ -87,9 +66,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.fhirServiceName == null ? Input.empty() : this.fhirServiceName;
     }
 
-    /**
-     * Setting indicating whether the service has a managed identity associated with it.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
 
@@ -97,9 +73,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The kind of the service.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,FhirServiceKind>> kind;
 
@@ -107,9 +80,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -117,9 +87,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group that contains the service instance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -127,9 +94,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -137,9 +101,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The name of workspace resource.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

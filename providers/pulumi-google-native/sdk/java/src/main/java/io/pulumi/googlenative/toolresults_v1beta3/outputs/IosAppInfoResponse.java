@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IosAppInfoResponse {
-/**
- * The name of the app. Required
- */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -19,9 +16,6 @@ public final class IosAppInfoResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The name of the app. Required
- */
     public String getName() {
         return this.name;
     }

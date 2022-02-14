@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of Confidential Ledger
- */
     @EnumType
     public enum LedgerType {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Public("Public"),
-/**
- * 
- */
         Private("Private");
 
         private final String value;

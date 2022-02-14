@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a network port.
- */
 public final class PortResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PortResponse Empty = new PortResponse();
 
-    /**
-     * Backend port of the target virtual machine.
-     */
     @InputImport(name="backendPort")
     private final @Nullable Integer backendPort;
 
@@ -28,9 +22,6 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
         return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
     }
 
-    /**
-     * Protocol type of the port.
-     */
     @InputImport(name="transportProtocol")
     private final @Nullable String transportProtocol;
 

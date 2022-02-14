@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BillingRoleAssignmentByDepartmentArgs Empty = new BillingRoleAssignmentByDepartmentArgs();
 
-    /**
-     * The ID that uniquely identifies a billing account.
-     */
     @InputImport(name="billingAccountName", required=true)
     private final Input<String> billingAccountName;
 
@@ -27,9 +21,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.billingAccountName;
     }
 
-    /**
-     * The ID that uniquely identifies a role assignment.
-     */
     @InputImport(name="billingRoleAssignmentName")
     private final @Nullable Input<String> billingRoleAssignmentName;
 
@@ -37,9 +28,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.billingRoleAssignmentName == null ? Input.empty() : this.billingRoleAssignmentName;
     }
 
-    /**
-     * The ID that uniquely identifies a department.
-     */
     @InputImport(name="departmentName", required=true)
     private final Input<String> departmentName;
 
@@ -47,9 +35,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.departmentName;
     }
 
-    /**
-     * The principal id of the user to whom the role was assigned.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -57,9 +42,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * The principal tenant id of the user to whom the role was assigned.
-     */
     @InputImport(name="principalTenantId")
     private final @Nullable Input<String> principalTenantId;
 
@@ -67,9 +49,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.principalTenantId == null ? Input.empty() : this.principalTenantId;
     }
 
-    /**
-     * The ID of the role definition.
-     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable Input<String> roleDefinitionId;
 
@@ -77,9 +56,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
     }
 
-    /**
-     * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     */
     @InputImport(name="userAuthenticationType")
     private final @Nullable Input<String> userAuthenticationType;
 
@@ -87,9 +63,6 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
         return this.userAuthenticationType == null ? Input.empty() : this.userAuthenticationType;
     }
 
-    /**
-     * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     */
     @InputImport(name="userEmailAddress")
     private final @Nullable Input<String> userEmailAddress;
 

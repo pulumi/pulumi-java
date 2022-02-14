@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * App Engine Routing. Defines routing characteristics specific to App Engine - service, version, and instance. For more information about services, versions, and instances see [An Overview of App Engine](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine), [Microservices Architecture on Google App Engine](https://cloud.google.com/appengine/docs/python/microservices-on-app-engine), [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed), and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
- */
 public final class AppEngineRoutingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppEngineRoutingArgs Empty = new AppEngineRoutingArgs();
 
-    /**
-     * App instance. By default, the task is sent to an instance which is available when the task is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
-     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -27,9 +21,6 @@ public final class AppEngineRoutingArgs extends io.pulumi.resources.ResourceArgs
         return this.instance == null ? Input.empty() : this.instance;
     }
 
-    /**
-     * App service. By default, the task is sent to the service which is the default service when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.
-     */
     @InputImport(name="service")
     private final @Nullable Input<String> service;
 
@@ -37,9 +28,6 @@ public final class AppEngineRoutingArgs extends io.pulumi.resources.ResourceArgs
         return this.service == null ? Input.empty() : this.service;
     }
 
-    /**
-     * App version. By default, the task is sent to the version which is the default version when the task is attempted. For some queues or tasks which were created using the App Engine Task Queue API, host is not parsable into service, version, and instance. For example, some tasks which were created using the App Engine SDK use a custom domain name; custom domains are not parsed by Cloud Tasks. If host is not parsable, then service, version, and instance are the empty string.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

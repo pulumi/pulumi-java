@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings of the registration for the Apple provider
- */
 public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppleRegistrationArgs Empty = new AppleRegistrationArgs();
 
-    /**
-     * The Client ID of the app used for login.
-     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -27,9 +21,6 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
-    /**
-     * The app setting name that contains the client secret.
-     */
     @InputImport(name="clientSecretSettingName")
     private final @Nullable Input<String> clientSecretSettingName;
 

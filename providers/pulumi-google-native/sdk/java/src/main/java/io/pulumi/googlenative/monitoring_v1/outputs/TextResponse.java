@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TextResponse {
-/**
- * The text content to be displayed.
- */
     private final String content;
-/**
- * How the text content is formatted.
- */
     private final String format;
 
     @OutputCustomType.Constructor({"content","format"})
@@ -26,15 +20,9 @@ public final class TextResponse {
         this.format = Objects.requireNonNull(format);
     }
 
-/**
- * The text content to be displayed.
- */
     public String getContent() {
         return this.content;
     }
-/**
- * How the text content is formatted.
- */
     public String getFormat() {
         return this.format;
     }

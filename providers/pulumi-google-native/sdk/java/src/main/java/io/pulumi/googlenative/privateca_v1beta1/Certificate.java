@@ -17,153 +17,75 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Create a new Certificate in a given Project, Location from a particular CertificateAuthority.
-Auto-naming is currently not supported for this resource.
-Note - this resource's API doesn't support deletion. When deleted, the resource will persist
-on Google Cloud even though it will be deleted from Pulumi state.
- */
 @ResourceType(type="google-native:privateca/v1beta1:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
-    /**
-     * A structured description of the issued X.509 certificate.
-     */
     @OutputExport(name="certificateDescription", type=CertificateDescriptionResponse.class, parameters={})
     private Output<CertificateDescriptionResponse> certificateDescription;
 
-    /**
-     * @return A structured description of the issued X.509 certificate.
-     */
     public Output<CertificateDescriptionResponse> getCertificateDescription() {
         return this.certificateDescription;
     }
-    /**
-     * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     */
     @OutputExport(name="config", type=CertificateConfigResponse.class, parameters={})
     private Output<CertificateConfigResponse> config;
 
-    /**
-     * @return Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
-     */
     public Output<CertificateConfigResponse> getConfig() {
         return this.config;
     }
-    /**
-     * The time at which this Certificate was created.
-     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    /**
-     * @return The time at which this Certificate was created.
-     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    /**
-     * Optional. Labels with user-defined metadata.
-     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
-    /**
-     * @return Optional. Labels with user-defined metadata.
-     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
-    /**
-     * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     */
     @OutputExport(name="lifetime", type=String.class, parameters={})
     private Output<String> lifetime;
 
-    /**
-     * @return Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
-     */
     public Output<String> getLifetime() {
         return this.lifetime;
     }
-    /**
-     * The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource path for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*{@literal /}certificates/*`.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The pem-encoded, signed X.509 certificate.
-     */
     @OutputExport(name="pemCertificate", type=String.class, parameters={})
     private Output<String> pemCertificate;
 
-    /**
-     * @return The pem-encoded, signed X.509 certificate.
-     */
     public Output<String> getPemCertificate() {
         return this.pemCertificate;
     }
-    /**
-     * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
-     */
     @OutputExport(name="pemCertificateChain", type=List.class, parameters={String.class})
     private Output<List<String>> pemCertificateChain;
 
-    /**
-     * @return The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
-     */
     public Output<List<String>> getPemCertificateChain() {
         return this.pemCertificateChain;
     }
-    /**
-     * Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     */
     @OutputExport(name="pemCsr", type=String.class, parameters={})
     private Output<String> pemCsr;
 
-    /**
-     * @return Immutable. A pem-encoded X.509 certificate signing request (CSR).
-     */
     public Output<String> getPemCsr() {
         return this.pemCsr;
     }
-    /**
-     * Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
-     */
     @OutputExport(name="revocationDetails", type=RevocationDetailsResponse.class, parameters={})
     private Output<RevocationDetailsResponse> revocationDetails;
 
-    /**
-     * @return Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
-     */
     public Output<RevocationDetailsResponse> getRevocationDetails() {
         return this.revocationDetails;
     }
-    /**
-     * The time at which this Certificate was updated.
-     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    /**
-     * @return The time at which this Certificate was updated.
-     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:privateca/v1beta1:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -179,14 +101,6 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Certificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Certificate(name, id, options);
     }

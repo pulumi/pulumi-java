@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Managed application deployment policy.
- */
 public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationDeploymentPolicyArgs Empty = new ApplicationDeploymentPolicyArgs();
 
-    /**
-     * The managed application deployment mode.
-     */
     @InputImport(name="deploymentMode", required=true)
     private final Input<Either<String,DeploymentMode>> deploymentMode;
 

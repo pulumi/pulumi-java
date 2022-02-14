@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTypeProvider {
-/**
- * Gets information about a specific type provider.
- */
     public static CompletableFuture<GetTypeProviderResult> invokeAsync(GetTypeProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/v2beta:getTypeProvider", TypeShape.of(GetTypeProviderResult.class), args == null ? GetTypeProviderArgs.Empty : args, Utilities.withVersion(options));
     }

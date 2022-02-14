@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Asset input port
- */
 public final class InputPortResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InputPortResponse Empty = new InputPortResponse();
 
-    /**
-     * Port data type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

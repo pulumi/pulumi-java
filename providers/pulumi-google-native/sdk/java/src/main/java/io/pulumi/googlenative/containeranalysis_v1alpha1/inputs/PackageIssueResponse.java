@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * This message wraps a location affected by a vulnerability and its associated fix (if one is available).
- */
 public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageIssueResponse Empty = new PackageIssueResponse();
 
-    /**
-     * The location of the vulnerability.
-     */
     @InputImport(name="affectedLocation", required=true)
     private final VulnerabilityLocationResponse affectedLocation;
 
@@ -26,9 +20,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.affectedLocation;
     }
 
-    /**
-     * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when distro or language system has not yet assigned a severity for this vulnerability.
-     */
     @InputImport(name="effectiveSeverity", required=true)
     private final String effectiveSeverity;
 
@@ -36,9 +27,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.effectiveSeverity;
     }
 
-    /**
-     * The location of the available fix for vulnerability.
-     */
     @InputImport(name="fixedLocation", required=true)
     private final VulnerabilityLocationResponse fixedLocation;
 
@@ -46,9 +34,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.fixedLocation;
     }
 
-    /**
-     * The type of package (e.g. OS, MAVEN, GO).
-     */
     @InputImport(name="packageType", required=true)
     private final String packageType;
 
@@ -56,9 +41,6 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.packageType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="severityName", required=true)
     private final String severityName;
 

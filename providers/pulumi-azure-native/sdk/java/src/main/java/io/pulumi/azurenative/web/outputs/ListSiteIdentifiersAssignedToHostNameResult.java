@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListSiteIdentifiersAssignedToHostNameResult {
-/**
- * Link to next page of resources.
- */
     private final String nextLink;
-/**
- * Collection of resources.
- */
     private final List<IdentifierResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -28,15 +22,9 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * Link to next page of resources.
- */
     public String getNextLink() {
         return this.nextLink;
     }
-/**
- * Collection of resources.
- */
     public List<IdentifierResponse> getValue() {
         return this.value;
     }

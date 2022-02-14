@@ -14,29 +14,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DetectorResponse {
-/**
- * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
- */
     private final @Nullable String description;
-/**
- * The detector id.
- */
     private final String id;
-/**
- * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
- */
     private final @Nullable List<String> imagePaths;
-/**
- * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
- */
     private final @Nullable String name;
-/**
- * The detector's parameters.'
- */
     private final @Nullable Map<String,Object> parameters;
-/**
- * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
- */
     private final @Nullable List<String> supportedResourceTypes;
 
     @OutputCustomType.Constructor({"description","id","imagePaths","name","parameters","supportedResourceTypes"})
@@ -55,39 +37,21 @@ public final class DetectorResponse {
         this.supportedResourceTypes = supportedResourceTypes;
     }
 
-/**
- * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The detector id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
- */
     public List<String> getImagePaths() {
         return this.imagePaths == null ? List.of() : this.imagePaths;
     }
-/**
- * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The detector's parameters.'
- */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
- */
     public List<String> getSupportedResourceTypes() {
         return this.supportedResourceTypes == null ? List.of() : this.supportedResourceTypes;
     }

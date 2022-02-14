@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * KeyUsage.ExtendedKeyUsageOptions has fields that correspond to certain common OIDs that could be specified as an extended key usage value.
- */
 public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtendedKeyUsageOptionsResponse Empty = new ExtendedKeyUsageOptionsResponse();
 
-    /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
-     */
     @InputImport(name="clientAuth", required=true)
     private final Boolean clientAuth;
 
@@ -25,9 +19,6 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
         return this.clientAuth;
     }
 
-    /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
-     */
     @InputImport(name="codeSigning", required=true)
     private final Boolean codeSigning;
 
@@ -35,9 +26,6 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
         return this.codeSigning;
     }
 
-    /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
-     */
     @InputImport(name="emailProtection", required=true)
     private final Boolean emailProtection;
 
@@ -45,9 +33,6 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
         return this.emailProtection;
     }
 
-    /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
-     */
     @InputImport(name="ocspSigning", required=true)
     private final Boolean ocspSigning;
 
@@ -55,9 +40,6 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
         return this.ocspSigning;
     }
 
-    /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
-     */
     @InputImport(name="serverAuth", required=true)
     private final Boolean serverAuth;
 
@@ -65,9 +47,6 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
         return this.serverAuth;
     }
 
-    /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
-     */
     @InputImport(name="timeStamping", required=true)
     private final Boolean timeStamping;
 

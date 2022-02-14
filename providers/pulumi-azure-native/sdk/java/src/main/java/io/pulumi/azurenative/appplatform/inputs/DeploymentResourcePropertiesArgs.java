@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Deployment resource properties payload
- */
 public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentResourcePropertiesArgs Empty = new DeploymentResourcePropertiesArgs();
 
-    /**
-     * Deployment settings of the Deployment
-     */
     @InputImport(name="deploymentSettings")
     private final @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
 
@@ -28,9 +22,6 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
         return this.deploymentSettings == null ? Input.empty() : this.deploymentSettings;
     }
 
-    /**
-     * Uploaded source information of the deployment.
-     */
     @InputImport(name="source")
     private final @Nullable Input<UserSourceInfoArgs> source;
 

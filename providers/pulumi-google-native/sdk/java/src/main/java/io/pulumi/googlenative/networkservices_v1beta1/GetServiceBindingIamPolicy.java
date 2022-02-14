@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceBindingIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- */
     public static CompletableFuture<GetServiceBindingIamPolicyResult> invokeAsync(GetServiceBindingIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkservices/v1beta1:getServiceBindingIamPolicy", TypeShape.of(GetServiceBindingIamPolicyResult.class), args == null ? GetServiceBindingIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

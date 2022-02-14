@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContentLinkResponse {
-/**
- * The content hash.
- */
     private final ContentHashResponse contentHash;
-/**
- * The content size.
- */
     private final Double contentSize;
-/**
- * The content version.
- */
     private final String contentVersion;
-/**
- * The metadata.
- */
     private final Object metadata;
-/**
- * The content link URI.
- */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"contentHash","contentSize","contentVersion","metadata","uri"})
@@ -49,33 +34,18 @@ public final class ContentLinkResponse {
         this.uri = uri;
     }
 
-/**
- * The content hash.
- */
     public ContentHashResponse getContentHash() {
         return this.contentHash;
     }
-/**
- * The content size.
- */
     public Double getContentSize() {
         return this.contentSize;
     }
-/**
- * The content version.
- */
     public String getContentVersion() {
         return this.contentVersion;
     }
-/**
- * The metadata.
- */
     public Object getMetadata() {
         return this.metadata;
     }
-/**
- * The content link URI.
- */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the encryption associated with the workspace
- */
 public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionDetailsResponse Empty = new EncryptionDetailsResponse();
 
-    /**
-     * Customer Managed Key Details
-     */
     @InputImport(name="cmk")
     private final @Nullable CustomerManagedKeyDetailsResponse cmk;
 
@@ -28,9 +22,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
         return this.cmk == null ? Optional.empty() : Optional.ofNullable(this.cmk);
     }
 
-    /**
-     * Double Encryption enabled
-     */
     @InputImport(name="doubleEncryptionEnabled", required=true)
     private final Boolean doubleEncryptionEnabled;
 

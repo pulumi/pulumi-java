@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Message for specifying a window around a finding to apply a detection rule.
- */
 public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ProximityArgs Empty = new GooglePrivacyDlpV2ProximityArgs();
 
-    /**
-     * Number of characters after the finding to consider.
-     */
     @InputImport(name="windowAfter")
     private final @Nullable Input<Integer> windowAfter;
 
@@ -27,9 +21,6 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
         return this.windowAfter == null ? Input.empty() : this.windowAfter;
     }
 
-    /**
-     * Number of characters before the finding to consider.
-     */
     @InputImport(name="windowBefore")
     private final @Nullable Input<Integer> windowBefore;
 

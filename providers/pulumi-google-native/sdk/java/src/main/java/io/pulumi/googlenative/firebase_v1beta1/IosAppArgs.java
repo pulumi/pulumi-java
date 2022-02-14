@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IosAppArgs Empty = new IosAppArgs();
 
-    /**
-     * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
-     */
     @InputImport(name="appId")
     private final @Nullable Input<String> appId;
 
@@ -27,9 +21,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId == null ? Input.empty() : this.appId;
     }
 
-    /**
-     * The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
-     */
     @InputImport(name="appStoreId")
     private final @Nullable Input<String> appStoreId;
 
@@ -37,9 +28,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appStoreId == null ? Input.empty() : this.appStoreId;
     }
 
-    /**
-     * Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
-     */
     @InputImport(name="bundleId")
     private final @Nullable Input<String> bundleId;
 
@@ -47,9 +35,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.bundleId == null ? Input.empty() : this.bundleId;
     }
 
-    /**
-     * The user-assigned display name for the `IosApp`.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -57,9 +42,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,9 +49,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -77,9 +56,6 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The Apple Developer Team ID associated with the App in the App Store.
-     */
     @InputImport(name="teamId")
     private final @Nullable Input<String> teamId;
 

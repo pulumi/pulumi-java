@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuLocationInfoArgs Empty = new SkuLocationInfoArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="extendedLocations")
     private final @Nullable Input<List<String>> extendedLocations;
 
@@ -29,9 +23,6 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.extendedLocations == null ? Input.empty() : this.extendedLocations;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -39,9 +30,6 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -49,9 +37,6 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="zoneDetails")
     private final @Nullable Input<List<SkuZoneDetailArgs>> zoneDetails;
 
@@ -59,9 +44,6 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.zoneDetails == null ? Input.empty() : this.zoneDetails;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

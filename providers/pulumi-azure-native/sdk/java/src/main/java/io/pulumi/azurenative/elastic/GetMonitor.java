@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitor {
-/**
- * Monitor resource.
-API Version: 2020-07-01.
- *
- * Monitor resource.
- */
     public static CompletableFuture<GetMonitorResult> invokeAsync(GetMonitorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:getMonitor", TypeShape.of(GetMonitorResult.class), args == null ? GetMonitorArgs.Empty : args, Utilities.withVersion(options));
     }

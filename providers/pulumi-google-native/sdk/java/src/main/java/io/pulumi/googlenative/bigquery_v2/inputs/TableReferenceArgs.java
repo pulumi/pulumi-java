@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableReferenceArgs Empty = new TableReferenceArgs();
 
-    /**
-     * [Required] The ID of the dataset containing this table.
-     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -27,9 +21,6 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
-    /**
-     * [Required] The ID of the project containing this table.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -37,9 +28,6 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     */
     @InputImport(name="tableId")
     private final @Nullable Input<String> tableId;
 

@@ -15,208 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * 
-API Version: 2020-11-20.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ProviderRegistrations_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var providerRegistration = new AzureNative.ProviderHub.ProviderRegistration("providerRegistration", new AzureNative.ProviderHub.ProviderRegistrationArgs
-        {
-            Properties = new AzureNative.ProviderHub.Inputs.ProviderRegistrationPropertiesArgs
-            {
-                Capabilities = 
-                {
-                    new AzureNative.ProviderHub.Inputs.ResourceProviderCapabilitiesArgs
-                    {
-                        Effect = "Allow",
-                        QuotaId = "CSP_2015-05-01",
-                    },
-                    new AzureNative.ProviderHub.Inputs.ResourceProviderCapabilitiesArgs
-                    {
-                        Effect = "Allow",
-                        QuotaId = "CSP_MG_2017-12-01",
-                    },
-                },
-                Management = new AzureNative.ProviderHub.Inputs.ResourceProviderManifestPropertiesManagementArgs
-                {
-                    IncidentContactEmail = "helpme@contoso.com",
-                    IncidentRoutingService = "Contoso Resource Provider",
-                    IncidentRoutingTeam = "Contoso Triage",
-                },
-                ProviderType = "Internal",
-                ProviderVersion = "2.0",
-            },
-            ProviderNamespace = "Microsoft.Contoso",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := providerhub.NewProviderRegistration(ctx, "providerRegistration", &providerhub.ProviderRegistrationArgs{
-			Properties: &providerhub.ProviderRegistrationPropertiesArgs{
-				Capabilities: providerhub.ResourceProviderCapabilitiesArray{
-					&providerhub.ResourceProviderCapabilitiesArgs{
-						Effect:  pulumi.String("Allow"),
-						QuotaId: pulumi.String("CSP_2015-05-01"),
-					},
-					&providerhub.ResourceProviderCapabilitiesArgs{
-						Effect:  pulumi.String("Allow"),
-						QuotaId: pulumi.String("CSP_MG_2017-12-01"),
-					},
-				},
-				Management: &providerhub.ResourceProviderManifestPropertiesManagementArgs{
-					IncidentContactEmail:   pulumi.String("helpme@contoso.com"),
-					IncidentRoutingService: pulumi.String("Contoso Resource Provider"),
-					IncidentRoutingTeam:    pulumi.String("Contoso Triage"),
-				},
-				ProviderType:    pulumi.String("Internal"),
-				ProviderVersion: pulumi.String("2.0"),
-			},
-			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const providerRegistration = new azure_native.providerhub.ProviderRegistration("providerRegistration", {
-    properties: {
-        capabilities: [
-            {
-                effect: "Allow",
-                quotaId: "CSP_2015-05-01",
-            },
-            {
-                effect: "Allow",
-                quotaId: "CSP_MG_2017-12-01",
-            },
-        ],
-        management: {
-            incidentContactEmail: "helpme@contoso.com",
-            incidentRoutingService: "Contoso Resource Provider",
-            incidentRoutingTeam: "Contoso Triage",
-        },
-        providerType: "Internal",
-        providerVersion: "2.0",
-    },
-    providerNamespace: "Microsoft.Contoso",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-provider_registration = azure_native.providerhub.ProviderRegistration("providerRegistration",
-    properties=azure_native.providerhub.ProviderRegistrationPropertiesArgs(
-        capabilities=[
-            azure_native.providerhub.ResourceProviderCapabilitiesArgs(
-                effect="Allow",
-                quota_id="CSP_2015-05-01",
-            ),
-            azure_native.providerhub.ResourceProviderCapabilitiesArgs(
-                effect="Allow",
-                quota_id="CSP_MG_2017-12-01",
-            ),
-        ],
-        management=azure_native.providerhub.ResourceProviderManifestPropertiesManagementArgs(
-            incident_contact_email="helpme@contoso.com",
-            incident_routing_service="Contoso Resource Provider",
-            incident_routing_team="Contoso Triage",
-        ),
-        provider_type="Internal",
-        provider_version="2.0",
-    ),
-    provider_namespace="Microsoft.Contoso")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:providerhub:ProviderRegistration myresource1 /subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace} 
-```
-
- */
 @ResourceType(type="azure-native:providerhub:ProviderRegistration")
 public class ProviderRegistration extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="properties", type=ProviderRegistrationResponseProperties.class, parameters={})
     private Output<ProviderRegistrationResponseProperties> properties;
 
     public Output<ProviderRegistrationResponseProperties> getProperties() {
         return this.properties;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ProviderRegistration(String name, @Nullable ProviderRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:ProviderRegistration", name, args == null ? ProviderRegistrationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -238,14 +57,6 @@ public class ProviderRegistration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ProviderRegistration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProviderRegistration(name, id, options);
     }

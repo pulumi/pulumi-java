@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The message filter type.
- */
     @EnumType
     public enum MessageFilterType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Include("Include"),
-/**
- * 
- */
         Exclude("Exclude");
 
         private final String value;

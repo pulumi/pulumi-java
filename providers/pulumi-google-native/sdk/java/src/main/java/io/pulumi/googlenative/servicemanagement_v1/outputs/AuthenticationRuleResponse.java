@@ -13,21 +13,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthenticationRuleResponse {
-/**
- * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
- */
     private final Boolean allowWithoutCredential;
-/**
- * The requirements for OAuth credentials.
- */
     private final OAuthRequirementsResponse oauth;
-/**
- * Requirements for additional authentication providers.
- */
     private final List<AuthRequirementResponse> requirements;
-/**
- * Selects the methods to which this rule applies. Refer to selector for syntax details.
- */
     private final String selector;
 
     @OutputCustomType.Constructor({"allowWithoutCredential","oauth","requirements","selector"})
@@ -42,27 +30,15 @@ public final class AuthenticationRuleResponse {
         this.selector = Objects.requireNonNull(selector);
     }
 
-/**
- * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
- */
     public Boolean getAllowWithoutCredential() {
         return this.allowWithoutCredential;
     }
-/**
- * The requirements for OAuth credentials.
- */
     public OAuthRequirementsResponse getOauth() {
         return this.oauth;
     }
-/**
- * Requirements for additional authentication providers.
- */
     public List<AuthRequirementResponse> getRequirements() {
         return this.requirements;
     }
-/**
- * Selects the methods to which this rule applies. Refer to selector for syntax details.
- */
     public String getSelector() {
         return this.selector;
     }

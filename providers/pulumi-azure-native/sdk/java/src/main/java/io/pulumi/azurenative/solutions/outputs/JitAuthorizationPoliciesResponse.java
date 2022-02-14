@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JitAuthorizationPoliciesResponse {
-/**
- * The the principal id that will be granted JIT access.
- */
     private final String principalId;
-/**
- * The role definition id that will be granted to the Principal.
- */
     private final String roleDefinitionId;
 
     @OutputCustomType.Constructor({"principalId","roleDefinitionId"})
@@ -26,15 +20,9 @@ public final class JitAuthorizationPoliciesResponse {
         this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
     }
 
-/**
- * The the principal id that will be granted JIT access.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The role definition id that will be granted to the Principal.
- */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }

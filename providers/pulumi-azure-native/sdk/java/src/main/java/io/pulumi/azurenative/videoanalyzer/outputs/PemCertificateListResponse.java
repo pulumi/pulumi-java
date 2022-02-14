@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PemCertificateListResponse {
-/**
- * PEM formatted public certificates. One certificate per entry.
- */
     private final List<String> certificates;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"certificates","type"})
@@ -28,16 +21,9 @@ Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * PEM formatted public certificates. One certificate per entry.
- */
     public List<String> getCertificates() {
         return this.certificates;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
- */
     public String getType() {
         return this.type;
     }

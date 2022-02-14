@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1IntotoDetailsResponse {
-/**
- * 
- */
     private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
-/**
- * 
- */
     private final LinkResponse signed;
 
     @OutputCustomType.Constructor({"signatures","signed"})
@@ -28,15 +22,9 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
         this.signed = Objects.requireNonNull(signed);
     }
 
-/**
- * 
- */
     public List<GrafeasV1beta1IntotoSignatureResponse> getSignatures() {
         return this.signatures;
     }
-/**
- * 
- */
     public LinkResponse getSigned() {
         return this.signed;
     }

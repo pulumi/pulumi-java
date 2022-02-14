@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * the scale direction. Whether the scaling action increases or decreases the number of instances.
- */
     @EnumType
     public enum ScaleDirection {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Increase("Increase"),
-/**
- * 
- */
         Decrease("Decrease");
 
         private final String value;

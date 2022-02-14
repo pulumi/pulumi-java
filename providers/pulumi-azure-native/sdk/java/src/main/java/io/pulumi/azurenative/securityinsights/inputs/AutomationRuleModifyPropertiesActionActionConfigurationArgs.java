@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration of the modify properties automation rule action
- */
 public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRuleModifyPropertiesActionActionConfigurationArgs Empty = new AutomationRuleModifyPropertiesActionActionConfigurationArgs();
 
-    /**
-     * The reason the incident was closed
-     */
     @InputImport(name="classification")
     private final @Nullable Input<Either<String,IncidentClassification>> classification;
 
@@ -35,9 +29,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
         return this.classification == null ? Input.empty() : this.classification;
     }
 
-    /**
-     * Describes the reason the incident was closed
-     */
     @InputImport(name="classificationComment")
     private final @Nullable Input<String> classificationComment;
 
@@ -45,9 +36,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
         return this.classificationComment == null ? Input.empty() : this.classificationComment;
     }
 
-    /**
-     * The classification reason to close the incident with
-     */
     @InputImport(name="classificationReason")
     private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
 
@@ -55,9 +43,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
         return this.classificationReason == null ? Input.empty() : this.classificationReason;
     }
 
-    /**
-     * List of labels to add to the incident
-     */
     @InputImport(name="labels")
     private final @Nullable Input<List<IncidentLabelArgs>> labels;
 
@@ -65,9 +50,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * Describes a user that the incident is assigned to
-     */
     @InputImport(name="owner")
     private final @Nullable Input<IncidentOwnerInfoArgs> owner;
 
@@ -75,9 +57,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
         return this.owner == null ? Input.empty() : this.owner;
     }
 
-    /**
-     * The severity of the incident
-     */
     @InputImport(name="severity")
     private final @Nullable Input<Either<String,IncidentSeverity>> severity;
 
@@ -85,9 +64,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
         return this.severity == null ? Input.empty() : this.severity;
     }
 
-    /**
-     * The status of the incident
-     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,IncidentStatus>> status;
 

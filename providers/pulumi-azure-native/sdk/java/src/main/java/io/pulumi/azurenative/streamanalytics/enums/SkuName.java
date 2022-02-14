@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The name of the SKU. Required on PUT (CreateOrReplace) requests.
- */
     @EnumType
     public enum SkuName {
-/**
- * 
- */
         Standard("Standard");
 
         private final String value;

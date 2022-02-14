@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Represents a monthly schedule. An example of a valid monthly schedule is "on the third Tuesday of the month" or "on the 15th of the month".
- */
 public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonthlyScheduleResponse Empty = new MonthlyScheduleResponse();
 
-    /**
-     * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month. Months without the target day will be skipped. For example, a schedule to run "every month on the 31st" will not run in February, April, June, etc.
-     */
     @InputImport(name="monthDay", required=true)
     private final Integer monthDay;
 
@@ -26,9 +20,6 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
         return this.monthDay;
     }
 
-    /**
-     * Week day in a month.
-     */
     @InputImport(name="weekDayOfMonth", required=true)
     private final WeekDayOfMonthResponse weekDayOfMonth;
 

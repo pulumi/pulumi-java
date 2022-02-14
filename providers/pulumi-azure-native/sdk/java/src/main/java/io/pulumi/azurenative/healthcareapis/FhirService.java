@@ -22,467 +22,93 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The description of Fhir Service
-API Version: 2021-06-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a Fhir Service
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var fhirService = new AzureNative.HealthcareApis.FhirService("fhirService", new AzureNative.HealthcareApis.FhirServiceArgs
-        {
-            AccessPolicies = 
-            {
-                new AzureNative.HealthcareApis.Inputs.FhirServiceAccessPolicyEntryArgs
-                {
-                    ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
-                },
-                new AzureNative.HealthcareApis.Inputs.FhirServiceAccessPolicyEntryArgs
-                {
-                    ObjectId = "5b307da8-43d4-492b-8b66-b0294ade872f",
-                },
-            },
-            AcrConfiguration = new AzureNative.HealthcareApis.Inputs.FhirServiceAcrConfigurationArgs
-            {
-                LoginServers = 
-                {
-                    "test1.azurecr.io",
-                },
-            },
-            AuthenticationConfiguration = new AzureNative.HealthcareApis.Inputs.FhirServiceAuthenticationConfigurationArgs
-            {
-                Audience = "https://azurehealthcareapis.com",
-                Authority = "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
-                SmartProxyEnabled = true,
-            },
-            CorsConfiguration = new AzureNative.HealthcareApis.Inputs.FhirServiceCorsConfigurationArgs
-            {
-                AllowCredentials = false,
-                Headers = 
-                {
-                    "*",
-                },
-                MaxAge = 1440,
-                Methods = 
-                {
-                    "DELETE",
-                    "GET",
-                    "OPTIONS",
-                    "PATCH",
-                    "POST",
-                    "PUT",
-                },
-                Origins = 
-                {
-                    "*",
-                },
-            },
-            ExportConfiguration = new AzureNative.HealthcareApis.Inputs.FhirServiceExportConfigurationArgs
-            {
-                StorageAccountName = "existingStorageAccount",
-            },
-            FhirServiceName = "fhirservice1",
-            Identity = new AzureNative.HealthcareApis.Inputs.ServiceManagedIdentityIdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Kind = "fhir-R4",
-            Location = "westus",
-            ResourceGroupName = "testRG",
-            Tags = 
-            {
-                { "additionalProp1", "string" },
-                { "additionalProp2", "string" },
-                { "additionalProp3", "string" },
-            },
-            WorkspaceName = "workspace1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	healthcareapis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthcareapis"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := healthcareapis.NewFhirService(ctx, "fhirService", &healthcareapis.FhirServiceArgs{
-			AccessPolicies: []healthcareapis.FhirServiceAccessPolicyEntryArgs{
-				&healthcareapis.FhirServiceAccessPolicyEntryArgs{
-					ObjectId: pulumi.String("c487e7d1-3210-41a3-8ccc-e9372b78da47"),
-				},
-				&healthcareapis.FhirServiceAccessPolicyEntryArgs{
-					ObjectId: pulumi.String("5b307da8-43d4-492b-8b66-b0294ade872f"),
-				},
-			},
-			AcrConfiguration: &healthcareapis.FhirServiceAcrConfigurationArgs{
-				LoginServers: pulumi.StringArray{
-					pulumi.String("test1.azurecr.io"),
-				},
-			},
-			AuthenticationConfiguration: &healthcareapis.FhirServiceAuthenticationConfigurationArgs{
-				Audience:          pulumi.String("https://azurehealthcareapis.com"),
-				Authority:         pulumi.String("https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc"),
-				SmartProxyEnabled: pulumi.Bool(true),
-			},
-			CorsConfiguration: &healthcareapis.FhirServiceCorsConfigurationArgs{
-				AllowCredentials: pulumi.Bool(false),
-				Headers: pulumi.StringArray{
-					pulumi.String("*"),
-				},
-				MaxAge: pulumi.Int(1440),
-				Methods: pulumi.StringArray{
-					pulumi.String("DELETE"),
-					pulumi.String("GET"),
-					pulumi.String("OPTIONS"),
-					pulumi.String("PATCH"),
-					pulumi.String("POST"),
-					pulumi.String("PUT"),
-				},
-				Origins: pulumi.StringArray{
-					pulumi.String("*"),
-				},
-			},
-			ExportConfiguration: &healthcareapis.FhirServiceExportConfigurationArgs{
-				StorageAccountName: pulumi.String("existingStorageAccount"),
-			},
-			FhirServiceName: pulumi.String("fhirservice1"),
-			Identity: &healthcareapis.ServiceManagedIdentityIdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Kind:              pulumi.String("fhir-R4"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("testRG"),
-			Tags: pulumi.StringMap{
-				"additionalProp1": pulumi.String("string"),
-				"additionalProp2": pulumi.String("string"),
-				"additionalProp3": pulumi.String("string"),
-			},
-			WorkspaceName: pulumi.String("workspace1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const fhirService = new azure_native.healthcareapis.FhirService("fhirService", {
-    accessPolicies: [
-        {
-            objectId: "c487e7d1-3210-41a3-8ccc-e9372b78da47",
-        },
-        {
-            objectId: "5b307da8-43d4-492b-8b66-b0294ade872f",
-        },
-    ],
-    acrConfiguration: {
-        loginServers: ["test1.azurecr.io"],
-    },
-    authenticationConfiguration: {
-        audience: "https://azurehealthcareapis.com",
-        authority: "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
-        smartProxyEnabled: true,
-    },
-    corsConfiguration: {
-        allowCredentials: false,
-        headers: ["*"],
-        maxAge: 1440,
-        methods: [
-            "DELETE",
-            "GET",
-            "OPTIONS",
-            "PATCH",
-            "POST",
-            "PUT",
-        ],
-        origins: ["*"],
-    },
-    exportConfiguration: {
-        storageAccountName: "existingStorageAccount",
-    },
-    fhirServiceName: "fhirservice1",
-    identity: {
-        type: "SystemAssigned",
-    },
-    kind: "fhir-R4",
-    location: "westus",
-    resourceGroupName: "testRG",
-    tags: {
-        additionalProp1: "string",
-        additionalProp2: "string",
-        additionalProp3: "string",
-    },
-    workspaceName: "workspace1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-fhir_service = azure_native.healthcareapis.FhirService("fhirService",
-    access_policies=[
-        azure_native.healthcareapis.FhirServiceAccessPolicyEntryArgs(
-            object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
-        ),
-        azure_native.healthcareapis.FhirServiceAccessPolicyEntryArgs(
-            object_id="5b307da8-43d4-492b-8b66-b0294ade872f",
-        ),
-    ],
-    acr_configuration=azure_native.healthcareapis.FhirServiceAcrConfigurationArgs(
-        login_servers=["test1.azurecr.io"],
-    ),
-    authentication_configuration=azure_native.healthcareapis.FhirServiceAuthenticationConfigurationArgs(
-        audience="https://azurehealthcareapis.com",
-        authority="https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
-        smart_proxy_enabled=True,
-    ),
-    cors_configuration=azure_native.healthcareapis.FhirServiceCorsConfigurationArgs(
-        allow_credentials=False,
-        headers=["*"],
-        max_age=1440,
-        methods=[
-            "DELETE",
-            "GET",
-            "OPTIONS",
-            "PATCH",
-            "POST",
-            "PUT",
-        ],
-        origins=["*"],
-    ),
-    export_configuration=azure_native.healthcareapis.FhirServiceExportConfigurationArgs(
-        storage_account_name="existingStorageAccount",
-    ),
-    fhir_service_name="fhirservice1",
-    identity=azure_native.healthcareapis.ServiceManagedIdentityIdentityArgs(
-        type="SystemAssigned",
-    ),
-    kind="fhir-R4",
-    location="westus",
-    resource_group_name="testRG",
-    tags={
-        "additionalProp1": "string",
-        "additionalProp2": "string",
-        "additionalProp3": "string",
-    },
-    workspace_name="workspace1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:healthcareapis:FhirService fhirservice1 /subscriptions/subid/resourceGroups/testRG/providers/Microsoft.HealthcareApis/workspaces/workspace1/fhirservices/fhirservice1 
-```
-
- */
 @ResourceType(type="azure-native:healthcareapis:FhirService")
 public class FhirService extends io.pulumi.resources.CustomResource {
-    /**
-     * Fhir Service access policies.
-     */
     @OutputExport(name="accessPolicies", type=List.class, parameters={FhirServiceAccessPolicyEntryResponse.class})
     private Output</* @Nullable */ List<FhirServiceAccessPolicyEntryResponse>> accessPolicies;
 
-    /**
-     * @return Fhir Service access policies.
-     */
     public Output</* @Nullable */ List<FhirServiceAccessPolicyEntryResponse>> getAccessPolicies() {
         return this.accessPolicies;
     }
-    /**
-     * Fhir Service Azure container registry configuration.
-     */
     @OutputExport(name="acrConfiguration", type=FhirServiceAcrConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceAcrConfigurationResponse> acrConfiguration;
 
-    /**
-     * @return Fhir Service Azure container registry configuration.
-     */
     public Output</* @Nullable */ FhirServiceAcrConfigurationResponse> getAcrConfiguration() {
         return this.acrConfiguration;
     }
-    /**
-     * Fhir Service authentication configuration.
-     */
     @OutputExport(name="authenticationConfiguration", type=FhirServiceAuthenticationConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceAuthenticationConfigurationResponse> authenticationConfiguration;
 
-    /**
-     * @return Fhir Service authentication configuration.
-     */
     public Output</* @Nullable */ FhirServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
         return this.authenticationConfiguration;
     }
-    /**
-     * Fhir Service Cors configuration.
-     */
     @OutputExport(name="corsConfiguration", type=FhirServiceCorsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceCorsConfigurationResponse> corsConfiguration;
 
-    /**
-     * @return Fhir Service Cors configuration.
-     */
     public Output</* @Nullable */ FhirServiceCorsConfigurationResponse> getCorsConfiguration() {
         return this.corsConfiguration;
     }
-    /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * Fhir Service export configuration.
-     */
     @OutputExport(name="exportConfiguration", type=FhirServiceExportConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceExportConfigurationResponse> exportConfiguration;
 
-    /**
-     * @return Fhir Service export configuration.
-     */
     public Output</* @Nullable */ FhirServiceExportConfigurationResponse> getExportConfiguration() {
         return this.exportConfiguration;
     }
-    /**
-     * Setting indicating whether the service has a managed identity associated with it.
-     */
     @OutputExport(name="identity", type=ServiceManagedIdentityResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity;
 
-    /**
-     * @return Setting indicating whether the service has a managed identity associated with it.
-     */
     public Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> getIdentity() {
         return this.identity;
     }
-    /**
-     * The kind of the service.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return The kind of the service.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public FhirService(String name, FhirServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:healthcareapis:FhirService", name, args == null ? FhirServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -501,14 +127,6 @@ public class FhirService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static FhirService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FhirService(name, id, options);
     }

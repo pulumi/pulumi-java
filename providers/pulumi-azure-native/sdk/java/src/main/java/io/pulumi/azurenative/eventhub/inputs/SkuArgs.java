@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU parameters supplied to the create namespace operation
- */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
-    /**
-     * The Event Hubs throughput units, value should be 0 to 20 throughput units.
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -31,9 +25,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * Name of this SKU.
-     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuName>> name;
 
@@ -41,9 +32,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The billing tier of this particular SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,SkuTier>> tier;
 

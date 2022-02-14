@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ControllerConnectionDetailsResponse {
-/**
- * Base class for types that supply values used to connect to container orchestrators
- */
     private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
     @OutputCustomType.Constructor({"orchestratorSpecificConnectionDetails"})
@@ -21,9 +18,6 @@ public final class ControllerConnectionDetailsResponse {
         this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
     }
 
-/**
- * Base class for types that supply values used to connect to container orchestrators
- */
     public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {
         return Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
     }

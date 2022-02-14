@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
- */
     @EnumType
     public enum InstanceGroupManagerUpdatePolicyType {
-/**
- * No action is being proactively performed in order to bring this IGM to its target version distribution (regardless of whether this distribution is expressed using instanceTemplate or versions field).
- */
         Opportunistic("OPPORTUNISTIC"),
-/**
- * This IGM will actively converge to its target version distribution (regardless of whether this distribution is expressed using instanceTemplate or versions field).
- */
         Proactive("PROACTIVE");
 
         private final String value;

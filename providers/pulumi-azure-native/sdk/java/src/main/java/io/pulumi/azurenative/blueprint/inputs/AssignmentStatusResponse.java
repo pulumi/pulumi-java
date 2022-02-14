@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The status of a blueprint assignment. This field is readonly.
- */
 public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignmentStatusResponse Empty = new AssignmentStatusResponse();
 
-    /**
-     * Last modified time of this blueprint definition.
-     */
     @InputImport(name="lastModified", required=true)
     private final String lastModified;
 
@@ -26,9 +20,6 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
         return this.lastModified;
     }
 
-    /**
-     * List of resources that were created by the blueprint assignment.
-     */
     @InputImport(name="managedResources", required=true)
     private final List<String> managedResources;
 
@@ -36,9 +27,6 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
         return this.managedResources;
     }
 
-    /**
-     * Creation time of this blueprint definition.
-     */
     @InputImport(name="timeCreated", required=true)
     private final String timeCreated;
 

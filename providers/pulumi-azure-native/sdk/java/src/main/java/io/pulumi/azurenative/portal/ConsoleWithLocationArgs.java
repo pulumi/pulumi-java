@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConsoleWithLocationArgs Empty = new ConsoleWithLocationArgs();
 
-    /**
-     * The name of the console
-     */
     @InputImport(name="consoleName")
     private final @Nullable Input<String> consoleName;
 
@@ -27,9 +21,6 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
         return this.consoleName == null ? Input.empty() : this.consoleName;
     }
 
-    /**
-     * The provider location
-     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlavorDataResponse {
-/**
- * Model flavor-specific data.
- */
     private final @Nullable Map<String,String> data;
 
     @OutputCustomType.Constructor({"data"})
@@ -21,9 +18,6 @@ public final class FlavorDataResponse {
         this.data = data;
     }
 
-/**
- * Model flavor-specific data.
- */
     public Map<String,String> getData() {
         return this.data == null ? Map.of() : this.data;
     }

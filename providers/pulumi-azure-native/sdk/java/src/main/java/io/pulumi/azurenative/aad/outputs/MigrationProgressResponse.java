@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrationProgressResponse {
-/**
- * Completion Percentage
- */
     private final @Nullable Double completionPercentage;
-/**
- * Progress Message
- */
     private final @Nullable String progressMessage;
 
     @OutputCustomType.Constructor({"completionPercentage","progressMessage"})
@@ -29,15 +23,9 @@ public final class MigrationProgressResponse {
         this.progressMessage = progressMessage;
     }
 
-/**
- * Completion Percentage
- */
     public Optional<Double> getCompletionPercentage() {
         return Optional.ofNullable(this.completionPercentage);
     }
-/**
- * Progress Message
- */
     public Optional<String> getProgressMessage() {
         return Optional.ofNullable(this.progressMessage);
     }

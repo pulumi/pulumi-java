@@ -15,185 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Response to put/get patch schedules for Redis cache.
-API Version: 2020-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### RedisCachePatchSchedulesCreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var patchSchedule = new AzureNative.Cache.PatchSchedule("patchSchedule", new AzureNative.Cache.PatchScheduleArgs
-        {
-            Default = "default",
-            Name = "cache1",
-            ResourceGroupName = "rg1",
-            ScheduleEntries = 
-            {
-                new AzureNative.Cache.Inputs.ScheduleEntryArgs
-                {
-                    DayOfWeek = "Monday",
-                    MaintenanceWindow = "PT5H",
-                    StartHourUtc = 12,
-                },
-                new AzureNative.Cache.Inputs.ScheduleEntryArgs
-                {
-                    DayOfWeek = "Tuesday",
-                    StartHourUtc = 12,
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cache.NewPatchSchedule(ctx, "patchSchedule", &cache.PatchScheduleArgs{
-			Default:           pulumi.String("default"),
-			Name:              pulumi.String("cache1"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ScheduleEntries: cache.ScheduleEntryArray{
-				&cache.ScheduleEntryArgs{
-					DayOfWeek:         "Monday",
-					MaintenanceWindow: pulumi.String("PT5H"),
-					StartHourUtc:      pulumi.Int(12),
-				},
-				&cache.ScheduleEntryArgs{
-					DayOfWeek:    "Tuesday",
-					StartHourUtc: pulumi.Int(12),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
-    "default": "default",
-    name: "cache1",
-    resourceGroupName: "rg1",
-    scheduleEntries: [
-        {
-            dayOfWeek: "Monday",
-            maintenanceWindow: "PT5H",
-            startHourUtc: 12,
-        },
-        {
-            dayOfWeek: "Tuesday",
-            startHourUtc: 12,
-        },
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-patch_schedule = azure_native.cache.PatchSchedule("patchSchedule",
-    default="default",
-    name="cache1",
-    resource_group_name="rg1",
-    schedule_entries=[
-        azure_native.cache.ScheduleEntryArgs(
-            day_of_week="Monday",
-            maintenance_window="PT5H",
-            start_hour_utc=12,
-        ),
-        azure_native.cache.ScheduleEntryArgs(
-            day_of_week="Tuesday",
-            start_hour_utc=12,
-        ),
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:cache:PatchSchedule default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/patchSchedules/default 
-```
-
- */
 @ResourceType(type="azure-native:cache:PatchSchedule")
 public class PatchSchedule extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of patch schedules for a Redis cache.
-     */
     @OutputExport(name="scheduleEntries", type=List.class, parameters={ScheduleEntryResponse.class})
     private Output<List<ScheduleEntryResponse>> scheduleEntries;
 
-    /**
-     * @return List of patch schedules for a Redis cache.
-     */
     public Output<List<ScheduleEntryResponse>> getScheduleEntries() {
         return this.scheduleEntries;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PatchSchedule(String name, PatchScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:PatchSchedule", name, args == null ? PatchScheduleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -217,14 +59,6 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PatchSchedule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PatchSchedule(name, id, options);
     }

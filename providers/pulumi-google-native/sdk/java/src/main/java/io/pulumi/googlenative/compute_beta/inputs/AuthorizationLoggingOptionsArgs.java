@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
 public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizationLoggingOptionsArgs Empty = new AuthorizationLoggingOptionsArgs();
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="permissionType")
     private final @Nullable Input<AuthorizationLoggingOptionsPermissionType> permissionType;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkGatewayNatRuleArgs Empty = new GetVirtualNetworkGatewayNatRuleArgs();
 
-    /**
-     * The name of the nat rule.
-     */
     @InputImport(name="natRuleName", required=true)
     private final String natRuleName;
 
@@ -25,9 +19,6 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
         return this.natRuleName;
     }
 
-    /**
-     * The resource group name of the Virtual Network Gateway.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the gateway.
-     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final String virtualNetworkGatewayName;
 

@@ -12,42 +12,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureDataLakeStoreSinkResponse {
-/**
- * The type of copy behavior for copy sink.
- */
     private final @Nullable Object copyBehavior;
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object disableMetricsCollection;
-/**
- * Single File Parallel.
- */
     private final @Nullable Object enableAdlsSingleFileParallel;
-/**
- * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object maxConcurrentConnections;
-/**
- * Sink retry count. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object sinkRetryCount;
-/**
- * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object sinkRetryWait;
-/**
- * Copy sink type.
-Expected value is 'AzureDataLakeStoreSink'.
- */
     private final String type;
-/**
- * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
- */
     private final @Nullable Object writeBatchSize;
-/**
- * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object writeBatchTimeout;
 
     @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","enableAdlsSingleFileParallel","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
@@ -72,58 +44,30 @@ Expected value is 'AzureDataLakeStoreSink'.
         this.writeBatchTimeout = writeBatchTimeout;
     }
 
-/**
- * The type of copy behavior for copy sink.
- */
     public Optional<Object> getCopyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
-/**
- * Single File Parallel.
- */
     public Optional<Object> getEnableAdlsSingleFileParallel() {
         return Optional.ofNullable(this.enableAdlsSingleFileParallel);
     }
-/**
- * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
-/**
- * Sink retry count. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
-/**
- * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
-/**
- * Copy sink type.
-Expected value is 'AzureDataLakeStoreSink'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
- */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
-/**
- * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }

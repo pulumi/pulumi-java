@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CustomResourceDefinitionNames indicates the names to serve this CustomResourceDefinition
- */
 public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceDefinitionNamesArgs Empty = new CustomResourceDefinitionNamesArgs();
 
-    /**
-     * categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
-     */
     @InputImport(name="categories")
     private final @Nullable Input<List<String>> categories;
 
@@ -28,9 +22,6 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
         return this.categories == null ? Input.empty() : this.categories;
     }
 
-    /**
-     * kind is the serialized kind of the resource. It is normally CamelCase and singular. Custom resource instances will use this value as the `kind` attribute in API calls.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -38,9 +29,6 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
         return this.kind;
     }
 
-    /**
-     * listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".
-     */
     @InputImport(name="listKind")
     private final @Nullable Input<String> listKind;
 
@@ -48,9 +36,6 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
         return this.listKind == null ? Input.empty() : this.listKind;
     }
 
-    /**
-     * plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.
-     */
     @InputImport(name="plural", required=true)
     private final Input<String> plural;
 
@@ -58,9 +43,6 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
         return this.plural;
     }
 
-    /**
-     * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.
-     */
     @InputImport(name="shortNames")
     private final @Nullable Input<List<String>> shortNames;
 
@@ -68,9 +50,6 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
         return this.shortNames == null ? Input.empty() : this.shortNames;
     }
 
-    /**
-     * singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
-     */
     @InputImport(name="singular")
     private final @Nullable Input<String> singular;
 

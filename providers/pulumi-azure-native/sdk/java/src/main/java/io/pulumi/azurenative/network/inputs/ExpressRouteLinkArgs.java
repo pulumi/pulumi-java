@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ExpressRouteLink child resource definition.
- */
 public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteLinkArgs Empty = new ExpressRouteLinkArgs();
 
-    /**
-     * Administrative state of the physical port.
-     */
     @InputImport(name="adminState")
     private final @Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState;
 
@@ -30,9 +24,6 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.adminState == null ? Input.empty() : this.adminState;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -40,9 +31,6 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * MacSec configuration.
-     */
     @InputImport(name="macSecConfig")
     private final @Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig;
 
@@ -50,9 +38,6 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
         return this.macSecConfig == null ? Input.empty() : this.macSecConfig;
     }
 
-    /**
-     * Name of child port resource that is unique among child port resources of the parent.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

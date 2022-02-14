@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ThresholdResponse {
-/**
- * The state color for this threshold. Color is not allowed in a XyChart.
- */
     private final String color;
-/**
- * The direction for the current threshold. Direction is not allowed in a XyChart.
- */
     private final String direction;
-/**
- * A label for the threshold.
- */
     private final String label;
-/**
- * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
- */
     private final String targetAxis;
-/**
- * The value of the threshold. The value should be defined in the native scale of the metric.
- */
     private final Double value;
 
     @OutputCustomType.Constructor({"color","direction","label","targetAxis","value"})
@@ -45,33 +30,18 @@ public final class ThresholdResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The state color for this threshold. Color is not allowed in a XyChart.
- */
     public String getColor() {
         return this.color;
     }
-/**
- * The direction for the current threshold. Direction is not allowed in a XyChart.
- */
     public String getDirection() {
         return this.direction;
     }
-/**
- * A label for the threshold.
- */
     public String getLabel() {
         return this.label;
     }
-/**
- * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
- */
     public String getTargetAxis() {
         return this.targetAxis;
     }
-/**
- * The value of the threshold. The value should be defined in the native scale of the metric.
- */
     public Double getValue() {
         return this.value;
     }

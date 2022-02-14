@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse {
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
- */
     private final String odataType;
 
     @OutputCustomType.Constructor({"odataType"})
@@ -20,10 +16,6 @@ Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKe
         this.odataType = Objects.requireNonNull(odataType);
     }
 
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
- */
     public String getOdataType() {
         return this.odataType;
     }

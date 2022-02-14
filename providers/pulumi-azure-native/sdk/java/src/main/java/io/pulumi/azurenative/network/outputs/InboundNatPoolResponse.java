@@ -14,57 +14,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InboundNatPoolResponse {
-/**
- * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
- */
     private final Integer backendPort;
-/**
- * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
- */
     private final @Nullable Boolean enableFloatingIP;
-/**
- * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
- */
     private final @Nullable Boolean enableTcpReset;
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * A reference to frontend IP addresses.
- */
     private final @Nullable SubResourceResponse frontendIPConfiguration;
-/**
- * The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
- */
     private final Integer frontendPortRangeEnd;
-/**
- * The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
- */
     private final Integer frontendPortRangeStart;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
- */
     private final @Nullable Integer idleTimeoutInMinutes;
-/**
- * The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name can be used to access the resource.
- */
     private final @Nullable String name;
-/**
- * The reference to the transport protocol used by the inbound NAT pool.
- */
     private final String protocol;
-/**
- * The provisioning state of the inbound NAT pool resource.
- */
     private final String provisioningState;
-/**
- * Type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"backendPort","enableFloatingIP","enableTcpReset","etag","frontendIPConfiguration","frontendPortRangeEnd","frontendPortRangeStart","id","idleTimeoutInMinutes","name","protocol","provisioningState","type"})
@@ -97,81 +58,42 @@ public final class InboundNatPoolResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
- */
     public Integer getBackendPort() {
         return this.backendPort;
     }
-/**
- * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
- */
     public Optional<Boolean> getEnableFloatingIP() {
         return Optional.ofNullable(this.enableFloatingIP);
     }
-/**
- * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
- */
     public Optional<Boolean> getEnableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * A reference to frontend IP addresses.
- */
     public Optional<SubResourceResponse> getFrontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
-/**
- * The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
- */
     public Integer getFrontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
     }
-/**
- * The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
- */
     public Integer getFrontendPortRangeStart() {
         return this.frontendPortRangeStart;
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
- */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
-/**
- * The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name can be used to access the resource.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The reference to the transport protocol used by the inbound NAT pool.
- */
     public String getProtocol() {
         return this.protocol;
     }
-/**
- * The provisioning state of the inbound NAT pool resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Type of the resource.
- */
     public String getType() {
         return this.type;
     }

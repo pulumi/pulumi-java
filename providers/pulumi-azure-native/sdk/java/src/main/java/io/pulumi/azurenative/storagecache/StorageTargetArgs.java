@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageTargetArgs Empty = new StorageTargetArgs();
 
-    /**
-     * Properties when targetType is blobNfs.
-     */
     @InputImport(name="blobNfs")
     private final @Nullable Input<BlobNfsTargetArgs> blobNfs;
 
@@ -36,9 +30,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.blobNfs == null ? Input.empty() : this.blobNfs;
     }
 
-    /**
-     * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
-     */
     @InputImport(name="cacheName", required=true)
     private final Input<String> cacheName;
 
@@ -46,9 +37,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheName;
     }
 
-    /**
-     * Properties when targetType is clfs.
-     */
     @InputImport(name="clfs")
     private final @Nullable Input<ClfsTargetArgs> clfs;
 
@@ -56,9 +44,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.clfs == null ? Input.empty() : this.clfs;
     }
 
-    /**
-     * List of Cache namespace junctions to target for namespace associations.
-     */
     @InputImport(name="junctions")
     private final @Nullable Input<List<NamespaceJunctionArgs>> junctions;
 
@@ -66,9 +51,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.junctions == null ? Input.empty() : this.junctions;
     }
 
-    /**
-     * Properties when targetType is nfs3.
-     */
     @InputImport(name="nfs3")
     private final @Nullable Input<Nfs3TargetArgs> nfs3;
 
@@ -76,9 +58,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.nfs3 == null ? Input.empty() : this.nfs3;
     }
 
-    /**
-     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
 
@@ -86,9 +65,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * Target resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -96,9 +72,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of Storage Target.
-     */
     @InputImport(name="storageTargetName")
     private final @Nullable Input<String> storageTargetName;
 
@@ -106,9 +79,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageTargetName == null ? Input.empty() : this.storageTargetName;
     }
 
-    /**
-     * Type of the Storage Target.
-     */
     @InputImport(name="targetType", required=true)
     private final Input<Either<String,StorageTargetType>> targetType;
 
@@ -116,9 +86,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetType;
     }
 
-    /**
-     * Properties when targetType is unknown.
-     */
     @InputImport(name="unknown")
     private final @Nullable Input<UnknownTargetArgs> unknown;
 

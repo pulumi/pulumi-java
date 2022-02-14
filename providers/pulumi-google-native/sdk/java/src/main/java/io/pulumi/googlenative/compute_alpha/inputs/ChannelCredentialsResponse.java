@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * [Deprecated] gRPC channel credentials to access the SDS server. gRPC channel credentials to access the SDS server.
- */
 public final class ChannelCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ChannelCredentialsResponse Empty = new ChannelCredentialsResponse();
 
-    /**
-     * The call credentials to access the SDS server.
-     */
     @InputImport(name="certificates", required=true)
     private final TlsCertificatePathsResponse certificates;
 
@@ -26,9 +20,6 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
         return this.certificates;
     }
 
-    /**
-     * The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
-     */
     @InputImport(name="channelCredentialType", required=true)
     private final String channelCredentialType;
 

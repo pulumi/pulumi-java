@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The tier of the peering SKU.
- */
     @EnumType
     public enum Tier {
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Premium("Premium");
 
         private final String value;

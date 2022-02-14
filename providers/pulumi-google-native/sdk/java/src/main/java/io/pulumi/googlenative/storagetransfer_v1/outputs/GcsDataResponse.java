@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GcsDataResponse {
-/**
- * Cloud Storage bucket name. Must meet [Bucket Name Requirements](/storage/docs/naming#requirements).
- */
     private final String bucketName;
-/**
- * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. The root path value must meet [Object Name Requirements](/storage/docs/naming#objectnames).
- */
     private final String path;
 
     @OutputCustomType.Constructor({"bucketName","path"})
@@ -26,15 +20,9 @@ public final class GcsDataResponse {
         this.path = Objects.requireNonNull(path);
     }
 
-/**
- * Cloud Storage bucket name. Must meet [Bucket Name Requirements](/storage/docs/naming#requirements).
- */
     public String getBucketName() {
         return this.bucketName;
     }
-/**
- * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'. The root path value must meet [Object Name Requirements](/storage/docs/naming#objectnames).
- */
     public String getPath() {
         return this.path;
     }

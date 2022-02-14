@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiConnectionDefinitionResponseProperties Empty = new ApiConnectionDefinitionResponseProperties();
 
-    /**
-     * 
-     */
     @InputImport(name="api")
     private final @Nullable ApiReferenceResponse api;
 
@@ -32,9 +26,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.api == null ? Optional.empty() : Optional.ofNullable(this.api);
     }
 
-    /**
-     * Timestamp of last connection change
-     */
     @InputImport(name="changedTime")
     private final @Nullable String changedTime;
 
@@ -42,9 +33,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
     }
 
-    /**
-     * Timestamp of the connection creation
-     */
     @InputImport(name="createdTime")
     private final @Nullable String createdTime;
 
@@ -52,9 +40,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
-    /**
-     * Dictionary of custom parameter values
-     */
     @InputImport(name="customParameterValues")
     private final @Nullable Map<String,String> customParameterValues;
 
@@ -62,9 +47,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
 
-    /**
-     * Display name
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -72,9 +54,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * Dictionary of nonsecret parameter values
-     */
     @InputImport(name="nonSecretParameterValues")
     private final @Nullable Map<String,String> nonSecretParameterValues;
 
@@ -82,9 +61,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
 
-    /**
-     * Dictionary of parameter values
-     */
     @InputImport(name="parameterValues")
     private final @Nullable Map<String,String> parameterValues;
 
@@ -92,9 +68,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
 
-    /**
-     * Status of the connection
-     */
     @InputImport(name="statuses")
     private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
 
@@ -102,9 +75,6 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
         return this.statuses == null ? List.of() : this.statuses;
     }
 
-    /**
-     * Links to test the API connection
-     */
     @InputImport(name="testLinks")
     private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 

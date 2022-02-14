@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListBotConnectionWithSecretsArgs Empty = new ListBotConnectionWithSecretsArgs();
 
-    /**
-     * The name of the Bot Service Connection Setting resource.
-     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -25,9 +19,6 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
         return this.connectionName;
     }
 
-    /**
-     * The name of the Bot resource group in the user subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class ListBotConnectionWithSecretsArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Bot resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

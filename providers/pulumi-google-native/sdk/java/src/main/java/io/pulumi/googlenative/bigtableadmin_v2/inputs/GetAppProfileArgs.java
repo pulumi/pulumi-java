@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetAppProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppProfileArgs Empty = new GetAppProfileArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appProfileId", required=true)
     private final String appProfileId;
 
@@ -27,9 +21,6 @@ public final class GetAppProfileArgs extends io.pulumi.resources.InvokeArgs {
         return this.appProfileId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -37,9 +28,6 @@ public final class GetAppProfileArgs extends io.pulumi.resources.InvokeArgs {
         return this.instanceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

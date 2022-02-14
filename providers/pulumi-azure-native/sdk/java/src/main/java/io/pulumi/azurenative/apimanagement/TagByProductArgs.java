@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TagByProductArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagByProductArgs Empty = new TagByProductArgs();
 
-    /**
-     * Product identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="productId", required=true)
     private final Input<String> productId;
 
@@ -27,9 +21,6 @@ public final class TagByProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.productId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class TagByProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -47,9 +35,6 @@ public final class TagByProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Tag identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="tagId")
     private final @Nullable Input<String> tagId;
 

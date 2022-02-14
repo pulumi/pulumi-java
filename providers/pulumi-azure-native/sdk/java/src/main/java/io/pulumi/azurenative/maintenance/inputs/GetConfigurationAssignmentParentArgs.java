@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigurationAssignmentParentArgs Empty = new GetConfigurationAssignmentParentArgs();
 
-    /**
-     * Configuration assignment name
-     */
     @InputImport(name="configurationAssignmentName", required=true)
     private final String configurationAssignmentName;
 
@@ -25,9 +19,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
         return this.configurationAssignmentName;
     }
 
-    /**
-     * Resource provider name
-     */
     @InputImport(name="providerName", required=true)
     private final String providerName;
 
@@ -35,9 +26,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
         return this.providerName;
     }
 
-    /**
-     * Resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource identifier
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -55,9 +40,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
         return this.resourceName;
     }
 
-    /**
-     * Resource parent identifier
-     */
     @InputImport(name="resourceParentName", required=true)
     private final String resourceParentName;
 
@@ -65,9 +47,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
         return this.resourceParentName;
     }
 
-    /**
-     * Resource parent type
-     */
     @InputImport(name="resourceParentType", required=true)
     private final String resourceParentType;
 
@@ -75,9 +54,6 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
         return this.resourceParentType;
     }
 
-    /**
-     * Resource type
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

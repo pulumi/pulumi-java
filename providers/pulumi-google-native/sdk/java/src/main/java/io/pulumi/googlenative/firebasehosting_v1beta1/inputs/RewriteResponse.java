@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A [`Rewrite`](https://firebase.google.com/docs/hosting/full-config#rewrites) specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
- */
 public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RewriteResponse Empty = new RewriteResponse();
 
-    /**
-     * The request will be forwarded to Firebase Dynamic Links.
-     */
     @InputImport(name="dynamicLinks", required=true)
     private final Boolean dynamicLinks;
 
@@ -27,9 +21,6 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
         return this.dynamicLinks;
     }
 
-    /**
-     * The function to proxy requests to. Must match the exported function name exactly.
-     */
     @InputImport(name="function", required=true)
     private final String function;
 
@@ -37,9 +28,6 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
         return this.function;
     }
 
-    /**
-     * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
-     */
     @InputImport(name="glob", required=true)
     private final String glob;
 
@@ -47,9 +35,6 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
         return this.glob;
     }
 
-    /**
-     * The URL path to rewrite the request to.
-     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -57,9 +42,6 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
         return this.path;
     }
 
-    /**
-     * The user-supplied RE2 regular expression to match against the request URL path.
-     */
     @InputImport(name="regex", required=true)
     private final String regex;
 
@@ -67,9 +49,6 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
         return this.regex;
     }
 
-    /**
-     * The request will be forwarded to Cloud Run.
-     */
     @InputImport(name="run", required=true)
     private final CloudRunRewriteResponse run;
 

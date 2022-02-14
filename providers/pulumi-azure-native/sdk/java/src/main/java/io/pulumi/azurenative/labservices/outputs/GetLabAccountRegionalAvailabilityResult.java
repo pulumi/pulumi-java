@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLabAccountRegionalAvailabilityResult {
-/**
- * Availability information for different size categories per region
- */
     private final @Nullable List<RegionalAvailabilityResponse> regionalAvailability;
 
     @OutputCustomType.Constructor({"regionalAvailability"})
@@ -21,9 +18,6 @@ public final class GetLabAccountRegionalAvailabilityResult {
         this.regionalAvailability = regionalAvailability;
     }
 
-/**
- * Availability information for different size categories per region
- */
     public List<RegionalAvailabilityResponse> getRegionalAvailability() {
         return this.regionalAvailability == null ? List.of() : this.regionalAvailability;
     }

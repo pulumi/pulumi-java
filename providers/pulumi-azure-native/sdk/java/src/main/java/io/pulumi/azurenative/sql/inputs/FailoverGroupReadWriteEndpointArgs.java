@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Read-write endpoint of the failover group instance.
- */
 public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FailoverGroupReadWriteEndpointArgs Empty = new FailoverGroupReadWriteEndpointArgs();
 
-    /**
-     * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-     */
     @InputImport(name="failoverPolicy", required=true)
     private final Input<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy;
 
@@ -30,9 +24,6 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
         return this.failoverPolicy;
     }
 
-    /**
-     * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-     */
     @InputImport(name="failoverWithDataLossGracePeriodMinutes")
     private final @Nullable Input<Integer> failoverWithDataLossGracePeriodMinutes;
 

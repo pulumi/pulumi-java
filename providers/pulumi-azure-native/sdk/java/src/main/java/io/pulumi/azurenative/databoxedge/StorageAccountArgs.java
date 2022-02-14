@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 
-    /**
-     * Data policy of the storage Account.
-     */
     @InputImport(name="dataPolicy", required=true)
     private final Input<Either<String,DataPolicy>> dataPolicy;
 
@@ -30,9 +24,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataPolicy;
     }
 
-    /**
-     * Description for the storage Account.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -50,9 +38,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Storage Account Credential Id
-     */
     @InputImport(name="storageAccountCredentialId")
     private final @Nullable Input<String> storageAccountCredentialId;
 
@@ -70,9 +52,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountCredentialId == null ? Input.empty() : this.storageAccountCredentialId;
     }
 
-    /**
-     * The StorageAccount name.
-     */
     @InputImport(name="storageAccountName")
     private final @Nullable Input<String> storageAccountName;
 
@@ -80,9 +59,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
     }
 
-    /**
-     * Current status of the storage account
-     */
     @InputImport(name="storageAccountStatus")
     private final @Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus;
 

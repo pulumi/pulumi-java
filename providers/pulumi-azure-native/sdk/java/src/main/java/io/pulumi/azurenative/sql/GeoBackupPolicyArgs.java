@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GeoBackupPolicyArgs Empty = new GeoBackupPolicyArgs();
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -28,9 +22,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.databaseName;
     }
 
-    /**
-     * The name of the geo backup policy.
-     */
     @InputImport(name="geoBackupPolicyName")
     private final @Nullable Input<String> geoBackupPolicyName;
 
@@ -38,9 +29,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.geoBackupPolicyName == null ? Input.empty() : this.geoBackupPolicyName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -58,9 +43,6 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.serverName;
     }
 
-    /**
-     * The state of the geo backup policy.
-     */
     @InputImport(name="state", required=true)
     private final Input<GeoBackupPolicyState> state;
 

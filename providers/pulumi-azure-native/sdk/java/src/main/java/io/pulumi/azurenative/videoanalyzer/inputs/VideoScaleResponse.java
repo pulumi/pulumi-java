@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The video scaling information.
- */
 public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VideoScaleResponse Empty = new VideoScaleResponse();
 
-    /**
-     * The desired output video height.
-     */
     @InputImport(name="height")
     private final @Nullable String height;
 
@@ -27,9 +21,6 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
     }
 
-    /**
-     * Describes the video scaling mode to be applied. Default mode is 'Pad'. If the mode is 'Pad' or 'Stretch' then both width and height must be specified. Else if the mode is 'PreserveAspectRatio' then only one of width or height need be provided.
-     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 
@@ -37,9 +28,6 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
-    /**
-     * The desired output video width.
-     */
     @InputImport(name="width")
     private final @Nullable String width;
 

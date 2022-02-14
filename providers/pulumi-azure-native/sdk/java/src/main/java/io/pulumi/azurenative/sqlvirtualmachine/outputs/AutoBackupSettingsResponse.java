@@ -13,45 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoBackupSettingsResponse {
-/**
- * Backup schedule type.
- */
     private final @Nullable String backupScheduleType;
-/**
- * Include or exclude system databases from auto backup.
- */
     private final @Nullable Boolean backupSystemDbs;
-/**
- * Enable or disable autobackup on SQL virtual machine.
- */
     private final @Nullable Boolean enable;
-/**
- * Enable or disable encryption for backup on SQL virtual machine.
- */
     private final @Nullable Boolean enableEncryption;
-/**
- * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
- */
     private final @Nullable String fullBackupFrequency;
-/**
- * Start time of a given day during which full backups can take place. 0-23 hours.
- */
     private final @Nullable Integer fullBackupStartTime;
-/**
- * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
- */
     private final @Nullable Integer fullBackupWindowHours;
-/**
- * Frequency of log backups. 5-60 minutes.
- */
     private final @Nullable Integer logBackupFrequency;
-/**
- * Retention period of backup: 1-30 days.
- */
     private final @Nullable Integer retentionPeriod;
-/**
- * Storage account url where backup will be taken to.
- */
     private final @Nullable String storageAccountUrl;
 
     @OutputCustomType.Constructor({"backupScheduleType","backupSystemDbs","enable","enableEncryption","fullBackupFrequency","fullBackupStartTime","fullBackupWindowHours","logBackupFrequency","retentionPeriod","storageAccountUrl"})
@@ -78,63 +48,33 @@ public final class AutoBackupSettingsResponse {
         this.storageAccountUrl = storageAccountUrl;
     }
 
-/**
- * Backup schedule type.
- */
     public Optional<String> getBackupScheduleType() {
         return Optional.ofNullable(this.backupScheduleType);
     }
-/**
- * Include or exclude system databases from auto backup.
- */
     public Optional<Boolean> getBackupSystemDbs() {
         return Optional.ofNullable(this.backupSystemDbs);
     }
-/**
- * Enable or disable autobackup on SQL virtual machine.
- */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
-/**
- * Enable or disable encryption for backup on SQL virtual machine.
- */
     public Optional<Boolean> getEnableEncryption() {
         return Optional.ofNullable(this.enableEncryption);
     }
-/**
- * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
- */
     public Optional<String> getFullBackupFrequency() {
         return Optional.ofNullable(this.fullBackupFrequency);
     }
-/**
- * Start time of a given day during which full backups can take place. 0-23 hours.
- */
     public Optional<Integer> getFullBackupStartTime() {
         return Optional.ofNullable(this.fullBackupStartTime);
     }
-/**
- * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
- */
     public Optional<Integer> getFullBackupWindowHours() {
         return Optional.ofNullable(this.fullBackupWindowHours);
     }
-/**
- * Frequency of log backups. 5-60 minutes.
- */
     public Optional<Integer> getLogBackupFrequency() {
         return Optional.ofNullable(this.logBackupFrequency);
     }
-/**
- * Retention period of backup: 1-30 days.
- */
     public Optional<Integer> getRetentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
-/**
- * Storage account url where backup will be taken to.
- */
     public Optional<String> getStorageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }

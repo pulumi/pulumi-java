@@ -14,17 +14,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ModelEnvironmentDefinitionResponseResponseSpark {
-/**
- * The Spark packages to use.
- */
     private final @Nullable List<SparkMavenPackageResponse> packages;
-/**
- * Whether to precache the packages.
- */
     private final @Nullable Boolean precachePackages;
-/**
- * The list of spark repositories.
- */
     private final @Nullable List<String> repositories;
 
     @OutputCustomType.Constructor({"packages","precachePackages","repositories"})
@@ -37,21 +28,12 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
         this.repositories = repositories;
     }
 
-/**
- * The Spark packages to use.
- */
     public List<SparkMavenPackageResponse> getPackages() {
         return this.packages == null ? List.of() : this.packages;
     }
-/**
- * Whether to precache the packages.
- */
     public Optional<Boolean> getPrecachePackages() {
         return Optional.ofNullable(this.precachePackages);
     }
-/**
- * The list of spark repositories.
- */
     public List<String> getRepositories() {
         return this.repositories == null ? List.of() : this.repositories;
     }

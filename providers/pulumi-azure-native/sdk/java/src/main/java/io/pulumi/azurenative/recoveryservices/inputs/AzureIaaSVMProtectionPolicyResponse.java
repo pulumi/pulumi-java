@@ -19,17 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * IaaS VM workload-specific backup policy.
- */
 public final class AzureIaaSVMProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureIaaSVMProtectionPolicyResponse Empty = new AzureIaaSVMProtectionPolicyResponse();
 
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureIaasVM'.
-     */
     @InputImport(name="backupManagementType", required=true)
     private final String backupManagementType;
 
@@ -37,9 +30,6 @@ Expected value is 'AzureIaasVM'.
         return this.backupManagementType;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instantRPDetails")
     private final @Nullable InstantRPAdditionalDetailsResponse instantRPDetails;
 
@@ -47,9 +37,6 @@ Expected value is 'AzureIaasVM'.
         return this.instantRPDetails == null ? Optional.empty() : Optional.ofNullable(this.instantRPDetails);
     }
 
-    /**
-     * Instant RP retention policy range in days
-     */
     @InputImport(name="instantRpRetentionRangeInDays")
     private final @Nullable Integer instantRpRetentionRangeInDays;
 
@@ -57,9 +44,6 @@ Expected value is 'AzureIaasVM'.
         return this.instantRpRetentionRangeInDays == null ? Optional.empty() : Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
 
-    /**
-     * Number of items associated with this policy.
-     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Integer protectedItemsCount;
 
@@ -67,9 +51,6 @@ Expected value is 'AzureIaasVM'.
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
-    /**
-     * Retention policy with the details on backup copy retention ranges.
-     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
@@ -77,9 +58,6 @@ Expected value is 'AzureIaasVM'.
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
-    /**
-     * Backup schedule specified as part of backup policy.
-     */
     @InputImport(name="schedulePolicy")
     private final @Nullable Object schedulePolicy;
 
@@ -87,9 +65,6 @@ Expected value is 'AzureIaasVM'.
         return this.schedulePolicy == null ? null : this.schedulePolicy;
     }
 
-    /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetBackendBucketArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackendBucketArgs Empty = new GetBackendBucketArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="backendBucket", required=true)
     private final String backendBucket;
 
@@ -27,9 +21,6 @@ public final class GetBackendBucketArgs extends io.pulumi.resources.InvokeArgs {
         return this.backendBucket;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

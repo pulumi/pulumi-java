@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PipelineTriggerDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineTriggerDescriptorResponse Empty = new PipelineTriggerDescriptorResponse();
 
-    /**
-     * The source trigger that caused the pipeline run.
-     */
     @InputImport(name="sourceTrigger")
     private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 

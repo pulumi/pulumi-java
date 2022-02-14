@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpgradeOccurrenceResponse {
-/**
- * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
- */
     private final UpgradeDistributionResponse distribution;
-/**
- * Required - The package this Upgrade is for.
- */
     private final String $package;
-/**
- * Required - The version of the package in a machine + human readable form.
- */
     private final VersionResponse parsedVersion;
 
     @OutputCustomType.Constructor({"distribution","$package","parsedVersion"})
@@ -34,21 +25,12 @@ public final class UpgradeOccurrenceResponse {
         this.parsedVersion = Objects.requireNonNull(parsedVersion);
     }
 
-/**
- * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
- */
     public UpgradeDistributionResponse getDistribution() {
         return this.distribution;
     }
-/**
- * Required - The package this Upgrade is for.
- */
     public String get$package() {
         return this.$package;
     }
-/**
- * Required - The version of the package in a machine + human readable form.
- */
     public VersionResponse getParsedVersion() {
         return this.parsedVersion;
     }

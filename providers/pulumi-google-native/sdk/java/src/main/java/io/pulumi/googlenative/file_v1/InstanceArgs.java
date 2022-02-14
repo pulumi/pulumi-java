@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
-    /**
-     * The description of the instance (2048 characters or less).
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,9 +26,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -42,9 +33,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * File system shares on the instance. For this version, only a single file share is supported.
-     */
     @InputImport(name="fileShares")
     private final @Nullable Input<List<FileShareConfigArgs>> fileShares;
 
@@ -52,9 +40,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileShares == null ? Input.empty() : this.fileShares;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -62,9 +47,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
-    /**
-     * KMS key name used for data encryption.
-     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 
@@ -72,9 +54,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
     }
 
-    /**
-     * Resource labels to represent user provided metadata.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -82,9 +61,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -92,9 +68,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * VPC networks to which the instance is connected. For this version, only a single network is supported.
-     */
     @InputImport(name="networks")
     private final @Nullable Input<List<NetworkConfigArgs>> networks;
 
@@ -102,9 +75,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.networks == null ? Input.empty() : this.networks;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -112,9 +82,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The service tier of the instance.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<InstanceTier> tier;
 

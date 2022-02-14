@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPredictionTrainingResults {
-/**
- * The training results of the prediction.
-API Version: 2017-04-26.
- *
- * The training results of the prediction.
- */
     public static CompletableFuture<GetPredictionTrainingResultsResult> invokeAsync(GetPredictionTrainingResultsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionTrainingResults", TypeShape.of(GetPredictionTrainingResultsResult.class), args == null ? GetPredictionTrainingResultsArgs.Empty : args, Utilities.withVersion(options));
     }

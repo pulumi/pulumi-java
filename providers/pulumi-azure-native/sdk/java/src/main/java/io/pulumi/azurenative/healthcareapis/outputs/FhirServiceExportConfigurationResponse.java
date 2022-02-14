@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FhirServiceExportConfigurationResponse {
-/**
- * The name of the default export storage account.
- */
     private final @Nullable String storageAccountName;
 
     @OutputCustomType.Constructor({"storageAccountName"})
@@ -21,9 +18,6 @@ public final class FhirServiceExportConfigurationResponse {
         this.storageAccountName = storageAccountName;
     }
 
-/**
- * The name of the default export storage account.
- */
     public Optional<String> getStorageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }

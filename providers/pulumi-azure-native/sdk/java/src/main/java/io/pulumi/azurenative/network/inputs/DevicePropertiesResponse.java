@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * List of properties of the device.
- */
 public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DevicePropertiesResponse Empty = new DevicePropertiesResponse();
 
-    /**
-     * Model of the device.
-     */
     @InputImport(name="deviceModel")
     private final @Nullable String deviceModel;
 
@@ -28,9 +22,6 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.deviceModel == null ? Optional.empty() : Optional.ofNullable(this.deviceModel);
     }
 
-    /**
-     * Name of the device Vendor.
-     */
     @InputImport(name="deviceVendor")
     private final @Nullable String deviceVendor;
 
@@ -38,9 +29,6 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.deviceVendor == null ? Optional.empty() : Optional.ofNullable(this.deviceVendor);
     }
 
-    /**
-     * Link speed.
-     */
     @InputImport(name="linkSpeedInMbps")
     private final @Nullable Integer linkSpeedInMbps;
 

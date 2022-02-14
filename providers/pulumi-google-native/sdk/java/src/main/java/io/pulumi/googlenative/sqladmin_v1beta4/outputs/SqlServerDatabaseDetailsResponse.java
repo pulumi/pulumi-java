@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SqlServerDatabaseDetailsResponse {
-/**
- * The version of SQL Server with which the database is to be made compatible
- */
     private final Integer compatibilityLevel;
-/**
- * The recovery model of a SQL Server database
- */
     private final String recoveryModel;
 
     @OutputCustomType.Constructor({"compatibilityLevel","recoveryModel"})
@@ -27,15 +21,9 @@ public final class SqlServerDatabaseDetailsResponse {
         this.recoveryModel = Objects.requireNonNull(recoveryModel);
     }
 
-/**
- * The version of SQL Server with which the database is to be made compatible
- */
     public Integer getCompatibilityLevel() {
         return this.compatibilityLevel;
     }
-/**
- * The recovery model of a SQL Server database
- */
     public String getRecoveryModel() {
         return this.recoveryModel;
     }

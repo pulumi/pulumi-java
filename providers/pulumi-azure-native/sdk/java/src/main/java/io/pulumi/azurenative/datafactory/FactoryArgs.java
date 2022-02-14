@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FactoryArgs Empty = new FactoryArgs();
 
-    /**
-     * Properties to enable Customer Managed Key for the factory.
-     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionConfigurationArgs> encryption;
 
@@ -35,9 +29,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
-    /**
-     * The factory name.
-     */
     @InputImport(name="factoryName")
     private final @Nullable Input<String> factoryName;
 
@@ -45,9 +36,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.factoryName == null ? Input.empty() : this.factoryName;
     }
 
-    /**
-     * List of parameters for factory.
-     */
     @InputImport(name="globalParameters")
     private final @Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
@@ -55,9 +43,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.globalParameters == null ? Input.empty() : this.globalParameters;
     }
 
-    /**
-     * Managed service identity of the factory.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<FactoryIdentityArgs> identity;
 
@@ -65,9 +50,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -75,9 +57,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Whether or not public network access is allowed for the data factory.
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -85,9 +64,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * Git repo information of the factory.
-     */
     @InputImport(name="repoConfiguration")
     private final @Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
@@ -95,9 +71,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.repoConfiguration == null ? Input.empty() : this.repoConfiguration;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -105,9 +78,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

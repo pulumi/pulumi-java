@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The managed application definition artifact name.
- */
     @EnumType
     public enum ApplicationDefinitionArtifactName {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         ApplicationResourceTemplate("ApplicationResourceTemplate"),
-/**
- * 
- */
         CreateUiDefinition("CreateUiDefinition"),
-/**
- * 
- */
         MainTemplateParameters("MainTemplateParameters");
 
         private final String value;

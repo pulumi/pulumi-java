@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildServiceBuilderArgs Empty = new BuildServiceBuilderArgs();
 
-    /**
-     * The name of the build service resource.
-     */
     @InputImport(name="buildServiceName", required=true)
     private final Input<String> buildServiceName;
 
@@ -28,9 +22,6 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
         return this.buildServiceName;
     }
 
-    /**
-     * The name of the builder resource.
-     */
     @InputImport(name="builderName")
     private final @Nullable Input<String> builderName;
 
@@ -38,9 +29,6 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
         return this.builderName == null ? Input.empty() : this.builderName;
     }
 
-    /**
-     * Property of the Builder resource.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<BuilderPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

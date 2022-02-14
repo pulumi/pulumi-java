@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Encryption at rest settings for disk or snapshot
- */
 public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionArgs Empty = new EncryptionArgs();
 
-    /**
-     * ResourceId of the disk encryption set to use for enabling encryption at rest.
-     */
     @InputImport(name="diskEncryptionSetId")
     private final @Nullable Input<String> diskEncryptionSetId;
 
@@ -29,9 +23,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
     }
 
-    /**
-     * The type of key used to encrypt the data of the disk.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,EncryptionType>> type;
 

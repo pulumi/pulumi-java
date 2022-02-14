@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VaultPrivateLinkServiceConnectionStateResponse {
-/**
- * Gets or sets actions required.
- */
     private final String actionsRequired;
-/**
- * Gets or sets description.
- */
     private final String description;
-/**
- * Gets or sets the status.
- */
     private final String status;
 
     @OutputCustomType.Constructor({"actionsRequired","description","status"})
@@ -32,21 +23,12 @@ public final class VaultPrivateLinkServiceConnectionStateResponse {
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * Gets or sets actions required.
- */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
-/**
- * Gets or sets description.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Gets or sets the status.
- */
     public String getStatus() {
         return this.status;
     }

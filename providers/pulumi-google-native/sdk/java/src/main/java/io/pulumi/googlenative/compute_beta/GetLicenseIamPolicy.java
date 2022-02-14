@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLicenseIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
- */
     public static CompletableFuture<GetLicenseIamPolicyResult> invokeAsync(GetLicenseIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getLicenseIamPolicy", TypeShape.of(GetLicenseIamPolicyResult.class), args == null ? GetLicenseIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

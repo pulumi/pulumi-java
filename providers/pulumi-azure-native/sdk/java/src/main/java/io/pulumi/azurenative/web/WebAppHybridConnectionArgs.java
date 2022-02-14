@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppHybridConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppHybridConnectionArgs Empty = new WebAppHybridConnectionArgs();
 
-    /**
-     * The hostname of the endpoint.
-     */
     @InputImport(name="hostname")
     private final @Nullable Input<String> hostname;
 
@@ -28,9 +22,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -38,9 +29,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The name of the web app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -48,9 +36,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.name;
     }
 
-    /**
-     * The namespace for this hybrid connection.
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -58,9 +43,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.namespaceName;
     }
 
-    /**
-     * The port of the endpoint.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -68,9 +50,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * The ARM URI to the Service Bus relay.
-     */
     @InputImport(name="relayArmUri")
     private final @Nullable Input<String> relayArmUri;
 
@@ -78,9 +57,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.relayArmUri == null ? Input.empty() : this.relayArmUri;
     }
 
-    /**
-     * The name of the Service Bus relay.
-     */
     @InputImport(name="relayName")
     private final @Nullable Input<String> relayName;
 
@@ -88,9 +64,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.relayName == null ? Input.empty() : this.relayName;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -98,9 +71,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
-     */
     @InputImport(name="sendKeyName")
     private final @Nullable Input<String> sendKeyName;
 
@@ -108,10 +78,6 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
         return this.sendKeyName == null ? Input.empty() : this.sendKeyName;
     }
 
-    /**
-     * The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
-normally, use the POST /listKeys API instead.
-     */
     @InputImport(name="sendKeyValue")
     private final @Nullable Input<String> sendKeyValue;
 
@@ -119,9 +85,6 @@ normally, use the POST /listKeys API instead.
         return this.sendKeyValue == null ? Input.empty() : this.sendKeyValue;
     }
 
-    /**
-     * The name of the Service Bus namespace.
-     */
     @InputImport(name="serviceBusNamespace")
     private final @Nullable Input<String> serviceBusNamespace;
 
@@ -129,9 +92,6 @@ normally, use the POST /listKeys API instead.
         return this.serviceBusNamespace == null ? Input.empty() : this.serviceBusNamespace;
     }
 
-    /**
-     * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
-     */
     @InputImport(name="serviceBusSuffix")
     private final @Nullable Input<String> serviceBusSuffix;
 

@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpgradeDistributionResponse {
-/**
- * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
- */
     private final String classification;
-/**
- * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
- */
     private final String cpeUri;
-/**
- * The cve tied to this Upgrade.
- */
     private final List<String> cve;
-/**
- * The severity as specified by the upstream operating system.
- */
     private final String severity;
 
     @OutputCustomType.Constructor({"classification","cpeUri","cve","severity"})
@@ -39,27 +27,15 @@ public final class UpgradeDistributionResponse {
         this.severity = Objects.requireNonNull(severity);
     }
 
-/**
- * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
- */
     public String getClassification() {
         return this.classification;
     }
-/**
- * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
- */
     public String getCpeUri() {
         return this.cpeUri;
     }
-/**
- * The cve tied to this Upgrade.
- */
     public List<String> getCve() {
         return this.cve;
     }
-/**
- * The severity as specified by the upstream operating system.
- */
     public String getSeverity() {
         return this.severity;
     }

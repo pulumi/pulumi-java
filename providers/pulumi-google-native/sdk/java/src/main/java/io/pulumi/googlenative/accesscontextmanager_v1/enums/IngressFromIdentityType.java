@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
- */
     @EnumType
     public enum IngressFromIdentityType {
-/**
- * No blanket identity group specified.
- */
         IdentityTypeUnspecified("IDENTITY_TYPE_UNSPECIFIED"),
-/**
- * Authorize access from all identities outside the perimeter.
- */
         AnyIdentity("ANY_IDENTITY"),
-/**
- * Authorize access from all human users outside the perimeter.
- */
         AnyUserAccount("ANY_USER_ACCOUNT"),
-/**
- * Authorize access from all service accounts outside the perimeter.
- */
         AnyServiceAccount("ANY_SERVICE_ACCOUNT");
 
         private final String value;

@@ -18,73 +18,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMetadataResult {
-/**
- * The creator of the content item.
- */
     private final @Nullable MetadataAuthorResponse author;
-/**
- * Categories for the solution content item
- */
     private final @Nullable MetadataCategoriesResponse categories;
-/**
- * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
- */
     private final @Nullable String contentId;
-/**
- * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
- */
     private final @Nullable MetadataDependenciesResponse dependencies;
-/**
- * Etag of the azure resource
- */
     private final @Nullable String etag;
-/**
- * first publish date solution content item
- */
     private final @Nullable String firstPublishDate;
-/**
- * Azure resource Id
- */
     private final String id;
-/**
- * The kind of content the metadata is for.
- */
     private final String kind;
-/**
- * last publish date for the solution content item
- */
     private final @Nullable String lastPublishDate;
-/**
- * Azure resource name
- */
     private final String name;
-/**
- * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
- */
     private final String parentId;
-/**
- * Providers for the solution content item
- */
     private final @Nullable List<String> providers;
-/**
- * Source of the content.  This is where/how it was created.
- */
     private final @Nullable MetadataSourceResponse source;
-/**
- * Support information for the metadata - type, name, contact information
- */
     private final @Nullable MetadataSupportResponse support;
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     private final SystemDataResponse systemData;
-/**
- * Azure resource type
- */
     private final String type;
-/**
- * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
- */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"author","categories","contentId","dependencies","etag","firstPublishDate","id","kind","lastPublishDate","name","parentId","providers","source","support","systemData","type","version"})
@@ -125,105 +74,54 @@ public final class GetMetadataResult {
         this.version = version;
     }
 
-/**
- * The creator of the content item.
- */
     public Optional<MetadataAuthorResponse> getAuthor() {
         return Optional.ofNullable(this.author);
     }
-/**
- * Categories for the solution content item
- */
     public Optional<MetadataCategoriesResponse> getCategories() {
         return Optional.ofNullable(this.categories);
     }
-/**
- * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
- */
     public Optional<String> getContentId() {
         return Optional.ofNullable(this.contentId);
     }
-/**
- * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
- */
     public Optional<MetadataDependenciesResponse> getDependencies() {
         return Optional.ofNullable(this.dependencies);
     }
-/**
- * Etag of the azure resource
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * first publish date solution content item
- */
     public Optional<String> getFirstPublishDate() {
         return Optional.ofNullable(this.firstPublishDate);
     }
-/**
- * Azure resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * The kind of content the metadata is for.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * last publish date for the solution content item
- */
     public Optional<String> getLastPublishDate() {
         return Optional.ofNullable(this.lastPublishDate);
     }
-/**
- * Azure resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
- */
     public String getParentId() {
         return this.parentId;
     }
-/**
- * Providers for the solution content item
- */
     public List<String> getProviders() {
         return this.providers == null ? List.of() : this.providers;
     }
-/**
- * Source of the content.  This is where/how it was created.
- */
     public Optional<MetadataSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
-/**
- * Support information for the metadata - type, name, contact information
- */
     public Optional<MetadataSupportResponse> getSupport() {
         return Optional.ofNullable(this.support);
     }
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Azure resource type
- */
     public String getType() {
         return this.type;
     }
-/**
- * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
- */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

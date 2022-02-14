@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PackageStoreResponse {
-/**
- * The name of the package store
- */
     private final String name;
-/**
- * The package store linked service reference.
- */
     private final EntityReferenceResponse packageStoreLinkedService;
 
     @OutputCustomType.Constructor({"name","packageStoreLinkedService"})
@@ -27,15 +21,9 @@ public final class PackageStoreResponse {
         this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
     }
 
-/**
- * The name of the package store
- */
     public String getName() {
         return this.name;
     }
-/**
- * The package store linked service reference.
- */
     public EntityReferenceResponse getPackageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }

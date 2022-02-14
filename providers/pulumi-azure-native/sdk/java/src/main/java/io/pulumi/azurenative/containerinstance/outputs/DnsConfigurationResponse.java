@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DnsConfigurationResponse {
-/**
- * The DNS servers for the container group.
- */
     private final List<String> nameServers;
-/**
- * The DNS options for the container group.
- */
     private final @Nullable String options;
-/**
- * The DNS search domains for hostname lookup in the container group.
- */
     private final @Nullable String searchDomains;
 
     @OutputCustomType.Constructor({"nameServers","options","searchDomains"})
@@ -35,21 +26,12 @@ public final class DnsConfigurationResponse {
         this.searchDomains = searchDomains;
     }
 
-/**
- * The DNS servers for the container group.
- */
     public List<String> getNameServers() {
         return this.nameServers;
     }
-/**
- * The DNS options for the container group.
- */
     public Optional<String> getOptions() {
         return Optional.ofNullable(this.options);
     }
-/**
- * The DNS search domains for hostname lookup in the container group.
- */
     public Optional<String> getSearchDomains() {
         return Optional.ofNullable(this.searchDomains);
     }

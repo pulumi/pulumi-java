@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the Backend WebProxy Server to use in the Request to Backend.
- */
 public final class BackendProxyContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendProxyContractArgs Empty = new BackendProxyContractArgs();
 
-    /**
-     * Password to connect to the WebProxy Server
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -27,9 +21,6 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
-     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 
@@ -37,9 +28,6 @@ public final class BackendProxyContractArgs extends io.pulumi.resources.Resource
         return this.url;
     }
 
-    /**
-     * Username to connect to the WebProxy server
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

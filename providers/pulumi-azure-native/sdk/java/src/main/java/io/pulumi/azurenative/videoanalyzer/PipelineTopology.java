@@ -22,373 +22,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
-
-  - Parameters: list of user defined parameters that can be references across the topology nodes.
-  - Sources: list of one or more data sources nodes such as an RTSP source which allows for content to be ingested from cameras.
-  - Processors: list of nodes which perform data analysis or transformations.
-  - Sinks: list of one or more data sinks which allow for data to be stored or exported to other destinations.
-API Version: 2021-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a pipeline topology with an Rtsp source and video sink.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipelineTopology = new AzureNative.VideoAnalyzer.PipelineTopology("pipelineTopology", new AzureNative.VideoAnalyzer.PipelineTopologyArgs
-        {
-            AccountName = "testaccount2",
-            Description = "Pipeline Topology 1 Description",
-            Kind = "Live",
-            Parameters = 
-            {
-                new AzureNative.VideoAnalyzer.Inputs.ParameterDeclarationArgs
-                {
-                    Default = "rtsp://microsoft.com/video.mp4",
-                    Description = "rtsp source url parameter",
-                    Name = "rtspUrlParameter",
-                    Type = "String",
-                },
-                new AzureNative.VideoAnalyzer.Inputs.ParameterDeclarationArgs
-                {
-                    Default = "password",
-                    Description = "rtsp source password parameter",
-                    Name = "rtspPasswordParameter",
-                    Type = "SecretString",
-                },
-            },
-            PipelineTopologyName = "pipelineTopology1",
-            ResourceGroupName = "testrg",
-            Sinks = 
-            {
-                new AzureNative.VideoAnalyzer.Inputs.VideoSinkArgs
-                {
-                    Inputs = 
-                    {
-                        new AzureNative.VideoAnalyzer.Inputs.NodeInputArgs
-                        {
-                            NodeName = "rtspSource",
-                        },
-                    },
-                    Name = "videoSink",
-                    Type = "#Microsoft.VideoAnalyzer.VideoSink",
-                    VideoCreationProperties = new AzureNative.VideoAnalyzer.Inputs.VideoCreationPropertiesArgs
-                    {
-                        Description = "Parking lot south entrance",
-                        SegmentLength = "PT30S",
-                        Title = "Parking Lot (Camera 1)",
-                    },
-                    VideoName = "camera001",
-                    VideoPublishingOptions = new AzureNative.VideoAnalyzer.Inputs.VideoPublishingOptionsArgs
-                    {
-                        DisableArchive = "false",
-                        DisableRtspPublishing = "true",
-                    },
-                },
-            },
-            Sku = new AzureNative.VideoAnalyzer.Inputs.SkuArgs
-            {
-                Name = "Live_S1",
-            },
-            Sources = 
-            {
-                new AzureNative.VideoAnalyzer.Inputs.RtspSourceArgs
-                {
-                    Endpoint = new AzureNative.VideoAnalyzer.Inputs.UnsecuredEndpointArgs
-                    {
-                        Credentials = new AzureNative.VideoAnalyzer.Inputs.UsernamePasswordCredentialsArgs
-                        {
-                            Password = rtspPasswordParameter,
-                            Type = "#Microsoft.VideoAnalyzer.UsernamePasswordCredentials",
-                            Username = "username",
-                        },
-                        Type = "#Microsoft.VideoAnalyzer.UnsecuredEndpoint",
-                        Url = rtspUrlParameter,
-                    },
-                    Name = "rtspSource",
-                    Transport = "Http",
-                    Type = "#Microsoft.VideoAnalyzer.RtspSource",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const pipelineTopology = new azure_native.videoanalyzer.PipelineTopology("pipelineTopology", {
-    accountName: "testaccount2",
-    description: "Pipeline Topology 1 Description",
-    kind: "Live",
-    parameters: [
-        {
-            "default": "rtsp://microsoft.com/video.mp4",
-            description: "rtsp source url parameter",
-            name: "rtspUrlParameter",
-            type: "String",
-        },
-        {
-            "default": "password",
-            description: "rtsp source password parameter",
-            name: "rtspPasswordParameter",
-            type: "SecretString",
-        },
-    ],
-    pipelineTopologyName: "pipelineTopology1",
-    resourceGroupName: "testrg",
-    sinks: [{
-        inputs: [{
-            nodeName: "rtspSource",
-        }],
-        name: "videoSink",
-        type: "#Microsoft.VideoAnalyzer.VideoSink",
-        videoCreationProperties: {
-            description: "Parking lot south entrance",
-            segmentLength: "PT30S",
-            title: "Parking Lot (Camera 1)",
-        },
-        videoName: "camera001",
-        videoPublishingOptions: {
-            disableArchive: "false",
-            disableRtspPublishing: "true",
-        },
-    }],
-    sku: {
-        name: "Live_S1",
-    },
-    sources: [{
-        endpoint: {
-            credentials: {
-                password: rtspPasswordParameter,
-                type: "#Microsoft.VideoAnalyzer.UsernamePasswordCredentials",
-                username: "username",
-            },
-            type: "#Microsoft.VideoAnalyzer.UnsecuredEndpoint",
-            url: rtspUrlParameter,
-        },
-        name: "rtspSource",
-        transport: "Http",
-        type: "#Microsoft.VideoAnalyzer.RtspSource",
-    }],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-pipeline_topology = azure_native.videoanalyzer.PipelineTopology("pipelineTopology",
-    account_name="testaccount2",
-    description="Pipeline Topology 1 Description",
-    kind="Live",
-    parameters=[
-        azure_native.videoanalyzer.ParameterDeclarationArgs(
-            default="rtsp://microsoft.com/video.mp4",
-            description="rtsp source url parameter",
-            name="rtspUrlParameter",
-            type="String",
-        ),
-        azure_native.videoanalyzer.ParameterDeclarationArgs(
-            default="password",
-            description="rtsp source password parameter",
-            name="rtspPasswordParameter",
-            type="SecretString",
-        ),
-    ],
-    pipeline_topology_name="pipelineTopology1",
-    resource_group_name="testrg",
-    sinks=[{
-        "inputs": [azure_native.videoanalyzer.NodeInputArgs(
-            node_name="rtspSource",
-        )],
-        "name": "videoSink",
-        "type": "#Microsoft.VideoAnalyzer.VideoSink",
-        "videoCreationProperties": azure_native.videoanalyzer.VideoCreationPropertiesArgs(
-            description="Parking lot south entrance",
-            segment_length="PT30S",
-            title="Parking Lot (Camera 1)",
-        ),
-        "videoName": "camera001",
-        "videoPublishingOptions": azure_native.videoanalyzer.VideoPublishingOptionsArgs(
-            disable_archive="false",
-            disable_rtsp_publishing="true",
-        ),
-    }],
-    sku=azure_native.videoanalyzer.SkuArgs(
-        name="Live_S1",
-    ),
-    sources=[azure_native.videoanalyzer.RtspSourceArgs(
-        endpoint=azure_native.videoanalyzer.UnsecuredEndpointArgs(
-            credentials=azure_native.videoanalyzer.UsernamePasswordCredentialsArgs(
-                password=rtsp_password_parameter,
-                type="#Microsoft.VideoAnalyzer.UsernamePasswordCredentials",
-                username="username",
-            ),
-            type="#Microsoft.VideoAnalyzer.UnsecuredEndpoint",
-            url=rtsp_url_parameter,
-        ),
-        name="rtspSource",
-        transport="Http",
-        type="#Microsoft.VideoAnalyzer.RtspSource",
-    )])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:videoanalyzer:PipelineTopology pipelineTopology1 /subscriptions/591e76c3-3e97-44db-879c-3e2b12961b62/resourceGroups/testrg/providers/Microsoft.Media/videoAnalyzers/testaccount2/pipelineTopologies/pipelineTopology1 
-```
-
- */
 @ResourceType(type="azure-native:videoanalyzer:PipelineTopology")
 public class PipelineTopology extends io.pulumi.resources.CustomResource {
-    /**
-     * An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Topology kind.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Topology kind.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
-     */
     @OutputExport(name="parameters", type=List.class, parameters={ParameterDeclarationResponse.class})
     private Output</* @Nullable */ List<ParameterDeclarationResponse>> parameters;
 
-    /**
-     * @return List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
-     */
     public Output</* @Nullable */ List<ParameterDeclarationResponse>> getParameters() {
         return this.parameters;
     }
-    /**
-     * List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
-     */
     @OutputExport(name="processors", type=List.class, parameters={EncoderProcessorResponse.class})
     private Output</* @Nullable */ List<EncoderProcessorResponse>> processors;
 
-    /**
-     * @return List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
-     */
     public Output</* @Nullable */ List<EncoderProcessorResponse>> getProcessors() {
         return this.processors;
     }
-    /**
-     * List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
-     */
     @OutputExport(name="sinks", type=List.class, parameters={VideoSinkResponse.class})
     private Output<List<VideoSinkResponse>> sinks;
 
-    /**
-     * @return List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
-     */
     public Output<List<VideoSinkResponse>> getSinks() {
         return this.sinks;
     }
-    /**
-     * Describes the properties of a SKU.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
-    /**
-     * @return Describes the properties of a SKU.
-     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
-     */
     @OutputExport(name="sources", type=List.class, parameters={Either.class})
     private Output<List<Either<RtspSourceResponse,VideoSourceResponse>>> sources;
 
-    /**
-     * @return List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
-     */
     public Output<List<Either<RtspSourceResponse,VideoSourceResponse>>> getSources() {
         return this.sources;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PipelineTopology(String name, PipelineTopologyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:videoanalyzer:PipelineTopology", name, args == null ? PipelineTopologyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -407,14 +103,6 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PipelineTopology get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PipelineTopology(name, id, options);
     }

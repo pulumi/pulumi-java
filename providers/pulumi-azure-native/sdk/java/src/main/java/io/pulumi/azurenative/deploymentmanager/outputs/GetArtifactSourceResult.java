@@ -13,37 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetArtifactSourceResult {
-/**
- * The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
- */
     private final @Nullable String artifactRoot;
-/**
- * The authentication method to use to access the artifact source.
- */
     private final SasAuthenticationResponse authentication;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The type of artifact source used.
- */
     private final String sourceType;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"artifactRoot","authentication","id","location","name","sourceType","tags","type"})
@@ -66,51 +42,27 @@ public final class GetArtifactSourceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
- */
     public Optional<String> getArtifactRoot() {
         return Optional.ofNullable(this.artifactRoot);
     }
-/**
- * The authentication method to use to access the artifact source.
- */
     public SasAuthenticationResponse getAuthentication() {
         return this.authentication;
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The type of artifact source used.
- */
     public String getSourceType() {
         return this.sourceType;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

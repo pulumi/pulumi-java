@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CapacityDetailsArgs Empty = new CapacityDetailsArgs();
 
-    /**
-     * A collection of Dedicated capacity administrators
-     */
     @InputImport(name="administration")
     private final @Nullable Input<DedicatedCapacityAdministratorsArgs> administration;
 
@@ -33,9 +27,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.administration == null ? Input.empty() : this.administration;
     }
 
-    /**
-     * The name of the Dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63.
-     */
     @InputImport(name="dedicatedCapacityName")
     private final @Nullable Input<String> dedicatedCapacityName;
 
@@ -43,9 +34,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.dedicatedCapacityName == null ? Input.empty() : this.dedicatedCapacityName;
     }
 
-    /**
-     * Location of the PowerBI Dedicated resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,9 +41,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,Mode>> mode;
 
@@ -63,9 +48,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.mode == null ? Input.empty() : this.mode;
     }
 
-    /**
-     * The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,9 +55,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The SKU of the PowerBI Dedicated capacity resource.
-     */
     @InputImport(name="sku", required=true)
     private final Input<CapacitySkuArgs> sku;
 
@@ -83,9 +62,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku;
     }
 
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @InputImport(name="systemData")
     private final @Nullable Input<SystemDataArgs> systemData;
 
@@ -93,9 +69,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.systemData == null ? Input.empty() : this.systemData;
     }
 
-    /**
-     * Key-value pairs of additional resource provisioning properties.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

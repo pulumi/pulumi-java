@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAndroidApp {
-/**
- * Gets the specified AndroidApp.
- */
     public static CompletableFuture<GetAndroidAppResult> invokeAsync(GetAndroidAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebase/v1beta1:getAndroidApp", TypeShape.of(GetAndroidAppResult.class), args == null ? GetAndroidAppArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Recovery plan manual action details.
- */
 public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanManualActionDetailsResponse Empty = new RecoveryPlanManualActionDetailsResponse();
 
-    /**
-     * The manual action description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -27,10 +21,6 @@ public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.res
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-Expected value is 'ManualActionDetails'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 

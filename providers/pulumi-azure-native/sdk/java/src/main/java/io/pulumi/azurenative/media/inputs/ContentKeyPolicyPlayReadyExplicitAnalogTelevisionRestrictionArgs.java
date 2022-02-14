@@ -10,16 +10,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Configures the Explicit Analog Television Output Restriction control bits. For further details see the PlayReady Compliance Rules.
- */
 public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs Empty = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs();
 
-    /**
-     * Indicates whether this restriction is enforced on a Best Effort basis.
-     */
     @InputImport(name="bestEffort", required=true)
     private final Input<Boolean> bestEffort;
 
@@ -27,9 +21,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
         return this.bestEffort;
     }
 
-    /**
-     * Configures the restriction control bits. Must be between 0 and 3 inclusive.
-     */
     @InputImport(name="configurationData", required=true)
     private final Input<Integer> configurationData;
 

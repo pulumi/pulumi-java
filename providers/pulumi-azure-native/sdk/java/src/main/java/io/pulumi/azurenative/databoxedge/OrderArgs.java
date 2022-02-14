@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrderArgs Empty = new OrderArgs();
 
-    /**
-     * The contact details.
-     */
     @InputImport(name="contactInformation", required=true)
     private final Input<ContactDetailsArgs> contactInformation;
 
@@ -31,9 +25,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactInformation;
     }
 
-    /**
-     * The order details of a device.
-     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -41,9 +32,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,9 +39,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * ShipmentType of the order
-     */
     @InputImport(name="shipmentType")
     private final @Nullable Input<Either<String,ShipmentType>> shipmentType;
 
@@ -61,9 +46,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
         return this.shipmentType == null ? Input.empty() : this.shipmentType;
     }
 
-    /**
-     * The shipping address.
-     */
     @InputImport(name="shippingAddress")
     private final @Nullable Input<AddressArgs> shippingAddress;
 

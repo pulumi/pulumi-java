@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Overlay configuration.
- */
 public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OverlayArgs Empty = new OverlayArgs();
 
-    /**
-     * List of Animations. The list should be chronological, without any time overlap.
-     */
     @InputImport(name="animations")
     private final @Nullable Input<List<AnimationArgs>> animations;
 
@@ -29,9 +23,6 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
         return this.animations == null ? Input.empty() : this.animations;
     }
 
-    /**
-     * Image overlay.
-     */
     @InputImport(name="image")
     private final @Nullable Input<ImageArgs> image;
 

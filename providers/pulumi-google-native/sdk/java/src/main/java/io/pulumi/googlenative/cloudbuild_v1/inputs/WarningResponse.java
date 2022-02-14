@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A non-fatal problem encountered during the execution of the build.
- */
 public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WarningResponse Empty = new WarningResponse();
 
-    /**
-     * The priority for this warning.
-     */
     @InputImport(name="priority", required=true)
     private final String priority;
 
@@ -25,9 +19,6 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority;
     }
 
-    /**
-     * Explanation of the warning generated.
-     */
     @InputImport(name="text", required=true)
     private final String text;
 

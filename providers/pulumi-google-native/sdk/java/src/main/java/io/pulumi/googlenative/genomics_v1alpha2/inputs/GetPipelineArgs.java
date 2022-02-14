@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPipelineArgs Empty = new GetPipelineArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="pipelineId", required=true)
     private final String pipelineId;
 

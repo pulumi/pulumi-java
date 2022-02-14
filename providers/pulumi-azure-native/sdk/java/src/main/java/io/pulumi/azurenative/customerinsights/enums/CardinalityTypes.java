@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The Relationship Cardinality.
- */
     @EnumType
     public enum CardinalityTypes {
-/**
- * 
- */
         OneToOne("OneToOne"),
-/**
- * 
- */
         OneToMany("OneToMany"),
-/**
- * 
- */
         ManyToMany("ManyToMany");
 
         private final String value;

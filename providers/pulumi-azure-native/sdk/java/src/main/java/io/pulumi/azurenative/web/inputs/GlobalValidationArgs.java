@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
- */
 public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalValidationArgs Empty = new GlobalValidationArgs();
 
-    /**
-     * The paths for which unauthenticated flow would not be redirected to the login page.
-     */
     @InputImport(name="excludedPaths")
     private final @Nullable Input<List<String>> excludedPaths;
 
@@ -30,11 +24,6 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
         return this.excludedPaths == null ? Input.empty() : this.excludedPaths;
     }
 
-    /**
-     * The default authentication provider to use when multiple providers are configured.
-This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".
-     */
     @InputImport(name="redirectToProvider")
     private final @Nullable Input<String> redirectToProvider;
 
@@ -42,9 +31,6 @@ action is set to "RedirectToLoginPage".
         return this.redirectToProvider == null ? Input.empty() : this.redirectToProvider;
     }
 
-    /**
-     * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
-     */
     @InputImport(name="requireAuthentication")
     private final @Nullable Input<Boolean> requireAuthentication;
 
@@ -52,9 +38,6 @@ action is set to "RedirectToLoginPage".
         return this.requireAuthentication == null ? Input.empty() : this.requireAuthentication;
     }
 
-    /**
-     * The action to take when an unauthenticated client attempts to access the app.
-     */
     @InputImport(name="unauthenticatedClientAction")
     private final @Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrustedIdProvider {
-/**
- * Data Lake Store trusted identity provider information.
-API Version: 2016-11-01.
- *
- * Data Lake Store trusted identity provider information.
- */
     public static CompletableFuture<GetTrustedIdProviderResult> invokeAsync(GetTrustedIdProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getTrustedIdProvider", TypeShape.of(GetTrustedIdProviderResult.class), args == null ? GetTrustedIdProviderArgs.Empty : args, Utilities.withVersion(options));
     }

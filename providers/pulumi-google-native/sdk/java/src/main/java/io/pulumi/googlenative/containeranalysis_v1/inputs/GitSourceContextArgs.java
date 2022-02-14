@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A GitSourceContext denotes a particular revision in a third party Git repository (e.g., GitHub).
- */
 public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitSourceContextArgs Empty = new GitSourceContextArgs();
 
-    /**
-     * Git commit hash.
-     */
     @InputImport(name="revisionId")
     private final @Nullable Input<String> revisionId;
 
@@ -27,9 +21,6 @@ public final class GitSourceContextArgs extends io.pulumi.resources.ResourceArgs
         return this.revisionId == null ? Input.empty() : this.revisionId;
     }
 
-    /**
-     * Git repository URL.
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

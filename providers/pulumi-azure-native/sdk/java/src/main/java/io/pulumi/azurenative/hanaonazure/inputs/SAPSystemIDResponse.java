@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies information related to a SAP system ID
- */
 public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SAPSystemIDResponse Empty = new SAPSystemIDResponse();
 
-    /**
-     * Group ID of the HANA database user.
-     */
     @InputImport(name="gid")
     private final @Nullable String gid;
 
@@ -27,9 +21,6 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
         return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
     }
 
-    /**
-     * Percent of memory to allocate to this SID.
-     */
     @InputImport(name="memoryAllocation", required=true)
     private final String memoryAllocation;
 
@@ -37,9 +28,6 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
         return this.memoryAllocation;
     }
 
-    /**
-     * SAP system ID as database identifier.
-     */
     @InputImport(name="sid")
     private final @Nullable String sid;
 
@@ -47,9 +35,6 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
     }
 
-    /**
-     * User ID of the HANA database user.
-     */
     @InputImport(name="uid")
     private final @Nullable String uid;
 
@@ -57,9 +42,6 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
         return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
     }
 
-    /**
-     * Name of the HANA database user.
-     */
     @InputImport(name="username")
     private final @Nullable String username;
 

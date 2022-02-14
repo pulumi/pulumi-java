@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Function activity.
- */
 public final class AzureFunctionActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFunctionActivityArgs Empty = new AzureFunctionActivityArgs();
 
-    /**
-     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-     */
     @InputImport(name="body")
     private final @Nullable Input<Object> body;
 
@@ -35,9 +29,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.body == null ? Input.empty() : this.body;
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -45,9 +36,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,9 +43,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="functionName", required=true)
     private final Input<Object> functionName;
 
@@ -65,9 +50,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.functionName;
     }
 
-    /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="headers")
     private final @Nullable Input<Object> headers;
 
@@ -75,9 +57,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.headers == null ? Input.empty() : this.headers;
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -85,9 +64,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
-    /**
-     * Rest API method for target endpoint.
-     */
     @InputImport(name="method", required=true)
     private final Input<Either<String,AzureFunctionActivityMethod>> method;
 
@@ -95,9 +71,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.method;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -105,9 +78,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -115,10 +85,6 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
         return this.policy == null ? Input.empty() : this.policy;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'AzureFunctionActivity'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -126,9 +92,6 @@ Expected value is 'AzureFunctionActivity'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

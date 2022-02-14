@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Settings of suggestion trigger.
- */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs Empty = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs();
 
-    /**
-     * Do not trigger if last utterance is small talk.
-     */
     @InputImport(name="noSmallTalk")
     private final @Nullable Input<Boolean> noSmallTalk;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.noSmallTalk == null ? Input.empty() : this.noSmallTalk;
     }
 
-    /**
-     * Only trigger suggestion if participant role of last utterance is END_USER.
-     */
     @InputImport(name="onlyEndUser")
     private final @Nullable Input<Boolean> onlyEndUser;
 

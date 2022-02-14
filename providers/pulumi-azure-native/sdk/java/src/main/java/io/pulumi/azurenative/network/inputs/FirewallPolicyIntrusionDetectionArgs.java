@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for intrusion detection mode and rules.
- */
 public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyIntrusionDetectionArgs Empty = new FirewallPolicyIntrusionDetectionArgs();
 
-    /**
-     * Intrusion detection configuration properties.
-     */
     @InputImport(name="configuration")
     private final @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
@@ -30,9 +24,6 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
-    /**
-     * Intrusion detection general state.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 

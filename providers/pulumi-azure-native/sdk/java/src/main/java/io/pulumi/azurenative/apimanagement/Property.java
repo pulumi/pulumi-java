@@ -15,203 +15,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Property details.
-API Version: 2019-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateProperty
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var property = new AzureNative.ApiManagement.Property("property", new AzureNative.ApiManagement.PropertyArgs
-        {
-            DisplayName = "prop3name",
-            PropId = "testprop2",
-            ResourceGroupName = "rg1",
-            Secret = true,
-            ServiceName = "apimService1",
-            Tags = 
-            {
-                "foo",
-                "bar",
-            },
-            Value = "propValue",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewProperty(ctx, "property", &apimanagement.PropertyArgs{
-			DisplayName:       pulumi.String("prop3name"),
-			PropId:            pulumi.String("testprop2"),
-			ResourceGroupName: pulumi.String("rg1"),
-			Secret:            pulumi.Bool(true),
-			ServiceName:       pulumi.String("apimService1"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo"),
-				pulumi.String("bar"),
-			},
-			Value: pulumi.String("propValue"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const property = new azure_native.apimanagement.Property("property", {
-    displayName: "prop3name",
-    propId: "testprop2",
-    resourceGroupName: "rg1",
-    secret: true,
-    serviceName: "apimService1",
-    tags: [
-        "foo",
-        "bar",
-    ],
-    value: "propValue",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-property = azure_native.apimanagement.Property("property",
-    display_name="prop3name",
-    prop_id="testprop2",
-    resource_group_name="rg1",
-    secret=True,
-    service_name="apimService1",
-    tags=[
-        "foo",
-        "bar",
-    ],
-    value="propValue")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:Property testprop2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/properties/testprop2 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:Property")
 public class Property extends io.pulumi.resources.CustomResource {
-    /**
-     * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Determines whether the value is a secret and should be encrypted or not. Default value is false.
-     */
     @OutputExport(name="secret", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> secret;
 
-    /**
-     * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
-     */
     public Output</* @Nullable */ Boolean> getSecret() {
         return this.secret;
     }
-    /**
-     * Optional tags that when provided can be used to filter the property list.
-     */
     @OutputExport(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
-    /**
-     * @return Optional tags that when provided can be used to filter the property list.
-     */
     public Output</* @Nullable */ List<String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
-     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output<String> value;
 
-    /**
-     * @return Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
-     */
     public Output<String> getValue() {
         return this.value;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Property(String name, PropertyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Property", name, args == null ? PropertyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -235,14 +77,6 @@ public class Property extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Property get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Property(name, id, options);
     }

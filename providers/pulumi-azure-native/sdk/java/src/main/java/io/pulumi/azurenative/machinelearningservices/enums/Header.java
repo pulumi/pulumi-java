@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Header type.
- */
     @EnumType
     public enum Header {
-/**
- * 
- */
         All_files_have_same_headers("all_files_have_same_headers"),
-/**
- * 
- */
         Only_first_file_has_headers("only_first_file_has_headers"),
-/**
- * 
- */
         No_headers("no_headers"),
-/**
- * 
- */
         Combine_all_files_headers("combine_all_files_headers");
 
         private final String value;

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CapabilityResponse {
-/**
- * Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -21,9 +18,6 @@ public final class CapabilityResponse {
         this.name = name;
     }
 
-/**
- * Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

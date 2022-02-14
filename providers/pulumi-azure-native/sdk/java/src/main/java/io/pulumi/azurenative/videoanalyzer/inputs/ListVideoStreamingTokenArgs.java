@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListVideoStreamingTokenArgs Empty = new ListVideoStreamingTokenArgs();
 
-    /**
-     * The Azure Video Analyzer account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.Invok
         return this.accountName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class ListVideoStreamingTokenArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the video to generate a token for playback.
-     */
     @InputImport(name="videoName", required=true)
     private final String videoName;
 

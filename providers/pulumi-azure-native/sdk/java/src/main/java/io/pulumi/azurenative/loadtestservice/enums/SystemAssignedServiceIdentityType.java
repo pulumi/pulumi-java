@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of managed service identity (either system assigned, or none).
- */
     @EnumType
     public enum SystemAssignedServiceIdentityType {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         SystemAssigned("SystemAssigned");
 
         private final String value;

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoadBalancerBackendAddressPoolReferenceResponse {
-/**
- * Gets the name of the proxy resource on the target side.
- */
     private final @Nullable String name;
-/**
- * Gets the ARM resource ID of the tracked resource being referenced.
- */
     private final String sourceArmResourceId;
 
     @OutputCustomType.Constructor({"name","sourceArmResourceId"})
@@ -28,15 +22,9 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse {
         this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
     }
 
-/**
- * Gets the name of the proxy resource on the target side.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Gets the ARM resource ID of the tracked resource being referenced.
- */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }

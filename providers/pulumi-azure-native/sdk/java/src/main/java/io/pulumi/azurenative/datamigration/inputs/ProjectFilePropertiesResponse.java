@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Base class for file properties.
- */
 public final class ProjectFilePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProjectFilePropertiesResponse Empty = new ProjectFilePropertiesResponse();
 
-    /**
-     * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
-     */
     @InputImport(name="extension")
     private final @Nullable String extension;
 
@@ -28,9 +22,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
         return this.extension == null ? Optional.empty() : Optional.ofNullable(this.extension);
     }
 
-    /**
-     * Relative path of this file resource. This property can be set when creating or updating the file resource.
-     */
     @InputImport(name="filePath")
     private final @Nullable String filePath;
 
@@ -38,9 +29,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
     }
 
-    /**
-     * Modification DateTime.
-     */
     @InputImport(name="lastModified", required=true)
     private final String lastModified;
 
@@ -48,9 +36,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
         return this.lastModified;
     }
 
-    /**
-     * File content type. This property can be modified to reflect the file content type.
-     */
     @InputImport(name="mediaType")
     private final @Nullable String mediaType;
 
@@ -58,9 +43,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
         return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
     }
 
-    /**
-     * File size.
-     */
     @InputImport(name="size", required=true)
     private final Double size;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrganizationArgs Empty = new OrganizationArgs();
 
-    /**
-     * Location of Organization resource
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,9 +24,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Confluent offer detail
-     */
     @InputImport(name="offerDetail")
     private final @Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
@@ -40,9 +31,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.offerDetail == null ? Input.empty() : this.offerDetail;
     }
 
-    /**
-     * Organization resource name
-     */
     @InputImport(name="organizationName")
     private final @Nullable Input<String> organizationName;
 
@@ -50,9 +38,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationName == null ? Input.empty() : this.organizationName;
     }
 
-    /**
-     * Resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Organization resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -70,9 +52,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Subscriber detail
-     */
     @InputImport(name="userDetail")
     private final @Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 

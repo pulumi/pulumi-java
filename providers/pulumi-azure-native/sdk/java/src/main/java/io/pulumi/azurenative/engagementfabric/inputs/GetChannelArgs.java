@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
-    /**
-     * Account Name
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * Channel Name
-     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -35,9 +26,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
         return this.channelName;
     }
 
-    /**
-     * Resource Group Name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

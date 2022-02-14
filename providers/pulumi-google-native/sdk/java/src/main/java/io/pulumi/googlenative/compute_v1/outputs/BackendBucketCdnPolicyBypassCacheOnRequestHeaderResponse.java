@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse {
-/**
- * The header field name to match on when bypassing cache. Values are case-insensitive.
- */
     private final String headerName;
 
     @OutputCustomType.Constructor({"headerName"})
@@ -19,9 +16,6 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse {
         this.headerName = Objects.requireNonNull(headerName);
     }
 
-/**
- * The header field name to match on when bypassing cache. Values are case-insensitive.
- */
     public String getHeaderName() {
         return this.headerName;
     }

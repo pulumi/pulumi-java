@@ -22,478 +22,105 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The service resource.
-API Version: 2020-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Put a service with maximum parameters
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureNative.ServiceFabric.Service("service", new AzureNative.ServiceFabric.ServiceArgs
-        {
-            ApplicationName = "myApp",
-            ClusterName = "myCluster",
-            CorrelationScheme = 
-            {
-                new AzureNative.ServiceFabric.Inputs.ServiceCorrelationDescriptionArgs
-                {
-                    Scheme = "Affinity",
-                    ServiceName = "fabric:/app1/app1~svc1",
-                },
-            },
-            DefaultMoveCost = "Medium",
-            PartitionDescription = new AzureNative.ServiceFabric.Inputs.SingletonPartitionSchemeDescriptionArgs
-            {
-                PartitionScheme = "Singleton",
-            },
-            PlacementConstraints = "NodeType==frontend",
-            ResourceGroupName = "resRg",
-            ServiceDnsName = "my.service.dns",
-            ServiceKind = "Stateless",
-            ServiceLoadMetrics = 
-            {
-                new AzureNative.ServiceFabric.Inputs.ServiceLoadMetricDescriptionArgs
-                {
-                    Name = "metric1",
-                    Weight = "Low",
-                },
-            },
-            ServiceName = "myService",
-            ServicePackageActivationMode = "SharedProcess",
-            ServicePlacementPolicies = {},
-            ServiceTypeName = "myServiceType",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
-			ApplicationName: pulumi.String("myApp"),
-			ClusterName:     pulumi.String("myCluster"),
-			CorrelationScheme: []servicefabric.ServiceCorrelationDescriptionArgs{
-				&servicefabric.ServiceCorrelationDescriptionArgs{
-					Scheme:      pulumi.String("Affinity"),
-					ServiceName: pulumi.String("fabric:/app1/app1~svc1"),
-				},
-			},
-			DefaultMoveCost: pulumi.String("Medium"),
-			PartitionDescription: servicefabric.SingletonPartitionSchemeDescription{
-				PartitionScheme: "Singleton",
-			},
-			PlacementConstraints: pulumi.String("NodeType==frontend"),
-			ResourceGroupName:    pulumi.String("resRg"),
-			ServiceDnsName:       pulumi.String("my.service.dns"),
-			ServiceKind:          pulumi.String("Stateless"),
-			ServiceLoadMetrics: []servicefabric.ServiceLoadMetricDescriptionArgs{
-				&servicefabric.ServiceLoadMetricDescriptionArgs{
-					Name:   pulumi.String("metric1"),
-					Weight: pulumi.String("Low"),
-				},
-			},
-			ServiceName:                  pulumi.String("myService"),
-			ServicePackageActivationMode: pulumi.String("SharedProcess"),
-			ServicePlacementPolicies:     servicefabric.ServicePlacementPolicyDescriptionArray{},
-			ServiceTypeName:              pulumi.String("myServiceType"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const service = new azure_native.servicefabric.Service("service", {
-    applicationName: "myApp",
-    clusterName: "myCluster",
-    correlationScheme: [{
-        scheme: "Affinity",
-        serviceName: "fabric:/app1/app1~svc1",
-    }],
-    defaultMoveCost: "Medium",
-    partitionDescription: {
-        partitionScheme: "Singleton",
-    },
-    placementConstraints: "NodeType==frontend",
-    resourceGroupName: "resRg",
-    serviceDnsName: "my.service.dns",
-    serviceKind: "Stateless",
-    serviceLoadMetrics: [{
-        name: "metric1",
-        weight: "Low",
-    }],
-    serviceName: "myService",
-    servicePackageActivationMode: "SharedProcess",
-    servicePlacementPolicies: [],
-    serviceTypeName: "myServiceType",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-service = azure_native.servicefabric.Service("service",
-    application_name="myApp",
-    cluster_name="myCluster",
-    correlation_scheme=[azure_native.servicefabric.ServiceCorrelationDescriptionArgs(
-        scheme="Affinity",
-        service_name="fabric:/app1/app1~svc1",
-    )],
-    default_move_cost="Medium",
-    partition_description=azure_native.servicefabric.SingletonPartitionSchemeDescriptionArgs(
-        partition_scheme="Singleton",
-    ),
-    placement_constraints="NodeType==frontend",
-    resource_group_name="resRg",
-    service_dns_name="my.service.dns",
-    service_kind="Stateless",
-    service_load_metrics=[azure_native.servicefabric.ServiceLoadMetricDescriptionArgs(
-        name="metric1",
-        weight="Low",
-    )],
-    service_name="myService",
-    service_package_activation_mode="SharedProcess",
-    service_placement_policies=[],
-    service_type_name="myServiceType")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Put a service with minimum parameters
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureNative.ServiceFabric.Service("service", new AzureNative.ServiceFabric.ServiceArgs
-        {
-            ApplicationName = "myApp",
-            ClusterName = "myCluster",
-            PartitionDescription = new AzureNative.ServiceFabric.Inputs.SingletonPartitionSchemeDescriptionArgs
-            {
-                PartitionScheme = "Singleton",
-            },
-            ResourceGroupName = "resRg",
-            ServiceKind = "Stateless",
-            ServiceName = "myService",
-            ServiceTypeName = "myServiceType",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
-			ApplicationName: pulumi.String("myApp"),
-			ClusterName:     pulumi.String("myCluster"),
-			PartitionDescription: servicefabric.SingletonPartitionSchemeDescription{
-				PartitionScheme: "Singleton",
-			},
-			ResourceGroupName: pulumi.String("resRg"),
-			ServiceKind:       pulumi.String("Stateless"),
-			ServiceName:       pulumi.String("myService"),
-			ServiceTypeName:   pulumi.String("myServiceType"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const service = new azure_native.servicefabric.Service("service", {
-    applicationName: "myApp",
-    clusterName: "myCluster",
-    partitionDescription: {
-        partitionScheme: "Singleton",
-    },
-    resourceGroupName: "resRg",
-    serviceKind: "Stateless",
-    serviceName: "myService",
-    serviceTypeName: "myServiceType",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-service = azure_native.servicefabric.Service("service",
-    application_name="myApp",
-    cluster_name="myCluster",
-    partition_description=azure_native.servicefabric.SingletonPartitionSchemeDescriptionArgs(
-        partition_scheme="Singleton",
-    ),
-    resource_group_name="resRg",
-    service_kind="Stateless",
-    service_name="myService",
-    service_type_name="myServiceType")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:servicefabric:Service myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService 
-```
-
- */
 @ResourceType(type="azure-native:servicefabric:Service")
 public class Service extends io.pulumi.resources.CustomResource {
-    /**
-     * A list that describes the correlation of the service with other services.
-     */
     @OutputExport(name="correlationScheme", type=List.class, parameters={ServiceCorrelationDescriptionResponse.class})
     private Output</* @Nullable */ List<ServiceCorrelationDescriptionResponse>> correlationScheme;
 
-    /**
-     * @return A list that describes the correlation of the service with other services.
-     */
     public Output</* @Nullable */ List<ServiceCorrelationDescriptionResponse>> getCorrelationScheme() {
         return this.correlationScheme;
     }
-    /**
-     * Specifies the move cost for the service.
-     */
     @OutputExport(name="defaultMoveCost", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultMoveCost;
 
-    /**
-     * @return Specifies the move cost for the service.
-     */
     public Output</* @Nullable */ String> getDefaultMoveCost() {
         return this.defaultMoveCost;
     }
-    /**
-     * Azure resource etag.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Azure resource etag.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * It will be deprecated in New API, resource location depends on the parent resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return It will be deprecated in New API, resource location depends on the parent resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Azure resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Describes how the service is partitioned.
-     */
     @OutputExport(name="partitionDescription", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> partitionDescription;
 
-    /**
-     * @return Describes how the service is partitioned.
-     */
     public Output</* @Nullable */ Object> getPartitionDescription() {
         return this.partitionDescription;
     }
-    /**
-     * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
-     */
     @OutputExport(name="placementConstraints", type=String.class, parameters={})
     private Output</* @Nullable */ String> placementConstraints;
 
-    /**
-     * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
-     */
     public Output</* @Nullable */ String> getPlacementConstraints() {
         return this.placementConstraints;
     }
-    /**
-     * The current deployment or provisioning state, which only appears in the response
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The current deployment or provisioning state, which only appears in the response
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
-     */
     @OutputExport(name="serviceDnsName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceDnsName;
 
-    /**
-     * @return Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
-     */
     public Output</* @Nullable */ String> getServiceDnsName() {
         return this.serviceDnsName;
     }
-    /**
-     * The kind of service (Stateless or Stateful).
-     */
     @OutputExport(name="serviceKind", type=String.class, parameters={})
     private Output<String> serviceKind;
 
-    /**
-     * @return The kind of service (Stateless or Stateful).
-     */
     public Output<String> getServiceKind() {
         return this.serviceKind;
     }
-    /**
-     * The service load metrics is given as an array of ServiceLoadMetricDescription objects.
-     */
     @OutputExport(name="serviceLoadMetrics", type=List.class, parameters={ServiceLoadMetricDescriptionResponse.class})
     private Output</* @Nullable */ List<ServiceLoadMetricDescriptionResponse>> serviceLoadMetrics;
 
-    /**
-     * @return The service load metrics is given as an array of ServiceLoadMetricDescription objects.
-     */
     public Output</* @Nullable */ List<ServiceLoadMetricDescriptionResponse>> getServiceLoadMetrics() {
         return this.serviceLoadMetrics;
     }
-    /**
-     * The activation Mode of the service package
-     */
     @OutputExport(name="servicePackageActivationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> servicePackageActivationMode;
 
-    /**
-     * @return The activation Mode of the service package
-     */
     public Output</* @Nullable */ String> getServicePackageActivationMode() {
         return this.servicePackageActivationMode;
     }
-    /**
-     * A list that describes the correlation of the service with other services.
-     */
     @OutputExport(name="servicePlacementPolicies", type=List.class, parameters={ServicePlacementPolicyDescriptionResponse.class})
     private Output</* @Nullable */ List<ServicePlacementPolicyDescriptionResponse>> servicePlacementPolicies;
 
-    /**
-     * @return A list that describes the correlation of the service with other services.
-     */
     public Output</* @Nullable */ List<ServicePlacementPolicyDescriptionResponse>> getServicePlacementPolicies() {
         return this.servicePlacementPolicies;
     }
-    /**
-     * The name of the service type
-     */
     @OutputExport(name="serviceTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceTypeName;
 
-    /**
-     * @return The name of the service type
-     */
     public Output</* @Nullable */ String> getServiceTypeName() {
         return this.serviceTypeName;
     }
-    /**
-     * Azure resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Azure resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Azure resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicefabric:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -519,14 +146,6 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

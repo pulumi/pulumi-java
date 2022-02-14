@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * How to combine the results of multiple conditions to determine if an incident should be opened. If condition_time_series_query_language is present, this must be COMBINE_UNSPECIFIED.
- */
     @EnumType
     public enum AlertPolicyCombiner {
-/**
- * An unspecified combiner.
- */
         CombineUnspecified("COMBINE_UNSPECIFIED"),
-/**
- * Combine conditions using the logical AND operator. An incident is created only if all the conditions are met simultaneously. This combiner is satisfied if all conditions are met, even if they are met on completely different resources.
- */
         And("AND"),
-/**
- * Combine conditions using the logical OR operator. An incident is created if any of the listed conditions is met.
- */
         Or("OR"),
-/**
- * Combine conditions using logical AND operator, but unlike the regular AND option, an incident is created only if all conditions are met simultaneously on at least one resource.
- */
         AndWithMatchingResource("AND_WITH_MATCHING_RESOURCE");
 
         private final String value;

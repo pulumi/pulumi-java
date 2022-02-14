@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * DeploymentCondition describes the state of a deployment at a certain point.
- */
 public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentConditionArgs Empty = new DeploymentConditionArgs();
 
-    /**
-     * Last time the condition transitioned from one status to another.
-     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -27,9 +21,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
-    /**
-     * The last time this condition was updated.
-     */
     @InputImport(name="lastUpdateTime")
     private final @Nullable Input<String> lastUpdateTime;
 
@@ -37,9 +28,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
     }
 
-    /**
-     * A human readable message indicating details about the transition.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -47,9 +35,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * The reason for the condition's last transition.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -57,9 +42,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
         return this.reason == null ? Input.empty() : this.reason;
     }
 
-    /**
-     * Status of the condition, one of True, False, Unknown.
-     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -67,9 +49,6 @@ public final class DeploymentConditionArgs extends io.pulumi.resources.ResourceA
         return this.status;
     }
 
-    /**
-     * Type of deployment condition.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

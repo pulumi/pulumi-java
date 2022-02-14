@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiManagementServiceSsoToken {
-/**
- * The response of the GetSsoToken operation.
-API Version: 2020-12-01.
- *
- * The response of the GetSsoToken operation.
- */
     public static CompletableFuture<GetApiManagementServiceSsoTokenResult> invokeAsync(GetApiManagementServiceSsoTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceSsoToken", TypeShape.of(GetApiManagementServiceSsoTokenResult.class), args == null ? GetApiManagementServiceSsoTokenArgs.Empty : args, Utilities.withVersion(options));
     }

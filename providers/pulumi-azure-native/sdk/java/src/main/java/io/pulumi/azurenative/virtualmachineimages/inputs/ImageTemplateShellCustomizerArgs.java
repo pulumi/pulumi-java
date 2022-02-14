@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
- */
 public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateShellCustomizerArgs Empty = new ImageTemplateShellCustomizerArgs();
 
-    /**
-     * Array of shell commands to execute
-     */
     @InputImport(name="inline")
     private final @Nullable Input<List<String>> inline;
 
@@ -28,9 +22,6 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
         return this.inline == null ? Input.empty() : this.inline;
     }
 
-    /**
-     * Friendly Name to provide context on what this customization step does
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
-     */
     @InputImport(name="scriptUri")
     private final @Nullable Input<String> scriptUri;
 
@@ -48,9 +36,6 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
         return this.scriptUri == null ? Input.empty() : this.scriptUri;
     }
 
-    /**
-     * SHA256 checksum of the shell script provided in the scriptUri field
-     */
     @InputImport(name="sha256Checksum")
     private final @Nullable Input<String> sha256Checksum;
 
@@ -58,10 +43,6 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
     }
 
-    /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-Expected value is 'Shell'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

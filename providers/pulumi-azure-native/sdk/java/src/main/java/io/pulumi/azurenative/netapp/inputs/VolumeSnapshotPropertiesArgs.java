@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Volume Snapshot Properties
- */
 public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeSnapshotPropertiesArgs Empty = new VolumeSnapshotPropertiesArgs();
 
-    /**
-     * Snapshot Policy ResourceId
-     */
     @InputImport(name="snapshotPolicyId")
     private final @Nullable Input<String> snapshotPolicyId;
 

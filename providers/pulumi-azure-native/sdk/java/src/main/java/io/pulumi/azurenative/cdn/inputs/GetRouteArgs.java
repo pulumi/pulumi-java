@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
-    /**
-     * Name of the endpoint under the profile which is unique globally.
-     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -25,9 +19,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
         return this.endpointName;
     }
 
-    /**
-     * Name of the CDN profile which is unique within the resource group.
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -35,9 +26,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the routing rule.
-     */
     @InputImport(name="routeName", required=true)
     private final String routeName;
 

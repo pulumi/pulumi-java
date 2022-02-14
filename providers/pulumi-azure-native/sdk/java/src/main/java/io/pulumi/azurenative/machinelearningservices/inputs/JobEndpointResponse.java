@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Job endpoint definition
- */
 public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobEndpointResponse Empty = new JobEndpointResponse();
 
-    /**
-     * Url for endpoint.
-     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 
@@ -29,9 +23,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
-    /**
-     * Endpoint type.
-     */
     @InputImport(name="jobEndpointType")
     private final @Nullable String jobEndpointType;
 
@@ -39,9 +30,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.jobEndpointType == null ? Optional.empty() : Optional.ofNullable(this.jobEndpointType);
     }
 
-    /**
-     * Port for endpoint.
-     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -49,9 +37,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * Additional properties to set on the endpoint.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 

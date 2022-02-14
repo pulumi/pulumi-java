@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CertificateReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateReferenceResponse Empty = new CertificateReferenceResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,9 +22,6 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
         return this.id;
     }
 
-    /**
-     * The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
-     */
     @InputImport(name="storeLocation")
     private final @Nullable String storeLocation;
 
@@ -38,9 +29,6 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
         return this.storeLocation == null ? Optional.empty() : Optional.ofNullable(this.storeLocation);
     }
 
-    /**
-     * This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
-     */
     @InputImport(name="storeName")
     private final @Nullable String storeName;
 
@@ -48,9 +36,6 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
         return this.storeName == null ? Optional.empty() : Optional.ofNullable(this.storeName);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="visibility")
     private final @Nullable List<String> visibility;
 

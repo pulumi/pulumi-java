@@ -13,33 +13,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetProjectResult {
-/**
- * For optimistic concurrency control.
- */
     private final @Nullable String eTag;
-/**
- * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
- */
     private final String id;
-/**
- * Azure location in which project is created.
- */
     private final @Nullable String location;
-/**
- * Name of the project.
- */
     private final String name;
-/**
- * Properties of the project.
- */
     private final ProjectPropertiesResponse properties;
-/**
- * Tags provided by Azure Tagging service.
- */
     private final @Nullable Object tags;
-/**
- * Type of the object = [Microsoft.Migrate/assessmentProjects].
- */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","location","name","properties","tags","type"})
@@ -60,45 +39,24 @@ public final class GetProjectResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * For optimistic concurrency control.
- */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
-/**
- * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Azure location in which project is created.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Name of the project.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Properties of the project.
- */
     public ProjectPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * Tags provided by Azure Tagging service.
- */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
-/**
- * Type of the object = [Microsoft.Migrate/assessmentProjects].
- */
     public String getType() {
         return this.type;
     }

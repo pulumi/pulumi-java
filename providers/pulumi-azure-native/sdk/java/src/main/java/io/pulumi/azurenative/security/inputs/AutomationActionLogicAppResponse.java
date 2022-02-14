@@ -10,17 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The logic app action that should be triggered. To learn more about Security Center's Workflow Automation capabilities, visit https://aka.ms/ASCWorkflowAutomationLearnMore
- */
 public final class AutomationActionLogicAppResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationActionLogicAppResponse Empty = new AutomationActionLogicAppResponse();
 
-    /**
-     * The type of the action that will be triggered by the Automation
-Expected value is 'LogicApp'.
-     */
     @InputImport(name="actionType", required=true)
     private final String actionType;
 
@@ -28,9 +21,6 @@ Expected value is 'LogicApp'.
         return this.actionType;
     }
 
-    /**
-     * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
-     */
     @InputImport(name="logicAppResourceId")
     private final @Nullable String logicAppResourceId;
 
@@ -38,9 +28,6 @@ Expected value is 'LogicApp'.
         return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
     }
 
-    /**
-     * The Logic App trigger URI endpoint (it will not be included in any response).
-     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

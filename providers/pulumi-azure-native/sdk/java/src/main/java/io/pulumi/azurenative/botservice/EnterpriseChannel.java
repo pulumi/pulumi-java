@@ -17,263 +17,57 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Enterprise Channel resource definition
-API Version: 2018-07-12.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create Enterprise Channel
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var enterpriseChannel = new AzureNative.BotService.EnterpriseChannel("enterpriseChannel", new AzureNative.BotService.EnterpriseChannelArgs
-        {
-            Location = "West US",
-            Properties = new AzureNative.BotService.Inputs.EnterpriseChannelPropertiesArgs
-            {
-                Nodes = 
-                {
-                    new AzureNative.BotService.Inputs.EnterpriseChannelNodeArgs
-                    {
-                        AzureLocation = "WestUs",
-                        AzureSku = "Int1",
-                        Name = "Node 1",
-                    },
-                },
-            },
-            ResourceGroupName = "OneResourceGroupName",
-            ResourceName = "contoso-dl",
-            Sku = new AzureNative.BotService.Inputs.SkuArgs
-            {
-                Name = "S1",
-            },
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := botservice.NewEnterpriseChannel(ctx, "enterpriseChannel", &botservice.EnterpriseChannelArgs{
-			Location: pulumi.String("West US"),
-			Properties: &botservice.EnterpriseChannelPropertiesArgs{
-				Nodes: []botservice.EnterpriseChannelNodeArgs{
-					&botservice.EnterpriseChannelNodeArgs{
-						AzureLocation: pulumi.String("WestUs"),
-						AzureSku:      pulumi.String("Int1"),
-						Name:          pulumi.String("Node 1"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("OneResourceGroupName"),
-			ResourceName:      pulumi.String("contoso-dl"),
-			Sku: &botservice.SkuArgs{
-				Name: pulumi.String("S1"),
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpriseChannel", {
-    location: "West US",
-    properties: {
-        nodes: [{
-            azureLocation: "WestUs",
-            azureSku: "Int1",
-            name: "Node 1",
-        }],
-    },
-    resourceGroupName: "OneResourceGroupName",
-    resourceName: "contoso-dl",
-    sku: {
-        name: "S1",
-    },
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-enterprise_channel = azure_native.botservice.EnterpriseChannel("enterpriseChannel",
-    location="West US",
-    properties=azure_native.botservice.EnterpriseChannelPropertiesArgs(
-        nodes=[azure_native.botservice.EnterpriseChannelNodeArgs(
-            azure_location="WestUs",
-            azure_sku="Int1",
-            name="Node 1",
-        )],
-    ),
-    resource_group_name="OneResourceGroupName",
-    resource_name="contoso-dl",
-    sku=azure_native.botservice.SkuArgs(
-        name="S1",
-    ),
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:botservice:EnterpriseChannel myresource1 someid 
-```
-
- */
 @ResourceType(type="azure-native:botservice:EnterpriseChannel")
 public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
-    /**
-     * Entity Tag
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Entity Tag
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * Required. Gets or sets the Kind of the resource.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Required. Gets or sets the Kind of the resource.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Specifies the location of the resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Specifies the location of the resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Specifies the name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Specifies the name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The set of properties specific to an Enterprise Channel resource.
-     */
     @OutputExport(name="properties", type=EnterpriseChannelPropertiesResponse.class, parameters={})
     private Output<EnterpriseChannelPropertiesResponse> properties;
 
-    /**
-     * @return The set of properties specific to an Enterprise Channel resource.
-     */
     public Output<EnterpriseChannelPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Gets or sets the SKU of the resource.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return Gets or sets the SKU of the resource.
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Contains resource tags defined as key/value pairs.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Contains resource tags defined as key/value pairs.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Specifies the type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Specifies the type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public EnterpriseChannel(String name, EnterpriseChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:botservice:EnterpriseChannel", name, args == null ? EnterpriseChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -292,14 +86,6 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static EnterpriseChannel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnterpriseChannel(name, id, options);
     }

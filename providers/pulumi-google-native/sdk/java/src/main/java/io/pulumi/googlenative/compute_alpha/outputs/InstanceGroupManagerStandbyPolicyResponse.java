@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceGroupManagerStandbyPolicyResponse {
-/**
- * 
- */
     private final Integer initialDelaySec;
 
     @OutputCustomType.Constructor({"initialDelaySec"})
@@ -19,9 +16,6 @@ public final class InstanceGroupManagerStandbyPolicyResponse {
         this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
     }
 
-/**
- * 
- */
     public Integer getInitialDelaySec() {
         return this.initialDelaySec;
     }

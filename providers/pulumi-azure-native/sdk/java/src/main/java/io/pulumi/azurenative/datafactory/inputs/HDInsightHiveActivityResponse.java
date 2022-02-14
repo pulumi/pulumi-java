@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * HDInsight Hive activity type.
- */
 public final class HDInsightHiveActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HDInsightHiveActivityResponse Empty = new HDInsightHiveActivityResponse();
 
-    /**
-     * User specified arguments to HDInsightActivity.
-     */
     @InputImport(name="arguments")
     private final @Nullable List<Object> arguments;
 
@@ -35,9 +29,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.arguments == null ? List.of() : this.arguments;
     }
 
-    /**
-     * Allows user to specify defines for Hive job request.
-     */
     @InputImport(name="defines")
     private final @Nullable Map<String,Object> defines;
 
@@ -45,9 +36,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.defines == null ? Map.of() : this.defines;
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -55,9 +43,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -65,9 +50,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Debug info option.
-     */
     @InputImport(name="getDebugInfo")
     private final @Nullable String getDebugInfo;
 
@@ -75,9 +57,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -85,9 +64,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -95,9 +71,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -105,9 +78,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
-    /**
-     * Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
-     */
     @InputImport(name="queryTimeout")
     private final @Nullable Integer queryTimeout;
 
@@ -115,9 +85,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
-    /**
-     * Script linked service reference.
-     */
     @InputImport(name="scriptLinkedService")
     private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
 
@@ -125,9 +92,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.scriptLinkedService == null ? Optional.empty() : Optional.ofNullable(this.scriptLinkedService);
     }
 
-    /**
-     * Script path. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="scriptPath")
     private final @Nullable Object scriptPath;
 
@@ -135,9 +99,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.scriptPath == null ? Optional.empty() : Optional.ofNullable(this.scriptPath);
     }
 
-    /**
-     * Storage linked service references.
-     */
     @InputImport(name="storageLinkedServices")
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
@@ -145,10 +106,6 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'HDInsightHive'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -156,9 +113,6 @@ Expected value is 'HDInsightHive'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -166,9 +120,6 @@ Expected value is 'HDInsightHive'.
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
-    /**
-     * User specified arguments under hivevar namespace.
-     */
     @InputImport(name="variables")
     private final @Nullable List<Object> variables;
 

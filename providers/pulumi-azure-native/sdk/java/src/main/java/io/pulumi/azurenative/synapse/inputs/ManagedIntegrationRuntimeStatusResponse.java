@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Managed integration runtime status.
- */
 public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIntegrationRuntimeStatusResponse Empty = new ManagedIntegrationRuntimeStatusResponse();
 
-    /**
-     * The time at which the integration runtime was created, in ISO8601 format.
-     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -29,9 +23,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
         return this.createTime;
     }
 
-    /**
-     * The workspace name which the integration runtime belong to.
-     */
     @InputImport(name="dataFactoryName", required=true)
     private final String dataFactoryName;
 
@@ -39,9 +30,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
         return this.dataFactoryName;
     }
 
-    /**
-     * The last operation result that occurred on this integration runtime.
-     */
     @InputImport(name="lastOperation", required=true)
     private final ManagedIntegrationRuntimeOperationResultResponse lastOperation;
 
@@ -49,9 +37,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
         return this.lastOperation;
     }
 
-    /**
-     * The list of nodes for managed integration runtime.
-     */
     @InputImport(name="nodes", required=true)
     private final List<ManagedIntegrationRuntimeNodeResponse> nodes;
 
@@ -59,9 +44,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
         return this.nodes;
     }
 
-    /**
-     * The errors that occurred on this integration runtime.
-     */
     @InputImport(name="otherErrors", required=true)
     private final List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
 
@@ -69,9 +51,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
         return this.otherErrors;
     }
 
-    /**
-     * The state of integration runtime.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -79,10 +58,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
         return this.state;
     }
 
-    /**
-     * The type of integration runtime.
-Expected value is 'Managed'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

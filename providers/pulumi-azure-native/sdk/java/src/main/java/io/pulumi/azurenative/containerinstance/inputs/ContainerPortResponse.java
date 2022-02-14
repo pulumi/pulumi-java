@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The port exposed on the container instance.
- */
 public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerPortResponse Empty = new ContainerPortResponse();
 
-    /**
-     * The port number exposed within the container group.
-     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -28,9 +22,6 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
         return this.port;
     }
 
-    /**
-     * The protocol associated with the port.
-     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 

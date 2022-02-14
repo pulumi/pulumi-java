@@ -21,491 +21,135 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The streaming endpoint.
-API Version: 2020-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a streaming endpoint
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingEndpoint = new AzureNative.Media.StreamingEndpoint("streamingEndpoint", new AzureNative.Media.StreamingEndpointArgs
-        {
-            AccessControl = new AzureNative.Media.Inputs.StreamingEndpointAccessControlArgs
-            {
-                Akamai = new AzureNative.Media.Inputs.AkamaiAccessControlArgs
-                {
-                    AkamaiSignatureHeaderAuthenticationKeyList = 
-                    {
-                        new AzureNative.Media.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
-                        {
-                            Base64Key = "dGVzdGlkMQ==",
-                            Expiration = "2029-12-31T16:00:00-08:00",
-                            Identifier = "id1",
-                        },
-                        new AzureNative.Media.Inputs.AkamaiSignatureHeaderAuthenticationKeyArgs
-                        {
-                            Base64Key = "dGVzdGlkMQ==",
-                            Expiration = "2030-12-31T16:00:00-08:00",
-                            Identifier = "id2",
-                        },
-                    },
-                },
-                Ip = new AzureNative.Media.Inputs.IPAccessControlArgs
-                {
-                    Allow = 
-                    {
-                        new AzureNative.Media.Inputs.IPRangeArgs
-                        {
-                            Address = "192.168.1.1",
-                            Name = "AllowedIp",
-                        },
-                    },
-                },
-            },
-            AccountName = "slitestmedia10",
-            AvailabilitySetName = "availableset",
-            CdnEnabled = false,
-            Description = "test event 1",
-            Location = "West US",
-            ResourceGroupName = "mediaresources",
-            ScaleUnits = 1,
-            StreamingEndpointName = "myStreamingEndpoint1",
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewStreamingEndpoint(ctx, "streamingEndpoint", &media.StreamingEndpointArgs{
-			AccessControl: &media.StreamingEndpointAccessControlArgs{
-				Akamai: &media.AkamaiAccessControlArgs{
-					AkamaiSignatureHeaderAuthenticationKeyList: media.AkamaiSignatureHeaderAuthenticationKeyArray{
-						&media.AkamaiSignatureHeaderAuthenticationKeyArgs{
-							Base64Key:  pulumi.String("dGVzdGlkMQ=="),
-							Expiration: pulumi.String("2029-12-31T16:00:00-08:00"),
-							Identifier: pulumi.String("id1"),
-						},
-						&media.AkamaiSignatureHeaderAuthenticationKeyArgs{
-							Base64Key:  pulumi.String("dGVzdGlkMQ=="),
-							Expiration: pulumi.String("2030-12-31T16:00:00-08:00"),
-							Identifier: pulumi.String("id2"),
-						},
-					},
-				},
-				Ip: &media.IPAccessControlArgs{
-					Allow: media.IPRangeArray{
-						&media.IPRangeArgs{
-							Address: pulumi.String("192.168.1.1"),
-							Name:    pulumi.String("AllowedIp"),
-						},
-					},
-				},
-			},
-			AccountName:           pulumi.String("slitestmedia10"),
-			AvailabilitySetName:   pulumi.String("availableset"),
-			CdnEnabled:            pulumi.Bool(false),
-			Description:           pulumi.String("test event 1"),
-			Location:              pulumi.String("West US"),
-			ResourceGroupName:     pulumi.String("mediaresources"),
-			ScaleUnits:            pulumi.Int(1),
-			StreamingEndpointName: pulumi.String("myStreamingEndpoint1"),
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const streamingEndpoint = new azure_native.media.StreamingEndpoint("streamingEndpoint", {
-    accessControl: {
-        akamai: {
-            akamaiSignatureHeaderAuthenticationKeyList: [
-                {
-                    base64Key: "dGVzdGlkMQ==",
-                    expiration: "2029-12-31T16:00:00-08:00",
-                    identifier: "id1",
-                },
-                {
-                    base64Key: "dGVzdGlkMQ==",
-                    expiration: "2030-12-31T16:00:00-08:00",
-                    identifier: "id2",
-                },
-            ],
-        },
-        ip: {
-            allow: [{
-                address: "192.168.1.1",
-                name: "AllowedIp",
-            }],
-        },
-    },
-    accountName: "slitestmedia10",
-    availabilitySetName: "availableset",
-    cdnEnabled: false,
-    description: "test event 1",
-    location: "West US",
-    resourceGroupName: "mediaresources",
-    scaleUnits: 1,
-    streamingEndpointName: "myStreamingEndpoint1",
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-streaming_endpoint = azure_native.media.StreamingEndpoint("streamingEndpoint",
-    access_control=azure_native.media.StreamingEndpointAccessControlArgs(
-        akamai=azure_native.media.AkamaiAccessControlArgs(
-            akamai_signature_header_authentication_key_list=[
-                azure_native.media.AkamaiSignatureHeaderAuthenticationKeyArgs(
-                    base64_key="dGVzdGlkMQ==",
-                    expiration="2029-12-31T16:00:00-08:00",
-                    identifier="id1",
-                ),
-                azure_native.media.AkamaiSignatureHeaderAuthenticationKeyArgs(
-                    base64_key="dGVzdGlkMQ==",
-                    expiration="2030-12-31T16:00:00-08:00",
-                    identifier="id2",
-                ),
-            ],
-        ),
-        ip=azure_native.media.IPAccessControlArgs(
-            allow=[azure_native.media.IPRangeArgs(
-                address="192.168.1.1",
-                name="AllowedIp",
-            )],
-        ),
-    ),
-    account_name="slitestmedia10",
-    availability_set_name="availableset",
-    cdn_enabled=False,
-    description="test event 1",
-    location="West US",
-    resource_group_name="mediaresources",
-    scale_units=1,
-    streaming_endpoint_name="myStreamingEndpoint1",
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:media:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
-```
-
- */
 @ResourceType(type="azure-native:media:StreamingEndpoint")
 public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
-    /**
-     * The access control definition of the streaming endpoint.
-     */
     @OutputExport(name="accessControl", type=StreamingEndpointAccessControlResponse.class, parameters={})
     private Output</* @Nullable */ StreamingEndpointAccessControlResponse> accessControl;
 
-    /**
-     * @return The access control definition of the streaming endpoint.
-     */
     public Output</* @Nullable */ StreamingEndpointAccessControlResponse> getAccessControl() {
         return this.accessControl;
     }
-    /**
-     * This feature is deprecated, do not set a value for this property.
-     */
     @OutputExport(name="availabilitySetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilitySetName;
 
-    /**
-     * @return This feature is deprecated, do not set a value for this property.
-     */
     public Output</* @Nullable */ String> getAvailabilitySetName() {
         return this.availabilitySetName;
     }
-    /**
-     * The CDN enabled flag.
-     */
     @OutputExport(name="cdnEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cdnEnabled;
 
-    /**
-     * @return The CDN enabled flag.
-     */
     public Output</* @Nullable */ Boolean> getCdnEnabled() {
         return this.cdnEnabled;
     }
-    /**
-     * The CDN profile name.
-     */
     @OutputExport(name="cdnProfile", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdnProfile;
 
-    /**
-     * @return The CDN profile name.
-     */
     public Output</* @Nullable */ String> getCdnProfile() {
         return this.cdnProfile;
     }
-    /**
-     * The CDN provider name.
-     */
     @OutputExport(name="cdnProvider", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdnProvider;
 
-    /**
-     * @return The CDN provider name.
-     */
     public Output</* @Nullable */ String> getCdnProvider() {
         return this.cdnProvider;
     }
-    /**
-     * The exact time the streaming endpoint was created.
-     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
-    /**
-     * @return The exact time the streaming endpoint was created.
-     */
     public Output<String> getCreated() {
         return this.created;
     }
-    /**
-     * The streaming endpoint access policies.
-     */
     @OutputExport(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
     private Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies;
 
-    /**
-     * @return The streaming endpoint access policies.
-     */
     public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> getCrossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies;
     }
-    /**
-     * The custom host names of the streaming endpoint
-     */
     @OutputExport(name="customHostNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customHostNames;
 
-    /**
-     * @return The custom host names of the streaming endpoint
-     */
     public Output</* @Nullable */ List<String>> getCustomHostNames() {
         return this.customHostNames;
     }
-    /**
-     * The streaming endpoint description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The streaming endpoint description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The free trial expiration time.
-     */
     @OutputExport(name="freeTrialEndTime", type=String.class, parameters={})
     private Output<String> freeTrialEndTime;
 
-    /**
-     * @return The free trial expiration time.
-     */
     public Output<String> getFreeTrialEndTime() {
         return this.freeTrialEndTime;
     }
-    /**
-     * The streaming endpoint host name.
-     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
-    /**
-     * @return The streaming endpoint host name.
-     */
     public Output<String> getHostName() {
         return this.hostName;
     }
-    /**
-     * The exact time the streaming endpoint was last modified.
-     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
-    /**
-     * @return The exact time the streaming endpoint was last modified.
-     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Max cache age
-     */
     @OutputExport(name="maxCacheAge", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxCacheAge;
 
-    /**
-     * @return Max cache age
-     */
     public Output</* @Nullable */ Double> getMaxCacheAge() {
         return this.maxCacheAge;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the streaming endpoint.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the streaming endpoint.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The resource state of the streaming endpoint.
-     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
-    /**
-     * @return The resource state of the streaming endpoint.
-     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
-    /**
-     * The number of scale units. Use the Scale operation to adjust this value.
-     */
     @OutputExport(name="scaleUnits", type=Integer.class, parameters={})
     private Output<Integer> scaleUnits;
 
-    /**
-     * @return The number of scale units. Use the Scale operation to adjust this value.
-     */
     public Output<Integer> getScaleUnits() {
         return this.scaleUnits;
     }
-    /**
-     * The system metadata relating to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata relating to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StreamingEndpoint(String name, StreamingEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:StreamingEndpoint", name, args == null ? StreamingEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -529,14 +173,6 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StreamingEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamingEndpoint(name, id, options);
     }

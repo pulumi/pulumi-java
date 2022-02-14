@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNamespaceAuthorizationRuleArgs Empty = new GetNamespaceAuthorizationRuleArgs();
 
-    /**
-     * The authorization rule name.
-     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -25,9 +19,6 @@ public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources
         return this.authorizationRuleName;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -35,9 +26,6 @@ public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources
         return this.namespaceName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Azure Automation Runbook notification receiver.
- */
 public final class AutomationRunbookReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRunbookReceiverResponse Empty = new AutomationRunbookReceiverResponse();
 
-    /**
-     * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
-     */
     @InputImport(name="automationAccountId", required=true)
     private final String automationAccountId;
 
@@ -28,9 +22,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
         return this.automationAccountId;
     }
 
-    /**
-     * Indicates whether this instance is global runbook.
-     */
     @InputImport(name="isGlobalRunbook", required=true)
     private final Boolean isGlobalRunbook;
 
@@ -38,9 +29,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
         return this.isGlobalRunbook;
     }
 
-    /**
-     * Indicates name of the webhook.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -48,9 +36,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The name for this runbook.
-     */
     @InputImport(name="runbookName", required=true)
     private final String runbookName;
 
@@ -58,9 +43,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
         return this.runbookName;
     }
 
-    /**
-     * The URI where webhooks should be sent.
-     */
     @InputImport(name="serviceUri")
     private final @Nullable String serviceUri;
 
@@ -68,9 +50,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
     }
 
-    /**
-     * Indicates whether to use common alert schema.
-     */
     @InputImport(name="useCommonAlertSchema")
     private final @Nullable Boolean useCommonAlertSchema;
 
@@ -78,9 +57,6 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    /**
-     * The resource id for webhook linked to this runbook.
-     */
     @InputImport(name="webhookResourceId", required=true)
     private final String webhookResourceId;
 

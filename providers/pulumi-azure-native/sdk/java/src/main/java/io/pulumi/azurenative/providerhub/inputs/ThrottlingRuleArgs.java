@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThrottlingRuleArgs Empty = new ThrottlingRuleArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -29,9 +23,6 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="metrics", required=true)
     private final Input<List<ThrottlingMetricArgs>> metrics;
 
@@ -39,9 +30,6 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.metrics;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requiredFeatures")
     private final @Nullable Input<List<String>> requiredFeatures;
 

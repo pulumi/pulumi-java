@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MultiCloudCluster contains information specific to GKE Multi-Cloud clusters.
- */
 public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MultiCloudClusterArgs Empty = new MultiCloudClusterArgs();
 
-    /**
-     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
-     */
     @InputImport(name="resourceLink")
     private final @Nullable Input<String> resourceLink;
 

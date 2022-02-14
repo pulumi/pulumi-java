@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionDetailsResponse {
-/**
- * Customer Managed Key Details
- */
     private final @Nullable CustomerManagedKeyDetailsResponse cmk;
-/**
- * Double Encryption enabled
- */
     private final Boolean doubleEncryptionEnabled;
 
     @OutputCustomType.Constructor({"cmk","doubleEncryptionEnabled"})
@@ -29,15 +23,9 @@ public final class EncryptionDetailsResponse {
         this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
     }
 
-/**
- * Customer Managed Key Details
- */
     public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
         return Optional.ofNullable(this.cmk);
     }
-/**
- * Double Encryption enabled
- */
     public Boolean getDoubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;
     }

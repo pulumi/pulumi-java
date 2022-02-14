@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TokenCredentialsPropertiesResponse {
-/**
- * 
- */
     private final @Nullable List<TokenCertificateResponse> certificates;
-/**
- * 
- */
     private final @Nullable List<TokenPasswordResponse> passwords;
 
     @OutputCustomType.Constructor({"certificates","passwords"})
@@ -29,15 +23,9 @@ public final class TokenCredentialsPropertiesResponse {
         this.passwords = passwords;
     }
 
-/**
- * 
- */
     public List<TokenCertificateResponse> getCertificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
-/**
- * 
- */
     public List<TokenPasswordResponse> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
     }

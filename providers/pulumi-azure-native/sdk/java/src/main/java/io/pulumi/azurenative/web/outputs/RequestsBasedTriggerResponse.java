@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RequestsBasedTriggerResponse {
-/**
- * Request Count.
- */
     private final @Nullable Integer count;
-/**
- * Time interval.
- */
     private final @Nullable String timeInterval;
 
     @OutputCustomType.Constructor({"count","timeInterval"})
@@ -29,15 +23,9 @@ public final class RequestsBasedTriggerResponse {
         this.timeInterval = timeInterval;
     }
 
-/**
- * Request Count.
- */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
-/**
- * Time interval.
- */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }

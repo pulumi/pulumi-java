@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represent the secrets intended for encryption with asymmetric key pair.
- */
 public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AsymmetricEncryptedSecretResponse Empty = new AsymmetricEncryptedSecretResponse();
 
-    /**
-     * The algorithm used to encrypt "Value".
-     */
     @InputImport(name="encryptionAlgorithm", required=true)
     private final String encryptionAlgorithm;
 
@@ -27,9 +21,6 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
         return this.encryptionAlgorithm;
     }
 
-    /**
-     * Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.
-     */
     @InputImport(name="encryptionCertThumbprint")
     private final @Nullable String encryptionCertThumbprint;
 
@@ -37,9 +28,6 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
         return this.encryptionCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertThumbprint);
     }
 
-    /**
-     * The value of the secret.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

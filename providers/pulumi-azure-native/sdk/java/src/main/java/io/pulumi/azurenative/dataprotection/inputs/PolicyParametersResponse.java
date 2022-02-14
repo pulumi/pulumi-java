@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters in Policy
- */
 public final class PolicyParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyParametersResponse Empty = new PolicyParametersResponse();
 
-    /**
-     * Gets or sets the DataStore Parameters
-     */
     @InputImport(name="dataStoreParametersList")
     private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 

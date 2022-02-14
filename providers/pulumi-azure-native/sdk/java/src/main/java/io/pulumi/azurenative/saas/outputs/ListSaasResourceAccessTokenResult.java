@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListSaasResourceAccessTokenResult {
-/**
- * The Publisher Offer Base Uri
- */
     private final @Nullable String publisherOfferBaseUri;
-/**
- * The generated token
- */
     private final @Nullable String token;
 
     @OutputCustomType.Constructor({"publisherOfferBaseUri","token"})
@@ -28,15 +22,9 @@ public final class ListSaasResourceAccessTokenResult {
         this.token = token;
     }
 
-/**
- * The Publisher Offer Base Uri
- */
     public Optional<String> getPublisherOfferBaseUri() {
         return Optional.ofNullable(this.publisherOfferBaseUri);
     }
-/**
- * The generated token
- */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }

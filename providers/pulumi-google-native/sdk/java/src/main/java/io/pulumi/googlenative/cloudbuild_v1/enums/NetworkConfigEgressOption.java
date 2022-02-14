@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Option to configure network egress for the workers.
- */
     @EnumType
     public enum NetworkConfigEgressOption {
-/**
- * If set, defaults to PUBLIC_EGRESS.
- */
         EgressOptionUnspecified("EGRESS_OPTION_UNSPECIFIED"),
-/**
- * If set, workers are created without any public address, which prevents network egress to public IPs unless a network proxy is configured.
- */
         NoPublicEgress("NO_PUBLIC_EGRESS"),
-/**
- * If set, workers are created with a public address which allows for public internet egress.
- */
         PublicEgress("PUBLIC_EGRESS");
 
         private final String value;

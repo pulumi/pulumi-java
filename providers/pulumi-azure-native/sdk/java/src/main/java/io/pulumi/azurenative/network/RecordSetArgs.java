@@ -24,16 +24,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecordSetArgs Empty = new RecordSetArgs();
 
-    /**
-     * The list of A records in the record set.
-     */
     @InputImport(name="aRecords")
     private final @Nullable Input<List<ARecordArgs>> aRecords;
 
@@ -41,9 +35,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.aRecords == null ? Input.empty() : this.aRecords;
     }
 
-    /**
-     * The list of AAAA records in the record set.
-     */
     @InputImport(name="aaaaRecords")
     private final @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
 
@@ -51,9 +42,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.aaaaRecords == null ? Input.empty() : this.aaaaRecords;
     }
 
-    /**
-     * The list of CAA records in the record set.
-     */
     @InputImport(name="caaRecords")
     private final @Nullable Input<List<CaaRecordArgs>> caaRecords;
 
@@ -61,9 +49,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.caaRecords == null ? Input.empty() : this.caaRecords;
     }
 
-    /**
-     * The CNAME record in the  record set.
-     */
     @InputImport(name="cnameRecord")
     private final @Nullable Input<CnameRecordArgs> cnameRecord;
 
@@ -71,9 +56,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.cnameRecord == null ? Input.empty() : this.cnameRecord;
     }
 
-    /**
-     * The metadata attached to the record set.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -81,9 +63,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * The list of MX records in the record set.
-     */
     @InputImport(name="mxRecords")
     private final @Nullable Input<List<MxRecordArgs>> mxRecords;
 
@@ -91,9 +70,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.mxRecords == null ? Input.empty() : this.mxRecords;
     }
 
-    /**
-     * The list of NS records in the record set.
-     */
     @InputImport(name="nsRecords")
     private final @Nullable Input<List<NsRecordArgs>> nsRecords;
 
@@ -101,9 +77,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.nsRecords == null ? Input.empty() : this.nsRecords;
     }
 
-    /**
-     * The list of PTR records in the record set.
-     */
     @InputImport(name="ptrRecords")
     private final @Nullable Input<List<PtrRecordArgs>> ptrRecords;
 
@@ -111,9 +84,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ptrRecords == null ? Input.empty() : this.ptrRecords;
     }
 
-    /**
-     * The type of DNS record in this record set. Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).
-     */
     @InputImport(name="recordType", required=true)
     private final Input<String> recordType;
 
@@ -121,9 +91,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.recordType;
     }
 
-    /**
-     * The name of the record set, relative to the name of the zone.
-     */
     @InputImport(name="relativeRecordSetName")
     private final @Nullable Input<String> relativeRecordSetName;
 
@@ -131,9 +98,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.relativeRecordSetName == null ? Input.empty() : this.relativeRecordSetName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -141,9 +105,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The SOA record in the record set.
-     */
     @InputImport(name="soaRecord")
     private final @Nullable Input<SoaRecordArgs> soaRecord;
 
@@ -151,9 +112,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.soaRecord == null ? Input.empty() : this.soaRecord;
     }
 
-    /**
-     * The list of SRV records in the record set.
-     */
     @InputImport(name="srvRecords")
     private final @Nullable Input<List<SrvRecordArgs>> srvRecords;
 
@@ -161,9 +119,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.srvRecords == null ? Input.empty() : this.srvRecords;
     }
 
-    /**
-     * A reference to an azure resource from where the dns resource value is taken.
-     */
     @InputImport(name="targetResource")
     private final @Nullable Input<SubResourceArgs> targetResource;
 
@@ -171,9 +126,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetResource == null ? Input.empty() : this.targetResource;
     }
 
-    /**
-     * The TTL (time-to-live) of the records in the record set.
-     */
     @InputImport(name="ttl")
     private final @Nullable Input<Double> ttl;
 
@@ -181,9 +133,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ttl == null ? Input.empty() : this.ttl;
     }
 
-    /**
-     * The list of TXT records in the record set.
-     */
     @InputImport(name="txtRecords")
     private final @Nullable Input<List<TxtRecordArgs>> txtRecords;
 
@@ -191,9 +140,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.txtRecords == null ? Input.empty() : this.txtRecords;
     }
 
-    /**
-     * The name of the DNS zone (without a terminating dot).
-     */
     @InputImport(name="zoneName", required=true)
     private final Input<String> zoneName;
 

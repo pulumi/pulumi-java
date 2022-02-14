@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWebAppRelayServiceConnectionSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppRelayServiceConnectionSlotArgs Empty = new GetWebAppRelayServiceConnectionSlotArgs();
 
-    /**
-     * Name of the hybrid connection.
-     */
     @InputImport(name="entityName", required=true)
     private final String entityName;
 
@@ -25,9 +19,6 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends io.pulumi.res
         return this.entityName;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends io.pulumi.res
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetWebAppRelayServiceConnectionSlotArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API will get a hybrid connection for the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

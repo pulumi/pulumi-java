@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Details about Edge Profile for the resource
- */
 public final class EdgeProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdgeProfileResponse Empty = new EdgeProfileResponse();
 
-    /**
-     * Edge Profile Subscription
-     */
     @InputImport(name="subscription")
     private final @Nullable EdgeProfileSubscriptionResponse subscription;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBudgetArgs Empty = new GetBudgetArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="billingAccountId", required=true)
     private final String billingAccountId;
 
@@ -25,9 +19,6 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
         return this.billingAccountId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="budgetId", required=true)
     private final String budgetId;
 

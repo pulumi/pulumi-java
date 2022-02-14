@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class InstantSnapshotResourceStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstantSnapshotResourceStatusResponse Empty = new InstantSnapshotResourceStatusResponse();
 
-    /**
-     * The storage size of this instant snapshot.
-     */
     @InputImport(name="storageSizeBytes", required=true)
     private final String storageSizeBytes;
 

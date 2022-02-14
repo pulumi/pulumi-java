@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The resource requirements.
- */
 public final class ResourceRequirementsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceRequirementsResponse Empty = new ResourceRequirementsResponse();
 
-    /**
-     * The resource limits of this container instance.
-     */
     @InputImport(name="limits")
     private final @Nullable ResourceLimitsResponse limits;
 
@@ -28,9 +22,6 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
         return this.limits == null ? Optional.empty() : Optional.ofNullable(this.limits);
     }
 
-    /**
-     * The resource requests of this container instance.
-     */
     @InputImport(name="requests", required=true)
     private final ResourceRequestsResponse requests;
 

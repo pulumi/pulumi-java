@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetConnectedRegistryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectedRegistryArgs Empty = new GetConnectedRegistryArgs();
 
-    /**
-     * The name of the connected registry.
-     */
     @InputImport(name="connectedRegistryName", required=true)
     private final String connectedRegistryName;
 
@@ -25,9 +19,6 @@ public final class GetConnectedRegistryArgs extends io.pulumi.resources.InvokeAr
         return this.connectedRegistryName;
     }
 
-    /**
-     * The name of the container registry.
-     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -35,9 +26,6 @@ public final class GetConnectedRegistryArgs extends io.pulumi.resources.InvokeAr
         return this.registryName;
     }
 
-    /**
-     * The name of the resource group to which the container registry belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

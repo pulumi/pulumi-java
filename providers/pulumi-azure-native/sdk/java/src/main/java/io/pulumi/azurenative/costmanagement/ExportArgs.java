@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportArgs Empty = new ExportArgs();
 
-    /**
-     * Has the definition for the export.
-     */
     @InputImport(name="definition", required=true)
     private final Input<ExportDefinitionArgs> definition;
 
@@ -32,9 +26,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition;
     }
 
-    /**
-     * Has delivery information for the export.
-     */
     @InputImport(name="deliveryInfo", required=true)
     private final Input<ExportDeliveryInfoArgs> deliveryInfo;
 
@@ -42,9 +33,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.deliveryInfo;
     }
 
-    /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -52,9 +40,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
-    /**
-     * Export Name.
-     */
     @InputImport(name="exportName")
     private final @Nullable Input<String> exportName;
 
@@ -62,9 +47,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.exportName == null ? Input.empty() : this.exportName;
     }
 
-    /**
-     * The format of the export being delivered. Currently only 'Csv' is supported.
-     */
     @InputImport(name="format")
     private final @Nullable Input<Either<String,FormatType>> format;
 
@@ -72,9 +54,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
-    /**
-     * Has schedule information for the export.
-     */
     @InputImport(name="schedule")
     private final @Nullable Input<ExportScheduleArgs> schedule;
 
@@ -82,9 +61,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
-    /**
-     * The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

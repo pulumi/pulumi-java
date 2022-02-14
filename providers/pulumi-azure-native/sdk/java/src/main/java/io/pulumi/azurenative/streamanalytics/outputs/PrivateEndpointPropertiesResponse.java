@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointPropertiesResponse {
-/**
- * The date when this private endpoint was created.
- */
     private final String createdDate;
-/**
- * A list of connections to the remote resource. Immutable after it is set.
- */
     private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
     @OutputCustomType.Constructor({"createdDate","manualPrivateLinkServiceConnections"})
@@ -29,15 +23,9 @@ public final class PrivateEndpointPropertiesResponse {
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
     }
 
-/**
- * The date when this private endpoint was created.
- */
     public String getCreatedDate() {
         return this.createdDate;
     }
-/**
- * A list of connections to the remote resource. Immutable after it is set.
- */
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }

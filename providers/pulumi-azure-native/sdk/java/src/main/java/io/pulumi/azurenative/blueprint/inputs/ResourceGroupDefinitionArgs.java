@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents an Azure resource group in a blueprint definition.
- */
 public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceGroupDefinitionArgs Empty = new ResourceGroupDefinitionArgs();
 
-    /**
-     * Artifacts which need to be deployed before this resource group.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<String>> dependsOn;
 
@@ -29,9 +23,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Description of this parameter/resourceGroup.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * DisplayName of this parameter/resourceGroup.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -49,9 +37,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -69,9 +51,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
-     */
     @InputImport(name="strongType")
     private final @Nullable Input<String> strongType;
 
@@ -79,9 +58,6 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
         return this.strongType == null ? Input.empty() : this.strongType;
     }
 
-    /**
-     * Tags to be assigned to this resource group.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

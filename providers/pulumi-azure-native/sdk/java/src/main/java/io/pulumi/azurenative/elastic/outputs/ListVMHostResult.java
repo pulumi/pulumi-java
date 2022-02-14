@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListVMHostResult {
-/**
- * Link to the next Vm resource Id, if any.
- */
     private final @Nullable String nextLink;
-/**
- * Results of a list operation.
- */
     private final @Nullable List<VMResourcesResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -30,15 +24,9 @@ public final class ListVMHostResult {
         this.value = value;
     }
 
-/**
- * Link to the next Vm resource Id, if any.
- */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
-/**
- * Results of a list operation.
- */
     public List<VMResourcesResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

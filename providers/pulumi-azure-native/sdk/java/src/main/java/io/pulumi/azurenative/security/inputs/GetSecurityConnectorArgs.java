@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecurityConnectorArgs Empty = new GetSecurityConnectorArgs();
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The security connector name.
-     */
     @InputImport(name="securityConnectorName", required=true)
     private final String securityConnectorName;
 

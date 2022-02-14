@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobPropertiesResponse Empty = new JobPropertiesResponse();
 
-    /**
-     * Gets or sets the job action.
-     */
     @InputImport(name="action")
     private final @Nullable JobActionResponse action;
 
@@ -30,9 +24,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
-    /**
-     * Gets or sets the job recurrence.
-     */
     @InputImport(name="recurrence")
     private final @Nullable JobRecurrenceResponse recurrence;
 
@@ -40,9 +31,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 
-    /**
-     * Gets or sets the job start time.
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -50,9 +38,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
-    /**
-     * Gets or set the job state.
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -60,9 +45,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
-    /**
-     * Gets the job status.
-     */
     @InputImport(name="status", required=true)
     private final JobStatusResponse status;
 

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CapacityReservationGroupInstanceViewResponse {
-/**
- * List of instance view of the capacity reservations under the capacity reservation group.
- */
     private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
     @OutputCustomType.Constructor({"capacityReservations"})
@@ -20,9 +17,6 @@ public final class CapacityReservationGroupInstanceViewResponse {
         this.capacityReservations = Objects.requireNonNull(capacityReservations);
     }
 
-/**
- * List of instance view of the capacity reservations under the capacity reservation group.
- */
     public List<CapacityReservationInstanceViewWithNameResponse> getCapacityReservations() {
         return this.capacityReservations;
     }

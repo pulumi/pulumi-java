@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExpressRouteConnectionIdResponse {
-/**
- * The ID of the ExpressRouteConnection.
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class ExpressRouteConnectionIdResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * The ID of the ExpressRouteConnection.
- */
     public String getId() {
         return this.id;
     }

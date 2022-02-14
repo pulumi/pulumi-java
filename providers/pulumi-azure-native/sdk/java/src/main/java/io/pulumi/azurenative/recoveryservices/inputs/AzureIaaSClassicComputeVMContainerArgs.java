@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IaaS VM workload-specific backup item representing a classic virtual machine.
- */
 public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureIaaSClassicComputeVMContainerArgs Empty = new AzureIaaSClassicComputeVMContainerArgs();
 
-    /**
-     * Type of backup management for the container.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -29,13 +23,6 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
-    /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
-     */
     @InputImport(name="containerType", required=true)
     private final Input<String> containerType;
 
@@ -43,9 +30,6 @@ Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
         return this.containerType;
     }
 
-    /**
-     * Friendly name of the container.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -53,9 +37,6 @@ Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * Status of health of the container.
-     */
     @InputImport(name="healthStatus")
     private final @Nullable Input<String> healthStatus;
 
@@ -63,9 +44,6 @@ Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
     }
 
-    /**
-     * Status of registration of the container with the Recovery Services Vault.
-     */
     @InputImport(name="registrationStatus")
     private final @Nullable Input<String> registrationStatus;
 
@@ -73,9 +51,6 @@ Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
     }
 
-    /**
-     * Resource group name of Recovery Services Vault.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -83,9 +58,6 @@ Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
-    /**
-     * Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
-     */
     @InputImport(name="virtualMachineId")
     private final @Nullable Input<String> virtualMachineId;
 
@@ -93,9 +65,6 @@ Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
         return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
     }
 
-    /**
-     * Specifies whether the container represents a Classic or an Azure Resource Manager VM.
-     */
     @InputImport(name="virtualMachineVersion")
     private final @Nullable Input<String> virtualMachineVersion;
 

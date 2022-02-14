@@ -8,50 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. Immutable. Compliance Regime associated with this workload.
- */
     @EnumType
     public enum WorkloadComplianceRegime {
-/**
- * Unknown compliance regime.
- */
         ComplianceRegimeUnspecified("COMPLIANCE_REGIME_UNSPECIFIED"),
-/**
- * Information protection as per DoD IL4 requirements.
- */
         Il4("IL4"),
-/**
- * Criminal Justice Information Services (CJIS) Security policies.
- */
         Cjis("CJIS"),
-/**
- * FedRAMP High data protection controls
- */
         FedrampHigh("FEDRAMP_HIGH"),
-/**
- * FedRAMP Moderate data protection controls
- */
         FedrampModerate("FEDRAMP_MODERATE"),
-/**
- * Assured Workloads For US Regions data protection controls
- */
         UsRegionalAccess("US_REGIONAL_ACCESS"),
-/**
- * Health Insurance Portability and Accountability Act controls
- */
         Hipaa("HIPAA"),
-/**
- * Health Information Trust Alliance controls
- */
         Hitrust("HITRUST"),
-/**
- * Assured Workloads For EU Regions and Support controls
- */
         EuRegionsAndSupport("EU_REGIONS_AND_SUPPORT"),
-/**
- * Assured Workloads For Canada Regions and Support controls
- */
         CaRegionsAndSupport("CA_REGIONS_AND_SUPPORT");
 
         private final String value;

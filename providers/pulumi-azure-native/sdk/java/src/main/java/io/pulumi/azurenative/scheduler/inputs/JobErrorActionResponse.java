@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobErrorActionResponse Empty = new JobErrorActionResponse();
 
-    /**
-     * Gets or sets the storage queue message.
-     */
     @InputImport(name="queueMessage")
     private final @Nullable StorageQueueMessageResponse queueMessage;
 
@@ -32,9 +26,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
         return this.queueMessage == null ? Optional.empty() : Optional.ofNullable(this.queueMessage);
     }
 
-    /**
-     * Gets or sets the http requests.
-     */
     @InputImport(name="request")
     private final @Nullable HttpRequestResponse request;
 
@@ -42,9 +33,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
     }
 
-    /**
-     * Gets or sets the retry policy.
-     */
     @InputImport(name="retryPolicy")
     private final @Nullable RetryPolicyResponse retryPolicy;
 
@@ -52,9 +40,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
         return this.retryPolicy == null ? Optional.empty() : Optional.ofNullable(this.retryPolicy);
     }
 
-    /**
-     * Gets or sets the service bus queue message.
-     */
     @InputImport(name="serviceBusQueueMessage")
     private final @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage;
 
@@ -62,9 +47,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
         return this.serviceBusQueueMessage == null ? Optional.empty() : Optional.ofNullable(this.serviceBusQueueMessage);
     }
 
-    /**
-     * Gets or sets the service bus topic message.
-     */
     @InputImport(name="serviceBusTopicMessage")
     private final @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage;
 
@@ -72,9 +54,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
         return this.serviceBusTopicMessage == null ? Optional.empty() : Optional.ofNullable(this.serviceBusTopicMessage);
     }
 
-    /**
-     * Gets or sets the job error action type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

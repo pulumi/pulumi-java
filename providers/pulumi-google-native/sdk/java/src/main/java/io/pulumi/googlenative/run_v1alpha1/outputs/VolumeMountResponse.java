@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VolumeMountResponse {
-/**
- * Path within the container at which the volume should be mounted. Must not contain ':'.
- */
     private final String mountPath;
-/**
- * The name of the volume. There must be a corresponding Volume with the same name.
- */
     private final String name;
-/**
- * (Optional) Only true is accepted. Defaults to true.
- */
     private final Boolean readOnly;
-/**
- * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
- */
     private final String subPath;
 
     @OutputCustomType.Constructor({"mountPath","name","readOnly","subPath"})
@@ -39,27 +27,15 @@ public final class VolumeMountResponse {
         this.subPath = Objects.requireNonNull(subPath);
     }
 
-/**
- * Path within the container at which the volume should be mounted. Must not contain ':'.
- */
     public String getMountPath() {
         return this.mountPath;
     }
-/**
- * The name of the volume. There must be a corresponding Volume with the same name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * (Optional) Only true is accepted. Defaults to true.
- */
     public Boolean getReadOnly() {
         return this.readOnly;
     }
-/**
- * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
- */
     public String getSubPath() {
         return this.subPath;
     }

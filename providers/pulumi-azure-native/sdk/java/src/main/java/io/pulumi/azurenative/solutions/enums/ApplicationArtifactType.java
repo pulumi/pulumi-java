@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The managed application definition artifact type.
- */
     @EnumType
     public enum ApplicationArtifactType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Template("Template"),
-/**
- * 
- */
         Custom("Custom");
 
         private final String value;

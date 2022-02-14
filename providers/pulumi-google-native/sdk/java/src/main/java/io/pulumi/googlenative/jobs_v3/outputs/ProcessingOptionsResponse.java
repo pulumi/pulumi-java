@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ProcessingOptionsResponse {
-/**
- * Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.
- */
     private final Boolean disableStreetAddressResolution;
-/**
- * Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
- */
     private final String htmlSanitization;
 
     @OutputCustomType.Constructor({"disableStreetAddressResolution","htmlSanitization"})
@@ -27,15 +21,9 @@ public final class ProcessingOptionsResponse {
         this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
     }
 
-/**
- * Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.
- */
     public Boolean getDisableStreetAddressResolution() {
         return this.disableStreetAddressResolution;
     }
-/**
- * Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
- */
     public String getHtmlSanitization() {
         return this.htmlSanitization;
     }

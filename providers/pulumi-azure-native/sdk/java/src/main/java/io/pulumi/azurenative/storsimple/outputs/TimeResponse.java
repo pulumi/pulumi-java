@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TimeResponse {
-/**
- * The hour.
- */
     private final Integer hours;
-/**
- * The minute.
- */
     private final Integer minutes;
-/**
- * The second.
- */
     private final Integer seconds;
 
     @OutputCustomType.Constructor({"hours","minutes","seconds"})
@@ -32,21 +23,12 @@ public final class TimeResponse {
         this.seconds = Objects.requireNonNull(seconds);
     }
 
-/**
- * The hour.
- */
     public Integer getHours() {
         return this.hours;
     }
-/**
- * The minute.
- */
     public Integer getMinutes() {
         return this.minutes;
     }
-/**
- * The second.
- */
     public Integer getSeconds() {
         return this.seconds;
     }

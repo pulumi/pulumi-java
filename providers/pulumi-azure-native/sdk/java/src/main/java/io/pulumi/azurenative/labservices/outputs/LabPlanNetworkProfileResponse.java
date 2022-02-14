@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabPlanNetworkProfileResponse {
-/**
- * The external subnet resource id
- */
     private final @Nullable String subnetId;
 
     @OutputCustomType.Constructor({"subnetId"})
@@ -21,9 +18,6 @@ public final class LabPlanNetworkProfileResponse {
         this.subnetId = subnetId;
     }
 
-/**
- * The external subnet resource id
- */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }

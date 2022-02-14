@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTrigger {
-/**
- * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
- */
     public static CompletableFuture<GetJobTriggerResult> invokeAsync(GetJobTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getJobTrigger", TypeShape.of(GetJobTriggerResult.class), args == null ? GetJobTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

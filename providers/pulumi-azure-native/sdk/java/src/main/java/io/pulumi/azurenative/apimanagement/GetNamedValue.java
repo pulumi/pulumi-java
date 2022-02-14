@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamedValue {
-/**
- * NamedValue details.
-API Version: 2020-12-01.
- *
- * NamedValue details.
- */
     public static CompletableFuture<GetNamedValueResult> invokeAsync(GetNamedValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getNamedValue", TypeShape.of(GetNamedValueResult.class), args == null ? GetNamedValueArgs.Empty : args, Utilities.withVersion(options));
     }

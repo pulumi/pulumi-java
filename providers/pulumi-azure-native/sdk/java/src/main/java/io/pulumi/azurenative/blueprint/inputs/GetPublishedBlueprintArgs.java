@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPublishedBlueprintArgs Empty = new GetPublishedBlueprintArgs();
 
-    /**
-     * Name of the blueprint definition.
-     */
     @InputImport(name="blueprintName", required=true)
     private final String blueprintName;
 
@@ -25,9 +19,6 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
         return this.blueprintName;
     }
 
-    /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     */
     @InputImport(name="resourceScope", required=true)
     private final String resourceScope;
 
@@ -35,9 +26,6 @@ public final class GetPublishedBlueprintArgs extends io.pulumi.resources.InvokeA
         return this.resourceScope;
     }
 
-    /**
-     * Version of the published blueprint definition.
-     */
     @InputImport(name="versionId", required=true)
     private final String versionId;
 

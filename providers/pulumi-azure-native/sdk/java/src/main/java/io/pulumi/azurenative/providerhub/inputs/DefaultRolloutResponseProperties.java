@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the rollout.
- */
 public final class DefaultRolloutResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultRolloutResponseProperties Empty = new DefaultRolloutResponseProperties();
 
-    /**
-     * 
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -29,9 +23,6 @@ public final class DefaultRolloutResponseProperties extends io.pulumi.resources.
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="specification")
     private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
 
@@ -39,9 +30,6 @@ public final class DefaultRolloutResponseProperties extends io.pulumi.resources.
         return this.specification == null ? Optional.empty() : Optional.ofNullable(this.specification);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="status")
     private final @Nullable DefaultRolloutPropertiesResponseStatus status;
 

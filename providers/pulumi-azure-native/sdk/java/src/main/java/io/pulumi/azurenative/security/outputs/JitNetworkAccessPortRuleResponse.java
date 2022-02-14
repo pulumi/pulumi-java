@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JitNetworkAccessPortRuleResponse {
-/**
- * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
- */
     private final @Nullable String allowedSourceAddressPrefix;
-/**
- * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
- */
     private final @Nullable List<String> allowedSourceAddressPrefixes;
-/**
- * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
- */
     private final String maxRequestAccessDuration;
-/**
- * 
- */
     private final Integer number;
-/**
- * 
- */
     private final String protocol;
 
     @OutputCustomType.Constructor({"allowedSourceAddressPrefix","allowedSourceAddressPrefixes","maxRequestAccessDuration","number","protocol"})
@@ -48,33 +33,18 @@ public final class JitNetworkAccessPortRuleResponse {
         this.protocol = Objects.requireNonNull(protocol);
     }
 
-/**
- * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
- */
     public Optional<String> getAllowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
-/**
- * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
- */
     public List<String> getAllowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
-/**
- * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
- */
     public String getMaxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
-/**
- * 
- */
     public Integer getNumber() {
         return this.number;
     }
-/**
- * 
- */
     public String getProtocol() {
         return this.protocol;
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPatchSchedule {
-/**
- * Response to put/get patch schedules for Redis cache.
-API Version: 2020-06-01.
- *
- * Response to put/get patch schedules for Redis cache.
- */
     public static CompletableFuture<GetPatchScheduleResult> invokeAsync(GetPatchScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getPatchSchedule", TypeShape.of(GetPatchScheduleResult.class), args == null ? GetPatchScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVpnServerConfigurationArgs Empty = new GetVpnServerConfigurationArgs();
 
-    /**
-     * The resource group name of the VpnServerConfiguration.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the VpnServerConfiguration being retrieved.
-     */
     @InputImport(name="vpnServerConfigurationName", required=true)
     private final String vpnServerConfigurationName;
 

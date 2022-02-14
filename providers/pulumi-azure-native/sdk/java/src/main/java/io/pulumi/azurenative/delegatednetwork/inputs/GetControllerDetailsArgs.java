@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetControllerDetailsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetControllerDetailsArgs Empty = new GetControllerDetailsArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetControllerDetailsArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

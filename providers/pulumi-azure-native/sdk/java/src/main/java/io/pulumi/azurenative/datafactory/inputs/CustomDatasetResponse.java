@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The custom dataset.
- */
 public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomDatasetResponse Empty = new CustomDatasetResponse();
 
-    /**
-     * List of tags that can be used for describing the Dataset.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -33,9 +27,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Dataset description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -43,9 +34,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     */
     @InputImport(name="folder")
     private final @Nullable DatasetResponseFolder folder;
 
@@ -53,9 +41,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -63,9 +48,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.linkedServiceName;
     }
 
-    /**
-     * Parameters for dataset.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -73,9 +55,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     */
     @InputImport(name="schema")
     private final @Nullable Object schema;
 
@@ -83,9 +62,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     */
     @InputImport(name="structure")
     private final @Nullable Object structure;
 
@@ -93,10 +69,6 @@ public final class CustomDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
-    /**
-     * Type of dataset.
-Expected value is 'CustomDataset'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

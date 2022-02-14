@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Channel settings definition
- */
 public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ChannelSettingsResponse Empty = new ChannelSettingsResponse();
 
-    /**
-     * The bot icon url
-     */
     @InputImport(name="botIconUrl")
     private final @Nullable String botIconUrl;
 
@@ -30,9 +24,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.botIconUrl == null ? Optional.empty() : Optional.ofNullable(this.botIconUrl);
     }
 
-    /**
-     * The bot id
-     */
     @InputImport(name="botId")
     private final @Nullable String botId;
 
@@ -40,9 +31,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.botId == null ? Optional.empty() : Optional.ofNullable(this.botId);
     }
 
-    /**
-     * The channel display name
-     */
     @InputImport(name="channelDisplayName")
     private final @Nullable String channelDisplayName;
 
@@ -50,9 +38,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.channelDisplayName == null ? Optional.empty() : Optional.ofNullable(this.channelDisplayName);
     }
 
-    /**
-     * The channel id
-     */
     @InputImport(name="channelId")
     private final @Nullable String channelId;
 
@@ -60,9 +45,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
     }
 
-    /**
-     * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
-     */
     @InputImport(name="disableLocalAuth")
     private final @Nullable Boolean disableLocalAuth;
 
@@ -70,9 +52,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
     }
 
-    /**
-     * The extensionKey1
-     */
     @InputImport(name="extensionKey1")
     private final @Nullable String extensionKey1;
 
@@ -80,9 +59,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.extensionKey1 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey1);
     }
 
-    /**
-     * The extensionKey2
-     */
     @InputImport(name="extensionKey2")
     private final @Nullable String extensionKey2;
 
@@ -90,9 +66,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.extensionKey2 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey2);
     }
 
-    /**
-     * Whether this channel is enabled for the bot
-     */
     @InputImport(name="isEnabled")
     private final @Nullable Boolean isEnabled;
 
@@ -100,9 +73,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
     }
 
-    /**
-     * The list of sites
-     */
     @InputImport(name="sites")
     private final @Nullable List<SiteResponse> sites;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestConfigurationAssignmentArgs Empty = new GuestConfigurationAssignmentArgs();
 
-    /**
-     * Name of the guest configuration assignment.
-     */
     @InputImport(name="guestConfigurationAssignmentName")
     private final @Nullable Input<String> guestConfigurationAssignmentName;
 
@@ -28,9 +22,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
         return this.guestConfigurationAssignmentName == null ? Input.empty() : this.guestConfigurationAssignmentName;
     }
 
-    /**
-     * Region where the VM is located.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the guest configuration assignment.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Properties of the Guest configuration assignment.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties;
 
@@ -58,9 +43,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +50,6 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the virtual machine.
-     */
     @InputImport(name="vmName", required=true)
     private final Input<String> vmName;
 

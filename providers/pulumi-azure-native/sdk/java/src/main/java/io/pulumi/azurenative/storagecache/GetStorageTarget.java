@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageTarget {
-/**
- * Type of the Storage Target.
-API Version: 2021-03-01.
- *
- * Type of the Storage Target.
- */
     public static CompletableFuture<GetStorageTargetResult> invokeAsync(GetStorageTargetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagecache:getStorageTarget", TypeShape.of(GetStorageTargetResult.class), args == null ? GetStorageTargetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AvroOptionsArgs Empty = new AvroOptionsArgs();
 
-    /**
-     * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
-     */
     @InputImport(name="useAvroLogicalTypes")
     private final @Nullable Input<Boolean> useAvroLogicalTypes;
 

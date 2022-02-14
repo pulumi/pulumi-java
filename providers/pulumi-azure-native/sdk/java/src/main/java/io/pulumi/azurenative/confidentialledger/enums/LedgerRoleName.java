@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * LedgerRole associated with the Security Principal of Ledger
- */
     @EnumType
     public enum LedgerRoleName {
-/**
- * 
- */
         Reader("Reader"),
-/**
- * 
- */
         Contributor("Contributor"),
-/**
- * 
- */
         Administrator("Administrator");
 
         private final String value;

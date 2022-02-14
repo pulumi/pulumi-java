@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentSpecificationVersionArgs Empty = new EnvironmentSpecificationVersionArgs();
 
-    /**
-     * Name of EnvironmentSpecificationVersion.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,9 +21,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.name;
     }
 
-    /**
-     * Additional attributes of the entity.
-     */
     @InputImport(name="properties", required=true)
     private final Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties;
 
@@ -37,9 +28,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.properties;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Version of EnvironmentSpecificationVersion.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -57,9 +42,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
         return this.version == null ? Input.empty() : this.version;
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

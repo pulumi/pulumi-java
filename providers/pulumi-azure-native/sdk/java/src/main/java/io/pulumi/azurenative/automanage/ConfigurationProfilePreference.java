@@ -16,210 +16,39 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Definition of the configuration profile preference.
-API Version: 2020-06-30-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update configuration profile preference
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var configurationProfilePreference = new AzureNative.Automanage.ConfigurationProfilePreference("configurationProfilePreference", new AzureNative.Automanage.ConfigurationProfilePreferenceArgs
-        {
-            ConfigurationProfilePreferenceName = "defaultProfilePreference",
-            Location = "East US",
-            Properties = new AzureNative.Automanage.Inputs.ConfigurationProfilePreferencePropertiesArgs
-            {
-                AntiMalware = new AzureNative.Automanage.Inputs.ConfigurationProfilePreferenceAntiMalwareArgs
-                {
-                    EnableRealTimeProtection = "True",
-                },
-                VmBackup = new AzureNative.Automanage.Inputs.ConfigurationProfilePreferenceVmBackupArgs
-                {
-                    TimeZone = "Pacific Standard Time",
-                },
-            },
-            ResourceGroupName = "myResourceGroupName",
-            Tags = 
-            {
-                { "Organization", "Administration" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automanage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automanage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automanage.NewConfigurationProfilePreference(ctx, "configurationProfilePreference", &automanage.ConfigurationProfilePreferenceArgs{
-			ConfigurationProfilePreferenceName: pulumi.String("defaultProfilePreference"),
-			Location:                           pulumi.String("East US"),
-			Properties: &automanage.ConfigurationProfilePreferencePropertiesArgs{
-				AntiMalware: &automanage.ConfigurationProfilePreferenceAntiMalwareArgs{
-					EnableRealTimeProtection: pulumi.String("True"),
-				},
-				VmBackup: &automanage.ConfigurationProfilePreferenceVmBackupArgs{
-					TimeZone: pulumi.String("Pacific Standard Time"),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroupName"),
-			Tags: pulumi.StringMap{
-				"Organization": pulumi.String("Administration"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const configurationProfilePreference = new azure_native.automanage.ConfigurationProfilePreference("configurationProfilePreference", {
-    configurationProfilePreferenceName: "defaultProfilePreference",
-    location: "East US",
-    properties: {
-        antiMalware: {
-            enableRealTimeProtection: "True",
-        },
-        vmBackup: {
-            timeZone: "Pacific Standard Time",
-        },
-    },
-    resourceGroupName: "myResourceGroupName",
-    tags: {
-        Organization: "Administration",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-configuration_profile_preference = azure_native.automanage.ConfigurationProfilePreference("configurationProfilePreference",
-    configuration_profile_preference_name="defaultProfilePreference",
-    location="East US",
-    properties=azure_native.automanage.ConfigurationProfilePreferencePropertiesArgs(
-        anti_malware=azure_native.automanage.ConfigurationProfilePreferenceAntiMalwareArgs(
-            enable_real_time_protection="True",
-        ),
-        vm_backup=azure_native.automanage.ConfigurationProfilePreferenceVmBackupArgs(
-            time_zone="Pacific Standard Time",
-        ),
-    ),
-    resource_group_name="myResourceGroupName",
-    tags={
-        "Organization": "Administration",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automanage:ConfigurationProfilePreference defaultProfilePreference /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference 
-```
-
- */
 @ResourceType(type="azure-native:automanage:ConfigurationProfilePreference")
 public class ConfigurationProfilePreference extends io.pulumi.resources.CustomResource {
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of the configuration profile preference.
-     */
     @OutputExport(name="properties", type=ConfigurationProfilePreferencePropertiesResponse.class, parameters={})
     private Output<ConfigurationProfilePreferencePropertiesResponse> properties;
 
-    /**
-     * @return Properties of the configuration profile preference.
-     */
     public Output<ConfigurationProfilePreferencePropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ConfigurationProfilePreference(String name, ConfigurationProfilePreferenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automanage:ConfigurationProfilePreference", name, args == null ? ConfigurationProfilePreferenceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -238,14 +67,6 @@ public class ConfigurationProfilePreference extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ConfigurationProfilePreference get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationProfilePreference(name, id, options);
     }

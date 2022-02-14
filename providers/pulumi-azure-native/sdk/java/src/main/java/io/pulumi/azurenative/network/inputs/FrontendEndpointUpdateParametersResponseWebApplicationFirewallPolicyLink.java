@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the Web Application Firewall policy for each host (if applicable)
- */
 public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink Empty = new FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

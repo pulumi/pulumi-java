@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a tool results execution resource. This has the results of a TestMatrix.
- */
 public final class ToolResultsExecutionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ToolResultsExecutionResponse Empty = new ToolResultsExecutionResponse();
 
-    /**
-     * A tool results execution ID.
-     */
     @InputImport(name="executionId", required=true)
     private final String executionId;
 
@@ -25,9 +19,6 @@ public final class ToolResultsExecutionResponse extends io.pulumi.resources.Invo
         return this.executionId;
     }
 
-    /**
-     * A tool results history ID.
-     */
     @InputImport(name="historyId", required=true)
     private final String historyId;
 
@@ -35,9 +26,6 @@ public final class ToolResultsExecutionResponse extends io.pulumi.resources.Invo
         return this.historyId;
     }
 
-    /**
-     * The cloud project that owns the tool results execution.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates what services are allowed to bypass firewall checks.
- */
     @EnumType
     public enum NetworkAclBypass {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         AzureServices("AzureServices");
 
         private final String value;

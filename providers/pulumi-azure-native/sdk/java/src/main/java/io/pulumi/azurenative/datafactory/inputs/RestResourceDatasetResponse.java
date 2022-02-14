@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A Rest service dataset.
- */
 public final class RestResourceDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestResourceDatasetResponse Empty = new RestResourceDatasetResponse();
 
-    /**
-     * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Object additionalHeaders;
 
@@ -33,9 +27,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
     }
 
-    /**
-     * List of tags that can be used for describing the Dataset.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -43,9 +34,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Dataset description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -53,9 +41,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     */
     @InputImport(name="folder")
     private final @Nullable DatasetResponseFolder folder;
 
@@ -63,9 +48,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -73,9 +55,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.linkedServiceName;
     }
 
-    /**
-     * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="paginationRules")
     private final @Nullable Object paginationRules;
 
@@ -83,9 +62,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.paginationRules == null ? Optional.empty() : Optional.ofNullable(this.paginationRules);
     }
 
-    /**
-     * Parameters for dataset.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -93,9 +69,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="relativeUrl")
     private final @Nullable Object relativeUrl;
 
@@ -103,9 +76,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.relativeUrl == null ? Optional.empty() : Optional.ofNullable(this.relativeUrl);
     }
 
-    /**
-     * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="requestBody")
     private final @Nullable Object requestBody;
 
@@ -113,9 +83,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
     }
 
-    /**
-     * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="requestMethod")
     private final @Nullable Object requestMethod;
 
@@ -123,9 +90,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
     }
 
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     */
     @InputImport(name="schema")
     private final @Nullable Object schema;
 
@@ -133,9 +97,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     */
     @InputImport(name="structure")
     private final @Nullable Object structure;
 
@@ -143,10 +104,6 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
-    /**
-     * Type of dataset.
-Expected value is 'RestResource'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

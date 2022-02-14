@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModelContainer {
-/**
- * Azure Resource Manager resource envelope.
-API Version: 2021-03-01-preview.
- *
- * Azure Resource Manager resource envelope.
- */
     public static CompletableFuture<GetModelContainerResult> invokeAsync(GetModelContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getModelContainer", TypeShape.of(GetModelContainerResult.class), args == null ? GetModelContainerArgs.Empty : args, Utilities.withVersion(options));
     }

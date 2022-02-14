@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * A set of Confidential Instance options.
- */
 public final class ConfidentialInstanceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfidentialInstanceConfigResponse Empty = new ConfidentialInstanceConfigResponse();
 
-    /**
-     * Defines whether the instance should have confidential compute enabled.
-     */
     @InputImport(name="enableConfidentialCompute", required=true)
     private final Boolean enableConfidentialCompute;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderHubMetadataProviderAuthenticationArgs Empty = new ProviderHubMetadataProviderAuthenticationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="allowedAudiences", required=true)
     private final Input<List<String>> allowedAudiences;
 

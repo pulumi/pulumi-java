@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Key Vault linked service.
- */
 public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureKeyVaultLinkedServiceResponse Empty = new AzureKeyVaultLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -33,9 +27,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The base URL of the Azure Key Vault. e.g. https://myakv.vault.azure.net Type: string (or Expression with resultType string).
-     */
     @InputImport(name="baseUrl", required=true)
     private final Object baseUrl;
 
@@ -43,9 +34,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
         return this.baseUrl;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -53,9 +41,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -63,9 +48,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -73,9 +55,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -83,10 +62,6 @@ public final class AzureKeyVaultLinkedServiceResponse extends io.pulumi.resource
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureKeyVault'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

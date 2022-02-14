@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum BasicPerfSampleSeriesPerfUnit {
-/**
- * 
- */
         PerfUnitUnspecified("perfUnitUnspecified"),
-/**
- * 
- */
         Kibibyte("kibibyte"),
-/**
- * 
- */
         Percent("percent"),
-/**
- * 
- */
         BytesPerSecond("bytesPerSecond"),
-/**
- * 
- */
         FramesPerSecond("framesPerSecond"),
-/**
- * 
- */
         Byte("byte");
 
         private final String value;

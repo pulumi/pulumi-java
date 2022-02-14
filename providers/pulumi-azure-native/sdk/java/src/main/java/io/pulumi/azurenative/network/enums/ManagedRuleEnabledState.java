@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The state of the managed rule. Defaults to Disabled if not specified.
- */
     @EnumType
     public enum ManagedRuleEnabledState {
-/**
- * 
- */
         Disabled("Disabled");
 
         private final String value;

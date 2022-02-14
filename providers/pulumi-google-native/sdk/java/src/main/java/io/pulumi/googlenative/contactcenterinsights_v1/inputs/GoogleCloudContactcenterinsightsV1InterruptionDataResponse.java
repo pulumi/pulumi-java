@@ -6,9 +6,6 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 import java.util.Objects;
 
 
-/**
- * The data for an interruption annotation.
- */
 public final class GoogleCloudContactcenterinsightsV1InterruptionDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1InterruptionDataResponse Empty = new GoogleCloudContactcenterinsightsV1InterruptionDataResponse();

@@ -21,20 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An EphemeralContainer is a temporary container that you may add to an existing Pod for user-initiated activities such as debugging. Ephemeral containers have no resource or scheduling guarantees, and they will not be restarted when they exit or when a Pod is removed or restarted. The kubelet may evict a Pod if an ephemeral container causes the Pod to exceed its resource allocation.
-
-To add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.
-
-This is a beta feature available on clusters that haven't disabled the EphemeralContainers feature gate.
- */
 public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EphemeralContainerArgs Empty = new EphemeralContainerArgs();
 
-    /**
-     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -42,9 +32,6 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
         return this.args == null ? Input.empty() : this.args;
     }
 
-    /**
-     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -52,9 +39,6 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
         return this.command == null ? Input.empty() : this.command;
     }
 
-    /**
-     * List of environment variables to set in the container. Cannot be updated.
-     */
     @InputImport(name="env")
     private final @Nullable Input<List<EnvVarArgs>> env;
 
@@ -62,9 +46,6 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
         return this.env == null ? Input.empty() : this.env;
     }
 
-    /**
-     * List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
-     */
     @InputImport(name="envFrom")
     private final @Nullable Input<List<EnvFromSourceArgs>> envFrom;
 
@@ -72,9 +53,6 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
         return this.envFrom == null ? Input.empty() : this.envFrom;
     }
 
-    /**
-     * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
-     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -82,14 +60,6 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
         return this.image == null ? Input.empty() : this.image;
     }
 
-    /**
-     * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
-
-Possible enum values:
- - `"Always"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
- - `"IfNotPresent"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.
- - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
-     */
     @InputImport(name="imagePullPolicy")
     private final @Nullable Input<String> imagePullPolicy;
 
@@ -97,9 +67,6 @@ Possible enum values:
         return this.imagePullPolicy == null ? Input.empty() : this.imagePullPolicy;
     }
 
-    /**
-     * Lifecycle is not allowed for ephemeral containers.
-     */
     @InputImport(name="lifecycle")
     private final @Nullable Input<LifecycleArgs> lifecycle;
 
@@ -107,9 +74,6 @@ Possible enum values:
         return this.lifecycle == null ? Input.empty() : this.lifecycle;
     }
 
-    /**
-     * Probes are not allowed for ephemeral containers.
-     */
     @InputImport(name="livenessProbe")
     private final @Nullable Input<ProbeArgs> livenessProbe;
 
@@ -117,9 +81,6 @@ Possible enum values:
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
     }
 
-    /**
-     * Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -127,9 +88,6 @@ Possible enum values:
         return this.name;
     }
 
-    /**
-     * Ports are not allowed for ephemeral containers.
-     */
     @InputImport(name="ports")
     private final @Nullable Input<List<ContainerPortArgs>> ports;
 
@@ -137,9 +95,6 @@ Possible enum values:
         return this.ports == null ? Input.empty() : this.ports;
     }
 
-    /**
-     * Probes are not allowed for ephemeral containers.
-     */
     @InputImport(name="readinessProbe")
     private final @Nullable Input<ProbeArgs> readinessProbe;
 
@@ -147,9 +102,6 @@ Possible enum values:
         return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
     }
 
-    /**
-     * Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.
-     */
     @InputImport(name="resources")
     private final @Nullable Input<ResourceRequirementsArgs> resources;
 
@@ -157,9 +109,6 @@ Possible enum values:
         return this.resources == null ? Input.empty() : this.resources;
     }
 
-    /**
-     * Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
-     */
     @InputImport(name="securityContext")
     private final @Nullable Input<SecurityContextArgs> securityContext;
 
@@ -167,9 +116,6 @@ Possible enum values:
         return this.securityContext == null ? Input.empty() : this.securityContext;
     }
 
-    /**
-     * Probes are not allowed for ephemeral containers.
-     */
     @InputImport(name="startupProbe")
     private final @Nullable Input<ProbeArgs> startupProbe;
 
@@ -177,9 +123,6 @@ Possible enum values:
         return this.startupProbe == null ? Input.empty() : this.startupProbe;
     }
 
-    /**
-     * Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
-     */
     @InputImport(name="stdin")
     private final @Nullable Input<Boolean> stdin;
 
@@ -187,9 +130,6 @@ Possible enum values:
         return this.stdin == null ? Input.empty() : this.stdin;
     }
 
-    /**
-     * Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
-     */
     @InputImport(name="stdinOnce")
     private final @Nullable Input<Boolean> stdinOnce;
 
@@ -197,11 +137,6 @@ Possible enum values:
         return this.stdinOnce == null ? Input.empty() : this.stdinOnce;
     }
 
-    /**
-     * If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container uses the namespaces configured in the Pod spec.
-
-The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined.
-     */
     @InputImport(name="targetContainerName")
     private final @Nullable Input<String> targetContainerName;
 
@@ -209,9 +144,6 @@ The container runtime must implement support for this feature. If the runtime do
         return this.targetContainerName == null ? Input.empty() : this.targetContainerName;
     }
 
-    /**
-     * Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
-     */
     @InputImport(name="terminationMessagePath")
     private final @Nullable Input<String> terminationMessagePath;
 
@@ -219,13 +151,6 @@ The container runtime must implement support for this feature. If the runtime do
         return this.terminationMessagePath == null ? Input.empty() : this.terminationMessagePath;
     }
 
-    /**
-     * Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
-
-Possible enum values:
- - `"FallbackToLogsOnError"` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
- - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
-     */
     @InputImport(name="terminationMessagePolicy")
     private final @Nullable Input<String> terminationMessagePolicy;
 
@@ -233,9 +158,6 @@ Possible enum values:
         return this.terminationMessagePolicy == null ? Input.empty() : this.terminationMessagePolicy;
     }
 
-    /**
-     * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.
-     */
     @InputImport(name="tty")
     private final @Nullable Input<Boolean> tty;
 
@@ -243,9 +165,6 @@ Possible enum values:
         return this.tty == null ? Input.empty() : this.tty;
     }
 
-    /**
-     * volumeDevices is the list of block devices to be used by the container.
-     */
     @InputImport(name="volumeDevices")
     private final @Nullable Input<List<VolumeDeviceArgs>> volumeDevices;
 
@@ -253,9 +172,6 @@ Possible enum values:
         return this.volumeDevices == null ? Input.empty() : this.volumeDevices;
     }
 
-    /**
-     * Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
-     */
     @InputImport(name="volumeMounts")
     private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 
@@ -263,9 +179,6 @@ Possible enum values:
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
     }
 
-    /**
-     * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.
-     */
     @InputImport(name="workingDir")
     private final @Nullable Input<String> workingDir;
 

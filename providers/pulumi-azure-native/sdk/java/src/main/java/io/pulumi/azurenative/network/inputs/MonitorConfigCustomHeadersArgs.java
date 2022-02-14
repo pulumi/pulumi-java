@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Custom header name and value.
- */
 public final class MonitorConfigCustomHeadersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitorConfigCustomHeadersArgs Empty = new MonitorConfigCustomHeadersArgs();
 
-    /**
-     * Header name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class MonitorConfigCustomHeadersArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Header value.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

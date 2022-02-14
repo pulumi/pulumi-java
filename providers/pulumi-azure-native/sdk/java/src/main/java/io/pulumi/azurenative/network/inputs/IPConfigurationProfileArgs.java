@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IP configuration profile child resource.
- */
 public final class IPConfigurationProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPConfigurationProfileArgs Empty = new IPConfigurationProfileArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,9 +22,6 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the resource. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The reference to the subnet resource to create a container network interface ip configuration.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetArgs> subnet;
 

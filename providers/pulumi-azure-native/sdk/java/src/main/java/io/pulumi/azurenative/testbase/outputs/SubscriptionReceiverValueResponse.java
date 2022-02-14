@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubscriptionReceiverValueResponse {
-/**
- * The role of the notification receiver.
- */
     private final @Nullable String role;
-/**
- * The subscription id of the notification receiver.
- */
     private final @Nullable String subscriptionId;
-/**
- * The subscription name of the notification receiver.
- */
     private final @Nullable String subscriptionName;
 
     @OutputCustomType.Constructor({"role","subscriptionId","subscriptionName"})
@@ -34,21 +25,12 @@ public final class SubscriptionReceiverValueResponse {
         this.subscriptionName = subscriptionName;
     }
 
-/**
- * The role of the notification receiver.
- */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
-/**
- * The subscription id of the notification receiver.
- */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
-/**
- * The subscription name of the notification receiver.
- */
     public Optional<String> getSubscriptionName() {
         return Optional.ofNullable(this.subscriptionName);
     }

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListServiceTestKeys {
-/**
- * Test keys payload
-API Version: 2020-07-01.
- *
- * Test keys payload
- */
     public static CompletableFuture<ListServiceTestKeysResult> invokeAsync(ListServiceTestKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:listServiceTestKeys", TypeShape.of(ListServiceTestKeysResult.class), args == null ? ListServiceTestKeysArgs.Empty : args, Utilities.withVersion(options));
     }

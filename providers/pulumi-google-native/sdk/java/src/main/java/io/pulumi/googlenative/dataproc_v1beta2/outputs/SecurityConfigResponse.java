@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityConfigResponse {
-/**
- * Optional. Kerberos related configuration.
- */
     private final KerberosConfigResponse kerberosConfig;
 
     @OutputCustomType.Constructor({"kerberosConfig"})
@@ -19,9 +16,6 @@ public final class SecurityConfigResponse {
         this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
     }
 
-/**
- * Optional. Kerberos related configuration.
- */
     public KerberosConfigResponse getKerberosConfig() {
         return this.kerberosConfig;
     }

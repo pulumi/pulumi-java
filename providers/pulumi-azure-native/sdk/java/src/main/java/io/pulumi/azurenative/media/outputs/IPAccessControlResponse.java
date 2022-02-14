@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IPAccessControlResponse {
-/**
- * The IP allow list.
- */
     private final @Nullable List<IPRangeResponse> allow;
 
     @OutputCustomType.Constructor({"allow"})
@@ -21,9 +18,6 @@ public final class IPAccessControlResponse {
         this.allow = allow;
     }
 
-/**
- * The IP allow list.
- */
     public List<IPRangeResponse> getAllow() {
         return this.allow == null ? List.of() : this.allow;
     }

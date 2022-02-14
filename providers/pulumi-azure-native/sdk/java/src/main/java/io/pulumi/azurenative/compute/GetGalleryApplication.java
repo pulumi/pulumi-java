@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryApplication {
-/**
- * Specifies information about the gallery Application Definition that you want to create or update.
-API Version: 2020-09-30.
- *
- * Specifies information about the gallery Application Definition that you want to create or update.
- */
     public static CompletableFuture<GetGalleryApplicationResult> invokeAsync(GetGalleryApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryApplication", TypeShape.of(GetGalleryApplicationResult.class), args == null ? GetGalleryApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

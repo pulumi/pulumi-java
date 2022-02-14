@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiPortalCustomDomain {
-/**
- * Custom domain of the API portal
-API Version: 2022-01-01-preview.
- *
- * Custom domain of the API portal
- */
     public static CompletableFuture<GetApiPortalCustomDomainResult> invokeAsync(GetApiPortalCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortalCustomDomain", TypeShape.of(GetApiPortalCustomDomainResult.class), args == null ? GetApiPortalCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

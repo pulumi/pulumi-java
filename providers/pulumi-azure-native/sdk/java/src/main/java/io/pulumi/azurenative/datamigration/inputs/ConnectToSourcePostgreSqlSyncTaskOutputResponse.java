@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Output for the task that validates connection to PostgreSQL and source server requirements
- */
 public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourcePostgreSqlSyncTaskOutputResponse Empty = new ConnectToSourcePostgreSqlSyncTaskOutputResponse();
 
-    /**
-     * List of databases on source server
-     */
     @InputImport(name="databases", required=true)
     private final List<String> databases;
 
@@ -27,9 +21,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
         return this.databases;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -37,9 +28,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
         return this.id;
     }
 
-    /**
-     * Source server brand version
-     */
     @InputImport(name="sourceServerBrandVersion", required=true)
     private final String sourceServerBrandVersion;
 
@@ -47,9 +35,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
         return this.sourceServerBrandVersion;
     }
 
-    /**
-     * Version of the source server
-     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -57,9 +42,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
         return this.sourceServerVersion;
     }
 
-    /**
-     * Validation errors associated with the task
-     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

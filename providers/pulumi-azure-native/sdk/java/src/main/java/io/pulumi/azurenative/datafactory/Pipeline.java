@@ -59,163 +59,81 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Pipeline resource type.
-API Version: 2018-06-01.
- */
 @ResourceType(type="azure-native:datafactory:Pipeline")
 public class Pipeline extends io.pulumi.resources.CustomResource {
-    /**
-     * List of activities in pipeline.
-     */
     @OutputExport(name="activities", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> activities;
 
-    /**
-     * @return List of activities in pipeline.
-     */
     public Output</* @Nullable */ List<Object>> getActivities() {
         return this.activities;
     }
-    /**
-     * List of tags that can be used for describing the Pipeline.
-     */
     @OutputExport(name="annotations", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> annotations;
 
-    /**
-     * @return List of tags that can be used for describing the Pipeline.
-     */
     public Output</* @Nullable */ List<Object>> getAnnotations() {
         return this.annotations;
     }
-    /**
-     * The max number of concurrent runs for the pipeline.
-     */
     @OutputExport(name="concurrency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> concurrency;
 
-    /**
-     * @return The max number of concurrent runs for the pipeline.
-     */
     public Output</* @Nullable */ Integer> getConcurrency() {
         return this.concurrency;
     }
-    /**
-     * The description of the pipeline.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description of the pipeline.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Etag identifies change in the resource.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Etag identifies change in the resource.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-     */
     @OutputExport(name="folder", type=PipelineResponseFolder.class, parameters={})
     private Output</* @Nullable */ PipelineResponseFolder> folder;
 
-    /**
-     * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
-     */
     public Output</* @Nullable */ PipelineResponseFolder> getFolder() {
         return this.folder;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of parameters for pipeline.
-     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> parameters;
 
-    /**
-     * @return List of parameters for pipeline.
-     */
     public Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> getParameters() {
         return this.parameters;
     }
-    /**
-     * Pipeline Policy.
-     */
     @OutputExport(name="policy", type=PipelinePolicyResponse.class, parameters={})
     private Output</* @Nullable */ PipelinePolicyResponse> policy;
 
-    /**
-     * @return Pipeline Policy.
-     */
     public Output</* @Nullable */ PipelinePolicyResponse> getPolicy() {
         return this.policy;
     }
-    /**
-     * Dimensions emitted by Pipeline.
-     */
     @OutputExport(name="runDimensions", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> runDimensions;
 
-    /**
-     * @return Dimensions emitted by Pipeline.
-     */
     public Output</* @Nullable */ Map<String,Object>> getRunDimensions() {
         return this.runDimensions;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * List of variables for pipeline.
-     */
     @OutputExport(name="variables", type=Map.class, parameters={String.class, VariableSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,VariableSpecificationResponse>> variables;
 
-    /**
-     * @return List of variables for pipeline.
-     */
     public Output</* @Nullable */ Map<String,VariableSpecificationResponse>> getVariables() {
         return this.variables;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Pipeline(String name, PipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datafactory:Pipeline", name, args == null ? PipelineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -235,14 +153,6 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Pipeline get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Pipeline(name, id, options);
     }

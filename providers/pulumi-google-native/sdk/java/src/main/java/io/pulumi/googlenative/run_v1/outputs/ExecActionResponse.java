@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExecActionResponse {
-/**
- * (Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.
- */
     private final List<String> command;
 
     @OutputCustomType.Constructor({"command"})
@@ -20,9 +17,6 @@ public final class ExecActionResponse {
         this.command = Objects.requireNonNull(command);
     }
 
-/**
- * (Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.
- */
     public List<String> getCommand() {
         return this.command;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
-    /**
-     * Group description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Group name.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -38,9 +29,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-     */
     @InputImport(name="externalId")
     private final @Nullable Input<String> externalId;
 
@@ -48,9 +36,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
-    /**
-     * Group identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -58,9 +43,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +50,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -78,9 +57,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Group type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<GroupType> type;
 

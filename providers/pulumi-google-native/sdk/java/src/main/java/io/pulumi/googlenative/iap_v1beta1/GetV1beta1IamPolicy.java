@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetV1beta1IamPolicy {
-/**
- * Gets the access control policy for an Identity-Aware Proxy protected resource. More information about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
- */
     public static CompletableFuture<GetV1beta1IamPolicyResult> invokeAsync(GetV1beta1IamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1beta1:getV1beta1IamPolicy", TypeShape.of(GetV1beta1IamPolicyResult.class), args == null ? GetV1beta1IamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

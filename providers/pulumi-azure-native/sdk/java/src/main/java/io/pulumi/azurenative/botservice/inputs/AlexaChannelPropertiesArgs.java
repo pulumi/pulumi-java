@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The parameters to provide for the Alexa channel.
- */
 public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlexaChannelPropertiesArgs Empty = new AlexaChannelPropertiesArgs();
 
-    /**
-     * The Alexa skill Id
-     */
     @InputImport(name="alexaSkillId", required=true)
     private final Input<String> alexaSkillId;
 
@@ -27,9 +21,6 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.alexaSkillId;
     }
 
-    /**
-     * Whether this channel is enabled for the bot
-     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 

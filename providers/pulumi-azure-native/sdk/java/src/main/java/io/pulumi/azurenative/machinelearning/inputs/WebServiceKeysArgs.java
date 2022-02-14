@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Access keys for the web service calls.
- */
 public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebServiceKeysArgs Empty = new WebServiceKeysArgs();
 
-    /**
-     * The primary access key.
-     */
     @InputImport(name="primary")
     private final @Nullable Input<String> primary;
 
@@ -27,9 +21,6 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
         return this.primary == null ? Input.empty() : this.primary;
     }
 
-    /**
-     * The secondary access key.
-     */
     @InputImport(name="secondary")
     private final @Nullable Input<String> secondary;
 

@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
-/**
- * The environment ID associated with the metrics.
- */
     private final String env;
-/**
- * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
- */
     private final String instanceId;
-/**
- * The location associated with the metrics.
- */
     private final String location;
 
     @OutputCustomType.Constructor({"env","instanceId","location"})
@@ -32,21 +23,12 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
         this.location = Objects.requireNonNull(location);
     }
 
-/**
- * The environment ID associated with the metrics.
- */
     public String getEnv() {
         return this.env;
     }
-/**
- * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
- */
     public String getInstanceId() {
         return this.instanceId;
     }
-/**
- * The location associated with the metrics.
- */
     public String getLocation() {
         return this.location;
     }

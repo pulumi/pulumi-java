@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Site load balancing.
- */
     @EnumType
     public enum SiteLoadBalancing {
-/**
- * 
- */
         WeightedRoundRobin("WeightedRoundRobin"),
-/**
- * 
- */
         LeastRequests("LeastRequests"),
-/**
- * 
- */
         LeastResponseTime("LeastResponseTime"),
-/**
- * 
- */
         WeightedTotalTraffic("WeightedTotalTraffic"),
-/**
- * 
- */
         RequestHash("RequestHash"),
-/**
- * 
- */
         PerSiteRoundRobin("PerSiteRoundRobin");
 
         private final String value;

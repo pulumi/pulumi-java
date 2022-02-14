@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Hostname type.
- */
     @EnumType
     public enum HostnameType {
-/**
- * 
- */
         Proxy("Proxy"),
-/**
- * 
- */
         Portal("Portal"),
-/**
- * 
- */
         Management("Management"),
-/**
- * 
- */
         Scm("Scm"),
-/**
- * 
- */
         DeveloperPortal("DeveloperPortal");
 
         private final String value;

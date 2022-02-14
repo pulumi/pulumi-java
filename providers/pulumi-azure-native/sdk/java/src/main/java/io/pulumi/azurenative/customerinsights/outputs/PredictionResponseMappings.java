@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PredictionResponseMappings {
-/**
- * The grade of the link mapping.
- */
     private final String grade;
-/**
- * The reason of the link mapping.
- */
     private final String reason;
-/**
- * The score of the link mapping.
- */
     private final String score;
 
     @OutputCustomType.Constructor({"grade","reason","score"})
@@ -32,21 +23,12 @@ public final class PredictionResponseMappings {
         this.score = Objects.requireNonNull(score);
     }
 
-/**
- * The grade of the link mapping.
- */
     public String getGrade() {
         return this.grade;
     }
-/**
- * The reason of the link mapping.
- */
     public String getReason() {
         return this.reason;
     }
-/**
- * The score of the link mapping.
- */
     public String getScore() {
         return this.score;
     }

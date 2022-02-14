@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The group by expression to be used in the report.
- */
 public final class ReportConfigGroupingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportConfigGroupingArgs Empty = new ReportConfigGroupingArgs();
 
-    /**
-     * The name of the column to group. This version supports subscription lowest possible grain.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +22,6 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
         return this.name;
     }
 
-    /**
-     * Has type of the column to group.
-     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ReportConfigColumnType>> type;
 

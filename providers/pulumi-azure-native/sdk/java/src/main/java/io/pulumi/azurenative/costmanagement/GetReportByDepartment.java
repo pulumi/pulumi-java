@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReportByDepartment {
-/**
- * A report resource.
-API Version: 2018-08-01-preview.
- *
- * A report resource.
- */
     public static CompletableFuture<GetReportByDepartmentResult> invokeAsync(GetReportByDepartmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getReportByDepartment", TypeShape.of(GetReportByDepartmentResult.class), args == null ? GetReportByDepartmentArgs.Empty : args, Utilities.withVersion(options));
     }

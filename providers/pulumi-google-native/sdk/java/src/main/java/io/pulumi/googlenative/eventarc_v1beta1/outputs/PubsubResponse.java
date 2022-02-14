@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PubsubResponse {
-/**
- * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
- */
     private final String subscription;
-/**
- * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
- */
     private final String topic;
 
     @OutputCustomType.Constructor({"subscription","topic"})
@@ -26,15 +20,9 @@ public final class PubsubResponse {
         this.topic = Objects.requireNonNull(topic);
     }
 
-/**
- * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
- */
     public String getSubscription() {
         return this.subscription;
     }
-/**
- * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
- */
     public String getTopic() {
         return this.topic;
     }

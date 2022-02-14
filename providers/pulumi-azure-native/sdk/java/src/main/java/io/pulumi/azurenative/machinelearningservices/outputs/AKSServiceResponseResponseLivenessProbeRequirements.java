@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AKSServiceResponseResponseLivenessProbeRequirements {
-/**
- * The number of failures to allow before returning an unhealthy status.
- */
     private final @Nullable Integer failureThreshold;
-/**
- * The delay before the first probe in seconds.
- */
     private final @Nullable Integer initialDelaySeconds;
-/**
- * The length of time between probes in seconds.
- */
     private final @Nullable Integer periodSeconds;
-/**
- * The number of successful probes before returning a healthy status.
- */
     private final @Nullable Integer successThreshold;
-/**
- * The probe timeout in seconds.
- */
     private final @Nullable Integer timeoutSeconds;
 
     @OutputCustomType.Constructor({"failureThreshold","initialDelaySeconds","periodSeconds","successThreshold","timeoutSeconds"})
@@ -46,33 +31,18 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
         this.timeoutSeconds = timeoutSeconds;
     }
 
-/**
- * The number of failures to allow before returning an unhealthy status.
- */
     public Optional<Integer> getFailureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
-/**
- * The delay before the first probe in seconds.
- */
     public Optional<Integer> getInitialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
-/**
- * The length of time between probes in seconds.
- */
     public Optional<Integer> getPeriodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
-/**
- * The number of successful probes before returning a healthy status.
- */
     public Optional<Integer> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
-/**
- * The probe timeout in seconds.
- */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

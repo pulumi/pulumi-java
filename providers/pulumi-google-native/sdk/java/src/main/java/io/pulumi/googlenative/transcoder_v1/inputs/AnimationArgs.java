@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Animation types.
- */
 public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnimationArgs Empty = new AnimationArgs();
 
-    /**
-     * End previous animation.
-     */
     @InputImport(name="animationEnd")
     private final @Nullable Input<AnimationEndArgs> animationEnd;
 
@@ -29,9 +23,6 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
         return this.animationEnd == null ? Input.empty() : this.animationEnd;
     }
 
-    /**
-     * Display overlay object with fade animation.
-     */
     @InputImport(name="animationFade")
     private final @Nullable Input<AnimationFadeArgs> animationFade;
 
@@ -39,9 +30,6 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
         return this.animationFade == null ? Input.empty() : this.animationFade;
     }
 
-    /**
-     * Display static overlay object.
-     */
     @InputImport(name="animationStatic")
     private final @Nullable Input<AnimationStaticArgs> animationStatic;
 

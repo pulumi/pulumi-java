@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedNetworkPeeringPolicyResponse {
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final @Nullable String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Gets or sets the properties of a Managed Network Policy
- */
     private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","type"})
@@ -47,33 +32,18 @@ public final class ManagedNetworkPeeringPolicyResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Gets or sets the properties of a Managed Network Policy
- */
     public Optional<ManagedNetworkPeeringPolicyPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     public String getType() {
         return this.type;
     }

@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorResponse {
-/**
- * Additional information about the error.
- */
     private final Map<String,String> details;
-/**
- * The time when the error occurred.
- */
     private final String errorTime;
-/**
- * A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
- */
     private final String errorUuid;
-/**
- * A message containing more information about the error that occurred.
- */
     private final String message;
-/**
- * A title that explains the reason for the error.
- */
     private final String reason;
 
     @OutputCustomType.Constructor({"details","errorTime","errorUuid","message","reason"})
@@ -45,33 +30,18 @@ public final class ErrorResponse {
         this.reason = Objects.requireNonNull(reason);
     }
 
-/**
- * Additional information about the error.
- */
     public Map<String,String> getDetails() {
         return this.details;
     }
-/**
- * The time when the error occurred.
- */
     public String getErrorTime() {
         return this.errorTime;
     }
-/**
- * A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
- */
     public String getErrorUuid() {
         return this.errorUuid;
     }
-/**
- * A message containing more information about the error that occurred.
- */
     public String getMessage() {
         return this.message;
     }
-/**
- * A title that explains the reason for the error.
- */
     public String getReason() {
         return this.reason;
     }

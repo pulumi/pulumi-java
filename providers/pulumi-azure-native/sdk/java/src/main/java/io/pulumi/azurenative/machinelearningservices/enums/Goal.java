@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Defines supported metric goals for hyperparameter tuning
- */
     @EnumType
     public enum Goal {
-/**
- * 
- */
         Minimize("Minimize"),
-/**
- * 
- */
         Maximize("Maximize");
 
         private final String value;

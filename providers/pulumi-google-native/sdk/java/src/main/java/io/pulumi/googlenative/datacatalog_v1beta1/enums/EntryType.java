@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the entry. Only used for Entries with types in the EntryType enum.
- */
     @EnumType
     public enum EntryType {
-/**
- * Default unknown type.
- */
         EntryTypeUnspecified("ENTRY_TYPE_UNSPECIFIED"),
-/**
- * Output only. The type of entry that has a GoogleSQL schema, including logical views.
- */
         Table("TABLE"),
-/**
- * Output only. The type of models. https://cloud.google.com/bigquery-ml/docs/bigqueryml-intro
- */
         Model("MODEL"),
-/**
- * Output only. An entry type which is used for streaming entries. Example: Pub/Sub topic.
- */
         DataStream("DATA_STREAM"),
-/**
- * An entry type which is a set of files or objects. Example: Cloud Storage fileset.
- */
         Fileset("FILESET");
 
         private final String value;

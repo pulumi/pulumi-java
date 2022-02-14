@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of an existing Shared Private Link Resource to use when connecting to a private origin.
- */
 public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharedPrivateLinkResourcePropertiesResponse Empty = new SharedPrivateLinkResourcePropertiesResponse();
 
-    /**
-     * The group id from the provider of resource the shared private link resource is for.
-     */
     @InputImport(name="groupId")
     private final @Nullable String groupId;
 
@@ -28,9 +22,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
-    /**
-     * The resource id of the resource the shared private link resource is for.
-     */
     @InputImport(name="privateLink")
     private final @Nullable ResourceReferenceResponse privateLink;
 
@@ -38,9 +29,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.privateLink == null ? Optional.empty() : Optional.ofNullable(this.privateLink);
     }
 
-    /**
-     * The location of the shared private link resource
-     */
     @InputImport(name="privateLinkLocation")
     private final @Nullable String privateLinkLocation;
 
@@ -48,9 +36,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
     }
 
-    /**
-     * The request message for requesting approval of the shared private link resource.
-     */
     @InputImport(name="requestMessage")
     private final @Nullable String requestMessage;
 
@@ -58,9 +43,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
-    /**
-     * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 

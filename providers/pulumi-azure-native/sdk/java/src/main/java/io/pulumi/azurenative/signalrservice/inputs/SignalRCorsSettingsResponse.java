@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cross-Origin Resource Sharing (CORS) settings.
- */
 public final class SignalRCorsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SignalRCorsSettingsResponse Empty = new SignalRCorsSettingsResponse();
 
-    /**
-     * Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
-     */
     @InputImport(name="allowedOrigins")
     private final @Nullable List<String> allowedOrigins;
 

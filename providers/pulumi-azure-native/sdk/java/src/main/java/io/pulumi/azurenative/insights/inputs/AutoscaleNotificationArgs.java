@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Autoscale notification.
- */
 public final class AutoscaleNotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscaleNotificationArgs Empty = new AutoscaleNotificationArgs();
 
-    /**
-     * the email notification.
-     */
     @InputImport(name="email")
     private final @Nullable Input<EmailNotificationArgs> email;
 
@@ -30,9 +24,6 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
         return this.email == null ? Input.empty() : this.email;
     }
 
-    /**
-     * the operation associated with the notification and its value must be "scale"
-     */
     @InputImport(name="operation", required=true)
     private final Input<OperationType> operation;
 
@@ -40,9 +31,6 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
         return this.operation;
     }
 
-    /**
-     * the collection of webhook notifications.
-     */
     @InputImport(name="webhooks")
     private final @Nullable Input<List<WebhookNotificationArgs>> webhooks;
 

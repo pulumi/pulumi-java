@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains information about the delivery package being shipped by the customer to the Microsoft data center.
- */
 public final class DeliveryPackageInformationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryPackageInformationArgs Empty = new DeliveryPackageInformationArgs();
 
-    /**
-     * The name of the carrier that is used to ship the import or export drives.
-     */
     @InputImport(name="carrierName", required=true)
     private final Input<String> carrierName;
 
@@ -28,9 +22,6 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
         return this.carrierName;
     }
 
-    /**
-     * The number of drives included in the package.
-     */
     @InputImport(name="driveCount")
     private final @Nullable Input<Double> driveCount;
 
@@ -38,9 +29,6 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
         return this.driveCount == null ? Input.empty() : this.driveCount;
     }
 
-    /**
-     * The date when the package is shipped.
-     */
     @InputImport(name="shipDate")
     private final @Nullable Input<String> shipDate;
 
@@ -48,9 +36,6 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
         return this.shipDate == null ? Input.empty() : this.shipDate;
     }
 
-    /**
-     * The tracking number of the package.
-     */
     @InputImport(name="trackingNumber", required=true)
     private final Input<String> trackingNumber;
 

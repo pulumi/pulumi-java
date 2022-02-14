@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The instance view of the container group. Only valid in response.
- */
 public final class ContainerGroupResponseInstanceView extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerGroupResponseInstanceView Empty = new ContainerGroupResponseInstanceView();
 
-    /**
-     * The events of this container group.
-     */
     @InputImport(name="events", required=true)
     private final List<EventResponse> events;
 
@@ -27,9 +21,6 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
         return this.events;
     }
 
-    /**
-     * The state of the container group. Only valid in response.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlContainer {
-/**
- * An Azure Cosmos DB container.
-API Version: 2021-03-15.
- *
- * An Azure Cosmos DB container.
- */
     public static CompletableFuture<GetSqlResourceSqlContainerResult> invokeAsync(GetSqlResourceSqlContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlContainer", TypeShape.of(GetSqlResourceSqlContainerResult.class), args == null ? GetSqlResourceSqlContainerArgs.Empty : args, Utilities.withVersion(options));
     }

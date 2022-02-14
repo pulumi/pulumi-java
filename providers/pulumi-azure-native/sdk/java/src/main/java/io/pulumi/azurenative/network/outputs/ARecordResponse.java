@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ARecordResponse {
-/**
- * The IPv4 address of this A record.
- */
     private final @Nullable String ipv4Address;
 
     @OutputCustomType.Constructor({"ipv4Address"})
@@ -21,9 +18,6 @@ public final class ARecordResponse {
         this.ipv4Address = ipv4Address;
     }
 
-/**
- * The IPv4 address of this A record.
- */
     public Optional<String> getIpv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }

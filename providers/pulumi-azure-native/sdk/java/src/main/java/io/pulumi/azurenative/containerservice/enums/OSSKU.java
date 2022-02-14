@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
- */
     @EnumType
     public enum OSSKU {
-/**
- * 
- */
         Ubuntu("Ubuntu"),
-/**
- * 
- */
         CBLMariner("CBLMariner");
 
         private final String value;

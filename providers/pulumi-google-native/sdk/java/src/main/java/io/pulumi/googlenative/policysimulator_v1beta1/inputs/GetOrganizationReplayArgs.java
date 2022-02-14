@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOrganizationReplayArgs Empty = new GetOrganizationReplayArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -25,9 +19,6 @@ public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeA
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -35,9 +26,6 @@ public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeA
         return this.organizationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="replayId", required=true)
     private final String replayId;
 

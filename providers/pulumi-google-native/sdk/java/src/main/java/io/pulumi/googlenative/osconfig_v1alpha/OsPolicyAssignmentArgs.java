@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OsPolicyAssignmentArgs Empty = new OsPolicyAssignmentArgs();
 
-    /**
-     * OS policy assignment description. Length of the description is limited to 1024 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,9 +25,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -41,9 +32,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * Filter to select VMs.
-     */
     @InputImport(name="instanceFilter", required=true)
     private final Input<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
@@ -51,9 +39,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.instanceFilter;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,9 +46,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -71,9 +53,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * List of OS policies to be applied to the VMs.
-     */
     @InputImport(name="osPolicies", required=true)
     private final Input<List<OSPolicyArgs>> osPolicies;
 
@@ -81,9 +60,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.osPolicies;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="osPolicyAssignmentId", required=true)
     private final Input<String> osPolicyAssignmentId;
 
@@ -91,9 +67,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.osPolicyAssignmentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -101,9 +74,6 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
-     */
     @InputImport(name="rollout", required=true)
     private final Input<OSPolicyAssignmentRolloutArgs> rollout;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetServer {
-/**
- * Gets a TargetServer resource.
- */
     public static CompletableFuture<GetTargetServerResult> invokeAsync(GetTargetServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getTargetServer", TypeShape.of(GetTargetServerResult.class), args == null ? GetTargetServerArgs.Empty : args, Utilities.withVersion(options));
     }

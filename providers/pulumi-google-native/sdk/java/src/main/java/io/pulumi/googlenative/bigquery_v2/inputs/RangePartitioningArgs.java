@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RangePartitioningArgs Empty = new RangePartitioningArgs();
 
-    /**
-     * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
-     */
     @InputImport(name="field")
     private final @Nullable Input<String> field;
 
@@ -28,9 +22,6 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
         return this.field == null ? Input.empty() : this.field;
     }
 
-    /**
-     * [TrustedTester] [Required] Defines the ranges for range partitioning.
-     */
     @InputImport(name="range")
     private final @Nullable Input<RangePartitioningRangeArgs> range;
 

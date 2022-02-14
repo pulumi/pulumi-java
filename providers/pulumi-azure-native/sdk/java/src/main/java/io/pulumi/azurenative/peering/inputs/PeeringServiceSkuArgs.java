@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The SKU that defines the type of the peering service.
- */
 public final class PeeringServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeeringServiceSkuArgs Empty = new PeeringServiceSkuArgs();
 
-    /**
-     * The name of the peering service SKU.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

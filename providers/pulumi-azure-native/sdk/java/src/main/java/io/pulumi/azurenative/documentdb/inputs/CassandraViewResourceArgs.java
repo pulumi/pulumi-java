@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Cosmos DB Cassandra view resource object
- */
 public final class CassandraViewResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CassandraViewResourceArgs Empty = new CassandraViewResourceArgs();
 
-    /**
-     * Name of the Cosmos DB Cassandra view
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -26,9 +20,6 @@ public final class CassandraViewResourceArgs extends io.pulumi.resources.Resourc
         return this.id;
     }
 
-    /**
-     * View Definition of the Cosmos DB Cassandra view
-     */
     @InputImport(name="viewDefinition", required=true)
     private final Input<String> viewDefinition;
 

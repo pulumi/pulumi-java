@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCache {
-/**
- * Cache details.
-API Version: 2020-12-01.
- *
- * Cache details.
- */
     public static CompletableFuture<GetCacheResult> invokeAsync(GetCacheArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getCache", TypeShape.of(GetCacheResult.class), args == null ? GetCacheArgs.Empty : args, Utilities.withVersion(options));
     }

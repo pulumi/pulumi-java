@@ -12,37 +12,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPrivateConnectionResult {
-/**
- * The create time of the resource.
- */
     private final String createTime;
-/**
- * Display name.
- */
     private final String displayName;
-/**
- * In case of error, the details of the error in a user-friendly format.
- */
     private final ErrorResponse error;
-/**
- * Labels.
- */
     private final Map<String,String> labels;
-/**
- * The resource's name.
- */
     private final String name;
-/**
- * The state of the Private Connection.
- */
     private final String state;
-/**
- * The update time of the resource.
- */
     private final String updateTime;
-/**
- * VPC Peering Config.
- */
     private final VpcPeeringConfigResponse vpcPeeringConfig;
 
     @OutputCustomType.Constructor({"createTime","displayName","error","labels","name","state","updateTime","vpcPeeringConfig"})
@@ -65,51 +41,27 @@ public final class GetPrivateConnectionResult {
         this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
     }
 
-/**
- * The create time of the resource.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Display name.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * In case of error, the details of the error in a user-friendly format.
- */
     public ErrorResponse getError() {
         return this.error;
     }
-/**
- * Labels.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * The resource's name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The state of the Private Connection.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The update time of the resource.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }
-/**
- * VPC Peering Config.
- */
     public VpcPeeringConfigResponse getVpcPeeringConfig() {
         return this.vpcPeeringConfig;
     }

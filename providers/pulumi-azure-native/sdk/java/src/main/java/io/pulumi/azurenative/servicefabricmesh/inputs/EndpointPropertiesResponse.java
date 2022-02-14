@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a container endpoint.
- */
 public final class EndpointPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointPropertiesResponse Empty = new EndpointPropertiesResponse();
 
-    /**
-     * The name of the endpoint.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,9 +22,6 @@ public final class EndpointPropertiesResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * Port used by the container.
-     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 

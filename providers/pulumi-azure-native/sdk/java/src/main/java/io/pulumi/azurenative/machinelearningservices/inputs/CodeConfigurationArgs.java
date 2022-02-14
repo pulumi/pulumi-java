@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for a scoring code asset.
- */
 public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CodeConfigurationArgs Empty = new CodeConfigurationArgs();
 
-    /**
-     * ARM resource ID of the code asset.
-     */
     @InputImport(name="codeId")
     private final @Nullable Input<String> codeId;
 
@@ -27,9 +21,6 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.codeId == null ? Input.empty() : this.codeId;
     }
 
-    /**
-     * The script to execute on startup. eg. "score.py"
-     */
     @InputImport(name="scoringScript", required=true)
     private final Input<String> scoringScript;
 

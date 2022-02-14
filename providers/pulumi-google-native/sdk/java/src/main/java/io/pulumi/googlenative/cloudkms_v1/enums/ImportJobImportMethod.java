@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. Immutable. The wrapping method to be used for incoming key material.
- */
     @EnumType
     public enum ImportJobImportMethod {
-/**
- * Not specified.
- */
         ImportMethodUnspecified("IMPORT_METHOD_UNSPECIFIED"),
-/**
- * This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 3072 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).
- */
         RsaOaep3072Sha1Aes256("RSA_OAEP_3072_SHA1_AES_256"),
-/**
- * This ImportMethod represents the CKM_RSA_AES_KEY_WRAP key wrapping scheme defined in the PKCS #11 standard. In summary, this involves wrapping the raw key with an ephemeral AES key, and wrapping the ephemeral AES key with a 4096 bit RSA key. For more details, see [RSA AES key wrap mechanism](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/cos01/pkcs11-curr-v2.40-cos01.html#_Toc408226908).
- */
         RsaOaep4096Sha1Aes256("RSA_OAEP_4096_SHA1_AES_256");
 
         private final String value;

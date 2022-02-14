@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiManagementServiceDomainOwnershipIdentifier {
-/**
- * Response of the GetDomainOwnershipIdentifier operation.
-API Version: 2020-12-01.
- *
- * Response of the GetDomainOwnershipIdentifier operation.
- */
     public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> invokeAsync(@Nullable GetApiManagementServiceDomainOwnershipIdentifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceDomainOwnershipIdentifier", TypeShape.of(GetApiManagementServiceDomainOwnershipIdentifierResult.class), args == null ? GetApiManagementServiceDomainOwnershipIdentifierArgs.Empty : args, Utilities.withVersion(options));
     }

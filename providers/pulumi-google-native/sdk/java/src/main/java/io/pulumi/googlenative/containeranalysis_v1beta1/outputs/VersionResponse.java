@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VersionResponse {
-/**
- * Used to correct mistakes in the version numbering scheme.
- */
     private final Integer epoch;
-/**
- * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
- */
     private final Boolean inclusive;
-/**
- * Distinguishes between sentinel MIN/MAX versions and normal versions.
- */
     private final String kind;
-/**
- * Required only when version kind is NORMAL. The main part of the version name.
- */
     private final String name;
-/**
- * The iteration of the package build from the above version.
- */
     private final String revision;
 
     @OutputCustomType.Constructor({"epoch","inclusive","kind","name","revision"})
@@ -46,33 +31,18 @@ public final class VersionResponse {
         this.revision = Objects.requireNonNull(revision);
     }
 
-/**
- * Used to correct mistakes in the version numbering scheme.
- */
     public Integer getEpoch() {
         return this.epoch;
     }
-/**
- * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
- */
     public Boolean getInclusive() {
         return this.inclusive;
     }
-/**
- * Distinguishes between sentinel MIN/MAX versions and normal versions.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Required only when version kind is NORMAL. The main part of the version name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The iteration of the package build from the above version.
- */
     public String getRevision() {
         return this.revision;
     }

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The X12 message identifier.
- */
 public final class X12MessageIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X12MessageIdentifierArgs Empty = new X12MessageIdentifierArgs();
 
-    /**
-     * The message id.
-     */
     @InputImport(name="messageId", required=true)
     private final Input<String> messageId;
 

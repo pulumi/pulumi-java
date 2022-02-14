@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudChannelV1EduDataResponse {
-/**
- * Size of the institute.
- */
     private final String instituteSize;
-/**
- * Designated institute type of customer.
- */
     private final String instituteType;
-/**
- * Web address for the edu customer's institution.
- */
     private final String website;
 
     @OutputCustomType.Constructor({"instituteSize","instituteType","website"})
@@ -32,21 +23,12 @@ public final class GoogleCloudChannelV1EduDataResponse {
         this.website = Objects.requireNonNull(website);
     }
 
-/**
- * Size of the institute.
- */
     public String getInstituteSize() {
         return this.instituteSize;
     }
-/**
- * Designated institute type of customer.
- */
     public String getInstituteType() {
         return this.instituteType;
     }
-/**
- * Web address for the edu customer's institution.
- */
     public String getWebsite() {
         return this.website;
     }

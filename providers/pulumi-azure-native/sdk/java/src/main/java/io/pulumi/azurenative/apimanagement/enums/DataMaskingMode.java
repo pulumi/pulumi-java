@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Data masking mode.
- */
     @EnumType
     public enum DataMaskingMode {
-/**
- * Mask the value of an entity.
- */
         Mask("Mask"),
-/**
- * Hide the presence of an entity.
- */
         Hide("Hide");
 
         private final String value;

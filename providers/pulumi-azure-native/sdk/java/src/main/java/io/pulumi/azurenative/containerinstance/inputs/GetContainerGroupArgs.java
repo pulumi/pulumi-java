@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetContainerGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetContainerGroupArgs Empty = new GetContainerGroupArgs();
 
-    /**
-     * The name of the container group.
-     */
     @InputImport(name="containerGroupName", required=true)
     private final String containerGroupName;
 
@@ -25,9 +19,6 @@ public final class GetContainerGroupArgs extends io.pulumi.resources.InvokeArgs 
         return this.containerGroupName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

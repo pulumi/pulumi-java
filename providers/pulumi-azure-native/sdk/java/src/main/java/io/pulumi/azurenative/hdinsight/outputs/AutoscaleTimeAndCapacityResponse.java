@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoscaleTimeAndCapacityResponse {
-/**
- * The maximum instance count of the cluster
- */
     private final @Nullable Integer maxInstanceCount;
-/**
- * The minimum instance count of the cluster
- */
     private final @Nullable Integer minInstanceCount;
-/**
- * 24-hour time in the form xx:xx
- */
     private final @Nullable String time;
 
     @OutputCustomType.Constructor({"maxInstanceCount","minInstanceCount","time"})
@@ -35,21 +26,12 @@ public final class AutoscaleTimeAndCapacityResponse {
         this.time = time;
     }
 
-/**
- * The maximum instance count of the cluster
- */
     public Optional<Integer> getMaxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
-/**
- * The minimum instance count of the cluster
- */
     public Optional<Integer> getMinInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
-/**
- * 24-hour time in the form xx:xx
- */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }

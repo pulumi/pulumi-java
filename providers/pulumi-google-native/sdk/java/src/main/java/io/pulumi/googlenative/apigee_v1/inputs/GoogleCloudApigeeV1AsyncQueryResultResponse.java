@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1AsyncQueryResultResponse Empty = new GoogleCloudApigeeV1AsyncQueryResultResponse();
 
-    /**
-     * Query result will be unaccessable after this time.
-     */
     @InputImport(name="expires", required=true)
     private final String expires;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
         return this.expires;
     }
 
-    /**
-     * Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
-     */
     @InputImport(name="self", required=true)
     private final String self;
 

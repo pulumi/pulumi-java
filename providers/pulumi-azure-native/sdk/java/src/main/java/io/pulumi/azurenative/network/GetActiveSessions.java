@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActiveSessions {
-/**
- * Response for GetActiveSessions.
-API Version: 2020-11-01.
- *
- * Response for GetActiveSessions.
- */
     public static CompletableFuture<GetActiveSessionsResult> invokeAsync(GetActiveSessionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getActiveSessions", TypeShape.of(GetActiveSessionsResult.class), args == null ? GetActiveSessionsArgs.Empty : args, Utilities.withVersion(options));
     }

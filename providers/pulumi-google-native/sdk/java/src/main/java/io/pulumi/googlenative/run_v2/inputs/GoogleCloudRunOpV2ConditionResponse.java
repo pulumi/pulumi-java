@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines a status condition for a resource.
- */
 public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunOpV2ConditionResponse Empty = new GoogleCloudRunOpV2ConditionResponse();
 
-    /**
-     * A reason for the domain mapping condition.
-     */
     @InputImport(name="domainMappingReason", required=true)
     private final String domainMappingReason;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.domainMappingReason;
     }
 
-    /**
-     * A reason for the execution condition.
-     */
     @InputImport(name="executionReason", required=true)
     private final String executionReason;
 
@@ -35,9 +26,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.executionReason;
     }
 
-    /**
-     * A reason for the internal condition.
-     */
     @InputImport(name="internalReason", required=true)
     private final String internalReason;
 
@@ -45,9 +33,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.internalReason;
     }
 
-    /**
-     * Last time the condition transitioned from one status to another.
-     */
     @InputImport(name="lastTransitionTime", required=true)
     private final String lastTransitionTime;
 
@@ -55,9 +40,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.lastTransitionTime;
     }
 
-    /**
-     * Human readable message indicating details about the current status.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -65,9 +47,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.message;
     }
 
-    /**
-     * A common (service-level) reason for this condition.
-     */
     @InputImport(name="reason", required=true)
     private final String reason;
 
@@ -75,9 +54,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.reason;
     }
 
-    /**
-     * A reason for the revision condition.
-     */
     @InputImport(name="revisionReason", required=true)
     private final String revisionReason;
 
@@ -85,9 +61,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.revisionReason;
     }
 
-    /**
-     * How to interpret failures of this condition, one of Error, Warning, Info
-     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -95,9 +68,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.severity;
     }
 
-    /**
-     * State of the condition.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -105,9 +75,6 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
         return this.state;
     }
 
-    /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

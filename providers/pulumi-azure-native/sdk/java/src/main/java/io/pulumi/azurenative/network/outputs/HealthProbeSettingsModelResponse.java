@@ -12,41 +12,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HealthProbeSettingsModelResponse {
-/**
- * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
- */
     private final @Nullable String enabledState;
-/**
- * Configures which HTTP method to use to probe the backends defined under backendPools.
- */
     private final @Nullable String healthProbeMethod;
-/**
- * Resource ID.
- */
     private final @Nullable String id;
-/**
- * The number of seconds between health probes.
- */
     private final @Nullable Integer intervalInSeconds;
-/**
- * Resource name.
- */
     private final @Nullable String name;
-/**
- * The path to use for the health probe. Default is /
- */
     private final @Nullable String path;
-/**
- * Protocol scheme to use for this probe
- */
     private final @Nullable String protocol;
-/**
- * Resource status.
- */
     private final String resourceState;
-/**
- * Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"enabledState","healthProbeMethod","id","intervalInSeconds","name","path","protocol","resourceState","type"})
@@ -71,57 +44,30 @@ public final class HealthProbeSettingsModelResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
- */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
-/**
- * Configures which HTTP method to use to probe the backends defined under backendPools.
- */
     public Optional<String> getHealthProbeMethod() {
         return Optional.ofNullable(this.healthProbeMethod);
     }
-/**
- * Resource ID.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * The number of seconds between health probes.
- */
     public Optional<Integer> getIntervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
-/**
- * Resource name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The path to use for the health probe. Default is /
- */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
-/**
- * Protocol scheme to use for this probe
- */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
-/**
- * Resource status.
- */
     public String getResourceState() {
         return this.resourceState;
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }

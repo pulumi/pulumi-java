@@ -15,45 +15,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTemplateSpecResult {
-/**
- * Template Spec description.
- */
     private final @Nullable String description;
-/**
- * Template Spec display name.
- */
     private final @Nullable String displayName;
-/**
- * String Id used to locate any resource on Azure.
- */
     private final String id;
-/**
- * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
- */
     private final String location;
-/**
- * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
- */
     private final @Nullable Object metadata;
-/**
- * Name of this resource.
- */
     private final String name;
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     private final SystemDataResponse systemData;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Type of this resource.
- */
     private final String type;
-/**
- * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
- */
     private final Map<String,TemplateSpecVersionInfoResponse> versions;
 
     @OutputCustomType.Constructor({"description","displayName","id","location","metadata","name","systemData","tags","type","versions"})
@@ -80,63 +50,33 @@ public final class GetTemplateSpecResult {
         this.versions = Objects.requireNonNull(versions);
     }
 
-/**
- * Template Spec description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Template Spec display name.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * String Id used to locate any resource on Azure.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
- */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
-/**
- * Name of this resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Type of this resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
- */
     public Map<String,TemplateSpecVersionInfoResponse> getVersions() {
         return this.versions;
     }

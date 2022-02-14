@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters that define the configuration of traffic analytics.
- */
 public final class TrafficAnalyticsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrafficAnalyticsPropertiesResponse Empty = new TrafficAnalyticsPropertiesResponse();
 
-    /**
-     * Parameters that define the configuration of traffic analytics.
-     */
     @InputImport(name="networkWatcherFlowAnalyticsConfiguration")
     private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A private endpoint connection under a server
- */
 public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerPrivateEndpointConnectionResponse Empty = new ServerPrivateEndpointConnectionResponse();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,9 +20,6 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
         return this.id;
     }
 
-    /**
-     * Private endpoint connection properties
-     */
     @InputImport(name="properties", required=true)
     private final PrivateEndpointConnectionPropertiesResponse properties;
 

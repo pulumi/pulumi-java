@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * An value that determines where the API Version identifier will be located in a HTTP request.
- */
     @EnumType
     public enum VersioningScheme {
-/**
- * The API Version is passed in a path segment.
- */
         Segment("Segment"),
-/**
- * The API Version is passed in a query parameter.
- */
         Query("Query"),
-/**
- * The API Version is passed in a HTTP header.
- */
         Header("Header");
 
         private final String value;

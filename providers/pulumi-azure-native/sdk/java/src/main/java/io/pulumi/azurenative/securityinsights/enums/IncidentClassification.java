@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The reason the incident was closed
- */
     @EnumType
     public enum IncidentClassification {
-/**
- * Incident classification was undetermined
- */
         Undetermined("Undetermined"),
-/**
- * Incident was true positive
- */
         TruePositive("TruePositive"),
-/**
- * Incident was benign positive
- */
         BenignPositive("BenignPositive"),
-/**
- * Incident was false positive
- */
         FalsePositive("FalsePositive");
 
         private final String value;

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponsePolicy {
-/**
- * Fetches the representation of an existing Response Policy.
- */
     public static CompletableFuture<GetResponsePolicyResult> invokeAsync(GetResponsePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getResponsePolicy", TypeShape.of(GetResponsePolicyResult.class), args == null ? GetResponsePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

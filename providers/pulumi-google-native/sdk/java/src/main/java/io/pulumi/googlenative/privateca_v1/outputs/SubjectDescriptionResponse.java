@@ -11,29 +11,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubjectDescriptionResponse {
-/**
- * The serial number encoded in lowercase hexadecimal.
- */
     private final String hexSerialNumber;
-/**
- * For convenience, the actual lifetime of an issued certificate.
- */
     private final String lifetime;
-/**
- * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
- */
     private final String notAfterTime;
-/**
- * The time at which the certificate becomes valid.
- */
     private final String notBeforeTime;
-/**
- * Contains distinguished name fields such as the common name, location and / organization.
- */
     private final SubjectResponse subject;
-/**
- * The subject alternative name fields.
- */
     private final SubjectAltNamesResponse subjectAltName;
 
     @OutputCustomType.Constructor({"hexSerialNumber","lifetime","notAfterTime","notBeforeTime","subject","subjectAltName"})
@@ -52,39 +34,21 @@ public final class SubjectDescriptionResponse {
         this.subjectAltName = Objects.requireNonNull(subjectAltName);
     }
 
-/**
- * The serial number encoded in lowercase hexadecimal.
- */
     public String getHexSerialNumber() {
         return this.hexSerialNumber;
     }
-/**
- * For convenience, the actual lifetime of an issued certificate.
- */
     public String getLifetime() {
         return this.lifetime;
     }
-/**
- * The time after which the certificate is expired. Per RFC 5280, the validity period for a certificate is the period of time from not_before_time through not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' - 1 second.
- */
     public String getNotAfterTime() {
         return this.notAfterTime;
     }
-/**
- * The time at which the certificate becomes valid.
- */
     public String getNotBeforeTime() {
         return this.notBeforeTime;
     }
-/**
- * Contains distinguished name fields such as the common name, location and / organization.
- */
     public SubjectResponse getSubject() {
         return this.subject;
     }
-/**
- * The subject alternative name fields.
- */
     public SubjectAltNamesResponse getSubjectAltName() {
         return this.subjectAltName;
     }

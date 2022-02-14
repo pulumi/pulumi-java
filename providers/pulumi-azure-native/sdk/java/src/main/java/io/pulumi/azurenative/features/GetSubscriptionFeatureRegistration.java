@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscriptionFeatureRegistration {
-/**
- * Subscription feature registration details
-API Version: 2021-07-01.
- *
- * Subscription feature registration details
- */
     public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> invokeAsync(GetSubscriptionFeatureRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:features:getSubscriptionFeatureRegistration", TypeShape.of(GetSubscriptionFeatureRegistrationResult.class), args == null ? GetSubscriptionFeatureRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

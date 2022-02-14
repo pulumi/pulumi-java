@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualMachineRunCommandByVirtualMachineArgs Empty = new GetVirtualMachineRunCommandByVirtualMachineArgs();
 
-    /**
-     * The expand expression to apply on the operation.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the virtual machine run command.
-     */
     @InputImport(name="runCommandName", required=true)
     private final String runCommandName;
 
@@ -47,9 +35,6 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
         return this.runCommandName;
     }
 
-    /**
-     * The name of the virtual machine containing the run command.
-     */
     @InputImport(name="vmName", required=true)
     private final String vmName;
 

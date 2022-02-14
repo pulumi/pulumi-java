@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Kubernetes role storage resource
- */
 public final class KubernetesRoleStorageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubernetesRoleStorageArgs Empty = new KubernetesRoleStorageArgs();
 
-    /**
-     * Mount points of shares in role(s).
-     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<MountPointMapArgs>> endpoints;
 

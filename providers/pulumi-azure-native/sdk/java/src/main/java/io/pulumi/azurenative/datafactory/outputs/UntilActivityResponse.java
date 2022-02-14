@@ -53,38 +53,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UntilActivityResponse {
-/**
- * List of activities to execute.
- */
     private final List<Object> activities;
-/**
- * Activity depends on condition.
- */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-/**
- * Activity description.
- */
     private final @Nullable String description;
-/**
- * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
- */
     private final ExpressionResponse expression;
-/**
- * Activity name.
- */
     private final String name;
-/**
- * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object timeout;
-/**
- * Type of activity.
-Expected value is 'Until'.
- */
     private final String type;
-/**
- * Activity user properties.
- */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"activities","dependsOn","description","expression","name","timeout","type","userProperties"})
@@ -107,52 +82,27 @@ Expected value is 'Until'.
         this.userProperties = userProperties;
     }
 
-/**
- * List of activities to execute.
- */
     public List<Object> getActivities() {
         return this.activities;
     }
-/**
- * Activity depends on condition.
- */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Activity description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true
- */
     public ExpressionResponse getExpression() {
         return this.expression;
     }
-/**
- * Activity name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
-/**
- * Type of activity.
-Expected value is 'Until'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * Activity user properties.
- */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

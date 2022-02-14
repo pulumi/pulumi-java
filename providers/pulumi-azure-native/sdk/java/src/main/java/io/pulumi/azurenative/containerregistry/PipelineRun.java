@@ -17,341 +17,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * An object that represents a pipeline run for a container registry.
-API Version: 2020-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PipelineRunCreate_Export
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipelineRun = new AzureNative.ContainerRegistry.PipelineRun("pipelineRun", new AzureNative.ContainerRegistry.PipelineRunArgs
-        {
-            PipelineRunName = "myPipelineRun",
-            RegistryName = "myRegistry",
-            Request = new AzureNative.ContainerRegistry.Inputs.PipelineRunRequestArgs
-            {
-                Artifacts = 
-                {
-                    "sourceRepository/hello-world",
-                    "sourceRepository2@sha256:00000000000000000000000000000000000",
-                },
-                PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-                Target = new AzureNative.ContainerRegistry.Inputs.PipelineRunTargetPropertiesArgs
-                {
-                    Name = "myblob.tar.gz",
-                    Type = "AzureStorageBlob",
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewPipelineRun(ctx, "pipelineRun", &containerregistry.PipelineRunArgs{
-			PipelineRunName: pulumi.String("myPipelineRun"),
-			RegistryName:    pulumi.String("myRegistry"),
-			Request: &containerregistry.PipelineRunRequestArgs{
-				Artifacts: pulumi.StringArray{
-					pulumi.String("sourceRepository/hello-world"),
-					pulumi.String("sourceRepository2@sha256:00000000000000000000000000000000000"),
-				},
-				PipelineResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline"),
-				Target: &containerregistry.PipelineRunTargetPropertiesArgs{
-					Name: pulumi.String("myblob.tar.gz"),
-					Type: pulumi.String("AzureStorageBlob"),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const pipelineRun = new azure_native.containerregistry.PipelineRun("pipelineRun", {
-    pipelineRunName: "myPipelineRun",
-    registryName: "myRegistry",
-    request: {
-        artifacts: [
-            "sourceRepository/hello-world",
-            "sourceRepository2@sha256:00000000000000000000000000000000000",
-        ],
-        pipelineResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-        target: {
-            name: "myblob.tar.gz",
-            type: "AzureStorageBlob",
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-pipeline_run = azure_native.containerregistry.PipelineRun("pipelineRun",
-    pipeline_run_name="myPipelineRun",
-    registry_name="myRegistry",
-    request=azure_native.containerregistry.PipelineRunRequestArgs(
-        artifacts=[
-            "sourceRepository/hello-world",
-            "sourceRepository2@sha256:00000000000000000000000000000000000",
-        ],
-        pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/exportPipelines/myExportPipeline",
-        target=azure_native.containerregistry.PipelineRunTargetPropertiesArgs(
-            name="myblob.tar.gz",
-            type="AzureStorageBlob",
-        ),
-    ),
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### PipelineRunCreate_Import
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var pipelineRun = new AzureNative.ContainerRegistry.PipelineRun("pipelineRun", new AzureNative.ContainerRegistry.PipelineRunArgs
-        {
-            ForceUpdateTag = "2020-03-04T17:23:21.9261521+00:00",
-            PipelineRunName = "myPipelineRun",
-            RegistryName = "myRegistry",
-            Request = new AzureNative.ContainerRegistry.Inputs.PipelineRunRequestArgs
-            {
-                CatalogDigest = "sha256@",
-                PipelineResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-                Source = new AzureNative.ContainerRegistry.Inputs.PipelineRunSourcePropertiesArgs
-                {
-                    Name = "myblob.tar.gz",
-                    Type = "AzureStorageBlob",
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerregistry.NewPipelineRun(ctx, "pipelineRun", &containerregistry.PipelineRunArgs{
-			ForceUpdateTag:  pulumi.String("2020-03-04T17:23:21.9261521+00:00"),
-			PipelineRunName: pulumi.String("myPipelineRun"),
-			RegistryName:    pulumi.String("myRegistry"),
-			Request: &containerregistry.PipelineRunRequestArgs{
-				CatalogDigest:      pulumi.String("sha256@"),
-				PipelineResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline"),
-				Source: &containerregistry.PipelineRunSourcePropertiesArgs{
-					Name: pulumi.String("myblob.tar.gz"),
-					Type: pulumi.String("AzureStorageBlob"),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const pipelineRun = new azure_native.containerregistry.PipelineRun("pipelineRun", {
-    forceUpdateTag: "2020-03-04T17:23:21.9261521+00:00",
-    pipelineRunName: "myPipelineRun",
-    registryName: "myRegistry",
-    request: {
-        catalogDigest: "sha256@",
-        pipelineResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-        source: {
-            name: "myblob.tar.gz",
-            type: "AzureStorageBlob",
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-pipeline_run = azure_native.containerregistry.PipelineRun("pipelineRun",
-    force_update_tag="2020-03-04T17:23:21.9261521+00:00",
-    pipeline_run_name="myPipelineRun",
-    registry_name="myRegistry",
-    request=azure_native.containerregistry.PipelineRunRequestArgs(
-        catalog_digest="sha256@",
-        pipeline_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/importPipelines/myImportPipeline",
-        source=azure_native.containerregistry.PipelineRunSourcePropertiesArgs(
-            name="myblob.tar.gz",
-            type="AzureStorageBlob",
-        ),
-    ),
-    resource_group_name="myResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:containerregistry:PipelineRun myPipelineRun /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/pipelineRuns/myPipelineRun 
-```
-
- */
 @ResourceType(type="azure-native:containerregistry:PipelineRun")
 public class PipelineRun extends io.pulumi.resources.CustomResource {
-    /**
-     * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-     */
     @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
-    /**
-     * @return How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-     */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of a pipeline run.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of a pipeline run.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The request parameters for a pipeline run.
-     */
     @OutputExport(name="request", type=PipelineRunRequestResponse.class, parameters={})
     private Output</* @Nullable */ PipelineRunRequestResponse> request;
 
-    /**
-     * @return The request parameters for a pipeline run.
-     */
     public Output</* @Nullable */ PipelineRunRequestResponse> getRequest() {
         return this.request;
     }
-    /**
-     * The response of a pipeline run.
-     */
     @OutputExport(name="response", type=PipelineRunResponseResponse.class, parameters={})
     private Output<PipelineRunResponseResponse> response;
 
-    /**
-     * @return The response of a pipeline run.
-     */
     public Output<PipelineRunResponseResponse> getResponse() {
         return this.response;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PipelineRun(String name, PipelineRunArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerregistry:PipelineRun", name, args == null ? PipelineRunArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -374,14 +84,6 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PipelineRun get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PipelineRun(name, id, options);
     }

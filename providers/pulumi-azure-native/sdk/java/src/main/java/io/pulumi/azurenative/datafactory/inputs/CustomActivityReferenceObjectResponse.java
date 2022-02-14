@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Reference objects for custom activity
- */
 public final class CustomActivityReferenceObjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomActivityReferenceObjectResponse Empty = new CustomActivityReferenceObjectResponse();
 
-    /**
-     * Dataset references.
-     */
     @InputImport(name="datasets")
     private final @Nullable List<DatasetReferenceResponse> datasets;
 
@@ -29,9 +23,6 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
         return this.datasets == null ? List.of() : this.datasets;
     }
 
-    /**
-     * Linked service references.
-     */
     @InputImport(name="linkedServices")
     private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 

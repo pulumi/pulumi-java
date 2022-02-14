@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * AzureFirewall NAT Rule Collection Action.
- */
 public final class AzureFirewallNatRCActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallNatRCActionResponse Empty = new AzureFirewallNatRCActionResponse();
 
-    /**
-     * The type of action.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

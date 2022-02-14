@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
-/**
- * 
- */
     private final ResourcePolicyDailyCycleResponse dailySchedule;
-/**
- * 
- */
     private final ResourcePolicyHourlyCycleResponse hourlySchedule;
-/**
- * 
- */
     private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
     @OutputCustomType.Constructor({"dailySchedule","hourlySchedule","weeklySchedule"})
@@ -34,21 +25,12 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
         this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
     }
 
-/**
- * 
- */
     public ResourcePolicyDailyCycleResponse getDailySchedule() {
         return this.dailySchedule;
     }
-/**
- * 
- */
     public ResourcePolicyHourlyCycleResponse getHourlySchedule() {
         return this.hourlySchedule;
     }
-/**
- * 
- */
     public ResourcePolicyWeeklyCycleResponse getWeeklySchedule() {
         return this.weeklySchedule;
     }

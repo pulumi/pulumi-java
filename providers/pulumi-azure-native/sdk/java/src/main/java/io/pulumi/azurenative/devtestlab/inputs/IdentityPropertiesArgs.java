@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a managed identity
- */
 public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 
-    /**
-     * The client secret URL of the identity.
-     */
     @InputImport(name="clientSecretUrl")
     private final @Nullable Input<String> clientSecretUrl;
 
@@ -29,9 +23,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.clientSecretUrl == null ? Input.empty() : this.clientSecretUrl;
     }
 
-    /**
-     * The principal id of resource identity.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -39,9 +30,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * The tenant identifier of resource.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -49,9 +37,6 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * Managed identity.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ManagedIdentityType>> type;
 

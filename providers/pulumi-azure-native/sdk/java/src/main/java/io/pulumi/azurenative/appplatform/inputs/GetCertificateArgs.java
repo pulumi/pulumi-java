@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
-    /**
-     * The name of the certificate resource.
-     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -25,9 +19,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         return this.certificateName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

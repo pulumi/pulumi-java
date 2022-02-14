@@ -14,45 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetServerSecurityAlertPolicyResult {
-/**
- * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
- */
     private final @Nullable List<String> disabledAlerts;
-/**
- * Specifies that the alert is sent to the account administrators.
- */
     private final @Nullable Boolean emailAccountAdmins;
-/**
- * Specifies an array of e-mail addresses to which the alert is sent.
- */
     private final @Nullable List<String> emailAddresses;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Specifies the number of days to keep in the Threat Detection audit logs.
- */
     private final @Nullable Integer retentionDays;
-/**
- * Specifies the state of the policy, whether it is enabled or disabled.
- */
     private final String state;
-/**
- * Specifies the identifier key of the Threat Detection audit storage account.
- */
     private final @Nullable String storageAccountAccessKey;
-/**
- * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
- */
     private final @Nullable String storageEndpoint;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"disabledAlerts","emailAccountAdmins","emailAddresses","id","name","retentionDays","state","storageAccountAccessKey","storageEndpoint","type"})
@@ -79,63 +49,33 @@ public final class GetServerSecurityAlertPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
- */
     public List<String> getDisabledAlerts() {
         return this.disabledAlerts == null ? List.of() : this.disabledAlerts;
     }
-/**
- * Specifies that the alert is sent to the account administrators.
- */
     public Optional<Boolean> getEmailAccountAdmins() {
         return Optional.ofNullable(this.emailAccountAdmins);
     }
-/**
- * Specifies an array of e-mail addresses to which the alert is sent.
- */
     public List<String> getEmailAddresses() {
         return this.emailAddresses == null ? List.of() : this.emailAddresses;
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Specifies the number of days to keep in the Threat Detection audit logs.
- */
     public Optional<Integer> getRetentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
-/**
- * Specifies the state of the policy, whether it is enabled or disabled.
- */
     public String getState() {
         return this.state;
     }
-/**
- * Specifies the identifier key of the Threat Detection audit storage account.
- */
     public Optional<String> getStorageAccountAccessKey() {
         return Optional.ofNullable(this.storageAccountAccessKey);
     }
-/**
- * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
- */
     public Optional<String> getStorageEndpoint() {
         return Optional.ofNullable(this.storageEndpoint);
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

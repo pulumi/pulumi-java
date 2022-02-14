@@ -8,19 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes the user's progress in configuring their environment setting
- */
     @EnumType
     public enum ConfigurationState {
-/**
- * User either hasn't started configuring their template
-or they haven't started the configuration process.
- */
         NotApplicable("NotApplicable"),
-/**
- * User is finished modifying the template.
- */
         Completed("Completed");
 
         private final String value;

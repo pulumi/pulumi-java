@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information for connecting over HTTP(s).
- */
 public final class AddressableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressableArgs Empty = new AddressableArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

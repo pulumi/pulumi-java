@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Vpn NatRule mapping.
- */
 public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnNatRuleMappingArgs Empty = new VpnNatRuleMappingArgs();
 
-    /**
-     * Address space for Vpn NatRule mapping.
-     */
     @InputImport(name="addressSpace")
     private final @Nullable Input<String> addressSpace;
 

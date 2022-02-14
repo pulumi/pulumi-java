@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Daily Schedule properties
- */
 public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DailyScheduleArgs Empty = new DailyScheduleArgs();
 
-    /**
-     * Indicates which hour in UTC timezone a snapshot should be taken
-     */
     @InputImport(name="hour")
     private final @Nullable Input<Integer> hour;
 
@@ -28,9 +22,6 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.hour == null ? Input.empty() : this.hour;
     }
 
-    /**
-     * Indicates which minute snapshot should be taken
-     */
     @InputImport(name="minute")
     private final @Nullable Input<Integer> minute;
 
@@ -38,9 +29,6 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.minute == null ? Input.empty() : this.minute;
     }
 
-    /**
-     * Daily snapshot count to keep
-     */
     @InputImport(name="snapshotsToKeep")
     private final @Nullable Input<Integer> snapshotsToKeep;
 
@@ -48,9 +36,6 @@ public final class DailyScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotsToKeep == null ? Input.empty() : this.snapshotsToKeep;
     }
 
-    /**
-     * Resource size in bytes, current storage usage for the volume in bytes
-     */
     @InputImport(name="usedBytes")
     private final @Nullable Input<Double> usedBytes;
 

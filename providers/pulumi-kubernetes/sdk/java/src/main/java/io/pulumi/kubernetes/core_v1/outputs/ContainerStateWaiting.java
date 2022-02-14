@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerStateWaiting {
-/**
- * Message regarding why the container is not yet running.
- */
     private final @Nullable String message;
-/**
- * (brief) reason the container is not yet running.
- */
     private final @Nullable String reason;
 
     @OutputCustomType.Constructor({"message","reason"})
@@ -28,15 +22,9 @@ public final class ContainerStateWaiting {
         this.reason = reason;
     }
 
-/**
- * Message regarding why the container is not yet running.
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
-/**
- * (brief) reason the container is not yet running.
- */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }

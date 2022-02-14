@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuditSinkSpec {
-/**
- * Policy defines the policy for selecting which events should be sent to the webhook required
- */
     private final Policy policy;
-/**
- * Webhook to send events required
- */
     private final Webhook webhook;
 
     @OutputCustomType.Constructor({"policy","webhook"})
@@ -27,15 +21,9 @@ public final class AuditSinkSpec {
         this.webhook = Objects.requireNonNull(webhook);
     }
 
-/**
- * Policy defines the policy for selecting which events should be sent to the webhook required
- */
     public Policy getPolicy() {
         return this.policy;
     }
-/**
- * Webhook to send events required
- */
     public Webhook getWebhook() {
         return this.webhook;
     }

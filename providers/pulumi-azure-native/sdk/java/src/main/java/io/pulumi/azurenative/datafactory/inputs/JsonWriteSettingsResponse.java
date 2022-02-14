@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Json write settings.
- */
 public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JsonWriteSettingsResponse Empty = new JsonWriteSettingsResponse();
 
-    /**
-     * File pattern of JSON. This setting controls the way a collection of JSON objects will be treated. The default value is 'setOfObjects'. It is case-sensitive.
-     */
     @InputImport(name="filePattern")
     private final @Nullable Object filePattern;
 
@@ -28,10 +22,6 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
         return this.filePattern == null ? Optional.empty() : Optional.ofNullable(this.filePattern);
     }
 
-    /**
-     * The write setting type.
-Expected value is 'JsonWriteSettings'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -10,33 +10,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GatewayRouteResponse {
-/**
- * The route's AS path sequence.
- */
     private final String asPath;
-/**
- * The gateway's local address.
- */
     private final String localAddress;
-/**
- * The route's network prefix.
- */
     private final String network;
-/**
- * The route's next hop.
- */
     private final String nextHop;
-/**
- * The source this route was learned from.
- */
     private final String origin;
-/**
- * The peer this route was learned from.
- */
     private final String sourcePeer;
-/**
- * The route's weight.
- */
     private final Integer weight;
 
     @OutputCustomType.Constructor({"asPath","localAddress","network","nextHop","origin","sourcePeer","weight"})
@@ -57,45 +36,24 @@ public final class GatewayRouteResponse {
         this.weight = Objects.requireNonNull(weight);
     }
 
-/**
- * The route's AS path sequence.
- */
     public String getAsPath() {
         return this.asPath;
     }
-/**
- * The gateway's local address.
- */
     public String getLocalAddress() {
         return this.localAddress;
     }
-/**
- * The route's network prefix.
- */
     public String getNetwork() {
         return this.network;
     }
-/**
- * The route's next hop.
- */
     public String getNextHop() {
         return this.nextHop;
     }
-/**
- * The source this route was learned from.
- */
     public String getOrigin() {
         return this.origin;
     }
-/**
- * The peer this route was learned from.
- */
     public String getSourcePeer() {
         return this.sourcePeer;
     }
-/**
- * The route's weight.
- */
     public Integer getWeight() {
         return this.weight;
     }

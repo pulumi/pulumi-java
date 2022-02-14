@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Storage workload type.
- */
     @EnumType
     public enum StorageWorkloadType {
-/**
- * 
- */
         GENERAL("GENERAL"),
-/**
- * 
- */
         OLTP("OLTP"),
-/**
- * 
- */
         DW("DW");
 
         private final String value;

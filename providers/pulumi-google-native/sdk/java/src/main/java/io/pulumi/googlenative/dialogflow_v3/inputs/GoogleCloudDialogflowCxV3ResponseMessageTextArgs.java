@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The text response message.
- */
 public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ResponseMessageTextArgs Empty = new GoogleCloudDialogflowCxV3ResponseMessageTextArgs();
 
-    /**
-     * A collection of text responses.
-     */
     @InputImport(name="text", required=true)
     private final Input<List<String>> text;
 

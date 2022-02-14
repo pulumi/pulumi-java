@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueueAuthorizationRuleArgs Empty = new GetQueueAuthorizationRuleArgs();
 
-    /**
-     * The authorization rule name.
-     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -25,9 +19,6 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
         return this.authorizationRuleName;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -35,9 +26,6 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
         return this.namespaceName;
     }
 
-    /**
-     * The queue name.
-     */
     @InputImport(name="queueName", required=true)
     private final String queueName;
 
@@ -45,9 +33,6 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
         return this.queueName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

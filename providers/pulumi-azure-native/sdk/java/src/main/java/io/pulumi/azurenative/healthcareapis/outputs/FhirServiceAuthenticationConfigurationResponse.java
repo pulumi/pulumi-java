@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FhirServiceAuthenticationConfigurationResponse {
-/**
- * The audience url for the service
- */
     private final @Nullable String audience;
-/**
- * The authority url for the service
- */
     private final @Nullable String authority;
-/**
- * If the SMART on FHIR proxy is enabled
- */
     private final @Nullable Boolean smartProxyEnabled;
 
     @OutputCustomType.Constructor({"audience","authority","smartProxyEnabled"})
@@ -35,21 +26,12 @@ public final class FhirServiceAuthenticationConfigurationResponse {
         this.smartProxyEnabled = smartProxyEnabled;
     }
 
-/**
- * The audience url for the service
- */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
-/**
- * The authority url for the service
- */
     public Optional<String> getAuthority() {
         return Optional.ofNullable(this.authority);
     }
-/**
- * If the SMART on FHIR proxy is enabled
- */
     public Optional<Boolean> getSmartProxyEnabled() {
         return Optional.ofNullable(this.smartProxyEnabled);
     }

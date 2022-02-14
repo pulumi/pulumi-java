@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Entity representing the reference to the deployment parameters.
- */
 public final class ParametersLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParametersLinkResponse Empty = new ParametersLinkResponse();
 
-    /**
-     * If included, must match the ContentVersion in the template.
-     */
     @InputImport(name="contentVersion")
     private final @Nullable String contentVersion;
 
@@ -27,9 +21,6 @@ public final class ParametersLinkResponse extends io.pulumi.resources.InvokeArgs
         return this.contentVersion == null ? Optional.empty() : Optional.ofNullable(this.contentVersion);
     }
 
-    /**
-     * The URI of the parameters file.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

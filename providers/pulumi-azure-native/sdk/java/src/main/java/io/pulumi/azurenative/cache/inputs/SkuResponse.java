@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * SKU parameters supplied to the create Redis operation.
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
-     */
     @InputImport(name="capacity", required=true)
     private final Integer capacity;
 
@@ -26,9 +20,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity;
     }
 
-    /**
-     * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
-     */
     @InputImport(name="family", required=true)
     private final String family;
 
@@ -36,9 +27,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family;
     }
 
-    /**
-     * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackfillAllStrategyResponse {
-/**
- * MySQL data source objects to avoid backfilling.
- */
     private final MysqlRdbmsResponse mysqlExcludedObjects;
-/**
- * Oracle data source objects to avoid backfilling.
- */
     private final OracleRdbmsResponse oracleExcludedObjects;
 
     @OutputCustomType.Constructor({"mysqlExcludedObjects","oracleExcludedObjects"})
@@ -27,15 +21,9 @@ public final class BackfillAllStrategyResponse {
         this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
     }
 
-/**
- * MySQL data source objects to avoid backfilling.
- */
     public MysqlRdbmsResponse getMysqlExcludedObjects() {
         return this.mysqlExcludedObjects;
     }
-/**
- * Oracle data source objects to avoid backfilling.
- */
     public OracleRdbmsResponse getOracleExcludedObjects() {
         return this.oracleExcludedObjects;
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MembershipArgs Empty = new MembershipArgs();
 
-    /**
-     * Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
-     */
     @InputImport(name="authority")
     private final @Nullable Input<AuthorityArgs> authority;
 
@@ -31,9 +25,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.authority == null ? Input.empty() : this.authority;
     }
 
-    /**
-     * Optional. Endpoint information to reach this member.
-     */
     @InputImport(name="endpoint")
     private final @Nullable Input<MembershipEndpointArgs> endpoint;
 
@@ -41,9 +32,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpoint == null ? Input.empty() : this.endpoint;
     }
 
-    /**
-     * Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. For GKE clusters, external_id is managed by the Hub API and updates will be ignored. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
-     */
     @InputImport(name="externalId")
     private final @Nullable Input<String> externalId;
 
@@ -51,9 +39,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
-    /**
-     * Optional. The infrastructure type this Membership is running on.
-     */
     @InputImport(name="infrastructureType")
     private final @Nullable Input<MembershipInfrastructureType> infrastructureType;
 
@@ -61,9 +46,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.infrastructureType == null ? Input.empty() : this.infrastructureType;
     }
 
-    /**
-     * Optional. GCP labels for this membership.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -71,9 +53,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="membershipId", required=true)
     private final Input<String> membershipId;
 
@@ -91,9 +67,6 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
         return this.membershipId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

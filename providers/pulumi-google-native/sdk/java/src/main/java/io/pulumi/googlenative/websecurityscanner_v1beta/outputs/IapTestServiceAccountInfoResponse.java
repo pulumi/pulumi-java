@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IapTestServiceAccountInfoResponse {
-/**
- * Describes OAuth2 Client ID of resources protected by Identity-Aware-Proxy(IAP).
- */
     private final String targetAudienceClientId;
 
     @OutputCustomType.Constructor({"targetAudienceClientId"})
@@ -19,9 +16,6 @@ public final class IapTestServiceAccountInfoResponse {
         this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
     }
 
-/**
- * Describes OAuth2 Client ID of resources protected by Identity-Aware-Proxy(IAP).
- */
     public String getTargetAudienceClientId() {
         return this.targetAudienceClientId;
     }

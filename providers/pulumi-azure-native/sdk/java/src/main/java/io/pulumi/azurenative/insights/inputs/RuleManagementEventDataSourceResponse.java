@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A rule management event data source. The discriminator fields is always RuleManagementEventDataSource in this case.
- */
 public final class RuleManagementEventDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleManagementEventDataSourceResponse Empty = new RuleManagementEventDataSourceResponse();
 
-    /**
-     * the claims.
-     */
     @InputImport(name="claims")
     private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
 
@@ -28,9 +22,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
         return this.claims == null ? Optional.empty() : Optional.ofNullable(this.claims);
     }
 
-    /**
-     * the event name.
-     */
     @InputImport(name="eventName")
     private final @Nullable String eventName;
 
@@ -38,9 +29,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
         return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
     }
 
-    /**
-     * the event source.
-     */
     @InputImport(name="eventSource")
     private final @Nullable String eventSource;
 
@@ -48,9 +36,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
         return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
     }
 
-    /**
-     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     */
     @InputImport(name="legacyResourceId")
     private final @Nullable String legacyResourceId;
 
@@ -58,9 +43,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
         return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
     }
 
-    /**
-     * the level.
-     */
     @InputImport(name="level")
     private final @Nullable String level;
 
@@ -68,9 +50,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
-    /**
-     * the namespace of the metric.
-     */
     @InputImport(name="metricNamespace")
     private final @Nullable String metricNamespace;
 
@@ -78,10 +57,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
-    /**
-     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource'.
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -89,9 +64,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.odataType;
     }
 
-    /**
-     * The name of the operation that should be checked for. If no name is provided, any operation will match.
-     */
     @InputImport(name="operationName")
     private final @Nullable String operationName;
 
@@ -99,9 +71,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.operationName == null ? Optional.empty() : Optional.ofNullable(this.operationName);
     }
 
-    /**
-     * the resource group name.
-     */
     @InputImport(name="resourceGroupName")
     private final @Nullable String resourceGroupName;
 
@@ -109,9 +78,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
-    /**
-     * the location of the resource.
-     */
     @InputImport(name="resourceLocation")
     private final @Nullable String resourceLocation;
 
@@ -119,9 +85,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
     }
 
-    /**
-     * the resource provider name.
-     */
     @InputImport(name="resourceProviderName")
     private final @Nullable String resourceProviderName;
 
@@ -129,9 +92,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.resourceProviderName == null ? Optional.empty() : Optional.ofNullable(this.resourceProviderName);
     }
 
-    /**
-     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     */
     @InputImport(name="resourceUri")
     private final @Nullable String resourceUri;
 
@@ -139,9 +99,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 
-    /**
-     * The status of the operation that should be checked for. If no status is provided, any status will match.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -149,9 +106,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEven
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * the substatus.
-     */
     @InputImport(name="subStatus")
     private final @Nullable String subStatus;
 

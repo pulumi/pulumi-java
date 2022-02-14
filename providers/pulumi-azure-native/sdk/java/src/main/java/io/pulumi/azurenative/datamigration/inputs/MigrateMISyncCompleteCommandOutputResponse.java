@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Output for command that completes online migration for an Azure SQL Database Managed Instance.
- */
 public final class MigrateMISyncCompleteCommandOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMISyncCompleteCommandOutputResponse Empty = new MigrateMISyncCompleteCommandOutputResponse();
 
-    /**
-     * List of errors that happened during the command execution
-     */
     @InputImport(name="errors")
     private final @Nullable List<ReportableExceptionResponse> errors;
 

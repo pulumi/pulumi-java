@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskResponse {
-/**
- * Specifies the size of an empty data disk in gigabytes.
- */
     private final @Nullable Integer diskSizeGB;
-/**
- * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
- */
     private final Integer lun;
-/**
- * The disk name.
- */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"diskSizeGB","lun","name"})
@@ -35,21 +26,12 @@ public final class DiskResponse {
         this.name = name;
     }
 
-/**
- * Specifies the size of an empty data disk in gigabytes.
- */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
-/**
- * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
- */
     public Integer getLun() {
         return this.lun;
     }
-/**
- * The disk name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

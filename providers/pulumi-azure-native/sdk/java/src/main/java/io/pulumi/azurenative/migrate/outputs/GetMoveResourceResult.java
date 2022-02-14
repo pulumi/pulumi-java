@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetMoveResourceResult {
-/**
- * Fully qualified resource Id for the resource.
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Defines the move resource properties.
- */
     private final MoveResourcePropertiesResponse properties;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -39,27 +27,15 @@ public final class GetMoveResourceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource Id for the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines the move resource properties.
- */
     public MoveResourcePropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

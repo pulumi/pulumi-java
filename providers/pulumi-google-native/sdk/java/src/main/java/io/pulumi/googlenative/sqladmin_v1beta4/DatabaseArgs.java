@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
-    /**
-     * The Cloud SQL charset value.
-     */
     @InputImport(name="charset")
     private final @Nullable Input<String> charset;
 
@@ -28,9 +22,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.charset == null ? Input.empty() : this.charset;
     }
 
-    /**
-     * The Cloud SQL collation value.
-     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -38,9 +29,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
-    /**
-     * The name of the Cloud SQL instance. This does not include the project ID.
-     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -48,9 +36,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
-    /**
-     * This is always `sql#database`.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -58,9 +43,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,9 +50,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -78,9 +57,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The URI of this resource.
-     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -88,9 +64,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sqlserverDatabaseDetails")
     private final @Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 

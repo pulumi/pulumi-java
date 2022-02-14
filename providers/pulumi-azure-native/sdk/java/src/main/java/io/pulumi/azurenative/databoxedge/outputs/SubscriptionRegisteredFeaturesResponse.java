@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubscriptionRegisteredFeaturesResponse {
-/**
- * 
- */
     private final @Nullable String name;
-/**
- * 
- */
     private final @Nullable String state;
 
     @OutputCustomType.Constructor({"name","state"})
@@ -28,15 +22,9 @@ public final class SubscriptionRegisteredFeaturesResponse {
         this.state = state;
     }
 
-/**
- * 
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * 
- */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

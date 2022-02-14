@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging
- */
 public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutingPropertiesArgs Empty = new RoutingPropertiesArgs();
 
-    /**
-     * The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
-     */
     @InputImport(name="endpoints")
     private final @Nullable Input<RoutingEndpointsArgs> endpoints;
 
@@ -31,9 +25,6 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
-    /**
-     * The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
-     */
     @InputImport(name="enrichments")
     private final @Nullable Input<List<EnrichmentPropertiesArgs>> enrichments;
 
@@ -41,9 +32,6 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.enrichments == null ? Input.empty() : this.enrichments;
     }
 
-    /**
-     * The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.
-     */
     @InputImport(name="fallbackRoute")
     private final @Nullable Input<FallbackRoutePropertiesArgs> fallbackRoute;
 
@@ -51,9 +39,6 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.fallbackRoute == null ? Input.empty() : this.fallbackRoute;
     }
 
-    /**
-     * The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
-     */
     @InputImport(name="routes")
     private final @Nullable Input<List<RoutePropertiesArgs>> routes;
 

@@ -18,397 +18,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Represents order item contract
-API Version: 2021-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### CreateOrderItem
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var orderItemByName = new AzureNative.EdgeOrder.OrderItemByName("orderItemByName", new AzureNative.EdgeOrder.OrderItemByNameArgs
-        {
-            AddressDetails = new AzureNative.EdgeOrder.Inputs.AddressDetailsArgs
-            {
-                ForwardAddress = new AzureNative.EdgeOrder.Inputs.AddressPropertiesArgs
-                {
-                    ContactDetails = new AzureNative.EdgeOrder.Inputs.ContactDetailsArgs
-                    {
-                        ContactName = "164 TOWNSEND ST",
-                        EmailList = 
-                        {
-                            "ssemmail@microsoft.com",
-                            "vishwamdir@microsoft.com",
-                        },
-                        Phone = "3213131190",
-                    },
-                    ShippingAddress = new AzureNative.EdgeOrder.Inputs.ShippingAddressArgs
-                    {
-                        AddressType = "Residential",
-                        City = "San Francisco",
-                        CompanyName = "Microsoft",
-                        Country = "US",
-                        PostalCode = "94107",
-                        StateOrProvince = "CA",
-                        StreetAddress1 = "16 TOWNSEND ST",
-                        StreetAddress2 = "UNIT 1",
-                        ZipExtendedCode = "1",
-                    },
-                },
-            },
-            Location = "westus",
-            OrderId = "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/locations/westus/orders/TestOrderItemName01",
-            OrderItemDetails = new AzureNative.EdgeOrder.Inputs.OrderItemDetailsArgs
-            {
-                OrderItemType = "Purchase",
-                Preferences = new AzureNative.EdgeOrder.Inputs.PreferencesArgs
-                {
-                    TransportPreferences = new AzureNative.EdgeOrder.Inputs.TransportPreferencesArgs
-                    {
-                        PreferredShipmentType = "MicrosoftManaged",
-                    },
-                },
-                ProductDetails = new AzureNative.EdgeOrder.Inputs.ProductDetailsArgs
-                {
-                    HierarchyInformation = new AzureNative.EdgeOrder.Inputs.HierarchyInformationArgs
-                    {
-                        ConfigurationName = "AzureStackEdgeGPU",
-                        ProductFamilyName = "AzureStackEdge",
-                        ProductLineName = "AzureStackEdge",
-                        ProductName = "AzureStackEdgeGPU",
-                    },
-                },
-            },
-            OrderItemName = "TestOrderItemName01",
-            ResourceGroupName = "TestRG",
-            Tags = 
-            {
-                { "carrot", "vegetable" },
-                { "mango", "fruit" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	edgeorder "github.com/pulumi/pulumi-azure-native/sdk/go/azure/edgeorder"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := edgeorder.NewOrderItemByName(ctx, "orderItemByName", &edgeorder.OrderItemByNameArgs{
-			AddressDetails: &edgeorder.AddressDetailsArgs{
-				ForwardAddress: &edgeorder.AddressPropertiesArgs{
-					ContactDetails: &edgeorder.ContactDetailsArgs{
-						ContactName: pulumi.String("164 TOWNSEND ST"),
-						EmailList: pulumi.StringArray{
-							pulumi.String("ssemmail@microsoft.com"),
-							pulumi.String("vishwamdir@microsoft.com"),
-						},
-						Phone: pulumi.String("3213131190"),
-					},
-					ShippingAddress: &edgeorder.ShippingAddressArgs{
-						AddressType:     pulumi.String("Residential"),
-						City:            pulumi.String("San Francisco"),
-						CompanyName:     pulumi.String("Microsoft"),
-						Country:         pulumi.String("US"),
-						PostalCode:      pulumi.String("94107"),
-						StateOrProvince: pulumi.String("CA"),
-						StreetAddress1:  pulumi.String("16 TOWNSEND ST"),
-						StreetAddress2:  pulumi.String("UNIT 1"),
-						ZipExtendedCode: pulumi.String("1"),
-					},
-				},
-			},
-			Location: pulumi.String("westus"),
-			OrderId:  pulumi.String("/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/locations/westus/orders/TestOrderItemName01"),
-			OrderItemDetails: &edgeorder.OrderItemDetailsArgs{
-				OrderItemType: pulumi.String("Purchase"),
-				Preferences: &edgeorder.PreferencesArgs{
-					TransportPreferences: &edgeorder.TransportPreferencesArgs{
-						PreferredShipmentType: pulumi.String("MicrosoftManaged"),
-					},
-				},
-				ProductDetails: &edgeorder.ProductDetailsArgs{
-					HierarchyInformation: &edgeorder.HierarchyInformationArgs{
-						ConfigurationName: pulumi.String("AzureStackEdgeGPU"),
-						ProductFamilyName: pulumi.String("AzureStackEdge"),
-						ProductLineName:   pulumi.String("AzureStackEdge"),
-						ProductName:       pulumi.String("AzureStackEdgeGPU"),
-					},
-				},
-			},
-			OrderItemName:     pulumi.String("TestOrderItemName01"),
-			ResourceGroupName: pulumi.String("TestRG"),
-			Tags: pulumi.StringMap{
-				"carrot": pulumi.String("vegetable"),
-				"mango":  pulumi.String("fruit"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const orderItemByName = new azure_native.edgeorder.OrderItemByName("orderItemByName", {
-    addressDetails: {
-        forwardAddress: {
-            contactDetails: {
-                contactName: "164 TOWNSEND ST",
-                emailList: [
-                    "ssemmail@microsoft.com",
-                    "vishwamdir@microsoft.com",
-                ],
-                phone: "3213131190",
-            },
-            shippingAddress: {
-                addressType: "Residential",
-                city: "San Francisco",
-                companyName: "Microsoft",
-                country: "US",
-                postalCode: "94107",
-                stateOrProvince: "CA",
-                streetAddress1: "16 TOWNSEND ST",
-                streetAddress2: "UNIT 1",
-                zipExtendedCode: "1",
-            },
-        },
-    },
-    location: "westus",
-    orderId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/locations/westus/orders/TestOrderItemName01",
-    orderItemDetails: {
-        orderItemType: "Purchase",
-        preferences: {
-            transportPreferences: {
-                preferredShipmentType: "MicrosoftManaged",
-            },
-        },
-        productDetails: {
-            hierarchyInformation: {
-                configurationName: "AzureStackEdgeGPU",
-                productFamilyName: "AzureStackEdge",
-                productLineName: "AzureStackEdge",
-                productName: "AzureStackEdgeGPU",
-            },
-        },
-    },
-    orderItemName: "TestOrderItemName01",
-    resourceGroupName: "TestRG",
-    tags: {
-        carrot: "vegetable",
-        mango: "fruit",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-order_item_by_name = azure_native.edgeorder.OrderItemByName("orderItemByName",
-    address_details=azure_native.edgeorder.AddressDetailsArgs(
-        forward_address=azure_native.edgeorder.AddressPropertiesArgs(
-            contact_details=azure_native.edgeorder.ContactDetailsArgs(
-                contact_name="164 TOWNSEND ST",
-                email_list=[
-                    "ssemmail@microsoft.com",
-                    "vishwamdir@microsoft.com",
-                ],
-                phone="3213131190",
-            ),
-            shipping_address=azure_native.edgeorder.ShippingAddressArgs(
-                address_type="Residential",
-                city="San Francisco",
-                company_name="Microsoft",
-                country="US",
-                postal_code="94107",
-                state_or_province="CA",
-                street_address1="16 TOWNSEND ST",
-                street_address2="UNIT 1",
-                zip_extended_code="1",
-            ),
-        ),
-    ),
-    location="westus",
-    order_id="/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/locations/westus/orders/TestOrderItemName01",
-    order_item_details=azure_native.edgeorder.OrderItemDetailsArgs(
-        order_item_type="Purchase",
-        preferences=azure_native.edgeorder.PreferencesArgs(
-            transport_preferences=azure_native.edgeorder.TransportPreferencesArgs(
-                preferred_shipment_type="MicrosoftManaged",
-            ),
-        ),
-        product_details=azure_native.edgeorder.ProductDetailsArgs(
-            hierarchy_information=azure_native.edgeorder.HierarchyInformationArgs(
-                configuration_name="AzureStackEdgeGPU",
-                product_family_name="AzureStackEdge",
-                product_line_name="AzureStackEdge",
-                product_name="AzureStackEdgeGPU",
-            ),
-        ),
-    ),
-    order_item_name="TestOrderItemName01",
-    resource_group_name="TestRG",
-    tags={
-        "carrot": "vegetable",
-        "mango": "fruit",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:edgeorder:OrderItemByName TestOrderItemName01 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/TestRG/providers/Microsoft.EdgeOrder/orderItems/TestOrderItemName01 
-```
-
- */
 @ResourceType(type="azure-native:edgeorder:OrderItemByName")
 public class OrderItemByName extends io.pulumi.resources.CustomResource {
-    /**
-     * Represents shipping and return address for order item
-     */
     @OutputExport(name="addressDetails", type=AddressDetailsResponse.class, parameters={})
     private Output<AddressDetailsResponse> addressDetails;
 
-    /**
-     * @return Represents shipping and return address for order item
-     */
     public Output<AddressDetailsResponse> getAddressDetails() {
         return this.addressDetails;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Id of the order to which order item belongs to
-     */
     @OutputExport(name="orderId", type=String.class, parameters={})
     private Output<String> orderId;
 
-    /**
-     * @return Id of the order to which order item belongs to
-     */
     public Output<String> getOrderId() {
         return this.orderId;
     }
-    /**
-     * Represents order item details.
-     */
     @OutputExport(name="orderItemDetails", type=OrderItemDetailsResponse.class, parameters={})
     private Output<OrderItemDetailsResponse> orderItemDetails;
 
-    /**
-     * @return Represents order item details.
-     */
     public Output<OrderItemDetailsResponse> getOrderItemDetails() {
         return this.orderItemDetails;
     }
-    /**
-     * Start time of order item
-     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
-    /**
-     * @return Start time of order item
-     */
     public Output<String> getStartTime() {
         return this.startTime;
     }
-    /**
-     * Represents resource creation and update time
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Represents resource creation and update time
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public OrderItemByName(String name, OrderItemByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:edgeorder:OrderItemByName", name, args == null ? OrderItemByNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -428,14 +94,6 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static OrderItemByName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrderItemByName(name, id, options);
     }

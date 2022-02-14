@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The resource Id model.
- */
 public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceReferenceResponse Empty = new ResourceReferenceResponse();
 
-    /**
-     * The fully qualified resource Id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 

@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Linked service for MongoDb data source.
- */
 public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoDbLinkedServiceResponse Empty = new MongoDbLinkedServiceResponse();
 
-    /**
-     * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="allowSelfSignedServerCert")
     private final @Nullable Object allowSelfSignedServerCert;
 
@@ -35,9 +29,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -45,9 +36,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Database to verify the username and password. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="authSource")
     private final @Nullable Object authSource;
 
@@ -55,9 +43,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.authSource == null ? Optional.empty() : Optional.ofNullable(this.authSource);
     }
 
-    /**
-     * The authentication type to be used to connect to the MongoDB database.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -65,9 +50,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -75,9 +57,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="databaseName", required=true)
     private final Object databaseName;
 
@@ -85,9 +64,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.databaseName;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -95,9 +71,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="enableSsl")
     private final @Nullable Object enableSsl;
 
@@ -105,9 +78,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -115,9 +85,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -125,9 +92,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Password for authentication.
-     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -135,9 +99,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.password == null ? null : this.password;
     }
 
-    /**
-     * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="port")
     private final @Nullable Object port;
 
@@ -145,9 +106,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="server", required=true)
     private final Object server;
 
@@ -155,10 +113,6 @@ public final class MongoDbLinkedServiceResponse extends io.pulumi.resources.Invo
         return this.server;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'MongoDb'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -166,9 +120,6 @@ Expected value is 'MongoDb'.
         return this.type;
     }
 
-    /**
-     * Username for authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

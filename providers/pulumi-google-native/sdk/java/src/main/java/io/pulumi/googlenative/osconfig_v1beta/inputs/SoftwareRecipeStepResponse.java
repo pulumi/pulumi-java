@@ -14,16 +14,10 @@ import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepRunScript
 import java.util.Objects;
 
 
-/**
- * An action that can be taken as part of installing or updating a recipe.
- */
 public final class SoftwareRecipeStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SoftwareRecipeStepResponse Empty = new SoftwareRecipeStepResponse();
 
-    /**
-     * Extracts an archive into the specified directory.
-     */
     @InputImport(name="archiveExtraction", required=true)
     private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
 
@@ -31,9 +25,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
         return this.archiveExtraction;
     }
 
-    /**
-     * Installs a deb file via dpkg.
-     */
     @InputImport(name="dpkgInstallation", required=true)
     private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
 
@@ -41,9 +32,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
         return this.dpkgInstallation;
     }
 
-    /**
-     * Copies a file onto the instance.
-     */
     @InputImport(name="fileCopy", required=true)
     private final SoftwareRecipeStepCopyFileResponse fileCopy;
 
@@ -51,9 +39,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
         return this.fileCopy;
     }
 
-    /**
-     * Executes an artifact or local file.
-     */
     @InputImport(name="fileExec", required=true)
     private final SoftwareRecipeStepExecFileResponse fileExec;
 
@@ -61,9 +46,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
         return this.fileExec;
     }
 
-    /**
-     * Installs an MSI file.
-     */
     @InputImport(name="msiInstallation", required=true)
     private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
 
@@ -71,9 +53,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
         return this.msiInstallation;
     }
 
-    /**
-     * Installs an rpm file via the rpm utility.
-     */
     @InputImport(name="rpmInstallation", required=true)
     private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
 
@@ -81,9 +60,6 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
         return this.rpmInstallation;
     }
 
-    /**
-     * Runs commands in a shell.
-     */
     @InputImport(name="scriptRun", required=true)
     private final SoftwareRecipeStepRunScriptResponse scriptRun;
 

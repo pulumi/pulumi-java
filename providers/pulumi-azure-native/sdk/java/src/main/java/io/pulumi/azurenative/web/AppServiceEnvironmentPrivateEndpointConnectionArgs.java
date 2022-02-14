@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppServiceEnvironmentPrivateEndpointConnectionArgs Empty = new AppServiceEnvironmentPrivateEndpointConnectionArgs();
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,9 +22,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the App Service Environment.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,9 +29,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
         return this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -48,9 +36,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
-    /**
-     * The state of a private link connection
-     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -58,9 +43,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExpressRouteConnection {
-/**
- * ExpressRouteConnection resource.
-API Version: 2020-11-01.
- *
- * ExpressRouteConnection resource.
- */
     public static CompletableFuture<GetExpressRouteConnectionResult> invokeAsync(GetExpressRouteConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getExpressRouteConnection", TypeShape.of(GetExpressRouteConnectionResult.class), args == null ? GetExpressRouteConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

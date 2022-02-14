@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The HDInsight cluster application GET response.
- */
 public final class ApplicationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationPropertiesArgs Empty = new ApplicationPropertiesArgs();
 
-    /**
-     * The application type.
-     */
     @InputImport(name="applicationType")
     private final @Nullable Input<String> applicationType;
 
@@ -33,9 +27,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
         return this.applicationType == null ? Input.empty() : this.applicationType;
     }
 
-    /**
-     * The list of roles in the cluster.
-     */
     @InputImport(name="computeProfile")
     private final @Nullable Input<ComputeProfileArgs> computeProfile;
 
@@ -43,9 +34,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
         return this.computeProfile == null ? Input.empty() : this.computeProfile;
     }
 
-    /**
-     * The list of errors.
-     */
     @InputImport(name="errors")
     private final @Nullable Input<List<ErrorsArgs>> errors;
 
@@ -53,9 +41,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
         return this.errors == null ? Input.empty() : this.errors;
     }
 
-    /**
-     * The list of application HTTPS endpoints.
-     */
     @InputImport(name="httpsEndpoints")
     private final @Nullable Input<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
 
@@ -63,9 +48,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
         return this.httpsEndpoints == null ? Input.empty() : this.httpsEndpoints;
     }
 
-    /**
-     * The list of install script actions.
-     */
     @InputImport(name="installScriptActions")
     private final @Nullable Input<List<RuntimeScriptActionArgs>> installScriptActions;
 
@@ -73,9 +55,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
         return this.installScriptActions == null ? Input.empty() : this.installScriptActions;
     }
 
-    /**
-     * The list of application SSH endpoints.
-     */
     @InputImport(name="sshEndpoints")
     private final @Nullable Input<List<ApplicationGetEndpointArgs>> sshEndpoints;
 
@@ -83,9 +62,6 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
         return this.sshEndpoints == null ? Input.empty() : this.sshEndpoints;
     }
 
-    /**
-     * The list of uninstall script actions.
-     */
     @InputImport(name="uninstallScriptActions")
     private final @Nullable Input<List<RuntimeScriptActionArgs>> uninstallScriptActions;
 

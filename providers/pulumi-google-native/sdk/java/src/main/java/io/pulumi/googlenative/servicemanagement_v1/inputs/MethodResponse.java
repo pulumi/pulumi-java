@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Method represents a method of an API interface.
- */
 public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MethodResponse Empty = new MethodResponse();
 
-    /**
-     * The simple name of this method.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,9 +22,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Any metadata attached to the method.
-     */
     @InputImport(name="options", required=true)
     private final List<OptionResponse> options;
 
@@ -38,9 +29,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
         return this.options;
     }
 
-    /**
-     * If true, the request is streamed.
-     */
     @InputImport(name="requestStreaming", required=true)
     private final Boolean requestStreaming;
 
@@ -48,9 +36,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
         return this.requestStreaming;
     }
 
-    /**
-     * A URL of the input message type.
-     */
     @InputImport(name="requestTypeUrl", required=true)
     private final String requestTypeUrl;
 
@@ -58,9 +43,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
         return this.requestTypeUrl;
     }
 
-    /**
-     * If true, the response is streamed.
-     */
     @InputImport(name="responseStreaming", required=true)
     private final Boolean responseStreaming;
 
@@ -68,9 +50,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
         return this.responseStreaming;
     }
 
-    /**
-     * The URL of the output message type.
-     */
     @InputImport(name="responseTypeUrl", required=true)
     private final String responseTypeUrl;
 
@@ -78,9 +57,6 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
         return this.responseTypeUrl;
     }
 
-    /**
-     * The source syntax of this method.
-     */
     @InputImport(name="syntax", required=true)
     private final String syntax;
 

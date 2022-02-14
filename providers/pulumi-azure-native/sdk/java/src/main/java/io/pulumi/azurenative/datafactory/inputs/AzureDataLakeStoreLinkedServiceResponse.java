@@ -19,16 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Data Lake Store linked service.
- */
 public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataLakeStoreLinkedServiceResponse Empty = new AzureDataLakeStoreLinkedServiceResponse();
 
-    /**
-     * Data Lake Store account name. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="accountName")
     private final @Nullable Object accountName;
 
@@ -36,9 +30,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -46,9 +37,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="azureCloudType")
     private final @Nullable Object azureCloudType;
 
@@ -56,9 +44,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -66,9 +51,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -76,9 +58,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     * Data Lake Store service URI. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="dataLakeStoreUri", required=true)
     private final Object dataLakeStoreUri;
 
@@ -86,9 +65,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.dataLakeStoreUri;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -96,9 +72,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -106,9 +79,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -116,9 +86,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
-     */
     @InputImport(name="resourceGroupName")
     private final @Nullable Object resourceGroupName;
 
@@ -126,9 +93,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
-    /**
-     * The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -136,9 +100,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
-    /**
-     * The Key of the application used to authenticate against the Azure Data Lake Store account.
-     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -146,9 +107,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
-    /**
-     * Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable Object subscriptionId;
 
@@ -156,9 +114,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenant")
     private final @Nullable Object tenant;
 
@@ -166,10 +121,6 @@ public final class AzureDataLakeStoreLinkedServiceResponse extends io.pulumi.res
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureDataLakeStore'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

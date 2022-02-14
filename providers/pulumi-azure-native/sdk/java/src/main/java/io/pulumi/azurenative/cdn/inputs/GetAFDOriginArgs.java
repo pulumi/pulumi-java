@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAFDOriginArgs Empty = new GetAFDOriginArgs();
 
-    /**
-     * Name of the origin group which is unique within the profile.
-     */
     @InputImport(name="originGroupName", required=true)
     private final String originGroupName;
 
@@ -25,9 +19,6 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
         return this.originGroupName;
     }
 
-    /**
-     * Name of the origin which is unique within the profile.
-     */
     @InputImport(name="originName", required=true)
     private final String originName;
 
@@ -35,9 +26,6 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
         return this.originName;
     }
 
-    /**
-     * Name of the CDN profile which is unique within the resource group.
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -45,9 +33,6 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

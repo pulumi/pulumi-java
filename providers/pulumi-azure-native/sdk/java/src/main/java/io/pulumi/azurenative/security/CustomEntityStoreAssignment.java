@@ -15,162 +15,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Custom entity store assignment
-API Version: 2021-07-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a custom entity store assignment
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var customEntityStoreAssignment = new AzureNative.Security.CustomEntityStoreAssignment("customEntityStoreAssignment", new AzureNative.Security.CustomEntityStoreAssignmentArgs
-        {
-            CustomEntityStoreAssignmentName = "33e7cc6e-a139-4723-a0e5-76993aee0771",
-            Principal = "aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47",
-            ResourceGroupName = "TestResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewCustomEntityStoreAssignment(ctx, "customEntityStoreAssignment", &security.CustomEntityStoreAssignmentArgs{
-			CustomEntityStoreAssignmentName: pulumi.String("33e7cc6e-a139-4723-a0e5-76993aee0771"),
-			Principal:                       pulumi.String("aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47"),
-			ResourceGroupName:               pulumi.String("TestResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const customEntityStoreAssignment = new azure_native.security.CustomEntityStoreAssignment("customEntityStoreAssignment", {
-    customEntityStoreAssignmentName: "33e7cc6e-a139-4723-a0e5-76993aee0771",
-    principal: "aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47",
-    resourceGroupName: "TestResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-custom_entity_store_assignment = azure_native.security.CustomEntityStoreAssignment("customEntityStoreAssignment",
-    custom_entity_store_assignment_name="33e7cc6e-a139-4723-a0e5-76993aee0771",
-    principal="aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47",
-    resource_group_name="TestResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:security:CustomEntityStoreAssignment 33e7cc6e-a139-4723-a0e5-76993aee0771 /subscriptions/e5d1b86c-3051-44d5-8802-aa65d45a279b/resourcegroups/TestResourceGroup/providers/Microsoft.Security/customEntityStoreAssignments/33e7cc6e-a139-4723-a0e5-76993aee0771 
-```
-
- */
 @ResourceType(type="azure-native:security:CustomEntityStoreAssignment")
 public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResource {
-    /**
-     * The link to entity store database.
-     */
     @OutputExport(name="entityStoreDatabaseLink", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityStoreDatabaseLink;
 
-    /**
-     * @return The link to entity store database.
-     */
     public Output</* @Nullable */ String> getEntityStoreDatabaseLink() {
         return this.entityStoreDatabaseLink;
     }
-    /**
-     * Resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
-     */
     @OutputExport(name="principal", type=String.class, parameters={})
     private Output</* @Nullable */ String> principal;
 
-    /**
-     * @return The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
-     */
     public Output</* @Nullable */ String> getPrincipal() {
         return this.principal;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public CustomEntityStoreAssignment(String name, CustomEntityStoreAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:CustomEntityStoreAssignment", name, args == null ? CustomEntityStoreAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -189,14 +66,6 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static CustomEntityStoreAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomEntityStoreAssignment(name, id, options);
     }

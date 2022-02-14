@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeTemplateNodeTypeFlexibilityArgs Empty = new NodeTemplateNodeTypeFlexibilityArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="cpus")
     private final @Nullable Input<String> cpus;
 
@@ -27,9 +21,6 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
         return this.cpus == null ? Input.empty() : this.cpus;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="localSsd")
     private final @Nullable Input<String> localSsd;
 
@@ -37,9 +28,6 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
         return this.localSsd == null ? Input.empty() : this.localSsd;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="memory")
     private final @Nullable Input<String> memory;
 

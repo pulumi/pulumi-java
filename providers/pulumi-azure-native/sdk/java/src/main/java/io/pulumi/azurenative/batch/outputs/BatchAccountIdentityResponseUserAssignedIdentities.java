@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BatchAccountIdentityResponseUserAssignedIdentities {
-/**
- * The client id of user assigned identity.
- */
     private final String clientId;
-/**
- * The principal id of user assigned identity.
- */
     private final String principalId;
 
     @OutputCustomType.Constructor({"clientId","principalId"})
@@ -26,15 +20,9 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities {
         this.principalId = Objects.requireNonNull(principalId);
     }
 
-/**
- * The client id of user assigned identity.
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * The principal id of user assigned identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }

@@ -15,26 +15,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateMISyncCompleteCommandPropertiesResponse {
-/**
- * Command type.
-Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
- */
     private final String commandType;
-/**
- * Array of errors. This is ignored if submitted.
- */
     private final List<ODataErrorResponse> errors;
-/**
- * Command input
- */
     private final @Nullable MigrateMISyncCompleteCommandInputResponse input;
-/**
- * Command output. This is ignored if submitted.
- */
     private final MigrateMISyncCompleteCommandOutputResponse output;
-/**
- * The state of the command. This is ignored if submitted.
- */
     private final String state;
 
     @OutputCustomType.Constructor({"commandType","errors","input","output","state"})
@@ -51,34 +35,18 @@ Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * Command type.
-Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
- */
     public String getCommandType() {
         return this.commandType;
     }
-/**
- * Array of errors. This is ignored if submitted.
- */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
-/**
- * Command input
- */
     public Optional<MigrateMISyncCompleteCommandInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
-/**
- * Command output. This is ignored if submitted.
- */
     public MigrateMISyncCompleteCommandOutputResponse getOutput() {
         return this.output;
     }
-/**
- * The state of the command. This is ignored if submitted.
- */
     public String getState() {
         return this.state;
     }

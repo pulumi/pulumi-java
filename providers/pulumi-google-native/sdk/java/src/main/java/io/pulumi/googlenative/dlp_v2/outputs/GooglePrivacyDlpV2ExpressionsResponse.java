@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ExpressionsResponse {
-/**
- * Conditions to apply to the expression.
- */
     private final GooglePrivacyDlpV2ConditionsResponse conditions;
-/**
- * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
- */
     private final String logicalOperator;
 
     @OutputCustomType.Constructor({"conditions","logicalOperator"})
@@ -27,15 +21,9 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
         this.logicalOperator = Objects.requireNonNull(logicalOperator);
     }
 
-/**
- * Conditions to apply to the expression.
- */
     public GooglePrivacyDlpV2ConditionsResponse getConditions() {
         return this.conditions;
     }
-/**
- * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
- */
     public String getLogicalOperator() {
         return this.logicalOperator;
     }

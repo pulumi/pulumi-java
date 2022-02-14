@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlMITaskOutputErrorResponse Empty = new MigrateSqlServerSqlMITaskOutputErrorResponse();
 
-    /**
-     * Migration error
-     */
     @InputImport(name="error", required=true)
     private final ReportableExceptionResponse error;
 
@@ -26,9 +20,6 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends io.pulum
         return this.error;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,10 +27,6 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends io.pulum
         return this.id;
     }
 
-    /**
-     * Result type
-Expected value is 'ErrorOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 

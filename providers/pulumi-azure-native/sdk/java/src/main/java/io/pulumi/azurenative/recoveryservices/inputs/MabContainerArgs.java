@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container with items backed up using MAB backup engine.
- */
 public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MabContainerArgs Empty = new MabContainerArgs();
 
-    /**
-     * Agent version of this container.
-     */
     @InputImport(name="agentVersion")
     private final @Nullable Input<String> agentVersion;
 
@@ -34,9 +28,6 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
     }
 
-    /**
-     * Type of backup management for the container.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -44,9 +35,6 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
-    /**
-     * Can the container be registered one more time.
-     */
     @InputImport(name="canReRegister")
     private final @Nullable Input<Boolean> canReRegister;
 
@@ -54,9 +42,6 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.canReRegister == null ? Input.empty() : this.canReRegister;
     }
 
-    /**
-     * Health state of mab container.
-     */
     @InputImport(name="containerHealthState")
     private final @Nullable Input<String> containerHealthState;
 
@@ -64,9 +49,6 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerHealthState == null ? Input.empty() : this.containerHealthState;
     }
 
-    /**
-     * ContainerID represents the container.
-     */
     @InputImport(name="containerId")
     private final @Nullable Input<Double> containerId;
 
@@ -74,13 +56,6 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerId == null ? Input.empty() : this.containerId;
     }
 
-    /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'Windows'.
-     */
     @InputImport(name="containerType", required=true)
     private final Input<String> containerType;
 
@@ -88,9 +63,6 @@ Expected value is 'Windows'.
         return this.containerType;
     }
 
-    /**
-     * Additional information for this container
-     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<MabContainerExtendedInfoArgs> extendedInfo;
 
@@ -98,9 +70,6 @@ Expected value is 'Windows'.
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
-    /**
-     * Friendly name of the container.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -108,9 +77,6 @@ Expected value is 'Windows'.
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * Status of health of the container.
-     */
     @InputImport(name="healthStatus")
     private final @Nullable Input<String> healthStatus;
 
@@ -118,9 +84,6 @@ Expected value is 'Windows'.
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
     }
 
-    /**
-     * Health details on this mab container.
-     */
     @InputImport(name="mabContainerHealthDetails")
     private final @Nullable Input<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
@@ -128,9 +91,6 @@ Expected value is 'Windows'.
         return this.mabContainerHealthDetails == null ? Input.empty() : this.mabContainerHealthDetails;
     }
 
-    /**
-     * Number of items backed up in this container.
-     */
     @InputImport(name="protectedItemCount")
     private final @Nullable Input<Double> protectedItemCount;
 
@@ -138,9 +98,6 @@ Expected value is 'Windows'.
         return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
     }
 
-    /**
-     * Status of registration of the container with the Recovery Services Vault.
-     */
     @InputImport(name="registrationStatus")
     private final @Nullable Input<String> registrationStatus;
 

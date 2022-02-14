@@ -15,210 +15,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Describes a Shared Private Link Resource
-API Version: 2021-04-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### SignalRSharedPrivateLinkResources_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var signalRSharedPrivateLinkResource = new AzureNative.SignalRService.SignalRSharedPrivateLinkResource("signalRSharedPrivateLinkResource", new AzureNative.SignalRService.SignalRSharedPrivateLinkResourceArgs
-        {
-            GroupId = "sites",
-            PrivateLinkResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
-            RequestMessage = "Please approve",
-            ResourceGroupName = "myResourceGroup",
-            ResourceName = "mySignalRService",
-            SharedPrivateLinkResourceName = "upstream",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	signalrservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/signalrservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := signalrservice.NewSignalRSharedPrivateLinkResource(ctx, "signalRSharedPrivateLinkResource", &signalrservice.SignalRSharedPrivateLinkResourceArgs{
-			GroupId:                       pulumi.String("sites"),
-			PrivateLinkResourceId:         pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp"),
-			RequestMessage:                pulumi.String("Please approve"),
-			ResourceGroupName:             pulumi.String("myResourceGroup"),
-			ResourceName:                  pulumi.String("mySignalRService"),
-			SharedPrivateLinkResourceName: pulumi.String("upstream"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const signalRSharedPrivateLinkResource = new azure_native.signalrservice.SignalRSharedPrivateLinkResource("signalRSharedPrivateLinkResource", {
-    groupId: "sites",
-    privateLinkResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
-    requestMessage: "Please approve",
-    resourceGroupName: "myResourceGroup",
-    resourceName: "mySignalRService",
-    sharedPrivateLinkResourceName: "upstream",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-signal_r_shared_private_link_resource = azure_native.signalrservice.SignalRSharedPrivateLinkResource("signalRSharedPrivateLinkResource",
-    group_id="sites",
-    private_link_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
-    request_message="Please approve",
-    resource_group_name="myResourceGroup",
-    resource_name="mySignalRService",
-    shared_private_link_resource_name="upstream")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:signalrservice:SignalRSharedPrivateLinkResource upstream /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService/privateEndpointConnections/upstream 
-```
-
- */
 @ResourceType(type="azure-native:signalrservice:SignalRSharedPrivateLinkResource")
 public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.CustomResource {
-    /**
-     * The group id from the provider of resource the shared private link resource is for
-     */
     @OutputExport(name="groupId", type=String.class, parameters={})
     private Output<String> groupId;
 
-    /**
-     * @return The group id from the provider of resource the shared private link resource is for
-     */
     public Output<String> getGroupId() {
         return this.groupId;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource id of the resource the shared private link resource is for
-     */
     @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
     private Output<String> privateLinkResourceId;
 
-    /**
-     * @return The resource id of the resource the shared private link resource is for
-     */
     public Output<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
-    /**
-     * Provisioning state of the shared private link resource
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the shared private link resource
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The request message for requesting approval of the shared private link resource
-     */
     @OutputExport(name="requestMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestMessage;
 
-    /**
-     * @return The request message for requesting approval of the shared private link resource
-     */
     public Output</* @Nullable */ String> getRequestMessage() {
         return this.requestMessage;
     }
-    /**
-     * Status of the shared private link resource
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return Status of the shared private link resource
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SignalRSharedPrivateLinkResource(String name, SignalRSharedPrivateLinkResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:signalrservice:SignalRSharedPrivateLinkResource", name, args == null ? SignalRSharedPrivateLinkResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -240,14 +87,6 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SignalRSharedPrivateLinkResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SignalRSharedPrivateLinkResource(name, id, options);
     }

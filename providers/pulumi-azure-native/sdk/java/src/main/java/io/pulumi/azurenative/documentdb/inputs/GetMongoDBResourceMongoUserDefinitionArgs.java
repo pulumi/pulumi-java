@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMongoDBResourceMongoUserDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMongoDBResourceMongoUserDefinitionArgs Empty = new GetMongoDBResourceMongoUserDefinitionArgs();
 
-    /**
-     * Cosmos DB database account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends io.pulumi.r
         return this.accountName;
     }
 
-    /**
-     * The ID for the User Definition {dbName.userName}.
-     */
     @InputImport(name="mongoUserDefinitionId", required=true)
     private final String mongoUserDefinitionId;
 
@@ -35,9 +26,6 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends io.pulumi.r
         return this.mongoUserDefinitionId;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Message defining a field of a BigQuery table.
- */
 public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2BigQueryFieldArgs Empty = new GooglePrivacyDlpV2BigQueryFieldArgs();
 
-    /**
-     * Designated field in the BigQuery table.
-     */
     @InputImport(name="field")
     private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
 
@@ -28,9 +22,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
         return this.field == null ? Input.empty() : this.field;
     }
 
-    /**
-     * Source table of the field.
-     */
     @InputImport(name="table")
     private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table;
 

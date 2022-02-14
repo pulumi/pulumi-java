@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueryParameterTypeStructTypesItemResponse Empty = new QueryParameterTypeStructTypesItemResponse();
 
-    /**
-     * [Optional] Human-oriented description of the field.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -26,9 +20,6 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
         return this.description;
     }
 
-    /**
-     * [Optional] The name of this field.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -36,9 +27,6 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
         return this.name;
     }
 
-    /**
-     * [Required] The type of this field.
-     */
     @InputImport(name="type", required=true)
     private final QueryParameterTypeResponse type;
 

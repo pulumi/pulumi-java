@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PollingOptionsArgs Empty = new PollingOptionsArgs();
 
-    /**
-     * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
-     */
     @InputImport(name="diagnostics")
     private final @Nullable Input<List<DiagnosticArgs>> diagnostics;
 
@@ -29,9 +23,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
     }
 
-    /**
-     * JsonPath expression that determines if the request failed.
-     */
     @InputImport(name="failCondition")
     private final @Nullable Input<String> failCondition;
 
@@ -39,9 +30,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.failCondition == null ? Input.empty() : this.failCondition;
     }
 
-    /**
-     * JsonPath expression that determines if the request is completed.
-     */
     @InputImport(name="finishCondition")
     private final @Nullable Input<String> finishCondition;
 
@@ -49,9 +37,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.finishCondition == null ? Input.empty() : this.finishCondition;
     }
 
-    /**
-     * JsonPath expression that evaluates to string, it indicates where to poll.
-     */
     @InputImport(name="pollingLink")
     private final @Nullable Input<String> pollingLink;
 
@@ -59,9 +44,6 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.pollingLink == null ? Input.empty() : this.pollingLink;
     }
 
-    /**
-     * JsonPath expression, after polling is completed, indicates where to fetch the resource.
-     */
     @InputImport(name="targetLink")
     private final @Nullable Input<String> targetLink;
 

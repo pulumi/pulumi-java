@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RunbookDraftResponse Empty = new RunbookDraftResponse();
 
-    /**
-     * Gets or sets the creation time of the runbook draft.
-     */
     @InputImport(name="creationTime")
     private final @Nullable String creationTime;
 
@@ -32,9 +26,6 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
-    /**
-     * Gets or sets the draft runbook content link.
-     */
     @InputImport(name="draftContentLink")
     private final @Nullable ContentLinkResponse draftContentLink;
 
@@ -42,9 +33,6 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
         return this.draftContentLink == null ? Optional.empty() : Optional.ofNullable(this.draftContentLink);
     }
 
-    /**
-     * Gets or sets whether runbook is in edit mode.
-     */
     @InputImport(name="inEdit")
     private final @Nullable Boolean inEdit;
 
@@ -52,9 +40,6 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
         return this.inEdit == null ? Optional.empty() : Optional.ofNullable(this.inEdit);
     }
 
-    /**
-     * Gets or sets the last modified time of the runbook draft.
-     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable String lastModifiedTime;
 
@@ -62,9 +47,6 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
     }
 
-    /**
-     * Gets or sets the runbook output types.
-     */
     @InputImport(name="outputTypes")
     private final @Nullable List<String> outputTypes;
 
@@ -72,9 +54,6 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
         return this.outputTypes == null ? List.of() : this.outputTypes;
     }
 
-    /**
-     * Gets or sets the runbook draft parameters.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,RunbookParameterResponse> parameters;
 

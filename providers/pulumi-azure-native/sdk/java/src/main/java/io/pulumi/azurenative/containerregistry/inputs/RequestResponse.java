@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The request that generated the event.
- */
 public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RequestResponse Empty = new RequestResponse();
 
-    /**
-     * The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
-     */
     @InputImport(name="addr")
     private final @Nullable String addr;
 
@@ -27,9 +21,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
         return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
     }
 
-    /**
-     * The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
-     */
     @InputImport(name="host")
     private final @Nullable String host;
 
@@ -37,9 +28,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
-    /**
-     * The ID of the request that initiated the event.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -47,9 +35,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The request method that generated the event.
-     */
     @InputImport(name="method")
     private final @Nullable String method;
 
@@ -57,9 +42,6 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
-    /**
-     * The user agent header of the request.
-     */
     @InputImport(name="useragent")
     private final @Nullable String useragent;
 

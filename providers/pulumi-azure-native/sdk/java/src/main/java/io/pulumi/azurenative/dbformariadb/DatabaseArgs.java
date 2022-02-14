@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
-    /**
-     * The charset of the database.
-     */
     @InputImport(name="charset")
     private final @Nullable Input<String> charset;
 
@@ -27,9 +21,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.charset == null ? Input.empty() : this.charset;
     }
 
-    /**
-     * The collation of the database.
-     */
     @InputImport(name="collation")
     private final @Nullable Input<String> collation;
 
@@ -37,9 +28,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.collation == null ? Input.empty() : this.collation;
     }
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -47,9 +35,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

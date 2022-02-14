@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GpuResourceResponse {
-/**
- * The count of the GPU resource.
- */
     private final Integer count;
-/**
- * The SKU of the GPU resource.
- */
     private final String sku;
 
     @OutputCustomType.Constructor({"count","sku"})
@@ -27,15 +21,9 @@ public final class GpuResourceResponse {
         this.sku = Objects.requireNonNull(sku);
     }
 
-/**
- * The count of the GPU resource.
- */
     public Integer getCount() {
         return this.count;
     }
-/**
- * The SKU of the GPU resource.
- */
     public String getSku() {
         return this.sku;
     }

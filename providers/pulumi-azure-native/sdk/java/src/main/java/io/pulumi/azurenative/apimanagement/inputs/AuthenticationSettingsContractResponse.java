@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * API Authentication Settings.
- */
 public final class AuthenticationSettingsContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthenticationSettingsContractResponse Empty = new AuthenticationSettingsContractResponse();
 
-    /**
-     * OAuth2 Authentication settings
-     */
     @InputImport(name="oAuth2")
     private final @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
 
@@ -28,9 +22,6 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
         return this.oAuth2 == null ? Optional.empty() : Optional.ofNullable(this.oAuth2);
     }
 
-    /**
-     * OpenID Connect Authentication Settings
-     */
     @InputImport(name="openid")
     private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 

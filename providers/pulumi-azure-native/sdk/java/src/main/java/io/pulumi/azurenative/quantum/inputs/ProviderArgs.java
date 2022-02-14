@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about a Provider. A Provider is an entity that offers Targets to run Azure Quantum Jobs.
- */
 public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();
 
-    /**
-     * The provider's marketplace application display name.
-     */
     @InputImport(name="applicationName")
     private final @Nullable Input<String> applicationName;
 
@@ -29,9 +23,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName == null ? Input.empty() : this.applicationName;
     }
 
-    /**
-     * A Uri identifying the specific instance of this provider.
-     */
     @InputImport(name="instanceUri")
     private final @Nullable Input<String> instanceUri;
 
@@ -39,9 +30,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceUri == null ? Input.empty() : this.instanceUri;
     }
 
-    /**
-     * Unique id of this provider.
-     */
     @InputImport(name="providerId")
     private final @Nullable Input<String> providerId;
 
@@ -49,9 +37,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerId == null ? Input.empty() : this.providerId;
     }
 
-    /**
-     * The sku associated with pricing information for this provider.
-     */
     @InputImport(name="providerSku")
     private final @Nullable Input<String> providerSku;
 
@@ -59,9 +44,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerSku == null ? Input.empty() : this.providerSku;
     }
 
-    /**
-     * Provisioning status field
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,Status>> provisioningState;
 
@@ -69,9 +51,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * Id to track resource usage for the provider.
-     */
     @InputImport(name="resourceUsageId")
     private final @Nullable Input<String> resourceUsageId;
 

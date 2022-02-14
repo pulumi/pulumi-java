@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TrafficAnalyticsPropertiesResponse {
-/**
- * Parameters that define the configuration of traffic analytics.
- */
     private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
     @OutputCustomType.Constructor({"networkWatcherFlowAnalyticsConfiguration"})
@@ -21,9 +18,6 @@ public final class TrafficAnalyticsPropertiesResponse {
         this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
     }
 
-/**
- * Parameters that define the configuration of traffic analytics.
- */
     public Optional<TrafficAnalyticsConfigurationPropertiesResponse> getNetworkWatcherFlowAnalyticsConfiguration() {
         return Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
     }

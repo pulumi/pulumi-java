@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListIotHubResourceKeysResult {
-/**
- * The next link.
- */
     private final String nextLink;
-/**
- * The list of shared access policies.
- */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -29,15 +23,9 @@ public final class ListIotHubResourceKeysResult {
         this.value = value;
     }
 
-/**
- * The next link.
- */
     public String getNextLink() {
         return this.nextLink;
     }
-/**
- * The list of shared access policies.
- */
     public List<SharedAccessSignatureAuthorizationRuleResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

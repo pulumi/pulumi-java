@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of VPN client root certificate of VpnServerConfiguration.
- */
 public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnServerConfigVpnClientRootCertificateArgs Empty = new VpnServerConfigVpnClientRootCertificateArgs();
 
-    /**
-     * The certificate name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The certificate public data.
-     */
     @InputImport(name="publicCertData")
     private final @Nullable Input<String> publicCertData;
 

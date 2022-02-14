@@ -9,16 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * An object that defines the blob inventory rule. Each definition consists of a set of filters.
- */
 public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobInventoryPolicyDefinitionArgs Empty = new BlobInventoryPolicyDefinitionArgs();
 
-    /**
-     * An object that defines the filter set.
-     */
     @InputImport(name="filters", required=true)
     private final Input<BlobInventoryPolicyFilterArgs> filters;
 

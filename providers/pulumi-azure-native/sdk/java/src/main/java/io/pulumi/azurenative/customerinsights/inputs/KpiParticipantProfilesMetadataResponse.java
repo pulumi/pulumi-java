@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The KPI participant profile metadata.
- */
 public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KpiParticipantProfilesMetadataResponse Empty = new KpiParticipantProfilesMetadataResponse();
 
-    /**
-     * Name of the type.
-     */
     @InputImport(name="typeName", required=true)
     private final String typeName;
 

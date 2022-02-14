@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LinkedAccessCheckResponse {
-/**
- * 
- */
     private final @Nullable String actionName;
-/**
- * 
- */
     private final @Nullable String linkedAction;
-/**
- * 
- */
     private final @Nullable String linkedActionVerb;
-/**
- * 
- */
     private final @Nullable String linkedProperty;
-/**
- * 
- */
     private final @Nullable String linkedType;
 
     @OutputCustomType.Constructor({"actionName","linkedAction","linkedActionVerb","linkedProperty","linkedType"})
@@ -46,33 +31,18 @@ public final class LinkedAccessCheckResponse {
         this.linkedType = linkedType;
     }
 
-/**
- * 
- */
     public Optional<String> getActionName() {
         return Optional.ofNullable(this.actionName);
     }
-/**
- * 
- */
     public Optional<String> getLinkedAction() {
         return Optional.ofNullable(this.linkedAction);
     }
-/**
- * 
- */
     public Optional<String> getLinkedActionVerb() {
         return Optional.ofNullable(this.linkedActionVerb);
     }
-/**
- * 
- */
     public Optional<String> getLinkedProperty() {
         return Optional.ofNullable(this.linkedProperty);
     }
-/**
- * 
- */
     public Optional<String> getLinkedType() {
         return Optional.ofNullable(this.linkedType);
     }

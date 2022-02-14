@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListSpacecraftAvailableContactsArgs Empty = new ListSpacecraftAvailableContactsArgs();
 
-    /**
-     * The reference to the contact profile resource.
-     */
     @InputImport(name="contactProfile", required=true)
     private final ResourceReference contactProfile;
 
@@ -26,9 +20,6 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
         return this.contactProfile;
     }
 
-    /**
-     * End time of a contact.
-     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -36,9 +27,6 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
         return this.endTime;
     }
 
-    /**
-     * Name of Azure Ground Station.
-     */
     @InputImport(name="groundStationName", required=true)
     private final String groundStationName;
 
@@ -46,9 +34,6 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
         return this.groundStationName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -56,9 +41,6 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Spacecraft ID
-     */
     @InputImport(name="spacecraftName", required=true)
     private final String spacecraftName;
 
@@ -66,9 +48,6 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
         return this.spacecraftName;
     }
 
-    /**
-     * Start time of a contact.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

@@ -25,93 +25,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterGetPropertiesResponse {
-/**
- * The cluster definition.
- */
     private final ClusterDefinitionResponse clusterDefinition;
-/**
- * The hdp version of the cluster.
- */
     private final @Nullable String clusterHdpVersion;
-/**
- * The cluster id.
- */
     private final @Nullable String clusterId;
-/**
- * The state of the cluster.
- */
     private final @Nullable String clusterState;
-/**
- * The version of the cluster.
- */
     private final @Nullable String clusterVersion;
-/**
- * The compute isolation properties.
- */
     private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
-/**
- * The compute profile.
- */
     private final @Nullable ComputeProfileResponse computeProfile;
-/**
- * The list of connectivity endpoints.
- */
     private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
-/**
- * The date on which the cluster was created.
- */
     private final @Nullable String createdDate;
-/**
- * The disk encryption properties.
- */
     private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
-/**
- * The encryption-in-transit properties.
- */
     private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
-/**
- * The list of errors.
- */
     private final @Nullable List<ErrorsResponse> errors;
-/**
- * The excluded services config.
- */
     private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
-/**
- * The cluster kafka rest proxy configuration.
- */
     private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
-/**
- * The minimal supported tls version.
- */
     private final @Nullable String minSupportedTlsVersion;
-/**
- * The network properties.
- */
     private final @Nullable NetworkPropertiesResponse networkProperties;
-/**
- * The type of operating system.
- */
     private final @Nullable String osType;
-/**
- * The provisioning state, which only appears in the response.
- */
     private final @Nullable String provisioningState;
-/**
- * The quota information.
- */
     private final @Nullable QuotaInfoResponse quotaInfo;
-/**
- * The security profile.
- */
     private final @Nullable SecurityProfileResponse securityProfile;
-/**
- * The storage profile.
- */
     private final @Nullable StorageProfileResponse storageProfile;
-/**
- * The cluster tier.
- */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"clusterDefinition","clusterHdpVersion","clusterId","clusterState","clusterVersion","computeIsolationProperties","computeProfile","connectivityEndpoints","createdDate","diskEncryptionProperties","encryptionInTransitProperties","errors","excludedServicesConfig","kafkaRestProperties","minSupportedTlsVersion","networkProperties","osType","provisioningState","quotaInfo","securityProfile","storageProfile","tier"})
@@ -162,135 +96,69 @@ public final class ClusterGetPropertiesResponse {
         this.tier = tier;
     }
 
-/**
- * The cluster definition.
- */
     public ClusterDefinitionResponse getClusterDefinition() {
         return this.clusterDefinition;
     }
-/**
- * The hdp version of the cluster.
- */
     public Optional<String> getClusterHdpVersion() {
         return Optional.ofNullable(this.clusterHdpVersion);
     }
-/**
- * The cluster id.
- */
     public Optional<String> getClusterId() {
         return Optional.ofNullable(this.clusterId);
     }
-/**
- * The state of the cluster.
- */
     public Optional<String> getClusterState() {
         return Optional.ofNullable(this.clusterState);
     }
-/**
- * The version of the cluster.
- */
     public Optional<String> getClusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
-/**
- * The compute isolation properties.
- */
     public Optional<ComputeIsolationPropertiesResponse> getComputeIsolationProperties() {
         return Optional.ofNullable(this.computeIsolationProperties);
     }
-/**
- * The compute profile.
- */
     public Optional<ComputeProfileResponse> getComputeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
-/**
- * The list of connectivity endpoints.
- */
     public List<ConnectivityEndpointResponse> getConnectivityEndpoints() {
         return this.connectivityEndpoints == null ? List.of() : this.connectivityEndpoints;
     }
-/**
- * The date on which the cluster was created.
- */
     public Optional<String> getCreatedDate() {
         return Optional.ofNullable(this.createdDate);
     }
-/**
- * The disk encryption properties.
- */
     public Optional<DiskEncryptionPropertiesResponse> getDiskEncryptionProperties() {
         return Optional.ofNullable(this.diskEncryptionProperties);
     }
-/**
- * The encryption-in-transit properties.
- */
     public Optional<EncryptionInTransitPropertiesResponse> getEncryptionInTransitProperties() {
         return Optional.ofNullable(this.encryptionInTransitProperties);
     }
-/**
- * The list of errors.
- */
     public List<ErrorsResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
-/**
- * The excluded services config.
- */
     public Optional<ExcludedServicesConfigResponse> getExcludedServicesConfig() {
         return Optional.ofNullable(this.excludedServicesConfig);
     }
-/**
- * The cluster kafka rest proxy configuration.
- */
     public Optional<KafkaRestPropertiesResponse> getKafkaRestProperties() {
         return Optional.ofNullable(this.kafkaRestProperties);
     }
-/**
- * The minimal supported tls version.
- */
     public Optional<String> getMinSupportedTlsVersion() {
         return Optional.ofNullable(this.minSupportedTlsVersion);
     }
-/**
- * The network properties.
- */
     public Optional<NetworkPropertiesResponse> getNetworkProperties() {
         return Optional.ofNullable(this.networkProperties);
     }
-/**
- * The type of operating system.
- */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
-/**
- * The provisioning state, which only appears in the response.
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * The quota information.
- */
     public Optional<QuotaInfoResponse> getQuotaInfo() {
         return Optional.ofNullable(this.quotaInfo);
     }
-/**
- * The security profile.
- */
     public Optional<SecurityProfileResponse> getSecurityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
-/**
- * The storage profile.
- */
     public Optional<StorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
-/**
- * The cluster tier.
- */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

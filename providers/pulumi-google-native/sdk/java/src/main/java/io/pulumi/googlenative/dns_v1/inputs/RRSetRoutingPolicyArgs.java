@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A RRSetRoutingPolicy represents ResourceRecordSet data that is returned dynamically with the response varying based on configured properties such as geolocation or by weighted random selection.
- */
 public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="geo")
     private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
 
@@ -29,9 +23,6 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
         return this.geo == null ? Input.empty() : this.geo;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -39,9 +30,6 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="wrr")
     private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 

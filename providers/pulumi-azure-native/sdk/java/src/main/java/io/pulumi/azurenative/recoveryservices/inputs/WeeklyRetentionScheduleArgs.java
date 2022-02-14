@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Weekly retention schedule.
- */
 public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WeeklyRetentionScheduleArgs Empty = new WeeklyRetentionScheduleArgs();
 
-    /**
-     * List of days of week for weekly retention policy.
-     */
     @InputImport(name="daysOfTheWeek")
     private final @Nullable Input<List<DayOfWeek>> daysOfTheWeek;
 
@@ -30,9 +24,6 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
         return this.daysOfTheWeek == null ? Input.empty() : this.daysOfTheWeek;
     }
 
-    /**
-     * Retention duration of retention Policy.
-     */
     @InputImport(name="retentionDuration")
     private final @Nullable Input<RetentionDurationArgs> retentionDuration;
 
@@ -40,9 +31,6 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
         return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
     }
 
-    /**
-     * Retention times of retention policy.
-     */
     @InputImport(name="retentionTimes")
     private final @Nullable Input<List<String>> retentionTimes;
 

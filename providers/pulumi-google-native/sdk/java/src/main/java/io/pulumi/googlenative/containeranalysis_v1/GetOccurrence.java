@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOccurrence {
-/**
- * Gets the specified occurrence.
- */
     public static CompletableFuture<GetOccurrenceResult> invokeAsync(GetOccurrenceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1:getOccurrence", TypeShape.of(GetOccurrenceResult.class), args == null ? GetOccurrenceArgs.Empty : args, Utilities.withVersion(options));
     }

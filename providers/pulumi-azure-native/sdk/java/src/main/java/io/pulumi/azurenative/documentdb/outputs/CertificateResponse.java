@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CertificateResponse {
-/**
- * PEM formatted public key.
- */
     private final @Nullable String pem;
 
     @OutputCustomType.Constructor({"pem"})
@@ -21,9 +18,6 @@ public final class CertificateResponse {
         this.pem = pem;
     }
 
-/**
- * PEM formatted public key.
- */
     public Optional<String> getPem() {
         return Optional.ofNullable(this.pem);
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoleManagementPolicyAssignmentArgs Empty = new GetRoleManagementPolicyAssignmentArgs();
 
-    /**
-     * The name of format {guid_guid} the role management policy assignment to get.
-     */
     @InputImport(name="roleManagementPolicyAssignmentName", required=true)
     private final String roleManagementPolicyAssignmentName;
 
@@ -25,9 +19,6 @@ public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resou
         return this.roleManagementPolicyAssignmentName;
     }
 
-    /**
-     * The scope of the role management policy.
-     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

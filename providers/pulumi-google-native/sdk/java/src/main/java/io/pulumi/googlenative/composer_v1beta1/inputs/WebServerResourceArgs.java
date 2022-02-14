@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for resources used by Airflow web server.
- */
 public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebServerResourceArgs Empty = new WebServerResourceArgs();
 
-    /**
-     * Optional. CPU request and limit for Airflow web server.
-     */
     @InputImport(name="cpu")
     private final @Nullable Input<Double> cpu;
 
@@ -27,9 +21,6 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
-    /**
-     * Optional. Memory (GB) request and limit for Airflow web server.
-     */
     @InputImport(name="memoryGb")
     private final @Nullable Input<Double> memoryGb;
 
@@ -37,9 +28,6 @@ public final class WebServerResourceArgs extends io.pulumi.resources.ResourceArg
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
-    /**
-     * Optional. Storage (GB) request and limit for Airflow web server.
-     */
     @InputImport(name="storageGb")
     private final @Nullable Input<Double> storageGb;
 

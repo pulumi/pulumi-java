@@ -32,16 +32,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskArgs Empty = new TaskArgs();
 
-    /**
-     * Name of the resource group
-     */
     @InputImport(name="groupName", required=true)
     private final Input<String> groupName;
 
@@ -49,9 +43,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupName;
     }
 
-    /**
-     * Name of the project
-     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -59,9 +50,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName;
     }
 
-    /**
-     * Custom task properties
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -69,9 +57,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the service
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -79,9 +64,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Name of the Task
-     */
     @InputImport(name="taskName")
     private final @Nullable Input<String> taskName;
 

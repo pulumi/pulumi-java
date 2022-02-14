@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetBillingAccountSinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBillingAccountSinkArgs Empty = new GetBillingAccountSinkArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="billingAccountId", required=true)
     private final String billingAccountId;
 
@@ -25,9 +19,6 @@ public final class GetBillingAccountSinkArgs extends io.pulumi.resources.InvokeA
         return this.billingAccountId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sinkId", required=true)
     private final String sinkId;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cognitive Services account commitment quota.
- */
 public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommitmentQuotaResponse Empty = new CommitmentQuotaResponse();
 
-    /**
-     * Commitment quota quantity.
-     */
     @InputImport(name="quantity")
     private final @Nullable Double quantity;
 
@@ -28,9 +22,6 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
         return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
     }
 
-    /**
-     * Commitment quota unit.
-     */
     @InputImport(name="unit")
     private final @Nullable String unit;
 

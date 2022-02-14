@@ -14,21 +14,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataCollectionRuleResponseDataSources {
-/**
- * The list of Azure VM extension data source configurations.
- */
     private final @Nullable List<ExtensionDataSourceResponse> extensions;
-/**
- * The list of performance counter data source configurations.
- */
     private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
-/**
- * The list of Syslog data source configurations.
- */
     private final @Nullable List<SyslogDataSourceResponse> syslog;
-/**
- * The list of Windows Event Log data source configurations.
- */
     private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
     @OutputCustomType.Constructor({"extensions","performanceCounters","syslog","windowsEventLogs"})
@@ -43,27 +31,15 @@ public final class DataCollectionRuleResponseDataSources {
         this.windowsEventLogs = windowsEventLogs;
     }
 
-/**
- * The list of Azure VM extension data source configurations.
- */
     public List<ExtensionDataSourceResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
-/**
- * The list of performance counter data source configurations.
- */
     public List<PerfCounterDataSourceResponse> getPerformanceCounters() {
         return this.performanceCounters == null ? List.of() : this.performanceCounters;
     }
-/**
- * The list of Syslog data source configurations.
- */
     public List<SyslogDataSourceResponse> getSyslog() {
         return this.syslog == null ? List.of() : this.syslog;
     }
-/**
- * The list of Windows Event Log data source configurations.
- */
     public List<WindowsEventLogDataSourceResponse> getWindowsEventLogs() {
         return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
     }

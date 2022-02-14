@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The identity type. This is the only required field when adding a system assigned identity to a resource.
- */
     @EnumType
     public enum ResourceIdentityType {
-/**
- * Indicates that a system assigned identity is associated with the resource.
- */
         SystemAssigned("SystemAssigned"),
-/**
- * Indicates that no identity is associated with the resource or that the existing identity should be removed.
- */
         None("None");
 
         private final String value;

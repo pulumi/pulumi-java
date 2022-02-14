@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMware Azure specific enable protection input.
- */
 public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageAzureV2EnableProtectionInputArgs Empty = new InMageAzureV2EnableProtectionInputArgs();
 
-    /**
-     * The DiskEncryptionSet ARM ID.
-     */
     @InputImport(name="diskEncryptionSetId")
     private final @Nullable Input<String> diskEncryptionSetId;
 
@@ -31,9 +25,6 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
         return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
     }
 
-    /**
-     * The DiskType.
-     */
     @InputImport(name="diskType")
     private final @Nullable Input<Either<String,DiskAccountType>> diskType;
 
@@ -41,9 +32,6 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
-    /**
-     * The disks to include list.
-     */
     @InputImport(name="disksToInclude")
     private final @Nullable Input<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude;
 
@@ -51,9 +39,6 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
     }
 
-    /**
-     * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
-     */
     @InputImport(name="enableRdpOnTargetOption")
     private final @Nullable Input<String> enableRdpOnTargetOption;
 
@@ -61,10 +46,6 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
         return this.enableRdpOnTargetOption == null ? Input.empty() : this.enableRdpOnTargetOption;
     }
 
-    /**
-     * The class type.
-Expected value is 'InMageAzureV2'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -72,9 +53,6 @@ Expected value is 'InMageAzureV2'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The storage account to be used for logging during replication.
-     */
     @InputImport(name="logStorageAccountId")
     private final @Nullable Input<String> logStorageAccountId;
 
@@ -82,9 +60,6 @@ Expected value is 'InMageAzureV2'.
         return this.logStorageAccountId == null ? Input.empty() : this.logStorageAccountId;
     }
 
-    /**
-     * The Master target Id.
-     */
     @InputImport(name="masterTargetId")
     private final @Nullable Input<String> masterTargetId;
 
@@ -92,9 +67,6 @@ Expected value is 'InMageAzureV2'.
         return this.masterTargetId == null ? Input.empty() : this.masterTargetId;
     }
 
-    /**
-     * The multi vm group Id.
-     */
     @InputImport(name="multiVmGroupId")
     private final @Nullable Input<String> multiVmGroupId;
 
@@ -102,9 +74,6 @@ Expected value is 'InMageAzureV2'.
         return this.multiVmGroupId == null ? Input.empty() : this.multiVmGroupId;
     }
 
-    /**
-     * The multi vm group name.
-     */
     @InputImport(name="multiVmGroupName")
     private final @Nullable Input<String> multiVmGroupName;
 
@@ -112,9 +81,6 @@ Expected value is 'InMageAzureV2'.
         return this.multiVmGroupName == null ? Input.empty() : this.multiVmGroupName;
     }
 
-    /**
-     * The Process Server Id.
-     */
     @InputImport(name="processServerId")
     private final @Nullable Input<String> processServerId;
 
@@ -122,9 +88,6 @@ Expected value is 'InMageAzureV2'.
         return this.processServerId == null ? Input.empty() : this.processServerId;
     }
 
-    /**
-     * The CS account Id.
-     */
     @InputImport(name="runAsAccountId")
     private final @Nullable Input<String> runAsAccountId;
 
@@ -132,9 +95,6 @@ Expected value is 'InMageAzureV2'.
         return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
     }
 
-    /**
-     * The storage account name.
-     */
     @InputImport(name="storageAccountId")
     private final @Nullable Input<String> storageAccountId;
 
@@ -142,9 +102,6 @@ Expected value is 'InMageAzureV2'.
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
     }
 
-    /**
-     * The availability set ARM Id.
-     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable Input<String> targetAvailabilitySetId;
 
@@ -152,9 +109,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
     }
 
-    /**
-     * The target availability zone.
-     */
     @InputImport(name="targetAvailabilityZone")
     private final @Nullable Input<String> targetAvailabilityZone;
 
@@ -162,9 +116,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
     }
 
-    /**
-     * The selected target Azure network Id.
-     */
     @InputImport(name="targetAzureNetworkId")
     private final @Nullable Input<String> targetAzureNetworkId;
 
@@ -172,9 +123,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAzureNetworkId == null ? Input.empty() : this.targetAzureNetworkId;
     }
 
-    /**
-     * The selected target Azure subnet Id.
-     */
     @InputImport(name="targetAzureSubnetId")
     private final @Nullable Input<String> targetAzureSubnetId;
 
@@ -182,9 +130,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAzureSubnetId == null ? Input.empty() : this.targetAzureSubnetId;
     }
 
-    /**
-     * The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
-     */
     @InputImport(name="targetAzureV1ResourceGroupId")
     private final @Nullable Input<String> targetAzureV1ResourceGroupId;
 
@@ -192,9 +137,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAzureV1ResourceGroupId == null ? Input.empty() : this.targetAzureV1ResourceGroupId;
     }
 
-    /**
-     * The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
-     */
     @InputImport(name="targetAzureV2ResourceGroupId")
     private final @Nullable Input<String> targetAzureV2ResourceGroupId;
 
@@ -202,9 +144,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAzureV2ResourceGroupId == null ? Input.empty() : this.targetAzureV2ResourceGroupId;
     }
 
-    /**
-     * The target azure Vm Name.
-     */
     @InputImport(name="targetAzureVmName")
     private final @Nullable Input<String> targetAzureVmName;
 
@@ -212,9 +151,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetAzureVmName == null ? Input.empty() : this.targetAzureVmName;
     }
 
-    /**
-     * The proximity placement group ARM Id.
-     */
     @InputImport(name="targetProximityPlacementGroupId")
     private final @Nullable Input<String> targetProximityPlacementGroupId;
 
@@ -222,9 +158,6 @@ Expected value is 'InMageAzureV2'.
         return this.targetProximityPlacementGroupId == null ? Input.empty() : this.targetProximityPlacementGroupId;
     }
 
-    /**
-     * The target VM size.
-     */
     @InputImport(name="targetVmSize")
     private final @Nullable Input<String> targetVmSize;
 

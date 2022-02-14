@@ -19,46 +19,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AmazonS3CompatibleLinkedServiceResponse {
-/**
- * The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object accessKeyId;
-/**
- * List of tags that can be used for describing the linked service.
- */
     private final @Nullable List<Object> annotations;
-/**
- * The integration runtime reference.
- */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-/**
- * Linked service description.
- */
     private final @Nullable String description;
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encryptedCredential;
-/**
- * If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object forcePathStyle;
-/**
- * Parameters for linked service.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.
- */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
-/**
- * This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object serviceUrl;
-/**
- * Type of linked service.
-Expected value is 'AmazonS3Compatible'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"accessKeyId","annotations","connectVia","description","encryptedCredential","forcePathStyle","parameters","secretAccessKey","serviceUrl","type"})
@@ -85,64 +54,33 @@ Expected value is 'AmazonS3Compatible'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getAccessKeyId() {
         return Optional.ofNullable(this.accessKeyId);
     }
-/**
- * List of tags that can be used for describing the linked service.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * The integration runtime reference.
- */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
-/**
- * Linked service description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
-/**
- * If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getForcePathStyle() {
         return Optional.ofNullable(this.forcePathStyle);
     }
-/**
- * Parameters for linked service.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.
- */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getSecretAccessKey() {
         return Optional.ofNullable(this.secretAccessKey);
     }
-/**
- * This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
-/**
- * Type of linked service.
-Expected value is 'AmazonS3Compatible'.
- */
     public String getType() {
         return this.type;
     }

@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Adhoc trigger context
- */
 public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdhocBasedTriggerContextResponse Empty = new AdhocBasedTriggerContextResponse();
 
-    /**
-     * Type of the specific object - used for deserializing
-Expected value is 'AdhocBasedTriggerContext'.
-     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -27,9 +20,6 @@ Expected value is 'AdhocBasedTriggerContext'.
         return this.objectType;
     }
 
-    /**
-     * Tagging Criteria containing retention tag for adhoc backup.
-     */
     @InputImport(name="taggingCriteria", required=true)
     private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 

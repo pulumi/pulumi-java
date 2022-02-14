@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeExtensionOptionsResourceCreationBeginArgs Empty = new ResourceTypeExtensionOptionsResourceCreationBeginArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="request")
     private final @Nullable Input<List<Either<String,ExtensionOptionType>>> request;
 
@@ -30,9 +24,6 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
         return this.request == null ? Input.empty() : this.request;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="response")
     private final @Nullable Input<List<Either<String,ExtensionOptionType>>> response;
 

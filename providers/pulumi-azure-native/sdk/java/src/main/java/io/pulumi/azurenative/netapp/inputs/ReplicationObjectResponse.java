@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Replication properties
- */
 public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationObjectResponse Empty = new ReplicationObjectResponse();
 
-    /**
-     * Indicates whether the local volume is the source or destination for the Volume Replication
-     */
     @InputImport(name="endpointType")
     private final @Nullable String endpointType;
 
@@ -27,9 +21,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
         return this.endpointType == null ? Optional.empty() : Optional.ofNullable(this.endpointType);
     }
 
-    /**
-     * The remote region for the other end of the Volume Replication.
-     */
     @InputImport(name="remoteVolumeRegion")
     private final @Nullable String remoteVolumeRegion;
 
@@ -37,9 +28,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
         return this.remoteVolumeRegion == null ? Optional.empty() : Optional.ofNullable(this.remoteVolumeRegion);
     }
 
-    /**
-     * The resource ID of the remote volume.
-     */
     @InputImport(name="remoteVolumeResourceId", required=true)
     private final String remoteVolumeResourceId;
 
@@ -47,9 +35,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
         return this.remoteVolumeResourceId;
     }
 
-    /**
-     * Id
-     */
     @InputImport(name="replicationId")
     private final @Nullable String replicationId;
 
@@ -57,9 +42,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
         return this.replicationId == null ? Optional.empty() : Optional.ofNullable(this.replicationId);
     }
 
-    /**
-     * Schedule
-     */
     @InputImport(name="replicationSchedule", required=true)
     private final String replicationSchedule;
 

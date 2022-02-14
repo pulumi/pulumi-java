@@ -12,17 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeploymentStrategy {
-/**
- * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
- */
     private final @Nullable RollingUpdateDeployment rollingUpdate;
-/**
- * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
-
-Possible enum values:
- - `"Recreate"` Kill all existing pods before creating new ones.
- - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"rollingUpdate","type"})
@@ -33,19 +23,9 @@ Possible enum values:
         this.type = type;
     }
 
-/**
- * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
- */
     public Optional<RollingUpdateDeployment> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
-/**
- * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
-
-Possible enum values:
- - `"Recreate"` Kill all existing pods before creating new ones.
- - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

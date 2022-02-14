@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * (Optional) The ID of the parent management group.
- */
 public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParentGroupInfoResponse Empty = new ParentGroupInfoResponse();
 
-    /**
-     * The friendly name of the parent management group.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -27,9 +21,6 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,9 +28,6 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the parent management group
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

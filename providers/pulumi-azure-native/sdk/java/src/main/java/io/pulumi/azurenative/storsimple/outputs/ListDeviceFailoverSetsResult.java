@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListDeviceFailoverSetsResult {
-/**
- * The list of failover sets.
- */
     private final @Nullable List<FailoverSetResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -21,9 +18,6 @@ public final class ListDeviceFailoverSetsResult {
         this.value = value;
     }
 
-/**
- * The list of failover sets.
- */
     public List<FailoverSetResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

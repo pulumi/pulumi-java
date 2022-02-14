@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the REST health check step properties.
- */
 public final class RestHealthCheckStepAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestHealthCheckStepAttributesResponse Empty = new RestHealthCheckStepAttributesResponse();
 
-    /**
-     * The list of checks that form the health check step.
-     */
     @InputImport(name="healthChecks", required=true)
     private final List<RestHealthCheckResponse> healthChecks;
 
@@ -29,9 +23,6 @@ public final class RestHealthCheckStepAttributesResponse extends io.pulumi.resou
         return this.healthChecks;
     }
 
-    /**
-     * The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
-     */
     @InputImport(name="healthyStateDuration", required=true)
     private final String healthyStateDuration;
 
@@ -39,9 +30,6 @@ public final class RestHealthCheckStepAttributesResponse extends io.pulumi.resou
         return this.healthyStateDuration;
     }
 
-    /**
-     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
-     */
     @InputImport(name="maxElasticDuration")
     private final @Nullable String maxElasticDuration;
 
@@ -49,10 +37,6 @@ public final class RestHealthCheckStepAttributesResponse extends io.pulumi.resou
         return this.maxElasticDuration == null ? Optional.empty() : Optional.ofNullable(this.maxElasticDuration);
     }
 
-    /**
-     * The type of health check.
-Expected value is 'REST'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -60,9 +44,6 @@ Expected value is 'REST'.
         return this.type;
     }
 
-    /**
-     * The duration in ISO 8601 format for which health check waits idly without any checks.
-     */
     @InputImport(name="waitDuration")
     private final @Nullable String waitDuration;
 

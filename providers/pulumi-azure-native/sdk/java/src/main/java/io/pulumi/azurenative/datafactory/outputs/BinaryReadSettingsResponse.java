@@ -15,14 +15,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BinaryReadSettingsResponse {
-/**
- * Compression settings.
- */
     private final @Nullable Object compressionProperties;
-/**
- * The read setting type.
-Expected value is 'BinaryReadSettings'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"compressionProperties","type"})
@@ -33,16 +26,9 @@ Expected value is 'BinaryReadSettings'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Compression settings.
- */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
-/**
- * The read setting type.
-Expected value is 'BinaryReadSettings'.
- */
     public String getType() {
         return this.type;
     }

@@ -15,18 +15,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureSqlProtectionPolicyResponse {
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureSql'.
- */
     private final String backupManagementType;
-/**
- * Number of items associated with this policy.
- */
     private final @Nullable Integer protectedItemsCount;
-/**
- * Retention policy details.
- */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
     @OutputCustomType.Constructor({"backupManagementType","protectedItemsCount","retentionPolicy"})
@@ -39,22 +29,12 @@ Expected value is 'AzureSql'.
         this.retentionPolicy = retentionPolicy;
     }
 
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureSql'.
- */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
-/**
- * Number of items associated with this policy.
- */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
-/**
- * Retention policy details.
- */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }

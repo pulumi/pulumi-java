@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of support for content item
- */
     @EnumType
     public enum SupportTier {
-/**
- * 
- */
         Microsoft("Microsoft"),
-/**
- * 
- */
         Partner("Partner"),
-/**
- * 
- */
         Community("Community");
 
         private final String value;

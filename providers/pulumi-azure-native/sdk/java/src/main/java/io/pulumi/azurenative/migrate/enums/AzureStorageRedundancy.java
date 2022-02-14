@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Storage Redundancy type offered by Azure.
- */
     @EnumType
     public enum AzureStorageRedundancy {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         LocallyRedundant("LocallyRedundant"),
-/**
- * 
- */
         ZoneRedundant("ZoneRedundant"),
-/**
- * 
- */
         GeoRedundant("GeoRedundant"),
-/**
- * 
- */
         ReadAccessGeoRedundant("ReadAccessGeoRedundant");
 
         private final String value;

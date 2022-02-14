@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataSourceConfigurationResponse {
-/**
- * Windows event logs configuration.
- */
     private final @Nullable List<EventLogConfigurationResponse> eventLogs;
-/**
- * Performance counter configuration
- */
     private final @Nullable List<PerformanceCounterConfigurationResponse> perfCounters;
-/**
- * ETW providers configuration
- */
     private final @Nullable List<EtwProviderConfigurationResponse> providers;
 
     @OutputCustomType.Constructor({"eventLogs","perfCounters","providers"})
@@ -36,21 +27,12 @@ public final class DataSourceConfigurationResponse {
         this.providers = providers;
     }
 
-/**
- * Windows event logs configuration.
- */
     public List<EventLogConfigurationResponse> getEventLogs() {
         return this.eventLogs == null ? List.of() : this.eventLogs;
     }
-/**
- * Performance counter configuration
- */
     public List<PerformanceCounterConfigurationResponse> getPerfCounters() {
         return this.perfCounters == null ? List.of() : this.perfCounters;
     }
-/**
- * ETW providers configuration
- */
     public List<EtwProviderConfigurationResponse> getProviders() {
         return this.providers == null ? List.of() : this.providers;
     }

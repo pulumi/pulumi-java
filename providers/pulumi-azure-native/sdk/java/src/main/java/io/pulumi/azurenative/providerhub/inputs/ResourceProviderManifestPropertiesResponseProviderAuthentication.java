@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ResourceProviderManifestPropertiesResponseProviderAuthentication extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceProviderManifestPropertiesResponseProviderAuthentication Empty = new ResourceProviderManifestPropertiesResponseProviderAuthentication();
 
-    /**
-     * 
-     */
     @InputImport(name="allowedAudiences", required=true)
     private final List<String> allowedAudiences;
 

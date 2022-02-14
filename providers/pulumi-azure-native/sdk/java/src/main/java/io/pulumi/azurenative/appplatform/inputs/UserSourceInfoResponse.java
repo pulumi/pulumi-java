@@ -10,17 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Source information for a deployment
- */
 public final class UserSourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserSourceInfoResponse Empty = new UserSourceInfoResponse();
 
-    /**
-     * Selector for the artifact to be used for the deployment for multi-module projects. This should be
-the relative path to the target module/project.
-     */
     @InputImport(name="artifactSelector")
     private final @Nullable String artifactSelector;
 
@@ -28,9 +21,6 @@ the relative path to the target module/project.
         return this.artifactSelector == null ? Optional.empty() : Optional.ofNullable(this.artifactSelector);
     }
 
-    /**
-     * Relative path of the storage which stores the source
-     */
     @InputImport(name="relativePath")
     private final @Nullable String relativePath;
 
@@ -38,9 +28,6 @@ the relative path to the target module/project.
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
     }
 
-    /**
-     * Type of the source uploaded
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -48,9 +35,6 @@ the relative path to the target module/project.
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * Version of the source
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

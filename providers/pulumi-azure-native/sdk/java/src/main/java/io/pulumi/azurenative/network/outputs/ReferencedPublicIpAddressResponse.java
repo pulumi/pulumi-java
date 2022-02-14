@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReferencedPublicIpAddressResponse {
-/**
- * The PublicIPAddress Reference.
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -21,9 +18,6 @@ public final class ReferencedPublicIpAddressResponse {
         this.id = id;
     }
 
-/**
- * The PublicIPAddress Reference.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

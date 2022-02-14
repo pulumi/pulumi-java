@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of identity that last modified the resource
- */
     @EnumType
     public enum IdentityType {
-/**
- * 
- */
         User("User"),
-/**
- * 
- */
         Application("Application"),
-/**
- * 
- */
         ManagedIdentity("ManagedIdentity"),
-/**
- * 
- */
         Key("Key");
 
         private final String value;

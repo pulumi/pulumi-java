@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvironmentVariableResponse {
-/**
- * The name of the environment variable.
- */
     private final String name;
-/**
- * The value of the secure environment variable.
- */
     private final @Nullable String secureValue;
-/**
- * The value of the environment variable.
- */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","secureValue","value"})
@@ -34,21 +25,12 @@ public final class EnvironmentVariableResponse {
         this.value = value;
     }
 
-/**
- * The name of the environment variable.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The value of the secure environment variable.
- */
     public Optional<String> getSecureValue() {
         return Optional.ofNullable(this.secureValue);
     }
-/**
- * The value of the environment variable.
- */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

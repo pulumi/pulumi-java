@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProtectedItemArgs Empty = new GetProtectedItemArgs();
 
-    /**
-     * Container name associated with the backed up item.
-     */
     @InputImport(name="containerName", required=true)
     private final String containerName;
 
@@ -27,9 +21,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.containerName;
     }
 
-    /**
-     * Fabric name associated with the backed up item.
-     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -37,9 +28,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.fabricName;
     }
 
-    /**
-     * OData filter options.
-     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -47,9 +35,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
-    /**
-     * Backed up item name whose details are to be fetched.
-     */
     @InputImport(name="protectedItemName", required=true)
     private final String protectedItemName;
 
@@ -57,9 +42,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.protectedItemName;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

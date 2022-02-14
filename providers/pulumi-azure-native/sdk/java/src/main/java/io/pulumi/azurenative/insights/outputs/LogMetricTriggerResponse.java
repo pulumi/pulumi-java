@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LogMetricTriggerResponse {
-/**
- * Evaluation of metric on a particular column
- */
     private final @Nullable String metricColumn;
-/**
- * Metric Trigger Type - 'Consecutive' or 'Total'
- */
     private final @Nullable String metricTriggerType;
-/**
- * The threshold of the metric trigger.
- */
     private final @Nullable Double threshold;
-/**
- * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
- */
     private final @Nullable String thresholdOperator;
 
     @OutputCustomType.Constructor({"metricColumn","metricTriggerType","threshold","thresholdOperator"})
@@ -41,27 +29,15 @@ public final class LogMetricTriggerResponse {
         this.thresholdOperator = thresholdOperator;
     }
 
-/**
- * Evaluation of metric on a particular column
- */
     public Optional<String> getMetricColumn() {
         return Optional.ofNullable(this.metricColumn);
     }
-/**
- * Metric Trigger Type - 'Consecutive' or 'Total'
- */
     public Optional<String> getMetricTriggerType() {
         return Optional.ofNullable(this.metricTriggerType);
     }
-/**
- * The threshold of the metric trigger.
- */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
-/**
- * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
- */
     public Optional<String> getThresholdOperator() {
         return Optional.ofNullable(this.thresholdOperator);
     }

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VolumeError {
-/**
- * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
- */
     private final @Nullable String message;
-/**
- * Time the error was encountered.
- */
     private final @Nullable String time;
 
     @OutputCustomType.Constructor({"message","time"})
@@ -28,15 +22,9 @@ public final class VolumeError {
         this.time = time;
     }
 
-/**
- * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
-/**
- * Time the error was encountered.
- */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }

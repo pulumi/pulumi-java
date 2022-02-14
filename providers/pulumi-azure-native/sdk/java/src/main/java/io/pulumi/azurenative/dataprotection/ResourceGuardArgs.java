@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceGuardArgs Empty = new ResourceGuardArgs();
 
-    /**
-     * Optional ETag.
-     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -29,9 +23,6 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
-    /**
-     * Input Managed Identity Details
-     */
     @InputImport(name="identity")
     private final @Nullable Input<DppIdentityDetailsArgs> identity;
 
@@ -39,9 +30,6 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group where the backup vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of ResourceGuard
-     */
     @InputImport(name="resourceGuardsName")
     private final @Nullable Input<String> resourceGuardsName;
 
@@ -69,9 +51,6 @@ public final class ResourceGuardArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGuardsName == null ? Input.empty() : this.resourceGuardsName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

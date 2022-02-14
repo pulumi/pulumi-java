@@ -8,16 +8,10 @@ import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContact
 import java.util.Objects;
 
 
-/**
- * Configuration information of a phrase match rule.
- */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse();
 
-    /**
-     * The configuration for the exact match rule.
-     */
     @InputImport(name="exactMatchConfig", required=true)
     private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 

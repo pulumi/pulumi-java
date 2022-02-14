@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The binding to an Azure Machine Learning web service.
- */
 public final class AzureMachineLearningWebServiceFunctionBindingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureMachineLearningWebServiceFunctionBindingResponse Empty = new AzureMachineLearningWebServiceFunctionBindingResponse();
 
-    /**
-     * The API key used to authenticate with Request-Response endpoint.
-     */
     @InputImport(name="apiKey")
     private final @Nullable String apiKey;
 
@@ -31,9 +25,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
         return this.apiKey == null ? Optional.empty() : Optional.ofNullable(this.apiKey);
     }
 
-    /**
-     * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
-     */
     @InputImport(name="batchSize")
     private final @Nullable Integer batchSize;
 
@@ -41,9 +32,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
     }
 
-    /**
-     * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
-     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 
@@ -51,9 +39,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
-    /**
-     * The inputs for the Azure Machine Learning web service endpoint.
-     */
     @InputImport(name="inputs")
     private final @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
 
@@ -61,9 +46,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
         return this.inputs == null ? Optional.empty() : Optional.ofNullable(this.inputs);
     }
 
-    /**
-     * A list of outputs from the Azure Machine Learning web service endpoint execution.
-     */
     @InputImport(name="outputs")
     private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
 
@@ -71,10 +53,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
         return this.outputs == null ? List.of() : this.outputs;
     }
 
-    /**
-     * Indicates the function binding type.
-Expected value is 'Microsoft.MachineLearning/WebService'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

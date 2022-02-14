@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCommitmentPlanArgs Empty = new GetCommitmentPlanArgs();
 
-    /**
-     * The Azure ML commitment plan name.
-     */
     @InputImport(name="commitmentPlanName", required=true)
     private final String commitmentPlanName;
 
@@ -25,9 +19,6 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
         return this.commitmentPlanName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The attributes of the key.
- */
 public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyAttributesArgs Empty = new KeyAttributesArgs();
 
-    /**
-     * Determines whether or not the object is enabled.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -28,9 +22,6 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     */
     @InputImport(name="expires")
     private final @Nullable Input<Double> expires;
 
@@ -38,9 +29,6 @@ public final class KeyAttributesArgs extends io.pulumi.resources.ResourceArgs {
         return this.expires == null ? Input.empty() : this.expires;
     }
 
-    /**
-     * Not before date in seconds since 1970-01-01T00:00:00Z.
-     */
     @InputImport(name="notBefore")
     private final @Nullable Input<Double> notBefore;
 

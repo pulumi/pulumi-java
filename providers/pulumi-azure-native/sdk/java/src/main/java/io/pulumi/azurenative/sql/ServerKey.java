@@ -15,206 +15,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A server key.
-API Version: 2020-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates or updates a server key
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serverKey = new AzureNative.Sql.ServerKey("serverKey", new AzureNative.Sql.ServerKeyArgs
-        {
-            KeyName = "someVault_someKey_01234567890123456789012345678901",
-            ResourceGroupName = "sqlcrudtest-7398",
-            ServerKeyType = "AzureKeyVault",
-            ServerName = "sqlcrudtest-4645",
-            Uri = "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewServerKey(ctx, "serverKey", &sql.ServerKeyArgs{
-			KeyName:           pulumi.String("someVault_someKey_01234567890123456789012345678901"),
-			ResourceGroupName: pulumi.String("sqlcrudtest-7398"),
-			ServerKeyType:     pulumi.String("AzureKeyVault"),
-			ServerName:        pulumi.String("sqlcrudtest-4645"),
-			Uri:               pulumi.String("https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const serverKey = new azure_native.sql.ServerKey("serverKey", {
-    keyName: "someVault_someKey_01234567890123456789012345678901",
-    resourceGroupName: "sqlcrudtest-7398",
-    serverKeyType: "AzureKeyVault",
-    serverName: "sqlcrudtest-4645",
-    uri: "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-server_key = azure_native.sql.ServerKey("serverKey",
-    key_name="someVault_someKey_01234567890123456789012345678901",
-    resource_group_name="sqlcrudtest-7398",
-    server_key_type="AzureKeyVault",
-    server_name="sqlcrudtest-4645",
-    uri="https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:ServerKey sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/keys/someVault_someKey_01234567890123456789012345678901 
-```
-
- */
 @ResourceType(type="azure-native:sql:ServerKey")
 public class ServerKey extends io.pulumi.resources.CustomResource {
-    /**
-     * Key auto rotation opt-in flag. Either true or false.
-     */
     @OutputExport(name="autoRotationEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> autoRotationEnabled;
 
-    /**
-     * @return Key auto rotation opt-in flag. Either true or false.
-     */
     public Output<Boolean> getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
-    /**
-     * The server key creation date.
-     */
     @OutputExport(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
-    /**
-     * @return The server key creation date.
-     */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
-    /**
-     * Kind of encryption protector. This is metadata used for the Azure portal experience.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Subregion of the server key.
-     */
     @OutputExport(name="subregion", type=String.class, parameters={})
     private Output<String> subregion;
 
-    /**
-     * @return Subregion of the server key.
-     */
     public Output<String> getSubregion() {
         return this.subregion;
     }
-    /**
-     * Thumbprint of the server key.
-     */
     @OutputExport(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
-    /**
-     * @return Thumbprint of the server key.
-     */
     public Output<String> getThumbprint() {
         return this.thumbprint;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ServerKey(String name, ServerKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ServerKey", name, args == null ? ServerKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -239,14 +90,6 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ServerKey get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerKey(name, id, options);
     }

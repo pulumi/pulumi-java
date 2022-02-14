@@ -15,41 +15,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetKeyResult {
-/**
- * Settings for keys that can be used by Android apps.
- */
     private final GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings;
-/**
- * The timestamp corresponding to the creation of this Key.
- */
     private final String createTime;
-/**
- * Human-readable display name of this key. Modifiable by user.
- */
     private final String displayName;
-/**
- * Settings for keys that can be used by iOS apps.
- */
     private final GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings;
-/**
- * See Creating and managing labels.
- */
     private final Map<String,String> labels;
-/**
- * The resource name for the Key in the format "projects/{project}/keys/{key}".
- */
     private final String name;
-/**
- * Options for user acceptance testing.
- */
     private final GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions;
-/**
- * Settings for WAF
- */
     private final GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings;
-/**
- * Settings for keys that can be used by websites.
- */
     private final GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings;
 
     @OutputCustomType.Constructor({"androidSettings","createTime","displayName","iosSettings","labels","name","testingOptions","wafSettings","webSettings"})
@@ -74,57 +47,30 @@ public final class GetKeyResult {
         this.webSettings = Objects.requireNonNull(webSettings);
     }
 
-/**
- * Settings for keys that can be used by Android apps.
- */
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse getAndroidSettings() {
         return this.androidSettings;
     }
-/**
- * The timestamp corresponding to the creation of this Key.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Human-readable display name of this key. Modifiable by user.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Settings for keys that can be used by iOS apps.
- */
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse getIosSettings() {
         return this.iosSettings;
     }
-/**
- * See Creating and managing labels.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * The resource name for the Key in the format "projects/{project}/keys/{key}".
- */
     public String getName() {
         return this.name;
     }
-/**
- * Options for user acceptance testing.
- */
     public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse getTestingOptions() {
         return this.testingOptions;
     }
-/**
- * Settings for WAF
- */
     public GoogleCloudRecaptchaenterpriseV1WafSettingsResponse getWafSettings() {
         return this.wafSettings;
     }
-/**
- * Settings for keys that can be used by websites.
- */
     public GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse getWebSettings() {
         return this.webSettings;
     }

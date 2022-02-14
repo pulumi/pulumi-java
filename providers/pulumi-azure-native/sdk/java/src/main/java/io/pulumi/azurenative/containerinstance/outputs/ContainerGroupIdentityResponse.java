@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerGroupIdentityResponse {
-/**
- * The principal id of the container group identity. This property will only be provided for a system assigned identity.
- */
     private final String principalId;
-/**
- * The tenant id associated with the container group. This property will only be provided for a system assigned identity.
- */
     private final String tenantId;
-/**
- * The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
- */
     private final @Nullable String type;
-/**
- * The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
- */
     private final @Nullable Map<String,ContainerGroupIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -42,27 +30,15 @@ public final class ContainerGroupIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
-/**
- * The principal id of the container group identity. This property will only be provided for a system assigned identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant id associated with the container group. This property will only be provided for a system assigned identity.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
-/**
- * The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
- */
     public Map<String,ContainerGroupIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

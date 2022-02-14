@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * ReplicationSync contain information about the last replica sync to the cloud.
- */
 public final class ReplicationSyncResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationSyncResponse Empty = new ReplicationSyncResponse();
 
-    /**
-     * The most updated snapshot created time in the source that finished replication.
-     */
     @InputImport(name="lastSyncTime", required=true)
     private final String lastSyncTime;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * StatusCondition describes why a cluster or a node pool has a certain status (e.g., ERROR or DEGRADED).
- */
 public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatusConditionArgs Empty = new StatusConditionArgs();
 
-    /**
-     * Canonical code of the condition.
-     */
     @InputImport(name="canonicalCode")
     private final @Nullable Input<StatusConditionCanonicalCode> canonicalCode;
 
@@ -28,9 +22,6 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
         return this.canonicalCode == null ? Input.empty() : this.canonicalCode;
     }
 
-    /**
-     * Human-friendly representation of the condition
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 

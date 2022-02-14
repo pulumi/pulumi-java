@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucketAccessControl {
-/**
- * Returns the ACL entry for the specified entity on the specified bucket.
- */
     public static CompletableFuture<GetBucketAccessControlResult> invokeAsync(GetBucketAccessControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucketAccessControl", TypeShape.of(GetBucketAccessControlResult.class), args == null ? GetBucketAccessControlArgs.Empty : args, Utilities.withVersion(options));
     }

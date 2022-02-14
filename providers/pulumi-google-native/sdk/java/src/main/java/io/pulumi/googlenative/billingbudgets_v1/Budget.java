@@ -17,103 +17,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
-Auto-naming is currently not supported for this resource.
- */
 @ResourceType(type="google-native:billingbudgets/v1:Budget")
 public class Budget extends io.pulumi.resources.CustomResource {
-    /**
-     * Budgeted amount.
-     */
     @OutputExport(name="amount", type=GoogleCloudBillingBudgetsV1BudgetAmountResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1BudgetAmountResponse> amount;
 
-    /**
-     * @return Budgeted amount.
-     */
     public Output<GoogleCloudBillingBudgetsV1BudgetAmountResponse> getAmount() {
         return this.amount;
     }
-    /**
-     * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
-     */
     @OutputExport(name="budgetFilter", type=GoogleCloudBillingBudgetsV1FilterResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1FilterResponse> budgetFilter;
 
-    /**
-     * @return Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
-     */
     public Output<GoogleCloudBillingBudgetsV1FilterResponse> getBudgetFilter() {
         return this.budgetFilter;
     }
-    /**
-     * User data for display name in UI. The name must be less than or equal to 60 characters.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return User data for display name in UI. The name must be less than or equal to 60 characters.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag causes an update to overwrite other changes.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag causes an update to overwrite other changes.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
-     */
     @OutputExport(name="notificationsRule", type=GoogleCloudBillingBudgetsV1NotificationsRuleResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1NotificationsRuleResponse> notificationsRule;
 
-    /**
-     * @return Optional. Rules to apply to notifications sent based on budget spend and thresholds.
-     */
     public Output<GoogleCloudBillingBudgetsV1NotificationsRuleResponse> getNotificationsRule() {
         return this.notificationsRule;
     }
-    /**
-     * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
-     */
     @OutputExport(name="thresholdRules", type=List.class, parameters={GoogleCloudBillingBudgetsV1ThresholdRuleResponse.class})
     private Output<List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse>> thresholdRules;
 
-    /**
-     * @return Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
-     */
     public Output<List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse>> getThresholdRules() {
         return this.thresholdRules;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Budget(String name, BudgetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:billingbudgets/v1:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -129,14 +77,6 @@ public class Budget extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Budget get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Budget(name, id, options);
     }

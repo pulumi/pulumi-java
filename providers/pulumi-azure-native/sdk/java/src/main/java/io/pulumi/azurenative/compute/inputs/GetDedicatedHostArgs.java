@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDedicatedHostArgs Empty = new GetDedicatedHostArgs();
 
-    /**
-     * The expand expression to apply on the operation.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the dedicated host group.
-     */
     @InputImport(name="hostGroupName", required=true)
     private final String hostGroupName;
 
@@ -37,9 +28,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
         return this.hostGroupName;
     }
 
-    /**
-     * The name of the dedicated host.
-     */
     @InputImport(name="hostName", required=true)
     private final String hostName;
 
@@ -47,9 +35,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
         return this.hostName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

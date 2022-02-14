@@ -9,16 +9,10 @@ import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestResponse;
 import java.util.Objects;
 
 
-/**
- * The details about how to run the execution.
- */
 public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SpecificationResponse Empty = new SpecificationResponse();
 
-    /**
-     * An Android mobile test execution specification.
-     */
     @InputImport(name="androidTest", required=true)
     private final AndroidTestResponse androidTest;
 
@@ -26,9 +20,6 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
         return this.androidTest;
     }
 
-    /**
-     * An iOS mobile test execution specification.
-     */
     @InputImport(name="iosTest", required=true)
     private final IosTestResponse iosTest;
 

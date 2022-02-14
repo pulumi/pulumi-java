@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A reference to an Azure resource.
- */
 public final class ResourceReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceReferenceArgs Empty = new ResourceReferenceArgs();
 
-    /**
-     * The fully qualified Azure resource id.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

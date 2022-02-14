@@ -12,53 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBackupResult {
-/**
- * UUID v4 used to identify the Backup
- */
     private final String backupId;
-/**
- * Type of backup Manual or Scheduled
- */
     private final String backupType;
-/**
- * The creation date of the backup
- */
     private final String creationDate;
-/**
- * Failure reason
- */
     private final String failureReason;
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Label for backup
- */
     private final @Nullable String label;
-/**
- * Resource location
- */
     private final String location;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Azure lifecycle management
- */
     private final String provisioningState;
-/**
- * Size of backup
- */
     private final Double size;
-/**
- * Resource type
- */
     private final String type;
-/**
- * Volume name
- */
     private final String volumeName;
 
     @OutputCustomType.Constructor({"backupId","backupType","creationDate","failureReason","id","label","location","name","provisioningState","size","type","volumeName"})
@@ -89,75 +53,39 @@ public final class GetBackupResult {
         this.volumeName = Objects.requireNonNull(volumeName);
     }
 
-/**
- * UUID v4 used to identify the Backup
- */
     public String getBackupId() {
         return this.backupId;
     }
-/**
- * Type of backup Manual or Scheduled
- */
     public String getBackupType() {
         return this.backupType;
     }
-/**
- * The creation date of the backup
- */
     public String getCreationDate() {
         return this.creationDate;
     }
-/**
- * Failure reason
- */
     public String getFailureReason() {
         return this.failureReason;
     }
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Label for backup
- */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
-/**
- * Resource location
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Azure lifecycle management
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Size of backup
- */
     public Double getSize() {
         return this.size;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }
-/**
- * Volume name
- */
     public String getVolumeName() {
         return this.volumeName;
     }

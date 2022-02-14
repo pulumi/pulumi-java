@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Provides data to pass through to the worker harness.
- */
 public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkerSettingsArgs Empty = new WorkerSettingsArgs();
 
-    /**
-     * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
-     */
     @InputImport(name="baseUrl")
     private final @Nullable Input<String> baseUrl;
 
@@ -28,9 +22,6 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.baseUrl == null ? Input.empty() : this.baseUrl;
     }
 
-    /**
-     * Whether to send work progress updates to the service.
-     */
     @InputImport(name="reportingEnabled")
     private final @Nullable Input<Boolean> reportingEnabled;
 
@@ -38,9 +29,6 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportingEnabled == null ? Input.empty() : this.reportingEnabled;
     }
 
-    /**
-     * The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".
-     */
     @InputImport(name="servicePath")
     private final @Nullable Input<String> servicePath;
 
@@ -48,9 +36,6 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.servicePath == null ? Input.empty() : this.servicePath;
     }
 
-    /**
-     * The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".
-     */
     @InputImport(name="shuffleServicePath")
     private final @Nullable Input<String> shuffleServicePath;
 
@@ -58,9 +43,6 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.shuffleServicePath == null ? Input.empty() : this.shuffleServicePath;
     }
 
-    /**
-     * The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
-     */
     @InputImport(name="tempStoragePrefix")
     private final @Nullable Input<String> tempStoragePrefix;
 
@@ -68,9 +50,6 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
     }
 
-    /**
-     * The ID of the worker running this pipeline.
-     */
     @InputImport(name="workerId")
     private final @Nullable Input<String> workerId;
 

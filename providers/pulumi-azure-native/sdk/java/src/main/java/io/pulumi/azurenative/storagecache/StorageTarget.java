@@ -20,514 +20,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Type of the Storage Target.
-API Version: 2021-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### StorageTargets_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageTarget = new AzureNative.StorageCache.StorageTarget("storageTarget", new AzureNative.StorageCache.StorageTargetArgs
-        {
-            CacheName = "sc1",
-            Junctions = 
-            {
-                new AzureNative.StorageCache.Inputs.NamespaceJunctionArgs
-                {
-                    NamespacePath = "/path/on/cache",
-                    NfsAccessPolicy = "default",
-                    NfsExport = "exp1",
-                    TargetPath = "/path/on/exp1",
-                },
-                new AzureNative.StorageCache.Inputs.NamespaceJunctionArgs
-                {
-                    NamespacePath = "/path2/on/cache",
-                    NfsAccessPolicy = "rootSquash",
-                    NfsExport = "exp2",
-                    TargetPath = "/path2/on/exp2",
-                },
-            },
-            Nfs3 = new AzureNative.StorageCache.Inputs.Nfs3TargetArgs
-            {
-                Target = "10.0.44.44",
-                UsageModel = "READ_HEAVY_INFREQ",
-            },
-            ResourceGroupName = "scgroup",
-            StorageTargetName = "st1",
-            TargetType = "nfs3",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagecache.NewStorageTarget(ctx, "storageTarget", &storagecache.StorageTargetArgs{
-			CacheName: pulumi.String("sc1"),
-			Junctions: []storagecache.NamespaceJunctionArgs{
-				&storagecache.NamespaceJunctionArgs{
-					NamespacePath:   pulumi.String("/path/on/cache"),
-					NfsAccessPolicy: pulumi.String("default"),
-					NfsExport:       pulumi.String("exp1"),
-					TargetPath:      pulumi.String("/path/on/exp1"),
-				},
-				&storagecache.NamespaceJunctionArgs{
-					NamespacePath:   pulumi.String("/path2/on/cache"),
-					NfsAccessPolicy: pulumi.String("rootSquash"),
-					NfsExport:       pulumi.String("exp2"),
-					TargetPath:      pulumi.String("/path2/on/exp2"),
-				},
-			},
-			Nfs3: &storagecache.Nfs3TargetArgs{
-				Target:     pulumi.String("10.0.44.44"),
-				UsageModel: pulumi.String("READ_HEAVY_INFREQ"),
-			},
-			ResourceGroupName: pulumi.String("scgroup"),
-			StorageTargetName: pulumi.String("st1"),
-			TargetType:        pulumi.String("nfs3"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget", {
-    cacheName: "sc1",
-    junctions: [
-        {
-            namespacePath: "/path/on/cache",
-            nfsAccessPolicy: "default",
-            nfsExport: "exp1",
-            targetPath: "/path/on/exp1",
-        },
-        {
-            namespacePath: "/path2/on/cache",
-            nfsAccessPolicy: "rootSquash",
-            nfsExport: "exp2",
-            targetPath: "/path2/on/exp2",
-        },
-    ],
-    nfs3: {
-        target: "10.0.44.44",
-        usageModel: "READ_HEAVY_INFREQ",
-    },
-    resourceGroupName: "scgroup",
-    storageTargetName: "st1",
-    targetType: "nfs3",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_target = azure_native.storagecache.StorageTarget("storageTarget",
-    cache_name="sc1",
-    junctions=[
-        azure_native.storagecache.NamespaceJunctionArgs(
-            namespace_path="/path/on/cache",
-            nfs_access_policy="default",
-            nfs_export="exp1",
-            target_path="/path/on/exp1",
-        ),
-        azure_native.storagecache.NamespaceJunctionArgs(
-            namespace_path="/path2/on/cache",
-            nfs_access_policy="rootSquash",
-            nfs_export="exp2",
-            target_path="/path2/on/exp2",
-        ),
-    ],
-    nfs3=azure_native.storagecache.Nfs3TargetArgs(
-        target="10.0.44.44",
-        usage_model="READ_HEAVY_INFREQ",
-    ),
-    resource_group_name="scgroup",
-    storage_target_name="st1",
-    target_type="nfs3")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### StorageTargets_CreateOrUpdate_BlobNfs
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageTarget = new AzureNative.StorageCache.StorageTarget("storageTarget", new AzureNative.StorageCache.StorageTargetArgs
-        {
-            BlobNfs = new AzureNative.StorageCache.Inputs.BlobNfsTargetArgs
-            {
-                Target = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs",
-                UsageModel = "WRITE_WORKLOAD_15",
-            },
-            CacheName = "sc1",
-            Junctions = 
-            {
-                new AzureNative.StorageCache.Inputs.NamespaceJunctionArgs
-                {
-                    NamespacePath = "/blobnfs",
-                },
-            },
-            ResourceGroupName = "scgroup",
-            StorageTargetName = "st1",
-            TargetType = "blobNfs",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagecache.NewStorageTarget(ctx, "storageTarget", &storagecache.StorageTargetArgs{
-			BlobNfs: &storagecache.BlobNfsTargetArgs{
-				Target:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs"),
-				UsageModel: pulumi.String("WRITE_WORKLOAD_15"),
-			},
-			CacheName: pulumi.String("sc1"),
-			Junctions: []storagecache.NamespaceJunctionArgs{
-				&storagecache.NamespaceJunctionArgs{
-					NamespacePath: pulumi.String("/blobnfs"),
-				},
-			},
-			ResourceGroupName: pulumi.String("scgroup"),
-			StorageTargetName: pulumi.String("st1"),
-			TargetType:        pulumi.String("blobNfs"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget", {
-    blobNfs: {
-        target: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs",
-        usageModel: "WRITE_WORKLOAD_15",
-    },
-    cacheName: "sc1",
-    junctions: [{
-        namespacePath: "/blobnfs",
-    }],
-    resourceGroupName: "scgroup",
-    storageTargetName: "st1",
-    targetType: "blobNfs",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_target = azure_native.storagecache.StorageTarget("storageTarget",
-    blob_nfs=azure_native.storagecache.BlobNfsTargetArgs(
-        target="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Storage/storageAccounts/blofnfs/blobServices/default/containers/blobnfs",
-        usage_model="WRITE_WORKLOAD_15",
-    ),
-    cache_name="sc1",
-    junctions=[azure_native.storagecache.NamespaceJunctionArgs(
-        namespace_path="/blobnfs",
-    )],
-    resource_group_name="scgroup",
-    storage_target_name="st1",
-    target_type="blobNfs")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### StorageTargets_CreateOrUpdate_NoJunctions
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageTarget = new AzureNative.StorageCache.StorageTarget("storageTarget", new AzureNative.StorageCache.StorageTargetArgs
-        {
-            CacheName = "sc1",
-            Nfs3 = new AzureNative.StorageCache.Inputs.Nfs3TargetArgs
-            {
-                Target = "10.0.44.44",
-                UsageModel = "READ_HEAVY_INFREQ",
-            },
-            ResourceGroupName = "scgroup",
-            StorageTargetName = "st1",
-            TargetType = "nfs3",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagecache.NewStorageTarget(ctx, "storageTarget", &storagecache.StorageTargetArgs{
-			CacheName: pulumi.String("sc1"),
-			Nfs3: &storagecache.Nfs3TargetArgs{
-				Target:     pulumi.String("10.0.44.44"),
-				UsageModel: pulumi.String("READ_HEAVY_INFREQ"),
-			},
-			ResourceGroupName: pulumi.String("scgroup"),
-			StorageTargetName: pulumi.String("st1"),
-			TargetType:        pulumi.String("nfs3"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageTarget = new azure_native.storagecache.StorageTarget("storageTarget", {
-    cacheName: "sc1",
-    nfs3: {
-        target: "10.0.44.44",
-        usageModel: "READ_HEAVY_INFREQ",
-    },
-    resourceGroupName: "scgroup",
-    storageTargetName: "st1",
-    targetType: "nfs3",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_target = azure_native.storagecache.StorageTarget("storageTarget",
-    cache_name="sc1",
-    nfs3=azure_native.storagecache.Nfs3TargetArgs(
-        target="10.0.44.44",
-        usage_model="READ_HEAVY_INFREQ",
-    ),
-    resource_group_name="scgroup",
-    storage_target_name="st1",
-    target_type="nfs3")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:storagecache:StorageTarget st1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1/storagetargets/st1 
-```
-
- */
 @ResourceType(type="azure-native:storagecache:StorageTarget")
 public class StorageTarget extends io.pulumi.resources.CustomResource {
-    /**
-     * Properties when targetType is blobNfs.
-     */
     @OutputExport(name="blobNfs", type=BlobNfsTargetResponse.class, parameters={})
     private Output</* @Nullable */ BlobNfsTargetResponse> blobNfs;
 
-    /**
-     * @return Properties when targetType is blobNfs.
-     */
     public Output</* @Nullable */ BlobNfsTargetResponse> getBlobNfs() {
         return this.blobNfs;
     }
-    /**
-     * Properties when targetType is clfs.
-     */
     @OutputExport(name="clfs", type=ClfsTargetResponse.class, parameters={})
     private Output</* @Nullable */ ClfsTargetResponse> clfs;
 
-    /**
-     * @return Properties when targetType is clfs.
-     */
     public Output</* @Nullable */ ClfsTargetResponse> getClfs() {
         return this.clfs;
     }
-    /**
-     * List of Cache namespace junctions to target for namespace associations.
-     */
     @OutputExport(name="junctions", type=List.class, parameters={NamespaceJunctionResponse.class})
     private Output</* @Nullable */ List<NamespaceJunctionResponse>> junctions;
 
-    /**
-     * @return List of Cache namespace junctions to target for namespace associations.
-     */
     public Output</* @Nullable */ List<NamespaceJunctionResponse>> getJunctions() {
         return this.junctions;
     }
-    /**
-     * Region name string.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Region name string.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Name of the Storage Target.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the Storage Target.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties when targetType is nfs3.
-     */
     @OutputExport(name="nfs3", type=Nfs3TargetResponse.class, parameters={})
     private Output</* @Nullable */ Nfs3TargetResponse> nfs3;
 
-    /**
-     * @return Properties when targetType is nfs3.
-     */
     public Output</* @Nullable */ Nfs3TargetResponse> getNfs3() {
         return this.nfs3;
     }
-    /**
-     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
-    /**
-     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The system meta data relating to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system meta data relating to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Type of the Storage Target.
-     */
     @OutputExport(name="targetType", type=String.class, parameters={})
     private Output<String> targetType;
 
-    /**
-     * @return Type of the Storage Target.
-     */
     public Output<String> getTargetType() {
         return this.targetType;
     }
-    /**
-     * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Properties when targetType is unknown.
-     */
     @OutputExport(name="unknown", type=UnknownTargetResponse.class, parameters={})
     private Output</* @Nullable */ UnknownTargetResponse> unknown;
 
-    /**
-     * @return Properties when targetType is unknown.
-     */
     public Output</* @Nullable */ UnknownTargetResponse> getUnknown() {
         return this.unknown;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StorageTarget(String name, StorageTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagecache:StorageTarget", name, args == null ? StorageTargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -552,14 +113,6 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StorageTarget get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageTarget(name, id, options);
     }

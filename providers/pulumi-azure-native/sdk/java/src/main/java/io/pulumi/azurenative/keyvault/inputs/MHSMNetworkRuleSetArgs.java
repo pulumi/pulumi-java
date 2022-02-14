@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A set of rules governing the network accessibility of a managed hsm pool.
- */
 public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MHSMNetworkRuleSetArgs Empty = new MHSMNetworkRuleSetArgs();
 
-    /**
-     * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
-     */
     @InputImport(name="bypass")
     private final @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass;
 
@@ -33,9 +27,6 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
         return this.bypass == null ? Input.empty() : this.bypass;
     }
 
-    /**
-     * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
-     */
     @InputImport(name="defaultAction")
     private final @Nullable Input<Either<String,NetworkRuleAction>> defaultAction;
 
@@ -43,9 +34,6 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
     }
 
-    /**
-     * The list of IP address rules.
-     */
     @InputImport(name="ipRules")
     private final @Nullable Input<List<MHSMIPRuleArgs>> ipRules;
 
@@ -53,9 +41,6 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
         return this.ipRules == null ? Input.empty() : this.ipRules;
     }
 
-    /**
-     * The list of virtual network rules.
-     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
 

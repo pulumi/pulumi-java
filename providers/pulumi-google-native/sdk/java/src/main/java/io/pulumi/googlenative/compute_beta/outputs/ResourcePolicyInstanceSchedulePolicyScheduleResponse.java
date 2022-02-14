@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
-/**
- * Specifies the frequency for the operation, using the unix-cron format.
- */
     private final String schedule;
 
     @OutputCustomType.Constructor({"schedule"})
@@ -19,9 +16,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
         this.schedule = Objects.requireNonNull(schedule);
     }
 
-/**
- * Specifies the frequency for the operation, using the unix-cron format.
- */
     public String getSchedule() {
         return this.schedule;
     }

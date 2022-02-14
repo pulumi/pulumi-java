@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An item in the list.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse();
 
-    /**
-     * Optional. The main text describing the item.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
         return this.description;
     }
 
-    /**
-     * Optional. The image to display.
-     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
         return this.image;
     }
 
-    /**
-     * Additional information about this option.
-     */
     @InputImport(name="info", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info;
 
@@ -47,9 +35,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
         return this.info;
     }
 
-    /**
-     * The title of the list item.
-     */
     @InputImport(name="title", required=true)
     private final String title;
 

@@ -22,759 +22,111 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
-API Version: 2020-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update specific Front Door
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var frontDoor = new AzureNative.Network.FrontDoor("frontDoor", new AzureNative.Network.FrontDoorArgs
-        {
-            BackendPools = 
-            {
-                new AzureNative.Network.Inputs.BackendPoolArgs
-                {
-                    Backends = 
-                    {
-                        new AzureNative.Network.Inputs.BackendArgs
-                        {
-                            Address = "w3.contoso.com",
-                            HttpPort = 80,
-                            HttpsPort = 443,
-                            Priority = 2,
-                            Weight = 1,
-                        },
-                        new AzureNative.Network.Inputs.BackendArgs
-                        {
-                            Address = "contoso.com.website-us-west-2.othercloud.net",
-                            HttpPort = 80,
-                            HttpsPort = 443,
-                            Priority = 1,
-                            PrivateLinkApprovalMessage = "Please approve the connection request for this Private Link",
-                            PrivateLinkLocation = "eastus",
-                            PrivateLinkResourceId = "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
-                            Weight = 2,
-                        },
-                        new AzureNative.Network.Inputs.BackendArgs
-                        {
-                            Address = "10.0.1.5",
-                            HttpPort = 80,
-                            HttpsPort = 443,
-                            Priority = 1,
-                            PrivateLinkAlias = "APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice",
-                            PrivateLinkApprovalMessage = "Please approve this request to connect to the Private Link",
-                            Weight = 1,
-                        },
-                    },
-                    HealthProbeSettings = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
-                    },
-                    LoadBalancingSettings = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
-                    },
-                    Name = "backendPool1",
-                },
-            },
-            BackendPoolsSettings = new AzureNative.Network.Inputs.BackendPoolsSettingsArgs
-            {
-                EnforceCertificateNameCheck = "Enabled",
-                SendRecvTimeoutSeconds = 60,
-            },
-            EnabledState = "Enabled",
-            FrontDoorName = "frontDoor1",
-            FrontendEndpoints = 
-            {
-                new AzureNative.Network.Inputs.FrontendEndpointArgs
-                {
-                    HostName = "www.contoso.com",
-                    Name = "frontendEndpoint1",
-                    SessionAffinityEnabledState = "Enabled",
-                    SessionAffinityTtlSeconds = 60,
-                    WebApplicationFirewallPolicyLink = new AzureNative.Network.Inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
-                    },
-                },
-                new AzureNative.Network.Inputs.FrontendEndpointArgs
-                {
-                    HostName = "frontDoor1.azurefd.net",
-                    Name = "default",
-                },
-            },
-            HealthProbeSettings = 
-            {
-                new AzureNative.Network.Inputs.HealthProbeSettingsModelArgs
-                {
-                    EnabledState = "Enabled",
-                    HealthProbeMethod = "HEAD",
-                    IntervalInSeconds = 120,
-                    Name = "healthProbeSettings1",
-                    Path = "/",
-                    Protocol = "Http",
-                },
-            },
-            LoadBalancingSettings = 
-            {
-                new AzureNative.Network.Inputs.LoadBalancingSettingsModelArgs
-                {
-                    Name = "loadBalancingSettings1",
-                    SampleSize = 4,
-                    SuccessfulSamplesRequired = 2,
-                },
-            },
-            Location = "westus",
-            ResourceGroupName = "rg1",
-            RoutingRules = 
-            {
-                new AzureNative.Network.Inputs.RoutingRuleArgs
-                {
-                    AcceptedProtocols = 
-                    {
-                        "Http",
-                    },
-                    EnabledState = "Enabled",
-                    FrontendEndpoints = 
-                    {
-                        new AzureNative.Network.Inputs.SubResourceArgs
-                        {
-                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
-                        },
-                        new AzureNative.Network.Inputs.SubResourceArgs
-                        {
-                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
-                        },
-                    },
-                    Name = "routingRule1",
-                    PatternsToMatch = 
-                    {
-                        "/*",
-                    },
-                    RouteConfiguration = new AzureNative.Network.Inputs.ForwardingConfigurationArgs
-                    {
-                        BackendPool = new AzureNative.Network.Inputs.SubResourceArgs
-                        {
-                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-                        },
-                        OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-                    },
-                    RulesEngine = new AzureNative.Network.Inputs.SubResourceArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
-                    },
-                    WebApplicationFirewallPolicyLink = new AzureNative.Network.Inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs
-                    {
-                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
-                    },
-                },
-            },
-            Tags = 
-            {
-                { "tag1", "value1" },
-                { "tag2", "value2" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFrontDoor(ctx, "frontDoor", &network.FrontDoorArgs{
-			BackendPools: []network.BackendPoolArgs{
-				&network.BackendPoolArgs{
-					Backends: network.BackendArray{
-						&network.BackendArgs{
-							Address:   pulumi.String("w3.contoso.com"),
-							HttpPort:  pulumi.Int(80),
-							HttpsPort: pulumi.Int(443),
-							Priority:  pulumi.Int(2),
-							Weight:    pulumi.Int(1),
-						},
-						&network.BackendArgs{
-							Address:                    pulumi.String("contoso.com.website-us-west-2.othercloud.net"),
-							HttpPort:                   pulumi.Int(80),
-							HttpsPort:                  pulumi.Int(443),
-							Priority:                   pulumi.Int(1),
-							PrivateLinkApprovalMessage: pulumi.String("Please approve the connection request for this Private Link"),
-							PrivateLinkLocation:        pulumi.String("eastus"),
-							PrivateLinkResourceId:      pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1"),
-							Weight:                     pulumi.Int(2),
-						},
-						&network.BackendArgs{
-							Address:                    pulumi.String("10.0.1.5"),
-							HttpPort:                   pulumi.Int(80),
-							HttpsPort:                  pulumi.Int(443),
-							Priority:                   pulumi.Int(1),
-							PrivateLinkAlias:           pulumi.String("APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice"),
-							PrivateLinkApprovalMessage: pulumi.String("Please approve this request to connect to the Private Link"),
-							Weight:                     pulumi.Int(1),
-						},
-					},
-					HealthProbeSettings: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1"),
-					},
-					LoadBalancingSettings: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1"),
-					},
-					Name: pulumi.String("backendPool1"),
-				},
-			},
-			BackendPoolsSettings: &network.BackendPoolsSettingsArgs{
-				EnforceCertificateNameCheck: pulumi.String("Enabled"),
-				SendRecvTimeoutSeconds:      pulumi.Int(60),
-			},
-			EnabledState:  pulumi.String("Enabled"),
-			FrontDoorName: pulumi.String("frontDoor1"),
-			FrontendEndpoints: []network.FrontendEndpointArgs{
-				&network.FrontendEndpointArgs{
-					HostName:                    pulumi.String("www.contoso.com"),
-					Name:                        pulumi.String("frontendEndpoint1"),
-					SessionAffinityEnabledState: pulumi.String("Enabled"),
-					SessionAffinityTtlSeconds:   pulumi.Int(60),
-					WebApplicationFirewallPolicyLink: &network.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1"),
-					},
-				},
-				&network.FrontendEndpointArgs{
-					HostName: pulumi.String("frontDoor1.azurefd.net"),
-					Name:     pulumi.String("default"),
-				},
-			},
-			HealthProbeSettings: []network.HealthProbeSettingsModelArgs{
-				&network.HealthProbeSettingsModelArgs{
-					EnabledState:      pulumi.String("Enabled"),
-					HealthProbeMethod: pulumi.String("HEAD"),
-					IntervalInSeconds: pulumi.Int(120),
-					Name:              pulumi.String("healthProbeSettings1"),
-					Path:              pulumi.String("/"),
-					Protocol:          pulumi.String("Http"),
-				},
-			},
-			LoadBalancingSettings: []network.LoadBalancingSettingsModelArgs{
-				&network.LoadBalancingSettingsModelArgs{
-					Name:                      pulumi.String("loadBalancingSettings1"),
-					SampleSize:                pulumi.Int(4),
-					SuccessfulSamplesRequired: pulumi.Int(2),
-				},
-			},
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("rg1"),
-			RoutingRules: []network.RoutingRuleArgs{
-				&network.RoutingRuleArgs{
-					AcceptedProtocols: pulumi.StringArray{
-						pulumi.String("Http"),
-					},
-					EnabledState: pulumi.String("Enabled"),
-					FrontendEndpoints: network.SubResourceArray{
-						&network.SubResourceArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1"),
-						},
-						&network.SubResourceArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default"),
-						},
-					},
-					Name: pulumi.String("routingRule1"),
-					PatternsToMatch: pulumi.StringArray{
-						pulumi.String("/*"),
-					},
-					RouteConfiguration: network.ForwardingConfiguration{
-						BackendPool: network.SubResource{
-							Id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-						},
-						OdataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-					},
-					RulesEngine: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1"),
-					},
-					WebApplicationFirewallPolicyLink: &network.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1"),
-					},
-				},
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const frontDoor = new azure_native.network.FrontDoor("frontDoor", {
-    backendPools: [{
-        backends: [
-            {
-                address: "w3.contoso.com",
-                httpPort: 80,
-                httpsPort: 443,
-                priority: 2,
-                weight: 1,
-            },
-            {
-                address: "contoso.com.website-us-west-2.othercloud.net",
-                httpPort: 80,
-                httpsPort: 443,
-                priority: 1,
-                privateLinkApprovalMessage: "Please approve the connection request for this Private Link",
-                privateLinkLocation: "eastus",
-                privateLinkResourceId: "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
-                weight: 2,
-            },
-            {
-                address: "10.0.1.5",
-                httpPort: 80,
-                httpsPort: 443,
-                priority: 1,
-                privateLinkAlias: "APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice",
-                privateLinkApprovalMessage: "Please approve this request to connect to the Private Link",
-                weight: 1,
-            },
-        ],
-        healthProbeSettings: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
-        },
-        loadBalancingSettings: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
-        },
-        name: "backendPool1",
-    }],
-    backendPoolsSettings: {
-        enforceCertificateNameCheck: "Enabled",
-        sendRecvTimeoutSeconds: 60,
-    },
-    enabledState: "Enabled",
-    frontDoorName: "frontDoor1",
-    frontendEndpoints: [
-        {
-            hostName: "www.contoso.com",
-            name: "frontendEndpoint1",
-            sessionAffinityEnabledState: "Enabled",
-            sessionAffinityTtlSeconds: 60,
-            webApplicationFirewallPolicyLink: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
-            },
-        },
-        {
-            hostName: "frontDoor1.azurefd.net",
-            name: "default",
-        },
-    ],
-    healthProbeSettings: [{
-        enabledState: "Enabled",
-        healthProbeMethod: "HEAD",
-        intervalInSeconds: 120,
-        name: "healthProbeSettings1",
-        path: "/",
-        protocol: "Http",
-    }],
-    loadBalancingSettings: [{
-        name: "loadBalancingSettings1",
-        sampleSize: 4,
-        successfulSamplesRequired: 2,
-    }],
-    location: "westus",
-    resourceGroupName: "rg1",
-    routingRules: [{
-        acceptedProtocols: ["Http"],
-        enabledState: "Enabled",
-        frontendEndpoints: [
-            {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
-            },
-            {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
-            },
-        ],
-        name: "routingRule1",
-        patternsToMatch: ["/*"],
-        routeConfiguration: {
-            backendPool: {
-                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-            },
-            odataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-        },
-        rulesEngine: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
-        },
-        webApplicationFirewallPolicyLink: {
-            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
-        },
-    }],
-    tags: {
-        tag1: "value1",
-        tag2: "value2",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-front_door = azure_native.network.FrontDoor("frontDoor",
-    backend_pools=[azure_native.network.BackendPoolArgs(
-        backends=[
-            azure_native.network.BackendArgs(
-                address="w3.contoso.com",
-                http_port=80,
-                https_port=443,
-                priority=2,
-                weight=1,
-            ),
-            azure_native.network.BackendArgs(
-                address="contoso.com.website-us-west-2.othercloud.net",
-                http_port=80,
-                https_port=443,
-                priority=1,
-                private_link_approval_message="Please approve the connection request for this Private Link",
-                private_link_location="eastus",
-                private_link_resource_id="/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1",
-                weight=2,
-            ),
-            azure_native.network.BackendArgs(
-                address="10.0.1.5",
-                http_port=80,
-                https_port=443,
-                priority=1,
-                private_link_alias="APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice",
-                private_link_approval_message="Please approve this request to connect to the Private Link",
-                weight=1,
-            ),
-        ],
-        health_probe_settings=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1",
-        ),
-        load_balancing_settings=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1",
-        ),
-        name="backendPool1",
-    )],
-    backend_pools_settings=azure_native.network.BackendPoolsSettingsArgs(
-        enforce_certificate_name_check="Enabled",
-        send_recv_timeout_seconds=60,
-    ),
-    enabled_state="Enabled",
-    front_door_name="frontDoor1",
-    frontend_endpoints=[
-        azure_native.network.FrontendEndpointArgs(
-            host_name="www.contoso.com",
-            name="frontendEndpoint1",
-            session_affinity_enabled_state="Enabled",
-            session_affinity_ttl_seconds=60,
-            web_application_firewall_policy_link=azure_native.network.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
-            ),
-        ),
-        azure_native.network.FrontendEndpointArgs(
-            host_name="frontDoor1.azurefd.net",
-            name="default",
-        ),
-    ],
-    health_probe_settings=[azure_native.network.HealthProbeSettingsModelArgs(
-        enabled_state="Enabled",
-        health_probe_method="HEAD",
-        interval_in_seconds=120,
-        name="healthProbeSettings1",
-        path="/",
-        protocol="Http",
-    )],
-    load_balancing_settings=[azure_native.network.LoadBalancingSettingsModelArgs(
-        name="loadBalancingSettings1",
-        sample_size=4,
-        successful_samples_required=2,
-    )],
-    location="westus",
-    resource_group_name="rg1",
-    routing_rules=[azure_native.network.RoutingRuleArgs(
-        accepted_protocols=["Http"],
-        enabled_state="Enabled",
-        frontend_endpoints=[
-            azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1",
-            ),
-            azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default",
-            ),
-        ],
-        name="routingRule1",
-        patterns_to_match=["/*"],
-        route_configuration=azure_native.network.ForwardingConfigurationArgs(
-            backend_pool=azure_native.network.SubResourceArgs(
-                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
-            ),
-            odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
-        ),
-        rules_engine=azure_native.network.SubResourceArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1",
-        ),
-        web_application_firewall_policy_link=azure_native.network.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs(
-            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
-        ),
-    )],
-    tags={
-        "tag1": "value1",
-        "tag2": "value2",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
-```
-
- */
 @ResourceType(type="azure-native:network:FrontDoor")
 public class FrontDoor extends io.pulumi.resources.CustomResource {
-    /**
-     * Backend pools available to routing rules.
-     */
     @OutputExport(name="backendPools", type=List.class, parameters={BackendPoolResponse.class})
     private Output</* @Nullable */ List<BackendPoolResponse>> backendPools;
 
-    /**
-     * @return Backend pools available to routing rules.
-     */
     public Output</* @Nullable */ List<BackendPoolResponse>> getBackendPools() {
         return this.backendPools;
     }
-    /**
-     * Settings for all backendPools
-     */
     @OutputExport(name="backendPoolsSettings", type=BackendPoolsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BackendPoolsSettingsResponse> backendPoolsSettings;
 
-    /**
-     * @return Settings for all backendPools
-     */
     public Output</* @Nullable */ BackendPoolsSettingsResponse> getBackendPoolsSettings() {
         return this.backendPoolsSettings;
     }
-    /**
-     * The host that each frontendEndpoint must CNAME to.
-     */
     @OutputExport(name="cname", type=String.class, parameters={})
     private Output<String> cname;
 
-    /**
-     * @return The host that each frontendEndpoint must CNAME to.
-     */
     public Output<String> getCname() {
         return this.cname;
     }
-    /**
-     * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
-     */
     @OutputExport(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
-    /**
-     * @return Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
-     */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
-    /**
-     * A friendly name for the frontDoor
-     */
     @OutputExport(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
-    /**
-     * @return A friendly name for the frontDoor
-     */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
-    /**
-     * The Id of the frontdoor.
-     */
     @OutputExport(name="frontdoorId", type=String.class, parameters={})
     private Output<String> frontdoorId;
 
-    /**
-     * @return The Id of the frontdoor.
-     */
     public Output<String> getFrontdoorId() {
         return this.frontdoorId;
     }
-    /**
-     * Frontend endpoints available to routing rules.
-     */
     @OutputExport(name="frontendEndpoints", type=List.class, parameters={FrontendEndpointResponse.class})
     private Output</* @Nullable */ List<FrontendEndpointResponse>> frontendEndpoints;
 
-    /**
-     * @return Frontend endpoints available to routing rules.
-     */
     public Output</* @Nullable */ List<FrontendEndpointResponse>> getFrontendEndpoints() {
         return this.frontendEndpoints;
     }
-    /**
-     * Health probe settings associated with this Front Door instance.
-     */
     @OutputExport(name="healthProbeSettings", type=List.class, parameters={HealthProbeSettingsModelResponse.class})
     private Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> healthProbeSettings;
 
-    /**
-     * @return Health probe settings associated with this Front Door instance.
-     */
     public Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> getHealthProbeSettings() {
         return this.healthProbeSettings;
     }
-    /**
-     * Load balancing settings associated with this Front Door instance.
-     */
     @OutputExport(name="loadBalancingSettings", type=List.class, parameters={LoadBalancingSettingsModelResponse.class})
     private Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> loadBalancingSettings;
 
-    /**
-     * @return Load balancing settings associated with this Front Door instance.
-     */
     public Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> getLoadBalancingSettings() {
         return this.loadBalancingSettings;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state of the Front Door.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the Front Door.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource status of the Front Door.
-     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
-    /**
-     * @return Resource status of the Front Door.
-     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
-    /**
-     * Routing rules associated with this Front Door.
-     */
     @OutputExport(name="routingRules", type=List.class, parameters={RoutingRuleResponse.class})
     private Output</* @Nullable */ List<RoutingRuleResponse>> routingRules;
 
-    /**
-     * @return Routing rules associated with this Front Door.
-     */
     public Output</* @Nullable */ List<RoutingRuleResponse>> getRoutingRules() {
         return this.routingRules;
     }
-    /**
-     * Rules Engine Configurations available to routing rules.
-     */
     @OutputExport(name="rulesEngines", type=List.class, parameters={RulesEngineResponse.class})
     private Output<List<RulesEngineResponse>> rulesEngines;
 
-    /**
-     * @return Rules Engine Configurations available to routing rules.
-     */
     public Output<List<RulesEngineResponse>> getRulesEngines() {
         return this.rulesEngines;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public FrontDoor(String name, FrontDoorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:FrontDoor", name, args == null ? FrontDoorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -797,14 +149,6 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static FrontDoor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FrontDoor(name, id, options);
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetChannelPartnerLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetChannelPartnerLinkArgs Empty = new GetChannelPartnerLinkArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 
@@ -27,9 +21,6 @@ public final class GetChannelPartnerLinkArgs extends io.pulumi.resources.InvokeA
         return this.accountId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="channelPartnerLinkId", required=true)
     private final String channelPartnerLinkId;
 
@@ -37,9 +28,6 @@ public final class GetChannelPartnerLinkArgs extends io.pulumi.resources.InvokeA
         return this.channelPartnerLinkId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="view")
     private final @Nullable String view;
 

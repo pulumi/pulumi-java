@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * The name of the machine learning team account.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * The description of this workspace.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -49,9 +37,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * The fully qualified arm id of the user key vault.
-     */
     @InputImport(name="keyVaultId", required=true)
     private final Input<String> keyVaultId;
 
@@ -59,9 +44,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultId;
     }
 
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -69,9 +51,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group to which the machine learning team account belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,9 +58,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The no of users/seats who can access this team account. This property defines the charge on the team account.
-     */
     @InputImport(name="seats")
     private final @Nullable Input<String> seats;
 
@@ -89,9 +65,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.seats == null ? Input.empty() : this.seats;
     }
 
-    /**
-     * The properties of the storage account for the machine learning team account.
-     */
     @InputImport(name="storageAccount", required=true)
     private final Input<StorageAccountPropertiesArgs> storageAccount;
 
@@ -99,9 +72,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccount;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -109,9 +79,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The fully qualified arm id of the vso account to be used for this team account.
-     */
     @InputImport(name="vsoAccountId", required=true)
     private final Input<String> vsoAccountId;
 

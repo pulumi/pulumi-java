@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The filter expression to be used in the report.
- */
 public final class ReportConfigFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportConfigFilterResponse Empty = new ReportConfigFilterResponse();
 
-    /**
-     * The logical "AND" expression. Must have at least 2 items.
-     */
     @InputImport(name="and")
     private final @Nullable List<ReportConfigFilterResponse> and;
 
@@ -28,9 +22,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
         return this.and == null ? List.of() : this.and;
     }
 
-    /**
-     * Has comparison expression for a dimension
-     */
     @InputImport(name="dimensions")
     private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
 
@@ -38,9 +29,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
     }
 
-    /**
-     * The logical "OR" expression. Must have at least 2 items.
-     */
     @InputImport(name="or")
     private final @Nullable List<ReportConfigFilterResponse> or;
 
@@ -48,9 +36,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
         return this.or == null ? List.of() : this.or;
     }
 
-    /**
-     * Has comparison expression for a tag key
-     */
     @InputImport(name="tagKey")
     private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
 
@@ -58,9 +43,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
         return this.tagKey == null ? Optional.empty() : Optional.ofNullable(this.tagKey);
     }
 
-    /**
-     * Has comparison expression for a tag value
-     */
     @InputImport(name="tagValue")
     private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
 
@@ -68,9 +50,6 @@ public final class ReportConfigFilterResponse extends io.pulumi.resources.Invoke
         return this.tagValue == null ? Optional.empty() : Optional.ofNullable(this.tagValue);
     }
 
-    /**
-     * Has comparison expression for a tag
-     */
     @InputImport(name="tags")
     private final @Nullable ReportConfigComparisonExpressionResponse tags;
 

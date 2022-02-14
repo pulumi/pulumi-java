@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Schema for MSIX Package Application properties.
- */
 public final class MsixPackageApplicationsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MsixPackageApplicationsResponse Empty = new MsixPackageApplicationsResponse();
 
-    /**
-     * Package Application Id, found in appxmanifest.xml.
-     */
     @InputImport(name="appId")
     private final @Nullable String appId;
 
@@ -27,9 +21,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
-    /**
-     * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
-     */
     @InputImport(name="appUserModelID")
     private final @Nullable String appUserModelID;
 
@@ -37,9 +28,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
         return this.appUserModelID == null ? Optional.empty() : Optional.ofNullable(this.appUserModelID);
     }
 
-    /**
-     * Description of Package Application.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -47,9 +35,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * User friendly name.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -57,9 +42,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * User friendly name.
-     */
     @InputImport(name="iconImageName")
     private final @Nullable String iconImageName;
 
@@ -67,9 +49,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
         return this.iconImageName == null ? Optional.empty() : Optional.ofNullable(this.iconImageName);
     }
 
-    /**
-     * the icon a 64 bit string as a byte array.
-     */
     @InputImport(name="rawIcon")
     private final @Nullable String rawIcon;
 
@@ -77,9 +56,6 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
         return this.rawIcon == null ? Optional.empty() : Optional.ofNullable(this.rawIcon);
     }
 
-    /**
-     * the icon a 64 bit string as a byte array.
-     */
     @InputImport(name="rawPng")
     private final @Nullable String rawPng;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPeeringServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPeeringServiceArgs Empty = new GetPeeringServiceArgs();
 
-    /**
-     * The name of the peering.
-     */
     @InputImport(name="peeringServiceName", required=true)
     private final String peeringServiceName;
 
@@ -25,9 +19,6 @@ public final class GetPeeringServiceArgs extends io.pulumi.resources.InvokeArgs 
         return this.peeringServiceName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

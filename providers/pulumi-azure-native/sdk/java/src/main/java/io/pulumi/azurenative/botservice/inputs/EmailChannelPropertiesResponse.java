@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the Email channel.
- */
 public final class EmailChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EmailChannelPropertiesResponse Empty = new EmailChannelPropertiesResponse();
 
-    /**
-     * The email address
-     */
     @InputImport(name="emailAddress", required=true)
     private final String emailAddress;
 
@@ -28,9 +22,6 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
         return this.emailAddress;
     }
 
-    /**
-     * Whether this channel is enabled for the bot
-     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -38,9 +29,6 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
         return this.isEnabled;
     }
 
-    /**
-     * The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
-     */
     @InputImport(name="password")
     private final @Nullable String password;
 

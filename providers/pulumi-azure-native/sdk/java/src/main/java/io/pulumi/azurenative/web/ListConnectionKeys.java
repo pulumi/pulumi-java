@@ -13,10 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConnectionKeys {
-/**
- * 
-API Version: 2015-08-01-preview.
- */
     public static CompletableFuture<ListConnectionKeysResult> invokeAsync(ListConnectionKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionKeys", TypeShape.of(ListConnectionKeysResult.class), args == null ? ListConnectionKeysArgs.Empty : args, Utilities.withVersion(options));
     }

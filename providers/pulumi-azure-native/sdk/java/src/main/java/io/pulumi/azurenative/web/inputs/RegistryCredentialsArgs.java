@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App Private Registry
- */
 public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryCredentialsArgs Empty = new RegistryCredentialsArgs();
 
-    /**
-     * The name of the Secret that contains the registry login password
-     */
     @InputImport(name="passwordSecretRef")
     private final @Nullable Input<String> passwordSecretRef;
 
@@ -27,9 +21,6 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
         return this.passwordSecretRef == null ? Input.empty() : this.passwordSecretRef;
     }
 
-    /**
-     * Container Registry Server
-     */
     @InputImport(name="server")
     private final @Nullable Input<String> server;
 
@@ -37,9 +28,6 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
         return this.server == null ? Input.empty() : this.server;
     }
 
-    /**
-     * Container Registry Username
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

@@ -10,22 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AddRemoveReplicaScalingMechanismResponse {
-/**
- * Enumerates the mechanisms for auto scaling.
-Expected value is 'AddRemoveReplica'.
- */
     private final String kind;
-/**
- * Maximum number of containers (scale up won't be performed above this number).
- */
     private final Integer maxCount;
-/**
- * Minimum number of containers (scale down won't be performed below this number).
- */
     private final Integer minCount;
-/**
- * Each time auto scaling is performed, this number of containers will be added or removed.
- */
     private final Integer scaleIncrement;
 
     @OutputCustomType.Constructor({"kind","maxCount","minCount","scaleIncrement"})
@@ -40,28 +27,15 @@ Expected value is 'AddRemoveReplica'.
         this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
     }
 
-/**
- * Enumerates the mechanisms for auto scaling.
-Expected value is 'AddRemoveReplica'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Maximum number of containers (scale up won't be performed above this number).
- */
     public Integer getMaxCount() {
         return this.maxCount;
     }
-/**
- * Minimum number of containers (scale down won't be performed below this number).
- */
     public Integer getMinCount() {
         return this.minCount;
     }
-/**
- * Each time auto scaling is performed, this number of containers will be added or removed.
- */
     public Integer getScaleIncrement() {
         return this.scaleIncrement;
     }

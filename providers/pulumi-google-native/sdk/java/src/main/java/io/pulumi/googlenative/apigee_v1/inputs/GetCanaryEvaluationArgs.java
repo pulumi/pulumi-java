@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCanaryEvaluationArgs Empty = new GetCanaryEvaluationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="canaryevaluationId", required=true)
     private final String canaryevaluationId;
 
@@ -25,9 +19,6 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
         return this.canaryevaluationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -35,9 +26,6 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
         return this.instanceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger based on status code.
- */
 public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatusCodesBasedTriggerResponse Empty = new StatusCodesBasedTriggerResponse();
 
-    /**
-     * Request Count.
-     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -28,9 +22,6 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
-    /**
-     * Request Path
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -38,9 +29,6 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * HTTP status code.
-     */
     @InputImport(name="status")
     private final @Nullable Integer status;
 
@@ -48,9 +36,6 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * Request Sub Status.
-     */
     @InputImport(name="subStatus")
     private final @Nullable Integer subStatus;
 
@@ -58,9 +43,6 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
         return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
     }
 
-    /**
-     * Time interval.
-     */
     @InputImport(name="timeInterval")
     private final @Nullable String timeInterval;
 
@@ -68,9 +50,6 @@ public final class StatusCodesBasedTriggerResponse extends io.pulumi.resources.I
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
     }
 
-    /**
-     * Win32 error code.
-     */
     @InputImport(name="win32Status")
     private final @Nullable Integer win32Status;
 

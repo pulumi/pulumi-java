@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaRuleFilterActionResponse {
-/**
- * A filter to apply on the matching condition results. Supported features: * filter must be set. * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID "product_1" or "product_2", and color "Red" or "Blue": *(id: ANY("product_1", "product_2")) * *AND * *(colorFamilies: ANY("Red", "Blue")) *
- */
     private final String filter;
 
     @OutputCustomType.Constructor({"filter"})
@@ -19,9 +16,6 @@ public final class GoogleCloudRetailV2betaRuleFilterActionResponse {
         this.filter = Objects.requireNonNull(filter);
     }
 
-/**
- * A filter to apply on the matching condition results. Supported features: * filter must be set. * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID "product_1" or "product_2", and color "Red" or "Blue": *(id: ANY("product_1", "product_2")) * *AND * *(colorFamilies: ANY("Red", "Blue")) *
- */
     public String getFilter() {
         return this.filter;
     }

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceIamPolicy {
-/**
- * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set. Authorization requires `spanner.instances.getIamPolicy` on resource.
- */
     public static CompletableFuture<GetInstanceIamPolicyResult> invokeAsync(GetInstanceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args == null ? GetInstanceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

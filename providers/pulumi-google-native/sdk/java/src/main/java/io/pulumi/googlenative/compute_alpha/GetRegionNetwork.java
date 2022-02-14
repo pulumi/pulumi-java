@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionNetwork {
-/**
- * Returns the specified network.
- */
     public static CompletableFuture<GetRegionNetworkResult> invokeAsync(GetRegionNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetwork", TypeShape.of(GetRegionNetworkResult.class), args == null ? GetRegionNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

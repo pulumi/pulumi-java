@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The location of file server dataset.
- */
 public final class AzureFileStorageLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileStorageLocationArgs Empty = new AzureFileStorageLocationArgs();
 
-    /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileName")
     private final @Nullable Input<Object> fileName;
 
@@ -28,9 +22,6 @@ public final class AzureFileStorageLocationArgs extends io.pulumi.resources.Reso
         return this.fileName == null ? Input.empty() : this.fileName;
     }
 
-    /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="folderPath")
     private final @Nullable Input<Object> folderPath;
 
@@ -38,10 +29,6 @@ public final class AzureFileStorageLocationArgs extends io.pulumi.resources.Reso
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
-    /**
-     * Type of dataset storage location.
-Expected value is 'AzureFileStorageLocation'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

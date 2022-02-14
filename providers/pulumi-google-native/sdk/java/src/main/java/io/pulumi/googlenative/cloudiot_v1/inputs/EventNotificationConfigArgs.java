@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration for forwarding telemetry events.
- */
 public final class EventNotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventNotificationConfigArgs Empty = new EventNotificationConfigArgs();
 
-    /**
-     * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
-     */
     @InputImport(name="pubsubTopicName")
     private final @Nullable Input<String> pubsubTopicName;
 
@@ -27,9 +21,6 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
         return this.pubsubTopicName == null ? Input.empty() : this.pubsubTopicName;
     }
 
-    /**
-     * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
-     */
     @InputImport(name="subfolderMatches")
     private final @Nullable Input<String> subfolderMatches;
 

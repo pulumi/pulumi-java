@@ -14,159 +14,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Description of a namespace authorization rule.
-API Version: 2017-04-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### RelayAuthorizationRuleCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var wcfRelayAuthorizationRule = new AzureNative.Relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNative.Relay.WCFRelayAuthorizationRuleArgs
-        {
-            AuthorizationRuleName = "example-RelayAuthRules-01",
-            NamespaceName = "example-RelayNamespace-01",
-            RelayName = "example-Relay-wcf-01",
-            ResourceGroupName = "resourcegroup",
-            Rights = 
-            {
-                "Listen",
-                "Send",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := relay.NewWCFRelayAuthorizationRule(ctx, "wcfRelayAuthorizationRule", &relay.WCFRelayAuthorizationRuleArgs{
-			AuthorizationRuleName: pulumi.String("example-RelayAuthRules-01"),
-			NamespaceName:         pulumi.String("example-RelayNamespace-01"),
-			RelayName:             pulumi.String("example-Relay-wcf-01"),
-			ResourceGroupName:     pulumi.String("resourcegroup"),
-			Rights: relay.AccessRightsArray{
-				"Listen",
-				"Send",
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const wcfRelayAuthorizationRule = new azure_native.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
-    authorizationRuleName: "example-RelayAuthRules-01",
-    namespaceName: "example-RelayNamespace-01",
-    relayName: "example-Relay-wcf-01",
-    resourceGroupName: "resourcegroup",
-    rights: [
-        "Listen",
-        "Send",
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-wcf_relay_authorization_rule = azure_native.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
-    authorization_rule_name="example-RelayAuthRules-01",
-    namespace_name="example-RelayNamespace-01",
-    relay_name="example-Relay-wcf-01",
-    resource_group_name="resourcegroup",
-    rights=[
-        "Listen",
-        "Send",
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:relay:WCFRelayAuthorizationRule example-RelayAuthRules-01 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Relay/namespaces/example-RelayNamespace-01/WcfRelays/example-Relay-Wcf-01/AuthorizationRules/example-RelayAuthRules-01 
-```
-
- */
 @ResourceType(type="azure-native:relay:WCFRelayAuthorizationRule")
 public class WCFRelayAuthorizationRule extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The rights associated with the rule.
-     */
     @OutputExport(name="rights", type=List.class, parameters={String.class})
     private Output<List<String>> rights;
 
-    /**
-     * @return The rights associated with the rule.
-     */
     public Output<List<String>> getRights() {
         return this.rights;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public WCFRelayAuthorizationRule(String name, WCFRelayAuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:relay:WCFRelayAuthorizationRule", name, args == null ? WCFRelayAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -186,14 +54,6 @@ public class WCFRelayAuthorizationRule extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static WCFRelayAuthorizationRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WCFRelayAuthorizationRule(name, id, options);
     }

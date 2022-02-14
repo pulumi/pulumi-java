@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEndpointArgs Empty = new GetEndpointArgs();
 
-    /**
-     * The name of the Traffic Manager endpoint.
-     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -25,9 +19,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
         return this.endpointName;
     }
 
-    /**
-     * The type of the Traffic Manager endpoint.
-     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -35,9 +26,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
         return this.endpointType;
     }
 
-    /**
-     * The name of the Traffic Manager profile.
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -45,9 +33,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
         return this.profileName;
     }
 
-    /**
-     * The name of the resource group containing the Traffic Manager endpoint.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

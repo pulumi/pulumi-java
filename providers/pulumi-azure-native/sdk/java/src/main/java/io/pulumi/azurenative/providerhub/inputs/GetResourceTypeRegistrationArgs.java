@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceTypeRegistrationArgs Empty = new GetResourceTypeRegistrationArgs();
 
-    /**
-     * The name of the resource provider hosted within ProviderHub.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final String providerNamespace;
 
@@ -25,9 +19,6 @@ public final class GetResourceTypeRegistrationArgs extends io.pulumi.resources.I
         return this.providerNamespace;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

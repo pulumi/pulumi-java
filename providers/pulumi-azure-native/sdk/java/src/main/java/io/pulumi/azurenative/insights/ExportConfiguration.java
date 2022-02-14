@@ -14,366 +14,123 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Properties that define a Continuous Export configuration.
-API Version: 2015-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ExportConfigurationUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exportConfiguration = new AzureNative.Insights.ExportConfiguration("exportConfiguration", new AzureNative.Insights.ExportConfigurationArgs
-        {
-            DestinationAccountId = "/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",
-            DestinationAddress = "https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token",
-            DestinationStorageLocationId = "eastus",
-            DestinationStorageSubscriptionId = "subid",
-            DestinationType = "Blob",
-            ExportId = "uGOoki0jQsyEs3IdQ83Q4QsNr4=",
-            IsEnabled = "true",
-            NotificationQueueEnabled = "false",
-            NotificationQueueUri = "",
-            RecordTypes = "Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability",
-            ResourceGroupName = "my-resource-group",
-            ResourceName = "my-component",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewExportConfiguration(ctx, "exportConfiguration", &insights.ExportConfigurationArgs{
-			DestinationAccountId:             pulumi.String("/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob"),
-			DestinationAddress:               pulumi.String("https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token"),
-			DestinationStorageLocationId:     pulumi.String("eastus"),
-			DestinationStorageSubscriptionId: pulumi.String("subid"),
-			DestinationType:                  pulumi.String("Blob"),
-			ExportId:                         pulumi.String("uGOoki0jQsyEs3IdQ83Q4QsNr4="),
-			IsEnabled:                        pulumi.String("true"),
-			NotificationQueueEnabled:         pulumi.String("false"),
-			NotificationQueueUri:             pulumi.String(""),
-			RecordTypes:                      pulumi.String("Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability"),
-			ResourceGroupName:                pulumi.String("my-resource-group"),
-			ResourceName:                     pulumi.String("my-component"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const exportConfiguration = new azure_native.insights.ExportConfiguration("exportConfiguration", {
-    destinationAccountId: "/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",
-    destinationAddress: "https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token",
-    destinationStorageLocationId: "eastus",
-    destinationStorageSubscriptionId: "subid",
-    destinationType: "Blob",
-    exportId: "uGOoki0jQsyEs3IdQ83Q4QsNr4=",
-    isEnabled: "true",
-    notificationQueueEnabled: "false",
-    notificationQueueUri: "",
-    recordTypes: "Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability",
-    resourceGroupName: "my-resource-group",
-    resourceName: "my-component",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-export_configuration = azure_native.insights.ExportConfiguration("exportConfiguration",
-    destination_account_id="/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob",
-    destination_address="https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&sr=c&sig=token",
-    destination_storage_location_id="eastus",
-    destination_storage_subscription_id="subid",
-    destination_type="Blob",
-    export_id="uGOoki0jQsyEs3IdQ83Q4QsNr4=",
-    is_enabled="true",
-    notification_queue_enabled="false",
-    notification_queue_uri="",
-    record_types="Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability",
-    resource_group_name="my-resource-group",
-    resource_name="my-component")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:ExportConfiguration myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/exportconfiguration/{exportId} 
-```
-
- */
 @ResourceType(type="azure-native:insights:ExportConfiguration")
 public class ExportConfiguration extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the Application Insights component.
-     */
     @OutputExport(name="applicationName", type=String.class, parameters={})
     private Output<String> applicationName;
 
-    /**
-     * @return The name of the Application Insights component.
-     */
     public Output<String> getApplicationName() {
         return this.applicationName;
     }
-    /**
-     * The name of the destination storage container.
-     */
     @OutputExport(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
-    /**
-     * @return The name of the destination storage container.
-     */
     public Output<String> getContainerName() {
         return this.containerName;
     }
-    /**
-     * The name of destination account.
-     */
     @OutputExport(name="destinationAccountId", type=String.class, parameters={})
     private Output<String> destinationAccountId;
 
-    /**
-     * @return The name of destination account.
-     */
     public Output<String> getDestinationAccountId() {
         return this.destinationAccountId;
     }
-    /**
-     * The destination account location ID.
-     */
     @OutputExport(name="destinationStorageLocationId", type=String.class, parameters={})
     private Output<String> destinationStorageLocationId;
 
-    /**
-     * @return The destination account location ID.
-     */
     public Output<String> getDestinationStorageLocationId() {
         return this.destinationStorageLocationId;
     }
-    /**
-     * The destination storage account subscription ID.
-     */
     @OutputExport(name="destinationStorageSubscriptionId", type=String.class, parameters={})
     private Output<String> destinationStorageSubscriptionId;
 
-    /**
-     * @return The destination storage account subscription ID.
-     */
     public Output<String> getDestinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId;
     }
-    /**
-     * The destination type.
-     */
     @OutputExport(name="destinationType", type=String.class, parameters={})
     private Output<String> destinationType;
 
-    /**
-     * @return The destination type.
-     */
     public Output<String> getDestinationType() {
         return this.destinationType;
     }
-    /**
-     * The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
-     */
     @OutputExport(name="exportId", type=String.class, parameters={})
     private Output<String> exportId;
 
-    /**
-     * @return The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
-     */
     public Output<String> getExportId() {
         return this.exportId;
     }
-    /**
-     * This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
-     */
     @OutputExport(name="exportStatus", type=String.class, parameters={})
     private Output<String> exportStatus;
 
-    /**
-     * @return This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
-     */
     public Output<String> getExportStatus() {
         return this.exportStatus;
     }
-    /**
-     * The instrumentation key of the Application Insights component.
-     */
     @OutputExport(name="instrumentationKey", type=String.class, parameters={})
     private Output<String> instrumentationKey;
 
-    /**
-     * @return The instrumentation key of the Application Insights component.
-     */
     public Output<String> getInstrumentationKey() {
         return this.instrumentationKey;
     }
-    /**
-     * This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
-     */
     @OutputExport(name="isUserEnabled", type=String.class, parameters={})
     private Output<String> isUserEnabled;
 
-    /**
-     * @return This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
-     */
     public Output<String> getIsUserEnabled() {
         return this.isUserEnabled;
     }
-    /**
-     * The last time the Continuous Export configuration started failing.
-     */
     @OutputExport(name="lastGapTime", type=String.class, parameters={})
     private Output<String> lastGapTime;
 
-    /**
-     * @return The last time the Continuous Export configuration started failing.
-     */
     public Output<String> getLastGapTime() {
         return this.lastGapTime;
     }
-    /**
-     * The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
-     */
     @OutputExport(name="lastSuccessTime", type=String.class, parameters={})
     private Output<String> lastSuccessTime;
 
-    /**
-     * @return The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
-     */
     public Output<String> getLastSuccessTime() {
         return this.lastSuccessTime;
     }
-    /**
-     * Last time the Continuous Export configuration was updated.
-     */
     @OutputExport(name="lastUserUpdate", type=String.class, parameters={})
     private Output<String> lastUserUpdate;
 
-    /**
-     * @return Last time the Continuous Export configuration was updated.
-     */
     public Output<String> getLastUserUpdate() {
         return this.lastUserUpdate;
     }
-    /**
-     * Deprecated
-     */
     @OutputExport(name="notificationQueueEnabled", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationQueueEnabled;
 
-    /**
-     * @return Deprecated
-     */
     public Output</* @Nullable */ String> getNotificationQueueEnabled() {
         return this.notificationQueueEnabled;
     }
-    /**
-     * This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
-     */
     @OutputExport(name="permanentErrorReason", type=String.class, parameters={})
     private Output<String> permanentErrorReason;
 
-    /**
-     * @return This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
-     */
     public Output<String> getPermanentErrorReason() {
         return this.permanentErrorReason;
     }
-    /**
-     * This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
-     */
     @OutputExport(name="recordTypes", type=String.class, parameters={})
     private Output</* @Nullable */ String> recordTypes;
 
-    /**
-     * @return This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
-     */
     public Output</* @Nullable */ String> getRecordTypes() {
         return this.recordTypes;
     }
-    /**
-     * The resource group of the Application Insights component.
-     */
     @OutputExport(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
-    /**
-     * @return The resource group of the Application Insights component.
-     */
     public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
-    /**
-     * The name of the destination storage account.
-     */
     @OutputExport(name="storageName", type=String.class, parameters={})
     private Output<String> storageName;
 
-    /**
-     * @return The name of the destination storage account.
-     */
     public Output<String> getStorageName() {
         return this.storageName;
     }
-    /**
-     * The subscription of the Application Insights component.
-     */
     @OutputExport(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
-    /**
-     * @return The subscription of the Application Insights component.
-     */
     public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ExportConfiguration(String name, ExportConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ExportConfiguration", name, args == null ? ExportConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -392,14 +149,6 @@ public class ExportConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ExportConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExportConfiguration(name, id, options);
     }

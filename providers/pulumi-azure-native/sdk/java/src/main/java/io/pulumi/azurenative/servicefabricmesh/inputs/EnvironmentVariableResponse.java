@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes an environment variable for the container.
- */
 public final class EnvironmentVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentVariableResponse Empty = new EnvironmentVariableResponse();
 
-    /**
-     * The name of the environment variable.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The value of the environment variable.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

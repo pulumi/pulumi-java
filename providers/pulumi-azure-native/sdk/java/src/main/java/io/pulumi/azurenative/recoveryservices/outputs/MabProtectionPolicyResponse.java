@@ -19,22 +19,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MabProtectionPolicyResponse {
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'MAB'.
- */
     private final String backupManagementType;
-/**
- * Number of items associated with this policy.
- */
     private final @Nullable Integer protectedItemsCount;
-/**
- * Retention policy details.
- */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
-/**
- * Backup schedule of backup policy.
- */
     private final @Nullable Object schedulePolicy;
 
     @OutputCustomType.Constructor({"backupManagementType","protectedItemsCount","retentionPolicy","schedulePolicy"})
@@ -49,28 +36,15 @@ Expected value is 'MAB'.
         this.schedulePolicy = schedulePolicy;
     }
 
-/**
- * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'MAB'.
- */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
-/**
- * Number of items associated with this policy.
- */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
-/**
- * Retention policy details.
- */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
-/**
- * Backup schedule of backup policy.
- */
     public Optional<Object> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }

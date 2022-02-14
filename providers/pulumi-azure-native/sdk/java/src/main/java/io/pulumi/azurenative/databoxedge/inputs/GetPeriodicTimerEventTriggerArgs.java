@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPeriodicTimerEventTriggerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPeriodicTimerEventTriggerArgs Empty = new GetPeriodicTimerEventTriggerArgs();
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -25,9 +19,6 @@ public final class GetPeriodicTimerEventTriggerArgs extends io.pulumi.resources.
         return this.deviceName;
     }
 
-    /**
-     * The trigger name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class GetPeriodicTimerEventTriggerArgs extends io.pulumi.resources.
         return this.name;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MongoIndexKeysResponse {
-/**
- * List of keys for each MongoDB collection in the Azure Cosmos DB service
- */
     private final @Nullable List<String> keys;
 
     @OutputCustomType.Constructor({"keys"})
@@ -21,9 +18,6 @@ public final class MongoIndexKeysResponse {
         this.keys = keys;
     }
 
-/**
- * List of keys for each MongoDB collection in the Azure Cosmos DB service
- */
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }

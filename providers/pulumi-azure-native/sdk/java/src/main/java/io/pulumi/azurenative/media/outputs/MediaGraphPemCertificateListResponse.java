@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MediaGraphPemCertificateListResponse {
-/**
- * PEM formatted public certificates, one per entry.
- */
     private final List<String> certificates;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
- */
     private final String odataType;
 
     @OutputCustomType.Constructor({"certificates","odataType"})
@@ -28,16 +21,9 @@ Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
         this.odataType = Objects.requireNonNull(odataType);
     }
 
-/**
- * PEM formatted public certificates, one per entry.
- */
     public List<String> getCertificates() {
         return this.certificates;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
- */
     public String getOdataType() {
         return this.odataType;
     }

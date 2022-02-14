@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebTestPropertiesResponseConfiguration {
-/**
- * The XML specification of a WebTest to run against an application.
- */
     private final @Nullable String webTest;
 
     @OutputCustomType.Constructor({"webTest"})
@@ -21,9 +18,6 @@ public final class WebTestPropertiesResponseConfiguration {
         this.webTest = webTest;
     }
 
-/**
- * The XML specification of a WebTest to run against an application.
- */
     public Optional<String> getWebTest() {
         return Optional.ofNullable(this.webTest);
     }

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserInfoResponse {
-/**
- * E-mail address of the user.
- */
     private final String email;
 
     @OutputCustomType.Constructor({"email"})
@@ -19,9 +16,6 @@ public final class UserInfoResponse {
         this.email = Objects.requireNonNull(email);
     }
 
-/**
- * E-mail address of the user.
- */
     public String getEmail() {
         return this.email;
     }

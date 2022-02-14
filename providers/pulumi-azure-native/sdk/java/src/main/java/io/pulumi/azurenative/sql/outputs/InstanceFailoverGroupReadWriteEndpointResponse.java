@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceFailoverGroupReadWriteEndpointResponse {
-/**
- * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
- */
     private final String failoverPolicy;
-/**
- * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
- */
     private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
     @OutputCustomType.Constructor({"failoverPolicy","failoverWithDataLossGracePeriodMinutes"})
@@ -29,15 +23,9 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
         this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
     }
 
-/**
- * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
- */
     public String getFailoverPolicy() {
         return this.failoverPolicy;
     }
-/**
- * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
- */
     public Optional<Integer> getFailoverWithDataLossGracePeriodMinutes() {
         return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }

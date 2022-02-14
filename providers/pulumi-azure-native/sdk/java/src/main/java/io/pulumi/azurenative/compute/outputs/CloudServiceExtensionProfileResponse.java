@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudServiceExtensionProfileResponse {
-/**
- * List of extensions for the cloud service.
- */
     private final @Nullable List<ExtensionResponse> extensions;
 
     @OutputCustomType.Constructor({"extensions"})
@@ -21,9 +18,6 @@ public final class CloudServiceExtensionProfileResponse {
         this.extensions = extensions;
     }
 
-/**
- * List of extensions for the cloud service.
- */
     public List<ExtensionResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }

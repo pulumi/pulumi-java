@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The filter expression to be used in the report.
- */
 public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportConfigFilterArgs Empty = new ReportConfigFilterArgs();
 
-    /**
-     * The logical "AND" expression. Must have at least 2 items.
-     */
     @InputImport(name="and")
     private final @Nullable Input<List<ReportConfigFilterArgs>> and;
 
@@ -28,9 +22,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
         return this.and == null ? Input.empty() : this.and;
     }
 
-    /**
-     * Has comparison expression for a dimension
-     */
     @InputImport(name="dimensions")
     private final @Nullable Input<ReportConfigComparisonExpressionArgs> dimensions;
 
@@ -38,9 +29,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
         return this.dimensions == null ? Input.empty() : this.dimensions;
     }
 
-    /**
-     * The logical "OR" expression. Must have at least 2 items.
-     */
     @InputImport(name="or")
     private final @Nullable Input<List<ReportConfigFilterArgs>> or;
 
@@ -48,9 +36,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
         return this.or == null ? Input.empty() : this.or;
     }
 
-    /**
-     * Has comparison expression for a tag key
-     */
     @InputImport(name="tagKey")
     private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagKey;
 
@@ -58,9 +43,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
         return this.tagKey == null ? Input.empty() : this.tagKey;
     }
 
-    /**
-     * Has comparison expression for a tag value
-     */
     @InputImport(name="tagValue")
     private final @Nullable Input<ReportConfigComparisonExpressionArgs> tagValue;
 
@@ -68,9 +50,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
         return this.tagValue == null ? Input.empty() : this.tagValue;
     }
 
-    /**
-     * Has comparison expression for a tag
-     */
     @InputImport(name="tags")
     private final @Nullable Input<ReportConfigComparisonExpressionArgs> tags;
 

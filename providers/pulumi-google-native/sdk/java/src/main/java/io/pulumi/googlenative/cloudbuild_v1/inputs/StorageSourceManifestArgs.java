@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Location of the source manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
- */
 public final class StorageSourceManifestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageSourceManifestArgs Empty = new StorageSourceManifestArgs();
 
-    /**
-     * Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
-     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -27,9 +21,6 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
-    /**
-     * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
-     */
     @InputImport(name="generation")
     private final @Nullable Input<String> generation;
 
@@ -37,9 +28,6 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
         return this.generation == null ? Input.empty() : this.generation;
     }
 
-    /**
-     * Google Cloud Storage object containing the source manifest. This object must be a JSON file.
-     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 

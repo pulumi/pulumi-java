@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Rule results properties.
- */
 public final class RuleResultsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleResultsPropertiesResponse Empty = new RuleResultsPropertiesResponse();
 
-    /**
-     * Expected results in the baseline.
-     */
     @InputImport(name="results")
     private final @Nullable List<List<String>> results;
 

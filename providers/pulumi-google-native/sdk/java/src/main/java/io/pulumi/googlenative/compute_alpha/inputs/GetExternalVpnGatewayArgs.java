@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetExternalVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExternalVpnGatewayArgs Empty = new GetExternalVpnGatewayArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="externalVpnGateway", required=true)
     private final String externalVpnGateway;
 
@@ -27,9 +21,6 @@ public final class GetExternalVpnGatewayArgs extends io.pulumi.resources.InvokeA
         return this.externalVpnGateway;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

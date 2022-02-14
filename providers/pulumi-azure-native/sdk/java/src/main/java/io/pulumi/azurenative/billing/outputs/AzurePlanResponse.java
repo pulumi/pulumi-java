@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzurePlanResponse {
-/**
- * The sku description.
- */
     private final String skuDescription;
-/**
- * The sku id.
- */
     private final @Nullable String skuId;
 
     @OutputCustomType.Constructor({"skuDescription","skuId"})
@@ -28,15 +22,9 @@ public final class AzurePlanResponse {
         this.skuId = skuId;
     }
 
-/**
- * The sku description.
- */
     public String getSkuDescription() {
         return this.skuDescription;
     }
-/**
- * The sku id.
- */
     public Optional<String> getSkuId() {
         return Optional.ofNullable(this.skuId);
     }

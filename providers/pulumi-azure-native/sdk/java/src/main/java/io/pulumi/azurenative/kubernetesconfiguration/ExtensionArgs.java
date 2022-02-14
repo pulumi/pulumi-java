@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionArgs Empty = new ExtensionArgs();
 
-    /**
-     * Flag to note if this instance participates in auto upgrade of minor version, or not.
-     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -33,9 +27,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
-    /**
-     * The name of the kubernetes cluster.
-     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -43,9 +34,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
-    /**
-     * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
-     */
     @InputImport(name="clusterResourceName", required=true)
     private final Input<String> clusterResourceName;
 
@@ -53,9 +41,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterResourceName;
     }
 
-    /**
-     * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
-     */
     @InputImport(name="clusterRp", required=true)
     private final Input<String> clusterRp;
 
@@ -63,9 +48,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterRp;
     }
 
-    /**
-     * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-     */
     @InputImport(name="configurationProtectedSettings")
     private final @Nullable Input<Map<String,String>> configurationProtectedSettings;
 
@@ -73,9 +55,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.configurationProtectedSettings == null ? Input.empty() : this.configurationProtectedSettings;
     }
 
-    /**
-     * Configuration settings, as name-value pairs for configuring this instance of the extension.
-     */
     @InputImport(name="configurationSettings")
     private final @Nullable Input<Map<String,String>> configurationSettings;
 
@@ -83,9 +62,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.configurationSettings == null ? Input.empty() : this.configurationSettings;
     }
 
-    /**
-     * Name of an instance of the Extension.
-     */
     @InputImport(name="extensionInstanceName")
     private final @Nullable Input<String> extensionInstanceName;
 
@@ -93,9 +69,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensionInstanceName == null ? Input.empty() : this.extensionInstanceName;
     }
 
-    /**
-     * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
-     */
     @InputImport(name="extensionType")
     private final @Nullable Input<String> extensionType;
 
@@ -103,9 +76,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensionType == null ? Input.empty() : this.extensionType;
     }
 
-    /**
-     * The identity of the configuration.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ConfigurationIdentityArgs> identity;
 
@@ -113,9 +83,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
-     */
     @InputImport(name="releaseTrain")
     private final @Nullable Input<String> releaseTrain;
 
@@ -123,9 +90,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseTrain == null ? Input.empty() : this.releaseTrain;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -133,9 +97,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Scope at which the extension instance is installed.
-     */
     @InputImport(name="scope")
     private final @Nullable Input<ScopeArgs> scope;
 
@@ -143,9 +104,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
-    /**
-     * Status from this instance of the extension.
-     */
     @InputImport(name="statuses")
     private final @Nullable Input<List<ExtensionStatusArgs>> statuses;
 
@@ -153,9 +111,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.statuses == null ? Input.empty() : this.statuses;
     }
 
-    /**
-     * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

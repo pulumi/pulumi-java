@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuResponse {
-/**
- * Gets or sets the SKU capacity.
- */
     private final @Nullable Integer capacity;
-/**
- * Gets or sets the SKU family.
- */
     private final @Nullable String family;
-/**
- * Gets or sets the SKU name of the account.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"capacity","family","name"})
@@ -35,21 +26,12 @@ public final class SkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Gets or sets the SKU capacity.
- */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
-/**
- * Gets or sets the SKU family.
- */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
-/**
- * Gets or sets the SKU name of the account.
- */
     public String getName() {
         return this.name;
     }

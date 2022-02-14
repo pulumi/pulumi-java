@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The authentication type.
- */
     @EnumType
     public enum RestAuthType {
-/**
- * 
- */
         ApiKey("ApiKey"),
-/**
- * 
- */
         RolloutIdentity("RolloutIdentity");
 
         private final String value;

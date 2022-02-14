@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Network Virtual Appliance Sku Properties.
- */
 public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BreakOutCategoryPoliciesArgs Empty = new BreakOutCategoryPoliciesArgs();
 
-    /**
-     * Flag to control breakout of o365 allow category.
-     */
     @InputImport(name="allow")
     private final @Nullable Input<Boolean> allow;
 
@@ -27,9 +21,6 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
         return this.allow == null ? Input.empty() : this.allow;
     }
 
-    /**
-     * Flag to control breakout of o365 default category.
-     */
     @InputImport(name="default")
     private final @Nullable Input<Boolean> $default;
 
@@ -37,9 +28,6 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
         return this.$default == null ? Input.empty() : this.$default;
     }
 
-    /**
-     * Flag to control breakout of o365 optimize category.
-     */
     @InputImport(name="optimize")
     private final @Nullable Input<Boolean> optimize;
 

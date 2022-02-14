@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGlobalUserPersonalPreferencesResult {
-/**
- * Array of favorite lab resource ids
- */
     private final @Nullable List<String> favoriteLabResourceIds;
-/**
- * Id to be used by the cache orchestrator
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"favoriteLabResourceIds","id"})
@@ -29,15 +23,9 @@ public final class GetGlobalUserPersonalPreferencesResult {
         this.id = id;
     }
 
-/**
- * Array of favorite lab resource ids
- */
     public List<String> getFavoriteLabResourceIds() {
         return this.favoriteLabResourceIds == null ? List.of() : this.favoriteLabResourceIds;
     }
-/**
- * Id to be used by the cache orchestrator
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

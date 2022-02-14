@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Managed application deployment policy.
- */
 public final class ApplicationDeploymentPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationDeploymentPolicyResponse Empty = new ApplicationDeploymentPolicyResponse();
 
-    /**
-     * The managed application deployment mode.
-     */
     @InputImport(name="deploymentMode", required=true)
     private final String deploymentMode;
 

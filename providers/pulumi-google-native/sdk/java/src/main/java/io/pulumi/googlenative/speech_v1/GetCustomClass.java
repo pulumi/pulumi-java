@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomClass {
-/**
- * Get a custom class.
- */
     public static CompletableFuture<GetCustomClassResult> invokeAsync(GetCustomClassArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getCustomClass", TypeShape.of(GetCustomClassResult.class), args == null ? GetCustomClassArgs.Empty : args, Utilities.withVersion(options));
     }

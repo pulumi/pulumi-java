@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A detail for a distro and package this vulnerability occurrence was found in and its associated fix (if one is available).
- */
 public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageIssueArgs Empty = new PackageIssueArgs();
 
-    /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
-     */
     @InputImport(name="affectedCpeUri", required=true)
     private final Input<String> affectedCpeUri;
 
@@ -28,9 +22,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedCpeUri;
     }
 
-    /**
-     * The package this vulnerability was found in.
-     */
     @InputImport(name="affectedPackage", required=true)
     private final Input<String> affectedPackage;
 
@@ -38,9 +29,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedPackage;
     }
 
-    /**
-     * The version of the package that is installed on the resource affected by this vulnerability.
-     */
     @InputImport(name="affectedVersion", required=true)
     private final Input<VersionArgs> affectedVersion;
 
@@ -48,9 +36,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.affectedVersion;
     }
 
-    /**
-     * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
-     */
     @InputImport(name="fixedCpeUri")
     private final @Nullable Input<String> fixedCpeUri;
 
@@ -58,9 +43,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedCpeUri == null ? Input.empty() : this.fixedCpeUri;
     }
 
-    /**
-     * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
-     */
     @InputImport(name="fixedPackage")
     private final @Nullable Input<String> fixedPackage;
 
@@ -68,9 +50,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedPackage == null ? Input.empty() : this.fixedPackage;
     }
 
-    /**
-     * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
-     */
     @InputImport(name="fixedVersion", required=true)
     private final Input<VersionArgs> fixedVersion;
 
@@ -78,9 +57,6 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedVersion;
     }
 
-    /**
-     * The type of package (e.g. OS, MAVEN, GO).
-     */
     @InputImport(name="packageType")
     private final @Nullable Input<String> packageType;
 

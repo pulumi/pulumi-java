@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes threat kill chain phase entity
- */
 public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThreatIntelligenceParsedPatternTypeValueArgs Empty = new ThreatIntelligenceParsedPatternTypeValueArgs();
 
-    /**
-     * Value of parsed pattern
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 
@@ -27,9 +21,6 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
         return this.value == null ? Input.empty() : this.value;
     }
 
-    /**
-     * Type of the value
-     */
     @InputImport(name="valueType")
     private final @Nullable Input<String> valueType;
 

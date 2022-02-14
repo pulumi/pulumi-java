@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the disk information for the HANA instance
- */
 public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskArgs Empty = new DiskArgs();
 
-    /**
-     * Specifies the size of an empty data disk in gigabytes.
-     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -28,9 +22,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
-    /**
-     * The disk name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

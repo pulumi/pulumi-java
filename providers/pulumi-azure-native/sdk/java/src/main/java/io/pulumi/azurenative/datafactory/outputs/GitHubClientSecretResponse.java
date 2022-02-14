@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GitHubClientSecretResponse {
-/**
- * Bring your own app client secret AKV URL.
- */
     private final @Nullable String byoaSecretAkvUrl;
-/**
- * Bring your own app client secret name in AKV.
- */
     private final @Nullable String byoaSecretName;
 
     @OutputCustomType.Constructor({"byoaSecretAkvUrl","byoaSecretName"})
@@ -28,15 +22,9 @@ public final class GitHubClientSecretResponse {
         this.byoaSecretName = byoaSecretName;
     }
 
-/**
- * Bring your own app client secret AKV URL.
- */
     public Optional<String> getByoaSecretAkvUrl() {
         return Optional.ofNullable(this.byoaSecretAkvUrl);
     }
-/**
- * Bring your own app client secret name in AKV.
- */
     public Optional<String> getByoaSecretName() {
         return Optional.ofNullable(this.byoaSecretName);
     }

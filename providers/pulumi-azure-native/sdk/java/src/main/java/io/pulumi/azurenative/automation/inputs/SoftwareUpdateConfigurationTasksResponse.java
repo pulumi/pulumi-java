@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Task properties of the software update configuration.
- */
 public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SoftwareUpdateConfigurationTasksResponse Empty = new SoftwareUpdateConfigurationTasksResponse();
 
-    /**
-     * Post task properties.
-     */
     @InputImport(name="postTask")
     private final @Nullable TaskPropertiesResponse postTask;
 
@@ -27,9 +21,6 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
         return this.postTask == null ? Optional.empty() : Optional.ofNullable(this.postTask);
     }
 
-    /**
-     * Pre task properties.
-     */
     @InputImport(name="preTask")
     private final @Nullable TaskPropertiesResponse preTask;
 

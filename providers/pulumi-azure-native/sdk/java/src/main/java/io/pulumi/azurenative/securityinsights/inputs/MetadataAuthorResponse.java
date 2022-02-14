@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Publisher or creator of the content item.
- */
 public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetadataAuthorResponse Empty = new MetadataAuthorResponse();
 
-    /**
-     * Email of author contact
-     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -27,9 +21,6 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
-    /**
-     * Link for author/vendor page
-     */
     @InputImport(name="link")
     private final @Nullable String link;
 
@@ -37,9 +28,6 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
-    /**
-     * Name of the author. Company or person.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

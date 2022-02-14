@@ -16,150 +16,75 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Creates a spoke in the specified project and location.
- */
 @ResourceType(type="google-native:networkconnectivity/v1:Spoke")
 public class Spoke extends io.pulumi.resources.CustomResource {
-    /**
-     * The time the spoke was created.
-     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    /**
-     * @return The time the spoke was created.
-     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    /**
-     * An optional description of the spoke.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return An optional description of the spoke.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * Immutable. The name of the hub that this spoke is attached to.
-     */
     @OutputExport(name="hub", type=String.class, parameters={})
     private Output<String> hub;
 
-    /**
-     * @return Immutable. The name of the hub that this spoke is attached to.
-     */
     public Output<String> getHub() {
         return this.hub;
     }
-    /**
-     * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
-    /**
-     * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
-    /**
-     * VLAN attachments that are associated with the spoke.
-     */
     @OutputExport(name="linkedInterconnectAttachments", type=LinkedInterconnectAttachmentsResponse.class, parameters={})
     private Output<LinkedInterconnectAttachmentsResponse> linkedInterconnectAttachments;
 
-    /**
-     * @return VLAN attachments that are associated with the spoke.
-     */
     public Output<LinkedInterconnectAttachmentsResponse> getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
-    /**
-     * Router appliance instances that are associated with the spoke.
-     */
     @OutputExport(name="linkedRouterApplianceInstances", type=LinkedRouterApplianceInstancesResponse.class, parameters={})
     private Output<LinkedRouterApplianceInstancesResponse> linkedRouterApplianceInstances;
 
-    /**
-     * @return Router appliance instances that are associated with the spoke.
-     */
     public Output<LinkedRouterApplianceInstancesResponse> getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
-    /**
-     * VPN tunnels that are associated with the spoke.
-     */
     @OutputExport(name="linkedVpnTunnels", type=LinkedVpnTunnelsResponse.class, parameters={})
     private Output<LinkedVpnTunnelsResponse> linkedVpnTunnels;
 
-    /**
-     * @return VPN tunnels that are associated with the spoke.
-     */
     public Output<LinkedVpnTunnelsResponse> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
-    /**
-     * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The current lifecycle state of this spoke.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
-    /**
-     * @return The current lifecycle state of this spoke.
-     */
     public Output<String> getState() {
         return this.state;
     }
-    /**
-     * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
-     */
     @OutputExport(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
-    /**
-     * @return The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
-     */
     public Output<String> getUniqueId() {
         return this.uniqueId;
     }
-    /**
-     * The time the spoke was last updated.
-     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    /**
-     * @return The time the spoke was last updated.
-     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Spoke(String name, SpokeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:networkconnectivity/v1:Spoke", name, args == null ? SpokeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -175,14 +100,6 @@ public class Spoke extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Spoke get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Spoke(name, id, options);
     }

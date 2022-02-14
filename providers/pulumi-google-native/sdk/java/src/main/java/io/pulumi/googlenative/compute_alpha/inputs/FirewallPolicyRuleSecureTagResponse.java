@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyRuleSecureTagResponse Empty = new FirewallPolicyRuleSecureTagResponse();
 
-    /**
-     * Name of the secure tag, created with TagManager's TagValue API.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
         return this.name;
     }
 
-    /**
-     * State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 

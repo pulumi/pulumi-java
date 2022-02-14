@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Android app information.
- */
 public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidAppInfoArgs Empty = new AndroidAppInfoArgs();
 
-    /**
-     * The name of the app. Optional
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The package name of the app. Required.
-     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 
@@ -37,9 +28,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
-    /**
-     * The internal version code of the app. Optional.
-     */
     @InputImport(name="versionCode")
     private final @Nullable Input<String> versionCode;
 
@@ -47,9 +35,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.versionCode == null ? Input.empty() : this.versionCode;
     }
 
-    /**
-     * The version name of the app. Optional.
-     */
     @InputImport(name="versionName")
     private final @Nullable Input<String> versionName;
 

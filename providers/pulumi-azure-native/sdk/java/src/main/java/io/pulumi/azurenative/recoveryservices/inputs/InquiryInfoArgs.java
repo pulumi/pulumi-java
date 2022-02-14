@@ -12,17 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details about inquired protectable items under a given container.
- */
 public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InquiryInfoArgs Empty = new InquiryInfoArgs();
 
-    /**
-     * Inquiry Details which will have workload specific details.
-For e.g. - For SQL and oracle this will contain different details.
-     */
     @InputImport(name="inquiryDetails")
     private final @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
@@ -30,10 +23,6 @@ For e.g. - For SQL and oracle this will contain different details.
         return this.inquiryDetails == null ? Input.empty() : this.inquiryDetails;
     }
 
-    /**
-     * Inquiry Status for this container such as
-InProgress | Failed | Succeeded
-     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

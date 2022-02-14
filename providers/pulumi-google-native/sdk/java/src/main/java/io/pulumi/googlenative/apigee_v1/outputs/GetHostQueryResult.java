@@ -11,57 +11,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetHostQueryResult {
-/**
- * Creation time of the query.
- */
     private final String created;
-/**
- * Hostname is available only when query is executed at host level.
- */
     private final String envgroupHostname;
-/**
- * Error is set when query fails.
- */
     private final String error;
-/**
- * ExecutionTime is available only after the query is completed.
- */
     private final String executionTime;
-/**
- * Asynchronous Query Name.
- */
     private final String name;
-/**
- * Contains information like metrics, dimenstions etc of the AsyncQuery.
- */
     private final GoogleCloudApigeeV1QueryMetadataResponse queryParams;
-/**
- * Asynchronous Report ID.
- */
     private final String reportDefinitionId;
-/**
- * Result is available only after the query is completed.
- */
     private final GoogleCloudApigeeV1AsyncQueryResultResponse result;
-/**
- * ResultFileSize is available only after the query is completed.
- */
     private final String resultFileSize;
-/**
- * ResultRows is available only after the query is completed.
- */
     private final String resultRows;
-/**
- * Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
- */
     private final String self;
-/**
- * Query state could be "enqueued", "running", "completed", "failed".
- */
     private final String state;
-/**
- * Last updated timestamp for the query.
- */
     private final String updated;
 
     @OutputCustomType.Constructor({"created","envgroupHostname","error","executionTime","name","queryParams","reportDefinitionId","result","resultFileSize","resultRows","self","state","updated"})
@@ -94,81 +55,42 @@ public final class GetHostQueryResult {
         this.updated = Objects.requireNonNull(updated);
     }
 
-/**
- * Creation time of the query.
- */
     public String getCreated() {
         return this.created;
     }
-/**
- * Hostname is available only when query is executed at host level.
- */
     public String getEnvgroupHostname() {
         return this.envgroupHostname;
     }
-/**
- * Error is set when query fails.
- */
     public String getError() {
         return this.error;
     }
-/**
- * ExecutionTime is available only after the query is completed.
- */
     public String getExecutionTime() {
         return this.executionTime;
     }
-/**
- * Asynchronous Query Name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Contains information like metrics, dimenstions etc of the AsyncQuery.
- */
     public GoogleCloudApigeeV1QueryMetadataResponse getQueryParams() {
         return this.queryParams;
     }
-/**
- * Asynchronous Report ID.
- */
     public String getReportDefinitionId() {
         return this.reportDefinitionId;
     }
-/**
- * Result is available only after the query is completed.
- */
     public GoogleCloudApigeeV1AsyncQueryResultResponse getResult() {
         return this.result;
     }
-/**
- * ResultFileSize is available only after the query is completed.
- */
     public String getResultFileSize() {
         return this.resultFileSize;
     }
-/**
- * ResultRows is available only after the query is completed.
- */
     public String getResultRows() {
         return this.resultRows;
     }
-/**
- * Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
- */
     public String getSelf() {
         return this.self;
     }
-/**
- * Query state could be "enqueued", "running", "completed", "failed".
- */
     public String getState() {
         return this.state;
     }
-/**
- * Last updated timestamp for the query.
- */
     public String getUpdated() {
         return this.updated;
     }

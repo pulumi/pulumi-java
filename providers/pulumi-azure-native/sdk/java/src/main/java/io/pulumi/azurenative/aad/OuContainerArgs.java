@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OuContainerArgs Empty = new OuContainerArgs();
 
-    /**
-     * The account name
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * The name of the domain service.
-     */
     @InputImport(name="domainServiceName", required=true)
     private final Input<String> domainServiceName;
 
@@ -37,9 +28,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainServiceName;
     }
 
-    /**
-     * The name of the OuContainer.
-     */
     @InputImport(name="ouContainerName")
     private final @Nullable Input<String> ouContainerName;
 
@@ -47,9 +35,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.ouContainerName == null ? Input.empty() : this.ouContainerName;
     }
 
-    /**
-     * The account password
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -57,9 +42,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The account spn
-     */
     @InputImport(name="spn")
     private final @Nullable Input<String> spn;
 

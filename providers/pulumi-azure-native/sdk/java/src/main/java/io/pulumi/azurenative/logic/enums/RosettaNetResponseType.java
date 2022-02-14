@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The value indicating whether the RosettaNet PIP communication is synchronous.
- */
     @EnumType
     public enum RosettaNetResponseType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Sync("Sync"),
-/**
- * 
- */
         Async("Async");
 
         private final String value;

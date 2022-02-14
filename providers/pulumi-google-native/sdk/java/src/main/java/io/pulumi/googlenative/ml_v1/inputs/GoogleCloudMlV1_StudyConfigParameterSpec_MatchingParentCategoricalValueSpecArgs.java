@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents the spec to match categorical values from parent parameter.
- */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs();
 
-    /**
-     * Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

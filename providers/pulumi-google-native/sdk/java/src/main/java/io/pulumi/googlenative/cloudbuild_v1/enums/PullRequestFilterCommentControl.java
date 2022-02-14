@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
- */
     @EnumType
     public enum PullRequestFilterCommentControl {
-/**
- * Do not require comments on Pull Requests before builds are triggered.
- */
         CommentsDisabled("COMMENTS_DISABLED"),
-/**
- * Enforce that repository owners or collaborators must comment on Pull Requests before builds are triggered.
- */
         CommentsEnabled("COMMENTS_ENABLED"),
-/**
- * Enforce that repository owners or collaborators must comment on external contributors' Pull Requests before builds are triggered.
- */
         CommentsEnabledForExternalContributorsOnly("COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY");
 
         private final String value;

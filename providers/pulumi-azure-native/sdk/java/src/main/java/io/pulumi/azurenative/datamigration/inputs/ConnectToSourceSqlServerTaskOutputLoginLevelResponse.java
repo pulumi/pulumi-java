@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Login level output for the task that validates connection to SQL Server and also validates source server requirements
- */
 public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerTaskOutputLoginLevelResponse Empty = new ConnectToSourceSqlServerTaskOutputLoginLevelResponse();
 
-    /**
-     * The default database for the login.
-     */
     @InputImport(name="defaultDatabase", required=true)
     private final String defaultDatabase;
 
@@ -27,9 +21,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         return this.defaultDatabase;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -37,9 +28,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         return this.id;
     }
 
-    /**
-     * The state of the login.
-     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -47,9 +35,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         return this.isEnabled;
     }
 
-    /**
-     * The type of login.
-     */
     @InputImport(name="loginType", required=true)
     private final String loginType;
 
@@ -57,9 +42,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         return this.loginType;
     }
 
-    /**
-     * Information about eligibility of login for migration.
-     */
     @InputImport(name="migrationEligibility", required=true)
     private final MigrationEligibilityInfoResponse migrationEligibility;
 
@@ -67,9 +49,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         return this.migrationEligibility;
     }
 
-    /**
-     * Login name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -77,10 +56,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
         return this.name;
     }
 
-    /**
-     * Type of result - database level or task level
-Expected value is 'LoginLevelOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 

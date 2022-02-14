@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDeviceExtendedInformationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceExtendedInformationArgs Empty = new GetDeviceExtendedInformationArgs();
 
-    /**
-     * The device name.
-     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -25,9 +19,6 @@ public final class GetDeviceExtendedInformationArgs extends io.pulumi.resources.
         return this.deviceName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

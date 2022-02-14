@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
- */
 public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttachedDiskInitializeParamsArgs Empty = new AttachedDiskInitializeParamsArgs();
 
-    /**
-     * An optional description. Provide this property when creating the disk.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,9 +27,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.
-     */
     @InputImport(name="diskName")
     private final @Nullable Input<String> diskName;
 
@@ -43,9 +34,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.diskName == null ? Input.empty() : this.diskName;
     }
 
-    /**
-     * Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.
-     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<String> diskSizeGb;
 
@@ -53,9 +41,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
-    /**
-     * Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a full list of acceptable values, see Persistent disk types. If you define this field, you can provide either the full or partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType - projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for InstanceTemplate, this is the name of the disk type, not URL.
-     */
     @InputImport(name="diskType")
     private final @Nullable Input<String> diskType;
 
@@ -63,9 +48,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
-    /**
-     * A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
-     */
     @InputImport(name="guestOsFeatures")
     private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
 
@@ -73,9 +55,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
     }
 
-    /**
-     * Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -83,9 +62,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * A list of publicly visible licenses. Reserved for Google's use.
-     */
     @InputImport(name="licenses")
     private final @Nullable Input<List<String>> licenses;
 
@@ -93,9 +69,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.licenses == null ? Input.empty() : this.licenses;
     }
 
-    /**
-     * Indicates whether or not the disk can be read/write attached to more than one instance.
-     */
     @InputImport(name="multiWriter")
     private final @Nullable Input<Boolean> multiWriter;
 
@@ -103,9 +76,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.multiWriter == null ? Input.empty() : this.multiWriter;
     }
 
-    /**
-     * Specifies which action to take on instance update with this disk. Default is to use the existing disk.
-     */
     @InputImport(name="onUpdateAction")
     private final @Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
@@ -113,9 +83,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.onUpdateAction == null ? Input.empty() : this.onUpdateAction;
     }
 
-    /**
-     * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
-     */
     @InputImport(name="provisionedIops")
     private final @Nullable Input<String> provisionedIops;
 
@@ -123,9 +90,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
     }
 
-    /**
-     * Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.
-     */
     @InputImport(name="resourcePolicies")
     private final @Nullable Input<List<String>> resourcePolicies;
 
@@ -133,9 +97,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
     }
 
-    /**
-     * The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family If the source image is deleted later, this field will not be set.
-     */
     @InputImport(name="sourceImage")
     private final @Nullable Input<String> sourceImage;
 
@@ -143,9 +104,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
     }
 
-    /**
-     * The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Instance templates do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.
-     */
     @InputImport(name="sourceImageEncryptionKey")
     private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
@@ -153,9 +111,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
     }
 
-    /**
-     * The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not be set.
-     */
     @InputImport(name="sourceSnapshot")
     private final @Nullable Input<String> sourceSnapshot;
 
@@ -163,9 +118,6 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
         return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
     }
 
-    /**
-     * The customer-supplied encryption key of the source snapshot.
-     */
     @InputImport(name="sourceSnapshotEncryptionKey")
     private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 

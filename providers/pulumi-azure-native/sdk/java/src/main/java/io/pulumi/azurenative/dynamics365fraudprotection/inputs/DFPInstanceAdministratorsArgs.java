@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An array of administrator user identities
- */
 public final class DFPInstanceAdministratorsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DFPInstanceAdministratorsArgs Empty = new DFPInstanceAdministratorsArgs();
 
-    /**
-     * An array of administrator user identities.
-     */
     @InputImport(name="members")
     private final @Nullable Input<List<String>> members;
 

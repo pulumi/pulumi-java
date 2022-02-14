@@ -14,45 +14,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutoprovisioningNodePoolDefaultsResponse {
-/**
- * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
- */
     private final String bootDiskKmsKey;
-/**
- * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
- */
     private final Integer diskSizeGb;
-/**
- * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
- */
     private final String diskType;
-/**
- * The image type to use for NAP created node.
- */
     private final String imageType;
-/**
- * Specifies the node management options for NAP created node-pools.
- */
     private final NodeManagementResponse management;
-/**
- * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass "automatic" as field value.
- */
     private final String minCpuPlatform;
-/**
- * Scopes that are used by NAP when creating node pools.
- */
     private final List<String> oauthScopes;
-/**
- * The Google Cloud Platform Service Account to be used by the node VMs.
- */
     private final String serviceAccount;
-/**
- * Shielded Instance options.
- */
     private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
-/**
- * Specifies the upgrade settings for NAP created node pools
- */
     private final UpgradeSettingsResponse upgradeSettings;
 
     @OutputCustomType.Constructor({"bootDiskKmsKey","diskSizeGb","diskType","imageType","management","minCpuPlatform","oauthScopes","serviceAccount","shieldedInstanceConfig","upgradeSettings"})
@@ -79,63 +49,33 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
         this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
     }
 
-/**
- * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
- */
     public String getBootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
-/**
- * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
- */
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
-/**
- * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
- */
     public String getDiskType() {
         return this.diskType;
     }
-/**
- * The image type to use for NAP created node.
- */
     public String getImageType() {
         return this.imageType;
     }
-/**
- * Specifies the node management options for NAP created node-pools.
- */
     public NodeManagementResponse getManagement() {
         return this.management;
     }
-/**
- * Minimum CPU platform to be used for NAP created node pools. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass "automatic" as field value.
- */
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
-/**
- * Scopes that are used by NAP when creating node pools.
- */
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
-/**
- * The Google Cloud Platform Service Account to be used by the node VMs.
- */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
-/**
- * Shielded Instance options.
- */
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
-/**
- * Specifies the upgrade settings for NAP created node pools
- */
     public UpgradeSettingsResponse getUpgradeSettings() {
         return this.upgradeSettings;
     }

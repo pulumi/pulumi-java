@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Files that make up the template contents of a template type.
- */
 public final class TemplateContentsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TemplateContentsResponse Empty = new TemplateContentsResponse();
 
-    /**
-     * Import files referenced by the main template.
-     */
     @InputImport(name="imports", required=true)
     private final List<ImportFileResponse> imports;
 
@@ -27,9 +21,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
         return this.imports;
     }
 
-    /**
-     * Which interpreter (python or jinja) should be used during expansion.
-     */
     @InputImport(name="interpreter", required=true)
     private final String interpreter;
 
@@ -37,9 +28,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
         return this.interpreter;
     }
 
-    /**
-     * The filename of the mainTemplate
-     */
     @InputImport(name="mainTemplate", required=true)
     private final String mainTemplate;
 
@@ -47,9 +35,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
         return this.mainTemplate;
     }
 
-    /**
-     * The contents of the template schema.
-     */
     @InputImport(name="schema", required=true)
     private final String schema;
 
@@ -57,9 +42,6 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
         return this.schema;
     }
 
-    /**
-     * The contents of the main template file.
-     */
     @InputImport(name="template", required=true)
     private final String template;
 

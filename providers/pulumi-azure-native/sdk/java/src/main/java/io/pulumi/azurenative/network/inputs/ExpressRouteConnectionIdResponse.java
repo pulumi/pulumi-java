@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The ID of the ExpressRouteConnection.
- */
 public final class ExpressRouteConnectionIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteConnectionIdResponse Empty = new ExpressRouteConnectionIdResponse();
 
-    /**
-     * The ID of the ExpressRouteConnection.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 

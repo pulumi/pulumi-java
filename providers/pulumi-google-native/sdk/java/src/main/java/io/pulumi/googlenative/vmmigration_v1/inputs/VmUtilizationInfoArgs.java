@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Utilization information of a single VM.
- */
 public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmUtilizationInfoArgs Empty = new VmUtilizationInfoArgs();
 
-    /**
-     * Utilization metrics for this VM.
-     */
     @InputImport(name="utilization")
     private final @Nullable Input<VmUtilizationMetricsArgs> utilization;
 
@@ -29,9 +23,6 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
         return this.utilization == null ? Input.empty() : this.utilization;
     }
 
-    /**
-     * The VM's ID in the source.
-     */
     @InputImport(name="vmId")
     private final @Nullable Input<String> vmId;
 
@@ -39,9 +30,6 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
         return this.vmId == null ? Input.empty() : this.vmId;
     }
 
-    /**
-     * The description of the VM in a Source of type Vmware.
-     */
     @InputImport(name="vmwareVmDetails")
     private final @Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails;
 

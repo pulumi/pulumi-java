@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the source of connection monitor.
- */
 public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorSourceArgs Empty = new ConnectionMonitorSourceArgs();
 
-    /**
-     * The source port used by connection monitor.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -28,9 +22,6 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * The ID of the resource used as the source by connection monitor.
-     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 

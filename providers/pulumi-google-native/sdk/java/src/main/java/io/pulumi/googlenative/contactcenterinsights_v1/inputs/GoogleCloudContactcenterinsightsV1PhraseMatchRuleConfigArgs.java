@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration information of a phrase match rule.
- */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs();
 
-    /**
-     * The configuration for the exact match rule.
-     */
     @InputImport(name="exactMatchConfig")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 

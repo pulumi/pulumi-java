@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLoadTestArgs Empty = new GetLoadTestArgs();
 
-    /**
-     * Load Test name.
-     */
     @InputImport(name="loadTestName", required=true)
     private final String loadTestName;
 
@@ -25,9 +19,6 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
         return this.loadTestName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -17,191 +17,39 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The resource `random.RandomShuffle` generates a random permutation of a list of strings given as an argument.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as random from "@pulumi/random";
-
-const az = new random.RandomShuffle("az", {
-    inputs: [
-        "us-west-1a",
-        "us-west-1c",
-        "us-west-1d",
-        "us-west-1e",
-    ],
-    resultCount: 2,
-});
-const example = new aws.elb.LoadBalancer("example", {
-    // Place the ELB in any two of the given availability zones, selected
-    // at random.
-    availabilityZones: az.results,
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_random as random
-
-az = random.RandomShuffle("az",
-    inputs=[
-        "us-west-1a",
-        "us-west-1c",
-        "us-west-1d",
-        "us-west-1e",
-    ],
-    result_count=2)
-example = aws.elb.LoadBalancer("example", availability_zones=az.results)
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-using Random = Pulumi.Random;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var az = new Random.RandomShuffle("az", new Random.RandomShuffleArgs
-        {
-            Inputs = 
-            {
-                "us-west-1a",
-                "us-west-1c",
-                "us-west-1d",
-                "us-west-1e",
-            },
-            ResultCount = 2,
-        });
-        var example = new Aws.Elb.LoadBalancer("example", new Aws.Elb.LoadBalancerArgs
-        {
-            AvailabilityZones = az.Results,
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elb"
-	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		az, err := random.NewRandomShuffle(ctx, "az", &random.RandomShuffleArgs{
-			Inputs: pulumi.StringArray{
-				pulumi.String("us-west-1a"),
-				pulumi.String("us-west-1c"),
-				pulumi.String("us-west-1d"),
-				pulumi.String("us-west-1e"),
-			},
-			ResultCount: pulumi.Int(2),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = elb.NewLoadBalancer(ctx, "example", &elb.LoadBalancerArgs{
-			AvailabilityZones: az.Results,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{{% /examples %}}
- */
 @ResourceType(type="random:index/randomShuffle:RandomShuffle")
 public class RandomShuffle extends io.pulumi.resources.CustomResource {
-    /**
-     * The list of strings to shuffle.
-
-     */
     @OutputExport(name="inputs", type=List.class, parameters={String.class})
     private Output<List<String>> inputs;
 
-    /**
-     * @return The list of strings to shuffle.
-
-     */
     public Output<List<String>> getInputs() {
         return this.inputs;
     }
-    /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
-    /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     public Output</* @Nullable */ Map<String,Object>> getKeepers() {
         return this.keepers;
     }
-    /**
-     * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
-
-     */
     @OutputExport(name="resultCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> resultCount;
 
-    /**
-     * @return The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
-
-     */
     public Output</* @Nullable */ Integer> getResultCount() {
         return this.resultCount;
     }
-    /**
-     * Random permutation of the list of strings given in `input`.
-
-     */
     @OutputExport(name="results", type=List.class, parameters={String.class})
     private Output<List<String>> results;
 
-    /**
-     * @return Random permutation of the list of strings given in `input`.
-
-     */
     public Output<List<String>> getResults() {
         return this.results;
     }
-    /**
-     * Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
-
-     */
     @OutputExport(name="seed", type=String.class, parameters={})
     private Output</* @Nullable */ String> seed;
 
-    /**
-     * @return Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
-
-     */
     public Output</* @Nullable */ String> getSeed() {
         return this.seed;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public RandomShuffle(String name, RandomShuffleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomShuffle:RandomShuffle", name, args == null ? RandomShuffleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -217,15 +65,6 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param state
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static RandomShuffle get(String name, Input<String> id, @Nullable RandomShuffleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomShuffle(name, id, state, options);
     }

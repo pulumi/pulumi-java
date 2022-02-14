@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListJobCredentials {
-/**
- * List of unencrypted credentials for accessing device.
-API Version: 2020-11-01.
- *
- * List of unencrypted credentials for accessing device.
- */
     public static CompletableFuture<ListJobCredentialsResult> invokeAsync(ListJobCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databox:listJobCredentials", TypeShape.of(ListJobCredentialsResult.class), args == null ? ListJobCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

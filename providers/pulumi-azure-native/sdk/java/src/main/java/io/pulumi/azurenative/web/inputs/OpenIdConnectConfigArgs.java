@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings of the endpoints used for the custom Open ID Connect provider.
- */
 public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenIdConnectConfigArgs Empty = new OpenIdConnectConfigArgs();
 
-    /**
-     * The endpoint to be used to make an authorization request.
-     */
     @InputImport(name="authorizationEndpoint")
     private final @Nullable Input<String> authorizationEndpoint;
 
@@ -27,9 +21,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
         return this.authorizationEndpoint == null ? Input.empty() : this.authorizationEndpoint;
     }
 
-    /**
-     * The endpoint that provides the keys necessary to validate the token.
-     */
     @InputImport(name="certificationUri")
     private final @Nullable Input<String> certificationUri;
 
@@ -37,9 +28,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
         return this.certificationUri == null ? Input.empty() : this.certificationUri;
     }
 
-    /**
-     * The endpoint that issues the token.
-     */
     @InputImport(name="issuer")
     private final @Nullable Input<String> issuer;
 
@@ -47,9 +35,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
         return this.issuer == null ? Input.empty() : this.issuer;
     }
 
-    /**
-     * The endpoint to be used to request a token.
-     */
     @InputImport(name="tokenEndpoint")
     private final @Nullable Input<String> tokenEndpoint;
 
@@ -57,9 +42,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
         return this.tokenEndpoint == null ? Input.empty() : this.tokenEndpoint;
     }
 
-    /**
-     * The endpoint that contains all the configuration endpoints for the provider.
-     */
     @InputImport(name="wellKnownOpenIdConfiguration")
     private final @Nullable Input<String> wellKnownOpenIdConfiguration;
 

@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScaleRuleMetricDimensionResponse {
-/**
- * Name of the dimension.
- */
     private final String dimensionName;
-/**
- * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
- */
     private final String operator;
-/**
- * list of dimension values. For example: ["App1","App2"].
- */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"dimensionName","operator","values"})
@@ -33,21 +24,12 @@ public final class ScaleRuleMetricDimensionResponse {
         this.values = Objects.requireNonNull(values);
     }
 
-/**
- * Name of the dimension.
- */
     public String getDimensionName() {
         return this.dimensionName;
     }
-/**
- * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
- */
     public String getOperator() {
         return this.operator;
     }
-/**
- * list of dimension values. For example: ["App1","App2"].
- */
     public List<String> getValues() {
         return this.values;
     }

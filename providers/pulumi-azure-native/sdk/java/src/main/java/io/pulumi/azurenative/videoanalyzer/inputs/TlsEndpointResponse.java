@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * TLS endpoint describes an endpoint that the pipeline can connect to over TLS transport (data is encrypted in transit).
- */
 public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TlsEndpointResponse Empty = new TlsEndpointResponse();
 
-    /**
-     * Credentials to be presented to the endpoint.
-     */
     @InputImport(name="credentials", required=true)
     private final UsernamePasswordCredentialsResponse credentials;
 
@@ -31,9 +25,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.credentials;
     }
 
-    /**
-     * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
-     */
     @InputImport(name="trustedCertificates")
     private final @Nullable PemCertificateListResponse trustedCertificates;
 
@@ -41,9 +32,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.trustedCertificates == null ? Optional.empty() : Optional.ofNullable(this.trustedCertificates);
     }
 
-    /**
-     * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
-     */
     @InputImport(name="tunnel")
     private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
@@ -51,10 +39,6 @@ public final class TlsEndpointResponse extends io.pulumi.resources.InvokeArgs {
         return this.tunnel == null ? Optional.empty() : Optional.ofNullable(this.tunnel);
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -62,9 +46,6 @@ Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
         return this.type;
     }
 
-    /**
-     * The endpoint URL for Video Analyzer to connect to.
-     */
     @InputImport(name="url", required=true)
     private final String url;
 
@@ -72,9 +53,6 @@ Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
         return this.url;
     }
 
-    /**
-     * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     */
     @InputImport(name="validationOptions")
     private final @Nullable TlsValidationOptionsResponse validationOptions;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details when multiple steps are run with the same configuration as a group.
- */
 public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MultiStepArgs Empty = new MultiStepArgs();
 
-    /**
-     * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
-     */
     @InputImport(name="multistepNumber")
     private final @Nullable Input<Integer> multistepNumber;
 
@@ -29,9 +23,6 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.multistepNumber == null ? Input.empty() : this.multistepNumber;
     }
 
-    /**
-     * Present if it is a primary (original) step.
-     */
     @InputImport(name="primaryStep")
     private final @Nullable Input<PrimaryStepArgs> primaryStep;
 
@@ -39,9 +30,6 @@ public final class MultiStepArgs extends io.pulumi.resources.ResourceArgs {
         return this.primaryStep == null ? Input.empty() : this.primaryStep;
     }
 
-    /**
-     * Step Id of the primary (original) step, which might be this step.
-     */
     @InputImport(name="primaryStepId")
     private final @Nullable Input<String> primaryStepId;
 

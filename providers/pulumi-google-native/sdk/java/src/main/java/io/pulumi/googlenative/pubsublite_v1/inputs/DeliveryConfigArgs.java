@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The settings for a subscription's message delivery.
- */
 public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryConfigArgs Empty = new DeliveryConfigArgs();
 
-    /**
-     * The DeliveryRequirement for this subscription.
-     */
     @InputImport(name="deliveryRequirement")
     private final @Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 

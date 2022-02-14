@@ -12,25 +12,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PatchInstanceFilterResponse {
-/**
- * Target all VM instances in the project. If true, no other criteria is permitted.
- */
     private final Boolean all;
-/**
- * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
- */
     private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
-/**
- * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
- */
     private final List<String> instanceNamePrefixes;
-/**
- * Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
- */
     private final List<String> instances;
-/**
- * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
- */
     private final List<String> zones;
 
     @OutputCustomType.Constructor({"all","groupLabels","instanceNamePrefixes","instances","zones"})
@@ -47,33 +32,18 @@ public final class PatchInstanceFilterResponse {
         this.zones = Objects.requireNonNull(zones);
     }
 
-/**
- * Target all VM instances in the project. If true, no other criteria is permitted.
- */
     public Boolean getAll() {
         return this.all;
     }
-/**
- * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
- */
     public List<PatchInstanceFilterGroupLabelResponse> getGroupLabels() {
         return this.groupLabels;
     }
-/**
- * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
- */
     public List<String> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes;
     }
-/**
- * Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
- */
     public List<String> getInstances() {
         return this.instances;
     }
-/**
- * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
- */
     public List<String> getZones() {
         return this.zones;
     }

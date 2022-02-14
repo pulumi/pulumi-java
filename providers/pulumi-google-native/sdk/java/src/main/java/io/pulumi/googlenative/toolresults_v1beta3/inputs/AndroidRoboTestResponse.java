@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A test of an android application that explores the application on a virtual or physical Android device, finding culprits and crashes as it goes.
- */
 public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AndroidRoboTestResponse Empty = new AndroidRoboTestResponse();
 
-    /**
-     * The initial activity that should be used to start the app. Optional
-     */
     @InputImport(name="appInitialActivity", required=true)
     private final String appInitialActivity;
 
@@ -26,9 +20,6 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
         return this.appInitialActivity;
     }
 
-    /**
-     * The java package for the bootstrap. Optional
-     */
     @InputImport(name="bootstrapPackageId", required=true)
     private final String bootstrapPackageId;
 
@@ -36,9 +27,6 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
         return this.bootstrapPackageId;
     }
 
-    /**
-     * The runner class for the bootstrap. Optional
-     */
     @InputImport(name="bootstrapRunnerClass", required=true)
     private final String bootstrapRunnerClass;
 
@@ -46,9 +34,6 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
         return this.bootstrapRunnerClass;
     }
 
-    /**
-     * The max depth of the traversal stack Robo can explore. Optional
-     */
     @InputImport(name="maxDepth", required=true)
     private final Integer maxDepth;
 
@@ -56,9 +41,6 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
         return this.maxDepth;
     }
 
-    /**
-     * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
-     */
     @InputImport(name="maxSteps", required=true)
     private final Integer maxSteps;
 

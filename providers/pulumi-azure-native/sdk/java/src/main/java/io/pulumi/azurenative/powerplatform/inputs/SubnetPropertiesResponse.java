@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a subnet.
- */
 public final class SubnetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetPropertiesResponse Empty = new SubnetPropertiesResponse();
 
-    /**
-     * Subnet name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AttachedDiskResponse {
-/**
- * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
- */
     private final String mode;
-/**
- * Specifies the full path to an existing disk. For example: "projects/my-project/zones/us-central1-c/disks/my-disk".
- */
     private final String sourceDisk;
 
     @OutputCustomType.Constructor({"mode","sourceDisk"})
@@ -26,15 +20,9 @@ public final class AttachedDiskResponse {
         this.sourceDisk = Objects.requireNonNull(sourceDisk);
     }
 
-/**
- * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
- */
     public String getMode() {
         return this.mode;
     }
-/**
- * Specifies the full path to an existing disk. For example: "projects/my-project/zones/us-central1-c/disks/my-disk".
- */
     public String getSourceDisk() {
         return this.sourceDisk;
     }

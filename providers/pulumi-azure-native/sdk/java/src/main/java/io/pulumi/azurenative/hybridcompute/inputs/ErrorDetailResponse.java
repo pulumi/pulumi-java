@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorDetailResponse Empty = new ErrorDetailResponse();
 
-    /**
-     * The error's code.
-     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -28,9 +22,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
         return this.code;
     }
 
-    /**
-     * Additional error details.
-     */
     @InputImport(name="details")
     private final @Nullable List<ErrorDetailResponse> details;
 
@@ -38,9 +29,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
         return this.details == null ? List.of() : this.details;
     }
 
-    /**
-     * A human readable error message.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -48,9 +36,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
-    /**
-     * Indicates which property in the request is responsible for the error.
-     */
     @InputImport(name="target")
     private final @Nullable String target;
 

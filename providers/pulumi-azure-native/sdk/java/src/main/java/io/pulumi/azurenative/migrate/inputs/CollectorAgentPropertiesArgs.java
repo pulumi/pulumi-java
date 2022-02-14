@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CollectorAgentPropertiesArgs Empty = new CollectorAgentPropertiesArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="spnDetails")
     private final @Nullable Input<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 

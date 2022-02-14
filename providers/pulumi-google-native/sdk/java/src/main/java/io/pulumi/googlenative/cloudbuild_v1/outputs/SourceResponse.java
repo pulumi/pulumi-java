@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceResponse {
-/**
- * If provided, get the source from this location in a Cloud Source Repository.
- */
     private final RepoSourceResponse repoSource;
-/**
- * If provided, get the source from this location in Google Cloud Storage.
- */
     private final StorageSourceResponse storageSource;
-/**
- * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
- */
     private final StorageSourceManifestResponse storageSourceManifest;
 
     @OutputCustomType.Constructor({"repoSource","storageSource","storageSourceManifest"})
@@ -34,21 +25,12 @@ public final class SourceResponse {
         this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
     }
 
-/**
- * If provided, get the source from this location in a Cloud Source Repository.
- */
     public RepoSourceResponse getRepoSource() {
         return this.repoSource;
     }
-/**
- * If provided, get the source from this location in Google Cloud Storage.
- */
     public StorageSourceResponse getStorageSource() {
         return this.storageSource;
     }
-/**
- * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
- */
     public StorageSourceManifestResponse getStorageSourceManifest() {
         return this.storageSourceManifest;
     }

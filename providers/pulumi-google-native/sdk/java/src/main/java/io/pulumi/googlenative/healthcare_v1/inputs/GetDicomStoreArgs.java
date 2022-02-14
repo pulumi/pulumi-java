@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDicomStoreArgs Empty = new GetDicomStoreArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -27,9 +21,6 @@ public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="dicomStoreId", required=true)
     private final String dicomStoreId;
 
@@ -37,9 +28,6 @@ public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.dicomStoreId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetDicomStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -14,222 +14,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Issue Contract details.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiManagementCreateApiIssue
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var apiIssue = new AzureNative.ApiManagement.ApiIssue("apiIssue", new AzureNative.ApiManagement.ApiIssueArgs
-        {
-            ApiId = "57d1f7558aa04f15146d9d8a",
-            CreatedDate = "2018-02-01T22:21:20.467Z",
-            Description = "New API issue description",
-            IssueId = "57d2ef278aa04f0ad01d6cdc",
-            ResourceGroupName = "rg1",
-            ServiceName = "apimService1",
-            State = "open",
-            Title = "New API issue",
-            UserId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apimanagement.NewApiIssue(ctx, "apiIssue", &apimanagement.ApiIssueArgs{
-			ApiId:             pulumi.String("57d1f7558aa04f15146d9d8a"),
-			CreatedDate:       pulumi.String("2018-02-01T22:21:20.467Z"),
-			Description:       pulumi.String("New API issue description"),
-			IssueId:           pulumi.String("57d2ef278aa04f0ad01d6cdc"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("apimService1"),
-			State:             pulumi.String("open"),
-			Title:             pulumi.String("New API issue"),
-			UserId:            pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const apiIssue = new azure_native.apimanagement.ApiIssue("apiIssue", {
-    apiId: "57d1f7558aa04f15146d9d8a",
-    createdDate: "2018-02-01T22:21:20.467Z",
-    description: "New API issue description",
-    issueId: "57d2ef278aa04f0ad01d6cdc",
-    resourceGroupName: "rg1",
-    serviceName: "apimService1",
-    state: "open",
-    title: "New API issue",
-    userId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-api_issue = azure_native.apimanagement.ApiIssue("apiIssue",
-    api_id="57d1f7558aa04f15146d9d8a",
-    created_date="2018-02-01T22:21:20.467Z",
-    description="New API issue description",
-    issue_id="57d2ef278aa04f0ad01d6cdc",
-    resource_group_name="rg1",
-    service_name="apimService1",
-    state="open",
-    title="New API issue",
-    user_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:apimanagement:ApiIssue 57d2ef278aa04f0ad01d6cdc /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc 
-```
-
- */
 @ResourceType(type="azure-native:apimanagement:ApiIssue")
 public class ApiIssue extends io.pulumi.resources.CustomResource {
-    /**
-     * A resource identifier for the API the issue was created for.
-     */
     @OutputExport(name="apiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiId;
 
-    /**
-     * @return A resource identifier for the API the issue was created for.
-     */
     public Output</* @Nullable */ String> getApiId() {
         return this.apiId;
     }
-    /**
-     * Date and time when the issue was created.
-     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
-    /**
-     * @return Date and time when the issue was created.
-     */
     public Output</* @Nullable */ String> getCreatedDate() {
         return this.createdDate;
     }
-    /**
-     * Text describing the issue.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return Text describing the issue.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Status of the issue.
-     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
-    /**
-     * @return Status of the issue.
-     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
-    /**
-     * The issue title.
-     */
     @OutputExport(name="title", type=String.class, parameters={})
     private Output<String> title;
 
-    /**
-     * @return The issue title.
-     */
     public Output<String> getTitle() {
         return this.title;
     }
-    /**
-     * Resource type for API Management resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type for API Management resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * A resource identifier for the user created the issue.
-     */
     @OutputExport(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
-    /**
-     * @return A resource identifier for the user created the issue.
-     */
     public Output<String> getUserId() {
         return this.userId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ApiIssue(String name, ApiIssueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiIssue", name, args == null ? ApiIssueArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -258,14 +93,6 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ApiIssue get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiIssue(name, id, options);
     }

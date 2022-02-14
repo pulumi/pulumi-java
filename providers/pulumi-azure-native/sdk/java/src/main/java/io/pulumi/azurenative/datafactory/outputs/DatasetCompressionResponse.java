@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetCompressionResponse {
-/**
- * The dataset compression level. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object level;
-/**
- * Type of dataset compression. Type: string (or Expression with resultType string).
- */
     private final Object type;
 
     @OutputCustomType.Constructor({"level","type"})
@@ -28,15 +22,9 @@ public final class DatasetCompressionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The dataset compression level. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getLevel() {
         return Optional.ofNullable(this.level);
     }
-/**
- * Type of dataset compression. Type: string (or Expression with resultType string).
- */
     public Object getType() {
         return this.type;
     }

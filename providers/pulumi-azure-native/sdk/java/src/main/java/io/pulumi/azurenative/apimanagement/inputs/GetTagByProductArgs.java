@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagByProductArgs Empty = new GetTagByProductArgs();
 
-    /**
-     * Product identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="productId", required=true)
     private final String productId;
 
@@ -25,9 +19,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.productId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -45,9 +33,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.serviceName;
     }
 
-    /**
-     * Tag identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="tagId", required=true)
     private final String tagId;
 

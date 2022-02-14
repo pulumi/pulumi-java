@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceSkuResponse {
-/**
- * The number of instances in the read only query pool.
- */
     private final @Nullable Integer capacity;
-/**
- * Name of the SKU level.
- */
     private final String name;
-/**
- * The name of the Azure pricing tier to which the SKU applies.
- */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capacity","name","tier"})
@@ -35,21 +26,12 @@ public final class ResourceSkuResponse {
         this.tier = tier;
     }
 
-/**
- * The number of instances in the read only query pool.
- */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
-/**
- * Name of the SKU level.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The name of the Azure pricing tier to which the SKU applies.
- */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListJobCredentialsResult {
-/**
- * Link for the next set of unencrypted credentials.
- */
     private final @Nullable String nextLink;
-/**
- * List of unencrypted credentials.
- */
     private final @Nullable List<UnencryptedCredentialsResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -30,15 +24,9 @@ public final class ListJobCredentialsResult {
         this.value = value;
     }
 
-/**
- * Link for the next set of unencrypted credentials.
- */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
-/**
- * List of unencrypted credentials.
- */
     public List<UnencryptedCredentialsResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

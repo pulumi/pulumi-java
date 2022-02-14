@@ -9,16 +9,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
 
-/**
- * Message defining a field of a BigQuery table.
- */
 public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2BigQueryFieldResponse Empty = new GooglePrivacyDlpV2BigQueryFieldResponse();
 
-    /**
-     * Designated field in the BigQuery table.
-     */
     @InputImport(name="field", required=true)
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
@@ -26,9 +20,6 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
         return this.field;
     }
 
-    /**
-     * Source table of the field.
-     */
     @InputImport(name="table", required=true)
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 

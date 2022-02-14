@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An SLI measuring performance on a well-known service type. Performance will be computed on the basis of pre-defined metrics. The type of the service_resource determines the metrics to use and the service_resource.labels and metric_labels are used to construct a monitoring filter to filter that metric down to just the data relevant to this service.
- */
 public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicSliArgs Empty = new BasicSliArgs();
 
-    /**
-     * Good service is defined to be the count of requests made to this service that return successfully.
-     */
     @InputImport(name="availability")
     private final @Nullable Input<AvailabilityCriteriaArgs> availability;
 
@@ -30,9 +24,6 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
         return this.availability == null ? Input.empty() : this.availability;
     }
 
-    /**
-     * Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.
-     */
     @InputImport(name="latency")
     private final @Nullable Input<LatencyCriteriaArgs> latency;
 
@@ -40,9 +31,6 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
         return this.latency == null ? Input.empty() : this.latency;
     }
 
-    /**
-     * OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.
-     */
     @InputImport(name="location")
     private final @Nullable Input<List<String>> location;
 
@@ -50,9 +38,6 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.
-     */
     @InputImport(name="method")
     private final @Nullable Input<List<String>> method;
 
@@ -60,9 +45,6 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
         return this.method == null ? Input.empty() : this.method;
     }
 
-    /**
-     * OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.
-     */
     @InputImport(name="version")
     private final @Nullable Input<List<String>> version;
 

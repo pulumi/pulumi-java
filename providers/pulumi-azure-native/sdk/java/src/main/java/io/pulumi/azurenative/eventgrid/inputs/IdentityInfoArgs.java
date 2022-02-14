@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The identity information for the resource.
- */
 public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityInfoArgs Empty = new IdentityInfoArgs();
 
-    /**
-     * The principal ID of resource identity.
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -31,9 +25,6 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * The tenant ID of resource.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -41,9 +32,6 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IdentityType>> type;
 
@@ -51,11 +39,6 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
-'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-This property is currently not used and reserved for future usage.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 

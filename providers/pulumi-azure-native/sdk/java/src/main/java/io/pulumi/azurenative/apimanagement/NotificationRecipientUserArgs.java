@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotificationRecipientUserArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationRecipientUserArgs Empty = new NotificationRecipientUserArgs();
 
-    /**
-     * Notification Name Identifier.
-     */
     @InputImport(name="notificationName", required=true)
     private final Input<String> notificationName;
 
@@ -27,9 +21,6 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
         return this.notificationName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -47,9 +35,6 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
         return this.serviceName;
     }
 
-    /**
-     * User identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="userId")
     private final @Nullable Input<String> userId;
 

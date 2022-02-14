@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHybridRunbookWorkerGroupArgs Empty = new GetHybridRunbookWorkerGroupArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -25,9 +19,6 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
         return this.automationAccountName;
     }
 
-    /**
-     * The hybrid runbook worker group name
-     */
     @InputImport(name="hybridRunbookWorkerGroupName", required=true)
     private final String hybridRunbookWorkerGroupName;
 
@@ -35,9 +26,6 @@ public final class GetHybridRunbookWorkerGroupArgs extends io.pulumi.resources.I
         return this.hybridRunbookWorkerGroupName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

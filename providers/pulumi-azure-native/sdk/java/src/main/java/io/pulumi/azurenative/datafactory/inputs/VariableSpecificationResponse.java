@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of a single variable for a Pipeline.
- */
 public final class VariableSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VariableSpecificationResponse Empty = new VariableSpecificationResponse();
 
-    /**
-     * Default value of variable.
-     */
     @InputImport(name="defaultValue")
     private final @Nullable Object defaultValue;
 
@@ -28,9 +22,6 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
-    /**
-     * Variable type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

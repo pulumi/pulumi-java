@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Criterion for dynamic threshold.
- */
 public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DynamicMetricCriteriaArgs Empty = new DynamicMetricCriteriaArgs();
 
-    /**
-     * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
-     */
     @InputImport(name="alertSensitivity", required=true)
     private final Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
 
@@ -35,10 +29,6 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
         return this.alertSensitivity;
     }
 
-    /**
-     * Specifies the type of threshold criteria
-Expected value is 'DynamicThresholdCriterion'.
-     */
     @InputImport(name="criterionType", required=true)
     private final Input<String> criterionType;
 
@@ -46,9 +36,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.criterionType;
     }
 
-    /**
-     * List of dimension conditions.
-     */
     @InputImport(name="dimensions")
     private final @Nullable Input<List<MetricDimensionArgs>> dimensions;
 
@@ -56,9 +43,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.dimensions == null ? Input.empty() : this.dimensions;
     }
 
-    /**
-     * The minimum number of violations required within the selected lookback time window required to raise an alert.
-     */
     @InputImport(name="failingPeriods", required=true)
     private final Input<DynamicThresholdFailingPeriodsArgs> failingPeriods;
 
@@ -66,9 +50,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.failingPeriods;
     }
 
-    /**
-     * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
-     */
     @InputImport(name="ignoreDataBefore")
     private final @Nullable Input<String> ignoreDataBefore;
 
@@ -76,9 +57,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.ignoreDataBefore == null ? Input.empty() : this.ignoreDataBefore;
     }
 
-    /**
-     * Name of the metric.
-     */
     @InputImport(name="metricName", required=true)
     private final Input<String> metricName;
 
@@ -86,9 +64,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.metricName;
     }
 
-    /**
-     * Namespace of the metric.
-     */
     @InputImport(name="metricNamespace")
     private final @Nullable Input<String> metricNamespace;
 
@@ -96,9 +71,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
     }
 
-    /**
-     * Name of the criteria.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -106,9 +78,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.name;
     }
 
-    /**
-     * The operator used to compare the metric value against the threshold.
-     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,DynamicThresholdOperator>> operator;
 
@@ -116,9 +85,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.operator;
     }
 
-    /**
-     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-     */
     @InputImport(name="skipMetricValidation")
     private final @Nullable Input<Boolean> skipMetricValidation;
 
@@ -126,9 +92,6 @@ Expected value is 'DynamicThresholdCriterion'.
         return this.skipMetricValidation == null ? Input.empty() : this.skipMetricValidation;
     }
 
-    /**
-     * the criteria time aggregation types.
-     */
     @InputImport(name="timeAggregation", required=true)
     private final Input<Either<String,AggregationTypeEnum>> timeAggregation;
 

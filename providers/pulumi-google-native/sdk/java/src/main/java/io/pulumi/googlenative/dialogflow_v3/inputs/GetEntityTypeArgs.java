@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntityTypeArgs Empty = new GetEntityTypeArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentId", required=true)
     private final String agentId;
 
@@ -27,9 +21,6 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
         return this.agentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="entityTypeId", required=true)
     private final String entityTypeId;
 
@@ -37,9 +28,6 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
         return this.entityTypeId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="languageCode")
     private final @Nullable String languageCode;
 
@@ -47,9 +35,6 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -57,9 +42,6 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

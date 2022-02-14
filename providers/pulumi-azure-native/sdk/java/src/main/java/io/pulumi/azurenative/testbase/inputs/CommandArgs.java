@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The command used in the test
- */
 public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommandArgs Empty = new CommandArgs();
 
-    /**
-     * The action of the command.
-     */
     @InputImport(name="action", required=true)
     private final Input<Either<String,Action>> action;
 
@@ -32,9 +26,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
-    /**
-     * Specifies whether to run the command even if a previous command is failed.
-     */
     @InputImport(name="alwaysRun")
     private final @Nullable Input<Boolean> alwaysRun;
 
@@ -42,9 +33,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.alwaysRun == null ? Input.empty() : this.alwaysRun;
     }
 
-    /**
-     * Specifies whether to apply update before the command.
-     */
     @InputImport(name="applyUpdateBefore")
     private final @Nullable Input<Boolean> applyUpdateBefore;
 
@@ -52,9 +40,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.applyUpdateBefore == null ? Input.empty() : this.applyUpdateBefore;
     }
 
-    /**
-     * The content of the command. The content depends on source type.
-     */
     @InputImport(name="content", required=true)
     private final Input<String> content;
 
@@ -62,9 +47,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.content;
     }
 
-    /**
-     * The type of command content.
-     */
     @InputImport(name="contentType", required=true)
     private final Input<Either<String,ContentType>> contentType;
 
@@ -72,9 +54,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType;
     }
 
-    /**
-     * Specifies the max run time of the command.
-     */
     @InputImport(name="maxRunTime")
     private final @Nullable Input<Integer> maxRunTime;
 
@@ -82,9 +61,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxRunTime == null ? Input.empty() : this.maxRunTime;
     }
 
-    /**
-     * The name of the command.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -92,9 +68,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Specifies whether to restart the VM after the command executed.
-     */
     @InputImport(name="restartAfter")
     private final @Nullable Input<Boolean> restartAfter;
 
@@ -102,9 +75,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.restartAfter == null ? Input.empty() : this.restartAfter;
     }
 
-    /**
-     * Specifies whether to run the command in interactive mode.
-     */
     @InputImport(name="runAsInteractive")
     private final @Nullable Input<Boolean> runAsInteractive;
 
@@ -112,9 +82,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.runAsInteractive == null ? Input.empty() : this.runAsInteractive;
     }
 
-    /**
-     * Specifies whether to run the command as administrator.
-     */
     @InputImport(name="runElevated")
     private final @Nullable Input<Boolean> runElevated;
 

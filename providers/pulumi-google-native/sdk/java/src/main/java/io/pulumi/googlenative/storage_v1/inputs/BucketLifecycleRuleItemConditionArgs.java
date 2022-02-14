@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The condition(s) under which the action will be taken.
- */
 public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketLifecycleRuleItemConditionArgs Empty = new BucketLifecycleRuleItemConditionArgs();
 
-    /**
-     * Age of an object (in days). This condition is satisfied when an object reaches the specified age.
-     */
     @InputImport(name="age")
     private final @Nullable Input<Integer> age;
 
@@ -30,9 +24,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.age == null ? Input.empty() : this.age;
     }
 
-    /**
-     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when an object is created before midnight of the specified date in UTC.
-     */
     @InputImport(name="createdBefore")
     private final @Nullable Input<String> createdBefore;
 
@@ -40,9 +31,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.createdBefore == null ? Input.empty() : this.createdBefore;
     }
 
-    /**
-     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the custom time on an object is before this date in UTC.
-     */
     @InputImport(name="customTimeBefore")
     private final @Nullable Input<String> customTimeBefore;
 
@@ -50,9 +38,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.customTimeBefore == null ? Input.empty() : this.customTimeBefore;
     }
 
-    /**
-     * Number of days elapsed since the user-specified timestamp set on an object. The condition is satisfied if the days elapsed is at least this number. If no custom timestamp is specified on an object, the condition does not apply.
-     */
     @InputImport(name="daysSinceCustomTime")
     private final @Nullable Input<Integer> daysSinceCustomTime;
 
@@ -60,9 +45,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.daysSinceCustomTime == null ? Input.empty() : this.daysSinceCustomTime;
     }
 
-    /**
-     * Number of days elapsed since the noncurrent timestamp of an object. The condition is satisfied if the days elapsed is at least this number. This condition is relevant only for versioned objects. The value of the field must be a nonnegative integer. If it's zero, the object version will become eligible for Lifecycle action as soon as it becomes noncurrent.
-     */
     @InputImport(name="daysSinceNoncurrentTime")
     private final @Nullable Input<Integer> daysSinceNoncurrentTime;
 
@@ -70,9 +52,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.daysSinceNoncurrentTime == null ? Input.empty() : this.daysSinceNoncurrentTime;
     }
 
-    /**
-     * Relevant only for versioned objects. If the value is true, this condition matches live objects; if the value is false, it matches archived objects.
-     */
     @InputImport(name="isLive")
     private final @Nullable Input<Boolean> isLive;
 
@@ -80,9 +59,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.isLive == null ? Input.empty() : this.isLive;
     }
 
-    /**
-     * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access" launch stage and is only available to a whitelisted set of users; that means that this feature may be changed in backward-incompatible ways and that it is not guaranteed to be released.
-     */
     @InputImport(name="matchesPattern")
     private final @Nullable Input<String> matchesPattern;
 
@@ -90,9 +66,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.matchesPattern == null ? Input.empty() : this.matchesPattern;
     }
 
-    /**
-     * Objects having any of the storage classes specified by this condition will be matched. Values include MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, and DURABLE_REDUCED_AVAILABILITY.
-     */
     @InputImport(name="matchesStorageClass")
     private final @Nullable Input<List<String>> matchesStorageClass;
 
@@ -100,9 +73,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.matchesStorageClass == null ? Input.empty() : this.matchesStorageClass;
     }
 
-    /**
-     * A date in RFC 3339 format with only the date part (for instance, "2013-01-15"). This condition is satisfied when the noncurrent time on an object is before this date in UTC. This condition is relevant only for versioned objects.
-     */
     @InputImport(name="noncurrentTimeBefore")
     private final @Nullable Input<String> noncurrentTimeBefore;
 
@@ -110,9 +80,6 @@ public final class BucketLifecycleRuleItemConditionArgs extends io.pulumi.resour
         return this.noncurrentTimeBefore == null ? Input.empty() : this.noncurrentTimeBefore;
     }
 
-    /**
-     * Relevant only for versioned objects. If the value is N, this condition is satisfied when there are at least N versions (including the live version) newer than this version of the object.
-     */
     @InputImport(name="numNewerVersions")
     private final @Nullable Input<Integer> numNewerVersions;
 

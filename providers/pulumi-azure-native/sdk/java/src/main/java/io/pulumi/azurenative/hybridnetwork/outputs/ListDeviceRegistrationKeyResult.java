@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListDeviceRegistrationKeyResult {
-/**
- * The registration key for the device.
- */
     private final String registrationKey;
 
     @OutputCustomType.Constructor({"registrationKey"})
@@ -19,9 +16,6 @@ public final class ListDeviceRegistrationKeyResult {
         this.registrationKey = Objects.requireNonNull(registrationKey);
     }
 
-/**
- * The registration key for the device.
- */
     public String getRegistrationKey() {
         return this.registrationKey;
     }

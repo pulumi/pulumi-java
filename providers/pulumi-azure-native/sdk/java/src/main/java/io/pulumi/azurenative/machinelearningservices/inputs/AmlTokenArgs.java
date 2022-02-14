@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * AML Token identity configuration.
- */
 public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AmlTokenArgs Empty = new AmlTokenArgs();
 
-    /**
-     * Enum to determine identity framework.
-Expected value is 'AMLToken'.
-     */
     @InputImport(name="identityType", required=true)
     private final Input<String> identityType;
 

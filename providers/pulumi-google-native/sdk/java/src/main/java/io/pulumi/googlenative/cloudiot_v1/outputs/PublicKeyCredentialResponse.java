@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PublicKeyCredentialResponse {
-/**
- * The format of the key.
- */
     private final String format;
-/**
- * The key data.
- */
     private final String key;
 
     @OutputCustomType.Constructor({"format","key"})
@@ -26,15 +20,9 @@ public final class PublicKeyCredentialResponse {
         this.key = Objects.requireNonNull(key);
     }
 
-/**
- * The format of the key.
- */
     public String getFormat() {
         return this.format;
     }
-/**
- * The key data.
- */
     public String getKey() {
         return this.key;
     }

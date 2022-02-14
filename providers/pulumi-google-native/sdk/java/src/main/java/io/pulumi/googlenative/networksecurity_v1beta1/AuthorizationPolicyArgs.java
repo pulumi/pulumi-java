@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizationPolicyArgs Empty = new AuthorizationPolicyArgs();
 
-    /**
-     * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
-     */
     @InputImport(name="action", required=true)
     private final Input<AuthorizationPolicyAction> action;
 
@@ -31,9 +25,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="authorizationPolicyId", required=true)
     private final Input<String> authorizationPolicyId;
 
@@ -41,9 +32,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.authorizationPolicyId;
     }
 
-    /**
-     * Optional. Free-text description of the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -51,9 +39,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Optional. Set of label tags associated with the AuthorizationPolicy resource.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -61,9 +46,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -71,9 +53,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -81,9 +60,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -91,9 +67,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
-     */
     @InputImport(name="rules")
     private final @Nullable Input<List<RuleArgs>> rules;
 

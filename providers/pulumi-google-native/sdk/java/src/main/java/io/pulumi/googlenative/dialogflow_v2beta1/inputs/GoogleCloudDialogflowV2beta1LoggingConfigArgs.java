@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines logging behavior for conversation lifecycle events.
- */
 public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1LoggingConfigArgs Empty = new GoogleCloudDialogflowV2beta1LoggingConfigArgs();
 
-    /**
-     * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
-     */
     @InputImport(name="enableStackdriverLogging")
     private final @Nullable Input<Boolean> enableStackdriverLogging;
 

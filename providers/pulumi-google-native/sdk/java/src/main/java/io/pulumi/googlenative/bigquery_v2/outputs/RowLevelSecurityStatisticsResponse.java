@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RowLevelSecurityStatisticsResponse {
-/**
- * [Preview] Whether any accessed data was protected by row access policies.
- */
     private final Boolean rowLevelSecurityApplied;
 
     @OutputCustomType.Constructor({"rowLevelSecurityApplied"})
@@ -19,9 +16,6 @@ public final class RowLevelSecurityStatisticsResponse {
         this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
     }
 
-/**
- * [Preview] Whether any accessed data was protected by row access policies.
- */
     public Boolean getRowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
     }

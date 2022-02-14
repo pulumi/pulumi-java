@@ -36,16 +36,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PersistentVolumeSpec is the specification of a persistent volume.
- */
 public final class PersistentVolumeSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PersistentVolumeSpecArgs Empty = new PersistentVolumeSpecArgs();
 
-    /**
-     * AccessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes
-     */
     @InputImport(name="accessModes")
     private final @Nullable Input<List<String>> accessModes;
 
@@ -53,9 +47,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.accessModes == null ? Input.empty() : this.accessModes;
     }
 
-    /**
-     * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-     */
     @InputImport(name="awsElasticBlockStore")
     private final @Nullable Input<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
 
@@ -63,9 +54,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.awsElasticBlockStore == null ? Input.empty() : this.awsElasticBlockStore;
     }
 
-    /**
-     * AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-     */
     @InputImport(name="azureDisk")
     private final @Nullable Input<AzureDiskVolumeSourceArgs> azureDisk;
 
@@ -73,9 +61,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.azureDisk == null ? Input.empty() : this.azureDisk;
     }
 
-    /**
-     * AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-     */
     @InputImport(name="azureFile")
     private final @Nullable Input<AzureFilePersistentVolumeSourceArgs> azureFile;
 
@@ -83,9 +68,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.azureFile == null ? Input.empty() : this.azureFile;
     }
 
-    /**
-     * A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
-     */
     @InputImport(name="capacity")
     private final @Nullable Input<Map<String,String>> capacity;
 
@@ -93,9 +75,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
-    /**
-     * CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
-     */
     @InputImport(name="cephfs")
     private final @Nullable Input<CephFSPersistentVolumeSourceArgs> cephfs;
 
@@ -103,9 +82,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.cephfs == null ? Input.empty() : this.cephfs;
     }
 
-    /**
-     * Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
-     */
     @InputImport(name="cinder")
     private final @Nullable Input<CinderPersistentVolumeSourceArgs> cinder;
 
@@ -113,9 +89,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.cinder == null ? Input.empty() : this.cinder;
     }
 
-    /**
-     * ClaimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding
-     */
     @InputImport(name="claimRef")
     private final @Nullable Input<ObjectReferenceArgs> claimRef;
 
@@ -123,9 +96,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.claimRef == null ? Input.empty() : this.claimRef;
     }
 
-    /**
-     * CSI represents storage that is handled by an external CSI driver (Beta feature).
-     */
     @InputImport(name="csi")
     private final @Nullable Input<CSIPersistentVolumeSourceArgs> csi;
 
@@ -133,9 +103,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.csi == null ? Input.empty() : this.csi;
     }
 
-    /**
-     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
-     */
     @InputImport(name="fc")
     private final @Nullable Input<FCVolumeSourceArgs> fc;
 
@@ -143,9 +110,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.fc == null ? Input.empty() : this.fc;
     }
 
-    /**
-     * FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
-     */
     @InputImport(name="flexVolume")
     private final @Nullable Input<FlexPersistentVolumeSourceArgs> flexVolume;
 
@@ -153,9 +117,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.flexVolume == null ? Input.empty() : this.flexVolume;
     }
 
-    /**
-     * Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running
-     */
     @InputImport(name="flocker")
     private final @Nullable Input<FlockerVolumeSourceArgs> flocker;
 
@@ -163,9 +124,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.flocker == null ? Input.empty() : this.flocker;
     }
 
-    /**
-     * GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-     */
     @InputImport(name="gcePersistentDisk")
     private final @Nullable Input<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
 
@@ -173,9 +131,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.gcePersistentDisk == null ? Input.empty() : this.gcePersistentDisk;
     }
 
-    /**
-     * Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.k8s.io/volumes/glusterfs/README.md
-     */
     @InputImport(name="glusterfs")
     private final @Nullable Input<GlusterfsPersistentVolumeSourceArgs> glusterfs;
 
@@ -183,9 +138,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.glusterfs == null ? Input.empty() : this.glusterfs;
     }
 
-    /**
-     * HostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-     */
     @InputImport(name="hostPath")
     private final @Nullable Input<HostPathVolumeSourceArgs> hostPath;
 
@@ -193,9 +145,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.hostPath == null ? Input.empty() : this.hostPath;
     }
 
-    /**
-     * ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.
-     */
     @InputImport(name="iscsi")
     private final @Nullable Input<ISCSIPersistentVolumeSourceArgs> iscsi;
 
@@ -203,9 +152,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.iscsi == null ? Input.empty() : this.iscsi;
     }
 
-    /**
-     * Local represents directly-attached storage with node affinity
-     */
     @InputImport(name="local")
     private final @Nullable Input<LocalVolumeSourceArgs> local;
 
@@ -213,9 +159,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.local == null ? Input.empty() : this.local;
     }
 
-    /**
-     * A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
-     */
     @InputImport(name="mountOptions")
     private final @Nullable Input<List<String>> mountOptions;
 
@@ -223,9 +166,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
-    /**
-     * NFS represents an NFS mount on the host. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-     */
     @InputImport(name="nfs")
     private final @Nullable Input<NFSVolumeSourceArgs> nfs;
 
@@ -233,9 +173,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.nfs == null ? Input.empty() : this.nfs;
     }
 
-    /**
-     * NodeAffinity defines constraints that limit what nodes this volume can be accessed from. This field influences the scheduling of pods that use this volume.
-     */
     @InputImport(name="nodeAffinity")
     private final @Nullable Input<VolumeNodeAffinityArgs> nodeAffinity;
 
@@ -243,14 +180,6 @@ public final class PersistentVolumeSpecArgs extends io.pulumi.resources.Resource
         return this.nodeAffinity == null ? Input.empty() : this.nodeAffinity;
     }
 
-    /**
-     * What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
-
-Possible enum values:
- - `"Delete"` means the volume will be deleted from Kubernetes on release from its claim. The volume plugin must support Deletion.
- - `"Recycle"` means the volume will be recycled back into the pool of unbound persistent volumes on release from its claim. The volume plugin must support Recycling.
- - `"Retain"` means the volume will be left in its current phase (Released) for manual reclamation by the administrator. The default policy is Retain.
-     */
     @InputImport(name="persistentVolumeReclaimPolicy")
     private final @Nullable Input<String> persistentVolumeReclaimPolicy;
 
@@ -258,9 +187,6 @@ Possible enum values:
         return this.persistentVolumeReclaimPolicy == null ? Input.empty() : this.persistentVolumeReclaimPolicy;
     }
 
-    /**
-     * PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
-     */
     @InputImport(name="photonPersistentDisk")
     private final @Nullable Input<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
 
@@ -268,9 +194,6 @@ Possible enum values:
         return this.photonPersistentDisk == null ? Input.empty() : this.photonPersistentDisk;
     }
 
-    /**
-     * PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
-     */
     @InputImport(name="portworxVolume")
     private final @Nullable Input<PortworxVolumeSourceArgs> portworxVolume;
 
@@ -278,9 +201,6 @@ Possible enum values:
         return this.portworxVolume == null ? Input.empty() : this.portworxVolume;
     }
 
-    /**
-     * Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
-     */
     @InputImport(name="quobyte")
     private final @Nullable Input<QuobyteVolumeSourceArgs> quobyte;
 
@@ -288,9 +208,6 @@ Possible enum values:
         return this.quobyte == null ? Input.empty() : this.quobyte;
     }
 
-    /**
-     * RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
-     */
     @InputImport(name="rbd")
     private final @Nullable Input<RBDPersistentVolumeSourceArgs> rbd;
 
@@ -298,9 +215,6 @@ Possible enum values:
         return this.rbd == null ? Input.empty() : this.rbd;
     }
 
-    /**
-     * ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
-     */
     @InputImport(name="scaleIO")
     private final @Nullable Input<ScaleIOPersistentVolumeSourceArgs> scaleIO;
 
@@ -308,9 +222,6 @@ Possible enum values:
         return this.scaleIO == null ? Input.empty() : this.scaleIO;
     }
 
-    /**
-     * Name of StorageClass to which this persistent volume belongs. Empty value means that this volume does not belong to any StorageClass.
-     */
     @InputImport(name="storageClassName")
     private final @Nullable Input<String> storageClassName;
 
@@ -318,9 +229,6 @@ Possible enum values:
         return this.storageClassName == null ? Input.empty() : this.storageClassName;
     }
 
-    /**
-     * StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md
-     */
     @InputImport(name="storageos")
     private final @Nullable Input<StorageOSPersistentVolumeSourceArgs> storageos;
 
@@ -328,9 +236,6 @@ Possible enum values:
         return this.storageos == null ? Input.empty() : this.storageos;
     }
 
-    /**
-     * volumeMode defines if a volume is intended to be used with a formatted filesystem or to remain in raw block state. Value of Filesystem is implied when not included in spec.
-     */
     @InputImport(name="volumeMode")
     private final @Nullable Input<String> volumeMode;
 
@@ -338,9 +243,6 @@ Possible enum values:
         return this.volumeMode == null ? Input.empty() : this.volumeMode;
     }
 
-    /**
-     * VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
-     */
     @InputImport(name="vsphereVolume")
     private final @Nullable Input<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
 

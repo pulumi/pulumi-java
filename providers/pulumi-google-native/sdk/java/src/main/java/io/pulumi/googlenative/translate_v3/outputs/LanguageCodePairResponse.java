@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LanguageCodePairResponse {
-/**
- * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
- */
     private final String sourceLanguageCode;
-/**
- * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
- */
     private final String targetLanguageCode;
 
     @OutputCustomType.Constructor({"sourceLanguageCode","targetLanguageCode"})
@@ -26,15 +20,9 @@ public final class LanguageCodePairResponse {
         this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
     }
 
-/**
- * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
- */
     public String getSourceLanguageCode() {
         return this.sourceLanguageCode;
     }
-/**
- * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
- */
     public String getTargetLanguageCode() {
         return this.targetLanguageCode;
     }

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SkuResponse {
-/**
- * The name of the HealthBot SKU
- */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -19,9 +16,6 @@ public final class SkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The name of the HealthBot SKU
- */
     public String getName() {
         return this.name;
     }

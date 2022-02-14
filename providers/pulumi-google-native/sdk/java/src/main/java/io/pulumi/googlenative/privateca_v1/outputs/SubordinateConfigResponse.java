@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubordinateConfigResponse {
-/**
- * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
- */
     private final String certificateAuthority;
-/**
- * Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
- */
     private final SubordinateConfigChainResponse pemIssuerChain;
 
     @OutputCustomType.Constructor({"certificateAuthority","pemIssuerChain"})
@@ -27,15 +21,9 @@ public final class SubordinateConfigResponse {
         this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
     }
 
-/**
- * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
- */
     public String getCertificateAuthority() {
         return this.certificateAuthority;
     }
-/**
- * Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
- */
     public SubordinateConfigChainResponse getPemIssuerChain() {
         return this.pemIssuerChain;
     }

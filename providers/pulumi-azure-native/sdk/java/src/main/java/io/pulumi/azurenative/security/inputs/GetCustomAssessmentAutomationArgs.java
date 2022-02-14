@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCustomAssessmentAutomationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomAssessmentAutomationArgs Empty = new GetCustomAssessmentAutomationArgs();
 
-    /**
-     * Name of the Custom Assessment Automation.
-     */
     @InputImport(name="customAssessmentAutomationName", required=true)
     private final String customAssessmentAutomationName;
 
@@ -25,9 +19,6 @@ public final class GetCustomAssessmentAutomationArgs extends io.pulumi.resources
         return this.customAssessmentAutomationName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

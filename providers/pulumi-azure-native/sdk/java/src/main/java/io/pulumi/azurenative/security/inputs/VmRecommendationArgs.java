@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a machine that is part of a machine group
- */
 public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmRecommendationArgs Empty = new VmRecommendationArgs();
 
-    /**
-     * The configuration status of the machines group or machine or rule
-     */
     @InputImport(name="configurationStatus")
     private final @Nullable Input<String> configurationStatus;
 
@@ -27,9 +21,6 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
         return this.configurationStatus == null ? Input.empty() : this.configurationStatus;
     }
 
-    /**
-     * The machine supportability of Enforce feature
-     */
     @InputImport(name="enforcementSupport")
     private final @Nullable Input<String> enforcementSupport;
 
@@ -37,9 +28,6 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
         return this.enforcementSupport == null ? Input.empty() : this.enforcementSupport;
     }
 
-    /**
-     * The recommendation action of the machine or rule
-     */
     @InputImport(name="recommendationAction")
     private final @Nullable Input<String> recommendationAction;
 
@@ -47,9 +35,6 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
         return this.recommendationAction == null ? Input.empty() : this.recommendationAction;
     }
 
-    /**
-     * The full resource id of the machine
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

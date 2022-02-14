@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DockerImagePlatformArgs Empty = new DockerImagePlatformArgs();
 
-    /**
-     * The OS type the Environment.
-     */
     @InputImport(name="operatingSystemType")
     private final @Nullable Input<Either<String,OperatingSystemType>> operatingSystemType;
 

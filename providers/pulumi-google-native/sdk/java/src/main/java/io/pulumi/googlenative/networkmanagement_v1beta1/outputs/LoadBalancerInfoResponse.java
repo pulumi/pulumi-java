@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoadBalancerInfoResponse {
-/**
- * Type of load balancer's backend configuration.
- */
     private final String backendType;
-/**
- * Backend configuration URI.
- */
     private final String backendUri;
-/**
- * Information for the loadbalancer backends.
- */
     private final List<LoadBalancerBackendResponse> backends;
-/**
- * URI of the health check for the load balancer.
- */
     private final String healthCheckUri;
-/**
- * Type of the load balancer.
- */
     private final String loadBalancerType;
 
     @OutputCustomType.Constructor({"backendType","backendUri","backends","healthCheckUri","loadBalancerType"})
@@ -46,33 +31,18 @@ public final class LoadBalancerInfoResponse {
         this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
     }
 
-/**
- * Type of load balancer's backend configuration.
- */
     public String getBackendType() {
         return this.backendType;
     }
-/**
- * Backend configuration URI.
- */
     public String getBackendUri() {
         return this.backendUri;
     }
-/**
- * Information for the loadbalancer backends.
- */
     public List<LoadBalancerBackendResponse> getBackends() {
         return this.backends;
     }
-/**
- * URI of the health check for the load balancer.
- */
     public String getHealthCheckUri() {
         return this.healthCheckUri;
     }
-/**
- * Type of the load balancer.
- */
     public String getLoadBalancerType() {
         return this.loadBalancerType;
     }

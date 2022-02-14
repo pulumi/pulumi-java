@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The event delivery schema for the event subscription.
- */
     @EnumType
     public enum EventDeliverySchema {
-/**
- * 
- */
         EventGridSchema("EventGridSchema"),
-/**
- * 
- */
         CustomInputSchema("CustomInputSchema"),
-/**
- * 
- */
         CloudEventSchemaV1_0("CloudEventSchemaV1_0");
 
         private final String value;

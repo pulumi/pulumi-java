@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Hyper V replica provider specific settings base class.
- */
 public final class HyperVReplicaBaseReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HyperVReplicaBaseReplicationDetailsResponse Empty = new HyperVReplicaBaseReplicationDetailsResponse();
 
-    /**
-     * Initial replication details.
-     */
     @InputImport(name="initialReplicationDetails")
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
@@ -31,10 +25,6 @@ public final class HyperVReplicaBaseReplicationDetailsResponse extends io.pulumi
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
     }
 
-    /**
-     * Gets the Instance type.
-Expected value is 'HyperVReplicaBaseReplicationDetails'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -42,9 +32,6 @@ Expected value is 'HyperVReplicaBaseReplicationDetails'.
         return this.instanceType;
     }
 
-    /**
-     * The Last replication time.
-     */
     @InputImport(name="lastReplicatedTime")
     private final @Nullable String lastReplicatedTime;
 
@@ -52,9 +39,6 @@ Expected value is 'HyperVReplicaBaseReplicationDetails'.
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
     }
 
-    /**
-     * VM disk details.
-     */
     @InputImport(name="vMDiskDetails")
     private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
@@ -62,9 +46,6 @@ Expected value is 'HyperVReplicaBaseReplicationDetails'.
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
 
-    /**
-     * The virtual machine Id.
-     */
     @InputImport(name="vmId")
     private final @Nullable String vmId;
 
@@ -72,9 +53,6 @@ Expected value is 'HyperVReplicaBaseReplicationDetails'.
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
-    /**
-     * The PE Network details.
-     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMNicDetailsResponse> vmNics;
 
@@ -82,9 +60,6 @@ Expected value is 'HyperVReplicaBaseReplicationDetails'.
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
-    /**
-     * The protection state for the vm.
-     */
     @InputImport(name="vmProtectionState")
     private final @Nullable String vmProtectionState;
 
@@ -92,9 +67,6 @@ Expected value is 'HyperVReplicaBaseReplicationDetails'.
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
-    /**
-     * The protection state description for the vm.
-     */
     @InputImport(name="vmProtectionStateDescription")
     private final @Nullable String vmProtectionStateDescription;
 

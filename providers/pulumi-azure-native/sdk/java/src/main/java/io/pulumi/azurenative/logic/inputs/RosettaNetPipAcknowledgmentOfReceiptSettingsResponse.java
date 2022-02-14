@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * The integration account RosettaNet ProcessConfiguration Acknowledgement settings.
- */
 public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RosettaNetPipAcknowledgmentOfReceiptSettingsResponse Empty = new RosettaNetPipAcknowledgmentOfReceiptSettingsResponse();
 
-    /**
-     * The non-repudiation is required or not.
-     */
     @InputImport(name="isNonRepudiationRequired", required=true)
     private final Boolean isNonRepudiationRequired;
 
@@ -26,9 +20,6 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
         return this.isNonRepudiationRequired;
     }
 
-    /**
-     * The time to acknowledge in seconds.
-     */
     @InputImport(name="timeToAcknowledgeInSeconds", required=true)
     private final Integer timeToAcknowledgeInSeconds;
 

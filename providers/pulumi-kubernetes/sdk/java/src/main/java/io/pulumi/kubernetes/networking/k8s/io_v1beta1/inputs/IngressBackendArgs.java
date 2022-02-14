@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * IngressBackend describes all endpoints for a given service and port.
- */
 public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressBackendArgs Empty = new IngressBackendArgs();
 
-    /**
-     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
-     */
     @InputImport(name="resource")
     private final @Nullable Input<TypedLocalObjectReferenceArgs> resource;
 
@@ -30,9 +24,6 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.resource == null ? Input.empty() : this.resource;
     }
 
-    /**
-     * Specifies the name of the referenced service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -40,9 +31,6 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
-    /**
-     * Specifies the port of the referenced service.
-     */
     @InputImport(name="servicePort", required=true)
     private final Input<Either<Integer,String>> servicePort;
 

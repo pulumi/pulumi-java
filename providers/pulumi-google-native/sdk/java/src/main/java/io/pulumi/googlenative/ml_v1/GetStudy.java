@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudy {
-/**
- * Gets a study.
- */
     public static CompletableFuture<GetStudyResult> invokeAsync(GetStudyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ml/v1:getStudy", TypeShape.of(GetStudyResult.class), args == null ? GetStudyArgs.Empty : args, Utilities.withVersion(options));
     }

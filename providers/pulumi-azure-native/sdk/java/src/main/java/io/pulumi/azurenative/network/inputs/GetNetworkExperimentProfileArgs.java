@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetNetworkExperimentProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNetworkExperimentProfileArgs Empty = new GetNetworkExperimentProfileArgs();
 
-    /**
-     * The Profile identifier associated with the Tenant and Partner
-     */
     @InputImport(name="profileName", required=true)
     private final String profileName;
 
@@ -25,9 +19,6 @@ public final class GetNetworkExperimentProfileArgs extends io.pulumi.resources.I
         return this.profileName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

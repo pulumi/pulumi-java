@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConversation {
-/**
- * Retrieves the specific conversation.
- */
     public static CompletableFuture<GetConversationResult> invokeAsync(GetConversationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getConversation", TypeShape.of(GetConversationResult.class), args == null ? GetConversationArgs.Empty : args, Utilities.withVersion(options));
     }

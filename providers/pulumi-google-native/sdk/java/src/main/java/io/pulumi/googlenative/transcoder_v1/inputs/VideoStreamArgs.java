@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Video stream resource.
- */
 public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoStreamArgs Empty = new VideoStreamArgs();
 
-    /**
-     * H264 codec settings.
-     */
     @InputImport(name="h264")
     private final @Nullable Input<H264CodecSettingsArgs> h264;
 
@@ -29,9 +23,6 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.h264 == null ? Input.empty() : this.h264;
     }
 
-    /**
-     * H265 codec settings.
-     */
     @InputImport(name="h265")
     private final @Nullable Input<H265CodecSettingsArgs> h265;
 
@@ -39,9 +30,6 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.h265 == null ? Input.empty() : this.h265;
     }
 
-    /**
-     * VP9 codec settings.
-     */
     @InputImport(name="vp9")
     private final @Nullable Input<Vp9CodecSettingsArgs> vp9;
 

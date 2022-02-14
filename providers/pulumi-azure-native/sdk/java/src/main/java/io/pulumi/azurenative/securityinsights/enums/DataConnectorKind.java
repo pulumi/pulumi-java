@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The data connector kind
- */
     @EnumType
     public enum DataConnectorKind {
-/**
- * 
- */
         AzureActiveDirectory("AzureActiveDirectory"),
-/**
- * 
- */
         AzureSecurityCenter("AzureSecurityCenter"),
-/**
- * 
- */
         MicrosoftCloudAppSecurity("MicrosoftCloudAppSecurity"),
-/**
- * 
- */
         ThreatIntelligence("ThreatIntelligence"),
-/**
- * 
- */
         Office365("Office365"),
-/**
- * 
- */
         AmazonWebServicesCloudTrail("AmazonWebServicesCloudTrail"),
-/**
- * 
- */
         AzureAdvancedThreatProtection("AzureAdvancedThreatProtection"),
-/**
- * 
- */
         MicrosoftDefenderAdvancedThreatProtection("MicrosoftDefenderAdvancedThreatProtection");
 
         private final String value;

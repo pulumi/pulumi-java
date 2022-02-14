@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceFabricScheduleArgs Empty = new GetServiceFabricScheduleArgs();
 
-    /**
-     * Specify the $expand query. Example: 'properties($select=status)'
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the lab.
-     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -37,9 +28,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
         return this.labName;
     }
 
-    /**
-     * The name of the schedule.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -47,9 +35,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
         return this.name;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the service fabric.
-     */
     @InputImport(name="serviceFabricName", required=true)
     private final String serviceFabricName;
 
@@ -67,9 +49,6 @@ public final class GetServiceFabricScheduleArgs extends io.pulumi.resources.Invo
         return this.serviceFabricName;
     }
 
-    /**
-     * The name of the user profile.
-     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

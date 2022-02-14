@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of support
- */
     @EnumType
     public enum SupportType {
-/**
- * 
- */
         SupplementalServicing("SupplementalServicing"),
-/**
- * 
- */
         PremiumAssurance("PremiumAssurance");
 
         private final String value;

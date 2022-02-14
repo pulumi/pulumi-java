@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExportConfiguration {
-/**
- * Properties that define a Continuous Export configuration.
-API Version: 2015-05-01.
- *
- * Properties that define a Continuous Export configuration.
- */
     public static CompletableFuture<GetExportConfigurationResult> invokeAsync(GetExportConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getExportConfiguration", TypeShape.of(GetExportConfigurationResult.class), args == null ? GetExportConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

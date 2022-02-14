@@ -13,25 +13,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationRegistrationResponseProperties {
-/**
- * 
- */
     private final @Nullable List<String> includedEvents;
-/**
- * 
- */
     private final @Nullable String messageScope;
-/**
- * 
- */
     private final @Nullable List<NotificationEndpointResponse> notificationEndpoints;
-/**
- * 
- */
     private final @Nullable String notificationMode;
-/**
- * 
- */
     private final @Nullable String provisioningState;
 
     @OutputCustomType.Constructor({"includedEvents","messageScope","notificationEndpoints","notificationMode","provisioningState"})
@@ -48,33 +33,18 @@ public final class NotificationRegistrationResponseProperties {
         this.provisioningState = provisioningState;
     }
 
-/**
- * 
- */
     public List<String> getIncludedEvents() {
         return this.includedEvents == null ? List.of() : this.includedEvents;
     }
-/**
- * 
- */
     public Optional<String> getMessageScope() {
         return Optional.ofNullable(this.messageScope);
     }
-/**
- * 
- */
     public List<NotificationEndpointResponse> getNotificationEndpoints() {
         return this.notificationEndpoints == null ? List.of() : this.notificationEndpoints;
     }
-/**
- * 
- */
     public Optional<String> getNotificationMode() {
         return Optional.ofNullable(this.notificationMode);
     }
-/**
- * 
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

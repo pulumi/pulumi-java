@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The resource model definition representing SKU
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * The name of the HealthBot SKU
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

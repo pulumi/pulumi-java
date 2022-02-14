@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum SecurityPolicyAdvancedOptionsConfigLogLevel {
-/**
- * 
- */
         Normal("NORMAL"),
-/**
- * 
- */
         Verbose("VERBOSE");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a certain point.
- */
 public final class HorizontalPodAutoscalerConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HorizontalPodAutoscalerConditionArgs Empty = new HorizontalPodAutoscalerConditionArgs();
 
-    /**
-     * lastTransitionTime is the last time the condition transitioned from one status to another
-     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -27,9 +21,6 @@ public final class HorizontalPodAutoscalerConditionArgs extends io.pulumi.resour
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
-    /**
-     * message is a human-readable explanation containing details about the transition
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -37,9 +28,6 @@ public final class HorizontalPodAutoscalerConditionArgs extends io.pulumi.resour
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * reason is the reason for the condition's last transition.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -47,9 +35,6 @@ public final class HorizontalPodAutoscalerConditionArgs extends io.pulumi.resour
         return this.reason == null ? Input.empty() : this.reason;
     }
 
-    /**
-     * status is the status of the condition (True, False, Unknown)
-     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -57,9 +42,6 @@ public final class HorizontalPodAutoscalerConditionArgs extends io.pulumi.resour
         return this.status;
     }
 
-    /**
-     * type describes the current condition
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

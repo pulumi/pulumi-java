@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogConfigCounterOptionsCustomFieldResponse {
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String name;
-/**
- * This is deprecated and has no effect. Do not use.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -26,15 +20,9 @@ public final class LogConfigCounterOptionsCustomFieldResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getName() {
         return this.name;
     }
-/**
- * This is deprecated and has no effect. Do not use.
- */
     public String getValue() {
         return this.value;
     }

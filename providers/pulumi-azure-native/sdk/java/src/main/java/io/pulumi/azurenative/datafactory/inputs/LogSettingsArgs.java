@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Log settings.
- */
 public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogSettingsArgs Empty = new LogSettingsArgs();
 
-    /**
-     * Specifies settings for copy activity log.
-     */
     @InputImport(name="copyActivityLogSettings")
     private final @Nullable Input<CopyActivityLogSettingsArgs> copyActivityLogSettings;
 
@@ -29,9 +23,6 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.copyActivityLogSettings == null ? Input.empty() : this.copyActivityLogSettings;
     }
 
-    /**
-     * Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="enableCopyActivityLog")
     private final @Nullable Input<Object> enableCopyActivityLog;
 
@@ -39,9 +30,6 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableCopyActivityLog == null ? Input.empty() : this.enableCopyActivityLog;
     }
 
-    /**
-     * Log location settings customer needs to provide when enabling log.
-     */
     @InputImport(name="logLocationSettings", required=true)
     private final Input<LogLocationSettingsArgs> logLocationSettings;
 

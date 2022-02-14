@@ -14,66 +14,33 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new consent store in the parent dataset. Attempting to create a consent store with the same ID as an existing store fails with an ALREADY_EXISTS error.
- */
 @ResourceType(type="google-native:healthcare/v1:ConsentStore")
 public class ConsentStore extends io.pulumi.resources.CustomResource {
-    /**
-     * Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
-     */
     @OutputExport(name="defaultConsentTtl", type=String.class, parameters={})
     private Output<String> defaultConsentTtl;
 
-    /**
-     * @return Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
-     */
     public Output<String> getDefaultConsentTtl() {
         return this.defaultConsentTtl;
     }
-    /**
-     * Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
-     */
     @OutputExport(name="enableConsentCreateOnUpdate", type=Boolean.class, parameters={})
     private Output<Boolean> enableConsentCreateOnUpdate;
 
-    /**
-     * @return Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
-     */
     public Output<Boolean> getEnableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate;
     }
-    /**
-     * Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
-     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
-    /**
-     * @return Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
-     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
-    /**
-     * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
-     */
     public Output<String> getName() {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ConsentStore(String name, ConsentStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:healthcare/v1:ConsentStore", name, args == null ? ConsentStoreArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -89,14 +56,6 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ConsentStore get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConsentStore(name, id, options);
     }

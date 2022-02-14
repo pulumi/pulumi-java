@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The type of the paths for alias.
- */
 public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AliasPathResponse Empty = new AliasPathResponse();
 
-    /**
-     * The API versions.
-     */
     @InputImport(name="apiVersions")
     private final @Nullable List<String> apiVersions;
 
@@ -30,9 +24,6 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
 
-    /**
-     * The metadata of the alias path. If missing, fall back to the default metadata of the alias.
-     */
     @InputImport(name="metadata", required=true)
     private final AliasPathMetadataResponse metadata;
 
@@ -40,9 +31,6 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
         return this.metadata;
     }
 
-    /**
-     * The path of an alias.
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -50,9 +38,6 @@ public final class AliasPathResponse extends io.pulumi.resources.InvokeArgs {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * The pattern for an alias path.
-     */
     @InputImport(name="pattern")
     private final @Nullable AliasPatternResponse pattern;
 

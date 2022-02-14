@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse {
-/**
- * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
- */
     private final List<String> categories;
 
     @OutputCustomType.Constructor({"categories"})
@@ -20,9 +17,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
         this.categories = Objects.requireNonNull(categories);
     }
 
-/**
- * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
- */
     public List<String> getCategories() {
         return this.categories;
     }

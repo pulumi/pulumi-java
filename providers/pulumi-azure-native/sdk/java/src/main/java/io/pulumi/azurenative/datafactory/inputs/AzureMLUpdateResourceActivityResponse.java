@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure ML Update Resource management activity.
- */
 public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureMLUpdateResourceActivityResponse Empty = new AzureMLUpdateResourceActivityResponse();
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -33,9 +27,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -43,9 +34,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Linked service reference.
-     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -53,9 +41,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -63,9 +48,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.name;
     }
 
-    /**
-     * Activity policy.
-     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -73,9 +55,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
-    /**
-     * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
-     */
     @InputImport(name="trainedModelFilePath", required=true)
     private final Object trainedModelFilePath;
 
@@ -83,9 +62,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.trainedModelFilePath;
     }
 
-    /**
-     * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
-     */
     @InputImport(name="trainedModelLinkedServiceName", required=true)
     private final LinkedServiceReferenceResponse trainedModelLinkedServiceName;
 
@@ -93,9 +69,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.trainedModelLinkedServiceName;
     }
 
-    /**
-     * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="trainedModelName", required=true)
     private final Object trainedModelName;
 
@@ -103,10 +76,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
         return this.trainedModelName;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'AzureMLUpdateResource'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -114,9 +83,6 @@ Expected value is 'AzureMLUpdateResource'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

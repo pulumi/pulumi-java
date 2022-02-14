@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The platform properties against which the run has to happen.
- */
 public final class PlatformPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PlatformPropertiesResponse Empty = new PlatformPropertiesResponse();
 
-    /**
-     * The OS architecture.
-     */
     @InputImport(name="architecture")
     private final @Nullable String architecture;
 
@@ -27,9 +21,6 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
         return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
     }
 
-    /**
-     * The operating system type required for the run.
-     */
     @InputImport(name="os", required=true)
     private final String os;
 
@@ -37,9 +28,6 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
         return this.os;
     }
 
-    /**
-     * Variant of the CPU.
-     */
     @InputImport(name="variant")
     private final @Nullable String variant;
 

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger that creates pipeline runs periodically, on schedule.
- */
 public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleTriggerArgs Empty = new ScheduleTriggerArgs();
 
-    /**
-     * List of tags that can be used for describing the trigger.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -31,9 +25,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Trigger description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,9 +32,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Pipelines that need to be started.
-     */
     @InputImport(name="pipelines")
     private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
@@ -51,9 +39,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
         return this.pipelines == null ? Input.empty() : this.pipelines;
     }
 
-    /**
-     * Recurrence schedule configuration.
-     */
     @InputImport(name="recurrence", required=true)
     private final Input<ScheduleTriggerRecurrenceArgs> recurrence;
 
@@ -61,10 +46,6 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
         return this.recurrence;
     }
 
-    /**
-     * Trigger type.
-Expected value is 'ScheduleTrigger'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

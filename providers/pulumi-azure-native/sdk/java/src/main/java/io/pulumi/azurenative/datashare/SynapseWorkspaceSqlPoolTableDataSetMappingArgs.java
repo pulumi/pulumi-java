@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SynapseWorkspaceSqlPoolTableDataSetMappingArgs Empty = new SynapseWorkspaceSqlPoolTableDataSetMappingArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
         return this.accountName;
     }
 
-    /**
-     * The id of the source data set.
-     */
     @InputImport(name="dataSetId", required=true)
     private final Input<String> dataSetId;
 
@@ -37,9 +28,6 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
         return this.dataSetId;
     }
 
-    /**
-     * The name of the data set mapping to be created.
-     */
     @InputImport(name="dataSetMappingName")
     private final @Nullable Input<String> dataSetMappingName;
 
@@ -47,10 +35,6 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
     }
 
-    /**
-     * Kind of data set mapping.
-Expected value is 'SynapseWorkspaceSqlPoolTable'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -58,9 +42,6 @@ Expected value is 'SynapseWorkspaceSqlPoolTable'.
         return this.kind;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +49,6 @@ Expected value is 'SynapseWorkspaceSqlPoolTable'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share subscription which will hold the data set sink.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -78,9 +56,6 @@ Expected value is 'SynapseWorkspaceSqlPoolTable'.
         return this.shareSubscriptionName;
     }
 
-    /**
-     * Resource id of the Synapse Workspace SQL Pool Table
-     */
     @InputImport(name="synapseWorkspaceSqlPoolTableResourceId", required=true)
     private final Input<String> synapseWorkspaceSqlPoolTableResourceId;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAutomationArgs Empty = new GetAutomationArgs();
 
-    /**
-     * The security automation name.
-     */
     @InputImport(name="automationName", required=true)
     private final String automationName;
 
@@ -25,9 +19,6 @@ public final class GetAutomationArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

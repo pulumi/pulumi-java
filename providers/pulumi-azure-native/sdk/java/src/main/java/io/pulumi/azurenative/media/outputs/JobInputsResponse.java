@@ -16,14 +16,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobInputsResponse {
-/**
- * List of inputs to a Job.
- */
     private final @Nullable List<Object> inputs;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.JobInputs'.
- */
     private final String odataType;
 
     @OutputCustomType.Constructor({"inputs","odataType"})
@@ -34,16 +27,9 @@ Expected value is '#Microsoft.Media.JobInputs'.
         this.odataType = Objects.requireNonNull(odataType);
     }
 
-/**
- * List of inputs to a Job.
- */
     public List<Object> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.JobInputs'.
- */
     public String getOdataType() {
         return this.odataType;
     }

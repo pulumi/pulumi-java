@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMonitorMonitoredResources {
-/**
- * Response of a list operation.
-API Version: 2020-10-01.
- *
- * Response of a list operation.
- */
     public static CompletableFuture<ListMonitorMonitoredResourcesResult> invokeAsync(ListMonitorMonitoredResourcesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:listMonitorMonitoredResources", TypeShape.of(ListMonitorMonitoredResourcesResult.class), args == null ? ListMonitorMonitoredResourcesArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserAssignedIdentityResponse {
-/**
- * Client App Id associated with this identity.
- */
     private final String clientId;
-/**
- * Azure Active Directory principal ID associated with this identity.
- */
     private final String principalId;
 
     @OutputCustomType.Constructor({"clientId","principalId"})
@@ -26,15 +20,9 @@ public final class UserAssignedIdentityResponse {
         this.principalId = Objects.requireNonNull(principalId);
     }
 
-/**
- * Client App Id associated with this identity.
- */
     public String getClientId() {
         return this.clientId;
     }
-/**
- * Azure Active Directory principal ID associated with this identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }

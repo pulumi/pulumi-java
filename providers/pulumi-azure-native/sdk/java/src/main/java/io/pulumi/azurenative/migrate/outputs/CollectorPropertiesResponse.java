@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CollectorPropertiesResponse {
-/**
- * 
- */
     private final @Nullable CollectorAgentPropertiesResponse agentProperties;
-/**
- * Time when this collector was created. Date-Time represented in ISO-8601 format.
- */
     private final String createdTimestamp;
-/**
- * The ARM id of the discovery service site.
- */
     private final @Nullable String discoverySiteId;
-/**
- * Time when this collector was updated. Date-Time represented in ISO-8601 format.
- */
     private final String updatedTimestamp;
 
     @OutputCustomType.Constructor({"agentProperties","createdTimestamp","discoverySiteId","updatedTimestamp"})
@@ -41,27 +29,15 @@ public final class CollectorPropertiesResponse {
         this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
     }
 
-/**
- * 
- */
     public Optional<CollectorAgentPropertiesResponse> getAgentProperties() {
         return Optional.ofNullable(this.agentProperties);
     }
-/**
- * Time when this collector was created. Date-Time represented in ISO-8601 format.
- */
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
-/**
- * The ARM id of the discovery service site.
- */
     public Optional<String> getDiscoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
-/**
- * Time when this collector was updated. Date-Time represented in ISO-8601 format.
- */
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
     }

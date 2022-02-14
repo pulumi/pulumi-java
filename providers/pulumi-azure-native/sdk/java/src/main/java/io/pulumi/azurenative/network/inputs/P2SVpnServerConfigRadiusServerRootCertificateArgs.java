@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Radius Server root certificate of P2SVpnServerConfiguration.
- */
 public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final P2SVpnServerConfigRadiusServerRootCertificateArgs Empty = new P2SVpnServerConfigRadiusServerRootCertificateArgs();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -27,9 +21,6 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends io.
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -37,9 +28,6 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends io.
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,9 +35,6 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateArgs extends io.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The certificate public data.
-     */
     @InputImport(name="publicCertData", required=true)
     private final Input<String> publicCertData;
 

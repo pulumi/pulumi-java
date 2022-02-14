@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OfficeDataConnectorArgs Empty = new OfficeDataConnectorArgs();
 
-    /**
-     * Connector ID
-     */
     @InputImport(name="dataConnectorId")
     private final @Nullable Input<String> dataConnectorId;
 
@@ -28,9 +22,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
     }
 
-    /**
-     * The available data types for the connector.
-     */
     @InputImport(name="dataTypes")
     private final @Nullable Input<OfficeDataConnectorDataTypesArgs> dataTypes;
 
@@ -38,10 +29,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
         return this.dataTypes == null ? Input.empty() : this.dataTypes;
     }
 
-    /**
-     * The kind of the data connector
-Expected value is 'Office365'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -49,9 +36,6 @@ Expected value is 'Office365'.
         return this.kind;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +43,6 @@ Expected value is 'Office365'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The tenant id to connect to, and get the data from.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -69,9 +50,6 @@ Expected value is 'Office365'.
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

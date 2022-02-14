@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity source for a CosmosDB (MongoDB API) database.
- */
 public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CosmosDbMongoDbApiSourceArgs Empty = new CosmosDbMongoDbApiSourceArgs();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -29,9 +23,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
-    /**
-     * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="batchSize")
     private final @Nullable Input<Object> batchSize;
 
@@ -39,9 +30,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.batchSize == null ? Input.empty() : this.batchSize;
     }
 
-    /**
-     * Cursor methods for Mongodb query.
-     */
     @InputImport(name="cursorMethods")
     private final @Nullable Input<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
 
@@ -49,9 +37,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.cursorMethods == null ? Input.empty() : this.cursorMethods;
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -59,9 +44,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
-    /**
-     * Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
-     */
     @InputImport(name="filter")
     private final @Nullable Input<Object> filter;
 
@@ -69,9 +51,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.filter == null ? Input.empty() : this.filter;
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -79,9 +58,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
-    /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="queryTimeout")
     private final @Nullable Input<Object> queryTimeout;
 
@@ -89,9 +65,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -99,9 +72,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -109,10 +79,6 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
-    /**
-     * Copy source type.
-Expected value is 'CosmosDbMongoDbApiSource'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

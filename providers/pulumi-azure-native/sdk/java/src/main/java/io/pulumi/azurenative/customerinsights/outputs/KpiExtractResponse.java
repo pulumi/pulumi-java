@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KpiExtractResponse {
-/**
- * The expression.
- */
     private final String expression;
-/**
- * KPI extract name.
- */
     private final String extractName;
 
     @OutputCustomType.Constructor({"expression","extractName"})
@@ -26,15 +20,9 @@ public final class KpiExtractResponse {
         this.extractName = Objects.requireNonNull(extractName);
     }
 
-/**
- * The expression.
- */
     public String getExpression() {
         return this.expression;
     }
-/**
- * KPI extract name.
- */
     public String getExtractName() {
         return this.extractName;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConsoleArgs Empty = new ConsoleArgs();
 
-    /**
-     * The name of the console
-     */
     @InputImport(name="consoleName")
     private final @Nullable Input<String> consoleName;
 
@@ -28,9 +22,6 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.consoleName == null ? Input.empty() : this.consoleName;
     }
 
-    /**
-     * Cloud shell properties for creating a console.
-     */
     @InputImport(name="properties", required=true)
     private final Input<ConsoleCreatePropertiesArgs> properties;
 

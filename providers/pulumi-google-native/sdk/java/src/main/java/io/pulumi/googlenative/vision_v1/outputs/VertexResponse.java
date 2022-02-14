@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VertexResponse {
-/**
- * X coordinate.
- */
     private final Integer x;
-/**
- * Y coordinate.
- */
     private final Integer y;
 
     @OutputCustomType.Constructor({"x","y"})
@@ -26,15 +20,9 @@ public final class VertexResponse {
         this.y = Objects.requireNonNull(y);
     }
 
-/**
- * X coordinate.
- */
     public Integer getX() {
         return this.x;
     }
-/**
- * Y coordinate.
- */
     public Integer getY() {
         return this.y;
     }

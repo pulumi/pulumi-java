@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Base class for generic container of backup items
- */
 public final class GenericContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GenericContainerResponse Empty = new GenericContainerResponse();
 
-    /**
-     * Type of backup management for the container.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -28,13 +22,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
-    /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'GenericContainer'.
-     */
     @InputImport(name="containerType", required=true)
     private final String containerType;
 
@@ -42,9 +29,6 @@ Expected value is 'GenericContainer'.
         return this.containerType;
     }
 
-    /**
-     * Extended information (not returned in List container API calls)
-     */
     @InputImport(name="extendedInformation")
     private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
 
@@ -52,9 +36,6 @@ Expected value is 'GenericContainer'.
         return this.extendedInformation == null ? Optional.empty() : Optional.ofNullable(this.extendedInformation);
     }
 
-    /**
-     * Name of the container's fabric
-     */
     @InputImport(name="fabricName")
     private final @Nullable String fabricName;
 
@@ -62,9 +43,6 @@ Expected value is 'GenericContainer'.
         return this.fabricName == null ? Optional.empty() : Optional.ofNullable(this.fabricName);
     }
 
-    /**
-     * Friendly name of the container.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -72,9 +50,6 @@ Expected value is 'GenericContainer'.
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * Status of health of the container.
-     */
     @InputImport(name="healthStatus")
     private final @Nullable String healthStatus;
 
@@ -82,9 +57,6 @@ Expected value is 'GenericContainer'.
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
-    /**
-     * Status of registration of the container with the Recovery Services Vault.
-     */
     @InputImport(name="registrationStatus")
     private final @Nullable String registrationStatus;
 

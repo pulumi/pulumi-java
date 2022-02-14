@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComputeResourceResponse {
-/**
- * Memory in GB
- */
     private final Double memoryInGB;
-/**
- * Processor count
- */
     private final Integer processorCount;
 
     @OutputCustomType.Constructor({"memoryInGB","processorCount"})
@@ -27,15 +21,9 @@ public final class ComputeResourceResponse {
         this.processorCount = Objects.requireNonNull(processorCount);
     }
 
-/**
- * Memory in GB
- */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }
-/**
- * Processor count
- */
     public Integer getProcessorCount() {
         return this.processorCount;
     }

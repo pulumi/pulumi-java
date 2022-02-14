@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetNamedValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNamedValueArgs Empty = new GetNamedValueArgs();
 
-    /**
-     * Identifier of the NamedValue.
-     */
     @InputImport(name="namedValueId", required=true)
     private final String namedValueId;
 
@@ -25,9 +19,6 @@ public final class GetNamedValueArgs extends io.pulumi.resources.InvokeArgs {
         return this.namedValueId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetNamedValueArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * SSL certificate details.
- */
 public final class CertificateDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateDetailsResponse Empty = new CertificateDetailsResponse();
 
-    /**
-     * Certificate Issuer.
-     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -26,9 +20,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.issuer;
     }
 
-    /**
-     * Date Certificate is valid to.
-     */
     @InputImport(name="notAfter", required=true)
     private final String notAfter;
 
@@ -36,9 +27,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.notAfter;
     }
 
-    /**
-     * Date Certificate is valid from.
-     */
     @InputImport(name="notBefore", required=true)
     private final String notBefore;
 
@@ -46,9 +34,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.notBefore;
     }
 
-    /**
-     * Raw certificate data.
-     */
     @InputImport(name="rawData", required=true)
     private final String rawData;
 
@@ -56,9 +41,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.rawData;
     }
 
-    /**
-     * Certificate Serial Number.
-     */
     @InputImport(name="serialNumber", required=true)
     private final String serialNumber;
 
@@ -66,9 +48,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.serialNumber;
     }
 
-    /**
-     * Certificate Signature algorithm.
-     */
     @InputImport(name="signatureAlgorithm", required=true)
     private final String signatureAlgorithm;
 
@@ -76,9 +55,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.signatureAlgorithm;
     }
 
-    /**
-     * Certificate Subject.
-     */
     @InputImport(name="subject", required=true)
     private final String subject;
 
@@ -86,9 +62,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.subject;
     }
 
-    /**
-     * Certificate Thumbprint.
-     */
     @InputImport(name="thumbprint", required=true)
     private final String thumbprint;
 
@@ -96,9 +69,6 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
         return this.thumbprint;
     }
 
-    /**
-     * Certificate Version.
-     */
     @InputImport(name="version", required=true)
     private final Integer version;
 

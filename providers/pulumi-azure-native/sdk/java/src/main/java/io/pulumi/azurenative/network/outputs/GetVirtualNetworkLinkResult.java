@@ -14,45 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualNetworkLinkResult {
-/**
- * The ETag of the virtual network link.
- */
     private final @Nullable String etag;
-/**
- * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
- */
     private final String id;
-/**
- * The Azure Region where the resource lives
- */
     private final @Nullable String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
- */
     private final String provisioningState;
-/**
- * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
- */
     private final @Nullable Boolean registrationEnabled;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
- */
     private final String type;
-/**
- * The reference of the virtual network.
- */
     private final @Nullable SubResourceResponse virtualNetwork;
-/**
- * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
- */
     private final String virtualNetworkLinkState;
 
     @OutputCustomType.Constructor({"etag","id","location","name","provisioningState","registrationEnabled","tags","type","virtualNetwork","virtualNetworkLinkState"})
@@ -79,63 +49,33 @@ public final class GetVirtualNetworkLinkResult {
         this.virtualNetworkLinkState = Objects.requireNonNull(virtualNetworkLinkState);
     }
 
-/**
- * The ETag of the virtual network link.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The Azure Region where the resource lives
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
- */
     public Optional<Boolean> getRegistrationEnabled() {
         return Optional.ofNullable(this.registrationEnabled);
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The reference of the virtual network.
- */
     public Optional<SubResourceResponse> getVirtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }
-/**
- * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
- */
     public String getVirtualNetworkLinkState() {
         return this.virtualNetworkLinkState;
     }

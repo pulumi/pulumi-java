@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * AcceleratorConfig defines the accelerator cards to attach to the VM.
- */
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs Empty = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs();
 
-    /**
-     * The number of guest accelerator cards exposed to each VM.
-     */
     @InputImport(name="acceleratorCount")
     private final @Nullable Input<String> acceleratorCount;
 
@@ -27,9 +21,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
     }
 
-    /**
-     * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
-     */
     @InputImport(name="acceleratorType")
     private final @Nullable Input<String> acceleratorType;
 

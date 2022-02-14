@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of an additional API Management resource location.
- */
 public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdditionalLocationArgs Empty = new AdditionalLocationArgs();
 
-    /**
-     * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
-     */
     @InputImport(name="disableGateway")
     private final @Nullable Input<Boolean> disableGateway;
 
@@ -31,9 +25,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
         return this.disableGateway == null ? Input.empty() : this.disableGateway;
     }
 
-    /**
-     * The location name of the additional region among Azure Data center regions.
-     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -41,9 +32,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
         return this.location;
     }
 
-    /**
-     * SKU properties of the API Management service.
-     */
     @InputImport(name="sku", required=true)
     private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
 
@@ -51,9 +39,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
         return this.sku;
     }
 
-    /**
-     * Virtual network configuration for the location.
-     */
     @InputImport(name="virtualNetworkConfiguration")
     private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
@@ -61,9 +46,6 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
         return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
     }
 
-    /**
-     * A list of availability zones denoting where the resource needs to come from.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

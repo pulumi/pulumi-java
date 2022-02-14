@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Cosmos DB Cassandra keyspace resource object
- */
 public final class CassandraKeyspaceResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CassandraKeyspaceResourceArgs Empty = new CassandraKeyspaceResourceArgs();
 
-    /**
-     * Name of the Cosmos DB Cassandra keyspace
-     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

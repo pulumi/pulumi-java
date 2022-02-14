@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineLearningCompute {
-/**
- * Machine Learning compute object wrapped into ARM resource envelope.
-API Version: 2021-01-01.
- *
- * Machine Learning compute object wrapped into ARM resource envelope.
- */
     public static CompletableFuture<GetMachineLearningComputeResult> invokeAsync(GetMachineLearningComputeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningCompute", TypeShape.of(GetMachineLearningComputeResult.class), args == null ? GetMachineLearningComputeArgs.Empty : args, Utilities.withVersion(options));
     }

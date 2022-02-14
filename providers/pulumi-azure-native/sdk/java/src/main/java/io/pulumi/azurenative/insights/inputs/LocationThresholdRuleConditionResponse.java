@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A rule condition based on a certain number of locations failing.
- */
 public final class LocationThresholdRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LocationThresholdRuleConditionResponse Empty = new LocationThresholdRuleConditionResponse();
 
-    /**
-     * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
-     */
     @InputImport(name="dataSource")
     private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
@@ -31,9 +25,6 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
         return this.dataSource == null ? null : this.dataSource;
     }
 
-    /**
-     * the number of locations that must fail to activate the alert.
-     */
     @InputImport(name="failedLocationCount", required=true)
     private final Integer failedLocationCount;
 
@@ -41,10 +32,6 @@ public final class LocationThresholdRuleConditionResponse extends io.pulumi.reso
         return this.failedLocationCount;
     }
 
-    /**
-     * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -52,9 +39,6 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdR
         return this.odataType;
     }
 
-    /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     */
     @InputImport(name="windowSize")
     private final @Nullable String windowSize;
 

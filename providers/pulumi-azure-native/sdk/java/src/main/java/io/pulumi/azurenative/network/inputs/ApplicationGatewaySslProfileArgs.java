@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * SSL profile of an application gateway.
- */
 public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewaySslProfileArgs Empty = new ApplicationGatewaySslProfileArgs();
 
-    /**
-     * Client authentication configuration of the application gateway resource.
-     */
     @InputImport(name="clientAuthConfiguration")
     private final @Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
@@ -31,9 +25,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
         return this.clientAuthConfiguration == null ? Input.empty() : this.clientAuthConfiguration;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -41,9 +32,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Name of the SSL profile that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,9 +39,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * SSL policy of the application gateway resource.
-     */
     @InputImport(name="sslPolicy")
     private final @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
@@ -61,9 +46,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
     }
 
-    /**
-     * Array of references to application gateway trusted client certificates.
-     */
     @InputImport(name="trustedClientCertificates")
     private final @Nullable Input<List<SubResourceArgs>> trustedClientCertificates;
 

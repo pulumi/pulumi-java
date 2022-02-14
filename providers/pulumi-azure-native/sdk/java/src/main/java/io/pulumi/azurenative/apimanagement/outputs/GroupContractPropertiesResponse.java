@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GroupContractPropertiesResponse {
-/**
- * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
- */
     private final Boolean builtIn;
-/**
- * Group description. Can contain HTML formatting tags.
- */
     private final @Nullable String description;
-/**
- * Group name.
- */
     private final String displayName;
-/**
- * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
- */
     private final @Nullable String externalId;
-/**
- * Group type.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"builtIn","description","displayName","externalId","type"})
@@ -47,33 +32,18 @@ public final class GroupContractPropertiesResponse {
         this.type = type;
     }
 
-/**
- * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
- */
     public Boolean getBuiltIn() {
         return this.builtIn;
     }
-/**
- * Group description. Can contain HTML formatting tags.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Group name.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
- */
     public Optional<String> getExternalId() {
         return Optional.ofNullable(this.externalId);
     }
-/**
- * Group type.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

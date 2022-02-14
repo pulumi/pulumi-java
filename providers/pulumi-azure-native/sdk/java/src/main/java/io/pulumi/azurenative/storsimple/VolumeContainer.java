@@ -17,267 +17,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The volume container.
-API Version: 2017-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### VolumeContainersCreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var volumeContainer = new AzureNative.StorSimple.VolumeContainer("volumeContainer", new AzureNative.StorSimple.VolumeContainerArgs
-        {
-            BandwidthSettingId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
-            DeviceName = "Device05ForSDKTest",
-            EncryptionKey = new AzureNative.StorSimple.Inputs.AsymmetricEncryptedSecretArgs
-            {
-                EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
-                EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
-                Value = "R//pyVLx/fn58ia098JiLgZB5RY7fVT+6o8a4fmsvjy+ls2UgJphMf25XVqEQCZnsp/5uxteN1M/9ArPIICdhM7M1+b/Ur7kJ0FH0ktxfk7CrPWWJLI4q20LZoduJGI56lREav1VpuLdqw5F9fRcq7zbfgPQ3B/SD0mfumNRiV+AnwbC6msfavIuWrhVDl9iSzEPE+zU06/kpsexnrS81yYT2QlVVUbvpY4F3zfH8TQPpAROTbv2pld6JO4eGOrZ5O1iOr6XCg2TY2W/jf+Ev4z5tqC9VWXE5kh65gjBfpWN0bDWXKekqEhor2crHAxZi4dybdY8Ok1MDWd1CSU8kw==",
-            },
-            ManagerName = "ManagerForSDKTest1",
-            ResourceGroupName = "ResourceGroupForSDKTest",
-            StorageAccountCredentialId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/safortestrecording",
-            VolumeContainerName = "VolumeContainerForSDKTest",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewVolumeContainer(ctx, "volumeContainer", &storsimple.VolumeContainerArgs{
-			BandwidthSettingId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1"),
-			DeviceName:         pulumi.String("Device05ForSDKTest"),
-			EncryptionKey: &storsimple.AsymmetricEncryptedSecretArgs{
-				EncryptionAlgorithm:      "RSAES_PKCS1_v_1_5",
-				EncryptionCertThumbprint: pulumi.String("A872A2DF196AC7682EE24791E7DE2E2A360F5926"),
-				Value:                    pulumi.String("R//pyVLx/fn58ia098JiLgZB5RY7fVT+6o8a4fmsvjy+ls2UgJphMf25XVqEQCZnsp/5uxteN1M/9ArPIICdhM7M1+b/Ur7kJ0FH0ktxfk7CrPWWJLI4q20LZoduJGI56lREav1VpuLdqw5F9fRcq7zbfgPQ3B/SD0mfumNRiV+AnwbC6msfavIuWrhVDl9iSzEPE+zU06/kpsexnrS81yYT2QlVVUbvpY4F3zfH8TQPpAROTbv2pld6JO4eGOrZ5O1iOr6XCg2TY2W/jf+Ev4z5tqC9VWXE5kh65gjBfpWN0bDWXKekqEhor2crHAxZi4dybdY8Ok1MDWd1CSU8kw=="),
-			},
-			ManagerName:                pulumi.String("ManagerForSDKTest1"),
-			ResourceGroupName:          pulumi.String("ResourceGroupForSDKTest"),
-			StorageAccountCredentialId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/safortestrecording"),
-			VolumeContainerName:        pulumi.String("VolumeContainerForSDKTest"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const volumeContainer = new azure_native.storsimple.VolumeContainer("volumeContainer", {
-    bandwidthSettingId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
-    deviceName: "Device05ForSDKTest",
-    encryptionKey: {
-        encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
-        encryptionCertThumbprint: "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
-        value: "R//pyVLx/fn58ia098JiLgZB5RY7fVT+6o8a4fmsvjy+ls2UgJphMf25XVqEQCZnsp/5uxteN1M/9ArPIICdhM7M1+b/Ur7kJ0FH0ktxfk7CrPWWJLI4q20LZoduJGI56lREav1VpuLdqw5F9fRcq7zbfgPQ3B/SD0mfumNRiV+AnwbC6msfavIuWrhVDl9iSzEPE+zU06/kpsexnrS81yYT2QlVVUbvpY4F3zfH8TQPpAROTbv2pld6JO4eGOrZ5O1iOr6XCg2TY2W/jf+Ev4z5tqC9VWXE5kh65gjBfpWN0bDWXKekqEhor2crHAxZi4dybdY8Ok1MDWd1CSU8kw==",
-    },
-    managerName: "ManagerForSDKTest1",
-    resourceGroupName: "ResourceGroupForSDKTest",
-    storageAccountCredentialId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/safortestrecording",
-    volumeContainerName: "VolumeContainerForSDKTest",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-volume_container = azure_native.storsimple.VolumeContainer("volumeContainer",
-    bandwidth_setting_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1",
-    device_name="Device05ForSDKTest",
-    encryption_key=azure_native.storsimple.AsymmetricEncryptedSecretArgs(
-        encryption_algorithm="RSAES_PKCS1_v_1_5",
-        encryption_cert_thumbprint="A872A2DF196AC7682EE24791E7DE2E2A360F5926",
-        value="R//pyVLx/fn58ia098JiLgZB5RY7fVT+6o8a4fmsvjy+ls2UgJphMf25XVqEQCZnsp/5uxteN1M/9ArPIICdhM7M1+b/Ur7kJ0FH0ktxfk7CrPWWJLI4q20LZoduJGI56lREav1VpuLdqw5F9fRcq7zbfgPQ3B/SD0mfumNRiV+AnwbC6msfavIuWrhVDl9iSzEPE+zU06/kpsexnrS81yYT2QlVVUbvpY4F3zfH8TQPpAROTbv2pld6JO4eGOrZ5O1iOr6XCg2TY2W/jf+Ev4z5tqC9VWXE5kh65gjBfpWN0bDWXKekqEhor2crHAxZi4dybdY8Ok1MDWd1CSU8kw==",
-    ),
-    manager_name="ManagerForSDKTest1",
-    resource_group_name="ResourceGroupForSDKTest",
-    storage_account_credential_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/safortestrecording",
-    volume_container_name="VolumeContainerForSDKTest")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:storsimple:VolumeContainer VolumeContainerForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/VolumeContainerForSDKTest 
-```
-
- */
 @ResourceType(type="azure-native:storsimple:VolumeContainer")
 public class VolumeContainer extends io.pulumi.resources.CustomResource {
-    /**
-     * The bandwidth-rate set on the volume container.
-     */
     @OutputExport(name="bandWidthRateInMbps", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> bandWidthRateInMbps;
 
-    /**
-     * @return The bandwidth-rate set on the volume container.
-     */
     public Output</* @Nullable */ Integer> getBandWidthRateInMbps() {
         return this.bandWidthRateInMbps;
     }
-    /**
-     * The ID of the bandwidth setting associated with the volume container.
-     */
     @OutputExport(name="bandwidthSettingId", type=String.class, parameters={})
     private Output</* @Nullable */ String> bandwidthSettingId;
 
-    /**
-     * @return The ID of the bandwidth setting associated with the volume container.
-     */
     public Output</* @Nullable */ String> getBandwidthSettingId() {
         return this.bandwidthSettingId;
     }
-    /**
-     * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
-     */
     @OutputExport(name="encryptionKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptionKey;
 
-    /**
-     * @return The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
-     */
     public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getEncryptionKey() {
         return this.encryptionKey;
     }
-    /**
-     * The flag to denote whether encryption is enabled or not.
-     */
     @OutputExport(name="encryptionStatus", type=String.class, parameters={})
     private Output<String> encryptionStatus;
 
-    /**
-     * @return The flag to denote whether encryption is enabled or not.
-     */
     public Output<String> getEncryptionStatus() {
         return this.encryptionStatus;
     }
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return The Kind of the object. Currently only Series8000 is supported
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * The name of the object.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the object.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
-     */
     @OutputExport(name="ownerShipStatus", type=String.class, parameters={})
     private Output<String> ownerShipStatus;
 
-    /**
-     * @return The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
-     */
     public Output<String> getOwnerShipStatus() {
         return this.ownerShipStatus;
     }
-    /**
-     * The path ID of storage account associated with the volume container.
-     */
     @OutputExport(name="storageAccountCredentialId", type=String.class, parameters={})
     private Output<String> storageAccountCredentialId;
 
-    /**
-     * @return The path ID of storage account associated with the volume container.
-     */
     public Output<String> getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
-    /**
-     * The total cloud storage for the volume container.
-     */
     @OutputExport(name="totalCloudStorageUsageInBytes", type=Double.class, parameters={})
     private Output<Double> totalCloudStorageUsageInBytes;
 
-    /**
-     * @return The total cloud storage for the volume container.
-     */
     public Output<Double> getTotalCloudStorageUsageInBytes() {
         return this.totalCloudStorageUsageInBytes;
     }
-    /**
-     * The hierarchical type of the object.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The hierarchical type of the object.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The number of volumes in the volume Container.
-     */
     @OutputExport(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
-    /**
-     * @return The number of volumes in the volume Container.
-     */
     public Output<Integer> getVolumeCount() {
         return this.volumeCount;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public VolumeContainer(String name, VolumeContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storsimple:VolumeContainer", name, args == null ? VolumeContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -296,14 +104,6 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static VolumeContainer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VolumeContainer(name, id, options);
     }

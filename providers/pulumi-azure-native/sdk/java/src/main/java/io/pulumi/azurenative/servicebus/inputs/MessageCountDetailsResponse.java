@@ -8,16 +8,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
-/**
- * Message Count Details.
- */
 public final class MessageCountDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MessageCountDetailsResponse Empty = new MessageCountDetailsResponse();
 
-    /**
-     * Number of active messages in the queue, topic, or subscription.
-     */
     @InputImport(name="activeMessageCount", required=true)
     private final Double activeMessageCount;
 
@@ -25,9 +19,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
         return this.activeMessageCount;
     }
 
-    /**
-     * Number of messages that are dead lettered.
-     */
     @InputImport(name="deadLetterMessageCount", required=true)
     private final Double deadLetterMessageCount;
 
@@ -35,9 +26,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
         return this.deadLetterMessageCount;
     }
 
-    /**
-     * Number of scheduled messages.
-     */
     @InputImport(name="scheduledMessageCount", required=true)
     private final Double scheduledMessageCount;
 
@@ -45,9 +33,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
         return this.scheduledMessageCount;
     }
 
-    /**
-     * Number of messages transferred into dead letters.
-     */
     @InputImport(name="transferDeadLetterMessageCount", required=true)
     private final Double transferDeadLetterMessageCount;
 
@@ -55,9 +40,6 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
         return this.transferDeadLetterMessageCount;
     }
 
-    /**
-     * Number of messages transferred to another queue, topic, or subscription.
-     */
     @InputImport(name="transferMessageCount", required=true)
     private final Double transferMessageCount;
 

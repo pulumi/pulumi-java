@@ -14,45 +14,15 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetMessageResult {
-/**
- * The datetime when the message was created. Set by the server.
- */
     private final String createTime;
-/**
- * Raw message bytes.
- */
     private final String data;
-/**
- * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
- */
     private final Map<String,String> labels;
-/**
- * The message type for this message. MSH-9.1.
- */
     private final String messageType;
-/**
- * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
- */
     private final String name;
-/**
- * The parsed version of the raw message data.
- */
     private final ParsedDataResponse parsedData;
-/**
- * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
- */
     private final List<PatientIdResponse> patientIds;
-/**
- * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
- */
     private final SchematizedDataResponse schematizedData;
-/**
- * The hospital that this message came from. MSH-4.
- */
     private final String sendFacility;
-/**
- * The datetime the sending application sent this message. MSH-7.
- */
     private final String sendTime;
 
     @OutputCustomType.Constructor({"createTime","data","labels","messageType","name","parsedData","patientIds","schematizedData","sendFacility","sendTime"})
@@ -79,63 +49,33 @@ public final class GetMessageResult {
         this.sendTime = Objects.requireNonNull(sendTime);
     }
 
-/**
- * The datetime when the message was created. Set by the server.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * Raw message bytes.
- */
     public String getData() {
         return this.data;
     }
-/**
- * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * The message type for this message. MSH-9.1.
- */
     public String getMessageType() {
         return this.messageType;
     }
-/**
- * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The parsed version of the raw message data.
- */
     public ParsedDataResponse getParsedData() {
         return this.parsedData;
     }
-/**
- * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
- */
     public List<PatientIdResponse> getPatientIds() {
         return this.patientIds;
     }
-/**
- * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
- */
     public SchematizedDataResponse getSchematizedData() {
         return this.schematizedData;
     }
-/**
- * The hospital that this message came from. MSH-4.
- */
     public String getSendFacility() {
         return this.sendFacility;
     }
-/**
- * The datetime the sending application sent this message. MSH-7.
- */
     public String getSendTime() {
         return this.sendTime;
     }

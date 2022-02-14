@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * RevisionTemplate describes the data a revision should have when created from a template.
- */
 public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2RevisionTemplateArgs Empty = new GoogleCloudRunOpV2RevisionTemplateArgs();
 
-    /**
-     * KRM-style annotations for the resource.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -36,9 +30,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Enables Confidential Cloud Run in Revisions created using this template.
-     */
     @InputImport(name="confidential")
     private final @Nullable Input<Boolean> confidential;
 
@@ -46,9 +37,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.confidential == null ? Input.empty() : this.confidential;
     }
 
-    /**
-     * Sets the maximum number of requests that each serving instance can receive.
-     */
     @InputImport(name="containerConcurrency")
     private final @Nullable Input<Integer> containerConcurrency;
 
@@ -56,9 +44,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
     }
 
-    /**
-     * Holds the single container that defines the unit of execution for this Revision.
-     */
     @InputImport(name="containers")
     private final @Nullable Input<List<GoogleCloudRunOpV2ContainerArgs>> containers;
 
@@ -66,9 +51,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.containers == null ? Input.empty() : this.containers;
     }
 
-    /**
-     * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
-     */
     @InputImport(name="encryptionKey")
     private final @Nullable Input<String> encryptionKey;
 
@@ -76,9 +58,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
     }
 
-    /**
-     * The sandbox environment to host this Revision.
-     */
     @InputImport(name="executionEnvironment")
     private final @Nullable Input<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
 
@@ -86,9 +65,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.executionEnvironment == null ? Input.empty() : this.executionEnvironment;
     }
 
-    /**
-     * KRM-style labels for the resource.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -96,9 +72,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
-     */
     @InputImport(name="revision")
     private final @Nullable Input<String> revision;
 
@@ -106,9 +79,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.revision == null ? Input.empty() : this.revision;
     }
 
-    /**
-     * Scaling settings for this Revision.
-     */
     @InputImport(name="scaling")
     private final @Nullable Input<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
 
@@ -116,9 +86,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.scaling == null ? Input.empty() : this.scaling;
     }
 
-    /**
-     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
-     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -126,9 +93,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
-    /**
-     * Max allowed time for an instance to respond to a request.
-     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 
@@ -136,9 +100,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
-    /**
-     * A list of Volumes to make available to containers.
-     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
 
@@ -146,9 +107,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
         return this.volumes == null ? Input.empty() : this.volumes;
     }
 
-    /**
-     * VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
-     */
     @InputImport(name="vpcAccess")
     private final @Nullable Input<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
 

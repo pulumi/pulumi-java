@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Copy activity sources of tabular type.
- */
 public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TabularSourceResponse Empty = new TabularSourceResponse();
 
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -28,9 +22,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -38,9 +29,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -48,9 +36,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
-    /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -58,9 +43,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -68,9 +50,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -78,10 +57,6 @@ public final class TabularSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
-    /**
-     * Copy source type.
-Expected value is 'TabularSource'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

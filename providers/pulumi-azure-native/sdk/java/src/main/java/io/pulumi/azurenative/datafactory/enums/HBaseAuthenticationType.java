@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The authentication mechanism to use to connect to the HBase server.
- */
     @EnumType
     public enum HBaseAuthenticationType {
-/**
- * 
- */
         Anonymous("Anonymous"),
-/**
- * 
- */
         Basic("Basic");
 
         private final String value;

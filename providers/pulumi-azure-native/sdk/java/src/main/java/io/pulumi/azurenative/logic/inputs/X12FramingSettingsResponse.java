@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The X12 agreement framing settings.
- */
 public final class X12FramingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12FramingSettingsResponse Empty = new X12FramingSettingsResponse();
 
-    /**
-     * The X12 character set.
-     */
     @InputImport(name="characterSet", required=true)
     private final String characterSet;
 
@@ -27,9 +21,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
         return this.characterSet;
     }
 
-    /**
-     * The component separator.
-     */
     @InputImport(name="componentSeparator", required=true)
     private final Integer componentSeparator;
 
@@ -37,9 +28,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
         return this.componentSeparator;
     }
 
-    /**
-     * The data element separator.
-     */
     @InputImport(name="dataElementSeparator", required=true)
     private final Integer dataElementSeparator;
 
@@ -47,9 +35,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
         return this.dataElementSeparator;
     }
 
-    /**
-     * The replacement character.
-     */
     @InputImport(name="replaceCharacter", required=true)
     private final Integer replaceCharacter;
 
@@ -57,9 +42,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
         return this.replaceCharacter;
     }
 
-    /**
-     * The value indicating whether to replace separators in payload.
-     */
     @InputImport(name="replaceSeparatorsInPayload", required=true)
     private final Boolean replaceSeparatorsInPayload;
 
@@ -67,9 +49,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
         return this.replaceSeparatorsInPayload;
     }
 
-    /**
-     * The segment terminator.
-     */
     @InputImport(name="segmentTerminator", required=true)
     private final Integer segmentTerminator;
 
@@ -77,9 +56,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
         return this.segmentTerminator;
     }
 
-    /**
-     * The segment terminator suffix.
-     */
     @InputImport(name="segmentTerminatorSuffix", required=true)
     private final String segmentTerminatorSuffix;
 

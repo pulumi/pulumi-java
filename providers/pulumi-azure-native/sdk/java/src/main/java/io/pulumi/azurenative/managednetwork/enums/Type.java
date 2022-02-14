@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the connectivity type of a network structure policy
- */
     @EnumType
     public enum Type {
-/**
- * 
- */
         HubAndSpokeTopology("HubAndSpokeTopology"),
-/**
- * 
- */
         MeshTopology("MeshTopology");
 
         private final String value;

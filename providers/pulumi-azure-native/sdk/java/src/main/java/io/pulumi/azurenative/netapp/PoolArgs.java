@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PoolArgs Empty = new PoolArgs();
 
-    /**
-     * The name of the NetApp account
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -32,9 +26,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,9 +33,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the capacity pool
-     */
     @InputImport(name="poolName")
     private final @Nullable Input<String> poolName;
 
@@ -52,9 +40,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.poolName == null ? Input.empty() : this.poolName;
     }
 
-    /**
-     * The qos type of the pool
-     */
     @InputImport(name="qosType")
     private final @Nullable Input<Either<String,QosType>> qosType;
 
@@ -62,9 +47,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.qosType == null ? Input.empty() : this.qosType;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,9 +54,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The service level of the file system
-     */
     @InputImport(name="serviceLevel", required=true)
     private final Input<Either<String,ServiceLevel>> serviceLevel;
 
@@ -82,9 +61,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceLevel;
     }
 
-    /**
-     * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
-     */
     @InputImport(name="size", required=true)
     private final Input<Double> size;
 
@@ -92,9 +68,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.size;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

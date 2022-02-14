@@ -11,14 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationActionWorkspaceResponse {
-/**
- * The type of the action that will be triggered by the Automation
-Expected value is 'Workspace'.
- */
     private final String actionType;
-/**
- * The fully qualified Log Analytics Workspace Azure Resource ID.
- */
     private final @Nullable String workspaceResourceId;
 
     @OutputCustomType.Constructor({"actionType","workspaceResourceId"})
@@ -29,16 +22,9 @@ Expected value is 'Workspace'.
         this.workspaceResourceId = workspaceResourceId;
     }
 
-/**
- * The type of the action that will be triggered by the Automation
-Expected value is 'Workspace'.
- */
     public String getActionType() {
         return this.actionType;
     }
-/**
- * The fully qualified Log Analytics Workspace Azure Resource ID.
- */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }

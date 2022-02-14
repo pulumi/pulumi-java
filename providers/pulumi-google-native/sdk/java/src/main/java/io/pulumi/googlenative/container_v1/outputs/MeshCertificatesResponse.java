@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MeshCertificatesResponse {
-/**
- * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
- */
     private final Boolean enableCertificates;
 
     @OutputCustomType.Constructor({"enableCertificates"})
@@ -19,9 +16,6 @@ public final class MeshCertificatesResponse {
         this.enableCertificates = Objects.requireNonNull(enableCertificates);
     }
 
-/**
- * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
- */
     public Boolean getEnableCertificates() {
         return this.enableCertificates;
     }

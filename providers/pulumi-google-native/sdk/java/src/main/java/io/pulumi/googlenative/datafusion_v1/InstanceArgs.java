@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
-    /**
-     * List of accelerators enabled for this CDF instance.
-     */
     @InputImport(name="accelerators")
     private final @Nullable Input<List<AcceleratorArgs>> accelerators;
 
@@ -35,9 +29,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.accelerators == null ? Input.empty() : this.accelerators;
     }
 
-    /**
-     * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
-     */
     @InputImport(name="availableVersion")
     private final @Nullable Input<List<VersionArgs>> availableVersion;
 
@@ -45,9 +36,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.availableVersion == null ? Input.empty() : this.availableVersion;
     }
 
-    /**
-     * The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature.
-     */
     @InputImport(name="cryptoKeyConfig")
     private final @Nullable Input<CryptoKeyConfigArgs> cryptoKeyConfig;
 
@@ -55,9 +43,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.cryptoKeyConfig == null ? Input.empty() : this.cryptoKeyConfig;
     }
 
-    /**
-     * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
-     */
     @InputImport(name="dataprocServiceAccount")
     private final @Nullable Input<String> dataprocServiceAccount;
 
@@ -65,9 +50,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataprocServiceAccount == null ? Input.empty() : this.dataprocServiceAccount;
     }
 
-    /**
-     * A description of this instance.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -75,9 +57,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Display name for an instance.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -85,9 +64,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Option to enable granular role-based access control.
-     */
     @InputImport(name="enableRbac")
     private final @Nullable Input<Boolean> enableRbac;
 
@@ -95,9 +71,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableRbac == null ? Input.empty() : this.enableRbac;
     }
 
-    /**
-     * Option to enable Stackdriver Logging.
-     */
     @InputImport(name="enableStackdriverLogging")
     private final @Nullable Input<Boolean> enableStackdriverLogging;
 
@@ -105,9 +78,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableStackdriverLogging == null ? Input.empty() : this.enableStackdriverLogging;
     }
 
-    /**
-     * Option to enable Stackdriver Monitoring.
-     */
     @InputImport(name="enableStackdriverMonitoring")
     private final @Nullable Input<Boolean> enableStackdriverMonitoring;
 
@@ -115,9 +85,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableStackdriverMonitoring == null ? Input.empty() : this.enableStackdriverMonitoring;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -125,9 +92,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
-    /**
-     * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character '=' is not allowed to be used within the labels.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -135,9 +99,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -145,9 +106,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Network configuration options. These are required when a private Data Fusion instance is to be created.
-     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
@@ -155,9 +113,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
-    /**
-     * Map of additional options used to configure the behavior of Data Fusion instance.
-     */
     @InputImport(name="options")
     private final @Nullable Input<Map<String,String>> options;
 
@@ -165,9 +120,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
-    /**
-     * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
-     */
     @InputImport(name="privateInstance")
     private final @Nullable Input<Boolean> privateInstance;
 
@@ -175,9 +127,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateInstance == null ? Input.empty() : this.privateInstance;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -185,9 +134,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Instance type.
-     */
     @InputImport(name="type", required=true)
     private final Input<InstanceType> type;
 
@@ -195,9 +141,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
-    /**
-     * Current version of the Data Fusion. Only specifiable in Update.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -205,9 +148,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.version == null ? Input.empty() : this.version;
     }
 
-    /**
-     * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
-     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

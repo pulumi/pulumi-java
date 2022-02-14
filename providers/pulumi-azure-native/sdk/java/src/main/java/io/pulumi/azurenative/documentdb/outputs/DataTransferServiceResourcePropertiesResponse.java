@@ -14,30 +14,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataTransferServiceResourcePropertiesResponse {
-/**
- * Time of the last state change (ISO-8601 format).
- */
     private final String creationTime;
-/**
- * Instance count for the service.
- */
     private final @Nullable Integer instanceCount;
-/**
- * Instance type for the service.
- */
     private final @Nullable String instanceSize;
-/**
- * An array that contains all of the locations for the service.
- */
     private final List<DataTransferRegionalServiceResourceResponse> locations;
-/**
- * ServiceType for the service.
-Expected value is 'DataTransfer'.
- */
     private final String serviceType;
-/**
- * Describes the status of a service.
- */
     private final String status;
 
     @OutputCustomType.Constructor({"creationTime","instanceCount","instanceSize","locations","serviceType","status"})
@@ -56,40 +37,21 @@ Expected value is 'DataTransfer'.
         this.status = Objects.requireNonNull(status);
     }
 
-/**
- * Time of the last state change (ISO-8601 format).
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * Instance count for the service.
- */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
-/**
- * Instance type for the service.
- */
     public Optional<String> getInstanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
-/**
- * An array that contains all of the locations for the service.
- */
     public List<DataTransferRegionalServiceResourceResponse> getLocations() {
         return this.locations;
     }
-/**
- * ServiceType for the service.
-Expected value is 'DataTransfer'.
- */
     public String getServiceType() {
         return this.serviceType;
     }
-/**
- * Describes the status of a service.
- */
     public String getStatus() {
         return this.status;
     }

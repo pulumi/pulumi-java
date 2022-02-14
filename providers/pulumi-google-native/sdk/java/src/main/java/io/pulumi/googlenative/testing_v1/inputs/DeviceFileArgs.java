@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A single device file description.
- */
 public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceFileArgs Empty = new DeviceFileArgs();
 
-    /**
-     * A reference to an opaque binary blob file.
-     */
     @InputImport(name="obbFile")
     private final @Nullable Input<ObbFileArgs> obbFile;
 
@@ -28,9 +22,6 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
         return this.obbFile == null ? Input.empty() : this.obbFile;
     }
 
-    /**
-     * A reference to a regular file.
-     */
     @InputImport(name="regularFile")
     private final @Nullable Input<RegularFileArgs> regularFile;
 

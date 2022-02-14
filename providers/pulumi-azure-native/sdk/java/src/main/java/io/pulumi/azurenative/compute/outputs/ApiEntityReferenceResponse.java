@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiEntityReferenceResponse {
-/**
- * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -21,9 +18,6 @@ public final class ApiEntityReferenceResponse {
         this.id = id;
     }
 
-/**
- * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

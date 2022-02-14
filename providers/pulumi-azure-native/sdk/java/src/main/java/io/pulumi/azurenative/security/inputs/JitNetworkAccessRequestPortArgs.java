@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitNetworkAccessRequestPortArgs Empty = new JitNetworkAccessRequestPortArgs();
 
-    /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
-     */
     @InputImport(name="allowedSourceAddressPrefix")
     private final @Nullable Input<String> allowedSourceAddressPrefix;
 
@@ -32,9 +26,6 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
         return this.allowedSourceAddressPrefix == null ? Input.empty() : this.allowedSourceAddressPrefix;
     }
 
-    /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
-     */
     @InputImport(name="allowedSourceAddressPrefixes")
     private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
 
@@ -42,9 +33,6 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
         return this.allowedSourceAddressPrefixes == null ? Input.empty() : this.allowedSourceAddressPrefixes;
     }
 
-    /**
-     * The date & time at which the request ends in UTC
-     */
     @InputImport(name="endTimeUtc", required=true)
     private final Input<String> endTimeUtc;
 
@@ -52,9 +40,6 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
         return this.endTimeUtc;
     }
 
-    /**
-     * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-     */
     @InputImport(name="mappedPort")
     private final @Nullable Input<Integer> mappedPort;
 
@@ -62,9 +47,6 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
         return this.mappedPort == null ? Input.empty() : this.mappedPort;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="number", required=true)
     private final Input<Integer> number;
 
@@ -72,9 +54,6 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
         return this.number;
     }
 
-    /**
-     * The status of the port
-     */
     @InputImport(name="status", required=true)
     private final Input<Either<String,Status>> status;
 
@@ -82,9 +61,6 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
         return this.status;
     }
 
-    /**
-     * A description of why the `status` has its value
-     */
     @InputImport(name="statusReason", required=true)
     private final Input<Either<String,StatusReason>> statusReason;
 

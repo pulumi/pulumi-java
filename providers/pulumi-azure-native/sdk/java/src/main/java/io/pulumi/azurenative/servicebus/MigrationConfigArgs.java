@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrationConfigArgs Empty = new MigrationConfigArgs();
 
-    /**
-     * The configuration name. Should always be "$default".
-     */
     @InputImport(name="configName")
     private final @Nullable Input<String> configName;
 
@@ -27,9 +21,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.configName == null ? Input.empty() : this.configName;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -37,9 +28,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.namespaceName;
     }
 
-    /**
-     * Name to access Standard Namespace after migration
-     */
     @InputImport(name="postMigrationName", required=true)
     private final Input<String> postMigrationName;
 
@@ -47,9 +35,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.postMigrationName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Existing premium Namespace ARM Id name which has no entities, will be used for migration
-     */
     @InputImport(name="targetNamespace", required=true)
     private final Input<String> targetNamespace;
 

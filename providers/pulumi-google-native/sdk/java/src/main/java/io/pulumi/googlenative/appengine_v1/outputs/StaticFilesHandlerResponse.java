@@ -11,33 +11,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StaticFilesHandlerResponse {
-/**
- * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
- */
     private final Boolean applicationReadable;
-/**
- * Time a static file served by this handler should be cached by web proxies and browsers.
- */
     private final String expiration;
-/**
- * HTTP headers to use for all responses from these URLs.
- */
     private final Map<String,String> httpHeaders;
-/**
- * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
- */
     private final String mimeType;
-/**
- * Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
- */
     private final String path;
-/**
- * Whether this handler should match the request if the file referenced by the handler does not exist.
- */
     private final Boolean requireMatchingFile;
-/**
- * Regular expression that matches the file paths for all files that should be referenced by this handler.
- */
     private final String uploadPathRegex;
 
     @OutputCustomType.Constructor({"applicationReadable","expiration","httpHeaders","mimeType","path","requireMatchingFile","uploadPathRegex"})
@@ -58,45 +37,24 @@ public final class StaticFilesHandlerResponse {
         this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex);
     }
 
-/**
- * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
- */
     public Boolean getApplicationReadable() {
         return this.applicationReadable;
     }
-/**
- * Time a static file served by this handler should be cached by web proxies and browsers.
- */
     public String getExpiration() {
         return this.expiration;
     }
-/**
- * HTTP headers to use for all responses from these URLs.
- */
     public Map<String,String> getHttpHeaders() {
         return this.httpHeaders;
     }
-/**
- * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
- */
     public String getMimeType() {
         return this.mimeType;
     }
-/**
- * Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
- */
     public String getPath() {
         return this.path;
     }
-/**
- * Whether this handler should match the request if the file referenced by the handler does not exist.
- */
     public Boolean getRequireMatchingFile() {
         return this.requireMatchingFile;
     }
-/**
- * Regular expression that matches the file paths for all files that should be referenced by this handler.
- */
     public String getUploadPathRegex() {
         return this.uploadPathRegex;
     }

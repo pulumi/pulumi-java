@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration used to bootstrap a Pipeline.
- */
 public final class BootstrapConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BootstrapConfigurationArgs Empty = new BootstrapConfigurationArgs();
 
-    /**
-     * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
-     */
     @InputImport(name="sourceRepository")
     private final @Nullable Input<CodeRepositoryArgs> sourceRepository;
 
@@ -28,9 +22,6 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
         return this.sourceRepository == null ? Input.empty() : this.sourceRepository;
     }
 
-    /**
-     * Template used to bootstrap the pipeline.
-     */
     @InputImport(name="template", required=true)
     private final Input<PipelineTemplateArgs> template;
 

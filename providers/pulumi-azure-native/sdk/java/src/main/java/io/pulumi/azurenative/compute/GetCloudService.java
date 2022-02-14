@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudService {
-/**
- * Describes the cloud service.
-API Version: 2021-03-01.
- *
- * Describes the cloud service.
- */
     public static CompletableFuture<GetCloudServiceResult> invokeAsync(GetCloudServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getCloudService", TypeShape.of(GetCloudServiceResult.class), args == null ? GetCloudServiceArgs.Empty : args, Utilities.withVersion(options));
     }

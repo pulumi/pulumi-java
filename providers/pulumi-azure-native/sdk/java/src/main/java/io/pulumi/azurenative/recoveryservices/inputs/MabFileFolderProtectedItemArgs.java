@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MAB workload-specific backup item.
- */
 public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MabFileFolderProtectedItemArgs Empty = new MabFileFolderProtectedItemArgs();
 
-    /**
-     * Type of backup management for the backed up item.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -34,9 +28,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
-    /**
-     * Name of the backup set the backup item belongs to
-     */
     @InputImport(name="backupSetName")
     private final @Nullable Input<String> backupSetName;
 
@@ -44,9 +35,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
     }
 
-    /**
-     * Name of the computer associated with this backup item.
-     */
     @InputImport(name="computerName")
     private final @Nullable Input<String> computerName;
 
@@ -54,9 +42,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.computerName == null ? Input.empty() : this.computerName;
     }
 
-    /**
-     * Unique name of container
-     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -64,9 +49,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
-    /**
-     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -74,9 +56,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
-    /**
-     * Sync time for deferred deletion in UTC
-     */
     @InputImport(name="deferredDeleteSyncTimeInUTC")
     private final @Nullable Input<Double> deferredDeleteSyncTimeInUTC;
 
@@ -84,9 +63,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.deferredDeleteSyncTimeInUTC == null ? Input.empty() : this.deferredDeleteSyncTimeInUTC;
     }
 
-    /**
-     * Time for deferred deletion in UTC
-     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
@@ -94,9 +70,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
     }
 
-    /**
-     * Time remaining before the DS marked for deferred delete is permanently deleted
-     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
@@ -104,9 +77,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
     }
 
-    /**
-     * Additional information with this backup item.
-     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo;
 
@@ -114,9 +84,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
-    /**
-     * Friendly name of this backup item.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -124,9 +91,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
-    /**
-     * Flag to identify whether the deferred deleted DS is to be purged soon
-     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
@@ -134,9 +98,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
-    /**
-     * Flag to identify that deferred deleted DS is to be moved into Pause state
-     */
     @InputImport(name="isRehydrate")
     private final @Nullable Input<Boolean> isRehydrate;
 
@@ -144,9 +105,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
     }
 
-    /**
-     * Flag to identify whether the DS is scheduled for deferred delete
-     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
@@ -154,9 +112,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
     }
 
-    /**
-     * Status of last backup operation.
-     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable Input<String> lastBackupStatus;
 
@@ -164,9 +119,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
     }
 
-    /**
-     * Timestamp of the last backup operation on this backup item.
-     */
     @InputImport(name="lastBackupTime")
     private final @Nullable Input<String> lastBackupTime;
 
@@ -174,9 +126,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
     }
 
-    /**
-     * Timestamp when the last (latest) backup copy was created for this backup item.
-     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable Input<String> lastRecoveryPoint;
 
@@ -184,9 +133,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
     }
 
-    /**
-     * ID of the backup policy with which this item is backed up.
-     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -194,10 +140,6 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
-    /**
-     * backup item type.
-Expected value is 'MabFileFolderProtectedItem'.
-     */
     @InputImport(name="protectedItemType", required=true)
     private final Input<String> protectedItemType;
 
@@ -205,9 +147,6 @@ Expected value is 'MabFileFolderProtectedItem'.
         return this.protectedItemType;
     }
 
-    /**
-     * Protected, ProtectionStopped, IRPending or ProtectionError
-     */
     @InputImport(name="protectionState")
     private final @Nullable Input<String> protectionState;
 
@@ -215,9 +154,6 @@ Expected value is 'MabFileFolderProtectedItem'.
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
-    /**
-     * ARM ID of the resource to be backed up.
-     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -225,9 +161,6 @@ Expected value is 'MabFileFolderProtectedItem'.
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
-    /**
-     * Type of workload this item represents.
-     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 

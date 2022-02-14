@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Cluster principal role.
- */
     @EnumType
     public enum ClusterPrincipalRole {
-/**
- * 
- */
         AllDatabasesAdmin("AllDatabasesAdmin"),
-/**
- * 
- */
         AllDatabasesViewer("AllDatabasesViewer");
 
         private final String value;

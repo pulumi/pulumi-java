@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final Input<String> appId;
 
@@ -28,9 +22,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.appId;
     }
 
-    /**
-     * Relative name of the domain serving the application. Example: example.com.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -38,9 +29,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="noManagedCertificate")
     private final @Nullable Input<String> noManagedCertificate;
 
@@ -48,9 +36,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.noManagedCertificate == null ? Input.empty() : this.noManagedCertificate;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="overrideStrategy")
     private final @Nullable Input<String> overrideStrategy;
 
@@ -58,9 +43,6 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.overrideStrategy == null ? Input.empty() : this.overrideStrategy;
     }
 
-    /**
-     * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
-     */
     @InputImport(name="sslSettings")
     private final @Nullable Input<SslSettingsArgs> sslSettings;
 

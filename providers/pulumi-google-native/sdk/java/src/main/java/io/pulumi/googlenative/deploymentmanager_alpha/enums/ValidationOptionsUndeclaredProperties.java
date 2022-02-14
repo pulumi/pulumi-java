@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specify what to do with extra properties when executing a request.
- */
     @EnumType
     public enum ValidationOptionsUndeclaredProperties {
-/**
- * 
- */
         Unknown("UNKNOWN"),
-/**
- * Always include even if not present on discovery doc.
- */
         Include("INCLUDE"),
-/**
- * Always ignore if not present on discovery doc.
- */
         Ignore("IGNORE"),
-/**
- * Include on request, but emit a warning.
- */
         IncludeWithWarnings("INCLUDE_WITH_WARNINGS"),
-/**
- * Ignore properties, but emit a warning.
- */
         IgnoreWithWarnings("IGNORE_WITH_WARNINGS"),
-/**
- * Always fail if undeclared properties are present.
- */
         Fail("FAIL");
 
         private final String value;

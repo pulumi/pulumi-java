@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a category of labels in a labeling job.
- */
 public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabelCategoryResponse Empty = new LabelCategoryResponse();
 
-    /**
-     * Indicates whether it is allowed to select multiple classes in this category.
-     */
     @InputImport(name="allowMultiSelect")
     private final @Nullable Boolean allowMultiSelect;
 
@@ -30,9 +24,6 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.allowMultiSelect == null ? Optional.empty() : Optional.ofNullable(this.allowMultiSelect);
     }
 
-    /**
-     * Dictionary of label classes in this category.
-     */
     @InputImport(name="classes", required=true)
     private final Map<String,LabelClassResponse> classes;
 
@@ -40,9 +31,6 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
         return this.classes;
     }
 
-    /**
-     * Display name of the label category.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
-    /**
-     * Identifier of the certificate entity. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="certificateId")
     private final @Nullable Input<String> certificateId;
 
@@ -28,9 +22,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
-    /**
-     * Base 64 encoded certificate using the application/x-pkcs12 representation.
-     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -38,9 +29,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
-    /**
-     * KeyVault location details of the certificate.
-     */
     @InputImport(name="keyVault")
     private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
 
@@ -48,9 +36,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVault == null ? Input.empty() : this.keyVault;
     }
 
-    /**
-     * Password for the Certificate
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -58,9 +43,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +50,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

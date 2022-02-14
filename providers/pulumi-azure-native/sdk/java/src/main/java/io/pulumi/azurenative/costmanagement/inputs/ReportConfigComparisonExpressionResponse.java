@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The comparison expression to be used in the report.
- */
 public final class ReportConfigComparisonExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportConfigComparisonExpressionResponse Empty = new ReportConfigComparisonExpressionResponse();
 
-    /**
-     * The name of the column to use in comparison.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,9 +20,6 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
         return this.name;
     }
 
-    /**
-     * The operator to use for comparison.
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -36,9 +27,6 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
         return this.operator;
     }
 
-    /**
-     * Array of values to use for comparison
-     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

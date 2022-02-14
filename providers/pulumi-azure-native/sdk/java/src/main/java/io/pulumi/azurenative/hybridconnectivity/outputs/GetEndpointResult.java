@@ -11,49 +11,16 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEndpointResult {
-/**
- * The timestamp of resource creation (UTC).
- */
     private final @Nullable String createdAt;
-/**
- * The identity that created the resource.
- */
     private final @Nullable String createdBy;
-/**
- * The type of identity that created the resource.
- */
     private final @Nullable String createdByType;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The timestamp of resource last modification (UTC)
- */
     private final @Nullable String lastModifiedAt;
-/**
- * The identity that last modified the resource.
- */
     private final @Nullable String lastModifiedBy;
-/**
- * The type of identity that last modified the resource.
- */
     private final @Nullable String lastModifiedByType;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * 
- */
     private final String provisioningState;
-/**
- * The resource Id of the connectivity endpoint (optional).
- */
     private final @Nullable String resourceId;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","id","lastModifiedAt","lastModifiedBy","lastModifiedByType","name","provisioningState","resourceId","type"})
@@ -82,69 +49,36 @@ public final class GetEndpointResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The timestamp of resource creation (UTC).
- */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
-/**
- * The identity that created the resource.
- */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
-/**
- * The type of identity that created the resource.
- */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The timestamp of resource last modification (UTC)
- */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
-/**
- * The identity that last modified the resource.
- */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
-/**
- * The type of identity that last modified the resource.
- */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The resource Id of the connectivity endpoint (optional).
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionDetailsResponse {
-/**
- * The key encryption key certificate expiry date.
- */
     private final @Nullable String kekCertExpiryDate;
-/**
- * The key encryption key certificate thumbprint.
- */
     private final @Nullable String kekCertThumbprint;
-/**
- * The key encryption key state for the Vmm.
- */
     private final @Nullable String kekState;
 
     @OutputCustomType.Constructor({"kekCertExpiryDate","kekCertThumbprint","kekState"})
@@ -34,21 +25,12 @@ public final class EncryptionDetailsResponse {
         this.kekState = kekState;
     }
 
-/**
- * The key encryption key certificate expiry date.
- */
     public Optional<String> getKekCertExpiryDate() {
         return Optional.ofNullable(this.kekCertExpiryDate);
     }
-/**
- * The key encryption key certificate thumbprint.
- */
     public Optional<String> getKekCertThumbprint() {
         return Optional.ofNullable(this.kekCertThumbprint);
     }
-/**
- * The key encryption key state for the Vmm.
- */
     public Optional<String> getKekState() {
         return Optional.ofNullable(this.kekState);
     }

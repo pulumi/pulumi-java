@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration needed to perform TLS termination & initiation.
- */
 public final class FirewallPolicyTransportSecurityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyTransportSecurityResponse Empty = new FirewallPolicyTransportSecurityResponse();
 
-    /**
-     * The CA used for intermediate CA generation.
-     */
     @InputImport(name="certificateAuthority")
     private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 

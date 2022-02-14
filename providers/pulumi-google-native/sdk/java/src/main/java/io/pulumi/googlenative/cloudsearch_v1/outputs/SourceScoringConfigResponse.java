@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceScoringConfigResponse {
-/**
- * Importance of the source.
- */
     private final String sourceImportance;
 
     @OutputCustomType.Constructor({"sourceImportance"})
@@ -19,9 +16,6 @@ public final class SourceScoringConfigResponse {
         this.sourceImportance = Objects.requireNonNull(sourceImportance);
     }
 
-/**
- * Importance of the source.
- */
     public String getSourceImportance() {
         return this.sourceImportance;
     }

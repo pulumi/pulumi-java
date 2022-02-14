@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Repository containing the source code for a pipeline.
- */
 public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CodeRepositoryResponse Empty = new CodeRepositoryResponse();
 
-    /**
-     * Authorization info to access the code repository.
-     */
     @InputImport(name="authorization")
     private final @Nullable AuthorizationResponse authorization;
 
@@ -29,9 +23,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
         return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
     }
 
-    /**
-     * Default branch used to configure Continuous Integration (CI) in the pipeline.
-     */
     @InputImport(name="defaultBranch", required=true)
     private final String defaultBranch;
 
@@ -39,9 +30,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
         return this.defaultBranch;
     }
 
-    /**
-     * Unique immutable identifier of the code repository.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -49,9 +37,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
         return this.id;
     }
 
-    /**
-     * Repository-specific properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -59,9 +44,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * Type of code repository.
-     */
     @InputImport(name="repositoryType", required=true)
     private final String repositoryType;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The card for presenting a list of options to select from.
- */
 public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse();
 
-    /**
-     * List items.
-     */
     @InputImport(name="items", required=true)
     private final List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
         return this.items;
     }
 
-    /**
-     * Optional. Subtitle of the list.
-     */
     @InputImport(name="subtitle", required=true)
     private final String subtitle;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse e
         return this.subtitle;
     }
 
-    /**
-     * Optional. The overall title of the list.
-     */
     @InputImport(name="title", required=true)
     private final String title;
 

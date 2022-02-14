@@ -14,33 +14,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationRuleModifyPropertiesActionResponseActionConfiguration {
-/**
- * The reason the incident was closed
- */
     private final @Nullable String classification;
-/**
- * Describes the reason the incident was closed
- */
     private final @Nullable String classificationComment;
-/**
- * The classification reason to close the incident with
- */
     private final @Nullable String classificationReason;
-/**
- * List of labels to add to the incident
- */
     private final @Nullable List<IncidentLabelResponse> labels;
-/**
- * Describes a user that the incident is assigned to
- */
     private final @Nullable IncidentOwnerInfoResponse owner;
-/**
- * The severity of the incident
- */
     private final @Nullable String severity;
-/**
- * The status of the incident
- */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"classification","classificationComment","classificationReason","labels","owner","severity","status"})
@@ -61,45 +40,24 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
         this.status = status;
     }
 
-/**
- * The reason the incident was closed
- */
     public Optional<String> getClassification() {
         return Optional.ofNullable(this.classification);
     }
-/**
- * Describes the reason the incident was closed
- */
     public Optional<String> getClassificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
-/**
- * The classification reason to close the incident with
- */
     public Optional<String> getClassificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
-/**
- * List of labels to add to the incident
- */
     public List<IncidentLabelResponse> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
-/**
- * Describes a user that the incident is assigned to
- */
     public Optional<IncidentOwnerInfoResponse> getOwner() {
         return Optional.ofNullable(this.owner);
     }
-/**
- * The severity of the incident
- */
     public Optional<String> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
-/**
- * The status of the incident
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

@@ -8,34 +8,13 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Provisioning state of the migrate project.
- */
     @EnumType
     public enum ProvisioningState {
-/**
- * 
- */
         Accepted("Accepted"),
-/**
- * 
- */
         Creating("Creating"),
-/**
- * 
- */
         Deleting("Deleting"),
-/**
- * 
- */
         Failed("Failed"),
-/**
- * 
- */
         Moving("Moving"),
-/**
- * 
- */
         Succeeded("Succeeded");
 
         private final String value;

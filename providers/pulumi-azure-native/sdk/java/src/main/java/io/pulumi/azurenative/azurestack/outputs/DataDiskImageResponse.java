@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataDiskImageResponse {
-/**
- * The LUN.
- */
     private final Integer lun;
-/**
- * SAS key for source blob.
- */
     private final String sourceBlobSasUri;
 
     @OutputCustomType.Constructor({"lun","sourceBlobSasUri"})
@@ -27,15 +21,9 @@ public final class DataDiskImageResponse {
         this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
     }
 
-/**
- * The LUN.
- */
     public Integer getLun() {
         return this.lun;
     }
-/**
- * SAS key for source blob.
- */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }

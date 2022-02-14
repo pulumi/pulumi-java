@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityConnector {
-/**
- * The security connector resource.
-API Version: 2021-07-01-preview.
- *
- * The security connector resource.
- */
     public static CompletableFuture<GetSecurityConnectorResult> invokeAsync(GetSecurityConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getSecurityConnector", TypeShape.of(GetSecurityConnectorResult.class), args == null ? GetSecurityConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

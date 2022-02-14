@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Settings for WorkerPool autoscaling.
- */
 public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscalingSettingsArgs Empty = new AutoscalingSettingsArgs();
 
-    /**
-     * The algorithm to use for autoscaling.
-     */
     @InputImport(name="algorithm")
     private final @Nullable Input<AutoscalingSettingsAlgorithm> algorithm;
 
@@ -28,9 +22,6 @@ public final class AutoscalingSettingsArgs extends io.pulumi.resources.ResourceA
         return this.algorithm == null ? Input.empty() : this.algorithm;
     }
 
-    /**
-     * The maximum number of workers to cap scaling at.
-     */
     @InputImport(name="maxNumWorkers")
     private final @Nullable Input<Integer> maxNumWorkers;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The configuration for continuous tests.
- */
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse Empty = new GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse();
 
-    /**
-     * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
-     */
     @InputImport(name="enableContinuousRun", required=true)
     private final Boolean enableContinuousRun;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
         return this.enableContinuousRun;
     }
 
-    /**
-     * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
-     */
     @InputImport(name="enablePredeploymentRun", required=true)
     private final Boolean enablePredeploymentRun;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
         return this.enablePredeploymentRun;
     }
 
-    /**
-     * A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
-     */
     @InputImport(name="testCases", required=true)
     private final List<String> testCases;
 

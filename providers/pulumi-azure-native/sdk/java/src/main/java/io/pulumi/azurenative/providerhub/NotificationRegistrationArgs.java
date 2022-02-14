@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotificationRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationRegistrationArgs Empty = new NotificationRegistrationArgs();
 
-    /**
-     * The notification registration.
-     */
     @InputImport(name="notificationRegistrationName")
     private final @Nullable Input<String> notificationRegistrationName;
 
@@ -28,9 +22,6 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
         return this.notificationRegistrationName == null ? Input.empty() : this.notificationRegistrationName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<NotificationRegistrationPropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource provider hosted within ProviderHub.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 

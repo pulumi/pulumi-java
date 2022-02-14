@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketBillingResponse {
-/**
- * When set to true, Requester Pays is enabled for this bucket.
- */
     private final Boolean requesterPays;
 
     @OutputCustomType.Constructor({"requesterPays"})
@@ -19,9 +16,6 @@ public final class BucketBillingResponse {
         this.requesterPays = Objects.requireNonNull(requesterPays);
     }
 
-/**
- * When set to true, Requester Pays is enabled for this bucket.
- */
     public Boolean getRequesterPays() {
         return this.requesterPays;
     }

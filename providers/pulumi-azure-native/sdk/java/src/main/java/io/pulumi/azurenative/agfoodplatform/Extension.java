@@ -15,210 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Extension resource.
-API Version: 2020-05-12-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Extensions_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var extension = new AzureNative.AgFoodPlatform.Extension("extension", new AzureNative.AgFoodPlatform.ExtensionArgs
-        {
-            ExtensionId = "provider.extension",
-            FarmBeatsResourceName = "examples-farmbeatsResourceName",
-            ResourceGroupName = "examples-rg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	agfoodplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/agfoodplatform"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := agfoodplatform.NewExtension(ctx, "extension", &agfoodplatform.ExtensionArgs{
-			ExtensionId:           pulumi.String("provider.extension"),
-			FarmBeatsResourceName: pulumi.String("examples-farmbeatsResourceName"),
-			ResourceGroupName:     pulumi.String("examples-rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const extension = new azure_native.agfoodplatform.Extension("extension", {
-    extensionId: "provider.extension",
-    farmBeatsResourceName: "examples-farmbeatsResourceName",
-    resourceGroupName: "examples-rg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-extension = azure_native.agfoodplatform.Extension("extension",
-    extension_id="provider.extension",
-    farm_beats_resource_name="examples-farmbeatsResourceName",
-    resource_group_name="examples-rg")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:agfoodplatform:Extension provider.extension /subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/examples-rg/Microsoft.AgFoodPlatform/farmBeats/examples-farmbeatsResourceName/extensions/provider.extension 
-```
-
- */
 @ResourceType(type="azure-native:agfoodplatform:Extension")
 public class Extension extends io.pulumi.resources.CustomResource {
-    /**
-     * The ETag value to implement optimistic concurrency.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
-    /**
-     * @return The ETag value to implement optimistic concurrency.
-     */
     public Output<String> getETag() {
         return this.eTag;
     }
-    /**
-     * Extension api docs link.
-     */
     @OutputExport(name="extensionApiDocsLink", type=String.class, parameters={})
     private Output<String> extensionApiDocsLink;
 
-    /**
-     * @return Extension api docs link.
-     */
     public Output<String> getExtensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
-    /**
-     * Extension auth link.
-     */
     @OutputExport(name="extensionAuthLink", type=String.class, parameters={})
     private Output<String> extensionAuthLink;
 
-    /**
-     * @return Extension auth link.
-     */
     public Output<String> getExtensionAuthLink() {
         return this.extensionAuthLink;
     }
-    /**
-     * Extension category. e.g. weather/sensor/satellite.
-     */
     @OutputExport(name="extensionCategory", type=String.class, parameters={})
     private Output<String> extensionCategory;
 
-    /**
-     * @return Extension category. e.g. weather/sensor/satellite.
-     */
     public Output<String> getExtensionCategory() {
         return this.extensionCategory;
     }
-    /**
-     * Extension Id.
-     */
     @OutputExport(name="extensionId", type=String.class, parameters={})
     private Output<String> extensionId;
 
-    /**
-     * @return Extension Id.
-     */
     public Output<String> getExtensionId() {
         return this.extensionId;
     }
-    /**
-     * Installed extension version.
-     */
     @OutputExport(name="installedExtensionVersion", type=String.class, parameters={})
     private Output<String> installedExtensionVersion;
 
-    /**
-     * @return Installed extension version.
-     */
     public Output<String> getInstalledExtensionVersion() {
         return this.installedExtensionVersion;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Extension(String name, ExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:agfoodplatform:Extension", name, args == null ? ExtensionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -237,14 +90,6 @@ public class Extension extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Extension get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Extension(name, id, options);
     }

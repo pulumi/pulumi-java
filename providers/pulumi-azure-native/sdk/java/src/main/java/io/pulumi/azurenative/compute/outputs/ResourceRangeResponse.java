@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceRangeResponse {
-/**
- * The maximum number of the resource.
- */
     private final @Nullable Integer max;
-/**
- * The minimum number of the resource.
- */
     private final @Nullable Integer min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -28,15 +22,9 @@ public final class ResourceRangeResponse {
         this.min = min;
     }
 
-/**
- * The maximum number of the resource.
- */
     public Optional<Integer> getMax() {
         return Optional.ofNullable(this.max);
     }
-/**
- * The minimum number of the resource.
- */
     public Optional<Integer> getMin() {
         return Optional.ofNullable(this.min);
     }

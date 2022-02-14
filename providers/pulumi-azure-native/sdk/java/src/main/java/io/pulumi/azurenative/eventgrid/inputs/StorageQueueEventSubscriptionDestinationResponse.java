@@ -10,17 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about the storage queue destination for an event subscription.
- */
 public final class StorageQueueEventSubscriptionDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageQueueEventSubscriptionDestinationResponse Empty = new StorageQueueEventSubscriptionDestinationResponse();
 
-    /**
-     * Type of the endpoint for the event subscription destination.
-Expected value is 'StorageQueue'.
-     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -28,9 +21,6 @@ Expected value is 'StorageQueue'.
         return this.endpointType;
     }
 
-    /**
-     * The name of the Storage queue under a storage account that is the destination of an event subscription.
-     */
     @InputImport(name="queueName")
     private final @Nullable String queueName;
 
@@ -38,9 +28,6 @@ Expected value is 'StorageQueue'.
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
     }
 
-    /**
-     * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
-     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

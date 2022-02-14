@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutoStoragePropertiesResponse {
-/**
- * The UTC time at which storage keys were last synchronized with the Batch account.
- */
     private final String lastKeySync;
-/**
- * The resource ID of the storage account to be used for auto-storage account.
- */
     private final String storageAccountId;
 
     @OutputCustomType.Constructor({"lastKeySync","storageAccountId"})
@@ -26,15 +20,9 @@ public final class AutoStoragePropertiesResponse {
         this.storageAccountId = Objects.requireNonNull(storageAccountId);
     }
 
-/**
- * The UTC time at which storage keys were last synchronized with the Batch account.
- */
     public String getLastKeySync() {
         return this.lastKeySync;
     }
-/**
- * The resource ID of the storage account to be used for auto-storage account.
- */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The pricing tier of the web application firewall policy.
- */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
-    /**
-     * Name of the pricing tier.
-     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,SkuName>> name;
 

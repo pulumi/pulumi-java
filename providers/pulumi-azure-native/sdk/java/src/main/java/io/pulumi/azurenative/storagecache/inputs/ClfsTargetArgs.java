@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties pertaining to the ClfsTarget
- */
 public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClfsTargetArgs Empty = new ClfsTargetArgs();
 
-    /**
-     * Resource ID of storage container.
-     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

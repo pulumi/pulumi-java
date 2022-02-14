@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HDInsightResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final HDInsightResponseProperties Empty = new HDInsightResponseProperties();
 
-    /**
-     * Public IP address of the master node of the cluster.
-     */
     @InputImport(name="address")
     private final @Nullable String address;
 
@@ -29,9 +23,6 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
-    /**
-     * Admin credentials for master node of the cluster
-     */
     @InputImport(name="administratorAccount")
     private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
@@ -39,9 +30,6 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
         return this.administratorAccount == null ? Optional.empty() : Optional.ofNullable(this.administratorAccount);
     }
 
-    /**
-     * Port open for ssh connections on the master node of the cluster.
-     */
     @InputImport(name="sshPort")
     private final @Nullable Integer sshPort;
 

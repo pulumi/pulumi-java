@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies a file available as a Cloud Storage Object.
- */
 public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceFileGcsArgs Empty = new OSPolicyResourceFileGcsArgs();
 
-    /**
-     * Bucket of the Cloud Storage object.
-     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -27,9 +21,6 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
         return this.bucket;
     }
 
-    /**
-     * Generation number of the Cloud Storage object.
-     */
     @InputImport(name="generation")
     private final @Nullable Input<String> generation;
 
@@ -37,9 +28,6 @@ public final class OSPolicyResourceFileGcsArgs extends io.pulumi.resources.Resou
         return this.generation == null ? Input.empty() : this.generation;
     }
 
-    /**
-     * Name of the Cloud Storage object.
-     */
     @InputImport(name="object", required=true)
     private final Input<String> object;
 

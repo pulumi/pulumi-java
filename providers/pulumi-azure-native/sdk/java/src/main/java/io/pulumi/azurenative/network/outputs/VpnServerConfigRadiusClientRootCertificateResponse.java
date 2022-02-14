@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VpnServerConfigRadiusClientRootCertificateResponse {
-/**
- * The certificate name.
- */
     private final @Nullable String name;
-/**
- * The Radius client root certificate thumbprint.
- */
     private final @Nullable String thumbprint;
 
     @OutputCustomType.Constructor({"name","thumbprint"})
@@ -28,15 +22,9 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse {
         this.thumbprint = thumbprint;
     }
 
-/**
- * The certificate name.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The Radius client root certificate thumbprint.
- */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

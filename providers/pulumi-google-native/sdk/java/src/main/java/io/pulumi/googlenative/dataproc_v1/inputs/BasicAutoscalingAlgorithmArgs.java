@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Basic algorithm for autoscaling.
- */
 public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicAutoscalingAlgorithmArgs Empty = new BasicAutoscalingAlgorithmArgs();
 
-    /**
-     * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
-     */
     @InputImport(name="cooldownPeriod")
     private final @Nullable Input<String> cooldownPeriod;
 
@@ -29,9 +23,6 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
         return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
     }
 
-    /**
-     * Optional. Spark Standalone autoscaling configuration
-     */
     @InputImport(name="sparkStandaloneConfig")
     private final @Nullable Input<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig;
 
@@ -39,9 +30,6 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
         return this.sparkStandaloneConfig == null ? Input.empty() : this.sparkStandaloneConfig;
     }
 
-    /**
-     * Optional. YARN autoscaling configuration.
-     */
     @InputImport(name="yarnConfig")
     private final @Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig;
 

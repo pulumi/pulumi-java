@@ -15,45 +15,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAccountResult {
-/**
- * Entity Tag
- */
     private final String etag;
-/**
- * The id of the created account
- */
     private final String id;
-/**
- * The identity of Cognitive Services account.
- */
     private final @Nullable IdentityResponse identity;
-/**
- * The Kind of the resource.
- */
     private final @Nullable String kind;
-/**
- * The location of the resource
- */
     private final @Nullable String location;
-/**
- * The name of the created account
- */
     private final String name;
-/**
- * Properties of Cognitive Services account.
- */
     private final CognitiveServicesAccountPropertiesResponse properties;
-/**
- * The SKU of Cognitive Services account.
- */
     private final @Nullable SkuResponse sku;
-/**
- * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","identity","kind","location","name","properties","sku","tags","type"})
@@ -80,63 +50,33 @@ public final class GetAccountResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Entity Tag
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * The id of the created account
- */
     public String getId() {
         return this.id;
     }
-/**
- * The identity of Cognitive Services account.
- */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * The Kind of the resource.
- */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
-/**
- * The location of the resource
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the created account
- */
     public String getName() {
         return this.name;
     }
-/**
- * Properties of Cognitive Services account.
- */
     public CognitiveServicesAccountPropertiesResponse getProperties() {
         return this.properties;
     }
-/**
- * The SKU of Cognitive Services account.
- */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

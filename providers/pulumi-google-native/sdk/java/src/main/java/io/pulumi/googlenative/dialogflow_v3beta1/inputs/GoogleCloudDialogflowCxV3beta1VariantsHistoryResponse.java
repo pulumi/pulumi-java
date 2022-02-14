@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The history of variants update.
- */
 public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse Empty = new GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse();
 
-    /**
-     * Update time of the variants.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
         return this.updateTime;
     }
 
-    /**
-     * The flow versions as the variants.
-     */
     @InputImport(name="versionVariants", required=true)
     private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 

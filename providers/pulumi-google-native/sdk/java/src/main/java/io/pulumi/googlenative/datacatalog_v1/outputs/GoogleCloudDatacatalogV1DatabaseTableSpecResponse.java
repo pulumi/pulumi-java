@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
-/**
- * Type of this table.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Type of this table.
- */
     public String getType() {
         return this.type;
     }

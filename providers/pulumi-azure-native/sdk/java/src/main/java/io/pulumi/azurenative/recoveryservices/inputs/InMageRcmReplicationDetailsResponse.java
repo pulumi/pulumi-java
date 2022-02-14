@@ -16,16 +16,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * InMageRcm provider specific details.
- */
 public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmReplicationDetailsResponse Empty = new InMageRcmReplicationDetailsResponse();
 
-    /**
-     * The agent upgrade blocking error information.
-     */
     @InputImport(name="agentUpgradeBlockingErrorDetails", required=true)
     private final List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
 
@@ -33,9 +27,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.agentUpgradeBlockingErrorDetails;
     }
 
-    /**
-     * The agent auto upgrade state.
-     */
     @InputImport(name="agentUpgradeState", required=true)
     private final String agentUpgradeState;
 
@@ -43,9 +34,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.agentUpgradeState;
     }
 
-    /**
-     * The allocated memory in MB.
-     */
     @InputImport(name="allocatedMemoryInMB", required=true)
     private final Double allocatedMemoryInMB;
 
@@ -53,9 +41,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.allocatedMemoryInMB;
     }
 
-    /**
-     * The type of the discovered VM.
-     */
     @InputImport(name="discoveryType", required=true)
     private final String discoveryType;
 
@@ -63,9 +48,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.discoveryType;
     }
 
-    /**
-     * The ARM Id of the discovered VM.
-     */
     @InputImport(name="fabricDiscoveryMachineId", required=true)
     private final String fabricDiscoveryMachineId;
 
@@ -73,9 +55,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.fabricDiscoveryMachineId;
     }
 
-    /**
-     * The recovery point Id to which the VM was failed over.
-     */
     @InputImport(name="failoverRecoveryPointId", required=true)
     private final String failoverRecoveryPointId;
 
@@ -83,9 +62,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.failoverRecoveryPointId;
     }
 
-    /**
-     * The firmware type.
-     */
     @InputImport(name="firmwareType", required=true)
     private final String firmwareType;
 
@@ -93,9 +69,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.firmwareType;
     }
 
-    /**
-     * The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
-     */
     @InputImport(name="initialReplicationProcessedBytes", required=true)
     private final Double initialReplicationProcessedBytes;
 
@@ -103,9 +76,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.initialReplicationProcessedBytes;
     }
 
-    /**
-     * The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
-     */
     @InputImport(name="initialReplicationProgressPercentage", required=true)
     private final Integer initialReplicationProgressPercentage;
 
@@ -113,9 +83,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.initialReplicationProgressPercentage;
     }
 
-    /**
-     * The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
-     */
     @InputImport(name="initialReplicationTransferredBytes", required=true)
     private final Double initialReplicationTransferredBytes;
 
@@ -123,10 +90,6 @@ public final class InMageRcmReplicationDetailsResponse extends io.pulumi.resourc
         return this.initialReplicationTransferredBytes;
     }
 
-    /**
-     * Gets the Instance type.
-Expected value is 'InMageRcm'.
-     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -134,9 +97,6 @@ Expected value is 'InMageRcm'.
         return this.instanceType;
     }
 
-    /**
-     * The virtual machine internal identifier.
-     */
     @InputImport(name="internalIdentifier", required=true)
     private final String internalIdentifier;
 
@@ -144,9 +104,6 @@ Expected value is 'InMageRcm'.
         return this.internalIdentifier;
     }
 
-    /**
-     * A value indicating whether last agent upgrade was successful or not.
-     */
     @InputImport(name="isLastUpgradeSuccessful", required=true)
     private final String isLastUpgradeSuccessful;
 
@@ -154,9 +111,6 @@ Expected value is 'InMageRcm'.
         return this.isLastUpgradeSuccessful;
     }
 
-    /**
-     * The last agent upgrade error information.
-     */
     @InputImport(name="lastAgentUpgradeErrorDetails", required=true)
     private final List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
 
@@ -164,9 +118,6 @@ Expected value is 'InMageRcm'.
         return this.lastAgentUpgradeErrorDetails;
     }
 
-    /**
-     * The last agent upgrade failed or cancelled job Id.
-     */
     @InputImport(name="lastAgentUpgradeFailedJobId", required=true)
     private final String lastAgentUpgradeFailedJobId;
 
@@ -174,9 +125,6 @@ Expected value is 'InMageRcm'.
         return this.lastAgentUpgradeFailedJobId;
     }
 
-    /**
-     * The last agent upgrade type.
-     */
     @InputImport(name="lastAgentUpgradeType", required=true)
     private final String lastAgentUpgradeType;
 
@@ -184,9 +132,6 @@ Expected value is 'InMageRcm'.
         return this.lastAgentUpgradeType;
     }
 
-    /**
-     * The last recovery point Id.
-     */
     @InputImport(name="lastRecoveryPointId", required=true)
     private final String lastRecoveryPointId;
 
@@ -194,9 +139,6 @@ Expected value is 'InMageRcm'.
         return this.lastRecoveryPointId;
     }
 
-    /**
-     * The last recovery point received time.
-     */
     @InputImport(name="lastRecoveryPointReceived", required=true)
     private final String lastRecoveryPointReceived;
 
@@ -204,9 +146,6 @@ Expected value is 'InMageRcm'.
         return this.lastRecoveryPointReceived;
     }
 
-    /**
-     * The last recovery point objective calculated time.
-     */
     @InputImport(name="lastRpoCalculatedTime", required=true)
     private final String lastRpoCalculatedTime;
 
@@ -214,9 +153,6 @@ Expected value is 'InMageRcm'.
         return this.lastRpoCalculatedTime;
     }
 
-    /**
-     * The last recovery point objective value.
-     */
     @InputImport(name="lastRpoInSeconds", required=true)
     private final Double lastRpoInSeconds;
 
@@ -224,9 +160,6 @@ Expected value is 'InMageRcm'.
         return this.lastRpoInSeconds;
     }
 
-    /**
-     * License Type of the VM to be used.
-     */
     @InputImport(name="licenseType", required=true)
     private final String licenseType;
 
@@ -234,9 +167,6 @@ Expected value is 'InMageRcm'.
         return this.licenseType;
     }
 
-    /**
-     * The mobility agent information.
-     */
     @InputImport(name="mobilityAgentDetails", required=true)
     private final InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
 
@@ -244,9 +174,6 @@ Expected value is 'InMageRcm'.
         return this.mobilityAgentDetails;
     }
 
-    /**
-     * The multi VM group name.
-     */
     @InputImport(name="multiVmGroupName", required=true)
     private final String multiVmGroupName;
 
@@ -254,9 +181,6 @@ Expected value is 'InMageRcm'.
         return this.multiVmGroupName;
     }
 
-    /**
-     * The type of the OS on the VM.
-     */
     @InputImport(name="osType", required=true)
     private final String osType;
 
@@ -264,9 +188,6 @@ Expected value is 'InMageRcm'.
         return this.osType;
     }
 
-    /**
-     * The process server Id.
-     */
     @InputImport(name="processServerId", required=true)
     private final String processServerId;
 
@@ -274,9 +195,6 @@ Expected value is 'InMageRcm'.
         return this.processServerId;
     }
 
-    /**
-     * The process server name.
-     */
     @InputImport(name="processServerName", required=true)
     private final String processServerName;
 
@@ -284,9 +202,6 @@ Expected value is 'InMageRcm'.
         return this.processServerName;
     }
 
-    /**
-     * The processor core count.
-     */
     @InputImport(name="processorCoreCount", required=true)
     private final Integer processorCoreCount;
 
@@ -294,9 +209,6 @@ Expected value is 'InMageRcm'.
         return this.processorCoreCount;
     }
 
-    /**
-     * The list of protected disks.
-     */
     @InputImport(name="protectedDisks", required=true)
     private final List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
 
@@ -304,9 +216,6 @@ Expected value is 'InMageRcm'.
         return this.protectedDisks;
     }
 
-    /**
-     * The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
-     */
     @InputImport(name="resyncProcessedBytes", required=true)
     private final Double resyncProcessedBytes;
 
@@ -314,9 +223,6 @@ Expected value is 'InMageRcm'.
         return this.resyncProcessedBytes;
     }
 
-    /**
-     * The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
-     */
     @InputImport(name="resyncProgressPercentage", required=true)
     private final Integer resyncProgressPercentage;
 
@@ -324,9 +230,6 @@ Expected value is 'InMageRcm'.
         return this.resyncProgressPercentage;
     }
 
-    /**
-     * A value indicating whether resync is required.
-     */
     @InputImport(name="resyncRequired", required=true)
     private final String resyncRequired;
 
@@ -334,9 +237,6 @@ Expected value is 'InMageRcm'.
         return this.resyncRequired;
     }
 
-    /**
-     * The resync state.
-     */
     @InputImport(name="resyncState", required=true)
     private final String resyncState;
 
@@ -344,9 +244,6 @@ Expected value is 'InMageRcm'.
         return this.resyncState;
     }
 
-    /**
-     * The resync transferred bytes from source VM to azure for all selected disks on source VM.
-     */
     @InputImport(name="resyncTransferredBytes", required=true)
     private final Double resyncTransferredBytes;
 
@@ -354,9 +251,6 @@ Expected value is 'InMageRcm'.
         return this.resyncTransferredBytes;
     }
 
-    /**
-     * The run-as account Id.
-     */
     @InputImport(name="runAsAccountId", required=true)
     private final String runAsAccountId;
 
@@ -364,9 +258,6 @@ Expected value is 'InMageRcm'.
         return this.runAsAccountId;
     }
 
-    /**
-     * The target availability set Id.
-     */
     @InputImport(name="targetAvailabilitySetId", required=true)
     private final String targetAvailabilitySetId;
 
@@ -374,9 +265,6 @@ Expected value is 'InMageRcm'.
         return this.targetAvailabilitySetId;
     }
 
-    /**
-     * The target availability zone.
-     */
     @InputImport(name="targetAvailabilityZone", required=true)
     private final String targetAvailabilityZone;
 
@@ -384,9 +272,6 @@ Expected value is 'InMageRcm'.
         return this.targetAvailabilityZone;
     }
 
-    /**
-     * The target boot diagnostics storage account ARM Id.
-     */
     @InputImport(name="targetBootDiagnosticsStorageAccountId", required=true)
     private final String targetBootDiagnosticsStorageAccountId;
 
@@ -394,9 +279,6 @@ Expected value is 'InMageRcm'.
         return this.targetBootDiagnosticsStorageAccountId;
     }
 
-    /**
-     * The target generation.
-     */
     @InputImport(name="targetGeneration", required=true)
     private final String targetGeneration;
 
@@ -404,9 +286,6 @@ Expected value is 'InMageRcm'.
         return this.targetGeneration;
     }
 
-    /**
-     * The target network Id.
-     */
     @InputImport(name="targetNetworkId", required=true)
     private final String targetNetworkId;
 
@@ -414,9 +293,6 @@ Expected value is 'InMageRcm'.
         return this.targetNetworkId;
     }
 
-    /**
-     * The target proximity placement group Id.
-     */
     @InputImport(name="targetProximityPlacementGroupId", required=true)
     private final String targetProximityPlacementGroupId;
 
@@ -424,9 +300,6 @@ Expected value is 'InMageRcm'.
         return this.targetProximityPlacementGroupId;
     }
 
-    /**
-     * The target resource group Id.
-     */
     @InputImport(name="targetResourceGroupId", required=true)
     private final String targetResourceGroupId;
 
@@ -434,9 +307,6 @@ Expected value is 'InMageRcm'.
         return this.targetResourceGroupId;
     }
 
-    /**
-     * Target VM name.
-     */
     @InputImport(name="targetVmName", required=true)
     private final String targetVmName;
 
@@ -444,9 +314,6 @@ Expected value is 'InMageRcm'.
         return this.targetVmName;
     }
 
-    /**
-     * The target VM size.
-     */
     @InputImport(name="targetVmSize", required=true)
     private final String targetVmSize;
 
@@ -454,9 +321,6 @@ Expected value is 'InMageRcm'.
         return this.targetVmSize;
     }
 
-    /**
-     * The test network Id.
-     */
     @InputImport(name="testNetworkId", required=true)
     private final String testNetworkId;
 
@@ -464,9 +328,6 @@ Expected value is 'InMageRcm'.
         return this.testNetworkId;
     }
 
-    /**
-     * The network details.
-     */
     @InputImport(name="vmNics", required=true)
     private final List<InMageRcmNicDetailsResponse> vmNics;
 

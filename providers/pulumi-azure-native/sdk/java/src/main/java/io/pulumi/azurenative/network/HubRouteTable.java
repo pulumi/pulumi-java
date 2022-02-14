@@ -15,266 +15,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * RouteTable resource in a virtual hub.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### RouteTablePut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var hubRouteTable = new AzureNative.Network.HubRouteTable("hubRouteTable", new AzureNative.Network.HubRouteTableArgs
-        {
-            Labels = 
-            {
-                "label1",
-                "label2",
-            },
-            ResourceGroupName = "rg1",
-            RouteTableName = "hubRouteTable1",
-            Routes = 
-            {
-                new AzureNative.Network.Inputs.HubRouteArgs
-                {
-                    DestinationType = "CIDR",
-                    Destinations = 
-                    {
-                        "10.0.0.0/8",
-                        "20.0.0.0/8",
-                        "30.0.0.0/8",
-                    },
-                    Name = "route1",
-                    NextHop = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1",
-                    NextHopType = "ResourceId",
-                },
-            },
-            VirtualHubName = "virtualHub1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewHubRouteTable(ctx, "hubRouteTable", &network.HubRouteTableArgs{
-			Labels: pulumi.StringArray{
-				pulumi.String("label1"),
-				pulumi.String("label2"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			RouteTableName:    pulumi.String("hubRouteTable1"),
-			Routes: []network.HubRouteArgs{
-				&network.HubRouteArgs{
-					DestinationType: pulumi.String("CIDR"),
-					Destinations: pulumi.StringArray{
-						pulumi.String("10.0.0.0/8"),
-						pulumi.String("20.0.0.0/8"),
-						pulumi.String("30.0.0.0/8"),
-					},
-					Name:        pulumi.String("route1"),
-					NextHop:     pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1"),
-					NextHopType: pulumi.String("ResourceId"),
-				},
-			},
-			VirtualHubName: pulumi.String("virtualHub1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const hubRouteTable = new azure_native.network.HubRouteTable("hubRouteTable", {
-    labels: [
-        "label1",
-        "label2",
-    ],
-    resourceGroupName: "rg1",
-    routeTableName: "hubRouteTable1",
-    routes: [{
-        destinationType: "CIDR",
-        destinations: [
-            "10.0.0.0/8",
-            "20.0.0.0/8",
-            "30.0.0.0/8",
-        ],
-        name: "route1",
-        nextHop: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1",
-        nextHopType: "ResourceId",
-    }],
-    virtualHubName: "virtualHub1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-hub_route_table = azure_native.network.HubRouteTable("hubRouteTable",
-    labels=[
-        "label1",
-        "label2",
-    ],
-    resource_group_name="rg1",
-    route_table_name="hubRouteTable1",
-    routes=[azure_native.network.HubRouteArgs(
-        destination_type="CIDR",
-        destinations=[
-            "10.0.0.0/8",
-            "20.0.0.0/8",
-            "30.0.0.0/8",
-        ],
-        name="route1",
-        next_hop="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azureFirewall1",
-        next_hop_type="ResourceId",
-    )],
-    virtual_hub_name="virtualHub1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:HubRouteTable hubRouteTable1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
-```
-
- */
 @ResourceType(type="azure-native:network:HubRouteTable")
 public class HubRouteTable extends io.pulumi.resources.CustomResource {
-    /**
-     * List of all connections associated with this route table.
-     */
     @OutputExport(name="associatedConnections", type=List.class, parameters={String.class})
     private Output<List<String>> associatedConnections;
 
-    /**
-     * @return List of all connections associated with this route table.
-     */
     public Output<List<String>> getAssociatedConnections() {
         return this.associatedConnections;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * List of labels associated with this route table.
-     */
     @OutputExport(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
-    /**
-     * @return List of labels associated with this route table.
-     */
     public Output</* @Nullable */ List<String>> getLabels() {
         return this.labels;
     }
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * List of all connections that advertise to this route table.
-     */
     @OutputExport(name="propagatingConnections", type=List.class, parameters={String.class})
     private Output<List<String>> propagatingConnections;
 
-    /**
-     * @return List of all connections that advertise to this route table.
-     */
     public Output<List<String>> getPropagatingConnections() {
         return this.propagatingConnections;
     }
-    /**
-     * The provisioning state of the RouteTable resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the RouteTable resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * List of all routes.
-     */
     @OutputExport(name="routes", type=List.class, parameters={HubRouteResponse.class})
     private Output</* @Nullable */ List<HubRouteResponse>> routes;
 
-    /**
-     * @return List of all routes.
-     */
     public Output</* @Nullable */ List<HubRouteResponse>> getRoutes() {
         return this.routes;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public HubRouteTable(String name, HubRouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:HubRouteTable", name, args == null ? HubRouteTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -301,14 +92,6 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static HubRouteTable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HubRouteTable(name, id, options);
     }

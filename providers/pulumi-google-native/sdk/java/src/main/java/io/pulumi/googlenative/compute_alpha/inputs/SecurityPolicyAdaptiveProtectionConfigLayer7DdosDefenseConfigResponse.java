@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration options for L7 DDoS detection.
- */
 public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse Empty = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse();
 
-    /**
-     * If set to true, enables CAAP for L7 DDoS detection.
-     */
     @InputImport(name="enable", required=true)
     private final Boolean enable;
 
@@ -26,9 +20,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
         return this.enable;
     }
 
-    /**
-     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
-     */
     @InputImport(name="ruleVisibility", required=true)
     private final String ruleVisibility;
 

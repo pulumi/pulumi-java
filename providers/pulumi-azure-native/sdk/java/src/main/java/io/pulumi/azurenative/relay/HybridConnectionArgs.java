@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HybridConnectionArgs Empty = new HybridConnectionArgs();
 
-    /**
-     * The hybrid connection name.
-     */
     @InputImport(name="hybridConnectionName")
     private final @Nullable Input<String> hybridConnectionName;
 
@@ -28,9 +22,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.hybridConnectionName == null ? Input.empty() : this.hybridConnectionName;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -38,9 +29,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.namespaceName;
     }
 
-    /**
-     * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
-     */
     @InputImport(name="requiresClientAuthorization")
     private final @Nullable Input<Boolean> requiresClientAuthorization;
 
@@ -48,9 +36,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.requiresClientAuthorization == null ? Input.empty() : this.requiresClientAuthorization;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     */
     @InputImport(name="userMetadata")
     private final @Nullable Input<String> userMetadata;
 

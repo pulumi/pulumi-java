@@ -8,16 +8,10 @@ import io.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleRestrictionE
 import java.util.Objects;
 
 
-/**
- * Evaluations of restrictions applied to parent group on this membership.
- */
 public final class RestrictionEvaluationsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestrictionEvaluationsResponse Empty = new RestrictionEvaluationsResponse();
 
-    /**
-     * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
-     */
     @InputImport(name="memberRestrictionEvaluation", required=true)
     private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 

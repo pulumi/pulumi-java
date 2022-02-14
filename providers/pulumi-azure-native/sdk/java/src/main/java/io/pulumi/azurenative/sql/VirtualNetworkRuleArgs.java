@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkRuleArgs Empty = new VirtualNetworkRuleArgs();
 
-    /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
-     */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
     private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
 
@@ -28,9 +22,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.ignoreMissingVnetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,9 +29,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -48,9 +36,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.serverName;
     }
 
-    /**
-     * The name of the virtual network rule.
-     */
     @InputImport(name="virtualNetworkRuleName")
     private final @Nullable Input<String> virtualNetworkRuleName;
 
@@ -58,9 +43,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.virtualNetworkRuleName == null ? Input.empty() : this.virtualNetworkRuleName;
     }
 
-    /**
-     * The ARM resource id of the virtual network subnet.
-     */
     @InputImport(name="virtualNetworkSubnetId", required=true)
     private final Input<String> virtualNetworkSubnetId;
 

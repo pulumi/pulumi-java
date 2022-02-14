@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListEffectiveVirtualNetworkByNetworkManagerArgs Empty = new ListEffectiveVirtualNetworkByNetworkManagerArgs();
 
-    /**
-     * Conditional Members.
-     */
     @InputImport(name="conditionalMembers")
     private final @Nullable String conditionalMembers;
 
@@ -28,9 +22,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
         return this.conditionalMembers == null ? Optional.empty() : Optional.ofNullable(this.conditionalMembers);
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -38,9 +29,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
         return this.resourceGroupName;
     }
 
-    /**
-     * Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
-     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 
@@ -58,9 +43,6 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
-    /**
-     * An optional query parameter which specifies the maximum number of records to be returned by the server.
-     */
     @InputImport(name="top")
     private final @Nullable Integer top;
 

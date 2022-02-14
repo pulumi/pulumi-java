@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Encryption configuration for a Cloud Spanner database.
- */
 public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 
-    /**
-     * The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
-     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 

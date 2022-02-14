@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TrafficSelectorPolicyResponse {
-/**
- * A collection of local address spaces in CIDR format.
- */
     private final List<String> localAddressRanges;
-/**
- * A collection of remote address spaces in CIDR format.
- */
     private final List<String> remoteAddressRanges;
 
     @OutputCustomType.Constructor({"localAddressRanges","remoteAddressRanges"})
@@ -27,15 +21,9 @@ public final class TrafficSelectorPolicyResponse {
         this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
     }
 
-/**
- * A collection of local address spaces in CIDR format.
- */
     public List<String> getLocalAddressRanges() {
         return this.localAddressRanges;
     }
-/**
- * A collection of remote address spaces in CIDR format.
- */
     public List<String> getRemoteAddressRanges() {
         return this.remoteAddressRanges;
     }

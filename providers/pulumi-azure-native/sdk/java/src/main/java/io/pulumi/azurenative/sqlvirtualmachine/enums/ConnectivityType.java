@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SQL Server connectivity option.
- */
     @EnumType
     public enum ConnectivityType {
-/**
- * 
- */
         LOCAL("LOCAL"),
-/**
- * 
- */
         PRIVATE("PRIVATE"),
-/**
- * 
- */
         PUBLIC("PUBLIC");
 
         private final String value;

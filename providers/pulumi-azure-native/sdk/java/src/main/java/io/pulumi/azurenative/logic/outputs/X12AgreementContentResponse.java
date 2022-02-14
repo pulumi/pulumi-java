@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class X12AgreementContentResponse {
-/**
- * The X12 one-way receive agreement.
- */
     private final X12OneWayAgreementResponse receiveAgreement;
-/**
- * The X12 one-way send agreement.
- */
     private final X12OneWayAgreementResponse sendAgreement;
 
     @OutputCustomType.Constructor({"receiveAgreement","sendAgreement"})
@@ -26,15 +20,9 @@ public final class X12AgreementContentResponse {
         this.sendAgreement = Objects.requireNonNull(sendAgreement);
     }
 
-/**
- * The X12 one-way receive agreement.
- */
     public X12OneWayAgreementResponse getReceiveAgreement() {
         return this.receiveAgreement;
     }
-/**
- * The X12 one-way send agreement.
- */
     public X12OneWayAgreementResponse getSendAgreement() {
         return this.sendAgreement;
     }

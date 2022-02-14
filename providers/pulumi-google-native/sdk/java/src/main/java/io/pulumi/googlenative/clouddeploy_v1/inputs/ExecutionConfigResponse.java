@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Configuration of the environment to use when calling Skaffold.
- */
 public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExecutionConfigResponse Empty = new ExecutionConfigResponse();
 
-    /**
-     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
-     */
     @InputImport(name="artifactStorage", required=true)
     private final String artifactStorage;
 
@@ -28,9 +22,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
         return this.artifactStorage;
     }
 
-    /**
-     * Optional. Use default Cloud Build pool.
-     */
     @InputImport(name="defaultPool", required=true)
     private final DefaultPoolResponse defaultPool;
 
@@ -38,9 +29,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
         return this.defaultPool;
     }
 
-    /**
-     * Optional. Use private Cloud Build pool.
-     */
     @InputImport(name="privatePool", required=true)
     private final PrivatePoolResponse privatePool;
 
@@ -48,9 +36,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
         return this.privatePool;
     }
 
-    /**
-     * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
-     */
     @InputImport(name="serviceAccount", required=true)
     private final String serviceAccount;
 
@@ -58,9 +43,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
         return this.serviceAccount;
     }
 
-    /**
-     * Usages when this configuration should be applied.
-     */
     @InputImport(name="usages", required=true)
     private final List<String> usages;
 
@@ -68,9 +50,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
         return this.usages;
     }
 
-    /**
-     * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
-     */
     @InputImport(name="workerPool", required=true)
     private final String workerPool;
 

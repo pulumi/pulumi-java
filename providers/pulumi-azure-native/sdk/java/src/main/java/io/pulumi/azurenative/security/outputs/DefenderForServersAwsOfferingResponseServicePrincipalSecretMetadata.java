@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata {
-/**
- * expiration date of service principal secret
- */
     private final @Nullable String expiryDate;
-/**
- * name of secret resource in parameter store
- */
     private final @Nullable String parameterNameInStore;
-/**
- * region of parameter store where secret is kept
- */
     private final @Nullable String parameterStoreRegion;
 
     @OutputCustomType.Constructor({"expiryDate","parameterNameInStore","parameterStoreRegion"})
@@ -34,21 +25,12 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
         this.parameterStoreRegion = parameterStoreRegion;
     }
 
-/**
- * expiration date of service principal secret
- */
     public Optional<String> getExpiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
-/**
- * name of secret resource in parameter store
- */
     public Optional<String> getParameterNameInStore() {
         return Optional.ofNullable(this.parameterNameInStore);
     }
-/**
- * region of parameter store where secret is kept
- */
     public Optional<String> getParameterStoreRegion() {
         return Optional.ofNullable(this.parameterStoreRegion);
     }

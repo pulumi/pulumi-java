@@ -21,69 +21,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatastoreResponse {
-/**
- * 
- */
     private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
-/**
- * 
- */
     private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
-/**
- * 
- */
     private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
-/**
- * 
- */
     private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
-/**
- * 
- */
     private final @Nullable AzureStorageSectionResponse azureStorageSection;
-/**
- * The User who created the datastore.
- */
     private final UserInfoResponse createdBy;
-/**
- * The date and time when the datastore was created.
- */
     private final String createdTime;
-/**
- * The datastore type.
- */
     private final @Nullable String dataStoreType;
-/**
- * Description of the datastore.
- */
     private final @Nullable String description;
-/**
- * Data specific to GlusterFS.
- */
     private final @Nullable GlusterFsSectionResponse glusterFsSection;
-/**
- * A read only property that denotes whether the service datastore has been validated with credentials.
- */
     private final @Nullable Boolean hasBeenValidated;
-/**
- * Info about origin if it is linked.
- */
     private final @Nullable LinkedInfoResponse linkedInfo;
-/**
- * The User who modified the datastore.
- */
     private final UserInfoResponse modifiedBy;
-/**
- * The date and time when the datastore was last modified.
- */
     private final String modifiedTime;
-/**
- * Name of the datastore.
- */
     private final @Nullable String name;
-/**
- * Tags for this datastore.
- */
     private final Map<String,String> tags;
 
     @OutputCustomType.Constructor({"azureDataLakeSection","azureMySqlSection","azurePostgreSqlSection","azureSqlDatabaseSection","azureStorageSection","createdBy","createdTime","dataStoreType","description","glusterFsSection","hasBeenValidated","linkedInfo","modifiedBy","modifiedTime","name","tags"})
@@ -122,99 +74,51 @@ public final class DatastoreResponse {
         this.tags = Objects.requireNonNull(tags);
     }
 
-/**
- * 
- */
     public Optional<AzureDataLakeSectionResponse> getAzureDataLakeSection() {
         return Optional.ofNullable(this.azureDataLakeSection);
     }
-/**
- * 
- */
     public Optional<AzureMySqlSectionResponse> getAzureMySqlSection() {
         return Optional.ofNullable(this.azureMySqlSection);
     }
-/**
- * 
- */
     public Optional<AzurePostgreSqlSectionResponse> getAzurePostgreSqlSection() {
         return Optional.ofNullable(this.azurePostgreSqlSection);
     }
-/**
- * 
- */
     public Optional<AzureSqlDatabaseSectionResponse> getAzureSqlDatabaseSection() {
         return Optional.ofNullable(this.azureSqlDatabaseSection);
     }
-/**
- * 
- */
     public Optional<AzureStorageSectionResponse> getAzureStorageSection() {
         return Optional.ofNullable(this.azureStorageSection);
     }
-/**
- * The User who created the datastore.
- */
     public UserInfoResponse getCreatedBy() {
         return this.createdBy;
     }
-/**
- * The date and time when the datastore was created.
- */
     public String getCreatedTime() {
         return this.createdTime;
     }
-/**
- * The datastore type.
- */
     public Optional<String> getDataStoreType() {
         return Optional.ofNullable(this.dataStoreType);
     }
-/**
- * Description of the datastore.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Data specific to GlusterFS.
- */
     public Optional<GlusterFsSectionResponse> getGlusterFsSection() {
         return Optional.ofNullable(this.glusterFsSection);
     }
-/**
- * A read only property that denotes whether the service datastore has been validated with credentials.
- */
     public Optional<Boolean> getHasBeenValidated() {
         return Optional.ofNullable(this.hasBeenValidated);
     }
-/**
- * Info about origin if it is linked.
- */
     public Optional<LinkedInfoResponse> getLinkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
-/**
- * The User who modified the datastore.
- */
     public UserInfoResponse getModifiedBy() {
         return this.modifiedBy;
     }
-/**
- * The date and time when the datastore was last modified.
- */
     public String getModifiedTime() {
         return this.modifiedTime;
     }
-/**
- * Name of the datastore.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Tags for this datastore.
- */
     public Map<String,String> getTags() {
         return this.tags;
     }

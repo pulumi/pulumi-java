@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListProductDetailsArgs Empty = new ListProductDetailsArgs();
 
-    /**
-     * Name of the product.
-     */
     @InputImport(name="productName", required=true)
     private final String productName;
 
@@ -25,9 +19,6 @@ public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs
         return this.productName;
     }
 
-    /**
-     * Name of the Azure Stack registration.
-     */
     @InputImport(name="registrationName", required=true)
     private final String registrationName;
 
@@ -35,9 +26,6 @@ public final class ListProductDetailsArgs extends io.pulumi.resources.InvokeArgs
         return this.registrationName;
     }
 
-    /**
-     * Name of the resource group.
-     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

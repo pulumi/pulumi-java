@@ -11,17 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Common settings field for backup management
- */
 public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SettingsResponse Empty = new SettingsResponse();
 
-    /**
-     * Workload compression flag. This has been added so that 'isSqlCompression'
-will be deprecated once clients upgrade to consider this flag.
-     */
     @InputImport(name="isCompression")
     private final @Nullable Boolean isCompression;
 
@@ -29,9 +22,6 @@ will be deprecated once clients upgrade to consider this flag.
         return this.isCompression == null ? Optional.empty() : Optional.ofNullable(this.isCompression);
     }
 
-    /**
-     * SQL compression flag
-     */
     @InputImport(name="issqlcompression")
     private final @Nullable Boolean issqlcompression;
 
@@ -39,9 +29,6 @@ will be deprecated once clients upgrade to consider this flag.
         return this.issqlcompression == null ? Optional.empty() : Optional.ofNullable(this.issqlcompression);
     }
 
-    /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 

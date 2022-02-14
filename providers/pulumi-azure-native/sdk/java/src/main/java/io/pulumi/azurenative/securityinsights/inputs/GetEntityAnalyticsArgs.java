@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEntityAnalyticsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntityAnalyticsArgs Empty = new GetEntityAnalyticsArgs();
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -25,9 +19,6 @@ public final class GetEntityAnalyticsArgs extends io.pulumi.resources.InvokeArgs
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetEntityAnalyticsArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
-     */
     @InputImport(name="settingsName", required=true)
     private final String settingsName;
 
@@ -45,9 +33,6 @@ public final class GetEntityAnalyticsArgs extends io.pulumi.resources.InvokeArgs
         return this.settingsName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

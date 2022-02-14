@@ -15,251 +15,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * NSX DNS Service
-API Version: 2020-07-17-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### WorkloadNetworks_CreateDnsService
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workloadNetworkDnsService = new AzureNative.AVS.WorkloadNetworkDnsService("workloadNetworkDnsService", new AzureNative.AVS.WorkloadNetworkDnsServiceArgs
-        {
-            DefaultDnsZone = "defaultDnsZone1",
-            DisplayName = "dnsService1",
-            DnsServiceId = "dnsService1",
-            DnsServiceIp = "5.5.5.5",
-            FqdnZones = 
-            {
-                "fqdnZone1",
-            },
-            LogLevel = "INFO",
-            PrivateCloudName = "cloud1",
-            ResourceGroupName = "group1",
-            Revision = 1,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := avs.NewWorkloadNetworkDnsService(ctx, "workloadNetworkDnsService", &avs.WorkloadNetworkDnsServiceArgs{
-			DefaultDnsZone: pulumi.String("defaultDnsZone1"),
-			DisplayName:    pulumi.String("dnsService1"),
-			DnsServiceId:   pulumi.String("dnsService1"),
-			DnsServiceIp:   pulumi.String("5.5.5.5"),
-			FqdnZones: pulumi.StringArray{
-				pulumi.String("fqdnZone1"),
-			},
-			LogLevel:          pulumi.String("INFO"),
-			PrivateCloudName:  pulumi.String("cloud1"),
-			ResourceGroupName: pulumi.String("group1"),
-			Revision:          pulumi.Float64(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService("workloadNetworkDnsService", {
-    defaultDnsZone: "defaultDnsZone1",
-    displayName: "dnsService1",
-    dnsServiceId: "dnsService1",
-    dnsServiceIp: "5.5.5.5",
-    fqdnZones: ["fqdnZone1"],
-    logLevel: "INFO",
-    privateCloudName: "cloud1",
-    resourceGroupName: "group1",
-    revision: 1,
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-workload_network_dns_service = azure_native.avs.WorkloadNetworkDnsService("workloadNetworkDnsService",
-    default_dns_zone="defaultDnsZone1",
-    display_name="dnsService1",
-    dns_service_id="dnsService1",
-    dns_service_ip="5.5.5.5",
-    fqdn_zones=["fqdnZone1"],
-    log_level="INFO",
-    private_cloud_name="cloud1",
-    resource_group_name="group1",
-    revision=1)
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:avs:WorkloadNetworkDnsService dnsService1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsServices/dnsService1 
-```
-
- */
 @ResourceType(type="azure-native:avs:WorkloadNetworkDnsService")
 public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResource {
-    /**
-     * Default DNS zone of the DNS Service.
-     */
     @OutputExport(name="defaultDnsZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultDnsZone;
 
-    /**
-     * @return Default DNS zone of the DNS Service.
-     */
     public Output</* @Nullable */ String> getDefaultDnsZone() {
         return this.defaultDnsZone;
     }
-    /**
-     * Display name of the DNS Service.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return Display name of the DNS Service.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * DNS service IP of the DNS Service.
-     */
     @OutputExport(name="dnsServiceIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsServiceIp;
 
-    /**
-     * @return DNS service IP of the DNS Service.
-     */
     public Output</* @Nullable */ String> getDnsServiceIp() {
         return this.dnsServiceIp;
     }
-    /**
-     * FQDN zones of the DNS Service.
-     */
     @OutputExport(name="fqdnZones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> fqdnZones;
 
-    /**
-     * @return FQDN zones of the DNS Service.
-     */
     public Output</* @Nullable */ List<String>> getFqdnZones() {
         return this.fqdnZones;
     }
-    /**
-     * DNS Service log level.
-     */
     @OutputExport(name="logLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> logLevel;
 
-    /**
-     * @return DNS Service log level.
-     */
     public Output</* @Nullable */ String> getLogLevel() {
         return this.logLevel;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * NSX revision number.
-     */
     @OutputExport(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
-    /**
-     * @return NSX revision number.
-     */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
-    /**
-     * DNS Service status.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return DNS Service status.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public WorkloadNetworkDnsService(String name, WorkloadNetworkDnsServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:WorkloadNetworkDnsService", name, args == null ? WorkloadNetworkDnsServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -281,14 +99,6 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static WorkloadNetworkDnsService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkloadNetworkDnsService(name, id, options);
     }

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ValidatingWebhook describes an admission webhook and the resources and operations it applies to.
- */
 public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ValidatingWebhookArgs Empty = new ValidatingWebhookArgs();
 
-    /**
-     * AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the Webhook expects. API server will try to use first version in the list which it supports. If none of the versions specified in this list supported by API server, validation will fail for this object. If a persisted webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail and be subject to the failure policy.
-     */
     @InputImport(name="admissionReviewVersions", required=true)
     private final Input<List<String>> admissionReviewVersions;
 
@@ -32,9 +26,6 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
         return this.admissionReviewVersions;
     }
 
-    /**
-     * ClientConfig defines how to communicate with the hook. Required
-     */
     @InputImport(name="clientConfig", required=true)
     private final Input<WebhookClientConfigArgs> clientConfig;
 
@@ -42,9 +33,6 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
         return this.clientConfig;
     }
 
-    /**
-     * FailurePolicy defines how unrecognized errors from the admission endpoint are handled - allowed values are Ignore or Fail. Defaults to Fail.
-     */
     @InputImport(name="failurePolicy")
     private final @Nullable Input<String> failurePolicy;
 
@@ -52,15 +40,6 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
         return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
     }
 
-    /**
-     * matchPolicy defines how the "rules" list is used to match incoming requests. Allowed values are "Exact" or "Equivalent".
-
-- Exact: match a request only if it exactly matches a specified rule. For example, if deployments can be modified via apps/v1, apps/v1beta1, and extensions/v1beta1, but "rules" only included `apiGroups:["apps"], apiVersions:["v1"], resources: ["deployments"]`, a request to apps/v1beta1 or extensions/v1beta1 would not be sent to the webhook.
-
-- Equivalent: match a request if modifies a resource listed in rules, even via another API group or version. For example, if deployments can be modified via apps/v1, apps/v1beta1, and extensions/v1beta1, and "rules" only included `apiGroups:["apps"], apiVersions:["v1"], resources: ["deployments"]`, a request to apps/v1beta1 or extensions/v1beta1 would be converted to apps/v1 and sent to the webhook.
-
-Defaults to "Equivalent"
-     */
     @InputImport(name="matchPolicy")
     private final @Nullable Input<String> matchPolicy;
 
@@ -68,9 +47,6 @@ Defaults to "Equivalent"
         return this.matchPolicy == null ? Input.empty() : this.matchPolicy;
     }
 
-    /**
-     * The name of the admission webhook. Name should be fully qualified, e.g., imagepolicy.kubernetes.io, where "imagepolicy" is the name of the webhook, and kubernetes.io is the name of the organization. Required.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -78,39 +54,6 @@ Defaults to "Equivalent"
         return this.name;
     }
 
-    /**
-     * NamespaceSelector decides whether to run the webhook on an object based on whether the namespace for that object matches the selector. If the object itself is a namespace, the matching is performed on object.metadata.labels. If the object is another cluster scoped resource, it never skips the webhook.
-
-For example, to run the webhook on any objects whose namespace is not associated with "runlevel" of "0" or "1";  you will set the selector as follows: "namespaceSelector": {
-  "matchExpressions": [
-    {
-      "key": "runlevel",
-      "operator": "NotIn",
-      "values": [
-        "0",
-        "1"
-      ]
-    }
-  ]
-}
-
-If instead you want to only run the webhook on any objects whose namespace is associated with the "environment" of "prod" or "staging"; you will set the selector as follows: "namespaceSelector": {
-  "matchExpressions": [
-    {
-      "key": "environment",
-      "operator": "In",
-      "values": [
-        "prod",
-        "staging"
-      ]
-    }
-  ]
-}
-
-See https://kubernetes.io/docs/concepts/overview/working-with-objects/labels for more examples of label selectors.
-
-Default to the empty LabelSelector, which matches everything.
-     */
     @InputImport(name="namespaceSelector")
     private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
 
@@ -118,9 +61,6 @@ Default to the empty LabelSelector, which matches everything.
         return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
     }
 
-    /**
-     * ObjectSelector decides whether to run the webhook based on if the object has matching labels. objectSelector is evaluated against both the oldObject and newObject that would be sent to the webhook, and is considered to match if either object matches the selector. A null object (oldObject in the case of create, or newObject in the case of delete) or an object that cannot have labels (like a DeploymentRollback or a PodProxyOptions object) is not considered to match. Use the object selector only if the webhook is opt-in, because end users may skip the admission webhook by setting the labels. Default to the empty LabelSelector, which matches everything.
-     */
     @InputImport(name="objectSelector")
     private final @Nullable Input<LabelSelectorArgs> objectSelector;
 
@@ -128,9 +68,6 @@ Default to the empty LabelSelector, which matches everything.
         return this.objectSelector == null ? Input.empty() : this.objectSelector;
     }
 
-    /**
-     * Rules describes what operations on what resources/subresources the webhook cares about. The webhook cares about an operation if it matches _any_ Rule. However, in order to prevent ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks from putting the cluster in a state which cannot be recovered from without completely disabling the plugin, ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks are never called on admission requests for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects.
-     */
     @InputImport(name="rules")
     private final @Nullable Input<List<RuleWithOperationsArgs>> rules;
 
@@ -138,9 +75,6 @@ Default to the empty LabelSelector, which matches everything.
         return this.rules == null ? Input.empty() : this.rules;
     }
 
-    /**
-     * SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission chain and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.
-     */
     @InputImport(name="sideEffects", required=true)
     private final Input<String> sideEffects;
 
@@ -148,9 +82,6 @@ Default to the empty LabelSelector, which matches everything.
         return this.sideEffects;
     }
 
-    /**
-     * TimeoutSeconds specifies the timeout for this webhook. After the timeout passes, the webhook call will be ignored or the API call will fail based on the failure policy. The timeout value must be between 1 and 30 seconds. Default to 10 seconds.
-     */
     @InputImport(name="timeoutSeconds")
     private final @Nullable Input<Integer> timeoutSeconds;
 

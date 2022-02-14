@@ -12,33 +12,12 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComplianceNoteResponse {
-/**
- * 
- */
     private final CisBenchmarkResponse cisBenchmark;
-/**
- * A description about this compliance check.
- */
     private final String description;
-/**
- * A rationale for the existence of this compliance check.
- */
     private final String rationale;
-/**
- * A description of remediation steps if the compliance check fails.
- */
     private final String remediation;
-/**
- * Serialized scan instructions with a predefined format.
- */
     private final String scanInstructions;
-/**
- * The title that identifies this compliance check.
- */
     private final String title;
-/**
- * The OS and config versions the benchmark applies to.
- */
     private final List<ComplianceVersionResponse> version;
 
     @OutputCustomType.Constructor({"cisBenchmark","description","rationale","remediation","scanInstructions","title","version"})
@@ -59,45 +38,24 @@ public final class ComplianceNoteResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * 
- */
     public CisBenchmarkResponse getCisBenchmark() {
         return this.cisBenchmark;
     }
-/**
- * A description about this compliance check.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * A rationale for the existence of this compliance check.
- */
     public String getRationale() {
         return this.rationale;
     }
-/**
- * A description of remediation steps if the compliance check fails.
- */
     public String getRemediation() {
         return this.remediation;
     }
-/**
- * Serialized scan instructions with a predefined format.
- */
     public String getScanInstructions() {
         return this.scanInstructions;
     }
-/**
- * The title that identifies this compliance check.
- */
     public String getTitle() {
         return this.title;
     }
-/**
- * The OS and config versions the benchmark applies to.
- */
     public List<ComplianceVersionResponse> getVersion() {
         return this.version;
     }

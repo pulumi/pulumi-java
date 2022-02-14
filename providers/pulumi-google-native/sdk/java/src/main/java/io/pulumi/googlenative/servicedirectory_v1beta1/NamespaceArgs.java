@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 
-    /**
-     * Optional. Resource labels associated with this namespace. No more than 64 user labels can be associated with a given resource. Label keys and values can be no longer than 63 characters.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -28,9 +22,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Immutable. The resource name for the namespace in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="namespaceId", required=true)
     private final Input<String> namespaceId;
 
@@ -58,9 +43,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

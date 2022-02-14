@@ -11,29 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureSqlContainerResponse {
-/**
- * Type of backup management for the container.
- */
     private final @Nullable String backupManagementType;
-/**
- * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'AzureSqlContainer'.
- */
     private final String containerType;
-/**
- * Friendly name of the container.
- */
     private final @Nullable String friendlyName;
-/**
- * Status of health of the container.
- */
     private final @Nullable String healthStatus;
-/**
- * Status of registration of the container with the Recovery Services Vault.
- */
     private final @Nullable String registrationStatus;
 
     @OutputCustomType.Constructor({"backupManagementType","containerType","friendlyName","healthStatus","registrationStatus"})
@@ -50,37 +31,18 @@ Expected value is 'AzureSqlContainer'.
         this.registrationStatus = registrationStatus;
     }
 
-/**
- * Type of backup management for the container.
- */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
-/**
- * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-Backup is VMAppContainer
-Expected value is 'AzureSqlContainer'.
- */
     public String getContainerType() {
         return this.containerType;
     }
-/**
- * Friendly name of the container.
- */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
-/**
- * Status of health of the container.
- */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
-/**
- * Status of registration of the container with the Recovery Services Vault.
- */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Storage Configurations for SQL Data, Log and TempDb.
- */
 public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageConfigurationSettingsArgs Empty = new StorageConfigurationSettingsArgs();
 
-    /**
-     * Disk configuration to apply to SQL Server.
-     */
     @InputImport(name="diskConfigurationType")
     private final @Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType;
 
@@ -31,9 +25,6 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
         return this.diskConfigurationType == null ? Input.empty() : this.diskConfigurationType;
     }
 
-    /**
-     * SQL Server Data Storage Settings.
-     */
     @InputImport(name="sqlDataSettings")
     private final @Nullable Input<SQLStorageSettingsArgs> sqlDataSettings;
 
@@ -41,9 +32,6 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
         return this.sqlDataSettings == null ? Input.empty() : this.sqlDataSettings;
     }
 
-    /**
-     * SQL Server Log Storage Settings.
-     */
     @InputImport(name="sqlLogSettings")
     private final @Nullable Input<SQLStorageSettingsArgs> sqlLogSettings;
 
@@ -51,9 +39,6 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
         return this.sqlLogSettings == null ? Input.empty() : this.sqlLogSettings;
     }
 
-    /**
-     * SQL Server TempDb Storage Settings.
-     */
     @InputImport(name="sqlTempDbSettings")
     private final @Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings;
 
@@ -61,9 +46,6 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
         return this.sqlTempDbSettings == null ? Input.empty() : this.sqlTempDbSettings;
     }
 
-    /**
-     * Storage workload type.
-     */
     @InputImport(name="storageWorkloadType")
     private final @Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType;
 

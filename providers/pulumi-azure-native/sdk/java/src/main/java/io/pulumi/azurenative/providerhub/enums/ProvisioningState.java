@@ -8,62 +8,20 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum ProvisioningState {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Accepted("Accepted"),
-/**
- * 
- */
         Running("Running"),
-/**
- * 
- */
         Creating("Creating"),
-/**
- * 
- */
         Created("Created"),
-/**
- * 
- */
         Deleting("Deleting"),
-/**
- * 
- */
         Deleted("Deleted"),
-/**
- * 
- */
         Canceled("Canceled"),
-/**
- * 
- */
         Failed("Failed"),
-/**
- * 
- */
         Succeeded("Succeeded"),
-/**
- * 
- */
         MovingResources("MovingResources"),
-/**
- * 
- */
         TransientFailure("TransientFailure"),
-/**
- * 
- */
         RolloutInProgress("RolloutInProgress");
 
         private final String value;

@@ -11,33 +11,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetScopeAssignmentResult {
-/**
- * The managed network ID with scope will be assigned to.
- */
     private final @Nullable String assignedManagedNetwork;
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     private final String etag;
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final @Nullable String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Provisioning state of the ManagedNetwork resource.
- */
     private final String provisioningState;
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"assignedManagedNetwork","etag","id","location","name","provisioningState","type"})
@@ -58,45 +37,24 @@ public final class GetScopeAssignmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The managed network ID with scope will be assigned to.
- */
     public Optional<String> getAssignedManagedNetwork() {
         return Optional.ofNullable(this.assignedManagedNetwork);
     }
-/**
- * A unique read-only string that changes whenever the resource is updated.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Provisioning state of the ManagedNetwork resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     public String getType() {
         return this.type;
     }

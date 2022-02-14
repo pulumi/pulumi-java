@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAccountResult {
-/**
- * The ID of the resource
- */
     private final String id;
-/**
- * The location of the resource
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The SKU of the resource
- */
     private final SKUResponse sku;
-/**
- * The tags of the resource
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The fully qualified type of the resource
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","sku","tags","type"})
@@ -53,39 +35,21 @@ public final class GetAccountResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The ID of the resource
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location of the resource
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The SKU of the resource
- */
     public SKUResponse getSku() {
         return this.sku;
     }
-/**
- * The tags of the resource
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The fully qualified type of the resource
- */
     public String getType() {
         return this.type;
     }

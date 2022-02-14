@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Settings for Extended Groups username and group download.
- */
 public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheUsernameDownloadSettingsArgs Empty = new CacheUsernameDownloadSettingsArgs();
 
-    /**
-     * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
-     */
     @InputImport(name="autoDownloadCertificate")
     private final @Nullable Input<Boolean> autoDownloadCertificate;
 
@@ -31,9 +25,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.autoDownloadCertificate == null ? Input.empty() : this.autoDownloadCertificate;
     }
 
-    /**
-     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
-     */
     @InputImport(name="caCertificateURI")
     private final @Nullable Input<String> caCertificateURI;
 
@@ -41,9 +32,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.caCertificateURI == null ? Input.empty() : this.caCertificateURI;
     }
 
-    /**
-     * When present, these are the credentials for the secure LDAP connection.
-     */
     @InputImport(name="credentials")
     private final @Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
 
@@ -51,9 +39,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    /**
-     * Whether or not the LDAP connection should be encrypted.
-     */
     @InputImport(name="encryptLdapConnection")
     private final @Nullable Input<Boolean> encryptLdapConnection;
 
@@ -61,9 +46,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.encryptLdapConnection == null ? Input.empty() : this.encryptLdapConnection;
     }
 
-    /**
-     * Whether or not Extended Groups is enabled.
-     */
     @InputImport(name="extendedGroups")
     private final @Nullable Input<Boolean> extendedGroups;
 
@@ -71,9 +53,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.extendedGroups == null ? Input.empty() : this.extendedGroups;
     }
 
-    /**
-     * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
-     */
     @InputImport(name="groupFileURI")
     private final @Nullable Input<String> groupFileURI;
 
@@ -81,9 +60,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.groupFileURI == null ? Input.empty() : this.groupFileURI;
     }
 
-    /**
-     * The base distinguished name for the LDAP domain.
-     */
     @InputImport(name="ldapBaseDN")
     private final @Nullable Input<String> ldapBaseDN;
 
@@ -91,9 +67,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.ldapBaseDN == null ? Input.empty() : this.ldapBaseDN;
     }
 
-    /**
-     * The fully qualified domain name or IP address of the LDAP server to use.
-     */
     @InputImport(name="ldapServer")
     private final @Nullable Input<String> ldapServer;
 
@@ -101,9 +74,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.ldapServer == null ? Input.empty() : this.ldapServer;
     }
 
-    /**
-     * Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
-     */
     @InputImport(name="requireValidCertificate")
     private final @Nullable Input<Boolean> requireValidCertificate;
 
@@ -111,9 +81,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.requireValidCertificate == null ? Input.empty() : this.requireValidCertificate;
     }
 
-    /**
-     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
-     */
     @InputImport(name="userFileURI")
     private final @Nullable Input<String> userFileURI;
 
@@ -121,9 +88,6 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
         return this.userFileURI == null ? Input.empty() : this.userFileURI;
     }
 
-    /**
-     * This setting determines how the cache gets username and group names for clients.
-     */
     @InputImport(name="usernameSource")
     private final @Nullable Input<Either<String,UsernameSource>> usernameSource;
 

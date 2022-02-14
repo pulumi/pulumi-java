@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
-    /**
-     * The current key used to encrypt the Media Services account, including the key version.
-     */
     @InputImport(name="currentKeyIdentifier", required=true)
     private final String currentKeyIdentifier;
 
@@ -27,9 +21,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.currentKeyIdentifier;
     }
 
-    /**
-     * The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
-     */
     @InputImport(name="keyIdentifier")
     private final @Nullable String keyIdentifier;
 

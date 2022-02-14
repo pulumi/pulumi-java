@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Kind of the guest configuration. For example:DSC
- */
     @EnumType
     public enum Kind {
-/**
- * 
- */
         DSC("DSC");
 
         private final String value;

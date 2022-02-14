@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a "type" of key that may be used in a Certificate issued from a CaPool. Note that a single AllowedKeyType may refer to either a fully-qualified key algorithm, such as RSA 4096, or a family of key algorithms, such as any RSA key.
- */
 public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllowedKeyTypeArgs Empty = new AllowedKeyTypeArgs();
 
-    /**
-     * Represents an allowed Elliptic Curve key type.
-     */
     @InputImport(name="ellipticCurve")
     private final @Nullable Input<EcKeyTypeArgs> ellipticCurve;
 
@@ -28,9 +22,6 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
     }
 
-    /**
-     * Represents an allowed RSA key type.
-     */
     @InputImport(name="rsa")
     private final @Nullable Input<RsaKeyTypeArgs> rsa;
 

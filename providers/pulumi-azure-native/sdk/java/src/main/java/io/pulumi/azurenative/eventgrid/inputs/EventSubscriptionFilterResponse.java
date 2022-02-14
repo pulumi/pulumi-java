@@ -25,16 +25,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Filter for the Event Subscription.
- */
 public final class EventSubscriptionFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventSubscriptionFilterResponse Empty = new EventSubscriptionFilterResponse();
 
-    /**
-     * An array of advanced filters that are used for filtering event subscriptions.
-     */
     @InputImport(name="advancedFilters")
     private final @Nullable List<Object> advancedFilters;
 
@@ -42,9 +36,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
 
-    /**
-     * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
-     */
     @InputImport(name="includedEventTypes")
     private final @Nullable List<String> includedEventTypes;
 
@@ -52,10 +43,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
         return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
     }
 
-    /**
-     * Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
-should be compared in a case sensitive manner.
-     */
     @InputImport(name="isSubjectCaseSensitive")
     private final @Nullable Boolean isSubjectCaseSensitive;
 
@@ -63,11 +50,6 @@ should be compared in a case sensitive manner.
         return this.isSubjectCaseSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSubjectCaseSensitive);
     }
 
-    /**
-     * An optional string to filter events for an event subscription based on a resource path prefix.
-The format of this depends on the publisher of the events.
-Wildcard characters are not supported in this path.
-     */
     @InputImport(name="subjectBeginsWith")
     private final @Nullable String subjectBeginsWith;
 
@@ -75,10 +57,6 @@ Wildcard characters are not supported in this path.
         return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
     }
 
-    /**
-     * An optional string to filter events for an event subscription based on a resource path suffix.
-Wildcard characters are not supported in this path.
-     */
     @InputImport(name="subjectEndsWith")
     private final @Nullable String subjectEndsWith;
 

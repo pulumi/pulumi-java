@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListEndpointCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListEndpointCredentialsArgs Empty = new ListEndpointCredentialsArgs();
 
-    /**
-     * The endpoint name.
-     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -28,9 +22,6 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
         return this.endpointName;
     }
 
-    /**
-     * The is how long the endpoint access token is valid (in seconds).
-     */
     @InputImport(name="expiresin")
     private final @Nullable Integer expiresin;
 
@@ -38,9 +29,6 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
         return this.expiresin == null ? Optional.empty() : Optional.ofNullable(this.expiresin);
     }
 
-    /**
-     * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

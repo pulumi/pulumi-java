@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A unique identifier for an entity in the Cloud Identity Groups API. An entity can represent either a group with an optional `namespace` or a user without a `namespace`. The combination of `id` and `namespace` must be unique; however, the same `id` can be used with different `namespace`s.
- */
 public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityKeyArgs Empty = new EntityKeyArgs();
 
-    /**
-     * The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -27,9 +21,6 @@ public final class EntityKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}`.
-     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 

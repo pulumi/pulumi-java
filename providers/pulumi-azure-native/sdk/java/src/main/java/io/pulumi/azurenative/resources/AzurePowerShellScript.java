@@ -22,992 +22,141 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Object model for the Azure PowerShell script.
-API Version: 2020-10-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### DeploymentScriptsCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var azurePowerShellScript = new AzureNative.Resources.AzurePowerShellScript("azurePowerShellScript", new AzureNative.Resources.AzurePowerShellScriptArgs
-        {
-            Arguments = "-Location 'westus' -Name \"*rg2\"",
-            AzPowerShellVersion = "1.7.0",
-            CleanupPreference = "Always",
-            Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
-                },
-            },
-            Kind = "AzurePowerShell",
-            Location = "westus",
-            ResourceGroupName = "script-rg",
-            RetentionInterval = "PT7D",
-            ScriptContent = "Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-            ScriptName = "MyDeploymentScript",
-            SupportingScriptUris = 
-            {
-                "https://uri1.to.supporting.script",
-                "https://uri2.to.supporting.script",
-            },
-            Timeout = "PT1H",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewAzurePowerShellScript(ctx, "azurePowerShellScript", &resources.AzurePowerShellScriptArgs{
-			Arguments:           pulumi.String("-Location 'westus' -Name \"*rg2\""),
-			AzPowerShellVersion: pulumi.String("1.7.0"),
-			CleanupPreference:   pulumi.String("Always"),
-			Identity: &resources.ManagedServiceIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
-				},
-			},
-			Kind:              pulumi.String("AzurePowerShell"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("script-rg"),
-			RetentionInterval: pulumi.String("PT7D"),
-			ScriptContent:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Param([string]", "$", "Location,[string]", "$", "Name) ", "$", "deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location ", "$", "Location -Name ", "$", "Name")),
-			ScriptName:        pulumi.String("MyDeploymentScript"),
-			SupportingScriptUris: pulumi.StringArray{
-				pulumi.String("https://uri1.to.supporting.script"),
-				pulumi.String("https://uri2.to.supporting.script"),
-			},
-			Timeout: pulumi.String("PT1H"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const azurePowerShellScript = new azure_native.resources.AzurePowerShellScript("azurePowerShellScript", {
-    arguments: "-Location 'westus' -Name \"*rg2\"",
-    azPowerShellVersion: "1.7.0",
-    cleanupPreference: "Always",
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    },
-    kind: "AzurePowerShell",
-    location: "westus",
-    resourceGroupName: "script-rg",
-    retentionInterval: "PT7D",
-    scriptContent: `Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name`,
-    scriptName: "MyDeploymentScript",
-    supportingScriptUris: [
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout: "PT1H",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-azure_power_shell_script = azure_native.resources.AzurePowerShellScript("azurePowerShellScript",
-    arguments="-Location 'westus' -Name \"*rg2\"",
-    az_power_shell_version="1.7.0",
-    cleanup_preference="Always",
-    identity=azure_native.resources.ManagedServiceIdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    ),
-    kind="AzurePowerShell",
-    location="westus",
-    resource_group_name="script-rg",
-    retention_interval="PT7D",
-    script_content="Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-    script_name="MyDeploymentScript",
-    supporting_script_uris=[
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout="PT1H")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DeploymentScriptsCreateNoUserManagedIdentity
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var azurePowerShellScript = new AzureNative.Resources.AzurePowerShellScript("azurePowerShellScript", new AzureNative.Resources.AzurePowerShellScriptArgs
-        {
-            Arguments = "-Location 'westus' -Name \"*rg2\"",
-            AzPowerShellVersion = "1.7.0",
-            CleanupPreference = "Always",
-            Kind = "AzurePowerShell",
-            Location = "westus",
-            ResourceGroupName = "script-rg",
-            RetentionInterval = "PT7D",
-            ScriptContent = "Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-            ScriptName = "MyDeploymentScript",
-            SupportingScriptUris = 
-            {
-                "https://uri1.to.supporting.script",
-                "https://uri2.to.supporting.script",
-            },
-            Timeout = "PT1H",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewAzurePowerShellScript(ctx, "azurePowerShellScript", &resources.AzurePowerShellScriptArgs{
-			Arguments:           pulumi.String("-Location 'westus' -Name \"*rg2\""),
-			AzPowerShellVersion: pulumi.String("1.7.0"),
-			CleanupPreference:   pulumi.String("Always"),
-			Kind:                pulumi.String("AzurePowerShell"),
-			Location:            pulumi.String("westus"),
-			ResourceGroupName:   pulumi.String("script-rg"),
-			RetentionInterval:   pulumi.String("PT7D"),
-			ScriptContent:       pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Param([string]", "$", "Location,[string]", "$", "Name) ", "$", "deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location ", "$", "Location -Name ", "$", "Name")),
-			ScriptName:          pulumi.String("MyDeploymentScript"),
-			SupportingScriptUris: pulumi.StringArray{
-				pulumi.String("https://uri1.to.supporting.script"),
-				pulumi.String("https://uri2.to.supporting.script"),
-			},
-			Timeout: pulumi.String("PT1H"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const azurePowerShellScript = new azure_native.resources.AzurePowerShellScript("azurePowerShellScript", {
-    arguments: "-Location 'westus' -Name \"*rg2\"",
-    azPowerShellVersion: "1.7.0",
-    cleanupPreference: "Always",
-    kind: "AzurePowerShell",
-    location: "westus",
-    resourceGroupName: "script-rg",
-    retentionInterval: "PT7D",
-    scriptContent: `Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name`,
-    scriptName: "MyDeploymentScript",
-    supportingScriptUris: [
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout: "PT1H",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-azure_power_shell_script = azure_native.resources.AzurePowerShellScript("azurePowerShellScript",
-    arguments="-Location 'westus' -Name \"*rg2\"",
-    az_power_shell_version="1.7.0",
-    cleanup_preference="Always",
-    kind="AzurePowerShell",
-    location="westus",
-    resource_group_name="script-rg",
-    retention_interval="PT7D",
-    script_content="Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-    script_name="MyDeploymentScript",
-    supporting_script_uris=[
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout="PT1H")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DeploymentScriptsCreate_MinCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var azurePowerShellScript = new AzureNative.Resources.AzurePowerShellScript("azurePowerShellScript", new AzureNative.Resources.AzurePowerShellScriptArgs
-        {
-            Arguments = "-Location 'westus' -Name \"*rg2\"",
-            AzPowerShellVersion = "1.7.0",
-            Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
-                },
-            },
-            Kind = "AzurePowerShell",
-            Location = "westus",
-            ResourceGroupName = "script-rg",
-            RetentionInterval = "P7D",
-            ScriptContent = "Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-            ScriptName = "MyDeploymentScript",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewAzurePowerShellScript(ctx, "azurePowerShellScript", &resources.AzurePowerShellScriptArgs{
-			Arguments:           pulumi.String("-Location 'westus' -Name \"*rg2\""),
-			AzPowerShellVersion: pulumi.String("1.7.0"),
-			Identity: &resources.ManagedServiceIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
-				},
-			},
-			Kind:              pulumi.String("AzurePowerShell"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("script-rg"),
-			RetentionInterval: pulumi.String("P7D"),
-			ScriptContent:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Param([string]", "$", "Location,[string]", "$", "Name) ", "$", "deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location ", "$", "Location -Name ", "$", "Name")),
-			ScriptName:        pulumi.String("MyDeploymentScript"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const azurePowerShellScript = new azure_native.resources.AzurePowerShellScript("azurePowerShellScript", {
-    arguments: "-Location 'westus' -Name \"*rg2\"",
-    azPowerShellVersion: "1.7.0",
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    },
-    kind: "AzurePowerShell",
-    location: "westus",
-    resourceGroupName: "script-rg",
-    retentionInterval: "P7D",
-    scriptContent: `Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name`,
-    scriptName: "MyDeploymentScript",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-azure_power_shell_script = azure_native.resources.AzurePowerShellScript("azurePowerShellScript",
-    arguments="-Location 'westus' -Name \"*rg2\"",
-    az_power_shell_version="1.7.0",
-    identity=azure_native.resources.ManagedServiceIdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    ),
-    kind="AzurePowerShell",
-    location="westus",
-    resource_group_name="script-rg",
-    retention_interval="P7D",
-    script_content="Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-    script_name="MyDeploymentScript")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DeploymentScriptsCreate_UsingCustomACIName
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var azurePowerShellScript = new AzureNative.Resources.AzurePowerShellScript("azurePowerShellScript", new AzureNative.Resources.AzurePowerShellScriptArgs
-        {
-            Arguments = "-Location 'westus' -Name \"*rg2\"",
-            AzPowerShellVersion = "1.7.0",
-            CleanupPreference = "Always",
-            ContainerSettings = new AzureNative.Resources.Inputs.ContainerConfigurationArgs
-            {
-                ContainerGroupName = "contoso-aci",
-            },
-            Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
-                },
-            },
-            Kind = "AzurePowerShell",
-            Location = "westus",
-            ResourceGroupName = "script-rg",
-            RetentionInterval = "PT7D",
-            ScriptContent = "Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-            ScriptName = "MyDeploymentScript",
-            SupportingScriptUris = 
-            {
-                "https://uri1.to.supporting.script",
-                "https://uri2.to.supporting.script",
-            },
-            Timeout = "PT1H",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewAzurePowerShellScript(ctx, "azurePowerShellScript", &resources.AzurePowerShellScriptArgs{
-			Arguments:           pulumi.String("-Location 'westus' -Name \"*rg2\""),
-			AzPowerShellVersion: pulumi.String("1.7.0"),
-			CleanupPreference:   pulumi.String("Always"),
-			ContainerSettings: &resources.ContainerConfigurationArgs{
-				ContainerGroupName: pulumi.String("contoso-aci"),
-			},
-			Identity: &resources.ManagedServiceIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
-				},
-			},
-			Kind:              pulumi.String("AzurePowerShell"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("script-rg"),
-			RetentionInterval: pulumi.String("PT7D"),
-			ScriptContent:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Param([string]", "$", "Location,[string]", "$", "Name) ", "$", "deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location ", "$", "Location -Name ", "$", "Name")),
-			ScriptName:        pulumi.String("MyDeploymentScript"),
-			SupportingScriptUris: pulumi.StringArray{
-				pulumi.String("https://uri1.to.supporting.script"),
-				pulumi.String("https://uri2.to.supporting.script"),
-			},
-			Timeout: pulumi.String("PT1H"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const azurePowerShellScript = new azure_native.resources.AzurePowerShellScript("azurePowerShellScript", {
-    arguments: "-Location 'westus' -Name \"*rg2\"",
-    azPowerShellVersion: "1.7.0",
-    cleanupPreference: "Always",
-    containerSettings: {
-        containerGroupName: "contoso-aci",
-    },
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    },
-    kind: "AzurePowerShell",
-    location: "westus",
-    resourceGroupName: "script-rg",
-    retentionInterval: "PT7D",
-    scriptContent: `Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name`,
-    scriptName: "MyDeploymentScript",
-    supportingScriptUris: [
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout: "PT1H",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-azure_power_shell_script = azure_native.resources.AzurePowerShellScript("azurePowerShellScript",
-    arguments="-Location 'westus' -Name \"*rg2\"",
-    az_power_shell_version="1.7.0",
-    cleanup_preference="Always",
-    container_settings=azure_native.resources.ContainerConfigurationArgs(
-        container_group_name="contoso-aci",
-    ),
-    identity=azure_native.resources.ManagedServiceIdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    ),
-    kind="AzurePowerShell",
-    location="westus",
-    resource_group_name="script-rg",
-    retention_interval="PT7D",
-    script_content="Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-    script_name="MyDeploymentScript",
-    supporting_script_uris=[
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout="PT1H")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DeploymentScriptsCreate_UsingExistingStorageAccount
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var azurePowerShellScript = new AzureNative.Resources.AzurePowerShellScript("azurePowerShellScript", new AzureNative.Resources.AzurePowerShellScriptArgs
-        {
-            Arguments = "-Location 'westus' -Name \"*rg2\"",
-            AzPowerShellVersion = "1.7.0",
-            CleanupPreference = "Always",
-            Identity = new AzureNative.Resources.Inputs.ManagedServiceIdentityArgs
-            {
-                Type = "UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai",  },
-                },
-            },
-            Kind = "AzurePowerShell",
-            Location = "westus",
-            ResourceGroupName = "script-rg",
-            RetentionInterval = "PT7D",
-            ScriptContent = "Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-            ScriptName = "MyDeploymentScript",
-            StorageAccountSettings = new AzureNative.Resources.Inputs.StorageAccountConfigurationArgs
-            {
-                StorageAccountKey = "contosostoragekey",
-                StorageAccountName = "contosostorage",
-            },
-            SupportingScriptUris = 
-            {
-                "https://uri1.to.supporting.script",
-                "https://uri2.to.supporting.script",
-            },
-            Timeout = "PT1H",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := resources.NewAzurePowerShellScript(ctx, "azurePowerShellScript", &resources.AzurePowerShellScriptArgs{
-			Arguments:           pulumi.String("-Location 'westus' -Name \"*rg2\""),
-			AzPowerShellVersion: pulumi.String("1.7.0"),
-			CleanupPreference:   pulumi.String("Always"),
-			Identity: &resources.ManagedServiceIdentityArgs{
-				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
-				},
-			},
-			Kind:              pulumi.String("AzurePowerShell"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("script-rg"),
-			RetentionInterval: pulumi.String("PT7D"),
-			ScriptContent:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "Param([string]", "$", "Location,[string]", "$", "Name) ", "$", "deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location ", "$", "Location -Name ", "$", "Name")),
-			ScriptName:        pulumi.String("MyDeploymentScript"),
-			StorageAccountSettings: &resources.StorageAccountConfigurationArgs{
-				StorageAccountKey:  pulumi.String("contosostoragekey"),
-				StorageAccountName: pulumi.String("contosostorage"),
-			},
-			SupportingScriptUris: pulumi.StringArray{
-				pulumi.String("https://uri1.to.supporting.script"),
-				pulumi.String("https://uri2.to.supporting.script"),
-			},
-			Timeout: pulumi.String("PT1H"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const azurePowerShellScript = new azure_native.resources.AzurePowerShellScript("azurePowerShellScript", {
-    arguments: "-Location 'westus' -Name \"*rg2\"",
-    azPowerShellVersion: "1.7.0",
-    cleanupPreference: "Always",
-    identity: {
-        type: "UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    },
-    kind: "AzurePowerShell",
-    location: "westus",
-    resourceGroupName: "script-rg",
-    retentionInterval: "PT7D",
-    scriptContent: `Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name`,
-    scriptName: "MyDeploymentScript",
-    storageAccountSettings: {
-        storageAccountKey: "contosostoragekey",
-        storageAccountName: "contosostorage",
-    },
-    supportingScriptUris: [
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout: "PT1H",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-azure_power_shell_script = azure_native.resources.AzurePowerShellScript("azurePowerShellScript",
-    arguments="-Location 'westus' -Name \"*rg2\"",
-    az_power_shell_version="1.7.0",
-    cleanup_preference="Always",
-    identity=azure_native.resources.ManagedServiceIdentityArgs(
-        type="UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": {},
-        },
-    ),
-    kind="AzurePowerShell",
-    location="westus",
-    resource_group_name="script-rg",
-    retention_interval="PT7D",
-    script_content="Param([string]$Location,[string]$Name) $deploymentScriptOutputs['test'] = 'value' Get-AzResourceGroup -Location $Location -Name $Name",
-    script_name="MyDeploymentScript",
-    storage_account_settings=azure_native.resources.StorageAccountConfigurationArgs(
-        storage_account_key="contosostoragekey",
-        storage_account_name="contosostorage",
-    ),
-    supporting_script_uris=[
-        "https://uri1.to.supporting.script",
-        "https://uri2.to.supporting.script",
-    ],
-    timeout="PT1H")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:resources:AzurePowerShellScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
-```
-
- */
 @ResourceType(type="azure-native:resources:AzurePowerShellScript")
 public class AzurePowerShellScript extends io.pulumi.resources.CustomResource {
-    /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2' 
-     */
     @OutputExport(name="arguments", type=String.class, parameters={})
     private Output</* @Nullable */ String> arguments;
 
-    /**
-     * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2' 
-     */
     public Output</* @Nullable */ String> getArguments() {
         return this.arguments;
     }
-    /**
-     * Azure PowerShell module version to be used.
-     */
     @OutputExport(name="azPowerShellVersion", type=String.class, parameters={})
     private Output<String> azPowerShellVersion;
 
-    /**
-     * @return Azure PowerShell module version to be used.
-     */
     public Output<String> getAzPowerShellVersion() {
         return this.azPowerShellVersion;
     }
-    /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
-     */
     @OutputExport(name="cleanupPreference", type=String.class, parameters={})
     private Output</* @Nullable */ String> cleanupPreference;
 
-    /**
-     * @return The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
-     */
     public Output</* @Nullable */ String> getCleanupPreference() {
         return this.cleanupPreference;
     }
-    /**
-     * Container settings.
-     */
     @OutputExport(name="containerSettings", type=ContainerConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ContainerConfigurationResponse> containerSettings;
 
-    /**
-     * @return Container settings.
-     */
     public Output</* @Nullable */ ContainerConfigurationResponse> getContainerSettings() {
         return this.containerSettings;
     }
-    /**
-     * The environment variables to pass over to the script.
-     */
     @OutputExport(name="environmentVariables", type=List.class, parameters={EnvironmentVariableResponse.class})
     private Output</* @Nullable */ List<EnvironmentVariableResponse>> environmentVariables;
 
-    /**
-     * @return The environment variables to pass over to the script.
-     */
     public Output</* @Nullable */ List<EnvironmentVariableResponse>> getEnvironmentVariables() {
         return this.environmentVariables;
     }
-    /**
-     * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
-     */
     @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
-    /**
-     * @return Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
-     */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
-    /**
-     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
-    /**
-     * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * Type of the script.
-Expected value is 'AzurePowerShell'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Type of the script.
-Expected value is 'AzurePowerShell'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * The location of the ACI and the storage account for the deployment script.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The location of the ACI and the storage account for the deployment script.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Name of this resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of this resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of script outputs.
-     */
     @OutputExport(name="outputs", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> outputs;
 
-    /**
-     * @return List of script outputs.
-     */
     public Output<Map<String,Object>> getOutputs() {
         return this.outputs;
     }
-    /**
-     * Uri for the script. This is the entry point for the external script.
-     */
     @OutputExport(name="primaryScriptUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryScriptUri;
 
-    /**
-     * @return Uri for the script. This is the entry point for the external script.
-     */
     public Output</* @Nullable */ String> getPrimaryScriptUri() {
         return this.primaryScriptUri;
     }
-    /**
-     * State of the script execution. This only appears in the response.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return State of the script execution. This only appears in the response.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
-     */
     @OutputExport(name="retentionInterval", type=String.class, parameters={})
     private Output<String> retentionInterval;
 
-    /**
-     * @return Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
-     */
     public Output<String> getRetentionInterval() {
         return this.retentionInterval;
     }
-    /**
-     * Script body.
-     */
     @OutputExport(name="scriptContent", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptContent;
 
-    /**
-     * @return Script body.
-     */
     public Output</* @Nullable */ String> getScriptContent() {
         return this.scriptContent;
     }
-    /**
-     * Contains the results of script execution.
-     */
     @OutputExport(name="status", type=ScriptStatusResponse.class, parameters={})
     private Output<ScriptStatusResponse> status;
 
-    /**
-     * @return Contains the results of script execution.
-     */
     public Output<ScriptStatusResponse> getStatus() {
         return this.status;
     }
-    /**
-     * Storage Account settings.
-     */
     @OutputExport(name="storageAccountSettings", type=StorageAccountConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountConfigurationResponse> storageAccountSettings;
 
-    /**
-     * @return Storage Account settings.
-     */
     public Output</* @Nullable */ StorageAccountConfigurationResponse> getStorageAccountSettings() {
         return this.storageAccountSettings;
     }
-    /**
-     * Supporting files for the external script.
-     */
     @OutputExport(name="supportingScriptUris", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportingScriptUris;
 
-    /**
-     * @return Supporting files for the external script.
-     */
     public Output</* @Nullable */ List<String>> getSupportingScriptUris() {
         return this.supportingScriptUris;
     }
-    /**
-     * The system metadata related to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata related to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
-     */
     @OutputExport(name="timeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeout;
 
-    /**
-     * @return Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
-     */
     public Output</* @Nullable */ String> getTimeout() {
         return this.timeout;
     }
-    /**
-     * Type of this resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of this resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public AzurePowerShellScript(String name, AzurePowerShellScriptArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:AzurePowerShellScript", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -1034,14 +183,6 @@ Expected value is 'AzurePowerShell'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static AzurePowerShellScript get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AzurePowerShellScript(name, id, options);
     }

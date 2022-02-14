@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of Cognitive Services account deployment.
- */
 public final class DeploymentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentPropertiesResponse Empty = new DeploymentPropertiesResponse();
 
-    /**
-     * Properties of Cognitive Services account deployment model.
-     */
     @InputImport(name="model")
     private final @Nullable DeploymentModelResponse model;
 
@@ -29,9 +23,6 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
         return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
     }
 
-    /**
-     * Gets the status of the resource at the time the operation was called.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -39,9 +30,6 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
         return this.provisioningState;
     }
 
-    /**
-     * Properties of Cognitive Services account deployment model.
-     */
     @InputImport(name="scaleSettings")
     private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 

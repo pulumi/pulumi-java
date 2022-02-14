@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FluidRelayServerArgs Empty = new FluidRelayServerArgs();
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,9 +24,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -40,9 +31,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Provision states for FluidRelay RP
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -50,9 +38,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * The resource group containing the resource.
-     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -60,9 +45,6 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroup;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

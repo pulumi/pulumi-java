@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
-    /**
-     * The name of the application resource.
-     */
     @InputImport(name="applicationName")
     private final @Nullable Input<String> applicationName;
 
@@ -35,9 +29,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName == null ? Input.empty() : this.applicationName;
     }
 
-    /**
-     * The name of the cluster resource.
-     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -45,9 +36,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
-    /**
-     * Describes the managed identities for an Azure resource.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedIdentityArgs> identity;
 
@@ -55,9 +43,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * It will be deprecated in New API, resource location depends on the parent resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -65,9 +50,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * List of user assigned identities for the application, each mapped to a friendly name.
-     */
     @InputImport(name="managedIdentities")
     private final @Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
 
@@ -75,9 +57,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedIdentities == null ? Input.empty() : this.managedIdentities;
     }
 
-    /**
-     * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
-     */
     @InputImport(name="maximumNodes")
     private final @Nullable Input<Double> maximumNodes;
 
@@ -85,9 +64,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.maximumNodes == null ? Input.empty() : this.maximumNodes;
     }
 
-    /**
-     * List of application capacity metric description.
-     */
     @InputImport(name="metrics")
     private final @Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics;
 
@@ -95,9 +71,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
-    /**
-     * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
-     */
     @InputImport(name="minimumNodes")
     private final @Nullable Input<Double> minimumNodes;
 
@@ -105,9 +78,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimumNodes == null ? Input.empty() : this.minimumNodes;
     }
 
-    /**
-     * List of application parameters with overridden values from their default values specified in the application manifest.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 
@@ -115,9 +85,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Remove the current application capacity settings.
-     */
     @InputImport(name="removeApplicationCapacity")
     private final @Nullable Input<Boolean> removeApplicationCapacity;
 
@@ -125,9 +92,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.removeApplicationCapacity == null ? Input.empty() : this.removeApplicationCapacity;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -135,9 +99,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Azure resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -145,9 +106,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The application type name as defined in the application manifest.
-     */
     @InputImport(name="typeName")
     private final @Nullable Input<String> typeName;
 
@@ -155,9 +113,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.typeName == null ? Input.empty() : this.typeName;
     }
 
-    /**
-     * The version of the application type as defined in the application manifest.
-     */
     @InputImport(name="typeVersion")
     private final @Nullable Input<String> typeVersion;
 
@@ -165,9 +120,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.typeVersion == null ? Input.empty() : this.typeVersion;
     }
 
-    /**
-     * Describes the policy for a monitored application upgrade.
-     */
     @InputImport(name="upgradePolicy")
     private final @Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy;
 

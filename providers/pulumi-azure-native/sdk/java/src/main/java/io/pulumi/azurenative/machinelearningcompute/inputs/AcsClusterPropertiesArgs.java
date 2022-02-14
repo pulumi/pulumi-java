@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about the container service backing the cluster
- */
 public final class AcsClusterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AcsClusterPropertiesArgs Empty = new AcsClusterPropertiesArgs();
 
-    /**
-     * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
-     */
     @InputImport(name="agentCount")
     private final @Nullable Input<Integer> agentCount;
 
@@ -34,9 +28,6 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
         return this.agentCount == null ? Input.empty() : this.agentCount;
     }
 
-    /**
-     * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
-     */
     @InputImport(name="agentVmSize")
     private final @Nullable Input<Either<String,AgentVMSizeTypes>> agentVmSize;
 
@@ -44,9 +35,6 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
         return this.agentVmSize == null ? Input.empty() : this.agentVmSize;
     }
 
-    /**
-     * The number of master nodes in the container service.
-     */
     @InputImport(name="masterCount")
     private final @Nullable Input<Integer> masterCount;
 
@@ -54,9 +42,6 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
         return this.masterCount == null ? Input.empty() : this.masterCount;
     }
 
-    /**
-     * Orchestrator specific properties
-     */
     @InputImport(name="orchestratorProperties")
     private final @Nullable Input<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
@@ -64,9 +49,6 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
         return this.orchestratorProperties == null ? Input.empty() : this.orchestratorProperties;
     }
 
-    /**
-     * Type of orchestrator. It cannot be changed once the cluster is created.
-     */
     @InputImport(name="orchestratorType", required=true)
     private final Input<Either<String,OrchestratorType>> orchestratorType;
 
@@ -74,9 +56,6 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
         return this.orchestratorType;
     }
 
-    /**
-     * The system services deployed to the cluster
-     */
     @InputImport(name="systemServices")
     private final @Nullable Input<List<SystemServiceArgs>> systemServices;
 

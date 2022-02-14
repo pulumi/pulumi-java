@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The owner of the bucket. This is always the project team's owner group.
- */
 public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketOwnerArgs Empty = new BucketOwnerArgs();
 
-    /**
-     * The entity, in the form project-owner-projectId.
-     */
     @InputImport(name="entity")
     private final @Nullable Input<String> entity;
 
@@ -27,9 +21,6 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
         return this.entity == null ? Input.empty() : this.entity;
     }
 
-    /**
-     * The ID for the entity.
-     */
     @InputImport(name="entityId")
     private final @Nullable Input<String> entityId;
 

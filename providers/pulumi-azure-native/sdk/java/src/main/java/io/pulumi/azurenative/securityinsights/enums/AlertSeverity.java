@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The severity for alerts created by this alert rule.
- */
     @EnumType
     public enum AlertSeverity {
-/**
- * High severity
- */
         High("High"),
-/**
- * Medium severity
- */
         Medium("Medium"),
-/**
- * Low severity
- */
         Low("Low"),
-/**
- * Informational severity
- */
         Informational("Informational");
 
         private final String value;

@@ -6,9 +6,6 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 import java.util.Objects;
 
 
-/**
- * Master is the configuration for components on master.
- */
 public final class MasterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MasterResponse Empty = new MasterResponse();

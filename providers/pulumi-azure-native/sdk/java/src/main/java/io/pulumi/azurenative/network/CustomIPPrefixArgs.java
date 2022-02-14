@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomIPPrefixArgs Empty = new CustomIPPrefixArgs();
 
-    /**
-     * The prefix range in CIDR notation. Should include the start address and the prefix length.
-     */
     @InputImport(name="cidr")
     private final @Nullable Input<String> cidr;
 
@@ -32,9 +26,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.cidr == null ? Input.empty() : this.cidr;
     }
 
-    /**
-     * The commissioned state of the Custom IP Prefix.
-     */
     @InputImport(name="commissionedState")
     private final @Nullable Input<Either<String,CommissionedState>> commissionedState;
 
@@ -42,9 +33,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.commissionedState == null ? Input.empty() : this.commissionedState;
     }
 
-    /**
-     * The name of the custom IP prefix.
-     */
     @InputImport(name="customIpPrefixName")
     private final @Nullable Input<String> customIpPrefixName;
 
@@ -52,9 +40,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.customIpPrefixName == null ? Input.empty() : this.customIpPrefixName;
     }
 
-    /**
-     * The extended location of the custom IP prefix.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -62,9 +47,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -72,9 +54,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -82,9 +61,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -92,9 +68,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -102,9 +75,6 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

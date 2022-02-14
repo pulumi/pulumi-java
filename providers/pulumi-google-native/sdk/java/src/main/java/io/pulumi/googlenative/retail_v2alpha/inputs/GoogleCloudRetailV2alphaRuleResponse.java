@@ -16,16 +16,10 @@ import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRule
 import java.util.Objects;
 
 
-/**
- * A rule is a condition-action pair * A condition defines when a rule is to be triggered. * An action specifies what occurs on that trigger. Currently only boost rules are supported. Currently only supported by the search endpoint.
- */
 public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaRuleResponse Empty = new GoogleCloudRetailV2alphaRuleResponse();
 
-    /**
-     * A boost action.
-     */
     @InputImport(name="boostAction", required=true)
     private final GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction;
 
@@ -33,9 +27,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.boostAction;
     }
 
-    /**
-     * The condition that triggers the rule. If the condition is empty, the rule will always apply.
-     */
     @InputImport(name="condition", required=true)
     private final GoogleCloudRetailV2alphaConditionResponse condition;
 
@@ -43,9 +34,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.condition;
     }
 
-    /**
-     * Prevents term from being associated with other terms.
-     */
     @InputImport(name="doNotAssociateAction", required=true)
     private final GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction;
 
@@ -53,9 +41,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.doNotAssociateAction;
     }
 
-    /**
-     * Filters results.
-     */
     @InputImport(name="filterAction", required=true)
     private final GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction;
 
@@ -63,9 +48,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.filterAction;
     }
 
-    /**
-     * Ignores specific terms from query during search.
-     */
     @InputImport(name="ignoreAction", required=true)
     private final GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction;
 
@@ -73,9 +55,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.ignoreAction;
     }
 
-    /**
-     * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
-     */
     @InputImport(name="onewaySynonymsAction", required=true)
     private final GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
 
@@ -83,9 +62,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.onewaySynonymsAction;
     }
 
-    /**
-     * Redirects a shopper to a specific page.
-     */
     @InputImport(name="redirectAction", required=true)
     private final GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction;
 
@@ -93,9 +69,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.redirectAction;
     }
 
-    /**
-     * Replaces specific terms in the query.
-     */
     @InputImport(name="replacementAction", required=true)
     private final GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction;
 
@@ -103,9 +76,6 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
         return this.replacementAction;
     }
 
-    /**
-     * Treats a set of terms as synonyms of one another.
-     */
     @InputImport(name="twowaySynonymsAction", required=true)
     private final GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 

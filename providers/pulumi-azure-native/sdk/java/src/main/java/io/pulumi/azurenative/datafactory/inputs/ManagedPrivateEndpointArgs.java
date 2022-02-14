@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a managed private endpoint
- */
 public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedPrivateEndpointArgs Empty = new ManagedPrivateEndpointArgs();
 
-    /**
-     * Fully qualified domain names
-     */
     @InputImport(name="fqdns")
     private final @Nullable Input<List<String>> fqdns;
 
@@ -28,9 +22,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.fqdns == null ? Input.empty() : this.fqdns;
     }
 
-    /**
-     * The groupId to which the managed private endpoint is created
-     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -38,9 +29,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
-    /**
-     * The ARM resource ID of the resource to which the managed private endpoint is created
-     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable Input<String> privateLinkResourceId;
 

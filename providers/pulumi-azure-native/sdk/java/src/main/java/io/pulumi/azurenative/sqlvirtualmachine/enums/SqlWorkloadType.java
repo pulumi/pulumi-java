@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * SQL Server workload type.
- */
     @EnumType
     public enum SqlWorkloadType {
-/**
- * 
- */
         GENERAL("GENERAL"),
-/**
- * 
- */
         OLTP("OLTP"),
-/**
- * 
- */
         DW("DW");
 
         private final String value;

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Resource for a regional service location.
- */
 public final class DataTransferRegionalServiceResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataTransferRegionalServiceResourceResponse Empty = new DataTransferRegionalServiceResourceResponse();
 
-    /**
-     * The location name.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -25,9 +19,6 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
         return this.location;
     }
 
-    /**
-     * The regional service name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
         return this.name;
     }
 
-    /**
-     * Describes the status of a service.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

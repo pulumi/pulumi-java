@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AttestationAuthorityResponse {
-/**
- * 
- */
     private final AttestationAuthorityHintResponse hint;
 
     @OutputCustomType.Constructor({"hint"})
@@ -19,9 +16,6 @@ public final class AttestationAuthorityResponse {
         this.hint = Objects.requireNonNull(hint);
     }
 
-/**
- * 
- */
     public AttestationAuthorityHintResponse getHint() {
         return this.hint;
     }

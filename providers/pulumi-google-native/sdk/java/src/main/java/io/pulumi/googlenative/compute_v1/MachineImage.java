@@ -19,210 +19,105 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Creates a machine image in the specified project using the data that is included in the request. If you are creating a new machine image to update an existing instance, your new machine image should use the same network or, if applicable, the same subnetwork as the original instance.
- */
 @ResourceType(type="google-native:compute/v1:MachineImage")
 public class MachineImage extends io.pulumi.resources.CustomResource {
-    /**
-     * The creation timestamp for this machine image in RFC3339 text format.
-     */
     @OutputExport(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
-    /**
-     * @return The creation timestamp for this machine image in RFC3339 text format.
-     */
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return An optional description of this resource. Provide this property when you create the resource.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-     */
     @OutputExport(name="guestFlush", type=Boolean.class, parameters={})
     private Output<Boolean> guestFlush;
 
-    /**
-     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-     */
     public Output<Boolean> getGuestFlush() {
         return this.guestFlush;
     }
-    /**
-     * Properties of source instance
-     */
     @OutputExport(name="instanceProperties", type=InstancePropertiesResponse.class, parameters={})
     private Output<InstancePropertiesResponse> instanceProperties;
 
-    /**
-     * @return Properties of source instance
-     */
     public Output<InstancePropertiesResponse> getInstanceProperties() {
         return this.instanceProperties;
     }
-    /**
-     * The resource type, which is always compute#machineImage for machine image.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return The resource type, which is always compute#machineImage for machine image.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
-     */
     @OutputExport(name="machineImageEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
     private Output<CustomerEncryptionKeyResponse> machineImageEncryptionKey;
 
-    /**
-     * @return Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
-     */
     public Output<CustomerEncryptionKeyResponse> getMachineImageEncryptionKey() {
         return this.machineImageEncryptionKey;
     }
-    /**
-     * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Reserved for future use.
-     */
     @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
-    /**
-     * @return Reserved for future use.
-     */
     public Output<Boolean> getSatisfiesPzs() {
         return this.satisfiesPzs;
     }
-    /**
-     * An array of Machine Image specific properties for disks attached to the source instance
-     */
     @OutputExport(name="savedDisks", type=List.class, parameters={SavedDiskResponse.class})
     private Output<List<SavedDiskResponse>> savedDisks;
 
-    /**
-     * @return An array of Machine Image specific properties for disks attached to the source instance
-     */
     public Output<List<SavedDiskResponse>> getSavedDisks() {
         return this.savedDisks;
     }
-    /**
-     * The URL for this machine image. The server defines this URL.
-     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
-    /**
-     * @return The URL for this machine image. The server defines this URL.
-     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
-    /**
-     * [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
-     */
     @OutputExport(name="sourceDiskEncryptionKeys", type=List.class, parameters={SourceDiskEncryptionKeyResponse.class})
     private Output<List<SourceDiskEncryptionKeyResponse>> sourceDiskEncryptionKeys;
 
-    /**
-     * @return [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
-     */
     public Output<List<SourceDiskEncryptionKeyResponse>> getSourceDiskEncryptionKeys() {
         return this.sourceDiskEncryptionKeys;
     }
-    /**
-     * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance 
-     */
     @OutputExport(name="sourceInstance", type=String.class, parameters={})
     private Output<String> sourceInstance;
 
-    /**
-     * @return The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance 
-     */
     public Output<String> getSourceInstance() {
         return this.sourceInstance;
     }
-    /**
-     * DEPRECATED: Please use instance_properties instead for source instance related properties. New properties will not be added to this field.
-     */
     @OutputExport(name="sourceInstanceProperties", type=SourceInstancePropertiesResponse.class, parameters={})
     private Output<SourceInstancePropertiesResponse> sourceInstanceProperties;
 
-    /**
-     * @return DEPRECATED: Please use instance_properties instead for source instance related properties. New properties will not be added to this field.
-     */
     public Output<SourceInstancePropertiesResponse> getSourceInstanceProperties() {
         return this.sourceInstanceProperties;
     }
-    /**
-     * The status of the machine image. One of the following values: INVALID, CREATING, READY, DELETING, and UPLOADING.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return The status of the machine image. One of the following values: INVALID, CREATING, READY, DELETING, and UPLOADING.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-     */
     @OutputExport(name="storageLocations", type=List.class, parameters={String.class})
     private Output<List<String>> storageLocations;
 
-    /**
-     * @return The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-     */
     public Output<List<String>> getStorageLocations() {
         return this.storageLocations;
     }
-    /**
-     * Total size of the storage used by the machine image.
-     */
     @OutputExport(name="totalStorageBytes", type=String.class, parameters={})
     private Output<String> totalStorageBytes;
 
-    /**
-     * @return Total size of the storage used by the machine image.
-     */
     public Output<String> getTotalStorageBytes() {
         return this.totalStorageBytes;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public MachineImage(String name, MachineImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/v1:MachineImage", name, args == null ? MachineImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -238,14 +133,6 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static MachineImage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MachineImage(name, id, options);
     }

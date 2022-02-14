@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BatchOutputConfigurationResponse {
-/**
- * Customized output file name for append_row output action.
- */
     private final @Nullable String appendRowFileName;
-/**
- * Indicates how the output will be organized.
- */
     private final @Nullable String outputAction;
 
     @OutputCustomType.Constructor({"appendRowFileName","outputAction"})
@@ -28,15 +22,9 @@ public final class BatchOutputConfigurationResponse {
         this.outputAction = outputAction;
     }
 
-/**
- * Customized output file name for append_row output action.
- */
     public Optional<String> getAppendRowFileName() {
         return Optional.ofNullable(this.appendRowFileName);
     }
-/**
- * Indicates how the output will be organized.
- */
     public Optional<String> getOutputAction() {
         return Optional.ofNullable(this.outputAction);
     }

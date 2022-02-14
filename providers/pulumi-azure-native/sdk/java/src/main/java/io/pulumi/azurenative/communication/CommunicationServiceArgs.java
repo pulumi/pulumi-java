@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CommunicationServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommunicationServiceArgs Empty = new CommunicationServiceArgs();
 
-    /**
-     * The name of the CommunicationService resource.
-     */
     @InputImport(name="communicationServiceName")
     private final @Nullable Input<String> communicationServiceName;
 
@@ -28,9 +22,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
         return this.communicationServiceName == null ? Input.empty() : this.communicationServiceName;
     }
 
-    /**
-     * The location where the communication service stores its data at rest.
-     */
     @InputImport(name="dataLocation", required=true)
     private final Input<String> dataLocation;
 
@@ -38,9 +29,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
         return this.dataLocation;
     }
 
-    /**
-     * The Azure location where the CommunicationService is running.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,9 +36,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
-    /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

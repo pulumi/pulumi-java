@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSetArgs Empty = new DataSetArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the dataSet.
-     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -39,9 +30,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
-    /**
-     * Kind of data set.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,DataSetKind>> kind;
 
@@ -49,9 +37,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share to add the data set to.
-     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 

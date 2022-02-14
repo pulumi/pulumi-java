@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LiveEventArgs Empty = new LiveEventArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -37,9 +31,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * The flag indicates if the resource should be automatically started on creation.
-     */
     @InputImport(name="autoStart")
     private final @Nullable Input<Boolean> autoStart;
 
@@ -47,9 +38,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoStart == null ? Input.empty() : this.autoStart;
     }
 
-    /**
-     * Live event cross site access policies.
-     */
     @InputImport(name="crossSiteAccessPolicies")
     private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
@@ -57,9 +45,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.crossSiteAccessPolicies == null ? Input.empty() : this.crossSiteAccessPolicies;
     }
 
-    /**
-     * A description for the live event.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -67,9 +52,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
-     */
     @InputImport(name="encoding")
     private final @Nullable Input<LiveEventEncodingArgs> encoding;
 
@@ -77,9 +59,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
-    /**
-     * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
-     */
     @InputImport(name="hostnamePrefix")
     private final @Nullable Input<String> hostnamePrefix;
 
@@ -87,9 +66,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostnamePrefix == null ? Input.empty() : this.hostnamePrefix;
     }
 
-    /**
-     * Live event input settings. It defines how the live event receives input from a contribution encoder.
-     */
     @InputImport(name="input", required=true)
     private final Input<LiveEventInputArgs> input;
 
@@ -97,9 +73,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.input;
     }
 
-    /**
-     * The name of the live event, maximum length is 32.
-     */
     @InputImport(name="liveEventName")
     private final @Nullable Input<String> liveEventName;
 
@@ -107,9 +80,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.liveEventName == null ? Input.empty() : this.liveEventName;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -117,9 +87,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
-     */
     @InputImport(name="preview")
     private final @Nullable Input<LiveEventPreviewArgs> preview;
 
@@ -127,9 +94,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.preview == null ? Input.empty() : this.preview;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -137,9 +101,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
-     */
     @InputImport(name="streamOptions")
     private final @Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
@@ -147,9 +108,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.streamOptions == null ? Input.empty() : this.streamOptions;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -157,9 +115,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
-     */
     @InputImport(name="transcriptions")
     private final @Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions;
 
@@ -167,9 +122,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.transcriptions == null ? Input.empty() : this.transcriptions;
     }
 
-    /**
-     * Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
-     */
     @InputImport(name="useStaticHostname")
     private final @Nullable Input<Boolean> useStaticHostname;
 

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyAdaptiveProtectionConfigResponse {
-/**
- * If set to true, enables Cloud Armor Machine Learning.
- */
     private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
     @OutputCustomType.Constructor({"layer7DdosDefenseConfig"})
@@ -19,9 +16,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
         this.layer7DdosDefenseConfig = Objects.requireNonNull(layer7DdosDefenseConfig);
     }
 
-/**
- * If set to true, enables Cloud Armor Machine Learning.
- */
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse getLayer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
     }

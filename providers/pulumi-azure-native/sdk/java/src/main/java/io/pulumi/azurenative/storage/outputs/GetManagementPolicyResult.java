@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetManagementPolicyResult {
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * Returns the date and time the ManagementPolicies was last modified.
- */
     private final String lastModifiedTime;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
- */
     private final ManagementPolicySchemaResponse policy;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","lastModifiedTime","name","policy","type"})
@@ -45,33 +30,18 @@ public final class GetManagementPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * Returns the date and time the ManagementPolicies was last modified.
- */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
- */
     public ManagementPolicySchemaResponse getPolicy() {
         return this.policy;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

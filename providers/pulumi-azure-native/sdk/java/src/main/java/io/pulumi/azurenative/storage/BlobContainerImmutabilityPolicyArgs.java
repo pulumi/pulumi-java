@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobContainerImmutabilityPolicyArgs Empty = new BlobContainerImmutabilityPolicyArgs();
 
-    /**
-     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
-    /**
-     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     */
     @InputImport(name="allowProtectedAppendWrites")
     private final @Nullable Input<Boolean> allowProtectedAppendWrites;
 
@@ -39,9 +30,6 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
         return this.allowProtectedAppendWrites == null ? Input.empty() : this.allowProtectedAppendWrites;
     }
 
-    /**
-     * The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-     */
     @InputImport(name="containerName", required=true)
     private final Input<String> containerName;
 
@@ -49,9 +37,6 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
         return this.containerName;
     }
 
-    /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
-     */
     @InputImport(name="immutabilityPeriodSinceCreationInDays")
     private final @Nullable Input<Integer> immutabilityPeriodSinceCreationInDays;
 
@@ -59,9 +44,6 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
         return this.immutabilityPeriodSinceCreationInDays == null ? Input.empty() : this.immutabilityPeriodSinceCreationInDays;
     }
 
-    /**
-     * The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be 'default'
-     */
     @InputImport(name="immutabilityPolicyName")
     private final @Nullable Input<String> immutabilityPolicyName;
 
@@ -69,9 +51,6 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
         return this.immutabilityPolicyName == null ? Input.empty() : this.immutabilityPolicyName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

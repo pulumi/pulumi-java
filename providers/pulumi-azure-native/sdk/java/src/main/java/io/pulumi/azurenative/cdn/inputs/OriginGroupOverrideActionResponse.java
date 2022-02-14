@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the origin group override action for the delivery rule.
- */
 public final class OriginGroupOverrideActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OriginGroupOverrideActionResponse Empty = new OriginGroupOverrideActionResponse();
 
-    /**
-     * The name of the action for the delivery rule.
-Expected value is 'OriginGroupOverride'.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +20,6 @@ Expected value is 'OriginGroupOverride'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the action.
-     */
     @InputImport(name="parameters", required=true)
     private final OriginGroupOverrideActionParametersResponse parameters;
 

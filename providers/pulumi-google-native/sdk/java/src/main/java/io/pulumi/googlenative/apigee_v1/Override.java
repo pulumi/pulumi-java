@@ -13,54 +13,27 @@ import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TraceSampling
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a trace configuration override. The response contains a system-generated UUID, that can be used to view, update, or delete the configuration override. Use the List API to view the existing trace configuration overrides.
- */
 @ResourceType(type="google-native:apigee/v1:Override")
 public class Override extends io.pulumi.resources.CustomResource {
-    /**
-     * ID of the API proxy that will have its trace configuration overridden.
-     */
     @OutputExport(name="apiProxy", type=String.class, parameters={})
     private Output<String> apiProxy;
 
-    /**
-     * @return ID of the API proxy that will have its trace configuration overridden.
-     */
     public Output<String> getApiProxy() {
         return this.apiProxy;
     }
-    /**
-     * ID of the trace configuration override specified as a system-generated UUID.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return ID of the trace configuration override specified as a system-generated UUID.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Trace configuration to override.
-     */
     @OutputExport(name="samplingConfig", type=GoogleCloudApigeeV1TraceSamplingConfigResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> samplingConfig;
 
-    /**
-     * @return Trace configuration to override.
-     */
     public Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> getSamplingConfig() {
         return this.samplingConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Override(String name, OverrideArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Override", name, args == null ? OverrideArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,14 +49,6 @@ public class Override extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Override get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Override(name, id, options);
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines whether to send email notifications about new security alerts
- */
 public final class SecurityContactPropertiesResponseAlertNotifications extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityContactPropertiesResponseAlertNotifications Empty = new SecurityContactPropertiesResponseAlertNotifications();
 
-    /**
-     * Defines the minimal alert severity which will be sent as email notifications
-     */
     @InputImport(name="minimalSeverity")
     private final @Nullable String minimalSeverity;
 
@@ -27,9 +21,6 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends i
         return this.minimalSeverity == null ? Optional.empty() : Optional.ofNullable(this.minimalSeverity);
     }
 
-    /**
-     * Defines if email notifications will be sent about new security alerts
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

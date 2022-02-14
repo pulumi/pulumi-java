@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetwork {
-/**
- * Returns the specified network. Gets a list of available networks by making a list() request.
- */
     public static CompletableFuture<GetNetworkResult> invokeAsync(GetNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetwork", TypeShape.of(GetNetworkResult.class), args == null ? GetNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

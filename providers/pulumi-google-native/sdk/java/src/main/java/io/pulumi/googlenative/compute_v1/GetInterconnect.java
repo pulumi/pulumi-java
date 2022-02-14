@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInterconnect {
-/**
- * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
- */
     public static CompletableFuture<GetInterconnectResult> invokeAsync(GetInterconnectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getInterconnect", TypeShape.of(GetInterconnectResult.class), args == null ? GetInterconnectArgs.Empty : args, Utilities.withVersion(options));
     }

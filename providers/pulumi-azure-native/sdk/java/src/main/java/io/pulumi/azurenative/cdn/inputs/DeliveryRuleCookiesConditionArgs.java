@@ -10,17 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the Cookies condition for the delivery rule.
- */
 public final class DeliveryRuleCookiesConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleCookiesConditionArgs Empty = new DeliveryRuleCookiesConditionArgs();
 
-    /**
-     * The name of the condition for the delivery rule.
-Expected value is 'Cookies'.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,9 +21,6 @@ Expected value is 'Cookies'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the condition.
-     */
     @InputImport(name="parameters", required=true)
     private final Input<CookiesMatchConditionParametersArgs> parameters;
 

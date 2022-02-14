@@ -13,16 +13,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Table card for Actions on Google.
- */
 public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageTableCardResponse Empty = new GoogleCloudDialogflowV2IntentMessageTableCardResponse();
 
-    /**
-     * Optional. List of buttons for the card.
-     */
     @InputImport(name="buttons", required=true)
     private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
@@ -30,9 +24,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
         return this.buttons;
     }
 
-    /**
-     * Optional. Display properties for the columns in this table.
-     */
     @InputImport(name="columnProperties", required=true)
     private final List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties;
 
@@ -40,9 +31,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
         return this.columnProperties;
     }
 
-    /**
-     * Optional. Image which should be displayed on the card.
-     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
@@ -50,9 +38,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
         return this.image;
     }
 
-    /**
-     * Optional. Rows in this table of data.
-     */
     @InputImport(name="rows", required=true)
     private final List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows;
 
@@ -60,9 +45,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
         return this.rows;
     }
 
-    /**
-     * Optional. Subtitle to the title.
-     */
     @InputImport(name="subtitle", required=true)
     private final String subtitle;
 
@@ -70,9 +52,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
         return this.subtitle;
     }
 
-    /**
-     * Title of the card.
-     */
     @InputImport(name="title", required=true)
     private final String title;
 

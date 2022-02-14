@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EncryptionPropertiesResponse {
-/**
- * The encryption key name.
- */
     private final String keyName;
-/**
- * The encryption key version.
- */
     private final String keyVersion;
-/**
- * The keyvault base url.
- */
     private final String vaultBaseUrl;
 
     @OutputCustomType.Constructor({"keyName","keyVersion","vaultBaseUrl"})
@@ -32,21 +23,12 @@ public final class EncryptionPropertiesResponse {
         this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
     }
 
-/**
- * The encryption key name.
- */
     public String getKeyName() {
         return this.keyName;
     }
-/**
- * The encryption key version.
- */
     public String getKeyVersion() {
         return this.keyVersion;
     }
-/**
- * The keyvault base url.
- */
     public String getVaultBaseUrl() {
         return this.vaultBaseUrl;
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum ResourceProviderCapabilitiesEffect {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Allow("Allow"),
-/**
- * 
- */
         Disallow("Disallow");
 
         private final String value;

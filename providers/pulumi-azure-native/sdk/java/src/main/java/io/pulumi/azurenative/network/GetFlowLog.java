@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlowLog {
-/**
- * A flow log resource.
-API Version: 2020-11-01.
- *
- * A flow log resource.
- */
     public static CompletableFuture<GetFlowLogResult> invokeAsync(GetFlowLogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFlowLog", TypeShape.of(GetFlowLogResult.class), args == null ? GetFlowLogArgs.Empty : args, Utilities.withVersion(options));
     }

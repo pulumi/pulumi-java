@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Required Edu Attributes
- */
 public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudChannelV1EduDataResponse Empty = new GoogleCloudChannelV1EduDataResponse();
 
-    /**
-     * Size of the institute.
-     */
     @InputImport(name="instituteSize", required=true)
     private final String instituteSize;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
         return this.instituteSize;
     }
 
-    /**
-     * Designated institute type of customer.
-     */
     @InputImport(name="instituteType", required=true)
     private final String instituteType;
 
@@ -35,9 +26,6 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
         return this.instituteType;
     }
 
-    /**
-     * Web address for the edu customer's institution.
-     */
     @InputImport(name="website", required=true)
     private final String website;
 

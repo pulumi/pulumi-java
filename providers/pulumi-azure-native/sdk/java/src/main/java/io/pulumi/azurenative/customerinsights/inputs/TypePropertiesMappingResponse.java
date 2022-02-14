@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Metadata for a Link's property mapping.
- */
 public final class TypePropertiesMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TypePropertiesMappingResponse Empty = new TypePropertiesMappingResponse();
 
-    /**
-     * Link type.
-     */
     @InputImport(name="linkType")
     private final @Nullable String linkType;
 
@@ -27,9 +21,6 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
     }
 
-    /**
-     *  Property name on the source Entity Type.
-     */
     @InputImport(name="sourcePropertyName", required=true)
     private final String sourcePropertyName;
 
@@ -37,9 +28,6 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
         return this.sourcePropertyName;
     }
 
-    /**
-     * Property name on the target Entity Type.
-     */
     @InputImport(name="targetPropertyName", required=true)
     private final String targetPropertyName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotArgs Empty = new SnapshotArgs();
 
-    /**
-     * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -38,9 +29,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
-    /**
-     * Resource labels to represent user provided metadata.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -48,9 +36,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -58,9 +43,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -68,9 +50,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="snapshotId", required=true)
     private final Input<String> snapshotId;
 

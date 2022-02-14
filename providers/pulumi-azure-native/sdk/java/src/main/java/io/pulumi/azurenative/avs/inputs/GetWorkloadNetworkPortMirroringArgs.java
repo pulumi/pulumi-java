@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWorkloadNetworkPortMirroringArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkloadNetworkPortMirroringArgs Empty = new GetWorkloadNetworkPortMirroringArgs();
 
-    /**
-     * NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
-     */
     @InputImport(name="portMirroringId", required=true)
     private final String portMirroringId;
 
@@ -25,9 +19,6 @@ public final class GetWorkloadNetworkPortMirroringArgs extends io.pulumi.resourc
         return this.portMirroringId;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -35,9 +26,6 @@ public final class GetWorkloadNetworkPortMirroringArgs extends io.pulumi.resourc
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

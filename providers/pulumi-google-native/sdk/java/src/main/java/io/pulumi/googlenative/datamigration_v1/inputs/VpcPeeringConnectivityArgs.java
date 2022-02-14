@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The details of the VPC where the source database is located in Google Cloud. We will use this information to set up the VPC peering connection between Cloud SQL and this VPC.
- */
 public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpcPeeringConnectivityArgs Empty = new VpcPeeringConnectivityArgs();
 
-    /**
-     * The name of the VPC network to peer with the Cloud SQL private network.
-     */
     @InputImport(name="vpc")
     private final @Nullable Input<String> vpc;
 

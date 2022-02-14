@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
- */
     @EnumType
     public enum ExperimentState {
-/**
- * State unspecified.
- */
         StateUnspecified("STATE_UNSPECIFIED"),
-/**
- * The experiment is created but not started yet.
- */
         Draft("DRAFT"),
-/**
- * The experiment is running.
- */
         Running("RUNNING"),
-/**
- * The experiment is done.
- */
         Done("DONE"),
-/**
- * The experiment with auto-rollout enabled has failed.
- */
         RolloutFailed("ROLLOUT_FAILED");
 
         private final String value;

@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Represents a reviewer's decision for a given review
- */
     @EnumType
     public enum AccessReviewResult {
-/**
- * 
- */
         Approve("Approve"),
-/**
- * 
- */
         Deny("Deny"),
-/**
- * 
- */
         NotReviewed("NotReviewed"),
-/**
- * 
- */
         DontKnow("DontKnow"),
-/**
- * 
- */
         NotNotified("NotNotified");
 
         private final String value;

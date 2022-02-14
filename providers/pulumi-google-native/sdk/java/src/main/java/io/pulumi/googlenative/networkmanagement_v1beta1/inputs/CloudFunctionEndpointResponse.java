@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Wrapper for cloud function attributes.
- */
 public final class CloudFunctionEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudFunctionEndpointResponse Empty = new CloudFunctionEndpointResponse();
 
-    /**
-     * A [Cloud function](https://cloud.google.com/functions) name.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

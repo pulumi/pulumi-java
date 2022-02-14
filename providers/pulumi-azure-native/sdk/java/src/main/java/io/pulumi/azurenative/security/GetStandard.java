@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStandard {
-/**
- * Security Standard on a resource
-API Version: 2021-08-01-preview.
- *
- * Security Standard on a resource
- */
     public static CompletableFuture<GetStandardResult> invokeAsync(GetStandardArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getStandard", TypeShape.of(GetStandardResult.class), args == null ? GetStandardArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the database.
- */
     @EnumType
     public enum DatabaseDumpDatabaseType {
-/**
- * The type of the source database is unknown.
- */
         DatabaseTypeUnspecified("DATABASE_TYPE_UNSPECIFIED"),
-/**
- * The type of the source database is MySQL.
- */
         Mysql("MYSQL");
 
         private final String value;

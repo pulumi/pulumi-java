@@ -17,388 +17,75 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The description of the DigitalTwins service.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Put a DigitalTwinsInstance resource
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var digitalTwin = new AzureNative.DigitalTwins.DigitalTwin("digitalTwin", new AzureNative.DigitalTwins.DigitalTwinArgs
-        {
-            Location = "WestUS2",
-            ResourceGroupName = "resRg",
-            ResourceName = "myDigitalTwinsService",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := digitaltwins.NewDigitalTwin(ctx, "digitalTwin", &digitaltwins.DigitalTwinArgs{
-			Location:          pulumi.String("WestUS2"),
-			ResourceGroupName: pulumi.String("resRg"),
-			ResourceName:      pulumi.String("myDigitalTwinsService"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const digitalTwin = new azure_native.digitaltwins.DigitalTwin("digitalTwin", {
-    location: "WestUS2",
-    resourceGroupName: "resRg",
-    resourceName: "myDigitalTwinsService",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-digital_twin = azure_native.digitaltwins.DigitalTwin("digitalTwin",
-    location="WestUS2",
-    resource_group_name="resRg",
-    resource_name="myDigitalTwinsService")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Put a DigitalTwinsInstance resource with identity
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var digitalTwin = new AzureNative.DigitalTwins.DigitalTwin("digitalTwin", new AzureNative.DigitalTwins.DigitalTwinArgs
-        {
-            Identity = new AzureNative.DigitalTwins.Inputs.DigitalTwinsIdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Location = "WestUS2",
-            ResourceGroupName = "resRg",
-            ResourceName = "myDigitalTwinsService",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := digitaltwins.NewDigitalTwin(ctx, "digitalTwin", &digitaltwins.DigitalTwinArgs{
-			Identity: &digitaltwins.DigitalTwinsIdentityArgs{
-				Type: pulumi.String("SystemAssigned"),
-			},
-			Location:          pulumi.String("WestUS2"),
-			ResourceGroupName: pulumi.String("resRg"),
-			ResourceName:      pulumi.String("myDigitalTwinsService"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const digitalTwin = new azure_native.digitaltwins.DigitalTwin("digitalTwin", {
-    identity: {
-        type: "SystemAssigned",
-    },
-    location: "WestUS2",
-    resourceGroupName: "resRg",
-    resourceName: "myDigitalTwinsService",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-digital_twin = azure_native.digitaltwins.DigitalTwin("digitalTwin",
-    identity=azure_native.digitaltwins.DigitalTwinsIdentityArgs(
-        type="SystemAssigned",
-    ),
-    location="WestUS2",
-    resource_group_name="resRg",
-    resource_name="myDigitalTwinsService")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Put a DigitalTwinsInstance resource with publicNetworkAccess property
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var digitalTwin = new AzureNative.DigitalTwins.DigitalTwin("digitalTwin", new AzureNative.DigitalTwins.DigitalTwinArgs
-        {
-            Location = "WestUS2",
-            PublicNetworkAccess = "Enabled",
-            ResourceGroupName = "resRg",
-            ResourceName = "myDigitalTwinsService",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := digitaltwins.NewDigitalTwin(ctx, "digitalTwin", &digitaltwins.DigitalTwinArgs{
-			Location:            pulumi.String("WestUS2"),
-			PublicNetworkAccess: pulumi.String("Enabled"),
-			ResourceGroupName:   pulumi.String("resRg"),
-			ResourceName:        pulumi.String("myDigitalTwinsService"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const digitalTwin = new azure_native.digitaltwins.DigitalTwin("digitalTwin", {
-    location: "WestUS2",
-    publicNetworkAccess: "Enabled",
-    resourceGroupName: "resRg",
-    resourceName: "myDigitalTwinsService",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-digital_twin = azure_native.digitaltwins.DigitalTwin("digitalTwin",
-    location="WestUS2",
-    public_network_access="Enabled",
-    resource_group_name="resRg",
-    resource_name="myDigitalTwinsService")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:digitaltwins:DigitalTwin myDigitalTwinsService /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService 
-```
-
- */
 @ResourceType(type="azure-native:digitaltwins:DigitalTwin")
 public class DigitalTwin extends io.pulumi.resources.CustomResource {
-    /**
-     * Time when DigitalTwinsInstance was created.
-     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    /**
-     * @return Time when DigitalTwinsInstance was created.
-     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    /**
-     * Api endpoint to work with DigitalTwinsInstance.
-     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
-    /**
-     * @return Api endpoint to work with DigitalTwinsInstance.
-     */
     public Output<String> getHostName() {
         return this.hostName;
     }
-    /**
-     * The managed identity for the DigitalTwinsInstance.
-     */
     @OutputExport(name="identity", type=DigitalTwinsIdentityResponse.class, parameters={})
     private Output</* @Nullable */ DigitalTwinsIdentityResponse> identity;
 
-    /**
-     * @return The managed identity for the DigitalTwinsInstance.
-     */
     public Output</* @Nullable */ DigitalTwinsIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * Time when DigitalTwinsInstance was updated.
-     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
-    /**
-     * @return Time when DigitalTwinsInstance was updated.
-     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * 
-     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    /**
-     * The provisioning state.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Public network access for the DigitalTwinsInstance.
-     */
     @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
-    /**
-     * @return Public network access for the DigitalTwinsInstance.
-     */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DigitalTwin(String name, DigitalTwinArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:digitaltwins:DigitalTwin", name, args == null ? DigitalTwinArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -420,14 +107,6 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DigitalTwin get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DigitalTwin(name, id, options);
     }

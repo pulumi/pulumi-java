@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Information for an interconnect attachment when this belongs to an interconnect of type DEDICATED.
- */
 public final class InterconnectAttachmentPrivateInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InterconnectAttachmentPrivateInfoResponse Empty = new InterconnectAttachmentPrivateInfoResponse();
 
-    /**
-     * 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
-     */
     @InputImport(name="tag8021q", required=true)
     private final Integer tag8021q;
 

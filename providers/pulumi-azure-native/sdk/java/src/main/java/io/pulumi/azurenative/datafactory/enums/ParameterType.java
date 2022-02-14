@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Parameter type.
- */
     @EnumType
     public enum ParameterType {
-/**
- * 
- */
         Object("Object"),
-/**
- * 
- */
         String("String"),
-/**
- * 
- */
         Int("Int"),
-/**
- * 
- */
         Float("Float"),
-/**
- * 
- */
         Bool("Bool"),
-/**
- * 
- */
         Array("Array"),
-/**
- * 
- */
         SecureString("SecureString");
 
         private final String value;

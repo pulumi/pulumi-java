@@ -14,69 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLabResult {
-/**
- * Object id of the user that created the lab.
- */
     private final String createdByObjectId;
-/**
- * Lab creator name
- */
     private final String createdByUserPrincipalName;
-/**
- * Creation date for the lab
- */
     private final String createdDate;
-/**
- * The identifier of the resource.
- */
     private final String id;
-/**
- * Invitation code that users can use to join a lab.
- */
     private final String invitationCode;
-/**
- * The details of the latest operation. ex: status, error
- */
     private final LatestOperationResultResponse latestOperationResult;
-/**
- * The location of the resource.
- */
     private final @Nullable String location;
-/**
- * Maximum number of users allowed in the lab.
- */
     private final @Nullable Integer maxUsersInLab;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The provisioning status of the resource.
- */
     private final @Nullable String provisioningState;
-/**
- * The tags of the resource.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource.
- */
     private final String type;
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     private final @Nullable String uniqueIdentifier;
-/**
- * Maximum duration a user can use an environment for in the lab.
- */
     private final @Nullable String usageQuota;
-/**
- * Lab user access mode (open to all vs. restricted to those listed on the lab).
- */
     private final @Nullable String userAccessMode;
-/**
- * Maximum value MaxUsersInLab can be set to, as specified by the service
- */
     private final Integer userQuota;
 
     @OutputCustomType.Constructor({"createdByObjectId","createdByUserPrincipalName","createdDate","id","invitationCode","latestOperationResult","location","maxUsersInLab","name","provisioningState","tags","type","uniqueIdentifier","usageQuota","userAccessMode","userQuota"})
@@ -115,99 +67,51 @@ public final class GetLabResult {
         this.userQuota = Objects.requireNonNull(userQuota);
     }
 
-/**
- * Object id of the user that created the lab.
- */
     public String getCreatedByObjectId() {
         return this.createdByObjectId;
     }
-/**
- * Lab creator name
- */
     public String getCreatedByUserPrincipalName() {
         return this.createdByUserPrincipalName;
     }
-/**
- * Creation date for the lab
- */
     public String getCreatedDate() {
         return this.createdDate;
     }
-/**
- * The identifier of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Invitation code that users can use to join a lab.
- */
     public String getInvitationCode() {
         return this.invitationCode;
     }
-/**
- * The details of the latest operation. ex: status, error
- */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
-/**
- * The location of the resource.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Maximum number of users allowed in the lab.
- */
     public Optional<Integer> getMaxUsersInLab() {
         return Optional.ofNullable(this.maxUsersInLab);
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The provisioning status of the resource.
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * The tags of the resource.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unique immutable identifier of a resource (Guid).
- */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
-/**
- * Maximum duration a user can use an environment for in the lab.
- */
     public Optional<String> getUsageQuota() {
         return Optional.ofNullable(this.usageQuota);
     }
-/**
- * Lab user access mode (open to all vs. restricted to those listed on the lab).
- */
     public Optional<String> getUserAccessMode() {
         return Optional.ofNullable(this.userAccessMode);
     }
-/**
- * Maximum value MaxUsersInLab can be set to, as specified by the service
- */
     public Integer getUserQuota() {
         return this.userQuota;
     }

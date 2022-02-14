@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the destination of connection monitor.
- */
 public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorDestinationArgs Empty = new ConnectionMonitorDestinationArgs();
 
-    /**
-     * Address of the connection monitor destination (IP or domain name).
-     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -28,9 +22,6 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
         return this.address == null ? Input.empty() : this.address;
     }
 
-    /**
-     * The destination port used by connection monitor.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -38,9 +29,6 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
         return this.port == null ? Input.empty() : this.port;
     }
 
-    /**
-     * The ID of the resource used as the destination by connection monitor.
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

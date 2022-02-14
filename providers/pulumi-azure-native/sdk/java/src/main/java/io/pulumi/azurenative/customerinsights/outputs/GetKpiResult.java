@@ -18,93 +18,27 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetKpiResult {
-/**
- * The aliases.
- */
     private final @Nullable List<KpiAliasResponse> aliases;
-/**
- * The calculation window.
- */
     private final String calculationWindow;
-/**
- * Name of calculation window field.
- */
     private final @Nullable String calculationWindowFieldName;
-/**
- * Localized description for the KPI.
- */
     private final @Nullable Map<String,String> description;
-/**
- * Localized display name for the KPI.
- */
     private final @Nullable Map<String,String> displayName;
-/**
- * The mapping entity type.
- */
     private final String entityType;
-/**
- * The mapping entity name.
- */
     private final String entityTypeName;
-/**
- * The computation expression for the KPI.
- */
     private final String expression;
-/**
- * The KPI extracts.
- */
     private final @Nullable List<KpiExtractResponse> extracts;
-/**
- * The filter expression for the KPI.
- */
     private final @Nullable String filter;
-/**
- * The computation function for the KPI.
- */
     private final String function;
-/**
- * the group by properties for the KPI.
- */
     private final @Nullable List<String> groupBy;
-/**
- * The KPI GroupByMetadata.
- */
     private final List<KpiGroupByMetadataResponse> groupByMetadata;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * The KPI name.
- */
     private final String kpiName;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * The participant profiles.
- */
     private final List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata;
-/**
- * Provisioning state.
- */
     private final String provisioningState;
-/**
- * The hub name.
- */
     private final String tenantId;
-/**
- * The KPI thresholds.
- */
     private final @Nullable KpiThresholdsResponse thresHolds;
-/**
- * Resource type.
- */
     private final String type;
-/**
- * The unit of measurement for the KPI.
- */
     private final @Nullable String unit;
 
     @OutputCustomType.Constructor({"aliases","calculationWindow","calculationWindowFieldName","description","displayName","entityType","entityTypeName","expression","extracts","filter","function","groupBy","groupByMetadata","id","kpiName","name","participantProfilesMetadata","provisioningState","tenantId","thresHolds","type","unit"})
@@ -155,135 +89,69 @@ public final class GetKpiResult {
         this.unit = unit;
     }
 
-/**
- * The aliases.
- */
     public List<KpiAliasResponse> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
-/**
- * The calculation window.
- */
     public String getCalculationWindow() {
         return this.calculationWindow;
     }
-/**
- * Name of calculation window field.
- */
     public Optional<String> getCalculationWindowFieldName() {
         return Optional.ofNullable(this.calculationWindowFieldName);
     }
-/**
- * Localized description for the KPI.
- */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
-/**
- * Localized display name for the KPI.
- */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
-/**
- * The mapping entity type.
- */
     public String getEntityType() {
         return this.entityType;
     }
-/**
- * The mapping entity name.
- */
     public String getEntityTypeName() {
         return this.entityTypeName;
     }
-/**
- * The computation expression for the KPI.
- */
     public String getExpression() {
         return this.expression;
     }
-/**
- * The KPI extracts.
- */
     public List<KpiExtractResponse> getExtracts() {
         return this.extracts == null ? List.of() : this.extracts;
     }
-/**
- * The filter expression for the KPI.
- */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
-/**
- * The computation function for the KPI.
- */
     public String getFunction() {
         return this.function;
     }
-/**
- * the group by properties for the KPI.
- */
     public List<String> getGroupBy() {
         return this.groupBy == null ? List.of() : this.groupBy;
     }
-/**
- * The KPI GroupByMetadata.
- */
     public List<KpiGroupByMetadataResponse> getGroupByMetadata() {
         return this.groupByMetadata;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The KPI name.
- */
     public String getKpiName() {
         return this.kpiName;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The participant profiles.
- */
     public List<KpiParticipantProfilesMetadataResponse> getParticipantProfilesMetadata() {
         return this.participantProfilesMetadata;
     }
-/**
- * Provisioning state.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * The hub name.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The KPI thresholds.
- */
     public Optional<KpiThresholdsResponse> getThresHolds() {
         return Optional.ofNullable(this.thresHolds);
     }
-/**
- * Resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The unit of measurement for the KPI.
- */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }

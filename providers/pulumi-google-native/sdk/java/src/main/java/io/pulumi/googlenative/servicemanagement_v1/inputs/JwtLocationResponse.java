@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Specifies a location to extract JWT from an API request.
- */
 public final class JwtLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JwtLocationResponse Empty = new JwtLocationResponse();
 
-    /**
-     * Specifies HTTP header name to extract JWT token.
-     */
     @InputImport(name="header", required=true)
     private final String header;
 
@@ -25,9 +19,6 @@ public final class JwtLocationResponse extends io.pulumi.resources.InvokeArgs {
         return this.header;
     }
 
-    /**
-     * Specifies URL query parameter name to extract JWT token.
-     */
     @InputImport(name="query", required=true)
     private final String query;
 
@@ -35,9 +26,6 @@ public final class JwtLocationResponse extends io.pulumi.resources.InvokeArgs {
         return this.query;
     }
 
-    /**
-     * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type. Must be empty for "in" query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
-     */
     @InputImport(name="valuePrefix", required=true)
     private final String valuePrefix;
 

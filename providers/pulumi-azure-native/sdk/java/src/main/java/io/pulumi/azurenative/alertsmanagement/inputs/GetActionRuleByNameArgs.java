@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetActionRuleByNameArgs Empty = new GetActionRuleByNameArgs();
 
-    /**
-     * The name of action rule that needs to be fetched
-     */
     @InputImport(name="actionRuleName", required=true)
     private final String actionRuleName;
 
@@ -25,9 +19,6 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
         return this.actionRuleName;
     }
 
-    /**
-     * Resource group name where the resource is created.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

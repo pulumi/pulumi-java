@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
-    /**
-     * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -32,9 +26,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * The user-specified id of the job.
-     */
     @InputImport(name="jobId", required=true)
     private final Input<String> jobId;
 
@@ -42,9 +33,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobId;
     }
 
-    /**
-     * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -52,9 +40,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * Input parameters to create a prediction job.
-     */
     @InputImport(name="predictionInput")
     private final @Nullable Input<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
 
@@ -62,9 +47,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.predictionInput == null ? Input.empty() : this.predictionInput;
     }
 
-    /**
-     * The current prediction job result.
-     */
     @InputImport(name="predictionOutput")
     private final @Nullable Input<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
 
@@ -72,9 +54,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.predictionOutput == null ? Input.empty() : this.predictionOutput;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -82,9 +61,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * Input parameters to create a training job.
-     */
     @InputImport(name="trainingInput")
     private final @Nullable Input<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
 
@@ -92,9 +68,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.trainingInput == null ? Input.empty() : this.trainingInput;
     }
 
-    /**
-     * The current training job result.
-     */
     @InputImport(name="trainingOutput")
     private final @Nullable Input<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
 

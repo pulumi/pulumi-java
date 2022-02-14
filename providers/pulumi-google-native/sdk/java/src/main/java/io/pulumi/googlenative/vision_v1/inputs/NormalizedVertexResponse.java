@@ -8,16 +8,10 @@ import java.lang.Double;
 import java.util.Objects;
 
 
-/**
- * A vertex represents a 2D point in the image. NOTE: the normalized vertex coordinates are relative to the original image and range from 0 to 1.
- */
 public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NormalizedVertexResponse Empty = new NormalizedVertexResponse();
 
-    /**
-     * X coordinate.
-     */
     @InputImport(name="x", required=true)
     private final Double x;
 
@@ -25,9 +19,6 @@ public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeAr
         return this.x;
     }
 
-    /**
-     * Y coordinate.
-     */
     @InputImport(name="y", required=true)
     private final Double y;
 

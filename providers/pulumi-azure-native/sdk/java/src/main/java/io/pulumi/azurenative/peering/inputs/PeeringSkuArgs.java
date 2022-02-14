@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The SKU that defines the tier and kind of the peering.
- */
 public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeeringSkuArgs Empty = new PeeringSkuArgs();
 
-    /**
-     * The family of the peering SKU.
-     */
     @InputImport(name="family")
     private final @Nullable Input<Either<String,Family>> family;
 
@@ -31,9 +25,6 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
-    /**
-     * The name of the peering SKU.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -41,9 +32,6 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The size of the peering SKU.
-     */
     @InputImport(name="size")
     private final @Nullable Input<Either<String,Size>> size;
 
@@ -51,9 +39,6 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
-    /**
-     * The tier of the peering SKU.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,Tier>> tier;
 

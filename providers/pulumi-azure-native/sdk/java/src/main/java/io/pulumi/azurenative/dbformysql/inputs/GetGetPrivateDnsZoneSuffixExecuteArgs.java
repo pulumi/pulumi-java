@@ -6,9 +6,6 @@ package io.pulumi.azurenative.dbformysql.inputs;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGetPrivateDnsZoneSuffixExecuteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGetPrivateDnsZoneSuffixExecuteArgs Empty = new GetGetPrivateDnsZoneSuffixExecuteArgs();

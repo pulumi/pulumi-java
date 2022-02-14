@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Profile for how to handle networking for Lab Plans.
- */
 public final class LabPlanNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabPlanNetworkProfileArgs Empty = new LabPlanNetworkProfileArgs();
 
-    /**
-     * The external subnet resource id
-     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 

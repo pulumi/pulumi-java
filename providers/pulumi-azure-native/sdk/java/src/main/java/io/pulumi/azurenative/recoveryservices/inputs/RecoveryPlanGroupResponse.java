@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Recovery plan group details.
- */
 public final class RecoveryPlanGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanGroupResponse Empty = new RecoveryPlanGroupResponse();
 
-    /**
-     * The end group actions.
-     */
     @InputImport(name="endGroupActions")
     private final @Nullable List<RecoveryPlanActionResponse> endGroupActions;
 
@@ -30,9 +24,6 @@ public final class RecoveryPlanGroupResponse extends io.pulumi.resources.InvokeA
         return this.endGroupActions == null ? List.of() : this.endGroupActions;
     }
 
-    /**
-     * The group type.
-     */
     @InputImport(name="groupType", required=true)
     private final String groupType;
 
@@ -40,9 +31,6 @@ public final class RecoveryPlanGroupResponse extends io.pulumi.resources.InvokeA
         return this.groupType;
     }
 
-    /**
-     * The list of protected items.
-     */
     @InputImport(name="replicationProtectedItems")
     private final @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems;
 
@@ -50,9 +38,6 @@ public final class RecoveryPlanGroupResponse extends io.pulumi.resources.InvokeA
         return this.replicationProtectedItems == null ? List.of() : this.replicationProtectedItems;
     }
 
-    /**
-     * The start group actions.
-     */
     @InputImport(name="startGroupActions")
     private final @Nullable List<RecoveryPlanActionResponse> startGroupActions;
 

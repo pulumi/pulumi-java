@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAccessControlRecordArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccessControlRecordArgs Empty = new GetAccessControlRecordArgs();
 
-    /**
-     * Name of access control record to be fetched.
-     */
     @InputImport(name="accessControlRecordName", required=true)
     private final String accessControlRecordName;
 
@@ -25,9 +19,6 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
         return this.accessControlRecordName;
     }
 
-    /**
-     * The manager name
-     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -35,9 +26,6 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
         return this.managerName;
     }
 
-    /**
-     * The resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

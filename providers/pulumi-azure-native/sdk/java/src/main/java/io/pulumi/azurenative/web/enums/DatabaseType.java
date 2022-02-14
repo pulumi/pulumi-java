@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Database type (e.g. SqlAzure / MySql).
- */
     @EnumType
     public enum DatabaseType {
-/**
- * 
- */
         SqlAzure("SqlAzure"),
-/**
- * 
- */
         MySql("MySql"),
-/**
- * 
- */
         LocalMySql("LocalMySql"),
-/**
- * 
- */
         PostgreSql("PostgreSql");
 
         private final String value;

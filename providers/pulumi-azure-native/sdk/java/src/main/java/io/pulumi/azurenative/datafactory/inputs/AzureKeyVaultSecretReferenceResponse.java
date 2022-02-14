@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Key Vault secret reference.
- */
 public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureKeyVaultSecretReferenceResponse Empty = new AzureKeyVaultSecretReferenceResponse();
 
-    /**
-     * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="secretName", required=true)
     private final Object secretName;
 
@@ -29,9 +23,6 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
         return this.secretName;
     }
 
-    /**
-     * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="secretVersion")
     private final @Nullable Object secretVersion;
 
@@ -39,9 +30,6 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
-    /**
-     * The Azure Key Vault linked service reference.
-     */
     @InputImport(name="store", required=true)
     private final LinkedServiceReferenceResponse store;
 
@@ -49,10 +37,6 @@ public final class AzureKeyVaultSecretReferenceResponse extends io.pulumi.resour
         return this.store;
     }
 
-    /**
-     * Type of the secret.
-Expected value is 'AzureKeyVaultSecret'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

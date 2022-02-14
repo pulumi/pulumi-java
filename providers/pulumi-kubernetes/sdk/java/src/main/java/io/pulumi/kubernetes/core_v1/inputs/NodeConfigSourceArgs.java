@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil. This API is deprecated since 1.22
- */
 public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeConfigSourceArgs Empty = new NodeConfigSourceArgs();
 
-    /**
-     * ConfigMap is a reference to a Node's ConfigMap
-     */
     @InputImport(name="configMap")
     private final @Nullable Input<ConfigMapNodeConfigSourceArgs> configMap;
 

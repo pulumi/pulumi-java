@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Role type.
- */
     @EnumType
     public enum RoleTypes {
-/**
- * 
- */
         IOT("IOT"),
-/**
- * 
- */
         ASA("ASA"),
-/**
- * 
- */
         Functions("Functions"),
-/**
- * 
- */
         Cognitive("Cognitive"),
-/**
- * 
- */
         MEC("MEC"),
-/**
- * 
- */
         CloudEdgeManagement("CloudEdgeManagement"),
-/**
- * 
- */
         Kubernetes("Kubernetes");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes an Azure SQL database output data source.
- */
 public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSqlDatabaseOutputDataSourceResponse Empty = new AzureSqlDatabaseOutputDataSourceResponse();
 
-    /**
-     * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="database")
     private final @Nullable String database;
 
@@ -27,9 +21,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
-    /**
-     * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -37,9 +28,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
-    /**
-     * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="server")
     private final @Nullable String server;
 
@@ -47,9 +35,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
     }
 
-    /**
-     * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="table")
     private final @Nullable String table;
 
@@ -57,10 +42,6 @@ public final class AzureSqlDatabaseOutputDataSourceResponse extends io.pulumi.re
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
     }
 
-    /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Microsoft.Sql/Server/Database'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -68,9 +49,6 @@ Expected value is 'Microsoft.Sql/Server/Database'.
         return this.type;
     }
 
-    /**
-     * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="user")
     private final @Nullable String user;
 

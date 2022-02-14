@@ -15,178 +15,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The top level Linked service resource container.
-API Version: 2020-08-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### LinkedServicesCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var linkedService = new AzureNative.OperationalInsights.LinkedService("linkedService", new AzureNative.OperationalInsights.LinkedServiceArgs
-        {
-            LinkedServiceName = "Cluster",
-            ResourceGroupName = "mms-eus",
-            WorkspaceName = "TestLinkWS",
-            WriteAccessResourceId = "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := operationalinsights.NewLinkedService(ctx, "linkedService", &operationalinsights.LinkedServiceArgs{
-			LinkedServiceName:     pulumi.String("Cluster"),
-			ResourceGroupName:     pulumi.String("mms-eus"),
-			WorkspaceName:         pulumi.String("TestLinkWS"),
-			WriteAccessResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const linkedService = new azure_native.operationalinsights.LinkedService("linkedService", {
-    linkedServiceName: "Cluster",
-    resourceGroupName: "mms-eus",
-    workspaceName: "TestLinkWS",
-    writeAccessResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-linked_service = azure_native.operationalinsights.LinkedService("linkedService",
-    linked_service_name="Cluster",
-    resource_group_name="mms-eus",
-    workspace_name="TestLinkWS",
-    write_access_resource_id="/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:operationalinsights:LinkedService TestLinkWS/Cluster /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testlinkws/linkedservices/cluster 
-```
-
- */
 @ResourceType(type="azure-native:operationalinsights:LinkedService")
 public class LinkedService extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the linked service.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
-    /**
-     * @return The provisioning state of the linked service.
-     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
-     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
-    /**
-     * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
-     */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
-     */
     @OutputExport(name="writeAccessResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> writeAccessResourceId;
 
-    /**
-     * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
-     */
     public Output</* @Nullable */ String> getWriteAccessResourceId() {
         return this.writeAccessResourceId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public LinkedService(String name, LinkedServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:LinkedService", name, args == null ? LinkedServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -208,14 +75,6 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static LinkedService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedService(name, id, options);
     }

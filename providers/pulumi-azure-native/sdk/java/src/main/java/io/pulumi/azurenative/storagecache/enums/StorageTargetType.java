@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the Storage Target.
- */
     @EnumType
     public enum StorageTargetType {
-/**
- * 
- */
         Nfs3("nfs3"),
-/**
- * 
- */
         Clfs("clfs"),
-/**
- * 
- */
         Unknown("unknown"),
-/**
- * 
- */
         BlobNfs("blobNfs");
 
         private final String value;

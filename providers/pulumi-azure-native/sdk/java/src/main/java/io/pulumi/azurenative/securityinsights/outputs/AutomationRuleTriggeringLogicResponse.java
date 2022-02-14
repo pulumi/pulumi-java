@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationRuleTriggeringLogicResponse {
-/**
- * The conditions to evaluate to determine if the automation rule should be triggered on a given object
- */
     private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
-/**
- * Determines when the automation rule should automatically expire and be disabled.
- */
     private final @Nullable String expirationTimeUtc;
-/**
- * Determines whether the automation rule is enabled or disabled.
- */
     private final Boolean isEnabled;
-/**
- * The type of object the automation rule triggers on
- */
     private final String triggersOn;
-/**
- * The type of event the automation rule triggers on
- */
     private final String triggersWhen;
 
     @OutputCustomType.Constructor({"conditions","expirationTimeUtc","isEnabled","triggersOn","triggersWhen"})
@@ -49,33 +34,18 @@ public final class AutomationRuleTriggeringLogicResponse {
         this.triggersWhen = Objects.requireNonNull(triggersWhen);
     }
 
-/**
- * The conditions to evaluate to determine if the automation rule should be triggered on a given object
- */
     public List<AutomationRulePropertyValuesConditionResponse> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
-/**
- * Determines when the automation rule should automatically expire and be disabled.
- */
     public Optional<String> getExpirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
-/**
- * Determines whether the automation rule is enabled or disabled.
- */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
-/**
- * The type of object the automation rule triggers on
- */
     public String getTriggersOn() {
         return this.triggersOn;
     }
-/**
- * The type of event the automation rule triggers on
- */
     public String getTriggersWhen() {
         return this.triggersWhen;
     }

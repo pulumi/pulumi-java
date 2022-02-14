@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure backup rule
- */
 public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureBackupRuleArgs Empty = new AzureBackupRuleArgs();
 
-    /**
-     * BackupParameters base
-     */
     @InputImport(name="backupParameters")
     private final @Nullable Input<AzureBackupParamsArgs> backupParameters;
 
@@ -32,9 +26,6 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.backupParameters == null ? Input.empty() : this.backupParameters;
     }
 
-    /**
-     * DataStoreInfo base
-     */
     @InputImport(name="dataStore", required=true)
     private final Input<DataStoreInfoBaseArgs> dataStore;
 
@@ -42,9 +33,6 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.dataStore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -52,10 +40,6 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.name;
     }
 
-    /**
-     * 
-Expected value is 'AzureBackupRule'.
-     */
     @InputImport(name="objectType", required=true)
     private final Input<String> objectType;
 
@@ -63,9 +47,6 @@ Expected value is 'AzureBackupRule'.
         return this.objectType;
     }
 
-    /**
-     * Trigger context
-     */
     @InputImport(name="trigger", required=true)
     private final Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 

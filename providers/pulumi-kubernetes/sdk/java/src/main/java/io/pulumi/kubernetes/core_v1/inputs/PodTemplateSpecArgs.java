@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * PodTemplateSpec describes the data a pod should have when created from a template
- */
 public final class PodTemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodTemplateSpecArgs Empty = new PodTemplateSpecArgs();
 
-    /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -28,9 +22,6 @@ public final class PodTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     */
     @InputImport(name="spec")
     private final @Nullable Input<PodSpecArgs> spec;
 

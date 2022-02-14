@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ImportFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImportFileArgs Empty = new ImportFileArgs();
 
-    /**
-     * The contents of the file.
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -27,9 +21,6 @@ public final class ImportFileArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The name of the file.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyAlternativeNameServerConfigResponse Empty = new PolicyAlternativeNameServerConfigResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -27,9 +21,6 @@ public final class PolicyAlternativeNameServerConfigResponse extends io.pulumi.r
         return this.kind;
     }
 
-    /**
-     * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
-     */
     @InputImport(name="targetNameServers", required=true)
     private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 

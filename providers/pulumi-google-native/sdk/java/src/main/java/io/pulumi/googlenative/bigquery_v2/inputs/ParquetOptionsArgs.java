@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParquetOptionsArgs Empty = new ParquetOptionsArgs();
 
-    /**
-     * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
-     */
     @InputImport(name="enableListInference")
     private final @Nullable Input<Boolean> enableListInference;
 
@@ -27,9 +21,6 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableListInference == null ? Input.empty() : this.enableListInference;
     }
 
-    /**
-     * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
-     */
     @InputImport(name="enumAsString")
     private final @Nullable Input<Boolean> enumAsString;
 

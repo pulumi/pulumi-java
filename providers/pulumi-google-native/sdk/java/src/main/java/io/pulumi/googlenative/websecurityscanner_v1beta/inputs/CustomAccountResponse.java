@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes authentication configuration that uses a custom account.
- */
 public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomAccountResponse Empty = new CustomAccountResponse();
 
-    /**
-     * The login form URL of the website.
-     */
     @InputImport(name="loginUrl", required=true)
     private final String loginUrl;
 
@@ -25,9 +19,6 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
         return this.loginUrl;
     }
 
-    /**
-     * Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
-     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -35,9 +26,6 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
         return this.password;
     }
 
-    /**
-     * The user name of the custom account.
-     */
     @InputImport(name="username", required=true)
     private final String username;
 

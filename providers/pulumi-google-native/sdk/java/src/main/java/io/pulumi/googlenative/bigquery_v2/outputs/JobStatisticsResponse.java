@@ -19,73 +19,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobStatisticsResponse {
-/**
- * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
- */
     private final Double completionRatio;
-/**
- * Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
- */
     private final String creationTime;
-/**
- * End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
- */
     private final String endTime;
-/**
- * Statistics for an extract job.
- */
     private final JobStatistics4Response extract;
-/**
- * Statistics for a load job.
- */
     private final JobStatistics3Response load;
-/**
- * Number of child jobs executed.
- */
     private final String numChildJobs;
-/**
- * If this is a child job, the id of the parent.
- */
     private final String parentJobId;
-/**
- * Statistics for a query job.
- */
     private final JobStatistics2Response query;
-/**
- * Quotas which delayed this job's start time.
- */
     private final List<String> quotaDeferments;
-/**
- * Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
- */
     private final String reservationId;
-/**
- * Job resource usage breakdown by reservation.
- */
     private final List<JobStatisticsReservationUsageItemResponse> reservationUsage;
-/**
- * [Preview] Statistics for row-level security. Present only for query and extract jobs.
- */
     private final RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
-/**
- * Statistics for a child job of a script.
- */
     private final ScriptStatisticsResponse scriptStatistics;
-/**
- * [Preview] Information of the session if this job is part of one.
- */
     private final SessionInfoResponse sessionInfo;
-/**
- * Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
- */
     private final String startTime;
-/**
- * Slot-milliseconds for the job.
- */
     private final String totalSlotMs;
-/**
- * [Alpha] Information of the multi-statement transaction if this job is part of one.
- */
     private final TransactionInfoResponse transactionInfo;
 
     @OutputCustomType.Constructor({"completionRatio","creationTime","endTime","extract","load","numChildJobs","parentJobId","query","quotaDeferments","reservationId","reservationUsage","rowLevelSecurityStatistics","scriptStatistics","sessionInfo","startTime","totalSlotMs","transactionInfo"})
@@ -126,105 +75,54 @@ public final class JobStatisticsResponse {
         this.transactionInfo = Objects.requireNonNull(transactionInfo);
     }
 
-/**
- * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
- */
     public Double getCompletionRatio() {
         return this.completionRatio;
     }
-/**
- * Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
- */
     public String getEndTime() {
         return this.endTime;
     }
-/**
- * Statistics for an extract job.
- */
     public JobStatistics4Response getExtract() {
         return this.extract;
     }
-/**
- * Statistics for a load job.
- */
     public JobStatistics3Response getLoad() {
         return this.load;
     }
-/**
- * Number of child jobs executed.
- */
     public String getNumChildJobs() {
         return this.numChildJobs;
     }
-/**
- * If this is a child job, the id of the parent.
- */
     public String getParentJobId() {
         return this.parentJobId;
     }
-/**
- * Statistics for a query job.
- */
     public JobStatistics2Response getQuery() {
         return this.query;
     }
-/**
- * Quotas which delayed this job's start time.
- */
     public List<String> getQuotaDeferments() {
         return this.quotaDeferments;
     }
-/**
- * Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
- */
     public String getReservationId() {
         return this.reservationId;
     }
-/**
- * Job resource usage breakdown by reservation.
- */
     public List<JobStatisticsReservationUsageItemResponse> getReservationUsage() {
         return this.reservationUsage;
     }
-/**
- * [Preview] Statistics for row-level security. Present only for query and extract jobs.
- */
     public RowLevelSecurityStatisticsResponse getRowLevelSecurityStatistics() {
         return this.rowLevelSecurityStatistics;
     }
-/**
- * Statistics for a child job of a script.
- */
     public ScriptStatisticsResponse getScriptStatistics() {
         return this.scriptStatistics;
     }
-/**
- * [Preview] Information of the session if this job is part of one.
- */
     public SessionInfoResponse getSessionInfo() {
         return this.sessionInfo;
     }
-/**
- * Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
- */
     public String getStartTime() {
         return this.startTime;
     }
-/**
- * Slot-milliseconds for the job.
- */
     public String getTotalSlotMs() {
         return this.totalSlotMs;
     }
-/**
- * [Alpha] Information of the multi-statement transaction if this job is part of one.
- */
     public TransactionInfoResponse getTransactionInfo() {
         return this.transactionInfo;
     }

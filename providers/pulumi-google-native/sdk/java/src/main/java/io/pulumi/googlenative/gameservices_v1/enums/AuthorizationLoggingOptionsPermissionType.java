@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the permission that was checked.
- */
     @EnumType
     public enum AuthorizationLoggingOptionsPermissionType {
-/**
- * Default. Should not be used.
- */
         PermissionTypeUnspecified("PERMISSION_TYPE_UNSPECIFIED"),
-/**
- * A read of admin (meta) data.
- */
         AdminRead("ADMIN_READ"),
-/**
- * A write of admin (meta) data.
- */
         AdminWrite("ADMIN_WRITE"),
-/**
- * A read of standard data.
- */
         DataRead("DATA_READ"),
-/**
- * A write of standard data.
- */
         DataWrite("DATA_WRITE");
 
         private final String value;

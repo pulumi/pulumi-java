@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ProjectRepoIdResponse {
-/**
- * The ID of the project.
- */
     private final String project;
-/**
- * The name of the repo. Leave empty for the default repo.
- */
     private final String repoName;
 
     @OutputCustomType.Constructor({"project","repoName"})
@@ -26,15 +20,9 @@ public final class ProjectRepoIdResponse {
         this.repoName = Objects.requireNonNull(repoName);
     }
 
-/**
- * The ID of the project.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * The name of the repo. Leave empty for the default repo.
- */
     public String getRepoName() {
         return this.repoName;
     }

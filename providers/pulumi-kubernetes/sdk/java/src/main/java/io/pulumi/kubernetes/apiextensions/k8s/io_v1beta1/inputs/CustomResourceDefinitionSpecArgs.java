@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * CustomResourceDefinitionSpec describes how a user wants their resource to appear
- */
 public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceDefinitionSpecArgs Empty = new CustomResourceDefinitionSpecArgs();
 
-    /**
-     * additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
-     */
     @InputImport(name="additionalPrinterColumns")
     private final @Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
@@ -35,9 +29,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.additionalPrinterColumns == null ? Input.empty() : this.additionalPrinterColumns;
     }
 
-    /**
-     * conversion defines conversion settings for the CRD.
-     */
     @InputImport(name="conversion")
     private final @Nullable Input<CustomResourceConversionArgs> conversion;
 
@@ -45,9 +36,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.conversion == null ? Input.empty() : this.conversion;
     }
 
-    /**
-     * group is the API group of the defined custom resource. The custom resources are served under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`).
-     */
     @InputImport(name="group", required=true)
     private final Input<String> group;
 
@@ -55,9 +43,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.group;
     }
 
-    /**
-     * names specify the resource and kind names for the custom resource.
-     */
     @InputImport(name="names", required=true)
     private final Input<CustomResourceDefinitionNamesArgs> names;
 
@@ -65,9 +50,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.names;
     }
 
-    /**
-     * preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. If false, schemas must be defined for all versions. Defaults to true in v1beta for backwards compatibility. Deprecated: will be required to be false in v1. Preservation of unknown fields can be specified in the validation schema using the `x-kubernetes-preserve-unknown-fields: true` extension. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.
-     */
     @InputImport(name="preserveUnknownFields")
     private final @Nullable Input<Boolean> preserveUnknownFields;
 
@@ -75,9 +57,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.preserveUnknownFields == null ? Input.empty() : this.preserveUnknownFields;
     }
 
-    /**
-     * scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`. Default is `Namespaced`.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -85,9 +64,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.scope;
     }
 
-    /**
-     * subresources specify what subresources the defined custom resource has. If present, this field configures subresources for all versions. Top-level and per-version subresources are mutually exclusive.
-     */
     @InputImport(name="subresources")
     private final @Nullable Input<CustomResourceSubresourcesArgs> subresources;
 
@@ -95,9 +71,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.subresources == null ? Input.empty() : this.subresources;
     }
 
-    /**
-     * validation describes the schema used for validation and pruning of the custom resource. If present, this validation schema is used to validate all versions. Top-level and per-version schemas are mutually exclusive.
-     */
     @InputImport(name="validation")
     private final @Nullable Input<CustomResourceValidationArgs> validation;
 
@@ -105,9 +78,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.validation == null ? Input.empty() : this.validation;
     }
 
-    /**
-     * version is the API version of the defined custom resource. The custom resources are served under `/apis/<group>/<version>/...`. Must match the name of the first item in the `versions` list if `version` and `versions` are both specified. Optional if `versions` is specified. Deprecated: use `versions` instead.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -115,9 +85,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
         return this.version == null ? Input.empty() : this.version;
     }
 
-    /**
-     * versions is the list of all API versions of the defined custom resource. Optional if `version` is specified. The name of the first item in the `versions` list must match the `version` field if `version` and `versions` are both specified. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
-     */
     @InputImport(name="versions")
     private final @Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions;
 

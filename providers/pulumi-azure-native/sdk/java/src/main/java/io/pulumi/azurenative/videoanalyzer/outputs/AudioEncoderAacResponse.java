@@ -11,14 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AudioEncoderAacResponse {
-/**
- * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
- */
     private final @Nullable String bitrateKbps;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"bitrateKbps","type"})
@@ -29,16 +22,9 @@ Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
- */
     public Optional<String> getBitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
- */
     public String getType() {
         return this.type;
     }

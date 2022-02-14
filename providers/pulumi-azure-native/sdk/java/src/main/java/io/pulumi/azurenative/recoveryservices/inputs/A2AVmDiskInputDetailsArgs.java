@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure VM disk input details.
- */
 public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final A2AVmDiskInputDetailsArgs Empty = new A2AVmDiskInputDetailsArgs();
 
-    /**
-     * The disk Uri.
-     */
     @InputImport(name="diskUri")
     private final @Nullable Input<String> diskUri;
 
@@ -27,9 +21,6 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
         return this.diskUri == null ? Input.empty() : this.diskUri;
     }
 
-    /**
-     * The primary staging storage account Id.
-     */
     @InputImport(name="primaryStagingAzureStorageAccountId")
     private final @Nullable Input<String> primaryStagingAzureStorageAccountId;
 
@@ -37,9 +28,6 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
         return this.primaryStagingAzureStorageAccountId == null ? Input.empty() : this.primaryStagingAzureStorageAccountId;
     }
 
-    /**
-     * The recovery VHD storage account Id.
-     */
     @InputImport(name="recoveryAzureStorageAccountId")
     private final @Nullable Input<String> recoveryAzureStorageAccountId;
 

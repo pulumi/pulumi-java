@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SharePoint Online List linked service.
- */
 public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharePointOnlineListLinkedServiceResponse Empty = new SharePointOnlineListLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -35,9 +29,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -45,9 +36,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -55,9 +43,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -65,9 +50,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -75,9 +57,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId", required=true)
     private final Object servicePrincipalId;
 
@@ -85,9 +64,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.servicePrincipalId;
     }
 
-    /**
-     * The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalKey", required=true)
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -95,9 +71,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.servicePrincipalKey;
     }
 
-    /**
-     * The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="siteUrl", required=true)
     private final Object siteUrl;
 
@@ -105,9 +78,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.siteUrl;
     }
 
-    /**
-     * The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenantId", required=true)
     private final Object tenantId;
 
@@ -115,10 +85,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
         return this.tenantId;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'SharePointOnlineList'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

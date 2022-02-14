@@ -15,17 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure VM (Mercury) workload-specific backup policy.
- */
 public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureVmWorkloadProtectionPolicyResponse Empty = new AzureVmWorkloadProtectionPolicyResponse();
 
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'AzureWorkload'.
-     */
     @InputImport(name="backupManagementType", required=true)
     private final String backupManagementType;
 
@@ -33,9 +26,6 @@ Expected value is 'AzureWorkload'.
         return this.backupManagementType;
     }
 
-    /**
-     * Fix the policy inconsistency
-     */
     @InputImport(name="makePolicyConsistent")
     private final @Nullable Boolean makePolicyConsistent;
 
@@ -43,9 +33,6 @@ Expected value is 'AzureWorkload'.
         return this.makePolicyConsistent == null ? Optional.empty() : Optional.ofNullable(this.makePolicyConsistent);
     }
 
-    /**
-     * Number of items associated with this policy.
-     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Integer protectedItemsCount;
 
@@ -53,9 +40,6 @@ Expected value is 'AzureWorkload'.
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
-    /**
-     * Common settings for the backup management
-     */
     @InputImport(name="settings")
     private final @Nullable SettingsResponse settings;
 
@@ -63,9 +47,6 @@ Expected value is 'AzureWorkload'.
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
-    /**
-     * List of sub-protection policies which includes schedule and retention
-     */
     @InputImport(name="subProtectionPolicy")
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
@@ -73,9 +54,6 @@ Expected value is 'AzureWorkload'.
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
 
-    /**
-     * Type of workload for the backup management
-     */
     @InputImport(name="workLoadType")
     private final @Nullable String workLoadType;
 

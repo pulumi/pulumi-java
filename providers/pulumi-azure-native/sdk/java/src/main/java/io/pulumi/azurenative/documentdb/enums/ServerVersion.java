@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes the ServerVersion of an a MongoDB account.
- */
     @EnumType
     public enum ServerVersion {
-/**
- * 
- */
         ServerVersion_3_2("3.2"),
-/**
- * 
- */
         ServerVersion_3_6("3.6"),
-/**
- * 
- */
         ServerVersion_4_0("4.0");
 
         private final String value;

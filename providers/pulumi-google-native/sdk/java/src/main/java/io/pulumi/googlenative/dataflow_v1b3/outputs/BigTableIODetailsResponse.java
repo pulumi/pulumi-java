@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BigTableIODetailsResponse {
-/**
- * InstanceId accessed in the connection.
- */
     private final String instanceId;
-/**
- * ProjectId accessed in the connection.
- */
     private final String project;
-/**
- * TableId accessed in the connection.
- */
     private final String tableId;
 
     @OutputCustomType.Constructor({"instanceId","project","tableId"})
@@ -32,21 +23,12 @@ public final class BigTableIODetailsResponse {
         this.tableId = Objects.requireNonNull(tableId);
     }
 
-/**
- * InstanceId accessed in the connection.
- */
     public String getInstanceId() {
         return this.instanceId;
     }
-/**
- * ProjectId accessed in the connection.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * TableId accessed in the connection.
- */
     public String getTableId() {
         return this.tableId;
     }

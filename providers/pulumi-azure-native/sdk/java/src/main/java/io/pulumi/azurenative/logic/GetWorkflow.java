@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflow {
-/**
- * The workflow type.
-API Version: 2019-05-01.
- *
- * The workflow type.
- */
     public static CompletableFuture<GetWorkflowResult> invokeAsync(GetWorkflowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getWorkflow", TypeShape.of(GetWorkflowResult.class), args == null ? GetWorkflowArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterPropertiesResponseIdentityProfile {
-/**
- * The client id of the user assigned identity.
- */
     private final @Nullable String clientId;
-/**
- * The object id of the user assigned identity.
- */
     private final @Nullable String objectId;
-/**
- * The resource id of the user assigned identity.
- */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"clientId","objectId","resourceId"})
@@ -34,21 +25,12 @@ public final class ManagedClusterPropertiesResponseIdentityProfile {
         this.resourceId = resourceId;
     }
 
-/**
- * The client id of the user assigned identity.
- */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
-/**
- * The object id of the user assigned identity.
- */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
-/**
- * The resource id of the user assigned identity.
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

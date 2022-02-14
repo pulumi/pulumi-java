@@ -9,41 +9,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HiveMetastoreResponse {
-/**
- * The databaseName for the Hive MetaStore
- */
     private final String databaseName;
-/**
- * The resource identifier.
- */
     private final String id;
-/**
- * The resource name.
- */
     private final String name;
-/**
- * The current state of the NestedResource
- */
     private final String nestedResourceProvisioningState;
-/**
- * The password for the Hive MetaStore
- */
     private final String password;
-/**
- * The runtimeVersion for the Hive MetaStore
- */
     private final String runtimeVersion;
-/**
- * The serverUri for the Hive MetaStore
- */
     private final String serverUri;
-/**
- * The resource type.
- */
     private final String type;
-/**
- * The userName for the Hive MetaStore
- */
     private final String userName;
 
     @OutputCustomType.Constructor({"databaseName","id","name","nestedResourceProvisioningState","password","runtimeVersion","serverUri","type","userName"})
@@ -68,57 +41,30 @@ public final class HiveMetastoreResponse {
         this.userName = Objects.requireNonNull(userName);
     }
 
-/**
- * The databaseName for the Hive MetaStore
- */
     public String getDatabaseName() {
         return this.databaseName;
     }
-/**
- * The resource identifier.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The current state of the NestedResource
- */
     public String getNestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
     }
-/**
- * The password for the Hive MetaStore
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * The runtimeVersion for the Hive MetaStore
- */
     public String getRuntimeVersion() {
         return this.runtimeVersion;
     }
-/**
- * The serverUri for the Hive MetaStore
- */
     public String getServerUri() {
         return this.serverUri;
     }
-/**
- * The resource type.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The userName for the Hive MetaStore
- */
     public String getUserName() {
         return this.userName;
     }

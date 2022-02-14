@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedInstanceAdministratorArgs Empty = new GetManagedInstanceAdministratorArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="administratorName", required=true)
     private final String administratorName;
 
@@ -25,9 +19,6 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
         return this.administratorName;
     }
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName", required=true)
     private final String managedInstanceName;
 
@@ -35,9 +26,6 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
         return this.managedInstanceName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

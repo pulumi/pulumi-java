@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiManagementServiceSsoTokenResult {
-/**
- * Redirect URL to the Publisher Portal containing the SSO token.
- */
     private final @Nullable String redirectUri;
 
     @OutputCustomType.Constructor({"redirectUri"})
@@ -21,9 +18,6 @@ public final class GetApiManagementServiceSsoTokenResult {
         this.redirectUri = redirectUri;
     }
 
-/**
- * Redirect URL to the Publisher Portal containing the SSO token.
- */
     public Optional<String> getRedirectUri() {
         return Optional.ofNullable(this.redirectUri);
     }

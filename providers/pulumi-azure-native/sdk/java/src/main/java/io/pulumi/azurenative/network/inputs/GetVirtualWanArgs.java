@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualWanArgs Empty = new GetVirtualWanArgs();
 
-    /**
-     * The resource group name of the VirtualWan.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetVirtualWanArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the VirtualWAN being retrieved.
-     */
     @InputImport(name="virtualWANName", required=true)
     private final String virtualWANName;
 

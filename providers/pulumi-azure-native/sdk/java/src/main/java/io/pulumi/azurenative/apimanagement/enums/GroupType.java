@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Group type.
- */
     @EnumType
     public enum GroupType {
-/**
- * 
- */
         Custom("custom"),
-/**
- * 
- */
         System("system"),
-/**
- * 
- */
         External("external");
 
         private final String value;

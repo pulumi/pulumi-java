@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMware Azure specific enable protection input.
- */
 public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageEnableProtectionInputArgs Empty = new InMageEnableProtectionInputArgs();
 
-    /**
-     * The target data store name.
-     */
     @InputImport(name="datastoreName")
     private final @Nullable Input<String> datastoreName;
 
@@ -29,9 +23,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
     }
 
-    /**
-     * The enable disk exclusion input.
-     */
     @InputImport(name="diskExclusionInput")
     private final @Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput;
 
@@ -39,9 +30,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
         return this.diskExclusionInput == null ? Input.empty() : this.diskExclusionInput;
     }
 
-    /**
-     * The disks to include list.
-     */
     @InputImport(name="disksToInclude")
     private final @Nullable Input<List<String>> disksToInclude;
 
@@ -49,10 +37,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
     }
 
-    /**
-     * The class type.
-Expected value is 'InMage'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -60,9 +44,6 @@ Expected value is 'InMage'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The Master Target Id.
-     */
     @InputImport(name="masterTargetId", required=true)
     private final Input<String> masterTargetId;
 
@@ -70,9 +51,6 @@ Expected value is 'InMage'.
         return this.masterTargetId;
     }
 
-    /**
-     * The multi vm group Id.
-     */
     @InputImport(name="multiVmGroupId", required=true)
     private final Input<String> multiVmGroupId;
 
@@ -80,9 +58,6 @@ Expected value is 'InMage'.
         return this.multiVmGroupId;
     }
 
-    /**
-     * The multi vm group name.
-     */
     @InputImport(name="multiVmGroupName", required=true)
     private final Input<String> multiVmGroupName;
 
@@ -90,9 +65,6 @@ Expected value is 'InMage'.
         return this.multiVmGroupName;
     }
 
-    /**
-     * The Process Server Id.
-     */
     @InputImport(name="processServerId", required=true)
     private final Input<String> processServerId;
 
@@ -100,9 +72,6 @@ Expected value is 'InMage'.
         return this.processServerId;
     }
 
-    /**
-     * The retention drive to use on the MT.
-     */
     @InputImport(name="retentionDrive", required=true)
     private final Input<String> retentionDrive;
 
@@ -110,9 +79,6 @@ Expected value is 'InMage'.
         return this.retentionDrive;
     }
 
-    /**
-     * The CS account Id.
-     */
     @InputImport(name="runAsAccountId")
     private final @Nullable Input<String> runAsAccountId;
 
@@ -120,9 +86,6 @@ Expected value is 'InMage'.
         return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
     }
 
-    /**
-     * The Vm Name.
-     */
     @InputImport(name="vmFriendlyName")
     private final @Nullable Input<String> vmFriendlyName;
 

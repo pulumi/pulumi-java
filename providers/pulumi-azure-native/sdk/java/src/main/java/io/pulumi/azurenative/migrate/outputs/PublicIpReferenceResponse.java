@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PublicIpReferenceResponse {
-/**
- * Gets the ARM resource ID of the tracked resource being referenced.
- */
     private final String sourceArmResourceId;
 
     @OutputCustomType.Constructor({"sourceArmResourceId"})
@@ -19,9 +16,6 @@ public final class PublicIpReferenceResponse {
         this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
     }
 
-/**
- * Gets the ARM resource ID of the tracked resource being referenced.
- */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }

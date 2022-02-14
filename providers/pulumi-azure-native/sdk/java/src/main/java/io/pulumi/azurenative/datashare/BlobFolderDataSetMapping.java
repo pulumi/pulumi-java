@@ -15,548 +15,81 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A Blob folder data set mapping.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### DataSetMappings_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobFolderDataSetMapping = new AzureNative.DataShare.BlobFolderDataSetMapping("blobFolderDataSetMapping", new AzureNative.DataShare.BlobFolderDataSetMappingArgs
-        {
-            AccountName = "Account1",
-            DataSetMappingName = "DatasetMapping1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareSubscriptionName = "ShareSubscription1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewBlobFolderDataSetMapping(ctx, "blobFolderDataSetMapping", &datashare.BlobFolderDataSetMappingArgs{
-			AccountName:           pulumi.String("Account1"),
-			DataSetMappingName:    pulumi.String("DatasetMapping1"),
-			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
-			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blobFolderDataSetMapping = new azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping", {
-    accountName: "Account1",
-    dataSetMappingName: "DatasetMapping1",
-    resourceGroupName: "SampleResourceGroup",
-    shareSubscriptionName: "ShareSubscription1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blob_folder_data_set_mapping = azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping",
-    account_name="Account1",
-    data_set_mapping_name="DatasetMapping1",
-    resource_group_name="SampleResourceGroup",
-    share_subscription_name="ShareSubscription1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSetMappings_SqlDB_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobFolderDataSetMapping = new AzureNative.DataShare.BlobFolderDataSetMapping("blobFolderDataSetMapping", new AzureNative.DataShare.BlobFolderDataSetMappingArgs
-        {
-            AccountName = "Account1",
-            DataSetMappingName = "DatasetMapping1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareSubscriptionName = "ShareSubscription1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewBlobFolderDataSetMapping(ctx, "blobFolderDataSetMapping", &datashare.BlobFolderDataSetMappingArgs{
-			AccountName:           pulumi.String("Account1"),
-			DataSetMappingName:    pulumi.String("DatasetMapping1"),
-			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
-			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blobFolderDataSetMapping = new azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping", {
-    accountName: "Account1",
-    dataSetMappingName: "DatasetMapping1",
-    resourceGroupName: "SampleResourceGroup",
-    shareSubscriptionName: "ShareSubscription1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blob_folder_data_set_mapping = azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping",
-    account_name="Account1",
-    data_set_mapping_name="DatasetMapping1",
-    resource_group_name="SampleResourceGroup",
-    share_subscription_name="ShareSubscription1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobFolderDataSetMapping = new AzureNative.DataShare.BlobFolderDataSetMapping("blobFolderDataSetMapping", new AzureNative.DataShare.BlobFolderDataSetMappingArgs
-        {
-            AccountName = "Account1",
-            DataSetMappingName = "DatasetMapping1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareSubscriptionName = "ShareSubscription1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewBlobFolderDataSetMapping(ctx, "blobFolderDataSetMapping", &datashare.BlobFolderDataSetMappingArgs{
-			AccountName:           pulumi.String("Account1"),
-			DataSetMappingName:    pulumi.String("DatasetMapping1"),
-			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
-			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blobFolderDataSetMapping = new azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping", {
-    accountName: "Account1",
-    dataSetMappingName: "DatasetMapping1",
-    resourceGroupName: "SampleResourceGroup",
-    shareSubscriptionName: "ShareSubscription1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blob_folder_data_set_mapping = azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping",
-    account_name="Account1",
-    data_set_mapping_name="DatasetMapping1",
-    resource_group_name="SampleResourceGroup",
-    share_subscription_name="ShareSubscription1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSetMappings_SqlDW_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobFolderDataSetMapping = new AzureNative.DataShare.BlobFolderDataSetMapping("blobFolderDataSetMapping", new AzureNative.DataShare.BlobFolderDataSetMappingArgs
-        {
-            AccountName = "Account1",
-            DataSetMappingName = "DatasetMapping1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareSubscriptionName = "ShareSubscription1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewBlobFolderDataSetMapping(ctx, "blobFolderDataSetMapping", &datashare.BlobFolderDataSetMappingArgs{
-			AccountName:           pulumi.String("Account1"),
-			DataSetMappingName:    pulumi.String("DatasetMapping1"),
-			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
-			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blobFolderDataSetMapping = new azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping", {
-    accountName: "Account1",
-    dataSetMappingName: "DatasetMapping1",
-    resourceGroupName: "SampleResourceGroup",
-    shareSubscriptionName: "ShareSubscription1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blob_folder_data_set_mapping = azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping",
-    account_name="Account1",
-    data_set_mapping_name="DatasetMapping1",
-    resource_group_name="SampleResourceGroup",
-    share_subscription_name="ShareSubscription1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var blobFolderDataSetMapping = new AzureNative.DataShare.BlobFolderDataSetMapping("blobFolderDataSetMapping", new AzureNative.DataShare.BlobFolderDataSetMappingArgs
-        {
-            AccountName = "consumerAccount",
-            DataSetMappingName = "datasetMappingName1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareSubscriptionName = "ShareSubscription1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewBlobFolderDataSetMapping(ctx, "blobFolderDataSetMapping", &datashare.BlobFolderDataSetMappingArgs{
-			AccountName:           pulumi.String("consumerAccount"),
-			DataSetMappingName:    pulumi.String("datasetMappingName1"),
-			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
-			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const blobFolderDataSetMapping = new azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping", {
-    accountName: "consumerAccount",
-    dataSetMappingName: "datasetMappingName1",
-    resourceGroupName: "SampleResourceGroup",
-    shareSubscriptionName: "ShareSubscription1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-blob_folder_data_set_mapping = azure_native.datashare.BlobFolderDataSetMapping("blobFolderDataSetMapping",
-    account_name="consumerAccount",
-    data_set_mapping_name="datasetMappingName1",
-    resource_group_name="SampleResourceGroup",
-    share_subscription_name="ShareSubscription1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datashare:BlobFolderDataSetMapping datasetMappingName1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
-```
-
- */
 @ResourceType(type="azure-native:datashare:BlobFolderDataSetMapping")
 public class BlobFolderDataSetMapping extends io.pulumi.resources.CustomResource {
-    /**
-     * Container that has the file path.
-     */
     @OutputExport(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
-    /**
-     * @return Container that has the file path.
-     */
     public Output<String> getContainerName() {
         return this.containerName;
     }
-    /**
-     * The id of the source data set.
-     */
     @OutputExport(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
-    /**
-     * @return The id of the source data set.
-     */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
-    /**
-     * Gets the status of the data set mapping.
-     */
     @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
-    /**
-     * @return Gets the status of the data set mapping.
-     */
     public Output<String> getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
-    /**
-     * Kind of data set mapping.
-Expected value is 'BlobFolder'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Kind of data set mapping.
-Expected value is 'BlobFolder'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Name of the azure resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the azure resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Prefix for blob folder
-     */
     @OutputExport(name="prefix", type=String.class, parameters={})
     private Output<String> prefix;
 
-    /**
-     * @return Prefix for blob folder
-     */
     public Output<String> getPrefix() {
         return this.prefix;
     }
-    /**
-     * Provisioning state of the data set mapping.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the data set mapping.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource group of storage account.
-     */
     @OutputExport(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
-    /**
-     * @return Resource group of storage account.
-     */
     public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
-    /**
-     * Storage account name of the source data set.
-     */
     @OutputExport(name="storageAccountName", type=String.class, parameters={})
     private Output<String> storageAccountName;
 
-    /**
-     * @return Storage account name of the source data set.
-     */
     public Output<String> getStorageAccountName() {
         return this.storageAccountName;
     }
-    /**
-     * Subscription id of storage account.
-     */
     @OutputExport(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
-    /**
-     * @return Subscription id of storage account.
-     */
     public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
-    /**
-     * System Data of the Azure resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return System Data of the Azure resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Type of the azure resource
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the azure resource
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public BlobFolderDataSetMapping(String name, BlobFolderDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:BlobFolderDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -586,14 +119,6 @@ Expected value is 'BlobFolder'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static BlobFolderDataSetMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BlobFolderDataSetMapping(name, id, options);
     }

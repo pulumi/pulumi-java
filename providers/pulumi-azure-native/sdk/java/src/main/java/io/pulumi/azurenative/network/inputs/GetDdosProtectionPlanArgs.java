@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDdosProtectionPlanArgs Empty = new GetDdosProtectionPlanArgs();
 
-    /**
-     * The name of the DDoS protection plan.
-     */
     @InputImport(name="ddosProtectionPlanName", required=true)
     private final String ddosProtectionPlanName;
 
@@ -25,9 +19,6 @@ public final class GetDdosProtectionPlanArgs extends io.pulumi.resources.InvokeA
         return this.ddosProtectionPlanName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

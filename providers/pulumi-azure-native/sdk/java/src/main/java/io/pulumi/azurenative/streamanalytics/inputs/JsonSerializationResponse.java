@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes how data from an input is serialized or how data is serialized when written to an output in JSON format.
- */
 public final class JsonSerializationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JsonSerializationResponse Empty = new JsonSerializationResponse();
 
-    /**
-     * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="encoding")
     private final @Nullable String encoding;
 
@@ -27,9 +21,6 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
-    /**
-     * This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.
-     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -37,10 +28,6 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
-    /**
-     * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Json'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

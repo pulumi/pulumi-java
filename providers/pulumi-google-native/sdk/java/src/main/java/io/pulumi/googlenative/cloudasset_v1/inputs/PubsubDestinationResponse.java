@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A Pub/Sub destination.
- */
 public final class PubsubDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PubsubDestinationResponse Empty = new PubsubDestinationResponse();
 
-    /**
-     * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
-     */
     @InputImport(name="topic", required=true)
     private final String topic;
 

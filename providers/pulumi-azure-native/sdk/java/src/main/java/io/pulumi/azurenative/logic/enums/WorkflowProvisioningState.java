@@ -8,98 +8,29 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The provisioning state.
- */
     @EnumType
     public enum WorkflowProvisioningState {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Accepted("Accepted"),
-/**
- * 
- */
         Running("Running"),
-/**
- * 
- */
         Ready("Ready"),
-/**
- * 
- */
         Creating("Creating"),
-/**
- * 
- */
         Created("Created"),
-/**
- * 
- */
         Deleting("Deleting"),
-/**
- * 
- */
         Deleted("Deleted"),
-/**
- * 
- */
         Canceled("Canceled"),
-/**
- * 
- */
         Failed("Failed"),
-/**
- * 
- */
         Succeeded("Succeeded"),
-/**
- * 
- */
         Moving("Moving"),
-/**
- * 
- */
         Updating("Updating"),
-/**
- * 
- */
         Registering("Registering"),
-/**
- * 
- */
         Registered("Registered"),
-/**
- * 
- */
         Unregistering("Unregistering"),
-/**
- * 
- */
         Unregistered("Unregistered"),
-/**
- * 
- */
         Completed("Completed"),
-/**
- * 
- */
         Renewing("Renewing"),
-/**
- * 
- */
         Pending("Pending"),
-/**
- * 
- */
         Waiting("Waiting"),
-/**
- * 
- */
         InProgress("InProgress");
 
         private final String value;

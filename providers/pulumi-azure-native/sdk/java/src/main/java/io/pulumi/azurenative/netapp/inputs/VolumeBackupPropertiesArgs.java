@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Volume Backup Properties
- */
 public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeBackupPropertiesArgs Empty = new VolumeBackupPropertiesArgs();
 
-    /**
-     * Backup Enabled
-     */
     @InputImport(name="backupEnabled")
     private final @Nullable Input<Boolean> backupEnabled;
 
@@ -28,9 +22,6 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
         return this.backupEnabled == null ? Input.empty() : this.backupEnabled;
     }
 
-    /**
-     * Backup Policy Resource ID
-     */
     @InputImport(name="backupPolicyId")
     private final @Nullable Input<String> backupPolicyId;
 
@@ -38,9 +29,6 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
         return this.backupPolicyId == null ? Input.empty() : this.backupPolicyId;
     }
 
-    /**
-     * Policy Enforced
-     */
     @InputImport(name="policyEnforced")
     private final @Nullable Input<Boolean> policyEnforced;
 
@@ -48,9 +36,6 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
         return this.policyEnforced == null ? Input.empty() : this.policyEnforced;
     }
 
-    /**
-     * Vault Resource ID
-     */
     @InputImport(name="vaultId")
     private final @Nullable Input<String> vaultId;
 

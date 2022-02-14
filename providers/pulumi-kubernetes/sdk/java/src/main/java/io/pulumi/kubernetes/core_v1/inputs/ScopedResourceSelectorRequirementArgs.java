@@ -11,22 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.
- */
 public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopedResourceSelectorRequirementArgs Empty = new ScopedResourceSelectorRequirementArgs();
 
-    /**
-     * Represents a scope's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
-
-Possible enum values:
- - `"DoesNotExist"`
- - `"Exists"`
- - `"In"`
- - `"NotIn"`
-     */
     @InputImport(name="operator", required=true)
     private final Input<String> operator;
 
@@ -34,17 +22,6 @@ Possible enum values:
         return this.operator;
     }
 
-    /**
-     * The name of the scope that the selector applies to.
-
-Possible enum values:
- - `"BestEffort"` Match all pod objects that have best effort quality of service
- - `"CrossNamespacePodAffinity"` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
- - `"NotBestEffort"` Match all pod objects that do not have best effort quality of service
- - `"NotTerminating"` Match all pod objects where spec.activeDeadlineSeconds is nil
- - `"PriorityClass"` Match all pod objects that have priority class mentioned
- - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
-     */
     @InputImport(name="scopeName", required=true)
     private final Input<String> scopeName;
 
@@ -52,9 +29,6 @@ Possible enum values:
         return this.scopeName;
     }
 
-    /**
-     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class V2AndroidKeyRestrictionsResponse {
-/**
- * A list of Android applications that are allowed to make API calls with this key.
- */
     private final List<V2AndroidApplicationResponse> allowedApplications;
 
     @OutputCustomType.Constructor({"allowedApplications"})
@@ -20,9 +17,6 @@ public final class V2AndroidKeyRestrictionsResponse {
         this.allowedApplications = Objects.requireNonNull(allowedApplications);
     }
 
-/**
- * A list of Android applications that are allowed to make API calls with this key.
- */
     public List<V2AndroidApplicationResponse> getAllowedApplications() {
         return this.allowedApplications;
     }

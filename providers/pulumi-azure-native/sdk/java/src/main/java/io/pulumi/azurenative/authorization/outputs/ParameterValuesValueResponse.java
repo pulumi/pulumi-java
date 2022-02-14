@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterValuesValueResponse {
-/**
- * The value of the parameter.
- */
     private final @Nullable Object value;
 
     @OutputCustomType.Constructor({"value"})
@@ -21,9 +18,6 @@ public final class ParameterValuesValueResponse {
         this.value = value;
     }
 
-/**
- * The value of the parameter.
- */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }

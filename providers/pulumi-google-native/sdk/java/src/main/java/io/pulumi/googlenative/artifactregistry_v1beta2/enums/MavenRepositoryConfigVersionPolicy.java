@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Version policy defines the versions that the registry will accept.
- */
     @EnumType
     public enum MavenRepositoryConfigVersionPolicy {
-/**
- * VERSION_POLICY_UNSPECIFIED - the version policy is not defined. When the version policy is not defined, no validation is performed for the versions.
- */
         VersionPolicyUnspecified("VERSION_POLICY_UNSPECIFIED"),
-/**
- * RELEASE - repository will accept only Release versions.
- */
         Release("RELEASE"),
-/**
- * SNAPSHOT - repository will accept only Snapshot versions.
- */
         Snapshot("SNAPSHOT");
 
         private final String value;

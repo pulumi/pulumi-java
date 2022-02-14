@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. State of the channel partner link.
- */
     @EnumType
     public enum ChannelPartnerLinkLinkState {
-/**
- * Not used.
- */
         ChannelPartnerLinkStateUnspecified("CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED"),
-/**
- * An invitation has been sent to the reseller to create a channel partner link.
- */
         Invited("INVITED"),
-/**
- * Status when the reseller is active.
- */
         Active("ACTIVE"),
-/**
- * Status when the reseller has been revoked by the distributor.
- */
         Revoked("REVOKED"),
-/**
- * Status when the reseller is suspended by Google or distributor.
- */
         Suspended("SUSPENDED");
 
         private final String value;

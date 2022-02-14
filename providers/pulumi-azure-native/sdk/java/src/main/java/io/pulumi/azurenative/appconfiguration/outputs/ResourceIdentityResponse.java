@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceIdentityResponse {
-/**
- * The principal id of the identity. This property will only be provided for a system-assigned identity.
- */
     private final String principalId;
-/**
- * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
- */
     private final String tenantId;
-/**
- * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
- */
     private final @Nullable String type;
-/**
- * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
- */
     private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -42,27 +30,15 @@ public final class ResourceIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
-/**
- * The principal id of the identity. This property will only be provided for a system-assigned identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
-/**
- * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
- */
     public Map<String,UserIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

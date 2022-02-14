@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines contents of a web application rule.
- */
 public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebApplicationFirewallCustomRuleResponse Empty = new WebApplicationFirewallCustomRuleResponse();
 
-    /**
-     * Type of Actions.
-     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -30,9 +24,6 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
         return this.action;
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -40,9 +31,6 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
         return this.etag;
     }
 
-    /**
-     * List of match conditions.
-     */
     @InputImport(name="matchConditions", required=true)
     private final List<MatchConditionResponse> matchConditions;
 
@@ -50,9 +38,6 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
         return this.matchConditions;
     }
 
-    /**
-     * The name of the resource that is unique within a policy. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -60,9 +45,6 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-     */
     @InputImport(name="priority", required=true)
     private final Integer priority;
 
@@ -70,9 +52,6 @@ public final class WebApplicationFirewallCustomRuleResponse extends io.pulumi.re
         return this.priority;
     }
 
-    /**
-     * The rule type.
-     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 

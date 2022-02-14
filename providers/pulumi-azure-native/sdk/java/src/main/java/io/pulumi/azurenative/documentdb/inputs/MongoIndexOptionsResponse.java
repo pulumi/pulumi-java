@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB MongoDB collection index options
- */
 public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoIndexOptionsResponse Empty = new MongoIndexOptionsResponse();
 
-    /**
-     * Expire after seconds
-     */
     @InputImport(name="expireAfterSeconds")
     private final @Nullable Integer expireAfterSeconds;
 
@@ -28,9 +22,6 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
         return this.expireAfterSeconds == null ? Optional.empty() : Optional.ofNullable(this.expireAfterSeconds);
     }
 
-    /**
-     * Is unique or not
-     */
     @InputImport(name="unique")
     private final @Nullable Boolean unique;
 

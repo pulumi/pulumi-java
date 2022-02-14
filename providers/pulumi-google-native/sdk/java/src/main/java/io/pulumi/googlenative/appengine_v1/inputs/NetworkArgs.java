@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Extra network settings. Only applicable in the App Engine flexible environment.
- */
 public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkArgs Empty = new NetworkArgs();
 
-    /**
-     * List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
-     */
     @InputImport(name="forwardedPorts")
     private final @Nullable Input<List<String>> forwardedPorts;
 
@@ -29,9 +23,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardedPorts == null ? Input.empty() : this.forwardedPorts;
     }
 
-    /**
-     * Tag to apply to the instance during creation. Only applicable in the App Engine flexible environment.
-     */
     @InputImport(name="instanceTag")
     private final @Nullable Input<String> instanceTag;
 
@@ -39,9 +30,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceTag == null ? Input.empty() : this.instanceTag;
     }
 
-    /**
-     * Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path.Defaults to default.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,9 +37,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Enable session affinity. Only applicable in the App Engine flexible environment.
-     */
     @InputImport(name="sessionAffinity")
     private final @Nullable Input<Boolean> sessionAffinity;
 
@@ -59,9 +44,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
     }
 
-    /**
-     * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is specified, a network name will also be required unless it is for the default network. If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetwork_name) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetwork_name must be specified and the IP address is created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
-     */
     @InputImport(name="subnetworkName")
     private final @Nullable Input<String> subnetworkName;
 

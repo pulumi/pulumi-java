@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CapabilityArgs Empty = new CapabilityArgs();
 
-    /**
-     * String that represents a Capability resource name.
-     */
     @InputImport(name="capabilityName")
     private final @Nullable Input<String> capabilityName;
 
@@ -27,9 +21,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
         return this.capabilityName == null ? Input.empty() : this.capabilityName;
     }
 
-    /**
-     * String that represents a resource provider namespace.
-     */
     @InputImport(name="parentProviderNamespace", required=true)
     private final Input<String> parentProviderNamespace;
 
@@ -37,9 +28,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentProviderNamespace;
     }
 
-    /**
-     * String that represents a resource name.
-     */
     @InputImport(name="parentResourceName", required=true)
     private final Input<String> parentResourceName;
 
@@ -47,9 +35,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResourceName;
     }
 
-    /**
-     * String that represents a resource type.
-     */
     @InputImport(name="parentResourceType", required=true)
     private final Input<String> parentResourceType;
 
@@ -57,9 +42,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResourceType;
     }
 
-    /**
-     * String that represents an Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * String that represents a Target resource name.
-     */
     @InputImport(name="targetName", required=true)
     private final Input<String> targetName;
 

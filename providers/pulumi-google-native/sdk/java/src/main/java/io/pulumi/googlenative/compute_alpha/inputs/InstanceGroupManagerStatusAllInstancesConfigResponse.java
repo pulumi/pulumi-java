@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceGroupManagerStatusAllInstancesConfigResponse Empty = new InstanceGroupManagerStatusAllInstancesConfigResponse();
 
-    /**
-     * Current instances' config revision. This value is in RFC3339 text format.
-     */
     @InputImport(name="currentRevision", required=true)
     private final String currentRevision;
 
@@ -26,9 +20,6 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
         return this.currentRevision;
     }
 
-    /**
-     * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
-     */
     @InputImport(name="effective", required=true)
     private final Boolean effective;
 

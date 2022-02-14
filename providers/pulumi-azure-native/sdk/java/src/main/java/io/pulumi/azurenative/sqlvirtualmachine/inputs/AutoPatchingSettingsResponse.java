@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Set a patching window during which Windows and SQL patches will be applied.
- */
 public final class AutoPatchingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoPatchingSettingsResponse Empty = new AutoPatchingSettingsResponse();
 
-    /**
-     * Day of week to apply the patch on.
-     */
     @InputImport(name="dayOfWeek")
     private final @Nullable String dayOfWeek;
 
@@ -29,9 +23,6 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
         return this.dayOfWeek == null ? Optional.empty() : Optional.ofNullable(this.dayOfWeek);
     }
 
-    /**
-     * Enable or disable autopatching on SQL virtual machine.
-     */
     @InputImport(name="enable")
     private final @Nullable Boolean enable;
 
@@ -39,9 +30,6 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
     }
 
-    /**
-     * Duration of patching.
-     */
     @InputImport(name="maintenanceWindowDuration")
     private final @Nullable Integer maintenanceWindowDuration;
 
@@ -49,9 +37,6 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
         return this.maintenanceWindowDuration == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindowDuration);
     }
 
-    /**
-     * Hour of the day when patching is initiated. Local VM time.
-     */
     @InputImport(name="maintenanceWindowStartingHour")
     private final @Nullable Integer maintenanceWindowStartingHour;
 

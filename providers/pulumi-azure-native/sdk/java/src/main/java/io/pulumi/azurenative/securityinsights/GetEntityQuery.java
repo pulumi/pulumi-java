@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
 public class GetEntityQuery {
-/**
- * Specific entity query.
-API Version: 2021-03-01-preview.
- *
- * Specific entity query.
- */
     public static CompletableFuture<GetEntityQueryResult> invokeAsync(GetEntityQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityQuery", TypeShape.of(GetEntityQueryResult.class), args == null ? GetEntityQueryArgs.Empty : args, Utilities.withVersion(options));
     }

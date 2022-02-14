@@ -12,17 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of which data will be collected from a separate VM extension that integrates with the Azure Monitor Agent.
-Collected from either Windows and Linux machines, depending on which extension is defined.
- */
 public final class ExtensionDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtensionDataSourceResponse Empty = new ExtensionDataSourceResponse();
 
-    /**
-     * The name of the VM extension.
-     */
     @InputImport(name="extensionName", required=true)
     private final String extensionName;
 
@@ -30,9 +23,6 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
         return this.extensionName;
     }
 
-    /**
-     * The extension settings. The format is specific for particular extension.
-     */
     @InputImport(name="extensionSettings")
     private final @Nullable Object extensionSettings;
 
@@ -40,9 +30,6 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
         return this.extensionSettings == null ? Optional.empty() : Optional.ofNullable(this.extensionSettings);
     }
 
-    /**
-     * The list of data sources this extension needs data from.
-     */
     @InputImport(name="inputDataSources")
     private final @Nullable List<String> inputDataSources;
 
@@ -50,10 +37,6 @@ public final class ExtensionDataSourceResponse extends io.pulumi.resources.Invok
         return this.inputDataSources == null ? List.of() : this.inputDataSources;
     }
 
-    /**
-     * A friendly name for the data source. 
-This name should be unique across all data sources (regardless of type) within the data collection rule.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -61,10 +44,6 @@ This name should be unique across all data sources (regardless of type) within t
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * List of streams that this data source will be sent to.
-A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     */
     @InputImport(name="streams")
     private final @Nullable List<String> streams;
 

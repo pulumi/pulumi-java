@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * the criteria time aggregation types.
- */
     @EnumType
     public enum AggregationTypeEnum {
-/**
- * 
- */
         Average("Average"),
-/**
- * 
- */
         Count("Count"),
-/**
- * 
- */
         Minimum("Minimum"),
-/**
- * 
- */
         Maximum("Maximum"),
-/**
- * 
- */
         Total("Total");
 
         private final String value;

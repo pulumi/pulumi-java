@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceProviderAuthorizationArgs Empty = new ResourceProviderAuthorizationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -27,9 +21,6 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="managedByRoleDefinitionId")
     private final @Nullable Input<String> managedByRoleDefinitionId;
 
@@ -37,9 +28,6 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
         return this.managedByRoleDefinitionId == null ? Input.empty() : this.managedByRoleDefinitionId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable Input<String> roleDefinitionId;
 

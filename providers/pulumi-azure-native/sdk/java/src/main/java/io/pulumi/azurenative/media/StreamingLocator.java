@@ -16,506 +16,87 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A Streaming Locator resource
-API Version: 2020-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates a Streaming Locator with clear streaming
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingLocator = new AzureNative.Media.StreamingLocator("streamingLocator", new AzureNative.Media.StreamingLocatorArgs
-        {
-            AccountName = "contosomedia",
-            AssetName = "ClimbingMountRainier",
-            ResourceGroupName = "contoso",
-            StreamingLocatorName = "UserCreatedClearStreamingLocator",
-            StreamingPolicyName = "clearStreamingPolicy",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewStreamingLocator(ctx, "streamingLocator", &media.StreamingLocatorArgs{
-			AccountName:          pulumi.String("contosomedia"),
-			AssetName:            pulumi.String("ClimbingMountRainier"),
-			ResourceGroupName:    pulumi.String("contoso"),
-			StreamingLocatorName: pulumi.String("UserCreatedClearStreamingLocator"),
-			StreamingPolicyName:  pulumi.String("clearStreamingPolicy"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const streamingLocator = new azure_native.media.StreamingLocator("streamingLocator", {
-    accountName: "contosomedia",
-    assetName: "ClimbingMountRainier",
-    resourceGroupName: "contoso",
-    streamingLocatorName: "UserCreatedClearStreamingLocator",
-    streamingPolicyName: "clearStreamingPolicy",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-streaming_locator = azure_native.media.StreamingLocator("streamingLocator",
-    account_name="contosomedia",
-    asset_name="ClimbingMountRainier",
-    resource_group_name="contoso",
-    streaming_locator_name="UserCreatedClearStreamingLocator",
-    streaming_policy_name="clearStreamingPolicy")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Creates a Streaming Locator with secure streaming
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingLocator = new AzureNative.Media.StreamingLocator("streamingLocator", new AzureNative.Media.StreamingLocatorArgs
-        {
-            AccountName = "contosomedia",
-            AssetName = "ClimbingMountRainier",
-            EndTime = "2028-12-31T23:59:59.9999999Z",
-            ResourceGroupName = "contoso",
-            StartTime = "2018-03-01T00:00:00Z",
-            StreamingLocatorName = "UserCreatedSecureStreamingLocator",
-            StreamingPolicyName = "secureStreamingPolicy",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewStreamingLocator(ctx, "streamingLocator", &media.StreamingLocatorArgs{
-			AccountName:          pulumi.String("contosomedia"),
-			AssetName:            pulumi.String("ClimbingMountRainier"),
-			EndTime:              pulumi.String("2028-12-31T23:59:59.9999999Z"),
-			ResourceGroupName:    pulumi.String("contoso"),
-			StartTime:            pulumi.String("2018-03-01T00:00:00Z"),
-			StreamingLocatorName: pulumi.String("UserCreatedSecureStreamingLocator"),
-			StreamingPolicyName:  pulumi.String("secureStreamingPolicy"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const streamingLocator = new azure_native.media.StreamingLocator("streamingLocator", {
-    accountName: "contosomedia",
-    assetName: "ClimbingMountRainier",
-    endTime: "2028-12-31T23:59:59.9999999Z",
-    resourceGroupName: "contoso",
-    startTime: "2018-03-01T00:00:00Z",
-    streamingLocatorName: "UserCreatedSecureStreamingLocator",
-    streamingPolicyName: "secureStreamingPolicy",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-streaming_locator = azure_native.media.StreamingLocator("streamingLocator",
-    account_name="contosomedia",
-    asset_name="ClimbingMountRainier",
-    end_time="2028-12-31T23:59:59.9999999Z",
-    resource_group_name="contoso",
-    start_time="2018-03-01T00:00:00Z",
-    streaming_locator_name="UserCreatedSecureStreamingLocator",
-    streaming_policy_name="secureStreamingPolicy")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Creates a Streaming Locator with user defined content keys
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var streamingLocator = new AzureNative.Media.StreamingLocator("streamingLocator", new AzureNative.Media.StreamingLocatorArgs
-        {
-            AccountName = "contosomedia",
-            AssetName = "ClimbingMountRainier",
-            ContentKeys = 
-            {
-                new AzureNative.Media.Inputs.StreamingLocatorContentKeyArgs
-                {
-                    Id = "60000000-0000-0000-0000-000000000001",
-                    LabelReferenceInStreamingPolicy = "aesDefaultKey",
-                    Value = "1UqLohAfWsEGkULYxHjYZg==",
-                },
-                new AzureNative.Media.Inputs.StreamingLocatorContentKeyArgs
-                {
-                    Id = "60000000-0000-0000-0000-000000000004",
-                    LabelReferenceInStreamingPolicy = "cencDefaultKey",
-                    Value = "4UqLohAfWsEGkULYxHjYZg==",
-                },
-                new AzureNative.Media.Inputs.StreamingLocatorContentKeyArgs
-                {
-                    Id = "60000000-0000-0000-0000-000000000007",
-                    LabelReferenceInStreamingPolicy = "cbcsDefaultKey",
-                    Value = "7UqLohAfWsEGkULYxHjYZg==",
-                },
-            },
-            ResourceGroupName = "contoso",
-            StreamingLocatorId = "90000000-0000-0000-0000-00000000000A",
-            StreamingLocatorName = "UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys",
-            StreamingPolicyName = "secureStreamingPolicy",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := media.NewStreamingLocator(ctx, "streamingLocator", &media.StreamingLocatorArgs{
-			AccountName: pulumi.String("contosomedia"),
-			AssetName:   pulumi.String("ClimbingMountRainier"),
-			ContentKeys: []media.StreamingLocatorContentKeyArgs{
-				&media.StreamingLocatorContentKeyArgs{
-					Id:                              pulumi.String("60000000-0000-0000-0000-000000000001"),
-					LabelReferenceInStreamingPolicy: pulumi.String("aesDefaultKey"),
-					Value:                           pulumi.String("1UqLohAfWsEGkULYxHjYZg=="),
-				},
-				&media.StreamingLocatorContentKeyArgs{
-					Id:                              pulumi.String("60000000-0000-0000-0000-000000000004"),
-					LabelReferenceInStreamingPolicy: pulumi.String("cencDefaultKey"),
-					Value:                           pulumi.String("4UqLohAfWsEGkULYxHjYZg=="),
-				},
-				&media.StreamingLocatorContentKeyArgs{
-					Id:                              pulumi.String("60000000-0000-0000-0000-000000000007"),
-					LabelReferenceInStreamingPolicy: pulumi.String("cbcsDefaultKey"),
-					Value:                           pulumi.String("7UqLohAfWsEGkULYxHjYZg=="),
-				},
-			},
-			ResourceGroupName:    pulumi.String("contoso"),
-			StreamingLocatorId:   pulumi.String("90000000-0000-0000-0000-00000000000A"),
-			StreamingLocatorName: pulumi.String("UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys"),
-			StreamingPolicyName:  pulumi.String("secureStreamingPolicy"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const streamingLocator = new azure_native.media.StreamingLocator("streamingLocator", {
-    accountName: "contosomedia",
-    assetName: "ClimbingMountRainier",
-    contentKeys: [
-        {
-            id: "60000000-0000-0000-0000-000000000001",
-            labelReferenceInStreamingPolicy: "aesDefaultKey",
-            value: "1UqLohAfWsEGkULYxHjYZg==",
-        },
-        {
-            id: "60000000-0000-0000-0000-000000000004",
-            labelReferenceInStreamingPolicy: "cencDefaultKey",
-            value: "4UqLohAfWsEGkULYxHjYZg==",
-        },
-        {
-            id: "60000000-0000-0000-0000-000000000007",
-            labelReferenceInStreamingPolicy: "cbcsDefaultKey",
-            value: "7UqLohAfWsEGkULYxHjYZg==",
-        },
-    ],
-    resourceGroupName: "contoso",
-    streamingLocatorId: "90000000-0000-0000-0000-00000000000A",
-    streamingLocatorName: "UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys",
-    streamingPolicyName: "secureStreamingPolicy",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-streaming_locator = azure_native.media.StreamingLocator("streamingLocator",
-    account_name="contosomedia",
-    asset_name="ClimbingMountRainier",
-    content_keys=[
-        azure_native.media.StreamingLocatorContentKeyArgs(
-            id="60000000-0000-0000-0000-000000000001",
-            label_reference_in_streaming_policy="aesDefaultKey",
-            value="1UqLohAfWsEGkULYxHjYZg==",
-        ),
-        azure_native.media.StreamingLocatorContentKeyArgs(
-            id="60000000-0000-0000-0000-000000000004",
-            label_reference_in_streaming_policy="cencDefaultKey",
-            value="4UqLohAfWsEGkULYxHjYZg==",
-        ),
-        azure_native.media.StreamingLocatorContentKeyArgs(
-            id="60000000-0000-0000-0000-000000000007",
-            label_reference_in_streaming_policy="cbcsDefaultKey",
-            value="7UqLohAfWsEGkULYxHjYZg==",
-        ),
-    ],
-    resource_group_name="contoso",
-    streaming_locator_id="90000000-0000-0000-0000-00000000000A",
-    streaming_locator_name="UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys",
-    streaming_policy_name="secureStreamingPolicy")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:media:StreamingLocator UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/streamingLocators/UserCreatedSecureStreamingLocatorWithUserDefinedContentKeys 
-```
-
- */
 @ResourceType(type="azure-native:media:StreamingLocator")
 public class StreamingLocator extends io.pulumi.resources.CustomResource {
-    /**
-     * Alternative Media ID of this Streaming Locator
-     */
     @OutputExport(name="alternativeMediaId", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternativeMediaId;
 
-    /**
-     * @return Alternative Media ID of this Streaming Locator
-     */
     public Output</* @Nullable */ String> getAlternativeMediaId() {
         return this.alternativeMediaId;
     }
-    /**
-     * Asset Name
-     */
     @OutputExport(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
-    /**
-     * @return Asset Name
-     */
     public Output<String> getAssetName() {
         return this.assetName;
     }
-    /**
-     * The ContentKeys used by this Streaming Locator.
-     */
     @OutputExport(name="contentKeys", type=List.class, parameters={StreamingLocatorContentKeyResponse.class})
     private Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> contentKeys;
 
-    /**
-     * @return The ContentKeys used by this Streaming Locator.
-     */
     public Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> getContentKeys() {
         return this.contentKeys;
     }
-    /**
-     * The creation time of the Streaming Locator.
-     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output<String> created;
 
-    /**
-     * @return The creation time of the Streaming Locator.
-     */
     public Output<String> getCreated() {
         return this.created;
     }
-    /**
-     * Name of the default ContentKeyPolicy used by this Streaming Locator.
-     */
     @OutputExport(name="defaultContentKeyPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultContentKeyPolicyName;
 
-    /**
-     * @return Name of the default ContentKeyPolicy used by this Streaming Locator.
-     */
     public Output</* @Nullable */ String> getDefaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
-    /**
-     * The end time of the Streaming Locator.
-     */
     @OutputExport(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
-    /**
-     * @return The end time of the Streaming Locator.
-     */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
-    /**
-     * A list of asset or account filters which apply to this streaming locator
-     */
     @OutputExport(name="filters", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> filters;
 
-    /**
-     * @return A list of asset or account filters which apply to this streaming locator
-     */
     public Output</* @Nullable */ List<String>> getFilters() {
         return this.filters;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The start time of the Streaming Locator.
-     */
     @OutputExport(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
-    /**
-     * @return The start time of the Streaming Locator.
-     */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
-    /**
-     * The StreamingLocatorId of the Streaming Locator.
-     */
     @OutputExport(name="streamingLocatorId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamingLocatorId;
 
-    /**
-     * @return The StreamingLocatorId of the Streaming Locator.
-     */
     public Output</* @Nullable */ String> getStreamingLocatorId() {
         return this.streamingLocatorId;
     }
-    /**
-     * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
-     */
     @OutputExport(name="streamingPolicyName", type=String.class, parameters={})
     private Output<String> streamingPolicyName;
 
-    /**
-     * @return Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
-     */
     public Output<String> getStreamingPolicyName() {
         return this.streamingPolicyName;
     }
-    /**
-     * The system metadata relating to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata relating to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StreamingLocator(String name, StreamingLocatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:StreamingLocator", name, args == null ? StreamingLocatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -538,14 +119,6 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StreamingLocator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StreamingLocator(name, id, options);
     }

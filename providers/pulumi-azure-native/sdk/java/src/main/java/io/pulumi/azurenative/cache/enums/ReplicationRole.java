@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Role of the linked server.
- */
     @EnumType
     public enum ReplicationRole {
-/**
- * 
- */
         Primary("Primary"),
-/**
- * 
- */
         Secondary("Secondary");
 
         private final String value;

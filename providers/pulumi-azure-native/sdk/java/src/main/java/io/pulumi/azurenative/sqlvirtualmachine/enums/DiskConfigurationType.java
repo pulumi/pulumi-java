@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Disk configuration to apply to SQL Server.
- */
     @EnumType
     public enum DiskConfigurationType {
-/**
- * 
- */
         NEW("NEW"),
-/**
- * 
- */
         EXTEND("EXTEND"),
-/**
- * 
- */
         ADD("ADD");
 
         private final String value;

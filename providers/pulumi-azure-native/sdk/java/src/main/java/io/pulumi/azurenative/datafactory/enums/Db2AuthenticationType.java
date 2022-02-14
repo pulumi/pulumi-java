@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
- */
     @EnumType
     public enum Db2AuthenticationType {
-/**
- * 
- */
         Basic("Basic");
 
         private final String value;

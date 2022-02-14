@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a custom preset for encoding the input content using the encoder processor.
- */
 public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncoderCustomPresetArgs Empty = new EncoderCustomPresetArgs();
 
-    /**
-     * Describes a custom preset for encoding audio.
-     */
     @InputImport(name="audioEncoder")
     private final @Nullable Input<AudioEncoderAacArgs> audioEncoder;
 
@@ -29,10 +23,6 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
         return this.audioEncoder == null ? Input.empty() : this.audioEncoder;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -40,9 +30,6 @@ Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
         return this.type;
     }
 
-    /**
-     * Describes a custom preset for encoding video.
-     */
     @InputImport(name="videoEncoder")
     private final @Nullable Input<VideoEncoderH264Args> videoEncoder;
 

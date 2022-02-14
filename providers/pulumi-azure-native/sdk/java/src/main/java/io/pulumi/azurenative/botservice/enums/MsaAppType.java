@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Microsoft App Type for the bot
- */
     @EnumType
     public enum MsaAppType {
-/**
- * 
- */
         UserAssignedMSI("UserAssignedMSI"),
-/**
- * 
- */
         SingleTenant("SingleTenant"),
-/**
- * 
- */
         MultiTenant("MultiTenant");
 
         private final String value;

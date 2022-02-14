@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SkuCapabilityResponse {
-/**
- * 
- */
     private final String name;
-/**
- * 
- */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -26,15 +20,9 @@ public final class SkuCapabilityResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * 
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
- */
     public String getValue() {
         return this.value;
     }

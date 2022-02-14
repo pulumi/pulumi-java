@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * API metadata property for Spring Cloud Gateway
- */
 public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayApiMetadataPropertiesResponse Empty = new GatewayApiMetadataPropertiesResponse();
 
-    /**
-     * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -27,9 +21,6 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Location of additional documentation for the APIs available on the Gateway instance
-     */
     @InputImport(name="documentation")
     private final @Nullable String documentation;
 
@@ -37,9 +28,6 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
         return this.documentation == null ? Optional.empty() : Optional.ofNullable(this.documentation);
     }
 
-    /**
-     * Base URL that API consumers will use to access APIs on the Gateway instance.
-     */
     @InputImport(name="serverUrl")
     private final @Nullable String serverUrl;
 
@@ -47,9 +35,6 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
         return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
     }
 
-    /**
-     * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
-     */
     @InputImport(name="title")
     private final @Nullable String title;
 
@@ -57,9 +42,6 @@ public final class GatewayApiMetadataPropertiesResponse extends io.pulumi.resour
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
-    /**
-     * Version of APIs available on this Gateway instance (default: `unspecified`).
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

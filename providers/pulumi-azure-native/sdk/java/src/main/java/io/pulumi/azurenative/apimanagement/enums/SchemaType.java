@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Schema Type. Immutable.
- */
     @EnumType
     public enum SchemaType {
-/**
- * Xml schema type.
- */
         Xml("xml"),
-/**
- * Json schema type.
- */
         Json("json");
 
         private final String value;

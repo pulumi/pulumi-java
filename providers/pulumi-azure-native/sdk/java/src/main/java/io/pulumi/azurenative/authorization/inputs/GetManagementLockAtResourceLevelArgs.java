@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementLockAtResourceLevelArgs Empty = new GetManagementLockAtResourceLevelArgs();
 
-    /**
-     * The name of lock.
-     */
     @InputImport(name="lockName", required=true)
     private final String lockName;
 
@@ -25,9 +19,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
         return this.lockName;
     }
 
-    /**
-     * An extra path parameter needed in some services, like SQL Databases.
-     */
     @InputImport(name="parentResourcePath", required=true)
     private final String parentResourcePath;
 
@@ -35,9 +26,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
         return this.parentResourcePath;
     }
 
-    /**
-     * The name of the resource group. 
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -55,9 +40,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
         return this.resourceName;
     }
 
-    /**
-     * The namespace of the resource provider.
-     */
     @InputImport(name="resourceProviderNamespace", required=true)
     private final String resourceProviderNamespace;
 
@@ -65,9 +47,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
         return this.resourceProviderNamespace;
     }
 
-    /**
-     * The type of the resource.
-     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

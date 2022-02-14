@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger based on status code.
- */
 public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatusCodesBasedTriggerArgs Empty = new StatusCodesBasedTriggerArgs();
 
-    /**
-     * Request Count.
-     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -28,9 +22,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
         return this.count == null ? Input.empty() : this.count;
     }
 
-    /**
-     * Request Path
-     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -38,9 +29,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
         return this.path == null ? Input.empty() : this.path;
     }
 
-    /**
-     * HTTP status code.
-     */
     @InputImport(name="status")
     private final @Nullable Input<Integer> status;
 
@@ -48,9 +36,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * Request Sub Status.
-     */
     @InputImport(name="subStatus")
     private final @Nullable Input<Integer> subStatus;
 
@@ -58,9 +43,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
         return this.subStatus == null ? Input.empty() : this.subStatus;
     }
 
-    /**
-     * Time interval.
-     */
     @InputImport(name="timeInterval")
     private final @Nullable Input<String> timeInterval;
 
@@ -68,9 +50,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
         return this.timeInterval == null ? Input.empty() : this.timeInterval;
     }
 
-    /**
-     * Win32 error code.
-     */
     @InputImport(name="win32Status")
     private final @Nullable Input<Integer> win32Status;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Map a field of profile to its corresponding StrongId in Related Profile.
- */
 public final class RelationshipTypeFieldMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RelationshipTypeFieldMappingResponse Empty = new RelationshipTypeFieldMappingResponse();
 
-    /**
-     * Specifies the fieldName in profile.
-     */
     @InputImport(name="profileFieldName", required=true)
     private final String profileFieldName;
 
@@ -25,9 +19,6 @@ public final class RelationshipTypeFieldMappingResponse extends io.pulumi.resour
         return this.profileFieldName;
     }
 
-    /**
-     * Specifies the KeyProperty (from StrongId) of the related profile.
-     */
     @InputImport(name="relatedProfileKeyProperty", required=true)
     private final String relatedProfileKeyProperty;
 

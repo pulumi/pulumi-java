@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of a storage blob to be created.
- */
     @EnumType
     public enum BlobType {
-/**
- * Block blobs store text and binary data. Block blobs are made up of blocks of data that can be managed individually.
- */
         Block("Block"),
-/**
- * Append blobs are made up of blocks like block blobs, but are optimized for append operations.
- */
         Append("Append");
 
         private final String value;

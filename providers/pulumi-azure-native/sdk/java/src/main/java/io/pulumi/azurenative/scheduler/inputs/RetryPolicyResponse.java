@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RetryPolicyResponse Empty = new RetryPolicyResponse();
 
-    /**
-     * Gets or sets the number of times a retry should be attempted.
-     */
     @InputImport(name="retryCount")
     private final @Nullable Integer retryCount;
 
@@ -28,9 +22,6 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.retryCount == null ? Optional.empty() : Optional.ofNullable(this.retryCount);
     }
 
-    /**
-     * Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
-     */
     @InputImport(name="retryInterval")
     private final @Nullable String retryInterval;
 
@@ -38,9 +29,6 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.retryInterval == null ? Optional.empty() : Optional.ofNullable(this.retryInterval);
     }
 
-    /**
-     * Gets or sets the retry strategy to be used.
-     */
     @InputImport(name="retryType")
     private final @Nullable String retryType;
 

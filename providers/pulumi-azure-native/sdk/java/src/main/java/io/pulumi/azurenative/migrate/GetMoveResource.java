@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMoveResource {
-/**
- * Defines the move resource.
-API Version: 2021-01-01.
- *
- * Defines the move resource.
- */
     public static CompletableFuture<GetMoveResourceResult> invokeAsync(GetMoveResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMoveResource", TypeShape.of(GetMoveResourceResult.class), args == null ? GetMoveResourceArgs.Empty : args, Utilities.withVersion(options));
     }

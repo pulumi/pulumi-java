@@ -11,16 +11,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Instructs the speech synthesizer on how to generate the output audio content.
- */
 public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2TextToSpeechSettingsResponse Empty = new GoogleCloudDialogflowV2TextToSpeechSettingsResponse();
 
-    /**
-     * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
-     */
     @InputImport(name="enableTextToSpeech", required=true)
     private final Boolean enableTextToSpeech;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
         return this.enableTextToSpeech;
     }
 
-    /**
-     * Audio encoding of the synthesized audio content.
-     */
     @InputImport(name="outputAudioEncoding", required=true)
     private final String outputAudioEncoding;
 
@@ -38,9 +29,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
         return this.outputAudioEncoding;
     }
 
-    /**
-     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
-     */
     @InputImport(name="sampleRateHertz", required=true)
     private final Integer sampleRateHertz;
 
@@ -48,9 +36,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
         return this.sampleRateHertz;
     }
 
-    /**
-     * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
-     */
     @InputImport(name="synthesizeSpeechConfigs", required=true)
     private final Map<String,String> synthesizeSpeechConfigs;
 

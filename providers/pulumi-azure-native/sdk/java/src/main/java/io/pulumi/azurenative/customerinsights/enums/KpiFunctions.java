@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The computation function for the KPI.
- */
     @EnumType
     public enum KpiFunctions {
-/**
- * 
- */
         Sum("Sum"),
-/**
- * 
- */
         Avg("Avg"),
-/**
- * 
- */
         Min("Min"),
-/**
- * 
- */
         Max("Max"),
-/**
- * 
- */
         Last("Last"),
-/**
- * 
- */
         Count("Count"),
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         CountDistinct("CountDistinct");
 
         private final String value;

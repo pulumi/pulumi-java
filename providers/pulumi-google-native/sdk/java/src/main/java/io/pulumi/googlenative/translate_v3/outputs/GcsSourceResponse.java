@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GcsSourceResponse {
-/**
- * Source data URI. For example, `gs://my_bucket/my_object`.
- */
     private final String inputUri;
 
     @OutputCustomType.Constructor({"inputUri"})
@@ -19,9 +16,6 @@ public final class GcsSourceResponse {
         this.inputUri = Objects.requireNonNull(inputUri);
     }
 
-/**
- * Source data URI. For example, `gs://my_bucket/my_object`.
- */
     public String getInputUri() {
         return this.inputUri;
     }

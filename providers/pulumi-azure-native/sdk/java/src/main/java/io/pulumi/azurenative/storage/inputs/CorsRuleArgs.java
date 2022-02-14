@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Specifies a CORS rule for the Blob service.
- */
 public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CorsRuleArgs Empty = new CorsRuleArgs();
 
-    /**
-     * Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
-     */
     @InputImport(name="allowedHeaders", required=true)
     private final Input<List<String>> allowedHeaders;
 
@@ -28,9 +22,6 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedHeaders;
     }
 
-    /**
-     * Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
-     */
     @InputImport(name="allowedMethods", required=true)
     private final Input<List<String>> allowedMethods;
 
@@ -38,9 +29,6 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedMethods;
     }
 
-    /**
-     * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
-     */
     @InputImport(name="allowedOrigins", required=true)
     private final Input<List<String>> allowedOrigins;
 
@@ -48,9 +36,6 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedOrigins;
     }
 
-    /**
-     * Required if CorsRule element is present. A list of response headers to expose to CORS clients.
-     */
     @InputImport(name="exposedHeaders", required=true)
     private final Input<List<String>> exposedHeaders;
 
@@ -58,9 +43,6 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.exposedHeaders;
     }
 
-    /**
-     * Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
-     */
     @InputImport(name="maxAgeInSeconds", required=true)
     private final Input<Integer> maxAgeInSeconds;
 

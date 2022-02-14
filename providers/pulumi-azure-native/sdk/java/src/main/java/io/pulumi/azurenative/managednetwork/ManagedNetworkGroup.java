@@ -15,283 +15,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * The Managed Network Group resource
-API Version: 2019-06-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ManagementNetworkGroupsPut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managedNetworkGroup = new AzureNative.ManagedNetwork.ManagedNetworkGroup("managedNetworkGroup", new AzureNative.ManagedNetwork.ManagedNetworkGroupArgs
-        {
-            ManagedNetworkGroupName = "myManagedNetworkGroup1",
-            ManagedNetworkName = "myManagedNetwork",
-            ManagementGroups = {},
-            ResourceGroupName = "myResourceGroup",
-            Subnets = 
-            {
-                new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                {
-                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
-                },
-            },
-            Subscriptions = {},
-            VirtualNetworks = 
-            {
-                new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                {
-                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-                },
-                new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
-                {
-                    Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	managednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managednetwork"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := managednetwork.NewManagedNetworkGroup(ctx, "managedNetworkGroup", &managednetwork.ManagedNetworkGroupArgs{
-			ManagedNetworkGroupName: pulumi.String("myManagedNetworkGroup1"),
-			ManagedNetworkName:      pulumi.String("myManagedNetwork"),
-			ManagementGroups:        managednetwork.ResourceIdArray{},
-			ResourceGroupName:       pulumi.String("myResourceGroup"),
-			Subnets: []managednetwork.ResourceIdArgs{
-				&managednetwork.ResourceIdArgs{
-					Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA"),
-				},
-			},
-			Subscriptions: managednetwork.ResourceIdArray{},
-			VirtualNetworks: []managednetwork.ResourceIdArgs{
-				&managednetwork.ResourceIdArgs{
-					Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA"),
-				},
-				&managednetwork.ResourceIdArgs{
-					Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managedNetworkGroup = new azure_native.managednetwork.ManagedNetworkGroup("managedNetworkGroup", {
-    managedNetworkGroupName: "myManagedNetworkGroup1",
-    managedNetworkName: "myManagedNetwork",
-    managementGroups: [],
-    resourceGroupName: "myResourceGroup",
-    subnets: [{
-        id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
-    }],
-    subscriptions: [],
-    virtualNetworks: [
-        {
-            id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-        },
-        {
-            id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-        },
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-managed_network_group = azure_native.managednetwork.ManagedNetworkGroup("managedNetworkGroup",
-    managed_network_group_name="myManagedNetworkGroup1",
-    managed_network_name="myManagedNetwork",
-    management_groups=[],
-    resource_group_name="myResourceGroup",
-    subnets=[azure_native.managednetwork.ResourceIdArgs(
-        id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA",
-    )],
-    subscriptions=[],
-    virtual_networks=[
-        azure_native.managednetwork.ResourceIdArgs(
-            id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA",
-        ),
-        azure_native.managednetwork.ResourceIdArgs(
-            id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB",
-        ),
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:managednetwork:ManagedNetworkGroup myManagedNetworkGroup1 /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1 
-```
-
- */
 @ResourceType(type="azure-native:managednetwork:ManagedNetworkGroup")
 public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Responsibility role under which this Managed Network Group will be created
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return Responsibility role under which this Managed Network Group will be created
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The collection of management groups covered by the Managed Network
-     */
     @OutputExport(name="managementGroups", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> managementGroups;
 
-    /**
-     * @return The collection of management groups covered by the Managed Network
-     */
     public Output</* @Nullable */ List<ResourceIdResponse>> getManagementGroups() {
         return this.managementGroups;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state of the ManagedNetwork resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the ManagedNetwork resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The collection of  subnets covered by the Managed Network
-     */
     @OutputExport(name="subnets", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> subnets;
 
-    /**
-     * @return The collection of  subnets covered by the Managed Network
-     */
     public Output</* @Nullable */ List<ResourceIdResponse>> getSubnets() {
         return this.subnets;
     }
-    /**
-     * The collection of subscriptions covered by the Managed Network
-     */
     @OutputExport(name="subscriptions", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> subscriptions;
 
-    /**
-     * @return The collection of subscriptions covered by the Managed Network
-     */
     public Output</* @Nullable */ List<ResourceIdResponse>> getSubscriptions() {
         return this.subscriptions;
     }
-    /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The collection of virtual nets covered by the Managed Network
-     */
     @OutputExport(name="virtualNetworks", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> virtualNetworks;
 
-    /**
-     * @return The collection of virtual nets covered by the Managed Network
-     */
     public Output</* @Nullable */ List<ResourceIdResponse>> getVirtualNetworks() {
         return this.virtualNetworks;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ManagedNetworkGroup(String name, ManagedNetworkGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:managednetwork:ManagedNetworkGroup", name, args == null ? ManagedNetworkGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -310,14 +96,6 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ManagedNetworkGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedNetworkGroup(name, id, options);
     }

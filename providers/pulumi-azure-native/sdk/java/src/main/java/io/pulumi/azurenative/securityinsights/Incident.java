@@ -18,391 +18,129 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Represents an incident in Azure Security Insights.
-API Version: 2020-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Creates or updates an incident.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var incident = new AzureNative.SecurityInsights.Incident("incident", new AzureNative.SecurityInsights.IncidentArgs
-        {
-            Classification = "FalsePositive",
-            ClassificationComment = "Not a malicious activity",
-            ClassificationReason = "IncorrectAlertLogic",
-            Description = "This is a demo incident",
-            FirstActivityTimeUtc = "2019-01-01T13:00:30Z",
-            IncidentId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-            LastActivityTimeUtc = "2019-01-01T13:05:30Z",
-            Owner = new AzureNative.SecurityInsights.Inputs.IncidentOwnerInfoArgs
-            {
-                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
-            },
-            ResourceGroupName = "myRg",
-            Severity = "High",
-            Status = "Closed",
-            Title = "My incident",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewIncident(ctx, "incident", &securityinsights.IncidentArgs{
-			Classification:        pulumi.String("FalsePositive"),
-			ClassificationComment: pulumi.String("Not a malicious activity"),
-			ClassificationReason:  pulumi.String("IncorrectAlertLogic"),
-			Description:           pulumi.String("This is a demo incident"),
-			FirstActivityTimeUtc:  pulumi.String("2019-01-01T13:00:30Z"),
-			IncidentId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			LastActivityTimeUtc:   pulumi.String("2019-01-01T13:05:30Z"),
-			Owner: &securityinsights.IncidentOwnerInfoArgs{
-				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
-			},
-			ResourceGroupName: pulumi.String("myRg"),
-			Severity:          pulumi.String("High"),
-			Status:            pulumi.String("Closed"),
-			Title:             pulumi.String("My incident"),
-			WorkspaceName:     pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const incident = new azure_native.securityinsights.Incident("incident", {
-    classification: "FalsePositive",
-    classificationComment: "Not a malicious activity",
-    classificationReason: "IncorrectAlertLogic",
-    description: "This is a demo incident",
-    firstActivityTimeUtc: "2019-01-01T13:00:30Z",
-    incidentId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-    lastActivityTimeUtc: "2019-01-01T13:05:30Z",
-    owner: {
-        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
-    resourceGroupName: "myRg",
-    severity: "High",
-    status: "Closed",
-    title: "My incident",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-incident = azure_native.securityinsights.Incident("incident",
-    classification="FalsePositive",
-    classification_comment="Not a malicious activity",
-    classification_reason="IncorrectAlertLogic",
-    description="This is a demo incident",
-    first_activity_time_utc="2019-01-01T13:00:30Z",
-    incident_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
-    last_activity_time_utc="2019-01-01T13:05:30Z",
-    owner=azure_native.securityinsights.IncidentOwnerInfoArgs(
-        object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
-    ),
-    resource_group_name="myRg",
-    severity="High",
-    status="Closed",
-    title="My incident",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:securityinsights:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
-```
-
- */
 @ResourceType(type="azure-native:securityinsights:Incident")
 public class Incident extends io.pulumi.resources.CustomResource {
-    /**
-     * Additional data on the incident
-     */
     @OutputExport(name="additionalData", type=IncidentAdditionalDataResponse.class, parameters={})
     private Output<IncidentAdditionalDataResponse> additionalData;
 
-    /**
-     * @return Additional data on the incident
-     */
     public Output<IncidentAdditionalDataResponse> getAdditionalData() {
         return this.additionalData;
     }
-    /**
-     * The reason the incident was closed
-     */
     @OutputExport(name="classification", type=String.class, parameters={})
     private Output</* @Nullable */ String> classification;
 
-    /**
-     * @return The reason the incident was closed
-     */
     public Output</* @Nullable */ String> getClassification() {
         return this.classification;
     }
-    /**
-     * Describes the reason the incident was closed
-     */
     @OutputExport(name="classificationComment", type=String.class, parameters={})
     private Output</* @Nullable */ String> classificationComment;
 
-    /**
-     * @return Describes the reason the incident was closed
-     */
     public Output</* @Nullable */ String> getClassificationComment() {
         return this.classificationComment;
     }
-    /**
-     * The classification reason the incident was closed with
-     */
     @OutputExport(name="classificationReason", type=String.class, parameters={})
     private Output</* @Nullable */ String> classificationReason;
 
-    /**
-     * @return The classification reason the incident was closed with
-     */
     public Output</* @Nullable */ String> getClassificationReason() {
         return this.classificationReason;
     }
-    /**
-     * The time the incident was created
-     */
     @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
-    /**
-     * @return The time the incident was created
-     */
     public Output<String> getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
-    /**
-     * The description of the incident
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description of the incident
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Etag of the azure resource
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Etag of the azure resource
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * The time of the first activity in the incident
-     */
     @OutputExport(name="firstActivityTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstActivityTimeUtc;
 
-    /**
-     * @return The time of the first activity in the incident
-     */
     public Output</* @Nullable */ String> getFirstActivityTimeUtc() {
         return this.firstActivityTimeUtc;
     }
-    /**
-     * A sequential number
-     */
     @OutputExport(name="incidentNumber", type=Integer.class, parameters={})
     private Output<Integer> incidentNumber;
 
-    /**
-     * @return A sequential number
-     */
     public Output<Integer> getIncidentNumber() {
         return this.incidentNumber;
     }
-    /**
-     * The deep-link url to the incident in Azure portal
-     */
     @OutputExport(name="incidentUrl", type=String.class, parameters={})
     private Output<String> incidentUrl;
 
-    /**
-     * @return The deep-link url to the incident in Azure portal
-     */
     public Output<String> getIncidentUrl() {
         return this.incidentUrl;
     }
-    /**
-     * List of labels relevant to this incident
-     */
     @OutputExport(name="labels", type=List.class, parameters={IncidentLabelResponse.class})
     private Output</* @Nullable */ List<IncidentLabelResponse>> labels;
 
-    /**
-     * @return List of labels relevant to this incident
-     */
     public Output</* @Nullable */ List<IncidentLabelResponse>> getLabels() {
         return this.labels;
     }
-    /**
-     * The time of the last activity in the incident
-     */
     @OutputExport(name="lastActivityTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastActivityTimeUtc;
 
-    /**
-     * @return The time of the last activity in the incident
-     */
     public Output</* @Nullable */ String> getLastActivityTimeUtc() {
         return this.lastActivityTimeUtc;
     }
-    /**
-     * The last time the incident was updated
-     */
     @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
-    /**
-     * @return The last time the incident was updated
-     */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Describes a user that the incident is assigned to
-     */
     @OutputExport(name="owner", type=IncidentOwnerInfoResponse.class, parameters={})
     private Output</* @Nullable */ IncidentOwnerInfoResponse> owner;
 
-    /**
-     * @return Describes a user that the incident is assigned to
-     */
     public Output</* @Nullable */ IncidentOwnerInfoResponse> getOwner() {
         return this.owner;
     }
-    /**
-     * List of resource ids of Analytic rules related to the incident
-     */
     @OutputExport(name="relatedAnalyticRuleIds", type=List.class, parameters={String.class})
     private Output<List<String>> relatedAnalyticRuleIds;
 
-    /**
-     * @return List of resource ids of Analytic rules related to the incident
-     */
     public Output<List<String>> getRelatedAnalyticRuleIds() {
         return this.relatedAnalyticRuleIds;
     }
-    /**
-     * The severity of the incident
-     */
     @OutputExport(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
-    /**
-     * @return The severity of the incident
-     */
     public Output<String> getSeverity() {
         return this.severity;
     }
-    /**
-     * The status of the incident
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return The status of the incident
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * The title of the incident
-     */
     @OutputExport(name="title", type=String.class, parameters={})
     private Output<String> title;
 
-    /**
-     * @return The title of the incident
-     */
     public Output<String> getTitle() {
         return this.title;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Incident(String name, IncidentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:Incident", name, args == null ? IncidentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -425,14 +163,6 @@ public class Incident extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Incident get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Incident(name, id, options);
     }

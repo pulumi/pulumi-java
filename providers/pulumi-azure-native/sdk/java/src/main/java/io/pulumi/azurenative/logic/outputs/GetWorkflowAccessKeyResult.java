@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkflowAccessKeyResult {
-/**
- * Gets or sets the resource id.
- */
     private final @Nullable String id;
-/**
- * Gets the workflow access key name.
- */
     private final String name;
-/**
- * Gets or sets the not-after time.
- */
     private final @Nullable String notAfter;
-/**
- * Gets or sets the not-before time.
- */
     private final @Nullable String notBefore;
-/**
- * Gets the workflow access key type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","notAfter","notBefore","type"})
@@ -46,33 +31,18 @@ public final class GetWorkflowAccessKeyResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Gets or sets the resource id.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * Gets the workflow access key name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Gets or sets the not-after time.
- */
     public Optional<String> getNotAfter() {
         return Optional.ofNullable(this.notAfter);
     }
-/**
- * Gets or sets the not-before time.
- */
     public Optional<String> getNotBefore() {
         return Optional.ofNullable(this.notBefore);
     }
-/**
- * Gets the workflow access key type.
- */
     public String getType() {
         return this.type;
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
-    /**
-     * The identity of the gateway.
-     */
     @InputImport(name="gatewayResourceName", required=true)
     private final String gatewayResourceName;
 
@@ -25,9 +19,6 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayResourceName;
     }
 
-    /**
-     * Azure resource group name
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * TargetsPresentCondition contains information on any Targets defined in the Delivery Pipeline that do not actually exist.
- */
 public final class TargetsPresentConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TargetsPresentConditionResponse Empty = new TargetsPresentConditionResponse();
 
-    /**
-     * The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
-     */
     @InputImport(name="missingTargets", required=true)
     private final List<String> missingTargets;
 
@@ -27,9 +21,6 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
         return this.missingTargets;
     }
 
-    /**
-     * True if there aren't any missing Targets.
-     */
     @InputImport(name="status", required=true)
     private final Boolean status;
 
@@ -37,9 +28,6 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
         return this.status;
     }
 
-    /**
-     * Last time the condition was updated.
-     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

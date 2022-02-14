@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the metric alert criteria for multiple resource that has multiple metric criteria.
- */
 public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricAlertMultipleResourceMultipleMetricCriteriaArgs Empty = new MetricAlertMultipleResourceMultipleMetricCriteriaArgs();
 
-    /**
-     * the list of multiple metric criteria for this 'all of' operation. 
-     */
     @InputImport(name="allOf")
     private final @Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
@@ -31,10 +25,6 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
         return this.allOf == null ? Input.empty() : this.allOf;
     }
 
-    /**
-     * specifies the type of the alert criteria.
-Expected value is 'Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria'.
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

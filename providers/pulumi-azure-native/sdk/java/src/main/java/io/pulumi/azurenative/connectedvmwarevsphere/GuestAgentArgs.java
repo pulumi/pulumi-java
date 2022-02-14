@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GuestAgentArgs Empty = new GuestAgentArgs();
 
-    /**
-     * Username / Password Credentials to provision guest agent.
-     */
     @InputImport(name="credentials")
     private final @Nullable Input<GuestCredentialArgs> credentials;
 
@@ -31,9 +25,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
-    /**
-     * HTTP Proxy configuration for the VM.
-     */
     @InputImport(name="httpProxyConfig")
     private final @Nullable Input<HttpProxyConfigurationArgs> httpProxyConfig;
 
@@ -41,9 +32,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpProxyConfig == null ? Input.empty() : this.httpProxyConfig;
     }
 
-    /**
-     * Name of the guestAgents.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,9 +39,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Gets or sets the guest agent provisioning action.
-     */
     @InputImport(name="provisioningAction")
     private final @Nullable Input<Either<String,ProvisioningAction>> provisioningAction;
 
@@ -61,9 +46,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningAction == null ? Input.empty() : this.provisioningAction;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,9 +53,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the vm.
-     */
     @InputImport(name="virtualMachineName", required=true)
     private final Input<String> virtualMachineName;
 

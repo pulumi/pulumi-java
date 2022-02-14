@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExternalDocumentation {
-/**
- * 
- */
     private final @Nullable String description;
-/**
- * 
- */
     private final @Nullable String url;
 
     @OutputCustomType.Constructor({"description","url"})
@@ -28,15 +22,9 @@ public final class ExternalDocumentation {
         this.url = url;
     }
 
-/**
- * 
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * 
- */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

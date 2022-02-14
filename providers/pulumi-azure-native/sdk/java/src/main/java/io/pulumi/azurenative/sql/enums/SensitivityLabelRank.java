@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum SensitivityLabelRank {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Low("Low"),
-/**
- * 
- */
         Medium("Medium"),
-/**
- * 
- */
         High("High"),
-/**
- * 
- */
         Critical("Critical");
 
         private final String value;

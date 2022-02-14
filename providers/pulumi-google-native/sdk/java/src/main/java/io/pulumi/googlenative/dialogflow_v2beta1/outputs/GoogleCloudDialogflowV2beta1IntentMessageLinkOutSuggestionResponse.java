@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse {
-/**
- * The name of the app or site this chip is linking to.
- */
     private final String destinationName;
-/**
- * The URI of the app or site to open when the user taps the suggestion chip.
- */
     private final String uri;
 
     @OutputCustomType.Constructor({"destinationName","uri"})
@@ -26,15 +20,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
         this.uri = Objects.requireNonNull(uri);
     }
 
-/**
- * The name of the app or site this chip is linking to.
- */
     public String getDestinationName() {
         return this.destinationName;
     }
-/**
- * The URI of the app or site to open when the user taps the suggestion chip.
- */
     public String getUri() {
         return this.uri;
     }

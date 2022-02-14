@@ -12,21 +12,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BandwidthScheduleResponse {
-/**
- * The days of the week when this schedule is applicable.
- */
     private final List<String> days;
-/**
- * The rate in Mbps.
- */
     private final Integer rateInMbps;
-/**
- * The start time of the schedule.
- */
     private final TimeResponse start;
-/**
- * The stop time of the schedule.
- */
     private final TimeResponse stop;
 
     @OutputCustomType.Constructor({"days","rateInMbps","start","stop"})
@@ -41,27 +29,15 @@ public final class BandwidthScheduleResponse {
         this.stop = Objects.requireNonNull(stop);
     }
 
-/**
- * The days of the week when this schedule is applicable.
- */
     public List<String> getDays() {
         return this.days;
     }
-/**
- * The rate in Mbps.
- */
     public Integer getRateInMbps() {
         return this.rateInMbps;
     }
-/**
- * The start time of the schedule.
- */
     public TimeResponse getStart() {
         return this.start;
     }
-/**
- * The stop time of the schedule.
- */
     public TimeResponse getStop() {
         return this.stop;
     }

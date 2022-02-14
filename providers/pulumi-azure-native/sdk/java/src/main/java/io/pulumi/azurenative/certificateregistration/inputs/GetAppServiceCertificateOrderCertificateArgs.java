@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppServiceCertificateOrderCertificateArgs Empty = new GetAppServiceCertificateOrderCertificateArgs();
 
-    /**
-     * Name of the certificate order.
-     */
     @InputImport(name="certificateOrderName", required=true)
     private final String certificateOrderName;
 
@@ -25,9 +19,6 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
         return this.certificateOrderName;
     }
 
-    /**
-     * Name of the certificate.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

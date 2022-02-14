@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse {
-/**
- * A list of phase match rules that are included in this group.
- */
     private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
-/**
- * The type of this phrase match rule group.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"phraseMatchRules","type"})
@@ -28,15 +22,9 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * A list of phase match rules that are included in this group.
- */
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
         return this.phraseMatchRules;
     }
-/**
- * The type of this phrase match rule group.
- */
     public String getType() {
         return this.type;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An MX record.
- */
 public final class MxRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MxRecordResponse Empty = new MxRecordResponse();
 
-    /**
-     * The domain name of the mail host for this MX record.
-     */
     @InputImport(name="exchange")
     private final @Nullable String exchange;
 
@@ -28,9 +22,6 @@ public final class MxRecordResponse extends io.pulumi.resources.InvokeArgs {
         return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
     }
 
-    /**
-     * The preference value for this MX record.
-     */
     @InputImport(name="preference")
     private final @Nullable Integer preference;
 

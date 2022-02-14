@@ -8,54 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. Immutable. The kind of analysis that is handled by this discovery.
- */
     @EnumType
     public enum DiscoveryNoteAnalysisKind {
-/**
- * Default value. This value is unused.
- */
         NoteKindUnspecified("NOTE_KIND_UNSPECIFIED"),
-/**
- * The note and occurrence represent a package vulnerability.
- */
         Vulnerability("VULNERABILITY"),
-/**
- * The note and occurrence assert build provenance.
- */
         Build("BUILD"),
-/**
- * This represents an image basis relationship.
- */
         Image("IMAGE"),
-/**
- * This represents a package installed via a package manager.
- */
         Package("PACKAGE"),
-/**
- * The note and occurrence track deployment events.
- */
         Deployment("DEPLOYMENT"),
-/**
- * The note and occurrence track the initial discovery status of a resource.
- */
         Discovery("DISCOVERY"),
-/**
- * This represents a logical "role" that can attest to artifacts.
- */
         Attestation("ATTESTATION"),
-/**
- * This represents an available package upgrade.
- */
         Upgrade("UPGRADE"),
-/**
- * This represents a Compliance Note
- */
         Compliance("COMPLIANCE"),
-/**
- * This represents a DSSE attestation Note
- */
         DsseAttestation("DSSE_ATTESTATION");
 
         private final String value;

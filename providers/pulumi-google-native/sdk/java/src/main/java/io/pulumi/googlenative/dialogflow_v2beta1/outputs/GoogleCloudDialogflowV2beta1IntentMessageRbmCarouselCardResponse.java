@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse {
-/**
- * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
- */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents;
-/**
- * The width of the cards in the carousel.
- */
     private final String cardWidth;
 
     @OutputCustomType.Constructor({"cardContents","cardWidth"})
@@ -28,15 +22,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
         this.cardWidth = Objects.requireNonNull(cardWidth);
     }
 
-/**
- * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
- */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> getCardContents() {
         return this.cardContents;
     }
-/**
- * The width of the cards in the carousel.
- */
     public String getCardWidth() {
         return this.cardWidth;
     }

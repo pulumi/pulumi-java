@@ -30,16 +30,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the move resource properties.
- */
 public final class MoveResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourcePropertiesResponse Empty = new MoveResourcePropertiesResponse();
 
-    /**
-     * Gets or sets the move resource dependencies.
-     */
     @InputImport(name="dependsOn", required=true)
     private final List<MoveResourceDependencyResponse> dependsOn;
 
@@ -47,9 +41,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.dependsOn;
     }
 
-    /**
-     * Gets or sets the move resource dependencies overrides.
-     */
     @InputImport(name="dependsOnOverrides")
     private final @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
 
@@ -57,9 +48,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.dependsOnOverrides == null ? List.of() : this.dependsOnOverrides;
     }
 
-    /**
-     * Defines the move resource errors.
-     */
     @InputImport(name="errors", required=true)
     private final MoveResourcePropertiesResponseErrors errors;
 
@@ -67,9 +55,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.errors;
     }
 
-    /**
-     * Gets or sets the existing target ARM Id of the resource.
-     */
     @InputImport(name="existingTargetId")
     private final @Nullable String existingTargetId;
 
@@ -77,9 +62,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.existingTargetId == null ? Optional.empty() : Optional.ofNullable(this.existingTargetId);
     }
 
-    /**
-     * Gets a value indicating whether the resolve action is required over the move collection.
-     */
     @InputImport(name="isResolveRequired", required=true)
     private final Boolean isResolveRequired;
 
@@ -87,9 +69,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.isResolveRequired;
     }
 
-    /**
-     * Defines the move resource status.
-     */
     @InputImport(name="moveStatus", required=true)
     private final MoveResourcePropertiesResponseMoveStatus moveStatus;
 
@@ -97,9 +76,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.moveStatus;
     }
 
-    /**
-     * Defines the provisioning states.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -107,9 +83,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.provisioningState;
     }
 
-    /**
-     * Gets or sets the resource settings.
-     */
     @InputImport(name="resourceSettings")
     private final @Nullable Object resourceSettings;
 
@@ -117,9 +90,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.resourceSettings == null ? null : this.resourceSettings;
     }
 
-    /**
-     * Gets or sets the Source ARM Id of the resource.
-     */
     @InputImport(name="sourceId", required=true)
     private final String sourceId;
 
@@ -127,9 +97,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.sourceId;
     }
 
-    /**
-     * Gets or sets the source resource settings.
-     */
     @InputImport(name="sourceResourceSettings", required=true)
     private final Object sourceResourceSettings;
 
@@ -137,9 +104,6 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
         return this.sourceResourceSettings;
     }
 
-    /**
-     * Gets or sets the Target ARM Id of the resource.
-     */
     @InputImport(name="targetId", required=true)
     private final String targetId;
 

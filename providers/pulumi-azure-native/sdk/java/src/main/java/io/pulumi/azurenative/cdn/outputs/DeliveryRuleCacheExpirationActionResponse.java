@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleCacheExpirationActionResponse {
-/**
- * The name of the action for the delivery rule.
-Expected value is 'CacheExpiration'.
- */
     private final String name;
-/**
- * Defines the parameters for the action.
- */
     private final CacheExpirationActionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -28,16 +21,9 @@ Expected value is 'CacheExpiration'.
         this.parameters = Objects.requireNonNull(parameters);
     }
 
-/**
- * The name of the action for the delivery rule.
-Expected value is 'CacheExpiration'.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines the parameters for the action.
- */
     public CacheExpirationActionParametersResponse getParameters() {
         return this.parameters;
     }

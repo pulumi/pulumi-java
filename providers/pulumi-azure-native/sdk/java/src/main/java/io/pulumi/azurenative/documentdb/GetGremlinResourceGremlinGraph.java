@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGremlinResourceGremlinGraph {
-/**
- * An Azure Cosmos DB Gremlin graph.
-API Version: 2021-03-15.
- *
- * An Azure Cosmos DB Gremlin graph.
- */
     public static CompletableFuture<GetGremlinResourceGremlinGraphResult> invokeAsync(GetGremlinResourceGremlinGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGremlinResourceGremlinGraph", TypeShape.of(GetGremlinResourceGremlinGraphResult.class), args == null ? GetGremlinResourceGremlinGraphArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Link type.
- */
     @EnumType
     public enum LinkTypes {
-/**
- * 
- */
         UpdateAlways("UpdateAlways"),
-/**
- * 
- */
         CopyIfNull("CopyIfNull");
 
         private final String value;

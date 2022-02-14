@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWorkflowTriggerCallbackUrlArgs Empty = new ListWorkflowTriggerCallbackUrlArgs();
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
-    /**
-     * The workflow trigger name.
-     */
     @InputImport(name="triggerName", required=true)
     private final String triggerName;
 
@@ -35,9 +26,6 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
         return this.triggerName;
     }
 
-    /**
-     * The workflow name.
-     */
     @InputImport(name="workflowName", required=true)
     private final String workflowName;
 

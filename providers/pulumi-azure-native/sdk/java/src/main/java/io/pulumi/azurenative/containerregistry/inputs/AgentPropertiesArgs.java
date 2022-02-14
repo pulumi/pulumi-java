@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties that determine the run agent configuration.
- */
 public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AgentPropertiesArgs Empty = new AgentPropertiesArgs();
 
-    /**
-     * The CPU configuration in terms of number of cores required for the run.
-     */
     @InputImport(name="cpu")
     private final @Nullable Input<Integer> cpu;
 

@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebServiceKeysResponse {
-/**
- * The primary access key.
- */
     private final @Nullable String primary;
-/**
- * The secondary access key.
- */
     private final @Nullable String secondary;
 
     @OutputCustomType.Constructor({"primary","secondary"})
@@ -28,15 +22,9 @@ public final class WebServiceKeysResponse {
         this.secondary = secondary;
     }
 
-/**
- * The primary access key.
- */
     public Optional<String> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
-/**
- * The secondary access key.
- */
     public Optional<String> getSecondary() {
         return Optional.ofNullable(this.secondary);
     }

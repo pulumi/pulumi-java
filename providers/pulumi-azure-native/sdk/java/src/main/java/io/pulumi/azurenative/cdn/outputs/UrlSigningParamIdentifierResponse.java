@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UrlSigningParamIdentifierResponse {
-/**
- * Indicates the purpose of the parameter
- */
     private final String paramIndicator;
-/**
- * Parameter name
- */
     private final String paramName;
 
     @OutputCustomType.Constructor({"paramIndicator","paramName"})
@@ -26,15 +20,9 @@ public final class UrlSigningParamIdentifierResponse {
         this.paramName = Objects.requireNonNull(paramName);
     }
 
-/**
- * Indicates the purpose of the parameter
- */
     public String getParamIndicator() {
         return this.paramIndicator;
     }
-/**
- * Parameter name
- */
     public String getParamName() {
         return this.paramName;
     }

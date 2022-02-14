@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Subject {
-/**
- * APIGroup holds the API group of the referenced subject. Defaults to "" for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
- */
     private final @Nullable String apiGroup;
-/**
- * Kind of object being referenced. Values defined by this API group are "User", "Group", and "ServiceAccount". If the Authorizer does not recognized the kind value, the Authorizer should report an error.
- */
     private final String kind;
-/**
- * Name of the object being referenced.
- */
     private final String name;
-/**
- * Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty the Authorizer should report an error.
- */
     private final @Nullable String namespace;
 
     @OutputCustomType.Constructor({"apiGroup","kind","name","namespace"})
@@ -40,27 +28,15 @@ public final class Subject {
         this.namespace = namespace;
     }
 
-/**
- * APIGroup holds the API group of the referenced subject. Defaults to "" for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
- */
     public Optional<String> getApiGroup() {
         return Optional.ofNullable(this.apiGroup);
     }
-/**
- * Kind of object being referenced. Values defined by this API group are "User", "Group", and "ServiceAccount". If the Authorizer does not recognized the kind value, the Authorizer should report an error.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Name of the object being referenced.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty the Authorizer should report an error.
- */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

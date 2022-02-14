@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement {
-/**
- * 
- */
     private final @Nullable String applicationId;
-/**
- * 
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"applicationId","type"})
@@ -28,15 +22,9 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
         this.type = type;
     }
 
-/**
- * 
- */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
-/**
- * 
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

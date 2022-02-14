@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayAutoscaleConfigurationResponse {
-/**
- * Upper bound on number of Application Gateway capacity.
- */
     private final @Nullable Integer maxCapacity;
-/**
- * Lower bound on number of Application Gateway capacity.
- */
     private final Integer minCapacity;
 
     @OutputCustomType.Constructor({"maxCapacity","minCapacity"})
@@ -28,15 +22,9 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse {
         this.minCapacity = Objects.requireNonNull(minCapacity);
     }
 
-/**
- * Upper bound on number of Application Gateway capacity.
- */
     public Optional<Integer> getMaxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
-/**
- * Lower bound on number of Application Gateway capacity.
- */
     public Integer getMinCapacity() {
         return this.minCapacity;
     }

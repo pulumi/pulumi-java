@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AuthorizationActionMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizationActionMappingArgs Empty = new AuthorizationActionMappingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="desired")
     private final @Nullable Input<String> desired;
 
@@ -27,9 +21,6 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
         return this.desired == null ? Input.empty() : this.desired;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="original")
     private final @Nullable Input<String> original;
 

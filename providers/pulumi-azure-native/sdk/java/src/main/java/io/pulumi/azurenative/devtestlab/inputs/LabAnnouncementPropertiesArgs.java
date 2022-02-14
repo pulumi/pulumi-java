@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a lab's announcement banner
- */
 public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabAnnouncementPropertiesArgs Empty = new LabAnnouncementPropertiesArgs();
 
-    /**
-     * Is the lab announcement active/enabled at this time?
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Either<String,EnableStatus>> enabled;
 
@@ -30,9 +24,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * The time at which the announcement expires (null for never)
-     */
     @InputImport(name="expirationDate")
     private final @Nullable Input<String> expirationDate;
 
@@ -40,9 +31,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
     }
 
-    /**
-     * Has this announcement expired?
-     */
     @InputImport(name="expired")
     private final @Nullable Input<Boolean> expired;
 
@@ -50,9 +38,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
         return this.expired == null ? Input.empty() : this.expired;
     }
 
-    /**
-     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     */
     @InputImport(name="markdown")
     private final @Nullable Input<String> markdown;
 
@@ -60,9 +45,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
         return this.markdown == null ? Input.empty() : this.markdown;
     }
 
-    /**
-     * The plain text title for the lab announcement
-     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The configuration for exporting to BigQuery.
- */
 public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse Empty = new GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse();
 
-    /**
-     * BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
-     */
     @InputImport(name="datasetUri", required=true)
     private final String datasetUri;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
         return this.datasetUri;
     }
 
-    /**
-     * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
-     */
     @InputImport(name="force", required=true)
     private final Boolean force;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
         return this.force;
     }
 
-    /**
-     * The configuration for the exported BigQuery schema.
-     */
     @InputImport(name="schemaConfig", required=true)
     private final SchemaConfigResponse schemaConfig;
 
@@ -47,9 +35,6 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
         return this.schemaConfig;
     }
 
-    /**
-     * Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
-     */
     @InputImport(name="writeDisposition", required=true)
     private final String writeDisposition;
 

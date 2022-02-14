@@ -19,69 +19,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OrderItemDetailsResponse {
-/**
- * Cancellation reason.
- */
     private final String cancellationReason;
-/**
- * Describes whether the order item is cancellable or not.
- */
     private final String cancellationStatus;
-/**
- * Current Order item Status
- */
     private final StageDetailsResponse currentStage;
-/**
- * Describes whether the order item is deletable or not.
- */
     private final String deletionStatus;
-/**
- * Top level error for the job.
- */
     private final ErrorDetailResponse error;
-/**
- * Forward Package Shipping details
- */
     private final ForwardShippingDetailsResponse forwardShippingDetails;
-/**
- * Parent RP details - this returns only the first or default parent RP from the entire list
- */
     private final ResourceProviderDetailsResponse managementRpDetails;
-/**
- * List of parent RP details supported for configuration.
- */
     private final List<ResourceProviderDetailsResponse> managementRpDetailsList;
-/**
- * Additional notification email list
- */
     private final @Nullable List<String> notificationEmailList;
-/**
- * Order item status history
- */
     private final List<StageDetailsResponse> orderItemStageHistory;
-/**
- * Order item type.
- */
     private final String orderItemType;
-/**
- * Customer notification Preferences
- */
     private final @Nullable PreferencesResponse preferences;
-/**
- * Unique identifier for configuration.
- */
     private final ProductDetailsResponse productDetails;
-/**
- * Return reason.
- */
     private final String returnReason;
-/**
- * Describes whether the order item is returnable or not.
- */
     private final String returnStatus;
-/**
- * Reverse Package Shipping details
- */
     private final ReverseShippingDetailsResponse reverseShippingDetails;
 
     @OutputCustomType.Constructor({"cancellationReason","cancellationStatus","currentStage","deletionStatus","error","forwardShippingDetails","managementRpDetails","managementRpDetailsList","notificationEmailList","orderItemStageHistory","orderItemType","preferences","productDetails","returnReason","returnStatus","reverseShippingDetails"})
@@ -120,99 +72,51 @@ public final class OrderItemDetailsResponse {
         this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
     }
 
-/**
- * Cancellation reason.
- */
     public String getCancellationReason() {
         return this.cancellationReason;
     }
-/**
- * Describes whether the order item is cancellable or not.
- */
     public String getCancellationStatus() {
         return this.cancellationStatus;
     }
-/**
- * Current Order item Status
- */
     public StageDetailsResponse getCurrentStage() {
         return this.currentStage;
     }
-/**
- * Describes whether the order item is deletable or not.
- */
     public String getDeletionStatus() {
         return this.deletionStatus;
     }
-/**
- * Top level error for the job.
- */
     public ErrorDetailResponse getError() {
         return this.error;
     }
-/**
- * Forward Package Shipping details
- */
     public ForwardShippingDetailsResponse getForwardShippingDetails() {
         return this.forwardShippingDetails;
     }
-/**
- * Parent RP details - this returns only the first or default parent RP from the entire list
- */
     public ResourceProviderDetailsResponse getManagementRpDetails() {
         return this.managementRpDetails;
     }
-/**
- * List of parent RP details supported for configuration.
- */
     public List<ResourceProviderDetailsResponse> getManagementRpDetailsList() {
         return this.managementRpDetailsList;
     }
-/**
- * Additional notification email list
- */
     public List<String> getNotificationEmailList() {
         return this.notificationEmailList == null ? List.of() : this.notificationEmailList;
     }
-/**
- * Order item status history
- */
     public List<StageDetailsResponse> getOrderItemStageHistory() {
         return this.orderItemStageHistory;
     }
-/**
- * Order item type.
- */
     public String getOrderItemType() {
         return this.orderItemType;
     }
-/**
- * Customer notification Preferences
- */
     public Optional<PreferencesResponse> getPreferences() {
         return Optional.ofNullable(this.preferences);
     }
-/**
- * Unique identifier for configuration.
- */
     public ProductDetailsResponse getProductDetails() {
         return this.productDetails;
     }
-/**
- * Return reason.
- */
     public String getReturnReason() {
         return this.returnReason;
     }
-/**
- * Describes whether the order item is returnable or not.
- */
     public String getReturnStatus() {
         return this.returnStatus;
     }
-/**
- * Reverse Package Shipping details
- */
     public ReverseShippingDetailsResponse getReverseShippingDetails() {
         return this.reverseShippingDetails;
     }

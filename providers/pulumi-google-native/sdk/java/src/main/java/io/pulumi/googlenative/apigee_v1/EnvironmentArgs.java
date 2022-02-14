@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
-    /**
-     * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
-     */
     @InputImport(name="apiProxyType")
     private final @Nullable Input<EnvironmentApiProxyType> apiProxyType;
 
@@ -30,9 +24,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiProxyType == null ? Input.empty() : this.apiProxyType;
     }
 
-    /**
-     * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
-     */
     @InputImport(name="deploymentType")
     private final @Nullable Input<EnvironmentDeploymentType> deploymentType;
 
@@ -40,9 +31,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentType == null ? Input.empty() : this.deploymentType;
     }
 
-    /**
-     * Optional. Description of the environment.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,9 +38,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Optional. Display name for this environment.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -60,9 +45,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,9 +52,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -80,9 +59,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * Optional. Key-value pairs that may be used for customizing the environment.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties;
 

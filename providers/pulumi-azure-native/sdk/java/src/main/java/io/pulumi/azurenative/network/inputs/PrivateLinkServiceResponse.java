@@ -20,16 +20,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Private link service resource.
- */
 public final class PrivateLinkServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceResponse Empty = new PrivateLinkServiceResponse();
 
-    /**
-     * The alias of the private link service.
-     */
     @InputImport(name="alias", required=true)
     private final String alias;
 
@@ -37,9 +31,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.alias;
     }
 
-    /**
-     * The auto-approval list of the private link service.
-     */
     @InputImport(name="autoApproval")
     private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
 
@@ -47,9 +38,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.autoApproval == null ? Optional.empty() : Optional.ofNullable(this.autoApproval);
     }
 
-    /**
-     * Whether the private link service is enabled for proxy protocol or not.
-     */
     @InputImport(name="enableProxyProtocol")
     private final @Nullable Boolean enableProxyProtocol;
 
@@ -57,9 +45,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.enableProxyProtocol == null ? Optional.empty() : Optional.ofNullable(this.enableProxyProtocol);
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -67,9 +52,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.etag;
     }
 
-    /**
-     * The extended location of the load balancer.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable ExtendedLocationResponse extendedLocation;
 
@@ -77,9 +59,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
     }
 
-    /**
-     * The list of Fqdn.
-     */
     @InputImport(name="fqdns")
     private final @Nullable List<String> fqdns;
 
@@ -87,9 +66,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.fqdns == null ? List.of() : this.fqdns;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -97,9 +73,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * An array of private link service IP configurations.
-     */
     @InputImport(name="ipConfigurations")
     private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
 
@@ -107,9 +80,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
-    /**
-     * An array of references to the load balancer IP configurations.
-     */
     @InputImport(name="loadBalancerFrontendIpConfigurations")
     private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
 
@@ -117,9 +87,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.loadBalancerFrontendIpConfigurations == null ? List.of() : this.loadBalancerFrontendIpConfigurations;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -127,9 +94,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -137,9 +101,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * An array of references to the network interfaces created for this private link service.
-     */
     @InputImport(name="networkInterfaces", required=true)
     private final List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -147,9 +108,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.networkInterfaces;
     }
 
-    /**
-     * An array of list about connections to the private endpoint.
-     */
     @InputImport(name="privateEndpointConnections", required=true)
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
@@ -157,9 +115,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.privateEndpointConnections;
     }
 
-    /**
-     * The provisioning state of the private link service resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -167,9 +122,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.provisioningState;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -177,9 +129,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -187,9 +136,6 @@ public final class PrivateLinkServiceResponse extends io.pulumi.resources.Invoke
         return this.type;
     }
 
-    /**
-     * The visibility list of the private link service.
-     */
     @InputImport(name="visibility")
     private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 

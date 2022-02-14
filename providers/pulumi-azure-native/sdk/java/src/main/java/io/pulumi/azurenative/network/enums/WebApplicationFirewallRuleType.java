@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The rule type.
- */
     @EnumType
     public enum WebApplicationFirewallRuleType {
-/**
- * 
- */
         MatchRule("MatchRule"),
-/**
- * 
- */
         Invalid("Invalid");
 
         private final String value;

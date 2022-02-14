@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobRecurrenceScheduleMonthlyOccurrenceArgs Empty = new JobRecurrenceScheduleMonthlyOccurrenceArgs();
 
-    /**
-     * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-     */
     @InputImport(name="day")
     private final @Nullable Input<JobScheduleDay> day;
 
@@ -28,9 +22,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
         return this.day == null ? Input.empty() : this.day;
     }
 
-    /**
-     * Gets or sets the occurrence. Must be between -5 and 5.
-     */
     @InputImport(name="occurrence")
     private final @Nullable Input<Integer> occurrence;
 

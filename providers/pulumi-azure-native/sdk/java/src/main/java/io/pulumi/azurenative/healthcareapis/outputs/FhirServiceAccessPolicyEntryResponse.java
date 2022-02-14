@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FhirServiceAccessPolicyEntryResponse {
-/**
- * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
- */
     private final String objectId;
 
     @OutputCustomType.Constructor({"objectId"})
@@ -19,9 +16,6 @@ public final class FhirServiceAccessPolicyEntryResponse {
         this.objectId = Objects.requireNonNull(objectId);
     }
 
-/**
- * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
- */
     public String getObjectId() {
         return this.objectId;
     }

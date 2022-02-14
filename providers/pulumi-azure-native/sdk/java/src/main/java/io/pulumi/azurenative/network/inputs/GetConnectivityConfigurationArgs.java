@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectivityConfigurationArgs Empty = new GetConnectivityConfigurationArgs();
 
-    /**
-     * The name of the network manager connectivity configuration.
-     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 
@@ -25,9 +19,6 @@ public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.
         return this.configurationName;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -35,9 +26,6 @@ public final class GetConnectivityConfigurationArgs extends io.pulumi.resources.
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

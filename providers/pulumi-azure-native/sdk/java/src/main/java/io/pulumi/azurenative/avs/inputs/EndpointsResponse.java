@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Endpoint addresses
- */
 public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointsResponse Empty = new EndpointsResponse();
 
-    /**
-     * Endpoint for the HCX Cloud Manager
-     */
     @InputImport(name="hcxCloudManager", required=true)
     private final String hcxCloudManager;
 
@@ -25,9 +19,6 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.hcxCloudManager;
     }
 
-    /**
-     * Endpoint for the NSX-T Data Center manager
-     */
     @InputImport(name="nsxtManager", required=true)
     private final String nsxtManager;
 
@@ -35,9 +26,6 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.nsxtManager;
     }
 
-    /**
-     * Endpoint for Virtual Center Server Appliance
-     */
     @InputImport(name="vcsa", required=true)
     private final String vcsa;
 

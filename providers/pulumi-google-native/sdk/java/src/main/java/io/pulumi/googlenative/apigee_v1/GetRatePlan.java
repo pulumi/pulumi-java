@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRatePlan {
-/**
- * Gets the details of a rate plan.
- */
     public static CompletableFuture<GetRatePlanResult> invokeAsync(GetRatePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getRatePlan", TypeShape.of(GetRatePlanResult.class), args == null ? GetRatePlanArgs.Empty : args, Utilities.withVersion(options));
     }

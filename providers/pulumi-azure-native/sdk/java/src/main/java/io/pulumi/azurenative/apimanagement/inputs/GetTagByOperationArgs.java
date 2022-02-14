@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagByOperationArgs Empty = new GetTagByOperationArgs();
 
-    /**
-     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -25,9 +19,6 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
         return this.apiId;
     }
 
-    /**
-     * Operation identifier within an API. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="operationId", required=true)
     private final String operationId;
 
@@ -35,9 +26,6 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
         return this.operationId;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the API Management service.
-     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -55,9 +40,6 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
         return this.serviceName;
     }
 
-    /**
-     * Tag identifier. Must be unique in the current API Management service instance.
-     */
     @InputImport(name="tagId", required=true)
     private final String tagId;
 

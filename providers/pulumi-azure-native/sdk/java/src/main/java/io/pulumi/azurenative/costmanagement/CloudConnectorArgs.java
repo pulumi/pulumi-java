@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudConnectorArgs Empty = new CloudConnectorArgs();
 
-    /**
-     * Connector billing model
-     */
     @InputImport(name="billingModel")
     private final @Nullable Input<Either<String,ConnectorBillingModel>> billingModel;
 
@@ -29,9 +23,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingModel == null ? Input.empty() : this.billingModel;
     }
 
-    /**
-     * Connector Name.
-     */
     @InputImport(name="connectorName")
     private final @Nullable Input<String> connectorName;
 
@@ -39,9 +30,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorName == null ? Input.empty() : this.connectorName;
     }
 
-    /**
-     * Credentials authentication key (eg AWS ARN)
-     */
     @InputImport(name="credentialsKey")
     private final @Nullable Input<String> credentialsKey;
 
@@ -49,9 +37,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentialsKey == null ? Input.empty() : this.credentialsKey;
     }
 
-    /**
-     * Credentials secret (eg AWS ExternalId)
-     */
     @InputImport(name="credentialsSecret")
     private final @Nullable Input<String> credentialsSecret;
 
@@ -59,9 +44,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentialsSecret == null ? Input.empty() : this.credentialsSecret;
     }
 
-    /**
-     * Default ManagementGroupId
-     */
     @InputImport(name="defaultManagementGroupId")
     private final @Nullable Input<String> defaultManagementGroupId;
 
@@ -69,9 +51,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultManagementGroupId == null ? Input.empty() : this.defaultManagementGroupId;
     }
 
-    /**
-     * Connector DisplayName
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -79,9 +58,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Connector kind (eg aws)
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -89,9 +65,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     */
     @InputImport(name="reportId")
     private final @Nullable Input<String> reportId;
 
@@ -99,9 +72,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportId == null ? Input.empty() : this.reportId;
     }
 
-    /**
-     * Billing SubscriptionId
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 

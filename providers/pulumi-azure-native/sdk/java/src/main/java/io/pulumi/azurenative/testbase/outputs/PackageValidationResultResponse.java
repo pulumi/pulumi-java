@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PackageValidationResultResponse {
-/**
- * Error information.
- */
     private final List<String> errors;
-/**
- * Indicates whether the package passed the validation.
- */
     private final Boolean isValid;
-/**
- * Validation name.
- */
     private final String validationName;
 
     @OutputCustomType.Constructor({"errors","isValid","validationName"})
@@ -34,21 +25,12 @@ public final class PackageValidationResultResponse {
         this.validationName = Objects.requireNonNull(validationName);
     }
 
-/**
- * Error information.
- */
     public List<String> getErrors() {
         return this.errors;
     }
-/**
- * Indicates whether the package passed the validation.
- */
     public Boolean getIsValid() {
         return this.isValid;
     }
-/**
- * Validation name.
- */
     public String getValidationName() {
         return this.validationName;
     }

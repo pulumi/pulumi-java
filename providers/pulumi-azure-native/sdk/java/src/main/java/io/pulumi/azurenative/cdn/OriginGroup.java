@@ -19,274 +19,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### OriginGroups_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var originGroup = new AzureNative.Cdn.OriginGroup("originGroup", new AzureNative.Cdn.OriginGroupArgs
-        {
-            EndpointName = "endpoint1",
-            HealthProbeSettings = new AzureNative.Cdn.Inputs.HealthProbeParametersArgs
-            {
-                ProbeIntervalInSeconds = 120,
-                ProbePath = "/health.aspx",
-                ProbeProtocol = "Http",
-                ProbeRequestType = "GET",
-            },
-            OriginGroupName = "origingroup1",
-            Origins = 
-            {
-                new AzureNative.Cdn.Inputs.ResourceReferenceArgs
-                {
-                    Id = "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-                },
-            },
-            ProfileName = "profile1",
-            ResourceGroupName = "RG",
-            ResponseBasedOriginErrorDetectionSettings = new AzureNative.Cdn.Inputs.ResponseBasedOriginErrorDetectionParametersArgs
-            {
-                ResponseBasedDetectedErrorTypes = "TcpErrorsOnly",
-                ResponseBasedFailoverThresholdPercentage = 10,
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cdn.NewOriginGroup(ctx, "originGroup", &cdn.OriginGroupArgs{
-			EndpointName: pulumi.String("endpoint1"),
-			HealthProbeSettings: &cdn.HealthProbeParametersArgs{
-				ProbeIntervalInSeconds: pulumi.Int(120),
-				ProbePath:              pulumi.String("/health.aspx"),
-				ProbeProtocol:          "Http",
-				ProbeRequestType:       "GET",
-			},
-			OriginGroupName: pulumi.String("origingroup1"),
-			Origins: cdn.ResourceReferenceArray{
-				&cdn.ResourceReferenceArgs{
-					Id: pulumi.String("/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1"),
-				},
-			},
-			ProfileName:       pulumi.String("profile1"),
-			ResourceGroupName: pulumi.String("RG"),
-			ResponseBasedOriginErrorDetectionSettings: &cdn.ResponseBasedOriginErrorDetectionParametersArgs{
-				ResponseBasedDetectedErrorTypes:          "TcpErrorsOnly",
-				ResponseBasedFailoverThresholdPercentage: pulumi.Int(10),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const originGroup = new azure_native.cdn.OriginGroup("originGroup", {
-    endpointName: "endpoint1",
-    healthProbeSettings: {
-        probeIntervalInSeconds: 120,
-        probePath: "/health.aspx",
-        probeProtocol: "Http",
-        probeRequestType: "GET",
-    },
-    originGroupName: "origingroup1",
-    origins: [{
-        id: "/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-    }],
-    profileName: "profile1",
-    resourceGroupName: "RG",
-    responseBasedOriginErrorDetectionSettings: {
-        responseBasedDetectedErrorTypes: "TcpErrorsOnly",
-        responseBasedFailoverThresholdPercentage: 10,
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-origin_group = azure_native.cdn.OriginGroup("originGroup",
-    endpoint_name="endpoint1",
-    health_probe_settings=azure_native.cdn.HealthProbeParametersArgs(
-        probe_interval_in_seconds=120,
-        probe_path="/health.aspx",
-        probe_protocol="Http",
-        probe_request_type="GET",
-    ),
-    origin_group_name="origingroup1",
-    origins=[azure_native.cdn.ResourceReferenceArgs(
-        id="/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/origins/origin1",
-    )],
-    profile_name="profile1",
-    resource_group_name="RG",
-    response_based_origin_error_detection_settings=azure_native.cdn.ResponseBasedOriginErrorDetectionParametersArgs(
-        response_based_detected_error_types="TcpErrorsOnly",
-        response_based_failover_threshold_percentage=10,
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:cdn:OriginGroup origingroup1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/originGroups/originGroup1 
-```
-
- */
 @ResourceType(type="azure-native:cdn:OriginGroup")
 public class OriginGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * Health probe settings to the origin that is used to determine the health of the origin.
-     */
     @OutputExport(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
     private Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings;
 
-    /**
-     * @return Health probe settings to the origin that is used to determine the health of the origin.
-     */
     public Output</* @Nullable */ HealthProbeParametersResponse> getHealthProbeSettings() {
         return this.healthProbeSettings;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The source of the content being delivered via CDN within given origin group.
-     */
     @OutputExport(name="origins", type=List.class, parameters={ResourceReferenceResponse.class})
     private Output<List<ResourceReferenceResponse>> origins;
 
-    /**
-     * @return The source of the content being delivered via CDN within given origin group.
-     */
     public Output<List<ResourceReferenceResponse>> getOrigins() {
         return this.origins;
     }
-    /**
-     * Provisioning status of the origin group.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning status of the origin group.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Resource status of the origin group.
-     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
-    /**
-     * @return Resource status of the origin group.
-     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
-    /**
-     * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-     */
     @OutputExport(name="responseBasedOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
     private Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings;
 
-    /**
-     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
-     */
     public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings;
     }
-    /**
-     * Read only system data
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Read only system data
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
-     */
     @OutputExport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    /**
-     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
-     */
     public Output</* @Nullable */ Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public OriginGroup(String name, OriginGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:OriginGroup", name, args == null ? OriginGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -309,14 +98,6 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static OriginGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OriginGroup(name, id, options);
     }

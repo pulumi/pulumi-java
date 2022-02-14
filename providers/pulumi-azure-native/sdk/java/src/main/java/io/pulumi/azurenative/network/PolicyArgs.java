@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
-    /**
-     * Describes custom rules inside the policy.
-     */
     @InputImport(name="customRules")
     private final @Nullable Input<CustomRuleListArgs> customRules;
 
@@ -32,9 +26,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.customRules == null ? Input.empty() : this.customRules;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,9 +33,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Describes managed rules inside the policy.
-     */
     @InputImport(name="managedRules")
     private final @Nullable Input<ManagedRuleSetListArgs> managedRules;
 
@@ -52,9 +40,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedRules == null ? Input.empty() : this.managedRules;
     }
 
-    /**
-     * The name of the Web Application Firewall Policy.
-     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -62,9 +47,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
-    /**
-     * Describes settings for the policy.
-     */
     @InputImport(name="policySettings")
     private final @Nullable Input<FrontDoorPolicySettingsArgs> policySettings;
 
@@ -72,9 +54,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policySettings == null ? Input.empty() : this.policySettings;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,9 +61,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -92,9 +68,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

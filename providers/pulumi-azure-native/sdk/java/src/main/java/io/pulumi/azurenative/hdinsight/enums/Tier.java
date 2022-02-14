@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The cluster tier.
- */
     @EnumType
     public enum Tier {
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium");
 
         private final String value;

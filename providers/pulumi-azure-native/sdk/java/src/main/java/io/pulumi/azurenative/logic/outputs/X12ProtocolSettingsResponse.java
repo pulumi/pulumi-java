@@ -22,53 +22,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class X12ProtocolSettingsResponse {
-/**
- * The X12 acknowledgment settings.
- */
     private final X12AcknowledgementSettingsResponse acknowledgementSettings;
-/**
- * The X12 envelope override settings.
- */
     private final @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides;
-/**
- * The X12 envelope settings.
- */
     private final X12EnvelopeSettingsResponse envelopeSettings;
-/**
- * The X12 framing settings.
- */
     private final X12FramingSettingsResponse framingSettings;
-/**
- * The X12 message filter.
- */
     private final X12MessageFilterResponse messageFilter;
-/**
- * The X12 message filter list.
- */
     private final @Nullable List<X12MessageIdentifierResponse> messageFilterList;
-/**
- * The X12 processing settings.
- */
     private final X12ProcessingSettingsResponse processingSettings;
-/**
- * The X12 schema references.
- */
     private final List<X12SchemaReferenceResponse> schemaReferences;
-/**
- * The X12 security settings.
- */
     private final X12SecuritySettingsResponse securitySettings;
-/**
- * The X12 validation override settings.
- */
     private final @Nullable List<X12ValidationOverrideResponse> validationOverrides;
-/**
- * The X12 validation settings.
- */
     private final X12ValidationSettingsResponse validationSettings;
-/**
- * The X12 delimiter override settings.
- */
     private final @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
 
     @OutputCustomType.Constructor({"acknowledgementSettings","envelopeOverrides","envelopeSettings","framingSettings","messageFilter","messageFilterList","processingSettings","schemaReferences","securitySettings","validationOverrides","validationSettings","x12DelimiterOverrides"})
@@ -99,75 +63,39 @@ public final class X12ProtocolSettingsResponse {
         this.x12DelimiterOverrides = x12DelimiterOverrides;
     }
 
-/**
- * The X12 acknowledgment settings.
- */
     public X12AcknowledgementSettingsResponse getAcknowledgementSettings() {
         return this.acknowledgementSettings;
     }
-/**
- * The X12 envelope override settings.
- */
     public List<X12EnvelopeOverrideResponse> getEnvelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
-/**
- * The X12 envelope settings.
- */
     public X12EnvelopeSettingsResponse getEnvelopeSettings() {
         return this.envelopeSettings;
     }
-/**
- * The X12 framing settings.
- */
     public X12FramingSettingsResponse getFramingSettings() {
         return this.framingSettings;
     }
-/**
- * The X12 message filter.
- */
     public X12MessageFilterResponse getMessageFilter() {
         return this.messageFilter;
     }
-/**
- * The X12 message filter list.
- */
     public List<X12MessageIdentifierResponse> getMessageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
-/**
- * The X12 processing settings.
- */
     public X12ProcessingSettingsResponse getProcessingSettings() {
         return this.processingSettings;
     }
-/**
- * The X12 schema references.
- */
     public List<X12SchemaReferenceResponse> getSchemaReferences() {
         return this.schemaReferences;
     }
-/**
- * The X12 security settings.
- */
     public X12SecuritySettingsResponse getSecuritySettings() {
         return this.securitySettings;
     }
-/**
- * The X12 validation override settings.
- */
     public List<X12ValidationOverrideResponse> getValidationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
-/**
- * The X12 validation settings.
- */
     public X12ValidationSettingsResponse getValidationSettings() {
         return this.validationSettings;
     }
-/**
- * The X12 delimiter override settings.
- */
     public List<X12DelimiterOverridesResponse> getX12DelimiterOverrides() {
         return this.x12DelimiterOverrides == null ? List.of() : this.x12DelimiterOverrides;
     }

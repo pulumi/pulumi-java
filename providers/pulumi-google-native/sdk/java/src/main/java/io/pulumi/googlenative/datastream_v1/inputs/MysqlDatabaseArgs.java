@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * MySQL database.
- */
 public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MysqlDatabaseArgs Empty = new MysqlDatabaseArgs();
 
-    /**
-     * Database name.
-     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -29,9 +23,6 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.database == null ? Input.empty() : this.database;
     }
 
-    /**
-     * Tables in the database.
-     */
     @InputImport(name="mysqlTables")
     private final @Nullable Input<List<MysqlTableArgs>> mysqlTables;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the cloud service role sku.
- */
 public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudServiceRoleSkuResponse Empty = new CloudServiceRoleSkuResponse();
 
-    /**
-     * Specifies the number of role instances in the cloud service.
-     */
     @InputImport(name="capacity")
     private final @Nullable Double capacity;
 
@@ -28,9 +22,6 @@ public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.Invok
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,9 +29,6 @@ public final class CloudServiceRoleSkuResponse extends io.pulumi.resources.Invok
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

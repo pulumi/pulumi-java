@@ -12,18 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BoolEqualsAdvancedFilterResponse {
-/**
- * The field/property in the event based on which you want to filter.
- */
     private final @Nullable String key;
-/**
- * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'BoolEquals'.
- */
     private final String operatorType;
-/**
- * The boolean filter value.
- */
     private final @Nullable Boolean value;
 
     @OutputCustomType.Constructor({"key","operatorType","value"})
@@ -36,22 +26,12 @@ Expected value is 'BoolEquals'.
         this.value = value;
     }
 
-/**
- * The field/property in the event based on which you want to filter.
- */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
-/**
- * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-Expected value is 'BoolEquals'.
- */
     public String getOperatorType() {
         return this.operatorType;
     }
-/**
- * The boolean filter value.
- */
     public Optional<Boolean> getValue() {
         return Optional.ofNullable(this.value);
     }

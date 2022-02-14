@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Backup Vault
- */
 public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupVaultResponse Empty = new BackupVaultResponse();
 
-    /**
-     * Provisioning state of the BackupVault resource
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -27,9 +21,6 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
-    /**
-     * Storage Settings
-     */
     @InputImport(name="storageSettings", required=true)
     private final List<StorageSettingResponse> storageSettings;
 

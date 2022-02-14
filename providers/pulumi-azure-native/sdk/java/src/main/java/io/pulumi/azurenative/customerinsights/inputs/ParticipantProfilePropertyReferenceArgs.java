@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The participant profile property reference.
- */
 public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParticipantProfilePropertyReferenceArgs Empty = new ParticipantProfilePropertyReferenceArgs();
 
-    /**
-     * The source interaction property that maps to the target profile property.
-     */
     @InputImport(name="interactionPropertyName", required=true)
     private final Input<String> interactionPropertyName;
 
@@ -26,9 +20,6 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
         return this.interactionPropertyName;
     }
 
-    /**
-     * The target profile property that maps to the source interaction property.
-     */
     @InputImport(name="profilePropertyName", required=true)
     private final Input<String> profilePropertyName;
 

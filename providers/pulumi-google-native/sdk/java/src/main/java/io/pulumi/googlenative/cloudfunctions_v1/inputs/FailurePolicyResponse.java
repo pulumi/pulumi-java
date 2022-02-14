@@ -8,16 +8,10 @@ import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryResponse;
 import java.util.Objects;
 
 
-/**
- * Describes the policy in case of function's execution failure. If empty, then defaults to ignoring failures (i.e. not retrying them).
- */
 public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailurePolicyResponse Empty = new FailurePolicyResponse();
 
-    /**
-     * If specified, then the function will be retried in case of a failure.
-     */
     @InputImport(name="retry", required=true)
     private final RetryResponse retry;
 

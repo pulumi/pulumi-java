@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssignmentArgs Empty = new GetAssignmentArgs();
 
-    /**
-     * Name of the blueprint assignment.
-     */
     @InputImport(name="assignmentName", required=true)
     private final String assignmentName;
 
@@ -25,9 +19,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.assignmentName;
     }
 
-    /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     */
     @InputImport(name="resourceScope", required=true)
     private final String resourceScope;
 

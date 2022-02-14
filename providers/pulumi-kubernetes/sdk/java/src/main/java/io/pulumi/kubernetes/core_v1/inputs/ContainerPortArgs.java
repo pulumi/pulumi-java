@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ContainerPort represents a network port in a single container.
- */
 public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerPortArgs Empty = new ContainerPortArgs();
 
-    /**
-     * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
-     */
     @InputImport(name="containerPort", required=true)
     private final Input<Integer> containerPort;
 
@@ -28,9 +22,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerPort;
     }
 
-    /**
-     * What host IP to bind the external port to.
-     */
     @InputImport(name="hostIP")
     private final @Nullable Input<String> hostIP;
 
@@ -38,9 +29,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostIP == null ? Input.empty() : this.hostIP;
     }
 
-    /**
-     * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
-     */
     @InputImport(name="hostPort")
     private final @Nullable Input<Integer> hostPort;
 
@@ -48,9 +36,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPort == null ? Input.empty() : this.hostPort;
     }
 
-    /**
-     * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,14 +43,6 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
-
-Possible enum values:
- - `"SCTP"` is the SCTP protocol.
- - `"TCP"` is the TCP protocol.
- - `"UDP"` is the UDP protocol.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<String> protocol;
 

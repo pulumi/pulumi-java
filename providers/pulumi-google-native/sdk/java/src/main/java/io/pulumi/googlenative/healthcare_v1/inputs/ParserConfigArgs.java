@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration for the parser. It determines how the server parses the messages.
- */
 public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParserConfigArgs Empty = new ParserConfigArgs();
 
-    /**
-     * Determines whether messages with no header are allowed.
-     */
     @InputImport(name="allowNullHeader")
     private final @Nullable Input<Boolean> allowNullHeader;
 
@@ -30,9 +24,6 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowNullHeader == null ? Input.empty() : this.allowNullHeader;
     }
 
-    /**
-     * Schemas used to parse messages in this store, if schematized parsing is desired.
-     */
     @InputImport(name="schema")
     private final @Nullable Input<SchemaPackageArgs> schema;
 
@@ -40,9 +31,6 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
-    /**
-     * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
-     */
     @InputImport(name="segmentTerminator")
     private final @Nullable Input<String> segmentTerminator;
 
@@ -50,9 +38,6 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.segmentTerminator == null ? Input.empty() : this.segmentTerminator;
     }
 
-    /**
-     * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
-     */
     @InputImport(name="version")
     private final @Nullable Input<ParserConfigVersion> version;
 

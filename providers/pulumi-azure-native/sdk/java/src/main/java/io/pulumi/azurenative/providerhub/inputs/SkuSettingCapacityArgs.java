@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuSettingCapacityArgs Empty = new SkuSettingCapacityArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="default")
     private final @Nullable Input<Integer> $default;
 
@@ -30,9 +24,6 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
         return this.$default == null ? Input.empty() : this.$default;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maximum")
     private final @Nullable Input<Integer> maximum;
 
@@ -40,9 +31,6 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
         return this.maximum == null ? Input.empty() : this.maximum;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="minimum", required=true)
     private final Input<Integer> minimum;
 
@@ -50,9 +38,6 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
         return this.minimum;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="scaleType")
     private final @Nullable Input<Either<String,SkuScaleType>> scaleType;
 

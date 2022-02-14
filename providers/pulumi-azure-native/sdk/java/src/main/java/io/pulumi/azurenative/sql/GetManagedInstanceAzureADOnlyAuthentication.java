@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedInstanceAzureADOnlyAuthentication {
-/**
- * Azure Active Directory only authentication.
-API Version: 2020-11-01-preview.
- *
- * Azure Active Directory only authentication.
- */
     public static CompletableFuture<GetManagedInstanceAzureADOnlyAuthenticationResult> invokeAsync(GetManagedInstanceAzureADOnlyAuthenticationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceAzureADOnlyAuthentication", TypeShape.of(GetManagedInstanceAzureADOnlyAuthenticationResult.class), args == null ? GetManagedInstanceAzureADOnlyAuthenticationArgs.Empty : args, Utilities.withVersion(options));
     }

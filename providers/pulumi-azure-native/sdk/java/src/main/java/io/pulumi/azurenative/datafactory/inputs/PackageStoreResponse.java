@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Package store for the SSIS integration runtime.
- */
 public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageStoreResponse Empty = new PackageStoreResponse();
 
-    /**
-     * The name of the package store
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,9 +20,6 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The package store linked service reference.
-     */
     @InputImport(name="packageStoreLinkedService", required=true)
     private final EntityReferenceResponse packageStoreLinkedService;
 

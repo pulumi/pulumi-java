@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceTypeExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeExtensionArgs Empty = new ResourceTypeExtensionArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="endpointUri")
     private final @Nullable Input<String> endpointUri;
 
@@ -30,9 +24,6 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="extensionCategories")
     private final @Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories;
 
@@ -40,9 +31,6 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
         return this.extensionCategories == null ? Input.empty() : this.extensionCategories;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

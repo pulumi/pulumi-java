@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAdminKey {
-/**
- * Response containing the primary and secondary admin API keys for a given Azure Cognitive Search service.
-API Version: 2020-08-01.
- *
- * Response containing the primary and secondary admin API keys for a given Azure Cognitive Search service.
- */
     public static CompletableFuture<ListAdminKeyResult> invokeAsync(ListAdminKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:listAdminKey", TypeShape.of(ListAdminKeyResult.class), args == null ? ListAdminKeyArgs.Empty : args, Utilities.withVersion(options));
     }

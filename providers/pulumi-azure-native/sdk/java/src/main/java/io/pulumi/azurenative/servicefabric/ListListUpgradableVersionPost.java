@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListListUpgradableVersionPost {
-/**
- * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
-API Version: 2020-12-01-preview.
- *
- * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
- */
     public static CompletableFuture<ListListUpgradableVersionPostResult> invokeAsync(ListListUpgradableVersionPostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:listListUpgradableVersionPost", TypeShape.of(ListListUpgradableVersionPostResult.class), args == null ? ListListUpgradableVersionPostArgs.Empty : args, Utilities.withVersion(options));
     }

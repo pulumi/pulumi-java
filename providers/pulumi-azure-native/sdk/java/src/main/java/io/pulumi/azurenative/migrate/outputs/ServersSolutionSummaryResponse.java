@@ -12,30 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServersSolutionSummaryResponse {
-/**
- * Gets or sets the count of servers assessed.
- */
     private final @Nullable Integer assessedCount;
-/**
- * Gets or sets the count of servers discovered.
- */
     private final @Nullable Integer discoveredCount;
-/**
- * Gets the Instance type.
-Expected value is 'Servers'.
- */
     private final String instanceType;
-/**
- * Gets or sets the count of servers migrated.
- */
     private final @Nullable Integer migratedCount;
-/**
- * Gets or sets the count of servers being replicated.
- */
     private final @Nullable Integer replicatingCount;
-/**
- * Gets or sets the count of servers test migrated.
- */
     private final @Nullable Integer testMigratedCount;
 
     @OutputCustomType.Constructor({"assessedCount","discoveredCount","instanceType","migratedCount","replicatingCount","testMigratedCount"})
@@ -54,40 +35,21 @@ Expected value is 'Servers'.
         this.testMigratedCount = testMigratedCount;
     }
 
-/**
- * Gets or sets the count of servers assessed.
- */
     public Optional<Integer> getAssessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
-/**
- * Gets or sets the count of servers discovered.
- */
     public Optional<Integer> getDiscoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
-/**
- * Gets the Instance type.
-Expected value is 'Servers'.
- */
     public String getInstanceType() {
         return this.instanceType;
     }
-/**
- * Gets or sets the count of servers migrated.
- */
     public Optional<Integer> getMigratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
-/**
- * Gets or sets the count of servers being replicated.
- */
     public Optional<Integer> getReplicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
-/**
- * Gets or sets the count of servers test migrated.
- */
     public Optional<Integer> getTestMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }

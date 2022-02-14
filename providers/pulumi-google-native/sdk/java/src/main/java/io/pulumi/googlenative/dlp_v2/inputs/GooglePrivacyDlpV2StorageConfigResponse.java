@@ -12,16 +12,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TimespanConfigResp
 import java.util.Objects;
 
 
-/**
- * Shared message indicating Cloud storage type.
- */
 public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2StorageConfigResponse Empty = new GooglePrivacyDlpV2StorageConfigResponse();
 
-    /**
-     * BigQuery options.
-     */
     @InputImport(name="bigQueryOptions", required=true)
     private final GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
 
@@ -29,9 +23,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
         return this.bigQueryOptions;
     }
 
-    /**
-     * Google Cloud Storage options.
-     */
     @InputImport(name="cloudStorageOptions", required=true)
     private final GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
 
@@ -39,9 +30,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
         return this.cloudStorageOptions;
     }
 
-    /**
-     * Google Cloud Datastore options.
-     */
     @InputImport(name="datastoreOptions", required=true)
     private final GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
 
@@ -49,9 +37,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
         return this.datastoreOptions;
     }
 
-    /**
-     * Hybrid inspection options.
-     */
     @InputImport(name="hybridOptions", required=true)
     private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
 
@@ -59,9 +44,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends io.pulumi.res
         return this.hybridOptions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="timespanConfig", required=true)
     private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 

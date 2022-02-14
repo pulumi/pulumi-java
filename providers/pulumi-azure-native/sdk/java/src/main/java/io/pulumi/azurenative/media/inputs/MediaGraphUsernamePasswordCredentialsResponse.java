@@ -8,17 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Username/password credential pair.
- */
 public final class MediaGraphUsernamePasswordCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MediaGraphUsernamePasswordCredentialsResponse Empty = new MediaGraphUsernamePasswordCredentialsResponse();
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -26,9 +19,6 @@ Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
         return this.odataType;
     }
 
-    /**
-     * Password for a username/password pair.
-     */
     @InputImport(name="password", required=true)
     private final String password;
 
@@ -36,9 +26,6 @@ Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
         return this.password;
     }
 
-    /**
-     * Username for a username/password pair.
-     */
     @InputImport(name="username", required=true)
     private final String username;
 

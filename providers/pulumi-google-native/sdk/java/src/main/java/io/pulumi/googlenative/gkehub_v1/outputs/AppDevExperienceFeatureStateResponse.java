@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AppDevExperienceFeatureStateResponse {
-/**
- * Status of subcomponent that detects configured Service Mesh resources.
- */
     private final StatusResponse networkingInstallSucceeded;
 
     @OutputCustomType.Constructor({"networkingInstallSucceeded"})
@@ -19,9 +16,6 @@ public final class AppDevExperienceFeatureStateResponse {
         this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
     }
 
-/**
- * Status of subcomponent that detects configured Service Mesh resources.
- */
     public StatusResponse getNetworkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
     }

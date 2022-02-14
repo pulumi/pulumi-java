@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FarmBeatsModelArgs Empty = new FarmBeatsModelArgs();
 
-    /**
-     * FarmBeats resource name.
-     */
     @InputImport(name="farmBeatsResourceName")
     private final @Nullable Input<String> farmBeatsResourceName;
 
@@ -28,9 +22,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.farmBeatsResourceName == null ? Input.empty() : this.farmBeatsResourceName;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

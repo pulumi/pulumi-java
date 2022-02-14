@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomResourceProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomResourceProviderArgs Empty = new CustomResourceProviderArgs();
 
-    /**
-     * A list of actions that the custom resource provider implements.
-     */
     @InputImport(name="actions")
     private final @Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions;
 
@@ -32,9 +26,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
         return this.actions == null ? Input.empty() : this.actions;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,9 +33,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,9 +40,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource provider.
-     */
     @InputImport(name="resourceProviderName")
     private final @Nullable Input<String> resourceProviderName;
 
@@ -62,9 +47,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
         return this.resourceProviderName == null ? Input.empty() : this.resourceProviderName;
     }
 
-    /**
-     * A list of resource types that the custom resource provider implements.
-     */
     @InputImport(name="resourceTypes")
     private final @Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
@@ -72,9 +54,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -82,9 +61,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * A list of validations to run on the custom resource provider's requests.
-     */
     @InputImport(name="validations")
     private final @Nullable Input<List<CustomRPValidationsArgs>> validations;
 

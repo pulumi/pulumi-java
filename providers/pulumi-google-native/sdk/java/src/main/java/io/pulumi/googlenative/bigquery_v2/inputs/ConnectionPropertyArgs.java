@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ConnectionPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionPropertyArgs Empty = new ConnectionPropertyArgs();
 
-    /**
-     * [Required] Name of the connection property to set.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -27,9 +21,6 @@ public final class ConnectionPropertyArgs extends io.pulumi.resources.ResourceAr
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * [Required] Value of the connection property.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

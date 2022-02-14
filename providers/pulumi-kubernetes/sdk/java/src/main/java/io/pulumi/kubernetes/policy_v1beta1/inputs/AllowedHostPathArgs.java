@@ -11,18 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * AllowedHostPath defines the host volume conditions that will be enabled by a policy for pods to use. It requires the path prefix to be defined.
- */
 public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllowedHostPathArgs Empty = new AllowedHostPathArgs();
 
-    /**
-     * pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
-
-Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
-     */
     @InputImport(name="pathPrefix")
     private final @Nullable Input<String> pathPrefix;
 
@@ -30,9 +22,6 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
         return this.pathPrefix == null ? Input.empty() : this.pathPrefix;
     }
 
-    /**
-     * when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 

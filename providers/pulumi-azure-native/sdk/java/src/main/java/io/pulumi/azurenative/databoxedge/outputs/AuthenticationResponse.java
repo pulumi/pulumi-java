@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AuthenticationResponse {
-/**
- * Symmetric key for authentication.
- */
     private final @Nullable SymmetricKeyResponse symmetricKey;
 
     @OutputCustomType.Constructor({"symmetricKey"})
@@ -21,9 +18,6 @@ public final class AuthenticationResponse {
         this.symmetricKey = symmetricKey;
     }
 
-/**
- * Symmetric key for authentication.
- */
     public Optional<SymmetricKeyResponse> getSymmetricKey() {
         return Optional.ofNullable(this.symmetricKey);
     }

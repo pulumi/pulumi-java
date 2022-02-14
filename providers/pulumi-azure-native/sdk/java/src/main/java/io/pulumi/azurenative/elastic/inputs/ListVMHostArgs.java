@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListVMHostArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListVMHostArgs Empty = new ListVMHostArgs();
 
-    /**
-     * Monitor resource name
-     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -25,9 +19,6 @@ public final class ListVMHostArgs extends io.pulumi.resources.InvokeArgs {
         return this.monitorName;
     }
 
-    /**
-     * The name of the resource group to which the Elastic resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

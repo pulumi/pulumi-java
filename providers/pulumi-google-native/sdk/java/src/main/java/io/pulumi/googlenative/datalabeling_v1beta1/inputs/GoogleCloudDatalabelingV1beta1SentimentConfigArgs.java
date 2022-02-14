@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Config for setting up sentiments.
- */
 public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1SentimentConfigArgs Empty = new GoogleCloudDatalabelingV1beta1SentimentConfigArgs();
 
-    /**
-     * If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
-     */
     @InputImport(name="enableLabelSentimentSelection")
     private final @Nullable Input<Boolean> enableLabelSentimentSelection;
 

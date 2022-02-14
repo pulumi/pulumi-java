@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse {
-/**
- * Segments this audio response is composed of.
- */
     private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
 
     @OutputCustomType.Constructor({"segments"})
@@ -20,9 +17,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
         this.segments = Objects.requireNonNull(segments);
     }
 
-/**
- * Segments this audio response is composed of.
- */
     public List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> getSegments() {
         return this.segments;
     }

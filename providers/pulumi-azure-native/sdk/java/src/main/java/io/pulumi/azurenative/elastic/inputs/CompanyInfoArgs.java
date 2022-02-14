@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Company information of the user to be passed to partners.
- */
 public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompanyInfoArgs Empty = new CompanyInfoArgs();
 
-    /**
-     * Business of the company
-     */
     @InputImport(name="business")
     private final @Nullable Input<String> business;
 
@@ -27,9 +21,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.business == null ? Input.empty() : this.business;
     }
 
-    /**
-     * Country of the company location.
-     */
     @InputImport(name="country")
     private final @Nullable Input<String> country;
 
@@ -37,9 +28,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.country == null ? Input.empty() : this.country;
     }
 
-    /**
-     * Domain of the company
-     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -47,9 +35,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.domain == null ? Input.empty() : this.domain;
     }
 
-    /**
-     * Number of employees in the company
-     */
     @InputImport(name="employeesNumber")
     private final @Nullable Input<String> employeesNumber;
 
@@ -57,9 +42,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.employeesNumber == null ? Input.empty() : this.employeesNumber;
     }
 
-    /**
-     * State of the company location.
-     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

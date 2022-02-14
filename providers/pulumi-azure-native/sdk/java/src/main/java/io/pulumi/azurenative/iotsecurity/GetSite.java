@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSite {
-/**
- * IoT site model
-API Version: 2021-02-01-preview.
- *
- * IoT site model
- */
     public static CompletableFuture<GetSiteResult> invokeAsync(GetSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getSite", TypeShape.of(GetSiteResult.class), args == null ? GetSiteArgs.Empty : args, Utilities.withVersion(options));
     }

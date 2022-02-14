@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDigitalTwinsEndpointArgs Empty = new GetDigitalTwinsEndpointArgs();
 
-    /**
-     * Name of Endpoint Resource.
-     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -25,9 +19,6 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
         return this.endpointName;
     }
 
-    /**
-     * The name of the resource group that contains the DigitalTwinsInstance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the DigitalTwinsInstance.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

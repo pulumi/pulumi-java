@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Automanage configuration profile preference properties.
- */
 public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationProfilePreferencePropertiesArgs Empty = new ConfigurationProfilePreferencePropertiesArgs();
 
-    /**
-     * The custom preferences for Azure Antimalware.
-     */
     @InputImport(name="antiMalware")
     private final @Nullable Input<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
@@ -28,9 +22,6 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
         return this.antiMalware == null ? Input.empty() : this.antiMalware;
     }
 
-    /**
-     * The custom preferences for Azure VM Backup.
-     */
     @InputImport(name="vmBackup")
     private final @Nullable Input<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 

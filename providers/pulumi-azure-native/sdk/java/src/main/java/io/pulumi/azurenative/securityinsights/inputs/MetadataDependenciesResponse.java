@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex dependencies.
- */
 public final class MetadataDependenciesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetadataDependenciesResponse Empty = new MetadataDependenciesResponse();
 
-    /**
-     * Id of the content item we depend on
-     */
     @InputImport(name="contentId")
     private final @Nullable String contentId;
 
@@ -28,9 +22,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
         return this.contentId == null ? Optional.empty() : Optional.ofNullable(this.contentId);
     }
 
-    /**
-     * This is the list of dependencies we must fulfill, according to the AND/OR operator
-     */
     @InputImport(name="criteria")
     private final @Nullable List<MetadataDependenciesResponse> criteria;
 
@@ -38,9 +29,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
         return this.criteria == null ? List.of() : this.criteria;
     }
 
-    /**
-     * Type of the content item we depend on
-     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -48,9 +36,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
-    /**
-     * Name of the content item
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -58,9 +43,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Operator used for list of dependencies in criteria array.
-     */
     @InputImport(name="operator")
     private final @Nullable String operator;
 
@@ -68,9 +50,6 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
-    /**
-     * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

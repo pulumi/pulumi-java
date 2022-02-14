@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Selects a repo using a Google Cloud Platform project ID (e.g., winged-cargo-31) and a repo name within that project.
- */
 public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse Empty = new GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse();
 
-    /**
-     * The ID of the project.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -25,9 +19,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
         return this.project;
     }
 
-    /**
-     * The name of the repo. Leave empty for the default repo.
-     */
     @InputImport(name="repoName", required=true)
     private final String repoName;
 

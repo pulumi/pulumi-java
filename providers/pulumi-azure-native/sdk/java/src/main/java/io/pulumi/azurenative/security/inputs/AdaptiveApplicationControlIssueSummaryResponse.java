@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a summary of the alerts of the machine group
- */
 public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdaptiveApplicationControlIssueSummaryResponse Empty = new AdaptiveApplicationControlIssueSummaryResponse();
 
-    /**
-     * An alert that machines within a group can have
-     */
     @InputImport(name="issue")
     private final @Nullable String issue;
 
@@ -28,9 +22,6 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
         return this.issue == null ? Optional.empty() : Optional.ofNullable(this.issue);
     }
 
-    /**
-     * The number of machines in the group that have this alert
-     */
     @InputImport(name="numberOfVms")
     private final @Nullable Double numberOfVms;
 

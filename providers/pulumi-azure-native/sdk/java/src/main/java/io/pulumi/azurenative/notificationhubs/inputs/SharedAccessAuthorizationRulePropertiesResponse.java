@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SharedAccessAuthorizationRule properties.
- */
 public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SharedAccessAuthorizationRulePropertiesResponse Empty = new SharedAccessAuthorizationRulePropertiesResponse();
 
-    /**
-     * A string that describes the claim type
-     */
     @InputImport(name="claimType", required=true)
     private final String claimType;
 
@@ -29,9 +23,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.claimType;
     }
 
-    /**
-     * A string that describes the claim value
-     */
     @InputImport(name="claimValue", required=true)
     private final String claimValue;
 
@@ -39,9 +30,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.claimValue;
     }
 
-    /**
-     * The created time for this rule
-     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -49,9 +37,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.createdTime;
     }
 
-    /**
-     * A string that describes the authorization rule.
-     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -59,9 +44,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.keyName;
     }
 
-    /**
-     * The last modified time for this rule
-     */
     @InputImport(name="modifiedTime", required=true)
     private final String modifiedTime;
 
@@ -69,9 +51,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.modifiedTime;
     }
 
-    /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     */
     @InputImport(name="primaryKey", required=true)
     private final String primaryKey;
 
@@ -79,9 +58,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.primaryKey;
     }
 
-    /**
-     * The revision number for the rule
-     */
     @InputImport(name="revision", required=true)
     private final Integer revision;
 
@@ -89,9 +65,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.revision;
     }
 
-    /**
-     * The rights associated with the rule.
-     */
     @InputImport(name="rights")
     private final @Nullable List<String> rights;
 
@@ -99,9 +72,6 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
         return this.rights == null ? List.of() : this.rights;
     }
 
-    /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     */
     @InputImport(name="secondaryKey", required=true)
     private final String secondaryKey;
 

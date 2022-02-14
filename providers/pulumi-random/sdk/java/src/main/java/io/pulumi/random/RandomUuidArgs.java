@@ -12,17 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RandomUuidArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomUuidArgs Empty = new RandomUuidArgs();
 
-    /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListBlockchainMemberApiKeysResult {
-/**
- * Gets or sets the collection of API key.
- */
     private final @Nullable List<ApiKeyResponse> keys;
 
     @OutputCustomType.Constructor({"keys"})
@@ -21,9 +18,6 @@ public final class ListBlockchainMemberApiKeysResult {
         this.keys = keys;
     }
 
-/**
- * Gets or sets the collection of API key.
- */
     public List<ApiKeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerTrustGroupArgs Empty = new ServerTrustGroupArgs();
 
-    /**
-     * Group members information for the server trust group.
-     */
     @InputImport(name="groupMembers", required=true)
     private final Input<List<ServerInfoArgs>> groupMembers;
 
@@ -29,9 +23,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.groupMembers;
     }
 
-    /**
-     * The name of the region where the resource is located.
-     */
     @InputImport(name="locationName", required=true)
     private final Input<String> locationName;
 
@@ -39,9 +30,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.locationName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server trust group.
-     */
     @InputImport(name="serverTrustGroupName")
     private final @Nullable Input<String> serverTrustGroupName;
 
@@ -59,9 +44,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.serverTrustGroupName == null ? Input.empty() : this.serverTrustGroupName;
     }
 
-    /**
-     * Trust scope of the server trust group.
-     */
     @InputImport(name="trustScopes", required=true)
     private final Input<List<String>> trustScopes;
 

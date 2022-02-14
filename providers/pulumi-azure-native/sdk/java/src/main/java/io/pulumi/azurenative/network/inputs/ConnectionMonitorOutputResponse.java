@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a connection monitor output destination.
- */
 public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionMonitorOutputResponse Empty = new ConnectionMonitorOutputResponse();
 
-    /**
-     * Connection monitor output destination type. Currently, only "Workspace" is supported.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,9 +22,6 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * Describes the settings for producing output into a log analytics workspace.
-     */
     @InputImport(name="workspaceSettings")
     private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 

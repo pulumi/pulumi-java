@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceMessageResponse {
-/**
- * A code that correspond to one type of user-facing message.
- */
     private final String code;
-/**
- * Message on memcached instance which will be exposed to users.
- */
     private final String message;
 
     @OutputCustomType.Constructor({"code","message"})
@@ -26,15 +20,9 @@ public final class InstanceMessageResponse {
         this.message = Objects.requireNonNull(message);
     }
 
-/**
- * A code that correspond to one type of user-facing message.
- */
     public String getCode() {
         return this.code;
     }
-/**
- * Message on memcached instance which will be exposed to users.
- */
     public String getMessage() {
         return this.message;
     }

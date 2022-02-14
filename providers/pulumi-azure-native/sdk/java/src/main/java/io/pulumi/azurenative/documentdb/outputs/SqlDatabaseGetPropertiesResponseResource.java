@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlDatabaseGetPropertiesResponseResource {
-/**
- * A system generated property that specified the addressable path of the collections resource.
- */
     private final @Nullable String colls;
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     private final String etag;
-/**
- * Name of the Cosmos DB SQL database
- */
     private final String id;
-/**
- * A system generated property. A unique identifier.
- */
     private final String rid;
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     private final Double ts;
-/**
- * A system generated property that specifies the addressable path of the users resource.
- */
     private final @Nullable String users;
 
     @OutputCustomType.Constructor({"colls","etag","id","rid","ts","users"})
@@ -53,39 +35,21 @@ public final class SqlDatabaseGetPropertiesResponseResource {
         this.users = users;
     }
 
-/**
- * A system generated property that specified the addressable path of the collections resource.
- */
     public Optional<String> getColls() {
         return Optional.ofNullable(this.colls);
     }
-/**
- * A system generated property representing the resource etag required for optimistic concurrency control.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Name of the Cosmos DB SQL database
- */
     public String getId() {
         return this.id;
     }
-/**
- * A system generated property. A unique identifier.
- */
     public String getRid() {
         return this.rid;
     }
-/**
- * A system generated property that denotes the last updated timestamp of the resource.
- */
     public Double getTs() {
         return this.ts;
     }
-/**
- * A system generated property that specifies the addressable path of the users resource.
- */
     public Optional<String> getUsers() {
         return Optional.ofNullable(this.users);
     }

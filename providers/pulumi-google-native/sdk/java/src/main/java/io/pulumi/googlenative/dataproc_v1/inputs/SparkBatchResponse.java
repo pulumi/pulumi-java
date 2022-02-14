@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A configuration for running an Apache Spark (https://spark.apache.org/) batch workload.
- */
 public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SparkBatchResponse Empty = new SparkBatchResponse();
 
-    /**
-     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
-     */
     @InputImport(name="archiveUris", required=true)
     private final List<String> archiveUris;
 
@@ -26,9 +20,6 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.archiveUris;
     }
 
-    /**
-     * Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
-     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -36,9 +27,6 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.args;
     }
 
-    /**
-     * Optional. HCFS URIs of files to be placed in the working directory of each executor.
-     */
     @InputImport(name="fileUris", required=true)
     private final List<String> fileUris;
 
@@ -46,9 +34,6 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileUris;
     }
 
-    /**
-     * Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
-     */
     @InputImport(name="jarFileUris", required=true)
     private final List<String> jarFileUris;
 
@@ -56,9 +41,6 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.jarFileUris;
     }
 
-    /**
-     * Optional. The name of the driver main class. The jar file that contains the class must be in the classpath or specified in jar_file_uris.
-     */
     @InputImport(name="mainClass", required=true)
     private final String mainClass;
 
@@ -66,9 +48,6 @@ public final class SparkBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.mainClass;
     }
 
-    /**
-     * Optional. The HCFS URI of the jar file that contains the main class.
-     */
     @InputImport(name="mainJarFileUri", required=true)
     private final String mainJarFileUri;
 

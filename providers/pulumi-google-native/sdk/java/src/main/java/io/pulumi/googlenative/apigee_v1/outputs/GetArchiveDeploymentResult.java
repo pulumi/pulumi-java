@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetArchiveDeploymentResult {
-/**
- * The time at which the Archive Deployment was created in milliseconds since the epoch.
- */
     private final String createdAt;
-/**
- * Input only. The Google Cloud Storage signed URL returned from GenerateUploadUrl and used to upload the Archive zip file.
- */
     private final String gcsUri;
-/**
- * User-supplied key-value pairs used to organize ArchiveDeployments. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
- */
     private final Map<String,String> labels;
-/**
- * Name of the Archive Deployment in the following format: `organizations/{org}/environments/{env}/archiveDeployments/{id}`.
- */
     private final String name;
-/**
- * A reference to the LRO that created this Archive Deployment in the following format: `organizations/{org}/operations/{id}`
- */
     private final String operation;
-/**
- * The time at which the Archive Deployment was updated in milliseconds since the epoch.
- */
     private final String updatedAt;
 
     @OutputCustomType.Constructor({"createdAt","gcsUri","labels","name","operation","updatedAt"})
@@ -51,39 +33,21 @@ public final class GetArchiveDeploymentResult {
         this.updatedAt = Objects.requireNonNull(updatedAt);
     }
 
-/**
- * The time at which the Archive Deployment was created in milliseconds since the epoch.
- */
     public String getCreatedAt() {
         return this.createdAt;
     }
-/**
- * Input only. The Google Cloud Storage signed URL returned from GenerateUploadUrl and used to upload the Archive zip file.
- */
     public String getGcsUri() {
         return this.gcsUri;
     }
-/**
- * User-supplied key-value pairs used to organize ArchiveDeployments. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * Name of the Archive Deployment in the following format: `organizations/{org}/environments/{env}/archiveDeployments/{id}`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * A reference to the LRO that created this Archive Deployment in the following format: `organizations/{org}/operations/{id}`
- */
     public String getOperation() {
         return this.operation;
     }
-/**
- * The time at which the Archive Deployment was updated in milliseconds since the epoch.
- */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

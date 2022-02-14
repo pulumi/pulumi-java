@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAFDOriginGroup {
-/**
- * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
-API Version: 2020-09-01.
- *
- * AFDOrigin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
- */
     public static CompletableFuture<GetAFDOriginGroupResult> invokeAsync(GetAFDOriginGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDOriginGroup", TypeShape.of(GetAFDOriginGroupResult.class), args == null ? GetAFDOriginGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
- */
     @EnumType
     public enum PubsubConfigState {
-/**
- * The subscription configuration has not been checked.
- */
         StateUnspecified("STATE_UNSPECIFIED"),
-/**
- * The Pub/Sub subscription is properly configured.
- */
         Ok("OK"),
-/**
- * The subscription has been deleted.
- */
         SubscriptionDeleted("SUBSCRIPTION_DELETED"),
-/**
- * The topic has been deleted.
- */
         TopicDeleted("TOPIC_DELETED"),
-/**
- * Some of the subscription's field are misconfigured.
- */
         SubscriptionMisconfigured("SUBSCRIPTION_MISCONFIGURED");
 
         private final String value;

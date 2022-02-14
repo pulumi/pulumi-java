@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneServiceDirectoryConfigNamespaceArgs Empty = new ManagedZoneServiceDirectoryConfigNamespaceArgs();
 
-    /**
-     * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
-     */
     @InputImport(name="deletionTime")
     private final @Nullable Input<String> deletionTime;
 
@@ -27,9 +21,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
         return this.deletionTime == null ? Input.empty() : this.deletionTime;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -37,9 +28,6 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
-     */
     @InputImport(name="namespaceUrl")
     private final @Nullable Input<String> namespaceUrl;
 

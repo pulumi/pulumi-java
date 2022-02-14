@@ -15,146 +15,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A short term retention policy.
-API Version: 2020-11-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Update the short term retention policy for the database.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var backupShortTermRetentionPolicy = new AzureNative.Sql.BackupShortTermRetentionPolicy("backupShortTermRetentionPolicy", new AzureNative.Sql.BackupShortTermRetentionPolicyArgs
-        {
-            DatabaseName = "testdb",
-            PolicyName = "default",
-            ResourceGroupName = "resourceGroup",
-            RetentionDays = 14,
-            ServerName = "testsvr",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewBackupShortTermRetentionPolicy(ctx, "backupShortTermRetentionPolicy", &sql.BackupShortTermRetentionPolicyArgs{
-			DatabaseName:      pulumi.String("testdb"),
-			PolicyName:        pulumi.String("default"),
-			ResourceGroupName: pulumi.String("resourceGroup"),
-			RetentionDays:     pulumi.Int(14),
-			ServerName:        pulumi.String("testsvr"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const backupShortTermRetentionPolicy = new azure_native.sql.BackupShortTermRetentionPolicy("backupShortTermRetentionPolicy", {
-    databaseName: "testdb",
-    policyName: "default",
-    resourceGroupName: "resourceGroup",
-    retentionDays: 14,
-    serverName: "testsvr",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-backup_short_term_retention_policy = azure_native.sql.BackupShortTermRetentionPolicy("backupShortTermRetentionPolicy",
-    database_name="testdb",
-    policy_name="default",
-    resource_group_name="resourceGroup",
-    retention_days=14,
-    server_name="testsvr")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:BackupShortTermRetentionPolicy default /subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Sql/resourceGroups/resourceGroup/servers/testsvr/databases/testdb/backupShortTermRetentionPolicies/default 
-```
-
- */
 @ResourceType(type="azure-native:sql:BackupShortTermRetentionPolicy")
 public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     */
     @OutputExport(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
-    /**
-     * @return The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     */
     public Output</* @Nullable */ Integer> getRetentionDays() {
         return this.retentionDays;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public BackupShortTermRetentionPolicy(String name, BackupShortTermRetentionPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:BackupShortTermRetentionPolicy", name, args == null ? BackupShortTermRetentionPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -179,14 +60,6 @@ public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static BackupShortTermRetentionPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupShortTermRetentionPolicy(name, id, options);
     }

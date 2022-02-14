@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties specific to the monitor resource.
- */
 public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitorPropertiesResponse Empty = new MonitorPropertiesResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="liftrResourceCategory", required=true)
     private final String liftrResourceCategory;
 
@@ -31,9 +25,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.liftrResourceCategory;
     }
 
-    /**
-     * The priority of the resource.
-     */
     @InputImport(name="liftrResourcePreference", required=true)
     private final Integer liftrResourcePreference;
 
@@ -41,9 +32,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.liftrResourcePreference;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="logzOrganizationProperties")
     private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
 
@@ -51,9 +39,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.logzOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.logzOrganizationProperties);
     }
 
-    /**
-     * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-     */
     @InputImport(name="marketplaceSubscriptionStatus")
     private final @Nullable String marketplaceSubscriptionStatus;
 
@@ -61,9 +46,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.marketplaceSubscriptionStatus == null ? Optional.empty() : Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
 
-    /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
-     */
     @InputImport(name="monitoringStatus")
     private final @Nullable String monitoringStatus;
 
@@ -71,9 +53,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="planData")
     private final @Nullable PlanDataResponse planData;
 
@@ -81,9 +60,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.planData == null ? Optional.empty() : Optional.ofNullable(this.planData);
     }
 
-    /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -91,9 +67,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="userInfo")
     private final @Nullable UserInfoResponse userInfo;
 

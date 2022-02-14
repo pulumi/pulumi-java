@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineTopologyArgs Empty = new PipelineTopologyArgs();
 
-    /**
-     * The Azure Video Analyzer account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -36,9 +30,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.accountName;
     }
 
-    /**
-     * An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -46,9 +37,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Topology kind.
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,Kind>> kind;
 
@@ -56,9 +44,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.kind;
     }
 
-    /**
-     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ParameterDeclarationArgs>> parameters;
 
@@ -66,9 +51,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Pipeline topology unique identifier.
-     */
     @InputImport(name="pipelineTopologyName")
     private final @Nullable Input<String> pipelineTopologyName;
 
@@ -76,9 +58,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.pipelineTopologyName == null ? Input.empty() : this.pipelineTopologyName;
     }
 
-    /**
-     * List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
-     */
     @InputImport(name="processors")
     private final @Nullable Input<List<EncoderProcessorArgs>> processors;
 
@@ -86,9 +65,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.processors == null ? Input.empty() : this.processors;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -96,9 +72,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
-     */
     @InputImport(name="sinks", required=true)
     private final Input<List<VideoSinkArgs>> sinks;
 
@@ -106,9 +79,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.sinks;
     }
 
-    /**
-     * Describes the properties of a SKU.
-     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -116,9 +86,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
         return this.sku;
     }
 
-    /**
-     * List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
-     */
     @InputImport(name="sources", required=true)
     private final Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 

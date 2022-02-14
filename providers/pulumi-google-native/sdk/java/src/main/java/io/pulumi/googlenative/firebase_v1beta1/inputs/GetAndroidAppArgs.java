@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetAndroidAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAndroidAppArgs Empty = new GetAndroidAppArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="androidAppId", required=true)
     private final String androidAppId;
 
@@ -27,9 +21,6 @@ public final class GetAndroidAppArgs extends io.pulumi.resources.InvokeArgs {
         return this.androidAppId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

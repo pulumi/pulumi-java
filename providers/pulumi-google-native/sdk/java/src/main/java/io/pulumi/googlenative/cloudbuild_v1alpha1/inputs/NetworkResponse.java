@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Network describes the GCP network used to create workers in.
- */
 public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkResponse Empty = new NetworkResponse();
 
-    /**
-     * Network on which the workers are created. "default" network is used if empty.
-     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -25,9 +19,6 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
         return this.network;
     }
 
-    /**
-     * Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -35,9 +26,6 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
         return this.project;
     }
 
-    /**
-     * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
-     */
     @InputImport(name="subnetwork", required=true)
     private final String subnetwork;
 

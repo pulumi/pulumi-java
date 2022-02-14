@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container for code asset versions.
- */
 public final class CodeContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CodeContainerResponse Empty = new CodeContainerResponse();
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,9 +22,6 @@ public final class CodeContainerResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -38,9 +29,6 @@ public final class CodeContainerResponse extends io.pulumi.resources.InvokeArgs 
         return this.properties == null ? Map.of() : this.properties;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

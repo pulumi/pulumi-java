@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMediaServiceKeys {
-/**
- * The response body for a ListKeys API.
-API Version: 2015-10-01.
- *
- * The response body for a ListKeys API.
- */
     public static CompletableFuture<ListMediaServiceKeysResult> invokeAsync(ListMediaServiceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listMediaServiceKeys", TypeShape.of(ListMediaServiceKeysResult.class), args == null ? ListMediaServiceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DailyRetentionFormatResponse {
-/**
- * List of days of the month.
- */
     private final @Nullable List<DayResponse> daysOfTheMonth;
 
     @OutputCustomType.Constructor({"daysOfTheMonth"})
@@ -21,9 +18,6 @@ public final class DailyRetentionFormatResponse {
         this.daysOfTheMonth = daysOfTheMonth;
     }
 
-/**
- * List of days of the month.
- */
     public List<DayResponse> getDaysOfTheMonth() {
         return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;
     }

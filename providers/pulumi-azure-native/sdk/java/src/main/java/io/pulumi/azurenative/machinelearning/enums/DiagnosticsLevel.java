@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
- */
     @EnumType
     public enum DiagnosticsLevel {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Error("Error"),
-/**
- * 
- */
         All("All");
 
         private final String value;

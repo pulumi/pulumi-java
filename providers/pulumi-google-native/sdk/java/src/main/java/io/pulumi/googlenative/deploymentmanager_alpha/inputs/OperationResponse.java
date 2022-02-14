@@ -12,16 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Represents an Operation resource. Google Compute Engine has three Operation resources: * [Global](/compute/docs/reference/rest/{$api_version}/globalOperations) * [Regional](/compute/docs/reference/rest/{$api_version}/regionOperations) * [Zonal](/compute/docs/reference/rest/{$api_version}/zoneOperations) You can use an operation resource to manage asynchronous API requests. For more information, read Handling API responses. Operations can be global, regional or zonal. - For global operations, use the `globalOperations` resource. - For regional operations, use the `regionOperations` resource. - For zonal operations, use the `zonalOperations` resource. For more information, read Global, Regional, and Zonal Resources.
- */
 public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OperationResponse Empty = new OperationResponse();
 
-    /**
-     * The value of `requestId` if you provided it in the request. Not present otherwise.
-     */
     @InputImport(name="clientOperationId", required=true)
     private final String clientOperationId;
 
@@ -29,9 +23,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.clientOperationId;
     }
 
-    /**
-     * A textual description of the operation, which is set when the operation is created.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -39,9 +30,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
-    /**
-     * The time that this operation was completed. This value is in RFC3339 text format.
-     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -49,9 +37,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
-    /**
-     * If errors are generated during processing of the operation, this field will be populated.
-     */
     @InputImport(name="error", required=true)
     private final OperationErrorResponse error;
 
@@ -59,9 +44,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.error;
     }
 
-    /**
-     * If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
-     */
     @InputImport(name="httpErrorMessage", required=true)
     private final String httpErrorMessage;
 
@@ -69,9 +51,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.httpErrorMessage;
     }
 
-    /**
-     * If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
-     */
     @InputImport(name="httpErrorStatusCode", required=true)
     private final Integer httpErrorStatusCode;
 
@@ -79,9 +58,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.httpErrorStatusCode;
     }
 
-    /**
-     * The time that this operation was requested. This value is in RFC3339 text format.
-     */
     @InputImport(name="insertTime", required=true)
     private final String insertTime;
 
@@ -89,9 +65,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.insertTime;
     }
 
-    /**
-     * Type of the resource. Always `compute#operation` for Operation resources.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -99,9 +72,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind;
     }
 
-    /**
-     * Name of the operation.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -109,9 +79,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
-     */
     @InputImport(name="operationGroupId", required=true)
     private final String operationGroupId;
 
@@ -119,9 +86,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.operationGroupId;
     }
 
-    /**
-     * The type of operation, such as `insert`, `update`, or `delete`, and so on.
-     */
     @InputImport(name="operationType", required=true)
     private final String operationType;
 
@@ -129,9 +93,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.operationType;
     }
 
-    /**
-     * An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
-     */
     @InputImport(name="progress", required=true)
     private final Integer progress;
 
@@ -139,9 +100,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.progress;
     }
 
-    /**
-     * The URL of the region where the operation resides. Only applicable when performing regional operations.
-     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -149,9 +107,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.region;
     }
 
-    /**
-     * Server-defined URL for the resource.
-     */
     @InputImport(name="selfLink", required=true)
     private final String selfLink;
 
@@ -159,9 +114,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.selfLink;
     }
 
-    /**
-     * The time that this operation was started by the server. This value is in RFC3339 text format.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -169,9 +121,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.startTime;
     }
 
-    /**
-     * The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -179,9 +128,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
-    /**
-     * An optional textual description of the current status of the operation.
-     */
     @InputImport(name="statusMessage", required=true)
     private final String statusMessage;
 
@@ -189,9 +135,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.statusMessage;
     }
 
-    /**
-     * The unique target ID, which identifies a specific incarnation of the target resource.
-     */
     @InputImport(name="targetId", required=true)
     private final String targetId;
 
@@ -199,9 +142,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetId;
     }
 
-    /**
-     * The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the persistent disk that the snapshot was created from.
-     */
     @InputImport(name="targetLink", required=true)
     private final String targetLink;
 
@@ -209,9 +149,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetLink;
     }
 
-    /**
-     * User who requested the operation, for example: `user@example.com`.
-     */
     @InputImport(name="user", required=true)
     private final String user;
 
@@ -219,9 +156,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.user;
     }
 
-    /**
-     * If warning messages are generated during processing of the operation, this field will be populated.
-     */
     @InputImport(name="warnings", required=true)
     private final List<OperationWarningsItemResponse> warnings;
 
@@ -229,9 +163,6 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
         return this.warnings;
     }
 
-    /**
-     * The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
-     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

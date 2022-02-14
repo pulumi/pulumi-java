@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobMaxRecurrenceResponse {
-/**
- * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
- */
     private final @Nullable String frequency;
-/**
- * Gets or sets the interval between retries.
- */
     private final @Nullable Integer interval;
 
     @OutputCustomType.Constructor({"frequency","interval"})
@@ -29,15 +23,9 @@ public final class JobMaxRecurrenceResponse {
         this.interval = interval;
     }
 
-/**
- * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
- */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
-/**
- * Gets or sets the interval between retries.
- */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }

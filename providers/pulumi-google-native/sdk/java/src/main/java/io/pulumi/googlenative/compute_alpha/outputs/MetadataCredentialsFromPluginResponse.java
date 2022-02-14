@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetadataCredentialsFromPluginResponse {
-/**
- * Plugin name.
- */
     private final String name;
-/**
- * A text proto that conforms to a Struct type definition interpreted by the plugin.
- */
     private final String structConfig;
 
     @OutputCustomType.Constructor({"name","structConfig"})
@@ -26,15 +20,9 @@ public final class MetadataCredentialsFromPluginResponse {
         this.structConfig = Objects.requireNonNull(structConfig);
     }
 
-/**
- * Plugin name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * A text proto that conforms to a Struct type definition interpreted by the plugin.
- */
     public String getStructConfig() {
         return this.structConfig;
     }

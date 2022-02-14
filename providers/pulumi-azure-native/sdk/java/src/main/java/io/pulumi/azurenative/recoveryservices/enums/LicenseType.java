@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The license type.
- */
     @EnumType
     public enum LicenseType {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         NoLicenseType("NoLicenseType"),
-/**
- * 
- */
         WindowsServer("WindowsServer");
 
         private final String value;

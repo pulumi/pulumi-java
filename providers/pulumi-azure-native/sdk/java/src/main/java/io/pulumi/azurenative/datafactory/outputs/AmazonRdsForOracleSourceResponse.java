@@ -13,46 +13,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AmazonRdsForOracleSourceResponse {
-/**
- * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
- */
     private final @Nullable Object additionalColumns;
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     private final @Nullable Object disableMetricsCollection;
-/**
- * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object maxConcurrentConnections;
-/**
- * AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object oracleReaderQuery;
-/**
- * The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object partitionOption;
-/**
- * The settings that will be leveraged for AmazonRdsForOracle source partitioning.
- */
     private final @Nullable AmazonRdsForOraclePartitionSettingsResponse partitionSettings;
-/**
- * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object queryTimeout;
-/**
- * Source retry count. Type: integer (or Expression with resultType integer).
- */
     private final @Nullable Object sourceRetryCount;
-/**
- * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     private final @Nullable Object sourceRetryWait;
-/**
- * Copy source type.
-Expected value is 'AmazonRdsForOracleSource'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","oracleReaderQuery","partitionOption","partitionSettings","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
@@ -79,64 +48,33 @@ Expected value is 'AmazonRdsForOracleSource'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
- */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
-/**
- * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
- */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
-/**
- * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
-/**
- * AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getOracleReaderQuery() {
         return Optional.ofNullable(this.oracleReaderQuery);
     }
-/**
- * The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getPartitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
-/**
- * The settings that will be leveraged for AmazonRdsForOracle source partitioning.
- */
     public Optional<AmazonRdsForOraclePartitionSettingsResponse> getPartitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
-/**
- * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
-/**
- * Source retry count. Type: integer (or Expression with resultType integer).
- */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
-/**
- * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
- */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
-/**
- * Copy source type.
-Expected value is 'AmazonRdsForOracleSource'.
- */
     public String getType() {
         return this.type;
     }

@@ -14,17 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for the command that completes online migration for an Azure SQL Database Managed Instance.
- */
 public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMISyncCompleteCommandPropertiesResponse Empty = new MigrateMISyncCompleteCommandPropertiesResponse();
 
-    /**
-     * Command type.
-Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
-     */
     @InputImport(name="commandType", required=true)
     private final String commandType;
 
@@ -32,9 +25,6 @@ Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
         return this.commandType;
     }
 
-    /**
-     * Array of errors. This is ignored if submitted.
-     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -42,9 +32,6 @@ Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
         return this.errors;
     }
 
-    /**
-     * Command input
-     */
     @InputImport(name="input")
     private final @Nullable MigrateMISyncCompleteCommandInputResponse input;
 
@@ -52,9 +39,6 @@ Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
-    /**
-     * Command output. This is ignored if submitted.
-     */
     @InputImport(name="output", required=true)
     private final MigrateMISyncCompleteCommandOutputResponse output;
 
@@ -62,9 +46,6 @@ Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
         return this.output;
     }
 
-    /**
-     * The state of the command. This is ignored if submitted.
-     */
     @InputImport(name="state", required=true)
     private final String state;
 

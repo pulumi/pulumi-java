@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
-    /**
-     * The name of the machine learning team account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
-    /**
-     * The name of the machine learning project under a team account workspace.
-     */
     @InputImport(name="projectName", required=true)
     private final String projectName;
 
@@ -35,9 +26,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.projectName;
     }
 
-    /**
-     * The name of the resource group to which the machine learning team account belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the machine learning team account workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for running a transfer.
- */
 public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferSpecArgs Empty = new TransferSpecArgs();
 
-    /**
-     * An AWS S3 data source.
-     */
     @InputImport(name="awsS3DataSource")
     private final @Nullable Input<AwsS3DataArgs> awsS3DataSource;
 
@@ -35,9 +29,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.awsS3DataSource == null ? Input.empty() : this.awsS3DataSource;
     }
 
-    /**
-     * An Azure Blob Storage data source.
-     */
     @InputImport(name="azureBlobStorageDataSource")
     private final @Nullable Input<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
 
@@ -45,9 +36,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureBlobStorageDataSource == null ? Input.empty() : this.azureBlobStorageDataSource;
     }
 
-    /**
-     * A Cloud Storage data sink.
-     */
     @InputImport(name="gcsDataSink")
     private final @Nullable Input<GcsDataArgs> gcsDataSink;
 
@@ -55,9 +43,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcsDataSink == null ? Input.empty() : this.gcsDataSink;
     }
 
-    /**
-     * A Cloud Storage data source.
-     */
     @InputImport(name="gcsDataSource")
     private final @Nullable Input<GcsDataArgs> gcsDataSource;
 
@@ -65,9 +50,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcsDataSource == null ? Input.empty() : this.gcsDataSource;
     }
 
-    /**
-     * Cloud Storage intermediate data location.
-     */
     @InputImport(name="gcsIntermediateDataLocation")
     private final @Nullable Input<GcsDataArgs> gcsIntermediateDataLocation;
 
@@ -75,9 +57,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcsIntermediateDataLocation == null ? Input.empty() : this.gcsIntermediateDataLocation;
     }
 
-    /**
-     * An HTTP URL data source.
-     */
     @InputImport(name="httpDataSource")
     private final @Nullable Input<HttpDataArgs> httpDataSource;
 
@@ -85,9 +64,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpDataSource == null ? Input.empty() : this.httpDataSource;
     }
 
-    /**
-     * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
-     */
     @InputImport(name="objectConditions")
     private final @Nullable Input<ObjectConditionsArgs> objectConditions;
 
@@ -95,9 +71,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectConditions == null ? Input.empty() : this.objectConditions;
     }
 
-    /**
-     * A POSIX Filesystem data sink.
-     */
     @InputImport(name="posixDataSink")
     private final @Nullable Input<PosixFilesystemArgs> posixDataSink;
 
@@ -105,9 +78,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.posixDataSink == null ? Input.empty() : this.posixDataSink;
     }
 
-    /**
-     * A POSIX Filesystem data source.
-     */
     @InputImport(name="posixDataSource")
     private final @Nullable Input<PosixFilesystemArgs> posixDataSource;
 
@@ -115,9 +85,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.posixDataSource == null ? Input.empty() : this.posixDataSource;
     }
 
-    /**
-     * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
-     */
     @InputImport(name="sinkAgentPoolName")
     private final @Nullable Input<String> sinkAgentPoolName;
 
@@ -125,9 +92,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkAgentPoolName == null ? Input.empty() : this.sinkAgentPoolName;
     }
 
-    /**
-     * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
-     */
     @InputImport(name="sourceAgentPoolName")
     private final @Nullable Input<String> sourceAgentPoolName;
 
@@ -135,9 +99,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceAgentPoolName == null ? Input.empty() : this.sourceAgentPoolName;
     }
 
-    /**
-     * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
-     */
     @InputImport(name="transferManifest")
     private final @Nullable Input<TransferManifestArgs> transferManifest;
 
@@ -145,9 +106,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.transferManifest == null ? Input.empty() : this.transferManifest;
     }
 
-    /**
-     * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
-     */
     @InputImport(name="transferOptions")
     private final @Nullable Input<TransferOptionsArgs> transferOptions;
 

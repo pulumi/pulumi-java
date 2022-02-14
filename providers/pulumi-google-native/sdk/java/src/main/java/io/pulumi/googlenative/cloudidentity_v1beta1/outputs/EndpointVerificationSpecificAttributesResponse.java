@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndpointVerificationSpecificAttributesResponse {
-/**
- * Details of certificates.
- */
     private final List<CertificateAttributesResponse> certificateAttributes;
 
     @OutputCustomType.Constructor({"certificateAttributes"})
@@ -20,9 +17,6 @@ public final class EndpointVerificationSpecificAttributesResponse {
         this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
     }
 
-/**
- * Details of certificates.
- */
     public List<CertificateAttributesResponse> getCertificateAttributes() {
         return this.certificateAttributes;
     }

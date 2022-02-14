@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Project Database Details
- */
 public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseInfoArgs Empty = new DatabaseInfoArgs();
 
-    /**
-     * Name of the database
-     */
     @InputImport(name="sourceDatabaseName", required=true)
     private final Input<String> sourceDatabaseName;
 

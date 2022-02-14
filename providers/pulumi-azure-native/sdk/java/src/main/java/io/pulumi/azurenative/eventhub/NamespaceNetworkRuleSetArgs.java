@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceNetworkRuleSetArgs Empty = new NamespaceNetworkRuleSetArgs();
 
-    /**
-     * Default Action for Network Rule Set
-     */
     @InputImport(name="defaultAction")
     private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
 
@@ -32,9 +26,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
     }
 
-    /**
-     * List of IpRules
-     */
     @InputImport(name="ipRules")
     private final @Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules;
 
@@ -42,9 +33,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
         return this.ipRules == null ? Input.empty() : this.ipRules;
     }
 
-    /**
-     * The Namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -52,9 +40,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
         return this.namespaceName;
     }
 
-    /**
-     * Name of the resource group within the azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,9 +47,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
-    /**
-     * List VirtualNetwork Rules
-     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 

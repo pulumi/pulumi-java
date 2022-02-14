@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The policy definition group.
- */
 public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyDefinitionGroupResponse Empty = new PolicyDefinitionGroupResponse();
 
-    /**
-     * A resource ID of a resource that contains additional metadata about the group.
-     */
     @InputImport(name="additionalMetadataId")
     private final @Nullable String additionalMetadataId;
 
@@ -27,9 +21,6 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
         return this.additionalMetadataId == null ? Optional.empty() : Optional.ofNullable(this.additionalMetadataId);
     }
 
-    /**
-     * The group's category.
-     */
     @InputImport(name="category")
     private final @Nullable String category;
 
@@ -37,9 +28,6 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
     }
 
-    /**
-     * The group's description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -47,9 +35,6 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The group's display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -57,9 +42,6 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * The name of the group.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

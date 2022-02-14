@@ -15,222 +15,63 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Defines the security configuration
-API Version: 2021-02-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create network manager security user configuration
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var securityUserConfiguration = new AzureNative.Network.SecurityUserConfiguration("securityUserConfiguration", new AzureNative.Network.SecurityUserConfigurationArgs
-        {
-            ConfigurationName = "myTestSecurityConfig",
-            DeleteExistingNSGs = "True",
-            Description = "A sample policy",
-            NetworkManagerName = "testNetworkManager",
-            ResourceGroupName = "rg1",
-            SecurityType = "UserPolicy",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewSecurityUserConfiguration(ctx, "securityUserConfiguration", &network.SecurityUserConfigurationArgs{
-			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
-			DeleteExistingNSGs: pulumi.String("True"),
-			Description:        pulumi.String("A sample policy"),
-			NetworkManagerName: pulumi.String("testNetworkManager"),
-			ResourceGroupName:  pulumi.String("rg1"),
-			SecurityType:       pulumi.String("UserPolicy"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const securityUserConfiguration = new azure_native.network.SecurityUserConfiguration("securityUserConfiguration", {
-    configurationName: "myTestSecurityConfig",
-    deleteExistingNSGs: "True",
-    description: "A sample policy",
-    networkManagerName: "testNetworkManager",
-    resourceGroupName: "rg1",
-    securityType: "UserPolicy",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-security_user_configuration = azure_native.network.SecurityUserConfiguration("securityUserConfiguration",
-    configuration_name="myTestSecurityConfig",
-    delete_existing_nsgs="True",
-    description="A sample policy",
-    network_manager_name="testNetworkManager",
-    resource_group_name="rg1",
-    security_type="UserPolicy")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:SecurityUserConfiguration myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityConfigurations/myTestSecurityConfig 
-```
-
- */
 @ResourceType(type="azure-native:network:SecurityUserConfiguration")
 public class SecurityUserConfiguration extends io.pulumi.resources.CustomResource {
-    /**
-     * Flag if need to delete existing network security groups.
-     */
     @OutputExport(name="deleteExistingNSGs", type=String.class, parameters={})
     private Output</* @Nullable */ String> deleteExistingNSGs;
 
-    /**
-     * @return Flag if need to delete existing network security groups.
-     */
     public Output</* @Nullable */ String> getDeleteExistingNSGs() {
         return this.deleteExistingNSGs;
     }
-    /**
-     * A description of the security configuration.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return A description of the security configuration.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * A display name of the security configuration.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return A display name of the security configuration.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Security Type.
-     */
     @OutputExport(name="securityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityType;
 
-    /**
-     * @return Security Type.
-     */
     public Output</* @Nullable */ String> getSecurityType() {
         return this.securityType;
     }
-    /**
-     * The system metadata related to this resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return The system metadata related to this resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SecurityUserConfiguration(String name, SecurityUserConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:SecurityUserConfiguration", name, args == null ? SecurityUserConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -250,14 +91,6 @@ public class SecurityUserConfiguration extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SecurityUserConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SecurityUserConfiguration(name, id, options);
     }

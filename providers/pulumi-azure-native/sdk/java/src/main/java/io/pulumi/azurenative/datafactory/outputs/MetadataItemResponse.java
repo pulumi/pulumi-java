@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetadataItemResponse {
-/**
- * Metadata item key name. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object name;
-/**
- * Metadata item value. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -28,15 +22,9 @@ public final class MetadataItemResponse {
         this.value = value;
     }
 
-/**
- * Metadata item key name. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * Metadata item value. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }

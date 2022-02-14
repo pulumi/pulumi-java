@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The definition of data present in the report.
- */
 public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportDatasetResponse Empty = new ReportDatasetResponse();
 
-    /**
-     * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     */
     @InputImport(name="aggregation")
     private final @Nullable Map<String,ReportAggregationResponse> aggregation;
 
@@ -33,9 +27,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
 
-    /**
-     * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     */
     @InputImport(name="configuration")
     private final @Nullable ReportDatasetConfigurationResponse configuration;
 
@@ -43,9 +34,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
-    /**
-     * Has filter expression to use in the report.
-     */
     @InputImport(name="filter")
     private final @Nullable ReportFilterResponse filter;
 
@@ -53,9 +41,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
-    /**
-     * The granularity of rows in the report.
-     */
     @InputImport(name="granularity")
     private final @Nullable String granularity;
 
@@ -63,9 +48,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
         return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
     }
 
-    /**
-     * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     */
     @InputImport(name="grouping")
     private final @Nullable List<ReportGroupingResponse> grouping;
 

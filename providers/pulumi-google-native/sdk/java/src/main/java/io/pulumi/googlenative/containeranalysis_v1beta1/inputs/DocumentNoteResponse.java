@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * DocumentNote represents an SPDX Document Creation Infromation section: https://spdx.github.io/spdx-spec/2-document-creation-information/
- */
 public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DocumentNoteResponse Empty = new DocumentNoteResponse();
 
-    /**
-     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
-     */
     @InputImport(name="dataLicence", required=true)
     private final String dataLicence;
 
@@ -25,9 +19,6 @@ public final class DocumentNoteResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataLicence;
     }
 
-    /**
-     * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
-     */
     @InputImport(name="spdxVersion", required=true)
     private final String spdxVersion;
 

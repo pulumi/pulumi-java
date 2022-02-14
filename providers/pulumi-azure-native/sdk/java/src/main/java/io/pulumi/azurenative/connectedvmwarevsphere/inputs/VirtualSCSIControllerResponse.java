@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This data object type contains the properties of a SCSI controller device attached to a virtual machine that is reported by the controller.
- */
 public final class VirtualSCSIControllerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualSCSIControllerResponse Empty = new VirtualSCSIControllerResponse();
 
-    /**
-     * Gets or sets the bus number of the controller.
-     */
     @InputImport(name="busNumber")
     private final @Nullable Integer busNumber;
 
@@ -28,9 +22,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
         return this.busNumber == null ? Optional.empty() : Optional.ofNullable(this.busNumber);
     }
 
-    /**
-     * Gets or sets the key of the controller.
-     */
     @InputImport(name="controllerKey")
     private final @Nullable Integer controllerKey;
 
@@ -38,9 +29,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
         return this.controllerKey == null ? Optional.empty() : Optional.ofNullable(this.controllerKey);
     }
 
-    /**
-     * Gets or sets the SCSI controller unit number.
-     */
     @InputImport(name="scsiCtlrUnitNumber")
     private final @Nullable Integer scsiCtlrUnitNumber;
 
@@ -48,9 +36,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
         return this.scsiCtlrUnitNumber == null ? Optional.empty() : Optional.ofNullable(this.scsiCtlrUnitNumber);
     }
 
-    /**
-     * Gets or sets the sharing mode.
-     */
     @InputImport(name="sharing")
     private final @Nullable String sharing;
 
@@ -58,9 +43,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
         return this.sharing == null ? Optional.empty() : Optional.ofNullable(this.sharing);
     }
 
-    /**
-     * Gets or sets the controller type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

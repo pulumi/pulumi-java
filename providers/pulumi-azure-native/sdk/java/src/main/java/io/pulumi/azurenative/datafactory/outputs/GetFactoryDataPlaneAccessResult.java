@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFactoryDataPlaneAccessResult {
-/**
- * Data Plane read only access token.
- */
     private final @Nullable String accessToken;
-/**
- * Data Plane service base URL.
- */
     private final @Nullable String dataPlaneUrl;
-/**
- * The user access policy.
- */
     private final @Nullable UserAccessPolicyResponse policy;
 
     @OutputCustomType.Constructor({"accessToken","dataPlaneUrl","policy"})
@@ -35,21 +26,12 @@ public final class GetFactoryDataPlaneAccessResult {
         this.policy = policy;
     }
 
-/**
- * Data Plane read only access token.
- */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
-/**
- * Data Plane service base URL.
- */
     public Optional<String> getDataPlaneUrl() {
         return Optional.ofNullable(this.dataPlaneUrl);
     }
-/**
- * The user access policy.
- */
     public Optional<UserAccessPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

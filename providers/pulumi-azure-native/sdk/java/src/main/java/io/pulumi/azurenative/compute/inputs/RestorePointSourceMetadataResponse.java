@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the properties of the Virtual Machine for which the restore point was created. The properties provided are a subset and the snapshot of the overall Virtual Machine properties captured at the time of the restore point creation.
- */
 public final class RestorePointSourceMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestorePointSourceMetadataResponse Empty = new RestorePointSourceMetadataResponse();
 
-    /**
-     * Gets the diagnostics profile.
-     */
     @InputImport(name="diagnosticsProfile")
     private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
@@ -32,9 +26,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.diagnosticsProfile == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsProfile);
     }
 
-    /**
-     * Gets the hardware profile.
-     */
     @InputImport(name="hardwareProfile")
     private final @Nullable HardwareProfileResponse hardwareProfile;
 
@@ -42,9 +33,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.hardwareProfile == null ? Optional.empty() : Optional.ofNullable(this.hardwareProfile);
     }
 
-    /**
-     * Gets the license type, which is for bring your own license scenario.
-     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -52,9 +40,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
-    /**
-     * Location of the VM from which the restore point was created.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -62,9 +47,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * Gets the OS profile.
-     */
     @InputImport(name="osProfile")
     private final @Nullable OSProfileResponse osProfile;
 
@@ -72,9 +54,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
-    /**
-     * Gets the security profile.
-     */
     @InputImport(name="securityProfile")
     private final @Nullable SecurityProfileResponse securityProfile;
 
@@ -82,9 +61,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
     }
 
-    /**
-     * Gets the storage profile.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
 
@@ -92,9 +68,6 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
     }
 
-    /**
-     * Gets the virtual machine unique id.
-     */
     @InputImport(name="vmId")
     private final @Nullable String vmId;
 

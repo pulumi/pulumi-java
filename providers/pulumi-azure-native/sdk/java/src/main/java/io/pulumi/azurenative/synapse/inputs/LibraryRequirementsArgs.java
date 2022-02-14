@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Library requirements for a Big Data pool powered by Apache Spark
- */
 public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LibraryRequirementsArgs Empty = new LibraryRequirementsArgs();
 
-    /**
-     * The library requirements.
-     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -27,9 +21,6 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
         return this.content == null ? Input.empty() : this.content;
     }
 
-    /**
-     * The filename of the library requirements file.
-     */
     @InputImport(name="filename")
     private final @Nullable Input<String> filename;
 

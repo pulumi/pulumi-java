@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The set of roles permitted through this Role Definition.
- */
 public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleArgs Empty = new RoleArgs();
 
-    /**
-     * The database name the role is applied.
-     */
     @InputImport(name="db")
     private final @Nullable Input<String> db;
 
@@ -27,9 +21,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.db == null ? Input.empty() : this.db;
     }
 
-    /**
-     * The role name.
-     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 

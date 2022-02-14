@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogAnalyticsConfigurationArgs Empty = new LogAnalyticsConfigurationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="customerId")
     private final @Nullable Input<String> customerId;
 
@@ -27,9 +21,6 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
         return this.customerId == null ? Input.empty() : this.customerId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sharedKey")
     private final @Nullable Input<String> sharedKey;
 

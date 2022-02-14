@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional properties of the product
- */
 public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProductPropertiesResponse Empty = new ProductPropertiesResponse();
 
-    /**
-     * The version.
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 

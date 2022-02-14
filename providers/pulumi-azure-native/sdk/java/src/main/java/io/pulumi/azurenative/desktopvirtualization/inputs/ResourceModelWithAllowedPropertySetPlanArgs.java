@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceModelWithAllowedPropertySetPlanArgs Empty = new ResourceModelWithAllowedPropertySetPlanArgs();
 
-    /**
-     * A user defined name of the 3rd Party Artifact that is being procured.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,9 +21,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
         return this.name;
     }
 
-    /**
-     * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. 
-     */
     @InputImport(name="product", required=true)
     private final Input<String> product;
 
@@ -37,9 +28,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
         return this.product;
     }
 
-    /**
-     * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
-     */
     @InputImport(name="promotionCode")
     private final @Nullable Input<String> promotionCode;
 
@@ -47,9 +35,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
         return this.promotionCode == null ? Input.empty() : this.promotionCode;
     }
 
-    /**
-     * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
-     */
     @InputImport(name="publisher", required=true)
     private final Input<String> publisher;
 
@@ -57,9 +42,6 @@ public final class ResourceModelWithAllowedPropertySetPlanArgs extends io.pulumi
         return this.publisher;
     }
 
-    /**
-     * The version of the desired product/artifact.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

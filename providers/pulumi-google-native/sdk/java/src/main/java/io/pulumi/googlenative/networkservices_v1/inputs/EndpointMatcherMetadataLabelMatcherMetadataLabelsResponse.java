@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines a name-pair value for a single label.
- */
 public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse Empty = new EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse();
 
-    /**
-     * Label name presented as key in xDS Node Metadata.
-     */
     @InputImport(name="labelName", required=true)
     private final String labelName;
 
@@ -25,9 +19,6 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse ext
         return this.labelName;
     }
 
-    /**
-     * Label value presented as value corresponding to the above key, in xDS Node Metadata.
-     */
     @InputImport(name="labelValue", required=true)
     private final String labelValue;
 

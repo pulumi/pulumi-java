@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketIamConfigurationResponse {
-/**
- * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
- */
     private final BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
-/**
- * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
- */
     private final String publicAccessPrevention;
-/**
- * The bucket's uniform bucket-level access configuration.
- */
     private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
     @OutputCustomType.Constructor({"bucketPolicyOnly","publicAccessPrevention","uniformBucketLevelAccess"})
@@ -34,21 +25,12 @@ public final class BucketIamConfigurationResponse {
         this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
     }
 
-/**
- * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
- */
     public BucketIamConfigurationBucketPolicyOnlyResponse getBucketPolicyOnly() {
         return this.bucketPolicyOnly;
     }
-/**
- * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
- */
     public String getPublicAccessPrevention() {
         return this.publicAccessPrevention;
     }
-/**
- * The bucket's uniform bucket-level access configuration.
- */
     public BucketIamConfigurationUniformBucketLevelAccessResponse getUniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }

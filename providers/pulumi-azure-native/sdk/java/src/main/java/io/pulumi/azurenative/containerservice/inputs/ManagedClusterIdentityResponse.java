@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity for the managed cluster.
- */
 public final class ManagedClusterIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterIdentityResponse Empty = new ManagedClusterIdentityResponse();
 
-    /**
-     * The principal id of the system assigned identity which is used by master components.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -29,9 +23,6 @@ public final class ManagedClusterIdentityResponse extends io.pulumi.resources.In
         return this.principalId;
     }
 
-    /**
-     * The tenant id of the system assigned identity which is used by master components.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -39,9 +30,6 @@ public final class ManagedClusterIdentityResponse extends io.pulumi.resources.In
         return this.tenantId;
     }
 
-    /**
-     * The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -49,9 +37,6 @@ public final class ManagedClusterIdentityResponse extends io.pulumi.resources.In
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAddress {
-/**
- * Returns the specified address resource.
- */
     public static CompletableFuture<GetAddressResult> invokeAsync(GetAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getAddress", TypeShape.of(GetAddressResult.class), args == null ? GetAddressArgs.Empty : args, Utilities.withVersion(options));
     }

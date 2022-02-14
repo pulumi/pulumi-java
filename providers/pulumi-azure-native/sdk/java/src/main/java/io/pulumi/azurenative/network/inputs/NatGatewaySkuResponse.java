@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU of nat gateway.
- */
 public final class NatGatewaySkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NatGatewaySkuResponse Empty = new NatGatewaySkuResponse();
 
-    /**
-     * Name of Nat Gateway SKU.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

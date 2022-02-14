@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The integration service environment access endpoint.
- */
 public final class IntegrationServiceEnvironmentAccessEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationServiceEnvironmentAccessEndpointResponse Empty = new IntegrationServiceEnvironmentAccessEndpointResponse();
 
-    /**
-     * The access endpoint type.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

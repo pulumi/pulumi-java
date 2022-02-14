@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PipelineTriggerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineTriggerPropertiesResponse Empty = new PipelineTriggerPropertiesResponse();
 
-    /**
-     * The source trigger properties of the pipeline.
-     */
     @InputImport(name="sourceTrigger")
     private final @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
 

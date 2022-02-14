@@ -15,34 +15,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WranglingDataFlowResponse {
-/**
- * List of tags that can be used for describing the data flow.
- */
     private final @Nullable List<Object> annotations;
-/**
- * The description of the data flow.
- */
     private final @Nullable String description;
-/**
- * Locale of the Power query mashup document.
- */
     private final @Nullable String documentLocale;
-/**
- * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
- */
     private final @Nullable DataFlowResponseFolder folder;
-/**
- * Power query mashup script.
- */
     private final @Nullable String script;
-/**
- * List of sources in Power Query.
- */
     private final @Nullable List<PowerQuerySourceResponse> sources;
-/**
- * Type of data flow.
-Expected value is 'WranglingDataFlow'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"annotations","description","documentLocale","folder","script","sources","type"})
@@ -63,46 +41,24 @@ Expected value is 'WranglingDataFlow'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * List of tags that can be used for describing the data flow.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * The description of the data flow.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Locale of the Power query mashup document.
- */
     public Optional<String> getDocumentLocale() {
         return Optional.ofNullable(this.documentLocale);
     }
-/**
- * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
- */
     public Optional<DataFlowResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
-/**
- * Power query mashup script.
- */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
-/**
- * List of sources in Power Query.
- */
     public List<PowerQuerySourceResponse> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
-/**
- * Type of data flow.
-Expected value is 'WranglingDataFlow'.
- */
     public String getType() {
         return this.type;
     }

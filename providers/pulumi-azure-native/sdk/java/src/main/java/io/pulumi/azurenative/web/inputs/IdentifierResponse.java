@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A domain specific resource identifier.
- */
 public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentifierResponse Empty = new IdentifierResponse();
 
-    /**
-     * Resource Id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -27,9 +21,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -37,9 +28,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
-    /**
-     * Resource Name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -47,9 +35,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -57,9 +42,6 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
-    /**
-     * String representation of the identity.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

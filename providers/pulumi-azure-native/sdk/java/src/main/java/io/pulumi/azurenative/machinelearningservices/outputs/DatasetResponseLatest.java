@@ -17,77 +17,23 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetResponseLatest {
-/**
- * User who created.
- */
     private final @Nullable UserInfoResponse createdBy;
-/**
- * The dataset creation time (UTC).
- */
     private final String createdTime;
-/**
- *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
- */
     private final @Nullable DatasetResponseDataPath dataPath;
-/**
- * Dataflow Json
- */
     private final String dataflow;
-/**
- * Dataset state
- */
     private final @Nullable DatasetStateResponse datasetDefinitionState;
-/**
- * Unique Dataset identifier.
- */
     private final String datasetId;
-/**
- * Description about the dataset.
- */
     private final String description;
-/**
- * eTag description
- */
     private final String etag;
-/**
- * Dataset FileType, specified by user.
- */
     private final String fileType;
-/**
- * The dataset last modified time (UTC).
- */
     private final String modifiedTime;
-/**
- * Summary of Definition changes.
- */
     private final String notes;
-/**
- * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
- */
     private final Boolean partitionFormatInPath;
-/**
- * Properties stores information like name of time series column for time series dataset.
- */
     private final @Nullable Map<String,Object> properties;
-/**
- * Indicates the saved dataset this definition is mapping to, populated on Get.
- */
     private final String savedDatasetId;
-/**
- * Tags associated with the dataset.
- */
     private final Map<String,String> tags;
-/**
- *  Telemetry information about the dataset including information like which service the dataset was created from.
- */
     private final Map<String,String> telemetryInfo;
-/**
- *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
- */
     private final Boolean useDescriptionTagsFromDefinition;
-/**
- * An identifier uniquely identifies a definition change.
- */
     private final String versionId;
 
     @OutputCustomType.Constructor({"createdBy","createdTime","dataPath","dataflow","datasetDefinitionState","datasetId","description","etag","fileType","modifiedTime","notes","partitionFormatInPath","properties","savedDatasetId","tags","telemetryInfo","useDescriptionTagsFromDefinition","versionId"})
@@ -130,111 +76,57 @@ public final class DatasetResponseLatest {
         this.versionId = Objects.requireNonNull(versionId);
     }
 
-/**
- * User who created.
- */
     public Optional<UserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
-/**
- * The dataset creation time (UTC).
- */
     public String getCreatedTime() {
         return this.createdTime;
     }
-/**
- *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
- */
     public Optional<DatasetResponseDataPath> getDataPath() {
         return Optional.ofNullable(this.dataPath);
     }
-/**
- * Dataflow Json
- */
     public String getDataflow() {
         return this.dataflow;
     }
-/**
- * Dataset state
- */
     public Optional<DatasetStateResponse> getDatasetDefinitionState() {
         return Optional.ofNullable(this.datasetDefinitionState);
     }
-/**
- * Unique Dataset identifier.
- */
     public String getDatasetId() {
         return this.datasetId;
     }
-/**
- * Description about the dataset.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * eTag description
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Dataset FileType, specified by user.
- */
     public String getFileType() {
         return this.fileType;
     }
-/**
- * The dataset last modified time (UTC).
- */
     public String getModifiedTime() {
         return this.modifiedTime;
     }
-/**
- * Summary of Definition changes.
- */
     public String getNotes() {
         return this.notes;
     }
-/**
- * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
- */
     public Boolean getPartitionFormatInPath() {
         return this.partitionFormatInPath;
     }
-/**
- * Properties stores information like name of time series column for time series dataset.
- */
     public Map<String,Object> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * Indicates the saved dataset this definition is mapping to, populated on Get.
- */
     public String getSavedDatasetId() {
         return this.savedDatasetId;
     }
-/**
- * Tags associated with the dataset.
- */
     public Map<String,String> getTags() {
         return this.tags;
     }
-/**
- *  Telemetry information about the dataset including information like which service the dataset was created from.
- */
     public Map<String,String> getTelemetryInfo() {
         return this.telemetryInfo;
     }
-/**
- *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
- */
     public Boolean getUseDescriptionTagsFromDefinition() {
         return this.useDescriptionTagsFromDefinition;
     }
-/**
- * An identifier uniquely identifies a definition change.
- */
     public String getVersionId() {
         return this.versionId;
     }

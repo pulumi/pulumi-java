@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucket {
-/**
- * Returns metadata for the specified bucket.
- */
     public static CompletableFuture<GetBucketResult> invokeAsync(GetBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucket", TypeShape.of(GetBucketResult.class), args == null ? GetBucketArgs.Empty : args, Utilities.withVersion(options));
     }

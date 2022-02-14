@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates the type of job details.
- */
     @EnumType
     public enum ClassDiscriminator {
-/**
- * Data Box orders.
- */
         DataBox("DataBox"),
-/**
- * Data Box Disk orders.
- */
         DataBoxDisk("DataBoxDisk"),
-/**
- * Data Box Heavy orders.
- */
         DataBoxHeavy("DataBoxHeavy");
 
         private final String value;

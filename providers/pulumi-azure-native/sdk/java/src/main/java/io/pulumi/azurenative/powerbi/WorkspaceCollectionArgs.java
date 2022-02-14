@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceCollectionArgs Empty = new WorkspaceCollectionArgs();
 
-    /**
-     * Azure location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Azure resource group
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,9 +30,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="sku")
     private final @Nullable Input<AzureSkuArgs> sku;
 
@@ -49,9 +37,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -59,9 +44,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Power BI Embedded Workspace Collection name
-     */
     @InputImport(name="workspaceCollectionName")
     private final @Nullable Input<String> workspaceCollectionName;
 

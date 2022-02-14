@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetwork {
-/**
- * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
- */
     public static CompletableFuture<GetSubnetworkResult> invokeAsync(GetSubnetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args == null ? GetSubnetworkArgs.Empty : args, Utilities.withVersion(options));
     }

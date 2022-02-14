@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Setting indicating whether the service has a managed identity associated with it.
- */
 public final class ServiceManagedIdentityResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceManagedIdentityResponseIdentity Empty = new ServiceManagedIdentityResponseIdentity();
 
-    /**
-     * Type of identity being specified, currently SystemAssigned and None are allowed.
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

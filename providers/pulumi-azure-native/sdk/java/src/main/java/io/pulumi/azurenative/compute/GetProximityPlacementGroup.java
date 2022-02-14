@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProximityPlacementGroup {
-/**
- * Specifies information about the proximity placement group.
-API Version: 2020-12-01.
- *
- * Specifies information about the proximity placement group.
- */
     public static CompletableFuture<GetProximityPlacementGroupResult> invokeAsync(GetProximityPlacementGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getProximityPlacementGroup", TypeShape.of(GetProximityPlacementGroupResult.class), args == null ? GetProximityPlacementGroupArgs.Empty : args, Utilities.withVersion(options));
     }

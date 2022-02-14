@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
 public final class LogConfigDataAccessOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogConfigDataAccessOptionsResponse Empty = new LogConfigDataAccessOptionsResponse();
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="logMode", required=true)
     private final String logMode;
 

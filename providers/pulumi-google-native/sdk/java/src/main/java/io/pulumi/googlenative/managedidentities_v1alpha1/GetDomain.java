@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * Gets details of a single Domain.
- */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1alpha1:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

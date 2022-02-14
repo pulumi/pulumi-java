@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChangeArgs Empty = new ChangeArgs();
 
-    /**
-     * Which ResourceRecordSets to add?
-     */
     @InputImport(name="additions")
     private final @Nullable Input<List<ResourceRecordSetArgs>> additions;
 
@@ -31,9 +25,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.additions == null ? Input.empty() : this.additions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="clientOperationId")
     private final @Nullable Input<String> clientOperationId;
 
@@ -41,9 +32,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
-    /**
-     * Which ResourceRecordSets to remove? Must match existing data exactly.
-     */
     @InputImport(name="deletions")
     private final @Nullable Input<List<ResourceRecordSetArgs>> deletions;
 
@@ -51,9 +39,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.deletions == null ? Input.empty() : this.deletions;
     }
 
-    /**
-     * Unique identifier for the resource; defined by the server (output only).
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -61,9 +46,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * If the DNS queries for the zone will be served.
-     */
     @InputImport(name="isServing")
     private final @Nullable Input<Boolean> isServing;
 
@@ -71,9 +53,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.isServing == null ? Input.empty() : this.isServing;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -81,9 +60,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="managedZone", required=true)
     private final Input<String> managedZone;
 
@@ -91,9 +67,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedZone;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -101,9 +74,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The time that this operation was started by the server (output only). This is in RFC3339 text format.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -111,9 +81,6 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
-     */
     @InputImport(name="status")
     private final @Nullable Input<ChangeStatus> status;
 

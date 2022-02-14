@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Storage type selected for this disk.
- */
     @EnumType
     public enum AzureDiskType {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium"),
-/**
- * 
- */
         StandardSSD("StandardSSD"),
-/**
- * 
- */
         StandardOrPremium("StandardOrPremium");
 
         private final String value;

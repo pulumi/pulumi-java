@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServicePerimeterArgs Empty = new GetServicePerimeterArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="accessPolicyId", required=true)
     private final String accessPolicyId;
 
@@ -25,9 +19,6 @@ public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArg
         return this.accessPolicyId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="servicePerimeterId", required=true)
     private final String servicePerimeterId;
 

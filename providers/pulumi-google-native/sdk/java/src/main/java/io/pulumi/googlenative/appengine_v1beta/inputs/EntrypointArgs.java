@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The entrypoint for the application.
- */
 public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntrypointArgs Empty = new EntrypointArgs();
 
-    /**
-     * The format should be a shell command that can be fed to bash -c.
-     */
     @InputImport(name="shell")
     private final @Nullable Input<String> shell;
 

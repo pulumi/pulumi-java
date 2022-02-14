@@ -11,18 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScriptSecureStringExecutionParameterResponse {
-/**
- * The parameter name
- */
     private final String name;
-/**
- * A secure value for the passed parameter, not to be stored in logs
- */
     private final @Nullable String secureValue;
-/**
- * The type of execution parameter
-Expected value is 'SecureValue'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"name","secureValue","type"})
@@ -35,22 +25,12 @@ Expected value is 'SecureValue'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The parameter name
- */
     public String getName() {
         return this.name;
     }
-/**
- * A secure value for the passed parameter, not to be stored in logs
- */
     public Optional<String> getSecureValue() {
         return Optional.ofNullable(this.secureValue);
     }
-/**
- * The type of execution parameter
-Expected value is 'SecureValue'.
- */
     public String getType() {
         return this.type;
     }

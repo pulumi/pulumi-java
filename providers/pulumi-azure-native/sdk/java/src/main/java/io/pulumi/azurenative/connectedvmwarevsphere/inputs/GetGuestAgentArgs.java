@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGuestAgentArgs Empty = new GetGuestAgentArgs();
 
-    /**
-     * Name of the GuestAgent.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the vm.
-     */
     @InputImport(name="virtualMachineName", required=true)
     private final String virtualMachineName;
 

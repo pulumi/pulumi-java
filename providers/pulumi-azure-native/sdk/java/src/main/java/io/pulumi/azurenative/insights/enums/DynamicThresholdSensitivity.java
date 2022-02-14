@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
- */
     @EnumType
     public enum DynamicThresholdSensitivity {
-/**
- * 
- */
         Low("Low"),
-/**
- * 
- */
         Medium("Medium"),
-/**
- * 
- */
         High("High");
 
         private final String value;

@@ -14,46 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPolicyAssignmentArtifactResult {
-/**
- * Artifacts which need to be deployed before the specified artifact.
- */
     private final @Nullable List<String> dependsOn;
-/**
- * Multi-line explain this resource.
- */
     private final @Nullable String description;
-/**
- * One-liner string explain this resource.
- */
     private final @Nullable String displayName;
-/**
- * String Id used to locate any resource on Azure.
- */
     private final String id;
-/**
- * Specifies the kind of blueprint artifact.
-Expected value is 'policyAssignment'.
- */
     private final String kind;
-/**
- * Name of this resource.
- */
     private final String name;
-/**
- * Parameter values for the policy definition.
- */
     private final Map<String,ParameterValueResponse> parameters;
-/**
- * Azure resource ID of the policy definition.
- */
     private final String policyDefinitionId;
-/**
- * Name of the resource group placeholder to which the policy will be assigned.
- */
     private final @Nullable String resourceGroup;
-/**
- * Type of this resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"dependsOn","description","displayName","id","kind","name","parameters","policyDefinitionId","resourceGroup","type"})
@@ -80,64 +49,33 @@ Expected value is 'policyAssignment'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Artifacts which need to be deployed before the specified artifact.
- */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Multi-line explain this resource.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * One-liner string explain this resource.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * String Id used to locate any resource on Azure.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Specifies the kind of blueprint artifact.
-Expected value is 'policyAssignment'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Name of this resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Parameter values for the policy definition.
- */
     public Map<String,ParameterValueResponse> getParameters() {
         return this.parameters;
     }
-/**
- * Azure resource ID of the policy definition.
- */
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
-/**
- * Name of the resource group placeholder to which the policy will be assigned.
- */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
-/**
- * Type of this resource.
- */
     public String getType() {
         return this.type;
     }

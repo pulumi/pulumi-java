@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Private link service connection details.
- */
 public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceConnectionArgs Empty = new PrivateLinkServiceConnectionArgs();
 
-    /**
-     * List of group IDs.
-     */
     @InputImport(name="groupIds")
     private final @Nullable Input<List<String>> groupIds;
 
@@ -28,9 +22,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.groupIds == null ? Input.empty() : this.groupIds;
     }
 
-    /**
-     * Private link service connection name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Request message.
-     */
     @InputImport(name="requestMessage")
     private final @Nullable Input<String> requestMessage;
 

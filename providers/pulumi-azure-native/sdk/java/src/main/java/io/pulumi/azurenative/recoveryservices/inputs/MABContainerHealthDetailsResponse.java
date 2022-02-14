@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * MAB workload-specific Health Details.
- */
 public final class MABContainerHealthDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MABContainerHealthDetailsResponse Empty = new MABContainerHealthDetailsResponse();
 
-    /**
-     * Health Code
-     */
     @InputImport(name="code")
     private final @Nullable Integer code;
 
@@ -29,9 +23,6 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
-    /**
-     * Health Message
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -39,9 +30,6 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Health Recommended Actions
-     */
     @InputImport(name="recommendations")
     private final @Nullable List<String> recommendations;
 
@@ -49,9 +37,6 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
         return this.recommendations == null ? List.of() : this.recommendations;
     }
 
-    /**
-     * Health Title
-     */
     @InputImport(name="title")
     private final @Nullable String title;
 

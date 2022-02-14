@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchemaRegistry {
-/**
- * Single item in List or Get Schema Group operation
-API Version: 2021-11-01.
- *
- * Single item in List or Get Schema Group operation
- */
     public static CompletableFuture<GetSchemaRegistryResult> invokeAsync(GetSchemaRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getSchemaRegistry", TypeShape.of(GetSchemaRegistryResult.class), args == null ? GetSchemaRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

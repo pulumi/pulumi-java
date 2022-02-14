@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Information of orphaned users on the SQL server database.
- */
 public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OrphanedUserInfoResponse Empty = new OrphanedUserInfoResponse();
 
-    /**
-     * Parent database of the user
-     */
     @InputImport(name="databaseName")
     private final @Nullable String databaseName;
 
@@ -27,9 +21,6 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
-    /**
-     * Name of the orphaned user
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -19,16 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a role on the cluster.
- */
 public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoleResponse Empty = new RoleResponse();
 
-    /**
-     * The autoscale configurations.
-     */
     @InputImport(name="autoscaleConfiguration")
     private final @Nullable AutoscaleResponse autoscaleConfiguration;
 
@@ -36,9 +30,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.autoscaleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.autoscaleConfiguration);
     }
 
-    /**
-     * The data disks groups for the role.
-     */
     @InputImport(name="dataDisksGroups")
     private final @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
 
@@ -46,9 +37,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataDisksGroups == null ? List.of() : this.dataDisksGroups;
     }
 
-    /**
-     * Indicates whether encrypt the data disks.
-     */
     @InputImport(name="encryptDataDisks")
     private final @Nullable Boolean encryptDataDisks;
 
@@ -56,9 +44,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.encryptDataDisks == null ? Optional.empty() : Optional.ofNullable(this.encryptDataDisks);
     }
 
-    /**
-     * The hardware profile.
-     */
     @InputImport(name="hardwareProfile")
     private final @Nullable HardwareProfileResponse hardwareProfile;
 
@@ -66,9 +51,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.hardwareProfile == null ? Optional.empty() : Optional.ofNullable(this.hardwareProfile);
     }
 
-    /**
-     * The minimum instance count of the cluster.
-     */
     @InputImport(name="minInstanceCount")
     private final @Nullable Integer minInstanceCount;
 
@@ -76,9 +58,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
     }
 
-    /**
-     * The name of the role.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -86,9 +65,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The operating system profile.
-     */
     @InputImport(name="osProfile")
     private final @Nullable OsProfileResponse osProfile;
 
@@ -96,9 +72,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
-    /**
-     * The list of script actions on the role.
-     */
     @InputImport(name="scriptActions")
     private final @Nullable List<ScriptActionResponse> scriptActions;
 
@@ -106,9 +79,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
 
-    /**
-     * The instance count of the cluster.
-     */
     @InputImport(name="targetInstanceCount")
     private final @Nullable Integer targetInstanceCount;
 
@@ -116,9 +86,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.targetInstanceCount);
     }
 
-    /**
-     * The name of the virtual machine group.
-     */
     @InputImport(name="vMGroupName")
     private final @Nullable String vMGroupName;
 
@@ -126,9 +93,6 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
         return this.vMGroupName == null ? Optional.empty() : Optional.ofNullable(this.vMGroupName);
     }
 
-    /**
-     * The virtual network profile.
-     */
     @InputImport(name="virtualNetworkProfile")
     private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 

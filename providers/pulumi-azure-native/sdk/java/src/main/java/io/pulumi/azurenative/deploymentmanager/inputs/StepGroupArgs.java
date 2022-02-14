@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties that define a Step group in a rollout.
- */
 public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StepGroupArgs Empty = new StepGroupArgs();
 
-    /**
-     * The list of step group names on which this step group depends on.
-     */
     @InputImport(name="dependsOnStepGroups")
     private final @Nullable Input<List<String>> dependsOnStepGroups;
 
@@ -29,9 +23,6 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.dependsOnStepGroups == null ? Input.empty() : this.dependsOnStepGroups;
     }
 
-    /**
-     * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
-     */
     @InputImport(name="deploymentTargetId", required=true)
     private final Input<String> deploymentTargetId;
 
@@ -39,9 +30,6 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentTargetId;
     }
 
-    /**
-     * The name of the step group.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -49,9 +37,6 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The list of steps to be run after deploying the target.
-     */
     @InputImport(name="postDeploymentSteps")
     private final @Nullable Input<List<PrePostStepArgs>> postDeploymentSteps;
 
@@ -59,9 +44,6 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.postDeploymentSteps == null ? Input.empty() : this.postDeploymentSteps;
     }
 
-    /**
-     * The list of steps to be run before deploying the target.
-     */
     @InputImport(name="preDeploymentSteps")
     private final @Nullable Input<List<PrePostStepArgs>> preDeploymentSteps;
 

@@ -13,54 +13,27 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Creates a GcpUserAccessBinding. If the client specifies a name, the server ignores it. Fails if a resource already exists with the same group_key. Completion of this long-running operation does not necessarily signify that the new binding is deployed onto all affected users, which may take more time.
- */
 @ResourceType(type="google-native:accesscontextmanager/v1:GcpUserAccessBinding")
 public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
-    /**
-     * Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-     */
     @OutputExport(name="accessLevels", type=List.class, parameters={String.class})
     private Output<List<String>> accessLevels;
 
-    /**
-     * @return Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
-     */
     public Output<List<String>> getAccessLevels() {
         return this.accessLevels;
     }
-    /**
-     * Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the [G Suite Directory API's Groups resource] (https://developers.google.com/admin-sdk/directory/v1/reference/groups#resource). If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-     */
     @OutputExport(name="groupKey", type=String.class, parameters={})
     private Output<String> groupKey;
 
-    /**
-     * @return Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the [G Suite Directory API's Groups resource] (https://developers.google.com/admin-sdk/directory/v1/reference/groups#resource). If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
-     */
     public Output<String> getGroupKey() {
         return this.groupKey;
     }
-    /**
-     * Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
-     */
     public Output<String> getName() {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public GcpUserAccessBinding(String name, GcpUserAccessBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:accesscontextmanager/v1:GcpUserAccessBinding", name, args == null ? GcpUserAccessBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,14 +49,6 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static GcpUserAccessBinding get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GcpUserAccessBinding(name, id, options);
     }

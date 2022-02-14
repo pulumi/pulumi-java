@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The enabled access level for Web Access over SSH.
- */
     @EnumType
     public enum ConnectionType {
-/**
- * 
- */
         Public("Public"),
-/**
- * 
- */
         Private("Private"),
-/**
- * 
- */
         None("None");
 
         private final String value;

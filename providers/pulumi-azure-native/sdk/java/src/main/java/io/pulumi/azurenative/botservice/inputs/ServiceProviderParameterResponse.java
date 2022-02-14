@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Extra Parameters specific to each Service Provider
- */
 public final class ServiceProviderParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceProviderParameterResponse Empty = new ServiceProviderParameterResponse();
 
-    /**
-     * Default Name for the Service Provider
-     */
     @InputImport(name="default", required=true)
     private final String $default;
 
@@ -26,9 +20,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
         return this.$default;
     }
 
-    /**
-     * Description of the Service Provider
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -36,9 +27,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
         return this.description;
     }
 
-    /**
-     * Display Name of the Service Provider
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -46,9 +34,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
         return this.displayName;
     }
 
-    /**
-     * Help Url for the  Service Provider
-     */
     @InputImport(name="helpUrl", required=true)
     private final String helpUrl;
 
@@ -56,9 +41,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
         return this.helpUrl;
     }
 
-    /**
-     * Meta data for the Service Provider
-     */
     @InputImport(name="metadata", required=true)
     private final ServiceProviderParameterResponseMetadata metadata;
 
@@ -66,9 +48,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
         return this.metadata;
     }
 
-    /**
-     * Name of the Service Provider
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -76,9 +55,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
         return this.name;
     }
 
-    /**
-     * Type of the Service Provider
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

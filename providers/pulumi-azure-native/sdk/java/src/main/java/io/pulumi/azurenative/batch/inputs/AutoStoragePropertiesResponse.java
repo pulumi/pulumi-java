@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Contains information about the auto-storage account associated with a Batch account.
- */
 public final class AutoStoragePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoStoragePropertiesResponse Empty = new AutoStoragePropertiesResponse();
 
-    /**
-     * The UTC time at which storage keys were last synchronized with the Batch account.
-     */
     @InputImport(name="lastKeySync", required=true)
     private final String lastKeySync;
 
@@ -25,9 +19,6 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
         return this.lastKeySync;
     }
 
-    /**
-     * The resource ID of the storage account to be used for auto-storage account.
-     */
     @InputImport(name="storageAccountId", required=true)
     private final String storageAccountId;
 

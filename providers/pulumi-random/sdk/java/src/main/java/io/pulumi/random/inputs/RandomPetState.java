@@ -13,17 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomPetState Empty = new RandomPetState();
 
-    /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -31,10 +24,6 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
-    /**
-     * The length (in words) of the pet name.
-
-     */
     @InputImport(name="length")
     private final @Nullable Input<Integer> length;
 
@@ -42,10 +31,6 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
         return this.length == null ? Input.empty() : this.length;
     }
 
-    /**
-     * A string to prefix the name with.
-
-     */
     @InputImport(name="prefix")
     private final @Nullable Input<String> prefix;
 
@@ -53,10 +38,6 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
-    /**
-     * The character to separate words in the pet name.
-
-     */
     @InputImport(name="separator")
     private final @Nullable Input<String> separator;
 

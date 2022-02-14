@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The sku deployment mode.
- */
     @EnumType
     public enum SkuDeploymentMode {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Azure("Azure"),
-/**
- * 
- */
         PrivateEdgeZone("PrivateEdgeZone");
 
         private final String value;

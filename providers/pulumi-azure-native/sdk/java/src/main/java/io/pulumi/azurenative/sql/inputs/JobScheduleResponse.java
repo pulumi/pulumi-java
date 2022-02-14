@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Scheduling properties of a job.
- */
 public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobScheduleResponse Empty = new JobScheduleResponse();
 
-    /**
-     * Whether or not the schedule is enabled.
-     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -28,9 +22,6 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    /**
-     * Schedule end time.
-     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -38,9 +29,6 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
-    /**
-     * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
-     */
     @InputImport(name="interval")
     private final @Nullable String interval;
 
@@ -48,9 +36,6 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
-    /**
-     * Schedule start time.
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -58,9 +43,6 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
-    /**
-     * Schedule interval type
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

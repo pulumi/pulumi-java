@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermission {
-/**
- * The list of invoice section properties with create subscription permission.
-API Version: 2020-05-01.
- *
- * The list of invoice section properties with create subscription permission.
- */
     public static CompletableFuture<ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult> invokeAsync(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:listBillingAccountInvoiceSectionsByCreateSubscriptionPermission", TypeShape.of(ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult.class), args == null ? ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs.Empty : args, Utilities.withVersion(options));
     }

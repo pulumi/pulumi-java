@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The dashboard's part position.
- */
 public final class DashboardPartsResponsePosition extends io.pulumi.resources.InvokeArgs {
 
     public static final DashboardPartsResponsePosition Empty = new DashboardPartsResponsePosition();
 
-    /**
-     * The dashboard's part column span.
-     */
     @InputImport(name="colSpan", required=true)
     private final Integer colSpan;
 
@@ -30,9 +24,6 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
         return this.colSpan;
     }
 
-    /**
-     * The dashboard part's metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Map<String,Object> metadata;
 
@@ -40,9 +31,6 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
-    /**
-     * The dashboard's part row span.
-     */
     @InputImport(name="rowSpan", required=true)
     private final Integer rowSpan;
 
@@ -50,9 +38,6 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
         return this.rowSpan;
     }
 
-    /**
-     * The dashboard's part x coordinate.
-     */
     @InputImport(name="x", required=true)
     private final Integer x;
 
@@ -60,9 +45,6 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
         return this.x;
     }
 
-    /**
-     * The dashboard's part y coordinate.
-     */
     @InputImport(name="y", required=true)
     private final Integer y;
 

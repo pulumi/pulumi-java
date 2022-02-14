@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListStaticSiteBuildFunctionAppSettingsArgs Empty = new ListStaticSiteBuildFunctionAppSettingsArgs();
 
-    /**
-     * The stage site identifier.
-     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -25,9 +19,6 @@ public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.
         return this.environmentName;
     }
 
-    /**
-     * Name of the static site.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

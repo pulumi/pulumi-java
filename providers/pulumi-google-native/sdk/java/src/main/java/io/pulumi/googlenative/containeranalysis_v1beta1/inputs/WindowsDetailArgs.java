@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsDetailArgs Empty = new WindowsDetailArgs();
 
-    /**
-     * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
-     */
     @InputImport(name="cpeUri", required=true)
     private final Input<String> cpeUri;
 
@@ -29,9 +23,6 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.cpeUri;
     }
 
-    /**
-     * The description of the vulnerability.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed kb's presence is considered a fix.
-     */
     @InputImport(name="fixingKbs", required=true)
     private final Input<List<KnowledgeBaseArgs>> fixingKbs;
 
@@ -49,9 +37,6 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixingKbs;
     }
 
-    /**
-     * The name of the vulnerability.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

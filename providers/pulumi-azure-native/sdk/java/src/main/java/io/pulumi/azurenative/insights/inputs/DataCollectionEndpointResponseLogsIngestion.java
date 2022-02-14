@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The endpoint used by clients to ingest logs.
- */
 public final class DataCollectionEndpointResponseLogsIngestion extends io.pulumi.resources.InvokeArgs {
 
     public static final DataCollectionEndpointResponseLogsIngestion Empty = new DataCollectionEndpointResponseLogsIngestion();
 
-    /**
-     * The endpoint. This property is READ-ONLY.
-     */
     @InputImport(name="endpoint", required=true)
     private final String endpoint;
 

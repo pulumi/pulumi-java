@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Overlay configuration.
- */
 public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OverlayResponse Empty = new OverlayResponse();
 
-    /**
-     * List of Animations. The list should be chronological, without any time overlap.
-     */
     @InputImport(name="animations", required=true)
     private final List<AnimationResponse> animations;
 
@@ -27,9 +21,6 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
         return this.animations;
     }
 
-    /**
-     * Image overlay.
-     */
     @InputImport(name="image", required=true)
     private final ImageResponse image;
 

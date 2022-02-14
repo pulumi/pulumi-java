@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of Actions.
- */
     @EnumType
     public enum WebApplicationFirewallAction {
-/**
- * 
- */
         Allow("Allow"),
-/**
- * 
- */
         Block("Block"),
-/**
- * 
- */
         Log("Log");
 
         private final String value;

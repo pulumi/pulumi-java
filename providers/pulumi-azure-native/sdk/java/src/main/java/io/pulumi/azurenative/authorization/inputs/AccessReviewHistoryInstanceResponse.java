@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Access Review History Definition Instance.
- */
 public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessReviewHistoryInstanceResponse Empty = new AccessReviewHistoryInstanceResponse();
 
-    /**
-     * The display name for the parent history definition.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -27,9 +21,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the 'se' parameter in the generated uri.
-     */
     @InputImport(name="downloadUri", required=true)
     private final String downloadUri;
 
@@ -37,9 +28,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.downloadUri;
     }
 
-    /**
-     * Date time when history data report expires and the associated data is deleted.
-     */
     @InputImport(name="expiration")
     private final @Nullable String expiration;
 
@@ -47,9 +35,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.expiration == null ? Optional.empty() : Optional.ofNullable(this.expiration);
     }
 
-    /**
-     * Date time when the history data report is scheduled to be generated.
-     */
     @InputImport(name="fulfilledDateTime")
     private final @Nullable String fulfilledDateTime;
 
@@ -57,9 +42,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.fulfilledDateTime == null ? Optional.empty() : Optional.ofNullable(this.fulfilledDateTime);
     }
 
-    /**
-     * The access review history definition instance id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -67,9 +49,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.id;
     }
 
-    /**
-     * The access review history definition instance unique id.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -77,9 +56,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.name;
     }
 
-    /**
-     * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-     */
     @InputImport(name="reviewHistoryPeriodEndDateTime")
     private final @Nullable String reviewHistoryPeriodEndDateTime;
 
@@ -87,9 +63,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.reviewHistoryPeriodEndDateTime == null ? Optional.empty() : Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
 
-    /**
-     * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-     */
     @InputImport(name="reviewHistoryPeriodStartDateTime")
     private final @Nullable String reviewHistoryPeriodStartDateTime;
 
@@ -97,9 +70,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.reviewHistoryPeriodStartDateTime == null ? Optional.empty() : Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
 
-    /**
-     * Date time when the history data report is scheduled to be generated.
-     */
     @InputImport(name="runDateTime")
     private final @Nullable String runDateTime;
 
@@ -107,9 +77,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.runDateTime == null ? Optional.empty() : Optional.ofNullable(this.runDateTime);
     }
 
-    /**
-     * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -> InProgress -> Done -> Expired
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -117,9 +84,6 @@ public final class AccessReviewHistoryInstanceResponse extends io.pulumi.resourc
         return this.status;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

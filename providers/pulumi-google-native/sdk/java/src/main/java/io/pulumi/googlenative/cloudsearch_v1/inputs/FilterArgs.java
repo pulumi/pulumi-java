@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A generic way of expressing filters in a query, which supports two approaches: **1. Setting a ValueFilter.** The name must match an operator_name defined in the schema for your data source. **2. Setting a CompositeFilter.** The filters are evaluated using the logical operator. The top-level operators can only be either an AND or a NOT. AND can appear only at the top-most level. OR can appear only under a top-level AND.
- */
 public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FilterArgs Empty = new FilterArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="compositeFilter")
     private final @Nullable Input<CompositeFilterArgs> compositeFilter;
 
@@ -28,9 +22,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.compositeFilter == null ? Input.empty() : this.compositeFilter;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="valueFilter")
     private final @Nullable Input<ValueFilterArgs> valueFilter;
 

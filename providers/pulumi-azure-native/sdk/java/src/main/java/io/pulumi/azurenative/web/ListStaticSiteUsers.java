@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStaticSiteUsers {
-/**
- * Collection of static site custom users.
-API Version: 2020-12-01.
- *
- * Collection of static site custom users.
- */
     public static CompletableFuture<ListStaticSiteUsersResult> invokeAsync(ListStaticSiteUsersArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteUsers", TypeShape.of(ListStaticSiteUsersResult.class), args == null ? ListStaticSiteUsersArgs.Empty : args, Utilities.withVersion(options));
     }

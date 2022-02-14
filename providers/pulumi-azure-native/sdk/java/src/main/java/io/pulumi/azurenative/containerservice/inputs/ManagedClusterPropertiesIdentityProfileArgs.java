@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterPropertiesIdentityProfileArgs Empty = new ManagedClusterPropertiesIdentityProfileArgs();
 
-    /**
-     * The client id of the user assigned identity.
-     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -27,9 +21,6 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
-    /**
-     * The object id of the user assigned identity.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 
@@ -37,9 +28,6 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
         return this.objectId == null ? Input.empty() : this.objectId;
     }
 
-    /**
-     * The resource id of the user assigned identity.
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

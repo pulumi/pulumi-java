@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The write behavior for the operation. Default is 'Insert'.
- */
     @EnumType
     public enum SapCloudForCustomerSinkWriteBehavior {
-/**
- * 
- */
         Insert("Insert"),
-/**
- * 
- */
         Update("Update");
 
         private final String value;

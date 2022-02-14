@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListKustoPoolLanguageExtensions {
-/**
- * The list of language extension objects.
-API Version: 2021-06-01-preview.
- *
- * The list of language extension objects.
- */
     public static CompletableFuture<ListKustoPoolLanguageExtensionsResult> invokeAsync(ListKustoPoolLanguageExtensionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolLanguageExtensions", TypeShape.of(ListKustoPoolLanguageExtensionsResult.class), args == null ? ListKustoPoolLanguageExtensionsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Status information about a virtual machine.
- */
 public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeVmInstanceViewStatusResponse Empty = new ComputeVmInstanceViewStatusResponse();
 
-    /**
-     * Gets the status Code.
-     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -27,9 +21,6 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
-    /**
-     * Gets the short localizable label for the status.
-     */
     @InputImport(name="displayStatus")
     private final @Nullable String displayStatus;
 
@@ -37,9 +28,6 @@ public final class ComputeVmInstanceViewStatusResponse extends io.pulumi.resourc
         return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
     }
 
-    /**
-     * Gets the message associated with the status.
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A message representing a rule in the phrase matcher.
- */
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse Empty = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse();
 
-    /**
-     * A list of phase match rules that are included in this group.
-     */
     @InputImport(name="phraseMatchRules", required=true)
     private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
         return this.phraseMatchRules;
     }
 
-    /**
-     * The type of this phrase match rule group.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

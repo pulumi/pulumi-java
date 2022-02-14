@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes an image source that is an image version in a shared image gallery.
- */
 public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateSharedImageVersionSourceArgs Empty = new ImageTemplateSharedImageVersionSourceArgs();
 
-    /**
-     * ARM resource id of the image version in the shared image gallery
-     */
     @InputImport(name="imageVersionId", required=true)
     private final Input<String> imageVersionId;
 
@@ -26,10 +20,6 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
         return this.imageVersionId;
     }
 
-    /**
-     * Specifies the type of source image you want to start with.
-Expected value is 'SharedImageVersion'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

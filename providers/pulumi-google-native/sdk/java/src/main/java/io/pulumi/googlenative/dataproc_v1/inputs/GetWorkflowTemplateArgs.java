@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetWorkflowTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkflowTemplateArgs Empty = new GetWorkflowTemplateArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -27,9 +21,6 @@ public final class GetWorkflowTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetWorkflowTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="version")
     private final @Nullable String version;
 
@@ -47,9 +35,6 @@ public final class GetWorkflowTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="workflowTemplateId", required=true)
     private final String workflowTemplateId;
 

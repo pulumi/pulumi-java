@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetReferenceResponse Empty = new DatasetReferenceResponse();
 
-    /**
-     * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -25,9 +19,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
         return this.datasetId;
     }
 
-    /**
-     * [Optional] The ID of the project containing this dataset.
-     */
     @InputImport(name="project", required=true)
     private final String project;
 

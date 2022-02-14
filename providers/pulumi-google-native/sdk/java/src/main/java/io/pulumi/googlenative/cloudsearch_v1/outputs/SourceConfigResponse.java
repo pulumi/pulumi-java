@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceConfigResponse {
-/**
- * The crowding configuration for the source.
- */
     private final SourceCrowdingConfigResponse crowdingConfig;
-/**
- * The scoring configuration for the source.
- */
     private final SourceScoringConfigResponse scoringConfig;
-/**
- * The source for which this configuration is to be used.
- */
     private final SourceResponse source;
 
     @OutputCustomType.Constructor({"crowdingConfig","scoringConfig","source"})
@@ -34,21 +25,12 @@ public final class SourceConfigResponse {
         this.source = Objects.requireNonNull(source);
     }
 
-/**
- * The crowding configuration for the source.
- */
     public SourceCrowdingConfigResponse getCrowdingConfig() {
         return this.crowdingConfig;
     }
-/**
- * The scoring configuration for the source.
- */
     public SourceScoringConfigResponse getScoringConfig() {
         return this.scoringConfig;
     }
-/**
- * The source for which this configuration is to be used.
- */
     public SourceResponse getSource() {
         return this.source;
     }

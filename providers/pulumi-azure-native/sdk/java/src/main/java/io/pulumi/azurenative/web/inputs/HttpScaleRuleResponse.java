@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App container Custom scaling rule.
- */
 public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpScaleRuleResponse Empty = new HttpScaleRuleResponse();
 
-    /**
-     * Authentication secrets for the custom scale rule.
-     */
     @InputImport(name="auth")
     private final @Nullable List<ScaleRuleAuthResponse> auth;
 
@@ -30,9 +24,6 @@ public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs 
         return this.auth == null ? List.of() : this.auth;
     }
 
-    /**
-     * Metadata properties to describe http scale rule.
-     */
     @InputImport(name="metadata")
     private final @Nullable Map<String,String> metadata;
 

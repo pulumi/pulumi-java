@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitNetworkAccessPortRuleArgs Empty = new JitNetworkAccessPortRuleArgs();
 
-    /**
-     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
-     */
     @InputImport(name="allowedSourceAddressPrefix")
     private final @Nullable Input<String> allowedSourceAddressPrefix;
 
@@ -31,9 +25,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
         return this.allowedSourceAddressPrefix == null ? Input.empty() : this.allowedSourceAddressPrefix;
     }
 
-    /**
-     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
-     */
     @InputImport(name="allowedSourceAddressPrefixes")
     private final @Nullable Input<List<String>> allowedSourceAddressPrefixes;
 
@@ -41,9 +32,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
         return this.allowedSourceAddressPrefixes == null ? Input.empty() : this.allowedSourceAddressPrefixes;
     }
 
-    /**
-     * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
-     */
     @InputImport(name="maxRequestAccessDuration", required=true)
     private final Input<String> maxRequestAccessDuration;
 
@@ -51,9 +39,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
         return this.maxRequestAccessDuration;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="number", required=true)
     private final Input<Integer> number;
 
@@ -61,9 +46,6 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
         return this.number;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,Protocol>> protocol;
 

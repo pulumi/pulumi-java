@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScriptStackFrameResponse Empty = new ScriptStackFrameResponse();
 
-    /**
-     * One-based end column.
-     */
     @InputImport(name="endColumn", required=true)
     private final Integer endColumn;
 
@@ -26,9 +20,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
         return this.endColumn;
     }
 
-    /**
-     * One-based end line.
-     */
     @InputImport(name="endLine", required=true)
     private final Integer endLine;
 
@@ -36,9 +27,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
         return this.endLine;
     }
 
-    /**
-     * Name of the active procedure, empty if in a top-level script.
-     */
     @InputImport(name="procedureId", required=true)
     private final String procedureId;
 
@@ -46,9 +34,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
         return this.procedureId;
     }
 
-    /**
-     * One-based start column.
-     */
     @InputImport(name="startColumn", required=true)
     private final Integer startColumn;
 
@@ -56,9 +41,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
         return this.startColumn;
     }
 
-    /**
-     * One-based start line.
-     */
     @InputImport(name="startLine", required=true)
     private final Integer startLine;
 
@@ -66,9 +48,6 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
         return this.startLine;
     }
 
-    /**
-     * Text of the current statement/expression.
-     */
     @InputImport(name="text", required=true)
     private final String text;
 

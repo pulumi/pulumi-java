@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OverrideArgs Empty = new OverrideArgs();
 
-    /**
-     * ID of the API proxy that will have its trace configuration overridden.
-     */
     @InputImport(name="apiProxy")
     private final @Nullable Input<String> apiProxy;
 
@@ -28,9 +22,6 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiProxy == null ? Input.empty() : this.apiProxy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -38,9 +29,6 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
-    /**
-     * ID of the trace configuration override specified as a system-generated UUID.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -58,9 +43,6 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * Trace configuration to override.
-     */
     @InputImport(name="samplingConfig")
     private final @Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 

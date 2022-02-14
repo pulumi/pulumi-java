@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -28,9 +22,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * Gets or sets the base64 encoded value of the certificate.
-     */
     @InputImport(name="base64Value", required=true)
     private final Input<String> base64Value;
 
@@ -38,9 +29,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.base64Value;
     }
 
-    /**
-     * The parameters supplied to the create or update certificate operation.
-     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -48,9 +36,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
-    /**
-     * Gets or sets the description of the certificate.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -58,9 +43,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Gets or sets the is exportable flag of the certificate.
-     */
     @InputImport(name="isExportable")
     private final @Nullable Input<Boolean> isExportable;
 
@@ -68,9 +50,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.isExportable == null ? Input.empty() : this.isExportable;
     }
 
-    /**
-     * Gets or sets the name of the certificate.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -78,9 +57,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -88,9 +64,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Gets or sets the thumbprint of the certificate.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 

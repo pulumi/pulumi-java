@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a set of certificates which are all in the same Key Vault.
- */
 public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VaultSecretGroupResponse Empty = new VaultSecretGroupResponse();
 
-    /**
-     * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
-     */
     @InputImport(name="sourceVault")
     private final @Nullable SubResourceResponse sourceVault;
 
@@ -29,9 +23,6 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
     }
 
-    /**
-     * The list of key vault references in SourceVault which contain certificates.
-     */
     @InputImport(name="vaultCertificates")
     private final @Nullable List<VaultCertificateResponse> vaultCertificates;
 

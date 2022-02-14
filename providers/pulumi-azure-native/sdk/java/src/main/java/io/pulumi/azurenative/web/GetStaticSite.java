@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticSite {
-/**
- * Static Site ARM resource.
-API Version: 2020-12-01.
- *
- * Static Site ARM resource.
- */
     public static CompletableFuture<GetStaticSiteResult> invokeAsync(GetStaticSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSite", TypeShape.of(GetStaticSiteResult.class), args == null ? GetStaticSiteArgs.Empty : args, Utilities.withVersion(options));
     }

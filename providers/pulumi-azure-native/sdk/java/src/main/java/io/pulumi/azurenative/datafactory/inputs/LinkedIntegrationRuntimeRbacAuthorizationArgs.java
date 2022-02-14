@@ -11,17 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The role based access control (RBAC) authorization type integration runtime.
- */
 public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedIntegrationRuntimeRbacAuthorizationArgs Empty = new LinkedIntegrationRuntimeRbacAuthorizationArgs();
 
-    /**
-     * The authorization type for integration runtime sharing.
-Expected value is 'RBAC'.
-     */
     @InputImport(name="authorizationType", required=true)
     private final Input<String> authorizationType;
 
@@ -29,9 +22,6 @@ Expected value is 'RBAC'.
         return this.authorizationType;
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable Input<CredentialReferenceArgs> credential;
 
@@ -39,9 +29,6 @@ Expected value is 'RBAC'.
         return this.credential == null ? Input.empty() : this.credential;
     }
 
-    /**
-     * The resource identifier of the integration runtime to be shared.
-     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 

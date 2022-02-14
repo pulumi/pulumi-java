@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines a managed rule group override setting.
- */
 public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontDoorManagedRuleOverrideResponse Empty = new FrontDoorManagedRuleOverrideResponse();
 
-    /**
-     * Describes the override action to be applied when rule matches.
-     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -29,9 +23,6 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
-    /**
-     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
-     */
     @InputImport(name="enabledState")
     private final @Nullable String enabledState;
 
@@ -39,9 +30,6 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
-    /**
-     * Describes the exclusions that are applied to this specific rule.
-     */
     @InputImport(name="exclusions")
     private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
@@ -49,9 +37,6 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
         return this.exclusions == null ? List.of() : this.exclusions;
     }
 
-    /**
-     * Identifier for the managed rule.
-     */
     @InputImport(name="ruleId", required=true)
     private final String ruleId;
 

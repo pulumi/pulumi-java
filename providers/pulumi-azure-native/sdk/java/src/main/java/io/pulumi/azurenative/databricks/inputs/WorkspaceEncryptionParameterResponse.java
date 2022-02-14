@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The object that contains details of encryption used on the workspace.
- */
 public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceEncryptionParameterResponse Empty = new WorkspaceEncryptionParameterResponse();
 
-    /**
-     * The type of variable that this is
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -28,9 +22,6 @@ public final class WorkspaceEncryptionParameterResponse extends io.pulumi.resour
         return this.type;
     }
 
-    /**
-     * The value which should be used for this field.
-     */
     @InputImport(name="value")
     private final @Nullable EncryptionResponse value;
 

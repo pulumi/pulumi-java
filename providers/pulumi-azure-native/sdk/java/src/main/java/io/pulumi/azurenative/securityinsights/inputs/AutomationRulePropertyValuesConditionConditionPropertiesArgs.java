@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration of the automation rule condition
- */
 public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRulePropertyValuesConditionConditionPropertiesArgs Empty = new AutomationRulePropertyValuesConditionConditionPropertiesArgs();
 
-    /**
-     * The operator to use for evaluation the condition
-     */
     @InputImport(name="operator")
     private final @Nullable Input<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator;
 
@@ -31,9 +25,6 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
         return this.operator == null ? Input.empty() : this.operator;
     }
 
-    /**
-     * The property to evaluate
-     */
     @InputImport(name="propertyName")
     private final @Nullable Input<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName;
 
@@ -41,9 +32,6 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
         return this.propertyName == null ? Input.empty() : this.propertyName;
     }
 
-    /**
-     * The values to use for evaluating the condition
-     */
     @InputImport(name="propertyValues")
     private final @Nullable Input<List<String>> propertyValues;
 

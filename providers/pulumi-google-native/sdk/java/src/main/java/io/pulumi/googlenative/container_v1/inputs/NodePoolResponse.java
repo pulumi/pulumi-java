@@ -17,16 +17,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * NodePool contains the name and configuration for a cluster's node pool. Node pools are a set of nodes (i.e. VM's), with a common configuration and specification, under the control of the cluster master. They may have a set of Kubernetes labels applied to them, which may be used to reference them during pod scheduling. They may also be resized up or down, to accommodate the workload.
- */
 public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodePoolResponse Empty = new NodePoolResponse();
 
-    /**
-     * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
-     */
     @InputImport(name="autoscaling", required=true)
     private final NodePoolAutoscalingResponse autoscaling;
 
@@ -34,9 +28,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.autoscaling;
     }
 
-    /**
-     * Which conditions caused the current node pool state.
-     */
     @InputImport(name="conditions", required=true)
     private final List<StatusConditionResponse> conditions;
 
@@ -44,9 +35,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.conditions;
     }
 
-    /**
-     * The node configuration of the pool.
-     */
     @InputImport(name="config", required=true)
     private final NodeConfigResponse config;
 
@@ -54,9 +42,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.config;
     }
 
-    /**
-     * The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
-     */
     @InputImport(name="initialNodeCount", required=true)
     private final Integer initialNodeCount;
 
@@ -64,9 +49,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.initialNodeCount;
     }
 
-    /**
-     * [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
-     */
     @InputImport(name="instanceGroupUrls", required=true)
     private final List<String> instanceGroupUrls;
 
@@ -74,9 +56,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.instanceGroupUrls;
     }
 
-    /**
-     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
-     */
     @InputImport(name="locations", required=true)
     private final List<String> locations;
 
@@ -84,9 +63,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.locations;
     }
 
-    /**
-     * NodeManagement configuration for this NodePool.
-     */
     @InputImport(name="management", required=true)
     private final NodeManagementResponse management;
 
@@ -94,9 +70,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.management;
     }
 
-    /**
-     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
-     */
     @InputImport(name="maxPodsConstraint", required=true)
     private final MaxPodsConstraintResponse maxPodsConstraint;
 
@@ -104,9 +77,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxPodsConstraint;
     }
 
-    /**
-     * The name of the node pool.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -114,9 +84,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
-     */
     @InputImport(name="networkConfig", required=true)
     private final NodeNetworkConfigResponse networkConfig;
 
@@ -124,9 +91,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.networkConfig;
     }
 
-    /**
-     * [Output only] The pod CIDR block size per node in this node pool.
-     */
     @InputImport(name="podIpv4CidrSize", required=true)
     private final Integer podIpv4CidrSize;
 
@@ -134,9 +98,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.podIpv4CidrSize;
     }
 
-    /**
-     * [Output only] Server-defined URL for the resource.
-     */
     @InputImport(name="selfLink", required=true)
     private final String selfLink;
 
@@ -144,9 +105,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.selfLink;
     }
 
-    /**
-     * [Output only] The status of the nodes in this pool instance.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -154,9 +112,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
-    /**
-     * Upgrade settings control disruption and speed of the upgrade.
-     */
     @InputImport(name="upgradeSettings", required=true)
     private final UpgradeSettingsResponse upgradeSettings;
 
@@ -164,9 +119,6 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.upgradeSettings;
     }
 
-    /**
-     * The version of the Kubernetes of this node.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

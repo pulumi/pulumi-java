@@ -14,17 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines a health policy used to evaluate the health of an application or one of its children entities.
-
- */
 public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArmApplicationHealthPolicyArgs Empty = new ArmApplicationHealthPolicyArgs();
 
-    /**
-     * Indicates whether warnings are treated with the same severity as errors.
-     */
     @InputImport(name="considerWarningAsError")
     private final @Nullable Input<Boolean> considerWarningAsError;
 
@@ -32,9 +25,6 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
         return this.considerWarningAsError == null ? Input.empty() : this.considerWarningAsError;
     }
 
-    /**
-     * The health policy used by default to evaluate the health of a service type.
-     */
     @InputImport(name="defaultServiceTypeHealthPolicy")
     private final @Nullable Input<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
@@ -42,13 +32,6 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
         return this.defaultServiceTypeHealthPolicy == null ? Input.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
-    /**
-     * The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
-The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
-This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
-The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
-
-     */
     @InputImport(name="maxPercentUnhealthyDeployedApplications")
     private final @Nullable Input<Integer> maxPercentUnhealthyDeployedApplications;
 
@@ -56,9 +39,6 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
         return this.maxPercentUnhealthyDeployedApplications == null ? Input.empty() : this.maxPercentUnhealthyDeployedApplications;
     }
 
-    /**
-     * The map with service type health policy per service type name. The map is empty by default.
-     */
     @InputImport(name="serviceTypeHealthPolicyMap")
     private final @Nullable Input<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap;
 

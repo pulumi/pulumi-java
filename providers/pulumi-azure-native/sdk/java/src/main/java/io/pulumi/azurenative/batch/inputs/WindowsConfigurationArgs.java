@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WindowsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsConfigurationArgs Empty = new WindowsConfigurationArgs();
 
-    /**
-     * If omitted, the default value is true.
-     */
     @InputImport(name="enableAutomaticUpdates")
     private final @Nullable Input<Boolean> enableAutomaticUpdates;
 

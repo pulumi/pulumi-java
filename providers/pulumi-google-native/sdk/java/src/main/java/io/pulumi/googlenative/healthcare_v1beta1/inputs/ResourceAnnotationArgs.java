@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Resource level annotation.
- */
 public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceAnnotationArgs Empty = new ResourceAnnotationArgs();
 
-    /**
-     * A description of the annotation record.
-     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 

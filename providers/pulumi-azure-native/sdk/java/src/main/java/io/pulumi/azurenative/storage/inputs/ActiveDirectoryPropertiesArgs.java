@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Settings properties for Active Directory (AD).
- */
 public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActiveDirectoryPropertiesArgs Empty = new ActiveDirectoryPropertiesArgs();
 
-    /**
-     * Specifies the security identifier (SID) for Azure Storage.
-     */
     @InputImport(name="azureStorageSid", required=true)
     private final Input<String> azureStorageSid;
 
@@ -26,9 +20,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
         return this.azureStorageSid;
     }
 
-    /**
-     * Specifies the domain GUID.
-     */
     @InputImport(name="domainGuid", required=true)
     private final Input<String> domainGuid;
 
@@ -36,9 +27,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
         return this.domainGuid;
     }
 
-    /**
-     * Specifies the primary domain that the AD DNS server is authoritative for.
-     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -46,9 +34,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
         return this.domainName;
     }
 
-    /**
-     * Specifies the security identifier (SID).
-     */
     @InputImport(name="domainSid", required=true)
     private final Input<String> domainSid;
 
@@ -56,9 +41,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
         return this.domainSid;
     }
 
-    /**
-     * Specifies the Active Directory forest to get.
-     */
     @InputImport(name="forestName", required=true)
     private final Input<String> forestName;
 
@@ -66,9 +48,6 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
         return this.forestName;
     }
 
-    /**
-     * Specifies the NetBIOS domain name.
-     */
     @InputImport(name="netBiosDomainName", required=true)
     private final Input<String> netBiosDomainName;
 

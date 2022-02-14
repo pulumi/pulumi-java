@@ -50,16 +50,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Switch cases with have a value and corresponding activities.
- */
 public final class SwitchCaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SwitchCaseResponse Empty = new SwitchCaseResponse();
 
-    /**
-     * List of activities to execute for satisfied case condition.
-     */
     @InputImport(name="activities")
     private final @Nullable List<Object> activities;
 
@@ -67,9 +61,6 @@ public final class SwitchCaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.activities == null ? List.of() : this.activities;
     }
 
-    /**
-     * Expected value that satisfies the expression result of the 'on' property.
-     */
     @InputImport(name="value")
     private final @Nullable String value;
 

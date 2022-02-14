@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRunbook {
-/**
- * Definition of the runbook type.
-API Version: 2019-06-01.
- *
- * Definition of the runbook type.
- */
     public static CompletableFuture<GetRunbookResult> invokeAsync(GetRunbookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getRunbook", TypeShape.of(GetRunbookResult.class), args == null ? GetRunbookArgs.Empty : args, Utilities.withVersion(options));
     }

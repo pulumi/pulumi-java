@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * A resource that manages a system package.
- */
 public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceArgs Empty = new OSPolicyResourcePackageResourceArgs();
 
-    /**
-     * A package managed by Apt.
-     */
     @InputImport(name="apt")
     private final @Nullable Input<OSPolicyResourcePackageResourceAPTArgs> apt;
 
@@ -34,9 +28,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.apt == null ? Input.empty() : this.apt;
     }
 
-    /**
-     * A deb package file.
-     */
     @InputImport(name="deb")
     private final @Nullable Input<OSPolicyResourcePackageResourceDebArgs> deb;
 
@@ -44,9 +35,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.deb == null ? Input.empty() : this.deb;
     }
 
-    /**
-     * The desired state the agent should maintain for this package.
-     */
     @InputImport(name="desiredState", required=true)
     private final Input<OSPolicyResourcePackageResourceDesiredState> desiredState;
 
@@ -54,9 +42,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.desiredState;
     }
 
-    /**
-     * A package managed by GooGet.
-     */
     @InputImport(name="googet")
     private final @Nullable Input<OSPolicyResourcePackageResourceGooGetArgs> googet;
 
@@ -64,9 +49,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.googet == null ? Input.empty() : this.googet;
     }
 
-    /**
-     * An MSI package.
-     */
     @InputImport(name="msi")
     private final @Nullable Input<OSPolicyResourcePackageResourceMSIArgs> msi;
 
@@ -74,9 +56,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.msi == null ? Input.empty() : this.msi;
     }
 
-    /**
-     * An rpm package file.
-     */
     @InputImport(name="rpm")
     private final @Nullable Input<OSPolicyResourcePackageResourceRPMArgs> rpm;
 
@@ -84,9 +63,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.rpm == null ? Input.empty() : this.rpm;
     }
 
-    /**
-     * A package managed by YUM.
-     */
     @InputImport(name="yum")
     private final @Nullable Input<OSPolicyResourcePackageResourceYUMArgs> yum;
 
@@ -94,9 +70,6 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
         return this.yum == null ? Input.empty() : this.yum;
     }
 
-    /**
-     * A package managed by Zypper.
-     */
     @InputImport(name="zypper")
     private final @Nullable Input<OSPolicyResourcePackageResourceZypperArgs> zypper;
 

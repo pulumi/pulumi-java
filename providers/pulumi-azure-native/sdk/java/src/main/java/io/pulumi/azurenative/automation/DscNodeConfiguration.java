@@ -17,349 +17,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Definition of the dsc node configuration.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create node configuration
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var dscNodeConfiguration = new AzureNative.Automation.DscNodeConfiguration("dscNodeConfiguration", new AzureNative.Automation.DscNodeConfigurationArgs
-        {
-            AutomationAccountName = "myAutomationAccount20",
-            Configuration = new AzureNative.Automation.Inputs.DscConfigurationAssociationPropertyArgs
-            {
-                Name = "configName",
-            },
-            IncrementNodeConfigurationBuild = true,
-            Name = "configName.nodeConfigName",
-            NodeConfigurationName = "configName.nodeConfigName",
-            ResourceGroupName = "rg",
-            Source = new AzureNative.Automation.Inputs.ContentSourceArgs
-            {
-                Hash = new AzureNative.Automation.Inputs.ContentHashArgs
-                {
-                    Algorithm = "sha256",
-                    Value = "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-                },
-                Type = "embeddedContent",
-                Value = @"
-instance of MSFT_RoleResource as $MSFT_RoleResource1ref
-{
-ResourceID = ""[WindowsFeature]IIS"";
- Ensure = ""Present"";
- SourceInfo = ""::3::32::WindowsFeature"";
- Name = ""Web-Server"";
- ModuleName = ""PsDesiredStateConfiguration"";
-
-ModuleVersion = ""1.0"";
- ConfigurationName = ""configName"";
-};
-instance of OMI_ConfigurationDocument
-
-                    {
- Version=""2.0.0"";
- 
-                        MinimumCompatibleVersion = ""1.0.0"";
- 
-                        CompatibleVersionAdditionalProperties= {""Omi_BaseResource:ConfigurationName""};
- 
-                        Author=""weijiel"";
- 
-                        GenerationDate=""03/30/2017 13:40:25"";
- 
-                        GenerationHost=""TEST-BACKEND"";
- 
-                        Name=""configName"";
-
-                    };
-",
-                Version = "1.0",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	"fmt"
-
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewDscNodeConfiguration(ctx, "dscNodeConfiguration", &automation.DscNodeConfigurationArgs{
-			AutomationAccountName: pulumi.String("myAutomationAccount20"),
-			Configuration: &automation.DscConfigurationAssociationPropertyArgs{
-				Name: pulumi.String("configName"),
-			},
-			IncrementNodeConfigurationBuild: pulumi.Bool(true),
-			Name:                            pulumi.String("configName.nodeConfigName"),
-			NodeConfigurationName:           pulumi.String("configName.nodeConfigName"),
-			ResourceGroupName:               pulumi.String("rg"),
-			Source: &automation.ContentSourceArgs{
-				Hash: &automation.ContentHashArgs{
-					Algorithm: pulumi.String("sha256"),
-					Value:     pulumi.String("6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5"),
-				},
-				Type: pulumi.String("embeddedContent"),
-				Value: pulumi.String(fmt.Sprintf("%v%v%v", "\ninstance of MSFT_RoleResource as ", "$", "MSFT_RoleResource1ref\n{\nResourceID = \"[WindowsFeature]IIS\";\n Ensure = \"Present\";\n SourceInfo = \"::3::32::WindowsFeature\";\n Name = \"Web-Server\";\n ModuleName = \"PsDesiredStateConfiguration\";\n\nModuleVersion = \"1.0\";\n ConfigurationName = \"configName\";\n};\ninstance of OMI_ConfigurationDocument\n\n                    {\n Version=\"2.0.0\";\n \n                        MinimumCompatibleVersion = \"1.0.0\";\n \n                        CompatibleVersionAdditionalProperties= {\"Omi_BaseResource:ConfigurationName\"};\n \n                        Author=\"weijiel\";\n \n                        GenerationDate=\"03/30/2017 13:40:25\";\n \n                        GenerationHost=\"TEST-BACKEND\";\n \n                        Name=\"configName\";\n\n                    };\n")),
-				Version: pulumi.String("1.0"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const dscNodeConfiguration = new azure_native.automation.DscNodeConfiguration("dscNodeConfiguration", {
-    automationAccountName: "myAutomationAccount20",
-    configuration: {
-        name: "configName",
-    },
-    incrementNodeConfigurationBuild: true,
-    name: "configName.nodeConfigName",
-    nodeConfigurationName: "configName.nodeConfigName",
-    resourceGroupName: "rg",
-    source: {
-        hash: {
-            algorithm: "sha256",
-            value: "6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-        },
-        type: "embeddedContent",
-        value: `
-instance of MSFT_RoleResource as $MSFT_RoleResource1ref
-{
-ResourceID = "[WindowsFeature]IIS";
- Ensure = "Present";
- SourceInfo = "::3::32::WindowsFeature";
- Name = "Web-Server";
- ModuleName = "PsDesiredStateConfiguration";
-
-ModuleVersion = "1.0";
- ConfigurationName = "configName";
-};
-instance of OMI_ConfigurationDocument
-
-                    {
- Version="2.0.0";
- 
-                        MinimumCompatibleVersion = "1.0.0";
- 
-                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
- 
-                        Author="weijiel";
- 
-                        GenerationDate="03/30/2017 13:40:25";
- 
-                        GenerationHost="TEST-BACKEND";
- 
-                        Name="configName";
-
-                    };
-`,
-        version: "1.0",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-dsc_node_configuration = azure_native.automation.DscNodeConfiguration("dscNodeConfiguration",
-    automation_account_name="myAutomationAccount20",
-    configuration=azure_native.automation.DscConfigurationAssociationPropertyArgs(
-        name="configName",
-    ),
-    increment_node_configuration_build=True,
-    name="configName.nodeConfigName",
-    node_configuration_name="configName.nodeConfigName",
-    resource_group_name="rg",
-    source=azure_native.automation.ContentSourceArgs(
-        hash=azure_native.automation.ContentHashArgs(
-            algorithm="sha256",
-            value="6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5",
-        ),
-        type="embeddedContent",
-        value="""
-instance of MSFT_RoleResource as $MSFT_RoleResource1ref
-{
-ResourceID = "[WindowsFeature]IIS";
- Ensure = "Present";
- SourceInfo = "::3::32::WindowsFeature";
- Name = "Web-Server";
- ModuleName = "PsDesiredStateConfiguration";
-
-ModuleVersion = "1.0";
- ConfigurationName = "configName";
-};
-instance of OMI_ConfigurationDocument
-
-                    {
- Version="2.0.0";
- 
-                        MinimumCompatibleVersion = "1.0.0";
- 
-                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
- 
-                        Author="weijiel";
- 
-                        GenerationDate="03/30/2017 13:40:25";
- 
-                        GenerationHost="TEST-BACKEND";
- 
-                        Name="configName";
-
-                    };
-""",
-        version="1.0",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:DscNodeConfiguration configName.nodeConfigName /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount20/nodeConfigurations/configName.nodeConfigName 
-```
-
- */
 @ResourceType(type="azure-native:automation:DscNodeConfiguration")
 public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
-    /**
-     * Gets or sets the configuration of the node.
-     */
     @OutputExport(name="configuration", type=DscConfigurationAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> configuration;
 
-    /**
-     * @return Gets or sets the configuration of the node.
-     */
     public Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> getConfiguration() {
         return this.configuration;
     }
-    /**
-     * Gets or sets creation time.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
-    /**
-     * @return Gets or sets creation time.
-     */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * If a new build version of NodeConfiguration is required.
-     */
     @OutputExport(name="incrementNodeConfigurationBuild", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> incrementNodeConfigurationBuild;
 
-    /**
-     * @return If a new build version of NodeConfiguration is required.
-     */
     public Output</* @Nullable */ Boolean> getIncrementNodeConfigurationBuild() {
         return this.incrementNodeConfigurationBuild;
     }
-    /**
-     * Gets or sets the last modified time.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
-    /**
-     * @return Gets or sets the last modified time.
-     */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Number of nodes with this node configuration assigned
-     */
     @OutputExport(name="nodeCount", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> nodeCount;
 
-    /**
-     * @return Number of nodes with this node configuration assigned
-     */
     public Output</* @Nullable */ Double> getNodeCount() {
         return this.nodeCount;
     }
-    /**
-     * Source of node configuration.
-     */
     @OutputExport(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
-    /**
-     * @return Source of node configuration.
-     */
     public Output</* @Nullable */ String> getSource() {
         return this.source;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DscNodeConfiguration(String name, DscNodeConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:DscNodeConfiguration", name, args == null ? DscNodeConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -381,14 +89,6 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DscNodeConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DscNodeConfiguration(name, id, options);
     }

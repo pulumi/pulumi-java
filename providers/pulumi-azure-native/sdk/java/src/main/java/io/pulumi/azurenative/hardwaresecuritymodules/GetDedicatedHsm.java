@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDedicatedHsm {
-/**
- * Resource information with extended details.
-API Version: 2018-10-31-preview.
- *
- * Resource information with extended details.
- */
     public static CompletableFuture<GetDedicatedHsmResult> invokeAsync(GetDedicatedHsmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hardwaresecuritymodules:getDedicatedHsm", TypeShape.of(GetDedicatedHsmResult.class), args == null ? GetDedicatedHsmArgs.Empty : args, Utilities.withVersion(options));
     }

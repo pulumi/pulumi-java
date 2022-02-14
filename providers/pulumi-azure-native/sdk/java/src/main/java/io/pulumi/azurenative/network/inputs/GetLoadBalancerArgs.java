@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLoadBalancerArgs Empty = new GetLoadBalancerArgs();
 
-    /**
-     * Expands referenced resources.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the load balancer.
-     */
     @InputImport(name="loadBalancerName", required=true)
     private final String loadBalancerName;
 
@@ -37,9 +28,6 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
         return this.loadBalancerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

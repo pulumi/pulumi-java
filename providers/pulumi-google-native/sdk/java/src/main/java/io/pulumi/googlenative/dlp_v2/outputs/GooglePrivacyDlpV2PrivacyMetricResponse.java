@@ -14,29 +14,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2PrivacyMetricResponse {
-/**
- * Categorical stats
- */
     private final GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
-/**
- * delta-presence
- */
     private final GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
-/**
- * K-anonymity
- */
     private final GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
-/**
- * k-map
- */
     private final GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
-/**
- * l-diversity
- */
     private final GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
-/**
- * Numerical stats
- */
     private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
     @OutputCustomType.Constructor({"categoricalStatsConfig","deltaPresenceEstimationConfig","kAnonymityConfig","kMapEstimationConfig","lDiversityConfig","numericalStatsConfig"})
@@ -55,39 +37,21 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
         this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
     }
 
-/**
- * Categorical stats
- */
     public GooglePrivacyDlpV2CategoricalStatsConfigResponse getCategoricalStatsConfig() {
         return this.categoricalStatsConfig;
     }
-/**
- * delta-presence
- */
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse getDeltaPresenceEstimationConfig() {
         return this.deltaPresenceEstimationConfig;
     }
-/**
- * K-anonymity
- */
     public GooglePrivacyDlpV2KAnonymityConfigResponse getKAnonymityConfig() {
         return this.kAnonymityConfig;
     }
-/**
- * k-map
- */
     public GooglePrivacyDlpV2KMapEstimationConfigResponse getKMapEstimationConfig() {
         return this.kMapEstimationConfig;
     }
-/**
- * l-diversity
- */
     public GooglePrivacyDlpV2LDiversityConfigResponse getLDiversityConfig() {
         return this.lDiversityConfig;
     }
-/**
- * Numerical stats
- */
     public GooglePrivacyDlpV2NumericalStatsConfigResponse getNumericalStatsConfig() {
         return this.numericalStatsConfig;
     }

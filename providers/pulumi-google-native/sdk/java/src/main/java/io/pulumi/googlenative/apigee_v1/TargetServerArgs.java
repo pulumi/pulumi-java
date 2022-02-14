@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetServerArgs Empty = new TargetServerArgs();
 
-    /**
-     * Optional. A human-readable description of this TargetServer.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,9 +25,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -41,9 +32,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
-    /**
-     * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
-     */
     @InputImport(name="host", required=true)
     private final Input<String> host;
 
@@ -51,9 +39,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.host;
     }
 
-    /**
-     * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
-     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -61,9 +46,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
-    /**
-     * The resource id of this target server. Values must match the regular expression 
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -71,9 +53,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -81,9 +60,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
-    /**
-     * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
-     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -91,9 +67,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.port;
     }
 
-    /**
-     * Immutable. The protocol used by this TargetServer.
-     */
     @InputImport(name="protocol")
     private final @Nullable Input<TargetServerProtocol> protocol;
 
@@ -101,9 +74,6 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
-    /**
-     * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
-     */
     @InputImport(name="sSLInfo")
     private final @Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 

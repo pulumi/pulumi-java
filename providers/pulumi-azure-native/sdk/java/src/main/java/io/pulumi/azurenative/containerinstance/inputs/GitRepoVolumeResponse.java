@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a volume that is populated with the contents of a git repository
- */
 public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GitRepoVolumeResponse Empty = new GitRepoVolumeResponse();
 
-    /**
-     * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
-     */
     @InputImport(name="directory")
     private final @Nullable String directory;
 
@@ -27,9 +21,6 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
         return this.directory == null ? Optional.empty() : Optional.ofNullable(this.directory);
     }
 
-    /**
-     * Repository URL
-     */
     @InputImport(name="repository", required=true)
     private final String repository;
 
@@ -37,9 +28,6 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
         return this.repository;
     }
 
-    /**
-     * Commit hash for the specified revision.
-     */
     @InputImport(name="revision")
     private final @Nullable String revision;
 

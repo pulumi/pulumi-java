@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The private IP address allocation method.
- */
     @EnumType
     public enum IPAllocationMethod {
-/**
- * 
- */
         Static("Static"),
-/**
- * 
- */
         Dynamic("Dynamic");
 
         private final String value;

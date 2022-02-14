@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureCredentialsResponse {
-/**
- * Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
- */
     private final String sasToken;
 
     @OutputCustomType.Constructor({"sasToken"})
@@ -19,9 +16,6 @@ public final class AzureCredentialsResponse {
         this.sasToken = Objects.requireNonNull(sasToken);
     }
 
-/**
- * Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
- */
     public String getSasToken() {
         return this.sasToken;
     }

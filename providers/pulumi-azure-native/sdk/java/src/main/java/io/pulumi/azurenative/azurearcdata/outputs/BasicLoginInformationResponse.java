@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BasicLoginInformationResponse {
-/**
- * Login username.
- */
     private final @Nullable String username;
 
     @OutputCustomType.Constructor({"username"})
@@ -21,9 +18,6 @@ public final class BasicLoginInformationResponse {
         this.username = username;
     }
 
-/**
- * Login username.
- */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationArgs Empty = new NotificationArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -29,9 +23,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucket;
     }
 
-    /**
-     * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
-     */
     @InputImport(name="customAttributes")
     private final @Nullable Input<Map<String,String>> customAttributes;
 
@@ -39,9 +30,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.customAttributes == null ? Input.empty() : this.customAttributes;
     }
 
-    /**
-     * HTTP 1.1 Entity tag for this subscription notification.
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -49,9 +37,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
-     */
     @InputImport(name="eventTypes")
     private final @Nullable Input<List<String>> eventTypes;
 
@@ -59,9 +44,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTypes == null ? Input.empty() : this.eventTypes;
     }
 
-    /**
-     * The ID of the notification.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -69,9 +51,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The kind of item this is. For notifications, this is always storage#notification.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -79,9 +58,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * If present, only apply this notification configuration to object names that begin with this prefix.
-     */
     @InputImport(name="objectNamePrefix")
     private final @Nullable Input<String> objectNamePrefix;
 
@@ -89,9 +65,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectNamePrefix == null ? Input.empty() : this.objectNamePrefix;
     }
 
-    /**
-     * The desired content of the Payload.
-     */
     @InputImport(name="payloadFormat")
     private final @Nullable Input<String> payloadFormat;
 
@@ -99,9 +72,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.payloadFormat == null ? Input.empty() : this.payloadFormat;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="provisionalUserProject")
     private final @Nullable Input<String> provisionalUserProject;
 
@@ -109,9 +79,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
     }
 
-    /**
-     * The canonical URL of this notification.
-     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -119,9 +86,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
-    /**
-     * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
-     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 
@@ -129,9 +93,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
         return this.topic == null ? Input.empty() : this.topic;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="userProject")
     private final @Nullable Input<String> userProject;
 

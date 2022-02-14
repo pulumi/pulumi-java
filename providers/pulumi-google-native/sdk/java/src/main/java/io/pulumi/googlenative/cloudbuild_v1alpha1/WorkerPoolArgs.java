@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkerPoolArgs Empty = new WorkerPoolArgs();
 
-    /**
-     * User-defined name of the `WorkerPool`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,9 +24,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The project ID of the GCP project for which the `WorkerPool` is created.
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -40,9 +31,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
-     */
     @InputImport(name="regions")
     private final @Nullable Input<List<WorkerPoolRegionsItem>> regions;
 
@@ -50,9 +38,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.regions == null ? Input.empty() : this.regions;
     }
 
-    /**
-     * Configuration to be used for a creating workers in the `WorkerPool`.
-     */
     @InputImport(name="workerConfig")
     private final @Nullable Input<WorkerConfigArgs> workerConfig;
 
@@ -60,9 +45,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
     }
 
-    /**
-     * Total number of workers to be created across all requested regions.
-     */
     @InputImport(name="workerCount")
     private final @Nullable Input<String> workerCount;
 

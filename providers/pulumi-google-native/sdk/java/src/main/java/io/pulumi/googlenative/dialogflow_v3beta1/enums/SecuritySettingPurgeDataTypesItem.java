@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum SecuritySettingPurgeDataTypesItem {
-/**
- * Unspecified. Do not use.
- */
         PurgeDataTypeUnspecified("PURGE_DATA_TYPE_UNSPECIFIED"),
-/**
- * Dialogflow history. This does not include Cloud logging, which is owned by the user - not Dialogflow.
- */
         DialogflowHistory("DIALOGFLOW_HISTORY");
 
         private final String value;

@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WebServerNetworkAccessControlResponse {
-/**
- * A collection of allowed IP ranges with descriptions.
- */
     private final List<AllowedIpRangeResponse> allowedIpRanges;
 
     @OutputCustomType.Constructor({"allowedIpRanges"})
@@ -20,9 +17,6 @@ public final class WebServerNetworkAccessControlResponse {
         this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
     }
 
-/**
- * A collection of allowed IP ranges with descriptions.
- */
     public List<AllowedIpRangeResponse> getAllowedIpRanges() {
         return this.allowedIpRanges;
     }

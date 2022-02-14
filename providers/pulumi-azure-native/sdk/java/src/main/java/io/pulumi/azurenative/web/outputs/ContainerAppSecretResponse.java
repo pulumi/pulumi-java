@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerAppSecretResponse {
-/**
- * Secret Name.
- */
     private final String name;
-/**
- * Secret Value.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -26,15 +20,9 @@ public final class ContainerAppSecretResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * Secret Name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Secret Value.
- */
     public String getValue() {
         return this.value;
     }

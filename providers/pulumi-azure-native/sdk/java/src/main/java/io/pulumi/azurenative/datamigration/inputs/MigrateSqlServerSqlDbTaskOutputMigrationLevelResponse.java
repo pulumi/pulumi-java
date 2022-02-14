@@ -14,16 +14,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Migration level result for Sql server to Azure Sql DB migration.
- */
 public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse Empty = new MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse();
 
-    /**
-     * Summary of database results in the migration
-     */
     @InputImport(name="databaseSummary", required=true)
     private final Map<String,DatabaseSummaryResultResponse> databaseSummary;
 
@@ -31,9 +25,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.databaseSummary;
     }
 
-    /**
-     * Selected databases as a map from database name to database id
-     */
     @InputImport(name="databases", required=true)
     private final Map<String,String> databases;
 
@@ -41,9 +32,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.databases;
     }
 
-    /**
-     * Duration of task execution in seconds.
-     */
     @InputImport(name="durationInSeconds", required=true)
     private final Double durationInSeconds;
 
@@ -51,9 +39,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.durationInSeconds;
     }
 
-    /**
-     * Migration end time
-     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -61,9 +46,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.endedOn;
     }
 
-    /**
-     * Migration exceptions and warnings.
-     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -71,9 +53,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.exceptionsAndWarnings;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -81,9 +60,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.id;
     }
 
-    /**
-     * Migration progress message
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -91,9 +67,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.message;
     }
 
-    /**
-     * Migration Report Result, provides unique url for downloading your migration report.
-     */
     @InputImport(name="migrationReport", required=true)
     private final MigrationReportResultResponse migrationReport;
 
@@ -101,10 +74,6 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse extends
         return this.migrationReport;
     }
 
-    /**
-     * Result type
-Expected value is 'MigrationLevelOutput'.
-     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -112,9 +81,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.resultType;
     }
 
-    /**
-     * Source server brand version
-     */
     @InputImport(name="sourceServerBrandVersion", required=true)
     private final String sourceServerBrandVersion;
 
@@ -122,9 +88,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.sourceServerBrandVersion;
     }
 
-    /**
-     * Source server version
-     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -132,9 +95,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.sourceServerVersion;
     }
 
-    /**
-     * Migration start time
-     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -142,9 +102,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.startedOn;
     }
 
-    /**
-     * Current status of migration
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -152,9 +109,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.status;
     }
 
-    /**
-     * Migration status message
-     */
     @InputImport(name="statusMessage", required=true)
     private final String statusMessage;
 
@@ -162,9 +116,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.statusMessage;
     }
 
-    /**
-     * Target server brand version
-     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -172,9 +123,6 @@ Expected value is 'MigrationLevelOutput'.
         return this.targetServerBrandVersion;
     }
 
-    /**
-     * Target server version
-     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

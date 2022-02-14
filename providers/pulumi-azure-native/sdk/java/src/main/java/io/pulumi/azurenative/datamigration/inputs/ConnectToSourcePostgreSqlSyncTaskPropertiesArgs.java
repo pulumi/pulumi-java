@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for the task that validates connection to PostgreSQL server and source server requirements for online migration
- */
 public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToSourcePostgreSqlSyncTaskPropertiesArgs Empty = new ConnectToSourcePostgreSqlSyncTaskPropertiesArgs();
 
-    /**
-     * Task input
-     */
     @InputImport(name="input")
     private final @Nullable Input<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
 
@@ -28,10 +22,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
         return this.input == null ? Input.empty() : this.input;
     }
 
-    /**
-     * Task type.
-Expected value is 'ConnectToSource.PostgreSql.Sync'.
-     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

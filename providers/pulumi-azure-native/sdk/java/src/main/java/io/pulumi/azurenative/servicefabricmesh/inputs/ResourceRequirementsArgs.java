@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This type describes the resource requirements for a container or a service.
- */
 public final class ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceRequirementsArgs Empty = new ResourceRequirementsArgs();
 
-    /**
-     * Describes the maximum limits on the resources for a given container.
-     */
     @InputImport(name="limits")
     private final @Nullable Input<ResourceLimitsArgs> limits;
 
@@ -28,9 +22,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
         return this.limits == null ? Input.empty() : this.limits;
     }
 
-    /**
-     * Describes the requested resources for a given container.
-     */
     @InputImport(name="requests", required=true)
     private final Input<ResourceRequestsArgs> requests;
 

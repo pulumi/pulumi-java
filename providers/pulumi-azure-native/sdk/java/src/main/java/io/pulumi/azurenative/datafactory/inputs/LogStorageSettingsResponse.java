@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * (Deprecated. Please use LogSettings) Log storage settings.
- */
 public final class LogStorageSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogStorageSettingsResponse Empty = new LogStorageSettingsResponse();
 
-    /**
-     * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="enableReliableLogging")
     private final @Nullable Object enableReliableLogging;
 
@@ -28,9 +22,6 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
         return this.enableReliableLogging == null ? Optional.empty() : Optional.ofNullable(this.enableReliableLogging);
     }
 
-    /**
-     * Log storage linked service reference.
-     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -38,9 +29,6 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
         return this.linkedServiceName;
     }
 
-    /**
-     * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="logLevel")
     private final @Nullable Object logLevel;
 
@@ -48,9 +36,6 @@ public final class LogStorageSettingsResponse extends io.pulumi.resources.Invoke
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
     }
 
-    /**
-     * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="path")
     private final @Nullable Object path;
 

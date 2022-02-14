@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateEndpointResponse {
-/**
- * Gets or sets id.
- */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -19,9 +16,6 @@ public final class PrivateEndpointResponse {
         this.id = Objects.requireNonNull(id);
     }
 
-/**
- * Gets or sets id.
- */
     public String getId() {
         return this.id;
     }

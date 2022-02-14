@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Input for the task that collects user tables for the given list of databases
- */
 public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GetUserTablesSqlTaskInputArgs Empty = new GetUserTablesSqlTaskInputArgs();
 
-    /**
-     * Connection information for SQL Server
-     */
     @InputImport(name="connectionInfo", required=true)
     private final Input<SqlConnectionInfoArgs> connectionInfo;
 
@@ -28,9 +22,6 @@ public final class GetUserTablesSqlTaskInputArgs extends io.pulumi.resources.Res
         return this.connectionInfo;
     }
 
-    /**
-     * List of database names to collect tables for
-     */
     @InputImport(name="selectedDatabases", required=true)
     private final Input<List<String>> selectedDatabases;
 

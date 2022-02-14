@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoScaleSettingsResponse Empty = new AutoScaleSettingsResponse();
 
-    /**
-     * Maximum number of instances for this deployment.
-     */
     @InputImport(name="maxInstances")
     private final @Nullable Integer maxInstances;
 
@@ -28,9 +22,6 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
         return this.maxInstances == null ? Optional.empty() : Optional.ofNullable(this.maxInstances);
     }
 
-    /**
-     * Minimum number of instances for this deployment.
-     */
     @InputImport(name="minInstances")
     private final @Nullable Integer minInstances;
 
@@ -38,9 +29,6 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
         return this.minInstances == null ? Optional.empty() : Optional.ofNullable(this.minInstances);
     }
 
-    /**
-     * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
-     */
     @InputImport(name="pollingInterval")
     private final @Nullable String pollingInterval;
 
@@ -48,10 +36,6 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
         return this.pollingInterval == null ? Optional.empty() : Optional.ofNullable(this.pollingInterval);
     }
 
-    /**
-     * 
-Expected value is 'Auto'.
-     */
     @InputImport(name="scaleType", required=true)
     private final String scaleType;
 
@@ -59,9 +43,6 @@ Expected value is 'Auto'.
         return this.scaleType;
     }
 
-    /**
-     * Target CPU usage for the autoscaler.
-     */
     @InputImport(name="targetUtilizationPercentage")
     private final @Nullable Integer targetUtilizationPercentage;
 

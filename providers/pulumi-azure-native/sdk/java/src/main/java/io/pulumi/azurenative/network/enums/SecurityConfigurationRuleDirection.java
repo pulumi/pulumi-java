@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates if the traffic matched against the rule in inbound or outbound.
- */
     @EnumType
     public enum SecurityConfigurationRuleDirection {
-/**
- * 
- */
         Inbound("Inbound"),
-/**
- * 
- */
         Outbound("Outbound");
 
         private final String value;

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * AAD based security principal with associated Ledger RoleName
- */
 public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AADBasedSecurityPrincipalArgs Empty = new AADBasedSecurityPrincipalArgs();
 
-    /**
-     * LedgerRole associated with the Security Principal of Ledger
-     */
     @InputImport(name="ledgerRoleName")
     private final @Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName;
 
@@ -29,9 +23,6 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
         return this.ledgerRoleName == null ? Input.empty() : this.ledgerRoleName;
     }
 
-    /**
-     * UUID/GUID based Principal Id of the Security Principal
-     */
     @InputImport(name="principalId")
     private final @Nullable Input<String> principalId;
 
@@ -39,9 +30,6 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
         return this.principalId == null ? Input.empty() : this.principalId;
     }
 
-    /**
-     * UUID/GUID based Tenant Id of the Security Principal
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

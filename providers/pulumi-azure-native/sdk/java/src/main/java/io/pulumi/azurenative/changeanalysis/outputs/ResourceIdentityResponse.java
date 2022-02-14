@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceIdentityResponse {
-/**
- * The principal id of the identity. This property will only be provided for a system-assigned identity.
- */
     private final String principalId;
-/**
- * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
- */
     private final String tenantId;
-/**
- * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -34,21 +25,12 @@ public final class ResourceIdentityResponse {
         this.type = type;
     }
 
-/**
- * The principal id of the identity. This property will only be provided for a system-assigned identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -9,16 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 
 
-/**
- * Runtime configuration for a workload.
- */
 public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuntimeConfigResponse Empty = new RuntimeConfigResponse();
 
-    /**
-     * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
-     */
     @InputImport(name="containerImage", required=true)
     private final String containerImage;
 
@@ -26,9 +20,6 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.containerImage;
     }
 
-    /**
-     * Optional. A mapping of property names to values, which are used to configure workload execution.
-     */
     @InputImport(name="properties", required=true)
     private final Map<String,String> properties;
 
@@ -36,9 +27,6 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.properties;
     }
 
-    /**
-     * Optional. Version of the batch runtime.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

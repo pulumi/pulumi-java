@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the dependency override of the move resource.
- */
 public final class MoveResourceDependencyOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourceDependencyOverrideResponse Empty = new MoveResourceDependencyOverrideResponse();
 
-    /**
-     * Gets or sets the ARM ID of the dependent resource.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -27,10 +21,6 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
-the dependent resource.
-     */
     @InputImport(name="targetId")
     private final @Nullable String targetId;
 

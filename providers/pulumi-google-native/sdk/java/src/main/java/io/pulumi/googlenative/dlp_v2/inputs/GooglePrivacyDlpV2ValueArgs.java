@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Set of primitive values supported by the system. Note that for the purposes of inspection or transformation, the number of bytes considered to comprise a 'Value' is based on its representation as a UTF-8 encoded string. For example, if 'integer_value' is set to 123456789, the number of bytes would be counted as 9, even though an int64 only holds up to 8 bytes of data.
- */
 public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ValueArgs Empty = new GooglePrivacyDlpV2ValueArgs();
 
-    /**
-     * boolean
-     */
     @InputImport(name="booleanValue")
     private final @Nullable Input<Boolean> booleanValue;
 
@@ -32,9 +26,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.booleanValue == null ? Input.empty() : this.booleanValue;
     }
 
-    /**
-     * date
-     */
     @InputImport(name="dateValue")
     private final @Nullable Input<GoogleTypeDateArgs> dateValue;
 
@@ -42,9 +33,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.dateValue == null ? Input.empty() : this.dateValue;
     }
 
-    /**
-     * day of week
-     */
     @InputImport(name="dayOfWeekValue")
     private final @Nullable Input<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
 
@@ -52,9 +40,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.dayOfWeekValue == null ? Input.empty() : this.dayOfWeekValue;
     }
 
-    /**
-     * float
-     */
     @InputImport(name="floatValue")
     private final @Nullable Input<Double> floatValue;
 
@@ -62,9 +47,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.floatValue == null ? Input.empty() : this.floatValue;
     }
 
-    /**
-     * integer
-     */
     @InputImport(name="integerValue")
     private final @Nullable Input<String> integerValue;
 
@@ -72,9 +54,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.integerValue == null ? Input.empty() : this.integerValue;
     }
 
-    /**
-     * string
-     */
     @InputImport(name="stringValue")
     private final @Nullable Input<String> stringValue;
 
@@ -82,9 +61,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.stringValue == null ? Input.empty() : this.stringValue;
     }
 
-    /**
-     * time of day
-     */
     @InputImport(name="timeValue")
     private final @Nullable Input<GoogleTypeTimeOfDayArgs> timeValue;
 
@@ -92,9 +68,6 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
         return this.timeValue == null ? Input.empty() : this.timeValue;
     }
 
-    /**
-     * timestamp
-     */
     @InputImport(name="timestampValue")
     private final @Nullable Input<String> timestampValue;
 

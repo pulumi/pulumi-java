@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateLinkScopedResourceResponse {
-/**
- * The full resource Id of the private link scope resource.
- */
     private final @Nullable String resourceId;
-/**
- * The private link scope unique Identifier.
- */
     private final @Nullable String scopeId;
 
     @OutputCustomType.Constructor({"resourceId","scopeId"})
@@ -28,15 +22,9 @@ public final class PrivateLinkScopedResourceResponse {
         this.scopeId = scopeId;
     }
 
-/**
- * The full resource Id of the private link scope resource.
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
-/**
- * The private link scope unique Identifier.
- */
     public Optional<String> getScopeId() {
         return Optional.ofNullable(this.scopeId);
     }

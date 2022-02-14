@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Uploads files to VMs (Linux, Windows). Corresponds to Packer file provisioner
- */
 public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateFileCustomizerArgs Empty = new ImageTemplateFileCustomizerArgs();
 
-    /**
-     * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
-     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -27,9 +21,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
         return this.destination == null ? Input.empty() : this.destination;
     }
 
-    /**
-     * Friendly Name to provide context on what this customization step does
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,9 +28,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * SHA256 checksum of the file provided in the sourceUri field above
-     */
     @InputImport(name="sha256Checksum")
     private final @Nullable Input<String> sha256Checksum;
 
@@ -47,9 +35,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
     }
 
-    /**
-     * The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
-     */
     @InputImport(name="sourceUri")
     private final @Nullable Input<String> sourceUri;
 
@@ -57,10 +42,6 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
         return this.sourceUri == null ? Input.empty() : this.sourceUri;
     }
 
-    /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-Expected value is 'File'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

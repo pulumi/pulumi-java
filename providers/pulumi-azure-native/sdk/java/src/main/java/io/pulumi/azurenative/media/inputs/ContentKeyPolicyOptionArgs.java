@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a policy option.
- */
 public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyOptionArgs Empty = new ContentKeyPolicyOptionArgs();
 
-    /**
-     * The key delivery configuration.
-     */
     @InputImport(name="configuration", required=true)
     private final Input<Object> configuration;
 
@@ -36,9 +30,6 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
         return this.configuration;
     }
 
-    /**
-     * The Policy Option description.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,9 +37,6 @@ public final class ContentKeyPolicyOptionArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The requirements that must be met to deliver keys with this configuration
-     */
     @InputImport(name="restriction", required=true)
     private final Input<Object> restriction;
 

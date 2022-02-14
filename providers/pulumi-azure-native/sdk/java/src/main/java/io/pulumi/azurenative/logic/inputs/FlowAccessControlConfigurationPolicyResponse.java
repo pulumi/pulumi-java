@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The access control configuration policy.
- */
 public final class FlowAccessControlConfigurationPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FlowAccessControlConfigurationPolicyResponse Empty = new FlowAccessControlConfigurationPolicyResponse();
 
-    /**
-     * The allowed caller IP address ranges.
-     */
     @InputImport(name="allowedCallerIpAddresses")
     private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
 
@@ -29,9 +23,6 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
         return this.allowedCallerIpAddresses == null ? List.of() : this.allowedCallerIpAddresses;
     }
 
-    /**
-     * The authentication policies for workflow.
-     */
     @InputImport(name="openAuthenticationPolicies")
     private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 

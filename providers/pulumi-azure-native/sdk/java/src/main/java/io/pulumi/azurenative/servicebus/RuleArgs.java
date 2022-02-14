@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleArgs Empty = new RuleArgs();
 
-    /**
-     * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
-     */
     @InputImport(name="action")
     private final @Nullable Input<ActionArgs> action;
 
@@ -31,9 +25,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
-    /**
-     * Properties of correlationFilter
-     */
     @InputImport(name="correlationFilter")
     private final @Nullable Input<CorrelationFilterArgs> correlationFilter;
 
@@ -41,9 +32,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.correlationFilter == null ? Input.empty() : this.correlationFilter;
     }
 
-    /**
-     * Filter type that is evaluated against a BrokeredMessage.
-     */
     @InputImport(name="filterType")
     private final @Nullable Input<FilterType> filterType;
 
@@ -51,9 +39,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.filterType == null ? Input.empty() : this.filterType;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -61,9 +46,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,9 +53,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The rule name.
-     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -81,9 +60,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
-    /**
-     * Properties of sqlFilter
-     */
     @InputImport(name="sqlFilter")
     private final @Nullable Input<SqlFilterArgs> sqlFilter;
 
@@ -91,9 +67,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlFilter == null ? Input.empty() : this.sqlFilter;
     }
 
-    /**
-     * The subscription name.
-     */
     @InputImport(name="subscriptionName", required=true)
     private final Input<String> subscriptionName;
 
@@ -101,9 +74,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionName;
     }
 
-    /**
-     * The topic name.
-     */
     @InputImport(name="topicName", required=true)
     private final Input<String> topicName;
 

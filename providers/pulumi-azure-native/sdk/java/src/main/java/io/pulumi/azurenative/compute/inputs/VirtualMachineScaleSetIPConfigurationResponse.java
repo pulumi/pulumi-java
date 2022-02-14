@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a virtual machine scale set network profile's IP configuration.
- */
 public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineScaleSetIPConfigurationResponse Empty = new VirtualMachineScaleSetIPConfigurationResponse();
 
-    /**
-     * Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.
-     */
     @InputImport(name="applicationGatewayBackendAddressPools")
     private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
@@ -32,9 +26,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
 
-    /**
-     * Specifies an array of references to application security group.
-     */
     @InputImport(name="applicationSecurityGroups")
     private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
@@ -42,9 +33,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
 
-    /**
-     * Resource Id
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -52,9 +40,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.
-     */
     @InputImport(name="loadBalancerBackendAddressPools")
     private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
@@ -62,9 +47,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
 
-    /**
-     * Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.
-     */
     @InputImport(name="loadBalancerInboundNatPools")
     private final @Nullable List<SubResourceResponse> loadBalancerInboundNatPools;
 
@@ -72,9 +54,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.loadBalancerInboundNatPools == null ? List.of() : this.loadBalancerInboundNatPools;
     }
 
-    /**
-     * The IP configuration name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -82,9 +61,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.name;
     }
 
-    /**
-     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     */
     @InputImport(name="primary")
     private final @Nullable Boolean primary;
 
@@ -92,9 +68,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
-    /**
-     * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
-     */
     @InputImport(name="privateIPAddressVersion")
     private final @Nullable String privateIPAddressVersion;
 
@@ -102,9 +75,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
-    /**
-     * The publicIPAddressConfiguration.
-     */
     @InputImport(name="publicIPAddressConfiguration")
     private final @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
@@ -112,9 +82,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
-    /**
-     * Specifies the identifier of the subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable ApiEntityReferenceResponse subnet;
 

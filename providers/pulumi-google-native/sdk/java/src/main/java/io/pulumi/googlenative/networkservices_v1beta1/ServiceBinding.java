@@ -13,102 +13,51 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new ServiceBinding in a given project and location.
- */
 @ResourceType(type="google-native:networkservices/v1beta1:ServiceBinding")
 public class ServiceBinding extends io.pulumi.resources.CustomResource {
-    /**
-     * The timestamp when the resource was created.
-     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    /**
-     * @return The timestamp when the resource was created.
-     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    /**
-     * Optional. A free-text description of the resource. Max length 1024 characters.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return Optional. A free-text description of the resource. Max length 1024 characters.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     */
     @OutputExport(name="endpointFilter", type=String.class, parameters={})
     private Output<String> endpointFilter;
 
-    /**
-     * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
-     */
     public Output<String> getEndpointFilter() {
         return this.endpointFilter;
     }
-    /**
-     * Optional. Set of label tags associated with the ServiceBinding resource.
-     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
-    /**
-     * @return Optional. Set of label tags associated with the ServiceBinding resource.
-     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
-    /**
-     * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
-     */
     @OutputExport(name="service", type=String.class, parameters={})
     private Output<String> service;
 
-    /**
-     * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
-     */
     public Output<String> getService() {
         return this.service;
     }
-    /**
-     * The timestamp when the resource was updated.
-     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    /**
-     * @return The timestamp when the resource was updated.
-     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ServiceBinding(String name, ServiceBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:networkservices/v1beta1:ServiceBinding", name, args == null ? ServiceBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -124,14 +73,6 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ServiceBinding get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceBinding(name, id, options);
     }

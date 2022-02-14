@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Shared message indicating Cloud storage type.
- */
 public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2StorageConfigArgs Empty = new GooglePrivacyDlpV2StorageConfigArgs();
 
-    /**
-     * BigQuery options.
-     */
     @InputImport(name="bigQueryOptions")
     private final @Nullable Input<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
 
@@ -31,9 +25,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
         return this.bigQueryOptions == null ? Input.empty() : this.bigQueryOptions;
     }
 
-    /**
-     * Google Cloud Storage options.
-     */
     @InputImport(name="cloudStorageOptions")
     private final @Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
 
@@ -41,9 +32,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
         return this.cloudStorageOptions == null ? Input.empty() : this.cloudStorageOptions;
     }
 
-    /**
-     * Google Cloud Datastore options.
-     */
     @InputImport(name="datastoreOptions")
     private final @Nullable Input<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
 
@@ -51,9 +39,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
         return this.datastoreOptions == null ? Input.empty() : this.datastoreOptions;
     }
 
-    /**
-     * Hybrid inspection options.
-     */
     @InputImport(name="hybridOptions")
     private final @Nullable Input<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
 
@@ -61,9 +46,6 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
         return this.hybridOptions == null ? Input.empty() : this.hybridOptions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="timespanConfig")
     private final @Nullable Input<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
 

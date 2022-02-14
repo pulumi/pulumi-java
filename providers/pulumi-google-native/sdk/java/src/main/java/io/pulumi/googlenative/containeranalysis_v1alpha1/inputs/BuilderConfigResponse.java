@@ -6,9 +6,6 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class BuilderConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuilderConfigResponse Empty = new BuilderConfigResponse();

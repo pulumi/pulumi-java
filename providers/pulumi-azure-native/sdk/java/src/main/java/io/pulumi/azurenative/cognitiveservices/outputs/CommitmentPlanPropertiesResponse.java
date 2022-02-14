@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CommitmentPlanPropertiesResponse {
-/**
- * AutoRenew commitment plan.
- */
     private final @Nullable Boolean autoRenew;
-/**
- * Cognitive Services account commitment period.
- */
     private final @Nullable CommitmentPeriodResponse current;
-/**
- * Account hosting model.
- */
     private final @Nullable String hostingModel;
-/**
- * Cognitive Services account commitment period.
- */
     private final CommitmentPeriodResponse last;
-/**
- * Cognitive Services account commitment period.
- */
     private final @Nullable CommitmentPeriodResponse next;
-/**
- * Commitment plan type.
- */
     private final @Nullable String planType;
 
     @OutputCustomType.Constructor({"autoRenew","current","hostingModel","last","next","planType"})
@@ -54,39 +36,21 @@ public final class CommitmentPlanPropertiesResponse {
         this.planType = planType;
     }
 
-/**
- * AutoRenew commitment plan.
- */
     public Optional<Boolean> getAutoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
-/**
- * Cognitive Services account commitment period.
- */
     public Optional<CommitmentPeriodResponse> getCurrent() {
         return Optional.ofNullable(this.current);
     }
-/**
- * Account hosting model.
- */
     public Optional<String> getHostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
-/**
- * Cognitive Services account commitment period.
- */
     public CommitmentPeriodResponse getLast() {
         return this.last;
     }
-/**
- * Cognitive Services account commitment period.
- */
     public Optional<CommitmentPeriodResponse> getNext() {
         return Optional.ofNullable(this.next);
     }
-/**
- * Commitment plan type.
- */
     public Optional<String> getPlanType() {
         return Optional.ofNullable(this.planType);
     }

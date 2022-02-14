@@ -16,196 +16,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Private endpoint connection resource.
-API Version: 2020-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### AadiamPutPrivateEndpointConnection
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateEndpointConnection = new AzureNative.AadIam.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.AadIam.PrivateEndpointConnectionArgs
-        {
-            PolicyName = "example-policy-5849",
-            PrivateEndpoint = new AzureNative.AadIam.Inputs.PrivateEndpointArgs
-            {
-                Id = "subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/microsoft.aadiam/privateLinkForAzureAD/ddb1/privateLinkConnections/{privateEndpointConnection name}",
-            },
-            PrivateEndpointConnectionName = "{privateEndpointConnection name}",
-            PrivateLinkServiceConnectionState = new AzureNative.AadIam.Inputs.PrivateLinkServiceConnectionStateArgs
-            {
-                ActionsRequired = "None",
-                Description = "You may pass",
-                Status = "Approved",
-            },
-            ResourceGroupName = "resourcegroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	aadiam "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aadiam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aadiam.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &aadiam.PrivateEndpointConnectionArgs{
-			PolicyName: pulumi.String("example-policy-5849"),
-			PrivateEndpoint: &aadiam.PrivateEndpointArgs{
-				Id: pulumi.String("subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/microsoft.aadiam/privateLinkForAzureAD/ddb1/privateLinkConnections/{privateEndpointConnection name}"),
-			},
-			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnection name}"),
-			PrivateLinkServiceConnectionState: &aadiam.PrivateLinkServiceConnectionStateArgs{
-				ActionsRequired: pulumi.String("None"),
-				Description:     pulumi.String("You may pass"),
-				Status:          pulumi.String("Approved"),
-			},
-			ResourceGroupName: pulumi.String("resourcegroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateEndpointConnection = new azure_native.aadiam.PrivateEndpointConnection("privateEndpointConnection", {
-    policyName: "example-policy-5849",
-    privateEndpoint: {
-        id: "subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/microsoft.aadiam/privateLinkForAzureAD/ddb1/privateLinkConnections/{privateEndpointConnection name}",
-    },
-    privateEndpointConnectionName: "{privateEndpointConnection name}",
-    privateLinkServiceConnectionState: {
-        actionsRequired: "None",
-        description: "You may pass",
-        status: "Approved",
-    },
-    resourceGroupName: "resourcegroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_endpoint_connection = azure_native.aadiam.PrivateEndpointConnection("privateEndpointConnection",
-    policy_name="example-policy-5849",
-    private_endpoint=azure_native.aadiam.PrivateEndpointArgs(
-        id="subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/microsoft.aadiam/privateLinkForAzureAD/ddb1/privateLinkConnections/{privateEndpointConnection name}",
-    ),
-    private_endpoint_connection_name="{privateEndpointConnection name}",
-    private_link_service_connection_state=azure_native.aadiam.PrivateLinkServiceConnectionStateArgs(
-        actions_required="None",
-        description="You may pass",
-        status="Approved",
-    ),
-    resource_group_name="resourcegroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:aadiam:PrivateEndpointConnection {privateEndpointConnection name} subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/microsoft.aadiam/privateLinkForAzureAD/ddb1/privateLinkConnections/{privateEndpointConnection name} 
-```
-
- */
 @ResourceType(type="azure-native:aadiam:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of the private endpoint object.
-     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
-    /**
-     * @return Properties of the private endpoint object.
-     */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
-    /**
-     * Approval state of the private link connection.
-     */
     @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
-    /**
-     * @return Approval state of the private link connection.
-     */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
-    /**
-     * Provisioning state of the private endpoint connection.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the private endpoint connection.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:aadiam:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -224,14 +67,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

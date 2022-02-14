@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServerEndpointArgs Empty = new GetServerEndpointArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of Server Endpoint object.
-     */
     @InputImport(name="serverEndpointName", required=true)
     private final String serverEndpointName;
 
@@ -35,9 +26,6 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
         return this.serverEndpointName;
     }
 
-    /**
-     * Name of Storage Sync Service resource.
-     */
     @InputImport(name="storageSyncServiceName", required=true)
     private final String storageSyncServiceName;
 
@@ -45,9 +33,6 @@ public final class GetServerEndpointArgs extends io.pulumi.resources.InvokeArgs 
         return this.storageSyncServiceName;
     }
 
-    /**
-     * Name of Sync Group resource.
-     */
     @InputImport(name="syncGroupName", required=true)
     private final String syncGroupName;
 

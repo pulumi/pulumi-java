@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabAccountRegionalAvailability {
-/**
- * The response model from the GetRegionalAvailability action
-API Version: 2018-10-15.
- *
- * The response model from the GetRegionalAvailability action
- */
     public static CompletableFuture<GetLabAccountRegionalAvailabilityResult> invokeAsync(GetLabAccountRegionalAvailabilityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabAccountRegionalAvailability", TypeShape.of(GetLabAccountRegionalAvailabilityResult.class), args == null ? GetLabAccountRegionalAvailabilityArgs.Empty : args, Utilities.withVersion(options));
     }

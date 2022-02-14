@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReferenceDataSet {
-/**
- * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
-API Version: 2020-05-15.
- *
- * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
- */
     public static CompletableFuture<GetReferenceDataSetResult> invokeAsync(GetReferenceDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getReferenceDataSet", TypeShape.of(GetReferenceDataSetResult.class), args == null ? GetReferenceDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

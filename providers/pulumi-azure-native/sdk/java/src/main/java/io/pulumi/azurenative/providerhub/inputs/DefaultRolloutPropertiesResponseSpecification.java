@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DefaultRolloutPropertiesResponseSpecification extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultRolloutPropertiesResponseSpecification Empty = new DefaultRolloutPropertiesResponseSpecification();
 
-    /**
-     * 
-     */
     @InputImport(name="canary")
     private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
 
@@ -35,9 +29,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.canary == null ? Optional.empty() : Optional.ofNullable(this.canary);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="highTraffic")
     private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
 
@@ -45,9 +36,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.highTraffic == null ? Optional.empty() : Optional.ofNullable(this.highTraffic);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lowTraffic")
     private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
 
@@ -55,9 +43,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.lowTraffic == null ? Optional.empty() : Optional.ofNullable(this.lowTraffic);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="mediumTraffic")
     private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
 
@@ -65,9 +50,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.mediumTraffic == null ? Optional.empty() : Optional.ofNullable(this.mediumTraffic);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="providerRegistration")
     private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
 
@@ -75,9 +57,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.providerRegistration == null ? Optional.empty() : Optional.ofNullable(this.providerRegistration);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="resourceTypeRegistrations")
     private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
 
@@ -85,9 +64,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="restOfTheWorldGroupOne")
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
 
@@ -95,9 +71,6 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
         return this.restOfTheWorldGroupOne == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="restOfTheWorldGroupTwo")
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 

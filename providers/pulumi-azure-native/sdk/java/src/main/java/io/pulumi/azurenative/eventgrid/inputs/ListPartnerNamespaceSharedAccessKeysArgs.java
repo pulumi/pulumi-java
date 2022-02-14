@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListPartnerNamespaceSharedAccessKeysArgs Empty = new ListPartnerNamespaceSharedAccessKeysArgs();
 
-    /**
-     * Name of the partner namespace.
-     */
     @InputImport(name="partnerNamespaceName", required=true)
     private final String partnerNamespaceName;
 
@@ -25,9 +19,6 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
         return this.partnerNamespaceName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

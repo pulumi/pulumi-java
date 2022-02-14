@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncidentRelationArgs Empty = new IncidentRelationArgs();
 
-    /**
-     * Incident ID
-     */
     @InputImport(name="incidentId", required=true)
     private final Input<String> incidentId;
 
@@ -27,9 +21,6 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.incidentId;
     }
 
-    /**
-     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -37,9 +28,6 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.operationalInsightsResourceProvider;
     }
 
-    /**
-     * The resource ID of the related resource
-     */
     @InputImport(name="relatedResourceId", required=true)
     private final Input<String> relatedResourceId;
 
@@ -47,9 +35,6 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.relatedResourceId;
     }
 
-    /**
-     * Relation Name
-     */
     @InputImport(name="relationName")
     private final @Nullable Input<String> relationName;
 
@@ -57,9 +42,6 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.relationName == null ? Input.empty() : this.relationName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,9 +49,6 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

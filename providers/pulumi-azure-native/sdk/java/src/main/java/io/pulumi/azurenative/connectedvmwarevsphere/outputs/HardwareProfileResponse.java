@@ -12,29 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HardwareProfileResponse {
-/**
- * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
- */
     private final Boolean cpuHotAddEnabled;
-/**
- * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
- */
     private final Boolean cpuHotRemoveEnabled;
-/**
- * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
- */
     private final Boolean memoryHotAddEnabled;
-/**
- * Gets or sets memory size in MBs for the vm.
- */
     private final @Nullable Integer memorySizeMB;
-/**
- * Gets or sets the number of vCPUs for the vm.
- */
     private final @Nullable Integer numCPUs;
-/**
- * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
- */
     private final @Nullable Integer numCoresPerSocket;
 
     @OutputCustomType.Constructor({"cpuHotAddEnabled","cpuHotRemoveEnabled","memoryHotAddEnabled","memorySizeMB","numCPUs","numCoresPerSocket"})
@@ -53,39 +35,21 @@ public final class HardwareProfileResponse {
         this.numCoresPerSocket = numCoresPerSocket;
     }
 
-/**
- * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
- */
     public Boolean getCpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
     }
-/**
- * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
- */
     public Boolean getCpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
     }
-/**
- * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
- */
     public Boolean getMemoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
     }
-/**
- * Gets or sets memory size in MBs for the vm.
- */
     public Optional<Integer> getMemorySizeMB() {
         return Optional.ofNullable(this.memorySizeMB);
     }
-/**
- * Gets or sets the number of vCPUs for the vm.
- */
     public Optional<Integer> getNumCPUs() {
         return Optional.ofNullable(this.numCPUs);
     }
-/**
- * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
- */
     public Optional<Integer> getNumCoresPerSocket() {
         return Optional.ofNullable(this.numCoresPerSocket);
     }

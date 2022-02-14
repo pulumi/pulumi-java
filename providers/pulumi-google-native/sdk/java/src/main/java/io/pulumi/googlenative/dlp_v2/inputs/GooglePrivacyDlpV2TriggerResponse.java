@@ -9,16 +9,10 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ScheduleResponse;
 import java.util.Objects;
 
 
-/**
- * What event needs to occur for a new job to be started.
- */
 public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2TriggerResponse Empty = new GooglePrivacyDlpV2TriggerResponse();
 
-    /**
-     * For use with hybrid jobs. Jobs must be manually created and finished.
-     */
     @InputImport(name="manual", required=true)
     private final GooglePrivacyDlpV2ManualResponse manual;
 
@@ -26,9 +20,6 @@ public final class GooglePrivacyDlpV2TriggerResponse extends io.pulumi.resources
         return this.manual;
     }
 
-    /**
-     * Create a job on a repeating basis based on the elapse of time.
-     */
     @InputImport(name="schedule", required=true)
     private final GooglePrivacyDlpV2ScheduleResponse schedule;
 

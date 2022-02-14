@@ -9,16 +9,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * Address details for an order item.
- */
 public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressDetailsArgs Empty = new AddressDetailsArgs();
 
-    /**
-     * Customer address and contact details. It should be address resource
-     */
     @InputImport(name="forwardAddress", required=true)
     private final Input<AddressPropertiesArgs> forwardAddress;
 

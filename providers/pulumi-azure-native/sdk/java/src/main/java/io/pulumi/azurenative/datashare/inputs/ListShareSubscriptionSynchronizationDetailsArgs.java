@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListShareSubscriptionSynchronizationDetailsArgs Empty = new ListShareSubscriptionSynchronizationDetailsArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -27,9 +21,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
         return this.accountName;
     }
 
-    /**
-     * Filters the results using OData syntax.
-     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -37,9 +28,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
-    /**
-     * Sorts the results using OData syntax.
-     */
     @InputImport(name="orderby")
     private final @Nullable String orderby;
 
@@ -47,9 +35,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share subscription.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 
@@ -67,9 +49,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
         return this.shareSubscriptionName;
     }
 
-    /**
-     * Continuation token
-     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 
@@ -77,9 +56,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
-    /**
-     * Synchronization id
-     */
     @InputImport(name="synchronizationId", required=true)
     private final String synchronizationId;
 

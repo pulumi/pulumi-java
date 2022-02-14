@@ -14,146 +14,40 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkloadCrrAccessTokenResponse {
-/**
- * Access token used for authentication
- */
     private final @Nullable String accessTokenString;
-/**
- * Active region name of BMS Stamp
- */
     private final @Nullable String bMSActiveRegion;
-/**
- * Backup Management Type
- */
     private final @Nullable String backupManagementType;
-/**
- * Container Id
- */
     private final @Nullable String containerId;
-/**
- * Container Unique name
- */
     private final @Nullable String containerName;
-/**
- * Container Type
- */
     private final @Nullable String containerType;
-/**
- * CoordinatorServiceStampId to be used by BCM in restore call
- */
     private final @Nullable String coordinatorServiceStampId;
-/**
- * CoordinatorServiceStampUri to be used by BCM in restore call
- */
     private final @Nullable String coordinatorServiceStampUri;
-/**
- * Datasource Container Unique Name
- */
     private final @Nullable String datasourceContainerName;
-/**
- * Datasource Id
- */
     private final @Nullable String datasourceId;
-/**
- * Datasource Friendly Name
- */
     private final @Nullable String datasourceName;
-/**
- * Datasource Type
- */
     private final @Nullable String datasourceType;
-/**
- * Type of the specific object - used for deserializing
-Expected value is 'WorkloadCrrAccessToken'.
- */
     private final String objectType;
-/**
- * Policy Id
- */
     private final @Nullable String policyId;
-/**
- * Policy Name
- */
     private final @Nullable String policyName;
-/**
- * 
- */
     private final @Nullable String protectableObjectContainerHostOsName;
-/**
- * 
- */
     private final @Nullable String protectableObjectFriendlyName;
-/**
- * 
- */
     private final @Nullable String protectableObjectParentLogicalContainerName;
-/**
- * 
- */
     private final @Nullable String protectableObjectProtectionState;
-/**
- * 
- */
     private final @Nullable String protectableObjectUniqueName;
-/**
- * 
- */
     private final @Nullable String protectableObjectWorkloadType;
-/**
- * Protected item container id
- */
     private final @Nullable Double protectionContainerId;
-/**
- * ProtectionServiceStampId to be used by BCM in restore call
- */
     private final @Nullable String protectionServiceStampId;
-/**
- * ProtectionServiceStampUri to be used by BCM in restore call
- */
     private final @Nullable String protectionServiceStampUri;
-/**
- * Recovery Point Id
- */
     private final @Nullable String recoveryPointId;
-/**
- * Recovery Point Time
- */
     private final @Nullable String recoveryPointTime;
-/**
- * Resource Group name of the source vault
- */
     private final @Nullable String resourceGroupName;
-/**
- * Resource Id of the source vault
- */
     private final @Nullable String resourceId;
-/**
- * Resource Name of the source vault
- */
     private final @Nullable String resourceName;
-/**
- * Recovery point information: Managed virtual machine
- */
     private final @Nullable Boolean rpIsManagedVirtualMachine;
-/**
- * Recovery point information: Original SA option
- */
     private final @Nullable Boolean rpOriginalSAOption;
-/**
- * Recovery point Tier Information
- */
     private final @Nullable Map<String,String> rpTierInformation;
-/**
- * Recovery point information: VM size description
- */
     private final @Nullable String rpVMSizeDescription;
-/**
- * Subscription Id of the source vault
- */
     private final @Nullable String subscriptionId;
-/**
- * Extended Information about the token like FileSpec etc.
- */
     private final @Nullable String tokenExtendedInformation;
 
     @OutputCustomType.Constructor({"accessTokenString","bMSActiveRegion","backupManagementType","containerId","containerName","containerType","coordinatorServiceStampId","coordinatorServiceStampUri","datasourceContainerName","datasourceId","datasourceName","datasourceType","objectType","policyId","policyName","protectableObjectContainerHostOsName","protectableObjectFriendlyName","protectableObjectParentLogicalContainerName","protectableObjectProtectionState","protectableObjectUniqueName","protectableObjectWorkloadType","protectionContainerId","protectionServiceStampId","protectionServiceStampUri","recoveryPointId","recoveryPointTime","resourceGroupName","resourceId","resourceName","rpIsManagedVirtualMachine","rpOriginalSAOption","rpTierInformation","rpVMSizeDescription","subscriptionId","tokenExtendedInformation"})
@@ -230,214 +124,108 @@ Expected value is 'WorkloadCrrAccessToken'.
         this.tokenExtendedInformation = tokenExtendedInformation;
     }
 
-/**
- * Access token used for authentication
- */
     public Optional<String> getAccessTokenString() {
         return Optional.ofNullable(this.accessTokenString);
     }
-/**
- * Active region name of BMS Stamp
- */
     public Optional<String> getBMSActiveRegion() {
         return Optional.ofNullable(this.bMSActiveRegion);
     }
-/**
- * Backup Management Type
- */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
-/**
- * Container Id
- */
     public Optional<String> getContainerId() {
         return Optional.ofNullable(this.containerId);
     }
-/**
- * Container Unique name
- */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
-/**
- * Container Type
- */
     public Optional<String> getContainerType() {
         return Optional.ofNullable(this.containerType);
     }
-/**
- * CoordinatorServiceStampId to be used by BCM in restore call
- */
     public Optional<String> getCoordinatorServiceStampId() {
         return Optional.ofNullable(this.coordinatorServiceStampId);
     }
-/**
- * CoordinatorServiceStampUri to be used by BCM in restore call
- */
     public Optional<String> getCoordinatorServiceStampUri() {
         return Optional.ofNullable(this.coordinatorServiceStampUri);
     }
-/**
- * Datasource Container Unique Name
- */
     public Optional<String> getDatasourceContainerName() {
         return Optional.ofNullable(this.datasourceContainerName);
     }
-/**
- * Datasource Id
- */
     public Optional<String> getDatasourceId() {
         return Optional.ofNullable(this.datasourceId);
     }
-/**
- * Datasource Friendly Name
- */
     public Optional<String> getDatasourceName() {
         return Optional.ofNullable(this.datasourceName);
     }
-/**
- * Datasource Type
- */
     public Optional<String> getDatasourceType() {
         return Optional.ofNullable(this.datasourceType);
     }
-/**
- * Type of the specific object - used for deserializing
-Expected value is 'WorkloadCrrAccessToken'.
- */
     public String getObjectType() {
         return this.objectType;
     }
-/**
- * Policy Id
- */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
-/**
- * Policy Name
- */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
-/**
- * 
- */
     public Optional<String> getProtectableObjectContainerHostOsName() {
         return Optional.ofNullable(this.protectableObjectContainerHostOsName);
     }
-/**
- * 
- */
     public Optional<String> getProtectableObjectFriendlyName() {
         return Optional.ofNullable(this.protectableObjectFriendlyName);
     }
-/**
- * 
- */
     public Optional<String> getProtectableObjectParentLogicalContainerName() {
         return Optional.ofNullable(this.protectableObjectParentLogicalContainerName);
     }
-/**
- * 
- */
     public Optional<String> getProtectableObjectProtectionState() {
         return Optional.ofNullable(this.protectableObjectProtectionState);
     }
-/**
- * 
- */
     public Optional<String> getProtectableObjectUniqueName() {
         return Optional.ofNullable(this.protectableObjectUniqueName);
     }
-/**
- * 
- */
     public Optional<String> getProtectableObjectWorkloadType() {
         return Optional.ofNullable(this.protectableObjectWorkloadType);
     }
-/**
- * Protected item container id
- */
     public Optional<Double> getProtectionContainerId() {
         return Optional.ofNullable(this.protectionContainerId);
     }
-/**
- * ProtectionServiceStampId to be used by BCM in restore call
- */
     public Optional<String> getProtectionServiceStampId() {
         return Optional.ofNullable(this.protectionServiceStampId);
     }
-/**
- * ProtectionServiceStampUri to be used by BCM in restore call
- */
     public Optional<String> getProtectionServiceStampUri() {
         return Optional.ofNullable(this.protectionServiceStampUri);
     }
-/**
- * Recovery Point Id
- */
     public Optional<String> getRecoveryPointId() {
         return Optional.ofNullable(this.recoveryPointId);
     }
-/**
- * Recovery Point Time
- */
     public Optional<String> getRecoveryPointTime() {
         return Optional.ofNullable(this.recoveryPointTime);
     }
-/**
- * Resource Group name of the source vault
- */
     public Optional<String> getResourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
-/**
- * Resource Id of the source vault
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
-/**
- * Resource Name of the source vault
- */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
-/**
- * Recovery point information: Managed virtual machine
- */
     public Optional<Boolean> getRpIsManagedVirtualMachine() {
         return Optional.ofNullable(this.rpIsManagedVirtualMachine);
     }
-/**
- * Recovery point information: Original SA option
- */
     public Optional<Boolean> getRpOriginalSAOption() {
         return Optional.ofNullable(this.rpOriginalSAOption);
     }
-/**
- * Recovery point Tier Information
- */
     public Map<String,String> getRpTierInformation() {
         return this.rpTierInformation == null ? Map.of() : this.rpTierInformation;
     }
-/**
- * Recovery point information: VM size description
- */
     public Optional<String> getRpVMSizeDescription() {
         return Optional.ofNullable(this.rpVMSizeDescription);
     }
-/**
- * Subscription Id of the source vault
- */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
-/**
- * Extended Information about the token like FileSpec etc.
- */
     public Optional<String> getTokenExtendedInformation() {
         return Optional.ofNullable(this.tokenExtendedInformation);
     }

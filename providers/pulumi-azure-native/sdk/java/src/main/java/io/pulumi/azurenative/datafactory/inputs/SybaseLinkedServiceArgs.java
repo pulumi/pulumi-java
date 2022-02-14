@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Linked service for Sybase data source.
- */
 public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SybaseLinkedServiceArgs Empty = new SybaseLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -36,9 +30,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * AuthenticationType to be used for connection.
-     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,SybaseAuthenticationType>> authenticationType;
 
@@ -46,9 +37,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -56,9 +44,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Database name for connection. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="database", required=true)
     private final Input<Object> database;
 
@@ -66,9 +51,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.database;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -76,9 +58,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -86,9 +65,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -96,9 +72,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * Password for authentication.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -106,9 +79,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Schema name for connection. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 
@@ -116,9 +86,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.schema == null ? Input.empty() : this.schema;
     }
 
-    /**
-     * Server name for connection. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="server", required=true)
     private final Input<Object> server;
 
@@ -126,10 +93,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.server;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Sybase'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -137,9 +100,6 @@ Expected value is 'Sybase'.
         return this.type;
     }
 
-    /**
-     * Username for authentication. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

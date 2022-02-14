@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerAzureADAdministratorArgs Empty = new ServerAzureADAdministratorArgs();
 
-    /**
-     * The name of server active directory administrator.
-     */
     @InputImport(name="administratorName")
     private final @Nullable Input<String> administratorName;
 
@@ -29,9 +23,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
         return this.administratorName == null ? Input.empty() : this.administratorName;
     }
 
-    /**
-     * Type of the sever administrator.
-     */
     @InputImport(name="administratorType", required=true)
     private final Input<Either<String,AdministratorType>> administratorType;
 
@@ -39,9 +30,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
         return this.administratorType;
     }
 
-    /**
-     * Login name of the server administrator.
-     */
     @InputImport(name="login", required=true)
     private final Input<String> login;
 
@@ -49,9 +37,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
         return this.login;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -69,9 +51,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
         return this.serverName;
     }
 
-    /**
-     * SID (object ID) of the server administrator.
-     */
     @InputImport(name="sid", required=true)
     private final Input<String> sid;
 
@@ -79,9 +58,6 @@ public final class ServerAzureADAdministratorArgs extends io.pulumi.resources.Re
         return this.sid;
     }
 
-    /**
-     * Tenant ID of the administrator.
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

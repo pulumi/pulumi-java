@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ForestTrustResponse {
-/**
- * Friendly Name
- */
     private final @Nullable String friendlyName;
-/**
- * Remote Dns ips
- */
     private final @Nullable String remoteDnsIps;
-/**
- * Trust Direction
- */
     private final @Nullable String trustDirection;
-/**
- * Trust Password
- */
     private final @Nullable String trustPassword;
-/**
- * Trusted Domain FQDN
- */
     private final @Nullable String trustedDomainFqdn;
 
     @OutputCustomType.Constructor({"friendlyName","remoteDnsIps","trustDirection","trustPassword","trustedDomainFqdn"})
@@ -46,33 +31,18 @@ public final class ForestTrustResponse {
         this.trustedDomainFqdn = trustedDomainFqdn;
     }
 
-/**
- * Friendly Name
- */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
-/**
- * Remote Dns ips
- */
     public Optional<String> getRemoteDnsIps() {
         return Optional.ofNullable(this.remoteDnsIps);
     }
-/**
- * Trust Direction
- */
     public Optional<String> getTrustDirection() {
         return Optional.ofNullable(this.trustDirection);
     }
-/**
- * Trust Password
- */
     public Optional<String> getTrustPassword() {
         return Optional.ofNullable(this.trustPassword);
     }
-/**
- * Trusted Domain FQDN
- */
     public Optional<String> getTrustedDomainFqdn() {
         return Optional.ofNullable(this.trustedDomainFqdn);
     }

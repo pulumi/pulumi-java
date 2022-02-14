@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRowAccessPolicyIamPolicyArgs Empty = new GetRowAccessPolicyIamPolicyArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -27,9 +21,6 @@ public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.I
         return this.datasetId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.I
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="rowAccessPolicyId", required=true)
     private final String rowAccessPolicyId;
 
@@ -47,9 +35,6 @@ public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.I
         return this.rowAccessPolicyId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 

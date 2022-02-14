@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReplicationRecoveryPlanArgs Empty = new GetReplicationRecoveryPlanArgs();
 
-    /**
-     * Name of the recovery plan.
-     */
     @InputImport(name="recoveryPlanName", required=true)
     private final String recoveryPlanName;
 
@@ -25,9 +19,6 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
         return this.recoveryPlanName;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the connection monitor endpoint.
- */
 public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorEndpointArgs Empty = new ConnectionMonitorEndpointArgs();
 
-    /**
-     * Address of the connection monitor endpoint (IP or domain name).
-     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -32,9 +26,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
         return this.address == null ? Input.empty() : this.address;
     }
 
-    /**
-     * Test coverage for the endpoint.
-     */
     @InputImport(name="coverageLevel")
     private final @Nullable Input<Either<String,CoverageLevel>> coverageLevel;
 
@@ -42,9 +33,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
         return this.coverageLevel == null ? Input.empty() : this.coverageLevel;
     }
 
-    /**
-     * Filter for sub-items within the endpoint.
-     */
     @InputImport(name="filter")
     private final @Nullable Input<ConnectionMonitorEndpointFilterArgs> filter;
 
@@ -52,9 +40,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
         return this.filter == null ? Input.empty() : this.filter;
     }
 
-    /**
-     * The name of the connection monitor endpoint.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -62,9 +47,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
-    /**
-     * Resource ID of the connection monitor endpoint.
-     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -72,9 +54,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
-    /**
-     * Endpoint scope.
-     */
     @InputImport(name="scope")
     private final @Nullable Input<ConnectionMonitorEndpointScopeArgs> scope;
 
@@ -82,9 +61,6 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
         return this.scope == null ? Input.empty() : this.scope;
     }
 
-    /**
-     * The endpoint type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,EndpointType>> type;
 

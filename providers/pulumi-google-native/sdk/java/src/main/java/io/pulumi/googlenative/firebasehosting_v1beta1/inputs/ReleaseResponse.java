@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- *  A `Release` is a particular [collection of configurations and files](sites.versions) that is set to be public at a particular time.
- */
 public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReleaseResponse Empty = new ReleaseResponse();
 
-    /**
-     * The deploy description when the release was created. The value can be up to 512 characters.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -27,9 +21,6 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
-    /**
-     * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,9 +28,6 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The time at which the version is set to be public.
-     */
     @InputImport(name="releaseTime", required=true)
     private final String releaseTime;
 
@@ -47,9 +35,6 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.releaseTime;
     }
 
-    /**
-     * Identifies the user who created the release.
-     */
     @InputImport(name="releaseUser", required=true)
     private final ActingUserResponse releaseUser;
 
@@ -57,9 +42,6 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.releaseUser;
     }
 
-    /**
-     * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -67,9 +49,6 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
-    /**
-     * The configuration and content that was released.
-     */
     @InputImport(name="version", required=true)
     private final VersionResponse version;
 

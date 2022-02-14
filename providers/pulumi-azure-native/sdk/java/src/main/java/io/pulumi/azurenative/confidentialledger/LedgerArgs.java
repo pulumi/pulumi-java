@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LedgerArgs Empty = new LedgerArgs();
 
-    /**
-     * Name of the Confidential Ledger
-     */
     @InputImport(name="ledgerName")
     private final @Nullable Input<String> ledgerName;
 
@@ -29,9 +23,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
         return this.ledgerName == null ? Input.empty() : this.ledgerName;
     }
 
-    /**
-     * The Azure location where the Confidential Ledger is running.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,9 +30,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Properties of Confidential Ledger Resource.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<LedgerPropertiesArgs> properties;
 
@@ -49,9 +37,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Additional tags for Confidential Ledger
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

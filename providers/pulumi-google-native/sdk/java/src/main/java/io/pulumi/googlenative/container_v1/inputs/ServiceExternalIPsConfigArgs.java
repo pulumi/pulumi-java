@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Config to block services with externalIPs field.
- */
 public final class ServiceExternalIPsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceExternalIPsConfigArgs Empty = new ServiceExternalIPsConfigArgs();
 
-    /**
-     * Whether Services with ExternalIPs field are allowed or not.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

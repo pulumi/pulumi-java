@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Gets or sets the disk backing type.
- */
     @EnumType
     public enum DiskType {
-/**
- * 
- */
         Flat("flat"),
-/**
- * 
- */
         Pmem("pmem"),
-/**
- * 
- */
         Rawphysical("rawphysical"),
-/**
- * 
- */
         Rawvirtual("rawvirtual"),
-/**
- * 
- */
         Sparse("sparse"),
-/**
- * 
- */
         Sesparse("sesparse"),
-/**
- * 
- */
         Unknown("unknown");
 
         private final String value;

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityContactArgs Empty = new SecurityContactArgs();
 
-    /**
-     * Defines whether to send email notifications about new security alerts
-     */
     @InputImport(name="alertNotifications")
     private final @Nullable Input<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
@@ -29,9 +23,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
         return this.alertNotifications == null ? Input.empty() : this.alertNotifications;
     }
 
-    /**
-     * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
-     */
     @InputImport(name="emails")
     private final @Nullable Input<String> emails;
 
@@ -39,9 +30,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
         return this.emails == null ? Input.empty() : this.emails;
     }
 
-    /**
-     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
-     */
     @InputImport(name="notificationsByRole")
     private final @Nullable Input<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
@@ -49,9 +37,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
         return this.notificationsByRole == null ? Input.empty() : this.notificationsByRole;
     }
 
-    /**
-     * The security contact's phone number
-     */
     @InputImport(name="phone")
     private final @Nullable Input<String> phone;
 
@@ -59,9 +44,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
         return this.phone == null ? Input.empty() : this.phone;
     }
 
-    /**
-     * Name of the security contact object
-     */
     @InputImport(name="securityContactName")
     private final @Nullable Input<String> securityContactName;
 

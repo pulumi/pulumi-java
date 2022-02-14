@@ -15,66 +15,33 @@ import io.pulumi.googlenative.pubsublite_v1.outputs.RetentionConfigResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new topic.
- */
 @ResourceType(type="google-native:pubsublite/v1:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The settings for this topic's partitions.
-     */
     @OutputExport(name="partitionConfig", type=PartitionConfigResponse.class, parameters={})
     private Output<PartitionConfigResponse> partitionConfig;
 
-    /**
-     * @return The settings for this topic's partitions.
-     */
     public Output<PartitionConfigResponse> getPartitionConfig() {
         return this.partitionConfig;
     }
-    /**
-     * The settings for this topic's Reservation usage.
-     */
     @OutputExport(name="reservationConfig", type=ReservationConfigResponse.class, parameters={})
     private Output<ReservationConfigResponse> reservationConfig;
 
-    /**
-     * @return The settings for this topic's Reservation usage.
-     */
     public Output<ReservationConfigResponse> getReservationConfig() {
         return this.reservationConfig;
     }
-    /**
-     * The settings for this topic's message retention.
-     */
     @OutputExport(name="retentionConfig", type=RetentionConfigResponse.class, parameters={})
     private Output<RetentionConfigResponse> retentionConfig;
 
-    /**
-     * @return The settings for this topic's message retention.
-     */
     public Output<RetentionConfigResponse> getRetentionConfig() {
         return this.retentionConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Topic(String name, TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:pubsublite/v1:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -90,14 +57,6 @@ public class Topic extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Topic get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Topic(name, id, options);
     }

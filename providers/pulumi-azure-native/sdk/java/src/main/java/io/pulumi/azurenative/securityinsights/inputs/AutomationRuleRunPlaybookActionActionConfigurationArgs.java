@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration of the run playbook automation rule action
- */
 public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRuleRunPlaybookActionActionConfigurationArgs Empty = new AutomationRuleRunPlaybookActionActionConfigurationArgs();
 
-    /**
-     * The resource id of the playbook resource
-     */
     @InputImport(name="logicAppResourceId")
     private final @Nullable Input<String> logicAppResourceId;
 
@@ -27,9 +21,6 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
         return this.logicAppResourceId == null ? Input.empty() : this.logicAppResourceId;
     }
 
-    /**
-     * The tenant id of the playbook resource
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

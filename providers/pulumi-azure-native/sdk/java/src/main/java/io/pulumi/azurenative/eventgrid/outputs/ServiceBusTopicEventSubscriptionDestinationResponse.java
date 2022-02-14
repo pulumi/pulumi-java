@@ -11,14 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceBusTopicEventSubscriptionDestinationResponse {
-/**
- * Type of the endpoint for the event subscription destination.
-Expected value is 'ServiceBusTopic'.
- */
     private final String endpointType;
-/**
- * The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.
- */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"endpointType","resourceId"})
@@ -29,16 +22,9 @@ Expected value is 'ServiceBusTopic'.
         this.resourceId = resourceId;
     }
 
-/**
- * Type of the endpoint for the event subscription destination.
-Expected value is 'ServiceBusTopic'.
- */
     public String getEndpointType() {
         return this.endpointType;
     }
-/**
- * The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

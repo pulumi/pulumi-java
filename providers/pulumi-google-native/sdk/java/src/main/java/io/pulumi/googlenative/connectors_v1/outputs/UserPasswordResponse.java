@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserPasswordResponse {
-/**
- * Secret version reference containing the password.
- */
     private final SecretResponse password;
-/**
- * Username.
- */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -27,15 +21,9 @@ public final class UserPasswordResponse {
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * Secret version reference containing the password.
- */
     public SecretResponse getPassword() {
         return this.password;
     }
-/**
- * Username.
- */
     public String getUsername() {
         return this.username;
     }

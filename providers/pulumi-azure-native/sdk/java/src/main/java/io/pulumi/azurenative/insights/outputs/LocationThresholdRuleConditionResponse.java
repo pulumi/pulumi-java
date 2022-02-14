@@ -15,22 +15,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LocationThresholdRuleConditionResponse {
-/**
- * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
- */
     private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
-/**
- * the number of locations that must fail to activate the alert.
- */
     private final Integer failedLocationCount;
-/**
- * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
- */
     private final String odataType;
-/**
- * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
- */
     private final @Nullable String windowSize;
 
     @OutputCustomType.Constructor({"dataSource","failedLocationCount","odataType","windowSize"})
@@ -45,28 +32,15 @@ Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdR
         this.windowSize = windowSize;
     }
 
-/**
- * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
- */
     public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> getDataSource() {
         return Optional.ofNullable(this.dataSource);
     }
-/**
- * the number of locations that must fail to activate the alert.
- */
     public Integer getFailedLocationCount() {
         return this.failedLocationCount;
     }
-/**
- * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
- */
     public String getOdataType() {
         return this.odataType;
     }
-/**
- * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
- */
     public Optional<String> getWindowSize() {
         return Optional.ofNullable(this.windowSize);
     }

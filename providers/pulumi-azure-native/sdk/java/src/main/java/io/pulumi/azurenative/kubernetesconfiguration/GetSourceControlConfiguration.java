@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSourceControlConfiguration {
-/**
- * The SourceControl Configuration object returned in Get & Put response.
-API Version: 2021-03-01.
- *
- * The SourceControl Configuration object returned in Get & Put response.
- */
     public static CompletableFuture<GetSourceControlConfigurationResult> invokeAsync(GetSourceControlConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getSourceControlConfiguration", TypeShape.of(GetSourceControlConfigurationResult.class), args == null ? GetSourceControlConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

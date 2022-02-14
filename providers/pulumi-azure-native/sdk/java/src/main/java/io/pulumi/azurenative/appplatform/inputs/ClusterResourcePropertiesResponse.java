@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Service properties payload
- */
 public final class ClusterResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterResourcePropertiesResponse Empty = new ClusterResourcePropertiesResponse();
 
-    /**
-     * Network profile of the Service
-     */
     @InputImport(name="networkProfile")
     private final @Nullable NetworkProfileResponse networkProfile;
 
@@ -29,9 +23,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
     }
 
-    /**
-     * Provisioning state of the Service
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -39,9 +30,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
-    /**
-     * ServiceInstanceEntity GUID which uniquely identifies a created resource
-     */
     @InputImport(name="serviceId", required=true)
     private final String serviceId;
 
@@ -49,9 +37,6 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
         return this.serviceId;
     }
 
-    /**
-     * Version of the Service
-     */
     @InputImport(name="version", required=true)
     private final Integer version;
 

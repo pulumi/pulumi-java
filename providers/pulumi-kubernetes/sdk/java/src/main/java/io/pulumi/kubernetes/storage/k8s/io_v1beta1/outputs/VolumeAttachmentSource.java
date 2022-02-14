@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VolumeAttachmentSource {
-/**
- * inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.
- */
     private final @Nullable PersistentVolumeSpec inlineVolumeSpec;
-/**
- * Name of the persistent volume to attach.
- */
     private final @Nullable String persistentVolumeName;
 
     @OutputCustomType.Constructor({"inlineVolumeSpec","persistentVolumeName"})
@@ -29,15 +23,9 @@ public final class VolumeAttachmentSource {
         this.persistentVolumeName = persistentVolumeName;
     }
 
-/**
- * inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.
- */
     public Optional<PersistentVolumeSpec> getInlineVolumeSpec() {
         return Optional.ofNullable(this.inlineVolumeSpec);
     }
-/**
- * Name of the persistent volume to attach.
- */
     public Optional<String> getPersistentVolumeName() {
         return Optional.ofNullable(this.persistentVolumeName);
     }

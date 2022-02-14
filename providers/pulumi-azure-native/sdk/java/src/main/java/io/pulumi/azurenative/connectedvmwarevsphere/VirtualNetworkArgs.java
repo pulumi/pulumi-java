@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkArgs Empty = new VirtualNetworkArgs();
 
-    /**
-     * Gets or sets the extended location.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -29,9 +23,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Gets or sets the inventory Item ID for the virtual network.
-     */
     @InputImport(name="inventoryItemId")
     private final @Nullable Input<String> inventoryItemId;
 
@@ -39,9 +30,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.inventoryItemId == null ? Input.empty() : this.inventoryItemId;
     }
 
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -49,9 +37,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Gets or sets the location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual network.
-     */
     @InputImport(name="moRefId")
     private final @Nullable Input<String> moRefId;
 
@@ -69,9 +51,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.moRefId == null ? Input.empty() : this.moRefId;
     }
 
-    /**
-     * The Resource Group Name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,9 +58,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Gets or sets the Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -89,9 +65,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Gets or sets the ARM Id of the vCenter resource in which this template resides.
-     */
     @InputImport(name="vCenterId")
     private final @Nullable Input<String> vCenterId;
 
@@ -99,9 +72,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
         return this.vCenterId == null ? Input.empty() : this.vCenterId;
     }
 
-    /**
-     * Name of the virtual network resource.
-     */
     @InputImport(name="virtualNetworkName")
     private final @Nullable Input<String> virtualNetworkName;
 

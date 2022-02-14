@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DigitalTwinArgs Empty = new DigitalTwinArgs();
 
-    /**
-     * The managed identity for the DigitalTwinsInstance.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<DigitalTwinsIdentityArgs> identity;
 
@@ -33,9 +27,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,9 +34,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
@@ -53,9 +41,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
     }
 
-    /**
-     * Public network access for the DigitalTwinsInstance.
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -63,9 +48,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * The name of the resource group that contains the DigitalTwinsInstance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,9 +55,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the DigitalTwinsInstance.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -83,9 +62,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

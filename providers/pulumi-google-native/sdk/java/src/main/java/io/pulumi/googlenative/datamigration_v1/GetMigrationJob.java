@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigrationJob {
-/**
- * Gets details of a single migration job.
- */
     public static CompletableFuture<GetMigrationJobResult> invokeAsync(GetMigrationJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getMigrationJob", TypeShape.of(GetMigrationJobResult.class), args == null ? GetMigrationJobArgs.Empty : args, Utilities.withVersion(options));
     }

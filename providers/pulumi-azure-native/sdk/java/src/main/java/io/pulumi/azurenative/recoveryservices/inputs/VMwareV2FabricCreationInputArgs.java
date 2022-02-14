@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMwareV2 fabric provider specific settings.
- */
 public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VMwareV2FabricCreationInputArgs Empty = new VMwareV2FabricCreationInputArgs();
 
-    /**
-     * Gets the class type.
-Expected value is 'VMwareV2'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -28,9 +21,6 @@ Expected value is 'VMwareV2'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * The ARM Id of the migration solution.
-     */
     @InputImport(name="migrationSolutionId", required=true)
     private final Input<String> migrationSolutionId;
 
@@ -38,9 +28,6 @@ Expected value is 'VMwareV2'.
         return this.migrationSolutionId;
     }
 
-    /**
-     * The ARM Id of the VMware site.
-     */
     @InputImport(name="vmwareSiteId", required=true)
     private final Input<String> vmwareSiteId;
 

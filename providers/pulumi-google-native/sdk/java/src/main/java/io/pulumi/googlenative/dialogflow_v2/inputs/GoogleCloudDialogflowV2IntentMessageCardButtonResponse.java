@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Contains information about a button.
- */
 public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageCardButtonResponse Empty = new GoogleCloudDialogflowV2IntentMessageCardButtonResponse();
 
-    /**
-     * Optional. The text to send back to the Dialogflow API or a URI to open.
-     */
     @InputImport(name="postback", required=true)
     private final String postback;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
         return this.postback;
     }
 
-    /**
-     * Optional. The text to show on the button.
-     */
     @InputImport(name="text", required=true)
     private final String text;
 

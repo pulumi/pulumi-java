@@ -20,58 +20,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HDInsightLinkedServiceResponse {
-/**
- * List of tags that can be used for describing the linked service.
- */
     private final @Nullable List<Object> annotations;
-/**
- * HDInsight cluster URI. Type: string (or Expression with resultType string).
- */
     private final Object clusterUri;
-/**
- * The integration runtime reference.
- */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-/**
- * Linked service description.
- */
     private final @Nullable String description;
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object encryptedCredential;
-/**
- * Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object fileSystem;
-/**
- * A reference to the Azure SQL linked service that points to the HCatalog database.
- */
     private final @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
-/**
- * Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
- */
     private final @Nullable Object isEspEnabled;
-/**
- * The Azure Storage linked service reference.
- */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-/**
- * Parameters for linked service.
- */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-/**
- * HDInsight cluster password.
- */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-/**
- * Type of linked service.
-Expected value is 'HDInsight'.
- */
     private final String type;
-/**
- * HDInsight cluster user name. Type: string (or Expression with resultType string).
- */
     private final @Nullable Object userName;
 
     @OutputCustomType.Constructor({"annotations","clusterUri","connectVia","description","encryptedCredential","fileSystem","hcatalogLinkedServiceName","isEspEnabled","linkedServiceName","parameters","password","type","userName"})
@@ -104,82 +64,42 @@ Expected value is 'HDInsight'.
         this.userName = userName;
     }
 
-/**
- * List of tags that can be used for describing the linked service.
- */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
-/**
- * HDInsight cluster URI. Type: string (or Expression with resultType string).
- */
     public Object getClusterUri() {
         return this.clusterUri;
     }
-/**
- * The integration runtime reference.
- */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
-/**
- * Linked service description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
-/**
- * Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getFileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
-/**
- * A reference to the Azure SQL linked service that points to the HCatalog database.
- */
     public Optional<LinkedServiceReferenceResponse> getHcatalogLinkedServiceName() {
         return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
-/**
- * Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
- */
     public Optional<Object> getIsEspEnabled() {
         return Optional.ofNullable(this.isEspEnabled);
     }
-/**
- * The Azure Storage linked service reference.
- */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
-/**
- * Parameters for linked service.
- */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * HDInsight cluster password.
- */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * Type of linked service.
-Expected value is 'HDInsight'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * HDInsight cluster user name. Type: string (or Expression with resultType string).
- */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }

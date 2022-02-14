@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Site redundancy mode
- */
     @EnumType
     public enum RedundancyMode {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         Manual("Manual"),
-/**
- * 
- */
         Failover("Failover"),
-/**
- * 
- */
         ActiveActive("ActiveActive"),
-/**
- * 
- */
         GeoRedundant("GeoRedundant");
 
         private final String value;

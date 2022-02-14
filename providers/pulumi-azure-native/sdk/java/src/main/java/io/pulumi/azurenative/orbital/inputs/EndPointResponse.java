@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Customer End point to store/retrieve data during a contact.
- */
 public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndPointResponse Empty = new EndPointResponse();
 
-    /**
-     * Name of an end point.
-     */
     @InputImport(name="endPointName", required=true)
     private final String endPointName;
 
@@ -25,9 +19,6 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
         return this.endPointName;
     }
 
-    /**
-     * IP Address.
-     */
     @InputImport(name="ipAddress", required=true)
     private final String ipAddress;
 
@@ -35,9 +26,6 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipAddress;
     }
 
-    /**
-     * TCP port to listen on to receive data.
-     */
     @InputImport(name="port", required=true)
     private final String port;
 
@@ -45,9 +33,6 @@ public final class EndPointResponse extends io.pulumi.resources.InvokeArgs {
         return this.port;
     }
 
-    /**
-     * Protocol either UDP or TCP.
-     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 

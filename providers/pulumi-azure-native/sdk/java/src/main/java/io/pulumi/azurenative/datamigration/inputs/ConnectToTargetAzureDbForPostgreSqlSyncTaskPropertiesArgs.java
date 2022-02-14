@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties for the task that validates connection to Azure Database For PostgreSQL server and target server requirements for online migration
- */
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs Empty = new ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs();
 
-    /**
-     * Task input
-     */
     @InputImport(name="input")
     private final @Nullable Input<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
@@ -28,10 +22,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
         return this.input == null ? Input.empty() : this.input;
     }
 
-    /**
-     * Task type.
-Expected value is 'ConnectToTarget.AzureDbForPostgreSql.Sync'.
-     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

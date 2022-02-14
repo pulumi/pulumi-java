@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container network interface child resource.
- */
 public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerNetworkInterfaceResponse Empty = new ContainerNetworkInterfaceResponse();
 
-    /**
-     * Reference to the container to which this container network interface is attached.
-     */
     @InputImport(name="container")
     private final @Nullable ContainerResponse container;
 
@@ -31,9 +25,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
     }
 
-    /**
-     * Container network interface configuration from which this container network interface is created.
-     */
     @InputImport(name="containerNetworkInterfaceConfiguration", required=true)
     private final ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration;
 
@@ -41,9 +32,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.containerNetworkInterfaceConfiguration;
     }
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -51,9 +39,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -61,9 +46,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Reference to the ip configuration on this container nic.
-     */
     @InputImport(name="ipConfigurations", required=true)
     private final List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations;
 
@@ -71,9 +53,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.ipConfigurations;
     }
 
-    /**
-     * The name of the resource. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -81,9 +60,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the container network interface resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -91,9 +67,6 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
-    /**
-     * Sub Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

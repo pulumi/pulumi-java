@@ -14,158 +14,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
-API Version: 2020-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### RedisCacheFirewallRuleCreate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var firewallRule = new AzureNative.Cache.FirewallRule("firewallRule", new AzureNative.Cache.FirewallRuleArgs
-        {
-            CacheName = "cache1",
-            EndIP = "192.168.1.4",
-            ResourceGroupName = "rg1",
-            RuleName = "rule1",
-            StartIP = "192.168.1.1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cache.NewFirewallRule(ctx, "firewallRule", &cache.FirewallRuleArgs{
-			CacheName:         pulumi.String("cache1"),
-			EndIP:             pulumi.String("192.168.1.4"),
-			ResourceGroupName: pulumi.String("rg1"),
-			RuleName:          pulumi.String("rule1"),
-			StartIP:           pulumi.String("192.168.1.1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const firewallRule = new azure_native.cache.FirewallRule("firewallRule", {
-    cacheName: "cache1",
-    endIP: "192.168.1.4",
-    resourceGroupName: "rg1",
-    ruleName: "rule1",
-    startIP: "192.168.1.1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-firewall_rule = azure_native.cache.FirewallRule("firewallRule",
-    cache_name="cache1",
-    end_ip="192.168.1.4",
-    resource_group_name="rg1",
-    rule_name="rule1",
-    start_ip="192.168.1.1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:cache:FirewallRule cache1/rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/firewallRules/rule1 
-```
-
- */
 @ResourceType(type="azure-native:cache:FirewallRule")
 public class FirewallRule extends io.pulumi.resources.CustomResource {
-    /**
-     * highest IP address included in the range
-     */
     @OutputExport(name="endIP", type=String.class, parameters={})
     private Output<String> endIP;
 
-    /**
-     * @return highest IP address included in the range
-     */
     public Output<String> getEndIP() {
         return this.endIP;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * lowest IP address included in the range
-     */
     @OutputExport(name="startIP", type=String.class, parameters={})
     private Output<String> startIP;
 
-    /**
-     * @return lowest IP address included in the range
-     */
     public Output<String> getStartIP() {
         return this.startIP;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public FirewallRule(String name, FirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -191,14 +66,6 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static FirewallRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallRule(name, id, options);
     }

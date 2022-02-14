@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Datadog organization properties
- */
 public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatadogOrganizationPropertiesResponse Empty = new DatadogOrganizationPropertiesResponse();
 
-    /**
-     * Id of the Datadog organization.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -25,9 +19,6 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
         return this.id;
     }
 
-    /**
-     * Name of the Datadog organization.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

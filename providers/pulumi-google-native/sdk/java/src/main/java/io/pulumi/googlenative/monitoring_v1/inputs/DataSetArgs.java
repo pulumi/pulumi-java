@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Groups a time series query definition with charting options.
- */
 public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSetArgs Empty = new DataSetArgs();
 
-    /**
-     * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
-     */
     @InputImport(name="legendTemplate")
     private final @Nullable Input<String> legendTemplate;
 
@@ -30,9 +24,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.legendTemplate == null ? Input.empty() : this.legendTemplate;
     }
 
-    /**
-     * Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
-     */
     @InputImport(name="minAlignmentPeriod")
     private final @Nullable Input<String> minAlignmentPeriod;
 
@@ -40,9 +31,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.minAlignmentPeriod == null ? Input.empty() : this.minAlignmentPeriod;
     }
 
-    /**
-     * How this data should be plotted on the chart.
-     */
     @InputImport(name="plotType")
     private final @Nullable Input<DataSetPlotType> plotType;
 
@@ -50,9 +38,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.plotType == null ? Input.empty() : this.plotType;
     }
 
-    /**
-     * Optional. The target axis to use for plotting the metric.
-     */
     @InputImport(name="targetAxis")
     private final @Nullable Input<DataSetTargetAxis> targetAxis;
 
@@ -60,9 +45,6 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetAxis == null ? Input.empty() : this.targetAxis;
     }
 
-    /**
-     * Fields for querying time series data from the Stackdriver metrics API.
-     */
     @InputImport(name="timeSeriesQuery", required=true)
     private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetFhirServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFhirServiceArgs Empty = new GetFhirServiceArgs();
 
-    /**
-     * The name of FHIR Service resource.
-     */
     @InputImport(name="fhirServiceName", required=true)
     private final String fhirServiceName;
 
@@ -25,9 +19,6 @@ public final class GetFhirServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.fhirServiceName;
     }
 
-    /**
-     * The name of the resource group that contains the service instance.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetFhirServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of workspace resource.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

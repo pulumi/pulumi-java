@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Options for controlling the validation of TLS endpoints.
- */
 public final class TlsValidationOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TlsValidationOptionsArgs Empty = new TlsValidationOptionsArgs();
 
-    /**
-     * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
-     */
     @InputImport(name="ignoreHostname")
     private final @Nullable Input<String> ignoreHostname;
 
@@ -27,9 +21,6 @@ public final class TlsValidationOptionsArgs extends io.pulumi.resources.Resource
         return this.ignoreHostname == null ? Input.empty() : this.ignoreHostname;
     }
 
-    /**
-     * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
-     */
     @InputImport(name="ignoreSignature")
     private final @Nullable Input<String> ignoreSignature;
 

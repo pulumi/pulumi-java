@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Contact people for the entry.
- */
 public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1ContactsResponse Empty = new GoogleCloudDatacatalogV1ContactsResponse();
 
-    /**
-     * The list of contact people for the entry.
-     */
     @InputImport(name="people", required=true)
     private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 

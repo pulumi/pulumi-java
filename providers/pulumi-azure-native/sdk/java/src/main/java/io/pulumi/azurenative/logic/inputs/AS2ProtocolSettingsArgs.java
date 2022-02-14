@@ -15,16 +15,10 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
-/**
- * The AS2 agreement protocol settings.
- */
 public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AS2ProtocolSettingsArgs Empty = new AS2ProtocolSettingsArgs();
 
-    /**
-     * The acknowledgement connection settings.
-     */
     @InputImport(name="acknowledgementConnectionSettings", required=true)
     private final Input<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
 
@@ -32,9 +26,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
         return this.acknowledgementConnectionSettings;
     }
 
-    /**
-     * The envelope settings.
-     */
     @InputImport(name="envelopeSettings", required=true)
     private final Input<AS2EnvelopeSettingsArgs> envelopeSettings;
 
@@ -42,9 +33,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
         return this.envelopeSettings;
     }
 
-    /**
-     * The error settings.
-     */
     @InputImport(name="errorSettings", required=true)
     private final Input<AS2ErrorSettingsArgs> errorSettings;
 
@@ -52,9 +40,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
         return this.errorSettings;
     }
 
-    /**
-     * The MDN settings.
-     */
     @InputImport(name="mdnSettings", required=true)
     private final Input<AS2MdnSettingsArgs> mdnSettings;
 
@@ -62,9 +47,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
         return this.mdnSettings;
     }
 
-    /**
-     * The message connection settings.
-     */
     @InputImport(name="messageConnectionSettings", required=true)
     private final Input<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
 
@@ -72,9 +54,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
         return this.messageConnectionSettings;
     }
 
-    /**
-     * The security settings.
-     */
     @InputImport(name="securitySettings", required=true)
     private final Input<AS2SecuritySettingsArgs> securitySettings;
 
@@ -82,9 +61,6 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
         return this.securitySettings;
     }
 
-    /**
-     * The validation settings.
-     */
     @InputImport(name="validationSettings", required=true)
     private final Input<AS2ValidationSettingsArgs> validationSettings;
 

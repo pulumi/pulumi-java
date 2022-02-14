@@ -13,41 +13,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEncryptionScopeResult {
-/**
- * Gets the creation date and time of the encryption scope in UTC.
- */
     private final String creationTime;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
- */
     private final @Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties;
-/**
- * Gets the last modification date and time of the encryption scope in UTC.
- */
     private final String lastModifiedTime;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
- */
     private final @Nullable Boolean requireInfrastructureEncryption;
-/**
- * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
- */
     private final @Nullable String source;
-/**
- * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
- */
     private final @Nullable String state;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"creationTime","id","keyVaultProperties","lastModifiedTime","name","requireInfrastructureEncryption","source","state","type"})
@@ -72,57 +45,30 @@ public final class GetEncryptionScopeResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Gets the creation date and time of the encryption scope in UTC.
- */
     public String getCreationTime() {
         return this.creationTime;
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
- */
     public Optional<EncryptionScopeKeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
-/**
- * Gets the last modification date and time of the encryption scope in UTC.
- */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
- */
     public Optional<Boolean> getRequireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
-/**
- * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
- */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
-/**
- * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
- */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

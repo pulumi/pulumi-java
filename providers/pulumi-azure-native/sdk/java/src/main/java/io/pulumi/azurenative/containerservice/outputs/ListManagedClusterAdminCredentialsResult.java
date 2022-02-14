@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListManagedClusterAdminCredentialsResult {
-/**
- * Base64-encoded Kubernetes configuration file.
- */
     private final List<CredentialResultResponse> kubeconfigs;
 
     @OutputCustomType.Constructor({"kubeconfigs"})
@@ -20,9 +17,6 @@ public final class ListManagedClusterAdminCredentialsResult {
         this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
     }
 
-/**
- * Base64-encoded Kubernetes configuration file.
- */
     public List<CredentialResultResponse> getKubeconfigs() {
         return this.kubeconfigs;
     }

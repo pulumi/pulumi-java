@@ -17,205 +17,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * API portal resource
-API Version: 2022-01-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ApiPortals_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var apiPortal = new AzureNative.AppPlatform.ApiPortal("apiPortal", new AzureNative.AppPlatform.ApiPortalArgs
-        {
-            ApiPortalName = "default",
-            Properties = new AzureNative.AppPlatform.Inputs.ApiPortalPropertiesArgs
-            {
-                GatewayIds = 
-                {
-                    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/gateways/default",
-                },
-                Public = true,
-            },
-            ResourceGroupName = "myResourceGroup",
-            ServiceName = "myservice",
-            Sku = new AzureNative.AppPlatform.Inputs.SkuArgs
-            {
-                Capacity = 2,
-                Name = "E0",
-                Tier = "Enterprise",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := appplatform.NewApiPortal(ctx, "apiPortal", &appplatform.ApiPortalArgs{
-			ApiPortalName: pulumi.String("default"),
-			Properties: &appplatform.ApiPortalPropertiesArgs{
-				GatewayIds: pulumi.StringArray{
-					pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/gateways/default"),
-				},
-				Public: pulumi.Bool(true),
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			ServiceName:       pulumi.String("myservice"),
-			Sku: &appplatform.SkuArgs{
-				Capacity: pulumi.Int(2),
-				Name:     pulumi.String("E0"),
-				Tier:     pulumi.String("Enterprise"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const apiPortal = new azure_native.appplatform.ApiPortal("apiPortal", {
-    apiPortalName: "default",
-    properties: {
-        gatewayIds: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/gateways/default"],
-        "public": true,
-    },
-    resourceGroupName: "myResourceGroup",
-    serviceName: "myservice",
-    sku: {
-        capacity: 2,
-        name: "E0",
-        tier: "Enterprise",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-api_portal = azure_native.appplatform.ApiPortal("apiPortal",
-    api_portal_name="default",
-    properties=azure_native.appplatform.ApiPortalPropertiesArgs(
-        gateway_ids=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/gateways/default"],
-        public=True,
-    ),
-    resource_group_name="myResourceGroup",
-    service_name="myservice",
-    sku=azure_native.appplatform.SkuArgs(
-        capacity=2,
-        name="E0",
-        tier="Enterprise",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:appplatform:ApiPortal default /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apiPortals/default 
-```
-
- */
 @ResourceType(type="azure-native:appplatform:ApiPortal")
 public class ApiPortal extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * API portal properties payload
-     */
     @OutputExport(name="properties", type=ApiPortalPropertiesResponse.class, parameters={})
     private Output<ApiPortalPropertiesResponse> properties;
 
-    /**
-     * @return API portal properties payload
-     */
     public Output<ApiPortalPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Sku of the API portal resource
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return Sku of the API portal resource
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ApiPortal(String name, ApiPortalArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:ApiPortal", name, args == null ? ApiPortalArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -234,14 +68,6 @@ public class ApiPortal extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ApiPortal get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiPortal(name, id, options);
     }

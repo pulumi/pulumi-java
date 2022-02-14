@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceGroupArgs Empty = new GetDeviceGroupArgs();
 
-    /**
-     * Device group name
-     */
     @InputImport(name="deviceGroupName", required=true)
     private final String deviceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceGroupName;
     }
 
-    /**
-     * Defender for IoT location
-     */
     @InputImport(name="iotDefenderLocation", required=true)
     private final String iotDefenderLocation;
 

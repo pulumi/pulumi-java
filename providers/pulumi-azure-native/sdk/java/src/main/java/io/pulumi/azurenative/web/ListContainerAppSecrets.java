@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListContainerAppSecrets {
-/**
- * Container App Secrets Collection ARM resource.
-API Version: 2021-03-01.
- *
- * Container App Secrets Collection ARM resource.
- */
     public static CompletableFuture<ListContainerAppSecretsResult> invokeAsync(ListContainerAppSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listContainerAppSecrets", TypeShape.of(ListContainerAppSecretsResult.class), args == null ? ListContainerAppSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

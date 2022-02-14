@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A site for the Webchat channel
- */
 public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebChatSiteArgs Empty = new WebChatSiteArgs();
 
-    /**
-     * Whether this site is enabled for DirectLine channel
-     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -27,9 +21,6 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled;
     }
 
-    /**
-     * Whether this site is enabled for preview versions of Webchat
-     */
     @InputImport(name="isWebchatPreviewEnabled", required=true)
     private final Input<Boolean> isWebchatPreviewEnabled;
 
@@ -37,9 +28,6 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isWebchatPreviewEnabled;
     }
 
-    /**
-     * Site name
-     */
     @InputImport(name="siteName", required=true)
     private final Input<String> siteName;
 

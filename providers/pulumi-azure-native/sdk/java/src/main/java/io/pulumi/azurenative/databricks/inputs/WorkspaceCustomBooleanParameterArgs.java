@@ -9,16 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * The value which should be used for this field.
- */
 public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceCustomBooleanParameterArgs Empty = new WorkspaceCustomBooleanParameterArgs();
 
-    /**
-     * The value which should be used for this field.
-     */
     @InputImport(name="value", required=true)
     private final Input<Boolean> value;
 

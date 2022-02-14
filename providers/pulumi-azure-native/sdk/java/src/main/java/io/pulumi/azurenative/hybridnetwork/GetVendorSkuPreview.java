@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVendorSkuPreview {
-/**
- * Customer subscription which can use a sku.
-API Version: 2020-01-01-preview.
- *
- * Customer subscription which can use a sku.
- */
     public static CompletableFuture<GetVendorSkuPreviewResult> invokeAsync(GetVendorSkuPreviewArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkuPreview", TypeShape.of(GetVendorSkuPreviewResult.class), args == null ? GetVendorSkuPreviewArgs.Empty : args, Utilities.withVersion(options));
     }

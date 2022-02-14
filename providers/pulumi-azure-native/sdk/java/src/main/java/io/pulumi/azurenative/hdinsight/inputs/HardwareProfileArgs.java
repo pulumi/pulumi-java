@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The hardware profile.
- */
 public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HardwareProfileArgs Empty = new HardwareProfileArgs();
 
-    /**
-     * The size of the VM
-     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

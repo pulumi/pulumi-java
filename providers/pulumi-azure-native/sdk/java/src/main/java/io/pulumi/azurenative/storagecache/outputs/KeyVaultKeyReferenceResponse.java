@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyVaultKeyReferenceResponse {
-/**
- * The URL referencing a key encryption key in Key Vault.
- */
     private final String keyUrl;
-/**
- * Describes a resource Id to source Key Vault.
- */
     private final KeyVaultKeyReferenceResponseSourceVault sourceVault;
 
     @OutputCustomType.Constructor({"keyUrl","sourceVault"})
@@ -27,15 +21,9 @@ public final class KeyVaultKeyReferenceResponse {
         this.sourceVault = Objects.requireNonNull(sourceVault);
     }
 
-/**
- * The URL referencing a key encryption key in Key Vault.
- */
     public String getKeyUrl() {
         return this.keyUrl;
     }
-/**
- * Describes a resource Id to source Key Vault.
- */
     public KeyVaultKeyReferenceResponseSourceVault getSourceVault() {
         return this.sourceVault;
     }

@@ -12,37 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDisasterRecoveryConfigResult {
-/**
- * Alternate name specified when alias and namespace names are same.
- */
     private final @Nullable String alternateName;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
- */
     private final @Nullable String partnerNamespace;
-/**
- * Number of entities pending to be replicated.
- */
     private final Double pendingReplicationOperationsCount;
-/**
- * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
- */
     private final String provisioningState;
-/**
- * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
- */
     private final String role;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"alternateName","id","name","partnerNamespace","pendingReplicationOperationsCount","provisioningState","role","type"})
@@ -65,51 +41,27 @@ public final class GetDisasterRecoveryConfigResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Alternate name specified when alias and namespace names are same.
- */
     public Optional<String> getAlternateName() {
         return Optional.ofNullable(this.alternateName);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
- */
     public Optional<String> getPartnerNamespace() {
         return Optional.ofNullable(this.partnerNamespace);
     }
-/**
- * Number of entities pending to be replicated.
- */
     public Double getPendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
-/**
- * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
- */
     public String getRole() {
         return this.role;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

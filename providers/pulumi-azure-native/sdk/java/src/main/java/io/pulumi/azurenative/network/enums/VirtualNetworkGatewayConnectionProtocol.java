@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Connection protocol used for this connection.
- */
     @EnumType
     public enum VirtualNetworkGatewayConnectionProtocol {
-/**
- * 
- */
         IKEv2("IKEv2"),
-/**
- * 
- */
         IKEv1("IKEv1");
 
         private final String value;

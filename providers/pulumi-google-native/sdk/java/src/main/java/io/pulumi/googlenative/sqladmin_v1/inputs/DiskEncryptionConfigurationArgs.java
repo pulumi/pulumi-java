@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Disk encryption configuration for an instance.
- */
 public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionConfigurationArgs Empty = new DiskEncryptionConfigurationArgs();
 
-    /**
-     * This is always `sql#diskEncryptionConfiguration`.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -27,9 +21,6 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Resource name of KMS key for disk encryption
-     */
     @InputImport(name="kmsKeyName")
     private final @Nullable Input<String> kmsKeyName;
 

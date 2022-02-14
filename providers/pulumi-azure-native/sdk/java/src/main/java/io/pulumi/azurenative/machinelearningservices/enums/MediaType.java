@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Media type of data asset.
- */
     @EnumType
     public enum MediaType {
-/**
- * 
- */
         Image("Image"),
-/**
- * 
- */
         Text("Text");
 
         private final String value;

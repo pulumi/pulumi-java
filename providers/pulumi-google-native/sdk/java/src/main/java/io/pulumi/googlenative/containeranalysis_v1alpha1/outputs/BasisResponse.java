@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BasisResponse {
-/**
- * The fingerprint of the base image.
- */
     private final FingerprintResponse fingerprint;
-/**
- * The resource_url for the resource representing the basis of associated occurrence images.
- */
     private final String resourceUrl;
 
     @OutputCustomType.Constructor({"fingerprint","resourceUrl"})
@@ -27,15 +21,9 @@ public final class BasisResponse {
         this.resourceUrl = Objects.requireNonNull(resourceUrl);
     }
 
-/**
- * The fingerprint of the base image.
- */
     public FingerprintResponse getFingerprint() {
         return this.fingerprint;
     }
-/**
- * The resource_url for the resource representing the basis of associated occurrence images.
- */
     public String getResourceUrl() {
         return this.resourceUrl;
     }

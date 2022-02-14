@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ProximityResponse {
-/**
- * Number of characters after the finding to consider.
- */
     private final Integer windowAfter;
-/**
- * Number of characters before the finding to consider.
- */
     private final Integer windowBefore;
 
     @OutputCustomType.Constructor({"windowAfter","windowBefore"})
@@ -26,15 +20,9 @@ public final class GooglePrivacyDlpV2ProximityResponse {
         this.windowBefore = Objects.requireNonNull(windowBefore);
     }
 
-/**
- * Number of characters after the finding to consider.
- */
     public Integer getWindowAfter() {
         return this.windowAfter;
     }
-/**
- * Number of characters before the finding to consider.
- */
     public Integer getWindowBefore() {
         return this.windowBefore;
     }

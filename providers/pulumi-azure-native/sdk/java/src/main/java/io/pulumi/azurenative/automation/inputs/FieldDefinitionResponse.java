@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Definition of the connection fields.
- */
 public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FieldDefinitionResponse Empty = new FieldDefinitionResponse();
 
-    /**
-     * Gets or sets the isEncrypted flag of the connection field definition.
-     */
     @InputImport(name="isEncrypted")
     private final @Nullable Boolean isEncrypted;
 
@@ -28,9 +22,6 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
     }
 
-    /**
-     * Gets or sets the isOptional flag of the connection field definition.
-     */
     @InputImport(name="isOptional")
     private final @Nullable Boolean isOptional;
 
@@ -38,9 +29,6 @@ public final class FieldDefinitionResponse extends io.pulumi.resources.InvokeArg
         return this.isOptional == null ? Optional.empty() : Optional.ofNullable(this.isOptional);
     }
 
-    /**
-     * Gets or sets the type of the connection field definition.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

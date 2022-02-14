@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RegistryCredentialResponse {
-/**
- * A public key certificate used to verify the device credentials.
- */
     private final PublicKeyCertificateResponse publicKeyCertificate;
 
     @OutputCustomType.Constructor({"publicKeyCertificate"})
@@ -19,9 +16,6 @@ public final class RegistryCredentialResponse {
         this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
     }
 
-/**
- * A public key certificate used to verify the device credentials.
- */
     public PublicKeyCertificateResponse getPublicKeyCertificate() {
         return this.publicKeyCertificate;
     }

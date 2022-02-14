@@ -16,239 +16,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A Database Migration Service resource
-API Version: 2018-04-19.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Services_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var service = new AzureNative.DataMigration.Service("service", new AzureNative.DataMigration.ServiceArgs
-        {
-            GroupName = "DmsSdkRg",
-            Location = "southcentralus",
-            ServiceName = "DmsSdkService",
-            Sku = new AzureNative.DataMigration.Inputs.ServiceSkuArgs
-            {
-                Name = "Basic_1vCore",
-            },
-            VirtualSubnetId = "/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datamigration.NewService(ctx, "service", &datamigration.ServiceArgs{
-			GroupName:   pulumi.String("DmsSdkRg"),
-			Location:    pulumi.String("southcentralus"),
-			ServiceName: pulumi.String("DmsSdkService"),
-			Sku: &datamigration.ServiceSkuArgs{
-				Name: pulumi.String("Basic_1vCore"),
-			},
-			VirtualSubnetId: pulumi.String("/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const service = new azure_native.datamigration.Service("service", {
-    groupName: "DmsSdkRg",
-    location: "southcentralus",
-    serviceName: "DmsSdkService",
-    sku: {
-        name: "Basic_1vCore",
-    },
-    virtualSubnetId: "/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-service = azure_native.datamigration.Service("service",
-    group_name="DmsSdkRg",
-    location="southcentralus",
-    service_name="DmsSdkService",
-    sku=azure_native.datamigration.ServiceSkuArgs(
-        name="Basic_1vCore",
-    ),
-    virtual_subnet_id="/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datamigration:Service DmsSdkService /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService 
-```
-
- */
 @ResourceType(type="azure-native:datamigration:Service")
 public class Service extends io.pulumi.resources.CustomResource {
-    /**
-     * HTTP strong entity tag value. Ignored if submitted
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return HTTP strong entity tag value. Ignored if submitted
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * The resource kind. Only 'vm' (the default) is supported.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return The resource kind. Only 'vm' (the default) is supported.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The resource's provisioning state
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The resource's provisioning state
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The public key of the service, used to encrypt secrets sent to the service
-     */
     @OutputExport(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
-    /**
-     * @return The public key of the service, used to encrypt secrets sent to the service
-     */
     public Output</* @Nullable */ String> getPublicKey() {
         return this.publicKey;
     }
-    /**
-     * Service SKU
-     */
     @OutputExport(name="sku", type=ServiceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ServiceSkuResponse> sku;
 
-    /**
-     * @return Service SKU
-     */
     public Output</* @Nullable */ ServiceSkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
-     */
     @OutputExport(name="virtualSubnetId", type=String.class, parameters={})
     private Output<String> virtualSubnetId;
 
-    /**
-     * @return The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
-     */
     public Output<String> getVirtualSubnetId() {
         return this.virtualSubnetId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datamigration:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -273,14 +103,6 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

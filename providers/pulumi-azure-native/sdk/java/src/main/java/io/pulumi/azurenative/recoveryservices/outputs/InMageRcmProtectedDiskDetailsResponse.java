@@ -10,41 +10,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InMageRcmProtectedDiskDetailsResponse {
-/**
- * The disk capacity in bytes.
- */
     private final Double capacityInBytes;
-/**
- * The disk encryption set ARM Id.
- */
     private final String diskEncryptionSetId;
-/**
- * The disk Id.
- */
     private final String diskId;
-/**
- * The disk name.
- */
     private final String diskName;
-/**
- * The disk type.
- */
     private final String diskType;
-/**
- * A value indicating whether the disk is the OS disk.
- */
     private final String isOSDisk;
-/**
- * The log storage account ARM Id.
- */
     private final String logStorageAccountId;
-/**
- * The ARM Id of the seed managed disk.
- */
     private final String seedManagedDiskId;
-/**
- * The ARM Id of the target managed disk.
- */
     private final String targetManagedDiskId;
 
     @OutputCustomType.Constructor({"capacityInBytes","diskEncryptionSetId","diskId","diskName","diskType","isOSDisk","logStorageAccountId","seedManagedDiskId","targetManagedDiskId"})
@@ -69,57 +42,30 @@ public final class InMageRcmProtectedDiskDetailsResponse {
         this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
     }
 
-/**
- * The disk capacity in bytes.
- */
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
     }
-/**
- * The disk encryption set ARM Id.
- */
     public String getDiskEncryptionSetId() {
         return this.diskEncryptionSetId;
     }
-/**
- * The disk Id.
- */
     public String getDiskId() {
         return this.diskId;
     }
-/**
- * The disk name.
- */
     public String getDiskName() {
         return this.diskName;
     }
-/**
- * The disk type.
- */
     public String getDiskType() {
         return this.diskType;
     }
-/**
- * A value indicating whether the disk is the OS disk.
- */
     public String getIsOSDisk() {
         return this.isOSDisk;
     }
-/**
- * The log storage account ARM Id.
- */
     public String getLogStorageAccountId() {
         return this.logStorageAccountId;
     }
-/**
- * The ARM Id of the seed managed disk.
- */
     public String getSeedManagedDiskId() {
         return this.seedManagedDiskId;
     }
-/**
- * The ARM Id of the target managed disk.
- */
     public String getTargetManagedDiskId() {
         return this.targetManagedDiskId;
     }

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HardwareProfileResponse {
-/**
- * Specifies the HANA instance SKU.
- */
     private final String hanaInstanceSize;
-/**
- * Name of the hardware type (vendor and/or their product name)
- */
     private final String hardwareType;
 
     @OutputCustomType.Constructor({"hanaInstanceSize","hardwareType"})
@@ -26,15 +20,9 @@ public final class HardwareProfileResponse {
         this.hardwareType = Objects.requireNonNull(hardwareType);
     }
 
-/**
- * Specifies the HANA instance SKU.
- */
     public String getHanaInstanceSize() {
         return this.hanaInstanceSize;
     }
-/**
- * Name of the hardware type (vendor and/or their product name)
- */
     public String getHardwareType() {
         return this.hardwareType;
     }

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * This is deprecated and has no effect. Do not use.
- */
 public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogConfigCounterOptionsResponse Empty = new LogConfigCounterOptionsResponse();
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="customFields", required=true)
     private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
 
@@ -27,9 +21,6 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
         return this.customFields;
     }
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="field", required=true)
     private final String field;
 
@@ -37,9 +28,6 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
         return this.field;
     }
 
-    /**
-     * This is deprecated and has no effect. Do not use.
-     */
     @InputImport(name="metric", required=true)
     private final String metric;
 

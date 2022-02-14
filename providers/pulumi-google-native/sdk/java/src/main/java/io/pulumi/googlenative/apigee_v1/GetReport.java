@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReport {
-/**
- * Retrieve a custom report definition.
- */
     public static CompletableFuture<GetReportResult> invokeAsync(GetReportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getReport", TypeShape.of(GetReportResult.class), args == null ? GetReportArgs.Empty : args, Utilities.withVersion(options));
     }

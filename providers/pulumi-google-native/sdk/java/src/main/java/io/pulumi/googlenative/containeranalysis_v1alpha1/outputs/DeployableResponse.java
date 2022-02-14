@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeployableResponse {
-/**
- * Resource URI for the artifact being deployed.
- */
     private final List<String> resourceUri;
 
     @OutputCustomType.Constructor({"resourceUri"})
@@ -20,9 +17,6 @@ public final class DeployableResponse {
         this.resourceUri = Objects.requireNonNull(resourceUri);
     }
 
-/**
- * Resource URI for the artifact being deployed.
- */
     public List<String> getResourceUri() {
         return this.resourceUri;
     }

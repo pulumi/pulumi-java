@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HistoryArgs Empty = new HistoryArgs();
 
-    /**
-     * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,9 +22,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
-     */
     @InputImport(name="historyId")
     private final @Nullable Input<String> historyId;
 
@@ -38,9 +29,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.historyId == null ? Input.empty() : this.historyId;
     }
 
-    /**
-     * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,9 +43,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -68,9 +50,6 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
-     */
     @InputImport(name="testPlatform")
     private final @Nullable Input<HistoryTestPlatform> testPlatform;
 

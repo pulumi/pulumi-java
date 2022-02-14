@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Node Affinity: the configuration of desired nodes onto which this Instance could be scheduled.
- */
 public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchedulingNodeAffinityArgs Empty = new SchedulingNodeAffinityArgs();
 
-    /**
-     * Corresponds to the label key of Node resource.
-     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -29,9 +23,6 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
         return this.key == null ? Input.empty() : this.key;
     }
 
-    /**
-     * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
-     */
     @InputImport(name="operator")
     private final @Nullable Input<SchedulingNodeAffinityOperator> operator;
 
@@ -39,9 +30,6 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
         return this.operator == null ? Input.empty() : this.operator;
     }
 
-    /**
-     * Corresponds to the label values of Node resource.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

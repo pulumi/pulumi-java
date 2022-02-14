@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
-    /**
-     * The name of the certificate
-     */
     @InputImport(name="certificateName", required=true)
     private final String certificateName;
 
@@ -25,9 +19,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         return this.certificateName;
     }
 
-    /**
-     * The name of the resource group that contains the IoT hub.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the IoT hub.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

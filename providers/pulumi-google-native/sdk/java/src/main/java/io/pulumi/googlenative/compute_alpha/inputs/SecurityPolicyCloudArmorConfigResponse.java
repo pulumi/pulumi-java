@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Configuration options for Cloud Armor.
- */
 public final class SecurityPolicyCloudArmorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyCloudArmorConfigResponse Empty = new SecurityPolicyCloudArmorConfigResponse();
 
-    /**
-     * If set to true, enables Cloud Armor Machine Learning.
-     */
     @InputImport(name="enableMl", required=true)
     private final Boolean enableMl;
 

@@ -12,21 +12,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CollectorAgentPropertiesResponse {
-/**
- * 
- */
     private final String id;
-/**
- * 
- */
     private final String lastHeartbeatUtc;
-/**
- * 
- */
     private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
-/**
- * 
- */
     private final String version;
 
     @OutputCustomType.Constructor({"id","lastHeartbeatUtc","spnDetails","version"})
@@ -41,27 +29,15 @@ public final class CollectorAgentPropertiesResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * 
- */
     public String getId() {
         return this.id;
     }
-/**
- * 
- */
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
-/**
- * 
- */
     public Optional<CollectorBodyAgentSpnPropertiesResponse> getSpnDetails() {
         return Optional.ofNullable(this.spnDetails);
     }
-/**
- * 
- */
     public String getVersion() {
         return this.version;
     }

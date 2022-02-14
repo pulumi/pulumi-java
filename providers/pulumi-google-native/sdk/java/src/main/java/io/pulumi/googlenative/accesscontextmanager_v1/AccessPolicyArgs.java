@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyArgs Empty = new AccessPolicyArgs();
 
-    /**
-     * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
-     */
     @InputImport(name="parent", required=true)
     private final Input<String> parent;
 
@@ -28,9 +22,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent;
     }
 
-    /**
-     * The scopes of a policy define which resources an ACM policy can restrict, and where ACM resources can be referenced. For example, a policy with scopes=["folders/123"] has the following behavior: - vpcsc perimeters can only restrict projects within folders/123 - access levels can only be referenced by resources within folders/123. If empty, there are no limitations on which resources can be restricted by an ACM policy, and there are no limitations on where ACM resources can be referenced. Only one policy can include a given scope (attempting to create a second policy which includes "folders/123" will result in an error). Currently, scopes cannot be modified after a policy is created. Currently, policies can only have a single scope. Format: list of `folders/{folder_number}` or `projects/{project_number}`
-     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<String>> scopes;
 
@@ -38,9 +29,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
-    /**
-     * Human readable title. Does not affect behavior.
-     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Set the scoring configuration. This allows modifying the ranking of results for a source.
- */
 public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceScoringConfigArgs Empty = new SourceScoringConfigArgs();
 
-    /**
-     * Importance of the source.
-     */
     @InputImport(name="sourceImportance")
     private final @Nullable Input<SourceScoringConfigSourceImportance> sourceImportance;
 

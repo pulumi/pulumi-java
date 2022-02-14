@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiManagementConfigResponse {
-/**
- * APIM-Api Identifier.
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -21,9 +18,6 @@ public final class ApiManagementConfigResponse {
         this.id = id;
     }
 
-/**
- * APIM-Api Identifier.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

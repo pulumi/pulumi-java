@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDebugTokenArgs Empty = new GetDebugTokenArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -27,9 +21,6 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
         return this.appId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="debugTokenId", required=true)
     private final String debugTokenId;
 
@@ -37,9 +28,6 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
         return this.debugTokenId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

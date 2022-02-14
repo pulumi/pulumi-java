@@ -13,37 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetServiceUnitResult {
-/**
- * The artifacts for the service unit.
- */
     private final @Nullable ServiceUnitArtifactsResponse artifacts;
-/**
- * Describes the type of ARM deployment to be performed on the resource.
- */
     private final String deploymentMode;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
- */
     private final String targetResourceGroup;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"artifacts","deploymentMode","id","location","name","tags","targetResourceGroup","type"})
@@ -66,51 +42,27 @@ public final class GetServiceUnitResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The artifacts for the service unit.
- */
     public Optional<ServiceUnitArtifactsResponse> getArtifacts() {
         return Optional.ofNullable(this.artifacts);
     }
-/**
- * Describes the type of ARM deployment to be performed on the resource.
- */
     public String getDeploymentMode() {
         return this.deploymentMode;
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
- */
     public String getTargetResourceGroup() {
         return this.targetResourceGroup;
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

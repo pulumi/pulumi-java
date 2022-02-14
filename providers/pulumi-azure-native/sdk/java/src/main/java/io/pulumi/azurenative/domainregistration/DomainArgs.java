@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="authCode")
     private final @Nullable Input<String> authCode;
 
@@ -32,9 +26,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.authCode == null ? Input.empty() : this.authCode;
     }
 
-    /**
-     * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
-     */
     @InputImport(name="autoRenew")
     private final @Nullable Input<Boolean> autoRenew;
 
@@ -42,9 +33,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoRenew == null ? Input.empty() : this.autoRenew;
     }
 
-    /**
-     * Legal agreement consent.
-     */
     @InputImport(name="consent", required=true)
     private final Input<DomainPurchaseConsentArgs> consent;
 
@@ -52,9 +40,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.consent;
     }
 
-    /**
-     * Administrative contact.
-     */
     @InputImport(name="contactAdmin", required=true)
     private final Input<ContactArgs> contactAdmin;
 
@@ -62,9 +47,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactAdmin;
     }
 
-    /**
-     * Billing contact.
-     */
     @InputImport(name="contactBilling", required=true)
     private final Input<ContactArgs> contactBilling;
 
@@ -72,9 +54,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactBilling;
     }
 
-    /**
-     * Registrant contact.
-     */
     @InputImport(name="contactRegistrant", required=true)
     private final Input<ContactArgs> contactRegistrant;
 
@@ -82,9 +61,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactRegistrant;
     }
 
-    /**
-     * Technical contact.
-     */
     @InputImport(name="contactTech", required=true)
     private final Input<ContactArgs> contactTech;
 
@@ -92,9 +68,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactTech;
     }
 
-    /**
-     * Current DNS type
-     */
     @InputImport(name="dnsType")
     private final @Nullable Input<DnsType> dnsType;
 
@@ -102,9 +75,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsType == null ? Input.empty() : this.dnsType;
     }
 
-    /**
-     * Azure DNS Zone to use
-     */
     @InputImport(name="dnsZoneId")
     private final @Nullable Input<String> dnsZoneId;
 
@@ -112,9 +82,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsZoneId == null ? Input.empty() : this.dnsZoneId;
     }
 
-    /**
-     * Name of the domain.
-     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -122,9 +89,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -132,9 +96,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Resource Location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -142,9 +103,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
-     */
     @InputImport(name="privacy")
     private final @Nullable Input<Boolean> privacy;
 
@@ -152,9 +110,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.privacy == null ? Input.empty() : this.privacy;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -162,9 +117,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -172,9 +124,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Target DNS type (would be used for migration)
-     */
     @InputImport(name="targetDnsType")
     private final @Nullable Input<DnsType> targetDnsType;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ADLSGen2FileDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ADLSGen2FileDataSetArgs Empty = new ADLSGen2FileDataSetArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class ADLSGen2FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.accountName;
     }
 
-    /**
-     * The name of the dataSet.
-     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -37,9 +28,6 @@ public final class ADLSGen2FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
-    /**
-     * File path within the file system.
-     */
     @InputImport(name="filePath", required=true)
     private final Input<String> filePath;
 
@@ -47,9 +35,6 @@ public final class ADLSGen2FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.filePath;
     }
 
-    /**
-     * File system to which the file belongs.
-     */
     @InputImport(name="fileSystem", required=true)
     private final Input<String> fileSystem;
 
@@ -57,10 +42,6 @@ public final class ADLSGen2FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.fileSystem;
     }
 
-    /**
-     * Kind of data set.
-Expected value is 'AdlsGen2File'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -68,9 +49,6 @@ Expected value is 'AdlsGen2File'.
         return this.kind;
     }
 
-    /**
-     * Resource group of storage account
-     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -78,9 +56,6 @@ Expected value is 'AdlsGen2File'.
         return this.resourceGroup;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -88,9 +63,6 @@ Expected value is 'AdlsGen2File'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share to add the data set to.
-     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -98,9 +70,6 @@ Expected value is 'AdlsGen2File'.
         return this.shareName;
     }
 
-    /**
-     * Storage account name of the source data set
-     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 
@@ -108,9 +77,6 @@ Expected value is 'AdlsGen2File'.
         return this.storageAccountName;
     }
 
-    /**
-     * Subscription id of storage account
-     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

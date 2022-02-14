@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Specifies the link to a Key Vault.
- */
 public final class KeyVaultReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultReferenceResponse Empty = new KeyVaultReferenceResponse();
 
-    /**
-     * Azure resource ID of the Key Vault.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 

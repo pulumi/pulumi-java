@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A test of an iOS application that implements one or more game loop scenarios. This test type accepts an archived application (.ipa file) and a list of integer scenarios that will be executed on the app sequentially.
- */
 public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IosTestLoopResponse Empty = new IosTestLoopResponse();
 
-    /**
-     * The bundle id for the application under test.
-     */
     @InputImport(name="appBundleId", required=true)
     private final String appBundleId;
 
@@ -28,9 +22,6 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
         return this.appBundleId;
     }
 
-    /**
-     * The .ipa of the application to test.
-     */
     @InputImport(name="appIpa", required=true)
     private final FileReferenceResponse appIpa;
 
@@ -38,9 +29,6 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
         return this.appIpa;
     }
 
-    /**
-     * The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
-     */
     @InputImport(name="scenarios", required=true)
     private final List<Integer> scenarios;
 

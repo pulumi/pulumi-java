@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * OAuth acquire token request body parameter (www-url-form-encoded).
- */
 public final class TokenBodyParameterContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenBodyParameterContractArgs Empty = new TokenBodyParameterContractArgs();
 
-    /**
-     * body parameter name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -26,9 +20,6 @@ public final class TokenBodyParameterContractArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
-    /**
-     * body parameter value.
-     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

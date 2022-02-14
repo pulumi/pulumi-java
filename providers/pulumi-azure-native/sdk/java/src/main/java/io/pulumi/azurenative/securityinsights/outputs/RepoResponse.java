@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RepoResponse {
-/**
- * Array of branches.
- */
     private final @Nullable List<String> branches;
-/**
- * The name of the repository.
- */
     private final @Nullable String fullName;
-/**
- * The url to access the repository.
- */
     private final @Nullable String url;
 
     @OutputCustomType.Constructor({"branches","fullName","url"})
@@ -35,21 +26,12 @@ public final class RepoResponse {
         this.url = url;
     }
 
-/**
- * Array of branches.
- */
     public List<String> getBranches() {
         return this.branches == null ? List.of() : this.branches;
     }
-/**
- * The name of the repository.
- */
     public Optional<String> getFullName() {
         return Optional.ofNullable(this.fullName);
     }
-/**
- * The url to access the repository.
- */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

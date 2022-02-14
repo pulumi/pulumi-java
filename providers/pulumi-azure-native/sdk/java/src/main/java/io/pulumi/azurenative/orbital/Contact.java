@@ -17,355 +17,123 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Customer creates a contact resource for a spacecraft resource.
-API Version: 2021-04-04-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create a contact
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var contact = new AzureNative.Orbital.Contact("contact", new AzureNative.Orbital.ContactArgs
-        {
-            ContactName = "contact1",
-            ContactProfile = new AzureNative.Orbital.Inputs.ResourceReferenceArgs
-            {
-                Id = "/subscriptions/subId/resourceGroups/rg/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK",
-            },
-            GroundStationName = "westus_gs1",
-            ReservationEndTime = "2020-07-16T20:55:00.00Z",
-            ReservationStartTime = "2020-07-16T20:35:00.00Z",
-            ResourceGroupName = "rg1",
-            SpacecraftName = "AQUA",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	orbital "github.com/pulumi/pulumi-azure-native/sdk/go/azure/orbital"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := orbital.NewContact(ctx, "contact", &orbital.ContactArgs{
-			ContactName: pulumi.String("contact1"),
-			ContactProfile: &orbital.ResourceReferenceArgs{
-				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK"),
-			},
-			GroundStationName:    pulumi.String("westus_gs1"),
-			ReservationEndTime:   pulumi.String("2020-07-16T20:55:00.00Z"),
-			ReservationStartTime: pulumi.String("2020-07-16T20:35:00.00Z"),
-			ResourceGroupName:    pulumi.String("rg1"),
-			SpacecraftName:       pulumi.String("AQUA"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const contact = new azure_native.orbital.Contact("contact", {
-    contactName: "contact1",
-    contactProfile: {
-        id: "/subscriptions/subId/resourceGroups/rg/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK",
-    },
-    groundStationName: "westus_gs1",
-    reservationEndTime: "2020-07-16T20:55:00.00Z",
-    reservationStartTime: "2020-07-16T20:35:00.00Z",
-    resourceGroupName: "rg1",
-    spacecraftName: "AQUA",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-contact = azure_native.orbital.Contact("contact",
-    contact_name="contact1",
-    contact_profile=azure_native.orbital.ResourceReferenceArgs(
-        id="/subscriptions/subId/resourceGroups/rg/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK",
-    ),
-    ground_station_name="westus_gs1",
-    reservation_end_time="2020-07-16T20:55:00.00Z",
-    reservation_start_time="2020-07-16T20:35:00.00Z",
-    resource_group_name="rg1",
-    spacecraft_name="AQUA")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:orbital:Contact contact1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/spacecrafts/AQUA/contacts/contact1 
-```
-
- */
 @ResourceType(type="azure-native:orbital:Contact")
 public class Contact extends io.pulumi.resources.CustomResource {
-    /**
-     * The reference to the contact profile resource.
-     */
     @OutputExport(name="contactProfile", type=ResourceReferenceResponse.class, parameters={})
     private Output<ResourceReferenceResponse> contactProfile;
 
-    /**
-     * @return The reference to the contact profile resource.
-     */
     public Output<ResourceReferenceResponse> getContactProfile() {
         return this.contactProfile;
     }
-    /**
-     * Azimuth of the antenna at the end of the contact in decimal degrees.
-     */
     @OutputExport(name="endAzimuthDegrees", type=Double.class, parameters={})
     private Output<Double> endAzimuthDegrees;
 
-    /**
-     * @return Azimuth of the antenna at the end of the contact in decimal degrees.
-     */
     public Output<Double> getEndAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
-    /**
-     * Spacecraft elevation above the horizon at contact end.
-     */
     @OutputExport(name="endElevationDegrees", type=Double.class, parameters={})
     private Output<Double> endElevationDegrees;
 
-    /**
-     * @return Spacecraft elevation above the horizon at contact end.
-     */
     public Output<Double> getEndElevationDegrees() {
         return this.endElevationDegrees;
     }
-    /**
-     * Any error message while scheduling a contact.
-     */
     @OutputExport(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
-    /**
-     * @return Any error message while scheduling a contact.
-     */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Azure Ground Station name.
-     */
     @OutputExport(name="groundStationName", type=String.class, parameters={})
     private Output<String> groundStationName;
 
-    /**
-     * @return Azure Ground Station name.
-     */
     public Output<String> getGroundStationName() {
         return this.groundStationName;
     }
-    /**
-     * Maximum elevation of the antenna during the contact in decimal degrees.
-     */
     @OutputExport(name="maximumElevationDegrees", type=Double.class, parameters={})
     private Output<Double> maximumElevationDegrees;
 
-    /**
-     * @return Maximum elevation of the antenna during the contact in decimal degrees.
-     */
     public Output<Double> getMaximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Reservation end time of a contact.
-     */
     @OutputExport(name="reservationEndTime", type=String.class, parameters={})
     private Output<String> reservationEndTime;
 
-    /**
-     * @return Reservation end time of a contact.
-     */
     public Output<String> getReservationEndTime() {
         return this.reservationEndTime;
     }
-    /**
-     * Reservation start time of a contact.
-     */
     @OutputExport(name="reservationStartTime", type=String.class, parameters={})
     private Output<String> reservationStartTime;
 
-    /**
-     * @return Reservation start time of a contact.
-     */
     public Output<String> getReservationStartTime() {
         return this.reservationStartTime;
     }
-    /**
-     * Receive end time of a contact.
-     */
     @OutputExport(name="rxEndTime", type=String.class, parameters={})
     private Output<String> rxEndTime;
 
-    /**
-     * @return Receive end time of a contact.
-     */
     public Output<String> getRxEndTime() {
         return this.rxEndTime;
     }
-    /**
-     * Receive start time of a contact.
-     */
     @OutputExport(name="rxStartTime", type=String.class, parameters={})
     private Output<String> rxStartTime;
 
-    /**
-     * @return Receive start time of a contact.
-     */
     public Output<String> getRxStartTime() {
         return this.rxStartTime;
     }
-    /**
-     * Azimuth of the antenna at the start of the contact in decimal degrees.
-     */
     @OutputExport(name="startAzimuthDegrees", type=Double.class, parameters={})
     private Output<Double> startAzimuthDegrees;
 
-    /**
-     * @return Azimuth of the antenna at the start of the contact in decimal degrees.
-     */
     public Output<Double> getStartAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
-    /**
-     * Spacecraft elevation above the horizon at contact start.
-     */
     @OutputExport(name="startElevationDegrees", type=Double.class, parameters={})
     private Output<Double> startElevationDegrees;
 
-    /**
-     * @return Spacecraft elevation above the horizon at contact start.
-     */
     public Output<Double> getStartElevationDegrees() {
         return this.startElevationDegrees;
     }
-    /**
-     * Status of a contact.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return Status of a contact.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Transmit end time of a contact.
-     */
     @OutputExport(name="txEndTime", type=String.class, parameters={})
     private Output<String> txEndTime;
 
-    /**
-     * @return Transmit end time of a contact.
-     */
     public Output<String> getTxEndTime() {
         return this.txEndTime;
     }
-    /**
-     * Transmit start time of a contact.
-     */
     @OutputExport(name="txStartTime", type=String.class, parameters={})
     private Output<String> txStartTime;
 
-    /**
-     * @return Transmit start time of a contact.
-     */
     public Output<String> getTxStartTime() {
         return this.txStartTime;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Contact(String name, ContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:orbital:Contact", name, args == null ? ContactArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -384,14 +152,6 @@ public class Contact extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Contact get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Contact(name, id, options);
     }

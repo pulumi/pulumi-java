@@ -11,21 +11,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse {
-/**
- * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
- */
     private final Double confidenceScore;
-/**
- * Map that contains metadata about the Smart Compose suggestion and the document from which it originates.
- */
     private final Map<String,String> metadata;
-/**
- * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
- */
     private final String queryRecord;
-/**
- * The content of the suggestion.
- */
     private final String suggestion;
 
     @OutputCustomType.Constructor({"confidenceScore","metadata","queryRecord","suggestion"})
@@ -40,27 +28,15 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
         this.suggestion = Objects.requireNonNull(suggestion);
     }
 
-/**
- * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
- */
     public Double getConfidenceScore() {
         return this.confidenceScore;
     }
-/**
- * Map that contains metadata about the Smart Compose suggestion and the document from which it originates.
- */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
-/**
- * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
- */
     public String getQueryRecord() {
         return this.queryRecord;
     }
-/**
- * The content of the suggestion.
- */
     public String getSuggestion() {
         return this.suggestion;
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only be specified for a global address.
- */
     @EnumType
     public enum GlobalAddressIpVersion {
-/**
- * 
- */
         Ipv4("IPV4"),
-/**
- * 
- */
         Ipv6("IPV6"),
-/**
- * 
- */
         UnspecifiedVersion("UNSPECIFIED_VERSION");
 
         private final String value;

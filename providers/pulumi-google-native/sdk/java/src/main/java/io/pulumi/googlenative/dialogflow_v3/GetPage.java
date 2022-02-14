@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPage {
-/**
- * Retrieves the specified page.
- */
     public static CompletableFuture<GetPageResult> invokeAsync(GetPageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getPage", TypeShape.of(GetPageResult.class), args == null ? GetPageArgs.Empty : args, Utilities.withVersion(options));
     }

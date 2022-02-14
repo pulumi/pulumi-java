@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListDatabaseAccountConnectionStringsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListDatabaseAccountConnectionStringsArgs Empty = new ListDatabaseAccountConnectionStringsArgs();
 
-    /**
-     * Cosmos DB database account name.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class ListDatabaseAccountConnectionStringsArgs extends io.pulumi.re
         return this.accountName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

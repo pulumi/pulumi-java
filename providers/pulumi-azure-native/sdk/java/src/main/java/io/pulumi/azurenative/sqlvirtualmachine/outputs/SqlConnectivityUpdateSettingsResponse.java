@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlConnectivityUpdateSettingsResponse {
-/**
- * SQL Server connectivity option.
- */
     private final @Nullable String connectivityType;
-/**
- * SQL Server port.
- */
     private final @Nullable Integer port;
 
     @OutputCustomType.Constructor({"connectivityType","port"})
@@ -29,15 +23,9 @@ public final class SqlConnectivityUpdateSettingsResponse {
         this.port = port;
     }
 
-/**
- * SQL Server connectivity option.
- */
     public Optional<String> getConnectivityType() {
         return Optional.ofNullable(this.connectivityType);
     }
-/**
- * SQL Server port.
- */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }

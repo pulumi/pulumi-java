@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the parameters for RequestUri match conditions
- */
 public final class RequestUriMatchConditionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RequestUriMatchConditionParametersArgs Empty = new RequestUriMatchConditionParametersArgs();
 
-    /**
-     * The match value for the condition of the delivery rule
-     */
     @InputImport(name="matchValues")
     private final @Nullable Input<List<String>> matchValues;
 
@@ -32,9 +26,6 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
         return this.matchValues == null ? Input.empty() : this.matchValues;
     }
 
-    /**
-     * Describes if this is negate condition or not
-     */
     @InputImport(name="negateCondition")
     private final @Nullable Input<Boolean> negateCondition;
 
@@ -42,9 +33,6 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -52,9 +40,6 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
         return this.odataType;
     }
 
-    /**
-     * Describes operator to be matched
-     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,RequestUriOperator>> operator;
 
@@ -62,9 +47,6 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
         return this.operator;
     }
 
-    /**
-     * List of transforms
-     */
     @InputImport(name="transforms")
     private final @Nullable Input<List<Either<String,Transform>>> transforms;
 

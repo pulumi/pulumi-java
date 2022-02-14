@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies whether the port is enabled for a serial console connection.
- */
     @EnumType
     public enum SerialPortState {
-/**
- * 
- */
         Enabled("enabled"),
-/**
- * 
- */
         Disabled("disabled");
 
         private final String value;

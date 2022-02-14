@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RouterAdvertisedIpRangeResponse {
-/**
- * User-specified description for the IP range.
- */
     private final String description;
-/**
- * The IP range to advertise. The value must be a CIDR-formatted string.
- */
     private final String range;
 
     @OutputCustomType.Constructor({"description","range"})
@@ -26,15 +20,9 @@ public final class RouterAdvertisedIpRangeResponse {
         this.range = Objects.requireNonNull(range);
     }
 
-/**
- * User-specified description for the IP range.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The IP range to advertise. The value must be a CIDR-formatted string.
- */
     public String getRange() {
         return this.range;
     }

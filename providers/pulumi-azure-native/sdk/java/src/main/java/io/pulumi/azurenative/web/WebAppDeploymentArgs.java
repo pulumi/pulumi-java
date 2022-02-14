@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppDeploymentArgs Empty = new WebAppDeploymentArgs();
 
-    /**
-     * True if deployment is currently active, false if completed and null if not started.
-     */
     @InputImport(name="active")
     private final @Nullable Input<Boolean> active;
 
@@ -29,9 +23,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.active == null ? Input.empty() : this.active;
     }
 
-    /**
-     * Who authored the deployment.
-     */
     @InputImport(name="author")
     private final @Nullable Input<String> author;
 
@@ -39,9 +30,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.author == null ? Input.empty() : this.author;
     }
 
-    /**
-     * Author email.
-     */
     @InputImport(name="authorEmail")
     private final @Nullable Input<String> authorEmail;
 
@@ -49,9 +37,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.authorEmail == null ? Input.empty() : this.authorEmail;
     }
 
-    /**
-     * Who performed the deployment.
-     */
     @InputImport(name="deployer")
     private final @Nullable Input<String> deployer;
 
@@ -59,9 +44,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.deployer == null ? Input.empty() : this.deployer;
     }
 
-    /**
-     * Details on deployment.
-     */
     @InputImport(name="details")
     private final @Nullable Input<String> details;
 
@@ -69,9 +51,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.details == null ? Input.empty() : this.details;
     }
 
-    /**
-     * End time.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -79,9 +58,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * ID of an existing deployment.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -89,9 +65,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -99,9 +72,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Details about deployment status.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -109,9 +79,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -119,9 +86,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -129,9 +93,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Start time.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -139,9 +100,6 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * Deployment status.
-     */
     @InputImport(name="status")
     private final @Nullable Input<Integer> status;
 

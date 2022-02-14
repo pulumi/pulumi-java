@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Identifies all occurrences of this vulnerability in the package for a specific distro/location For example: glibc in cpe:/o:debian:debian_linux:8 for versions 2.1 - 2.2
- */
 public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetailArgs Empty = new DetailArgs();
 
-    /**
-     * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
-     */
     @InputImport(name="cpeUri")
     private final @Nullable Input<String> cpeUri;
 
@@ -30,9 +24,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.cpeUri == null ? Input.empty() : this.cpeUri;
     }
 
-    /**
-     * A vendor-specific description of this note.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The fix for this specific package version.
-     */
     @InputImport(name="fixedLocation")
     private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
 
@@ -50,9 +38,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixedLocation == null ? Input.empty() : this.fixedLocation;
     }
 
-    /**
-     * Whether this Detail is obsolete. Occurrences are expected not to point to obsolete details.
-     */
     @InputImport(name="isObsolete")
     private final @Nullable Input<Boolean> isObsolete;
 
@@ -60,9 +45,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.isObsolete == null ? Input.empty() : this.isObsolete;
     }
 
-    /**
-     * The max version of the package in which the vulnerability exists.
-     */
     @InputImport(name="maxAffectedVersion")
     private final @Nullable Input<VersionArgs> maxAffectedVersion;
 
@@ -70,9 +52,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxAffectedVersion == null ? Input.empty() : this.maxAffectedVersion;
     }
 
-    /**
-     * The min version of the package in which the vulnerability exists.
-     */
     @InputImport(name="minAffectedVersion")
     private final @Nullable Input<VersionArgs> minAffectedVersion;
 
@@ -80,9 +59,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.minAffectedVersion == null ? Input.empty() : this.minAffectedVersion;
     }
 
-    /**
-     * The name of the package where the vulnerability was found. This field can be used as a filter in list requests.
-     */
     @InputImport(name="package")
     private final @Nullable Input<String> $package;
 
@@ -90,9 +66,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.$package == null ? Input.empty() : this.$package;
     }
 
-    /**
-     * The type of package; whether native or non native(ruby gems, node.js packages etc)
-     */
     @InputImport(name="packageType")
     private final @Nullable Input<String> packageType;
 
@@ -100,9 +73,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageType == null ? Input.empty() : this.packageType;
     }
 
-    /**
-     * The severity (eg: distro assigned severity) for this vulnerability.
-     */
     @InputImport(name="severityName")
     private final @Nullable Input<String> severityName;
 
@@ -110,9 +80,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.severityName == null ? Input.empty() : this.severityName;
     }
 
-    /**
-     * The source from which the information in this Detail was obtained.
-     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -120,9 +87,6 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
-    /**
-     * The vendor of the product. e.g. "google"
-     */
     @InputImport(name="vendor")
     private final @Nullable Input<String> vendor;
 

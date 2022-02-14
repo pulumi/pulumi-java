@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
-/**
- * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
-API Version: 2016-11-01.
- *
- * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
- */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

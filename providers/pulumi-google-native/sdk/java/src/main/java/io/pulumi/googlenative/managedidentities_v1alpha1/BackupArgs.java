@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="backupId", required=true)
     private final Input<String> backupId;
 
@@ -28,9 +22,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="domainId", required=true)
     private final Input<String> domainId;
 
@@ -38,9 +29,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainId;
     }
 
-    /**
-     * Optional. Resource labels to represent user provided metadata.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -48,9 +36,6 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

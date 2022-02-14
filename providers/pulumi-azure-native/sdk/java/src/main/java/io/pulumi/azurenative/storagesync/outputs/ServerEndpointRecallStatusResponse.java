@@ -12,17 +12,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerEndpointRecallStatusResponse {
-/**
- * Last updated timestamp
- */
     private final String lastUpdatedTimestamp;
-/**
- * Array of recall errors
- */
     private final List<ServerEndpointRecallErrorResponse> recallErrors;
-/**
- * Total count of recall errors.
- */
     private final Double totalRecallErrorsCount;
 
     @OutputCustomType.Constructor({"lastUpdatedTimestamp","recallErrors","totalRecallErrorsCount"})
@@ -35,21 +26,12 @@ public final class ServerEndpointRecallStatusResponse {
         this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
     }
 
-/**
- * Last updated timestamp
- */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
-/**
- * Array of recall errors
- */
     public List<ServerEndpointRecallErrorResponse> getRecallErrors() {
         return this.recallErrors;
     }
-/**
- * Total count of recall errors.
- */
     public Double getTotalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }

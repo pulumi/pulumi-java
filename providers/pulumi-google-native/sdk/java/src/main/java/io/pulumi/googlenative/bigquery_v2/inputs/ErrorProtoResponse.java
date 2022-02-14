@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorProtoResponse Empty = new ErrorProtoResponse();
 
-    /**
-     * Debugging information. This property is internal to Google and should not be used.
-     */
     @InputImport(name="debugInfo", required=true)
     private final String debugInfo;
 
@@ -25,9 +19,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
         return this.debugInfo;
     }
 
-    /**
-     * Specifies where the error occurred, if present.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,9 +26,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * A human-readable description of the error.
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -45,9 +33,6 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
-    /**
-     * A short error code that summarizes the error.
-     */
     @InputImport(name="reason", required=true)
     private final String reason;
 

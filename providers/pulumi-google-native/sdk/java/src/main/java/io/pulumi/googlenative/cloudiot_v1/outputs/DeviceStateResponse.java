@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeviceStateResponse {
-/**
- * The device state data.
- */
     private final String binaryData;
-/**
- * [Output only] The time at which this state version was updated in Cloud IoT Core.
- */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"binaryData","updateTime"})
@@ -26,15 +20,9 @@ public final class DeviceStateResponse {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
-/**
- * The device state data.
- */
     public String getBinaryData() {
         return this.binaryData;
     }
-/**
- * [Output only] The time at which this state version was updated in Cloud IoT Core.
- */
     public String getUpdateTime() {
         return this.updateTime;
     }

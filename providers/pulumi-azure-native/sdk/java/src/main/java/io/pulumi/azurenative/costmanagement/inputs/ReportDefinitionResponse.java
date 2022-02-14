@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The definition of a report.
- */
 public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportDefinitionResponse Empty = new ReportDefinitionResponse();
 
-    /**
-     * Has definition for data in this report.
-     */
     @InputImport(name="dataset")
     private final @Nullable ReportDatasetResponse dataset;
 
@@ -29,9 +23,6 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
         return this.dataset == null ? Optional.empty() : Optional.ofNullable(this.dataset);
     }
 
-    /**
-     * Has time period for pulling data for the report.
-     */
     @InputImport(name="timePeriod")
     private final @Nullable ReportTimePeriodResponse timePeriod;
 
@@ -39,9 +30,6 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
         return this.timePeriod == null ? Optional.empty() : Optional.ofNullable(this.timePeriod);
     }
 
-    /**
-     * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-     */
     @InputImport(name="timeframe", required=true)
     private final String timeframe;
 
@@ -49,9 +37,6 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
         return this.timeframe;
     }
 
-    /**
-     * The type of the report.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

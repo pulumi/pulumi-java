@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Active Directory settings used to join a cache to a domain.
- */
 public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheActiveDirectorySettingsResponse Empty = new CacheActiveDirectorySettingsResponse();
 
-    /**
-     * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
-     */
     @InputImport(name="cacheNetBiosName", required=true)
     private final String cacheNetBiosName;
 
@@ -28,9 +22,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
         return this.cacheNetBiosName;
     }
 
-    /**
-     * Active Directory admin credentials used to join the HPC Cache to a domain.
-     */
     @InputImport(name="credentials")
     private final @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
 
@@ -38,9 +29,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
-    /**
-     * True if the HPC Cache is joined to the Active Directory domain.
-     */
     @InputImport(name="domainJoined", required=true)
     private final String domainJoined;
 
@@ -48,9 +36,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
         return this.domainJoined;
     }
 
-    /**
-     * The fully qualified domain name of the Active Directory domain controller.
-     */
     @InputImport(name="domainName", required=true)
     private final String domainName;
 
@@ -58,9 +43,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
         return this.domainName;
     }
 
-    /**
-     * The Active Directory domain's NetBIOS name.
-     */
     @InputImport(name="domainNetBiosName", required=true)
     private final String domainNetBiosName;
 
@@ -68,9 +50,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
         return this.domainNetBiosName;
     }
 
-    /**
-     * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
-     */
     @InputImport(name="primaryDnsIpAddress", required=true)
     private final String primaryDnsIpAddress;
 
@@ -78,9 +57,6 @@ public final class CacheActiveDirectorySettingsResponse extends io.pulumi.resour
         return this.primaryDnsIpAddress;
     }
 
-    /**
-     * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
-     */
     @InputImport(name="secondaryDnsIpAddress")
     private final @Nullable String secondaryDnsIpAddress;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A tag of the LegalHold of a blob container.
- */
 public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TagPropertyResponse Empty = new TagPropertyResponse();
 
-    /**
-     * Returns the Object ID of the user who added the tag.
-     */
     @InputImport(name="objectIdentifier", required=true)
     private final String objectIdentifier;
 
@@ -25,9 +19,6 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
         return this.objectIdentifier;
     }
 
-    /**
-     * The tag value.
-     */
     @InputImport(name="tag", required=true)
     private final String tag;
 
@@ -35,9 +26,6 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
         return this.tag;
     }
 
-    /**
-     * Returns the Tenant ID that issued the token for the user who added the tag.
-     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -45,9 +33,6 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
         return this.tenantId;
     }
 
-    /**
-     * Returns the date and time the tag was added.
-     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 
@@ -55,9 +40,6 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
         return this.timestamp;
     }
 
-    /**
-     * Returns the User Principal Name of the user who added the tag.
-     */
     @InputImport(name="upn", required=true)
     private final String upn;
 

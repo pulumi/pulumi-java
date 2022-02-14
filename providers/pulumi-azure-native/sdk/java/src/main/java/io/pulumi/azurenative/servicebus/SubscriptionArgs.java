@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 
-    /**
-     * ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-     */
     @InputImport(name="autoDeleteOnIdle")
     private final @Nullable Input<String> autoDeleteOnIdle;
 
@@ -30,9 +24,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoDeleteOnIdle == null ? Input.empty() : this.autoDeleteOnIdle;
     }
 
-    /**
-     * Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
-     */
     @InputImport(name="deadLetteringOnFilterEvaluationExceptions")
     private final @Nullable Input<Boolean> deadLetteringOnFilterEvaluationExceptions;
 
@@ -40,9 +31,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetteringOnFilterEvaluationExceptions == null ? Input.empty() : this.deadLetteringOnFilterEvaluationExceptions;
     }
 
-    /**
-     * Value that indicates whether a subscription has dead letter support when a message expires.
-     */
     @InputImport(name="deadLetteringOnMessageExpiration")
     private final @Nullable Input<Boolean> deadLetteringOnMessageExpiration;
 
@@ -50,9 +38,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetteringOnMessageExpiration == null ? Input.empty() : this.deadLetteringOnMessageExpiration;
     }
 
-    /**
-     * ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
-     */
     @InputImport(name="defaultMessageTimeToLive")
     private final @Nullable Input<String> defaultMessageTimeToLive;
 
@@ -60,9 +45,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultMessageTimeToLive == null ? Input.empty() : this.defaultMessageTimeToLive;
     }
 
-    /**
-     * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
-     */
     @InputImport(name="duplicateDetectionHistoryTimeWindow")
     private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
 
@@ -70,9 +52,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.duplicateDetectionHistoryTimeWindow == null ? Input.empty() : this.duplicateDetectionHistoryTimeWindow;
     }
 
-    /**
-     * Value that indicates whether server-side batched operations are enabled.
-     */
     @InputImport(name="enableBatchedOperations")
     private final @Nullable Input<Boolean> enableBatchedOperations;
 
@@ -80,9 +59,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableBatchedOperations == null ? Input.empty() : this.enableBatchedOperations;
     }
 
-    /**
-     * Queue/Topic name to forward the Dead Letter message
-     */
     @InputImport(name="forwardDeadLetteredMessagesTo")
     private final @Nullable Input<String> forwardDeadLetteredMessagesTo;
 
@@ -90,9 +66,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardDeadLetteredMessagesTo == null ? Input.empty() : this.forwardDeadLetteredMessagesTo;
     }
 
-    /**
-     * Queue/Topic name to forward the messages
-     */
     @InputImport(name="forwardTo")
     private final @Nullable Input<String> forwardTo;
 
@@ -100,9 +73,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardTo == null ? Input.empty() : this.forwardTo;
     }
 
-    /**
-     * ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
-     */
     @InputImport(name="lockDuration")
     private final @Nullable Input<String> lockDuration;
 
@@ -110,9 +80,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lockDuration == null ? Input.empty() : this.lockDuration;
     }
 
-    /**
-     * Number of maximum deliveries.
-     */
     @InputImport(name="maxDeliveryCount")
     private final @Nullable Input<Integer> maxDeliveryCount;
 
@@ -120,9 +87,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -130,9 +94,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
-    /**
-     * Value indicating if a subscription supports the concept of sessions.
-     */
     @InputImport(name="requiresSession")
     private final @Nullable Input<Boolean> requiresSession;
 
@@ -140,9 +101,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiresSession == null ? Input.empty() : this.requiresSession;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -150,9 +108,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Enumerates the possible values for the status of a messaging entity.
-     */
     @InputImport(name="status")
     private final @Nullable Input<EntityStatus> status;
 
@@ -160,9 +115,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * The subscription name.
-     */
     @InputImport(name="subscriptionName")
     private final @Nullable Input<String> subscriptionName;
 
@@ -170,9 +122,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionName == null ? Input.empty() : this.subscriptionName;
     }
 
-    /**
-     * The topic name.
-     */
     @InputImport(name="topicName", required=true)
     private final Input<String> topicName;
 

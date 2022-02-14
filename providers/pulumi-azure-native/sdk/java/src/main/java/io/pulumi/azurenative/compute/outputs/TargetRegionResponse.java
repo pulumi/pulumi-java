@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TargetRegionResponse {
-/**
- * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
- */
     private final @Nullable EncryptionImagesResponse encryption;
-/**
- * The name of the region.
- */
     private final String name;
-/**
- * The number of replicas of the Image Version to be created per region. This property is updatable.
- */
     private final @Nullable Integer regionalReplicaCount;
-/**
- * Specifies the storage account type to be used to store the image. This property is not updatable.
- */
     private final @Nullable String storageAccountType;
 
     @OutputCustomType.Constructor({"encryption","name","regionalReplicaCount","storageAccountType"})
@@ -42,27 +30,15 @@ public final class TargetRegionResponse {
         this.storageAccountType = storageAccountType;
     }
 
-/**
- * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
- */
     public Optional<EncryptionImagesResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
-/**
- * The name of the region.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The number of replicas of the Image Version to be created per region. This property is updatable.
- */
     public Optional<Integer> getRegionalReplicaCount() {
         return Optional.ofNullable(this.regionalReplicaCount);
     }
-/**
- * Specifies the storage account type to be used to store the image. This property is not updatable.
- */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }

@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An X509Extension specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
- */
 public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X509ExtensionResponse Empty = new X509ExtensionResponse();
 
-    /**
-     * Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
-     */
     @InputImport(name="critical", required=true)
     private final Boolean critical;
 
@@ -27,9 +21,6 @@ public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.critical;
     }
 
-    /**
-     * The OID for this X.509 extension.
-     */
     @InputImport(name="objectId", required=true)
     private final ObjectIdResponse objectId;
 
@@ -37,9 +28,6 @@ public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs 
         return this.objectId;
     }
 
-    /**
-     * The value of this X.509 extension.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

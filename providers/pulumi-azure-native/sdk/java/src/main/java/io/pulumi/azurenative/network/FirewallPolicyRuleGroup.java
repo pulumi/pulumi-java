@@ -18,438 +18,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Rule Group resource.
-API Version: 2020-04-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create FirewallPolicyRuleGroup
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var firewallPolicyRuleGroup = new AzureNative.Network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureNative.Network.FirewallPolicyRuleGroupArgs
-        {
-            FirewallPolicyName = "firewallPolicy",
-            Priority = 110,
-            ResourceGroupName = "rg1",
-            RuleGroupName = "ruleGroup1",
-            Rules = 
-            {
-                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleArgs
-                {
-                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
-                    {
-                        Type = "Deny",
-                    },
-                    Name = "Example-Filter-Rule",
-                    RuleConditions = 
-                    {
-                        new AzureNative.Network.Inputs.NetworkRuleConditionArgs
-                        {
-                            DestinationAddresses = 
-                            {
-                                "*",
-                            },
-                            DestinationPorts = 
-                            {
-                                "*",
-                            },
-                            IpProtocols = 
-                            {
-                                "TCP",
-                            },
-                            Name = "network-condition1",
-                            RuleConditionType = "NetworkRuleCondition",
-                            SourceAddresses = 
-                            {
-                                "10.1.25.0/24",
-                            },
-                        },
-                    },
-                    RuleType = "FirewallPolicyFilterRule",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFirewallPolicyRuleGroup(ctx, "firewallPolicyRuleGroup", &network.FirewallPolicyRuleGroupArgs{
-			FirewallPolicyName: pulumi.String("firewallPolicy"),
-			Priority:           pulumi.Int(110),
-			ResourceGroupName:  pulumi.String("rg1"),
-			RuleGroupName:      pulumi.String("ruleGroup1"),
-			Rules: pulumi.AnyArray{
-				network.FirewallPolicyFilterRule{
-					Action: network.FirewallPolicyFilterRuleAction{
-						Type: "Deny",
-					},
-					Name: "Example-Filter-Rule",
-					RuleConditions: []interface{}{
-						network.NetworkRuleCondition{
-							DestinationAddresses: []string{
-								"*",
-							},
-							DestinationPorts: []string{
-								"*",
-							},
-							IpProtocols: []string{
-								"TCP",
-							},
-							Name:              "network-condition1",
-							RuleConditionType: "NetworkRuleCondition",
-							SourceAddresses: []string{
-								"10.1.25.0/24",
-							},
-						},
-					},
-					RuleType: "FirewallPolicyFilterRule",
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
-    firewallPolicyName: "firewallPolicy",
-    priority: 110,
-    resourceGroupName: "rg1",
-    ruleGroupName: "ruleGroup1",
-    rules: [{
-        action: {
-            type: "Deny",
-        },
-        name: "Example-Filter-Rule",
-        ruleConditions: [{
-            destinationAddresses: ["*"],
-            destinationPorts: ["*"],
-            ipProtocols: ["TCP"],
-            name: "network-condition1",
-            ruleConditionType: "NetworkRuleCondition",
-            sourceAddresses: ["10.1.25.0/24"],
-        }],
-        ruleType: "FirewallPolicyFilterRule",
-    }],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
-    firewall_policy_name="firewallPolicy",
-    priority=110,
-    resource_group_name="rg1",
-    rule_group_name="ruleGroup1",
-    rules=[azure_native.network.FirewallPolicyFilterRuleArgs(
-        action=azure_native.network.FirewallPolicyFilterRuleActionArgs(
-            type="Deny",
-        ),
-        name="Example-Filter-Rule",
-        rule_conditions=[azure_native.network.NetworkRuleConditionArgs(
-            destination_addresses=["*"],
-            destination_ports=["*"],
-            ip_protocols=["TCP"],
-            name="network-condition1",
-            rule_condition_type="NetworkRuleCondition",
-            source_addresses=["10.1.25.0/24"],
-        )],
-        rule_type="FirewallPolicyFilterRule",
-    )])
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create FirewallPolicyRuleGroup With IpGroups
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var firewallPolicyRuleGroup = new AzureNative.Network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", new AzureNative.Network.FirewallPolicyRuleGroupArgs
-        {
-            FirewallPolicyName = "firewallPolicy",
-            Priority = 110,
-            ResourceGroupName = "rg1",
-            RuleGroupName = "ruleGroup1",
-            Rules = 
-            {
-                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleArgs
-                {
-                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleActionArgs
-                    {
-                        Type = "Deny",
-                    },
-                    Name = "Example-Filter-Rule",
-                    RuleConditions = 
-                    {
-                        new AzureNative.Network.Inputs.NetworkRuleConditionArgs
-                        {
-                            DestinationIpGroups = 
-                            {
-                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-                            },
-                            DestinationPorts = 
-                            {
-                                "*",
-                            },
-                            IpProtocols = 
-                            {
-                                "TCP",
-                            },
-                            Name = "network-condition1",
-                            RuleConditionType = "NetworkRuleCondition",
-                            SourceIpGroups = 
-                            {
-                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-                            },
-                        },
-                    },
-                    RuleType = "FirewallPolicyFilterRule",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFirewallPolicyRuleGroup(ctx, "firewallPolicyRuleGroup", &network.FirewallPolicyRuleGroupArgs{
-			FirewallPolicyName: pulumi.String("firewallPolicy"),
-			Priority:           pulumi.Int(110),
-			ResourceGroupName:  pulumi.String("rg1"),
-			RuleGroupName:      pulumi.String("ruleGroup1"),
-			Rules: pulumi.AnyArray{
-				network.FirewallPolicyFilterRule{
-					Action: network.FirewallPolicyFilterRuleAction{
-						Type: "Deny",
-					},
-					Name: "Example-Filter-Rule",
-					RuleConditions: []interface{}{
-						network.NetworkRuleCondition{
-							DestinationIpGroups: []string{
-								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-							},
-							DestinationPorts: []string{
-								"*",
-							},
-							IpProtocols: []string{
-								"TCP",
-							},
-							Name:              "network-condition1",
-							RuleConditionType: "NetworkRuleCondition",
-							SourceIpGroups: []string{
-								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-							},
-						},
-					},
-					RuleType: "FirewallPolicyFilterRule",
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup", {
-    firewallPolicyName: "firewallPolicy",
-    priority: 110,
-    resourceGroupName: "rg1",
-    ruleGroupName: "ruleGroup1",
-    rules: [{
-        action: {
-            type: "Deny",
-        },
-        name: "Example-Filter-Rule",
-        ruleConditions: [{
-            destinationIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            destinationPorts: ["*"],
-            ipProtocols: ["TCP"],
-            name: "network-condition1",
-            ruleConditionType: "NetworkRuleCondition",
-            sourceIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        }],
-        ruleType: "FirewallPolicyFilterRule",
-    }],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-firewall_policy_rule_group = azure_native.network.FirewallPolicyRuleGroup("firewallPolicyRuleGroup",
-    firewall_policy_name="firewallPolicy",
-    priority=110,
-    resource_group_name="rg1",
-    rule_group_name="ruleGroup1",
-    rules=[azure_native.network.FirewallPolicyFilterRuleArgs(
-        action=azure_native.network.FirewallPolicyFilterRuleActionArgs(
-            type="Deny",
-        ),
-        name="Example-Filter-Rule",
-        rule_conditions=[azure_native.network.NetworkRuleConditionArgs(
-            destination_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            destination_ports=["*"],
-            ip_protocols=["TCP"],
-            name="network-condition1",
-            rule_condition_type="NetworkRuleCondition",
-            source_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        )],
-        rule_type="FirewallPolicyFilterRule",
-    )])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:FirewallPolicyRuleGroup firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
-```
-
- */
 @ResourceType(type="azure-native:network:FirewallPolicyRuleGroup")
 public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    /**
-     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    /**
-     * Priority of the Firewall Policy Rule Group resource.
-     */
     @OutputExport(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
-    /**
-     * @return Priority of the Firewall Policy Rule Group resource.
-     */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
-    /**
-     * The provisioning state of the firewall policy rule group resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the firewall policy rule group resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Group of Firewall Policy rules.
-     */
     @OutputExport(name="rules", type=List.class, parameters={Either.class})
     private Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleResponse,FirewallPolicyNatRuleResponse>>> rules;
 
-    /**
-     * @return Group of Firewall Policy rules.
-     */
     public Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleResponse,FirewallPolicyNatRuleResponse>>> getRules() {
         return this.rules;
     }
-    /**
-     * Rule Group type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Rule Group type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public FirewallPolicyRuleGroup(String name, FirewallPolicyRuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:FirewallPolicyRuleGroup", name, args == null ? FirewallPolicyRuleGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -475,14 +82,6 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static FirewallPolicyRuleGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallPolicyRuleGroup(name, id, options);
     }

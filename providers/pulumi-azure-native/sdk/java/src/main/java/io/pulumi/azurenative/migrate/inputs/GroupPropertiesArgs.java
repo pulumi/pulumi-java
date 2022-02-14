@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of group resource.
- */
 public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupPropertiesArgs Empty = new GroupPropertiesArgs();
 
-    /**
-     * The type of group.
-     */
     @InputImport(name="groupType")
     private final @Nullable Input<String> groupType;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The Edifact envelope override settings.
- */
 public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactEnvelopeOverrideResponse Empty = new EdifactEnvelopeOverrideResponse();
 
-    /**
-     * The application password.
-     */
     @InputImport(name="applicationPassword")
     private final @Nullable String applicationPassword;
 
@@ -27,9 +21,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.applicationPassword == null ? Optional.empty() : Optional.ofNullable(this.applicationPassword);
     }
 
-    /**
-     * The association assigned code.
-     */
     @InputImport(name="associationAssignedCode")
     private final @Nullable String associationAssignedCode;
 
@@ -37,9 +28,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.associationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.associationAssignedCode);
     }
 
-    /**
-     * The controlling agency code.
-     */
     @InputImport(name="controllingAgencyCode")
     private final @Nullable String controllingAgencyCode;
 
@@ -47,9 +35,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.controllingAgencyCode == null ? Optional.empty() : Optional.ofNullable(this.controllingAgencyCode);
     }
 
-    /**
-     * The functional group id.
-     */
     @InputImport(name="functionalGroupId")
     private final @Nullable String functionalGroupId;
 
@@ -57,9 +42,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.functionalGroupId == null ? Optional.empty() : Optional.ofNullable(this.functionalGroupId);
     }
 
-    /**
-     * The group header message release.
-     */
     @InputImport(name="groupHeaderMessageRelease")
     private final @Nullable String groupHeaderMessageRelease;
 
@@ -67,9 +49,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.groupHeaderMessageRelease == null ? Optional.empty() : Optional.ofNullable(this.groupHeaderMessageRelease);
     }
 
-    /**
-     * The group header message version.
-     */
     @InputImport(name="groupHeaderMessageVersion")
     private final @Nullable String groupHeaderMessageVersion;
 
@@ -77,9 +56,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.groupHeaderMessageVersion == null ? Optional.empty() : Optional.ofNullable(this.groupHeaderMessageVersion);
     }
 
-    /**
-     * The message association assigned code.
-     */
     @InputImport(name="messageAssociationAssignedCode")
     private final @Nullable String messageAssociationAssignedCode;
 
@@ -87,9 +63,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.messageAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.messageAssociationAssignedCode);
     }
 
-    /**
-     * The message id on which this envelope settings has to be applied.
-     */
     @InputImport(name="messageId")
     private final @Nullable String messageId;
 
@@ -97,9 +70,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
-    /**
-     * The message release version on which this envelope settings has to be applied.
-     */
     @InputImport(name="messageRelease")
     private final @Nullable String messageRelease;
 
@@ -107,9 +77,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.messageRelease == null ? Optional.empty() : Optional.ofNullable(this.messageRelease);
     }
 
-    /**
-     * The message version on which this envelope settings has to be applied.
-     */
     @InputImport(name="messageVersion")
     private final @Nullable String messageVersion;
 
@@ -117,9 +84,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.messageVersion == null ? Optional.empty() : Optional.ofNullable(this.messageVersion);
     }
 
-    /**
-     * The receiver application id.
-     */
     @InputImport(name="receiverApplicationId")
     private final @Nullable String receiverApplicationId;
 
@@ -127,9 +91,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.receiverApplicationId == null ? Optional.empty() : Optional.ofNullable(this.receiverApplicationId);
     }
 
-    /**
-     * The receiver application qualifier.
-     */
     @InputImport(name="receiverApplicationQualifier")
     private final @Nullable String receiverApplicationQualifier;
 
@@ -137,9 +98,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.receiverApplicationQualifier == null ? Optional.empty() : Optional.ofNullable(this.receiverApplicationQualifier);
     }
 
-    /**
-     * The sender application id.
-     */
     @InputImport(name="senderApplicationId")
     private final @Nullable String senderApplicationId;
 
@@ -147,9 +105,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);
     }
 
-    /**
-     * The sender application qualifier.
-     */
     @InputImport(name="senderApplicationQualifier")
     private final @Nullable String senderApplicationQualifier;
 
@@ -157,9 +112,6 @@ public final class EdifactEnvelopeOverrideResponse extends io.pulumi.resources.I
         return this.senderApplicationQualifier == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationQualifier);
     }
 
-    /**
-     * The target namespace on which this envelope settings has to be applied.
-     */
     @InputImport(name="targetNamespace")
     private final @Nullable String targetNamespace;
 

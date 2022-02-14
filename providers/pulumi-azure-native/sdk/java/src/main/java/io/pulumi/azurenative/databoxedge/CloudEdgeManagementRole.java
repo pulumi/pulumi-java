@@ -16,188 +16,51 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * CloudEdgeManagementRole role.
-API Version: 2020-12-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### RolePut
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cloudEdgeManagementRole = new AzureNative.DataBoxEdge.CloudEdgeManagementRole("cloudEdgeManagementRole", new AzureNative.DataBoxEdge.CloudEdgeManagementRoleArgs
-        {
-            DeviceName = "testedgedevice",
-            Name = "IoTRole1",
-            ResourceGroupName = "GroupForEdgeAutomation",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := databoxedge.NewCloudEdgeManagementRole(ctx, "cloudEdgeManagementRole", &databoxedge.CloudEdgeManagementRoleArgs{
-			DeviceName:        pulumi.String("testedgedevice"),
-			Name:              pulumi.String("IoTRole1"),
-			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const cloudEdgeManagementRole = new azure_native.databoxedge.CloudEdgeManagementRole("cloudEdgeManagementRole", {
-    deviceName: "testedgedevice",
-    name: "IoTRole1",
-    resourceGroupName: "GroupForEdgeAutomation",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-cloud_edge_management_role = azure_native.databoxedge.CloudEdgeManagementRole("cloudEdgeManagementRole",
-    device_name="testedgedevice",
-    name="IoTRole1",
-    resource_group_name="GroupForEdgeAutomation")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:databoxedge:CloudEdgeManagementRole IoTRole1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/IoTRole1 
-```
-
- */
 @ResourceType(type="azure-native:databoxedge:CloudEdgeManagementRole")
 public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource {
-    /**
-     * Edge Profile of the resource
-     */
     @OutputExport(name="edgeProfile", type=EdgeProfileResponse.class, parameters={})
     private Output<EdgeProfileResponse> edgeProfile;
 
-    /**
-     * @return Edge Profile of the resource
-     */
     public Output<EdgeProfileResponse> getEdgeProfile() {
         return this.edgeProfile;
     }
-    /**
-     * Role type.
-Expected value is 'CloudEdgeManagement'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Role type.
-Expected value is 'CloudEdgeManagement'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Local Edge Management Status
-     */
     @OutputExport(name="localManagementStatus", type=String.class, parameters={})
     private Output<String> localManagementStatus;
 
-    /**
-     * @return Local Edge Management Status
-     */
     public Output<String> getLocalManagementStatus() {
         return this.localManagementStatus;
     }
-    /**
-     * The object name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The object name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Role status.
-     */
     @OutputExport(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
-    /**
-     * @return Role status.
-     */
     public Output<String> getRoleStatus() {
         return this.roleStatus;
     }
-    /**
-     * Role configured on ASE resource
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Role configured on ASE resource
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The hierarchical type of the object.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The hierarchical type of the object.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public CloudEdgeManagementRole(String name, CloudEdgeManagementRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:CloudEdgeManagementRole", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -233,14 +96,6 @@ Expected value is 'CloudEdgeManagement'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static CloudEdgeManagementRole get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloudEdgeManagementRole(name, id, options);
     }

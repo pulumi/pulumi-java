@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationSourceIamPolicy {
-/**
- * Gets the access control policy on the specified Source.
- */
     public static CompletableFuture<GetOrganizationSourceIamPolicyResult> invokeAsync(GetOrganizationSourceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args == null ? GetOrganizationSourceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

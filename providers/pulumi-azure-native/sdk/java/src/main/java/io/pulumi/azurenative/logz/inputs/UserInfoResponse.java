@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserInfoResponse Empty = new UserInfoResponse();
 
-    /**
-     * Email of the user used by Logz for contacting them if needed
-     */
     @InputImport(name="emailAddress")
     private final @Nullable String emailAddress;
 
@@ -27,9 +21,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
-    /**
-     * First Name of the user
-     */
     @InputImport(name="firstName")
     private final @Nullable String firstName;
 
@@ -37,9 +28,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
     }
 
-    /**
-     * Last Name of the user
-     */
     @InputImport(name="lastName")
     private final @Nullable String lastName;
 
@@ -47,9 +35,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
     }
 
-    /**
-     * Phone number of the user used by Logz for contacting them if needed
-     */
     @InputImport(name="phoneNumber")
     private final @Nullable String phoneNumber;
 

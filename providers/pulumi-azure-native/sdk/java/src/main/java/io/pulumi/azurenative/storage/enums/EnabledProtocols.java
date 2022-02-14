@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The authentication protocol that is used for the file share. Can only be specified when creating a share.
- */
     @EnumType
     public enum EnabledProtocols {
-/**
- * 
- */
         SMB("SMB"),
-/**
- * 
- */
         NFS("NFS");
 
         private final String value;

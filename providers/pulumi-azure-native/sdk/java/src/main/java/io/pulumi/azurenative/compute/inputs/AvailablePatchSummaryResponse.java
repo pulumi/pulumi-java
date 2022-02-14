@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes the properties of an virtual machine instance view for available patch summary.
- */
 public final class AvailablePatchSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AvailablePatchSummaryResponse Empty = new AvailablePatchSummaryResponse();
 
-    /**
-     * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
-     */
     @InputImport(name="assessmentActivityId", required=true)
     private final String assessmentActivityId;
 
@@ -28,9 +22,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.assessmentActivityId;
     }
 
-    /**
-     * The number of critical or security patches that have been detected as available and not yet installed.
-     */
     @InputImport(name="criticalAndSecurityPatchCount", required=true)
     private final Integer criticalAndSecurityPatchCount;
 
@@ -38,9 +29,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.criticalAndSecurityPatchCount;
     }
 
-    /**
-     * The errors that were encountered during execution of the operation. The details array contains the list of them.
-     */
     @InputImport(name="error", required=true)
     private final ApiErrorResponse error;
 
@@ -48,9 +36,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.error;
     }
 
-    /**
-     * The UTC timestamp when the operation began.
-     */
     @InputImport(name="lastModifiedTime", required=true)
     private final String lastModifiedTime;
 
@@ -58,9 +43,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.lastModifiedTime;
     }
 
-    /**
-     * The number of all available patches excluding critical and security.
-     */
     @InputImport(name="otherPatchCount", required=true)
     private final Integer otherPatchCount;
 
@@ -68,9 +50,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.otherPatchCount;
     }
 
-    /**
-     * The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
-     */
     @InputImport(name="rebootPending", required=true)
     private final Boolean rebootPending;
 
@@ -78,9 +57,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.rebootPending;
     }
 
-    /**
-     * The UTC timestamp when the operation began.
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -88,9 +64,6 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
         return this.startTime;
     }
 
-    /**
-     * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

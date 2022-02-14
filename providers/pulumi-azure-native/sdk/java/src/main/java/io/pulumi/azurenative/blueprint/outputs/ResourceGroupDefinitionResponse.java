@@ -13,33 +13,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceGroupDefinitionResponse {
-/**
- * Artifacts which need to be deployed before this resource group.
- */
     private final @Nullable List<String> dependsOn;
-/**
- * Description of this parameter/resourceGroup.
- */
     private final @Nullable String description;
-/**
- * DisplayName of this parameter/resourceGroup.
- */
     private final @Nullable String displayName;
-/**
- * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
- */
     private final @Nullable String location;
-/**
- * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
- */
     private final @Nullable String name;
-/**
- * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
- */
     private final @Nullable String strongType;
-/**
- * Tags to be assigned to this resource group.
- */
     private final @Nullable Map<String,String> tags;
 
     @OutputCustomType.Constructor({"dependsOn","description","displayName","location","name","strongType","tags"})
@@ -60,45 +39,24 @@ public final class ResourceGroupDefinitionResponse {
         this.tags = tags;
     }
 
-/**
- * Artifacts which need to be deployed before this resource group.
- */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
-/**
- * Description of this parameter/resourceGroup.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * DisplayName of this parameter/resourceGroup.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
- */
     public Optional<String> getStrongType() {
         return Optional.ofNullable(this.strongType);
     }
-/**
- * Tags to be assigned to this resource group.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The storage profile of the user settings.
- */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageProfileResponse Empty = new StorageProfileResponse();
 
-    /**
-     * Size of file share
-     */
     @InputImport(name="diskSizeInGB")
     private final @Nullable Integer diskSizeInGB;
 
@@ -28,9 +22,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
         return this.diskSizeInGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeInGB);
     }
 
-    /**
-     * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
-     */
     @InputImport(name="fileShareName")
     private final @Nullable String fileShareName;
 
@@ -38,9 +29,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
         return this.fileShareName == null ? Optional.empty() : Optional.ofNullable(this.fileShareName);
     }
 
-    /**
-     * Full resource ID of storage account.
-     */
     @InputImport(name="storageAccountResourceId")
     private final @Nullable String storageAccountResourceId;
 

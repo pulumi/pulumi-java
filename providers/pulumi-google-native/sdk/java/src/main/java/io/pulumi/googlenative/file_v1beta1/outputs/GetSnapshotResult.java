@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSnapshotResult {
-/**
- * The time when the snapshot was created.
- */
     private final String createTime;
-/**
- * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
- */
     private final String description;
-/**
- * The amount of bytes needed to allocate a full copy of the snapshot content
- */
     private final String filesystemUsedBytes;
-/**
- * Resource labels to represent user provided metadata.
- */
     private final Map<String,String> labels;
-/**
- * The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
- */
     private final String name;
-/**
- * The snapshot state.
- */
     private final String state;
 
     @OutputCustomType.Constructor({"createTime","description","filesystemUsedBytes","labels","name","state"})
@@ -51,39 +33,21 @@ public final class GetSnapshotResult {
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * The time when the snapshot was created.
- */
     public String getCreateTime() {
         return this.createTime;
     }
-/**
- * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The amount of bytes needed to allocate a full copy of the snapshot content
- */
     public String getFilesystemUsedBytes() {
         return this.filesystemUsedBytes;
     }
-/**
- * Resource labels to represent user provided metadata.
- */
     public Map<String,String> getLabels() {
         return this.labels;
     }
-/**
- * The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The snapshot state.
- */
     public String getState() {
         return this.state;
     }

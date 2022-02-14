@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Defines the resource properties.
- */
 public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GuestAgentProfileResponse Empty = new GuestAgentProfileResponse();
 
-    /**
-     * The hybrid machine agent full version.
-     */
     @InputImport(name="agentVersion", required=true)
     private final String agentVersion;
 
@@ -27,9 +21,6 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
         return this.agentVersion;
     }
 
-    /**
-     * Details about the error state.
-     */
     @InputImport(name="errorDetails", required=true)
     private final List<ErrorDetailResponse> errorDetails;
 
@@ -37,9 +28,6 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
         return this.errorDetails;
     }
 
-    /**
-     * The time of the last status change.
-     */
     @InputImport(name="lastStatusChange", required=true)
     private final String lastStatusChange;
 
@@ -47,9 +35,6 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
         return this.lastStatusChange;
     }
 
-    /**
-     * The status of the hybrid machine agent.
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -57,9 +42,6 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
         return this.status;
     }
 
-    /**
-     * Specifies the VM's unique SMBIOS ID.
-     */
     @InputImport(name="vmUuid", required=true)
     private final String vmUuid;
 

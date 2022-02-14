@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobStep {
-/**
- * A job step.
-API Version: 2020-11-01-preview.
- *
- * A job step.
- */
     public static CompletableFuture<GetJobStepResult> invokeAsync(GetJobStepArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobStep", TypeShape.of(GetJobStepResult.class), args == null ? GetJobStepArgs.Empty : args, Utilities.withVersion(options));
     }

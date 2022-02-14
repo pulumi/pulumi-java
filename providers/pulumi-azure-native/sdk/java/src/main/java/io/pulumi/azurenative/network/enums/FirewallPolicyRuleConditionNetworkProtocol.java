@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The Network protocol of a Rule condition.
- */
     @EnumType
     public enum FirewallPolicyRuleConditionNetworkProtocol {
-/**
- * 
- */
         TCP("TCP"),
-/**
- * 
- */
         UDP("UDP"),
-/**
- * 
- */
         Any("Any"),
-/**
- * 
- */
         ICMP("ICMP");
 
         private final String value;

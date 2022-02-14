@@ -12,14 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PeriodicModeBackupPolicyResponse {
-/**
- * Configuration values for periodic mode backup
- */
     private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
-/**
- * Describes the mode of backups.
-Expected value is 'Periodic'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"periodicModeProperties","type"})
@@ -30,16 +23,9 @@ Expected value is 'Periodic'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Configuration values for periodic mode backup
- */
     public Optional<PeriodicModePropertiesResponse> getPeriodicModeProperties() {
         return Optional.ofNullable(this.periodicModeProperties);
     }
-/**
- * Describes the mode of backups.
-Expected value is 'Periodic'.
- */
     public String getType() {
         return this.type;
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information about the retry policy for an event subscription.
- */
 public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RetryPolicyArgs Empty = new RetryPolicyArgs();
 
-    /**
-     * Time To Live (in minutes) for events.
-     */
     @InputImport(name="eventTimeToLiveInMinutes")
     private final @Nullable Input<Integer> eventTimeToLiveInMinutes;
 
@@ -27,9 +21,6 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTimeToLiveInMinutes == null ? Input.empty() : this.eventTimeToLiveInMinutes;
     }
 
-    /**
-     * Maximum number of delivery retry attempts for events.
-     */
     @InputImport(name="maxDeliveryAttempts")
     private final @Nullable Input<Integer> maxDeliveryAttempts;
 

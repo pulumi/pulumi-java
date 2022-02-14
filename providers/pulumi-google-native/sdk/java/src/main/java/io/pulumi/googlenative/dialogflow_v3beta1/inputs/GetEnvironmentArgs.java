@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEnvironmentArgs Empty = new GetEnvironmentArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="agentId", required=true)
     private final String agentId;
 
@@ -27,9 +21,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.agentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -37,9 +28,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specified snapshot properties for scheduled snapshots created by this policy.
- */
 public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs Empty = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs();
 
-    /**
-     * Chain name that the snapshot is created in.
-     */
     @InputImport(name="chainName")
     private final @Nullable Input<String> chainName;
 
@@ -30,9 +24,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
         return this.chainName == null ? Input.empty() : this.chainName;
     }
 
-    /**
-     * Indication to perform a 'guest aware' snapshot.
-     */
     @InputImport(name="guestFlush")
     private final @Nullable Input<Boolean> guestFlush;
 
@@ -40,9 +31,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
     }
 
-    /**
-     * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -50,9 +38,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
-     */
     @InputImport(name="storageLocations")
     private final @Nullable Input<List<String>> storageLocations;
 

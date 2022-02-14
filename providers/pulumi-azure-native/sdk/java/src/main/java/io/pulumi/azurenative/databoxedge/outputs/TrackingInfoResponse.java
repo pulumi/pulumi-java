@@ -11,21 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TrackingInfoResponse {
-/**
- * Name of the carrier used in the delivery.
- */
     private final @Nullable String carrierName;
-/**
- * Serial number of the device being tracked.
- */
     private final @Nullable String serialNumber;
-/**
- * Tracking ID of the shipment.
- */
     private final @Nullable String trackingId;
-/**
- * Tracking URL of the shipment.
- */
     private final @Nullable String trackingUrl;
 
     @OutputCustomType.Constructor({"carrierName","serialNumber","trackingId","trackingUrl"})
@@ -40,27 +28,15 @@ public final class TrackingInfoResponse {
         this.trackingUrl = trackingUrl;
     }
 
-/**
- * Name of the carrier used in the delivery.
- */
     public Optional<String> getCarrierName() {
         return Optional.ofNullable(this.carrierName);
     }
-/**
- * Serial number of the device being tracked.
- */
     public Optional<String> getSerialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
-/**
- * Tracking ID of the shipment.
- */
     public Optional<String> getTrackingId() {
         return Optional.ofNullable(this.trackingId);
     }
-/**
- * Tracking URL of the shipment.
- */
     public Optional<String> getTrackingUrl() {
         return Optional.ofNullable(this.trackingUrl);
     }

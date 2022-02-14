@@ -14,16 +14,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Model that represents a branch in the step.
- */
 public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BranchArgs Empty = new BranchArgs();
 
-    /**
-     * List of actions.
-     */
     @InputImport(name="actions", required=true)
     private final Input<List<Object>> actions;
 
@@ -31,9 +25,6 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions;
     }
 
-    /**
-     * String of the branch name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

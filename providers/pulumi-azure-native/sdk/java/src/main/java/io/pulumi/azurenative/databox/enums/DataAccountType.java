@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the account of data.
- */
     @EnumType
     public enum DataAccountType {
-/**
- * Storage Accounts .
- */
         StorageAccount("StorageAccount"),
-/**
- * Azure Managed disk storage.
- */
         ManagedDisk("ManagedDisk");
 
         private final String value;

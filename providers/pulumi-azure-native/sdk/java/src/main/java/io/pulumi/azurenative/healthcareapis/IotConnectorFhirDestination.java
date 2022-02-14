@@ -16,322 +16,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * IoT Connector FHIR destination definition.
-API Version: 2021-06-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update an Iot Connector FHIR destination
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var iotConnectorFhirDestination = new AzureNative.HealthcareApis.IotConnectorFhirDestination("iotConnectorFhirDestination", new AzureNative.HealthcareApis.IotConnectorFhirDestinationArgs
-        {
-            FhirDestinationName = "dest1",
-            FhirMapping = new AzureNative.HealthcareApis.Inputs.IotMappingPropertiesArgs
-            {
-                Content = 
-                {
-                    { "template", 
-                    {
-                        
-                        {
-                            { "template", 
-                            {
-                                { "codes", 
-                                {
-                                    
-                                    {
-                                        { "code", "8867-4" },
-                                        { "display", "Heart rate" },
-                                        { "system", "http://loinc.org" },
-                                    },
-                                } },
-                                { "periodInterval", 60 },
-                                { "typeName", "heartrate" },
-                                { "value", 
-                                {
-                                    { "defaultPeriod", 5000 },
-                                    { "unit", "count/min" },
-                                    { "valueName", "hr" },
-                                    { "valueType", "SampledData" },
-                                } },
-                            } },
-                            { "templateType", "CodeValueFhir" },
-                        },
-                    } },
-                    { "templateType", "CollectionFhirTemplate" },
-                },
-            },
-            FhirServiceResourceId = "subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice",
-            IotConnectorName = "blue",
-            Location = "westus",
-            ResourceGroupName = "testRG",
-            ResourceIdentityResolutionType = "Create",
-            WorkspaceName = "workspace1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	healthcareapis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthcareapis"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := healthcareapis.NewIotConnectorFhirDestination(ctx, "iotConnectorFhirDestination", &healthcareapis.IotConnectorFhirDestinationArgs{
-			FhirDestinationName: pulumi.String("dest1"),
-			FhirMapping: &healthcareapis.IotMappingPropertiesArgs{
-				Content: pulumi.Any{
-					Template: []map[string]interface{}{
-						map[string]interface{}{
-							"template": map[string]interface{}{
-								"codes": []map[string]interface{}{
-									map[string]interface{}{
-										"code":    "8867-4",
-										"display": "Heart rate",
-										"system":  "http://loinc.org",
-									},
-								},
-								"periodInterval": 60,
-								"typeName":       "heartrate",
-								"value": map[string]interface{}{
-									"defaultPeriod": 5000,
-									"unit":          "count/min",
-									"valueName":     "hr",
-									"valueType":     "SampledData",
-								},
-							},
-							"templateType": "CodeValueFhir",
-						},
-					},
-					TemplateType: "CollectionFhirTemplate",
-				},
-			},
-			FhirServiceResourceId:          pulumi.String("subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice"),
-			IotConnectorName:               pulumi.String("blue"),
-			Location:                       pulumi.String("westus"),
-			ResourceGroupName:              pulumi.String("testRG"),
-			ResourceIdentityResolutionType: pulumi.String("Create"),
-			WorkspaceName:                  pulumi.String("workspace1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const iotConnectorFhirDestination = new azure_native.healthcareapis.IotConnectorFhirDestination("iotConnectorFhirDestination", {
-    fhirDestinationName: "dest1",
-    fhirMapping: {
-        content: {
-            template: [{
-                template: {
-                    codes: [{
-                        code: "8867-4",
-                        display: "Heart rate",
-                        system: "http://loinc.org",
-                    }],
-                    periodInterval: 60,
-                    typeName: "heartrate",
-                    value: {
-                        defaultPeriod: 5000,
-                        unit: "count/min",
-                        valueName: "hr",
-                        valueType: "SampledData",
-                    },
-                },
-                templateType: "CodeValueFhir",
-            }],
-            templateType: "CollectionFhirTemplate",
-        },
-    },
-    fhirServiceResourceId: "subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice",
-    iotConnectorName: "blue",
-    location: "westus",
-    resourceGroupName: "testRG",
-    resourceIdentityResolutionType: "Create",
-    workspaceName: "workspace1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-iot_connector_fhir_destination = azure_native.healthcareapis.IotConnectorFhirDestination("iotConnectorFhirDestination",
-    fhir_destination_name="dest1",
-    fhir_mapping=azure_native.healthcareapis.IotMappingPropertiesArgs(
-        content={
-            "template": [{
-                "template": {
-                    "codes": [{
-                        "code": "8867-4",
-                        "display": "Heart rate",
-                        "system": "http://loinc.org",
-                    }],
-                    "periodInterval": 60,
-                    "typeName": "heartrate",
-                    "value": {
-                        "defaultPeriod": 5000,
-                        "unit": "count/min",
-                        "valueName": "hr",
-                        "valueType": "SampledData",
-                    },
-                },
-                "templateType": "CodeValueFhir",
-            }],
-            "templateType": "CollectionFhirTemplate",
-        },
-    ),
-    fhir_service_resource_id="subscriptions/11111111-2222-3333-4444-555566667777/resourceGroups/myrg/providers/Microsoft.HealthcareApis/workspaces/myworkspace/fhirservices/myfhirservice",
-    iot_connector_name="blue",
-    location="westus",
-    resource_group_name="testRG",
-    resource_identity_resolution_type="Create",
-    workspace_name="workspace1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:healthcareapis:IotConnectorFhirDestination dest1 /subscriptions/subid/resourceGroups/testRG/providers/Microsoft.HealthcareApis/workspaces/workspace1/iotconnectors/blue/fhirdestinations/dest1 
-```
-
- */
 @ResourceType(type="azure-native:healthcareapis:IotConnectorFhirDestination")
 public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResource {
-    /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * FHIR Mappings
-     */
     @OutputExport(name="fhirMapping", type=IotMappingPropertiesResponse.class, parameters={})
     private Output<IotMappingPropertiesResponse> fhirMapping;
 
-    /**
-     * @return FHIR Mappings
-     */
     public Output<IotMappingPropertiesResponse> getFhirMapping() {
         return this.fhirMapping;
     }
-    /**
-     * Fully qualified resource id of the FHIR service to connect to.
-     */
     @OutputExport(name="fhirServiceResourceId", type=String.class, parameters={})
     private Output<String> fhirServiceResourceId;
 
-    /**
-     * @return Fully qualified resource id of the FHIR service to connect to.
-     */
     public Output<String> getFhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Determines how resource identity is resolved on the destination.
-     */
     @OutputExport(name="resourceIdentityResolutionType", type=String.class, parameters={})
     private Output<String> resourceIdentityResolutionType;
 
-    /**
-     * @return Determines how resource identity is resolved on the destination.
-     */
     public Output<String> getResourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public IotConnectorFhirDestination(String name, IotConnectorFhirDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:healthcareapis:IotConnectorFhirDestination", name, args == null ? IotConnectorFhirDestinationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -350,14 +85,6 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static IotConnectorFhirDestination get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotConnectorFhirDestination(name, id, options);
     }

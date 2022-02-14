@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
-/**
- * Whether applications from unknown sources can be installed on device.
- */
     private final Boolean enabledUnknownSources;
-/**
- * Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
- */
     private final Boolean ownerProfileAccount;
-/**
- * Ownership privileges on device.
- */
     private final String ownershipPrivilege;
-/**
- * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
- */
     private final Boolean supportsWorkProfile;
 
     @OutputCustomType.Constructor({"enabledUnknownSources","ownerProfileAccount","ownershipPrivilege","supportsWorkProfile"})
@@ -39,27 +27,15 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
         this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
     }
 
-/**
- * Whether applications from unknown sources can be installed on device.
- */
     public Boolean getEnabledUnknownSources() {
         return this.enabledUnknownSources;
     }
-/**
- * Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
- */
     public Boolean getOwnerProfileAccount() {
         return this.ownerProfileAccount;
     }
-/**
- * Ownership privileges on device.
- */
     public String getOwnershipPrivilege() {
         return this.ownershipPrivilege;
     }
-/**
- * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
- */
     public Boolean getSupportsWorkProfile() {
         return this.supportsWorkProfile;
     }

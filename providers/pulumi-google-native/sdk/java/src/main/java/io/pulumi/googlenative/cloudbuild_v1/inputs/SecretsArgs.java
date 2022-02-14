@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Secrets and secret environment variables.
- */
 public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretsArgs Empty = new SecretsArgs();
 
-    /**
-     * Secrets encrypted with KMS key and the associated secret environment variable.
-     */
     @InputImport(name="inline")
     private final @Nullable Input<List<InlineSecretArgs>> inline;
 
@@ -29,9 +23,6 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
         return this.inline == null ? Input.empty() : this.inline;
     }
 
-    /**
-     * Secrets in Secret Manager and associated secret environment variable.
-     */
     @InputImport(name="secretManager")
     private final @Nullable Input<List<SecretManagerSecretArgs>> secretManager;
 

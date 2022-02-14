@@ -6,9 +6,6 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 import java.util.Objects;
 
 
-/**
- * Job trigger option for hybrid jobs. Jobs must be manually created and finished.
- */
 public final class GooglePrivacyDlpV2ManualResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ManualResponse Empty = new GooglePrivacyDlpV2ManualResponse();

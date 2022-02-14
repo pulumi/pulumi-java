@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
-/**
- * The name of the event to handle.
- */
     private final String event;
-/**
- * The unique identifier of this event handler.
- */
     private final String name;
-/**
- * The target flow to transition to. Format: `projects//locations//agents//flows/`.
- */
     private final String targetFlow;
-/**
- * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
- */
     private final String targetPage;
-/**
- * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
- */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 
     @OutputCustomType.Constructor({"event","name","targetFlow","targetPage","triggerFulfillment"})
@@ -45,33 +30,18 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
         this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
     }
 
-/**
- * The name of the event to handle.
- */
     public String getEvent() {
         return this.event;
     }
-/**
- * The unique identifier of this event handler.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The target flow to transition to. Format: `projects//locations//agents//flows/`.
- */
     public String getTargetFlow() {
         return this.targetFlow;
     }
-/**
- * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
- */
     public String getTargetPage() {
         return this.targetPage;
     }
-/**
- * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
- */
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getTriggerFulfillment() {
         return this.triggerFulfillment;
     }

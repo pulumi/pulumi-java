@@ -23,16 +23,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
- */
 public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutputArgs Empty = new OutputArgs();
 
-    /**
-     * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="datasource")
     private final @Nullable Input<Object> datasource;
 
@@ -40,9 +34,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasource == null ? Input.empty() : this.datasource;
     }
 
-    /**
-     * Resource name
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,9 +41,6 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     */
     @InputImport(name="serialization")
     private final @Nullable Input<Object> serialization;
 

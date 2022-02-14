@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Network function role configuration.
- */
 public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkFunctionRoleConfigurationArgs Empty = new NetworkFunctionRoleConfigurationArgs();
 
-    /**
-     * Specifies the custom settings for the virtual machine.
-     */
     @InputImport(name="customProfile")
     private final @Nullable Input<CustomProfileArgs> customProfile;
 
@@ -36,9 +30,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.customProfile == null ? Input.empty() : this.customProfile;
     }
 
-    /**
-     * The network interface configurations.
-     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
@@ -46,9 +37,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
-    /**
-     * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
-     */
     @InputImport(name="osProfile")
     private final @Nullable Input<OsProfileArgs> osProfile;
 
@@ -56,9 +44,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.osProfile == null ? Input.empty() : this.osProfile;
     }
 
-    /**
-     * The name of the network function role.
-     */
     @InputImport(name="roleName")
     private final @Nullable Input<String> roleName;
 
@@ -66,9 +51,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.roleName == null ? Input.empty() : this.roleName;
     }
 
-    /**
-     * Role type.
-     */
     @InputImport(name="roleType")
     private final @Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
 
@@ -76,9 +58,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.roleType == null ? Input.empty() : this.roleType;
     }
 
-    /**
-     * Specifies the storage settings for the virtual machine disks.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<StorageProfileArgs> storageProfile;
 
@@ -86,9 +65,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
-    /**
-     * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
-     */
     @InputImport(name="userDataParameters")
     private final @Nullable Input<Object> userDataParameters;
 
@@ -96,9 +72,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.userDataParameters == null ? Input.empty() : this.userDataParameters;
     }
 
-    /**
-     * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
-     */
     @InputImport(name="userDataTemplate")
     private final @Nullable Input<Object> userDataTemplate;
 
@@ -106,9 +79,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
         return this.userDataTemplate == null ? Input.empty() : this.userDataTemplate;
     }
 
-    /**
-     * The size of the virtual machine.
-     */
     @InputImport(name="virtualMachineSize")
     private final @Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;
 

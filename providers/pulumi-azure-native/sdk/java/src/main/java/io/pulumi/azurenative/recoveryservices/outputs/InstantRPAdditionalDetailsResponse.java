@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstantRPAdditionalDetailsResponse {
-/**
- * 
- */
     private final @Nullable String azureBackupRGNamePrefix;
-/**
- * 
- */
     private final @Nullable String azureBackupRGNameSuffix;
 
     @OutputCustomType.Constructor({"azureBackupRGNamePrefix","azureBackupRGNameSuffix"})
@@ -28,15 +22,9 @@ public final class InstantRPAdditionalDetailsResponse {
         this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
     }
 
-/**
- * 
- */
     public Optional<String> getAzureBackupRGNamePrefix() {
         return Optional.ofNullable(this.azureBackupRGNamePrefix);
     }
-/**
- * 
- */
     public Optional<String> getAzureBackupRGNameSuffix() {
         return Optional.ofNullable(this.azureBackupRGNameSuffix);
     }

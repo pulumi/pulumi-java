@@ -23,62 +23,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedOnlineDeploymentResponse {
-/**
- * If true, enables Application Insights logging.
- */
     private final @Nullable Boolean appInsightsEnabled;
-/**
- * Code configuration for the endpoint deployment.
- */
     private final @Nullable CodeConfigurationResponse codeConfiguration;
-/**
- * Description of the endpoint deployment.
- */
     private final @Nullable String description;
-/**
- * Enum to determine endpoint compute type.
-Expected value is 'Managed'.
- */
     private final String endpointComputeType;
-/**
- * ARM resource ID of the environment specification for the endpoint deployment.
- */
     private final @Nullable String environmentId;
-/**
- * Environment variables configuration for the deployment.
- */
     private final @Nullable Map<String,String> environmentVariables;
-/**
- * Compute instance type.
- */
     private final @Nullable String instanceType;
-/**
- * Deployment container liveness/readiness probe configuration.
- */
     private final @Nullable ProbeSettingsResponse livenessProbe;
-/**
- * Reference to the model asset for the endpoint deployment.
- */
     private final @Nullable Object model;
-/**
- * Property dictionary. Properties can be added, but not removed or altered.
- */
     private final @Nullable Map<String,String> properties;
-/**
- * Provisioning state for the endpoint deployment.
- */
     private final String provisioningState;
-/**
- * Deployment container liveness/readiness probe configuration.
- */
     private final @Nullable ProbeSettingsResponse readinessProbe;
-/**
- * Online deployment scoring requests configuration.
- */
     private final @Nullable OnlineRequestSettingsResponse requestSettings;
-/**
- * Online deployment scaling configuration.
- */
     private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
     @OutputCustomType.Constructor({"appInsightsEnabled","codeConfiguration","description","endpointComputeType","environmentId","environmentVariables","instanceType","livenessProbe","model","properties","provisioningState","readinessProbe","requestSettings","scaleSettings"})
@@ -113,88 +70,45 @@ Expected value is 'Managed'.
         this.scaleSettings = scaleSettings;
     }
 
-/**
- * If true, enables Application Insights logging.
- */
     public Optional<Boolean> getAppInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
-/**
- * Code configuration for the endpoint deployment.
- */
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
-/**
- * Description of the endpoint deployment.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Enum to determine endpoint compute type.
-Expected value is 'Managed'.
- */
     public String getEndpointComputeType() {
         return this.endpointComputeType;
     }
-/**
- * ARM resource ID of the environment specification for the endpoint deployment.
- */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
-/**
- * Environment variables configuration for the deployment.
- */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
-/**
- * Compute instance type.
- */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
-/**
- * Deployment container liveness/readiness probe configuration.
- */
     public Optional<ProbeSettingsResponse> getLivenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
-/**
- * Reference to the model asset for the endpoint deployment.
- */
     public Optional<Object> getModel() {
         return Optional.ofNullable(this.model);
     }
-/**
- * Property dictionary. Properties can be added, but not removed or altered.
- */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
-/**
- * Provisioning state for the endpoint deployment.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Deployment container liveness/readiness probe configuration.
- */
     public Optional<ProbeSettingsResponse> getReadinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
-/**
- * Online deployment scoring requests configuration.
- */
     public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
         return Optional.ofNullable(this.requestSettings);
     }
-/**
- * Online deployment scaling configuration.
- */
     public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> getScaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }

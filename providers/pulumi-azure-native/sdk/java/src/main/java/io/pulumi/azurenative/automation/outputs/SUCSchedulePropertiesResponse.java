@@ -14,61 +14,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SUCSchedulePropertiesResponse {
-/**
- * Gets or sets the advanced schedule.
- */
     private final @Nullable AdvancedScheduleResponse advancedSchedule;
-/**
- * Gets or sets the creation time.
- */
     private final @Nullable String creationTime;
-/**
- * Gets or sets the description.
- */
     private final @Nullable String description;
-/**
- * Gets or sets the end time of the schedule.
- */
     private final @Nullable String expiryTime;
-/**
- * Gets or sets the expiry time's offset in minutes.
- */
     private final @Nullable Double expiryTimeOffsetMinutes;
-/**
- * Gets or sets the frequency of the schedule.
- */
     private final @Nullable String frequency;
-/**
- * Gets or sets the interval of the schedule.
- */
     private final @Nullable Double interval;
-/**
- * Gets or sets a value indicating whether this schedule is enabled.
- */
     private final @Nullable Boolean isEnabled;
-/**
- * Gets or sets the last modified time.
- */
     private final @Nullable String lastModifiedTime;
-/**
- * Gets or sets the next run time of the schedule.
- */
     private final @Nullable String nextRun;
-/**
- * Gets or sets the next run time's offset in minutes.
- */
     private final @Nullable Double nextRunOffsetMinutes;
-/**
- * Gets or sets the start time of the schedule.
- */
     private final @Nullable String startTime;
-/**
- * Gets the start time's offset in minutes.
- */
     private final Double startTimeOffsetMinutes;
-/**
- * Gets or sets the time zone of the schedule.
- */
     private final @Nullable String timeZone;
 
     @OutputCustomType.Constructor({"advancedSchedule","creationTime","description","expiryTime","expiryTimeOffsetMinutes","frequency","interval","isEnabled","lastModifiedTime","nextRun","nextRunOffsetMinutes","startTime","startTimeOffsetMinutes","timeZone"})
@@ -103,87 +61,45 @@ public final class SUCSchedulePropertiesResponse {
         this.timeZone = timeZone;
     }
 
-/**
- * Gets or sets the advanced schedule.
- */
     public Optional<AdvancedScheduleResponse> getAdvancedSchedule() {
         return Optional.ofNullable(this.advancedSchedule);
     }
-/**
- * Gets or sets the creation time.
- */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
-/**
- * Gets or sets the description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Gets or sets the end time of the schedule.
- */
     public Optional<String> getExpiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
-/**
- * Gets or sets the expiry time's offset in minutes.
- */
     public Optional<Double> getExpiryTimeOffsetMinutes() {
         return Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
-/**
- * Gets or sets the frequency of the schedule.
- */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
-/**
- * Gets or sets the interval of the schedule.
- */
     public Optional<Double> getInterval() {
         return Optional.ofNullable(this.interval);
     }
-/**
- * Gets or sets a value indicating whether this schedule is enabled.
- */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
-/**
- * Gets or sets the last modified time.
- */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
-/**
- * Gets or sets the next run time of the schedule.
- */
     public Optional<String> getNextRun() {
         return Optional.ofNullable(this.nextRun);
     }
-/**
- * Gets or sets the next run time's offset in minutes.
- */
     public Optional<Double> getNextRunOffsetMinutes() {
         return Optional.ofNullable(this.nextRunOffsetMinutes);
     }
-/**
- * Gets or sets the start time of the schedule.
- */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
-/**
- * Gets the start time's offset in minutes.
- */
     public Double getStartTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
-/**
- * Gets or sets the time zone of the schedule.
- */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }

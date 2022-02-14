@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListIngestionSettingTokensArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIngestionSettingTokensArgs Empty = new ListIngestionSettingTokensArgs();
 
-    /**
-     * Name of the ingestion setting
-     */
     @InputImport(name="ingestionSettingName", required=true)
     private final String ingestionSettingName;
 

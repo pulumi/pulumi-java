@@ -9,16 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * An RPM package file. RPM packages only support INSTALLED state.
- */
 public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourcePackageResourceRPMResponse Empty = new OSPolicyResourcePackageResourceRPMResponse();
 
-    /**
-     * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
-     */
     @InputImport(name="pullDeps", required=true)
     private final Boolean pullDeps;
 
@@ -26,9 +20,6 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
         return this.pullDeps;
     }
 
-    /**
-     * An rpm package.
-     */
     @InputImport(name="source", required=true)
     private final OSPolicyResourceFileResponse source;
 

@@ -6,9 +6,6 @@ package io.pulumi.azurenative.insights.inputs;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListEASubscriptionListMigrationDatePostArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListEASubscriptionListMigrationDatePostArgs Empty = new ListEASubscriptionListMigrationDatePostArgs();

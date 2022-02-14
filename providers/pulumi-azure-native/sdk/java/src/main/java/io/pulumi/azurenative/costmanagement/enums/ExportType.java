@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
- */
     @EnumType
     public enum ExportType {
-/**
- * 
- */
         Usage("Usage"),
-/**
- * 
- */
         ActualCost("ActualCost"),
-/**
- * 
- */
         AmortizedCost("AmortizedCost");
 
         private final String value;

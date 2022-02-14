@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * DRA details.
- */
 public final class DraDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DraDetailsResponse Empty = new DraDetailsResponse();
 
-    /**
-     * The health of the DRA.
-     */
     @InputImport(name="health", required=true)
     private final String health;
 
@@ -27,9 +21,6 @@ public final class DraDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.health;
     }
 
-    /**
-     * The health errors.
-     */
     @InputImport(name="healthErrors", required=true)
     private final List<HealthErrorResponse> healthErrors;
 
@@ -37,9 +28,6 @@ public final class DraDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.healthErrors;
     }
 
-    /**
-     * The DRA Id.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -47,9 +35,6 @@ public final class DraDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
-    /**
-     * The last heartbeat received from the DRA.
-     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -57,9 +42,6 @@ public final class DraDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastHeartbeatUtc;
     }
 
-    /**
-     * The DRA name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -67,9 +49,6 @@ public final class DraDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The DRA version.
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

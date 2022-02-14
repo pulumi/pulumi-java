@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Mode is the configuration for how to expose metadata to workloads running on the node pool.
- */
     @EnumType
     public enum WorkloadMetadataConfigMode {
-/**
- * Not set.
- */
         ModeUnspecified("MODE_UNSPECIFIED"),
-/**
- * Expose all Compute Engine metadata to pods.
- */
         GceMetadata("GCE_METADATA"),
-/**
- * Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level.
- */
         GkeMetadata("GKE_METADATA");
 
         private final String value;

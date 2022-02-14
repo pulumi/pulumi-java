@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FleetConfigResponse {
-/**
- * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
- */
     private final String fleetSpec;
-/**
- * The name of the FleetConfig.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"fleetSpec","name"})
@@ -26,15 +20,9 @@ public final class FleetConfigResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
- */
     public String getFleetSpec() {
         return this.fleetSpec;
     }
-/**
- * The name of the FleetConfig.
- */
     public String getName() {
         return this.name;
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Settings concerning lockbox.
- */
 public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeArgs {
 
     public static final PropertiesResponseLockbox Empty = new PropertiesResponseLockbox();
 
-    /**
-     * lockbox configuration
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

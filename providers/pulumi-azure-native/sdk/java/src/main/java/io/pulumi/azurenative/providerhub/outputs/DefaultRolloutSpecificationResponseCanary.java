@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefaultRolloutSpecificationResponseCanary {
-/**
- * 
- */
     private final @Nullable List<String> regions;
-/**
- * 
- */
     private final @Nullable List<String> skipRegions;
 
     @OutputCustomType.Constructor({"regions","skipRegions"})
@@ -28,15 +22,9 @@ public final class DefaultRolloutSpecificationResponseCanary {
         this.skipRegions = skipRegions;
     }
 
-/**
- * 
- */
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
-/**
- * 
- */
     public List<String> getSkipRegions() {
         return this.skipRegions == null ? List.of() : this.skipRegions;
     }

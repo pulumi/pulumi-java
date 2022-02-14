@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
-/**
- * The configuration used for this job.
- */
     private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
-/**
- * A summary of the outcome of this inspection job.
- */
     private final GooglePrivacyDlpV2ResultResponse result;
 
     @OutputCustomType.Constructor({"requestedOptions","result"})
@@ -27,15 +21,9 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
         this.result = Objects.requireNonNull(result);
     }
 
-/**
- * The configuration used for this job.
- */
     public GooglePrivacyDlpV2RequestedOptionsResponse getRequestedOptions() {
         return this.requestedOptions;
     }
-/**
- * A summary of the outcome of this inspection job.
- */
     public GooglePrivacyDlpV2ResultResponse getResult() {
         return this.result;
     }

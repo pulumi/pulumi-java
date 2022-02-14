@@ -14,222 +14,69 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Represents a disaster recovery configuration.
-API Version: 2014-04-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Update a disaster recovery configuration
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var disasterRecoveryConfiguration = new AzureNative.Sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", new AzureNative.Sql.DisasterRecoveryConfigurationArgs
-        {
-            DisasterRecoveryConfigurationName = "Default",
-            ResourceGroupName = "sqlcrudtest-4799",
-            ServerName = "sqlcrudtest-5961",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := sql.NewDisasterRecoveryConfiguration(ctx, "disasterRecoveryConfiguration", &sql.DisasterRecoveryConfigurationArgs{
-			DisasterRecoveryConfigurationName: pulumi.String("Default"),
-			ResourceGroupName:                 pulumi.String("sqlcrudtest-4799"),
-			ServerName:                        pulumi.String("sqlcrudtest-5961"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const disasterRecoveryConfiguration = new azure_native.sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration", {
-    disasterRecoveryConfigurationName: "Default",
-    resourceGroupName: "sqlcrudtest-4799",
-    serverName: "sqlcrudtest-5961",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-disaster_recovery_configuration = azure_native.sql.DisasterRecoveryConfiguration("disasterRecoveryConfiguration",
-    disaster_recovery_configuration_name="Default",
-    resource_group_name="sqlcrudtest-4799",
-    server_name="sqlcrudtest-5961")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:sql:DisasterRecoveryConfiguration Default /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-5961/databases/testdw/geoBackupPolicies/Default 
-```
-
- */
 @ResourceType(type="azure-native:sql:DisasterRecoveryConfiguration")
 public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomResource {
-    /**
-     * Whether or not failover can be done automatically.
-     */
     @OutputExport(name="autoFailover", type=String.class, parameters={})
     private Output<String> autoFailover;
 
-    /**
-     * @return Whether or not failover can be done automatically.
-     */
     public Output<String> getAutoFailover() {
         return this.autoFailover;
     }
-    /**
-     * How aggressive the automatic failover should be.
-     */
     @OutputExport(name="failoverPolicy", type=String.class, parameters={})
     private Output<String> failoverPolicy;
 
-    /**
-     * @return How aggressive the automatic failover should be.
-     */
     public Output<String> getFailoverPolicy() {
         return this.failoverPolicy;
     }
-    /**
-     * Location of the server that contains this disaster recovery configuration.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Location of the server that contains this disaster recovery configuration.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Logical name of the server.
-     */
     @OutputExport(name="logicalServerName", type=String.class, parameters={})
     private Output<String> logicalServerName;
 
-    /**
-     * @return Logical name of the server.
-     */
     public Output<String> getLogicalServerName() {
         return this.logicalServerName;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Logical name of the partner server.
-     */
     @OutputExport(name="partnerLogicalServerName", type=String.class, parameters={})
     private Output<String> partnerLogicalServerName;
 
-    /**
-     * @return Logical name of the partner server.
-     */
     public Output<String> getPartnerLogicalServerName() {
         return this.partnerLogicalServerName;
     }
-    /**
-     * Id of the partner server.
-     */
     @OutputExport(name="partnerServerId", type=String.class, parameters={})
     private Output<String> partnerServerId;
 
-    /**
-     * @return Id of the partner server.
-     */
     public Output<String> getPartnerServerId() {
         return this.partnerServerId;
     }
-    /**
-     * The role of the current server in the disaster recovery configuration.
-     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    /**
-     * @return The role of the current server in the disaster recovery configuration.
-     */
     public Output<String> getRole() {
         return this.role;
     }
-    /**
-     * The status of the disaster recovery configuration.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return The status of the disaster recovery configuration.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DisasterRecoveryConfiguration(String name, DisasterRecoveryConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:DisasterRecoveryConfiguration", name, args == null ? DisasterRecoveryConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -248,14 +95,6 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DisasterRecoveryConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DisasterRecoveryConfiguration(name, id, options);
     }

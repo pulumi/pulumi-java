@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ODataErrorResponse {
-/**
- * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
- */
     private final String code;
-/**
- * Inner errors that caused this error
- */
     private final List<ODataErrorResponse> details;
-/**
- * The human-readable description of the error
- */
     private final String message;
 
     @OutputCustomType.Constructor({"code","details","message"})
@@ -33,21 +24,12 @@ public final class ODataErrorResponse {
         this.message = Objects.requireNonNull(message);
     }
 
-/**
- * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
- */
     public String getCode() {
         return this.code;
     }
-/**
- * Inner errors that caused this error
- */
     public List<ODataErrorResponse> getDetails() {
         return this.details;
     }
-/**
- * The human-readable description of the error
- */
     public String getMessage() {
         return this.message;
     }

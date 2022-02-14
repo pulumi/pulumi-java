@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This activity will fail within its own scope and output a custom error message and error code. The error message and code can provided either as a string literal or as an expression that can be evaluated to a string at runtime. The activity scope can be the whole pipeline or a control activity (e.g. foreach, switch, until), if the fail activity is contained in it.
- */
 public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailActivityResponse Empty = new FailActivityResponse();
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -31,9 +25,6 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -41,9 +32,6 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="errorCode", required=true)
     private final Object errorCode;
 
@@ -51,9 +39,6 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.errorCode;
     }
 
-    /**
-     * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="message", required=true)
     private final Object message;
 
@@ -61,9 +46,6 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -71,10 +53,6 @@ public final class FailActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'Fail'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -82,9 +60,6 @@ Expected value is 'Fail'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

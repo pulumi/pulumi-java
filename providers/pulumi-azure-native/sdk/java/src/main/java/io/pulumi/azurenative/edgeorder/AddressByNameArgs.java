@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressByNameArgs Empty = new AddressByNameArgs();
 
-    /**
-     * The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     */
     @InputImport(name="addressName")
     private final @Nullable Input<String> addressName;
 
@@ -30,9 +24,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressName == null ? Input.empty() : this.addressName;
     }
 
-    /**
-     * Contact details for the address
-     */
     @InputImport(name="contactDetails", required=true)
     private final Input<ContactDetailsArgs> contactDetails;
 
@@ -40,9 +31,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactDetails;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,9 +38,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,9 +45,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Shipping details for the address
-     */
     @InputImport(name="shippingAddress")
     private final @Nullable Input<ShippingAddressArgs> shippingAddress;
 
@@ -70,9 +52,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
         return this.shippingAddress == null ? Input.empty() : this.shippingAddress;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetRegionHealthCheckServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionHealthCheckServiceArgs Empty = new GetRegionHealthCheckServiceArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="healthCheckService", required=true)
     private final String healthCheckService;
 
@@ -27,9 +21,6 @@ public final class GetRegionHealthCheckServiceArgs extends io.pulumi.resources.I
         return this.healthCheckService;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -37,9 +28,6 @@ public final class GetRegionHealthCheckServiceArgs extends io.pulumi.resources.I
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="region", required=true)
     private final String region;
 

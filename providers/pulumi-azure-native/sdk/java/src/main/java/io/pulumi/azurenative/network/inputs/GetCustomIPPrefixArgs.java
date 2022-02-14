@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetCustomIPPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomIPPrefixArgs Empty = new GetCustomIPPrefixArgs();
 
-    /**
-     * The name of the custom IP prefix.
-     */
     @InputImport(name="customIpPrefixName", required=true)
     private final String customIpPrefixName;
 
@@ -27,9 +21,6 @@ public final class GetCustomIPPrefixArgs extends io.pulumi.resources.InvokeArgs 
         return this.customIpPrefixName;
     }
 
-    /**
-     * Expands referenced resources.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -37,9 +28,6 @@ public final class GetCustomIPPrefixArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * ResourceRecordSet data for one geo location.
- */
 public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse Empty = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -26,9 +20,6 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.p
         return this.kind;
     }
 
-    /**
-     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -36,9 +27,6 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.p
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="rrdatas", required=true)
     private final List<String> rrdatas;
 
@@ -46,9 +34,6 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends io.p
         return this.rrdatas;
     }
 
-    /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
-     */
     @InputImport(name="signatureRrdatas", required=true)
     private final List<String> signatureRrdatas;
 

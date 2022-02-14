@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse {
-/**
- * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
- */
     private final String phoneNumber;
 
     @OutputCustomType.Constructor({"phoneNumber"})
@@ -19,9 +16,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
         this.phoneNumber = Objects.requireNonNull(phoneNumber);
     }
 
-/**
- * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
- */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }

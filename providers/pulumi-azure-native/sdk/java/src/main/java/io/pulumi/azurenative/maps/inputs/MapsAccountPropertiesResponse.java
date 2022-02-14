@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional Map account properties
- */
 public final class MapsAccountPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MapsAccountPropertiesResponse Empty = new MapsAccountPropertiesResponse();
 
-    /**
-     * A unique identifier for the maps account
-     */
     @InputImport(name="xMsClientId")
     private final @Nullable String xMsClientId;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Database instance backup configuration.
- */
 public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupConfigurationArgs Empty = new BackupConfigurationArgs();
 
-    /**
-     * Backup retention settings.
-     */
     @InputImport(name="backupRetentionSettings")
     private final @Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings;
 
@@ -30,9 +24,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.backupRetentionSettings == null ? Input.empty() : this.backupRetentionSettings;
     }
 
-    /**
-     * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
-     */
     @InputImport(name="binaryLogEnabled")
     private final @Nullable Input<Boolean> binaryLogEnabled;
 
@@ -40,9 +31,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.binaryLogEnabled == null ? Input.empty() : this.binaryLogEnabled;
     }
 
-    /**
-     * Whether this configuration is enabled.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -50,9 +38,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * This is always `sql#backupConfiguration`.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -60,9 +45,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Location of the backup
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -70,9 +52,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * (Postgres only) Whether point in time recovery is enabled.
-     */
     @InputImport(name="pointInTimeRecoveryEnabled")
     private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
@@ -80,9 +59,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
     }
 
-    /**
-     * Reserved for future use.
-     */
     @InputImport(name="replicationLogArchivingEnabled")
     private final @Nullable Input<Boolean> replicationLogArchivingEnabled;
 
@@ -90,9 +66,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.replicationLogArchivingEnabled == null ? Input.empty() : this.replicationLogArchivingEnabled;
     }
 
-    /**
-     * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -100,9 +73,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * The number of days of transaction logs we retain for point in time restore, from 1-7.
-     */
     @InputImport(name="transactionLogRetentionDays")
     private final @Nullable Input<Integer> transactionLogRetentionDays;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies an executable to run on a fully configured node and a timeout period for executable completion.
- */
 public final class NodeInitializationActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeInitializationActionArgs Empty = new NodeInitializationActionArgs();
 
-    /**
-     * Cloud Storage URI of executable file.
-     */
     @InputImport(name="executableFile", required=true)
     private final Input<String> executableFile;
 
@@ -27,9 +21,6 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
         return this.executableFile;
     }
 
-    /**
-     * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
-     */
     @InputImport(name="executionTimeout")
     private final @Nullable Input<String> executionTimeout;
 

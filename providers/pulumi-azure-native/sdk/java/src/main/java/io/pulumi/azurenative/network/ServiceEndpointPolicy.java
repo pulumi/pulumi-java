@@ -17,339 +17,69 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Service End point policy resource.
-API Version: 2020-11-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create service endpoint policy
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serviceEndpointPolicy = new AzureNative.Network.ServiceEndpointPolicy("serviceEndpointPolicy", new AzureNative.Network.ServiceEndpointPolicyArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "rg1",
-            ServiceEndpointPolicyName = "testPolicy",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewServiceEndpointPolicy(ctx, "serviceEndpointPolicy", &network.ServiceEndpointPolicyArgs{
-			Location:                  pulumi.String("westus"),
-			ResourceGroupName:         pulumi.String("rg1"),
-			ServiceEndpointPolicyName: pulumi.String("testPolicy"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const serviceEndpointPolicy = new azure_native.network.ServiceEndpointPolicy("serviceEndpointPolicy", {
-    location: "westus",
-    resourceGroupName: "rg1",
-    serviceEndpointPolicyName: "testPolicy",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-service_endpoint_policy = azure_native.network.ServiceEndpointPolicy("serviceEndpointPolicy",
-    location="westus",
-    resource_group_name="rg1",
-    service_endpoint_policy_name="testPolicy")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create service endpoint policy with definition
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var serviceEndpointPolicy = new AzureNative.Network.ServiceEndpointPolicy("serviceEndpointPolicy", new AzureNative.Network.ServiceEndpointPolicyArgs
-        {
-            Location = "westus",
-            ResourceGroupName = "rg1",
-            ServiceEndpointPolicyDefinitions = 
-            {
-                new AzureNative.Network.Inputs.ServiceEndpointPolicyDefinitionArgs
-                {
-                    Description = "Storage Service EndpointPolicy Definition",
-                    Name = "StorageServiceEndpointPolicyDefinition",
-                    Service = "Microsoft.Storage",
-                    ServiceResources = 
-                    {
-                        "/subscriptions/subid1",
-                        "/subscriptions/subid1/resourceGroups/storageRg",
-                        "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
-                    },
-                },
-            },
-            ServiceEndpointPolicyName = "testPolicy",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewServiceEndpointPolicy(ctx, "serviceEndpointPolicy", &network.ServiceEndpointPolicyArgs{
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceEndpointPolicyDefinitions: []network.ServiceEndpointPolicyDefinitionArgs{
-				&network.ServiceEndpointPolicyDefinitionArgs{
-					Description: pulumi.String("Storage Service EndpointPolicy Definition"),
-					Name:        pulumi.String("StorageServiceEndpointPolicyDefinition"),
-					Service:     pulumi.String("Microsoft.Storage"),
-					ServiceResources: pulumi.StringArray{
-						pulumi.String("/subscriptions/subid1"),
-						pulumi.String("/subscriptions/subid1/resourceGroups/storageRg"),
-						pulumi.String("/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount"),
-					},
-				},
-			},
-			ServiceEndpointPolicyName: pulumi.String("testPolicy"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const serviceEndpointPolicy = new azure_native.network.ServiceEndpointPolicy("serviceEndpointPolicy", {
-    location: "westus",
-    resourceGroupName: "rg1",
-    serviceEndpointPolicyDefinitions: [{
-        description: "Storage Service EndpointPolicy Definition",
-        name: "StorageServiceEndpointPolicyDefinition",
-        service: "Microsoft.Storage",
-        serviceResources: [
-            "/subscriptions/subid1",
-            "/subscriptions/subid1/resourceGroups/storageRg",
-            "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
-        ],
-    }],
-    serviceEndpointPolicyName: "testPolicy",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-service_endpoint_policy = azure_native.network.ServiceEndpointPolicy("serviceEndpointPolicy",
-    location="westus",
-    resource_group_name="rg1",
-    service_endpoint_policy_definitions=[azure_native.network.ServiceEndpointPolicyDefinitionArgs(
-        description="Storage Service EndpointPolicy Definition",
-        name="StorageServiceEndpointPolicyDefinition",
-        service="Microsoft.Storage",
-        service_resources=[
-            "/subscriptions/subid1",
-            "/subscriptions/subid1/resourceGroups/storageRg",
-            "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
-        ],
-    )],
-    service_endpoint_policy_name="testPolicy")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:network:ServiceEndpointPolicy testnsg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ServiceEndpointPolicies/testpolicy 
-```
-
- */
 @ResourceType(type="azure-native:network:ServiceEndpointPolicy")
 public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return A unique read-only string that changes whenever the resource is updated.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * Kind of service endpoint policy. This is metadata used for the Azure portal experience.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Kind of service endpoint policy. This is metadata used for the Azure portal experience.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning state of the service endpoint policy resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning state of the service endpoint policy resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The resource GUID property of the service endpoint policy resource.
-     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
-    /**
-     * @return The resource GUID property of the service endpoint policy resource.
-     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
-    /**
-     * A collection of service endpoint policy definitions of the service endpoint policy.
-     */
     @OutputExport(name="serviceEndpointPolicyDefinitions", type=List.class, parameters={ServiceEndpointPolicyDefinitionResponse.class})
     private Output</* @Nullable */ List<ServiceEndpointPolicyDefinitionResponse>> serviceEndpointPolicyDefinitions;
 
-    /**
-     * @return A collection of service endpoint policy definitions of the service endpoint policy.
-     */
     public Output</* @Nullable */ List<ServiceEndpointPolicyDefinitionResponse>> getServiceEndpointPolicyDefinitions() {
         return this.serviceEndpointPolicyDefinitions;
     }
-    /**
-     * A collection of references to subnets.
-     */
     @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output<List<SubnetResponse>> subnets;
 
-    /**
-     * @return A collection of references to subnets.
-     */
     public Output<List<SubnetResponse>> getSubnets() {
         return this.subnets;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ServiceEndpointPolicy(String name, ServiceEndpointPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ServiceEndpointPolicy", name, args == null ? ServiceEndpointPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -390,14 +120,6 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ServiceEndpointPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceEndpointPolicy(name, id, options);
     }

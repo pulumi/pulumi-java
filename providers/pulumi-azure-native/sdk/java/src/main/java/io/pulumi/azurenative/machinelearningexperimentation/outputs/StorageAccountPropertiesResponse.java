@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountPropertiesResponse {
-/**
- * The access key to the storage account.
- */
     private final String accessKey;
-/**
- * The fully qualified arm Id of the storage account.
- */
     private final String storageAccountId;
 
     @OutputCustomType.Constructor({"accessKey","storageAccountId"})
@@ -26,15 +20,9 @@ public final class StorageAccountPropertiesResponse {
         this.storageAccountId = Objects.requireNonNull(storageAccountId);
     }
 
-/**
- * The access key to the storage account.
- */
     public String getAccessKey() {
         return this.accessKey;
     }
-/**
- * The fully qualified arm Id of the storage account.
- */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Encryption Key Source
- */
     @EnumType
     public enum EncryptionKeySourceType {
-/**
- * 
- */
         Microsoft_Automation("Microsoft.Automation"),
-/**
- * 
- */
         Microsoft_Keyvault("Microsoft.Keyvault");
 
         private final String value;

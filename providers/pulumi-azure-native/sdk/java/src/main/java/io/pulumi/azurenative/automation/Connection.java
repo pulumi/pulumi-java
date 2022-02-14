@@ -16,224 +16,51 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Definition of the connection.
-API Version: 2019-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update connection
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var connection = new AzureNative.Automation.Connection("connection", new AzureNative.Automation.ConnectionArgs
-        {
-            AutomationAccountName = "myAutomationAccount28",
-            ConnectionName = "mysConnection",
-            ConnectionType = new AzureNative.Automation.Inputs.ConnectionTypeAssociationPropertyArgs
-            {
-                Name = "Azure",
-            },
-            Description = "my description goes here",
-            FieldDefinitionValues = 
-            {
-                { "AutomationCertificateName", "mysCertificateName" },
-                { "SubscriptionID", "subid" },
-            },
-            Name = "mysConnection",
-            ResourceGroupName = "rg",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := automation.NewConnection(ctx, "connection", &automation.ConnectionArgs{
-			AutomationAccountName: pulumi.String("myAutomationAccount28"),
-			ConnectionName:        pulumi.String("mysConnection"),
-			ConnectionType: &automation.ConnectionTypeAssociationPropertyArgs{
-				Name: pulumi.String("Azure"),
-			},
-			Description: pulumi.String("my description goes here"),
-			FieldDefinitionValues: pulumi.StringMap{
-				"AutomationCertificateName": pulumi.String("mysCertificateName"),
-				"SubscriptionID":            pulumi.String("subid"),
-			},
-			Name:              pulumi.String("mysConnection"),
-			ResourceGroupName: pulumi.String("rg"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const connection = new azure_native.automation.Connection("connection", {
-    automationAccountName: "myAutomationAccount28",
-    connectionName: "mysConnection",
-    connectionType: {
-        name: "Azure",
-    },
-    description: "my description goes here",
-    fieldDefinitionValues: {
-        AutomationCertificateName: "mysCertificateName",
-        SubscriptionID: "subid",
-    },
-    name: "mysConnection",
-    resourceGroupName: "rg",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-connection = azure_native.automation.Connection("connection",
-    automation_account_name="myAutomationAccount28",
-    connection_name="mysConnection",
-    connection_type=azure_native.automation.ConnectionTypeAssociationPropertyArgs(
-        name="Azure",
-    ),
-    description="my description goes here",
-    field_definition_values={
-        "AutomationCertificateName": "mysCertificateName",
-        "SubscriptionID": "subid",
-    },
-    name="mysConnection",
-    resource_group_name="rg")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:automation:Connection mysConnection /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount28/connections/mysConnection 
-```
-
- */
 @ResourceType(type="azure-native:automation:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
-    /**
-     * Gets or sets the connectionType of the connection.
-     */
     @OutputExport(name="connectionType", type=ConnectionTypeAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionTypeAssociationPropertyResponse> connectionType;
 
-    /**
-     * @return Gets or sets the connectionType of the connection.
-     */
     public Output</* @Nullable */ ConnectionTypeAssociationPropertyResponse> getConnectionType() {
         return this.connectionType;
     }
-    /**
-     * Gets the creation time.
-     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    /**
-     * @return Gets the creation time.
-     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    /**
-     * Gets or sets the description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return Gets or sets the description.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Gets the field definition values of the connection.
-     */
     @OutputExport(name="fieldDefinitionValues", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> fieldDefinitionValues;
 
-    /**
-     * @return Gets the field definition values of the connection.
-     */
     public Output<Map<String,String>> getFieldDefinitionValues() {
         return this.fieldDefinitionValues;
     }
-    /**
-     * Gets the last modified time.
-     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    /**
-     * @return Gets the last modified time.
-     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Connection(String name, ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -254,14 +81,6 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Connection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connection(name, id, options);
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. The width of the cards in the carousel.
- */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth {
-/**
- * Not specified.
- */
         CardWidthUnspecified("CARD_WIDTH_UNSPECIFIED"),
-/**
- * 120 DP. Note that tall media cannot be used.
- */
         Small("SMALL"),
-/**
- * 232 DP.
- */
         Medium("MEDIUM");
 
         private final String value;

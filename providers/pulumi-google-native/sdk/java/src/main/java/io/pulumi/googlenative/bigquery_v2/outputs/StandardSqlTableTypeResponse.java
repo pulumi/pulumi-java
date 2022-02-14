@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StandardSqlTableTypeResponse {
-/**
- * The columns in this table type
- */
     private final List<StandardSqlFieldResponse> columns;
 
     @OutputCustomType.Constructor({"columns"})
@@ -20,9 +17,6 @@ public final class StandardSqlTableTypeResponse {
         this.columns = Objects.requireNonNull(columns);
     }
 
-/**
- * The columns in this table type
- */
     public List<StandardSqlFieldResponse> getColumns() {
         return this.columns;
     }

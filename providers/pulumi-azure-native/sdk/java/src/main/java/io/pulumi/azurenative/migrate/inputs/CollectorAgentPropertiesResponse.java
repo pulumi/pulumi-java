@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CollectorAgentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CollectorAgentPropertiesResponse Empty = new CollectorAgentPropertiesResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,9 +22,6 @@ public final class CollectorAgentPropertiesResponse extends io.pulumi.resources.
         return this.id;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -38,9 +29,6 @@ public final class CollectorAgentPropertiesResponse extends io.pulumi.resources.
         return this.lastHeartbeatUtc;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="spnDetails")
     private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
 
@@ -48,9 +36,6 @@ public final class CollectorAgentPropertiesResponse extends io.pulumi.resources.
         return this.spnDetails == null ? Optional.empty() : Optional.ofNullable(this.spnDetails);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="version", required=true)
     private final String version;
 

@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Private Link Configuration on an application gateway.
- */
 public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayPrivateLinkConfigurationResponse Empty = new ApplicationGatewayPrivateLinkConfigurationResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,9 +23,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
         return this.etag;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -39,9 +30,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * An array of application gateway private link ip configurations.
-     */
     @InputImport(name="ipConfigurations")
     private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
 
@@ -49,9 +37,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
-    /**
-     * Name of the private link configuration that is unique within an Application Gateway.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -59,9 +44,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the application gateway private link configuration.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -69,9 +51,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
         return this.provisioningState;
     }
 
-    /**
-     * Type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

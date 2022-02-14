@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * KPI Resource Health Details
- */
 public final class KPIResourceHealthDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KPIResourceHealthDetailsResponse Empty = new KPIResourceHealthDetailsResponse();
 
-    /**
-     * Resource Health Status
-     */
     @InputImport(name="resourceHealthDetails")
     private final @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
 
@@ -29,9 +23,6 @@ public final class KPIResourceHealthDetailsResponse extends io.pulumi.resources.
         return this.resourceHealthDetails == null ? List.of() : this.resourceHealthDetails;
     }
 
-    /**
-     * Resource Health Status
-     */
     @InputImport(name="resourceHealthStatus")
     private final @Nullable String resourceHealthStatus;
 

@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Create network mappings input properties/behavior specific to Vmm to Azure Network mapping.
- */
 public final class VmmToAzureCreateNetworkMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmmToAzureCreateNetworkMappingInputArgs Empty = new VmmToAzureCreateNetworkMappingInputArgs();
 
-    /**
-     * The instance type.
-Expected value is 'VmmToAzure'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 

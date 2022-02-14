@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The response properties returned for a pipeline run.
- */
 public final class PipelineRunResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineRunResponseResponse Empty = new PipelineRunResponseResponse();
 
-    /**
-     * The digest of the tar used to transfer the artifacts.
-     */
     @InputImport(name="catalogDigest")
     private final @Nullable String catalogDigest;
 
@@ -32,9 +26,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
     }
 
-    /**
-     * The time the pipeline run finished.
-     */
     @InputImport(name="finishTime")
     private final @Nullable String finishTime;
 
@@ -42,9 +33,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
     }
 
-    /**
-     * The artifacts imported in the pipeline run.
-     */
     @InputImport(name="importedArtifacts")
     private final @Nullable List<String> importedArtifacts;
 
@@ -52,9 +40,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
     }
 
-    /**
-     * The detailed error message for the pipeline run in the case of failure.
-     */
     @InputImport(name="pipelineRunErrorMessage")
     private final @Nullable String pipelineRunErrorMessage;
 
@@ -62,9 +47,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.pipelineRunErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.pipelineRunErrorMessage);
     }
 
-    /**
-     * The current progress of the copy operation.
-     */
     @InputImport(name="progress")
     private final @Nullable ProgressPropertiesResponse progress;
 
@@ -72,9 +54,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.progress == null ? Optional.empty() : Optional.ofNullable(this.progress);
     }
 
-    /**
-     * The source of the pipeline run.
-     */
     @InputImport(name="source")
     private final @Nullable ImportPipelineSourcePropertiesResponse source;
 
@@ -82,9 +61,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
-    /**
-     * The time the pipeline run started.
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -92,9 +68,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
-    /**
-     * The current status of the pipeline run.
-     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -102,9 +75,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    /**
-     * The target of the pipeline run.
-     */
     @InputImport(name="target")
     private final @Nullable ExportPipelineTargetPropertiesResponse target;
 
@@ -112,9 +82,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
-    /**
-     * The trigger that caused the pipeline run.
-     */
     @InputImport(name="trigger")
     private final @Nullable PipelineTriggerDescriptorResponse trigger;
 

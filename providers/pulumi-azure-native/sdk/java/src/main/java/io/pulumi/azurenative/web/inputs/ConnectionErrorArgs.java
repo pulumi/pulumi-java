@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Connection error
- */
 public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionErrorArgs Empty = new ConnectionErrorArgs();
 
-    /**
-     * Code of the status
-     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -28,9 +22,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
         return this.code == null ? Input.empty() : this.code;
     }
 
-    /**
-     * Resource ETag
-     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -38,9 +29,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
         return this.etag == null ? Input.empty() : this.etag;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,9 +36,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Description of the status
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -58,9 +43,6 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

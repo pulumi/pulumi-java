@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionMonitorTest {
-/**
- * The Connection Monitor Test class.
-API Version: 2021-06-01.
- *
- * The Connection Monitor Test class.
- */
     public static CompletableFuture<GetConnectionMonitorTestResult> invokeAsync(GetConnectionMonitorTestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getConnectionMonitorTest", TypeShape.of(GetConnectionMonitorTestResult.class), args == null ? GetConnectionMonitorTestArgs.Empty : args, Utilities.withVersion(options));
     }

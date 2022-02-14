@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents configurations for a test case.
- */
 public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1TestConfigArgs Empty = new GoogleCloudDialogflowCxV3beta1TestConfigArgs();
 
-    /**
-     * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
-     */
     @InputImport(name="flow")
     private final @Nullable Input<String> flow;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
         return this.flow == null ? Input.empty() : this.flow;
     }
 
-    /**
-     * Session parameters to be compared when calculating differences.
-     */
     @InputImport(name="trackingParameters")
     private final @Nullable Input<List<String>> trackingParameters;
 

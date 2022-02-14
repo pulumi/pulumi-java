@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A public key in the PkixPublicKey format (see https://tools.ietf.org/html/rfc5280#section-4.1.2.7 for details). Public keys of this type are typically textually encoded using the PEM format.
- */
 public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PkixPublicKeyResponse Empty = new PkixPublicKeyResponse();
 
-    /**
-     * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
-     */
     @InputImport(name="publicKeyPem", required=true)
     private final String publicKeyPem;
 
@@ -25,9 +19,6 @@ public final class PkixPublicKeyResponse extends io.pulumi.resources.InvokeArgs 
         return this.publicKeyPem;
     }
 
-    /**
-     * The signature algorithm used to verify a message against a signature using this key. These signature algorithm must match the structure and any object identifiers encoded in `public_key_pem` (i.e. this algorithm must match that of the public key).
-     */
     @InputImport(name="signatureAlgorithm", required=true)
     private final String signatureAlgorithm;
 

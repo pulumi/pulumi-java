@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceGuardOperationDetailResponse {
-/**
- * 
- */
     private final @Nullable String defaultResourceRequest;
-/**
- * 
- */
     private final @Nullable String vaultCriticalOperation;
 
     @OutputCustomType.Constructor({"defaultResourceRequest","vaultCriticalOperation"})
@@ -28,15 +22,9 @@ public final class ResourceGuardOperationDetailResponse {
         this.vaultCriticalOperation = vaultCriticalOperation;
     }
 
-/**
- * 
- */
     public Optional<String> getDefaultResourceRequest() {
         return Optional.ofNullable(this.defaultResourceRequest);
     }
-/**
- * 
- */
     public Optional<String> getVaultCriticalOperation() {
         return Optional.ofNullable(this.vaultCriticalOperation);
     }

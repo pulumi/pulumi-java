@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the HTTP configuration.
- */
 public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionMonitorHttpConfigurationResponse Empty = new ConnectionMonitorHttpConfigurationResponse();
 
-    /**
-     * The HTTP method to use.
-     */
     @InputImport(name="method")
     private final @Nullable String method;
 
@@ -31,9 +25,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
-    /**
-     * The path component of the URI. For instance, "/dir1/dir2".
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -41,9 +32,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * The port to connect to.
-     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 
@@ -51,9 +39,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-     */
     @InputImport(name="preferHTTPS")
     private final @Nullable Boolean preferHTTPS;
 
@@ -61,9 +46,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
         return this.preferHTTPS == null ? Optional.empty() : Optional.ofNullable(this.preferHTTPS);
     }
 
-    /**
-     * The HTTP headers to transmit with the request.
-     */
     @InputImport(name="requestHeaders")
     private final @Nullable List<HTTPHeaderResponse> requestHeaders;
 
@@ -71,9 +53,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
     }
 
-    /**
-     * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
-     */
     @InputImport(name="validStatusCodeRanges")
     private final @Nullable List<String> validStatusCodeRanges;
 

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * TCPSocketAction describes an action based on opening a socket
- */
 public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TCPSocketActionArgs Empty = new TCPSocketActionArgs();
 
-    /**
-     * Optional: Host name to connect to, defaults to the pod IP.
-     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -29,9 +23,6 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
         return this.host == null ? Input.empty() : this.host;
     }
 
-    /**
-     * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
-     */
     @InputImport(name="port", required=true)
     private final Input<Either<Integer,String>> port;
 

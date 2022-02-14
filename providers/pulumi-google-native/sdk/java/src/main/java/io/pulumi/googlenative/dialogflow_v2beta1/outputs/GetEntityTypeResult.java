@@ -12,29 +12,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetEntityTypeResult {
-/**
- * Optional. Indicates whether the entity type can be automatically expanded.
- */
     private final String autoExpansionMode;
-/**
- * The name of the entity type.
- */
     private final String displayName;
-/**
- * Optional. Enables fuzzy entity extraction during classification.
- */
     private final Boolean enableFuzzyExtraction;
-/**
- * Optional. The collection of entity entries associated with the entity type.
- */
     private final List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities;
-/**
- * Indicates the kind of entity type.
- */
     private final String kind;
-/**
- * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
- */
     private final String name;
 
     @OutputCustomType.Constructor({"autoExpansionMode","displayName","enableFuzzyExtraction","entities","kind","name"})
@@ -53,39 +35,21 @@ public final class GetEntityTypeResult {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Optional. Indicates whether the entity type can be automatically expanded.
- */
     public String getAutoExpansionMode() {
         return this.autoExpansionMode;
     }
-/**
- * The name of the entity type.
- */
     public String getDisplayName() {
         return this.displayName;
     }
-/**
- * Optional. Enables fuzzy entity extraction during classification.
- */
     public Boolean getEnableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
-/**
- * Optional. The collection of entity entries associated with the entity type.
- */
     public List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> getEntities() {
         return this.entities;
     }
-/**
- * Indicates the kind of entity type.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
- */
     public String getName() {
         return this.name;
     }

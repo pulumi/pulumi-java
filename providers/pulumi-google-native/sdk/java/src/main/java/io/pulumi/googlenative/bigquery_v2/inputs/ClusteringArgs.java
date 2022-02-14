@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusteringArgs Empty = new ClusteringArgs();
 
-    /**
-     * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<String>> fields;
 

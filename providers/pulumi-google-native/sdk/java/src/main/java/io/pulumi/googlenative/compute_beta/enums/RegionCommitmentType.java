@@ -8,50 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
- */
     @EnumType
     public enum RegionCommitmentType {
-/**
- * 
- */
         AcceleratorOptimized("ACCELERATOR_OPTIMIZED"),
-/**
- * 
- */
         ComputeOptimized("COMPUTE_OPTIMIZED"),
-/**
- * 
- */
         ComputeOptimizedC2d("COMPUTE_OPTIMIZED_C2D"),
-/**
- * 
- */
         GeneralPurpose("GENERAL_PURPOSE"),
-/**
- * 
- */
         GeneralPurposeE2("GENERAL_PURPOSE_E2"),
-/**
- * 
- */
         GeneralPurposeN2("GENERAL_PURPOSE_N2"),
-/**
- * 
- */
         GeneralPurposeN2d("GENERAL_PURPOSE_N2D"),
-/**
- * 
- */
         GeneralPurposeT2d("GENERAL_PURPOSE_T2D"),
-/**
- * 
- */
         MemoryOptimized("MEMORY_OPTIMIZED"),
-/**
- * 
- */
         TypeUnspecified("TYPE_UNSPECIFIED");
 
         private final String value;

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This type describes a volume provided by an Azure Files file share.
- */
 public final class VolumeProviderParametersAzureFileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeProviderParametersAzureFileResponse Empty = new VolumeProviderParametersAzureFileResponse();
 
-    /**
-     * Access key of the Azure storage account for the File Share.
-     */
     @InputImport(name="accountKey")
     private final @Nullable String accountKey;
 
@@ -27,9 +21,6 @@ public final class VolumeProviderParametersAzureFileResponse extends io.pulumi.r
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
-    /**
-     * Name of the Azure storage account for the File Share.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -37,9 +28,6 @@ public final class VolumeProviderParametersAzureFileResponse extends io.pulumi.r
         return this.accountName;
     }
 
-    /**
-     * Name of the Azure Files file share that provides storage for the volume.
-     */
     @InputImport(name="shareName", required=true)
     private final String shareName;
 

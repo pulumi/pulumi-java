@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a reference to a volume resource.
- */
 public final class VolumeReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeReferenceResponse Empty = new VolumeReferenceResponse();
 
-    /**
-     * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
-     */
     @InputImport(name="destinationPath", required=true)
     private final String destinationPath;
 
@@ -28,9 +22,6 @@ public final class VolumeReferenceResponse extends io.pulumi.resources.InvokeArg
         return this.destinationPath;
     }
 
-    /**
-     * Name of the volume being referenced.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,9 +29,6 @@ public final class VolumeReferenceResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
-    /**
-     * The flag indicating whether the volume is read only. Default is 'false'.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Boolean readOnly;
 

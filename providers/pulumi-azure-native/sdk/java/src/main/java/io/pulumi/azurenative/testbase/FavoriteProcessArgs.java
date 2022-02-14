@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FavoriteProcessArgs Empty = new FavoriteProcessArgs();
 
-    /**
-     * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     */
     @InputImport(name="actualProcessName", required=true)
     private final Input<String> actualProcessName;
 
@@ -27,9 +21,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
         return this.actualProcessName;
     }
 
-    /**
-     * The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use 'actualProcessName' in request body to submit the name.
-     */
     @InputImport(name="favoriteProcessResourceName")
     private final @Nullable Input<String> favoriteProcessResourceName;
 
@@ -37,9 +28,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
         return this.favoriteProcessResourceName == null ? Input.empty() : this.favoriteProcessResourceName;
     }
 
-    /**
-     * The resource name of the Test Base Package.
-     */
     @InputImport(name="packageName", required=true)
     private final Input<String> packageName;
 
@@ -47,9 +35,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
         return this.packageName;
     }
 
-    /**
-     * The name of the resource group that contains the resource.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,9 +42,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource name of the Test Base Account.
-     */
     @InputImport(name="testBaseAccountName", required=true)
     private final Input<String> testBaseAccountName;
 

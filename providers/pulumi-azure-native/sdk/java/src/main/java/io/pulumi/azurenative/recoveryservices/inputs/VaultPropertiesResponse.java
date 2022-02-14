@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the vault.
- */
 public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VaultPropertiesResponse Empty = new VaultPropertiesResponse();
 
-    /**
-     * Customer Managed Key details of the resource.
-     */
     @InputImport(name="encryption")
     private final @Nullable VaultPropertiesResponseEncryption encryption;
 
@@ -31,9 +25,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
-    /**
-     * List of private endpoint connection.
-     */
     @InputImport(name="privateEndpointConnections", required=true)
     private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
 
@@ -41,9 +32,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.privateEndpointConnections;
     }
 
-    /**
-     * Private endpoint state for backup.
-     */
     @InputImport(name="privateEndpointStateForBackup", required=true)
     private final String privateEndpointStateForBackup;
 
@@ -51,9 +39,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.privateEndpointStateForBackup;
     }
 
-    /**
-     * Private endpoint state for site recovery.
-     */
     @InputImport(name="privateEndpointStateForSiteRecovery", required=true)
     private final String privateEndpointStateForSiteRecovery;
 
@@ -61,9 +46,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.privateEndpointStateForSiteRecovery;
     }
 
-    /**
-     * Provisioning State.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -71,9 +53,6 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.provisioningState;
     }
 
-    /**
-     * Details for upgrading vault.
-     */
     @InputImport(name="upgradeDetails")
     private final @Nullable UpgradeDetailsResponse upgradeDetails;
 

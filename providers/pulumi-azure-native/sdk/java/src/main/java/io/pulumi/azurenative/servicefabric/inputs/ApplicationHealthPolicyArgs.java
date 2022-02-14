@@ -12,17 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines a health policy used to evaluate the health of an application or one of its children entities.
-
- */
 public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationHealthPolicyArgs Empty = new ApplicationHealthPolicyArgs();
 
-    /**
-     * The health policy used by default to evaluate the health of a service type.
-     */
     @InputImport(name="defaultServiceTypeHealthPolicy")
     private final @Nullable Input<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
@@ -30,9 +23,6 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
         return this.defaultServiceTypeHealthPolicy == null ? Input.empty() : this.defaultServiceTypeHealthPolicy;
     }
 
-    /**
-     * The map with service type health policy per service type name. The map is empty by default.
-     */
     @InputImport(name="serviceTypeHealthPolicies")
     private final @Nullable Input<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 

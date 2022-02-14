@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSessionEntityType {
-/**
- * Retrieves the specified session entity type.
- */
     public static CompletableFuture<GetSessionEntityTypeResult> invokeAsync(GetSessionEntityTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getSessionEntityType", TypeShape.of(GetSessionEntityTypeResult.class), args == null ? GetSessionEntityTypeArgs.Empty : args, Utilities.withVersion(options));
     }

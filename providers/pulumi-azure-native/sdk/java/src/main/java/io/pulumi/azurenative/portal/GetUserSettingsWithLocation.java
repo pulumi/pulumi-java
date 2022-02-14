@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserSettingsWithLocation {
-/**
- * Response to get user settings
-API Version: 2018-10-01.
- *
- * Response to get user settings
- */
     public static CompletableFuture<GetUserSettingsWithLocationResult> invokeAsync(GetUserSettingsWithLocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettingsWithLocation", TypeShape.of(GetUserSettingsWithLocationResult.class), args == null ? GetUserSettingsWithLocationArgs.Empty : args, Utilities.withVersion(options));
     }

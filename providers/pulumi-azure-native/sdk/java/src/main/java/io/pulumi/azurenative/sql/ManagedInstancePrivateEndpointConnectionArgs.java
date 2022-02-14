@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedInstancePrivateEndpointConnectionArgs Empty = new ManagedInstancePrivateEndpointConnectionArgs();
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName", required=true)
     private final Input<String> managedInstanceName;
 
@@ -29,9 +23,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
         return this.managedInstanceName;
     }
 
-    /**
-     * Private endpoint which the connection belongs to.
-     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
@@ -39,9 +30,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -49,9 +37,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
-    /**
-     * Connection State of the Private Endpoint Connection.
-     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
@@ -59,9 +44,6 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The AssignmentPrincipal
- */
 public final class AssignmentPrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignmentPrincipalResponse Empty = new AssignmentPrincipalResponse();
 
-    /**
-     * The principal id being assigned to.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -28,9 +22,6 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
         return this.principalId;
     }
 
-    /**
-     * Other metadata for the principal.
-     */
     @InputImport(name="principalMetadata")
     private final @Nullable Map<String,String> principalMetadata;
 
@@ -38,9 +29,6 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
         return this.principalMetadata == null ? Map.of() : this.principalMetadata;
     }
 
-    /**
-     * The Type of the principal ID.
-     */
     @InputImport(name="principalType", required=true)
     private final String principalType;
 

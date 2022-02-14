@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Reboots a VM and waits for it to come back online (Windows). Corresponds to Packer windows-restart provisioner
- */
 public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplateRestartCustomizerResponse Empty = new ImageTemplateRestartCustomizerResponse();
 
-    /**
-     * Friendly Name to provide context on what this customization step does
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Command to check if restart succeeded [Default: '']
-     */
     @InputImport(name="restartCheckCommand")
     private final @Nullable String restartCheckCommand;
 
@@ -37,9 +28,6 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
         return this.restartCheckCommand == null ? Optional.empty() : Optional.ofNullable(this.restartCheckCommand);
     }
 
-    /**
-     * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
-     */
     @InputImport(name="restartCommand")
     private final @Nullable String restartCommand;
 
@@ -47,9 +35,6 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
         return this.restartCommand == null ? Optional.empty() : Optional.ofNullable(this.restartCommand);
     }
 
-    /**
-     * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
-     */
     @InputImport(name="restartTimeout")
     private final @Nullable String restartTimeout;
 
@@ -57,10 +42,6 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
         return this.restartTimeout == null ? Optional.empty() : Optional.ofNullable(this.restartTimeout);
     }
 
-    /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-Expected value is 'WindowsRestart'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

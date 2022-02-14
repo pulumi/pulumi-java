@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Linked service for Salesforce Service Cloud.
- */
 public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SalesforceServiceCloudLinkedServiceArgs Empty = new SalesforceServiceCloudLinkedServiceArgs();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -35,9 +29,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<Object> apiVersion;
 
@@ -45,9 +36,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -55,9 +43,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,9 +50,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -75,9 +57,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
-    /**
-     * The URL of Salesforce Service Cloud instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="environmentUrl")
     private final @Nullable Input<Object> environmentUrl;
 
@@ -85,9 +64,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.environmentUrl == null ? Input.empty() : this.environmentUrl;
     }
 
-    /**
-     * Extended properties appended to the connection string. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="extendedProperties")
     private final @Nullable Input<Object> extendedProperties;
 
@@ -95,9 +71,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -105,9 +78,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The password for Basic authentication of the Salesforce instance.
-     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -115,9 +85,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The security token is optional to remotely access Salesforce instance.
-     */
     @InputImport(name="securityToken")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
 
@@ -125,10 +92,6 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
         return this.securityToken == null ? Input.empty() : this.securityToken;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'SalesforceServiceCloud'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -136,9 +99,6 @@ Expected value is 'SalesforceServiceCloud'.
         return this.type;
     }
 
-    /**
-     * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

@@ -14,17 +14,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
-/**
- * 
- */
     private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
-/**
- * 
- */
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
-/**
- * 
- */
     private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
     @OutputCustomType.Constructor({"providerAuthentication","providerAuthorizations","thirdPartyProviderAuthorization"})
@@ -37,21 +28,12 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
         this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
     }
 
-/**
- * 
- */
     public Optional<ProviderHubMetadataResponseProviderAuthentication> getProviderAuthentication() {
         return Optional.ofNullable(this.providerAuthentication);
     }
-/**
- * 
- */
     public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
-/**
- * 
- */
     public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> getThirdPartyProviderAuthorization() {
         return Optional.ofNullable(this.thirdPartyProviderAuthorization);
     }

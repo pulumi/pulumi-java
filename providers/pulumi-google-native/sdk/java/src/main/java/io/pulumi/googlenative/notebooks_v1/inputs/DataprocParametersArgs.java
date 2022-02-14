@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameters used in Dataproc JobType executions.
- */
 public final class DataprocParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataprocParametersArgs Empty = new DataprocParametersArgs();
 
-    /**
-     * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
-     */
     @InputImport(name="cluster")
     private final @Nullable Input<String> cluster;
 

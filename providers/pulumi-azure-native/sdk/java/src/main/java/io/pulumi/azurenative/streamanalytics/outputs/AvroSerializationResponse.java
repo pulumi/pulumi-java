@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AvroSerializationResponse {
-/**
- * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Avro'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -20,10 +16,6 @@ Expected value is 'Avro'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Avro'.
- */
     public String getType() {
         return this.type;
     }

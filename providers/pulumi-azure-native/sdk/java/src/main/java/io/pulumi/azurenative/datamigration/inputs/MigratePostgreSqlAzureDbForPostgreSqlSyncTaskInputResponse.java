@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Input for the task that migrates PostgreSQL databases to Azure Database for PostgreSQL for online migrations
- */
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse();
 
-    /**
-     * Databases to migrate
-     */
     @InputImport(name="selectedDatabases", required=true)
     private final List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
 
@@ -27,9 +21,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
         return this.selectedDatabases;
     }
 
-    /**
-     * Connection information for source PostgreSQL
-     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -37,9 +28,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
         return this.sourceConnectionInfo;
     }
 
-    /**
-     * Connection information for target Azure Database for PostgreSQL
-     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 

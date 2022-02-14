@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGcpUserAccessBindingArgs Empty = new GetGcpUserAccessBindingArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="gcpUserAccessBindingId", required=true)
     private final String gcpUserAccessBindingId;
 
@@ -25,9 +19,6 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
         return this.gcpUserAccessBindingId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

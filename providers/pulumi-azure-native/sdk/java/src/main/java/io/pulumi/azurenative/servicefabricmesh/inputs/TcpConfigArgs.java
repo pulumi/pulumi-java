@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes the tcp configuration for external connectivity for this network.
- */
 public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TcpConfigArgs Empty = new TcpConfigArgs();
 
-    /**
-     * Describes destination endpoint for routing traffic.
-     */
     @InputImport(name="destination", required=true)
     private final Input<GatewayDestinationArgs> destination;
 
@@ -28,9 +22,6 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.destination;
     }
 
-    /**
-     * tcp gateway config name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,9 +29,6 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Specifies the port at which the service endpoint below needs to be exposed.
-     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 

@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotebookPreparationErrorResponse {
-/**
- * 
- */
     private final @Nullable String errorMessage;
-/**
- * 
- */
     private final @Nullable Integer statusCode;
 
     @OutputCustomType.Constructor({"errorMessage","statusCode"})
@@ -29,15 +23,9 @@ public final class NotebookPreparationErrorResponse {
         this.statusCode = statusCode;
     }
 
-/**
- * 
- */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
-/**
- * 
- */
     public Optional<Integer> getStatusCode() {
         return Optional.ofNullable(this.statusCode);
     }

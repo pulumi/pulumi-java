@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionFeatureRegistrationArgs Empty = new SubscriptionFeatureRegistrationArgs();
 
-    /**
-     * The feature name.
-     */
     @InputImport(name="featureName")
     private final @Nullable Input<String> featureName;
 
@@ -28,9 +22,6 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
         return this.featureName == null ? Input.empty() : this.featureName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<SubscriptionFeatureRegistrationPropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The provider namespace.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 

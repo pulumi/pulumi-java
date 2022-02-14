@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterTelemetryResponse {
-/**
- * Type of the integration.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -19,9 +16,6 @@ public final class ClusterTelemetryResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Type of the integration.
- */
     public String getType() {
         return this.type;
     }

@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
- */
 public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotSkuArgs Empty = new SnapshotSkuArgs();
 
-    /**
-     * The sku name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,SnapshotStorageAccountTypes>> name;
 

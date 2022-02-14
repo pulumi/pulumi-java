@@ -15,266 +15,45 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Response for iSCSI target requests.
-API Version: 2020-03-15-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or Update iSCSI target
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var iscsiTarget = new AzureNative.StoragePool.IscsiTarget("iscsiTarget", new AzureNative.StoragePool.IscsiTargetArgs
-        {
-            DiskPoolName = "myDiskPool",
-            IscsiTargetName = "myIscsiTarget",
-            ResourceGroupName = "myResourceGroup",
-            TargetIqn = "iqn.2005-03.org.iscsi:server1",
-            Tpgs = 
-            {
-                new AzureNative.StoragePool.Inputs.TargetPortalGroupCreateArgs
-                {
-                    Acls = 
-                    {
-                        new AzureNative.StoragePool.Inputs.AclArgs
-                        {
-                            InitiatorIqn = "iqn.2005-03.org.iscsi:client",
-                            MappedLuns = 
-                            {
-                                "lun0",
-                            },
-                            Password = "some_password",
-                            Username = "some_username",
-                        },
-                    },
-                    Attributes = new AzureNative.StoragePool.Inputs.AttributesArgs
-                    {
-                        Authentication = true,
-                        ProdModeWriteProtect = false,
-                    },
-                    Luns = 
-                    {
-                        new AzureNative.StoragePool.Inputs.IscsiLunArgs
-                        {
-                            ManagedDiskAzureResourceId = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
-                            Name = "lun0",
-                        },
-                    },
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storagepool "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagepool"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagepool.NewIscsiTarget(ctx, "iscsiTarget", &storagepool.IscsiTargetArgs{
-			DiskPoolName:      pulumi.String("myDiskPool"),
-			IscsiTargetName:   pulumi.String("myIscsiTarget"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			TargetIqn:         pulumi.String("iqn.2005-03.org.iscsi:server1"),
-			Tpgs: storagepool.TargetPortalGroupCreateArray{
-				&storagepool.TargetPortalGroupCreateArgs{
-					Acls: storagepool.AclArray{
-						&storagepool.AclArgs{
-							InitiatorIqn: pulumi.String("iqn.2005-03.org.iscsi:client"),
-							MappedLuns: pulumi.StringArray{
-								pulumi.String("lun0"),
-							},
-							Password: pulumi.String("some_password"),
-							Username: pulumi.String("some_username"),
-						},
-					},
-					Attributes: &storagepool.AttributesArgs{
-						Authentication:       pulumi.Bool(true),
-						ProdModeWriteProtect: pulumi.Bool(false),
-					},
-					Luns: storagepool.IscsiLunArray{
-						&storagepool.IscsiLunArgs{
-							ManagedDiskAzureResourceId: pulumi.String("/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1"),
-							Name:                       pulumi.String("lun0"),
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const iscsiTarget = new azure_native.storagepool.IscsiTarget("iscsiTarget", {
-    diskPoolName: "myDiskPool",
-    iscsiTargetName: "myIscsiTarget",
-    resourceGroupName: "myResourceGroup",
-    targetIqn: "iqn.2005-03.org.iscsi:server1",
-    tpgs: [{
-        acls: [{
-            initiatorIqn: "iqn.2005-03.org.iscsi:client",
-            mappedLuns: ["lun0"],
-            password: "some_password",
-            username: "some_username",
-        }],
-        attributes: {
-            authentication: true,
-            prodModeWriteProtect: false,
-        },
-        luns: [{
-            managedDiskAzureResourceId: "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
-            name: "lun0",
-        }],
-    }],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-iscsi_target = azure_native.storagepool.IscsiTarget("iscsiTarget",
-    disk_pool_name="myDiskPool",
-    iscsi_target_name="myIscsiTarget",
-    resource_group_name="myResourceGroup",
-    target_iqn="iqn.2005-03.org.iscsi:server1",
-    tpgs=[azure_native.storagepool.TargetPortalGroupCreateArgs(
-        acls=[azure_native.storagepool.AclArgs(
-            initiator_iqn="iqn.2005-03.org.iscsi:client",
-            mapped_luns=["lun0"],
-            password="some_password",
-            username="some_username",
-        )],
-        attributes=azure_native.storagepool.AttributesArgs(
-            authentication=True,
-            prod_mode_write_protect=False,
-        ),
-        luns=[azure_native.storagepool.IscsiLunArgs(
-            managed_disk_azure_resource_id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
-            name="lun0",
-        )],
-    )])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:storagepool:IscsiTarget myIscsiTarget /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool/iscsiTargets/myIscsiTarget 
-```
-
- */
 @ResourceType(type="azure-native:storagepool:IscsiTarget")
 public class IscsiTarget extends io.pulumi.resources.CustomResource {
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * State of the operation on the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return State of the operation on the resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Operational status of the iSCSI target.
-     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    /**
-     * @return Operational status of the iSCSI target.
-     */
     public Output<String> getStatus() {
         return this.status;
     }
-    /**
-     * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-     */
     @OutputExport(name="targetIqn", type=String.class, parameters={})
     private Output<String> targetIqn;
 
-    /**
-     * @return iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-     */
     public Output<String> getTargetIqn() {
         return this.targetIqn;
     }
-    /**
-     * List of iSCSI target portal groups. Can have 1 portal group at most.
-     */
     @OutputExport(name="tpgs", type=List.class, parameters={TargetPortalGroupResponse.class})
     private Output<List<TargetPortalGroupResponse>> tpgs;
 
-    /**
-     * @return List of iSCSI target portal groups. Can have 1 portal group at most.
-     */
     public Output<List<TargetPortalGroupResponse>> getTpgs() {
         return this.tpgs;
     }
-    /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public IscsiTarget(String name, IscsiTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagepool:IscsiTarget", name, args == null ? IscsiTargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -295,14 +74,6 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static IscsiTarget get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IscsiTarget(name, id, options);
     }

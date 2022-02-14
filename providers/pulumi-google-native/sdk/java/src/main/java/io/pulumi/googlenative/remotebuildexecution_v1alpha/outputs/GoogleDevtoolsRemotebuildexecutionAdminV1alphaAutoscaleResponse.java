@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse {
-/**
- * The maximal number of workers. Must be equal to or greater than min_size.
- */
     private final String maxSize;
-/**
- * The minimal number of workers. Must be greater than 0.
- */
     private final String minSize;
 
     @OutputCustomType.Constructor({"maxSize","minSize"})
@@ -26,15 +20,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
         this.minSize = Objects.requireNonNull(minSize);
     }
 
-/**
- * The maximal number of workers. Must be equal to or greater than min_size.
- */
     public String getMaxSize() {
         return this.maxSize;
     }
-/**
- * The minimal number of workers. Must be greater than 0.
- */
     public String getMinSize() {
         return this.minSize;
     }

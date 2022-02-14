@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VM Resource Ids
- */
 public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMResourcesResponse Empty = new VMResourcesResponse();
 
-    /**
-     * Version of the Logz agent installed on the VM.
-     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -27,9 +21,6 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
-    /**
-     * Request of a list vm host update operation.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

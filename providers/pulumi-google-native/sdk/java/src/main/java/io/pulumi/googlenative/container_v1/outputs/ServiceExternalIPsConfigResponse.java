@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceExternalIPsConfigResponse {
-/**
- * Whether Services with ExternalIPs field are allowed or not.
- */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -19,9 +16,6 @@ public final class ServiceExternalIPsConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
-/**
- * Whether Services with ExternalIPs field are allowed or not.
- */
     public Boolean getEnabled() {
         return this.enabled;
     }

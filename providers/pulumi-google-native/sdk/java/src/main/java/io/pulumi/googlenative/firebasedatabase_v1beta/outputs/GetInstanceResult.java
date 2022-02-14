@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceResult {
-/**
- * Immutable. The globally unique hostname of the database.
- */
     private final String databaseUrl;
-/**
- * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
- */
     private final String name;
-/**
- * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
- */
     private final String project;
-/**
- * The database's lifecycle state. Read-only.
- */
     private final String state;
-/**
- * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"databaseUrl","name","project","state","type"})
@@ -44,33 +29,18 @@ public final class GetInstanceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Immutable. The globally unique hostname of the database.
- */
     public String getDatabaseUrl() {
         return this.databaseUrl;
     }
-/**
- * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
- */
     public String getProject() {
         return this.project;
     }
-/**
- * The database's lifecycle state. Read-only.
- */
     public String getState() {
         return this.state;
     }
-/**
- * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
- */
     public String getType() {
         return this.type;
     }

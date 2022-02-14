@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionAutoscaler {
-/**
- * Returns the specified autoscaler.
- */
     public static CompletableFuture<GetRegionAutoscalerResult> invokeAsync(GetRegionAutoscalerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionAutoscaler", TypeShape.of(GetRegionAutoscalerResult.class), args == null ? GetRegionAutoscalerArgs.Empty : args, Utilities.withVersion(options));
     }

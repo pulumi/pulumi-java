@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a Virtual Machine Extension.
- */
 public final class VirtualMachineExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineExtensionResponse Empty = new VirtualMachineExtensionResponse();
 
-    /**
-     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Boolean autoUpgradeMinorVersion;
 
@@ -31,9 +25,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
-    /**
-     * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     */
     @InputImport(name="enableAutomaticUpgrade")
     private final @Nullable Boolean enableAutomaticUpgrade;
 
@@ -41,9 +32,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.enableAutomaticUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpgrade);
     }
 
-    /**
-     * How the extension handler should be forced to update even if the extension configuration has not changed.
-     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable String forceUpdateTag;
 
@@ -51,9 +39,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.forceUpdateTag == null ? Optional.empty() : Optional.ofNullable(this.forceUpdateTag);
     }
 
-    /**
-     * Resource Id
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -61,9 +46,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.id;
     }
 
-    /**
-     * The virtual machine extension instance view.
-     */
     @InputImport(name="instanceView")
     private final @Nullable VirtualMachineExtensionInstanceViewResponse instanceView;
 
@@ -71,9 +53,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.instanceView == null ? Optional.empty() : Optional.ofNullable(this.instanceView);
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -81,9 +60,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.location;
     }
 
-    /**
-     * Resource name
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -91,9 +67,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.name;
     }
 
-    /**
-     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     */
     @InputImport(name="protectedSettings")
     private final @Nullable Object protectedSettings;
 
@@ -101,9 +74,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
     }
 
-    /**
-     * The provisioning state, which only appears in the response.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -111,9 +81,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.provisioningState;
     }
 
-    /**
-     * The name of the extension handler publisher.
-     */
     @InputImport(name="publisher")
     private final @Nullable String publisher;
 
@@ -121,9 +88,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
-    /**
-     * Json formatted public settings for the extension.
-     */
     @InputImport(name="settings")
     private final @Nullable Object settings;
 
@@ -131,9 +95,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -141,9 +102,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * Resource type
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -151,9 +109,6 @@ public final class VirtualMachineExtensionResponse extends io.pulumi.resources.I
         return this.type;
     }
 
-    /**
-     * Specifies the version of the script handler.
-     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable String typeHandlerVersion;
 

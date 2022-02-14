@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
- */
     @EnumType
     public enum CustomRuleEnabledState {
-/**
- * 
- */
         Disabled("Disabled"),
-/**
- * 
- */
         Enabled("Enabled");
 
         private final String value;

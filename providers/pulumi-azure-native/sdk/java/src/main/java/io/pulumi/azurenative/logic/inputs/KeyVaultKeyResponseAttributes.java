@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The key attributes.
- */
 public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultKeyResponseAttributes Empty = new KeyVaultKeyResponseAttributes();
 
-    /**
-     * When the key was created.
-     */
     @InputImport(name="created")
     private final @Nullable Double created;
 
@@ -28,9 +22,6 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
         return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
     }
 
-    /**
-     * Whether the key is enabled or not.
-     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -38,9 +29,6 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    /**
-     * When the key was updated.
-     */
     @InputImport(name="updated")
     private final @Nullable Double updated;
 

@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Information about backup files when existing backup mode is used.
- */
 public final class DatabaseBackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseBackupInfoResponse Empty = new DatabaseBackupInfoResponse();
 
-    /**
-     * The list of backup files for the current database.
-     */
     @InputImport(name="backupFiles", required=true)
     private final List<String> backupFiles;
 
@@ -28,9 +22,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.backupFiles;
     }
 
-    /**
-     * Date and time when the backup operation finished.
-     */
     @InputImport(name="backupFinishDate", required=true)
     private final String backupFinishDate;
 
@@ -38,9 +29,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.backupFinishDate;
     }
 
-    /**
-     * Backup Type.
-     */
     @InputImport(name="backupType", required=true)
     private final String backupType;
 
@@ -48,9 +36,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.backupType;
     }
 
-    /**
-     * Database name.
-     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -58,9 +43,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.databaseName;
     }
 
-    /**
-     * Number of files in the backup set.
-     */
     @InputImport(name="familyCount", required=true)
     private final Integer familyCount;
 
@@ -68,9 +50,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.familyCount;
     }
 
-    /**
-     * Whether the backup set is compressed
-     */
     @InputImport(name="isCompressed", required=true)
     private final Boolean isCompressed;
 
@@ -78,9 +57,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.isCompressed;
     }
 
-    /**
-     * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
-     */
     @InputImport(name="isDamaged", required=true)
     private final Boolean isDamaged;
 
@@ -88,9 +64,6 @@ public final class DatabaseBackupInfoResponse extends io.pulumi.resources.Invoke
         return this.isDamaged;
     }
 
-    /**
-     * Position of current database backup in the file.
-     */
     @InputImport(name="position", required=true)
     private final Integer position;
 

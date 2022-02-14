@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConsoleProfileResponse {
-/**
- * The URL to access the cluster console (immutable).
- */
     private final @Nullable String url;
 
     @OutputCustomType.Constructor({"url"})
@@ -21,9 +18,6 @@ public final class ConsoleProfileResponse {
         this.url = url;
     }
 
-/**
- * The URL to access the cluster console (immutable).
- */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

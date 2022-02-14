@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlMigrationServiceArgs Empty = new SqlMigrationServiceArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,9 +22,6 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,9 +29,6 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the SQL Migration Service.
-     */
     @InputImport(name="sqlMigrationServiceName")
     private final @Nullable Input<String> sqlMigrationServiceName;
 
@@ -48,9 +36,6 @@ public final class SqlMigrationServiceArgs extends io.pulumi.resources.ResourceA
         return this.sqlMigrationServiceName == null ? Input.empty() : this.sqlMigrationServiceName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

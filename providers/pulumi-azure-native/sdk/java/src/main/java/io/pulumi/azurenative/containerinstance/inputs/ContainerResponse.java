@@ -17,16 +17,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A container instance.
- */
 public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerResponse Empty = new ContainerResponse();
 
-    /**
-     * The commands to execute within the container instance in exec form.
-     */
     @InputImport(name="command")
     private final @Nullable List<String> command;
 
@@ -34,9 +28,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.command == null ? List.of() : this.command;
     }
 
-    /**
-     * The environment variables to set in the container instance.
-     */
     @InputImport(name="environmentVariables")
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
@@ -44,9 +35,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
 
-    /**
-     * The name of the image used to create the container instance.
-     */
     @InputImport(name="image", required=true)
     private final String image;
 
@@ -54,9 +42,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.image;
     }
 
-    /**
-     * The instance view of the container instance. Only valid in response.
-     */
     @InputImport(name="instanceView", required=true)
     private final ContainerPropertiesResponseInstanceView instanceView;
 
@@ -64,9 +49,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.instanceView;
     }
 
-    /**
-     * The liveness probe.
-     */
     @InputImport(name="livenessProbe")
     private final @Nullable ContainerProbeResponse livenessProbe;
 
@@ -74,9 +56,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
     }
 
-    /**
-     * The user-provided name of the container instance.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -84,9 +63,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
-    /**
-     * The exposed ports on the container instance.
-     */
     @InputImport(name="ports")
     private final @Nullable List<ContainerPortResponse> ports;
 
@@ -94,9 +70,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.ports == null ? List.of() : this.ports;
     }
 
-    /**
-     * The readiness probe.
-     */
     @InputImport(name="readinessProbe")
     private final @Nullable ContainerProbeResponse readinessProbe;
 
@@ -104,9 +77,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.readinessProbe == null ? Optional.empty() : Optional.ofNullable(this.readinessProbe);
     }
 
-    /**
-     * The resource requirements of the container instance.
-     */
     @InputImport(name="resources", required=true)
     private final ResourceRequirementsResponse resources;
 
@@ -114,9 +84,6 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
         return this.resources;
     }
 
-    /**
-     * The volume mounts available to the container instance.
-     */
     @InputImport(name="volumeMounts")
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 

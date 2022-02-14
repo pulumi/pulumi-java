@@ -14,17 +14,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExperimentPropertiesResponse {
-/**
- * List of selectors.
- */
     private final List<SelectorResponse> selectors;
-/**
- * A boolean value that indicates if experiment should be started on creation or not.
- */
     private final @Nullable Boolean startOnCreation;
-/**
- * List of steps.
- */
     private final List<StepResponse> steps;
 
     @OutputCustomType.Constructor({"selectors","startOnCreation","steps"})
@@ -37,21 +28,12 @@ public final class ExperimentPropertiesResponse {
         this.steps = Objects.requireNonNull(steps);
     }
 
-/**
- * List of selectors.
- */
     public List<SelectorResponse> getSelectors() {
         return this.selectors;
     }
-/**
- * A boolean value that indicates if experiment should be started on creation or not.
- */
     public Optional<Boolean> getStartOnCreation() {
         return Optional.ofNullable(this.startOnCreation);
     }
-/**
- * List of steps.
- */
     public List<StepResponse> getSteps() {
         return this.steps;
     }

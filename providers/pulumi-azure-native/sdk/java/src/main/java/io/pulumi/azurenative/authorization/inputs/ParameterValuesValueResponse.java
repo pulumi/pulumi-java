@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The value of a parameter.
- */
 public final class ParameterValuesValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterValuesValueResponse Empty = new ParameterValuesValueResponse();
 
-    /**
-     * The value of the parameter.
-     */
     @InputImport(name="value")
     private final @Nullable Object value;
 

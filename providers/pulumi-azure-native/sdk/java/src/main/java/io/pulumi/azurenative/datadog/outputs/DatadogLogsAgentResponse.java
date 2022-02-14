@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatadogLogsAgentResponse {
-/**
- * The transport.
- */
     private final @Nullable String transport;
 
     @OutputCustomType.Constructor({"transport"})
@@ -21,9 +18,6 @@ public final class DatadogLogsAgentResponse {
         this.transport = transport;
     }
 
-/**
- * The transport.
- */
     public Optional<String> getTransport() {
         return Optional.ofNullable(this.transport);
     }

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Filter type that is evaluated against a BrokeredMessage.
- */
     @EnumType
     public enum FilterType {
-/**
- * 
- */
         SqlFilter("SqlFilter"),
-/**
- * 
- */
         CorrelationFilter("CorrelationFilter");
 
         private final String value;

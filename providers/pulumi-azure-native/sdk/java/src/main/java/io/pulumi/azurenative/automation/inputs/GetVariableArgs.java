@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVariableArgs Empty = new GetVariableArgs();
 
-    /**
-     * The name of the automation account.
-     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -25,9 +19,6 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
-    /**
-     * Name of an Azure Resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of variable.
-     */
     @InputImport(name="variableName", required=true)
     private final String variableName;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SshPublicKeyResponse Empty = new SshPublicKeyResponse();
 
-    /**
-     * Optional. It is used to store the function/usage of the key
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -27,9 +21,6 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
-     */
     @InputImport(name="key")
     private final @Nullable String key;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Source LifeCycle
- */
 public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceLifeCycleArgs Empty = new SourceLifeCycleArgs();
 
-    /**
-     * Delete Option
-     */
     @InputImport(name="deleteAfter", required=true)
     private final Input<AbsoluteDeleteOptionArgs> deleteAfter;
 
@@ -30,9 +24,6 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
         return this.deleteAfter;
     }
 
-    /**
-     * DataStoreInfo base
-     */
     @InputImport(name="sourceDataStore", required=true)
     private final Input<DataStoreInfoBaseArgs> sourceDataStore;
 
@@ -40,9 +31,6 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceDataStore;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="targetDataStoreCopySettings")
     private final @Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 

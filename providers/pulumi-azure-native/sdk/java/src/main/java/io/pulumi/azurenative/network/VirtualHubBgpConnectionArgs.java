@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubBgpConnectionArgs Empty = new VirtualHubBgpConnectionArgs();
 
-    /**
-     * The name of the connection.
-     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -28,9 +22,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -38,9 +29,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Name of the connection.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Peer ASN.
-     */
     @InputImport(name="peerAsn")
     private final @Nullable Input<Double> peerAsn;
 
@@ -58,9 +43,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
     }
 
-    /**
-     * Peer IP.
-     */
     @InputImport(name="peerIp")
     private final @Nullable Input<String> peerIp;
 
@@ -68,9 +50,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
         return this.peerIp == null ? Input.empty() : this.peerIp;
     }
 
-    /**
-     * The resource group name of the VirtualHub.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -78,9 +57,6 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the VirtualHub.
-     */
     @InputImport(name="virtualHubName", required=true)
     private final Input<String> virtualHubName;
 

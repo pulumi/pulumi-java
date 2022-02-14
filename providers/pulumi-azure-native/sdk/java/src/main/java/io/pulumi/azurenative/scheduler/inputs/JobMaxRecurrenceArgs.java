@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobMaxRecurrenceArgs Empty = new JobMaxRecurrenceArgs();
 
-    /**
-     * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
-     */
     @InputImport(name="frequency")
     private final @Nullable Input<RecurrenceFrequency> frequency;
 
@@ -28,9 +22,6 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
         return this.frequency == null ? Input.empty() : this.frequency;
     }
 
-    /**
-     * Gets or sets the interval between retries.
-     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 

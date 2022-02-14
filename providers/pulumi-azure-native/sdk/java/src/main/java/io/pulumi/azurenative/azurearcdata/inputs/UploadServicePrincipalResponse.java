@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Service principal for uploading billing, metrics and logs.
- */
 public final class UploadServicePrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UploadServicePrincipalResponse Empty = new UploadServicePrincipalResponse();
 
-    /**
-     * Authority for the service principal. Example: https://login.microsoftonline.com/
-     */
     @InputImport(name="authority")
     private final @Nullable String authority;
 
@@ -27,9 +21,6 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
-    /**
-     * Client ID of the service principal for uploading data.
-     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -37,9 +28,6 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * Tenant ID of the service principal.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

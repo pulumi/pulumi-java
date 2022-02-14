@@ -20,16 +20,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a virtual machines IP Configuration's PublicIPAddress configuration
- */
 public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachinePublicIPAddressConfigurationArgs Empty = new VirtualMachinePublicIPAddressConfigurationArgs();
 
-    /**
-     * Specify what happens to the public IP address when the VM is deleted
-     */
     @InputImport(name="deleteOption")
     private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
@@ -37,9 +31,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
     }
 
-    /**
-     * The dns settings to be applied on the publicIP addresses .
-     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings;
 
@@ -47,9 +38,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
-    /**
-     * The idle timeout of the public IP address.
-     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
@@ -57,9 +45,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
     }
 
-    /**
-     * The list of IP tags associated with the public IP address.
-     */
     @InputImport(name="ipTags")
     private final @Nullable Input<List<VirtualMachineIpTagArgs>> ipTags;
 
@@ -67,9 +52,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.ipTags == null ? Input.empty() : this.ipTags;
     }
 
-    /**
-     * The publicIP address configuration name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -77,9 +59,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.name;
     }
 
-    /**
-     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
-     */
     @InputImport(name="publicIPAddressVersion")
     private final @Nullable Input<Either<String,IPVersions>> publicIPAddressVersion;
 
@@ -87,9 +66,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
     }
 
-    /**
-     * Specify the public IP allocation type
-     */
     @InputImport(name="publicIPAllocationMethod")
     private final @Nullable Input<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod;
 
@@ -97,9 +73,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.publicIPAllocationMethod == null ? Input.empty() : this.publicIPAllocationMethod;
     }
 
-    /**
-     * The PublicIPPrefix from which to allocate publicIP addresses.
-     */
     @InputImport(name="publicIPPrefix")
     private final @Nullable Input<SubResourceArgs> publicIPPrefix;
 
@@ -107,9 +80,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
         return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
     }
 
-    /**
-     * Describes the public IP Sku
-     */
     @InputImport(name="sku")
     private final @Nullable Input<PublicIPAddressSkuArgs> sku;
 

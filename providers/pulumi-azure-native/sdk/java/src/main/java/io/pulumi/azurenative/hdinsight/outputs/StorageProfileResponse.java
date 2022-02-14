@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageProfileResponse {
-/**
- * The list of storage accounts in the cluster.
- */
     private final @Nullable List<StorageAccountResponse> storageaccounts;
 
     @OutputCustomType.Constructor({"storageaccounts"})
@@ -21,9 +18,6 @@ public final class StorageProfileResponse {
         this.storageaccounts = storageaccounts;
     }
 
-/**
- * The list of storage accounts in the cluster.
- */
     public List<StorageAccountResponse> getStorageaccounts() {
         return this.storageaccounts == null ? List.of() : this.storageaccounts;
     }

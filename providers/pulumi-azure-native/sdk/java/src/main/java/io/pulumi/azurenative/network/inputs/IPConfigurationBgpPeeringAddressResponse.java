@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of IPConfigurationBgpPeeringAddress.
- */
 public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPConfigurationBgpPeeringAddressResponse Empty = new IPConfigurationBgpPeeringAddressResponse();
 
-    /**
-     * The list of custom BGP peering addresses which belong to IP configuration.
-     */
     @InputImport(name="customBgpIpAddresses")
     private final @Nullable List<String> customBgpIpAddresses;
 
@@ -28,9 +22,6 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
         return this.customBgpIpAddresses == null ? List.of() : this.customBgpIpAddresses;
     }
 
-    /**
-     * The list of default BGP peering addresses which belong to IP configuration.
-     */
     @InputImport(name="defaultBgpIpAddresses", required=true)
     private final List<String> defaultBgpIpAddresses;
 
@@ -38,9 +29,6 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
         return this.defaultBgpIpAddresses;
     }
 
-    /**
-     * The ID of IP configuration which belongs to gateway.
-     */
     @InputImport(name="ipconfigurationId")
     private final @Nullable String ipconfigurationId;
 
@@ -48,9 +36,6 @@ public final class IPConfigurationBgpPeeringAddressResponse extends io.pulumi.re
         return this.ipconfigurationId == null ? Optional.empty() : Optional.ofNullable(this.ipconfigurationId);
     }
 
-    /**
-     * The list of tunnel public IP addresses which belong to IP configuration.
-     */
     @InputImport(name="tunnelIpAddresses", required=true)
     private final List<String> tunnelIpAddresses;
 

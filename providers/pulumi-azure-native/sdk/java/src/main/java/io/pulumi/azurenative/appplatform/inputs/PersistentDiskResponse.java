@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Persistent disk payload
- */
 public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PersistentDiskResponse Empty = new PersistentDiskResponse();
 
-    /**
-     * Mount path of the persistent disk
-     */
     @InputImport(name="mountPath")
     private final @Nullable String mountPath;
 
@@ -28,9 +22,6 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
     }
 
-    /**
-     * Size of the persistent disk in GB
-     */
     @InputImport(name="sizeInGB")
     private final @Nullable Integer sizeInGB;
 
@@ -38,9 +29,6 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
         return this.sizeInGB == null ? Optional.empty() : Optional.ofNullable(this.sizeInGB);
     }
 
-    /**
-     * Size of the used persistent disk in GB
-     */
     @InputImport(name="usedInGB", required=true)
     private final Integer usedInGB;
 

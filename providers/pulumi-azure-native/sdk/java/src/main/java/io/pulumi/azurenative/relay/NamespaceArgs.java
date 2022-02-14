@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceArgs Empty = new NamespaceArgs();
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName")
     private final @Nullable Input<String> namespaceName;
 
@@ -39,9 +30,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName == null ? Input.empty() : this.namespaceName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * SKU of the namespace.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -59,9 +44,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

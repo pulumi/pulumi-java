@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledTriggerArgs Empty = new ScheduledTriggerArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -30,10 +24,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.accountName;
     }
 
-    /**
-     * Kind of synchronization on trigger.
-Expected value is 'ScheduleBased'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -41,9 +31,6 @@ Expected value is 'ScheduleBased'.
         return this.kind;
     }
 
-    /**
-     * Recurrence Interval
-     */
     @InputImport(name="recurrenceInterval", required=true)
     private final Input<Either<String,RecurrenceInterval>> recurrenceInterval;
 
@@ -51,9 +38,6 @@ Expected value is 'ScheduleBased'.
         return this.recurrenceInterval;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,9 +45,6 @@ Expected value is 'ScheduleBased'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share subscription which will hold the data set sink.
-     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -71,9 +52,6 @@ Expected value is 'ScheduleBased'.
         return this.shareSubscriptionName;
     }
 
-    /**
-     * Synchronization mode
-     */
     @InputImport(name="synchronizationMode")
     private final @Nullable Input<Either<String,SynchronizationMode>> synchronizationMode;
 
@@ -81,9 +59,6 @@ Expected value is 'ScheduleBased'.
         return this.synchronizationMode == null ? Input.empty() : this.synchronizationMode;
     }
 
-    /**
-     * Synchronization time
-     */
     @InputImport(name="synchronizationTime", required=true)
     private final Input<String> synchronizationTime;
 
@@ -91,9 +66,6 @@ Expected value is 'ScheduleBased'.
         return this.synchronizationTime;
     }
 
-    /**
-     * The name of the trigger.
-     */
     @InputImport(name="triggerName")
     private final @Nullable Input<String> triggerName;
 

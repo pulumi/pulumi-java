@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Billing type Purchase meter details
- */
 public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PurchaseMeterDetailsResponse Empty = new PurchaseMeterDetailsResponse();
 
-    /**
-     * Represents billing type.
-Expected value is 'Purchase'.
-     */
     @InputImport(name="billingType", required=true)
     private final String billingType;
 
@@ -27,9 +20,6 @@ Expected value is 'Purchase'.
         return this.billingType;
     }
 
-    /**
-     * Charging type.
-     */
     @InputImport(name="chargingType", required=true)
     private final String chargingType;
 
@@ -37,9 +27,6 @@ Expected value is 'Purchase'.
         return this.chargingType;
     }
 
-    /**
-     * Billing unit applicable for Pav2 billing
-     */
     @InputImport(name="multiplier", required=true)
     private final Double multiplier;
 
@@ -47,9 +34,6 @@ Expected value is 'Purchase'.
         return this.multiplier;
     }
 
-    /**
-     * Product Id
-     */
     @InputImport(name="productId", required=true)
     private final String productId;
 
@@ -57,9 +41,6 @@ Expected value is 'Purchase'.
         return this.productId;
     }
 
-    /**
-     * Sku Id
-     */
     @InputImport(name="skuId", required=true)
     private final String skuId;
 
@@ -67,9 +48,6 @@ Expected value is 'Purchase'.
         return this.skuId;
     }
 
-    /**
-     * Term Id
-     */
     @InputImport(name="termId", required=true)
     private final String termId;
 

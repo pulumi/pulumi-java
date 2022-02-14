@@ -13,38 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLoggerResult {
-/**
- * The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.
- */
     private final @Nullable Map<String,String> credentials;
-/**
- * Logger description.
- */
     private final @Nullable String description;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Whether records are buffered in the logger before publishing. Default is assumed to be true.
- */
     private final @Nullable Boolean isBuffered;
-/**
- * Logger type.
- */
     private final String loggerType;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
- */
     private final @Nullable String resourceId;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"credentials","description","id","isBuffered","loggerType","name","resourceId","type"})
@@ -67,52 +42,27 @@ Instrumentation key for applicationInsights logger.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * The name and SendRule connection string of the event hub for azureEventHub logger.
-Instrumentation key for applicationInsights logger.
- */
     public Map<String,String> getCredentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
-/**
- * Logger description.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Whether records are buffered in the logger before publishing. Default is assumed to be true.
- */
     public Optional<Boolean> getIsBuffered() {
         return Optional.ofNullable(this.isBuffered);
     }
-/**
- * Logger type.
- */
     public String getLoggerType() {
         return this.loggerType;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
- */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }

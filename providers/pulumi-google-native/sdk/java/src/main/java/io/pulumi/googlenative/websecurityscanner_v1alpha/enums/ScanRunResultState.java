@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The result state of the ScanRun. This field is only available after the execution state reaches "FINISHED".
- */
     @EnumType
     public enum ScanRunResultState {
-/**
- * Default value. This value is returned when the ScanRun is not yet finished.
- */
         ResultStateUnspecified("RESULT_STATE_UNSPECIFIED"),
-/**
- * The scan finished without errors.
- */
         Success("SUCCESS"),
-/**
- * The scan finished with errors.
- */
         Error("ERROR"),
-/**
- * The scan was terminated by user.
- */
         Killed("KILLED");
 
         private final String value;

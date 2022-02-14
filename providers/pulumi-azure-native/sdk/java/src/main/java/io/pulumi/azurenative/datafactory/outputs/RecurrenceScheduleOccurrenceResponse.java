@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecurrenceScheduleOccurrenceResponse {
-/**
- * The day of the week.
- */
     private final @Nullable String day;
-/**
- * The occurrence.
- */
     private final @Nullable Integer occurrence;
 
     @OutputCustomType.Constructor({"day","occurrence"})
@@ -29,15 +23,9 @@ public final class RecurrenceScheduleOccurrenceResponse {
         this.occurrence = occurrence;
     }
 
-/**
- * The day of the week.
- */
     public Optional<String> getDay() {
         return Optional.ofNullable(this.day);
     }
-/**
- * The occurrence.
- */
     public Optional<Integer> getOccurrence() {
         return Optional.ofNullable(this.occurrence);
     }

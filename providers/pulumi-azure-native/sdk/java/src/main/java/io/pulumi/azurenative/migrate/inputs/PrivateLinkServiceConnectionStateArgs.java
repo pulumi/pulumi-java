@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * State of a private endpoint connection.
- */
 public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceConnectionStateArgs Empty = new PrivateLinkServiceConnectionStateArgs();
 
-    /**
-     * Actions required on the private endpoint connection.
-     */
     @InputImport(name="actionsRequired")
     private final @Nullable Input<String> actionsRequired;
 
@@ -27,9 +21,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
         return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
     }
 
-    /**
-     * Description of the private endpoint connection.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -37,9 +28,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Connection status of the private endpoint connection.
-     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

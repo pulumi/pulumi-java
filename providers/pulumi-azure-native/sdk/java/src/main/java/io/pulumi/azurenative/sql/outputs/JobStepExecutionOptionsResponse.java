@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobStepExecutionOptionsResponse {
-/**
- * Initial delay between retries for job step execution.
- */
     private final @Nullable Integer initialRetryIntervalSeconds;
-/**
- * The maximum amount of time to wait between retries for job step execution.
- */
     private final @Nullable Integer maximumRetryIntervalSeconds;
-/**
- * Maximum number of times the job step will be reattempted if the first attempt fails.
- */
     private final @Nullable Integer retryAttempts;
-/**
- * The backoff multiplier for the time between retries.
- */
     private final @Nullable Double retryIntervalBackoffMultiplier;
-/**
- * Execution timeout for the job step.
- */
     private final @Nullable Integer timeoutSeconds;
 
     @OutputCustomType.Constructor({"initialRetryIntervalSeconds","maximumRetryIntervalSeconds","retryAttempts","retryIntervalBackoffMultiplier","timeoutSeconds"})
@@ -47,33 +32,18 @@ public final class JobStepExecutionOptionsResponse {
         this.timeoutSeconds = timeoutSeconds;
     }
 
-/**
- * Initial delay between retries for job step execution.
- */
     public Optional<Integer> getInitialRetryIntervalSeconds() {
         return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
-/**
- * The maximum amount of time to wait between retries for job step execution.
- */
     public Optional<Integer> getMaximumRetryIntervalSeconds() {
         return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
-/**
- * Maximum number of times the job step will be reattempted if the first attempt fails.
- */
     public Optional<Integer> getRetryAttempts() {
         return Optional.ofNullable(this.retryAttempts);
     }
-/**
- * The backoff multiplier for the time between retries.
- */
     public Optional<Double> getRetryIntervalBackoffMultiplier() {
         return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
-/**
- * Execution timeout for the job step.
- */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

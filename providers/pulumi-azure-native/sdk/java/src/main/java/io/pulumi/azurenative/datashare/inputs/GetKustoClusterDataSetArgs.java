@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetKustoClusterDataSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKustoClusterDataSetArgs Empty = new GetKustoClusterDataSetArgs();
 
-    /**
-     * The name of the share account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,9 +19,6 @@ public final class GetKustoClusterDataSetArgs extends io.pulumi.resources.Invoke
         return this.accountName;
     }
 
-    /**
-     * The name of the dataSet.
-     */
     @InputImport(name="dataSetName", required=true)
     private final String dataSetName;
 
@@ -35,9 +26,6 @@ public final class GetKustoClusterDataSetArgs extends io.pulumi.resources.Invoke
         return this.dataSetName;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,9 +33,6 @@ public final class GetKustoClusterDataSetArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the share.
-     */
     @InputImport(name="shareName", required=true)
     private final String shareName;
 

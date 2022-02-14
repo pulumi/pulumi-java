@@ -13,41 +13,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIncidentCommentResult {
-/**
- * Describes the client that created the comment
- */
     private final ClientInfoResponse author;
-/**
- * The time the comment was created
- */
     private final String createdTimeUtc;
-/**
- * Etag of the azure resource
- */
     private final @Nullable String etag;
-/**
- * Azure resource Id
- */
     private final String id;
-/**
- * The time the comment was updated
- */
     private final String lastModifiedTimeUtc;
-/**
- * The comment message
- */
     private final String message;
-/**
- * Azure resource name
- */
     private final String name;
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     private final SystemDataResponse systemData;
-/**
- * Azure resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"author","createdTimeUtc","etag","id","lastModifiedTimeUtc","message","name","systemData","type"})
@@ -72,57 +45,30 @@ public final class GetIncidentCommentResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Describes the client that created the comment
- */
     public ClientInfoResponse getAuthor() {
         return this.author;
     }
-/**
- * The time the comment was created
- */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
-/**
- * Etag of the azure resource
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * Azure resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * The time the comment was updated
- */
     public String getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
-/**
- * The comment message
- */
     public String getMessage() {
         return this.message;
     }
-/**
- * Azure resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Azure Resource Manager metadata containing createdBy and modifiedBy information.
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * Azure resource type
- */
     public String getType() {
         return this.type;
     }

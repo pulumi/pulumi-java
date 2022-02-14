@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
-    /**
-     * The domain name of the association.
-     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -28,9 +22,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName;
     }
 
-    /**
-     * If set, the domain should redirect with the provided parameters.
-     */
     @InputImport(name="domainRedirect")
     private final @Nullable Input<DomainRedirectArgs> domainRedirect;
 
@@ -38,9 +29,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainRedirect == null ? Input.empty() : this.domainRedirect;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -48,9 +36,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * The site name of the association.
-     */
     @InputImport(name="site", required=true)
     private final Input<String> site;
 
@@ -58,9 +43,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.site;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="siteId", required=true)
     private final Input<String> siteId;
 

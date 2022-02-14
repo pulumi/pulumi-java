@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the Key Vault which hosts CMK
- */
 public final class CmkKeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CmkKeyVaultPropertiesArgs Empty = new CmkKeyVaultPropertiesArgs();
 
-    /**
-     * The key uri of the Customer Managed Key
-     */
     @InputImport(name="keyUri")
     private final @Nullable Input<String> keyUri;
 

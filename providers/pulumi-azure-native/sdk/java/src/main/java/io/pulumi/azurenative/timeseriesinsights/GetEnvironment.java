@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: Gen1Environment, Gen2Environment. */
 public class GetEnvironment {
-/**
- * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
-API Version: 2020-05-15.
- *
- * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
- */
     public static CompletableFuture<GetEnvironmentResult> invokeAsync(GetEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args == null ? GetEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

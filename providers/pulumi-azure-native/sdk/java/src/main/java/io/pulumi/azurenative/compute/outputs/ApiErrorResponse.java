@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiErrorResponse {
-/**
- * The error code.
- */
     private final @Nullable String code;
-/**
- * The Api error details
- */
     private final @Nullable List<ApiErrorBaseResponse> details;
-/**
- * The Api inner error
- */
     private final @Nullable InnerErrorResponse innererror;
-/**
- * The error message.
- */
     private final @Nullable String message;
-/**
- * The target of the particular error.
- */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"code","details","innererror","message","target"})
@@ -49,33 +34,18 @@ public final class ApiErrorResponse {
         this.target = target;
     }
 
-/**
- * The error code.
- */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
-/**
- * The Api error details
- */
     public List<ApiErrorBaseResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
-/**
- * The Api inner error
- */
     public Optional<InnerErrorResponse> getInnererror() {
         return Optional.ofNullable(this.innererror);
     }
-/**
- * The error message.
- */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
-/**
- * The target of the particular error.
- */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

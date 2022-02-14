@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EventLogConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventLogConfigurationResponse Empty = new EventLogConfigurationResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -27,9 +21,6 @@ public final class EventLogConfigurationResponse extends io.pulumi.resources.Inv
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="logName", required=true)
     private final String logName;
 

@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope
- */
 public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotDpsPropertiesDescriptionArgs Empty = new IotDpsPropertiesDescriptionArgs();
 
-    /**
-     * Allocation policy to be used by this provisioning service.
-     */
     @InputImport(name="allocationPolicy")
     private final @Nullable Input<Either<String,AllocationPolicy>> allocationPolicy;
 
@@ -36,9 +30,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.allocationPolicy == null ? Input.empty() : this.allocationPolicy;
     }
 
-    /**
-     * List of authorization keys for a provisioning service.
-     */
     @InputImport(name="authorizationPolicies")
     private final @Nullable Input<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies;
 
@@ -46,9 +37,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.authorizationPolicies == null ? Input.empty() : this.authorizationPolicies;
     }
 
-    /**
-     * List of IoT hubs associated with this provisioning service.
-     */
     @InputImport(name="iotHubs")
     private final @Nullable Input<List<IotHubDefinitionDescriptionArgs>> iotHubs;
 
@@ -56,9 +44,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.iotHubs == null ? Input.empty() : this.iotHubs;
     }
 
-    /**
-     * The IP filter rules.
-     */
     @InputImport(name="ipFilterRules")
     private final @Nullable Input<List<TargetIpFilterRuleArgs>> ipFilterRules;
 
@@ -66,9 +51,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.ipFilterRules == null ? Input.empty() : this.ipFilterRules;
     }
 
-    /**
-     * Private endpoint connections created on this IotHub
-     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
@@ -76,9 +58,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
     }
 
-    /**
-     * The ARM provisioning state of the provisioning service.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -86,9 +65,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
-    /**
-     * Whether requests from Public Network are allowed
-     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -96,9 +72,6 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
-    /**
-     * Current state of the provisioning service.
-     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,State>> state;
 

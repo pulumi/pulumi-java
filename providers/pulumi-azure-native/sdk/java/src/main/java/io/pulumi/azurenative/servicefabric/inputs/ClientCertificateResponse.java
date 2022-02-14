@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Client Certificate definition.
- */
 public final class ClientCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClientCertificateResponse Empty = new ClientCertificateResponse();
 
-    /**
-     * Certificate Common name.
-     */
     @InputImport(name="commonName")
     private final @Nullable String commonName;
 
@@ -28,9 +22,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
         return this.commonName == null ? Optional.empty() : Optional.ofNullable(this.commonName);
     }
 
-    /**
-     * Whether the certificate is admin or not.
-     */
     @InputImport(name="isAdmin", required=true)
     private final Boolean isAdmin;
 
@@ -38,9 +29,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
         return this.isAdmin;
     }
 
-    /**
-     * Issuer thumbprint for the certificate. Only used together with CommonName.
-     */
     @InputImport(name="issuerThumbprint")
     private final @Nullable String issuerThumbprint;
 
@@ -48,9 +36,6 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
         return this.issuerThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerThumbprint);
     }
 
-    /**
-     * Certificate Thumbprint.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 

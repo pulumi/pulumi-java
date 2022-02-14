@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InstanceFailoverGroupReadOnlyEndpointResponse {
-/**
- * Failover policy of the read-only endpoint for the failover group.
- */
     private final @Nullable String failoverPolicy;
 
     @OutputCustomType.Constructor({"failoverPolicy"})
@@ -21,9 +18,6 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse {
         this.failoverPolicy = failoverPolicy;
     }
 
-/**
- * Failover policy of the read-only endpoint for the failover group.
- */
     public Optional<String> getFailoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }

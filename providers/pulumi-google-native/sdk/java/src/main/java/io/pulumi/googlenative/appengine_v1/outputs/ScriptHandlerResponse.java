@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScriptHandlerResponse {
-/**
- * Path to the script from the application root directory.
- */
     private final String scriptPath;
 
     @OutputCustomType.Constructor({"scriptPath"})
@@ -19,9 +16,6 @@ public final class ScriptHandlerResponse {
         this.scriptPath = Objects.requireNonNull(scriptPath);
     }
 
-/**
- * Path to the script from the application root directory.
- */
     public String getScriptPath() {
         return this.scriptPath;
     }

@@ -10,18 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents the health policy used to evaluate the health of services belonging to a service type.
-
- */
 public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceTypeHealthPolicyArgs Empty = new ServiceTypeHealthPolicyArgs();
 
-    /**
-     * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
-
-     */
     @InputImport(name="maxPercentUnhealthyServices")
     private final @Nullable Input<Integer> maxPercentUnhealthyServices;
 

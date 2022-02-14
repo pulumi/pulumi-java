@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OperationErrorResponse {
-/**
- * The array of errors encountered while processing this operation.
- */
     private final List<OperationErrorErrorsItemResponse> errors;
 
     @OutputCustomType.Constructor({"errors"})
@@ -20,9 +17,6 @@ public final class OperationErrorResponse {
         this.errors = Objects.requireNonNull(errors);
     }
 
-/**
- * The array of errors encountered while processing this operation.
- */
     public List<OperationErrorErrorsItemResponse> getErrors() {
         return this.errors;
     }

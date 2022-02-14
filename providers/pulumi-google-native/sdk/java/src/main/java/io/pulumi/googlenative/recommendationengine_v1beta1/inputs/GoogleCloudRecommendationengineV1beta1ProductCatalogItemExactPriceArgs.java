@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Exact product price.
- */
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs Empty = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs();
 
-    /**
-     * Optional. Display price of the product.
-     */
     @InputImport(name="displayPrice")
     private final @Nullable Input<Double> displayPrice;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
         return this.displayPrice == null ? Input.empty() : this.displayPrice;
     }
 
-    /**
-     * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
-     */
     @InputImport(name="originalPrice")
     private final @Nullable Input<Double> originalPrice;
 

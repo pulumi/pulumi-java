@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The approver type.
- */
     @EnumType
     public enum JitApproverType {
-/**
- * 
- */
         User("user"),
-/**
- * 
- */
         Group("group");
 
         private final String value;

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSetting {
-/**
- * State of the myscope setting.
-API Version: 2019-11-01.
- *
- * State of the myscope setting.
- */
     public static CompletableFuture<GetSettingResult> invokeAsync(GetSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getSetting", TypeShape.of(GetSettingResult.class), args == null ? GetSettingArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,16 +23,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActionGroupArgs Empty = new ActionGroupArgs();
 
-    /**
-     * The name of the action group.
-     */
     @InputImport(name="actionGroupName")
     private final @Nullable Input<String> actionGroupName;
 
@@ -40,9 +34,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.actionGroupName == null ? Input.empty() : this.actionGroupName;
     }
 
-    /**
-     * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
-     */
     @InputImport(name="armRoleReceivers")
     private final @Nullable Input<List<ArmRoleReceiverArgs>> armRoleReceivers;
 
@@ -50,9 +41,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.armRoleReceivers == null ? Input.empty() : this.armRoleReceivers;
     }
 
-    /**
-     * The list of AutomationRunbook receivers that are part of this action group.
-     */
     @InputImport(name="automationRunbookReceivers")
     private final @Nullable Input<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
 
@@ -60,9 +48,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationRunbookReceivers == null ? Input.empty() : this.automationRunbookReceivers;
     }
 
-    /**
-     * The list of AzureAppPush receivers that are part of this action group.
-     */
     @InputImport(name="azureAppPushReceivers")
     private final @Nullable Input<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
 
@@ -70,9 +55,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureAppPushReceivers == null ? Input.empty() : this.azureAppPushReceivers;
     }
 
-    /**
-     * The list of azure function receivers that are part of this action group.
-     */
     @InputImport(name="azureFunctionReceivers")
     private final @Nullable Input<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
 
@@ -80,9 +62,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFunctionReceivers == null ? Input.empty() : this.azureFunctionReceivers;
     }
 
-    /**
-     * The list of email receivers that are part of this action group.
-     */
     @InputImport(name="emailReceivers")
     private final @Nullable Input<List<EmailReceiverArgs>> emailReceivers;
 
@@ -90,9 +69,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailReceivers == null ? Input.empty() : this.emailReceivers;
     }
 
-    /**
-     * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
-     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -100,9 +76,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled;
     }
 
-    /**
-     * The short name of the action group. This will be used in SMS messages.
-     */
     @InputImport(name="groupShortName", required=true)
     private final Input<String> groupShortName;
 
@@ -110,9 +83,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupShortName;
     }
 
-    /**
-     * The list of ITSM receivers that are part of this action group.
-     */
     @InputImport(name="itsmReceivers")
     private final @Nullable Input<List<ItsmReceiverArgs>> itsmReceivers;
 
@@ -120,9 +90,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.itsmReceivers == null ? Input.empty() : this.itsmReceivers;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -130,9 +97,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The list of logic app receivers that are part of this action group.
-     */
     @InputImport(name="logicAppReceivers")
     private final @Nullable Input<List<LogicAppReceiverArgs>> logicAppReceivers;
 
@@ -140,9 +104,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.logicAppReceivers == null ? Input.empty() : this.logicAppReceivers;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -150,9 +111,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The list of SMS receivers that are part of this action group.
-     */
     @InputImport(name="smsReceivers")
     private final @Nullable Input<List<SmsReceiverArgs>> smsReceivers;
 
@@ -160,9 +118,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.smsReceivers == null ? Input.empty() : this.smsReceivers;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -170,9 +125,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The list of voice receivers that are part of this action group.
-     */
     @InputImport(name="voiceReceivers")
     private final @Nullable Input<List<VoiceReceiverArgs>> voiceReceivers;
 
@@ -180,9 +132,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.voiceReceivers == null ? Input.empty() : this.voiceReceivers;
     }
 
-    /**
-     * The list of webhook receivers that are part of this action group.
-     */
     @InputImport(name="webhookReceivers")
     private final @Nullable Input<List<WebhookReceiverArgs>> webhookReceivers;
 

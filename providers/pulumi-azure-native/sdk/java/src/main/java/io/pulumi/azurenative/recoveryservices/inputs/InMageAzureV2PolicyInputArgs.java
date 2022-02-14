@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * VMWare Azure specific policy Input.
- */
 public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageAzureV2PolicyInputArgs Empty = new InMageAzureV2PolicyInputArgs();
 
-    /**
-     * The app consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
@@ -30,9 +24,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The crash consistent snapshot frequency (in minutes).
-     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Input<Integer> crashConsistentFrequencyInMinutes;
 
@@ -40,10 +31,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
         return this.crashConsistentFrequencyInMinutes == null ? Input.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
-    /**
-     * The class type.
-Expected value is 'InMageAzureV2'.
-     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -51,9 +38,6 @@ Expected value is 'InMageAzureV2'.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
-    /**
-     * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
-     */
     @InputImport(name="multiVmSyncStatus", required=true)
     private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
@@ -61,9 +45,6 @@ Expected value is 'InMageAzureV2'.
         return this.multiVmSyncStatus;
     }
 
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     */
     @InputImport(name="recoveryPointHistory")
     private final @Nullable Input<Integer> recoveryPointHistory;
 
@@ -71,9 +52,6 @@ Expected value is 'InMageAzureV2'.
         return this.recoveryPointHistory == null ? Input.empty() : this.recoveryPointHistory;
     }
 
-    /**
-     * The recovery point threshold in minutes.
-     */
     @InputImport(name="recoveryPointThresholdInMinutes")
     private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
 

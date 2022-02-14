@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
-    /**
-     * Name of the datasource
-     */
     @InputImport(name="dataSourceName", required=true)
     private final String dataSourceName;
 
@@ -25,9 +19,6 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataSourceName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

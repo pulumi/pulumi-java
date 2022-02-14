@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTemplateSpecVersionArgs Empty = new GetTemplateSpecVersionArgs();
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the Template Spec.
-     */
     @InputImport(name="templateSpecName", required=true)
     private final String templateSpecName;
 
@@ -35,9 +26,6 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
         return this.templateSpecName;
     }
 
-    /**
-     * The version of the Template Spec.
-     */
     @InputImport(name="templateSpecVersion", required=true)
     private final String templateSpecVersion;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForMIPPolicySync {
-/**
- * The description of the service.
-API Version: 2021-03-08.
- *
- * The description of the service.
- */
     public static CompletableFuture<GetprivateLinkServicesForMIPPolicySyncResult> invokeAsync(GetprivateLinkServicesForMIPPolicySyncArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getprivateLinkServicesForMIPPolicySync", TypeShape.of(GetprivateLinkServicesForMIPPolicySyncResult.class), args == null ? GetprivateLinkServicesForMIPPolicySyncArgs.Empty : args, Utilities.withVersion(options));
     }

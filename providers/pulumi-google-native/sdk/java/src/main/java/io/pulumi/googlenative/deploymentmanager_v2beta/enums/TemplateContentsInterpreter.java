@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Which interpreter (python or jinja) should be used during expansion.
- */
     @EnumType
     public enum TemplateContentsInterpreter {
-/**
- * 
- */
         UnknownInterpreter("UNKNOWN_INTERPRETER"),
-/**
- * 
- */
         Python("PYTHON"),
-/**
- * 
- */
         Jinja("JINJA");
 
         private final String value;

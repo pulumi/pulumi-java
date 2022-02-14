@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionAutoscalingPolicyIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
- */
     public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> invokeAsync(GetRegionAutoscalingPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionAutoscalingPolicyIamPolicy", TypeShape.of(GetRegionAutoscalingPolicyIamPolicyResult.class), args == null ? GetRegionAutoscalingPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

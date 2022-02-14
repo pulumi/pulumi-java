@@ -10,17 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Log Analytics destination.
- */
 public final class LogAnalyticsDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogAnalyticsDestinationArgs Empty = new LogAnalyticsDestinationArgs();
 
-    /**
-     * A friendly name for the destination. 
-This name should be unique across all destinations (regardless of type) within the data collection rule.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,9 +21,6 @@ This name should be unique across all destinations (regardless of type) within t
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The resource ID of the Log Analytics workspace.
-     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable Input<String> workspaceResourceId;
 

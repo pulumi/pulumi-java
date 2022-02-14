@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRemediationAtManagementGroupArgs Empty = new GetRemediationAtManagementGroupArgs();
 
-    /**
-     * Management group ID.
-     */
     @InputImport(name="managementGroupId", required=true)
     private final String managementGroupId;
 
@@ -25,9 +19,6 @@ public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resourc
         return this.managementGroupId;
     }
 
-    /**
-     * The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.
-     */
     @InputImport(name="managementGroupsNamespace", required=true)
     private final String managementGroupsNamespace;
 
@@ -35,9 +26,6 @@ public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resourc
         return this.managementGroupsNamespace;
     }
 
-    /**
-     * The name of the remediation.
-     */
     @InputImport(name="remediationName", required=true)
     private final String remediationName;
 

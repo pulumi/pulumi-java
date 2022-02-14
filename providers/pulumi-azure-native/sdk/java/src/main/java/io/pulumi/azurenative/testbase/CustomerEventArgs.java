@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerEventArgs Empty = new CustomerEventArgs();
 
-    /**
-     * The resource name of the Test Base Customer event.
-     */
     @InputImport(name="customerEventName")
     private final @Nullable Input<String> customerEventName;
 
@@ -29,9 +23,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerEventName == null ? Input.empty() : this.customerEventName;
     }
 
-    /**
-     * The name of the event subscribed to.
-     */
     @InputImport(name="eventName", required=true)
     private final Input<String> eventName;
 
@@ -39,9 +30,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventName;
     }
 
-    /**
-     * The notification event receivers.
-     */
     @InputImport(name="receivers", required=true)
     private final Input<List<NotificationEventReceiverArgs>> receivers;
 
@@ -49,9 +37,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.receivers;
     }
 
-    /**
-     * The name of the resource group that contains the resource.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource name of the Test Base Account.
-     */
     @InputImport(name="testBaseAccountName", required=true)
     private final Input<String> testBaseAccountName;
 

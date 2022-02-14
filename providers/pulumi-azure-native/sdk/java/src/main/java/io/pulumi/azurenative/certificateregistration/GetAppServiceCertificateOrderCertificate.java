@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppServiceCertificateOrderCertificate {
-/**
- * Key Vault container ARM resource for a certificate that is purchased through Azure.
-API Version: 2020-10-01.
- *
- * Key Vault container ARM resource for a certificate that is purchased through Azure.
- */
     public static CompletableFuture<GetAppServiceCertificateOrderCertificateResult> invokeAsync(GetAppServiceCertificateOrderCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:certificateregistration:getAppServiceCertificateOrderCertificate", TypeShape.of(GetAppServiceCertificateOrderCertificateResult.class), args == null ? GetAppServiceCertificateOrderCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

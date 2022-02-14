@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
-    /**
-     * The job collection name.
-     */
     @InputImport(name="jobCollectionName", required=true)
     private final Input<String> jobCollectionName;
 
@@ -28,9 +22,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobCollectionName;
     }
 
-    /**
-     * The job name.
-     */
     @InputImport(name="jobName")
     private final @Nullable Input<String> jobName;
 
@@ -38,9 +29,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName == null ? Input.empty() : this.jobName;
     }
 
-    /**
-     * Gets or sets the job properties.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<JobPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The resource group name.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

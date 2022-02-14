@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
-    /**
-     * The identity of the resource.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -31,9 +25,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Specifies the location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the private endpoint connection associated with the workspace
-     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -51,9 +39,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -61,9 +46,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState;
     }
 
-    /**
-     * Name of the resource group in which workspace is located.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,9 +53,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * The sku of the workspace.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -81,9 +60,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Contains resource tags defined as key/value pairs.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -91,9 +67,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

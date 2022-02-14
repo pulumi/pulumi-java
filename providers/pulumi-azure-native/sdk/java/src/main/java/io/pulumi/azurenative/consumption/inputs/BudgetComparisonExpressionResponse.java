@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The comparison expression to be used in the budgets.
- */
 public final class BudgetComparisonExpressionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BudgetComparisonExpressionResponse Empty = new BudgetComparisonExpressionResponse();
 
-    /**
-     * The name of the column to use in comparison.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,9 +20,6 @@ public final class BudgetComparisonExpressionResponse extends io.pulumi.resource
         return this.name;
     }
 
-    /**
-     * The operator to use for comparison.
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -36,9 +27,6 @@ public final class BudgetComparisonExpressionResponse extends io.pulumi.resource
         return this.operator;
     }
 
-    /**
-     * Array of values to use for comparison
-     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

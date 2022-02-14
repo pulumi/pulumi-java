@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StatefulPolicyResponse {
-/**
- * 
- */
     private final StatefulPolicyPreservedStateResponse preservedState;
 
     @OutputCustomType.Constructor({"preservedState"})
@@ -19,9 +16,6 @@ public final class StatefulPolicyResponse {
         this.preservedState = Objects.requireNonNull(preservedState);
     }
 
-/**
- * 
- */
     public StatefulPolicyPreservedStateResponse getPreservedState() {
         return this.preservedState;
     }

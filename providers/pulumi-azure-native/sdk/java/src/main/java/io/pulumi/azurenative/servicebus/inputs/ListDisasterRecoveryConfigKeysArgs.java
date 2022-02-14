@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListDisasterRecoveryConfigKeysArgs Empty = new ListDisasterRecoveryConfigKeysArgs();
 
-    /**
-     * The Disaster Recovery configuration name
-     */
     @InputImport(name="alias", required=true)
     private final String alias;
 
@@ -25,9 +19,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
         return this.alias;
     }
 
-    /**
-     * The authorization rule name.
-     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -35,9 +26,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
         return this.authorizationRuleName;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -45,9 +33,6 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
         return this.namespaceName;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

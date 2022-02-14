@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZoneServiceDirectoryConfigResponse {
-/**
- * 
- */
     private final String kind;
-/**
- * Contains information about the namespace associated with the zone.
- */
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
     @OutputCustomType.Constructor({"kind","namespace"})
@@ -27,15 +21,9 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
         this.namespace = Objects.requireNonNull(namespace);
     }
 
-/**
- * 
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * Contains information about the namespace associated with the zone.
- */
     public ManagedZoneServiceDirectoryConfigNamespaceResponse getNamespace() {
         return this.namespace;
     }

@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncidentArgs Empty = new IncidentArgs();
 
-    /**
-     * The reason the incident was closed
-     */
     @InputImport(name="classification")
     private final @Nullable Input<Either<String,IncidentClassification>> classification;
 
@@ -35,9 +29,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.classification == null ? Input.empty() : this.classification;
     }
 
-    /**
-     * Describes the reason the incident was closed
-     */
     @InputImport(name="classificationComment")
     private final @Nullable Input<String> classificationComment;
 
@@ -45,9 +36,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.classificationComment == null ? Input.empty() : this.classificationComment;
     }
 
-    /**
-     * The classification reason the incident was closed with
-     */
     @InputImport(name="classificationReason")
     private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
 
@@ -55,9 +43,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.classificationReason == null ? Input.empty() : this.classificationReason;
     }
 
-    /**
-     * The description of the incident
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,9 +50,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The time of the first activity in the incident
-     */
     @InputImport(name="firstActivityTimeUtc")
     private final @Nullable Input<String> firstActivityTimeUtc;
 
@@ -75,9 +57,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstActivityTimeUtc == null ? Input.empty() : this.firstActivityTimeUtc;
     }
 
-    /**
-     * Incident ID
-     */
     @InputImport(name="incidentId")
     private final @Nullable Input<String> incidentId;
 
@@ -85,9 +64,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.incidentId == null ? Input.empty() : this.incidentId;
     }
 
-    /**
-     * List of labels relevant to this incident
-     */
     @InputImport(name="labels")
     private final @Nullable Input<List<IncidentLabelArgs>> labels;
 
@@ -95,9 +71,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * The time of the last activity in the incident
-     */
     @InputImport(name="lastActivityTimeUtc")
     private final @Nullable Input<String> lastActivityTimeUtc;
 
@@ -105,9 +78,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastActivityTimeUtc == null ? Input.empty() : this.lastActivityTimeUtc;
     }
 
-    /**
-     * Describes a user that the incident is assigned to
-     */
     @InputImport(name="owner")
     private final @Nullable Input<IncidentOwnerInfoArgs> owner;
 
@@ -115,9 +85,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.owner == null ? Input.empty() : this.owner;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -125,9 +92,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The severity of the incident
-     */
     @InputImport(name="severity", required=true)
     private final Input<Either<String,IncidentSeverity>> severity;
 
@@ -135,9 +99,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity;
     }
 
-    /**
-     * The status of the incident
-     */
     @InputImport(name="status", required=true)
     private final Input<Either<String,IncidentStatus>> status;
 
@@ -145,9 +106,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.status;
     }
 
-    /**
-     * The title of the incident
-     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 
@@ -155,9 +113,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
         return this.title;
     }
 
-    /**
-     * The name of the workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

@@ -11,21 +11,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccountCredentialDetailsResponse {
-/**
- * Connection string of the account endpoint to use the account as a storage endpoint on the device.
- */
     private final String accountConnectionString;
-/**
- * Name of the account.
- */
     private final String accountName;
-/**
- * Type of the account.
- */
     private final String dataAccountType;
-/**
- * Per share level unencrypted access credentials.
- */
     private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
     @OutputCustomType.Constructor({"accountConnectionString","accountName","dataAccountType","shareCredentialDetails"})
@@ -40,27 +28,15 @@ public final class AccountCredentialDetailsResponse {
         this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
     }
 
-/**
- * Connection string of the account endpoint to use the account as a storage endpoint on the device.
- */
     public String getAccountConnectionString() {
         return this.accountConnectionString;
     }
-/**
- * Name of the account.
- */
     public String getAccountName() {
         return this.accountName;
     }
-/**
- * Type of the account.
- */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
-/**
- * Per share level unencrypted access credentials.
- */
     public List<ShareCredentialDetailsResponse> getShareCredentialDetails() {
         return this.shareCredentialDetails;
     }

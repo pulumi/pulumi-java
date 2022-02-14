@@ -8,58 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Current state of the provisioning service.
- */
     @EnumType
     public enum State {
-/**
- * 
- */
         Activating("Activating"),
-/**
- * 
- */
         Active("Active"),
-/**
- * 
- */
         Deleting("Deleting"),
-/**
- * 
- */
         Deleted("Deleted"),
-/**
- * 
- */
         ActivationFailed("ActivationFailed"),
-/**
- * 
- */
         DeletionFailed("DeletionFailed"),
-/**
- * 
- */
         Transitioning("Transitioning"),
-/**
- * 
- */
         Suspending("Suspending"),
-/**
- * 
- */
         Suspended("Suspended"),
-/**
- * 
- */
         Resuming("Resuming"),
-/**
- * 
- */
         FailingOver("FailingOver"),
-/**
- * 
- */
         FailoverFailed("FailoverFailed");
 
         private final String value;

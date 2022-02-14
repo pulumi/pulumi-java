@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceModelWithAllowedPropertySetResponseIdentity {
-/**
- * The principal ID of resource identity.
- */
     private final String principalId;
-/**
- * The tenant ID of resource.
- */
     private final String tenantId;
-/**
- * The identity type.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -34,21 +25,12 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity {
         this.type = type;
     }
 
-/**
- * The principal ID of resource identity.
- */
     public String getPrincipalId() {
         return this.principalId;
     }
-/**
- * The tenant ID of resource.
- */
     public String getTenantId() {
         return this.tenantId;
     }
-/**
- * The identity type.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

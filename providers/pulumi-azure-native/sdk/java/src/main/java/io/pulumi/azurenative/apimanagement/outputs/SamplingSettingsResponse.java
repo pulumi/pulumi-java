@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SamplingSettingsResponse {
-/**
- * Rate of sampling for fixed-rate sampling.
- */
     private final @Nullable Double percentage;
-/**
- * Sampling type.
- */
     private final @Nullable String samplingType;
 
     @OutputCustomType.Constructor({"percentage","samplingType"})
@@ -29,15 +23,9 @@ public final class SamplingSettingsResponse {
         this.samplingType = samplingType;
     }
 
-/**
- * Rate of sampling for fixed-rate sampling.
- */
     public Optional<Double> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }
-/**
- * Sampling type.
- */
     public Optional<String> getSamplingType() {
         return Optional.ofNullable(this.samplingType);
     }

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportConfigurationArgs Empty = new ExportConfigurationArgs();
 
-    /**
-     * The name of destination storage account.
-     */
     @InputImport(name="destinationAccountId")
     private final @Nullable Input<String> destinationAccountId;
 
@@ -27,9 +21,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.destinationAccountId == null ? Input.empty() : this.destinationAccountId;
     }
 
-    /**
-     * The SAS URL for the destination storage container. It must grant write permission.
-     */
     @InputImport(name="destinationAddress")
     private final @Nullable Input<String> destinationAddress;
 
@@ -37,9 +28,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.destinationAddress == null ? Input.empty() : this.destinationAddress;
     }
 
-    /**
-     * The location ID of the destination storage container.
-     */
     @InputImport(name="destinationStorageLocationId")
     private final @Nullable Input<String> destinationStorageLocationId;
 
@@ -47,9 +35,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.destinationStorageLocationId == null ? Input.empty() : this.destinationStorageLocationId;
     }
 
-    /**
-     * The subscription ID of the destination storage container.
-     */
     @InputImport(name="destinationStorageSubscriptionId")
     private final @Nullable Input<String> destinationStorageSubscriptionId;
 
@@ -57,9 +42,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.destinationStorageSubscriptionId == null ? Input.empty() : this.destinationStorageSubscriptionId;
     }
 
-    /**
-     * The Continuous Export destination type. This has to be 'Blob'.
-     */
     @InputImport(name="destinationType")
     private final @Nullable Input<String> destinationType;
 
@@ -67,9 +49,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.destinationType == null ? Input.empty() : this.destinationType;
     }
 
-    /**
-     * The Continuous Export configuration ID. This is unique within a Application Insights component.
-     */
     @InputImport(name="exportId")
     private final @Nullable Input<String> exportId;
 
@@ -77,9 +56,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.exportId == null ? Input.empty() : this.exportId;
     }
 
-    /**
-     * Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.
-     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<String> isEnabled;
 
@@ -87,9 +63,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
-    /**
-     * Deprecated
-     */
     @InputImport(name="notificationQueueEnabled")
     private final @Nullable Input<String> notificationQueueEnabled;
 
@@ -97,9 +70,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.notificationQueueEnabled == null ? Input.empty() : this.notificationQueueEnabled;
     }
 
-    /**
-     * Deprecated
-     */
     @InputImport(name="notificationQueueUri")
     private final @Nullable Input<String> notificationQueueUri;
 
@@ -107,9 +77,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.notificationQueueUri == null ? Input.empty() : this.notificationQueueUri;
     }
 
-    /**
-     * The document types to be exported, as comma separated values. Allowed values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
-     */
     @InputImport(name="recordTypes")
     private final @Nullable Input<String> recordTypes;
 
@@ -117,9 +84,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.recordTypes == null ? Input.empty() : this.recordTypes;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -127,9 +91,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Application Insights component resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

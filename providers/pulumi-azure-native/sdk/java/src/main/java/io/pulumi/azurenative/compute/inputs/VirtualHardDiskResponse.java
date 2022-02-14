@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the uri of a disk.
- */
 public final class VirtualHardDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualHardDiskResponse Empty = new VirtualHardDiskResponse();
 
-    /**
-     * Specifies the virtual hard disk's uri.
-     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

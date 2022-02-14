@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The edition for the SSIS Integration Runtime
- */
     @EnumType
     public enum IntegrationRuntimeEdition {
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Enterprise("Enterprise");
 
         private final String value;

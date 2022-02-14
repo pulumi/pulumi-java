@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingRuleArgs Empty = new LoggingRuleArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="action", required=true)
     private final Input<String> action;
 
@@ -31,9 +25,6 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="detailLevel", required=true)
     private final Input<Either<String,LoggingDetails>> detailLevel;
 
@@ -41,9 +32,6 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.detailLevel;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="direction", required=true)
     private final Input<Either<String,LoggingDirections>> direction;
 
@@ -51,9 +39,6 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.direction;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="hiddenPropertyPaths")
     private final @Nullable Input<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 

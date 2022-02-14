@@ -22,16 +22,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The X12 agreement protocol settings.
- */
 public final class X12ProtocolSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X12ProtocolSettingsResponse Empty = new X12ProtocolSettingsResponse();
 
-    /**
-     * The X12 acknowledgment settings.
-     */
     @InputImport(name="acknowledgementSettings", required=true)
     private final X12AcknowledgementSettingsResponse acknowledgementSettings;
 
@@ -39,9 +33,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.acknowledgementSettings;
     }
 
-    /**
-     * The X12 envelope override settings.
-     */
     @InputImport(name="envelopeOverrides")
     private final @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides;
 
@@ -49,9 +40,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
 
-    /**
-     * The X12 envelope settings.
-     */
     @InputImport(name="envelopeSettings", required=true)
     private final X12EnvelopeSettingsResponse envelopeSettings;
 
@@ -59,9 +47,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.envelopeSettings;
     }
 
-    /**
-     * The X12 framing settings.
-     */
     @InputImport(name="framingSettings", required=true)
     private final X12FramingSettingsResponse framingSettings;
 
@@ -69,9 +54,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.framingSettings;
     }
 
-    /**
-     * The X12 message filter.
-     */
     @InputImport(name="messageFilter", required=true)
     private final X12MessageFilterResponse messageFilter;
 
@@ -79,9 +61,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.messageFilter;
     }
 
-    /**
-     * The X12 message filter list.
-     */
     @InputImport(name="messageFilterList")
     private final @Nullable List<X12MessageIdentifierResponse> messageFilterList;
 
@@ -89,9 +68,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
 
-    /**
-     * The X12 processing settings.
-     */
     @InputImport(name="processingSettings", required=true)
     private final X12ProcessingSettingsResponse processingSettings;
 
@@ -99,9 +75,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.processingSettings;
     }
 
-    /**
-     * The X12 schema references.
-     */
     @InputImport(name="schemaReferences", required=true)
     private final List<X12SchemaReferenceResponse> schemaReferences;
 
@@ -109,9 +82,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.schemaReferences;
     }
 
-    /**
-     * The X12 security settings.
-     */
     @InputImport(name="securitySettings", required=true)
     private final X12SecuritySettingsResponse securitySettings;
 
@@ -119,9 +89,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.securitySettings;
     }
 
-    /**
-     * The X12 validation override settings.
-     */
     @InputImport(name="validationOverrides")
     private final @Nullable List<X12ValidationOverrideResponse> validationOverrides;
 
@@ -129,9 +96,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
 
-    /**
-     * The X12 validation settings.
-     */
     @InputImport(name="validationSettings", required=true)
     private final X12ValidationSettingsResponse validationSettings;
 
@@ -139,9 +103,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.validationSettings;
     }
 
-    /**
-     * The X12 delimiter override settings.
-     */
     @InputImport(name="x12DelimiterOverrides")
     private final @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
 

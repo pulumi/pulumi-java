@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BigQueryDestinationResponse {
-/**
- * The ID of a BigQuery Dataset.
- */
     private final String datasetId;
 
     @OutputCustomType.Constructor({"datasetId"})
@@ -19,9 +16,6 @@ public final class BigQueryDestinationResponse {
         this.datasetId = Objects.requireNonNull(datasetId);
     }
 
-/**
- * The ID of a BigQuery Dataset.
- */
     public String getDatasetId() {
         return this.datasetId;
     }

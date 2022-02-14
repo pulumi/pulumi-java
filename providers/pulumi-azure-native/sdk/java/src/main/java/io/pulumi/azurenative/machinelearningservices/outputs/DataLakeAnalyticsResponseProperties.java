@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataLakeAnalyticsResponseProperties {
-/**
- * DataLake Store Account Name
- */
     private final @Nullable String dataLakeStoreAccountName;
 
     @OutputCustomType.Constructor({"dataLakeStoreAccountName"})
@@ -21,9 +18,6 @@ public final class DataLakeAnalyticsResponseProperties {
         this.dataLakeStoreAccountName = dataLakeStoreAccountName;
     }
 
-/**
- * DataLake Store Account Name
- */
     public Optional<String> getDataLakeStoreAccountName() {
         return Optional.ofNullable(this.dataLakeStoreAccountName);
     }

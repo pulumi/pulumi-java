@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketCustomPlacementConfigResponse {
-/**
- * The list of regional locations in which data is placed.
- */
     private final List<String> dataLocations;
 
     @OutputCustomType.Constructor({"dataLocations"})
@@ -20,9 +17,6 @@ public final class BucketCustomPlacementConfigResponse {
         this.dataLocations = Objects.requireNonNull(dataLocations);
     }
 
-/**
- * The list of regional locations in which data is placed.
- */
     public List<String> getDataLocations() {
         return this.dataLocations;
     }

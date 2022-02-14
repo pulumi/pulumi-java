@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * An NS record.
- */
 public final class NsRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NsRecordResponse Empty = new NsRecordResponse();
 
-    /**
-     * The name server name for this NS record.
-     */
     @InputImport(name="nsdname")
     private final @Nullable String nsdname;
 

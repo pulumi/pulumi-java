@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * This activity suspends pipeline execution for the specified interval.
- */
 public final class WaitActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WaitActivityArgs Empty = new WaitActivityArgs();
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -31,9 +25,6 @@ public final class WaitActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -41,9 +32,6 @@ public final class WaitActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -51,10 +39,6 @@ public final class WaitActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'Wait'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -62,9 +46,6 @@ Expected value is 'Wait'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
@@ -72,9 +53,6 @@ Expected value is 'Wait'.
         return this.userProperties == null ? Input.empty() : this.userProperties;
     }
 
-    /**
-     * Duration in seconds.
-     */
     @InputImport(name="waitTimeInSeconds", required=true)
     private final Input<Object> waitTimeInSeconds;
 

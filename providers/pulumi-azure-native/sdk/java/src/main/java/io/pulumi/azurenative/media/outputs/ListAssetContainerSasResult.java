@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListAssetContainerSasResult {
-/**
- * The list of Asset container SAS URLs.
- */
     private final @Nullable List<String> assetContainerSasUrls;
 
     @OutputCustomType.Constructor({"assetContainerSasUrls"})
@@ -21,9 +18,6 @@ public final class ListAssetContainerSasResult {
         this.assetContainerSasUrls = assetContainerSasUrls;
     }
 
-/**
- * The list of Asset container SAS URLs.
- */
     public List<String> getAssetContainerSasUrls() {
         return this.assetContainerSasUrls == null ? List.of() : this.assetContainerSasUrls;
     }

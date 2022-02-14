@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Specifies set of certificates that should be installed onto the virtual machines.
- */
 public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VaultSecretGroupResponse Empty = new VaultSecretGroupResponse();
 
-    /**
-     * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
-     */
     @InputImport(name="sourceVault", required=true)
     private final SubResourceResponse sourceVault;
 
@@ -27,9 +21,6 @@ public final class VaultSecretGroupResponse extends io.pulumi.resources.InvokeAr
         return this.sourceVault;
     }
 
-    /**
-     * The list of key vault references in SourceVault which contain certificates.
-     */
     @InputImport(name="vaultCertificates", required=true)
     private final List<VaultCertificateResponse> vaultCertificates;
 

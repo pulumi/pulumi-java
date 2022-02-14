@@ -19,739 +19,87 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The policy assignment.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update a policy assignment
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignment = new AzureNative.Authorization.PolicyAssignment("policyAssignment", new AzureNative.Authorization.PolicyAssignmentArgs
-        {
-            Description = "Force resource names to begin with given DeptA and end with -LC",
-            DisplayName = "Enforce resource naming rules",
-            Metadata = 
-            {
-                { "assignedBy", "Special Someone" },
-            },
-            NonComplianceMessages = 
-            {
-                new AzureNative.Authorization.Inputs.NonComplianceMessageArgs
-                {
-                    Message = "Resource names must start with 'DeptA' and end with '-LC'.",
-                },
-            },
-            Parameters = 
-            {
-                { "prefix", new AzureNative.Authorization.Inputs.ParameterValuesValueArgs
-                {
-                    Value = "DeptA",
-                } },
-                { "suffix", new AzureNative.Authorization.Inputs.ParameterValuesValueArgs
-                {
-                    Value = "-LC",
-                } },
-            },
-            PolicyAssignmentName = "EnforceNaming",
-            PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-            Scope = "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
-			Description: pulumi.String("Force resource names to begin with given DeptA and end with -LC"),
-			DisplayName: pulumi.String("Enforce resource naming rules"),
-			Metadata: pulumi.Any{
-				AssignedBy: "Special Someone",
-			},
-			NonComplianceMessages: []authorization.NonComplianceMessageArgs{
-				&authorization.NonComplianceMessageArgs{
-					Message: pulumi.String("Resource names must start with 'DeptA' and end with '-LC'."),
-				},
-			},
-			Parameters: authorization.ParameterValuesValueMap{
-				"prefix": &authorization.ParameterValuesValueArgs{
-					Value: pulumi.Any("DeptA"),
-				},
-				"suffix": &authorization.ParameterValuesValueArgs{
-					Value: pulumi.Any("-LC"),
-				},
-			},
-			PolicyAssignmentName: pulumi.String("EnforceNaming"),
-			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming"),
-			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignment = new azure_native.authorization.PolicyAssignment("policyAssignment", {
-    description: "Force resource names to begin with given DeptA and end with -LC",
-    displayName: "Enforce resource naming rules",
-    metadata: {
-        assignedBy: "Special Someone",
-    },
-    nonComplianceMessages: [{
-        message: "Resource names must start with 'DeptA' and end with '-LC'.",
-    }],
-    parameters: {
-        prefix: {
-            value: "DeptA",
-        },
-        suffix: {
-            value: "-LC",
-        },
-    },
-    policyAssignmentName: "EnforceNaming",
-    policyDefinitionId: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-    scope: "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignment",
-    description="Force resource names to begin with given DeptA and end with -LC",
-    display_name="Enforce resource naming rules",
-    metadata={
-        "assignedBy": "Special Someone",
-    },
-    non_compliance_messages=[azure_native.authorization.NonComplianceMessageArgs(
-        message="Resource names must start with 'DeptA' and end with '-LC'.",
-    )],
-    parameters={
-        "prefix": azure_native.authorization.ParameterValuesValueArgs(
-            value="DeptA",
-        ),
-        "suffix": azure_native.authorization.ParameterValuesValueArgs(
-            value="-LC",
-        ),
-    },
-    policy_assignment_name="EnforceNaming",
-    policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-    scope="subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create or update a policy assignment with a managed identity
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignment = new AzureNative.Authorization.PolicyAssignment("policyAssignment", new AzureNative.Authorization.PolicyAssignmentArgs
-        {
-            Description = "Force resource names to begin with given DeptA and end with -LC",
-            DisplayName = "Enforce resource naming rules",
-            EnforcementMode = "Default",
-            Identity = new AzureNative.Authorization.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Location = "eastus",
-            Metadata = 
-            {
-                { "assignedBy", "Foo Bar" },
-            },
-            Parameters = 
-            {
-                { "prefix", new AzureNative.Authorization.Inputs.ParameterValuesValueArgs
-                {
-                    Value = "DeptA",
-                } },
-                { "suffix", new AzureNative.Authorization.Inputs.ParameterValuesValueArgs
-                {
-                    Value = "-LC",
-                } },
-            },
-            PolicyAssignmentName = "EnforceNaming",
-            PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-            Scope = "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
-			Description:     pulumi.String("Force resource names to begin with given DeptA and end with -LC"),
-			DisplayName:     pulumi.String("Enforce resource naming rules"),
-			EnforcementMode: pulumi.String("Default"),
-			Identity: &authorization.IdentityArgs{
-				Type: "SystemAssigned",
-			},
-			Location: pulumi.String("eastus"),
-			Metadata: pulumi.Any{
-				AssignedBy: "Foo Bar",
-			},
-			Parameters: authorization.ParameterValuesValueMap{
-				"prefix": &authorization.ParameterValuesValueArgs{
-					Value: pulumi.Any("DeptA"),
-				},
-				"suffix": &authorization.ParameterValuesValueArgs{
-					Value: pulumi.Any("-LC"),
-				},
-			},
-			PolicyAssignmentName: pulumi.String("EnforceNaming"),
-			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming"),
-			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignment = new azure_native.authorization.PolicyAssignment("policyAssignment", {
-    description: "Force resource names to begin with given DeptA and end with -LC",
-    displayName: "Enforce resource naming rules",
-    enforcementMode: "Default",
-    identity: {
-        type: "SystemAssigned",
-    },
-    location: "eastus",
-    metadata: {
-        assignedBy: "Foo Bar",
-    },
-    parameters: {
-        prefix: {
-            value: "DeptA",
-        },
-        suffix: {
-            value: "-LC",
-        },
-    },
-    policyAssignmentName: "EnforceNaming",
-    policyDefinitionId: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-    scope: "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignment",
-    description="Force resource names to begin with given DeptA and end with -LC",
-    display_name="Enforce resource naming rules",
-    enforcement_mode="Default",
-    identity=azure_native.authorization.IdentityArgs(
-        type="SystemAssigned",
-    ),
-    location="eastus",
-    metadata={
-        "assignedBy": "Foo Bar",
-    },
-    parameters={
-        "prefix": azure_native.authorization.ParameterValuesValueArgs(
-            value="DeptA",
-        ),
-        "suffix": azure_native.authorization.ParameterValuesValueArgs(
-            value="-LC",
-        ),
-    },
-    policy_assignment_name="EnforceNaming",
-    policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-    scope="subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create or update a policy assignment with multiple non-compliance messages
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignment = new AzureNative.Authorization.PolicyAssignment("policyAssignment", new AzureNative.Authorization.PolicyAssignmentArgs
-        {
-            DisplayName = "Enforce security policies",
-            NonComplianceMessages = 
-            {
-                new AzureNative.Authorization.Inputs.NonComplianceMessageArgs
-                {
-                    Message = "Resources must comply with all internal security policies. See <internal site URL> for more info.",
-                },
-                new AzureNative.Authorization.Inputs.NonComplianceMessageArgs
-                {
-                    Message = "Resource names must start with 'DeptA' and end with '-LC'.",
-                    PolicyDefinitionReferenceId = "10420126870854049575",
-                },
-                new AzureNative.Authorization.Inputs.NonComplianceMessageArgs
-                {
-                    Message = "Storage accounts must have firewall rules configured.",
-                    PolicyDefinitionReferenceId = "8572513655450389710",
-                },
-            },
-            PolicyAssignmentName = "securityInitAssignment",
-            PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/securityInitiative",
-            Scope = "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
-			DisplayName: pulumi.String("Enforce security policies"),
-			NonComplianceMessages: []authorization.NonComplianceMessageArgs{
-				&authorization.NonComplianceMessageArgs{
-					Message: pulumi.String("Resources must comply with all internal security policies. See <internal site URL> for more info."),
-				},
-				&authorization.NonComplianceMessageArgs{
-					Message:                     pulumi.String("Resource names must start with 'DeptA' and end with '-LC'."),
-					PolicyDefinitionReferenceId: pulumi.String("10420126870854049575"),
-				},
-				&authorization.NonComplianceMessageArgs{
-					Message:                     pulumi.String("Storage accounts must have firewall rules configured."),
-					PolicyDefinitionReferenceId: pulumi.String("8572513655450389710"),
-				},
-			},
-			PolicyAssignmentName: pulumi.String("securityInitAssignment"),
-			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/securityInitiative"),
-			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignment = new azure_native.authorization.PolicyAssignment("policyAssignment", {
-    displayName: "Enforce security policies",
-    nonComplianceMessages: [
-        {
-            message: "Resources must comply with all internal security policies. See <internal site URL> for more info.",
-        },
-        {
-            message: "Resource names must start with 'DeptA' and end with '-LC'.",
-            policyDefinitionReferenceId: "10420126870854049575",
-        },
-        {
-            message: "Storage accounts must have firewall rules configured.",
-            policyDefinitionReferenceId: "8572513655450389710",
-        },
-    ],
-    policyAssignmentName: "securityInitAssignment",
-    policyDefinitionId: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/securityInitiative",
-    scope: "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignment",
-    display_name="Enforce security policies",
-    non_compliance_messages=[
-        azure_native.authorization.NonComplianceMessageArgs(
-            message="Resources must comply with all internal security policies. See <internal site URL> for more info.",
-        ),
-        azure_native.authorization.NonComplianceMessageArgs(
-            message="Resource names must start with 'DeptA' and end with '-LC'.",
-            policy_definition_reference_id="10420126870854049575",
-        ),
-        azure_native.authorization.NonComplianceMessageArgs(
-            message="Storage accounts must have firewall rules configured.",
-            policy_definition_reference_id="8572513655450389710",
-        ),
-    ],
-    policy_assignment_name="securityInitAssignment",
-    policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/securityInitiative",
-    scope="subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create or update a policy assignment without enforcing policy effect during resource creation or update.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var policyAssignment = new AzureNative.Authorization.PolicyAssignment("policyAssignment", new AzureNative.Authorization.PolicyAssignmentArgs
-        {
-            Description = "Force resource names to begin with given DeptA and end with -LC",
-            DisplayName = "Enforce resource naming rules",
-            EnforcementMode = "DoNotEnforce",
-            Metadata = 
-            {
-                { "assignedBy", "Special Someone" },
-            },
-            Parameters = 
-            {
-                { "prefix", new AzureNative.Authorization.Inputs.ParameterValuesValueArgs
-                {
-                    Value = "DeptA",
-                } },
-                { "suffix", new AzureNative.Authorization.Inputs.ParameterValuesValueArgs
-                {
-                    Value = "-LC",
-                } },
-            },
-            PolicyAssignmentName = "EnforceNaming",
-            PolicyDefinitionId = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-            Scope = "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
-			Description:     pulumi.String("Force resource names to begin with given DeptA and end with -LC"),
-			DisplayName:     pulumi.String("Enforce resource naming rules"),
-			EnforcementMode: pulumi.String("DoNotEnforce"),
-			Metadata: pulumi.Any{
-				AssignedBy: "Special Someone",
-			},
-			Parameters: authorization.ParameterValuesValueMap{
-				"prefix": &authorization.ParameterValuesValueArgs{
-					Value: pulumi.Any("DeptA"),
-				},
-				"suffix": &authorization.ParameterValuesValueArgs{
-					Value: pulumi.Any("-LC"),
-				},
-			},
-			PolicyAssignmentName: pulumi.String("EnforceNaming"),
-			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming"),
-			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const policyAssignment = new azure_native.authorization.PolicyAssignment("policyAssignment", {
-    description: "Force resource names to begin with given DeptA and end with -LC",
-    displayName: "Enforce resource naming rules",
-    enforcementMode: "DoNotEnforce",
-    metadata: {
-        assignedBy: "Special Someone",
-    },
-    parameters: {
-        prefix: {
-            value: "DeptA",
-        },
-        suffix: {
-            value: "-LC",
-        },
-    },
-    policyAssignmentName: "EnforceNaming",
-    policyDefinitionId: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-    scope: "subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignment",
-    description="Force resource names to begin with given DeptA and end with -LC",
-    display_name="Enforce resource naming rules",
-    enforcement_mode="DoNotEnforce",
-    metadata={
-        "assignedBy": "Special Someone",
-    },
-    parameters={
-        "prefix": azure_native.authorization.ParameterValuesValueArgs(
-            value="DeptA",
-        ),
-        "suffix": azure_native.authorization.ParameterValuesValueArgs(
-            value="-LC",
-        ),
-    },
-    policy_assignment_name="EnforceNaming",
-    policy_definition_id="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming",
-    scope="subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:authorization:PolicyAssignment EnforceNaming /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/EnforceNaming 
-```
-
- */
 @ResourceType(type="azure-native:authorization:PolicyAssignment")
 public class PolicyAssignment extends io.pulumi.resources.CustomResource {
-    /**
-     * This message will be part of response in case of policy violation.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return This message will be part of response in case of policy violation.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * The display name of the policy assignment.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    /**
-     * @return The display name of the policy assignment.
-     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-     */
     @OutputExport(name="enforcementMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> enforcementMode;
 
-    /**
-     * @return The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-     */
     public Output</* @Nullable */ String> getEnforcementMode() {
         return this.enforcementMode;
     }
-    /**
-     * The managed identity associated with the policy assignment.
-     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
-    /**
-     * @return The managed identity associated with the policy assignment.
-     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The location of the policy assignment. Only required when utilizing managed identity.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the policy assignment. Only required when utilizing managed identity.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
-    /**
-     * @return The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
-    /**
-     * The name of the policy assignment.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the policy assignment.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The messages that describe why a resource is non-compliant with the policy.
-     */
     @OutputExport(name="nonComplianceMessages", type=List.class, parameters={NonComplianceMessageResponse.class})
     private Output</* @Nullable */ List<NonComplianceMessageResponse>> nonComplianceMessages;
 
-    /**
-     * @return The messages that describe why a resource is non-compliant with the policy.
-     */
     public Output</* @Nullable */ List<NonComplianceMessageResponse>> getNonComplianceMessages() {
         return this.nonComplianceMessages;
     }
-    /**
-     * The policy's excluded scopes.
-     */
     @OutputExport(name="notScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notScopes;
 
-    /**
-     * @return The policy's excluded scopes.
-     */
     public Output</* @Nullable */ List<String>> getNotScopes() {
         return this.notScopes;
     }
-    /**
-     * The parameter values for the assigned policy rule. The keys are the parameter names.
-     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterValuesValueResponse.class})
     private Output</* @Nullable */ Map<String,ParameterValuesValueResponse>> parameters;
 
-    /**
-     * @return The parameter values for the assigned policy rule. The keys are the parameter names.
-     */
     public Output</* @Nullable */ Map<String,ParameterValuesValueResponse>> getParameters() {
         return this.parameters;
     }
-    /**
-     * The ID of the policy definition or policy set definition being assigned.
-     */
     @OutputExport(name="policyDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionId;
 
-    /**
-     * @return The ID of the policy definition or policy set definition being assigned.
-     */
     public Output</* @Nullable */ String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
-    /**
-     * The scope for the policy assignment.
-     */
     @OutputExport(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
-    /**
-     * @return The scope for the policy assignment.
-     */
     public Output<String> getScope() {
         return this.scope;
     }
-    /**
-     * The type of the policy assignment.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the policy assignment.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PolicyAssignment(String name, PolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:PolicyAssignment", name, args == null ? PolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -781,14 +129,6 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PolicyAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicyAssignment(name, id, options);
     }

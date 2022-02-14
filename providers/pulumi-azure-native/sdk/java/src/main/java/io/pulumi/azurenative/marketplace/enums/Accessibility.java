@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Plan accessibility
- */
     @EnumType
     public enum Accessibility {
-/**
- * 
- */
         Unknown("Unknown"),
-/**
- * 
- */
         Public("Public"),
-/**
- * 
- */
         PrivateTenantOnLevel("PrivateTenantOnLevel"),
-/**
- * 
- */
         PrivateSubscriptionOnLevel("PrivateSubscriptionOnLevel");
 
         private final String value;

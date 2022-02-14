@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains IPv6 peering config.
- */
 public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final Ipv6ExpressRouteCircuitPeeringConfigResponse Empty = new Ipv6ExpressRouteCircuitPeeringConfigResponse();
 
-    /**
-     * The Microsoft peering configuration.
-     */
     @InputImport(name="microsoftPeeringConfig")
     private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
@@ -29,9 +23,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
         return this.microsoftPeeringConfig == null ? Optional.empty() : Optional.ofNullable(this.microsoftPeeringConfig);
     }
 
-    /**
-     * The primary address prefix.
-     */
     @InputImport(name="primaryPeerAddressPrefix")
     private final @Nullable String primaryPeerAddressPrefix;
 
@@ -39,9 +30,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
         return this.primaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
 
-    /**
-     * The reference to the RouteFilter resource.
-     */
     @InputImport(name="routeFilter")
     private final @Nullable SubResourceResponse routeFilter;
 
@@ -49,9 +37,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
         return this.routeFilter == null ? Optional.empty() : Optional.ofNullable(this.routeFilter);
     }
 
-    /**
-     * The secondary address prefix.
-     */
     @InputImport(name="secondaryPeerAddressPrefix")
     private final @Nullable String secondaryPeerAddressPrefix;
 
@@ -59,9 +44,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
         return this.secondaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
 
-    /**
-     * The state of peering.
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

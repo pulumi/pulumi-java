@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Name of this SKU.
- */
     @EnumType
     public enum ClusterSkuName {
-/**
- * 
- */
         Dedicated("Dedicated");
 
         private final String value;

@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The properties that make up a REST request
- */
 public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestRequestResponse Empty = new RestRequestResponse();
 
-    /**
-     * The authentication information required in the request to the health provider.
-     */
     @InputImport(name="authentication", required=true)
     private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
 
@@ -28,9 +22,6 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
         return this.authentication;
     }
 
-    /**
-     * The HTTP method to use for the request.
-     */
     @InputImport(name="method", required=true)
     private final String method;
 
@@ -38,9 +29,6 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
         return this.method;
     }
 
-    /**
-     * The HTTP URI to use for the request.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

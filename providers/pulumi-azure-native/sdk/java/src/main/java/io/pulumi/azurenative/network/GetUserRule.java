@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: DefaultUserRule, UserRule. */
 public class GetUserRule {
-/**
- * Network base rule.
-API Version: 2021-02-01-preview.
- *
- * Network base rule.
- */
     public static CompletableFuture<GetUserRuleResult> invokeAsync(GetUserRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getUserRule", TypeShape.of(GetUserRuleResult.class), args == null ? GetUserRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetManagedInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedInstanceArgs Empty = new GetManagedInstanceArgs();
 
-    /**
-     * The child resources to include in the response.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetManagedInstanceArgs extends io.pulumi.resources.InvokeArgs
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the managed instance.
-     */
     @InputImport(name="managedInstanceName", required=true)
     private final String managedInstanceName;
 
@@ -37,9 +28,6 @@ public final class GetManagedInstanceArgs extends io.pulumi.resources.InvokeArgs
         return this.managedInstanceName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

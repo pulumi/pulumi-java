@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TagsResponse {
-/**
- * 
- */
     private final @Nullable Map<String,String> tags;
 
     @OutputCustomType.Constructor({"tags"})
@@ -21,9 +18,6 @@ public final class TagsResponse {
         this.tags = tags;
     }
 
-/**
- * 
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

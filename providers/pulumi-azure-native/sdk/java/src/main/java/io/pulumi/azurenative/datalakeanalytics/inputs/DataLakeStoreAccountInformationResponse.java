@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Data Lake Store account information.
- */
 public final class DataLakeStoreAccountInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataLakeStoreAccountInformationResponse Empty = new DataLakeStoreAccountInformationResponse();
 
-    /**
-     * The resource identifier.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -25,9 +19,6 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
         return this.id;
     }
 
-    /**
-     * The resource name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,9 +26,6 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
         return this.name;
     }
 
-    /**
-     * The optional suffix for the Data Lake Store account.
-     */
     @InputImport(name="suffix", required=true)
     private final String suffix;
 
@@ -45,9 +33,6 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
         return this.suffix;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

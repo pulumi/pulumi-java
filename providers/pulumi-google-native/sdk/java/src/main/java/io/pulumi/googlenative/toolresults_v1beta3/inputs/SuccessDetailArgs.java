@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details for an outcome with a SUCCESS outcome summary. LINT.IfChange
- */
 public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SuccessDetailArgs Empty = new SuccessDetailArgs();
 
-    /**
-     * If a native process other than the app crashed.
-     */
     @InputImport(name="otherNativeCrash")
     private final @Nullable Input<Boolean> otherNativeCrash;
 

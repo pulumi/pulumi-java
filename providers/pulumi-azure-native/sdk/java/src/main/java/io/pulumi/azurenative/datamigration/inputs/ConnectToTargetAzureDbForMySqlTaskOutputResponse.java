@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Output for the task that validates connection to Azure Database for MySQL and target server requirements
- */
 public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetAzureDbForMySqlTaskOutputResponse Empty = new ConnectToTargetAzureDbForMySqlTaskOutputResponse();
 
-    /**
-     * List of databases on target server
-     */
     @InputImport(name="databases", required=true)
     private final List<String> databases;
 
@@ -27,9 +21,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
         return this.databases;
     }
 
-    /**
-     * Result identifier
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -37,9 +28,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
         return this.id;
     }
 
-    /**
-     * Version of the target server
-     */
     @InputImport(name="serverVersion", required=true)
     private final String serverVersion;
 
@@ -47,9 +35,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
         return this.serverVersion;
     }
 
-    /**
-     * Target server brand version
-     */
     @InputImport(name="targetServerBrandVersion", required=true)
     private final String targetServerBrandVersion;
 
@@ -57,9 +42,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse extends io.p
         return this.targetServerBrandVersion;
     }
 
-    /**
-     * Validation errors associated with the task
-     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

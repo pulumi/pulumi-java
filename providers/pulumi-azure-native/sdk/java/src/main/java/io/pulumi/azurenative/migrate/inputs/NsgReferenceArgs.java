@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines reference to NSG.
- */
 public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NsgReferenceArgs Empty = new NsgReferenceArgs();
 
-    /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
-     */
     @InputImport(name="sourceArmResourceId", required=true)
     private final Input<String> sourceArmResourceId;
 

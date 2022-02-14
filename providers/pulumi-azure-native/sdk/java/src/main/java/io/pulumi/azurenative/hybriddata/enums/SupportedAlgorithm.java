@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The encryption algorithm used to encrypt data.
- */
     @EnumType
     public enum SupportedAlgorithm {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         RSA1_5("RSA1_5"),
-/**
- * 
- */
         RSA_OAEP("RSA_OAEP"),
-/**
- * 
- */
         PlainText("PlainText");
 
         private final String value;

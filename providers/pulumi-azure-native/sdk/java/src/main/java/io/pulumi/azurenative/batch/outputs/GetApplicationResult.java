@@ -12,33 +12,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApplicationResult {
-/**
- * A value indicating whether packages within the application may be overwritten using the same version string.
- */
     private final @Nullable Boolean allowUpdates;
-/**
- * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
- */
     private final @Nullable String defaultVersion;
-/**
- * The display name for the application.
- */
     private final @Nullable String displayName;
-/**
- * The ETag of the resource, used for concurrency statements.
- */
     private final String etag;
-/**
- * The ID of the resource.
- */
     private final String id;
-/**
- * The name of the resource.
- */
     private final String name;
-/**
- * The type of the resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"allowUpdates","defaultVersion","displayName","etag","id","name","type"})
@@ -59,45 +38,24 @@ public final class GetApplicationResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * A value indicating whether packages within the application may be overwritten using the same version string.
- */
     public Optional<Boolean> getAllowUpdates() {
         return Optional.ofNullable(this.allowUpdates);
     }
-/**
- * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
- */
     public Optional<String> getDefaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
-/**
- * The display name for the application.
- */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
-/**
- * The ETag of the resource, used for concurrency statements.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * The ID of the resource.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The type of the resource.
- */
     public String getType() {
         return this.type;
     }

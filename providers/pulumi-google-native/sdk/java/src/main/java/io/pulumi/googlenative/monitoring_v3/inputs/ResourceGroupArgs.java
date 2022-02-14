@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The resource submessage for group checks. It can be used instead of a monitored resource, when multiple resources are being monitored.
- */
 public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceGroupArgs Empty = new ResourceGroupArgs();
 
-    /**
-     * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
-     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -28,9 +22,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
-    /**
-     * The resource type of the group members.
-     */
     @InputImport(name="resourceType")
     private final @Nullable Input<ResourceGroupResourceType> resourceType;
 

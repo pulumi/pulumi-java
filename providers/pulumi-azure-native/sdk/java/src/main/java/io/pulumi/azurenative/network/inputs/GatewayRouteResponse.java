@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Gateway routing details.
- */
 public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayRouteResponse Empty = new GatewayRouteResponse();
 
-    /**
-     * The route's AS path sequence.
-     */
     @InputImport(name="asPath", required=true)
     private final String asPath;
 
@@ -26,9 +20,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.asPath;
     }
 
-    /**
-     * The gateway's local address.
-     */
     @InputImport(name="localAddress", required=true)
     private final String localAddress;
 
@@ -36,9 +27,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.localAddress;
     }
 
-    /**
-     * The route's network prefix.
-     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -46,9 +34,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.network;
     }
 
-    /**
-     * The route's next hop.
-     */
     @InputImport(name="nextHop", required=true)
     private final String nextHop;
 
@@ -56,9 +41,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.nextHop;
     }
 
-    /**
-     * The source this route was learned from.
-     */
     @InputImport(name="origin", required=true)
     private final String origin;
 
@@ -66,9 +48,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.origin;
     }
 
-    /**
-     * The peer this route was learned from.
-     */
     @InputImport(name="sourcePeer", required=true)
     private final String sourcePeer;
 
@@ -76,9 +55,6 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourcePeer;
     }
 
-    /**
-     * The route's weight.
-     */
     @InputImport(name="weight", required=true)
     private final Integer weight;
 

@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetReferenceResponse {
-/**
- * Arguments for dataset.
- */
     private final @Nullable Map<String,Object> parameters;
-/**
- * Reference dataset name.
- */
     private final String referenceName;
-/**
- * Dataset reference type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"parameters","referenceName","type"})
@@ -35,21 +26,12 @@ public final class DatasetReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Arguments for dataset.
- */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-/**
- * Reference dataset name.
- */
     public String getReferenceName() {
         return this.referenceName;
     }
-/**
- * Dataset reference type.
- */
     public String getType() {
         return this.type;
     }

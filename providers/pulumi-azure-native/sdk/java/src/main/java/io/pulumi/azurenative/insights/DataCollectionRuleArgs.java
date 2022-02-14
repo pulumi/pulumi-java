@@ -17,16 +17,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataCollectionRuleArgs Empty = new DataCollectionRuleArgs();
 
-    /**
-     * The name of the data collection rule. The name is case insensitive.
-     */
     @InputImport(name="dataCollectionRuleName")
     private final @Nullable Input<String> dataCollectionRuleName;
 
@@ -34,9 +28,6 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
         return this.dataCollectionRuleName == null ? Input.empty() : this.dataCollectionRuleName;
     }
 
-    /**
-     * The specification of data flows.
-     */
     @InputImport(name="dataFlows")
     private final @Nullable Input<List<DataFlowArgs>> dataFlows;
 
@@ -44,10 +35,6 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
         return this.dataFlows == null ? Input.empty() : this.dataFlows;
     }
 
-    /**
-     * The specification of data sources. 
-This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
-     */
     @InputImport(name="dataSources")
     private final @Nullable Input<DataCollectionRuleDataSourcesArgs> dataSources;
 
@@ -55,9 +42,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return this.dataSources == null ? Input.empty() : this.dataSources;
     }
 
-    /**
-     * Description of the data collection rule.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,9 +49,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The specification of destinations.
-     */
     @InputImport(name="destinations")
     private final @Nullable Input<DataCollectionRuleDestinationsArgs> destinations;
 
@@ -75,9 +56,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return this.destinations == null ? Input.empty() : this.destinations;
     }
 
-    /**
-     * The kind of the resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,KnownDataCollectionRuleResourceKind>> kind;
 
@@ -85,9 +63,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The geo-location where the resource lives.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -95,9 +70,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -105,9 +77,6 @@ This property is optional and can be omitted if the rule is meant to be used via
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

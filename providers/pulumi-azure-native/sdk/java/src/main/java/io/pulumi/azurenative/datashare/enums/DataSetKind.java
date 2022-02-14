@@ -8,62 +8,20 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Kind of data set.
- */
     @EnumType
     public enum DataSetKind {
-/**
- * 
- */
         Blob("Blob"),
-/**
- * 
- */
         Container("Container"),
-/**
- * 
- */
         BlobFolder("BlobFolder"),
-/**
- * 
- */
         AdlsGen2FileSystem("AdlsGen2FileSystem"),
-/**
- * 
- */
         AdlsGen2Folder("AdlsGen2Folder"),
-/**
- * 
- */
         AdlsGen2File("AdlsGen2File"),
-/**
- * 
- */
         AdlsGen1Folder("AdlsGen1Folder"),
-/**
- * 
- */
         AdlsGen1File("AdlsGen1File"),
-/**
- * 
- */
         KustoCluster("KustoCluster"),
-/**
- * 
- */
         KustoDatabase("KustoDatabase"),
-/**
- * 
- */
         SqlDBTable("SqlDBTable"),
-/**
- * 
- */
         SqlDWTable("SqlDWTable"),
-/**
- * 
- */
         SynapseWorkspaceSqlPoolTable("SynapseWorkspaceSqlPoolTable");
 
         private final String value;

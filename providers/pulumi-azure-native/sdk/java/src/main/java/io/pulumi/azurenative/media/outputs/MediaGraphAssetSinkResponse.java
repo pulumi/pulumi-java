@@ -10,22 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MediaGraphAssetSinkResponse {
-/**
- * Asset name.
- */
     private final String assetName;
-/**
- * Sink inputs.
- */
     private final List<String> inputs;
-/**
- * Sink name.
- */
     private final String name;
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
- */
     private final String odataType;
 
     @OutputCustomType.Constructor({"assetName","inputs","name","odataType"})
@@ -40,28 +27,15 @@ Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
         this.odataType = Objects.requireNonNull(odataType);
     }
 
-/**
- * Asset name.
- */
     public String getAssetName() {
         return this.assetName;
     }
-/**
- * Sink inputs.
- */
     public List<String> getInputs() {
         return this.inputs;
     }
-/**
- * Sink name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The discriminator for derived types.
-Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
- */
     public String getOdataType() {
         return this.odataType;
     }

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PatientIdResponse {
-/**
- * ID type. For example, MRN or NHS.
- */
     private final String type;
-/**
- * The patient's unique identifier.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -26,15 +20,9 @@ public final class PatientIdResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * ID type. For example, MRN or NHS.
- */
     public String getType() {
         return this.type;
     }
-/**
- * The patient's unique identifier.
- */
     public String getValue() {
         return this.value;
     }

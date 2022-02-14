@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Set disk storage settings for SQL Server.
- */
 public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SQLStorageSettingsArgs Empty = new SQLStorageSettingsArgs();
 
-    /**
-     * SQL Server default file path
-     */
     @InputImport(name="defaultFilePath")
     private final @Nullable Input<String> defaultFilePath;
 
@@ -29,9 +23,6 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.defaultFilePath == null ? Input.empty() : this.defaultFilePath;
     }
 
-    /**
-     * Logical Unit Numbers for the disks.
-     */
     @InputImport(name="luns")
     private final @Nullable Input<List<Integer>> luns;
 

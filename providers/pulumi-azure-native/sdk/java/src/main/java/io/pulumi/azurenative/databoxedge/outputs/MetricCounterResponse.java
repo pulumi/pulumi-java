@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricCounterResponse {
-/**
- * The additional dimensions to be added to metric.
- */
     private final @Nullable List<MetricDimensionResponse> additionalDimensions;
-/**
- * The dimension filter.
- */
     private final @Nullable List<MetricDimensionResponse> dimensionFilter;
-/**
- * The instance from which counter should be collected.
- */
     private final @Nullable String instance;
-/**
- * The counter name.
- */
     private final String name;
 
     @OutputCustomType.Constructor({"additionalDimensions","dimensionFilter","instance","name"})
@@ -42,27 +30,15 @@ public final class MetricCounterResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * The additional dimensions to be added to metric.
- */
     public List<MetricDimensionResponse> getAdditionalDimensions() {
         return this.additionalDimensions == null ? List.of() : this.additionalDimensions;
     }
-/**
- * The dimension filter.
- */
     public List<MetricDimensionResponse> getDimensionFilter() {
         return this.dimensionFilter == null ? List.of() : this.dimensionFilter;
     }
-/**
- * The instance from which counter should be collected.
- */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
-/**
- * The counter name.
- */
     public String getName() {
         return this.name;
     }

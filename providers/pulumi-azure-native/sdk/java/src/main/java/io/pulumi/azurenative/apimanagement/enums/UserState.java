@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
- */
     @EnumType
     public enum UserState {
-/**
- * User state is active.
- */
         Active("active"),
-/**
- * User is blocked. Blocked users cannot authenticate at developer portal or call API.
- */
         Blocked("blocked"),
-/**
- * User account is pending. Requires identity confirmation before it can be made active.
- */
         Pending("pending"),
-/**
- * User account is closed. All identities and related entities are removed.
- */
         Deleted("deleted");
 
         private final String value;

@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointACLResponse {
-/**
- * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     private final @Nullable List<String> allow;
-/**
- * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     private final @Nullable List<String> deny;
-/**
- * Name of the private endpoint connection
- */
     private final String name;
 
     @OutputCustomType.Constructor({"allow","deny","name"})
@@ -34,21 +25,12 @@ public final class PrivateEndpointACLResponse {
         this.name = Objects.requireNonNull(name);
     }
 
-/**
- * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     public List<String> getAllow() {
         return this.allow == null ? List.of() : this.allow;
     }
-/**
- * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
- */
     public List<String> getDeny() {
         return this.deny == null ? List.of() : this.deny;
     }
-/**
- * Name of the private endpoint connection
- */
     public String getName() {
         return this.name;
     }

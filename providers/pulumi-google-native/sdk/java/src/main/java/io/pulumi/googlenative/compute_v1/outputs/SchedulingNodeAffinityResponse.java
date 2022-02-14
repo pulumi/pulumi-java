@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchedulingNodeAffinityResponse {
-/**
- * Corresponds to the label key of Node resource.
- */
     private final String key;
-/**
- * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
- */
     private final String operator;
-/**
- * Corresponds to the label values of Node resource.
- */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"key","operator","values"})
@@ -33,21 +24,12 @@ public final class SchedulingNodeAffinityResponse {
         this.values = Objects.requireNonNull(values);
     }
 
-/**
- * Corresponds to the label key of Node resource.
- */
     public String getKey() {
         return this.key;
     }
-/**
- * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
- */
     public String getOperator() {
         return this.operator;
     }
-/**
- * Corresponds to the label values of Node resource.
- */
     public List<String> getValues() {
         return this.values;
     }

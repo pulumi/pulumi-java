@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListSqlMigrationServiceAuthKeysArgs Empty = new ListSqlMigrationServiceAuthKeysArgs();
 
-    /**
-     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the SQL Migration Service.
-     */
     @InputImport(name="sqlMigrationServiceName", required=true)
     private final String sqlMigrationServiceName;
 

@@ -8,58 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The severity for alerts created by this alert rule.
- */
     @EnumType
     public enum AttackTactic {
-/**
- * 
- */
         InitialAccess("InitialAccess"),
-/**
- * 
- */
         Execution("Execution"),
-/**
- * 
- */
         Persistence("Persistence"),
-/**
- * 
- */
         PrivilegeEscalation("PrivilegeEscalation"),
-/**
- * 
- */
         DefenseEvasion("DefenseEvasion"),
-/**
- * 
- */
         CredentialAccess("CredentialAccess"),
-/**
- * 
- */
         Discovery("Discovery"),
-/**
- * 
- */
         LateralMovement("LateralMovement"),
-/**
- * 
- */
         Collection("Collection"),
-/**
- * 
- */
         Exfiltration("Exfiltration"),
-/**
- * 
- */
         CommandAndControl("CommandAndControl"),
-/**
- * 
- */
         Impact("Impact");
 
         private final String value;

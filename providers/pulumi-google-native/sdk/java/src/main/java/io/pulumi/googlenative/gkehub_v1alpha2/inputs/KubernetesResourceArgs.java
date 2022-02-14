@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * KubernetesResource contains the YAML manifests and configuration for Membership Kubernetes resources in the cluster. After CreateMembership or UpdateMembership, these resources should be re-applied in the cluster.
- */
 public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubernetesResourceArgs Empty = new KubernetesResourceArgs();
 
-    /**
-     * Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during Create or Update, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
-     */
     @InputImport(name="membershipCrManifest")
     private final @Nullable Input<String> membershipCrManifest;
 
@@ -28,9 +22,6 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
         return this.membershipCrManifest == null ? Input.empty() : this.membershipCrManifest;
     }
 
-    /**
-     * Optional. Options for Kubernetes resource generation.
-     */
     @InputImport(name="resourceOptions")
     private final @Nullable Input<ResourceOptionsArgs> resourceOptions;
 

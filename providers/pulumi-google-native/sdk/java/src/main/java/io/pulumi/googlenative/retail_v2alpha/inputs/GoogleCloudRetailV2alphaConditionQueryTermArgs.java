@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Query terms that we want to match on.
- */
 public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2alphaConditionQueryTermArgs Empty = new GoogleCloudRetailV2alphaConditionQueryTermArgs();
 
-    /**
-     * Whether this is supposed to be a full or partial match.
-     */
     @InputImport(name="fullMatch")
     private final @Nullable Input<Boolean> fullMatch;
 
@@ -28,9 +22,6 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
         return this.fullMatch == null ? Input.empty() : this.fullMatch;
     }
 
-    /**
-     * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

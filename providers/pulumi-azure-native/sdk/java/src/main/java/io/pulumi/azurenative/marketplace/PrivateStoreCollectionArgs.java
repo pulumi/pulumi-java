@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class PrivateStoreCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateStoreCollectionArgs Empty = new PrivateStoreCollectionArgs();
 
-    /**
-     * Indicating whether all subscriptions are selected (=true) or not (=false).
-     */
     @InputImport(name="allSubscriptions")
     private final @Nullable Input<Boolean> allSubscriptions;
 
@@ -29,9 +23,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
         return this.allSubscriptions == null ? Input.empty() : this.allSubscriptions;
     }
 
-    /**
-     * Gets or sets the association with Commercial's Billing Account.
-     */
     @InputImport(name="claim")
     private final @Nullable Input<String> claim;
 
@@ -39,9 +30,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
         return this.claim == null ? Input.empty() : this.claim;
     }
 
-    /**
-     * The collection ID
-     */
     @InputImport(name="collectionId")
     private final @Nullable Input<String> collectionId;
 
@@ -49,9 +37,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
         return this.collectionId == null ? Input.empty() : this.collectionId;
     }
 
-    /**
-     * Gets or sets collection name.
-     */
     @InputImport(name="collectionName")
     private final @Nullable Input<String> collectionName;
 
@@ -59,9 +44,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
         return this.collectionName == null ? Input.empty() : this.collectionName;
     }
 
-    /**
-     * Indicating whether the collection is enabled or disabled.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -69,9 +51,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * The store ID - must use the tenant ID
-     */
     @InputImport(name="privateStoreId", required=true)
     private final Input<String> privateStoreId;
 
@@ -79,9 +58,6 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
         return this.privateStoreId;
     }
 
-    /**
-     * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
-     */
     @InputImport(name="subscriptionsList")
     private final @Nullable Input<List<String>> subscriptionsList;
 

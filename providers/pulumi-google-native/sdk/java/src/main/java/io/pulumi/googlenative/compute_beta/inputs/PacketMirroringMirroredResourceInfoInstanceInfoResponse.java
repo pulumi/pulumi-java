@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PacketMirroringMirroredResourceInfoInstanceInfoResponse Empty = new PacketMirroringMirroredResourceInfoInstanceInfoResponse();
 
-    /**
-     * Unique identifier for the instance; defined by the server.
-     */
     @InputImport(name="canonicalUrl", required=true)
     private final String canonicalUrl;
 
@@ -25,9 +19,6 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
         return this.canonicalUrl;
     }
 
-    /**
-     * Resource URL to the virtual machine instance which is being mirrored.
-     */
     @InputImport(name="url", required=true)
     private final String url;
 

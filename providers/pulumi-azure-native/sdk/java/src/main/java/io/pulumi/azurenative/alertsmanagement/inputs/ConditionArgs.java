@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * condition to trigger an action rule
- */
 public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 
-    /**
-     * operator for a given condition
-     */
     @InputImport(name="operator")
     private final @Nullable Input<Either<String,Operator>> operator;
 
@@ -30,9 +24,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.operator == null ? Input.empty() : this.operator;
     }
 
-    /**
-     * list of values to match for a given condition.
-     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

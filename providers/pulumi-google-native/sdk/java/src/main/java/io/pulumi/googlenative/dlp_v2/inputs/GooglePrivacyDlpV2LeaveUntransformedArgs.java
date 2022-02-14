@@ -6,9 +6,6 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 import java.util.Objects;
 
 
-/**
- * Skips the data without modifying it if the requested transformation would cause an error. For example, if a `DateShift` transformation were applied an an IP address, this mode would leave the IP address unchanged in the response.
- */
 public final class GooglePrivacyDlpV2LeaveUntransformedArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2LeaveUntransformedArgs Empty = new GooglePrivacyDlpV2LeaveUntransformedArgs();

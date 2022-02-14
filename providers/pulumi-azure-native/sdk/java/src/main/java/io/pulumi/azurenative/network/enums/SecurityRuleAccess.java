@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The network traffic is allowed or denied.
- */
     @EnumType
     public enum SecurityRuleAccess {
-/**
- * 
- */
         Allow("Allow"),
-/**
- * 
- */
         Deny("Deny");
 
         private final String value;

@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InsightsTableResultResponse {
-/**
- * Columns Metadata of the table
- */
     private final @Nullable List<InsightsTableResultResponseColumns> columns;
-/**
- * Rows data of the table
- */
     private final @Nullable List<List<String>> rows;
 
     @OutputCustomType.Constructor({"columns","rows"})
@@ -29,15 +23,9 @@ public final class InsightsTableResultResponse {
         this.rows = rows;
     }
 
-/**
- * Columns Metadata of the table
- */
     public List<InsightsTableResultResponseColumns> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
-/**
- * Rows data of the table
- */
     public List<List<String>> getRows() {
         return this.rows == null ? List.of() : this.rows;
     }

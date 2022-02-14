@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetEkmConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEkmConnectionArgs Empty = new GetEkmConnectionArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="ekmConnectionId", required=true)
     private final String ekmConnectionId;
 
@@ -27,9 +21,6 @@ public final class GetEkmConnectionArgs extends io.pulumi.resources.InvokeArgs {
         return this.ekmConnectionId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -37,9 +28,6 @@ public final class GetEkmConnectionArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

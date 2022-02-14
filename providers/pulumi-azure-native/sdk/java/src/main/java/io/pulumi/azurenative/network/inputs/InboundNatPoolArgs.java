@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Inbound NAT pool of the load balancer.
- */
 public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InboundNatPoolArgs Empty = new InboundNatPoolArgs();
 
-    /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
-     */
     @InputImport(name="backendPort", required=true)
     private final Input<Integer> backendPort;
 
@@ -32,9 +26,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendPort;
     }
 
-    /**
-     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-     */
     @InputImport(name="enableFloatingIP")
     private final @Nullable Input<Boolean> enableFloatingIP;
 
@@ -42,9 +33,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableFloatingIP == null ? Input.empty() : this.enableFloatingIP;
     }
 
-    /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     */
     @InputImport(name="enableTcpReset")
     private final @Nullable Input<Boolean> enableTcpReset;
 
@@ -52,9 +40,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
     }
 
-    /**
-     * A reference to frontend IP addresses.
-     */
     @InputImport(name="frontendIPConfiguration")
     private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
@@ -62,9 +47,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
     }
 
-    /**
-     * The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
-     */
     @InputImport(name="frontendPortRangeEnd", required=true)
     private final Input<Integer> frontendPortRangeEnd;
 
@@ -72,9 +54,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendPortRangeEnd;
     }
 
-    /**
-     * The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
-     */
     @InputImport(name="frontendPortRangeStart", required=true)
     private final Input<Integer> frontendPortRangeStart;
 
@@ -82,9 +61,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontendPortRangeStart;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -92,9 +68,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
@@ -102,9 +75,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
     }
 
-    /**
-     * The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -112,9 +82,6 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The reference to the transport protocol used by the inbound NAT pool.
-     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,TransportProtocol>> protocol;
 

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger that runs every time the selected Blob container changes.
- */
 public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobTriggerArgs Empty = new BlobTriggerArgs();
 
-    /**
-     * List of tags that can be used for describing the trigger.
-     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -32,9 +26,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
-    /**
-     * Trigger description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,9 +33,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The path of the container/folder that will trigger the pipeline.
-     */
     @InputImport(name="folderPath", required=true)
     private final Input<String> folderPath;
 
@@ -52,9 +40,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.folderPath;
     }
 
-    /**
-     * The Azure Storage linked service reference.
-     */
     @InputImport(name="linkedService", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedService;
 
@@ -62,9 +47,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedService;
     }
 
-    /**
-     * The max number of parallel files to handle when it is triggered.
-     */
     @InputImport(name="maxConcurrency", required=true)
     private final Input<Integer> maxConcurrency;
 
@@ -72,9 +54,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrency;
     }
 
-    /**
-     * Pipelines that need to be started.
-     */
     @InputImport(name="pipelines")
     private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
@@ -82,10 +61,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelines == null ? Input.empty() : this.pipelines;
     }
 
-    /**
-     * Trigger type.
-Expected value is 'BlobTrigger'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

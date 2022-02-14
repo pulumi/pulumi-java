@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NormalizedVertexResponse {
-/**
- * X coordinate.
- */
     private final Double x;
-/**
- * Y coordinate.
- */
     private final Double y;
 
     @OutputCustomType.Constructor({"x","y"})
@@ -26,15 +20,9 @@ public final class NormalizedVertexResponse {
         this.y = Objects.requireNonNull(y);
     }
 
-/**
- * X coordinate.
- */
     public Double getX() {
         return this.x;
     }
-/**
- * Y coordinate.
- */
     public Double getY() {
         return this.y;
     }

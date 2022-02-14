@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Provides the configuration for logging a type of permissions. Example: { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.
- */
 public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuditLogConfigResponse Empty = new AuditLogConfigResponse();
 
-    /**
-     * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
-     */
     @InputImport(name="exemptedMembers", required=true)
     private final List<String> exemptedMembers;
 
@@ -27,9 +21,6 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.exemptedMembers;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="ignoreChildExemptions", required=true)
     private final Boolean ignoreChildExemptions;
 
@@ -37,9 +28,6 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.ignoreChildExemptions;
     }
 
-    /**
-     * The log type that this config enables.
-     */
     @InputImport(name="logType", required=true)
     private final String logType;
 

@@ -9,16 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * The AS2 agreement error settings.
- */
 public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AS2ErrorSettingsArgs Empty = new AS2ErrorSettingsArgs();
 
-    /**
-     * The value indicating whether to resend message If MDN is not received.
-     */
     @InputImport(name="resendIfMDNNotReceived", required=true)
     private final Input<Boolean> resendIfMDNNotReceived;
 
@@ -26,9 +20,6 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.resendIfMDNNotReceived;
     }
 
-    /**
-     * The value indicating whether to suspend duplicate message.
-     */
     @InputImport(name="suspendDuplicateMessage", required=true)
     private final Input<Boolean> suspendDuplicateMessage;
 

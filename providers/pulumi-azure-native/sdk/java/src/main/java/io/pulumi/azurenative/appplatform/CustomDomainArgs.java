@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomDomainArgs Empty = new CustomDomainArgs();
 
-    /**
-     * The name of the App resource.
-     */
     @InputImport(name="appName", required=true)
     private final Input<String> appName;
 
@@ -28,9 +22,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.appName;
     }
 
-    /**
-     * The name of the custom domain resource.
-     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -38,9 +29,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
-    /**
-     * Properties of the custom domain resource.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<CustomDomainPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,9 +43,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

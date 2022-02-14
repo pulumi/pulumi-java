@@ -15,175 +15,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Managed private endpoint resource type.
-API Version: 2018-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ManagedVirtualNetworks_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var managedPrivateEndpoint = new AzureNative.DataFactory.ManagedPrivateEndpoint("managedPrivateEndpoint", new AzureNative.DataFactory.ManagedPrivateEndpointArgs
-        {
-            FactoryName = "exampleFactoryName",
-            ManagedPrivateEndpointName = "exampleManagedPrivateEndpointName",
-            ManagedVirtualNetworkName = "exampleManagedVirtualNetworkName",
-            Properties = new AzureNative.DataFactory.Inputs.ManagedPrivateEndpointArgs
-            {
-                Fqdns = {},
-                GroupId = "blob",
-                PrivateLinkResourceId = "/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
-            },
-            ResourceGroupName = "exampleResourceGroup",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datafactory.NewManagedPrivateEndpoint(ctx, "managedPrivateEndpoint", &datafactory.ManagedPrivateEndpointArgs{
-			FactoryName:                pulumi.String("exampleFactoryName"),
-			ManagedPrivateEndpointName: pulumi.String("exampleManagedPrivateEndpointName"),
-			ManagedVirtualNetworkName:  pulumi.String("exampleManagedVirtualNetworkName"),
-			Properties: &datafactory.ManagedPrivateEndpointArgs{
-				Fqdns:                 pulumi.StringArray{},
-				GroupId:               pulumi.String("blob"),
-				PrivateLinkResourceId: pulumi.String("/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage"),
-			},
-			ResourceGroupName: pulumi.String("exampleResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const managedPrivateEndpoint = new azure_native.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint", {
-    factoryName: "exampleFactoryName",
-    managedPrivateEndpointName: "exampleManagedPrivateEndpointName",
-    managedVirtualNetworkName: "exampleManagedVirtualNetworkName",
-    properties: {
-        fqdns: [],
-        groupId: "blob",
-        privateLinkResourceId: "/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
-    },
-    resourceGroupName: "exampleResourceGroup",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-managed_private_endpoint = azure_native.datafactory.ManagedPrivateEndpoint("managedPrivateEndpoint",
-    factory_name="exampleFactoryName",
-    managed_private_endpoint_name="exampleManagedPrivateEndpointName",
-    managed_virtual_network_name="exampleManagedVirtualNetworkName",
-    properties=azure_native.datafactory.ManagedPrivateEndpointArgs(
-        fqdns=[],
-        group_id="blob",
-        private_link_resource_id="/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage",
-    ),
-    resource_group_name="exampleResourceGroup")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datafactory:ManagedPrivateEndpoint exampleManagedPrivateEndpointName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/managedVirtualNetworks/exampleManagedVirtualNetworkName/managedPrivateEndpoints/exampleManagedPrivateEndpointName 
-```
-
- */
 @ResourceType(type="azure-native:datafactory:ManagedPrivateEndpoint")
 public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
-    /**
-     * Etag identifies change in the resource.
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Etag identifies change in the resource.
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Managed private endpoint properties.
-     */
     @OutputExport(name="properties", type=ManagedPrivateEndpointResponse.class, parameters={})
     private Output<ManagedPrivateEndpointResponse> properties;
 
-    /**
-     * @return Managed private endpoint properties.
-     */
     public Output<ManagedPrivateEndpointResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * The resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ManagedPrivateEndpoint(String name, ManagedPrivateEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datafactory:ManagedPrivateEndpoint", name, args == null ? ManagedPrivateEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -202,14 +60,6 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ManagedPrivateEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedPrivateEndpoint(name, id, options);
     }

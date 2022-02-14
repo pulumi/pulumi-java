@@ -22,16 +22,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * The name of the Data Lake Store account.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -39,9 +33,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * The default owner group for all new folders and files created in the Data Lake Store account.
-     */
     @InputImport(name="defaultGroup")
     private final @Nullable Input<String> defaultGroup;
 
@@ -49,9 +40,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultGroup == null ? Input.empty() : this.defaultGroup;
     }
 
-    /**
-     * The Key Vault encryption configuration.
-     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -59,9 +47,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
-    /**
-     * The current state of encryption for this Data Lake Store account.
-     */
     @InputImport(name="encryptionState")
     private final @Nullable Input<EncryptionState> encryptionState;
 
@@ -69,9 +54,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionState == null ? Input.empty() : this.encryptionState;
     }
 
-    /**
-     * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     */
     @InputImport(name="firewallAllowAzureIps")
     private final @Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
@@ -79,9 +61,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallAllowAzureIps == null ? Input.empty() : this.firewallAllowAzureIps;
     }
 
-    /**
-     * The list of firewall rules associated with this Data Lake Store account.
-     */
     @InputImport(name="firewallRules")
     private final @Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
@@ -89,9 +68,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallRules == null ? Input.empty() : this.firewallRules;
     }
 
-    /**
-     * The current state of the IP address firewall for this Data Lake Store account.
-     */
     @InputImport(name="firewallState")
     private final @Nullable Input<FirewallState> firewallState;
 
@@ -99,9 +75,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.firewallState == null ? Input.empty() : this.firewallState;
     }
 
-    /**
-     * The Key Vault encryption identity, if any.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<EncryptionIdentityArgs> identity;
 
@@ -109,9 +82,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -119,9 +89,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The commitment tier to use for next month.
-     */
     @InputImport(name="newTier")
     private final @Nullable Input<TierType> newTier;
 
@@ -129,9 +96,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.newTier == null ? Input.empty() : this.newTier;
     }
 
-    /**
-     * The name of the Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -139,9 +103,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -149,9 +110,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The current state of the trusted identity provider feature for this Data Lake Store account.
-     */
     @InputImport(name="trustedIdProviderState")
     private final @Nullable Input<TrustedIdProviderState> trustedIdProviderState;
 
@@ -159,9 +117,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.trustedIdProviderState == null ? Input.empty() : this.trustedIdProviderState;
     }
 
-    /**
-     * The list of trusted identity providers associated with this Data Lake Store account.
-     */
     @InputImport(name="trustedIdProviders")
     private final @Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
@@ -169,9 +124,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.trustedIdProviders == null ? Input.empty() : this.trustedIdProviders;
     }
 
-    /**
-     * The list of virtual network rules associated with this Data Lake Store account.
-     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 

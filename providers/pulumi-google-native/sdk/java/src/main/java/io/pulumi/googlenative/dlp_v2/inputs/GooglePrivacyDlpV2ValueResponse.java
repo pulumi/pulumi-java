@@ -12,16 +12,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Set of primitive values supported by the system. Note that for the purposes of inspection or transformation, the number of bytes considered to comprise a 'Value' is based on its representation as a UTF-8 encoded string. For example, if 'integer_value' is set to 123456789, the number of bytes would be counted as 9, even though an int64 only holds up to 8 bytes of data.
- */
 public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ValueResponse Empty = new GooglePrivacyDlpV2ValueResponse();
 
-    /**
-     * boolean
-     */
     @InputImport(name="booleanValue", required=true)
     private final Boolean booleanValue;
 
@@ -29,9 +23,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.booleanValue;
     }
 
-    /**
-     * date
-     */
     @InputImport(name="dateValue", required=true)
     private final GoogleTypeDateResponse dateValue;
 
@@ -39,9 +30,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.dateValue;
     }
 
-    /**
-     * day of week
-     */
     @InputImport(name="dayOfWeekValue", required=true)
     private final String dayOfWeekValue;
 
@@ -49,9 +37,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.dayOfWeekValue;
     }
 
-    /**
-     * float
-     */
     @InputImport(name="floatValue", required=true)
     private final Double floatValue;
 
@@ -59,9 +44,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.floatValue;
     }
 
-    /**
-     * integer
-     */
     @InputImport(name="integerValue", required=true)
     private final String integerValue;
 
@@ -69,9 +51,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.integerValue;
     }
 
-    /**
-     * string
-     */
     @InputImport(name="stringValue", required=true)
     private final String stringValue;
 
@@ -79,9 +58,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.stringValue;
     }
 
-    /**
-     * time of day
-     */
     @InputImport(name="timeValue", required=true)
     private final GoogleTypeTimeOfDayResponse timeValue;
 
@@ -89,9 +65,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
         return this.timeValue;
     }
 
-    /**
-     * timestamp
-     */
     @InputImport(name="timestampValue", required=true)
     private final String timestampValue;
 

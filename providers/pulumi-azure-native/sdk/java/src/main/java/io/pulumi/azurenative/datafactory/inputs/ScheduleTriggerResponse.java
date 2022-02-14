@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger that creates pipeline runs periodically, on schedule.
- */
 public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleTriggerResponse Empty = new ScheduleTriggerResponse();
 
-    /**
-     * List of tags that can be used for describing the trigger.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -31,9 +25,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Trigger description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -41,9 +32,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Pipelines that need to be started.
-     */
     @InputImport(name="pipelines")
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
@@ -51,9 +39,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
-    /**
-     * Recurrence schedule configuration.
-     */
     @InputImport(name="recurrence", required=true)
     private final ScheduleTriggerRecurrenceResponse recurrence;
 
@@ -61,9 +46,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.recurrence;
     }
 
-    /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -71,10 +53,6 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.runtimeState;
     }
 
-    /**
-     * Trigger type.
-Expected value is 'ScheduleTrigger'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

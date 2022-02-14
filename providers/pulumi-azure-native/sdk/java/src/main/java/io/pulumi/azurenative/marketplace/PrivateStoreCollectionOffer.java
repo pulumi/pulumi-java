@@ -18,291 +18,93 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The privateStore offer data structure.
-API Version: 2021-06-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### PrivateStoreOffer_update
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateStoreCollectionOffer = new AzureNative.Marketplace.PrivateStoreCollectionOffer("privateStoreCollectionOffer", new AzureNative.Marketplace.PrivateStoreCollectionOfferArgs
-        {
-            CollectionId = "56a1a02d-8cf8-45df-bf37-d5f7120fcb3d",
-            ETag = "\"9301f4fd-0000-0100-0000-5e248b350666\"",
-            OfferId = "marketplacetestthirdparty.md-test-third-party-2",
-            PrivateStoreId = "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
-            SpecificPlanIdsLimitation = 
-            {
-                "0001",
-                "0002",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	marketplace "github.com/pulumi/pulumi-azure-native/sdk/go/azure/marketplace"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := marketplace.NewPrivateStoreCollectionOffer(ctx, "privateStoreCollectionOffer", &marketplace.PrivateStoreCollectionOfferArgs{
-			CollectionId:   pulumi.String("56a1a02d-8cf8-45df-bf37-d5f7120fcb3d"),
-			ETag:           pulumi.String("\"9301f4fd-0000-0100-0000-5e248b350666\""),
-			OfferId:        pulumi.String("marketplacetestthirdparty.md-test-third-party-2"),
-			PrivateStoreId: pulumi.String("a0e28e55-90c4-41d8-8e34-bb7ef7775406"),
-			SpecificPlanIdsLimitation: pulumi.StringArray{
-				pulumi.String("0001"),
-				pulumi.String("0002"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateStoreCollectionOffer = new azure_native.marketplace.PrivateStoreCollectionOffer("privateStoreCollectionOffer", {
-    collectionId: "56a1a02d-8cf8-45df-bf37-d5f7120fcb3d",
-    eTag: "\"9301f4fd-0000-0100-0000-5e248b350666\"",
-    offerId: "marketplacetestthirdparty.md-test-third-party-2",
-    privateStoreId: "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
-    specificPlanIdsLimitation: [
-        "0001",
-        "0002",
-    ],
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_store_collection_offer = azure_native.marketplace.PrivateStoreCollectionOffer("privateStoreCollectionOffer",
-    collection_id="56a1a02d-8cf8-45df-bf37-d5f7120fcb3d",
-    e_tag="\"9301f4fd-0000-0100-0000-5e248b350666\"",
-    offer_id="marketplacetestthirdparty.md-test-third-party-2",
-    private_store_id="a0e28e55-90c4-41d8-8e34-bb7ef7775406",
-    specific_plan_ids_limitation=[
-        "0001",
-        "0002",
-    ])
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:marketplace:PrivateStoreCollectionOffer marketplacetestthirdparty.md-test-third-party-2 /providers/Microsoft.Marketplace/privateStores/a0e28e55-90c4-41d8-8e34-bb7ef7775406/collections/56a1a02d-8cf8-45df-bf37-d5f7120fcb3d/offers/marketplacetestthirdparty.md-test-third-party-2 
-```
-
- */
 @ResourceType(type="azure-native:marketplace:PrivateStoreCollectionOffer")
 public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResource {
-    /**
-     * Private store offer creation date
-     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
-    /**
-     * @return Private store offer creation date
-     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
-    /**
-     * Identifier for purposes of race condition
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
-    /**
-     * @return Identifier for purposes of race condition
-     */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    /**
-     * Icon File Uris
-     */
     @OutputExport(name="iconFileUris", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> iconFileUris;
 
-    /**
-     * @return Icon File Uris
-     */
     public Output</* @Nullable */ Map<String,String>> getIconFileUris() {
         return this.iconFileUris;
     }
-    /**
-     * Private store offer modification date
-     */
     @OutputExport(name="modifiedAt", type=String.class, parameters={})
     private Output<String> modifiedAt;
 
-    /**
-     * @return Private store offer modification date
-     */
     public Output<String> getModifiedAt() {
         return this.modifiedAt;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * It will be displayed prominently in the marketplace
-     */
     @OutputExport(name="offerDisplayName", type=String.class, parameters={})
     private Output<String> offerDisplayName;
 
-    /**
-     * @return It will be displayed prominently in the marketplace
-     */
     public Output<String> getOfferDisplayName() {
         return this.offerDisplayName;
     }
-    /**
-     * Offer plans
-     */
     @OutputExport(name="plans", type=List.class, parameters={PlanResponse.class})
     private Output</* @Nullable */ List<PlanResponse>> plans;
 
-    /**
-     * @return Offer plans
-     */
     public Output</* @Nullable */ List<PlanResponse>> getPlans() {
         return this.plans;
     }
-    /**
-     * Private store unique id
-     */
     @OutputExport(name="privateStoreId", type=String.class, parameters={})
     private Output<String> privateStoreId;
 
-    /**
-     * @return Private store unique id
-     */
     public Output<String> getPrivateStoreId() {
         return this.privateStoreId;
     }
-    /**
-     * Publisher name that will be displayed prominently in the marketplace
-     */
     @OutputExport(name="publisherDisplayName", type=String.class, parameters={})
     private Output<String> publisherDisplayName;
 
-    /**
-     * @return Publisher name that will be displayed prominently in the marketplace
-     */
     public Output<String> getPublisherDisplayName() {
         return this.publisherDisplayName;
     }
-    /**
-     * Plan ids limitation for this offer
-     */
     @OutputExport(name="specificPlanIdsLimitation", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> specificPlanIdsLimitation;
 
-    /**
-     * @return Plan ids limitation for this offer
-     */
     public Output</* @Nullable */ List<String>> getSpecificPlanIdsLimitation() {
         return this.specificPlanIdsLimitation;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Offers unique id
-     */
     @OutputExport(name="uniqueOfferId", type=String.class, parameters={})
     private Output<String> uniqueOfferId;
 
-    /**
-     * @return Offers unique id
-     */
     public Output<String> getUniqueOfferId() {
         return this.uniqueOfferId;
     }
-    /**
-     * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
-     */
     @OutputExport(name="updateSuppressedDueIdempotence", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> updateSuppressedDueIdempotence;
 
-    /**
-     * @return Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
-     */
     public Output</* @Nullable */ Boolean> getUpdateSuppressedDueIdempotence() {
         return this.updateSuppressedDueIdempotence;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateStoreCollectionOffer(String name, PrivateStoreCollectionOfferArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:marketplace:PrivateStoreCollectionOffer", name, args == null ? PrivateStoreCollectionOfferArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -321,14 +123,6 @@ public class PrivateStoreCollectionOffer extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateStoreCollectionOffer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateStoreCollectionOffer(name, id, options);
     }

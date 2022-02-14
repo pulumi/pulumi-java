@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
- */
 public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupScheduleResponse Empty = new BackupScheduleResponse();
 
-    /**
-     * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
-     */
     @InputImport(name="frequencyInterval", required=true)
     private final Integer frequencyInterval;
 
@@ -29,9 +23,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.frequencyInterval;
     }
 
-    /**
-     * The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
-     */
     @InputImport(name="frequencyUnit", required=true)
     private final String frequencyUnit;
 
@@ -39,9 +30,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.frequencyUnit;
     }
 
-    /**
-     * True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
-     */
     @InputImport(name="keepAtLeastOneBackup", required=true)
     private final Boolean keepAtLeastOneBackup;
 
@@ -49,9 +37,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.keepAtLeastOneBackup;
     }
 
-    /**
-     * Last time when this schedule was triggered.
-     */
     @InputImport(name="lastExecutionTime", required=true)
     private final String lastExecutionTime;
 
@@ -59,9 +44,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.lastExecutionTime;
     }
 
-    /**
-     * After how many days backups should be deleted.
-     */
     @InputImport(name="retentionPeriodInDays", required=true)
     private final Integer retentionPeriodInDays;
 
@@ -69,9 +51,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
         return this.retentionPeriodInDays;
     }
 
-    /**
-     * When the schedule should start working.
-     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 

@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingAccountExclusion {
-/**
- * Gets the description of an exclusion in the _Default sink.
- */
     public static CompletableFuture<GetBillingAccountExclusionResult> invokeAsync(GetBillingAccountExclusionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountExclusion", TypeShape.of(GetBillingAccountExclusionResult.class), args == null ? GetBillingAccountExclusionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Connection type used for connecting to the instance.
- */
     @EnumType
     public enum ManagedInstanceProxyOverride {
-/**
- * 
- */
         Proxy("Proxy"),
-/**
- * 
- */
         Redirect("Redirect"),
-/**
- * 
- */
         Default("Default");
 
         private final String value;

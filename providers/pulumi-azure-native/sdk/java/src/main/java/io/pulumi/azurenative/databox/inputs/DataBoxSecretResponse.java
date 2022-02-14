@@ -11,16 +11,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * The secrets related to a DataBox.
- */
 public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxSecretResponse Empty = new DataBoxSecretResponse();
 
-    /**
-     * Per account level access credentials.
-     */
     @InputImport(name="accountCredentialDetails", required=true)
     private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
 
@@ -28,9 +22,6 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
         return this.accountCredentialDetails;
     }
 
-    /**
-     * Password for out of the box experience on device.
-     */
     @InputImport(name="devicePassword", required=true)
     private final String devicePassword;
 
@@ -38,9 +29,6 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
         return this.devicePassword;
     }
 
-    /**
-     * Serial number of the assigned device.
-     */
     @InputImport(name="deviceSerialNumber", required=true)
     private final String deviceSerialNumber;
 
@@ -48,9 +36,6 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
         return this.deviceSerialNumber;
     }
 
-    /**
-     * The base 64 encoded public key to authenticate with the device
-     */
     @InputImport(name="encodedValidationCertPubKey", required=true)
     private final String encodedValidationCertPubKey;
 
@@ -58,9 +43,6 @@ public final class DataBoxSecretResponse extends io.pulumi.resources.InvokeArgs 
         return this.encodedValidationCertPubKey;
     }
 
-    /**
-     * Network configuration of the appliance.
-     */
     @InputImport(name="networkConfigurations", required=true)
     private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 

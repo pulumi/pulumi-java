@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCatalogItemArgs Empty = new GetCatalogItemArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="catalogId", required=true)
     private final String catalogId;
 
@@ -27,9 +21,6 @@ public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.catalogId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="catalogItemId", required=true)
     private final String catalogItemId;
 
@@ -37,9 +28,6 @@ public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.catalogItemId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -47,9 +35,6 @@ public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

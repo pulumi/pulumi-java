@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzurePostgreSqlSectionResponse Empty = new AzurePostgreSqlSectionResponse();
 
-    /**
-     * The authority URL used for authentication.
-     */
     @InputImport(name="authorityUrl")
     private final @Nullable String authorityUrl;
 
@@ -28,9 +22,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
     }
 
-    /**
-     * The content of the certificate used for authentication.
-     */
     @InputImport(name="certificate")
     private final @Nullable String certificate;
 
@@ -38,9 +29,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
     }
 
-    /**
-     * The Client ID/Application ID
-     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -48,9 +36,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
-    /**
-     * The client secret.
-     */
     @InputImport(name="clientSecret")
     private final @Nullable String clientSecret;
 
@@ -58,9 +43,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
-    /**
-     * Sql Authentication type.
-     */
     @InputImport(name="credentialType")
     private final @Nullable String credentialType;
 
@@ -68,9 +50,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.credentialType == null ? Optional.empty() : Optional.ofNullable(this.credentialType);
     }
 
-    /**
-     * The Azure SQL database name.
-     */
     @InputImport(name="databaseName")
     private final @Nullable String databaseName;
 
@@ -78,9 +57,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
-    /**
-     * Indicates SSL requirement of Azure Postgresql server.
-     */
     @InputImport(name="enableSsl")
     private final @Nullable Boolean enableSsl;
 
@@ -88,9 +64,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
     }
 
-    /**
-     * The server host endpoint.
-     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 
@@ -98,9 +71,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
-    /**
-     *  Is it using certificate to authenticate. If false then use client secret.
-     */
     @InputImport(name="isCertAuth")
     private final @Nullable Boolean isCertAuth;
 
@@ -108,9 +78,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
     }
 
-    /**
-     * / The Azure SQL port number.
-     */
     @InputImport(name="portNumber")
     private final @Nullable String portNumber;
 
@@ -118,9 +85,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.portNumber == null ? Optional.empty() : Optional.ofNullable(this.portNumber);
     }
 
-    /**
-     * Resource Group.
-     */
     @InputImport(name="resourceGroup")
     private final @Nullable String resourceGroup;
 
@@ -128,9 +92,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
-    /**
-     * The resource the service principal/app has access to.
-     */
     @InputImport(name="resourceUri")
     private final @Nullable String resourceUri;
 
@@ -138,9 +99,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 
-    /**
-     * The Azure SQL server name.
-     */
     @InputImport(name="serverName")
     private final @Nullable String serverName;
 
@@ -148,9 +106,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
     }
 
-    /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
-     */
     @InputImport(name="serviceDataAccessAuthIdentity")
     private final @Nullable String serviceDataAccessAuthIdentity;
 
@@ -158,9 +113,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
-    /**
-     * Subscription ID.
-     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 
@@ -168,9 +120,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
-    /**
-     * The ID of the tenant the service principal/app belongs to.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -178,9 +127,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
-    /**
-     * The thumbprint of the certificate above.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 
@@ -188,9 +134,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 
-    /**
-     * The Azure SQL user id.
-     */
     @InputImport(name="userId")
     private final @Nullable String userId;
 
@@ -198,9 +141,6 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
         return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
     }
 
-    /**
-     * The Azure SQL user password.
-     */
     @InputImport(name="userPassword")
     private final @Nullable String userPassword;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Private Connectivity
- */
 public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateConnectivityArgs Empty = new PrivateConnectivityArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="privateConnectionName")
     private final @Nullable Input<String> privateConnectionName;
 

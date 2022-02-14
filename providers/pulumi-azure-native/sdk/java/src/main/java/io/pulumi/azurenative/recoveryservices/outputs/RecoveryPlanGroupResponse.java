@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecoveryPlanGroupResponse {
-/**
- * The end group actions.
- */
     private final @Nullable List<RecoveryPlanActionResponse> endGroupActions;
-/**
- * The group type.
- */
     private final String groupType;
-/**
- * The list of protected items.
- */
     private final @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems;
-/**
- * The start group actions.
- */
     private final @Nullable List<RecoveryPlanActionResponse> startGroupActions;
 
     @OutputCustomType.Constructor({"endGroupActions","groupType","replicationProtectedItems","startGroupActions"})
@@ -42,27 +30,15 @@ public final class RecoveryPlanGroupResponse {
         this.startGroupActions = startGroupActions;
     }
 
-/**
- * The end group actions.
- */
     public List<RecoveryPlanActionResponse> getEndGroupActions() {
         return this.endGroupActions == null ? List.of() : this.endGroupActions;
     }
-/**
- * The group type.
- */
     public String getGroupType() {
         return this.groupType;
     }
-/**
- * The list of protected items.
- */
     public List<RecoveryPlanProtectedItemResponse> getReplicationProtectedItems() {
         return this.replicationProtectedItems == null ? List.of() : this.replicationProtectedItems;
     }
-/**
- * The start group actions.
- */
     public List<RecoveryPlanActionResponse> getStartGroupActions() {
         return this.startGroupActions == null ? List.of() : this.startGroupActions;
     }

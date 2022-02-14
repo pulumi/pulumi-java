@@ -9,21 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PlanResponse {
-/**
- * The plan name.
- */
     private final String name;
-/**
- * The product code.
- */
     private final String product;
-/**
- * The publisher ID.
- */
     private final String publisher;
-/**
- * The plan's version.
- */
     private final String version;
 
     @OutputCustomType.Constructor({"name","product","publisher","version"})
@@ -38,27 +26,15 @@ public final class PlanResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * The plan name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The product code.
- */
     public String getProduct() {
         return this.product;
     }
-/**
- * The publisher ID.
- */
     public String getPublisher() {
         return this.publisher;
     }
-/**
- * The plan's version.
- */
     public String getVersion() {
         return this.version;
     }

@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required. The WAF feature for which this key is enabled.
- */
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature {
-/**
- * Undefined feature.
- */
         WafFeatureUnspecified("WAF_FEATURE_UNSPECIFIED"),
-/**
- * Redirects suspicious traffic to reCAPTCHA.
- */
         ChallengePage("CHALLENGE_PAGE"),
-/**
- * Use reCAPTCHA session-tokens to protect the whole user session on the site's domain.
- */
         SessionToken("SESSION_TOKEN"),
-/**
- * Use reCAPTCHA action-tokens to protect user actions.
- */
         ActionToken("ACTION_TOKEN");
 
         private final String value;

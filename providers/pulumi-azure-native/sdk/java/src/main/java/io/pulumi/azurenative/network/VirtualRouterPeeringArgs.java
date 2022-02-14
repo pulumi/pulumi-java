@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualRouterPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualRouterPeeringArgs Empty = new VirtualRouterPeeringArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,9 +22,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Name of the virtual router peering that is unique within a virtual router.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Peer ASN.
-     */
     @InputImport(name="peerAsn")
     private final @Nullable Input<Double> peerAsn;
 
@@ -48,9 +36,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
     }
 
-    /**
-     * Peer IP.
-     */
     @InputImport(name="peerIp")
     private final @Nullable Input<String> peerIp;
 
@@ -58,9 +43,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
         return this.peerIp == null ? Input.empty() : this.peerIp;
     }
 
-    /**
-     * The name of the Virtual Router Peering.
-     */
     @InputImport(name="peeringName")
     private final @Nullable Input<String> peeringName;
 
@@ -68,9 +50,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
         return this.peeringName == null ? Input.empty() : this.peeringName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -78,9 +57,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Virtual Router.
-     */
     @InputImport(name="virtualRouterName", required=true)
     private final Input<String> virtualRouterName;
 

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible.
- */
 public final class GooglePrivacyDlpV2UnwrappedCryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2UnwrappedCryptoKeyArgs Empty = new GooglePrivacyDlpV2UnwrappedCryptoKeyArgs();
 
-    /**
-     * A 128/192/256 bit key.
-     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 

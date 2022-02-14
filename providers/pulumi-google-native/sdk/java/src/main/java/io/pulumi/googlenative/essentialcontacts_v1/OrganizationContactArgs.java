@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OrganizationContactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrganizationContactArgs Empty = new OrganizationContactArgs();
 
-    /**
-     * The email address to send notifications to. This does not need to be a Google account.
-     */
     @InputImport(name="email", required=true)
     private final Input<String> email;
 
@@ -30,9 +24,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
         return this.email;
     }
 
-    /**
-     * The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
-     */
     @InputImport(name="languageTag")
     private final @Nullable Input<String> languageTag;
 
@@ -40,9 +31,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
         return this.languageTag == null ? Input.empty() : this.languageTag;
     }
 
-    /**
-     * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,9 +38,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The categories of notifications that the contact will receive communications for.
-     */
     @InputImport(name="notificationCategorySubscriptions")
     private final @Nullable Input<List<OrganizationContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
@@ -60,9 +45,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
         return this.notificationCategorySubscriptions == null ? Input.empty() : this.notificationCategorySubscriptions;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -70,9 +52,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
         return this.organizationId;
     }
 
-    /**
-     * The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
-     */
     @InputImport(name="validateTime")
     private final @Nullable Input<String> validateTime;
 
@@ -80,9 +59,6 @@ public final class OrganizationContactArgs extends io.pulumi.resources.ResourceA
         return this.validateTime == null ? Input.empty() : this.validateTime;
     }
 
-    /**
-     * The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
-     */
     @InputImport(name="validationState")
     private final @Nullable Input<OrganizationContactValidationState> validationState;
 

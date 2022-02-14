@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Long term retention policy.
- */
 public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LongTermRetentionPolicyArgs Empty = new LongTermRetentionPolicyArgs();
 
-    /**
-     * Daily retention schedule of the protection policy.
-     */
     @InputImport(name="dailySchedule")
     private final @Nullable Input<DailyRetentionScheduleArgs> dailySchedule;
 
@@ -31,9 +25,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
     }
 
-    /**
-     * Monthly retention schedule of the protection policy.
-     */
     @InputImport(name="monthlySchedule")
     private final @Nullable Input<MonthlyRetentionScheduleArgs> monthlySchedule;
 
@@ -41,10 +32,6 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
         return this.monthlySchedule == null ? Input.empty() : this.monthlySchedule;
     }
 
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-Expected value is 'LongTermRetentionPolicy'.
-     */
     @InputImport(name="retentionPolicyType", required=true)
     private final Input<String> retentionPolicyType;
 
@@ -52,9 +39,6 @@ Expected value is 'LongTermRetentionPolicy'.
         return this.retentionPolicyType;
     }
 
-    /**
-     * Weekly retention schedule of the protection policy.
-     */
     @InputImport(name="weeklySchedule")
     private final @Nullable Input<WeeklyRetentionScheduleArgs> weeklySchedule;
 
@@ -62,9 +46,6 @@ Expected value is 'LongTermRetentionPolicy'.
         return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
     }
 
-    /**
-     * Yearly retention schedule of the protection policy.
-     */
     @InputImport(name="yearlySchedule")
     private final @Nullable Input<YearlyRetentionScheduleArgs> yearlySchedule;
 

@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2EntityIdResponse {
-/**
- * Composite key indicating which field contains the entity identifier.
- */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
     @OutputCustomType.Constructor({"field"})
@@ -19,9 +16,6 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
         this.field = Objects.requireNonNull(field);
     }
 
-/**
- * Composite key indicating which field contains the entity identifier.
- */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }

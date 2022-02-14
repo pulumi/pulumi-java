@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 
-    /**
-     * The DNS settings in network interface.
-     */
     @InputImport(name="dnsSettings")
     private final @Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
@@ -38,9 +32,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
     }
 
-    /**
-     * If the network interface is accelerated networking enabled.
-     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Input<Boolean> enableAcceleratedNetworking;
 
@@ -48,9 +39,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.enableAcceleratedNetworking == null ? Input.empty() : this.enableAcceleratedNetworking;
     }
 
-    /**
-     * Indicates whether IP forwarding is enabled on this network interface.
-     */
     @InputImport(name="enableIPForwarding")
     private final @Nullable Input<Boolean> enableIPForwarding;
 
@@ -58,9 +46,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.enableIPForwarding == null ? Input.empty() : this.enableIPForwarding;
     }
 
-    /**
-     * The extended location of the network interface.
-     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -68,9 +53,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -78,9 +60,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * A list of IPConfigurations of the network interface.
-     */
     @InputImport(name="ipConfigurations")
     private final @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
@@ -88,9 +67,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -98,9 +74,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Migration phase of Network Interface resource.
-     */
     @InputImport(name="migrationPhase")
     private final @Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
@@ -108,9 +81,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.migrationPhase == null ? Input.empty() : this.migrationPhase;
     }
 
-    /**
-     * The name of the network interface.
-     */
     @InputImport(name="networkInterfaceName")
     private final @Nullable Input<String> networkInterfaceName;
 
@@ -118,9 +88,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.networkInterfaceName == null ? Input.empty() : this.networkInterfaceName;
     }
 
-    /**
-     * The reference to the NetworkSecurityGroup resource.
-     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup;
 
@@ -128,9 +95,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.networkSecurityGroup == null ? Input.empty() : this.networkSecurityGroup;
     }
 
-    /**
-     * Type of Network Interface resource.
-     */
     @InputImport(name="nicType")
     private final @Nullable Input<Either<String,NetworkInterfaceNicType>> nicType;
 
@@ -138,9 +102,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
-    /**
-     * Privatelinkservice of the network interface resource.
-     */
     @InputImport(name="privateLinkService")
     private final @Nullable Input<PrivateLinkServiceArgs> privateLinkService;
 
@@ -148,9 +109,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.privateLinkService == null ? Input.empty() : this.privateLinkService;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -158,9 +116,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

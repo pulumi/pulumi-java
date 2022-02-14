@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. Read replica mode. Can only be specified when trying to create the instance.
- */
     @EnumType
     public enum InstanceReadReplicasMode {
-/**
- * If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
- */
         ReadReplicasModeUnspecified("READ_REPLICAS_MODE_UNSPECIFIED"),
-/**
- * If disabled, read endpoint will not be provided and the instance cannot scale up or down the number of replicas.
- */
         ReadReplicasDisabled("READ_REPLICAS_DISABLED"),
-/**
- * If enabled, read endpoint will be provided and the instance can scale up and down the number of replicas. Not valid for basic tier.
- */
         ReadReplicasEnabled("READ_REPLICAS_ENABLED");
 
         private final String value;

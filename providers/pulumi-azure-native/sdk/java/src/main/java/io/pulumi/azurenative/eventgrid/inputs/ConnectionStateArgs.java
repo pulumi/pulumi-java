@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ConnectionState information.
- */
 public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionStateArgs Empty = new ConnectionStateArgs();
 
-    /**
-     * Actions required (if any).
-     */
     @InputImport(name="actionsRequired")
     private final @Nullable Input<String> actionsRequired;
 
@@ -29,9 +23,6 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
         return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
     }
 
-    /**
-     * Description of the connection state.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Status of the connection.
-     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,PersistedConnectionStatus>> status;
 

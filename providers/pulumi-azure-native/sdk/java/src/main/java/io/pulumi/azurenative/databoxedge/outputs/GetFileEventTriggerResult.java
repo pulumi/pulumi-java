@@ -14,38 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFileEventTriggerResult {
-/**
- * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
- */
     private final @Nullable String customContextTag;
-/**
- * The path ID that uniquely identifies the object.
- */
     private final String id;
-/**
- * Trigger Kind.
-Expected value is 'FileEvent'.
- */
     private final String kind;
-/**
- * The object name.
- */
     private final String name;
-/**
- * Role sink info.
- */
     private final RoleSinkInfoResponse sinkInfo;
-/**
- * File event source details.
- */
     private final FileSourceInfoResponse sourceInfo;
-/**
- * Trigger in DataBoxEdge Resource
- */
     private final SystemDataResponse systemData;
-/**
- * The hierarchical type of the object.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"customContextTag","id","kind","name","sinkInfo","sourceInfo","systemData","type"})
@@ -68,52 +43,27 @@ Expected value is 'FileEvent'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
- */
     public Optional<String> getCustomContextTag() {
         return Optional.ofNullable(this.customContextTag);
     }
-/**
- * The path ID that uniquely identifies the object.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Trigger Kind.
-Expected value is 'FileEvent'.
- */
     public String getKind() {
         return this.kind;
     }
-/**
- * The object name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Role sink info.
- */
     public RoleSinkInfoResponse getSinkInfo() {
         return this.sinkInfo;
     }
-/**
- * File event source details.
- */
     public FileSourceInfoResponse getSourceInfo() {
         return this.sourceInfo;
     }
-/**
- * Trigger in DataBoxEdge Resource
- */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
-/**
- * The hierarchical type of the object.
- */
     public String getType() {
         return this.type;
     }

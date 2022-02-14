@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The granularity of rows in the report.
- */
     @EnumType
     public enum ReportGranularityType {
-/**
- * 
- */
         Daily("Daily"),
-/**
- * 
- */
         Monthly("Monthly");
 
         private final String value;

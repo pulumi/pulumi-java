@@ -13,36 +13,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDataManagerResult {
-/**
- * Etag of the Resource.
- */
     private final @Nullable String etag;
-/**
- * The Resource Id.
- */
     private final String id;
-/**
- * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.
- */
     private final String location;
-/**
- * The Resource Name.
- */
     private final String name;
-/**
- * The sku type.
- */
     private final @Nullable SkuResponse sku;
-/**
- * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-(across resource groups).
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The Resource type.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","sku","tags","type"})
@@ -63,48 +39,24 @@ region is specified on update the request will succeed.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Etag of the Resource.
- */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
-/**
- * The Resource Id.
- */
     public String getId() {
         return this.id;
     }
-/**
- * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The Resource Name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The sku type.
- */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
-/**
- * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-(across resource groups).
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The Resource type.
- */
     public String getType() {
         return this.type;
     }

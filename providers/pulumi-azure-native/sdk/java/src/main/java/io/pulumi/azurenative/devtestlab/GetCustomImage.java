@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomImage {
-/**
- * A custom image.
-API Version: 2018-09-15.
- *
- * A custom image.
- */
     public static CompletableFuture<GetCustomImageResult> invokeAsync(GetCustomImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getCustomImage", TypeShape.of(GetCustomImageResult.class), args == null ? GetCustomImageArgs.Empty : args, Utilities.withVersion(options));
     }

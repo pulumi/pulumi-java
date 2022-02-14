@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies the cluster auto-delete schedule configuration.
- */
 public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LifecycleConfigArgs Empty = new LifecycleConfigArgs();
 
-    /**
-     * Optional. The time when cluster will be auto-deleted. (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-     */
     @InputImport(name="autoDeleteTime")
     private final @Nullable Input<String> autoDeleteTime;
 
@@ -27,9 +21,6 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.autoDeleteTime == null ? Input.empty() : this.autoDeleteTime;
     }
 
-    /**
-     * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-     */
     @InputImport(name="autoDeleteTtl")
     private final @Nullable Input<String> autoDeleteTtl;
 
@@ -37,9 +28,6 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.autoDeleteTtl == null ? Input.empty() : this.autoDeleteTtl;
     }
 
-    /**
-     * Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
-     */
     @InputImport(name="idleDeleteTtl")
     private final @Nullable Input<String> idleDeleteTtl;
 

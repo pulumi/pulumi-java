@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SaasSubscriptionLevelArgs Empty = new SaasSubscriptionLevelArgs();
 
-    /**
-     * Resource location. Only value allowed for SaaS is 'global'
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource name
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,9 +30,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Properties of the SaaS resource that are relevant for creation.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<SaasCreationPropertiesArgs> properties;
 
@@ -49,9 +37,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,9 +44,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -69,9 +51,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * the resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

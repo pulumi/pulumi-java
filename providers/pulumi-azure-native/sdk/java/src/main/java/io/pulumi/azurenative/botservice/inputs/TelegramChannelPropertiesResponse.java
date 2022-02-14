@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the Telegram channel.
- */
 public final class TelegramChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TelegramChannelPropertiesResponse Empty = new TelegramChannelPropertiesResponse();
 
-    /**
-     * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
-     */
     @InputImport(name="accessToken")
     private final @Nullable String accessToken;
 
@@ -28,9 +22,6 @@ public final class TelegramChannelPropertiesResponse extends io.pulumi.resources
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
     }
 
-    /**
-     * Whether this channel is enabled for the bot
-     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -38,9 +29,6 @@ public final class TelegramChannelPropertiesResponse extends io.pulumi.resources
         return this.isEnabled;
     }
 
-    /**
-     * Whether this channel is validated for the bot
-     */
     @InputImport(name="isValidated")
     private final @Nullable Boolean isValidated;
 

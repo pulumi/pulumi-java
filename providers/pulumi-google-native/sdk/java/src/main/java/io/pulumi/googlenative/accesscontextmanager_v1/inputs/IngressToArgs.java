@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on information about the ApiOperation intended to be performed on the target resource of the request. The request must satisfy what is defined in `operations` AND `resources` in order to match.
- */
 public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressToArgs Empty = new IngressToArgs();
 
-    /**
-     * A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
-     */
     @InputImport(name="operations")
     private final @Nullable Input<List<ApiOperationArgs>> operations;
 
@@ -29,9 +23,6 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
         return this.operations == null ? Input.empty() : this.operations;
     }
 
-    /**
-     * A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
-     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 

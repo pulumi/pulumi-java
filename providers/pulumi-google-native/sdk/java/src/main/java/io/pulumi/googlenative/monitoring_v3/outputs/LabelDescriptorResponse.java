@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LabelDescriptorResponse {
-/**
- * A human-readable description for the label.
- */
     private final String description;
-/**
- * The key for this label. The key must meet the following criteria: Does not exceed 100 characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character must be an upper- or lower-case letter. The remaining characters must be letters, digits, or underscores.
- */
     private final String key;
-/**
- * The type of data that can be assigned to the label.
- */
     private final String valueType;
 
     @OutputCustomType.Constructor({"description","key","valueType"})
@@ -32,21 +23,12 @@ public final class LabelDescriptorResponse {
         this.valueType = Objects.requireNonNull(valueType);
     }
 
-/**
- * A human-readable description for the label.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * The key for this label. The key must meet the following criteria: Does not exceed 100 characters. Matches the following regular expression: [a-zA-Z][a-zA-Z0-9_]* The first character must be an upper- or lower-case letter. The remaining characters must be letters, digits, or underscores.
- */
     public String getKey() {
         return this.key;
     }
-/**
- * The type of data that can be assigned to the label.
- */
     public String getValueType() {
         return this.valueType;
     }

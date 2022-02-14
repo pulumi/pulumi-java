@@ -10,17 +10,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ModelDefinitionModelOptionsResponse {
-/**
- * 
- */
     private final List<String> labels;
-/**
- * 
- */
     private final String lossType;
-/**
- * 
- */
     private final String modelType;
 
     @OutputCustomType.Constructor({"labels","lossType","modelType"})
@@ -33,21 +24,12 @@ public final class ModelDefinitionModelOptionsResponse {
         this.modelType = Objects.requireNonNull(modelType);
     }
 
-/**
- * 
- */
     public List<String> getLabels() {
         return this.labels;
     }
-/**
- * 
- */
     public String getLossType() {
         return this.lossType;
     }
-/**
- * 
- */
     public String getModelType() {
         return this.modelType;
     }

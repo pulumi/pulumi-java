@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a daily schedule.
- */
 public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DayDetailsResponse Empty = new DayDetailsResponse();
 
-    /**
-     * The time of day the schedule will occur.
-     */
     @InputImport(name="time")
     private final @Nullable String time;
 

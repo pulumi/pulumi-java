@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSyncGroup {
-/**
- * Sync Group object.
-API Version: 2020-03-01.
- *
- * Sync Group object.
- */
     public static CompletableFuture<GetSyncGroupResult> invokeAsync(GetSyncGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args == null ? GetSyncGroupArgs.Empty : args, Utilities.withVersion(options));
     }

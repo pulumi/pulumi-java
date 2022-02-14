@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * SKU for the resource.
- */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
-    /**
-     * The SKU capacity.
-     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -28,9 +22,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
-    /**
-     * The SKU family.
-     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -38,9 +29,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
-    /**
-     * The SKU model.
-     */
     @InputImport(name="model")
     private final @Nullable String model;
 
@@ -48,9 +36,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
     }
 
-    /**
-     * The SKU name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -58,9 +43,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The SKU size.
-     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -68,9 +50,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
-    /**
-     * The SKU tier.
-     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

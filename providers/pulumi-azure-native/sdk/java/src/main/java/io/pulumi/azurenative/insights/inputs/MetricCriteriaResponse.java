@@ -14,17 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Criterion to filter metrics.
- */
 public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricCriteriaResponse Empty = new MetricCriteriaResponse();
 
-    /**
-     * Specifies the type of threshold criteria
-Expected value is 'StaticThresholdCriterion'.
-     */
     @InputImport(name="criterionType", required=true)
     private final String criterionType;
 
@@ -32,9 +25,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.criterionType;
     }
 
-    /**
-     * List of dimension conditions.
-     */
     @InputImport(name="dimensions")
     private final @Nullable List<MetricDimensionResponse> dimensions;
 
@@ -42,9 +32,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.dimensions == null ? List.of() : this.dimensions;
     }
 
-    /**
-     * Name of the metric.
-     */
     @InputImport(name="metricName", required=true)
     private final String metricName;
 
@@ -52,9 +39,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.metricName;
     }
 
-    /**
-     * Namespace of the metric.
-     */
     @InputImport(name="metricNamespace")
     private final @Nullable String metricNamespace;
 
@@ -62,9 +46,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
-    /**
-     * Name of the criteria.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -72,9 +53,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.name;
     }
 
-    /**
-     * the criteria operator.
-     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -82,9 +60,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.operator;
     }
 
-    /**
-     * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-     */
     @InputImport(name="skipMetricValidation")
     private final @Nullable Boolean skipMetricValidation;
 
@@ -92,9 +67,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.skipMetricValidation == null ? Optional.empty() : Optional.ofNullable(this.skipMetricValidation);
     }
 
-    /**
-     * the criteria threshold value that activates the alert.
-     */
     @InputImport(name="threshold", required=true)
     private final Double threshold;
 
@@ -102,9 +74,6 @@ Expected value is 'StaticThresholdCriterion'.
         return this.threshold;
     }
 
-    /**
-     * the criteria time aggregation types.
-     */
     @InputImport(name="timeAggregation", required=true)
     private final String timeAggregation;
 

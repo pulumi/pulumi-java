@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DropInfoResponse {
-/**
- * Cause that the packet is dropped.
- */
     private final String cause;
-/**
- * URI of the resource that caused the drop.
- */
     private final String resourceUri;
 
     @OutputCustomType.Constructor({"cause","resourceUri"})
@@ -26,15 +20,9 @@ public final class DropInfoResponse {
         this.resourceUri = Objects.requireNonNull(resourceUri);
     }
 
-/**
- * Cause that the packet is dropped.
- */
     public String getCause() {
         return this.cause;
     }
-/**
- * URI of the resource that caused the drop.
- */
     public String getResourceUri() {
         return this.resourceUri;
     }

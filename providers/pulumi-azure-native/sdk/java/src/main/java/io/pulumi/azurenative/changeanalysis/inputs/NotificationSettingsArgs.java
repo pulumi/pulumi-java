@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Settings of change notification configuration for a subscription.
- */
 public final class NotificationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationSettingsArgs Empty = new NotificationSettingsArgs();
 
-    /**
-     * The state of notifications feature.
-     */
     @InputImport(name="activationState")
     private final @Nullable Input<Either<String,NotificationsState>> activationState;
 
@@ -30,9 +24,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
         return this.activationState == null ? Input.empty() : this.activationState;
     }
 
-    /**
-     * Configuration properties of an Azure Monitor workspace that receives change notifications.
-     */
     @InputImport(name="azureMonitorWorkspaceProperties")
     private final @Nullable Input<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 

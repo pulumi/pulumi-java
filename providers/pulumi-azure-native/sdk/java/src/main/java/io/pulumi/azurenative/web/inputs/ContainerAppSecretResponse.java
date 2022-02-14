@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Container App Secret.
- */
 public final class ContainerAppSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerAppSecretResponse Empty = new ContainerAppSecretResponse();
 
-    /**
-     * Secret Name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class ContainerAppSecretResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * Secret Value.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

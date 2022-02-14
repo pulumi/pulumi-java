@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Image annotation.
- */
 public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageAnnotationArgs Empty = new ImageAnnotationArgs();
 
-    /**
-     * The list of polygons outlining the sensitive regions in the image.
-     */
     @InputImport(name="boundingPolys")
     private final @Nullable Input<List<BoundingPolyArgs>> boundingPolys;
 
@@ -29,9 +23,6 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
         return this.boundingPolys == null ? Input.empty() : this.boundingPolys;
     }
 
-    /**
-     * 0-based index of the image frame. For example, an image frame in a DICOM instance.
-     */
     @InputImport(name="frameIndex")
     private final @Nullable Input<Integer> frameIndex;
 

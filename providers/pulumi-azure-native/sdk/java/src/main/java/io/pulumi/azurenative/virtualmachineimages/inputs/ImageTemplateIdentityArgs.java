@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Identity for the image template.
- */
 public final class ImageTemplateIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateIdentityArgs Empty = new ImageTemplateIdentityArgs();
 
-    /**
-     * The type of identity used for the image template. The type 'None' will remove any identities from the image template.
-     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 
@@ -30,9 +24,6 @@ public final class ImageTemplateIdentityArgs extends io.pulumi.resources.Resourc
         return this.type == null ? Input.empty() : this.type;
     }
 
-    /**
-     * The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

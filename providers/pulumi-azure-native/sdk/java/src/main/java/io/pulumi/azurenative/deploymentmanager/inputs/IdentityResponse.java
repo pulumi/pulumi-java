@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Identity for the resource.
- */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
-    /**
-     * The list of identities.
-     */
     @InputImport(name="identityIds", required=true)
     private final List<String> identityIds;
 
@@ -26,9 +20,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.identityIds;
     }
 
-    /**
-     * The identity type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

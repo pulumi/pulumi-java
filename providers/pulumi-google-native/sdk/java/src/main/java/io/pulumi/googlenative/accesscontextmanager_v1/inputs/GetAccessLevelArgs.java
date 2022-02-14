@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccessLevelArgs Empty = new GetAccessLevelArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="accessLevelFormat")
     private final @Nullable String accessLevelFormat;
 
@@ -27,9 +21,6 @@ public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
         return this.accessLevelFormat == null ? Optional.empty() : Optional.ofNullable(this.accessLevelFormat);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="accessLevelId", required=true)
     private final String accessLevelId;
 
@@ -37,9 +28,6 @@ public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
         return this.accessLevelId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="accessPolicyId", required=true)
     private final String accessPolicyId;
 

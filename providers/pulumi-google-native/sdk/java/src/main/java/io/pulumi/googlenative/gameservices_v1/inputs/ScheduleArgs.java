@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The schedule of a recurring or one time event. The event's time span is specified by start_time and end_time. If the scheduled event's timespan is larger than the cron_spec + cron_job_duration, the event will be recurring. If only cron_spec + cron_job_duration are specified, the event is effective starting at the local time specified by cron_spec, and is recurring. ``` start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time cron job: cron spec start time + duration ```
- */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
-    /**
-     * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
-     */
     @InputImport(name="cronJobDuration")
     private final @Nullable Input<String> cronJobDuration;
 
@@ -27,9 +21,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.cronJobDuration == null ? Input.empty() : this.cronJobDuration;
     }
 
-    /**
-     * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
-     */
     @InputImport(name="cronSpec")
     private final @Nullable Input<String> cronSpec;
 
@@ -37,9 +28,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.cronSpec == null ? Input.empty() : this.cronSpec;
     }
 
-    /**
-     * The end time of the event.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -47,9 +35,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * The start time of the event.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

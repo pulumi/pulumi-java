@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The DH Group used in IKE Phase 1 for initial SA.
- */
     @EnumType
     public enum DhGroup {
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         DHGroup1("DHGroup1"),
-/**
- * 
- */
         DHGroup2("DHGroup2"),
-/**
- * 
- */
         DHGroup14("DHGroup14"),
-/**
- * 
- */
         DHGroup2048("DHGroup2048"),
-/**
- * 
- */
         ECP256("ECP256"),
-/**
- * 
- */
         ECP384("ECP384"),
-/**
- * 
- */
         DHGroup24("DHGroup24");
 
         private final String value;

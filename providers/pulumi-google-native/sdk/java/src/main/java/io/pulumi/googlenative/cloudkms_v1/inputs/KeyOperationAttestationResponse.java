@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
- */
 public final class KeyOperationAttestationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyOperationAttestationResponse Empty = new KeyOperationAttestationResponse();
 
-    /**
-     * The certificate chains needed to validate the attestation
-     */
     @InputImport(name="certChains", required=true)
     private final CertificateChainsResponse certChains;
 
@@ -26,9 +20,6 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
         return this.certChains;
     }
 
-    /**
-     * The attestation data provided by the HSM when the key operation was performed.
-     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -36,9 +27,6 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
         return this.content;
     }
 
-    /**
-     * The format of the attestation data.
-     */
     @InputImport(name="format", required=true)
     private final String format;
 

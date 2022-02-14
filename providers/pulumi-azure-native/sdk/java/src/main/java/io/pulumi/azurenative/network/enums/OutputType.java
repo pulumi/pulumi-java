@@ -8,14 +8,8 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Connection monitor output destination type. Currently, only "Workspace" is supported.
- */
     @EnumType
     public enum OutputType {
-/**
- * 
- */
         Workspace("Workspace");
 
         private final String value;

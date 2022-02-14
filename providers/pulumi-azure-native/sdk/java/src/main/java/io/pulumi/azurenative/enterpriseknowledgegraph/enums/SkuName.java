@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The sku name
- */
     @EnumType
     public enum SkuName {
-/**
- * 
- */
         F0("F0"),
-/**
- * 
- */
         S1("S1");
 
         private final String value;

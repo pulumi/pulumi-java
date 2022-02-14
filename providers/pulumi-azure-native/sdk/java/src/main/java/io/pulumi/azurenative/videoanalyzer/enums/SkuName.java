@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The SKU name.
- */
     @EnumType
     public enum SkuName {
-/**
- * Represents the Live S1 SKU name. Using this SKU you can create live pipelines to capture, record, and stream live video from RTSP-capable cameras at bitrate settings from 0.5 Kbps to 3000 Kbps.
- */
         Live_S1("Live_S1"),
-/**
- * Represents the Batch S1 SKU name. Using this SKU you can create pipeline jobs to process recorded content.
- */
         Batch_S1("Batch_S1");
 
         private final String value;

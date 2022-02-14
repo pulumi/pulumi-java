@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of the endpoint for the event subscription destination.
- */
     @EnumType
     public enum EndpointType {
-/**
- * 
- */
         WebHook("WebHook"),
-/**
- * 
- */
         EventHub("EventHub"),
-/**
- * 
- */
         StorageQueue("StorageQueue"),
-/**
- * 
- */
         HybridConnection("HybridConnection"),
-/**
- * 
- */
         ServiceBusQueue("ServiceBusQueue"),
-/**
- * 
- */
         ServiceBusTopic("ServiceBusTopic"),
-/**
- * 
- */
         AzureFunction("AzureFunction");
 
         private final String value;

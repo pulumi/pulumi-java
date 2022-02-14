@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
- */
     @EnumType
     public enum RolloutStatus {
-/**
- * No status specified.
- */
         RolloutStatusUnspecified("ROLLOUT_STATUS_UNSPECIFIED"),
-/**
- * The Rollout is in progress.
- */
         InProgress("IN_PROGRESS"),
-/**
- * The Rollout has completed successfully.
- */
         Success("SUCCESS"),
-/**
- * The Rollout has been cancelled. This can happen if you have overlapping Rollout pushes, and the previous ones will be cancelled.
- */
         Cancelled("CANCELLED"),
-/**
- * The Rollout has failed and the rollback attempt has failed too.
- */
         Failed("FAILED"),
-/**
- * The Rollout has not started yet and is pending for execution.
- */
         Pending("PENDING"),
-/**
- * The Rollout has failed and rolled back to the previous successful Rollout.
- */
         FailedRolledBack("FAILED_ROLLED_BACK");
 
         private final String value;

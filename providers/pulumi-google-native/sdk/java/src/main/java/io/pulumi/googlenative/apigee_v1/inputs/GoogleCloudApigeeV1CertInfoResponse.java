@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * X.509 certificate as defined in RFC 5280.
- */
 public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1CertInfoResponse Empty = new GoogleCloudApigeeV1CertInfoResponse();
 
-    /**
-     * X.509 basic constraints extension.
-     */
     @InputImport(name="basicConstraints", required=true)
     private final String basicConstraints;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.basicConstraints;
     }
 
-    /**
-     * X.509 `notAfter` validity period in milliseconds since epoch.
-     */
     @InputImport(name="expiryDate", required=true)
     private final String expiryDate;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.expiryDate;
     }
 
-    /**
-     * Flag that specifies whether the certificate is valid. Flag is set to `Yes` if the certificate is valid, `No` if expired, or `Not yet` if not yet valid.
-     */
     @InputImport(name="isValid", required=true)
     private final String isValid;
 
@@ -47,9 +35,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.isValid;
     }
 
-    /**
-     * X.509 issuer.
-     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -57,9 +42,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.issuer;
     }
 
-    /**
-     * Public key component of the X.509 subject public key info.
-     */
     @InputImport(name="publicKey", required=true)
     private final String publicKey;
 
@@ -67,9 +49,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.publicKey;
     }
 
-    /**
-     * X.509 serial number.
-     */
     @InputImport(name="serialNumber", required=true)
     private final String serialNumber;
 
@@ -77,9 +56,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.serialNumber;
     }
 
-    /**
-     * X.509 signatureAlgorithm.
-     */
     @InputImport(name="sigAlgName", required=true)
     private final String sigAlgName;
 
@@ -87,9 +63,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.sigAlgName;
     }
 
-    /**
-     * X.509 subject.
-     */
     @InputImport(name="subject", required=true)
     private final String subject;
 
@@ -97,9 +70,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.subject;
     }
 
-    /**
-     * X.509 subject alternative names (SANs) extension.
-     */
     @InputImport(name="subjectAlternativeNames", required=true)
     private final List<String> subjectAlternativeNames;
 
@@ -107,9 +77,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.subjectAlternativeNames;
     }
 
-    /**
-     * X.509 `notBefore` validity period in milliseconds since epoch.
-     */
     @InputImport(name="validFrom", required=true)
     private final String validFrom;
 
@@ -117,9 +84,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
         return this.validFrom;
     }
 
-    /**
-     * X.509 version.
-     */
     @InputImport(name="version", required=true)
     private final Integer version;
 

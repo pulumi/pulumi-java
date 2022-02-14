@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Whether the measurement is an integer, a floating-point number, etc. Some combinations of metric_kind and value_type might not be supported.
- */
     @EnumType
     public enum MetricDescriptorValueType {
-/**
- * Do not use this default value.
- */
         ValueTypeUnspecified("VALUE_TYPE_UNSPECIFIED"),
-/**
- * The value is a boolean. This value type can be used only if the metric kind is GAUGE.
- */
         Bool("BOOL"),
-/**
- * The value is a signed 64-bit integer.
- */
         Int64("INT64"),
-/**
- * The value is a double precision floating point number.
- */
         Double("DOUBLE"),
-/**
- * The value is a text string. This value type can be used only if the metric kind is GAUGE.
- */
         String("STRING"),
-/**
- * The value is a Distribution.
- */
         Distribution("DISTRIBUTION"),
-/**
- * The value is money.
- */
         Money("MONEY");
 
         private final String value;

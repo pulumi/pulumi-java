@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableSchemaArgs Empty = new TableSchemaArgs();
 
-    /**
-     * Describes the fields in a table.
-     */
     @InputImport(name="fields")
     private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
 

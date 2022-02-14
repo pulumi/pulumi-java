@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WebServerResourceResponse {
-/**
- * Optional. CPU request and limit for Airflow web server.
- */
     private final Double cpu;
-/**
- * Optional. Memory (GB) request and limit for Airflow web server.
- */
     private final Double memoryGb;
-/**
- * Optional. Storage (GB) request and limit for Airflow web server.
- */
     private final Double storageGb;
 
     @OutputCustomType.Constructor({"cpu","memoryGb","storageGb"})
@@ -32,21 +23,12 @@ public final class WebServerResourceResponse {
         this.storageGb = Objects.requireNonNull(storageGb);
     }
 
-/**
- * Optional. CPU request and limit for Airflow web server.
- */
     public Double getCpu() {
         return this.cpu;
     }
-/**
- * Optional. Memory (GB) request and limit for Airflow web server.
- */
     public Double getMemoryGb() {
         return this.memoryGb;
     }
-/**
- * Optional. Storage (GB) request and limit for Airflow web server.
- */
     public Double getStorageGb() {
         return this.storageGb;
     }

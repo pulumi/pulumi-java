@@ -8,42 +8,15 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum TrafficRegionCategory {
-/**
- * 
- */
         NotSpecified("NotSpecified"),
-/**
- * 
- */
         Canary("Canary"),
-/**
- * 
- */
         LowTraffic("LowTraffic"),
-/**
- * 
- */
         MediumTraffic("MediumTraffic"),
-/**
- * 
- */
         HighTraffic("HighTraffic"),
-/**
- * 
- */
         None("None"),
-/**
- * 
- */
         RestOfTheWorldGroupOne("RestOfTheWorldGroupOne"),
-/**
- * 
- */
         RestOfTheWorldGroupTwo("RestOfTheWorldGroupTwo");
 
         private final String value;

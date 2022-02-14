@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * API route config of the Spring Cloud Gateway
- */
 public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayRouteConfigPropertiesArgs Empty = new GatewayRouteConfigPropertiesArgs();
 
-    /**
-     * The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
-     */
     @InputImport(name="appResourceId")
     private final @Nullable Input<String> appResourceId;
 
@@ -29,9 +23,6 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
         return this.appResourceId == null ? Input.empty() : this.appResourceId;
     }
 
-    /**
-     * Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
-     */
     @InputImport(name="routes")
     private final @Nullable Input<List<GatewayApiRouteArgs>> routes;
 

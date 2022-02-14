@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDiskArgs Empty = new GetDiskArgs();
 
-    /**
-     * The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
-     */
     @InputImport(name="diskName", required=true)
     private final String diskName;
 
@@ -25,9 +19,6 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.diskName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

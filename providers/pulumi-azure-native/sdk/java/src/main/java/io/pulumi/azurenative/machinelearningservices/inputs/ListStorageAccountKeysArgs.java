@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListStorageAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListStorageAccountKeysArgs Empty = new ListStorageAccountKeysArgs();
 
-    /**
-     * Name of the resource group in which workspace is located.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class ListStorageAccountKeysArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of Azure Machine Learning workspace.
-     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * User information that made some action
- */
 public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WatchlistUserInfoArgs Empty = new WatchlistUserInfoArgs();
 
-    /**
-     * The object id of the user.
-     */
     @InputImport(name="objectId")
     private final @Nullable Input<String> objectId;
 

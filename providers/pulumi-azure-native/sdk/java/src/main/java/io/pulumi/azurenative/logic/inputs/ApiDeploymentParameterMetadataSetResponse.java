@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The API deployment parameters metadata.
- */
 public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiDeploymentParameterMetadataSetResponse Empty = new ApiDeploymentParameterMetadataSetResponse();
 
-    /**
-     * The package content link parameter.
-     */
     @InputImport(name="packageContentLink")
     private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
 
@@ -27,9 +21,6 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
         return this.packageContentLink == null ? Optional.empty() : Optional.ofNullable(this.packageContentLink);
     }
 
-    /**
-     * The package content link parameter.
-     */
     @InputImport(name="redisCacheConnectionString")
     private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 

@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Metric and corresponding confidence intervals.
- */
 public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3ExperimentResultMetricResponse Empty = new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse();
 
-    /**
-     * The probability that the treatment is better than all other treatments in the experiment
-     */
     @InputImport(name="confidenceInterval", required=true)
     private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
         return this.confidenceInterval;
     }
 
-    /**
-     * Count value of a metric.
-     */
     @InputImport(name="count", required=true)
     private final Double count;
 
@@ -37,9 +28,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
         return this.count;
     }
 
-    /**
-     * Count-based metric type. Only one of type or count_type is specified in each Metric.
-     */
     @InputImport(name="countType", required=true)
     private final String countType;
 
@@ -47,9 +35,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
         return this.countType;
     }
 
-    /**
-     * Ratio value of a metric.
-     */
     @InputImport(name="ratio", required=true)
     private final Double ratio;
 
@@ -57,9 +42,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
         return this.ratio;
     }
 
-    /**
-     * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -8,17 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The role based access control (RBAC) authorization type integration runtime.
- */
 public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedIntegrationRuntimeRbacAuthorizationResponse Empty = new LinkedIntegrationRuntimeRbacAuthorizationResponse();
 
-    /**
-     * The authorization type for integration runtime sharing.
-Expected value is 'RBAC'.
-     */
     @InputImport(name="authorizationType", required=true)
     private final String authorizationType;
 
@@ -26,9 +19,6 @@ Expected value is 'RBAC'.
         return this.authorizationType;
     }
 
-    /**
-     * The resource identifier of the integration runtime to be shared.
-     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

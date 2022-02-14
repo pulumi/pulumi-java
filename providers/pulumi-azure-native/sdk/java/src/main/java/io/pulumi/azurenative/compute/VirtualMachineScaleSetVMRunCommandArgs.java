@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetVMRunCommandArgs Empty = new VirtualMachineScaleSetVMRunCommandArgs();
 
-    /**
-     * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
-     */
     @InputImport(name="asyncExecution")
     private final @Nullable Input<Boolean> asyncExecution;
 
@@ -33,9 +27,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.asyncExecution == null ? Input.empty() : this.asyncExecution;
     }
 
-    /**
-     * Specifies the Azure storage blob where script error stream will be uploaded.
-     */
     @InputImport(name="errorBlobUri")
     private final @Nullable Input<String> errorBlobUri;
 
@@ -43,9 +34,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.errorBlobUri == null ? Input.empty() : this.errorBlobUri;
     }
 
-    /**
-     * The instance ID of the virtual machine.
-     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -53,9 +41,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.instanceId;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,9 +48,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Specifies the Azure storage blob where script output stream will be uploaded.
-     */
     @InputImport(name="outputBlobUri")
     private final @Nullable Input<String> outputBlobUri;
 
@@ -73,9 +55,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.outputBlobUri == null ? Input.empty() : this.outputBlobUri;
     }
 
-    /**
-     * The parameters used by the script.
-     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<RunCommandInputParameterArgs>> parameters;
 
@@ -83,9 +62,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
-    /**
-     * The parameters used by the script.
-     */
     @InputImport(name="protectedParameters")
     private final @Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters;
 
@@ -93,9 +69,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.protectedParameters == null ? Input.empty() : this.protectedParameters;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -103,9 +76,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
-    /**
-     * Specifies the user account password on the VM when executing the run command.
-     */
     @InputImport(name="runAsPassword")
     private final @Nullable Input<String> runAsPassword;
 
@@ -113,9 +83,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.runAsPassword == null ? Input.empty() : this.runAsPassword;
     }
 
-    /**
-     * Specifies the user account on the VM when executing the run command.
-     */
     @InputImport(name="runAsUser")
     private final @Nullable Input<String> runAsUser;
 
@@ -123,9 +90,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.runAsUser == null ? Input.empty() : this.runAsUser;
     }
 
-    /**
-     * The name of the virtual machine run command.
-     */
     @InputImport(name="runCommandName")
     private final @Nullable Input<String> runCommandName;
 
@@ -133,9 +97,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.runCommandName == null ? Input.empty() : this.runCommandName;
     }
 
-    /**
-     * The source of the run command script.
-     */
     @InputImport(name="source")
     private final @Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source;
 
@@ -143,9 +104,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.source == null ? Input.empty() : this.source;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -153,9 +111,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The timeout in seconds to execute the run command.
-     */
     @InputImport(name="timeoutInSeconds")
     private final @Nullable Input<Integer> timeoutInSeconds;
 
@@ -163,9 +118,6 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
     }
 
-    /**
-     * The name of the VM scale set.
-     */
     @InputImport(name="vmScaleSetName", required=true)
     private final Input<String> vmScaleSetName;
 

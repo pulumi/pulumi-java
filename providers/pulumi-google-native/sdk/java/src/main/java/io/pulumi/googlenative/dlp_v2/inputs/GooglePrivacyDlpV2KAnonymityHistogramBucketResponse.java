@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Histogram of k-anonymity equivalence classes.
- */
 public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2KAnonymityHistogramBucketResponse Empty = new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse();
 
-    /**
-     * Total number of equivalence classes in this bucket.
-     */
     @InputImport(name="bucketSize", required=true)
     private final String bucketSize;
 
@@ -27,9 +21,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
         return this.bucketSize;
     }
 
-    /**
-     * Total number of distinct equivalence classes in this bucket.
-     */
     @InputImport(name="bucketValueCount", required=true)
     private final String bucketValueCount;
 
@@ -37,9 +28,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
         return this.bucketValueCount;
     }
 
-    /**
-     * Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
-     */
     @InputImport(name="bucketValues", required=true)
     private final List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
 
@@ -47,9 +35,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
         return this.bucketValues;
     }
 
-    /**
-     * Lower bound on the size of the equivalence classes in this bucket.
-     */
     @InputImport(name="equivalenceClassSizeLowerBound", required=true)
     private final String equivalenceClassSizeLowerBound;
 
@@ -57,9 +42,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends i
         return this.equivalenceClassSizeLowerBound;
     }
 
-    /**
-     * Upper bound on the size of the equivalence classes in this bucket.
-     */
     @InputImport(name="equivalenceClassSizeUpperBound", required=true)
     private final String equivalenceClassSizeUpperBound;
 

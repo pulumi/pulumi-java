@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A list of Android device configurations in which the test is to be executed.
- */
 public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidDeviceListArgs Empty = new AndroidDeviceListArgs();
 
-    /**
-     * A list of Android devices.
-     */
     @InputImport(name="androidDevices", required=true)
     private final Input<List<AndroidDeviceArgs>> androidDevices;
 

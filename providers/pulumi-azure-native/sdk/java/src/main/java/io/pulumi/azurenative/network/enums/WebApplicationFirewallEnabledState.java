@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The state of the policy.
- */
     @EnumType
     public enum WebApplicationFirewallEnabledState {
-/**
- * 
- */
         Disabled("Disabled"),
-/**
- * 
- */
         Enabled("Enabled");
 
         private final String value;

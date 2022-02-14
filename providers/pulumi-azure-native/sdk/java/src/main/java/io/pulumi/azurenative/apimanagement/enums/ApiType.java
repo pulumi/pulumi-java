@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of API.
- */
     @EnumType
     public enum ApiType {
-/**
- * 
- */
         Http("http"),
-/**
- * 
- */
         Soap("soap");
 
         private final String value;

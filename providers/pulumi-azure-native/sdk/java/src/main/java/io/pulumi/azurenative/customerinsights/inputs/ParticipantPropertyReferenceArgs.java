@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The participant property reference.
- */
 public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParticipantPropertyReferenceArgs Empty = new ParticipantPropertyReferenceArgs();
 
-    /**
-     * The source property that maps to the target property.
-     */
     @InputImport(name="sourcePropertyName", required=true)
     private final Input<String> sourcePropertyName;
 
@@ -26,9 +20,6 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
         return this.sourcePropertyName;
     }
 
-    /**
-     * The target property that maps to the source property.
-     */
     @InputImport(name="targetPropertyName", required=true)
     private final Input<String> targetPropertyName;
 

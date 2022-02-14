@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaxonomy {
-/**
- * Gets a taxonomy.
- */
     public static CompletableFuture<GetTaxonomyResult> invokeAsync(GetTaxonomyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getTaxonomy", TypeShape.of(GetTaxonomyResult.class), args == null ? GetTaxonomyArgs.Empty : args, Utilities.withVersion(options));
     }

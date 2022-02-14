@@ -11,25 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RequestResponse {
-/**
- * The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
- */
     private final @Nullable String addr;
-/**
- * The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
- */
     private final @Nullable String host;
-/**
- * The ID of the request that initiated the event.
- */
     private final @Nullable String id;
-/**
- * The request method that generated the event.
- */
     private final @Nullable String method;
-/**
- * The user agent header of the request.
- */
     private final @Nullable String useragent;
 
     @OutputCustomType.Constructor({"addr","host","id","method","useragent"})
@@ -46,33 +31,18 @@ public final class RequestResponse {
         this.useragent = useragent;
     }
 
-/**
- * The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
- */
     public Optional<String> getAddr() {
         return Optional.ofNullable(this.addr);
     }
-/**
- * The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
- */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
-/**
- * The ID of the request that initiated the event.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
-/**
- * The request method that generated the event.
- */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
-/**
- * The user agent header of the request.
- */
     public Optional<String> getUseragent() {
         return Optional.ofNullable(this.useragent);
     }

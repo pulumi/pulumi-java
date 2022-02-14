@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OutputDataBindingResponse Empty = new OutputDataBindingResponse();
 
-    /**
-     * ARM resource ID of the datastore where the data output will be stored.
-     */
     @InputImport(name="datastoreId")
     private final @Nullable String datastoreId;
 
@@ -27,9 +21,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
-    /**
-     * Mechanism for data movement to datastore.
-     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 
@@ -37,9 +28,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
-    /**
-     * Location of data inside the container process.
-     */
     @InputImport(name="pathOnCompute")
     private final @Nullable String pathOnCompute;
 
@@ -47,9 +35,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
         return this.pathOnCompute == null ? Optional.empty() : Optional.ofNullable(this.pathOnCompute);
     }
 
-    /**
-     * Path within the datastore to the data.
-     */
     @InputImport(name="pathOnDatastore")
     private final @Nullable String pathOnDatastore;
 

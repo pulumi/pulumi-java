@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnalysis {
-/**
- * Gets an analysis.
- */
     public static CompletableFuture<GetAnalysisResult> invokeAsync(GetAnalysisArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getAnalysis", TypeShape.of(GetAnalysisResult.class), args == null ? GetAnalysisArgs.Empty : args, Utilities.withVersion(options));
     }

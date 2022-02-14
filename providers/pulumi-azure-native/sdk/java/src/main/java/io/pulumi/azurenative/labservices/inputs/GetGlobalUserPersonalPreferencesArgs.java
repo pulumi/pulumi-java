@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalUserPersonalPreferencesArgs Empty = new GetGlobalUserPersonalPreferencesArgs();
 
-    /**
-     * Enum indicating if user is adding or removing a favorite lab
-     */
     @InputImport(name="addRemove")
     private final @Nullable Either<String,AddRemove> addRemove;
 
@@ -29,9 +23,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
         return this.addRemove == null ? null : this.addRemove;
     }
 
-    /**
-     * Resource Id of the lab account
-     */
     @InputImport(name="labAccountResourceId")
     private final @Nullable String labAccountResourceId;
 
@@ -39,9 +30,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
         return this.labAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.labAccountResourceId);
     }
 
-    /**
-     * Resource Id of the lab to add/remove from the favorites list
-     */
     @InputImport(name="labResourceId")
     private final @Nullable String labResourceId;
 
@@ -49,9 +37,6 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
         return this.labResourceId == null ? Optional.empty() : Optional.ofNullable(this.labResourceId);
     }
 
-    /**
-     * The name of the user.
-     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

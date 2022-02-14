@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum StorageType {
-/**
- * 
- */
         LocalNode("LocalNode"),
-/**
- * 
- */
         NetworkFileSystem("NetworkFileSystem");
 
         private final String value;

@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Network admin rule.
- */
 public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EffectiveSecurityAdminRuleResponse Empty = new EffectiveSecurityAdminRuleResponse();
 
-    /**
-     * Indicates the access allowed for this particular rule
-     */
     @InputImport(name="access", required=true)
     private final String access;
 
@@ -32,9 +26,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.access;
     }
 
-    /**
-     * A description of the security admin configuration.
-     */
     @InputImport(name="configurationDescription")
     private final @Nullable String configurationDescription;
 
@@ -42,9 +33,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
     }
 
-    /**
-     * A display name of the security admin configuration.
-     */
     @InputImport(name="configurationDisplayName")
     private final @Nullable String configurationDisplayName;
 
@@ -52,9 +40,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
     }
 
-    /**
-     * A description for this rule. Restricted to 140 chars.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -62,9 +47,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The destination port ranges.
-     */
     @InputImport(name="destinationPortRanges")
     private final @Nullable List<String> destinationPortRanges;
 
@@ -72,9 +54,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
 
-    /**
-     * The destination address prefixes. CIDR or destination IP ranges.
-     */
     @InputImport(name="destinations")
     private final @Nullable List<AddressPrefixItemResponse> destinations;
 
@@ -82,9 +61,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.destinations == null ? List.of() : this.destinations;
     }
 
-    /**
-     * Indicates if the traffic matched against the rule in inbound or outbound.
-     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -92,9 +68,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.direction;
     }
 
-    /**
-     * A friendly name for the rule.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -102,9 +75,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -112,10 +82,6 @@ public final class EffectiveSecurityAdminRuleResponse extends io.pulumi.resource
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Whether the rule is custom or default.
-Expected value is 'Custom'.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -123,9 +89,6 @@ Expected value is 'Custom'.
         return this.kind;
     }
 
-    /**
-     * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -133,9 +96,6 @@ Expected value is 'Custom'.
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
-    /**
-     * Network protocol this rule applies to.
-     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -143,9 +103,6 @@ Expected value is 'Custom'.
         return this.protocol;
     }
 
-    /**
-     * The provisioning state of the resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -153,9 +110,6 @@ Expected value is 'Custom'.
         return this.provisioningState;
     }
 
-    /**
-     * Groups for rule collection
-     */
     @InputImport(name="ruleCollectionAppliesToGroups")
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
@@ -163,9 +117,6 @@ Expected value is 'Custom'.
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
 
-    /**
-     * A description of the rule collection.
-     */
     @InputImport(name="ruleCollectionDescription")
     private final @Nullable String ruleCollectionDescription;
 
@@ -173,9 +124,6 @@ Expected value is 'Custom'.
         return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
     }
 
-    /**
-     * A display name of the rule collection.
-     */
     @InputImport(name="ruleCollectionDisplayName")
     private final @Nullable String ruleCollectionDisplayName;
 
@@ -183,9 +131,6 @@ Expected value is 'Custom'.
         return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
     }
 
-    /**
-     * Effective configuration groups.
-     */
     @InputImport(name="ruleGroups")
     private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
@@ -193,9 +138,6 @@ Expected value is 'Custom'.
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
 
-    /**
-     * The source port ranges.
-     */
     @InputImport(name="sourcePortRanges")
     private final @Nullable List<String> sourcePortRanges;
 
@@ -203,9 +145,6 @@ Expected value is 'Custom'.
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
 
-    /**
-     * The CIDR or source IP ranges.
-     */
     @InputImport(name="sources")
     private final @Nullable List<AddressPrefixItemResponse> sources;
 

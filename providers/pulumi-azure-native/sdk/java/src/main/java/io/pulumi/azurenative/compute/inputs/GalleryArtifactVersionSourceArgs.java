@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The gallery artifact version source.
- */
 public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryArtifactVersionSourceArgs Empty = new GalleryArtifactVersionSourceArgs();
 
-    /**
-     * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -27,9 +21,6 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
-     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

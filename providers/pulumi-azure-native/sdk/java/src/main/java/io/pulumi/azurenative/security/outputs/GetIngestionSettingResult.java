@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetIngestionSettingResult {
-/**
- * Resource Id
- */
     private final String id;
-/**
- * Resource name
- */
     private final String name;
-/**
- * Resource type
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","type"})
@@ -32,21 +23,12 @@ public final class GetIngestionSettingResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource Id
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name
- */
     public String getName() {
         return this.name;
     }
-/**
- * Resource type
- */
     public String getType() {
         return this.type;
     }

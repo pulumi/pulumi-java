@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PosixGroupResponse {
-/**
- * GID of the POSIX group.
- */
     private final String gid;
-/**
- * Name of the POSIX group.
- */
     private final String name;
-/**
- * System identifier for which group name and gid apply to. If not specified it will default to empty value.
- */
     private final String systemId;
 
     @OutputCustomType.Constructor({"gid","name","systemId"})
@@ -32,21 +23,12 @@ public final class PosixGroupResponse {
         this.systemId = Objects.requireNonNull(systemId);
     }
 
-/**
- * GID of the POSIX group.
- */
     public String getGid() {
         return this.gid;
     }
-/**
- * Name of the POSIX group.
- */
     public String getName() {
         return this.name;
     }
-/**
- * System identifier for which group name and gid apply to. If not specified it will default to empty value.
- */
     public String getSystemId() {
         return this.systemId;
     }

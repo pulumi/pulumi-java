@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPredictionTrainingResultsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPredictionTrainingResultsArgs Empty = new GetPredictionTrainingResultsArgs();
 
-    /**
-     * The name of the hub.
-     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -25,9 +19,6 @@ public final class GetPredictionTrainingResultsArgs extends io.pulumi.resources.
         return this.hubName;
     }
 
-    /**
-     * The name of the Prediction.
-     */
     @InputImport(name="predictionName", required=true)
     private final String predictionName;
 
@@ -35,9 +26,6 @@ public final class GetPredictionTrainingResultsArgs extends io.pulumi.resources.
         return this.predictionName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

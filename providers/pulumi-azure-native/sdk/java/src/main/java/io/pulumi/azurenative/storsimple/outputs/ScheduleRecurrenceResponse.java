@@ -12,17 +12,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScheduleRecurrenceResponse {
-/**
- * The recurrence type.
- */
     private final String recurrenceType;
-/**
- * The recurrence value.
- */
     private final Integer recurrenceValue;
-/**
- * The week days list. Applicable only for schedules of recurrence type 'weekly'.
- */
     private final @Nullable List<String> weeklyDaysList;
 
     @OutputCustomType.Constructor({"recurrenceType","recurrenceValue","weeklyDaysList"})
@@ -35,21 +26,12 @@ public final class ScheduleRecurrenceResponse {
         this.weeklyDaysList = weeklyDaysList;
     }
 
-/**
- * The recurrence type.
- */
     public String getRecurrenceType() {
         return this.recurrenceType;
     }
-/**
- * The recurrence value.
- */
     public Integer getRecurrenceValue() {
         return this.recurrenceValue;
     }
-/**
- * The week days list. Applicable only for schedules of recurrence type 'weekly'.
- */
     public List<String> getWeeklyDaysList() {
         return this.weeklyDaysList == null ? List.of() : this.weeklyDaysList;
     }

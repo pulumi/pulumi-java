@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Settings specific to keys that can be used by Android apps.
- */
 public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse Empty = new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse();
 
-    /**
-     * If set to true, allowed_package_names are not enforced.
-     */
     @InputImport(name="allowAllPackageNames", required=true)
     private final Boolean allowAllPackageNames;
 
@@ -27,9 +21,6 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
         return this.allowAllPackageNames;
     }
 
-    /**
-     * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
-     */
     @InputImport(name="allowedPackageNames", required=true)
     private final List<String> allowedPackageNames;
 

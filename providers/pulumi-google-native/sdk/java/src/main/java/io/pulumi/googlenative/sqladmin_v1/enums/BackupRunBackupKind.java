@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
- */
     @EnumType
     public enum BackupRunBackupKind {
-/**
- * This is an unknown BackupKind.
- */
         SqlBackupKindUnspecified("SQL_BACKUP_KIND_UNSPECIFIED"),
-/**
- * The snapshot based backups
- */
         Snapshot("SNAPSHOT"),
-/**
- * Physical backups
- */
         Physical("PHYSICAL");
 
         private final String value;

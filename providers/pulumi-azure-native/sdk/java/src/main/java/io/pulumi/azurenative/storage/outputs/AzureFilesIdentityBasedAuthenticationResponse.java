@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureFilesIdentityBasedAuthenticationResponse {
-/**
- * Required if choose AD.
- */
     private final @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
-/**
- * Indicates the directory service used.
- */
     private final String directoryServiceOptions;
 
     @OutputCustomType.Constructor({"activeDirectoryProperties","directoryServiceOptions"})
@@ -29,15 +23,9 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
         this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
     }
 
-/**
- * Required if choose AD.
- */
     public Optional<ActiveDirectoryPropertiesResponse> getActiveDirectoryProperties() {
         return Optional.ofNullable(this.activeDirectoryProperties);
     }
-/**
- * Indicates the directory service used.
- */
     public String getDirectoryServiceOptions() {
         return this.directoryServiceOptions;
     }

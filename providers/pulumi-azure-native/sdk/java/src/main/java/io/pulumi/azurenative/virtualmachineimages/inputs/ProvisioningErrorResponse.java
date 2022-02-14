@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the error happened when create or update an image template
- */
 public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProvisioningErrorResponse Empty = new ProvisioningErrorResponse();
 
-    /**
-     * Verbose error message about the provisioning failure
-     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -27,9 +21,6 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    /**
-     * Error code of the provisioning failure
-     */
     @InputImport(name="provisioningErrorCode")
     private final @Nullable String provisioningErrorCode;
 

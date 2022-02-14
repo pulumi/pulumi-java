@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImageArgs Empty = new GetImageArgs();
 
-    /**
-     * The expand expression to apply on the operation.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the image.
-     */
     @InputImport(name="imageName", required=true)
     private final String imageName;
 
@@ -37,9 +28,6 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.imageName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

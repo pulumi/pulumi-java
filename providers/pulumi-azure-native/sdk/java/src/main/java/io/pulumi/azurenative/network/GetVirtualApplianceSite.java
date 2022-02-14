@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualApplianceSite {
-/**
- * Virtual Appliance Site resource.
-API Version: 2020-11-01.
- *
- * Virtual Appliance Site resource.
- */
     public static CompletableFuture<GetVirtualApplianceSiteResult> invokeAsync(GetVirtualApplianceSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualApplianceSite", TypeShape.of(GetVirtualApplianceSiteResult.class), args == null ? GetVirtualApplianceSiteArgs.Empty : args, Utilities.withVersion(options));
     }

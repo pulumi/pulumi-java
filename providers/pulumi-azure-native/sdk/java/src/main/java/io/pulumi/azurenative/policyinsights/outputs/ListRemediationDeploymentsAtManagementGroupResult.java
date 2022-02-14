@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListRemediationDeploymentsAtManagementGroupResult {
-/**
- * The URL to get the next set of results.
- */
     private final String nextLink;
-/**
- * Array of deployments for the remediation.
- */
     private final List<RemediationDeploymentResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -28,15 +22,9 @@ public final class ListRemediationDeploymentsAtManagementGroupResult {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The URL to get the next set of results.
- */
     public String getNextLink() {
         return this.nextLink;
     }
-/**
- * Array of deployments for the remediation.
- */
     public List<RemediationDeploymentResponse> getValue() {
         return this.value;
     }

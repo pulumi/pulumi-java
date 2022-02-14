@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyTag {
-/**
- * Gets a policy tag.
- */
     public static CompletableFuture<GetPolicyTagResult> invokeAsync(GetPolicyTagArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1beta1:getPolicyTag", TypeShape.of(GetPolicyTagResult.class), args == null ? GetPolicyTagArgs.Empty : args, Utilities.withVersion(options));
     }

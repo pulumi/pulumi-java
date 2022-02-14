@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2WordListResponse {
-/**
- * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
- */
     private final List<String> words;
 
     @OutputCustomType.Constructor({"words"})
@@ -20,9 +17,6 @@ public final class GooglePrivacyDlpV2WordListResponse {
         this.words = Objects.requireNonNull(words);
     }
 
-/**
- * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
- */
     public List<String> getWords() {
         return this.words;
     }

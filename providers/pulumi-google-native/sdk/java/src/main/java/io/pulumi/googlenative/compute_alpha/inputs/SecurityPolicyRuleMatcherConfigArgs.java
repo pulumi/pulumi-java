@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyRuleMatcherConfigArgs Empty = new SecurityPolicyRuleMatcherConfigArgs();
 
-    /**
-     * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
-     */
     @InputImport(name="destIpRanges")
     private final @Nullable Input<List<String>> destIpRanges;
 
@@ -30,9 +24,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
         return this.destIpRanges == null ? Input.empty() : this.destIpRanges;
     }
 
-    /**
-     * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
-     */
     @InputImport(name="destPorts")
     private final @Nullable Input<List<SecurityPolicyRuleMatcherConfigDestinationPortArgs>> destPorts;
 
@@ -40,9 +31,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
         return this.destPorts == null ? Input.empty() : this.destPorts;
     }
 
-    /**
-     * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
-     */
     @InputImport(name="layer4Configs")
     private final @Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs;
 
@@ -50,9 +38,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
         return this.layer4Configs == null ? Input.empty() : this.layer4Configs;
     }
 
-    /**
-     * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
-     */
     @InputImport(name="srcIpRanges")
     private final @Nullable Input<List<String>> srcIpRanges;
 

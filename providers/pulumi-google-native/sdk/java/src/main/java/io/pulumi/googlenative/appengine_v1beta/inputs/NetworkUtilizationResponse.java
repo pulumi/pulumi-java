@@ -8,16 +8,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Target scaling by network usage. Only applicable in the App Engine flexible environment.
- */
 public final class NetworkUtilizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkUtilizationResponse Empty = new NetworkUtilizationResponse();
 
-    /**
-     * Target bytes received per second.
-     */
     @InputImport(name="targetReceivedBytesPerSecond", required=true)
     private final Integer targetReceivedBytesPerSecond;
 
@@ -25,9 +19,6 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
         return this.targetReceivedBytesPerSecond;
     }
 
-    /**
-     * Target packets received per second.
-     */
     @InputImport(name="targetReceivedPacketsPerSecond", required=true)
     private final Integer targetReceivedPacketsPerSecond;
 
@@ -35,9 +26,6 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
         return this.targetReceivedPacketsPerSecond;
     }
 
-    /**
-     * Target bytes sent per second.
-     */
     @InputImport(name="targetSentBytesPerSecond", required=true)
     private final Integer targetSentBytesPerSecond;
 
@@ -45,9 +33,6 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
         return this.targetSentBytesPerSecond;
     }
 
-    /**
-     * Target packets sent per second.
-     */
     @InputImport(name="targetSentPacketsPerSecond", required=true)
     private final Integer targetSentPacketsPerSecond;
 

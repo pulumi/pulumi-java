@@ -15,156 +15,21 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * An Application Insights component billing features
-API Version: 2015-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### ComponentCurrentBillingFeaturesUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var componentCurrentBillingFeature = new AzureNative.Insights.ComponentCurrentBillingFeature("componentCurrentBillingFeature", new AzureNative.Insights.ComponentCurrentBillingFeatureArgs
-        {
-            CurrentBillingFeatures = 
-            {
-                "Basic",
-                "Application Insights Enterprise",
-            },
-            DataVolumeCap = new AzureNative.Insights.Inputs.ApplicationInsightsComponentDataVolumeCapArgs
-            {
-                Cap = 100,
-                StopSendNotificationWhenHitCap = true,
-            },
-            ResourceGroupName = "my-resource-group",
-            ResourceName = "my-component",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewComponentCurrentBillingFeature(ctx, "componentCurrentBillingFeature", &insights.ComponentCurrentBillingFeatureArgs{
-			CurrentBillingFeatures: pulumi.StringArray{
-				pulumi.String("Basic"),
-				pulumi.String("Application Insights Enterprise"),
-			},
-			DataVolumeCap: &insights.ApplicationInsightsComponentDataVolumeCapArgs{
-				Cap:                            pulumi.Float64(100),
-				StopSendNotificationWhenHitCap: pulumi.Bool(true),
-			},
-			ResourceGroupName: pulumi.String("my-resource-group"),
-			ResourceName:      pulumi.String("my-component"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const componentCurrentBillingFeature = new azure_native.insights.ComponentCurrentBillingFeature("componentCurrentBillingFeature", {
-    currentBillingFeatures: [
-        "Basic",
-        "Application Insights Enterprise",
-    ],
-    dataVolumeCap: {
-        cap: 100,
-        stopSendNotificationWhenHitCap: true,
-    },
-    resourceGroupName: "my-resource-group",
-    resourceName: "my-component",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-component_current_billing_feature = azure_native.insights.ComponentCurrentBillingFeature("componentCurrentBillingFeature",
-    current_billing_features=[
-        "Basic",
-        "Application Insights Enterprise",
-    ],
-    data_volume_cap=azure_native.insights.ApplicationInsightsComponentDataVolumeCapArgs(
-        cap=100,
-        stop_send_notification_when_hit_cap=True,
-    ),
-    resource_group_name="my-resource-group",
-    resource_name="my-component")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:ComponentCurrentBillingFeature myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/currentbillingfeatures 
-```
-
- */
 @ResourceType(type="azure-native:insights:ComponentCurrentBillingFeature")
 public class ComponentCurrentBillingFeature extends io.pulumi.resources.CustomResource {
-    /**
-     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
-     */
     @OutputExport(name="currentBillingFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> currentBillingFeatures;
 
-    /**
-     * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
-     */
     public Output</* @Nullable */ List<String>> getCurrentBillingFeatures() {
         return this.currentBillingFeatures;
     }
-    /**
-     * An Application Insights component daily data volume cap
-     */
     @OutputExport(name="dataVolumeCap", type=ApplicationInsightsComponentDataVolumeCapResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationInsightsComponentDataVolumeCapResponse> dataVolumeCap;
 
-    /**
-     * @return An Application Insights component daily data volume cap
-     */
     public Output</* @Nullable */ ApplicationInsightsComponentDataVolumeCapResponse> getDataVolumeCap() {
         return this.dataVolumeCap;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public ComponentCurrentBillingFeature(String name, ComponentCurrentBillingFeatureArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ComponentCurrentBillingFeature", name, args == null ? ComponentCurrentBillingFeatureArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -183,14 +48,6 @@ public class ComponentCurrentBillingFeature extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static ComponentCurrentBillingFeature get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ComponentCurrentBillingFeature(name, id, options);
     }

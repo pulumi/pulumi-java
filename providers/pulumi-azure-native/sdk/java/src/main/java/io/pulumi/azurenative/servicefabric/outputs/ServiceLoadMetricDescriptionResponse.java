@@ -12,25 +12,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceLoadMetricDescriptionResponse {
-/**
- * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
- */
     private final @Nullable Integer defaultLoad;
-/**
- * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
- */
     private final String name;
-/**
- * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
- */
     private final @Nullable Integer primaryDefaultLoad;
-/**
- * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
- */
     private final @Nullable Integer secondaryDefaultLoad;
-/**
- * The service load metric relative weight, compared to other metrics configured for this service, as a number.
- */
     private final @Nullable String weight;
 
     @OutputCustomType.Constructor({"defaultLoad","name","primaryDefaultLoad","secondaryDefaultLoad","weight"})
@@ -47,33 +32,18 @@ public final class ServiceLoadMetricDescriptionResponse {
         this.weight = weight;
     }
 
-/**
- * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
- */
     public Optional<Integer> getDefaultLoad() {
         return Optional.ofNullable(this.defaultLoad);
     }
-/**
- * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
- */
     public Optional<Integer> getPrimaryDefaultLoad() {
         return Optional.ofNullable(this.primaryDefaultLoad);
     }
-/**
- * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
- */
     public Optional<Integer> getSecondaryDefaultLoad() {
         return Optional.ofNullable(this.secondaryDefaultLoad);
     }
-/**
- * The service load metric relative weight, compared to other metrics configured for this service, as a number.
- */
     public Optional<String> getWeight() {
         return Optional.ofNullable(this.weight);
     }

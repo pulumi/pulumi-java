@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegistrationDefinitionArgs Empty = new GetRegistrationDefinitionArgs();
 
-    /**
-     * Guid of the registration definition.
-     */
     @InputImport(name="registrationDefinitionId", required=true)
     private final String registrationDefinitionId;
 
@@ -25,9 +19,6 @@ public final class GetRegistrationDefinitionArgs extends io.pulumi.resources.Inv
         return this.registrationDefinitionId;
     }
 
-    /**
-     * Scope of the resource.
-     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

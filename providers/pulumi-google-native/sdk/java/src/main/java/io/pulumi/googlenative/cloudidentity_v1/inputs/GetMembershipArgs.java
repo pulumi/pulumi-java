@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -25,9 +19,6 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
         return this.groupId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="membershipId", required=true)
     private final String membershipId;
 

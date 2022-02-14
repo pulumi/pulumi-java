@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
-    /**
-     * Type used for App Engine services.
-     */
     @InputImport(name="appEngine")
     private final @Nullable Input<AppEngineArgs> appEngine;
 
@@ -35,9 +29,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.appEngine == null ? Input.empty() : this.appEngine;
     }
 
-    /**
-     * Type used for Cloud Endpoints services.
-     */
     @InputImport(name="cloudEndpoints")
     private final @Nullable Input<CloudEndpointsArgs> cloudEndpoints;
 
@@ -45,9 +36,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudEndpoints == null ? Input.empty() : this.cloudEndpoints;
     }
 
-    /**
-     * Type used for Istio services that live in a Kubernetes cluster.
-     */
     @InputImport(name="clusterIstio")
     private final @Nullable Input<ClusterIstioArgs> clusterIstio;
 
@@ -55,9 +43,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterIstio == null ? Input.empty() : this.clusterIstio;
     }
 
-    /**
-     * Custom service type.
-     */
     @InputImport(name="custom")
     private final @Nullable Input<CustomArgs> custom;
 
@@ -65,9 +50,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.custom == null ? Input.empty() : this.custom;
     }
 
-    /**
-     * Name used for UI elements listing this Service.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -75,9 +57,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
-     */
     @InputImport(name="istioCanonicalService")
     private final @Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService;
 
@@ -85,9 +64,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.istioCanonicalService == null ? Input.empty() : this.istioCanonicalService;
     }
 
-    /**
-     * Type used for Istio services scoped to an Istio mesh.
-     */
     @InputImport(name="meshIstio")
     private final @Nullable Input<MeshIstioArgs> meshIstio;
 
@@ -95,9 +71,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.meshIstio == null ? Input.empty() : this.meshIstio;
     }
 
-    /**
-     * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] 
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -105,9 +78,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="serviceId")
     private final @Nullable Input<String> serviceId;
 
@@ -115,9 +85,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceId == null ? Input.empty() : this.serviceId;
     }
 
-    /**
-     * Configuration for how to query telemetry on a Service.
-     */
     @InputImport(name="telemetry")
     private final @Nullable Input<TelemetryArgs> telemetry;
 
@@ -125,9 +92,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.telemetry == null ? Input.empty() : this.telemetry;
     }
 
-    /**
-     * Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
-     */
     @InputImport(name="userLabels")
     private final @Nullable Input<Map<String,String>> userLabels;
 
@@ -135,9 +99,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.userLabels == null ? Input.empty() : this.userLabels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v3Id", required=true)
     private final Input<String> v3Id;
 
@@ -145,9 +106,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.v3Id;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="v3Id1", required=true)
     private final Input<String> v3Id1;
 

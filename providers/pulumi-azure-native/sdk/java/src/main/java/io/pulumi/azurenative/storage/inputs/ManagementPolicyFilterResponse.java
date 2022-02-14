@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters. 
- */
 public final class ManagementPolicyFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementPolicyFilterResponse Empty = new ManagementPolicyFilterResponse();
 
-    /**
-     * An array of blob index tag based filters, there can be at most 10 tag filters
-     */
     @InputImport(name="blobIndexMatch")
     private final @Nullable List<TagFilterResponse> blobIndexMatch;
 
@@ -29,9 +23,6 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
         return this.blobIndexMatch == null ? List.of() : this.blobIndexMatch;
     }
 
-    /**
-     * An array of predefined enum values. Currently blockBlob supports all tiering and delete actions. Only delete actions are supported for appendBlob.
-     */
     @InputImport(name="blobTypes", required=true)
     private final List<String> blobTypes;
 
@@ -39,9 +30,6 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
         return this.blobTypes;
     }
 
-    /**
-     * An array of strings for prefixes to be match.
-     */
     @InputImport(name="prefixMatch")
     private final @Nullable List<String> prefixMatch;
 

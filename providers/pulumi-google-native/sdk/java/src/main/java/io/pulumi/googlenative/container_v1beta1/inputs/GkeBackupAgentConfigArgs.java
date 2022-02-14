@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for the Backup for GKE Agent.
- */
 public final class GkeBackupAgentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GkeBackupAgentConfigArgs Empty = new GkeBackupAgentConfigArgs();
 
-    /**
-     * Whether the Backup for GKE agent is enabled for this cluster.
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

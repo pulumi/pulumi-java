@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainService {
-/**
- * Domain service.
-API Version: 2021-03-01.
- *
- * Domain service.
- */
     public static CompletableFuture<GetDomainServiceResult> invokeAsync(GetDomainServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args == null ? GetDomainServiceArgs.Empty : args, Utilities.withVersion(options));
     }

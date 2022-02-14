@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryApplicationVersion {
-/**
- * Specifies information about the gallery Application Version that you want to create or update.
-API Version: 2020-09-30.
- *
- * Specifies information about the gallery Application Version that you want to create or update.
- */
     public static CompletableFuture<GetGalleryApplicationVersionResult> invokeAsync(GetGalleryApplicationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryApplicationVersion", TypeShape.of(GetGalleryApplicationVersionResult.class), args == null ? GetGalleryApplicationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

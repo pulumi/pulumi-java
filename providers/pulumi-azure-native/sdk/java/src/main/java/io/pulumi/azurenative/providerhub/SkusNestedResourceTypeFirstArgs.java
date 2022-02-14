@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkusNestedResourceTypeFirstArgs Empty = new SkusNestedResourceTypeFirstArgs();
 
-    /**
-     * The first child resource type.
-     */
     @InputImport(name="nestedResourceTypeFirst", required=true)
     private final Input<String> nestedResourceTypeFirst;
 
@@ -28,9 +22,6 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
         return this.nestedResourceTypeFirst;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="properties")
     private final @Nullable Input<SkuResourcePropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource provider hosted within ProviderHub.
-     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 
@@ -48,9 +36,6 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
         return this.providerNamespace;
     }
 
-    /**
-     * The resource type.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -58,9 +43,6 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
         return this.resourceType;
     }
 
-    /**
-     * The SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 

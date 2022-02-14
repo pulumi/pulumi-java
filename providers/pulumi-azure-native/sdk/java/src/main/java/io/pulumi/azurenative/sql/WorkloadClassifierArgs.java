@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadClassifierArgs Empty = new WorkloadClassifierArgs();
 
-    /**
-     * The workload classifier context.
-     */
     @InputImport(name="context")
     private final @Nullable Input<String> context;
 
@@ -27,9 +21,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.context == null ? Input.empty() : this.context;
     }
 
-    /**
-     * The name of the database.
-     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -37,9 +28,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.databaseName;
     }
 
-    /**
-     * The workload classifier end time for classification.
-     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -47,9 +35,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
-    /**
-     * The workload classifier importance.
-     */
     @InputImport(name="importance")
     private final @Nullable Input<String> importance;
 
@@ -57,9 +42,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.importance == null ? Input.empty() : this.importance;
     }
 
-    /**
-     * The workload classifier label.
-     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -67,9 +49,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.label == null ? Input.empty() : this.label;
     }
 
-    /**
-     * The workload classifier member name.
-     */
     @InputImport(name="memberName", required=true)
     private final Input<String> memberName;
 
@@ -77,9 +56,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.memberName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -87,9 +63,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -97,9 +70,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.serverName;
     }
 
-    /**
-     * The workload classifier start time for classification.
-     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -107,9 +77,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
-    /**
-     * The name of the workload classifier to create/update.
-     */
     @InputImport(name="workloadClassifierName")
     private final @Nullable Input<String> workloadClassifierName;
 
@@ -117,9 +84,6 @@ public final class WorkloadClassifierArgs extends io.pulumi.resources.ResourceAr
         return this.workloadClassifierName == null ? Input.empty() : this.workloadClassifierName;
     }
 
-    /**
-     * The name of the workload group from which to receive the classifier from.
-     */
     @InputImport(name="workloadGroupName", required=true)
     private final Input<String> workloadGroupName;
 

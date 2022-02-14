@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The access tier of a storage blob.
- */
     @EnumType
     public enum BlobAccessTier {
-/**
- * Optimized for storing data that is accessed frequently.
- */
         Hot("Hot"),
-/**
- * Optimized for storing data that is infrequently accessed and stored for at least 30 days.
- */
         Cool("Cool"),
-/**
- * Optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements, on the order of hours.
- */
         Archive("Archive");
 
         private final String value;

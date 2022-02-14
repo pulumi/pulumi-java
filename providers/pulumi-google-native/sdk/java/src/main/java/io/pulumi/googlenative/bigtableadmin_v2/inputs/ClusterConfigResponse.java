@@ -8,16 +8,10 @@ import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterAutoscalingConfigRe
 import java.util.Objects;
 
 
-/**
- * Configuration for a cluster.
- */
 public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterConfigResponse Empty = new ClusterConfigResponse();
 
-    /**
-     * Autoscaling configuration for this cluster.
-     */
     @InputImport(name="clusterAutoscalingConfig", required=true)
     private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 

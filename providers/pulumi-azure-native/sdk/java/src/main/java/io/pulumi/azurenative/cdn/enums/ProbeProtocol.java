@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Protocol to use for health probe.
- */
     @EnumType
     public enum ProbeProtocol {
-/**
- * 
- */
         NotSet("NotSet"),
-/**
- * 
- */
         Http("Http"),
-/**
- * 
- */
         Https("Https");
 
         private final String value;

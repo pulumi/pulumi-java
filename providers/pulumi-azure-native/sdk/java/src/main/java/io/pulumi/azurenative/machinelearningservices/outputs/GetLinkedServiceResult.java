@@ -13,29 +13,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetLinkedServiceResult {
-/**
- * ResourceId of the link of the linked service.
- */
     private final String id;
-/**
- * Identity for the resource.
- */
     private final @Nullable IdentityResponse identity;
-/**
- * location of the linked service.
- */
     private final @Nullable String location;
-/**
- * Friendly name of the linked service.
- */
     private final String name;
-/**
- * LinkedService specific properties.
- */
     private final LinkedServicePropsResponse properties;
-/**
- * Resource type of linked service.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","identity","location","name","properties","type"})
@@ -54,39 +36,21 @@ public final class GetLinkedServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * ResourceId of the link of the linked service.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Identity for the resource.
- */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
-/**
- * location of the linked service.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * Friendly name of the linked service.
- */
     public String getName() {
         return this.name;
     }
-/**
- * LinkedService specific properties.
- */
     public LinkedServicePropsResponse getProperties() {
         return this.properties;
     }
-/**
- * Resource type of linked service.
- */
     public String getType() {
         return this.type;
     }

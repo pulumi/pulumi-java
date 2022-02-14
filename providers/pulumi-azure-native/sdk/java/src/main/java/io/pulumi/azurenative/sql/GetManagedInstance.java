@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedInstance {
-/**
- * An Azure SQL managed instance.
-API Version: 2020-11-01-preview.
- *
- * An Azure SQL managed instance.
- */
     public static CompletableFuture<GetManagedInstanceResult> invokeAsync(GetManagedInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args == null ? GetManagedInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

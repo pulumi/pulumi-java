@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Machine resources for a version.
- */
 public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcesArgs Empty = new ResourcesArgs();
 
-    /**
-     * Number of CPU cores needed.
-     */
     @InputImport(name="cpu")
     private final @Nullable Input<Double> cpu;
 
@@ -30,9 +24,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
-    /**
-     * Disk size (GB) needed.
-     */
     @InputImport(name="diskGb")
     private final @Nullable Input<Double> diskGb;
 
@@ -40,9 +31,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskGb == null ? Input.empty() : this.diskGb;
     }
 
-    /**
-     * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
-     */
     @InputImport(name="kmsKeyReference")
     private final @Nullable Input<String> kmsKeyReference;
 
@@ -50,9 +38,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKeyReference == null ? Input.empty() : this.kmsKeyReference;
     }
 
-    /**
-     * Memory (GB) needed.
-     */
     @InputImport(name="memoryGb")
     private final @Nullable Input<Double> memoryGb;
 
@@ -60,9 +45,6 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
-    /**
-     * User specified volumes.
-     */
     @InputImport(name="volumes")
     private final @Nullable Input<List<VolumeArgs>> volumes;
 

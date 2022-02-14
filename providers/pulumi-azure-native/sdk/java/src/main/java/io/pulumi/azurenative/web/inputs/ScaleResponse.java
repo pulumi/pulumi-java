@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App scaling configurations.
- */
 public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScaleResponse Empty = new ScaleResponse();
 
-    /**
-     * Optional. Maximum number of container replicas. Defaults to 10 if not set.
-     */
     @InputImport(name="maxReplicas")
     private final @Nullable Integer maxReplicas;
 
@@ -29,9 +23,6 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
     }
 
-    /**
-     * Optional. Minimum number of container replicas.
-     */
     @InputImport(name="minReplicas")
     private final @Nullable Integer minReplicas;
 
@@ -39,9 +30,6 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
     }
 
-    /**
-     * Scaling rules.
-     */
     @InputImport(name="rules")
     private final @Nullable List<ScaleRuleResponse> rules;
 

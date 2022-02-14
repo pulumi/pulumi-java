@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the parameters for using a user's KeyVault certificate for securing custom domain.
- */
 public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultCertificateSourceParametersResponse Empty = new KeyVaultCertificateSourceParametersResponse();
 
-    /**
-     * Describes the action that shall be taken when the certificate is removed from Key Vault.
-     */
     @InputImport(name="deleteRule", required=true)
     private final String deleteRule;
 
@@ -27,9 +21,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.deleteRule;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -37,9 +28,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.odataType;
     }
 
-    /**
-     * Resource group of the user's Key Vault containing the SSL certificate
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -47,9 +35,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
-     */
     @InputImport(name="secretName", required=true)
     private final String secretName;
 
@@ -57,9 +42,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.secretName;
     }
 
-    /**
-     * The version(GUID) of Key Vault Secret in Key Vault.
-     */
     @InputImport(name="secretVersion")
     private final @Nullable String secretVersion;
 
@@ -67,9 +49,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
-    /**
-     * Subscription Id of the user's Key Vault containing the SSL certificate
-     */
     @InputImport(name="subscriptionId", required=true)
     private final String subscriptionId;
 
@@ -77,9 +56,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.subscriptionId;
     }
 
-    /**
-     * Describes the action that shall be taken when the certificate is updated in Key Vault.
-     */
     @InputImport(name="updateRule", required=true)
     private final String updateRule;
 
@@ -87,9 +63,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
         return this.updateRule;
     }
 
-    /**
-     * The name of the user's Key Vault containing the SSL certificate
-     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

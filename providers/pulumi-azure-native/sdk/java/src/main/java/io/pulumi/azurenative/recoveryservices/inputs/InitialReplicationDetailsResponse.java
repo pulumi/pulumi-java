@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Initial replication details.
- */
 public final class InitialReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InitialReplicationDetailsResponse Empty = new InitialReplicationDetailsResponse();
 
-    /**
-     * The initial replication progress percentage.
-     */
     @InputImport(name="initialReplicationProgressPercentage")
     private final @Nullable String initialReplicationProgressPercentage;
 
@@ -27,9 +21,6 @@ public final class InitialReplicationDetailsResponse extends io.pulumi.resources
         return this.initialReplicationProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationProgressPercentage);
     }
 
-    /**
-     * Initial replication type.
-     */
     @InputImport(name="initialReplicationType")
     private final @Nullable String initialReplicationType;
 

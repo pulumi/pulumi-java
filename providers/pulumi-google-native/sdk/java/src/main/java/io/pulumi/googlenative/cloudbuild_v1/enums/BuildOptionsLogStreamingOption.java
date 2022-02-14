@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Option to define build log streaming behavior to Google Cloud Storage.
- */
     @EnumType
     public enum BuildOptionsLogStreamingOption {
-/**
- * Service may automatically determine build log streaming behavior.
- */
         StreamDefault("STREAM_DEFAULT"),
-/**
- * Build logs should be streamed to Google Cloud Storage.
- */
         StreamOn("STREAM_ON"),
-/**
- * Build logs should not be streamed to Google Cloud Storage; they will be written when the build is completed.
- */
         StreamOff("STREAM_OFF");
 
         private final String value;

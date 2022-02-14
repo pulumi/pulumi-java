@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Storage setting
- */
 public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageSettingArgs Empty = new StorageSettingArgs();
 
-    /**
-     * Gets or sets the type of the datastore.
-     */
     @InputImport(name="datastoreType")
     private final @Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType;
 
@@ -30,9 +24,6 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
         return this.datastoreType == null ? Input.empty() : this.datastoreType;
     }
 
-    /**
-     * Gets or sets the type.
-     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,StorageSettingTypes>> type;
 

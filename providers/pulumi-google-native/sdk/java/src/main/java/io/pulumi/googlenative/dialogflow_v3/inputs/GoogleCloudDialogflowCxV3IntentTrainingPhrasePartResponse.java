@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents a part of a training phrase.
- */
 public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse Empty = new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse();
 
-    /**
-     * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
-     */
     @InputImport(name="parameterId", required=true)
     private final String parameterId;
 
@@ -25,9 +19,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
         return this.parameterId;
     }
 
-    /**
-     * The text for this part.
-     */
     @InputImport(name="text", required=true)
     private final String text;
 

@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscriptionNetworkManagerConnection {
-/**
- * The Network Manager Connection resource
-API Version: 2021-05-01-preview.
- *
- * The Network Manager Connection resource
- */
     public static CompletableFuture<GetSubscriptionNetworkManagerConnectionResult> invokeAsync(GetSubscriptionNetworkManagerConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSubscriptionNetworkManagerConnection", TypeShape.of(GetSubscriptionNetworkManagerConnectionResult.class), args == null ? GetSubscriptionNetworkManagerConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

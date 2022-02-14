@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageAccount {
-/**
- * Represents a Storage Account on the  Data Box Edge/Gateway device.
-API Version: 2020-12-01.
- *
- * Represents a Storage Account on the  Data Box Edge/Gateway device.
- */
     public static CompletableFuture<GetStorageAccountResult> invokeAsync(GetStorageAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args == null ? GetStorageAccountArgs.Empty : args, Utilities.withVersion(options));
     }

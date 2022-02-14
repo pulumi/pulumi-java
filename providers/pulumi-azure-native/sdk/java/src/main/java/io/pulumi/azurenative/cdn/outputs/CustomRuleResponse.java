@@ -14,25 +14,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomRuleResponse {
-/**
- * Describes what action to be applied when rule matches
- */
     private final String action;
-/**
- * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
- */
     private final @Nullable String enabledState;
-/**
- * List of match conditions.
- */
     private final List<MatchConditionResponse> matchConditions;
-/**
- * Defines the name of the custom rule
- */
     private final String name;
-/**
- * Defines in what order this rule be evaluated in the overall list of custom rules
- */
     private final Integer priority;
 
     @OutputCustomType.Constructor({"action","enabledState","matchConditions","name","priority"})
@@ -49,33 +34,18 @@ public final class CustomRuleResponse {
         this.priority = Objects.requireNonNull(priority);
     }
 
-/**
- * Describes what action to be applied when rule matches
- */
     public String getAction() {
         return this.action;
     }
-/**
- * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
- */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
-/**
- * List of match conditions.
- */
     public List<MatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
     }
-/**
- * Defines the name of the custom rule
- */
     public String getName() {
         return this.name;
     }
-/**
- * Defines in what order this rule be evaluated in the overall list of custom rules
- */
     public Integer getPriority() {
         return this.priority;
     }

@@ -16,229 +16,39 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The resource `random.RandomInteger` generates random values from a given range, described by the `min` and `max` attributes of a given resource.
-
-This resource can be used in conjunction with resources that have the `create_before_destroy` lifecycle flag set, to avoid conflicts with unique names during the brief period where both the old and new resources exist concurrently.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as random from "@pulumi/random";
-
-// The following example shows how to generate a random priority
-// between 1 and 50000 for a aws_alb_listener_rule resource:
-const priority = new random.RandomInteger("priority", {
-    min: 1,
-    max: 50000,
-    keepers: {
-        listener_arn: _var.listener_arn,
-    },
-});
-const main = new aws.alb.ListenerRule("main", {
-    listenerArn: _var.listener_arn,
-    priority: priority.result,
-    actions: [{
-        type: "forward",
-        targetGroupArn: _var.target_group_arn,
-    }],
-});
-// ... (other aws_alb_listener_rule arguments) ...
-```
-```python
-import pulumi
-import pulumi_aws as aws
-import pulumi_random as random
-
-# The following example shows how to generate a random priority
-# between 1 and 50000 for a aws_alb_listener_rule resource:
-priority = random.RandomInteger("priority",
-    min=1,
-    max=50000,
-    keepers={
-        "listener_arn": var["listener_arn"],
-    })
-main = aws.alb.ListenerRule("main",
-    listener_arn=var["listener_arn"],
-    priority=priority.result,
-    actions=[aws.alb.ListenerRuleActionArgs(
-        type="forward",
-        target_group_arn=var["target_group_arn"],
-    )])
-# ... (other aws_alb_listener_rule arguments) ...
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-using Random = Pulumi.Random;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // The following example shows how to generate a random priority
-        // between 1 and 50000 for a aws_alb_listener_rule resource:
-        var priority = new Random.RandomInteger("priority", new Random.RandomIntegerArgs
-        {
-            Min = 1,
-            Max = 50000,
-            Keepers = 
-            {
-                { "listener_arn", @var.Listener_arn },
-            },
-        });
-        var main = new Aws.Alb.ListenerRule("main", new Aws.Alb.ListenerRuleArgs
-        {
-            ListenerArn = @var.Listener_arn,
-            Priority = priority.Result,
-            Actions = 
-            {
-                new Aws.Alb.Inputs.ListenerRuleActionArgs
-                {
-                    Type = "forward",
-                    TargetGroupArn = @var.Target_group_arn,
-                },
-            },
-        });
-        // ... (other aws_alb_listener_rule arguments) ...
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/alb"
-	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		priority, err := random.NewRandomInteger(ctx, "priority", &random.RandomIntegerArgs{
-			Min: pulumi.Int(1),
-			Max: pulumi.Int(50000),
-			Keepers: pulumi.AnyMap{
-				"listener_arn": pulumi.Any(_var.Listener_arn),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		_, err = alb.NewListenerRule(ctx, "main", &alb.ListenerRuleArgs{
-			ListenerArn: pulumi.Any(_var.Listener_arn),
-			Priority:    priority.Result,
-			Actions: alb.ListenerRuleActionArray{
-				&alb.ListenerRuleActionArgs{
-					Type:           pulumi.String("forward"),
-					TargetGroupArn: pulumi.Any(_var.Target_group_arn),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-# Random integers can be imported using the result, min, and max, with an # optional seed. This can be used to replace a config value with a value # interpolated from the random provider without experiencing diffs. # Example (values are separated by a ,)
-
-```sh
- $ pulumi import random:index/randomInteger:RandomInteger priority 15390,1,50000
-```
-
- 
- */
 @ResourceType(type="random:index/randomInteger:RandomInteger")
 public class RandomInteger extends io.pulumi.resources.CustomResource {
-    /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
-    /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
-
-     */
     public Output</* @Nullable */ Map<String,Object>> getKeepers() {
         return this.keepers;
     }
-    /**
-     * The maximum inclusive value of the range.
-
-     */
     @OutputExport(name="max", type=Integer.class, parameters={})
     private Output<Integer> max;
 
-    /**
-     * @return The maximum inclusive value of the range.
-
-     */
     public Output<Integer> getMax() {
         return this.max;
     }
-    /**
-     * The minimum inclusive value of the range.
-
-     */
     @OutputExport(name="min", type=Integer.class, parameters={})
     private Output<Integer> min;
 
-    /**
-     * @return The minimum inclusive value of the range.
-
-     */
     public Output<Integer> getMin() {
         return this.min;
     }
-    /**
-     * The random integer result.
-
-     */
     @OutputExport(name="result", type=Integer.class, parameters={})
     private Output<Integer> result;
 
-    /**
-     * @return The random integer result.
-
-     */
     public Output<Integer> getResult() {
         return this.result;
     }
-    /**
-     * A custom seed to always produce the same value.
-
-     */
     @OutputExport(name="seed", type=String.class, parameters={})
     private Output</* @Nullable */ String> seed;
 
-    /**
-     * @return A custom seed to always produce the same value.
-
-     */
     public Output</* @Nullable */ String> getSeed() {
         return this.seed;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public RandomInteger(String name, RandomIntegerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomInteger:RandomInteger", name, args == null ? RandomIntegerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -254,15 +64,6 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param state
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static RandomInteger get(String name, Input<String> id, @Nullable RandomIntegerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomInteger(name, id, state, options);
     }

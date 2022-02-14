@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatasetCreateRequestRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetCreateRequestRegistrationArgs Empty = new DatasetCreateRequestRegistrationArgs();
 
-    /**
-     * The description for the dataset.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,9 +22,6 @@ public final class DatasetCreateRequestRegistrationArgs extends io.pulumi.resour
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The name of the dataset.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,9 +29,6 @@ public final class DatasetCreateRequestRegistrationArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Tags associated with the dataset.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

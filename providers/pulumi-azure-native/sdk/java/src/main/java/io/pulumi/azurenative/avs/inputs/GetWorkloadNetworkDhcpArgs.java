@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkloadNetworkDhcpArgs Empty = new GetWorkloadNetworkDhcpArgs();
 
-    /**
-     * NSX DHCP identifier. Generally the same as the DHCP display name
-     */
     @InputImport(name="dhcpId", required=true)
     private final String dhcpId;
 
@@ -25,9 +19,6 @@ public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.Invoke
         return this.dhcpId;
     }
 
-    /**
-     * Name of the private cloud
-     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -35,9 +26,6 @@ public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.Invoke
         return this.privateCloudName;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

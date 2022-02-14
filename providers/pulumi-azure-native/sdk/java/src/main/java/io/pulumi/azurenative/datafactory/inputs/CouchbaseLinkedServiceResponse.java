@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Couchbase server linked service.
- */
 public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CouchbaseLinkedServiceResponse Empty = new CouchbaseLinkedServiceResponse();
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -33,9 +27,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,9 +34,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     */
     @InputImport(name="connectionString")
     private final @Nullable Object connectionString;
 
@@ -53,9 +41,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
-    /**
-     * The Azure key vault secret reference of credString in connection string.
-     */
     @InputImport(name="credString")
     private final @Nullable AzureKeyVaultSecretReferenceResponse credString;
 
@@ -63,9 +48,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.credString == null ? Optional.empty() : Optional.ofNullable(this.credString);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -73,9 +55,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -83,9 +62,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -93,10 +69,6 @@ public final class CouchbaseLinkedServiceResponse extends io.pulumi.resources.In
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'Couchbase'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

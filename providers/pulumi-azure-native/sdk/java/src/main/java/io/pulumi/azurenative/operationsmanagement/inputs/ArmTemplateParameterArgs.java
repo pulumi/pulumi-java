@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Parameter to pass to ARM template
- */
 public final class ArmTemplateParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArmTemplateParameterArgs Empty = new ArmTemplateParameterArgs();
 
-    /**
-     * name of the parameter.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -27,9 +21,6 @@ public final class ArmTemplateParameterArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * value for the parameter. In Jtoken 
-     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

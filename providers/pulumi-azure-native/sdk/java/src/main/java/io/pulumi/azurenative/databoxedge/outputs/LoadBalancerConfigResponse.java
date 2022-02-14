@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LoadBalancerConfigResponse {
-/**
- * Load balancer type
- */
     private final String type;
-/**
- * Load balancer version
- */
     private final String version;
 
     @OutputCustomType.Constructor({"type","version"})
@@ -26,15 +20,9 @@ public final class LoadBalancerConfigResponse {
         this.version = Objects.requireNonNull(version);
     }
 
-/**
- * Load balancer type
- */
     public String getType() {
         return this.type;
     }
-/**
- * Load balancer version
- */
     public String getVersion() {
         return this.version;
     }

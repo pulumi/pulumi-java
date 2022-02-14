@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The ip configuration for a container network interface.
- */
 public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerNetworkInterfaceIpConfigurationResponse Empty = new ContainerNetworkInterfaceIpConfigurationResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -27,9 +21,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
         return this.etag;
     }
 
-    /**
-     * The name of the resource. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,9 +28,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the container network interface IP configuration resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -47,9 +35,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
         return this.provisioningState;
     }
 
-    /**
-     * Sub Resource type.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

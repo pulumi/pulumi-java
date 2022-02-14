@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TimerTriggerResponse {
-/**
- * The name of the trigger.
- */
     private final String name;
-/**
- * The CRON expression for the task schedule
- */
     private final String schedule;
-/**
- * The current status of trigger.
- */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"name","schedule","status"})
@@ -34,21 +25,12 @@ public final class TimerTriggerResponse {
         this.status = status;
     }
 
-/**
- * The name of the trigger.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The CRON expression for the task schedule
- */
     public String getSchedule() {
         return this.schedule;
     }
-/**
- * The current status of trigger.
- */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

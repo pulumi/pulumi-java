@@ -12,30 +12,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PostgreSqlConnectionInfoResponse {
-/**
- * Name of the database
- */
     private final @Nullable String databaseName;
-/**
- * Password credential.
- */
     private final @Nullable String password;
-/**
- * Port for Server
- */
     private final Integer port;
-/**
- * Name of the server
- */
     private final String serverName;
-/**
- * Type of connection info
-Expected value is 'PostgreSqlConnectionInfo'.
- */
     private final String type;
-/**
- * User name
- */
     private final @Nullable String userName;
 
     @OutputCustomType.Constructor({"databaseName","password","port","serverName","type","userName"})
@@ -54,40 +35,21 @@ Expected value is 'PostgreSqlConnectionInfo'.
         this.userName = userName;
     }
 
-/**
- * Name of the database
- */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
-/**
- * Password credential.
- */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
-/**
- * Port for Server
- */
     public Integer getPort() {
         return this.port;
     }
-/**
- * Name of the server
- */
     public String getServerName() {
         return this.serverName;
     }
-/**
- * Type of connection info
-Expected value is 'PostgreSqlConnectionInfo'.
- */
     public String getType() {
         return this.type;
     }
-/**
- * User name
- */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }

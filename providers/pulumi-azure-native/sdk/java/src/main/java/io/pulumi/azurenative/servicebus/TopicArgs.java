@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopicArgs Empty = new TopicArgs();
 
-    /**
-     * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-     */
     @InputImport(name="autoDeleteOnIdle")
     private final @Nullable Input<String> autoDeleteOnIdle;
 
@@ -30,9 +24,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoDeleteOnIdle == null ? Input.empty() : this.autoDeleteOnIdle;
     }
 
-    /**
-     * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
-     */
     @InputImport(name="defaultMessageTimeToLive")
     private final @Nullable Input<String> defaultMessageTimeToLive;
 
@@ -40,9 +31,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultMessageTimeToLive == null ? Input.empty() : this.defaultMessageTimeToLive;
     }
 
-    /**
-     * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
-     */
     @InputImport(name="duplicateDetectionHistoryTimeWindow")
     private final @Nullable Input<String> duplicateDetectionHistoryTimeWindow;
 
@@ -50,9 +38,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.duplicateDetectionHistoryTimeWindow == null ? Input.empty() : this.duplicateDetectionHistoryTimeWindow;
     }
 
-    /**
-     * Value that indicates whether server-side batched operations are enabled.
-     */
     @InputImport(name="enableBatchedOperations")
     private final @Nullable Input<Boolean> enableBatchedOperations;
 
@@ -60,9 +45,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableBatchedOperations == null ? Input.empty() : this.enableBatchedOperations;
     }
 
-    /**
-     * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
-     */
     @InputImport(name="enableExpress")
     private final @Nullable Input<Boolean> enableExpress;
 
@@ -70,9 +52,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableExpress == null ? Input.empty() : this.enableExpress;
     }
 
-    /**
-     * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
-     */
     @InputImport(name="enablePartitioning")
     private final @Nullable Input<Boolean> enablePartitioning;
 
@@ -80,9 +59,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.enablePartitioning == null ? Input.empty() : this.enablePartitioning;
     }
 
-    /**
-     * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
-     */
     @InputImport(name="maxSizeInMegabytes")
     private final @Nullable Input<Integer> maxSizeInMegabytes;
 
@@ -90,9 +66,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxSizeInMegabytes == null ? Input.empty() : this.maxSizeInMegabytes;
     }
 
-    /**
-     * The namespace name
-     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -100,9 +73,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
-    /**
-     * Value indicating if this topic requires duplicate detection.
-     */
     @InputImport(name="requiresDuplicateDetection")
     private final @Nullable Input<Boolean> requiresDuplicateDetection;
 
@@ -110,9 +80,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.requiresDuplicateDetection == null ? Input.empty() : this.requiresDuplicateDetection;
     }
 
-    /**
-     * Name of the Resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -120,9 +87,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Enumerates the possible values for the status of a messaging entity.
-     */
     @InputImport(name="status")
     private final @Nullable Input<EntityStatus> status;
 
@@ -130,9 +94,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * Value that indicates whether the topic supports ordering.
-     */
     @InputImport(name="supportOrdering")
     private final @Nullable Input<Boolean> supportOrdering;
 
@@ -140,9 +101,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.supportOrdering == null ? Input.empty() : this.supportOrdering;
     }
 
-    /**
-     * The topic name.
-     */
     @InputImport(name="topicName")
     private final @Nullable Input<String> topicName;
 

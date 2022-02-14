@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOpenShiftClusterCredentials {
-/**
- * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
-API Version: 2020-04-30.
- *
- * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
- */
     public static CompletableFuture<ListOpenShiftClusterCredentialsResult> invokeAsync(ListOpenShiftClusterCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterCredentials", TypeShape.of(ListOpenShiftClusterCredentialsResult.class), args == null ? ListOpenShiftClusterCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

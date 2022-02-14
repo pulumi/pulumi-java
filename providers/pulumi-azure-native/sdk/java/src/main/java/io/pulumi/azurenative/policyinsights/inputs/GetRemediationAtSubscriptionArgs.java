@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetRemediationAtSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRemediationAtSubscriptionArgs Empty = new GetRemediationAtSubscriptionArgs();
 
-    /**
-     * The name of the remediation.
-     */
     @InputImport(name="remediationName", required=true)
     private final String remediationName;
 

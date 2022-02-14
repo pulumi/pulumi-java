@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of a active directory administrator.
- */
 public final class ServerExternalAdministratorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerExternalAdministratorResponse Empty = new ServerExternalAdministratorResponse();
 
-    /**
-     * Type of the sever administrator.
-     */
     @InputImport(name="administratorType")
     private final @Nullable String administratorType;
 
@@ -28,9 +22,6 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
         return this.administratorType == null ? Optional.empty() : Optional.ofNullable(this.administratorType);
     }
 
-    /**
-     * Azure Active Directory only Authentication enabled.
-     */
     @InputImport(name="azureADOnlyAuthentication")
     private final @Nullable Boolean azureADOnlyAuthentication;
 
@@ -38,9 +29,6 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
         return this.azureADOnlyAuthentication == null ? Optional.empty() : Optional.ofNullable(this.azureADOnlyAuthentication);
     }
 
-    /**
-     * Login name of the server administrator.
-     */
     @InputImport(name="login")
     private final @Nullable String login;
 
@@ -48,9 +36,6 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
         return this.login == null ? Optional.empty() : Optional.ofNullable(this.login);
     }
 
-    /**
-     * Principal Type of the sever administrator.
-     */
     @InputImport(name="principalType")
     private final @Nullable String principalType;
 
@@ -58,9 +43,6 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
         return this.principalType == null ? Optional.empty() : Optional.ofNullable(this.principalType);
     }
 
-    /**
-     * SID (object ID) of the server administrator.
-     */
     @InputImport(name="sid")
     private final @Nullable String sid;
 
@@ -68,9 +50,6 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
     }
 
-    /**
-     * Tenant ID of the administrator.
-     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

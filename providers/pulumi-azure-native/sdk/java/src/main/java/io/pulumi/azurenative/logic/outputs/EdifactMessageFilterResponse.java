@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EdifactMessageFilterResponse {
-/**
- * The message filter type.
- */
     private final String messageFilterType;
 
     @OutputCustomType.Constructor({"messageFilterType"})
@@ -19,9 +16,6 @@ public final class EdifactMessageFilterResponse {
         this.messageFilterType = Objects.requireNonNull(messageFilterType);
     }
 
-/**
- * The message filter type.
- */
     public String getMessageFilterType() {
         return this.messageFilterType;
     }

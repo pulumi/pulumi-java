@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPolicyIamPolicy {
-/**
- * Gets the IAM policy for the specified Access Context Manager access policy.
- */
     public static CompletableFuture<GetAccessPolicyIamPolicyResult> invokeAsync(GetAccessPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessPolicyIamPolicy", TypeShape.of(GetAccessPolicyIamPolicyResult.class), args == null ? GetAccessPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

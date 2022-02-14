@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
- */
     @EnumType
     public enum PrivateEndpointServiceConnectionStatus {
-/**
- * 
- */
         Pending("Pending"),
-/**
- * 
- */
         Approved("Approved"),
-/**
- * 
- */
         Rejected("Rejected"),
-/**
- * 
- */
         Disconnected("Disconnected");
 
         private final String value;

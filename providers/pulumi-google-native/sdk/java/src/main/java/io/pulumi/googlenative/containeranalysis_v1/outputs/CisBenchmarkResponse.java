@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CisBenchmarkResponse {
-/**
- * 
- */
     private final Integer profileLevel;
-/**
- * 
- */
     private final String severity;
 
     @OutputCustomType.Constructor({"profileLevel","severity"})
@@ -27,15 +21,9 @@ public final class CisBenchmarkResponse {
         this.severity = Objects.requireNonNull(severity);
     }
 
-/**
- * 
- */
     public Integer getProfileLevel() {
         return this.profileLevel;
     }
-/**
- * 
- */
     public String getSeverity() {
         return this.severity;
     }

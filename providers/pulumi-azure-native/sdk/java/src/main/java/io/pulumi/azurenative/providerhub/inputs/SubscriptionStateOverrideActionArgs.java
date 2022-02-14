@@ -12,16 +12,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionStateOverrideActionArgs Empty = new SubscriptionStateOverrideActionArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="action", required=true)
     private final Input<Either<String,SubscriptionNotificationOperation>> action;
 
@@ -29,9 +23,6 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
         return this.action;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="state", required=true)
     private final Input<Either<String,SubscriptionTransitioningState>> state;
 

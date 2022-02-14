@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppArgs Empty = new AppArgs();
 
-    /**
-     * The name of the App resource.
-     */
     @InputImport(name="appName")
     private final @Nullable Input<String> appName;
 
@@ -29,9 +23,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.appName == null ? Input.empty() : this.appName;
     }
 
-    /**
-     * The Managed Identity type of the app resource
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedIdentityPropertiesArgs> identity;
 
@@ -39,9 +30,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The GEO location of the application, always the same with its parent resource
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,9 +37,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Properties of the App resource
-     */
     @InputImport(name="properties")
     private final @Nullable Input<AppResourcePropertiesArgs> properties;
 
@@ -59,9 +44,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Service resource.
-     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Image registry that contains the base image.
- */
 public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelDockerSectionBaseImageRegistryArgs Empty = new ModelDockerSectionBaseImageRegistryArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -27,9 +21,6 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
         return this.address == null ? Input.empty() : this.address;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -37,9 +28,6 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

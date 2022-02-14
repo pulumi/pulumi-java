@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
-    /**
-     * Name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the resource.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

@@ -53,16 +53,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * This activity evaluates an expression and executes activities under the cases property that correspond to the expression evaluation expected in the equals property.
- */
 public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SwitchActivityResponse Empty = new SwitchActivityResponse();
 
-    /**
-     * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
-     */
     @InputImport(name="cases")
     private final @Nullable List<SwitchCaseResponse> cases;
 
@@ -70,9 +64,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.cases == null ? List.of() : this.cases;
     }
 
-    /**
-     * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
-     */
     @InputImport(name="defaultActivities")
     private final @Nullable List<Object> defaultActivities;
 
@@ -80,9 +71,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.defaultActivities == null ? List.of() : this.defaultActivities;
     }
 
-    /**
-     * Activity depends on condition.
-     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -90,9 +78,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
-    /**
-     * Activity description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -100,9 +85,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Activity name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -110,9 +92,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
-    /**
-     * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
-     */
     @InputImport(name="on", required=true)
     private final ExpressionResponse on;
 
@@ -120,10 +99,6 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.on;
     }
 
-    /**
-     * Type of activity.
-Expected value is 'Switch'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -131,9 +106,6 @@ Expected value is 'Switch'.
         return this.type;
     }
 
-    /**
-     * Activity user properties.
-     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

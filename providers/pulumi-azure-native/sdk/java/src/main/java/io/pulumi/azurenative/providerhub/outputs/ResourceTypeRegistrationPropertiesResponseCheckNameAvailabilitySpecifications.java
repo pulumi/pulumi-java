@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications {
-/**
- * 
- */
     private final @Nullable Boolean enableDefaultValidation;
-/**
- * 
- */
     private final @Nullable List<String> resourceTypesWithCustomValidation;
 
     @OutputCustomType.Constructor({"enableDefaultValidation","resourceTypesWithCustomValidation"})
@@ -30,15 +24,9 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
         this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
     }
 
-/**
- * 
- */
     public Optional<Boolean> getEnableDefaultValidation() {
         return Optional.ofNullable(this.enableDefaultValidation);
     }
-/**
- * 
- */
     public List<String> getResourceTypesWithCustomValidation() {
         return this.resourceTypesWithCustomValidation == null ? List.of() : this.resourceTypesWithCustomValidation;
     }

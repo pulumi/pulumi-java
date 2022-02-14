@@ -15,25 +15,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExpressionRootResponse {
-/**
- * The azure resource error info.
- */
     private final @Nullable AzureResourceErrorInfoResponse error;
-/**
- * The path.
- */
     private final @Nullable String path;
-/**
- * The sub expressions.
- */
     private final @Nullable List<ExpressionResponse> subexpressions;
-/**
- * The text.
- */
     private final @Nullable String text;
-/**
- * 
- */
     private final @Nullable Object value;
 
     @OutputCustomType.Constructor({"error","path","subexpressions","text","value"})
@@ -50,33 +35,18 @@ public final class ExpressionRootResponse {
         this.value = value;
     }
 
-/**
- * The azure resource error info.
- */
     public Optional<AzureResourceErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
-/**
- * The path.
- */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
-/**
- * The sub expressions.
- */
     public List<ExpressionResponse> getSubexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
-/**
- * The text.
- */
     public Optional<String> getText() {
         return Optional.ofNullable(this.text);
     }
-/**
- * 
- */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }

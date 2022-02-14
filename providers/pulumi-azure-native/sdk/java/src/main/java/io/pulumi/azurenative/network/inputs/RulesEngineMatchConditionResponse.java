@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Define a match condition
- */
 public final class RulesEngineMatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RulesEngineMatchConditionResponse Empty = new RulesEngineMatchConditionResponse();
 
-    /**
-     * Describes if this is negate condition or not
-     */
     @InputImport(name="negateCondition")
     private final @Nullable Boolean negateCondition;
 
@@ -29,9 +23,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
-    /**
-     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-     */
     @InputImport(name="rulesEngineMatchValue", required=true)
     private final List<String> rulesEngineMatchValue;
 
@@ -39,9 +30,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
         return this.rulesEngineMatchValue;
     }
 
-    /**
-     * Match Variable
-     */
     @InputImport(name="rulesEngineMatchVariable", required=true)
     private final String rulesEngineMatchVariable;
 
@@ -49,9 +37,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
         return this.rulesEngineMatchVariable;
     }
 
-    /**
-     * Describes operator to apply to the match condition.
-     */
     @InputImport(name="rulesEngineOperator", required=true)
     private final String rulesEngineOperator;
 
@@ -59,9 +44,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
         return this.rulesEngineOperator;
     }
 
-    /**
-     * Name of selector in RequestHeader or RequestBody to be matched
-     */
     @InputImport(name="selector")
     private final @Nullable String selector;
 
@@ -69,9 +51,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
-    /**
-     * List of transforms
-     */
     @InputImport(name="transforms")
     private final @Nullable List<String> transforms;
 

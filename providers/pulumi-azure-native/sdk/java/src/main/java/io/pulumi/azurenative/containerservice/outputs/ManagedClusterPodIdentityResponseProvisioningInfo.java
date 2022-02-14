@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterPodIdentityResponseProvisioningInfo {
-/**
- * Pod identity assignment error (if any).
- */
     private final @Nullable CloudErrorResponse error;
 
     @OutputCustomType.Constructor({"error"})
@@ -21,9 +18,6 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
         this.error = error;
     }
 
-/**
- * Pod identity assignment error (if any).
- */
     public Optional<CloudErrorResponse> getError() {
         return Optional.ofNullable(this.error);
     }

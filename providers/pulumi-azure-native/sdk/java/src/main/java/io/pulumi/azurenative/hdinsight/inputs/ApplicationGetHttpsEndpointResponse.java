@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Gets the application HTTP endpoints.
- */
 public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGetHttpsEndpointResponse Empty = new ApplicationGetHttpsEndpointResponse();
 
-    /**
-     * The list of access modes for the application.
-     */
     @InputImport(name="accessModes")
     private final @Nullable List<String> accessModes;
 
@@ -30,9 +24,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
         return this.accessModes == null ? List.of() : this.accessModes;
     }
 
-    /**
-     * The destination port to connect to.
-     */
     @InputImport(name="destinationPort")
     private final @Nullable Integer destinationPort;
 
@@ -40,9 +31,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
     }
 
-    /**
-     * The value indicates whether to disable GatewayAuth.
-     */
     @InputImport(name="disableGatewayAuth")
     private final @Nullable Boolean disableGatewayAuth;
 
@@ -50,9 +38,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
         return this.disableGatewayAuth == null ? Optional.empty() : Optional.ofNullable(this.disableGatewayAuth);
     }
 
-    /**
-     * The location of the endpoint.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -60,9 +45,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
         return this.location;
     }
 
-    /**
-     * The private ip address of the endpoint.
-     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -70,9 +52,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
-    /**
-     * The public port to connect to.
-     */
     @InputImport(name="publicPort", required=true)
     private final Integer publicPort;
 
@@ -80,9 +59,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
         return this.publicPort;
     }
 
-    /**
-     * The subdomain suffix of the application.
-     */
     @InputImport(name="subDomainSuffix")
     private final @Nullable String subDomainSuffix;
 

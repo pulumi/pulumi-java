@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Allows filtering to one or more specific event types. If event types are present, those and only those event types will be transmitted to the cluster. Other types will be skipped. If no filter is specified, or no event types are present, all event types will be sent
- */
 public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FilterArgs Empty = new FilterArgs();
 
-    /**
-     * Event types to allowlist.
-     */
     @InputImport(name="eventType")
     private final @Nullable Input<List<FilterEventTypeItem>> eventType;
 

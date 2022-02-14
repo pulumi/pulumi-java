@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents Activity timeline item.
- */
 public final class ActivityTimelineItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActivityTimelineItemResponse Empty = new ActivityTimelineItemResponse();
 
-    /**
-     * The grouping bucket end time.
-     */
     @InputImport(name="bucketEndTimeUTC", required=true)
     private final String bucketEndTimeUTC;
 
@@ -25,9 +19,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
         return this.bucketEndTimeUTC;
     }
 
-    /**
-     * The grouping bucket start time.
-     */
     @InputImport(name="bucketStartTimeUTC", required=true)
     private final String bucketStartTimeUTC;
 
@@ -35,9 +26,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
         return this.bucketStartTimeUTC;
     }
 
-    /**
-     * The activity timeline content.
-     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -45,9 +33,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
         return this.content;
     }
 
-    /**
-     * The time of the first activity in the grouping bucket.
-     */
     @InputImport(name="firstActivityTimeUTC", required=true)
     private final String firstActivityTimeUTC;
 
@@ -55,10 +40,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
         return this.firstActivityTimeUTC;
     }
 
-    /**
-     * The entity query kind
-Expected value is 'Activity'.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -66,9 +47,6 @@ Expected value is 'Activity'.
         return this.kind;
     }
 
-    /**
-     * The time of the last activity in the grouping bucket.
-     */
     @InputImport(name="lastActivityTimeUTC", required=true)
     private final String lastActivityTimeUTC;
 
@@ -76,9 +54,6 @@ Expected value is 'Activity'.
         return this.lastActivityTimeUTC;
     }
 
-    /**
-     * The activity query id.
-     */
     @InputImport(name="queryId", required=true)
     private final String queryId;
 
@@ -86,9 +61,6 @@ Expected value is 'Activity'.
         return this.queryId;
     }
 
-    /**
-     * The activity timeline title.
-     */
     @InputImport(name="title", required=true)
     private final String title;
 

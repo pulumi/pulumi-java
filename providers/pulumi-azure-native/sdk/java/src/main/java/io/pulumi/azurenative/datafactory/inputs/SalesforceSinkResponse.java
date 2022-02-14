@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A copy activity Salesforce sink.
- */
 public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SalesforceSinkResponse Empty = new SalesforceSinkResponse();
 
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -28,9 +22,6 @@ public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
-    /**
-     * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="externalIdFieldName")
     private final @Nullable Object externalIdFieldName;
 
@@ -38,9 +29,6 @@ public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs
         return this.externalIdFieldName == null ? Optional.empty() : Optional.ofNullable(this.externalIdFieldName);
     }
 
-    /**
-     * The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
-     */
     @InputImport(name="ignoreNullValues")
     private final @Nullable Object ignoreNullValues;
 
@@ -48,9 +36,6 @@ public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs
         return this.ignoreNullValues == null ? Optional.empty() : Optional.ofNullable(this.ignoreNullValues);
     }
 
-    /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -58,9 +43,6 @@ public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
-    /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
-     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -68,9 +50,6 @@ public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
-    /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -78,10 +57,6 @@ public final class SalesforceSinkResponse extends io.pulumi.resources.InvokeArgs
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
-    /**
-     * Copy sink type.
-Expected value is 'SalesforceSink'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -89,9 +64,6 @@ Expected value is 'SalesforceSink'.
         return this.type;
     }
 
-    /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -99,9 +71,6 @@ Expected value is 'SalesforceSink'.
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
-    /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 
@@ -109,9 +78,6 @@ Expected value is 'SalesforceSink'.
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    /**
-     * The write behavior for the operation. Default is Insert.
-     */
     @InputImport(name="writeBehavior")
     private final @Nullable String writeBehavior;
 

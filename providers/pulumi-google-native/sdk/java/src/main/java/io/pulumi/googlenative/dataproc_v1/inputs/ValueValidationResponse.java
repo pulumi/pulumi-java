@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Validation based on a list of allowed values.
- */
 public final class ValueValidationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValueValidationResponse Empty = new ValueValidationResponse();
 
-    /**
-     * List of allowed values for the parameter.
-     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

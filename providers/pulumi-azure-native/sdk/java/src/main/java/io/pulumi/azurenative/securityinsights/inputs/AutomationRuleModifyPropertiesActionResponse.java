@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes an automation rule action to modify an object's properties
- */
 public final class AutomationRuleModifyPropertiesActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRuleModifyPropertiesActionResponse Empty = new AutomationRuleModifyPropertiesActionResponse();
 
-    /**
-     * The configuration of the modify properties automation rule action
-     */
     @InputImport(name="actionConfiguration", required=true)
     private final AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration;
 
@@ -27,10 +21,6 @@ public final class AutomationRuleModifyPropertiesActionResponse extends io.pulum
         return this.actionConfiguration;
     }
 
-    /**
-     * The type of the automation rule action
-Expected value is 'ModifyProperties'.
-     */
     @InputImport(name="actionType", required=true)
     private final String actionType;
 
@@ -38,9 +28,6 @@ Expected value is 'ModifyProperties'.
         return this.actionType;
     }
 
-    /**
-     * The order of execution of the automation rule action
-     */
     @InputImport(name="order", required=true)
     private final Integer order;
 

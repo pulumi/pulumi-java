@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JitSchedulingPolicyResponse {
-/**
- * 
- */
     private final String duration;
-/**
- * The start time of the request.
- */
     private final String startTime;
-/**
- * The type of JIT schedule.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"duration","startTime","type"})
@@ -32,21 +23,12 @@ public final class JitSchedulingPolicyResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * 
- */
     public String getDuration() {
         return this.duration;
     }
-/**
- * The start time of the request.
- */
     public String getStartTime() {
         return this.startTime;
     }
-/**
- * The type of JIT schedule.
- */
     public String getType() {
         return this.type;
     }

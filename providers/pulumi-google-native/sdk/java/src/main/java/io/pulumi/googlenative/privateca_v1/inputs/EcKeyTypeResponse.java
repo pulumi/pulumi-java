@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes an Elliptic Curve key that may be used in a Certificate issued from a CaPool.
- */
 public final class EcKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EcKeyTypeResponse Empty = new EcKeyTypeResponse();
 
-    /**
-     * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
-     */
     @InputImport(name="signatureAlgorithm", required=true)
     private final String signatureAlgorithm;
 

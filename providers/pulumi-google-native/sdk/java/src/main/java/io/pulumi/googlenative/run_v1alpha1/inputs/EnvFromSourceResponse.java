@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Not supported by Cloud Run EnvFromSource represents the source of a set of ConfigMaps
- */
 public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvFromSourceResponse Empty = new EnvFromSourceResponse();
 
-    /**
-     * (Optional) The ConfigMap to select from
-     */
     @InputImport(name="configMapRef", required=true)
     private final ConfigMapEnvSourceResponse configMapRef;
 
@@ -27,9 +21,6 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.configMapRef;
     }
 
-    /**
-     * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-     */
     @InputImport(name="prefix", required=true)
     private final String prefix;
 
@@ -37,9 +28,6 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.prefix;
     }
 
-    /**
-     * (Optional) The Secret to select from
-     */
     @InputImport(name="secretRef", required=true)
     private final SecretEnvSourceResponse secretRef;
 

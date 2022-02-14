@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CapabilityPropertiesResponse {
-/**
- * Localized string of the description.
- */
     private final String description;
-/**
- * URL to retrieve JSON schema of the Capability parameters.
- */
     private final String parametersSchema;
-/**
- * String of the Publisher that this Capability extends.
- */
     private final String publisher;
-/**
- * String of the Target Type that this Capability extends.
- */
     private final String targetType;
-/**
- * String of the URN for this Capability Type.
- */
     private final String urn;
 
     @OutputCustomType.Constructor({"description","parametersSchema","publisher","targetType","urn"})
@@ -44,33 +29,18 @@ public final class CapabilityPropertiesResponse {
         this.urn = Objects.requireNonNull(urn);
     }
 
-/**
- * Localized string of the description.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * URL to retrieve JSON schema of the Capability parameters.
- */
     public String getParametersSchema() {
         return this.parametersSchema;
     }
-/**
- * String of the Publisher that this Capability extends.
- */
     public String getPublisher() {
         return this.publisher;
     }
-/**
- * String of the Target Type that this Capability extends.
- */
     public String getTargetType() {
         return this.targetType;
     }
-/**
- * String of the URN for this Capability Type.
- */
     public String getUrn() {
         return this.urn;
     }

@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy {
-/**
- * 
- */
     private final @Nullable Boolean crossResourceGroupMoveEnabled;
-/**
- * 
- */
     private final @Nullable Boolean crossSubscriptionMoveEnabled;
-/**
- * 
- */
     private final @Nullable Boolean validationRequired;
 
     @OutputCustomType.Constructor({"crossResourceGroupMoveEnabled","crossSubscriptionMoveEnabled","validationRequired"})
@@ -34,21 +25,12 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
         this.validationRequired = validationRequired;
     }
 
-/**
- * 
- */
     public Optional<Boolean> getCrossResourceGroupMoveEnabled() {
         return Optional.ofNullable(this.crossResourceGroupMoveEnabled);
     }
-/**
- * 
- */
     public Optional<Boolean> getCrossSubscriptionMoveEnabled() {
         return Optional.ofNullable(this.crossSubscriptionMoveEnabled);
     }
-/**
- * 
- */
     public Optional<Boolean> getValidationRequired() {
         return Optional.ofNullable(this.validationRequired);
     }

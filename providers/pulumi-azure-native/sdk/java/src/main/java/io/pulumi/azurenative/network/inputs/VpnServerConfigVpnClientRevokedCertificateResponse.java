@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Properties of the revoked VPN client certificate of VpnServerConfiguration.
- */
 public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnServerConfigVpnClientRevokedCertificateResponse Empty = new VpnServerConfigVpnClientRevokedCertificateResponse();
 
-    /**
-     * The certificate name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The revoked VPN client certificate thumbprint.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 

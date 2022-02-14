@@ -19,16 +19,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure Data Lake Storage Gen2 linked service.
- */
 public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobFSLinkedServiceResponse Empty = new AzureBlobFSLinkedServiceResponse();
 
-    /**
-     * Account key for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="accountKey")
     private final @Nullable Object accountKey;
 
@@ -36,9 +30,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -46,9 +37,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="azureCloudType")
     private final @Nullable Object azureCloudType;
 
@@ -56,9 +44,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -66,9 +51,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * The credential reference containing authentication information.
-     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -76,9 +58,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -86,9 +65,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -96,9 +72,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -106,9 +79,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     */
     @InputImport(name="servicePrincipalCredential")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
@@ -116,9 +86,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
     }
 
-    /**
-     * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalCredentialType")
     private final @Nullable Object servicePrincipalCredentialType;
 
@@ -126,9 +93,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
-    /**
-     * The ID of the application used to authenticate against the Azure Data Lake Storage Gen2 account. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -136,9 +100,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
-    /**
-     * The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.
-     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -146,9 +107,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="tenant")
     private final @Nullable Object tenant;
 
@@ -156,10 +114,6 @@ public final class AzureBlobFSLinkedServiceResponse extends io.pulumi.resources.
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'AzureBlobFS'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -167,9 +121,6 @@ Expected value is 'AzureBlobFS'.
         return this.type;
     }
 
-    /**
-     * Endpoint for the Azure Data Lake Storage Gen2 service. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="url", required=true)
     private final Object url;
 

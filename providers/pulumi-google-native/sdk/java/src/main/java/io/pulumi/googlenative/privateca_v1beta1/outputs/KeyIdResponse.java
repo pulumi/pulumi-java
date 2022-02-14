@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyIdResponse {
-/**
- * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
- */
     private final String keyId;
 
     @OutputCustomType.Constructor({"keyId"})
@@ -19,9 +16,6 @@ public final class KeyIdResponse {
         this.keyId = Objects.requireNonNull(keyId);
     }
 
-/**
- * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
- */
     public String getKeyId() {
         return this.keyId;
     }

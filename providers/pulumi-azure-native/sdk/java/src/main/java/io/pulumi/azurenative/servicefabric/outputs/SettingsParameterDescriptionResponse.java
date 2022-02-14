@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SettingsParameterDescriptionResponse {
-/**
- * The parameter name of fabric setting.
- */
     private final String name;
-/**
- * The parameter value of fabric setting.
- */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -26,15 +20,9 @@ public final class SettingsParameterDescriptionResponse {
         this.value = Objects.requireNonNull(value);
     }
 
-/**
- * The parameter name of fabric setting.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The parameter value of fabric setting.
- */
     public String getValue() {
         return this.value;
     }

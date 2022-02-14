@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultUserRuleArgs Empty = new DefaultUserRuleArgs();
 
-    /**
-     * The name of the network manager security Configuration.
-     */
     @InputImport(name="configurationName", required=true)
     private final Input<String> configurationName;
 
@@ -27,9 +21,6 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.configurationName;
     }
 
-    /**
-     * Default rule flag.
-     */
     @InputImport(name="flag")
     private final @Nullable Input<String> flag;
 
@@ -37,10 +28,6 @@ public final class DefaultUserRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.flag == null ? Input.empty() : this.flag;
     }
 
-    /**
-     * Whether the rule is custom or default.
-Expected value is 'Default'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -48,9 +35,6 @@ Expected value is 'Default'.
         return this.kind;
     }
 
-    /**
-     * The name of the network manager.
-     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -58,9 +42,6 @@ Expected value is 'Default'.
         return this.networkManagerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +49,6 @@ Expected value is 'Default'.
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the network manager security Configuration rule collection.
-     */
     @InputImport(name="ruleCollectionName", required=true)
     private final Input<String> ruleCollectionName;
 
@@ -78,9 +56,6 @@ Expected value is 'Default'.
         return this.ruleCollectionName;
     }
 
-    /**
-     * The name of the rule.
-     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 

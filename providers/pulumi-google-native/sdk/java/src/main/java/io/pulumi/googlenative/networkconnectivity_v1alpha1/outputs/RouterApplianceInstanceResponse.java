@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RouterApplianceInstanceResponse {
-/**
- * The IP address of the network interface to use for peering.
- */
     private final String ipAddress;
-/**
- * 
- */
     private final String networkInterface;
-/**
- * The URI of the virtual machine resource
- */
     private final String virtualMachine;
 
     @OutputCustomType.Constructor({"ipAddress","networkInterface","virtualMachine"})
@@ -32,21 +23,12 @@ public final class RouterApplianceInstanceResponse {
         this.virtualMachine = Objects.requireNonNull(virtualMachine);
     }
 
-/**
- * The IP address of the network interface to use for peering.
- */
     public String getIpAddress() {
         return this.ipAddress;
     }
-/**
- * 
- */
     public String getNetworkInterface() {
         return this.networkInterface;
     }
-/**
- * The URI of the virtual machine resource
- */
     public String getVirtualMachine() {
         return this.virtualMachine;
     }

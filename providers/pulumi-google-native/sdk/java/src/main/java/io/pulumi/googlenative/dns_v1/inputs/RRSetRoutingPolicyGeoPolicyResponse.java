@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Configures a RRSetRoutingPolicy that routes based on the geo location of the querying user.
- */
 public final class RRSetRoutingPolicyGeoPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RRSetRoutingPolicyGeoPolicyResponse Empty = new RRSetRoutingPolicyGeoPolicyResponse();
 
-    /**
-     * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
-     */
     @InputImport(name="items", required=true)
     private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
 
@@ -27,9 +21,6 @@ public final class RRSetRoutingPolicyGeoPolicyResponse extends io.pulumi.resourc
         return this.items;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

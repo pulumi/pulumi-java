@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The cluster create parameters.
- */
 public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterCreatePropertiesArgs Empty = new ClusterCreatePropertiesArgs();
 
-    /**
-     * The cluster definition.
-     */
     @InputImport(name="clusterDefinition")
     private final @Nullable Input<ClusterDefinitionArgs> clusterDefinition;
 
@@ -38,9 +32,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.clusterDefinition == null ? Input.empty() : this.clusterDefinition;
     }
 
-    /**
-     * The version of the cluster.
-     */
     @InputImport(name="clusterVersion")
     private final @Nullable Input<String> clusterVersion;
 
@@ -48,9 +39,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.clusterVersion == null ? Input.empty() : this.clusterVersion;
     }
 
-    /**
-     * The compute isolation properties.
-     */
     @InputImport(name="computeIsolationProperties")
     private final @Nullable Input<ComputeIsolationPropertiesArgs> computeIsolationProperties;
 
@@ -58,9 +46,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.computeIsolationProperties == null ? Input.empty() : this.computeIsolationProperties;
     }
 
-    /**
-     * The compute profile.
-     */
     @InputImport(name="computeProfile")
     private final @Nullable Input<ComputeProfileArgs> computeProfile;
 
@@ -68,9 +53,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.computeProfile == null ? Input.empty() : this.computeProfile;
     }
 
-    /**
-     * The disk encryption properties.
-     */
     @InputImport(name="diskEncryptionProperties")
     private final @Nullable Input<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
 
@@ -78,9 +60,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.diskEncryptionProperties == null ? Input.empty() : this.diskEncryptionProperties;
     }
 
-    /**
-     * The encryption-in-transit properties.
-     */
     @InputImport(name="encryptionInTransitProperties")
     private final @Nullable Input<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
 
@@ -88,9 +67,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.encryptionInTransitProperties == null ? Input.empty() : this.encryptionInTransitProperties;
     }
 
-    /**
-     * The cluster kafka rest proxy configuration.
-     */
     @InputImport(name="kafkaRestProperties")
     private final @Nullable Input<KafkaRestPropertiesArgs> kafkaRestProperties;
 
@@ -98,9 +74,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.kafkaRestProperties == null ? Input.empty() : this.kafkaRestProperties;
     }
 
-    /**
-     * The minimal supported tls version.
-     */
     @InputImport(name="minSupportedTlsVersion")
     private final @Nullable Input<String> minSupportedTlsVersion;
 
@@ -108,9 +81,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.minSupportedTlsVersion == null ? Input.empty() : this.minSupportedTlsVersion;
     }
 
-    /**
-     * The network properties.
-     */
     @InputImport(name="networkProperties")
     private final @Nullable Input<NetworkPropertiesArgs> networkProperties;
 
@@ -118,9 +88,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.networkProperties == null ? Input.empty() : this.networkProperties;
     }
 
-    /**
-     * The type of operating system.
-     */
     @InputImport(name="osType")
     private final @Nullable Input<OSType> osType;
 
@@ -128,9 +95,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.osType == null ? Input.empty() : this.osType;
     }
 
-    /**
-     * The security profile.
-     */
     @InputImport(name="securityProfile")
     private final @Nullable Input<SecurityProfileArgs> securityProfile;
 
@@ -138,9 +102,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
     }
 
-    /**
-     * The storage profile.
-     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<StorageProfileArgs> storageProfile;
 
@@ -148,9 +109,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
-    /**
-     * The cluster tier.
-     */
     @InputImport(name="tier")
     private final @Nullable Input<Tier> tier;
 

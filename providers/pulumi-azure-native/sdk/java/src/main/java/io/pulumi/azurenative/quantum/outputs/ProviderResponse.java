@@ -11,29 +11,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderResponse {
-/**
- * The provider's marketplace application display name.
- */
     private final @Nullable String applicationName;
-/**
- * A Uri identifying the specific instance of this provider.
- */
     private final @Nullable String instanceUri;
-/**
- * Unique id of this provider.
- */
     private final @Nullable String providerId;
-/**
- * The sku associated with pricing information for this provider.
- */
     private final @Nullable String providerSku;
-/**
- * Provisioning status field
- */
     private final @Nullable String provisioningState;
-/**
- * Id to track resource usage for the provider.
- */
     private final @Nullable String resourceUsageId;
 
     @OutputCustomType.Constructor({"applicationName","instanceUri","providerId","providerSku","provisioningState","resourceUsageId"})
@@ -52,39 +34,21 @@ public final class ProviderResponse {
         this.resourceUsageId = resourceUsageId;
     }
 
-/**
- * The provider's marketplace application display name.
- */
     public Optional<String> getApplicationName() {
         return Optional.ofNullable(this.applicationName);
     }
-/**
- * A Uri identifying the specific instance of this provider.
- */
     public Optional<String> getInstanceUri() {
         return Optional.ofNullable(this.instanceUri);
     }
-/**
- * Unique id of this provider.
- */
     public Optional<String> getProviderId() {
         return Optional.ofNullable(this.providerId);
     }
-/**
- * The sku associated with pricing information for this provider.
- */
     public Optional<String> getProviderSku() {
         return Optional.ofNullable(this.providerSku);
     }
-/**
- * Provisioning status field
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * Id to track resource usage for the provider.
- */
     public Optional<String> getResourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }

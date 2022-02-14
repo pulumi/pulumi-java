@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JwtClaimChecksResponse {
-/**
- * The list of the allowed client applications.
- */
     private final @Nullable List<String> allowedClientApplications;
-/**
- * The list of the allowed groups.
- */
     private final @Nullable List<String> allowedGroups;
 
     @OutputCustomType.Constructor({"allowedClientApplications","allowedGroups"})
@@ -28,15 +22,9 @@ public final class JwtClaimChecksResponse {
         this.allowedGroups = allowedGroups;
     }
 
-/**
- * The list of the allowed client applications.
- */
     public List<String> getAllowedClientApplications() {
         return this.allowedClientApplications == null ? List.of() : this.allowedClientApplications;
     }
-/**
- * The list of the allowed groups.
- */
     public List<String> getAllowedGroups() {
         return this.allowedGroups == null ? List.of() : this.allowedGroups;
     }

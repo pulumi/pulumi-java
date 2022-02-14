@@ -9,16 +9,10 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
-/**
- * Summary statistics about the replayed log entries.
- */
 public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse Empty = new GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse();
 
-    /**
-     * The number of replayed log entries with a difference between baseline and simulated policies.
-     */
     @InputImport(name="differenceCount", required=true)
     private final Integer differenceCount;
 
@@ -26,9 +20,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
         return this.differenceCount;
     }
 
-    /**
-     * The number of log entries that could not be replayed.
-     */
     @InputImport(name="errorCount", required=true)
     private final Integer errorCount;
 
@@ -36,9 +27,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
         return this.errorCount;
     }
 
-    /**
-     * The total number of log entries replayed.
-     */
     @InputImport(name="logCount", required=true)
     private final Integer logCount;
 
@@ -46,9 +34,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
         return this.logCount;
     }
 
-    /**
-     * The date of the newest log entry replayed.
-     */
     @InputImport(name="newestDate", required=true)
     private final GoogleTypeDateResponse newestDate;
 
@@ -56,9 +41,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
         return this.newestDate;
     }
 
-    /**
-     * The date of the oldest log entry replayed.
-     */
     @InputImport(name="oldestDate", required=true)
     private final GoogleTypeDateResponse oldestDate;
 
@@ -66,9 +48,6 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
         return this.oldestDate;
     }
 
-    /**
-     * The number of replayed log entries with no difference between baseline and simulated policies.
-     */
     @InputImport(name="unchangedCount", required=true)
     private final Integer unchangedCount;
 

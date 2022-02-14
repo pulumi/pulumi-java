@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The tier of the SKU.
- */
     @EnumType
     public enum ExpressRouteCircuitSkuTier {
-/**
- * 
- */
         Standard("Standard"),
-/**
- * 
- */
         Premium("Premium"),
-/**
- * 
- */
         Basic("Basic"),
-/**
- * 
- */
         Local("Local");
 
         private final String value;

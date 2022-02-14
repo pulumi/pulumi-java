@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineArgs Empty = new VirtualMachineArgs();
 
-    /**
-     * The amount of memory
-     */
     @InputImport(name="amountOfRam", required=true)
     private final Input<Integer> amountOfRam;
 
@@ -35,9 +29,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.amountOfRam;
     }
 
-    /**
-     * Virtual machine properties
-     */
     @InputImport(name="customization")
     private final @Nullable Input<GuestOSCustomizationArgs> customization;
 
@@ -45,9 +36,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.customization == null ? Input.empty() : this.customization;
     }
 
-    /**
-     * The list of Virtual Disks
-     */
     @InputImport(name="disks")
     private final @Nullable Input<List<VirtualDiskArgs>> disks;
 
@@ -55,9 +43,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.disks == null ? Input.empty() : this.disks;
     }
 
-    /**
-     * Expose Guest OS or not
-     */
     @InputImport(name="exposeToGuestVM")
     private final @Nullable Input<Boolean> exposeToGuestVM;
 
@@ -65,9 +50,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.exposeToGuestVM == null ? Input.empty() : this.exposeToGuestVM;
     }
 
-    /**
-     * Azure region
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -75,9 +57,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The list of Virtual NICs
-     */
     @InputImport(name="nics")
     private final @Nullable Input<List<VirtualNicArgs>> nics;
 
@@ -85,9 +64,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.nics == null ? Input.empty() : this.nics;
     }
 
-    /**
-     * The number of CPU cores
-     */
     @InputImport(name="numberOfCores", required=true)
     private final Input<Integer> numberOfCores;
 
@@ -95,9 +71,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.numberOfCores;
     }
 
-    /**
-     * Password for login. Deprecated - use customization property
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -105,9 +78,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * Private Cloud Id
-     */
     @InputImport(name="privateCloudId", required=true)
     private final Input<String> privateCloudId;
 
@@ -115,9 +85,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateCloudId;
     }
 
-    /**
-     * The name of the resource group
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -125,9 +92,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Virtual Machines Resource Pool
-     */
     @InputImport(name="resourcePool")
     private final @Nullable Input<ResourcePoolArgs> resourcePool;
 
@@ -135,9 +99,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourcePool == null ? Input.empty() : this.resourcePool;
     }
 
-    /**
-     * The list of tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -145,9 +106,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Virtual Machine Template Id
-     */
     @InputImport(name="templateId")
     private final @Nullable Input<String> templateId;
 
@@ -155,9 +113,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateId == null ? Input.empty() : this.templateId;
     }
 
-    /**
-     * Username for login. Deprecated - use customization property
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 
@@ -165,9 +120,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.username == null ? Input.empty() : this.username;
     }
 
-    /**
-     * The list of Virtual VSphere Networks
-     */
     @InputImport(name="vSphereNetworks")
     private final @Nullable Input<List<String>> vSphereNetworks;
 
@@ -175,9 +127,6 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.vSphereNetworks == null ? Input.empty() : this.vSphereNetworks;
     }
 
-    /**
-     * virtual machine name
-     */
     @InputImport(name="virtualMachineName")
     private final @Nullable Input<String> virtualMachineName;
 

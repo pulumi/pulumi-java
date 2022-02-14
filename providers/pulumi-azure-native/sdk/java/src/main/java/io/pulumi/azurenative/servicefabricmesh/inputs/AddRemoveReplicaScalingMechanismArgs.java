@@ -10,17 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes the horizontal auto scaling mechanism that adds or removes replicas (containers or container groups).
- */
 public final class AddRemoveReplicaScalingMechanismArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddRemoveReplicaScalingMechanismArgs Empty = new AddRemoveReplicaScalingMechanismArgs();
 
-    /**
-     * Enumerates the mechanisms for auto scaling.
-Expected value is 'AddRemoveReplica'.
-     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -28,9 +21,6 @@ Expected value is 'AddRemoveReplica'.
         return this.kind;
     }
 
-    /**
-     * Maximum number of containers (scale up won't be performed above this number).
-     */
     @InputImport(name="maxCount", required=true)
     private final Input<Integer> maxCount;
 
@@ -38,9 +28,6 @@ Expected value is 'AddRemoveReplica'.
         return this.maxCount;
     }
 
-    /**
-     * Minimum number of containers (scale down won't be performed below this number).
-     */
     @InputImport(name="minCount", required=true)
     private final Input<Integer> minCount;
 
@@ -48,9 +35,6 @@ Expected value is 'AddRemoveReplica'.
         return this.minCount;
     }
 
-    /**
-     * Each time auto scaling is performed, this number of containers will be added or removed.
-     */
     @InputImport(name="scaleIncrement", required=true)
     private final Input<Integer> scaleIncrement;
 

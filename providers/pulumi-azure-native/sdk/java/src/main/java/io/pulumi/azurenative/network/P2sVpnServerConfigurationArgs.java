@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final P2sVpnServerConfigurationArgs Empty = new P2sVpnServerConfigurationArgs();
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -35,9 +29,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,9 +36,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Radius client root certificate of P2SVpnServerConfiguration.
-     */
     @InputImport(name="p2SVpnServerConfigRadiusClientRootCertificates")
     private final @Nullable Input<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates;
 
@@ -55,9 +43,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.p2SVpnServerConfigRadiusClientRootCertificates == null ? Input.empty() : this.p2SVpnServerConfigRadiusClientRootCertificates;
     }
 
-    /**
-     * Radius Server root certificate of P2SVpnServerConfiguration.
-     */
     @InputImport(name="p2SVpnServerConfigRadiusServerRootCertificates")
     private final @Nullable Input<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates;
 
@@ -65,9 +50,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.p2SVpnServerConfigRadiusServerRootCertificates == null ? Input.empty() : this.p2SVpnServerConfigRadiusServerRootCertificates;
     }
 
-    /**
-     * VPN client revoked certificate of P2SVpnServerConfiguration.
-     */
     @InputImport(name="p2SVpnServerConfigVpnClientRevokedCertificates")
     private final @Nullable Input<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates;
 
@@ -75,9 +57,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.p2SVpnServerConfigVpnClientRevokedCertificates == null ? Input.empty() : this.p2SVpnServerConfigVpnClientRevokedCertificates;
     }
 
-    /**
-     * VPN client root certificate of P2SVpnServerConfiguration.
-     */
     @InputImport(name="p2SVpnServerConfigVpnClientRootCertificates")
     private final @Nullable Input<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates;
 
@@ -85,9 +64,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.p2SVpnServerConfigVpnClientRootCertificates == null ? Input.empty() : this.p2SVpnServerConfigVpnClientRootCertificates;
     }
 
-    /**
-     * The name of the P2SVpnServerConfiguration.
-     */
     @InputImport(name="p2SVpnServerConfigurationName")
     private final @Nullable Input<String> p2SVpnServerConfigurationName;
 
@@ -95,9 +71,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.p2SVpnServerConfigurationName == null ? Input.empty() : this.p2SVpnServerConfigurationName;
     }
 
-    /**
-     * The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
-     */
     @InputImport(name="radiusServerAddress")
     private final @Nullable Input<String> radiusServerAddress;
 
@@ -105,9 +78,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.radiusServerAddress == null ? Input.empty() : this.radiusServerAddress;
     }
 
-    /**
-     * The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
-     */
     @InputImport(name="radiusServerSecret")
     private final @Nullable Input<String> radiusServerSecret;
 
@@ -115,9 +85,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.radiusServerSecret == null ? Input.empty() : this.radiusServerSecret;
     }
 
-    /**
-     * The resource group name of the VirtualWan.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -125,9 +92,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the VirtualWan.
-     */
     @InputImport(name="virtualWanName", required=true)
     private final Input<String> virtualWanName;
 
@@ -135,9 +99,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.virtualWanName;
     }
 
-    /**
-     * VpnClientIpsecPolicies for P2SVpnServerConfiguration.
-     */
     @InputImport(name="vpnClientIpsecPolicies")
     private final @Nullable Input<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
@@ -145,9 +106,6 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
         return this.vpnClientIpsecPolicies == null ? Input.empty() : this.vpnClientIpsecPolicies;
     }
 
-    /**
-     * VPN protocols for the P2SVpnServerConfiguration.
-     */
     @InputImport(name="vpnProtocols")
     private final @Nullable Input<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
 

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the de-interlacing settings.
- */
 public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeinterlaceArgs Empty = new DeinterlaceArgs();
 
-    /**
-     * The deinterlacing mode. Defaults to AutoPixelAdaptive.
-     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,DeinterlaceMode>> mode;
 
@@ -30,9 +24,6 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
-    /**
-     * The field parity for de-interlacing, defaults to Auto.
-     */
     @InputImport(name="parity")
     private final @Nullable Input<Either<String,DeinterlaceParity>> parity;
 

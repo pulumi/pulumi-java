@@ -9,9 +9,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetConsoleWithLocationResult {
-/**
- * Cloud shell console properties.
- */
     private final ConsolePropertiesResponse properties;
 
     @OutputCustomType.Constructor({"properties"})
@@ -19,9 +16,6 @@ public final class GetConsoleWithLocationResult {
         this.properties = Objects.requireNonNull(properties);
     }
 
-/**
- * Cloud shell console properties.
- */
     public ConsolePropertiesResponse getProperties() {
         return this.properties;
     }

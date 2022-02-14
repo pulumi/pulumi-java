@@ -15,16 +15,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure VM workload-specific protected item representing SAP ASE Database.
- */
 public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureVmWorkloadSAPAseDatabaseProtectedItemResponse Empty = new AzureVmWorkloadSAPAseDatabaseProtectedItemResponse();
 
-    /**
-     * Type of backup management for the backed up item.
-     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -32,9 +26,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
-    /**
-     * Name of the backup set the backup item belongs to
-     */
     @InputImport(name="backupSetName")
     private final @Nullable String backupSetName;
 
@@ -42,9 +33,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
     }
 
-    /**
-     * Unique name of container
-     */
     @InputImport(name="containerName")
     private final @Nullable String containerName;
 
@@ -52,9 +40,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
-    /**
-     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     */
     @InputImport(name="createMode")
     private final @Nullable String createMode;
 
@@ -62,9 +47,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
     }
 
-    /**
-     * Time for deferred deletion in UTC
-     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable String deferredDeleteTimeInUTC;
 
@@ -72,9 +54,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
-    /**
-     * Time remaining before the DS marked for deferred delete is permanently deleted
-     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable String deferredDeleteTimeRemaining;
 
@@ -82,9 +61,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
-    /**
-     * Additional information for this backup item.
-     */
     @InputImport(name="extendedInfo")
     private final @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
 
@@ -92,9 +68,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
-    /**
-     * Friendly name of the DB represented by this backup item.
-     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -102,9 +75,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
-    /**
-     * Flag to identify whether the deferred deleted DS is to be purged soon
-     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
@@ -112,9 +82,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
-    /**
-     * Flag to identify that deferred deleted DS is to be moved into Pause state
-     */
     @InputImport(name="isRehydrate")
     private final @Nullable Boolean isRehydrate;
 
@@ -122,9 +89,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
     }
 
-    /**
-     * Flag to identify whether the DS is scheduled for deferred delete
-     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Boolean isScheduledForDeferredDelete;
 
@@ -132,9 +96,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
-    /**
-     * Health details of different KPIs
-     */
     @InputImport(name="kpisHealths")
     private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
 
@@ -142,9 +103,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.kpisHealths == null ? Map.of() : this.kpisHealths;
     }
 
-    /**
-     * Error details in last backup
-     */
     @InputImport(name="lastBackupErrorDetail")
     private final @Nullable ErrorDetailResponse lastBackupErrorDetail;
 
@@ -152,9 +110,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.lastBackupErrorDetail == null ? Optional.empty() : Optional.ofNullable(this.lastBackupErrorDetail);
     }
 
-    /**
-     * Last backup operation status. Possible values: Healthy, Unhealthy.
-     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable String lastBackupStatus;
 
@@ -162,9 +117,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
     }
 
-    /**
-     * Timestamp of the last backup operation on this backup item.
-     */
     @InputImport(name="lastBackupTime")
     private final @Nullable String lastBackupTime;
 
@@ -172,9 +124,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.lastBackupTime == null ? Optional.empty() : Optional.ofNullable(this.lastBackupTime);
     }
 
-    /**
-     * Timestamp when the last (latest) backup copy was created for this backup item.
-     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable String lastRecoveryPoint;
 
@@ -182,9 +131,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
     }
 
-    /**
-     * Parent name of the DB such as Instance or Availability Group.
-     */
     @InputImport(name="parentName")
     private final @Nullable String parentName;
 
@@ -192,9 +138,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.parentName == null ? Optional.empty() : Optional.ofNullable(this.parentName);
     }
 
-    /**
-     * Parent type of protected item, example: for a DB, standalone server or distributed
-     */
     @InputImport(name="parentType")
     private final @Nullable String parentType;
 
@@ -202,9 +145,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.parentType == null ? Optional.empty() : Optional.ofNullable(this.parentType);
     }
 
-    /**
-     * ID of the backup policy with which this item is backed up.
-     */
     @InputImport(name="policyId")
     private final @Nullable String policyId;
 
@@ -212,9 +152,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
-    /**
-     * Data ID of the protected item.
-     */
     @InputImport(name="protectedItemDataSourceId")
     private final @Nullable String protectedItemDataSourceId;
 
@@ -222,9 +159,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.protectedItemDataSourceId == null ? Optional.empty() : Optional.ofNullable(this.protectedItemDataSourceId);
     }
 
-    /**
-     * Health status of the backup item, evaluated based on last heartbeat received
-     */
     @InputImport(name="protectedItemHealthStatus")
     private final @Nullable String protectedItemHealthStatus;
 
@@ -232,10 +166,6 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends io
         return this.protectedItemHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.protectedItemHealthStatus);
     }
 
-    /**
-     * backup item type.
-Expected value is 'AzureVmWorkloadSAPAseDatabase'.
-     */
     @InputImport(name="protectedItemType", required=true)
     private final String protectedItemType;
 
@@ -243,9 +173,6 @@ Expected value is 'AzureVmWorkloadSAPAseDatabase'.
         return this.protectedItemType;
     }
 
-    /**
-     * Backup state of this backup item.
-     */
     @InputImport(name="protectionState")
     private final @Nullable String protectionState;
 
@@ -253,9 +180,6 @@ Expected value is 'AzureVmWorkloadSAPAseDatabase'.
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
-    /**
-     * Backup status of this backup item.
-     */
     @InputImport(name="protectionStatus")
     private final @Nullable String protectionStatus;
 
@@ -263,9 +187,6 @@ Expected value is 'AzureVmWorkloadSAPAseDatabase'.
         return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
     }
 
-    /**
-     * Host/Cluster Name for instance or AG
-     */
     @InputImport(name="serverName")
     private final @Nullable String serverName;
 
@@ -273,9 +194,6 @@ Expected value is 'AzureVmWorkloadSAPAseDatabase'.
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
     }
 
-    /**
-     * ARM ID of the resource to be backed up.
-     */
     @InputImport(name="sourceResourceId")
     private final @Nullable String sourceResourceId;
 
@@ -283,9 +201,6 @@ Expected value is 'AzureVmWorkloadSAPAseDatabase'.
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
-    /**
-     * Type of workload this item represents.
-     */
     @InputImport(name="workloadType")
     private final @Nullable String workloadType;
 

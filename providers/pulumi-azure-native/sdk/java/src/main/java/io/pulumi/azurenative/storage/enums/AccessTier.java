@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
- */
     @EnumType
     public enum AccessTier {
-/**
- * 
- */
         Hot("Hot"),
-/**
- * 
- */
         Cool("Cool");
 
         private final String value;

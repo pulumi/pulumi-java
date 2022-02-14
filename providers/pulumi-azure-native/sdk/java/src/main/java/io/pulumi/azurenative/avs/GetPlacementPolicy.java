@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPlacementPolicy {
-/**
- * A vSphere Distributed Resource Scheduler (DRS) placement policy
-API Version: 2021-12-01.
- *
- * A vSphere Distributed Resource Scheduler (DRS) placement policy
- */
     public static CompletableFuture<GetPlacementPolicyResult> invokeAsync(GetPlacementPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPlacementPolicy", TypeShape.of(GetPlacementPolicyResult.class), args == null ? GetPlacementPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -17,242 +17,75 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Storage Sync Service object.
-API Version: 2020-03-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### StorageSyncServices_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var storageSyncService = new AzureNative.StorageSync.StorageSyncService("storageSyncService", new AzureNative.StorageSync.StorageSyncServiceArgs
-        {
-            IncomingTrafficPolicy = "AllowAllTraffic",
-            Location = "WestUS",
-            ResourceGroupName = "SampleResourceGroup_1",
-            StorageSyncServiceName = "SampleStorageSyncService_1",
-            Tags = ,
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storagesync.NewStorageSyncService(ctx, "storageSyncService", &storagesync.StorageSyncServiceArgs{
-			IncomingTrafficPolicy:  pulumi.String("AllowAllTraffic"),
-			Location:               pulumi.String("WestUS"),
-			ResourceGroupName:      pulumi.String("SampleResourceGroup_1"),
-			StorageSyncServiceName: pulumi.String("SampleStorageSyncService_1"),
-			Tags:                   nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const storageSyncService = new azure_native.storagesync.StorageSyncService("storageSyncService", {
-    incomingTrafficPolicy: "AllowAllTraffic",
-    location: "WestUS",
-    resourceGroupName: "SampleResourceGroup_1",
-    storageSyncServiceName: "SampleStorageSyncService_1",
-    tags: {},
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-storage_sync_service = azure_native.storagesync.StorageSyncService("storageSyncService",
-    incoming_traffic_policy="AllowAllTraffic",
-    location="WestUS",
-    resource_group_name="SampleResourceGroup_1",
-    storage_sync_service_name="SampleStorageSyncService_1",
-    tags={})
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:storagesync:StorageSyncService SampleStorageSyncService_1 /subscriptions/3a048283-338f-4002-a9dd-a50fdadcb392/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1 
-```
-
- */
 @ResourceType(type="azure-native:storagesync:StorageSyncService")
 public class StorageSyncService extends io.pulumi.resources.CustomResource {
-    /**
-     * Incoming Traffic Policy
-     */
     @OutputExport(name="incomingTrafficPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> incomingTrafficPolicy;
 
-    /**
-     * @return Incoming Traffic Policy
-     */
     public Output</* @Nullable */ String> getIncomingTrafficPolicy() {
         return this.incomingTrafficPolicy;
     }
-    /**
-     * Resource Last Operation Name
-     */
     @OutputExport(name="lastOperationName", type=String.class, parameters={})
     private Output<String> lastOperationName;
 
-    /**
-     * @return Resource Last Operation Name
-     */
     public Output<String> getLastOperationName() {
         return this.lastOperationName;
     }
-    /**
-     * StorageSyncService lastWorkflowId
-     */
     @OutputExport(name="lastWorkflowId", type=String.class, parameters={})
     private Output<String> lastWorkflowId;
 
-    /**
-     * @return StorageSyncService lastWorkflowId
-     */
     public Output<String> getLastWorkflowId() {
         return this.lastWorkflowId;
     }
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * List of private endpoint connection associated with the specified storage sync service
-     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    /**
-     * @return List of private endpoint connection associated with the specified storage sync service
-     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    /**
-     * StorageSyncService Provisioning State
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return StorageSyncService Provisioning State
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Storage Sync service status.
-     */
     @OutputExport(name="storageSyncServiceStatus", type=Integer.class, parameters={})
     private Output<Integer> storageSyncServiceStatus;
 
-    /**
-     * @return Storage Sync service status.
-     */
     public Output<Integer> getStorageSyncServiceStatus() {
         return this.storageSyncServiceStatus;
     }
-    /**
-     * Storage Sync service Uid
-     */
     @OutputExport(name="storageSyncServiceUid", type=String.class, parameters={})
     private Output<String> storageSyncServiceUid;
 
-    /**
-     * @return Storage Sync service Uid
-     */
     public Output<String> getStorageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public StorageSyncService(String name, StorageSyncServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagesync:StorageSyncService", name, args == null ? StorageSyncServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -280,14 +113,6 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static StorageSyncService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageSyncService(name, id, options);
     }

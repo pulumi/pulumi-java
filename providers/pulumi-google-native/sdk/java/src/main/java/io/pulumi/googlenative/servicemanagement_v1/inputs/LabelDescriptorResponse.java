@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A description of a label.
- */
 public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabelDescriptorResponse Empty = new LabelDescriptorResponse();
 
-    /**
-     * A human-readable description for the label.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -25,9 +19,6 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
         return this.description;
     }
 
-    /**
-     * The label key.
-     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -35,9 +26,6 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
         return this.key;
     }
 
-    /**
-     * The type of data that can be assigned to the label.
-     */
     @InputImport(name="valueType", required=true)
     private final String valueType;
 

@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyRuleMatcherConfigResponse Empty = new SecurityPolicyRuleMatcherConfigResponse();
 
-    /**
-     * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
-     */
     @InputImport(name="destIpRanges", required=true)
     private final List<String> destIpRanges;
 
@@ -27,9 +21,6 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
         return this.destIpRanges;
     }
 
-    /**
-     * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
-     */
     @InputImport(name="layer4Configs", required=true)
     private final List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
 
@@ -37,9 +28,6 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
         return this.layer4Configs;
     }
 
-    /**
-     * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
-     */
     @InputImport(name="srcIpRanges", required=true)
     private final List<String> srcIpRanges;
 

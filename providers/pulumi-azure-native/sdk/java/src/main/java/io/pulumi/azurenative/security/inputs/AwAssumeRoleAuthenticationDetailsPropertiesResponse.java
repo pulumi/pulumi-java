@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * AWS cloud account connector based assume role, the role enables delegating access to your AWS resources. The role is composed of role Amazon Resource Name (ARN) and external ID. For more details, refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">Creating a Role to Delegate Permissions to an IAM User (write only)</a>
- */
 public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AwAssumeRoleAuthenticationDetailsPropertiesResponse Empty = new AwAssumeRoleAuthenticationDetailsPropertiesResponse();
 
-    /**
-     * The ID of the cloud account
-     */
     @InputImport(name="accountId", required=true)
     private final String accountId;
 
@@ -26,9 +20,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
         return this.accountId;
     }
 
-    /**
-     * State of the multi-cloud connector
-     */
     @InputImport(name="authenticationProvisioningState", required=true)
     private final String authenticationProvisioningState;
 
@@ -36,10 +27,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
         return this.authenticationProvisioningState;
     }
 
-    /**
-     * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-Expected value is 'awsAssumeRole'.
-     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -47,9 +34,6 @@ Expected value is 'awsAssumeRole'.
         return this.authenticationType;
     }
 
-    /**
-     * Assumed role ID is an identifier that you can use to create temporary security credentials.
-     */
     @InputImport(name="awsAssumeRoleArn", required=true)
     private final String awsAssumeRoleArn;
 
@@ -57,9 +41,6 @@ Expected value is 'awsAssumeRole'.
         return this.awsAssumeRoleArn;
     }
 
-    /**
-     * A unique identifier that is required when you assume a role in another account.
-     */
     @InputImport(name="awsExternalId", required=true)
     private final String awsExternalId;
 
@@ -67,9 +48,6 @@ Expected value is 'awsAssumeRole'.
         return this.awsExternalId;
     }
 
-    /**
-     * The permissions detected in the cloud account.
-     */
     @InputImport(name="grantedPermissions", required=true)
     private final List<String> grantedPermissions;
 

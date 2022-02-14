@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Virtual Network ACL Rule object
- */
 public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkRuleArgs Empty = new VirtualNetworkRuleArgs();
 
-    /**
-     * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
-     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,9 +22,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.id == null ? Input.empty() : this.id;
     }
 
-    /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
-     */
     @InputImport(name="ignoreMissingVNetServiceEndpoint")
     private final @Nullable Input<Boolean> ignoreMissingVNetServiceEndpoint;
 

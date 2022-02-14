@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointResponse {
-/**
- * Specifies the id of private endpoint.
- */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -21,9 +18,6 @@ public final class PrivateEndpointResponse {
         this.id = id;
     }
 
-/**
- * Specifies the id of private endpoint.
- */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

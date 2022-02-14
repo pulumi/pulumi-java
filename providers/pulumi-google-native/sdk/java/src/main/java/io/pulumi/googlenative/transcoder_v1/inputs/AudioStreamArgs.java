@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Audio stream resource.
- */
 public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AudioStreamArgs Empty = new AudioStreamArgs();
 
-    /**
-     * Audio bitrate in bits per second. Must be between 1 and 10,000,000.
-     */
     @InputImport(name="bitrateBps", required=true)
     private final Input<Integer> bitrateBps;
 
@@ -30,9 +24,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.bitrateBps;
     }
 
-    /**
-     * Number of audio channels. Must be between 1 and 6. The default is 2.
-     */
     @InputImport(name="channelCount")
     private final @Nullable Input<Integer> channelCount;
 
@@ -40,9 +31,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelCount == null ? Input.empty() : this.channelCount;
     }
 
-    /**
-     * A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
-     */
     @InputImport(name="channelLayout")
     private final @Nullable Input<List<String>> channelLayout;
 
@@ -50,9 +38,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelLayout == null ? Input.empty() : this.channelLayout;
     }
 
-    /**
-     * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
-     */
     @InputImport(name="codec")
     private final @Nullable Input<String> codec;
 
@@ -60,9 +45,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.codec == null ? Input.empty() : this.codec;
     }
 
-    /**
-     * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
-     */
     @InputImport(name="mapping")
     private final @Nullable Input<List<AudioMappingArgs>> mapping;
 
@@ -70,9 +52,6 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.mapping == null ? Input.empty() : this.mapping;
     }
 
-    /**
-     * The audio sample rate in Hertz. The default is 48000 Hertz.
-     */
     @InputImport(name="sampleRateHertz")
     private final @Nullable Input<Integer> sampleRateHertz;
 

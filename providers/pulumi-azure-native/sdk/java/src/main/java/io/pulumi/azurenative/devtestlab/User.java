@@ -17,273 +17,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Profile of a lab user.
-API Version: 2018-09-15.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Users_CreateOrUpdate
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var user = new AzureNative.DevTestLab.User("user", new AzureNative.DevTestLab.UserArgs
-        {
-            Identity = new AzureNative.DevTestLab.Inputs.UserIdentityArgs
-            {
-                AppId = "{appId}",
-                ObjectId = "{objectId}",
-                PrincipalId = "{principalId}",
-                PrincipalName = "{principalName}",
-                TenantId = "{tenantId}",
-            },
-            LabName = "{devtestlabName}",
-            Location = "{location}",
-            Name = "{userName}",
-            ResourceGroupName = "resourceGroupName",
-            SecretStore = new AzureNative.DevTestLab.Inputs.UserSecretStoreArgs
-            {
-                KeyVaultId = "{keyVaultId}",
-                KeyVaultUri = "{keyVaultUri}",
-            },
-            Tags = 
-            {
-                { "tagName1", "tagValue1" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := devtestlab.NewUser(ctx, "user", &devtestlab.UserArgs{
-			Identity: &devtestlab.UserIdentityArgs{
-				AppId:         pulumi.String("{appId}"),
-				ObjectId:      pulumi.String("{objectId}"),
-				PrincipalId:   pulumi.String("{principalId}"),
-				PrincipalName: pulumi.String("{principalName}"),
-				TenantId:      pulumi.String("{tenantId}"),
-			},
-			LabName:           pulumi.String("{devtestlabName}"),
-			Location:          pulumi.String("{location}"),
-			Name:              pulumi.String("{userName}"),
-			ResourceGroupName: pulumi.String("resourceGroupName"),
-			SecretStore: &devtestlab.UserSecretStoreArgs{
-				KeyVaultId:  pulumi.String("{keyVaultId}"),
-				KeyVaultUri: pulumi.String("{keyVaultUri}"),
-			},
-			Tags: pulumi.StringMap{
-				"tagName1": pulumi.String("tagValue1"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const user = new azure_native.devtestlab.User("user", {
-    identity: {
-        appId: "{appId}",
-        objectId: "{objectId}",
-        principalId: "{principalId}",
-        principalName: "{principalName}",
-        tenantId: "{tenantId}",
-    },
-    labName: "{devtestlabName}",
-    location: "{location}",
-    name: "{userName}",
-    resourceGroupName: "resourceGroupName",
-    secretStore: {
-        keyVaultId: "{keyVaultId}",
-        keyVaultUri: "{keyVaultUri}",
-    },
-    tags: {
-        tagName1: "tagValue1",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-user = azure_native.devtestlab.User("user",
-    identity=azure_native.devtestlab.UserIdentityArgs(
-        app_id="{appId}",
-        object_id="{objectId}",
-        principal_id="{principalId}",
-        principal_name="{principalName}",
-        tenant_id="{tenantId}",
-    ),
-    lab_name="{devtestlabName}",
-    location="{location}",
-    name="{userName}",
-    resource_group_name="resourceGroupName",
-    secret_store=azure_native.devtestlab.UserSecretStoreArgs(
-        key_vault_id="{keyVaultId}",
-        key_vault_uri="{keyVaultUri}",
-    ),
-    tags={
-        "tagName1": "tagValue1",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:devtestlab:User myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/users/{name} 
-```
-
- */
 @ResourceType(type="azure-native:devtestlab:User")
 public class User extends io.pulumi.resources.CustomResource {
-    /**
-     * The creation date of the user profile.
-     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
-    /**
-     * @return The creation date of the user profile.
-     */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
-    /**
-     * The identity of the user.
-     */
     @OutputExport(name="identity", type=UserIdentityResponse.class, parameters={})
     private Output</* @Nullable */ UserIdentityResponse> identity;
 
-    /**
-     * @return The identity of the user.
-     */
     public Output</* @Nullable */ UserIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The location of the resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The provisioning status of the resource.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The provisioning status of the resource.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The secret store of the user.
-     */
     @OutputExport(name="secretStore", type=UserSecretStoreResponse.class, parameters={})
     private Output</* @Nullable */ UserSecretStoreResponse> secretStore;
 
-    /**
-     * @return The secret store of the user.
-     */
     public Output</* @Nullable */ UserSecretStoreResponse> getSecretStore() {
         return this.secretStore;
     }
-    /**
-     * The tags of the resource.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The tags of the resource.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
-    /**
-     * @return The unique immutable identifier of a resource (Guid).
-     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public User(String name, UserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:User", name, args == null ? UserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -303,14 +93,6 @@ public class User extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static User get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new User(name, id, options);
     }

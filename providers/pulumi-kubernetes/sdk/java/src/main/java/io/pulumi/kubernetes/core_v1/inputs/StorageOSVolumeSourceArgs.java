@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Represents a StorageOS persistent volume resource.
- */
 public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageOSVolumeSourceArgs Empty = new StorageOSVolumeSourceArgs();
 
-    /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -29,9 +23,6 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
-    /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -39,9 +30,6 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
-    /**
-     * SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
-     */
     @InputImport(name="secretRef")
     private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 
@@ -49,9 +37,6 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.secretRef == null ? Input.empty() : this.secretRef;
     }
 
-    /**
-     * VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
-     */
     @InputImport(name="volumeName")
     private final @Nullable Input<String> volumeName;
 
@@ -59,9 +44,6 @@ public final class StorageOSVolumeSourceArgs extends io.pulumi.resources.Resourc
         return this.volumeName == null ? Input.empty() : this.volumeName;
     }
 
-    /**
-     * VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
-     */
     @InputImport(name="volumeNamespace")
     private final @Nullable Input<String> volumeNamespace;
 

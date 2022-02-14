@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Read-replica configuration for connecting to the primary instance.
- */
 public final class ReplicaConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicaConfigurationArgs Empty = new ReplicaConfigurationArgs();
 
-    /**
-     * Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
-     */
     @InputImport(name="failoverTarget")
     private final @Nullable Input<Boolean> failoverTarget;
 
@@ -29,9 +23,6 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
         return this.failoverTarget == null ? Input.empty() : this.failoverTarget;
     }
 
-    /**
-     * This is always `sql#replicaConfiguration`.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -39,9 +30,6 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
-     */
     @InputImport(name="mysqlReplicaConfiguration")
     private final @Nullable Input<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
 

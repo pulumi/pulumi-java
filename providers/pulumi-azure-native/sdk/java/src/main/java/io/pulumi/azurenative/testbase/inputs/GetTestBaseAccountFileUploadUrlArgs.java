@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTestBaseAccountFileUploadUrlArgs Empty = new GetTestBaseAccountFileUploadUrlArgs();
 
-    /**
-     * The custom file name of the uploaded blob.
-     */
     @InputImport(name="blobName")
     private final @Nullable String blobName;
 
@@ -27,9 +21,6 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
         return this.blobName == null ? Optional.empty() : Optional.ofNullable(this.blobName);
     }
 
-    /**
-     * The name of the resource group that contains the resource.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * The resource name of the Test Base Account.
-     */
     @InputImport(name="testBaseAccountName", required=true)
     private final String testBaseAccountName;
 

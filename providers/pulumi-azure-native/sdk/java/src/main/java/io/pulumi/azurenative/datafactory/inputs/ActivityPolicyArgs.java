@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Execution policy for an activity.
- */
 public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActivityPolicyArgs Empty = new ActivityPolicyArgs();
 
-    /**
-     * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-     */
     @InputImport(name="retry")
     private final @Nullable Input<Object> retry;
 
@@ -29,9 +23,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.retry == null ? Input.empty() : this.retry;
     }
 
-    /**
-     * Interval between each retry attempt (in seconds). The default is 30 sec.
-     */
     @InputImport(name="retryIntervalInSeconds")
     private final @Nullable Input<Integer> retryIntervalInSeconds;
 
@@ -39,9 +30,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.retryIntervalInSeconds == null ? Input.empty() : this.retryIntervalInSeconds;
     }
 
-    /**
-     * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
-     */
     @InputImport(name="secureInput")
     private final @Nullable Input<Boolean> secureInput;
 
@@ -49,9 +37,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.secureInput == null ? Input.empty() : this.secureInput;
     }
 
-    /**
-     * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
-     */
     @InputImport(name="secureOutput")
     private final @Nullable Input<Boolean> secureOutput;
 
@@ -59,9 +44,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.secureOutput == null ? Input.empty() : this.secureOutput;
     }
 
-    /**
-     * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     */
     @InputImport(name="timeout")
     private final @Nullable Input<Object> timeout;
 

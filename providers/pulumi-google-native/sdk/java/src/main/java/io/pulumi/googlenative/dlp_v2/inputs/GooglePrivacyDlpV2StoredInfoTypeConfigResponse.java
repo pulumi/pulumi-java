@@ -11,16 +11,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Configuration for stored infoTypes. All fields and subfield are provided by the user. For more information, see https://cloud.google.com/dlp/docs/creating-custom-infotypes.
- */
 public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2StoredInfoTypeConfigResponse Empty = new GooglePrivacyDlpV2StoredInfoTypeConfigResponse();
 
-    /**
-     * Description of the StoredInfoType (max 256 characters).
-     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -28,9 +22,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
         return this.description;
     }
 
-    /**
-     * Store dictionary-based CustomInfoType.
-     */
     @InputImport(name="dictionary", required=true)
     private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
@@ -38,9 +29,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
         return this.dictionary;
     }
 
-    /**
-     * Display name of the StoredInfoType (max 256 characters).
-     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -48,9 +36,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
         return this.displayName;
     }
 
-    /**
-     * StoredInfoType where findings are defined by a dictionary of phrases.
-     */
     @InputImport(name="largeCustomDictionary", required=true)
     private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
 
@@ -58,9 +43,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
         return this.largeCustomDictionary;
     }
 
-    /**
-     * Store regular expression-based StoredInfoType.
-     */
     @InputImport(name="regex", required=true)
     private final GooglePrivacyDlpV2RegexResponse regex;
 

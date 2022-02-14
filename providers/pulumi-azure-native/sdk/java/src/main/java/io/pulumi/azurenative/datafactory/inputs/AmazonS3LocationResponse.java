@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The location of amazon S3 dataset.
- */
 public final class AmazonS3LocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AmazonS3LocationResponse Empty = new AmazonS3LocationResponse();
 
-    /**
-     * Specify the bucketName of amazon S3. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="bucketName")
     private final @Nullable Object bucketName;
 
@@ -28,9 +22,6 @@ public final class AmazonS3LocationResponse extends io.pulumi.resources.InvokeAr
         return this.bucketName == null ? Optional.empty() : Optional.ofNullable(this.bucketName);
     }
 
-    /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="fileName")
     private final @Nullable Object fileName;
 
@@ -38,9 +29,6 @@ public final class AmazonS3LocationResponse extends io.pulumi.resources.InvokeAr
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
     }
 
-    /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     */
     @InputImport(name="folderPath")
     private final @Nullable Object folderPath;
 
@@ -48,10 +36,6 @@ public final class AmazonS3LocationResponse extends io.pulumi.resources.InvokeAr
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
-    /**
-     * Type of dataset storage location.
-Expected value is 'AmazonS3Location'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -59,9 +43,6 @@ Expected value is 'AmazonS3Location'.
         return this.type;
     }
 
-    /**
-     * Specify the version of amazon S3. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="version")
     private final @Nullable Object version;
 

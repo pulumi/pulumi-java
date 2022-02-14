@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ImageTemplateIdentityResponseUserAssignedIdentities extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplateIdentityResponseUserAssignedIdentities Empty = new ImageTemplateIdentityResponseUserAssignedIdentities();
 
-    /**
-     * The client id of user assigned identity.
-     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -25,9 +19,6 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities extends i
         return this.clientId;
     }
 
-    /**
-     * The principal id of user assigned identity.
-     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

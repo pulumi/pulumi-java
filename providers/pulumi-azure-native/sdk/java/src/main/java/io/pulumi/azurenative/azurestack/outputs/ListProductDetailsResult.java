@@ -13,49 +13,16 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListProductDetailsResult {
-/**
- * Specifies kind of compute role included in the package.
- */
     private final String computeRole;
-/**
- * List of attached data disks.
- */
     private final List<DataDiskImageResponse> dataDiskImages;
-/**
- * The URI to the .azpkg file that provides information required for showing product in the gallery.
- */
     private final String galleryPackageBlobSasUri;
-/**
- * Specifies if product is a Virtual Machine Extension.
- */
     private final Boolean isSystemExtension;
-/**
- * OS disk image used by product.
- */
     private final OsDiskImageResponse osDiskImage;
-/**
- * Specifies the kind of the product (virtualMachine or virtualMachineExtension).
- */
     private final String productKind;
-/**
- * Indicates if specified product supports multiple extensions.
- */
     private final Boolean supportMultipleExtensions;
-/**
- * The URI.
- */
     private final String uri;
-/**
- * Specifies product version.
- */
     private final String version;
-/**
- * Specifies operating system used by the product.
- */
     private final String vmOsType;
-/**
- * Indicates if virtual machine Scale Set is enabled in the specified product.
- */
     private final Boolean vmScaleSetEnabled;
 
     @OutputCustomType.Constructor({"computeRole","dataDiskImages","galleryPackageBlobSasUri","isSystemExtension","osDiskImage","productKind","supportMultipleExtensions","uri","version","vmOsType","vmScaleSetEnabled"})
@@ -84,69 +51,36 @@ public final class ListProductDetailsResult {
         this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
     }
 
-/**
- * Specifies kind of compute role included in the package.
- */
     public String getComputeRole() {
         return this.computeRole;
     }
-/**
- * List of attached data disks.
- */
     public List<DataDiskImageResponse> getDataDiskImages() {
         return this.dataDiskImages;
     }
-/**
- * The URI to the .azpkg file that provides information required for showing product in the gallery.
- */
     public String getGalleryPackageBlobSasUri() {
         return this.galleryPackageBlobSasUri;
     }
-/**
- * Specifies if product is a Virtual Machine Extension.
- */
     public Boolean getIsSystemExtension() {
         return this.isSystemExtension;
     }
-/**
- * OS disk image used by product.
- */
     public OsDiskImageResponse getOsDiskImage() {
         return this.osDiskImage;
     }
-/**
- * Specifies the kind of the product (virtualMachine or virtualMachineExtension).
- */
     public String getProductKind() {
         return this.productKind;
     }
-/**
- * Indicates if specified product supports multiple extensions.
- */
     public Boolean getSupportMultipleExtensions() {
         return this.supportMultipleExtensions;
     }
-/**
- * The URI.
- */
     public String getUri() {
         return this.uri;
     }
-/**
- * Specifies product version.
- */
     public String getVersion() {
         return this.version;
     }
-/**
- * Specifies operating system used by the product.
- */
     public String getVmOsType() {
         return this.vmOsType;
     }
-/**
- * Indicates if virtual machine Scale Set is enabled in the specified product.
- */
     public Boolean getVmScaleSetEnabled() {
         return this.vmScaleSetEnabled;
     }

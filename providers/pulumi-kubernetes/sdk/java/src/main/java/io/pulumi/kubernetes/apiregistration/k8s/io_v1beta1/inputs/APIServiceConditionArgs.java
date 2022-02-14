@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * APIServiceCondition describes the state of an APIService at a particular point
- */
 public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final APIServiceConditionArgs Empty = new APIServiceConditionArgs();
 
-    /**
-     * Last time the condition transitioned from one status to another.
-     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -27,9 +21,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
-    /**
-     * Human-readable message indicating details about last transition.
-     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -37,9 +28,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
         return this.message == null ? Input.empty() : this.message;
     }
 
-    /**
-     * Unique, one-word, CamelCase reason for the condition's last transition.
-     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -47,9 +35,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
         return this.reason == null ? Input.empty() : this.reason;
     }
 
-    /**
-     * Status is the status of the condition. Can be True, False, Unknown.
-     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -57,9 +42,6 @@ public final class APIServiceConditionArgs extends io.pulumi.resources.ResourceA
         return this.status;
     }
 
-    /**
-     * Type is the type of the condition.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

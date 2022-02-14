@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Contains a list of match conditions, and an action on how to modify the request/response. If multiple rules match, the actions from one rule that conflict with a previous rule overwrite for a singular action, or append in the case of headers manipulation.
- */
 public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesEngineRuleArgs Empty = new RulesEngineRuleArgs();
 
-    /**
-     * Actions to perform on the request and response if all of the match conditions are met.
-     */
     @InputImport(name="action", required=true)
     private final Input<RulesEngineActionArgs> action;
 
@@ -33,9 +27,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.action;
     }
 
-    /**
-     * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
-     */
     @InputImport(name="matchConditions")
     private final @Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions;
 
@@ -43,9 +34,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.matchConditions == null ? Input.empty() : this.matchConditions;
     }
 
-    /**
-     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     */
     @InputImport(name="matchProcessingBehavior")
     private final @Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
@@ -53,9 +41,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.matchProcessingBehavior == null ? Input.empty() : this.matchProcessingBehavior;
     }
 
-    /**
-     * A name to refer to this specific rule.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -63,9 +48,6 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
         return this.name;
     }
 
-    /**
-     * A priority assigned to this rule. 
-     */
     @InputImport(name="priority", required=true)
     private final Input<Integer> priority;
 

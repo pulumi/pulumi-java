@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Represents the status of an operation that used the batch API.
- */
 public final class OperationBatchStatusResponseItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OperationBatchStatusResponseItemResponse Empty = new OperationBatchStatusResponseItemResponse();
 
-    /**
-     * status of the long running operation for an environment
-     */
     @InputImport(name="operationUrl", required=true)
     private final String operationUrl;
 
@@ -25,9 +19,6 @@ public final class OperationBatchStatusResponseItemResponse extends io.pulumi.re
         return this.operationUrl;
     }
 
-    /**
-     * status of the long running operation for an environment
-     */
     @InputImport(name="status", required=true)
     private final String status;
 

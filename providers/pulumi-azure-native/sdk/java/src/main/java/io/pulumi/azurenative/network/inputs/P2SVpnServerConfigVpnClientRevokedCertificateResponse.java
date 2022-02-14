@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * VPN client revoked certificate of P2SVpnServerConfiguration.
- */
 public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final P2SVpnServerConfigVpnClientRevokedCertificateResponse Empty = new P2SVpnServerConfigVpnClientRevokedCertificateResponse();
 
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -27,9 +21,6 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,9 +28,6 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -47,9 +35,6 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The provisioning state of the VPN client revoked certificate resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -57,9 +42,6 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse extends
         return this.provisioningState;
     }
 
-    /**
-     * The revoked VPN client certificate thumbprint.
-     */
     @InputImport(name="thumbprint")
     private final @Nullable String thumbprint;
 

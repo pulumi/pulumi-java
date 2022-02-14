@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The OS type of the custom image (i.e. Windows, Linux)
- */
     @EnumType
     public enum CustomImageOsType {
-/**
- * 
- */
         Windows("Windows"),
-/**
- * 
- */
         Linux("Linux"),
-/**
- * 
- */
         None("None");
 
         private final String value;

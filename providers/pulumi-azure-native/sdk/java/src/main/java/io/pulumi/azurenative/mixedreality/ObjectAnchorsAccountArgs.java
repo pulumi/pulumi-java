@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectAnchorsAccountArgs Empty = new ObjectAnchorsAccountArgs();
 
-    /**
-     * Name of an Mixed Reality Account.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -31,9 +25,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ObjectAnchorsAccountIdentityArgs> identity;
 
@@ -41,9 +32,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The kind of account, if supported
-     */
     @InputImport(name="kind")
     private final @Nullable Input<SkuArgs> kind;
 
@@ -51,9 +39,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,9 +46,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The plan associated with this account
-     */
     @InputImport(name="plan")
     private final @Nullable Input<IdentityArgs> plan;
 
@@ -71,9 +53,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.plan == null ? Input.empty() : this.plan;
     }
 
-    /**
-     * Name of an Azure resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -81,9 +60,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
-    /**
-     * The sku associated with this account
-     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -91,9 +67,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * The name of the storage account associated with this accountId
-     */
     @InputImport(name="storageAccountName")
     private final @Nullable Input<String> storageAccountName;
 
@@ -101,9 +74,6 @@ public final class ObjectAnchorsAccountArgs extends io.pulumi.resources.Resource
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

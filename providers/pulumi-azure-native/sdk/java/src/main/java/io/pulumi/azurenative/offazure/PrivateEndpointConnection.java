@@ -16,162 +16,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * REST model used to encapsulate the user visible state of a PrivateEndpoint.
-API Version: 2020-07-07.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Put privateEndpointConnection
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateEndpointConnection = new AzureNative.OffAzure.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.OffAzure.PrivateEndpointConnectionArgs
-        {
-            PeConnectionName = "privateendpt1938mastersit9007pe.4f2f2970-0bfa-45d4-9ee1-d9f79502fc6f",
-            ResourceGroupName = "ayagrawrg",
-            SiteName = "privateendpt1938mastersite",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	offazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/offazure"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := offazure.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &offazure.PrivateEndpointConnectionArgs{
-			PeConnectionName:  pulumi.String("privateendpt1938mastersit9007pe.4f2f2970-0bfa-45d4-9ee1-d9f79502fc6f"),
-			ResourceGroupName: pulumi.String("ayagrawrg"),
-			SiteName:          pulumi.String("privateendpt1938mastersite"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateEndpointConnection = new azure_native.offazure.PrivateEndpointConnection("privateEndpointConnection", {
-    peConnectionName: "privateendpt1938mastersit9007pe.4f2f2970-0bfa-45d4-9ee1-d9f79502fc6f",
-    resourceGroupName: "ayagrawrg",
-    siteName: "privateendpt1938mastersite",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_endpoint_connection = azure_native.offazure.PrivateEndpointConnection("privateEndpointConnection",
-    pe_connection_name="privateendpt1938mastersit9007pe.4f2f2970-0bfa-45d4-9ee1-d9f79502fc6f",
-    resource_group_name="ayagrawrg",
-    site_name="privateendpt1938mastersite")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:offazure:PrivateEndpointConnection privateendpt1938mastersit9007pe.4f2f2970-0bfa-45d4-9ee1-d9f79502fc6f /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/ayagrawrg/providers/Microsoft.OffAzure/MasterSites/privateendpt1938mastersite/privateEndpointConnections/privateendpt1938mastersit9007pe.4f2f2970-0bfa-45d4-9ee1-d9f79502fc6f 
-```
-
- */
 @ResourceType(type="azure-native:offazure:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
-    /**
-     * Gets the tag for optimistic concurrency control.
-     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
-    /**
-     * @return Gets the tag for optimistic concurrency control.
-     */
     public Output<String> getETag() {
         return this.eTag;
     }
-    /**
-     * Gets the name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Gets the name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Gets the properties of the object.
-     */
     @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
-    /**
-     * @return Gets the properties of the object.
-     */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Metadata pertaining to creation and last modification of the resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Gets the resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Gets the resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:offazure:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -190,14 +67,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

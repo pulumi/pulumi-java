@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatasetTagsItemResponse {
-/**
- * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
- */
     private final String tagKey;
-/**
- * [Required] Friendly short name of the tag value, e.g. "production".
- */
     private final String tagValue;
 
     @OutputCustomType.Constructor({"tagKey","tagValue"})
@@ -26,15 +20,9 @@ public final class DatasetTagsItemResponse {
         this.tagValue = Objects.requireNonNull(tagValue);
     }
 
-/**
- * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
- */
     public String getTagKey() {
         return this.tagKey;
     }
-/**
- * [Required] Friendly short name of the tag value, e.g. "production".
- */
     public String getTagValue() {
         return this.tagValue;
     }

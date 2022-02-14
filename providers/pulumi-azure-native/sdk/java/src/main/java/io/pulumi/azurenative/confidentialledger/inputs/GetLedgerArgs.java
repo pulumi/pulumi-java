@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLedgerArgs Empty = new GetLedgerArgs();
 
-    /**
-     * Name of the Confidential Ledger
-     */
     @InputImport(name="ledgerName", required=true)
     private final String ledgerName;
 
@@ -25,9 +19,6 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
         return this.ledgerName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

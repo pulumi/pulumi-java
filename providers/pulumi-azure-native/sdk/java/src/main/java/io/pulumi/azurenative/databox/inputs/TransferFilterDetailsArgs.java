@@ -16,16 +16,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Details of the filtering the transfer of data.
- */
 public final class TransferFilterDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferFilterDetailsArgs Empty = new TransferFilterDetailsArgs();
 
-    /**
-     * Filter details to transfer Azure files.
-     */
     @InputImport(name="azureFileFilterDetails")
     private final @Nullable Input<AzureFileFilterDetailsArgs> azureFileFilterDetails;
 
@@ -33,9 +27,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
         return this.azureFileFilterDetails == null ? Input.empty() : this.azureFileFilterDetails;
     }
 
-    /**
-     * Filter details to transfer blobs.
-     */
     @InputImport(name="blobFilterDetails")
     private final @Nullable Input<BlobFilterDetailsArgs> blobFilterDetails;
 
@@ -43,9 +34,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
         return this.blobFilterDetails == null ? Input.empty() : this.blobFilterDetails;
     }
 
-    /**
-     * Type of the account of data.
-     */
     @InputImport(name="dataAccountType", required=true)
     private final Input<Either<String,DataAccountType>> dataAccountType;
 
@@ -53,9 +41,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
         return this.dataAccountType;
     }
 
-    /**
-     * Details of the filter files to be used for data transfer.
-     */
     @InputImport(name="filterFileDetails")
     private final @Nullable Input<List<FilterFileDetailsArgs>> filterFileDetails;
 

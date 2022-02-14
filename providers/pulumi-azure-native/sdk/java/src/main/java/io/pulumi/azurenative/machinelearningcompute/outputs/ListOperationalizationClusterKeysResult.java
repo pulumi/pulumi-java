@@ -16,29 +16,11 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListOperationalizationClusterKeysResult {
-/**
- * Credentials for Azure AppInsights.
- */
     private final @Nullable AppInsightsCredentialsResponse appInsights;
-/**
- * Credentials for Azure Container Registry.
- */
     private final @Nullable ContainerRegistryCredentialsResponse containerRegistry;
-/**
- * Credentials for Azure Container Service.
- */
     private final @Nullable ContainerServiceCredentialsResponse containerService;
-/**
- * Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
- */
     private final @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration;
-/**
- * The SSL configuration for the services.
- */
     private final @Nullable SslConfigurationResponse sslConfiguration;
-/**
- * Credentials for the Storage Account.
- */
     private final @Nullable StorageAccountCredentialsResponse storageAccount;
 
     @OutputCustomType.Constructor({"appInsights","containerRegistry","containerService","serviceAuthConfiguration","sslConfiguration","storageAccount"})
@@ -57,39 +39,21 @@ public final class ListOperationalizationClusterKeysResult {
         this.storageAccount = storageAccount;
     }
 
-/**
- * Credentials for Azure AppInsights.
- */
     public Optional<AppInsightsCredentialsResponse> getAppInsights() {
         return Optional.ofNullable(this.appInsights);
     }
-/**
- * Credentials for Azure Container Registry.
- */
     public Optional<ContainerRegistryCredentialsResponse> getContainerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
-/**
- * Credentials for Azure Container Service.
- */
     public Optional<ContainerServiceCredentialsResponse> getContainerService() {
         return Optional.ofNullable(this.containerService);
     }
-/**
- * Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
- */
     public Optional<ServiceAuthConfigurationResponse> getServiceAuthConfiguration() {
         return Optional.ofNullable(this.serviceAuthConfiguration);
     }
-/**
- * The SSL configuration for the services.
- */
     public Optional<SslConfigurationResponse> getSslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
-/**
- * Credentials for the Storage Account.
- */
     public Optional<StorageAccountCredentialsResponse> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }

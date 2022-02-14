@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransactionNode {
-/**
- * Payload of the transaction node which is the request/response of the resource provider.
-API Version: 2018-06-01-preview.
- *
- * Payload of the transaction node which is the request/response of the resource provider.
- */
     public static CompletableFuture<GetTransactionNodeResult> invokeAsync(GetTransactionNodeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:getTransactionNode", TypeShape.of(GetTransactionNodeResult.class), args == null ? GetTransactionNodeArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,29 +10,11 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPerfSampleSeriesResult {
-/**
- * Basic series represented by a line chart
- */
     private final BasicPerfSampleSeriesResponse basicPerfSampleSeries;
-/**
- * A tool results execution ID. 
- */
     private final String executionId;
-/**
- * A tool results history ID. 
- */
     private final String historyId;
-/**
- * The cloud project 
- */
     private final String project;
-/**
- * A sample series id 
- */
     private final String sampleSeriesId;
-/**
- * A tool results step ID. 
- */
     private final String stepId;
 
     @OutputCustomType.Constructor({"basicPerfSampleSeries","executionId","historyId","project","sampleSeriesId","stepId"})
@@ -51,39 +33,21 @@ public final class GetPerfSampleSeriesResult {
         this.stepId = Objects.requireNonNull(stepId);
     }
 
-/**
- * Basic series represented by a line chart
- */
     public BasicPerfSampleSeriesResponse getBasicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
-/**
- * A tool results execution ID. 
- */
     public String getExecutionId() {
         return this.executionId;
     }
-/**
- * A tool results history ID. 
- */
     public String getHistoryId() {
         return this.historyId;
     }
-/**
- * The cloud project 
- */
     public String getProject() {
         return this.project;
     }
-/**
- * A sample series id 
- */
     public String getSampleSeriesId() {
         return this.sampleSeriesId;
     }
-/**
- * A tool results step ID. 
- */
     public String getStepId() {
         return this.stepId;
     }

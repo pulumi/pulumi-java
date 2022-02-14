@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Manifest configuration.
- */
 public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManifestResponse Empty = new ManifestResponse();
 
-    /**
-     * The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
-     */
     @InputImport(name="fileName", required=true)
     private final String fileName;
 
@@ -26,9 +20,6 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileName;
     }
 
-    /**
-     * List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
-     */
     @InputImport(name="muxStreams", required=true)
     private final List<String> muxStreams;
 
@@ -36,9 +27,6 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
         return this.muxStreams;
     }
 
-    /**
-     * Type of the manifest, can be `HLS` or `DASH`.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

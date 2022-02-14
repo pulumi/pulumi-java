@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLogAnalyticExportRequestRateByIntervalArgs Empty = new GetLogAnalyticExportRequestRateByIntervalArgs();
 
-    /**
-     * SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
-     */
     @InputImport(name="blobContainerSasUri", required=true)
     private final String blobContainerSasUri;
 
@@ -29,9 +23,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.blobContainerSasUri;
     }
 
-    /**
-     * From time of the query
-     */
     @InputImport(name="fromTime", required=true)
     private final String fromTime;
 
@@ -39,9 +30,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.fromTime;
     }
 
-    /**
-     * Group query result by Client Application ID.
-     */
     @InputImport(name="groupByClientApplicationId")
     private final @Nullable Boolean groupByClientApplicationId;
 
@@ -49,9 +37,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.groupByClientApplicationId == null ? Optional.empty() : Optional.ofNullable(this.groupByClientApplicationId);
     }
 
-    /**
-     * Group query result by Operation Name.
-     */
     @InputImport(name="groupByOperationName")
     private final @Nullable Boolean groupByOperationName;
 
@@ -59,9 +44,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.groupByOperationName == null ? Optional.empty() : Optional.ofNullable(this.groupByOperationName);
     }
 
-    /**
-     * Group query result by Resource Name.
-     */
     @InputImport(name="groupByResourceName")
     private final @Nullable Boolean groupByResourceName;
 
@@ -69,9 +51,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.groupByResourceName == null ? Optional.empty() : Optional.ofNullable(this.groupByResourceName);
     }
 
-    /**
-     * Group query result by Throttle Policy applied.
-     */
     @InputImport(name="groupByThrottlePolicy")
     private final @Nullable Boolean groupByThrottlePolicy;
 
@@ -79,9 +58,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.groupByThrottlePolicy == null ? Optional.empty() : Optional.ofNullable(this.groupByThrottlePolicy);
     }
 
-    /**
-     * Group query result by User Agent.
-     */
     @InputImport(name="groupByUserAgent")
     private final @Nullable Boolean groupByUserAgent;
 
@@ -89,9 +65,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.groupByUserAgent == null ? Optional.empty() : Optional.ofNullable(this.groupByUserAgent);
     }
 
-    /**
-     * Interval value in minutes used to create LogAnalytics call rate logs.
-     */
     @InputImport(name="intervalLength", required=true)
     private final IntervalInMins intervalLength;
 
@@ -99,9 +72,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.intervalLength;
     }
 
-    /**
-     * The location upon which virtual-machine-sizes is queried.
-     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -109,9 +79,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
         return this.location;
     }
 
-    /**
-     * To time of the query
-     */
     @InputImport(name="toTime", required=true)
     private final String toTime;
 

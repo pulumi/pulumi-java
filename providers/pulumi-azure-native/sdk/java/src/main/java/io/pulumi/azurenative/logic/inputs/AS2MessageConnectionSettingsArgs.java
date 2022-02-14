@@ -9,16 +9,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * The AS2 agreement message connection settings.
- */
 public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AS2MessageConnectionSettingsArgs Empty = new AS2MessageConnectionSettingsArgs();
 
-    /**
-     * The value indicating whether to ignore mismatch in certificate name.
-     */
     @InputImport(name="ignoreCertificateNameMismatch", required=true)
     private final Input<Boolean> ignoreCertificateNameMismatch;
 
@@ -26,9 +20,6 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
         return this.ignoreCertificateNameMismatch;
     }
 
-    /**
-     * The value indicating whether to keep the connection alive.
-     */
     @InputImport(name="keepHttpConnectionAlive", required=true)
     private final Input<Boolean> keepHttpConnectionAlive;
 
@@ -36,9 +27,6 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
         return this.keepHttpConnectionAlive;
     }
 
-    /**
-     * The value indicating whether to support HTTP status code 'CONTINUE'.
-     */
     @InputImport(name="supportHttpStatusCodeContinue", required=true)
     private final Input<Boolean> supportHttpStatusCodeContinue;
 
@@ -46,9 +34,6 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
         return this.supportHttpStatusCodeContinue;
     }
 
-    /**
-     * The value indicating whether to unfold the HTTP headers.
-     */
     @InputImport(name="unfoldHttpHeaders", required=true)
     private final Input<Boolean> unfoldHttpHeaders;
 

@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeGroupArgs Empty = new NodeGroupArgs();
 
-    /**
-     * Specifies how autoscaling should behave.
-     */
     @InputImport(name="autoscalingPolicy")
     private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
@@ -32,9 +26,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
     }
 
-    /**
-     * An optional description of this resource. Provide this property when you create the resource.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,9 +33,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="initialNodeCount", required=true)
     private final Input<String> initialNodeCount;
 
@@ -52,9 +40,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialNodeCount;
     }
 
-    /**
-     * An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
-     */
     @InputImport(name="locationHint")
     private final @Nullable Input<String> locationHint;
 
@@ -62,9 +47,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.locationHint == null ? Input.empty() : this.locationHint;
     }
 
-    /**
-     * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
-     */
     @InputImport(name="maintenancePolicy")
     private final @Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy;
 
@@ -72,9 +54,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
@@ -82,9 +61,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
     }
 
-    /**
-     * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -92,9 +68,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * URL of the node template to create the node group from.
-     */
     @InputImport(name="nodeTemplate")
     private final @Nullable Input<String> nodeTemplate;
 
@@ -102,9 +75,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeTemplate == null ? Input.empty() : this.nodeTemplate;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -112,9 +82,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -122,9 +89,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * Share-settings for the node group
-     */
     @InputImport(name="shareSettings")
     private final @Nullable Input<ShareSettingsArgs> shareSettings;
 
@@ -132,9 +96,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="status")
     private final @Nullable Input<NodeGroupStatus> status;
 
@@ -142,9 +103,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

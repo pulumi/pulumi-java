@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Operation request details.
- */
 public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RequestContractArgs Empty = new RequestContractArgs();
 
-    /**
-     * Operation request description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,9 +24,6 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Collection of operation request headers.
-     */
     @InputImport(name="headers")
     private final @Nullable Input<List<ParameterContractArgs>> headers;
 
@@ -40,9 +31,6 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
         return this.headers == null ? Input.empty() : this.headers;
     }
 
-    /**
-     * Collection of operation request query parameters.
-     */
     @InputImport(name="queryParameters")
     private final @Nullable Input<List<ParameterContractArgs>> queryParameters;
 
@@ -50,9 +38,6 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
         return this.queryParameters == null ? Input.empty() : this.queryParameters;
     }
 
-    /**
-     * Collection of operation request representations.
-     */
     @InputImport(name="representations")
     private final @Nullable Input<List<RepresentationContractArgs>> representations;
 

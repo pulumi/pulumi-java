@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The image reference properties.
- */
 public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageReferenceArgs Empty = new ImageReferenceArgs();
 
-    /**
-     * Specifies in decimal numbers, the exact version of image used to create the virtual machine.
-     */
     @InputImport(name="exactVersion")
     private final @Nullable Input<String> exactVersion;
 
@@ -27,9 +21,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.exactVersion == null ? Input.empty() : this.exactVersion;
     }
 
-    /**
-     * Specifies the offer of the image used to create the virtual machine.
-     */
     @InputImport(name="offer")
     private final @Nullable Input<String> offer;
 
@@ -37,9 +28,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.offer == null ? Input.empty() : this.offer;
     }
 
-    /**
-     * The image publisher.
-     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -47,9 +35,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
-    /**
-     * The image SKU.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -57,9 +42,6 @@ public final class ImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
-    /**
-     * Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
-     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

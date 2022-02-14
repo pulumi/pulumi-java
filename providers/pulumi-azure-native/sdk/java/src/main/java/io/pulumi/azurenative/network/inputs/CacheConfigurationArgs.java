@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
- */
 public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheConfigurationArgs Empty = new CacheConfigurationArgs();
 
-    /**
-     * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
-     */
     @InputImport(name="cacheDuration")
     private final @Nullable Input<String> cacheDuration;
 
@@ -30,9 +24,6 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
         return this.cacheDuration == null ? Input.empty() : this.cacheDuration;
     }
 
-    /**
-     * Whether to use dynamic compression for cached content
-     */
     @InputImport(name="dynamicCompression")
     private final @Nullable Input<Either<String,DynamicCompressionEnabled>> dynamicCompression;
 
@@ -40,9 +31,6 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
         return this.dynamicCompression == null ? Input.empty() : this.dynamicCompression;
     }
 
-    /**
-     * Treatment of URL query terms when forming the cache key.
-     */
     @InputImport(name="queryParameterStripDirective")
     private final @Nullable Input<Either<String,FrontDoorQuery>> queryParameterStripDirective;
 
@@ -50,9 +38,6 @@ public final class CacheConfigurationArgs extends io.pulumi.resources.ResourceAr
         return this.queryParameterStripDirective == null ? Input.empty() : this.queryParameterStripDirective;
     }
 
-    /**
-     * query parameters to include or exclude (comma separated).
-     */
     @InputImport(name="queryParameters")
     private final @Nullable Input<String> queryParameters;
 

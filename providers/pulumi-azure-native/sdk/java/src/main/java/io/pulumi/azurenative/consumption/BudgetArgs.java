@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetArgs Empty = new BudgetArgs();
 
-    /**
-     * The total amount of cost to track with the budget
-     */
     @InputImport(name="amount", required=true)
     private final Input<Double> amount;
 
@@ -35,9 +29,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.amount;
     }
 
-    /**
-     * Budget Name.
-     */
     @InputImport(name="budgetName")
     private final @Nullable Input<String> budgetName;
 
@@ -45,9 +36,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.budgetName == null ? Input.empty() : this.budgetName;
     }
 
-    /**
-     * The category of the budget, whether the budget tracks cost or usage.
-     */
     @InputImport(name="category", required=true)
     private final Input<Either<String,CategoryType>> category;
 
@@ -55,9 +43,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.category;
     }
 
-    /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -65,9 +50,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
-    /**
-     * May be used to filter budgets by user-specified dimensions and/or tags.
-     */
     @InputImport(name="filter")
     private final @Nullable Input<BudgetFilterArgs> filter;
 
@@ -75,9 +57,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
-    /**
-     * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
-     */
     @InputImport(name="notifications")
     private final @Nullable Input<Map<String,NotificationArgs>> notifications;
 
@@ -85,9 +64,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.notifications == null ? Input.empty() : this.notifications;
     }
 
-    /**
-     * The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.
-     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -95,9 +71,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope;
     }
 
-    /**
-     * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
-     */
     @InputImport(name="timeGrain", required=true)
     private final Input<Either<String,TimeGrainType>> timeGrain;
 
@@ -105,9 +78,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeGrain;
     }
 
-    /**
-     * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
-     */
     @InputImport(name="timePeriod", required=true)
     private final Input<BudgetTimePeriodArgs> timePeriod;
 

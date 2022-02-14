@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * A service that allows server-side encryption to be used.
- */
 public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionServiceResponse Empty = new EncryptionServiceResponse();
 
-    /**
-     * A boolean indicating whether or not the service encrypts the data as it is stored.
-     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -28,9 +22,6 @@ public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeA
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    /**
-     * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
-     */
     @InputImport(name="keyType")
     private final @Nullable String keyType;
 
@@ -38,9 +29,6 @@ public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeA
         return this.keyType == null ? Optional.empty() : Optional.ofNullable(this.keyType);
     }
 
-    /**
-     * Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
-     */
     @InputImport(name="lastEnabledTime", required=true)
     private final String lastEnabledTime;
 

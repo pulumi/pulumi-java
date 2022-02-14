@@ -18,16 +18,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentArgs Empty = new AssessmentArgs();
 
-    /**
-     * Additional data regarding the assessment
-     */
     @InputImport(name="additionalData")
     private final @Nullable Input<Map<String,String>> additionalData;
 
@@ -35,9 +29,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalData == null ? Input.empty() : this.additionalData;
     }
 
-    /**
-     * The Assessment Key - Unique key for the assessment type
-     */
     @InputImport(name="assessmentName")
     private final @Nullable Input<String> assessmentName;
 
@@ -45,9 +36,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assessmentName == null ? Input.empty() : this.assessmentName;
     }
 
-    /**
-     * Describes properties of an assessment metadata.
-     */
     @InputImport(name="metadata")
     private final @Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
@@ -55,9 +43,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
-    /**
-     * Data regarding 3rd party partner integration
-     */
     @InputImport(name="partnersData")
     private final @Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData;
 
@@ -65,9 +50,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.partnersData == null ? Input.empty() : this.partnersData;
     }
 
-    /**
-     * Details of the resource that was assessed
-     */
     @InputImport(name="resourceDetails", required=true)
     private final Input<Object> resourceDetails;
 
@@ -75,9 +57,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceDetails;
     }
 
-    /**
-     * The identifier of the resource.
-     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 
@@ -85,9 +64,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceId;
     }
 
-    /**
-     * The result of the assessment
-     */
     @InputImport(name="status", required=true)
     private final Input<AssessmentStatusArgs> status;
 

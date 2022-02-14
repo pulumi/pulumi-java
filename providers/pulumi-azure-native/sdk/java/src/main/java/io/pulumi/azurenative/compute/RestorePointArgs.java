@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestorePointArgs Empty = new RestorePointArgs();
 
-    /**
-     * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     */
     @InputImport(name="excludeDisks")
     private final @Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks;
 
@@ -29,9 +23,6 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
         return this.excludeDisks == null ? Input.empty() : this.excludeDisks;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,9 +30,6 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the restore point collection.
-     */
     @InputImport(name="restorePointCollectionName", required=true)
     private final Input<String> restorePointCollectionName;
 
@@ -49,9 +37,6 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
         return this.restorePointCollectionName;
     }
 
-    /**
-     * The name of the restore point.
-     */
     @InputImport(name="restorePointName")
     private final @Nullable Input<String> restorePointName;
 
@@ -59,9 +44,6 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
         return this.restorePointName == null ? Input.empty() : this.restorePointName;
     }
 
-    /**
-     * Gets the creation time of the restore point.
-     */
     @InputImport(name="timeCreated")
     private final @Nullable Input<String> timeCreated;
 

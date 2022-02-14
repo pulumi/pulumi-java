@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of kek encryption key
- */
     @EnumType
     public enum EncryptionKekType {
-/**
- * 
- */
         MicrosoftManaged("MicrosoftManaged"),
-/**
- * 
- */
         CustomerManaged("CustomerManaged");
 
         private final String value;

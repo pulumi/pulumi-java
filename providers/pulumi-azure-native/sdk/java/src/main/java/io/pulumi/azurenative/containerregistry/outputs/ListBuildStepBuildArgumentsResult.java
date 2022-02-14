@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListBuildStepBuildArgumentsResult {
-/**
- * The URI that can be used to request the next set of paged results.
- */
     private final @Nullable String nextLink;
-/**
- * The collection value.
- */
     private final @Nullable List<BuildArgumentResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -30,15 +24,9 @@ public final class ListBuildStepBuildArgumentsResult {
         this.value = value;
     }
 
-/**
- * The URI that can be used to request the next set of paged results.
- */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
-/**
- * The collection value.
- */
     public List<BuildArgumentResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A class that contains virtual network definition.
- */
 public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkConfigurationArgs Empty = new VirtualNetworkConfigurationArgs();
 
-    /**
-     * Data management's service public IP address resource id.
-     */
     @InputImport(name="dataManagementPublicIpId", required=true)
     private final Input<String> dataManagementPublicIpId;
 
@@ -26,9 +20,6 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
         return this.dataManagementPublicIpId;
     }
 
-    /**
-     * Engine service's public IP address resource id.
-     */
     @InputImport(name="enginePublicIpId", required=true)
     private final Input<String> enginePublicIpId;
 
@@ -36,9 +27,6 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
         return this.enginePublicIpId;
     }
 
-    /**
-     * The subnet resource id.
-     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 

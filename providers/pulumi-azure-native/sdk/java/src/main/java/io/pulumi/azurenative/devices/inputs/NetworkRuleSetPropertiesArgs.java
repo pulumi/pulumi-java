@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Network Rule Set Properties of IotHub
- */
 public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRuleSetPropertiesArgs Empty = new NetworkRuleSetPropertiesArgs();
 
-    /**
-     * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
-     */
     @InputImport(name="applyToBuiltInEventHubEndpoint", required=true)
     private final Input<Boolean> applyToBuiltInEventHubEndpoint;
 
@@ -32,9 +26,6 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
         return this.applyToBuiltInEventHubEndpoint;
     }
 
-    /**
-     * Default Action for Network Rule Set
-     */
     @InputImport(name="defaultAction")
     private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
 
@@ -42,9 +33,6 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
     }
 
-    /**
-     * List of IP Rules
-     */
     @InputImport(name="ipRules", required=true)
     private final Input<List<NetworkRuleSetIpRuleArgs>> ipRules;
 

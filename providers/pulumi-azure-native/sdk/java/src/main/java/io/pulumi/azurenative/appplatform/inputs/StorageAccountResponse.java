@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * storage resource of type Azure Storage Account.
- */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountResponse Empty = new StorageAccountResponse();
 
-    /**
-     * The account name of the Azure Storage Account.
-     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -25,10 +19,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.accountName;
     }
 
-    /**
-     * The type of the storage.
-Expected value is 'StorageAccount'.
-     */
     @InputImport(name="storageType", required=true)
     private final String storageType;
 

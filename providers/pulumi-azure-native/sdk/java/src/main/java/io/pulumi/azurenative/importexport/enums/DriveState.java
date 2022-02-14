@@ -8,38 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The drive's current state. 
- */
     @EnumType
     public enum DriveState {
-/**
- * 
- */
         Specified("Specified"),
-/**
- * 
- */
         Received("Received"),
-/**
- * 
- */
         NeverReceived("NeverReceived"),
-/**
- * 
- */
         Transferring("Transferring"),
-/**
- * 
- */
         Completed("Completed"),
-/**
- * 
- */
         CompletedMoreInfo("CompletedMoreInfo"),
-/**
- * 
- */
         ShippedBack("ShippedBack");
 
         private final String value;

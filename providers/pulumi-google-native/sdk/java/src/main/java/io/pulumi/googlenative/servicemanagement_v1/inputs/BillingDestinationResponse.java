@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Configuration of a specific billing destination (Currently only support bill against consumer project).
- */
 public final class BillingDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BillingDestinationResponse Empty = new BillingDestinationResponse();
 
-    /**
-     * Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
-     */
     @InputImport(name="metrics", required=true)
     private final List<String> metrics;
 
@@ -26,9 +20,6 @@ public final class BillingDestinationResponse extends io.pulumi.resources.Invoke
         return this.metrics;
     }
 
-    /**
-     * The monitored resource type. The type must be defined in Service.monitored_resources section.
-     */
     @InputImport(name="monitoredResource", required=true)
     private final String monitoredResource;
 

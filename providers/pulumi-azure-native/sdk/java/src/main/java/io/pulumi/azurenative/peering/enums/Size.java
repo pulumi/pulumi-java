@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The size of the peering SKU.
- */
     @EnumType
     public enum Size {
-/**
- * 
- */
         Free("Free"),
-/**
- * 
- */
         Metered("Metered"),
-/**
- * 
- */
         Unlimited("Unlimited");
 
         private final String value;

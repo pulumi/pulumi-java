@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The token type. Must be either PersonalAccessToken or Oauth.
- */
     @EnumType
     public enum TokenType {
-/**
- * 
- */
         PersonalAccessToken("PersonalAccessToken"),
-/**
- * 
- */
         Oauth("Oauth");
 
         private final String value;

@@ -12,54 +12,27 @@ import io.pulumi.googlenative.firebaseappcheck_v1beta.DebugTokenArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
-/**
- * Creates a new DebugToken for the specified app. For security reasons, after the creation operation completes, the `token` field cannot be updated or retrieved, but you can revoke the debug token using DeleteDebugToken. Each app can have a maximum of 20 debug tokens.
- */
 @ResourceType(type="google-native:firebaseappcheck/v1beta:DebugToken")
 public class DebugToken extends io.pulumi.resources.CustomResource {
-    /**
-     * A human readable display name used to identify this debug token.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return A human readable display name used to identify this debug token.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * The relative resource name of the debug token, in the format: ``` projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The relative resource name of the debug token, in the format: ``` projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Input only. Immutable. The secret token itself. Must be provided during creation, and must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided during an UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any response.
-     */
     @OutputExport(name="token", type=String.class, parameters={})
     private Output<String> token;
 
-    /**
-     * @return Input only. Immutable. The secret token itself. Must be provided during creation, and must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided during an UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any response.
-     */
     public Output<String> getToken() {
         return this.token;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public DebugToken(String name, DebugTokenArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:firebaseappcheck/v1beta:DebugToken", name, args == null ? DebugTokenArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -75,14 +48,6 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static DebugToken get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DebugToken(name, id, options);
     }

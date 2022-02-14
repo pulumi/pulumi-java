@@ -15,65 +15,20 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApplicationResult {
-/**
- * Internal - used by Visual Studio to setup the debugging session on the local development environment.
- */
     private final @Nullable String debugParams;
-/**
- * User readable description of the application.
- */
     private final @Nullable String description;
-/**
- * Describes the diagnostics definition and usage for an application resource.
- */
     private final @Nullable DiagnosticsDescriptionResponse diagnostics;
-/**
- * Describes the health state of an application resource.
- */
     private final String healthState;
-/**
- * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The geo-location where the resource lives
- */
     private final String location;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * State of the resource.
- */
     private final String provisioningState;
-/**
- * Names of the services in the application.
- */
     private final List<String> serviceNames;
-/**
- * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
- */
     private final @Nullable List<ServiceResourceDescriptionResponse> services;
-/**
- * Status of the application.
- */
     private final String status;
-/**
- * Gives additional information about the current status of the application.
- */
     private final String statusDetails;
-/**
- * Resource tags.
- */
     private final @Nullable Map<String,String> tags;
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     private final String type;
-/**
- * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
- */
     private final String unhealthyEvaluation;
 
     @OutputCustomType.Constructor({"debugParams","description","diagnostics","healthState","id","location","name","provisioningState","serviceNames","services","status","statusDetails","tags","type","unhealthyEvaluation"})
@@ -110,93 +65,48 @@ public final class GetApplicationResult {
         this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
     }
 
-/**
- * Internal - used by Visual Studio to setup the debugging session on the local development environment.
- */
     public Optional<String> getDebugParams() {
         return Optional.ofNullable(this.debugParams);
     }
-/**
- * User readable description of the application.
- */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
-/**
- * Describes the diagnostics definition and usage for an application resource.
- */
     public Optional<DiagnosticsDescriptionResponse> getDiagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
-/**
- * Describes the health state of an application resource.
- */
     public String getHealthState() {
         return this.healthState;
     }
-/**
- * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The geo-location where the resource lives
- */
     public String getLocation() {
         return this.location;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * State of the resource.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }
-/**
- * Names of the services in the application.
- */
     public List<String> getServiceNames() {
         return this.serviceNames;
     }
-/**
- * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
- */
     public List<ServiceResourceDescriptionResponse> getServices() {
         return this.services == null ? List.of() : this.services;
     }
-/**
- * Status of the application.
- */
     public String getStatus() {
         return this.status;
     }
-/**
- * Gives additional information about the current status of the application.
- */
     public String getStatusDetails() {
         return this.statusDetails;
     }
-/**
- * Resource tags.
- */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-/**
- * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
- */
     public String getType() {
         return this.type;
     }
-/**
- * When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
- */
     public String getUnhealthyEvaluation() {
         return this.unhealthyEvaluation;
     }

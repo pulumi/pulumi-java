@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration.
- */
 public final class BatchAccountIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BatchAccountIdentityArgs Empty = new BatchAccountIdentityArgs();
 
-    /**
-     * The type of identity used for the Batch account.
-     */
     @InputImport(name="type", required=true)
     private final Input<ResourceIdentityType> type;
 
@@ -30,9 +24,6 @@ public final class BatchAccountIdentityArgs extends io.pulumi.resources.Resource
         return this.type;
     }
 
-    /**
-     * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

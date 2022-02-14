@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
-/**
- * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
- */
     private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
 
     @OutputCustomType.Constructor({"columns"})
@@ -20,9 +17,6 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
         this.columns = Objects.requireNonNull(columns);
     }
 
-/**
- * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
- */
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> getColumns() {
         return this.columns;
     }

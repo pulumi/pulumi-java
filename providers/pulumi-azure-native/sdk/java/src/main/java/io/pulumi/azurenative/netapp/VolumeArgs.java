@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
-    /**
-     * The name of the NetApp account
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -36,9 +30,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * UUID v4 or resource identifier used to identify the Backup.
-     */
     @InputImport(name="backupId")
     private final @Nullable Input<String> backupId;
 
@@ -46,9 +37,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupId == null ? Input.empty() : this.backupId;
     }
 
-    /**
-     * A unique file path for the volume. Used when creating mount targets
-     */
     @InputImport(name="creationToken", required=true)
     private final Input<String> creationToken;
 
@@ -56,9 +44,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.creationToken;
     }
 
-    /**
-     * DataProtection type volumes include an object containing details of the replication
-     */
     @InputImport(name="dataProtection")
     private final @Nullable Input<VolumePropertiesDataProtectionArgs> dataProtection;
 
@@ -66,9 +51,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataProtection == null ? Input.empty() : this.dataProtection;
     }
 
-    /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
-     */
     @InputImport(name="encryptionKeySource")
     private final @Nullable Input<String> encryptionKeySource;
 
@@ -76,9 +58,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionKeySource == null ? Input.empty() : this.encryptionKeySource;
     }
 
-    /**
-     * Set of export policy rules
-     */
     @InputImport(name="exportPolicy")
     private final @Nullable Input<VolumePropertiesExportPolicyArgs> exportPolicy;
 
@@ -86,9 +65,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.exportPolicy == null ? Input.empty() : this.exportPolicy;
     }
 
-    /**
-     * Restoring
-     */
     @InputImport(name="isRestoring")
     private final @Nullable Input<Boolean> isRestoring;
 
@@ -96,9 +72,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.isRestoring == null ? Input.empty() : this.isRestoring;
     }
 
-    /**
-     * Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
-     */
     @InputImport(name="kerberosEnabled")
     private final @Nullable Input<Boolean> kerberosEnabled;
 
@@ -106,9 +79,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.kerberosEnabled == null ? Input.empty() : this.kerberosEnabled;
     }
 
-    /**
-     * Specifies whether LDAP is enabled or not for a given NFS volume.
-     */
     @InputImport(name="ldapEnabled")
     private final @Nullable Input<Boolean> ldapEnabled;
 
@@ -116,9 +86,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.ldapEnabled == null ? Input.empty() : this.ldapEnabled;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -126,9 +93,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the capacity pool
-     */
     @InputImport(name="poolName", required=true)
     private final Input<String> poolName;
 
@@ -136,9 +100,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.poolName;
     }
 
-    /**
-     * Set of protocol types, default NFSv3, CIFS for SMB protocol
-     */
     @InputImport(name="protocolTypes")
     private final @Nullable Input<List<String>> protocolTypes;
 
@@ -146,9 +107,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocolTypes == null ? Input.empty() : this.protocolTypes;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -156,9 +114,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
-     */
     @InputImport(name="securityStyle")
     private final @Nullable Input<Either<String,SecurityStyle>> securityStyle;
 
@@ -166,9 +121,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityStyle == null ? Input.empty() : this.securityStyle;
     }
 
-    /**
-     * The service level of the file system
-     */
     @InputImport(name="serviceLevel")
     private final @Nullable Input<Either<String,ServiceLevel>> serviceLevel;
 
@@ -176,9 +128,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceLevel == null ? Input.empty() : this.serviceLevel;
     }
 
-    /**
-     * Enables continuously available share property for smb volume. Only applicable for SMB volume
-     */
     @InputImport(name="smbContinuouslyAvailable")
     private final @Nullable Input<Boolean> smbContinuouslyAvailable;
 
@@ -186,9 +135,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.smbContinuouslyAvailable == null ? Input.empty() : this.smbContinuouslyAvailable;
     }
 
-    /**
-     * Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
-     */
     @InputImport(name="smbEncryption")
     private final @Nullable Input<Boolean> smbEncryption;
 
@@ -196,9 +142,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.smbEncryption == null ? Input.empty() : this.smbEncryption;
     }
 
-    /**
-     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
-     */
     @InputImport(name="snapshotDirectoryVisible")
     private final @Nullable Input<Boolean> snapshotDirectoryVisible;
 
@@ -206,9 +149,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotDirectoryVisible == null ? Input.empty() : this.snapshotDirectoryVisible;
     }
 
-    /**
-     * UUID v4 or resource identifier used to identify the Snapshot.
-     */
     @InputImport(name="snapshotId")
     private final @Nullable Input<String> snapshotId;
 
@@ -216,9 +156,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
     }
 
-    /**
-     * The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
-     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -226,9 +163,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -236,9 +170,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="throughputMibps")
     private final @Nullable Input<Double> throughputMibps;
 
@@ -246,9 +177,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.throughputMibps == null ? Input.empty() : this.throughputMibps;
     }
 
-    /**
-     * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
-     */
     @InputImport(name="usageThreshold", required=true)
     private final Input<Double> usageThreshold;
 
@@ -256,9 +184,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.usageThreshold;
     }
 
-    /**
-     * The name of the volume
-     */
     @InputImport(name="volumeName")
     private final @Nullable Input<String> volumeName;
 
@@ -266,9 +191,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumeName == null ? Input.empty() : this.volumeName;
     }
 
-    /**
-     * What type of volume is this
-     */
     @InputImport(name="volumeType")
     private final @Nullable Input<String> volumeType;
 

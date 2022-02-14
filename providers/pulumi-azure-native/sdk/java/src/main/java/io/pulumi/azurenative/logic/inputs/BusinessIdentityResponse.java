@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The integration account partner's business identity.
- */
 public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BusinessIdentityResponse Empty = new BusinessIdentityResponse();
 
-    /**
-     * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
-     */
     @InputImport(name="qualifier", required=true)
     private final String qualifier;
 
@@ -25,9 +19,6 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
         return this.qualifier;
     }
 
-    /**
-     * The user defined business identity value.
-     */
     @InputImport(name="value", required=true)
     private final String value;
 

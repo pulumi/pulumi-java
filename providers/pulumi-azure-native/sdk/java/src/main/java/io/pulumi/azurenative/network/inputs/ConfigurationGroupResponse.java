@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The network configuration group resource
- */
 public final class ConfigurationGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationGroupResponse Empty = new ConfigurationGroupResponse();
 
-    /**
-     * Network group conditional filter.
-     */
     @InputImport(name="conditionalMembership")
     private final @Nullable String conditionalMembership;
 
@@ -29,9 +23,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
         return this.conditionalMembership == null ? Optional.empty() : Optional.ofNullable(this.conditionalMembership);
     }
 
-    /**
-     * A description of the network group.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,9 +30,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * A friendly name for the network group.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -49,9 +37,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * Group members of network group.
-     */
     @InputImport(name="groupMembers")
     private final @Nullable List<GroupMembersItemResponse> groupMembers;
 
@@ -59,9 +44,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
 
-    /**
-     * Resource ID.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -69,9 +51,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    /**
-     * Group member type.
-     */
     @InputImport(name="memberType")
     private final @Nullable String memberType;
 
@@ -79,9 +58,6 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
         return this.memberType == null ? Optional.empty() : Optional.ofNullable(this.memberType);
     }
 
-    /**
-     * The provisioning state of the scope assignment resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Service Account used as a credential.
- */
 public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAccountResponse Empty = new ServiceAccountResponse();
 
-    /**
-     * The IAM service account email address like test@myproject.iam.gserviceaccount.com
-     */
     @InputImport(name="email", required=true)
     private final String email;
 

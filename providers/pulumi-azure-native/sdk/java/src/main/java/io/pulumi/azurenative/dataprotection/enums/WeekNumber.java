@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum WeekNumber {
-/**
- * 
- */
         First("First"),
-/**
- * 
- */
         Fourth("Fourth"),
-/**
- * 
- */
         Last("Last"),
-/**
- * 
- */
         Second("Second"),
-/**
- * 
- */
         Third("Third");
 
         private final String value;

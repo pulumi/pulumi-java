@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExtendedLocationOptionsResponse {
-/**
- * 
- */
     private final @Nullable String supportedPolicy;
-/**
- * 
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"supportedPolicy","type"})
@@ -28,15 +22,9 @@ public final class ExtendedLocationOptionsResponse {
         this.type = type;
     }
 
-/**
- * 
- */
     public Optional<String> getSupportedPolicy() {
         return Optional.ofNullable(this.supportedPolicy);
     }
-/**
- * 
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

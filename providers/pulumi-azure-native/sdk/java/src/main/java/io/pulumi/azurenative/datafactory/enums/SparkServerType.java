@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The type of Spark server.
- */
     @EnumType
     public enum SparkServerType {
-/**
- * 
- */
         SharkServer("SharkServer"),
-/**
- * 
- */
         SharkServer2("SharkServer2"),
-/**
- * 
- */
         SparkThriftServer("SparkThriftServer");
 
         private final String value;

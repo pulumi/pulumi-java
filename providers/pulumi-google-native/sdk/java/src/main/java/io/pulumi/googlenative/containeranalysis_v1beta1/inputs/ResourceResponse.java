@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * An entity that can have metadata. For example, a Docker image.
- */
 public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceResponse Empty = new ResourceResponse();
 
-    /**
-     * The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
-     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

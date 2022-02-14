@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUeba {
-/**
- * Settings with single toggle.
-API Version: 2021-03-01-preview.
- *
- * Settings with single toggle.
- */
     public static CompletableFuture<GetUebaResult> invokeAsync(GetUebaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getUeba", TypeShape.of(GetUebaResult.class), args == null ? GetUebaArgs.Empty : args, Utilities.withVersion(options));
     }

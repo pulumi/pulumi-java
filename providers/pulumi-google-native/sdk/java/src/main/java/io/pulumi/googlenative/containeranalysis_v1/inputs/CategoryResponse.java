@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The category to which the update belongs.
- */
 public final class CategoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CategoryResponse Empty = new CategoryResponse();
 
-    /**
-     * The identifier of the category.
-     */
     @InputImport(name="categoryId", required=true)
     private final String categoryId;
 
@@ -25,9 +19,6 @@ public final class CategoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.categoryId;
     }
 
-    /**
-     * The localized name of the category.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountStaticWebsiteArgs Empty = new StorageAccountStaticWebsiteArgs();
 
-    /**
-     * The name of the storage account within the specified resource group.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -27,9 +21,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
         return this.accountName;
     }
 
-    /**
-     * The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-     */
     @InputImport(name="error404Document")
     private final @Nullable Input<String> error404Document;
 
@@ -37,9 +28,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
         return this.error404Document == null ? Input.empty() : this.error404Document;
     }
 
-    /**
-     * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
-     */
     @InputImport(name="indexDocument")
     private final @Nullable Input<String> indexDocument;
 
@@ -47,9 +35,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
         return this.indexDocument == null ? Input.empty() : this.indexDocument;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

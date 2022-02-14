@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaxonomyArgs Empty = new TaxonomyArgs();
 
-    /**
-     * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
-     */
     @InputImport(name="activatedPolicyTypes")
     private final @Nullable Input<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
 
@@ -29,9 +23,6 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.activatedPolicyTypes == null ? Input.empty() : this.activatedPolicyTypes;
     }
 
-    /**
-     * Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -49,9 +37,6 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Information required for a TCP Uptime check request.
- */
 public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TcpCheckArgs Empty = new TcpCheckArgs();
 
-    /**
-     * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
-     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 

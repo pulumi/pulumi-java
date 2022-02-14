@@ -14,12 +14,6 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ADLSGen2FileDataSetMapping, ADLSGen2FileSystemDataSetMapping, ADLSGen2FolderDataSetMapping, BlobContainerDataSetMapping, BlobDataSetMapping, BlobFolderDataSetMapping, KustoClusterDataSetMapping, KustoDatabaseDataSetMapping, SqlDBTableDataSetMapping, SqlDWTableDataSetMapping, SynapseWorkspaceSqlPoolTableDataSetMapping. */
 public class GetDataSetMapping {
-/**
- * A data set mapping data transfer object.
-API Version: 2020-09-01.
- *
- * A data set mapping data transfer object.
- */
     public static CompletableFuture<GetDataSetMappingResult> invokeAsync(GetDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getDataSetMapping", TypeShape.of(GetDataSetMappingResult.class), args == null ? GetDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

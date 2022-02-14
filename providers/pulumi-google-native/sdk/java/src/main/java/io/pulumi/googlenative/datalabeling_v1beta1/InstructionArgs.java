@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstructionArgs Empty = new InstructionArgs();
 
-    /**
-     * The data type of this instruction.
-     */
     @InputImport(name="dataType", required=true)
     private final Input<InstructionDataType> dataType;
 
@@ -29,9 +23,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataType;
     }
 
-    /**
-     * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,9 +30,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The display name of the instruction. Maximum of 64 characters.
-     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -49,9 +37,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
-    /**
-     * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
-     */
     @InputImport(name="pdfInstruction")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
@@ -59,9 +44,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
         return this.pdfInstruction == null ? Input.empty() : this.pdfInstruction;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

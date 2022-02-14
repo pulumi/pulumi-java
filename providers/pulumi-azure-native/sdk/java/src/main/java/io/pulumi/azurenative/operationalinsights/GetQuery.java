@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQuery {
-/**
- * A Log Analytics QueryPack-Query definition.
-API Version: 2019-09-01-preview.
- *
- * A Log Analytics QueryPack-Query definition.
- */
     public static CompletableFuture<GetQueryResult> invokeAsync(GetQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQuery", TypeShape.of(GetQueryResult.class), args == null ? GetQueryArgs.Empty : args, Utilities.withVersion(options));
     }

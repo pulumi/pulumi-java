@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A test of an Android application that can control an Android component independently of its normal lifecycle. See for more information on types of Android tests.
- */
 public final class AndroidInstrumentationTestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AndroidInstrumentationTestResponse Empty = new AndroidInstrumentationTestResponse();
 
-    /**
-     * The java package for the test to be executed. Required
-     */
     @InputImport(name="testPackageId", required=true)
     private final String testPackageId;
 
@@ -27,9 +21,6 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
         return this.testPackageId;
     }
 
-    /**
-     * The InstrumentationTestRunner class. Required
-     */
     @InputImport(name="testRunnerClass", required=true)
     private final String testRunnerClass;
 
@@ -37,9 +28,6 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
         return this.testRunnerClass;
     }
 
-    /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
-     */
     @InputImport(name="testTargets", required=true)
     private final List<String> testTargets;
 
@@ -47,9 +35,6 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
         return this.testTargets;
     }
 
-    /**
-     * The flag indicates whether Android Test Orchestrator will be used to run test or not.
-     */
     @InputImport(name="useOrchestrator", required=true)
     private final Boolean useOrchestrator;
 

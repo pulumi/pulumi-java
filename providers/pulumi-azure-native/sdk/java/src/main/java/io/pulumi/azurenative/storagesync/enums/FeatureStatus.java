@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Offline data transfer
- */
     @EnumType
     public enum FeatureStatus {
-/**
- * 
- */
         On("on"),
-/**
- * 
- */
         Off("off");
 
         private final String value;

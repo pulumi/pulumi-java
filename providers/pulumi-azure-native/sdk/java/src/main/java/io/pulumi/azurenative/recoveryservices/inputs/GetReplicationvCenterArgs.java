@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReplicationvCenterArgs Empty = new GetReplicationvCenterArgs();
 
-    /**
-     * Fabric name.
-     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -25,9 +19,6 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
         return this.fabricName;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -45,9 +33,6 @@ public final class GetReplicationvCenterArgs extends io.pulumi.resources.InvokeA
         return this.resourceName;
     }
 
-    /**
-     * vCenter name.
-     */
     @InputImport(name="vCenterName", required=true)
     private final String vCenterName;
 

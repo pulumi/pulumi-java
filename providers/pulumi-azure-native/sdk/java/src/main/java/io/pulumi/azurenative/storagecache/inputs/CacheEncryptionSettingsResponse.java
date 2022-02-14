@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cache encryption settings.
- */
 public final class CacheEncryptionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheEncryptionSettingsResponse Empty = new CacheEncryptionSettingsResponse();
 
-    /**
-     * Specifies the location of the key encryption key in Key Vault.
-     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 

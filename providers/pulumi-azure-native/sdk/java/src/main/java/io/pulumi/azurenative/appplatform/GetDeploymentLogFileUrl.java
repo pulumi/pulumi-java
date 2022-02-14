@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeploymentLogFileUrl {
-/**
- * Log file URL payload
-API Version: 2020-07-01.
- *
- * Log file URL payload
- */
     public static CompletableFuture<GetDeploymentLogFileUrlResult> invokeAsync(GetDeploymentLogFileUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeploymentLogFileUrl", TypeShape.of(GetDeploymentLogFileUrlResult.class), args == null ? GetDeploymentLogFileUrlArgs.Empty : args, Utilities.withVersion(options));
     }

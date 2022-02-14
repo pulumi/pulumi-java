@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetMetricDescriptorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMetricDescriptorArgs Empty = new GetMetricDescriptorArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="metricDescriptorId", required=true)
     private final String metricDescriptorId;
 
@@ -27,9 +21,6 @@ public final class GetMetricDescriptorArgs extends io.pulumi.resources.InvokeArg
         return this.metricDescriptorId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable String project;
 

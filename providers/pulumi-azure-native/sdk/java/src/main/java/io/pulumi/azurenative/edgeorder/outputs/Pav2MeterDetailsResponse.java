@@ -10,22 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class Pav2MeterDetailsResponse {
-/**
- * Represents billing type.
-Expected value is 'Pav2'.
- */
     private final String billingType;
-/**
- * Charging type.
- */
     private final String chargingType;
-/**
- * Validation status of requested data center and transport.
- */
     private final String meterGuid;
-/**
- * Billing unit applicable for Pav2 billing
- */
     private final Double multiplier;
 
     @OutputCustomType.Constructor({"billingType","chargingType","meterGuid","multiplier"})
@@ -40,28 +27,15 @@ Expected value is 'Pav2'.
         this.multiplier = Objects.requireNonNull(multiplier);
     }
 
-/**
- * Represents billing type.
-Expected value is 'Pav2'.
- */
     public String getBillingType() {
         return this.billingType;
     }
-/**
- * Charging type.
- */
     public String getChargingType() {
         return this.chargingType;
     }
-/**
- * Validation status of requested data center and transport.
- */
     public String getMeterGuid() {
         return this.meterGuid;
     }
-/**
- * Billing unit applicable for Pav2 billing
- */
     public Double getMultiplier() {
         return this.multiplier;
     }

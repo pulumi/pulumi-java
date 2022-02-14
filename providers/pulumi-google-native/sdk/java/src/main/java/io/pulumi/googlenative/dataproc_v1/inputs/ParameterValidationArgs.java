@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for parameter validation.
- */
 public final class ParameterValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterValidationArgs Empty = new ParameterValidationArgs();
 
-    /**
-     * Validation based on regular expressions.
-     */
     @InputImport(name="regex")
     private final @Nullable Input<RegexValidationArgs> regex;
 
@@ -28,9 +22,6 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
         return this.regex == null ? Input.empty() : this.regex;
     }
 
-    /**
-     * Validation based on a list of allowed values.
-     */
     @InputImport(name="values")
     private final @Nullable Input<ValueValidationArgs> values;
 

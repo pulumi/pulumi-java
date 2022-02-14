@@ -17,26 +17,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReferenceInputPropertiesResponse {
-/**
- * Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
- */
     private final @Nullable BlobReferenceInputDataSourceResponse datasource;
-/**
- * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
- */
     private final DiagnosticsResponse diagnostics;
-/**
- * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
- */
     private final String etag;
-/**
- * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
- */
     private final @Nullable Object serialization;
-/**
- * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Reference'.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"datasource","diagnostics","etag","serialization","type"})
@@ -53,34 +37,18 @@ Expected value is 'Reference'.
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
- */
     public Optional<BlobReferenceInputDataSourceResponse> getDatasource() {
         return Optional.ofNullable(this.datasource);
     }
-/**
- * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
- */
     public DiagnosticsResponse getDiagnostics() {
         return this.diagnostics;
     }
-/**
- * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
- */
     public String getEtag() {
         return this.etag;
     }
-/**
- * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
- */
     public Optional<Object> getSerialization() {
         return Optional.ofNullable(this.serialization);
     }
-/**
- * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-Expected value is 'Reference'.
- */
     public String getType() {
         return this.type;
     }

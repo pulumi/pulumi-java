@@ -13,13 +13,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataCollectionRuleResponseDestinations {
-/**
- * Azure Monitor Metrics destination.
- */
     private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
-/**
- * List of Log Analytics destinations.
- */
     private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
     @OutputCustomType.Constructor({"azureMonitorMetrics","logAnalytics"})
@@ -30,15 +24,9 @@ public final class DataCollectionRuleResponseDestinations {
         this.logAnalytics = logAnalytics;
     }
 
-/**
- * Azure Monitor Metrics destination.
- */
     public Optional<DestinationsSpecResponseAzureMonitorMetrics> getAzureMonitorMetrics() {
         return Optional.ofNullable(this.azureMonitorMetrics);
     }
-/**
- * List of Log Analytics destinations.
- */
     public List<LogAnalyticsDestinationResponse> getLogAnalytics() {
         return this.logAnalytics == null ? List.of() : this.logAnalytics;
     }

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiVersionConstraintResponse {
-/**
- * Limit control plane API calls to API Management service with version equal to or newer than this value.
- */
     private final @Nullable String minApiVersion;
 
     @OutputCustomType.Constructor({"minApiVersion"})
@@ -21,9 +18,6 @@ public final class ApiVersionConstraintResponse {
         this.minApiVersion = minApiVersion;
     }
 
-/**
- * Limit control plane API calls to API Management service with version equal to or newer than this value.
- */
     public Optional<String> getMinApiVersion() {
         return Optional.ofNullable(this.minApiVersion);
     }

@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeArgs Empty = new NodeArgs();
 
-    /**
-     * The type of hardware accelerators associated with this node.
-     */
     @InputImport(name="acceleratorType", required=true)
     private final Input<String> acceleratorType;
 
@@ -31,9 +25,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.acceleratorType;
     }
 
-    /**
-     * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
-     */
     @InputImport(name="cidrBlock")
     private final @Nullable Input<String> cidrBlock;
 
@@ -41,9 +32,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
     }
 
-    /**
-     * The user-supplied description of the TPU. Maximum of 512 characters.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -51,9 +39,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * The health status of the TPU node.
-     */
     @InputImport(name="health")
     private final @Nullable Input<NodeHealth> health;
 
@@ -61,9 +46,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.health == null ? Input.empty() : this.health;
     }
 
-    /**
-     * Resource labels to represent user-provided metadata.
-     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -71,9 +53,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -81,9 +60,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of a network they wish to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on which this API has been activated. If none is provided, "default" will be used.
-     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -91,9 +67,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="nodeId")
     private final @Nullable Input<String> nodeId;
 
@@ -101,9 +74,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeId == null ? Input.empty() : this.nodeId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -111,9 +81,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -121,9 +88,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
-    /**
-     * The scheduling options for this node.
-     */
     @InputImport(name="schedulingConfig")
     private final @Nullable Input<SchedulingConfigArgs> schedulingConfig;
 
@@ -131,9 +95,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedulingConfig == null ? Input.empty() : this.schedulingConfig;
     }
 
-    /**
-     * The version of Tensorflow running in the Node.
-     */
     @InputImport(name="tensorflowVersion", required=true)
     private final Input<String> tensorflowVersion;
 
@@ -141,9 +102,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.tensorflowVersion;
     }
 
-    /**
-     * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering should be set up before provisioning the node. If this field is set, cidr_block field should not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC networks, the node must be created with this this field enabled.
-     */
     @InputImport(name="useServiceNetworking")
     private final @Nullable Input<Boolean> useServiceNetworking;
 

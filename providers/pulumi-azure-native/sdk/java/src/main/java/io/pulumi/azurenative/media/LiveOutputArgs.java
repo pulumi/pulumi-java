@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LiveOutputArgs Empty = new LiveOutputArgs();
 
-    /**
-     * The Media Services account name.
-     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -29,9 +23,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
-    /**
-     * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
-     */
     @InputImport(name="archiveWindowLength", required=true)
     private final Input<String> archiveWindowLength;
 
@@ -39,9 +30,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.archiveWindowLength;
     }
 
-    /**
-     * The asset that the live output will write to.
-     */
     @InputImport(name="assetName", required=true)
     private final Input<String> assetName;
 
@@ -49,9 +37,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetName;
     }
 
-    /**
-     * The description of the live output.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -59,9 +44,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * HTTP Live Streaming (HLS) packing setting for the live output.
-     */
     @InputImport(name="hls")
     private final @Nullable Input<HlsArgs> hls;
 
@@ -69,9 +51,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.hls == null ? Input.empty() : this.hls;
     }
 
-    /**
-     * The name of the live event, maximum length is 32.
-     */
     @InputImport(name="liveEventName", required=true)
     private final Input<String> liveEventName;
 
@@ -79,9 +58,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.liveEventName;
     }
 
-    /**
-     * The name of the live output.
-     */
     @InputImport(name="liveOutputName")
     private final @Nullable Input<String> liveOutputName;
 
@@ -89,9 +65,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.liveOutputName == null ? Input.empty() : this.liveOutputName;
     }
 
-    /**
-     * The manifest file name. If not provided, the service will generate one automatically.
-     */
     @InputImport(name="manifestName")
     private final @Nullable Input<String> manifestName;
 
@@ -99,9 +72,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.manifestName == null ? Input.empty() : this.manifestName;
     }
 
-    /**
-     * The initial timestamp that the live output will start at, any content before this value will not be archived.
-     */
     @InputImport(name="outputSnapTime")
     private final @Nullable Input<Double> outputSnapTime;
 
@@ -109,9 +79,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputSnapTime == null ? Input.empty() : this.outputSnapTime;
     }
 
-    /**
-     * The name of the resource group within the Azure subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

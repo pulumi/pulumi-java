@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSavedSearch {
-/**
- * Value object for saved search results.
-API Version: 2020-08-01.
- *
- * Value object for saved search results.
- */
     public static CompletableFuture<GetSavedSearchResult> invokeAsync(GetSavedSearchArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSavedSearch", TypeShape.of(GetSavedSearchResult.class), args == null ? GetSavedSearchArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,17 +11,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VaultPrivateEndpointConnectionResponse {
-/**
- * The Private Endpoint network resource that is linked to the Private Endpoint connection.
- */
     private final PrivateEndpointResponse privateEndpoint;
-/**
- * Gets or sets private link service connection state.
- */
     private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-/**
- * Gets or sets provisioning state of the private endpoint connection.
- */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
@@ -34,21 +25,12 @@ public final class VaultPrivateEndpointConnectionResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
-/**
- * The Private Endpoint network resource that is linked to the Private Endpoint connection.
- */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
-/**
- * Gets or sets private link service connection state.
- */
     public VaultPrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
-/**
- * Gets or sets provisioning state of the private endpoint connection.
- */
     public String getProvisioningState() {
         return this.provisioningState;
     }

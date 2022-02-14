@@ -13,17 +13,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceGuardProxyBaseResponse {
-/**
- * 
- */
     private final @Nullable String lastUpdatedTime;
-/**
- * 
- */
     private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
-/**
- * 
- */
     private final @Nullable String resourceGuardResourceId;
 
     @OutputCustomType.Constructor({"lastUpdatedTime","resourceGuardOperationDetails","resourceGuardResourceId"})
@@ -36,21 +27,12 @@ public final class ResourceGuardProxyBaseResponse {
         this.resourceGuardResourceId = resourceGuardResourceId;
     }
 
-/**
- * 
- */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
-/**
- * 
- */
     public List<ResourceGuardOperationDetailResponse> getResourceGuardOperationDetails() {
         return this.resourceGuardOperationDetails == null ? List.of() : this.resourceGuardOperationDetails;
     }
-/**
- * 
- */
     public Optional<String> getResourceGuardResourceId() {
         return Optional.ofNullable(this.resourceGuardResourceId);
     }

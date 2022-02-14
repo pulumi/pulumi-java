@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PreferredSchedulingTerm {
-/**
- * A node selector term, associated with the corresponding weight.
- */
     private final NodeSelectorTerm preference;
-/**
- * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
- */
     private final Integer weight;
 
     @OutputCustomType.Constructor({"preference","weight"})
@@ -27,15 +21,9 @@ public final class PreferredSchedulingTerm {
         this.weight = Objects.requireNonNull(weight);
     }
 
-/**
- * A node selector term, associated with the corresponding weight.
- */
     public NodeSelectorTerm getPreference() {
         return this.preference;
     }
-/**
- * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
- */
     public Integer getWeight() {
         return this.weight;
     }

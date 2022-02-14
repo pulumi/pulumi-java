@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizationPolicy {
-/**
- * Gets details of a single AuthorizationPolicy.
- */
     public static CompletableFuture<GetAuthorizationPolicyResult> invokeAsync(GetAuthorizationPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networksecurity/v1:getAuthorizationPolicy", TypeShape.of(GetAuthorizationPolicyResult.class), args == null ? GetAuthorizationPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

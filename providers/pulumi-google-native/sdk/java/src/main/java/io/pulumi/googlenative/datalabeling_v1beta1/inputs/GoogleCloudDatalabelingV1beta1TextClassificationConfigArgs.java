@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Config for text classification human labeling task.
- */
 public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs Empty = new GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs();
 
-    /**
-     * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
-     */
     @InputImport(name="allowMultiLabel")
     private final @Nullable Input<Boolean> allowMultiLabel;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
         return this.allowMultiLabel == null ? Input.empty() : this.allowMultiLabel;
     }
 
-    /**
-     * Annotation spec set resource name.
-     */
     @InputImport(name="annotationSpecSet", required=true)
     private final Input<String> annotationSpecSet;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
         return this.annotationSpecSet;
     }
 
-    /**
-     * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
-     */
     @InputImport(name="sentimentConfig")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig;
 

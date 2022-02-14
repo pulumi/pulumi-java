@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueryParameterArgs Empty = new QueryParameterArgs();
 
-    /**
-     * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,9 +23,6 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * [Required] The type of this parameter.
-     */
     @InputImport(name="parameterType")
     private final @Nullable Input<QueryParameterTypeArgs> parameterType;
 
@@ -39,9 +30,6 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameterType == null ? Input.empty() : this.parameterType;
     }
 
-    /**
-     * [Required] The value of this parameter.
-     */
     @InputImport(name="parameterValue")
     private final @Nullable Input<QueryParameterValueArgs> parameterValue;
 

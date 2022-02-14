@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class MountConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MountConfigurationArgs Empty = new MountConfigurationArgs();
 
-    /**
-     * This property is mutually exclusive with all other properties.
-     */
     @InputImport(name="azureBlobFileSystemConfiguration")
     private final @Nullable Input<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
 
@@ -30,9 +24,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
         return this.azureBlobFileSystemConfiguration == null ? Input.empty() : this.azureBlobFileSystemConfiguration;
     }
 
-    /**
-     * This property is mutually exclusive with all other properties.
-     */
     @InputImport(name="azureFileShareConfiguration")
     private final @Nullable Input<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
 
@@ -40,9 +31,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
         return this.azureFileShareConfiguration == null ? Input.empty() : this.azureFileShareConfiguration;
     }
 
-    /**
-     * This property is mutually exclusive with all other properties.
-     */
     @InputImport(name="cifsMountConfiguration")
     private final @Nullable Input<CIFSMountConfigurationArgs> cifsMountConfiguration;
 
@@ -50,9 +38,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
         return this.cifsMountConfiguration == null ? Input.empty() : this.cifsMountConfiguration;
     }
 
-    /**
-     * This property is mutually exclusive with all other properties.
-     */
     @InputImport(name="nfsMountConfiguration")
     private final @Nullable Input<NFSMountConfigurationArgs> nfsMountConfiguration;
 

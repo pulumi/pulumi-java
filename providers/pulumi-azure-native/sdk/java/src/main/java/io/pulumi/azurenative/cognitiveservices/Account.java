@@ -18,405 +18,63 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
-API Version: 2017-04-18.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create Account
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var account = new AzureNative.CognitiveServices.Account("account", new AzureNative.CognitiveServices.AccountArgs
-        {
-            AccountName = "testCreate1",
-            Identity = new AzureNative.CognitiveServices.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Kind = "Emotion",
-            Location = "West US",
-            Properties = new AzureNative.CognitiveServices.Inputs.CognitiveServicesAccountPropertiesArgs
-            {
-                Encryption = new AzureNative.CognitiveServices.Inputs.EncryptionArgs
-                {
-                    KeySource = "Microsoft.KeyVault",
-                    KeyVaultProperties = new AzureNative.CognitiveServices.Inputs.KeyVaultPropertiesArgs
-                    {
-                        KeyName = "KeyName",
-                        KeyVaultUri = "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
-                        KeyVersion = "891CF236-D241-4738-9462-D506AF493DFA",
-                    },
-                },
-                UserOwnedStorage = 
-                {
-                    new AzureNative.CognitiveServices.Inputs.UserOwnedStorageArgs
-                    {
-                        ResourceId = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-                    },
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNative.CognitiveServices.Inputs.SkuArgs
-            {
-                Name = "S0",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cognitiveservices.NewAccount(ctx, "account", &cognitiveservices.AccountArgs{
-			AccountName: pulumi.String("testCreate1"),
-			Identity: &cognitiveservices.IdentityArgs{
-				Type: "SystemAssigned",
-			},
-			Kind:     pulumi.String("Emotion"),
-			Location: pulumi.String("West US"),
-			Properties: &cognitiveservices.CognitiveServicesAccountPropertiesArgs{
-				Encryption: &cognitiveservices.EncryptionArgs{
-					KeySource: pulumi.String("Microsoft.KeyVault"),
-					KeyVaultProperties: &cognitiveservices.KeyVaultPropertiesArgs{
-						KeyName:     pulumi.String("KeyName"),
-						KeyVaultUri: pulumi.String("https://pltfrmscrts-use-pc-dev.vault.azure.net/"),
-						KeyVersion:  pulumi.String("891CF236-D241-4738-9462-D506AF493DFA"),
-					},
-				},
-				UserOwnedStorage: cognitiveservices.UserOwnedStorageArray{
-					&cognitiveservices.UserOwnedStorageArgs{
-						ResourceId: pulumi.String("/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &cognitiveservices.SkuArgs{
-				Name: pulumi.String("S0"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const account = new azure_native.cognitiveservices.Account("account", {
-    accountName: "testCreate1",
-    identity: {
-        type: "SystemAssigned",
-    },
-    kind: "Emotion",
-    location: "West US",
-    properties: {
-        encryption: {
-            keySource: "Microsoft.KeyVault",
-            keyVaultProperties: {
-                keyName: "KeyName",
-                keyVaultUri: "https://pltfrmscrts-use-pc-dev.vault.azure.net/",
-                keyVersion: "891CF236-D241-4738-9462-D506AF493DFA",
-            },
-        },
-        userOwnedStorage: [{
-            resourceId: "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-        }],
-    },
-    resourceGroupName: "myResourceGroup",
-    sku: {
-        name: "S0",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-account = azure_native.cognitiveservices.Account("account",
-    account_name="testCreate1",
-    identity=azure_native.cognitiveservices.IdentityArgs(
-        type="SystemAssigned",
-    ),
-    kind="Emotion",
-    location="West US",
-    properties=azure_native.cognitiveservices.CognitiveServicesAccountPropertiesArgs(
-        encryption=azure_native.cognitiveservices.EncryptionArgs(
-            key_source="Microsoft.KeyVault",
-            key_vault_properties=azure_native.cognitiveservices.KeyVaultPropertiesArgs(
-                key_name="KeyName",
-                key_vault_uri="https://pltfrmscrts-use-pc-dev.vault.azure.net/",
-                key_version="891CF236-D241-4738-9462-D506AF493DFA",
-            ),
-        ),
-        user_owned_storage=[azure_native.cognitiveservices.UserOwnedStorageArgs(
-            resource_id="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
-        )],
-    ),
-    resource_group_name="myResourceGroup",
-    sku=azure_native.cognitiveservices.SkuArgs(
-        name="S0",
-    ))
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create Account Min
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var account = new AzureNative.CognitiveServices.Account("account", new AzureNative.CognitiveServices.AccountArgs
-        {
-            AccountName = "testCreate1",
-            Identity = new AzureNative.CognitiveServices.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned",
-            },
-            Kind = "CognitiveServices",
-            Location = "West US",
-            Properties = ,
-            ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNative.CognitiveServices.Inputs.SkuArgs
-            {
-                Name = "S0",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cognitiveservices.NewAccount(ctx, "account", &cognitiveservices.AccountArgs{
-			AccountName: pulumi.String("testCreate1"),
-			Identity: &cognitiveservices.IdentityArgs{
-				Type: "SystemAssigned",
-			},
-			Kind:              pulumi.String("CognitiveServices"),
-			Location:          pulumi.String("West US"),
-			Properties:        nil,
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &cognitiveservices.SkuArgs{
-				Name: pulumi.String("S0"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const account = new azure_native.cognitiveservices.Account("account", {
-    accountName: "testCreate1",
-    identity: {
-        type: "SystemAssigned",
-    },
-    kind: "CognitiveServices",
-    location: "West US",
-    properties: {},
-    resourceGroupName: "myResourceGroup",
-    sku: {
-        name: "S0",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-account = azure_native.cognitiveservices.Account("account",
-    account_name="testCreate1",
-    identity=azure_native.cognitiveservices.IdentityArgs(
-        type="SystemAssigned",
-    ),
-    kind="CognitiveServices",
-    location="West US",
-    properties=azure_native.cognitiveservices.CognitiveServicesAccountPropertiesArgs(),
-    resource_group_name="myResourceGroup",
-    sku=azure_native.cognitiveservices.SkuArgs(
-        name="S0",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:cognitiveservices:Account testCreate1 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.CognitiveServices/accounts/testCreate1 
-```
-
- */
 @ResourceType(type="azure-native:cognitiveservices:Account")
 public class Account extends io.pulumi.resources.CustomResource {
-    /**
-     * Entity Tag
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    /**
-     * @return Entity Tag
-     */
     public Output<String> getEtag() {
         return this.etag;
     }
-    /**
-     * The identity of Cognitive Services account.
-     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
-    /**
-     * @return The identity of Cognitive Services account.
-     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The Kind of the resource.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
-    /**
-     * @return The Kind of the resource.
-     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    /**
-     * The location of the resource
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The location of the resource
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the created account
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the created account
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Properties of Cognitive Services account.
-     */
     @OutputExport(name="properties", type=CognitiveServicesAccountPropertiesResponse.class, parameters={})
     private Output<CognitiveServicesAccountPropertiesResponse> properties;
 
-    /**
-     * @return Properties of Cognitive Services account.
-     */
     public Output<CognitiveServicesAccountPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * The SKU of Cognitive Services account.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return The SKU of Cognitive Services account.
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cognitiveservices:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -438,14 +96,6 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

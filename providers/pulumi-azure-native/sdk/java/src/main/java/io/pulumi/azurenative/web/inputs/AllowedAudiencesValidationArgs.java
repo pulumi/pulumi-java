@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The configuration settings of the Allowed Audiences validation flow.
- */
 public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllowedAudiencesValidationArgs Empty = new AllowedAudiencesValidationArgs();
 
-    /**
-     * The configuration settings of the allowed list of audiences from which to validate the JWT token.
-     */
     @InputImport(name="allowedAudiences")
     private final @Nullable Input<List<String>> allowedAudiences;
 

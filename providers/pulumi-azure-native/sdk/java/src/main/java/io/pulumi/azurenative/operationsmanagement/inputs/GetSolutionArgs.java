@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSolutionArgs Empty = new GetSolutionArgs();
 
-    /**
-     * The name of the resource group to get. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetSolutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * User Solution Name.
-     */
     @InputImport(name="solutionName", required=true)
     private final String solutionName;
 

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JsonFieldResponse {
-/**
- * Name of a field in the input event schema that's to be used as the source of a mapping.
- */
     private final @Nullable String sourceField;
 
     @OutputCustomType.Constructor({"sourceField"})
@@ -21,9 +18,6 @@ public final class JsonFieldResponse {
         this.sourceField = sourceField;
     }
 
-/**
- * Name of a field in the input event schema that's to be used as the source of a mapping.
- */
     public Optional<String> getSourceField() {
         return Optional.ofNullable(this.sourceField);
     }

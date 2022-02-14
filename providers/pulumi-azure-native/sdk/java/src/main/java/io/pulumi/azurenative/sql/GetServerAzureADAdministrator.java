@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerAzureADAdministrator {
-/**
- * Azure Active Directory administrator.
-API Version: 2020-11-01-preview.
- *
- * Azure Active Directory administrator.
- */
     public static CompletableFuture<GetServerAzureADAdministratorResult> invokeAsync(GetServerAzureADAdministratorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAzureADAdministrator", TypeShape.of(GetServerAzureADAdministratorResult.class), args == null ? GetServerAzureADAdministratorArgs.Empty : args, Utilities.withVersion(options));
     }

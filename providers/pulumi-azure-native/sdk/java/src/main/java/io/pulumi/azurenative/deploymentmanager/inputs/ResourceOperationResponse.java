@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Individual resource operation information.
- */
 public final class ResourceOperationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceOperationResponse Empty = new ResourceOperationResponse();
 
-    /**
-     * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
-     */
     @InputImport(name="operationId", required=true)
     private final String operationId;
 
@@ -27,9 +21,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
         return this.operationId;
     }
 
-    /**
-     * State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -37,9 +28,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
-    /**
-     * Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
-     */
     @InputImport(name="resourceName")
     private final @Nullable String resourceName;
 
@@ -47,9 +35,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
-    /**
-     * Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
-     */
     @InputImport(name="resourceType")
     private final @Nullable String resourceType;
 
@@ -57,9 +42,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
-    /**
-     * Http status code of the operation.
-     */
     @InputImport(name="statusCode", required=true)
     private final String statusCode;
 
@@ -67,9 +49,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
         return this.statusCode;
     }
 
-    /**
-     * Descriptive information of the resource operation.
-     */
     @InputImport(name="statusMessage", required=true)
     private final String statusMessage;
 

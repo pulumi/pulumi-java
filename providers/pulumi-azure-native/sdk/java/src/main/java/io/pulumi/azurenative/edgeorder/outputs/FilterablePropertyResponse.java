@@ -10,13 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FilterablePropertyResponse {
-/**
- * Values to be filtered.
- */
     private final List<String> supportedValues;
-/**
- * Type of product filter.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"supportedValues","type"})
@@ -27,15 +21,9 @@ public final class FilterablePropertyResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Values to be filtered.
- */
     public List<String> getSupportedValues() {
         return this.supportedValues;
     }
-/**
- * Type of product filter.
- */
     public String getType() {
         return this.type;
     }

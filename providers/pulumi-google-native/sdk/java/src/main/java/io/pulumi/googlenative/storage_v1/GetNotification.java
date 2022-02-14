@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotification {
-/**
- * View a notification configuration.
- */
     public static CompletableFuture<GetNotificationResult> invokeAsync(GetNotificationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getNotification", TypeShape.of(GetNotificationResult.class), args == null ? GetNotificationArgs.Empty : args, Utilities.withVersion(options));
     }

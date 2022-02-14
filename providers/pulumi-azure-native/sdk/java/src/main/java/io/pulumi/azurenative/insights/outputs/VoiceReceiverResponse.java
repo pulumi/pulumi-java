@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VoiceReceiverResponse {
-/**
- * The country code of the voice receiver.
- */
     private final String countryCode;
-/**
- * The name of the voice receiver. Names must be unique across all receivers within an action group.
- */
     private final String name;
-/**
- * The phone number of the voice receiver.
- */
     private final String phoneNumber;
 
     @OutputCustomType.Constructor({"countryCode","name","phoneNumber"})
@@ -32,21 +23,12 @@ public final class VoiceReceiverResponse {
         this.phoneNumber = Objects.requireNonNull(phoneNumber);
     }
 
-/**
- * The country code of the voice receiver.
- */
     public String getCountryCode() {
         return this.countryCode;
     }
-/**
- * The name of the voice receiver. Names must be unique across all receivers within an action group.
- */
     public String getName() {
         return this.name;
     }
-/**
- * The phone number of the voice receiver.
- */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }

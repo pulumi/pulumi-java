@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Description of the type, names/ids, and input/outputs for a transform.
- */
 public final class TransformSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TransformSummaryResponse Empty = new TransformSummaryResponse();
 
-    /**
-     * Transform-specific display data.
-     */
     @InputImport(name="displayData", required=true)
     private final List<DisplayDataResponse> displayData;
 
@@ -27,9 +21,6 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
         return this.displayData;
     }
 
-    /**
-     * User names for all collection inputs to this transform.
-     */
     @InputImport(name="inputCollectionName", required=true)
     private final List<String> inputCollectionName;
 
@@ -37,9 +28,6 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
         return this.inputCollectionName;
     }
 
-    /**
-     * Type of transform.
-     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -47,9 +35,6 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
         return this.kind;
     }
 
-    /**
-     * User provided name for this transform instance.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -57,9 +42,6 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
-    /**
-     * User names for all collection outputs to this transform.
-     */
     @InputImport(name="outputCollectionName", required=true)
     private final List<String> outputCollectionName;
 

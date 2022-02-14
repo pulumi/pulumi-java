@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
-    /**
-     * The name of the database in the Kusto pool.
-     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -29,9 +23,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
-    /**
-     * Kind of the database
-     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,Kind>> kind;
 
@@ -39,9 +30,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
-    /**
-     * The name of the Kusto pool.
-     */
     @InputImport(name="kustoPoolName", required=true)
     private final Input<String> kustoPoolName;
 
@@ -49,9 +37,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.kustoPoolName;
     }
 
-    /**
-     * Resource location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,9 +44,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,9 +51,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ManagementAssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementAssociationArgs Empty = new ManagementAssociationArgs();
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,9 +22,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * User ManagementAssociation Name.
-     */
     @InputImport(name="managementAssociationName")
     private final @Nullable Input<String> managementAssociationName;
 
@@ -38,9 +29,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
         return this.managementAssociationName == null ? Input.empty() : this.managementAssociationName;
     }
 
-    /**
-     * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<ManagementAssociationPropertiesArgs> properties;
 
@@ -48,9 +36,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Provider name for the parent resource.
-     */
     @InputImport(name="providerName", required=true)
     private final Input<String> providerName;
 
@@ -58,9 +43,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
         return this.providerName;
     }
 
-    /**
-     * The name of the resource group to get. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,9 +50,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
-    /**
-     * Parent resource name.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -78,9 +57,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
         return this.resourceName;
     }
 
-    /**
-     * Resource type for the parent resource
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 

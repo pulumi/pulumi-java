@@ -14,154 +14,33 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A private link scoped resource
-API Version: 2019-10-17-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Update a scoped resource in a private link scope.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateLinkScopedResource = new AzureNative.Insights.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNative.Insights.PrivateLinkScopedResourceArgs
-        {
-            LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
-            Name = "scoped-resource-name",
-            ResourceGroupName = "MyResourceGroup",
-            ScopeName = "MyPrivateLinkScope",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := insights.NewPrivateLinkScopedResource(ctx, "privateLinkScopedResource", &insights.PrivateLinkScopedResourceArgs{
-			LinkedResourceId:  pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component"),
-			Name:              pulumi.String("scoped-resource-name"),
-			ResourceGroupName: pulumi.String("MyResourceGroup"),
-			ScopeName:         pulumi.String("MyPrivateLinkScope"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const privateLinkScopedResource = new azure_native.insights.PrivateLinkScopedResource("privateLinkScopedResource", {
-    linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
-    name: "scoped-resource-name",
-    resourceGroupName: "MyResourceGroup",
-    scopeName: "MyPrivateLinkScope",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-private_link_scoped_resource = azure_native.insights.PrivateLinkScopedResource("privateLinkScopedResource",
-    linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/components/my-component",
-    name="scoped-resource-name",
-    resource_group_name="MyResourceGroup",
-    scope_name="MyPrivateLinkScope")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:insights:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/MyResourceGroup/providers/Microsoft.Insights/privateLinkScopes/MyPrivateLinkScope/scopedResources/scoped-resource-name 
-```
-
- */
 @ResourceType(type="azure-native:insights:PrivateLinkScopedResource")
 public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResource {
-    /**
-     * The resource id of the scoped Azure monitor resource.
-     */
     @OutputExport(name="linkedResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedResourceId;
 
-    /**
-     * @return The resource id of the scoped Azure monitor resource.
-     */
     public Output</* @Nullable */ String> getLinkedResourceId() {
         return this.linkedResourceId;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * State of the private endpoint connection.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return State of the private endpoint connection.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PrivateLinkScopedResource(String name, PrivateLinkScopedResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:PrivateLinkScopedResource", name, args == null ? PrivateLinkScopedResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -181,14 +60,6 @@ public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PrivateLinkScopedResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateLinkScopedResource(name, id, options);
     }

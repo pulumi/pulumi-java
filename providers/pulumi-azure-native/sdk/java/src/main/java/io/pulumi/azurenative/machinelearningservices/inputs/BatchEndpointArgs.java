@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Batch endpoint configuration.
- */
 public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BatchEndpointArgs Empty = new BatchEndpointArgs();
 
-    /**
-     * Enum to determine endpoint authentication mode.
-     */
     @InputImport(name="authMode")
     private final @Nullable Input<Either<String,EndpointAuthMode>> authMode;
 
@@ -32,9 +26,6 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.authMode == null ? Input.empty() : this.authMode;
     }
 
-    /**
-     * Description of the inference endpoint.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,10 +33,6 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * EndpointAuthKeys to set initially on an Endpoint.
-This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
-     */
     @InputImport(name="keys")
     private final @Nullable Input<EndpointAuthKeysArgs> keys;
 
@@ -53,9 +40,6 @@ This property will always be returned as null. AuthKey values must be retrieved 
         return this.keys == null ? Input.empty() : this.keys;
     }
 
-    /**
-     * Property dictionary. Properties can be added, but not removed or altered.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -63,9 +47,6 @@ This property will always be returned as null. AuthKey values must be retrieved 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Traffic rules on how the traffic will be routed across deployments.
-     */
     @InputImport(name="traffic")
     private final @Nullable Input<Map<String,Integer>> traffic;
 

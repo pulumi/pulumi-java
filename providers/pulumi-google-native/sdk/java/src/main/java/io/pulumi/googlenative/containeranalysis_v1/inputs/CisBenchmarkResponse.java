@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A compliance check that is a CIS benchmark.
- */
 public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CisBenchmarkResponse Empty = new CisBenchmarkResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="profileLevel", required=true)
     private final Integer profileLevel;
 
@@ -26,9 +20,6 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
         return this.profileLevel;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="severity", required=true)
     private final String severity;
 

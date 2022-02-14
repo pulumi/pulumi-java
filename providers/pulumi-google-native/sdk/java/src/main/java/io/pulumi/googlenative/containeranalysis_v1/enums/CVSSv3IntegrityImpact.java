@@ -8,26 +8,11 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum CVSSv3IntegrityImpact {
-/**
- * 
- */
         ImpactUnspecified("IMPACT_UNSPECIFIED"),
-/**
- * 
- */
         ImpactHigh("IMPACT_HIGH"),
-/**
- * 
- */
         ImpactLow("IMPACT_LOW"),
-/**
- * 
- */
         ImpactNone("IMPACT_NONE");
 
         private final String value;

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * ContainerStatus contains details for the current status of this container.
- */
 public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerStatusArgs Empty = new ContainerStatusArgs();
 
-    /**
-     * Container's ID in the format 'docker://<container_id>'.
-     */
     @InputImport(name="containerID")
     private final @Nullable Input<String> containerID;
 
@@ -30,9 +24,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.containerID == null ? Input.empty() : this.containerID;
     }
 
-    /**
-     * The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
-     */
     @InputImport(name="image", required=true)
     private final Input<String> image;
 
@@ -40,9 +31,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.image;
     }
 
-    /**
-     * ImageID of the container's image.
-     */
     @InputImport(name="imageID", required=true)
     private final Input<String> imageID;
 
@@ -50,9 +38,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.imageID;
     }
 
-    /**
-     * Details about the container's last termination condition.
-     */
     @InputImport(name="lastState")
     private final @Nullable Input<ContainerStateArgs> lastState;
 
@@ -60,9 +45,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.lastState == null ? Input.empty() : this.lastState;
     }
 
-    /**
-     * This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -70,9 +52,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.name;
     }
 
-    /**
-     * Specifies whether the container has passed its readiness probe.
-     */
     @InputImport(name="ready", required=true)
     private final Input<Boolean> ready;
 
@@ -80,9 +59,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.ready;
     }
 
-    /**
-     * The number of times the container has been restarted.
-     */
     @InputImport(name="restartCount", required=true)
     private final Input<Integer> restartCount;
 
@@ -90,9 +66,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.restartCount;
     }
 
-    /**
-     * Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
-     */
     @InputImport(name="started")
     private final @Nullable Input<Boolean> started;
 
@@ -100,9 +73,6 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
         return this.started == null ? Input.empty() : this.started;
     }
 
-    /**
-     * Details about the container's current condition.
-     */
     @InputImport(name="state")
     private final @Nullable Input<ContainerStateArgs> state;
 

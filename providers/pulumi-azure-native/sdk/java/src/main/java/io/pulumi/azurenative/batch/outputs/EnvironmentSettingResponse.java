@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvironmentSettingResponse {
-/**
- * 
- */
     private final String name;
-/**
- * 
- */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -28,15 +22,9 @@ public final class EnvironmentSettingResponse {
         this.value = value;
     }
 
-/**
- * 
- */
     public String getName() {
         return this.name;
     }
-/**
- * 
- */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

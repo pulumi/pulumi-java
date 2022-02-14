@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyForDiskEncryptionSetResponse {
-/**
- * Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
- */
     private final String keyUrl;
-/**
- * Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
- */
     private final @Nullable SourceVaultResponse sourceVault;
 
     @OutputCustomType.Constructor({"keyUrl","sourceVault"})
@@ -29,15 +23,9 @@ public final class KeyForDiskEncryptionSetResponse {
         this.sourceVault = sourceVault;
     }
 
-/**
- * Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.
- */
     public String getKeyUrl() {
         return this.keyUrl;
     }
-/**
- * Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.
- */
     public Optional<SourceVaultResponse> getSourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }

@@ -9,16 +9,10 @@ import io.pulumi.googlenative.testing_v1.inputs.IosDeviceResponse;
 import java.util.Objects;
 
 
-/**
- * The environment in which the test is run.
- */
 public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentResponse Empty = new EnvironmentResponse();
 
-    /**
-     * An Android device which must be used with an Android test.
-     */
     @InputImport(name="androidDevice", required=true)
     private final AndroidDeviceResponse androidDevice;
 
@@ -26,9 +20,6 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
         return this.androidDevice;
     }
 
-    /**
-     * An iOS device which must be used with an iOS test.
-     */
     @InputImport(name="iosDevice", required=true)
     private final IosDeviceResponse iosDevice;
 

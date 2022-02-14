@@ -11,41 +11,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiIssueResult {
-/**
- * A resource identifier for the API the issue was created for.
- */
     private final @Nullable String apiId;
-/**
- * Date and time when the issue was created.
- */
     private final @Nullable String createdDate;
-/**
- * Text describing the issue.
- */
     private final String description;
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Status of the issue.
- */
     private final @Nullable String state;
-/**
- * The issue title.
- */
     private final String title;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
-/**
- * A resource identifier for the user created the issue.
- */
     private final String userId;
 
     @OutputCustomType.Constructor({"apiId","createdDate","description","id","name","state","title","type","userId"})
@@ -70,57 +43,30 @@ public final class GetApiIssueResult {
         this.userId = Objects.requireNonNull(userId);
     }
 
-/**
- * A resource identifier for the API the issue was created for.
- */
     public Optional<String> getApiId() {
         return Optional.ofNullable(this.apiId);
     }
-/**
- * Date and time when the issue was created.
- */
     public Optional<String> getCreatedDate() {
         return Optional.ofNullable(this.createdDate);
     }
-/**
- * Text describing the issue.
- */
     public String getDescription() {
         return this.description;
     }
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Status of the issue.
- */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
-/**
- * The issue title.
- */
     public String getTitle() {
         return this.title;
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }
-/**
- * A resource identifier for the user created the issue.
- */
     public String getUserId() {
         return this.userId;
     }

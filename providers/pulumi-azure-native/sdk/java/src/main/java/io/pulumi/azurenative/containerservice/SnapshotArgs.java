@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotArgs Empty = new SnapshotArgs();
 
-    /**
-     * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
-     */
     @InputImport(name="creationData")
     private final @Nullable Input<CreationDataArgs> creationData;
 
@@ -31,9 +25,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.creationData == null ? Input.empty() : this.creationData;
     }
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,9 +32,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,9 +39,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the managed cluster resource.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -61,9 +46,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * The type of a snapshot. The default is NodePool.
-     */
     @InputImport(name="snapshotType")
     private final @Nullable Input<Either<String,SnapshotType>> snapshotType;
 
@@ -71,9 +53,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotType == null ? Input.empty() : this.snapshotType;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

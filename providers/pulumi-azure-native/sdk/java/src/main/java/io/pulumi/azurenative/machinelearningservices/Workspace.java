@@ -25,578 +25,171 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * An object that represents a machine learning workspace.
-API Version: 2021-01-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create Workspace
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var workspace = new AzureNative.MachineLearningServices.Workspace("workspace", new AzureNative.MachineLearningServices.WorkspaceArgs
-        {
-            ApplicationInsights = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
-            ContainerRegistry = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
-            Description = "test description",
-            Encryption = new AzureNative.MachineLearningServices.Inputs.EncryptionPropertyArgs
-            {
-                Identity = new AzureNative.MachineLearningServices.Inputs.IdentityForCmkArgs
-                {
-                    UserAssignedIdentity = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai",
-                },
-                KeyVaultProperties = new AzureNative.MachineLearningServices.Inputs.KeyVaultPropertiesArgs
-                {
-                    IdentityClientId = "",
-                    KeyIdentifier = "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-                    KeyVaultArmId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-                },
-                Status = "Enabled",
-            },
-            FriendlyName = "HelloName",
-            HbiWorkspace = false,
-            Identity = new AzureNative.MachineLearningServices.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned,UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai",  },
-                },
-            },
-            KeyVault = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-            Location = "eastus2euap",
-            ResourceGroupName = "workspace-1234",
-            SharedPrivateLinkResources = 
-            {
-                new AzureNative.MachineLearningServices.Inputs.SharedPrivateLinkResourceArgs
-                {
-                    GroupId = "Sql",
-                    Name = "testdbresource",
-                    PrivateLinkResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
-                    RequestMessage = "Please approve",
-                    Status = "Approved",
-                },
-            },
-            Sku = new AzureNative.MachineLearningServices.Inputs.SkuArgs
-            {
-                Name = "Basic",
-                Tier = "Basic",
-            },
-            StorageAccount = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
-            WorkspaceName = "testworkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := machinelearningservices.NewWorkspace(ctx, "workspace", &machinelearningservices.WorkspaceArgs{
-			ApplicationInsights: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights"),
-			ContainerRegistry:   pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry"),
-			Description:         pulumi.String("test description"),
-			Encryption: &machinelearningservices.EncryptionPropertyArgs{
-				Identity: &machinelearningservices.IdentityForCmkArgs{
-					UserAssignedIdentity: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai"),
-				},
-				KeyVaultProperties: &machinelearningservices.KeyVaultPropertiesArgs{
-					IdentityClientId: pulumi.String(""),
-					KeyIdentifier:    pulumi.String("https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb"),
-					KeyVaultArmId:    pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
-				},
-				Status: pulumi.String("Enabled"),
-			},
-			FriendlyName: pulumi.String("HelloName"),
-			HbiWorkspace: pulumi.Bool(false),
-			Identity: &machinelearningservices.IdentityArgs{
-				Type: "SystemAssigned,UserAssigned",
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai": nil,
-				},
-			},
-			KeyVault:          pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
-			Location:          pulumi.String("eastus2euap"),
-			ResourceGroupName: pulumi.String("workspace-1234"),
-			SharedPrivateLinkResources: []machinelearningservices.SharedPrivateLinkResourceArgs{
-				&machinelearningservices.SharedPrivateLinkResourceArgs{
-					GroupId:               pulumi.String("Sql"),
-					Name:                  pulumi.String("testdbresource"),
-					PrivateLinkResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql"),
-					RequestMessage:        pulumi.String("Please approve"),
-					Status:                pulumi.String("Approved"),
-				},
-			},
-			Sku: &machinelearningservices.SkuArgs{
-				Name: pulumi.String("Basic"),
-				Tier: pulumi.String("Basic"),
-			},
-			StorageAccount: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount"),
-			WorkspaceName:  pulumi.String("testworkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const workspace = new azure_native.machinelearningservices.Workspace("workspace", {
-    applicationInsights: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
-    containerRegistry: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
-    description: "test description",
-    encryption: {
-        identity: {
-            userAssignedIdentity: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai",
-        },
-        keyVaultProperties: {
-            identityClientId: "",
-            keyIdentifier: "https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-            keyVaultArmId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-        },
-        status: "Enabled",
-    },
-    friendlyName: "HelloName",
-    hbiWorkspace: false,
-    identity: {
-        type: "SystemAssigned,UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai": {},
-        },
-    },
-    keyVault: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-    location: "eastus2euap",
-    resourceGroupName: "workspace-1234",
-    sharedPrivateLinkResources: [{
-        groupId: "Sql",
-        name: "testdbresource",
-        privateLinkResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
-        requestMessage: "Please approve",
-        status: "Approved",
-    }],
-    sku: {
-        name: "Basic",
-        tier: "Basic",
-    },
-    storageAccount: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
-    workspaceName: "testworkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-workspace = azure_native.machinelearningservices.Workspace("workspace",
-    application_insights="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights",
-    container_registry="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry",
-    description="test description",
-    encryption=azure_native.machinelearningservices.EncryptionPropertyArgs(
-        identity=azure_native.machinelearningservices.IdentityForCmkArgs(
-            user_assigned_identity="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai",
-        ),
-        key_vault_properties=azure_native.machinelearningservices.KeyVaultPropertiesArgs(
-            identity_client_id="",
-            key_identifier="https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb",
-            key_vault_arm_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-        ),
-        status="Enabled",
-    ),
-    friendly_name="HelloName",
-    hbi_workspace=False,
-    identity=azure_native.machinelearningservices.IdentityArgs(
-        type="SystemAssigned,UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai": {},
-        },
-    ),
-    key_vault="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv",
-    location="eastus2euap",
-    resource_group_name="workspace-1234",
-    shared_private_link_resources=[azure_native.machinelearningservices.SharedPrivateLinkResourceArgs(
-        group_id="Sql",
-        name="testdbresource",
-        private_link_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql",
-        request_message="Please approve",
-        status="Approved",
-    )],
-    sku=azure_native.machinelearningservices.SkuArgs(
-        name="Basic",
-        tier="Basic",
-    ),
-    storage_account="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount",
-    workspace_name="testworkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:machinelearningservices:Workspace testworkspace /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace 
-```
-
- */
 @ResourceType(type="azure-native:machinelearningservices:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
-    /**
-     * The flag to indicate whether to allow public access when behind VNet.
-     */
     @OutputExport(name="allowPublicAccessWhenBehindVnet", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowPublicAccessWhenBehindVnet;
 
-    /**
-     * @return The flag to indicate whether to allow public access when behind VNet.
-     */
     public Output</* @Nullable */ Boolean> getAllowPublicAccessWhenBehindVnet() {
         return this.allowPublicAccessWhenBehindVnet;
     }
-    /**
-     * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
-     */
     @OutputExport(name="applicationInsights", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationInsights;
 
-    /**
-     * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
-     */
     public Output</* @Nullable */ String> getApplicationInsights() {
         return this.applicationInsights;
     }
-    /**
-     * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
-     */
     @OutputExport(name="containerRegistry", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerRegistry;
 
-    /**
-     * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
-     */
     public Output</* @Nullable */ String> getContainerRegistry() {
         return this.containerRegistry;
     }
-    /**
-     * The description of this workspace.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    /**
-     * @return The description of this workspace.
-     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    /**
-     * Url for the discovery service to identify regional endpoints for machine learning experimentation services
-     */
     @OutputExport(name="discoveryUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> discoveryUrl;
 
-    /**
-     * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
-     */
     public Output</* @Nullable */ String> getDiscoveryUrl() {
         return this.discoveryUrl;
     }
-    /**
-     * The encryption settings of Azure ML workspace.
-     */
     @OutputExport(name="encryption", type=EncryptionPropertyResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertyResponse> encryption;
 
-    /**
-     * @return The encryption settings of Azure ML workspace.
-     */
     public Output</* @Nullable */ EncryptionPropertyResponse> getEncryption() {
         return this.encryption;
     }
-    /**
-     * The friendly name for this workspace. This name in mutable
-     */
     @OutputExport(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
-    /**
-     * @return The friendly name for this workspace. This name in mutable
-     */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
-    /**
-     * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
-     */
     @OutputExport(name="hbiWorkspace", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hbiWorkspace;
 
-    /**
-     * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
-     */
     public Output</* @Nullable */ Boolean> getHbiWorkspace() {
         return this.hbiWorkspace;
     }
-    /**
-     * The identity of the resource.
-     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
-    /**
-     * @return The identity of the resource.
-     */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The compute name for image build
-     */
     @OutputExport(name="imageBuildCompute", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageBuildCompute;
 
-    /**
-     * @return The compute name for image build
-     */
     public Output</* @Nullable */ String> getImageBuildCompute() {
         return this.imageBuildCompute;
     }
-    /**
-     * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-     */
     @OutputExport(name="keyVault", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVault;
 
-    /**
-     * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-     */
     public Output</* @Nullable */ String> getKeyVault() {
         return this.keyVault;
     }
-    /**
-     * Specifies the location of the resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Specifies the location of the resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Specifies the name of the resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Specifies the name of the resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The notebook info of Azure ML workspace.
-     */
     @OutputExport(name="notebookInfo", type=NotebookResourceInfoResponse.class, parameters={})
     private Output<NotebookResourceInfoResponse> notebookInfo;
 
-    /**
-     * @return The notebook info of Azure ML workspace.
-     */
     public Output<NotebookResourceInfoResponse> getNotebookInfo() {
         return this.notebookInfo;
     }
-    /**
-     * The user assigned identity resource id that represents the workspace identity.
-     */
     @OutputExport(name="primaryUserAssignedIdentity", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentity;
 
-    /**
-     * @return The user assigned identity resource id that represents the workspace identity.
-     */
     public Output</* @Nullable */ String> getPrimaryUserAssignedIdentity() {
         return this.primaryUserAssignedIdentity;
     }
-    /**
-     * The list of private endpoint connections in the workspace.
-     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    /**
-     * @return The list of private endpoint connections in the workspace.
-     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
-    /**
-     * Count of private connections in the workspace
-     */
     @OutputExport(name="privateLinkCount", type=Integer.class, parameters={})
     private Output<Integer> privateLinkCount;
 
-    /**
-     * @return Count of private connections in the workspace
-     */
     public Output<Integer> getPrivateLinkCount() {
         return this.privateLinkCount;
     }
-    /**
-     * The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * The service managed resource settings.
-     */
     @OutputExport(name="serviceManagedResourcesSettings", type=ServiceManagedResourcesSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> serviceManagedResourcesSettings;
 
-    /**
-     * @return The service managed resource settings.
-     */
     public Output</* @Nullable */ ServiceManagedResourcesSettingsResponse> getServiceManagedResourcesSettings() {
         return this.serviceManagedResourcesSettings;
     }
-    /**
-     * The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
-     */
     @OutputExport(name="serviceProvisionedResourceGroup", type=String.class, parameters={})
     private Output<String> serviceProvisionedResourceGroup;
 
-    /**
-     * @return The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
-     */
     public Output<String> getServiceProvisionedResourceGroup() {
         return this.serviceProvisionedResourceGroup;
     }
-    /**
-     * The list of shared private link resources in this workspace.
-     */
     @OutputExport(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
     private Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources;
 
-    /**
-     * @return The list of shared private link resources in this workspace.
-     */
     public Output</* @Nullable */ List<SharedPrivateLinkResourceResponse>> getSharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
-    /**
-     * The sku of the workspace.
-     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
-    /**
-     * @return The sku of the workspace.
-     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
-     */
     @OutputExport(name="storageAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccount;
 
-    /**
-     * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
-     */
     public Output</* @Nullable */ String> getStorageAccount() {
         return this.storageAccount;
     }
-    /**
-     * Read only system data
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Read only system data
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Contains resource tags defined as key/value pairs.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Contains resource tags defined as key/value pairs.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Specifies the type of the resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Specifies the type of the resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * The immutable id associated with this workspace.
-     */
     @OutputExport(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
-    /**
-     * @return The immutable id associated with this workspace.
-     */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -633,14 +226,6 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }

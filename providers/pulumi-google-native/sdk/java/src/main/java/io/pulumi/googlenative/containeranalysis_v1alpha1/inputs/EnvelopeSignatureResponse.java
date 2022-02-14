@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A DSSE signature
- */
 public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvelopeSignatureResponse Empty = new EnvelopeSignatureResponse();
 
-    /**
-     * A reference id to the key being used for signing
-     */
     @InputImport(name="keyid", required=true)
     private final String keyid;
 
@@ -25,9 +19,6 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
         return this.keyid;
     }
 
-    /**
-     * The signature itself
-     */
     @InputImport(name="sig", required=true)
     private final String sig;
 

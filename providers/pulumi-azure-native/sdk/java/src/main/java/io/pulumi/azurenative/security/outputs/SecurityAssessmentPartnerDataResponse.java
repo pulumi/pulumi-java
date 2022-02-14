@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityAssessmentPartnerDataResponse {
-/**
- * Name of the company of the partner
- */
     private final String partnerName;
-/**
- * secret to authenticate the partner - write only
- */
     private final String secret;
 
     @OutputCustomType.Constructor({"partnerName","secret"})
@@ -26,15 +20,9 @@ public final class SecurityAssessmentPartnerDataResponse {
         this.secret = Objects.requireNonNull(secret);
     }
 
-/**
- * Name of the company of the partner
- */
     public String getPartnerName() {
         return this.partnerName;
     }
-/**
- * secret to authenticate the partner - write only
- */
     public String getSecret() {
         return this.secret;
     }

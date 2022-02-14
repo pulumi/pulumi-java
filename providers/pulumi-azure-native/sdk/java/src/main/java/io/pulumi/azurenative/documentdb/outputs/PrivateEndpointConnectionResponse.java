@@ -13,33 +13,12 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionResponse {
-/**
- * Group id of the private endpoint.
- */
     private final @Nullable String groupId;
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     private final String id;
-/**
- * The name of the resource
- */
     private final String name;
-/**
- * Private endpoint which the connection belongs to.
- */
     private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
-/**
- * Connection State of the Private Endpoint Connection.
- */
     private final @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
-/**
- * Provisioning state of the private endpoint.
- */
     private final @Nullable String provisioningState;
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     private final String type;
 
     @OutputCustomType.Constructor({"groupId","id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
@@ -60,45 +39,24 @@ public final class PrivateEndpointConnectionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Group id of the private endpoint.
- */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
-/**
- * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
- */
     public String getId() {
         return this.id;
     }
-/**
- * The name of the resource
- */
     public String getName() {
         return this.name;
     }
-/**
- * Private endpoint which the connection belongs to.
- */
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
-/**
- * Connection State of the Private Endpoint Connection.
- */
     public Optional<PrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
-/**
- * Provisioning state of the private endpoint.
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-/**
- * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
- */
     public String getType() {
         return this.type;
     }

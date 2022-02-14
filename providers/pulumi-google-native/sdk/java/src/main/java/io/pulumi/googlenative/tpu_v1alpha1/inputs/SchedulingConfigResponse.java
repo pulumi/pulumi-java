@@ -8,16 +8,10 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
-/**
- * Sets the scheduling options for this node.
- */
 public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchedulingConfigResponse Empty = new SchedulingConfigResponse();
 
-    /**
-     * Defines whether the node is preemptible.
-     */
     @InputImport(name="preemptible", required=true)
     private final Boolean preemptible;
 
@@ -25,9 +19,6 @@ public final class SchedulingConfigResponse extends io.pulumi.resources.InvokeAr
         return this.preemptible;
     }
 
-    /**
-     * Whether the node is created under a reservation.
-     */
     @InputImport(name="reserved", required=true)
     private final Boolean reserved;
 

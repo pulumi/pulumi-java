@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Type of OS for which the key is requested.
- */
     @EnumType
     public enum OsType {
-/**
- * 
- */
         Windows7("Windows7"),
-/**
- * 
- */
         WindowsServer2008("WindowsServer2008"),
-/**
- * 
- */
         WindowsServer2008R2("WindowsServer2008R2");
 
         private final String value;

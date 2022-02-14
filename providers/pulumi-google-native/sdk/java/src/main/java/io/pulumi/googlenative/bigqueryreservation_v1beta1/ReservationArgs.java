@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationArgs Empty = new ReservationArgs();
 
-    /**
-     * If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
-     */
     @InputImport(name="ignoreIdleSlots")
     private final @Nullable Input<Boolean> ignoreIdleSlots;
 
@@ -28,9 +22,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreIdleSlots == null ? Input.empty() : this.ignoreIdleSlots;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,9 +29,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -48,9 +36,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,9 +43,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="reservationId")
     private final @Nullable Input<String> reservationId;
 
@@ -68,9 +50,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationId == null ? Input.empty() : this.reservationId;
     }
 
-    /**
-     * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot capacity exceed the project's slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project's slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
-     */
     @InputImport(name="slotCapacity")
     private final @Nullable Input<String> slotCapacity;
 

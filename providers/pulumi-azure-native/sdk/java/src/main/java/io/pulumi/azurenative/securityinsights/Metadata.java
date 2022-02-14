@@ -20,572 +20,105 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Metadata resource definition.
-API Version: 2021-03-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create/update full metadata.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var metadata = new AzureNative.SecurityInsights.Metadata("metadata", new AzureNative.SecurityInsights.MetadataArgs
-        {
-            Author = new AzureNative.SecurityInsights.Inputs.MetadataAuthorArgs
-            {
-                Email = "email@microsoft.com",
-                Name = "User Name",
-            },
-            Categories = new AzureNative.SecurityInsights.Inputs.MetadataCategoriesArgs
-            {
-                Domains = 
-                {
-                    "Application",
-                    "Security – Insider Threat",
-                },
-                Verticals = 
-                {
-                    "Healthcare",
-                },
-            },
-            ContentId = "c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-            Dependencies = new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-            {
-                Criteria = 
-                {
-                    new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-                    {
-                        Criteria = 
-                        {
-                            new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-                            {
-                                ContentId = "045d06d0-ee72-4794-aba4-cf5646e4c756",
-                                Kind = "DataConnector",
-                                Name = "Microsoft Defender for Endpoint",
-                            },
-                            new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-                            {
-                                ContentId = "dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d",
-                                Kind = "DataConnector",
-                            },
-                            new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-                            {
-                                ContentId = "de4dca9b-eb37-47d6-a56f-b8b06b261593",
-                                Kind = "DataConnector",
-                                Version = "2.0",
-                            },
-                        },
-                        Operator = "OR",
-                    },
-                    new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-                    {
-                        ContentId = "31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
-                        Kind = "Playbook",
-                        Version = "1.0",
-                    },
-                    new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
-                    {
-                        ContentId = "21ba424a-9438-4444-953a-7059539a7a1b",
-                        Kind = "Parser",
-                    },
-                },
-                Operator = "AND",
-            },
-            FirstPublishDate = "2021-05-18",
-            Kind = "AnalyticsRule",
-            LastPublishDate = "2021-05-18",
-            MetadataName = "metadataName",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
-            ParentId = "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
-            Providers = 
-            {
-                "Amazon",
-                "Microsoft",
-            },
-            ResourceGroupName = "myRg",
-            Source = new AzureNative.SecurityInsights.Inputs.MetadataSourceArgs
-            {
-                Kind = "Solution",
-                Name = "Contoso Solution 1.0",
-                SourceId = "b688a130-76f4-4a07-bf57-762222a3cadf",
-            },
-            Support = new AzureNative.SecurityInsights.Inputs.MetadataSupportArgs
-            {
-                Email = "support@microsoft.com",
-                Link = "https://support.microsoft.com/",
-                Name = "Microsoft",
-                Tier = "Partner",
-            },
-            Version = "1.0.0.0",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const metadata = new azure_native.securityinsights.Metadata("metadata", {
-    author: {
-        email: "email@microsoft.com",
-        name: "User Name",
-    },
-    categories: {
-        domains: [
-            "Application",
-            "Security – Insider Threat",
-        ],
-        verticals: ["Healthcare"],
-    },
-    contentId: "c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    dependencies: {
-        criteria: [
-            {
-                criteria: [
-                    {
-                        contentId: "045d06d0-ee72-4794-aba4-cf5646e4c756",
-                        kind: "DataConnector",
-                        name: "Microsoft Defender for Endpoint",
-                    },
-                    {
-                        contentId: "dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d",
-                        kind: "DataConnector",
-                    },
-                    {
-                        contentId: "de4dca9b-eb37-47d6-a56f-b8b06b261593",
-                        kind: "DataConnector",
-                        version: "2.0",
-                    },
-                ],
-                operator: "OR",
-            },
-            {
-                contentId: "31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
-                kind: "Playbook",
-                version: "1.0",
-            },
-            {
-                contentId: "21ba424a-9438-4444-953a-7059539a7a1b",
-                kind: "Parser",
-            },
-        ],
-        operator: "AND",
-    },
-    firstPublishDate: "2021-05-18",
-    kind: "AnalyticsRule",
-    lastPublishDate: "2021-05-18",
-    metadataName: "metadataName",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
-    parentId: "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
-    providers: [
-        "Amazon",
-        "Microsoft",
-    ],
-    resourceGroupName: "myRg",
-    source: {
-        kind: "Solution",
-        name: "Contoso Solution 1.0",
-        sourceId: "b688a130-76f4-4a07-bf57-762222a3cadf",
-    },
-    support: {
-        email: "support@microsoft.com",
-        link: "https://support.microsoft.com/",
-        name: "Microsoft",
-        tier: "Partner",
-    },
-    version: "1.0.0.0",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-metadata = azure_native.securityinsights.Metadata("metadata",
-    author=azure_native.securityinsights.MetadataAuthorArgs(
-        email="email@microsoft.com",
-        name="User Name",
-    ),
-    categories=azure_native.securityinsights.MetadataCategoriesArgs(
-        domains=[
-            "Application",
-            "Security – Insider Threat",
-        ],
-        verticals=["Healthcare"],
-    ),
-    content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    dependencies=azure_native.securityinsights.MetadataDependenciesArgs(
-        criteria=[
-            azure_native.securityinsights.MetadataDependenciesArgs(
-                criteria=[
-                    azure_native.securityinsights.MetadataDependenciesArgs(
-                        content_id="045d06d0-ee72-4794-aba4-cf5646e4c756",
-                        kind="DataConnector",
-                        name="Microsoft Defender for Endpoint",
-                    ),
-                    azure_native.securityinsights.MetadataDependenciesArgs(
-                        content_id="dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d",
-                        kind="DataConnector",
-                    ),
-                    azure_native.securityinsights.MetadataDependenciesArgs(
-                        content_id="de4dca9b-eb37-47d6-a56f-b8b06b261593",
-                        kind="DataConnector",
-                        version="2.0",
-                    ),
-                ],
-                operator="OR",
-            ),
-            azure_native.securityinsights.MetadataDependenciesArgs(
-                content_id="31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
-                kind="Playbook",
-                version="1.0",
-            ),
-            azure_native.securityinsights.MetadataDependenciesArgs(
-                content_id="21ba424a-9438-4444-953a-7059539a7a1b",
-                kind="Parser",
-            ),
-        ],
-        operator="AND",
-    ),
-    first_publish_date="2021-05-18",
-    kind="AnalyticsRule",
-    last_publish_date="2021-05-18",
-    metadata_name="metadataName",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
-    parent_id="/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
-    providers=[
-        "Amazon",
-        "Microsoft",
-    ],
-    resource_group_name="myRg",
-    source=azure_native.securityinsights.MetadataSourceArgs(
-        kind="Solution",
-        name="Contoso Solution 1.0",
-        source_id="b688a130-76f4-4a07-bf57-762222a3cadf",
-    ),
-    support=azure_native.securityinsights.MetadataSupportArgs(
-        email="support@microsoft.com",
-        link="https://support.microsoft.com/",
-        name="Microsoft",
-        tier="Partner",
-    ),
-    version="1.0.0.0",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### Create/update minimal metadata.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var metadata = new AzureNative.SecurityInsights.Metadata("metadata", new AzureNative.SecurityInsights.MetadataArgs
-        {
-            ContentId = "c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-            Kind = "AnalyticsRule",
-            MetadataName = "metadataName",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
-            ParentId = "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
-            ResourceGroupName = "myRg",
-            WorkspaceName = "myWorkspace",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewMetadata(ctx, "metadata", &securityinsights.MetadataArgs{
-			ContentId:                           pulumi.String("c00ee137-7475-47c8-9cce-ec6f0f1bedd0"),
-			Kind:                                pulumi.String("AnalyticsRule"),
-			MetadataName:                        pulumi.String("metadataName"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ParentId:                            pulumi.String("/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const metadata = new azure_native.securityinsights.Metadata("metadata", {
-    contentId: "c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    kind: "AnalyticsRule",
-    metadataName: "metadataName",
-    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
-    parentId: "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
-    resourceGroupName: "myRg",
-    workspaceName: "myWorkspace",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-metadata = azure_native.securityinsights.Metadata("metadata",
-    content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    kind="AnalyticsRule",
-    metadata_name="metadataName",
-    operational_insights_resource_provider="Microsoft.OperationalInsights",
-    parent_id="/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
-    resource_group_name="myRg",
-    workspace_name="myWorkspace")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:securityinsights:Metadata metadataName /subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/metadata/metadataName 
-```
-
- */
 @ResourceType(type="azure-native:securityinsights:Metadata")
 public class Metadata extends io.pulumi.resources.CustomResource {
-    /**
-     * The creator of the content item.
-     */
     @OutputExport(name="author", type=MetadataAuthorResponse.class, parameters={})
     private Output</* @Nullable */ MetadataAuthorResponse> author;
 
-    /**
-     * @return The creator of the content item.
-     */
     public Output</* @Nullable */ MetadataAuthorResponse> getAuthor() {
         return this.author;
     }
-    /**
-     * Categories for the solution content item
-     */
     @OutputExport(name="categories", type=MetadataCategoriesResponse.class, parameters={})
     private Output</* @Nullable */ MetadataCategoriesResponse> categories;
 
-    /**
-     * @return Categories for the solution content item
-     */
     public Output</* @Nullable */ MetadataCategoriesResponse> getCategories() {
         return this.categories;
     }
-    /**
-     * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
-     */
     @OutputExport(name="contentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentId;
 
-    /**
-     * @return Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
-     */
     public Output</* @Nullable */ String> getContentId() {
         return this.contentId;
     }
-    /**
-     * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
-     */
     @OutputExport(name="dependencies", type=MetadataDependenciesResponse.class, parameters={})
     private Output</* @Nullable */ MetadataDependenciesResponse> dependencies;
 
-    /**
-     * @return Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
-     */
     public Output</* @Nullable */ MetadataDependenciesResponse> getDependencies() {
         return this.dependencies;
     }
-    /**
-     * Etag of the azure resource
-     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
-    /**
-     * @return Etag of the azure resource
-     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
-    /**
-     * first publish date solution content item
-     */
     @OutputExport(name="firstPublishDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstPublishDate;
 
-    /**
-     * @return first publish date solution content item
-     */
     public Output</* @Nullable */ String> getFirstPublishDate() {
         return this.firstPublishDate;
     }
-    /**
-     * The kind of content the metadata is for.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return The kind of content the metadata is for.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * last publish date for the solution content item
-     */
     @OutputExport(name="lastPublishDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastPublishDate;
 
-    /**
-     * @return last publish date for the solution content item
-     */
     public Output</* @Nullable */ String> getLastPublishDate() {
         return this.lastPublishDate;
     }
-    /**
-     * Azure resource name
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Azure resource name
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
-     */
     @OutputExport(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
-    /**
-     * @return Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
-     */
     public Output<String> getParentId() {
         return this.parentId;
     }
-    /**
-     * Providers for the solution content item
-     */
     @OutputExport(name="providers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> providers;
 
-    /**
-     * @return Providers for the solution content item
-     */
     public Output</* @Nullable */ List<String>> getProviders() {
         return this.providers;
     }
-    /**
-     * Source of the content.  This is where/how it was created.
-     */
     @OutputExport(name="source", type=MetadataSourceResponse.class, parameters={})
     private Output</* @Nullable */ MetadataSourceResponse> source;
 
-    /**
-     * @return Source of the content.  This is where/how it was created.
-     */
     public Output</* @Nullable */ MetadataSourceResponse> getSource() {
         return this.source;
     }
-    /**
-     * Support information for the metadata - type, name, contact information
-     */
     @OutputExport(name="support", type=MetadataSupportResponse.class, parameters={})
     private Output</* @Nullable */ MetadataSupportResponse> support;
 
-    /**
-     * @return Support information for the metadata - type, name, contact information
-     */
     public Output</* @Nullable */ MetadataSupportResponse> getSupport() {
         return this.support;
     }
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Azure resource type
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Azure resource type
-     */
     public Output<String> getType() {
         return this.type;
     }
-    /**
-     * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
-     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
-    /**
-     * @return Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
-     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Metadata(String name, MetadataArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:Metadata", name, args == null ? MetadataArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -605,14 +138,6 @@ public class Metadata extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Metadata get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Metadata(name, id, options);
     }

@@ -12,53 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdifactDelimiterOverrideResponse {
-/**
- * The component separator.
- */
     private final Integer componentSeparator;
-/**
- * The data element separator.
- */
     private final Integer dataElementSeparator;
-/**
- * The decimal point indicator.
- */
     private final String decimalPointIndicator;
-/**
- * The message association assigned code.
- */
     private final @Nullable String messageAssociationAssignedCode;
-/**
- * The message id.
- */
     private final @Nullable String messageId;
-/**
- * The message release.
- */
     private final @Nullable String messageRelease;
-/**
- * The message version.
- */
     private final @Nullable String messageVersion;
-/**
- * The release indicator.
- */
     private final Integer releaseIndicator;
-/**
- * The repetition separator.
- */
     private final Integer repetitionSeparator;
-/**
- * The segment terminator.
- */
     private final Integer segmentTerminator;
-/**
- * The segment terminator suffix.
- */
     private final String segmentTerminatorSuffix;
-/**
- * The target namespace on which this delimiter settings has to be applied.
- */
     private final @Nullable String targetNamespace;
 
     @OutputCustomType.Constructor({"componentSeparator","dataElementSeparator","decimalPointIndicator","messageAssociationAssignedCode","messageId","messageRelease","messageVersion","releaseIndicator","repetitionSeparator","segmentTerminator","segmentTerminatorSuffix","targetNamespace"})
@@ -89,75 +53,39 @@ public final class EdifactDelimiterOverrideResponse {
         this.targetNamespace = targetNamespace;
     }
 
-/**
- * The component separator.
- */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
-/**
- * The data element separator.
- */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
-/**
- * The decimal point indicator.
- */
     public String getDecimalPointIndicator() {
         return this.decimalPointIndicator;
     }
-/**
- * The message association assigned code.
- */
     public Optional<String> getMessageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
-/**
- * The message id.
- */
     public Optional<String> getMessageId() {
         return Optional.ofNullable(this.messageId);
     }
-/**
- * The message release.
- */
     public Optional<String> getMessageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
-/**
- * The message version.
- */
     public Optional<String> getMessageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
-/**
- * The release indicator.
- */
     public Integer getReleaseIndicator() {
         return this.releaseIndicator;
     }
-/**
- * The repetition separator.
- */
     public Integer getRepetitionSeparator() {
         return this.repetitionSeparator;
     }
-/**
- * The segment terminator.
- */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
-/**
- * The segment terminator suffix.
- */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
-/**
- * The target namespace on which this delimiter settings has to be applied.
- */
     public Optional<String> getTargetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }

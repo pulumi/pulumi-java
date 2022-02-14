@@ -15,158 +15,39 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * Guest Usages Resource
-API Version: 2020-05-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### GuestUsages_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var guestUsage = new AzureNative.AzureActiveDirectory.GuestUsage("guestUsage", new AzureNative.AzureActiveDirectory.GuestUsageArgs
-        {
-            ResourceGroupName = "contosoResourceGroup",
-            ResourceName = "contoso.onmicrosoft.com",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	azureactivedirectory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azureactivedirectory"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := azureactivedirectory.NewGuestUsage(ctx, "guestUsage", &azureactivedirectory.GuestUsageArgs{
-			ResourceGroupName: pulumi.String("contosoResourceGroup"),
-			ResourceName:      pulumi.String("contoso.onmicrosoft.com"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const guestUsage = new azure_native.azureactivedirectory.GuestUsage("guestUsage", {
-    resourceGroupName: "contosoResourceGroup",
-    resourceName: "contoso.onmicrosoft.com",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-guest_usage = azure_native.azureactivedirectory.GuestUsage("guestUsage",
-    resource_group_name="contosoResourceGroup",
-    resource_name="contoso.onmicrosoft.com")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:azureactivedirectory:GuestUsage contoso.onmicrosoft.com /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/contosoResourceGroup/providers/Microsoft.AzureActiveDirectory/guestUsages/contoso.onmicrosoft.com 
-```
-
- */
 @ResourceType(type="azure-native:azureactivedirectory:GuestUsage")
 public class GuestUsage extends io.pulumi.resources.CustomResource {
-    /**
-     * Location of the Guest Usages resource.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return Location of the Guest Usages resource.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the Guest Usages resource.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the Guest Usages resource.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Key-value pairs of additional resource provisioning properties.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Key-value pairs of additional resource provisioning properties.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * An identifier for the tenant for which the resource is being created
-     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
-    /**
-     * @return An identifier for the tenant for which the resource is being created
-     */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
-    /**
-     * The type of the Guest Usages resource.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the Guest Usages resource.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public GuestUsage(String name, GuestUsageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azureactivedirectory:GuestUsage", name, args == null ? GuestUsageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -185,14 +66,6 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static GuestUsage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GuestUsage(name, id, options);
     }

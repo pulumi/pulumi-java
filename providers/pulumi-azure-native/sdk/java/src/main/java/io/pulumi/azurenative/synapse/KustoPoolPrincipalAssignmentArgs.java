@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KustoPoolPrincipalAssignmentArgs Empty = new KustoPoolPrincipalAssignmentArgs();
 
-    /**
-     * The name of the Kusto pool.
-     */
     @InputImport(name="kustoPoolName", required=true)
     private final Input<String> kustoPoolName;
 
@@ -30,9 +24,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.kustoPoolName;
     }
 
-    /**
-     * The name of the Kusto principalAssignment.
-     */
     @InputImport(name="principalAssignmentName")
     private final @Nullable Input<String> principalAssignmentName;
 
@@ -40,9 +31,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
     }
 
-    /**
-     * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
-     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -50,9 +38,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.principalId;
     }
 
-    /**
-     * Principal type.
-     */
     @InputImport(name="principalType", required=true)
     private final Input<Either<String,PrincipalType>> principalType;
 
@@ -60,9 +45,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.principalType;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,9 +52,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
-    /**
-     * Cluster principal role.
-     */
     @InputImport(name="role", required=true)
     private final Input<Either<String,ClusterPrincipalRole>> role;
 
@@ -80,9 +59,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.role;
     }
 
-    /**
-     * The tenant id of the principal
-     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -90,9 +66,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
-    /**
-     * The name of the workspace
-     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

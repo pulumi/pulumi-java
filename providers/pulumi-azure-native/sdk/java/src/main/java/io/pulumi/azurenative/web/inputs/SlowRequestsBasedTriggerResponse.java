@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger based on request execution time.
- */
 public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SlowRequestsBasedTriggerResponse Empty = new SlowRequestsBasedTriggerResponse();
 
-    /**
-     * Request Count.
-     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -28,9 +22,6 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
-    /**
-     * Request Path.
-     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -38,9 +29,6 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    /**
-     * Time interval.
-     */
     @InputImport(name="timeInterval")
     private final @Nullable String timeInterval;
 
@@ -48,9 +36,6 @@ public final class SlowRequestsBasedTriggerResponse extends io.pulumi.resources.
         return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
     }
 
-    /**
-     * Time taken.
-     */
     @InputImport(name="timeTaken")
     private final @Nullable String timeTaken;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ClientCertAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClientCertAuthenticationResponse Empty = new ClientCertAuthenticationResponse();
 
-    /**
-     * Gets or sets the certificate expiration date.
-     */
     @InputImport(name="certificateExpirationDate")
     private final @Nullable String certificateExpirationDate;
 
@@ -27,9 +21,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
         return this.certificateExpirationDate == null ? Optional.empty() : Optional.ofNullable(this.certificateExpirationDate);
     }
 
-    /**
-     * Gets or sets the certificate subject name.
-     */
     @InputImport(name="certificateSubjectName")
     private final @Nullable String certificateSubjectName;
 
@@ -37,9 +28,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
         return this.certificateSubjectName == null ? Optional.empty() : Optional.ofNullable(this.certificateSubjectName);
     }
 
-    /**
-     * Gets or sets the certificate thumbprint.
-     */
     @InputImport(name="certificateThumbprint")
     private final @Nullable String certificateThumbprint;
 
@@ -47,9 +35,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
         return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
     }
 
-    /**
-     * Gets or sets the certificate password, return value will always be empty.
-     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -57,9 +42,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
-    /**
-     * Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
-     */
     @InputImport(name="pfx")
     private final @Nullable String pfx;
 
@@ -67,10 +49,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
         return this.pfx == null ? Optional.empty() : Optional.ofNullable(this.pfx);
     }
 
-    /**
-     * Gets or sets the HTTP authentication type.
-Expected value is 'ClientCertificate'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

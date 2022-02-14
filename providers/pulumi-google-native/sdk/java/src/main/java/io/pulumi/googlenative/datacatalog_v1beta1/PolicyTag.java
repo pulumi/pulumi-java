@@ -13,79 +13,39 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * Creates a policy tag in the specified taxonomy.
-Auto-naming is currently not supported for this resource.
- */
 @ResourceType(type="google-native:datacatalog/v1beta1:PolicyTag")
 public class PolicyTag extends io.pulumi.resources.CustomResource {
-    /**
-     * Resource names of child policy tags of this policy tag.
-     */
     @OutputExport(name="childPolicyTags", type=List.class, parameters={String.class})
     private Output<List<String>> childPolicyTags;
 
-    /**
-     * @return Resource names of child policy tags of this policy tag.
-     */
     public Output<List<String>> getChildPolicyTags() {
         return this.childPolicyTags;
     }
-    /**
-     * Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.
-     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    /**
-     * @return Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.
-     */
     public Output<String> getDescription() {
         return this.description;
     }
-    /**
-     * User defined name of this policy tag. It must: be unique within the parent taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
-    /**
-     * @return User defined name of this policy tag. It must: be unique within the parent taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
-    /**
-     * Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Resource name of this policy tag's parent policy tag (e.g. for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the "Geolocation" policy tag in the example above). If not set, defaults to an empty string.
-     */
     @OutputExport(name="parentPolicyTag", type=String.class, parameters={})
     private Output<String> parentPolicyTag;
 
-    /**
-     * @return Resource name of this policy tag's parent policy tag (e.g. for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag). If empty, it means this policy tag is a top level policy tag (e.g. this field is empty for the "Geolocation" policy tag in the example above). If not set, defaults to an empty string.
-     */
     public Output<String> getParentPolicyTag() {
         return this.parentPolicyTag;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public PolicyTag(String name, PolicyTagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:datacatalog/v1beta1:PolicyTag", name, args == null ? PolicyTagArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -101,14 +61,6 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static PolicyTag get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicyTag(name, id, options);
     }

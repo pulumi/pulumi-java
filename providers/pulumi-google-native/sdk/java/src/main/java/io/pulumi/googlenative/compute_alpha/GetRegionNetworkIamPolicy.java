@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionNetworkIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
- */
     public static CompletableFuture<GetRegionNetworkIamPolicyResult> invokeAsync(GetRegionNetworkIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkIamPolicy", TypeShape.of(GetRegionNetworkIamPolicyResult.class), args == null ? GetRegionNetworkIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

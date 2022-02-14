@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
- */
 public final class ApplicableScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicableScheduleResponse Empty = new ApplicableScheduleResponse();
 
-    /**
-     * The identifier of the resource.
-     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,9 +23,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
         return this.id;
     }
 
-    /**
-     * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
-     */
     @InputImport(name="labVmsShutdown")
     private final @Nullable ScheduleResponse labVmsShutdown;
 
@@ -39,9 +30,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
         return this.labVmsShutdown == null ? Optional.empty() : Optional.ofNullable(this.labVmsShutdown);
     }
 
-    /**
-     * The auto-startup schedule, if one has been set at the lab or lab resource level.
-     */
     @InputImport(name="labVmsStartup")
     private final @Nullable ScheduleResponse labVmsStartup;
 
@@ -49,9 +37,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
         return this.labVmsStartup == null ? Optional.empty() : Optional.ofNullable(this.labVmsStartup);
     }
 
-    /**
-     * The location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -59,9 +44,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
-    /**
-     * The name of the resource.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -69,9 +51,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
-    /**
-     * The tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -79,9 +58,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    /**
-     * The type of the resource.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

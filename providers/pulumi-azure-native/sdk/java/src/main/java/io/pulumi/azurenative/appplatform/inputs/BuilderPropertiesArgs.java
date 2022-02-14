@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * KPack Builder properties payload
- */
 public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuilderPropertiesArgs Empty = new BuilderPropertiesArgs();
 
-    /**
-     * Builder buildpack groups.
-     */
     @InputImport(name="buildpackGroups")
     private final @Nullable Input<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
@@ -29,9 +23,6 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.buildpackGroups == null ? Input.empty() : this.buildpackGroups;
     }
 
-    /**
-     * Builder cluster stack property.
-     */
     @InputImport(name="stack")
     private final @Nullable Input<StackPropertiesArgs> stack;
 

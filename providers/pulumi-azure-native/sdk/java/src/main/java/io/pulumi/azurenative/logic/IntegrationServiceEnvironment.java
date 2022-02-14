@@ -18,334 +18,51 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * The integration service environment.
-API Version: 2019-05-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Create or update an integration service environment
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var integrationServiceEnvironment = new AzureNative.Logic.IntegrationServiceEnvironment("integrationServiceEnvironment", new AzureNative.Logic.IntegrationServiceEnvironmentArgs
-        {
-            IntegrationServiceEnvironmentName = "testIntegrationServiceEnvironment",
-            Location = "brazilsouth",
-            Properties = new AzureNative.Logic.Inputs.IntegrationServiceEnvironmentPropertiesArgs
-            {
-                EncryptionConfiguration = new AzureNative.Logic.Inputs.IntegrationServiceEnvironmenEncryptionConfigurationArgs
-                {
-                    EncryptionKeyReference = new AzureNative.Logic.Inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs
-                    {
-                        KeyName = "testKeyName",
-                        KeyVault = new AzureNative.Logic.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
-                        },
-                        KeyVersion = "13b261d30b984753869902d7f47f4d55",
-                    },
-                },
-                NetworkConfiguration = new AzureNative.Logic.Inputs.NetworkConfigurationArgs
-                {
-                    AccessEndpoint = new AzureNative.Logic.Inputs.IntegrationServiceEnvironmentAccessEndpointArgs
-                    {
-                        Type = "Internal",
-                    },
-                    Subnets = 
-                    {
-                        new AzureNative.Logic.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
-                        },
-                        new AzureNative.Logic.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
-                        },
-                        new AzureNative.Logic.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
-                        },
-                        new AzureNative.Logic.Inputs.ResourceReferenceArgs
-                        {
-                            Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
-                        },
-                    },
-                },
-            },
-            ResourceGroup = "testResourceGroup",
-            Sku = new AzureNative.Logic.Inputs.IntegrationServiceEnvironmentSkuArgs
-            {
-                Capacity = 2,
-                Name = "Premium",
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := logic.NewIntegrationServiceEnvironment(ctx, "integrationServiceEnvironment", &logic.IntegrationServiceEnvironmentArgs{
-			IntegrationServiceEnvironmentName: pulumi.String("testIntegrationServiceEnvironment"),
-			Location:                          pulumi.String("brazilsouth"),
-			Properties: &logic.IntegrationServiceEnvironmentPropertiesArgs{
-				EncryptionConfiguration: &logic.IntegrationServiceEnvironmenEncryptionConfigurationArgs{
-					EncryptionKeyReference: &logic.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs{
-						KeyName: pulumi.String("testKeyName"),
-						KeyVault: &logic.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault"),
-						},
-						KeyVersion: pulumi.String("13b261d30b984753869902d7f47f4d55"),
-					},
-				},
-				NetworkConfiguration: &logic.NetworkConfigurationArgs{
-					AccessEndpoint: &logic.IntegrationServiceEnvironmentAccessEndpointArgs{
-						Type: pulumi.String("Internal"),
-					},
-					Subnets: logic.ResourceReferenceArray{
-						&logic.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1"),
-						},
-						&logic.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2"),
-						},
-						&logic.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3"),
-						},
-						&logic.ResourceReferenceArgs{
-							Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4"),
-						},
-					},
-				},
-			},
-			ResourceGroup: pulumi.String("testResourceGroup"),
-			Sku: &logic.IntegrationServiceEnvironmentSkuArgs{
-				Capacity: pulumi.Int(2),
-				Name:     pulumi.String("Premium"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const integrationServiceEnvironment = new azure_native.logic.IntegrationServiceEnvironment("integrationServiceEnvironment", {
-    integrationServiceEnvironmentName: "testIntegrationServiceEnvironment",
-    location: "brazilsouth",
-    properties: {
-        encryptionConfiguration: {
-            encryptionKeyReference: {
-                keyName: "testKeyName",
-                keyVault: {
-                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
-                },
-                keyVersion: "13b261d30b984753869902d7f47f4d55",
-            },
-        },
-        networkConfiguration: {
-            accessEndpoint: {
-                type: "Internal",
-            },
-            subnets: [
-                {
-                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
-                },
-                {
-                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
-                },
-                {
-                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
-                },
-                {
-                    id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
-                },
-            ],
-        },
-    },
-    resourceGroup: "testResourceGroup",
-    sku: {
-        capacity: 2,
-        name: "Premium",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-integration_service_environment = azure_native.logic.IntegrationServiceEnvironment("integrationServiceEnvironment",
-    integration_service_environment_name="testIntegrationServiceEnvironment",
-    location="brazilsouth",
-    properties=azure_native.logic.IntegrationServiceEnvironmentPropertiesArgs(
-        encryption_configuration=azure_native.logic.IntegrationServiceEnvironmenEncryptionConfigurationArgs(
-            encryption_key_reference=azure_native.logic.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(
-                key_name="testKeyName",
-                key_vault=azure_native.logic.ResourceReferenceArgs(
-                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault",
-                ),
-                key_version="13b261d30b984753869902d7f47f4d55",
-            ),
-        ),
-        network_configuration=azure_native.logic.NetworkConfigurationArgs(
-            access_endpoint=azure_native.logic.IntegrationServiceEnvironmentAccessEndpointArgs(
-                type="Internal",
-            ),
-            subnets=[
-                azure_native.logic.ResourceReferenceArgs(
-                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1",
-                ),
-                azure_native.logic.ResourceReferenceArgs(
-                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2",
-                ),
-                azure_native.logic.ResourceReferenceArgs(
-                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3",
-                ),
-                azure_native.logic.ResourceReferenceArgs(
-                    id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4",
-                ),
-            ],
-        ),
-    ),
-    resource_group="testResourceGroup",
-    sku=azure_native.logic.IntegrationServiceEnvironmentSkuArgs(
-        capacity=2,
-        name="Premium",
-    ))
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:logic:IntegrationServiceEnvironment testIntegrationServiceEnvironment /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationServiceEnvironments/testIntegrationServiceEnvironment 
-```
-
- */
 @ResourceType(type="azure-native:logic:IntegrationServiceEnvironment")
 public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomResource {
-    /**
-     * Managed service identity properties.
-     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
-    /**
-     * @return Managed service identity properties.
-     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
-    /**
-     * The resource location.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
-    /**
-     * @return The resource location.
-     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    /**
-     * Gets the resource name.
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Gets the resource name.
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * The integration service environment properties.
-     */
     @OutputExport(name="properties", type=IntegrationServiceEnvironmentPropertiesResponse.class, parameters={})
     private Output<IntegrationServiceEnvironmentPropertiesResponse> properties;
 
-    /**
-     * @return The integration service environment properties.
-     */
     public Output<IntegrationServiceEnvironmentPropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * The sku.
-     */
     @OutputExport(name="sku", type=IntegrationServiceEnvironmentSkuResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationServiceEnvironmentSkuResponse> sku;
 
-    /**
-     * @return The sku.
-     */
     public Output</* @Nullable */ IntegrationServiceEnvironmentSkuResponse> getSku() {
         return this.sku;
     }
-    /**
-     * The resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return The resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * Gets the resource type.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Gets the resource type.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public IntegrationServiceEnvironment(String name, IntegrationServiceEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationServiceEnvironment", name, args == null ? IntegrationServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -364,14 +81,6 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static IntegrationServiceEnvironment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationServiceEnvironment(name, id, options);
     }

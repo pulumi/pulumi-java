@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines load balancer frontend IP configuration properties.
- */
 public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LBFrontendIPConfigurationResourceSettingsArgs Empty = new LBFrontendIPConfigurationResourceSettingsArgs();
 
-    /**
-     * Gets or sets the frontend IP configuration name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,10 +22,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Gets or sets the IP address of the Load Balancer.This is only specified if a specific
-private IP address shall be allocated from the subnet specified in subnetRef.
-     */
     @InputImport(name="privateIpAddress")
     private final @Nullable Input<String> privateIpAddress;
 
@@ -39,9 +29,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
     }
 
-    /**
-     * Gets or sets PrivateIP allocation method (Static/Dynamic).
-     */
     @InputImport(name="privateIpAllocationMethod")
     private final @Nullable Input<String> privateIpAllocationMethod;
 
@@ -49,9 +36,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.
         return this.privateIpAllocationMethod == null ? Input.empty() : this.privateIpAllocationMethod;
     }
 
-    /**
-     * Defines reference to subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetReferenceArgs> subnet;
 
@@ -59,9 +43,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
-    /**
-     * Gets or sets the csv list of zones.
-     */
     @InputImport(name="zones")
     private final @Nullable Input<String> zones;
 

@@ -9,13 +9,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubscriptionStateOverrideActionResponse {
-/**
- * 
- */
     private final String action;
-/**
- * 
- */
     private final String state;
 
     @OutputCustomType.Constructor({"action","state"})
@@ -26,15 +20,9 @@ public final class SubscriptionStateOverrideActionResponse {
         this.state = Objects.requireNonNull(state);
     }
 
-/**
- * 
- */
     public String getAction() {
         return this.action;
     }
-/**
- * 
- */
     public String getState() {
         return this.state;
     }

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Container App Secret.
- */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretResponse Empty = new SecretResponse();
 
-    /**
-     * Secret Name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 

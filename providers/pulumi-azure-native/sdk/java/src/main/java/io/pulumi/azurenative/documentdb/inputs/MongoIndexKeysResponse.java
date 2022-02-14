@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Cosmos DB MongoDB collection resource object
- */
 public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MongoIndexKeysResponse Empty = new MongoIndexKeysResponse();
 
-    /**
-     * List of keys for each MongoDB collection in the Azure Cosmos DB service
-     */
     @InputImport(name="keys")
     private final @Nullable List<String> keys;
 

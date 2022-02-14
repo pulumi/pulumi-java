@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionProtectorArgs Empty = new EncryptionProtectorArgs();
 
-    /**
-     * Key auto rotation opt-in flag. Either true or false.
-     */
     @InputImport(name="autoRotationEnabled")
     private final @Nullable Input<Boolean> autoRotationEnabled;
 
@@ -30,9 +24,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
         return this.autoRotationEnabled == null ? Input.empty() : this.autoRotationEnabled;
     }
 
-    /**
-     * The name of the encryption protector to be updated.
-     */
     @InputImport(name="encryptionProtectorName")
     private final @Nullable Input<String> encryptionProtectorName;
 
@@ -40,9 +31,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
         return this.encryptionProtectorName == null ? Input.empty() : this.encryptionProtectorName;
     }
 
-    /**
-     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,9 +38,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the server key.
-     */
     @InputImport(name="serverKeyName")
     private final @Nullable Input<String> serverKeyName;
 
@@ -60,9 +45,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
         return this.serverKeyName == null ? Input.empty() : this.serverKeyName;
     }
 
-    /**
-     * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
-     */
     @InputImport(name="serverKeyType", required=true)
     private final Input<Either<String,ServerKeyType>> serverKeyType;
 
@@ -70,9 +52,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
         return this.serverKeyType;
     }
 
-    /**
-     * The name of the server.
-     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

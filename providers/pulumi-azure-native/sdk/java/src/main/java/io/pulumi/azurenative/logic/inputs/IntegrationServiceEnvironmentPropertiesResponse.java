@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The integration service environment properties.
- */
 public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationServiceEnvironmentPropertiesResponse Empty = new IntegrationServiceEnvironmentPropertiesResponse();
 
-    /**
-     * The encryption configuration.
-     */
     @InputImport(name="encryptionConfiguration")
     private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
 
@@ -30,9 +24,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
-    /**
-     * The endpoints configuration.
-     */
     @InputImport(name="endpointsConfiguration")
     private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
 
@@ -40,9 +31,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
         return this.endpointsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointsConfiguration);
     }
 
-    /**
-     * Gets the tracking id.
-     */
     @InputImport(name="integrationServiceEnvironmentId")
     private final @Nullable String integrationServiceEnvironmentId;
 
@@ -50,9 +38,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
         return this.integrationServiceEnvironmentId == null ? Optional.empty() : Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
 
-    /**
-     * The network configuration.
-     */
     @InputImport(name="networkConfiguration")
     private final @Nullable NetworkConfigurationResponse networkConfiguration;
 
@@ -60,9 +45,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
         return this.networkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.networkConfiguration);
     }
 
-    /**
-     * The provisioning state.
-     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -70,9 +52,6 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends io.pu
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
-    /**
-     * The integration service environment state.
-     */
     @InputImport(name="state")
     private final @Nullable String state;
 

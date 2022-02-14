@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Azure API management (APIM) configuration linked to the app.
- */
 public final class ApiManagementConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiManagementConfigResponse Empty = new ApiManagementConfigResponse();
 
-    /**
-     * APIM-Api Identifier.
-     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -10,14 +10,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthCheckStepPropertiesResponse {
-/**
- * The health check step attributes
- */
     private final RestHealthCheckStepAttributesResponse attributes;
-/**
- * The type of step.
-Expected value is 'HealthCheck'.
- */
     private final String stepType;
 
     @OutputCustomType.Constructor({"attributes","stepType"})
@@ -28,16 +21,9 @@ Expected value is 'HealthCheck'.
         this.stepType = Objects.requireNonNull(stepType);
     }
 
-/**
- * The health check step attributes
- */
     public RestHealthCheckStepAttributesResponse getAttributes() {
         return this.attributes;
     }
-/**
- * The type of step.
-Expected value is 'HealthCheck'.
- */
     public String getStepType() {
         return this.stepType;
     }

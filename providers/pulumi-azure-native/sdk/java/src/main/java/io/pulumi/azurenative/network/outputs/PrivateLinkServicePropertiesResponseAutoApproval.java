@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateLinkServicePropertiesResponseAutoApproval {
-/**
- * The list of subscriptions.
- */
     private final @Nullable List<String> subscriptions;
 
     @OutputCustomType.Constructor({"subscriptions"})
@@ -21,9 +18,6 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
         this.subscriptions = subscriptions;
     }
 
-/**
- * The list of subscriptions.
- */
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDomainServiceArgs Empty = new GetDomainServiceArgs();
 
-    /**
-     * The name of the domain service.
-     */
     @InputImport(name="domainServiceName", required=true)
     private final String domainServiceName;
 
@@ -25,9 +19,6 @@ public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.domainServiceName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
- */
     @EnumType
     public enum CertificateFormat {
-/**
- * The certificate is a PFX (PKCS#12) formatted certificate or certificate chain.
- */
         Pfx("Pfx"),
-/**
- * The certificate is a base64-encoded X.509 certificate.
- */
         Cer("Cer");
 
         private final String value;

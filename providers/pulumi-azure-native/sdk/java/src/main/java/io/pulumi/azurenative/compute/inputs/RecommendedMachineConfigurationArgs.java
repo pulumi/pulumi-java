@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
- */
 public final class RecommendedMachineConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecommendedMachineConfigurationArgs Empty = new RecommendedMachineConfigurationArgs();
 
-    /**
-     * Describes the resource range.
-     */
     @InputImport(name="memory")
     private final @Nullable Input<ResourceRangeArgs> memory;
 
@@ -27,9 +21,6 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
         return this.memory == null ? Input.empty() : this.memory;
     }
 
-    /**
-     * Describes the resource range.
-     */
     @InputImport(name="vCPUs")
     private final @Nullable Input<ResourceRangeArgs> vCPUs;
 

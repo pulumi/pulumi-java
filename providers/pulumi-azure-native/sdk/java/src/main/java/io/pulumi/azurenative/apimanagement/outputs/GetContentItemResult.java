@@ -10,21 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetContentItemResult {
-/**
- * Resource ID.
- */
     private final String id;
-/**
- * Resource name.
- */
     private final String name;
-/**
- * Properties of the content item.
- */
     private final Object properties;
-/**
- * Resource type for API Management resource.
- */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -39,27 +27,15 @@ public final class GetContentItemResult {
         this.type = Objects.requireNonNull(type);
     }
 
-/**
- * Resource ID.
- */
     public String getId() {
         return this.id;
     }
-/**
- * Resource name.
- */
     public String getName() {
         return this.name;
     }
-/**
- * Properties of the content item.
- */
     public Object getProperties() {
         return this.properties;
     }
-/**
- * Resource type for API Management resource.
- */
     public String getType() {
         return this.type;
     }

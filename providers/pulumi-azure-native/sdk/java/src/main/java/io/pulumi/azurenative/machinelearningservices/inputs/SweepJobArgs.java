@@ -23,16 +23,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Sweep job definition.
- */
 public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SweepJobArgs Empty = new SweepJobArgs();
 
-    /**
-     * Type of the hyperparameter sampling algorithms
-     */
     @InputImport(name="algorithm", required=true)
     private final Input<Either<String,SamplingAlgorithm>> algorithm;
 
@@ -40,9 +34,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.algorithm;
     }
 
-    /**
-     * Compute binding for the job.
-     */
     @InputImport(name="compute", required=true)
     private final Input<ComputeConfigurationArgs> compute;
 
@@ -50,9 +41,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.compute;
     }
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -60,9 +48,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Early termination policies enable canceling poor-performing runs before they complete.
-     */
     @InputImport(name="earlyTermination")
     private final @Nullable Input<Object> earlyTermination;
 
@@ -70,9 +55,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.earlyTermination == null ? Input.empty() : this.earlyTermination;
     }
 
-    /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-     */
     @InputImport(name="experimentName")
     private final @Nullable Input<String> experimentName;
 
@@ -80,10 +62,6 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.experimentName == null ? Input.empty() : this.experimentName;
     }
 
-    /**
-     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
-Defaults to AmlToken if null.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
@@ -91,10 +69,6 @@ Defaults to AmlToken if null.
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Enum to determine the type of job.
-Expected value is 'Sweep'.
-     */
     @InputImport(name="jobType", required=true)
     private final Input<String> jobType;
 
@@ -102,9 +76,6 @@ Expected value is 'Sweep'.
         return this.jobType;
     }
 
-    /**
-     * An upper bound on the number of trials performed in parallel.
-     */
     @InputImport(name="maxConcurrentTrials")
     private final @Nullable Input<Integer> maxConcurrentTrials;
 
@@ -112,9 +83,6 @@ Expected value is 'Sweep'.
         return this.maxConcurrentTrials == null ? Input.empty() : this.maxConcurrentTrials;
     }
 
-    /**
-     * An upper bound on the number of trials to perform.
-     */
     @InputImport(name="maxTotalTrials")
     private final @Nullable Input<Integer> maxTotalTrials;
 
@@ -122,9 +90,6 @@ Expected value is 'Sweep'.
         return this.maxTotalTrials == null ? Input.empty() : this.maxTotalTrials;
     }
 
-    /**
-     * Optimization objective.
-     */
     @InputImport(name="objective", required=true)
     private final Input<ObjectiveArgs> objective;
 
@@ -132,10 +97,6 @@ Expected value is 'Sweep'.
         return this.objective;
     }
 
-    /**
-     * Job priority for scheduling policy. Only applies to AMLCompute.
-Private preview feature and only available to users on the allow list.
-     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -143,9 +104,6 @@ Private preview feature and only available to users on the allow list.
         return this.priority == null ? Input.empty() : this.priority;
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -153,9 +111,6 @@ Private preview feature and only available to users on the allow list.
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
-     */
     @InputImport(name="searchSpace", required=true)
     private final Input<Map<String,Object>> searchSpace;
 
@@ -163,9 +118,6 @@ Private preview feature and only available to users on the allow list.
         return this.searchSpace;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -173,9 +125,6 @@ Private preview feature and only available to users on the allow list.
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
-     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 
@@ -183,9 +132,6 @@ Private preview feature and only available to users on the allow list.
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
-    /**
-     * Trial component definition.
-     */
     @InputImport(name="trial")
     private final @Nullable Input<TrialComponentArgs> trial;
 

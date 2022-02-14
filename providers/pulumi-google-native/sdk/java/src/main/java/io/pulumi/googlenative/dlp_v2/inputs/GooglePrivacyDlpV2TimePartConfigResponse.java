@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
- */
 public final class GooglePrivacyDlpV2TimePartConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2TimePartConfigResponse Empty = new GooglePrivacyDlpV2TimePartConfigResponse();
 
-    /**
-     * The part of the time to keep.
-     */
     @InputImport(name="partToExtract", required=true)
     private final String partToExtract;
 

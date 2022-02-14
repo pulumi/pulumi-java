@@ -8,18 +8,9 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Indicates whether the Role Definition was built-in or user created.
- */
     @EnumType
     public enum MongoRoleDefinitionType {
-/**
- * 
- */
         BuiltInRole("BuiltInRole"),
-/**
- * 
- */
         CustomRole("CustomRole");
 
         private final String value;

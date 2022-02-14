@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSystemTopicArgs Empty = new GetSystemTopicArgs();
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Name of the system topic.
-     */
     @InputImport(name="systemTopicName", required=true)
     private final String systemTopicName;
 

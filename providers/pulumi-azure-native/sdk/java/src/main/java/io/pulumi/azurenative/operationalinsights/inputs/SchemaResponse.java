@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Table's schema.
- */
 public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchemaResponse Empty = new SchemaResponse();
 
-    /**
-     * Table category.
-     */
     @InputImport(name="categories", required=true)
     private final List<String> categories;
 
@@ -31,9 +25,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.categories;
     }
 
-    /**
-     * A list of table custom columns.
-     */
     @InputImport(name="columns")
     private final @Nullable List<ColumnResponse> columns;
 
@@ -41,9 +32,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.columns == null ? List.of() : this.columns;
     }
 
-    /**
-     * Table description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -51,9 +39,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Table display name.
-     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -61,9 +46,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
-    /**
-     * Table labels.
-     */
     @InputImport(name="labels", required=true)
     private final List<String> labels;
 
@@ -71,9 +53,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.labels;
     }
 
-    /**
-     * Table name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -81,9 +60,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Parameters of the restore operation that initiated this table.
-     */
     @InputImport(name="restoredLogs", required=true)
     private final RestoredLogsResponse restoredLogs;
 
@@ -91,9 +67,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.restoredLogs;
     }
 
-    /**
-     * Parameters of the search job that initiated this table.
-     */
     @InputImport(name="searchResults", required=true)
     private final SearchResultsResponse searchResults;
 
@@ -101,9 +74,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.searchResults;
     }
 
-    /**
-     * List of solutions the table is affiliated with
-     */
     @InputImport(name="solutions", required=true)
     private final List<String> solutions;
 
@@ -111,9 +81,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.solutions;
     }
 
-    /**
-     * Table's creator.
-     */
     @InputImport(name="source", required=true)
     private final String source;
 
@@ -121,9 +88,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.source;
     }
 
-    /**
-     * A list of table standard columns.
-     */
     @InputImport(name="standardColumns", required=true)
     private final List<ColumnResponse> standardColumns;
 
@@ -131,9 +95,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.standardColumns;
     }
 
-    /**
-     * The subtype describes what APIs can be used to interact with the table, and what features are available against it.
-     */
     @InputImport(name="tableSubType", required=true)
     private final String tableSubType;
 
@@ -141,9 +102,6 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.tableSubType;
     }
 
-    /**
-     * Table's creator.
-     */
     @InputImport(name="tableType", required=true)
     private final String tableType;
 

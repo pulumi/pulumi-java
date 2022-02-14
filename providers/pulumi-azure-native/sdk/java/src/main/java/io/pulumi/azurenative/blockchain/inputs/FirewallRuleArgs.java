@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Ip range for firewall rules
- */
 public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallRuleArgs Empty = new FirewallRuleArgs();
 
-    /**
-     * Gets or sets the end IP address of the firewall rule range.
-     */
     @InputImport(name="endIpAddress")
     private final @Nullable Input<String> endIpAddress;
 
@@ -27,9 +21,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.endIpAddress == null ? Input.empty() : this.endIpAddress;
     }
 
-    /**
-     * Gets or sets the name of the firewall rules.
-     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -37,9 +28,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
-    /**
-     * Gets or sets the start IP address of the firewall rule range.
-     */
     @InputImport(name="startIpAddress")
     private final @Nullable Input<String> startIpAddress;
 

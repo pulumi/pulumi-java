@@ -9,25 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PeeringServicePrefixEventResponse {
-/**
- * The description of the event associated with a prefix.
- */
     private final String eventDescription;
-/**
- * The level of the event associated with a prefix.
- */
     private final String eventLevel;
-/**
- * The summary of the event associated with a prefix.
- */
     private final String eventSummary;
-/**
- * The timestamp of the event associated with a prefix.
- */
     private final String eventTimestamp;
-/**
- * The type of the event associated with a prefix.
- */
     private final String eventType;
 
     @OutputCustomType.Constructor({"eventDescription","eventLevel","eventSummary","eventTimestamp","eventType"})
@@ -44,33 +29,18 @@ public final class PeeringServicePrefixEventResponse {
         this.eventType = Objects.requireNonNull(eventType);
     }
 
-/**
- * The description of the event associated with a prefix.
- */
     public String getEventDescription() {
         return this.eventDescription;
     }
-/**
- * The level of the event associated with a prefix.
- */
     public String getEventLevel() {
         return this.eventLevel;
     }
-/**
- * The summary of the event associated with a prefix.
- */
     public String getEventSummary() {
         return this.eventSummary;
     }
-/**
- * The timestamp of the event associated with a prefix.
- */
     public String getEventTimestamp() {
         return this.eventTimestamp;
     }
-/**
- * The type of the event associated with a prefix.
- */
     public String getEventType() {
         return this.eventType;
     }

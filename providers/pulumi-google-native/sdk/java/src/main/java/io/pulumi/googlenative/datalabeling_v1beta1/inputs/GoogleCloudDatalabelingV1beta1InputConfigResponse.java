@@ -12,16 +12,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * The configuration of input data, including data type, location, etc.
- */
 public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1InputConfigResponse Empty = new GoogleCloudDatalabelingV1beta1InputConfigResponse();
 
-    /**
-     * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
-     */
     @InputImport(name="annotationType", required=true)
     private final String annotationType;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
         return this.annotationType;
     }
 
-    /**
-     * Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
-     */
     @InputImport(name="bigquerySource", required=true)
     private final GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
         return this.bigquerySource;
     }
 
-    /**
-     * Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
-     */
     @InputImport(name="classificationMetadata", required=true)
     private final GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata;
 
@@ -49,9 +37,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
         return this.classificationMetadata;
     }
 
-    /**
-     * Data type must be specifed when user tries to import data.
-     */
     @InputImport(name="dataType", required=true)
     private final String dataType;
 
@@ -59,9 +44,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
         return this.dataType;
     }
 
-    /**
-     * Source located in Cloud Storage.
-     */
     @InputImport(name="gcsSource", required=true)
     private final GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource;
 
@@ -69,9 +51,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse extends io.
         return this.gcsSource;
     }
 
-    /**
-     * Required for text import, as language code must be specified.
-     */
     @InputImport(name="textMetadata", required=true)
     private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 

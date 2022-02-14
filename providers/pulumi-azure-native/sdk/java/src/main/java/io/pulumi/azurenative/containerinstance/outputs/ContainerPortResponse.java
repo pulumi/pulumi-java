@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerPortResponse {
-/**
- * The port number exposed within the container group.
- */
     private final Integer port;
-/**
- * The protocol associated with the port.
- */
     private final @Nullable String protocol;
 
     @OutputCustomType.Constructor({"port","protocol"})
@@ -29,15 +23,9 @@ public final class ContainerPortResponse {
         this.protocol = protocol;
     }
 
-/**
- * The port number exposed within the container group.
- */
     public Integer getPort() {
         return this.port;
     }
-/**
- * The protocol associated with the port.
- */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

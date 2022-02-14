@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * RoutingVPC contains information about the VPC networks that are associated with a hub's spokes.
- */
 public final class RoutingVPCArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutingVPCArgs Empty = new RoutingVPCArgs();
 
-    /**
-     * The URI of the VPC network.
-     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

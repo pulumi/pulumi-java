@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
- */
 public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSDiskResponse Empty = new OSDiskResponse();
 
-    /**
-     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.
-     */
     @InputImport(name="caching")
     private final @Nullable String caching;
 
@@ -33,9 +27,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
-    /**
-     * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
-     */
     @InputImport(name="createOption", required=true)
     private final String createOption;
 
@@ -43,9 +34,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.createOption;
     }
 
-    /**
-     * Specifies whether OS Disk should be deleted or detached upon VM deletion. <br><br> Possible values: <br><br> **Delete** If this value is used, the OS disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the os disk is retained after VM is deleted. <br><br> The default value is set to **detach**. For an ephemeral OS Disk, the default value is set to **Delete**. User cannot change the delete option for ephemeral OS Disk.
-     */
     @InputImport(name="deleteOption")
     private final @Nullable String deleteOption;
 
@@ -53,9 +41,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
-    /**
-     * Specifies the ephemeral Disk Settings for the operating system disk used by the virtual machine.
-     */
     @InputImport(name="diffDiskSettings")
     private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
@@ -63,9 +48,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.diffDiskSettings == null ? Optional.empty() : Optional.ofNullable(this.diffDiskSettings);
     }
 
-    /**
-     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Integer diskSizeGB;
 
@@ -73,9 +55,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
-    /**
-     * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
-     */
     @InputImport(name="encryptionSettings")
     private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
@@ -83,9 +62,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.encryptionSettings == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettings);
     }
 
-    /**
-     * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
-     */
     @InputImport(name="image")
     private final @Nullable VirtualHardDiskResponse image;
 
@@ -93,9 +69,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
-    /**
-     * The managed disk parameters.
-     */
     @InputImport(name="managedDisk")
     private final @Nullable ManagedDiskParametersResponse managedDisk;
 
@@ -103,9 +76,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
-    /**
-     * The disk name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -113,9 +83,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -123,9 +90,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
-    /**
-     * The virtual hard disk.
-     */
     @InputImport(name="vhd")
     private final @Nullable VirtualHardDiskResponse vhd;
 
@@ -133,9 +97,6 @@ public final class OSDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.vhd == null ? Optional.empty() : Optional.ofNullable(this.vhd);
     }
 
-    /**
-     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
-     */
     @InputImport(name="writeAcceleratorEnabled")
     private final @Nullable Boolean writeAcceleratorEnabled;
 

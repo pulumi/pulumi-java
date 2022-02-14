@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlTableResponse {
-/**
- * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
- */
     private final List<MysqlColumnResponse> mysqlColumns;
-/**
- * Table name.
- */
     private final String table;
 
     @OutputCustomType.Constructor({"mysqlColumns","table"})
@@ -28,15 +22,9 @@ public final class MysqlTableResponse {
         this.table = Objects.requireNonNull(table);
     }
 
-/**
- * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
- */
     public List<MysqlColumnResponse> getMysqlColumns() {
         return this.mysqlColumns;
     }
-/**
- * Table name.
- */
     public String getTable() {
         return this.table;
     }

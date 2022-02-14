@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGalleryImageArgs Empty = new GetGalleryImageArgs();
 
-    /**
-     * The name of the gallery image definition to be retrieved.
-     */
     @InputImport(name="galleryImageName", required=true)
     private final String galleryImageName;
 
@@ -25,9 +19,6 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.galleryImageName;
     }
 
-    /**
-     * The name of the Shared Image Gallery from which the Image Definitions are to be retrieved.
-     */
     @InputImport(name="galleryName", required=true)
     private final String galleryName;
 
@@ -35,9 +26,6 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.galleryName;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

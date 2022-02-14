@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSubscriptionSourceShareSynchronizationSettings {
-/**
- * List response for get source share Synchronization settings
-API Version: 2020-09-01.
- *
- * List response for get source share Synchronization settings
- */
     public static CompletableFuture<ListShareSubscriptionSourceShareSynchronizationSettingsResult> invokeAsync(ListShareSubscriptionSourceShareSynchronizationSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSubscriptionSourceShareSynchronizationSettings", TypeShape.of(ListShareSubscriptionSourceShareSynchronizationSettingsResult.class), args == null ? ListShareSubscriptionSourceShareSynchronizationSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

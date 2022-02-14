@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TxtRecordResponse {
-/**
- * The text value of this TXT record.
- */
     private final @Nullable List<String> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -21,9 +18,6 @@ public final class TxtRecordResponse {
         this.value = value;
     }
 
-/**
- * The text value of this TXT record.
- */
     public List<String> getValue() {
         return this.value == null ? List.of() : this.value;
     }

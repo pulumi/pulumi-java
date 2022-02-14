@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSharedflow {
-/**
- * Gets a shared flow by name, including a list of its revisions.
- */
     public static CompletableFuture<GetSharedflowResult> invokeAsync(GetSharedflowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getSharedflow", TypeShape.of(GetSharedflowResult.class), args == null ? GetSharedflowArgs.Empty : args, Utilities.withVersion(options));
     }

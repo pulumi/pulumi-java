@@ -20,16 +20,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The instance view of a virtual machine.
- */
 public final class VirtualMachineInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineInstanceViewResponse Empty = new VirtualMachineInstanceViewResponse();
 
-    /**
-     * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. <br><br>Minimum api-version: 2020-06-01.
-     */
     @InputImport(name="assignedHost", required=true)
     private final String assignedHost;
 
@@ -37,9 +31,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.assignedHost;
     }
 
-    /**
-     * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
-     */
     @InputImport(name="bootDiagnostics")
     private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
 
@@ -47,9 +38,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.bootDiagnostics == null ? Optional.empty() : Optional.ofNullable(this.bootDiagnostics);
     }
 
-    /**
-     * The computer name assigned to the virtual machine.
-     */
     @InputImport(name="computerName")
     private final @Nullable String computerName;
 
@@ -57,9 +45,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
     }
 
-    /**
-     * The virtual machine disk information.
-     */
     @InputImport(name="disks")
     private final @Nullable List<DiskInstanceViewResponse> disks;
 
@@ -67,9 +52,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.disks == null ? List.of() : this.disks;
     }
 
-    /**
-     * The extensions information.
-     */
     @InputImport(name="extensions")
     private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
 
@@ -77,9 +59,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.extensions == null ? List.of() : this.extensions;
     }
 
-    /**
-     * Specifies the HyperVGeneration Type associated with a resource
-     */
     @InputImport(name="hyperVGeneration")
     private final @Nullable String hyperVGeneration;
 
@@ -87,9 +66,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.hyperVGeneration == null ? Optional.empty() : Optional.ofNullable(this.hyperVGeneration);
     }
 
-    /**
-     * The Maintenance Operation status on the virtual machine.
-     */
     @InputImport(name="maintenanceRedeployStatus")
     private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
 
@@ -97,9 +73,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.maintenanceRedeployStatus == null ? Optional.empty() : Optional.ofNullable(this.maintenanceRedeployStatus);
     }
 
-    /**
-     * The Operating System running on the virtual machine.
-     */
     @InputImport(name="osName")
     private final @Nullable String osName;
 
@@ -107,9 +80,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.osName == null ? Optional.empty() : Optional.ofNullable(this.osName);
     }
 
-    /**
-     * The version of Operating System running on the virtual machine.
-     */
     @InputImport(name="osVersion")
     private final @Nullable String osVersion;
 
@@ -117,9 +87,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 
-    /**
-     * [Preview Feature] The status of virtual machine patch operations.
-     */
     @InputImport(name="patchStatus")
     private final @Nullable VirtualMachinePatchStatusResponse patchStatus;
 
@@ -127,9 +94,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.patchStatus == null ? Optional.empty() : Optional.ofNullable(this.patchStatus);
     }
 
-    /**
-     * Specifies the fault domain of the virtual machine.
-     */
     @InputImport(name="platformFaultDomain")
     private final @Nullable Integer platformFaultDomain;
 
@@ -137,9 +101,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.platformFaultDomain == null ? Optional.empty() : Optional.ofNullable(this.platformFaultDomain);
     }
 
-    /**
-     * Specifies the update domain of the virtual machine.
-     */
     @InputImport(name="platformUpdateDomain")
     private final @Nullable Integer platformUpdateDomain;
 
@@ -147,9 +108,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.platformUpdateDomain == null ? Optional.empty() : Optional.ofNullable(this.platformUpdateDomain);
     }
 
-    /**
-     * The Remote desktop certificate thumbprint.
-     */
     @InputImport(name="rdpThumbPrint")
     private final @Nullable String rdpThumbPrint;
 
@@ -157,9 +115,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.rdpThumbPrint == null ? Optional.empty() : Optional.ofNullable(this.rdpThumbPrint);
     }
 
-    /**
-     * The resource status information.
-     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
@@ -167,9 +122,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.statuses == null ? List.of() : this.statuses;
     }
 
-    /**
-     * The VM Agent running on the virtual machine.
-     */
     @InputImport(name="vmAgent")
     private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
 
@@ -177,9 +129,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
         return this.vmAgent == null ? Optional.empty() : Optional.ofNullable(this.vmAgent);
     }
 
-    /**
-     * The health status for the VM.
-     */
     @InputImport(name="vmHealth", required=true)
     private final VirtualMachineHealthStatusResponse vmHealth;
 

@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
-    /**
-     * The name of the parent resource (namely, either, the topic name or domain name).
-     */
     @InputImport(name="parentName", required=true)
     private final String parentName;
 
@@ -25,9 +19,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.parentName;
     }
 
-    /**
-     * The type of the parent resource. This can be either \'topics\' or \'domains\'.
-     */
     @InputImport(name="parentType", required=true)
     private final String parentType;
 
@@ -35,9 +26,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.parentType;
     }
 
-    /**
-     * The name of the private endpoint connection connection.
-     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -45,9 +33,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

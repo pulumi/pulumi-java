@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Datasource to be backed up
- */
 public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasourceArgs Empty = new DatasourceArgs();
 
-    /**
-     * DatasourceType of the resource.
-     */
     @InputImport(name="datasourceType")
     private final @Nullable Input<String> datasourceType;
 
@@ -27,9 +21,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasourceType == null ? Input.empty() : this.datasourceType;
     }
 
-    /**
-     * Type of Datasource object, used to initialize the right inherited type
-     */
     @InputImport(name="objectType")
     private final @Nullable Input<String> objectType;
 
@@ -37,9 +28,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectType == null ? Input.empty() : this.objectType;
     }
 
-    /**
-     * Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
-     */
     @InputImport(name="resourceID", required=true)
     private final Input<String> resourceID;
 
@@ -47,9 +35,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceID;
     }
 
-    /**
-     * Location of datasource.
-     */
     @InputImport(name="resourceLocation")
     private final @Nullable Input<String> resourceLocation;
 
@@ -57,9 +42,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
     }
 
-    /**
-     * Unique identifier of the resource in the context of parent.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -67,9 +49,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
-    /**
-     * Resource Type of Datasource.
-     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 
@@ -77,9 +56,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
-    /**
-     * Uri of the resource.
-     */
     @InputImport(name="resourceUri")
     private final @Nullable Input<String> resourceUri;
 

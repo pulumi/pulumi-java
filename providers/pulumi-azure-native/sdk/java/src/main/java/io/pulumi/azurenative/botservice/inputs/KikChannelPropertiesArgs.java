@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The parameters to provide for the Kik channel.
- */
 public final class KikChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KikChannelPropertiesArgs Empty = new KikChannelPropertiesArgs();
 
-    /**
-     * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
-     */
     @InputImport(name="apiKey")
     private final @Nullable Input<String> apiKey;
 
@@ -28,9 +22,6 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.apiKey == null ? Input.empty() : this.apiKey;
     }
 
-    /**
-     * Whether this channel is enabled for the bot
-     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -38,9 +29,6 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.isEnabled;
     }
 
-    /**
-     * Whether this channel is validated for the bot
-     */
     @InputImport(name="isValidated")
     private final @Nullable Input<Boolean> isValidated;
 
@@ -48,9 +36,6 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
         return this.isValidated == null ? Input.empty() : this.isValidated;
     }
 
-    /**
-     * The Kik user name
-     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

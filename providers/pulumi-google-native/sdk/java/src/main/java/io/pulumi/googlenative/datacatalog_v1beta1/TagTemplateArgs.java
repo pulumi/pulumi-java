@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagTemplateArgs Empty = new TagTemplateArgs();
 
-    /**
-     * The display name for this template. Defaults to an empty string.
-     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,9 +22,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
-    /**
-     * Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. This map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. Field IDs can contain letters (both uppercase and lowercase), numbers (0-9) and underscores (_). Field IDs must be at least 1 character long and at most 64 characters long. Field IDs must start with a letter or underscore.
-     */
     @InputImport(name="fields", required=true)
     private final Input<Map<String,String>> fields;
 
@@ -38,9 +29,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,9 +36,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The resource name of the tag template in URL format. Example: * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this TagTemplate and its child resources may not actually be stored in the location in this name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,9 +43,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -68,9 +50,6 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="tagTemplateId", required=true)
     private final Input<String> tagTemplateId;
 

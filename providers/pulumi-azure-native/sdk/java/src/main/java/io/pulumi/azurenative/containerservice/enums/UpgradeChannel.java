@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * upgrade channel for auto upgrade.
- */
     @EnumType
     public enum UpgradeChannel {
-/**
- * 
- */
         Rapid("rapid"),
-/**
- * 
- */
         Stable("stable"),
-/**
- * 
- */
         Patch("patch"),
-/**
- * 
- */
         Nodeimage("node-image"),
-/**
- * 
- */
         None("none");
 
         private final String value;

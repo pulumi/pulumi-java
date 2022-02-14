@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PropertiesResponseNetworkInjection {
-/**
- * Network injection configuration
- */
     private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 
     @OutputCustomType.Constructor({"virtualNetworks"})
@@ -21,9 +18,6 @@ public final class PropertiesResponseNetworkInjection {
         this.virtualNetworks = virtualNetworks;
     }
 
-/**
- * Network injection configuration
- */
     public Optional<VirtualNetworkPropertiesListResponse> getVirtualNetworks() {
         return Optional.ofNullable(this.virtualNetworks);
     }

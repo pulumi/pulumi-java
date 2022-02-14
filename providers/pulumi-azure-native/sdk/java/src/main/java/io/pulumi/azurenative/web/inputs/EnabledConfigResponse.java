@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Enabled configuration.
- */
 public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnabledConfigResponse Empty = new EnabledConfigResponse();
 
-    /**
-     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
-     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 

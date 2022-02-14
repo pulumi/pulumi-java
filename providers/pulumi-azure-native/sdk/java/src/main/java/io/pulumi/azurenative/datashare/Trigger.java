@@ -15,161 +15,34 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A Trigger data transfer object.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Triggers_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var trigger = new AzureNative.DataShare.Trigger("trigger", new AzureNative.DataShare.TriggerArgs
-        {
-            AccountName = "Account1",
-            Kind = "ScheduleBased",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareSubscriptionName = "ShareSubscription1",
-            TriggerName = "Trigger1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewTrigger(ctx, "trigger", &datashare.TriggerArgs{
-			AccountName:           pulumi.String("Account1"),
-			Kind:                  pulumi.String("ScheduleBased"),
-			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
-			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
-			TriggerName:           pulumi.String("Trigger1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const trigger = new azure_native.datashare.Trigger("trigger", {
-    accountName: "Account1",
-    kind: "ScheduleBased",
-    resourceGroupName: "SampleResourceGroup",
-    shareSubscriptionName: "ShareSubscription1",
-    triggerName: "Trigger1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-trigger = azure_native.datashare.Trigger("trigger",
-    account_name="Account1",
-    kind="ScheduleBased",
-    resource_group_name="SampleResourceGroup",
-    share_subscription_name="ShareSubscription1",
-    trigger_name="Trigger1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datashare:Trigger Trigger1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/triggers/Trigger1 
-```
-
- * @deprecated
- * Please use one of the variants: ScheduledTrigger.
- */
 @Deprecated /* Please use one of the variants: ScheduledTrigger. */
 @ResourceType(type="azure-native:datashare:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {
-    /**
-     * Kind of synchronization on trigger.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Kind of synchronization on trigger.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Name of the azure resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the azure resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * System Data of the Azure resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return System Data of the Azure resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Type of the azure resource
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the azure resource
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -192,14 +65,6 @@ public class Trigger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static Trigger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Trigger(name, id, options);
     }

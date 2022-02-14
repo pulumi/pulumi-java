@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSerialPort {
-/**
- * Represents the serial port of the parent resource.
-API Version: 2018-05-01.
- *
- * Represents the serial port of the parent resource.
- */
     public static CompletableFuture<GetSerialPortResult> invokeAsync(GetSerialPortArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:serialconsole:getSerialPort", TypeShape.of(GetSerialPortResult.class), args == null ? GetSerialPortArgs.Empty : args, Utilities.withVersion(options));
     }

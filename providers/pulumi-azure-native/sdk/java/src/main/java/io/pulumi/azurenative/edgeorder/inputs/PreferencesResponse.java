@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Preferences related to the order
- */
 public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PreferencesResponse Empty = new PreferencesResponse();
 
-    /**
-     * Preferences related to the Encryption.
-     */
     @InputImport(name="encryptionPreferences")
     private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
@@ -31,9 +25,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
         return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
     }
 
-    /**
-     * Preferences related to the Management resource.
-     */
     @InputImport(name="managementResourcePreferences")
     private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
 
@@ -41,9 +32,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
         return this.managementResourcePreferences == null ? Optional.empty() : Optional.ofNullable(this.managementResourcePreferences);
     }
 
-    /**
-     * Notification preferences.
-     */
     @InputImport(name="notificationPreferences")
     private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
 
@@ -51,9 +39,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
     }
 
-    /**
-     * Preferences related to the shipment logistics of the order.
-     */
     @InputImport(name="transportPreferences")
     private final @Nullable TransportPreferencesResponse transportPreferences;
 

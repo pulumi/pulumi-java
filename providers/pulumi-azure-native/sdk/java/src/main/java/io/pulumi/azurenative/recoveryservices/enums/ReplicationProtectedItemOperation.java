@@ -8,62 +8,20 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * 
- */
     @EnumType
     public enum ReplicationProtectedItemOperation {
-/**
- * 
- */
         ReverseReplicate("ReverseReplicate"),
-/**
- * 
- */
         Commit("Commit"),
-/**
- * 
- */
         PlannedFailover("PlannedFailover"),
-/**
- * 
- */
         UnplannedFailover("UnplannedFailover"),
-/**
- * 
- */
         DisableProtection("DisableProtection"),
-/**
- * 
- */
         TestFailover("TestFailover"),
-/**
- * 
- */
         TestFailoverCleanup("TestFailoverCleanup"),
-/**
- * 
- */
         Failback("Failback"),
-/**
- * 
- */
         FinalizeFailback("FinalizeFailback"),
-/**
- * 
- */
         ChangePit("ChangePit"),
-/**
- * 
- */
         RepairReplication("RepairReplication"),
-/**
- * 
- */
         SwitchProtection("SwitchProtection"),
-/**
- * 
- */
         CompleteMigration("CompleteMigration");
 
         private final String value;

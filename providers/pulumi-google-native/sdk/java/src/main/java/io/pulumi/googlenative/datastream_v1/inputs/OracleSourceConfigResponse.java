@@ -8,16 +8,10 @@ import io.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsResponse;
 import java.util.Objects;
 
 
-/**
- * Oracle data source configuration
- */
 public final class OracleSourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OracleSourceConfigResponse Empty = new OracleSourceConfigResponse();
 
-    /**
-     * Oracle objects to exclude from the stream.
-     */
     @InputImport(name="excludeObjects", required=true)
     private final OracleRdbmsResponse excludeObjects;
 
@@ -25,9 +19,6 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
         return this.excludeObjects;
     }
 
-    /**
-     * Oracle objects to include in the stream.
-     */
     @InputImport(name="includeObjects", required=true)
     private final OracleRdbmsResponse includeObjects;
 

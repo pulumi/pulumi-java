@@ -15,16 +15,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configures the Play Right in the PlayReady license.
- */
 public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyPlayReadyPlayRightArgs Empty = new ContentKeyPolicyPlayReadyPlayRightArgs();
 
-    /**
-     * Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-     */
     @InputImport(name="agcAndColorStripeRestriction")
     private final @Nullable Input<Integer> agcAndColorStripeRestriction;
 
@@ -32,9 +26,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.agcAndColorStripeRestriction == null ? Input.empty() : this.agcAndColorStripeRestriction;
     }
 
-    /**
-     * Configures Unknown output handling settings of the license.
-     */
     @InputImport(name="allowPassingVideoContentToUnknownOutput", required=true)
     private final Input<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
 
@@ -42,9 +33,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.allowPassingVideoContentToUnknownOutput;
     }
 
-    /**
-     * Specifies the output protection level for compressed digital audio.
-     */
     @InputImport(name="analogVideoOpl")
     private final @Nullable Input<Integer> analogVideoOpl;
 
@@ -52,9 +40,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.analogVideoOpl == null ? Input.empty() : this.analogVideoOpl;
     }
 
-    /**
-     * Specifies the output protection level for compressed digital audio.
-     */
     @InputImport(name="compressedDigitalAudioOpl")
     private final @Nullable Input<Integer> compressedDigitalAudioOpl;
 
@@ -62,9 +47,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.compressedDigitalAudioOpl == null ? Input.empty() : this.compressedDigitalAudioOpl;
     }
 
-    /**
-     * Specifies the output protection level for compressed digital video.
-     */
     @InputImport(name="compressedDigitalVideoOpl")
     private final @Nullable Input<Integer> compressedDigitalVideoOpl;
 
@@ -72,9 +54,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.compressedDigitalVideoOpl == null ? Input.empty() : this.compressedDigitalVideoOpl;
     }
 
-    /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
-     */
     @InputImport(name="digitalVideoOnlyContentRestriction", required=true)
     private final Input<Boolean> digitalVideoOnlyContentRestriction;
 
@@ -82,9 +61,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.digitalVideoOnlyContentRestriction;
     }
 
-    /**
-     * Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
-     */
     @InputImport(name="explicitAnalogTelevisionOutputRestriction")
     private final @Nullable Input<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
 
@@ -92,9 +68,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.explicitAnalogTelevisionOutputRestriction == null ? Input.empty() : this.explicitAnalogTelevisionOutputRestriction;
     }
 
-    /**
-     * The amount of time that the license is valid after the license is first used to play content.
-     */
     @InputImport(name="firstPlayExpiration")
     private final @Nullable Input<String> firstPlayExpiration;
 
@@ -102,9 +75,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.firstPlayExpiration == null ? Input.empty() : this.firstPlayExpiration;
     }
 
-    /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
-     */
     @InputImport(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
     private final Input<Boolean> imageConstraintForAnalogComponentVideoRestriction;
 
@@ -112,9 +82,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
 
-    /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
-     */
     @InputImport(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
     private final Input<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
 
@@ -122,9 +89,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
 
-    /**
-     * Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
-     */
     @InputImport(name="scmsRestriction")
     private final @Nullable Input<Integer> scmsRestriction;
 
@@ -132,9 +96,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.scmsRestriction == null ? Input.empty() : this.scmsRestriction;
     }
 
-    /**
-     * Specifies the output protection level for uncompressed digital audio.
-     */
     @InputImport(name="uncompressedDigitalAudioOpl")
     private final @Nullable Input<Integer> uncompressedDigitalAudioOpl;
 
@@ -142,9 +103,6 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
         return this.uncompressedDigitalAudioOpl == null ? Input.empty() : this.uncompressedDigitalAudioOpl;
     }
 
-    /**
-     * Specifies the output protection level for uncompressed digital video.
-     */
     @InputImport(name="uncompressedDigitalVideoOpl")
     private final @Nullable Input<Integer> uncompressedDigitalVideoOpl;
 

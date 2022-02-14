@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The ssh username, password, and ssh public key.
- */
 public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinuxOperatingSystemProfileArgs Empty = new LinuxOperatingSystemProfileArgs();
 
-    /**
-     * The password.
-     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -28,9 +22,6 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
         return this.password == null ? Input.empty() : this.password;
     }
 
-    /**
-     * The SSH profile.
-     */
     @InputImport(name="sshProfile")
     private final @Nullable Input<SshProfileArgs> sshProfile;
 
@@ -38,9 +29,6 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
         return this.sshProfile == null ? Input.empty() : this.sshProfile;
     }
 
-    /**
-     * The username.
-     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

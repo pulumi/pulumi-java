@@ -9,17 +9,8 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PlatformImagePurchasePlanResponse {
-/**
- * Name of the purchase plan.
- */
     private final String planName;
-/**
- * Product of the purchase plan.
- */
     private final String planProduct;
-/**
- * Publisher of the purchase plan.
- */
     private final String planPublisher;
 
     @OutputCustomType.Constructor({"planName","planProduct","planPublisher"})
@@ -32,21 +23,12 @@ public final class PlatformImagePurchasePlanResponse {
         this.planPublisher = Objects.requireNonNull(planPublisher);
     }
 
-/**
- * Name of the purchase plan.
- */
     public String getPlanName() {
         return this.planName;
     }
-/**
- * Product of the purchase plan.
- */
     public String getPlanProduct() {
         return this.planProduct;
     }
-/**
- * Publisher of the purchase plan.
- */
     public String getPlanPublisher() {
         return this.planPublisher;
     }

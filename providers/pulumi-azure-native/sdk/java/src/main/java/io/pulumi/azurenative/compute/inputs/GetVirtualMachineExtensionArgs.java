@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualMachineExtensionArgs Empty = new GetVirtualMachineExtensionArgs();
 
-    /**
-     * The expand expression to apply on the operation.
-     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -27,9 +21,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,9 +28,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the virtual machine extension.
-     */
     @InputImport(name="vmExtensionName", required=true)
     private final String vmExtensionName;
 
@@ -47,9 +35,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
         return this.vmExtensionName;
     }
 
-    /**
-     * The name of the virtual machine containing the extension.
-     */
     @InputImport(name="vmName", required=true)
     private final String vmName;
 

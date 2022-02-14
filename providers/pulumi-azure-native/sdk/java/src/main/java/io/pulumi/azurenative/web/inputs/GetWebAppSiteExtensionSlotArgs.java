@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppSiteExtensionSlotArgs Empty = new GetWebAppSiteExtensionSlotArgs();
 
-    /**
-     * Site name.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -25,9 +19,6 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
         return this.name;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,9 +26,6 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
-    /**
-     * Site extension name.
-     */
     @InputImport(name="siteExtensionId", required=true)
     private final String siteExtensionId;
 
@@ -45,9 +33,6 @@ public final class GetWebAppSiteExtensionSlotArgs extends io.pulumi.resources.In
         return this.siteExtensionId;
     }
 
-    /**
-     * Name of the deployment slot. If a slot is not specified, the API uses the production slot.
-     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

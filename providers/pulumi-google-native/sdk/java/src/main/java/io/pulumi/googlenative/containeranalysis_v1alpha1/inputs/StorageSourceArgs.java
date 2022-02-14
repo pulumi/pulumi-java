@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * StorageSource describes the location of the source in an archive file in Google Cloud Storage.
- */
 public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageSourceArgs Empty = new StorageSourceArgs();
 
-    /**
-     * Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
-     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -27,9 +21,6 @@ public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
-    /**
-     * Google Cloud Storage generation for the object.
-     */
     @InputImport(name="generation")
     private final @Nullable Input<String> generation;
 
@@ -37,9 +28,6 @@ public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.generation == null ? Input.empty() : this.generation;
     }
 
-    /**
-     * Google Cloud Storage object containing source.
-     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 

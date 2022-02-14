@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Database specific information for SQL to Azure SQL DB migration task inputs
- */
 public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbDatabaseInputResponse Empty = new MigrateSqlServerSqlDbDatabaseInputResponse();
 
-    /**
-     * Whether to set database read only before migration
-     */
     @InputImport(name="makeSourceDbReadOnly")
     private final @Nullable Boolean makeSourceDbReadOnly;
 
@@ -29,9 +23,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
         return this.makeSourceDbReadOnly == null ? Optional.empty() : Optional.ofNullable(this.makeSourceDbReadOnly);
     }
 
-    /**
-     * Name of the database
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -39,9 +30,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * Mapping of source to target tables
-     */
     @InputImport(name="tableMap")
     private final @Nullable Map<String,String> tableMap;
 
@@ -49,9 +37,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
 
-    /**
-     * Name of target database. Note: Target database will be truncated before starting migration.
-     */
     @InputImport(name="targetDatabaseName")
     private final @Nullable String targetDatabaseName;
 

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The CSPM monitoring for AWS offering configurations
- */
 public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CspmMonitorAwsOfferingArgs Empty = new CspmMonitorAwsOfferingArgs();
 
-    /**
-     * The native cloud connection configuration
-     */
     @InputImport(name="nativeCloudConnection")
     private final @Nullable Input<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
 
@@ -28,10 +22,6 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
         return this.nativeCloudConnection == null ? Input.empty() : this.nativeCloudConnection;
     }
 
-    /**
-     * The type of the security offering.
-Expected value is 'CspmMonitorAws'.
-     */
     @InputImport(name="offeringType", required=true)
     private final Input<String> offeringType;
 

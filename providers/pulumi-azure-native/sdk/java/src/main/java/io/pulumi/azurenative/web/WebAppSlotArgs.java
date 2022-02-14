@@ -21,16 +21,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSlotArgs Empty = new WebAppSlotArgs();
 
-    /**
-     * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
-     */
     @InputImport(name="clientAffinityEnabled")
     private final @Nullable Input<Boolean> clientAffinityEnabled;
 
@@ -38,9 +32,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientAffinityEnabled == null ? Input.empty() : this.clientAffinityEnabled;
     }
 
-    /**
-     * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
-     */
     @InputImport(name="clientCertEnabled")
     private final @Nullable Input<Boolean> clientCertEnabled;
 
@@ -48,9 +39,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertEnabled == null ? Input.empty() : this.clientCertEnabled;
     }
 
-    /**
-     * client certificate authentication comma-separated exclusion paths
-     */
     @InputImport(name="clientCertExclusionPaths")
     private final @Nullable Input<String> clientCertExclusionPaths;
 
@@ -58,12 +46,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertExclusionPaths == null ? Input.empty() : this.clientCertExclusionPaths;
     }
 
-    /**
-     * This composes with ClientCertEnabled setting.
-- ClientCertEnabled: false means ClientCert is ignored.
-- ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
-- ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-     */
     @InputImport(name="clientCertMode")
     private final @Nullable Input<ClientCertMode> clientCertMode;
 
@@ -71,9 +53,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertMode == null ? Input.empty() : this.clientCertMode;
     }
 
-    /**
-     * If specified during app creation, the app is cloned from a source app.
-     */
     @InputImport(name="cloningInfo")
     private final @Nullable Input<CloningInfoArgs> cloningInfo;
 
@@ -81,9 +60,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloningInfo == null ? Input.empty() : this.cloningInfo;
     }
 
-    /**
-     * Size of the function container.
-     */
     @InputImport(name="containerSize")
     private final @Nullable Input<Integer> containerSize;
 
@@ -91,9 +67,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerSize == null ? Input.empty() : this.containerSize;
     }
 
-    /**
-     * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
-     */
     @InputImport(name="customDomainVerificationId")
     private final @Nullable Input<String> customDomainVerificationId;
 
@@ -101,9 +74,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.customDomainVerificationId == null ? Input.empty() : this.customDomainVerificationId;
     }
 
-    /**
-     * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
-     */
     @InputImport(name="dailyMemoryTimeQuota")
     private final @Nullable Input<Integer> dailyMemoryTimeQuota;
 
@@ -111,9 +81,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.dailyMemoryTimeQuota == null ? Input.empty() : this.dailyMemoryTimeQuota;
     }
 
-    /**
-     * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
-     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -121,9 +88,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
-    /**
-     * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
-     */
     @InputImport(name="hostNameSslStates")
     private final @Nullable Input<List<HostNameSslStateArgs>> hostNameSslStates;
 
@@ -131,10 +95,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostNameSslStates == null ? Input.empty() : this.hostNameSslStates;
     }
 
-    /**
-     * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
- If <code>true</code>, the app is only accessible via API management process.
-     */
     @InputImport(name="hostNamesDisabled")
     private final @Nullable Input<Boolean> hostNamesDisabled;
 
@@ -142,9 +102,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostNamesDisabled == null ? Input.empty() : this.hostNamesDisabled;
     }
 
-    /**
-     * App Service Environment to use for the app.
-     */
     @InputImport(name="hostingEnvironmentProfile")
     private final @Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
@@ -152,10 +109,6 @@ public final class WebAppSlotArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostingEnvironmentProfile == null ? Input.empty() : this.hostingEnvironmentProfile;
     }
 
-    /**
-     * HttpsOnly: configures a web site to accept only https requests. Issues redirect for
-http requests
-     */
     @InputImport(name="httpsOnly")
     private final @Nullable Input<Boolean> httpsOnly;
 
@@ -163,9 +116,6 @@ http requests
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
     }
 
-    /**
-     * Hyper-V sandbox.
-     */
     @InputImport(name="hyperV")
     private final @Nullable Input<Boolean> hyperV;
 
@@ -173,9 +123,6 @@ http requests
         return this.hyperV == null ? Input.empty() : this.hyperV;
     }
 
-    /**
-     * Managed service identity.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -183,9 +130,6 @@ http requests
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Obsolete: Hyper-V sandbox.
-     */
     @InputImport(name="isXenon")
     private final @Nullable Input<Boolean> isXenon;
 
@@ -193,9 +137,6 @@ http requests
         return this.isXenon == null ? Input.empty() : this.isXenon;
     }
 
-    /**
-     * Identity to use for Key Vault Reference authentication.
-     */
     @InputImport(name="keyVaultReferenceIdentity")
     private final @Nullable Input<String> keyVaultReferenceIdentity;
 
@@ -203,9 +144,6 @@ http requests
         return this.keyVaultReferenceIdentity == null ? Input.empty() : this.keyVaultReferenceIdentity;
     }
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -213,9 +151,6 @@ http requests
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Resource Location.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -223,9 +158,6 @@ http requests
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -233,9 +165,6 @@ http requests
         return this.name;
     }
 
-    /**
-     * Site redundancy mode
-     */
     @InputImport(name="redundancyMode")
     private final @Nullable Input<RedundancyMode> redundancyMode;
 
@@ -243,9 +172,6 @@ http requests
         return this.redundancyMode == null ? Input.empty() : this.redundancyMode;
     }
 
-    /**
-     * <code>true</code> if reserved; otherwise, <code>false</code>.
-     */
     @InputImport(name="reserved")
     private final @Nullable Input<Boolean> reserved;
 
@@ -253,9 +179,6 @@ http requests
         return this.reserved == null ? Input.empty() : this.reserved;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -263,9 +186,6 @@ http requests
         return this.resourceGroupName;
     }
 
-    /**
-     * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
-     */
     @InputImport(name="scmSiteAlsoStopped")
     private final @Nullable Input<Boolean> scmSiteAlsoStopped;
 
@@ -273,9 +193,6 @@ http requests
         return this.scmSiteAlsoStopped == null ? Input.empty() : this.scmSiteAlsoStopped;
     }
 
-    /**
-     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-     */
     @InputImport(name="serverFarmId")
     private final @Nullable Input<String> serverFarmId;
 
@@ -283,9 +200,6 @@ http requests
         return this.serverFarmId == null ? Input.empty() : this.serverFarmId;
     }
 
-    /**
-     * Configuration of the app.
-     */
     @InputImport(name="siteConfig")
     private final @Nullable Input<SiteConfigArgs> siteConfig;
 
@@ -293,9 +207,6 @@ http requests
         return this.siteConfig == null ? Input.empty() : this.siteConfig;
     }
 
-    /**
-     * Name of the deployment slot to create or update. The name 'production' is reserved.
-     */
     @InputImport(name="slot")
     private final @Nullable Input<String> slot;
 
@@ -303,9 +214,6 @@ http requests
         return this.slot == null ? Input.empty() : this.slot;
     }
 
-    /**
-     * Checks if Customer provided storage account is required
-     */
     @InputImport(name="storageAccountRequired")
     private final @Nullable Input<Boolean> storageAccountRequired;
 
@@ -313,9 +221,6 @@ http requests
         return this.storageAccountRequired == null ? Input.empty() : this.storageAccountRequired;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -323,10 +228,6 @@ http requests
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
-This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
-     */
     @InputImport(name="virtualNetworkSubnetId")
     private final @Nullable Input<String> virtualNetworkSubnetId;
 

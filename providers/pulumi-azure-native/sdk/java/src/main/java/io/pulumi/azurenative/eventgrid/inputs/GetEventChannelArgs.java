@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEventChannelArgs Empty = new GetEventChannelArgs();
 
-    /**
-     * Name of the event channel.
-     */
     @InputImport(name="eventChannelName", required=true)
     private final String eventChannelName;
 
@@ -25,9 +19,6 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
         return this.eventChannelName;
     }
 
-    /**
-     * Name of the partner namespace.
-     */
     @InputImport(name="partnerNamespaceName", required=true)
     private final String partnerNamespaceName;
 
@@ -35,9 +26,6 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
         return this.partnerNamespaceName;
     }
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

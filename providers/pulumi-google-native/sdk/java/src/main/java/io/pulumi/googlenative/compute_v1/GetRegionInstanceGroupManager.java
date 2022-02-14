@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionInstanceGroupManager {
-/**
- * Returns all of the details about the specified managed instance group.
- */
     public static CompletableFuture<GetRegionInstanceGroupManagerResult> invokeAsync(GetRegionInstanceGroupManagerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionInstanceGroupManager", TypeShape.of(GetRegionInstanceGroupManagerResult.class), args == null ? GetRegionInstanceGroupManagerArgs.Empty : args, Utilities.withVersion(options));
     }

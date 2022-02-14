@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Cache identity properties.
- */
 public final class CacheIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheIdentityArgs Empty = new CacheIdentityArgs();
 
-    /**
-     * The type of identity used for the cache
-     */
     @InputImport(name="type")
     private final @Nullable Input<CacheIdentityType> type;
 

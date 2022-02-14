@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationFabricArgs Empty = new ReplicationFabricArgs();
 
-    /**
-     * Name of the ASR fabric.
-     */
     @InputImport(name="fabricName")
     private final @Nullable Input<String> fabricName;
 
@@ -28,9 +22,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
         return this.fabricName == null ? Input.empty() : this.fabricName;
     }
 
-    /**
-     * Fabric creation input.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<FabricCreationInputPropertiesArgs> properties;
 
@@ -38,9 +29,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * The name of the resource group where the recovery services vault is present.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -48,9 +36,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the recovery services vault.
-     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

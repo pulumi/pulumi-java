@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties of the volume mount.
- */
 public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeMountArgs Empty = new VolumeMountArgs();
 
-    /**
-     * The path within the container where the volume should be mounted. Must not contain colon (:).
-     */
     @InputImport(name="mountPath", required=true)
     private final Input<String> mountPath;
 
@@ -28,9 +22,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountPath;
     }
 
-    /**
-     * The name of the volume mount.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,9 +29,6 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
-    /**
-     * The flag indicating whether the volume mount is read-only.
-     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 

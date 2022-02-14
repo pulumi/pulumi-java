@@ -14,16 +14,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Trigger that runs every time a Blob event occurs.
- */
 public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobEventsTriggerResponse Empty = new BlobEventsTriggerResponse();
 
-    /**
-     * List of tags that can be used for describing the trigger.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -31,9 +25,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-     */
     @InputImport(name="blobPathBeginsWith")
     private final @Nullable String blobPathBeginsWith;
 
@@ -41,9 +32,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.blobPathBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.blobPathBeginsWith);
     }
 
-    /**
-     * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-     */
     @InputImport(name="blobPathEndsWith")
     private final @Nullable String blobPathEndsWith;
 
@@ -51,9 +39,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.blobPathEndsWith == null ? Optional.empty() : Optional.ofNullable(this.blobPathEndsWith);
     }
 
-    /**
-     * Trigger description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -61,9 +46,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * The type of events that cause this trigger to fire.
-     */
     @InputImport(name="events", required=true)
     private final List<String> events;
 
@@ -71,9 +53,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.events;
     }
 
-    /**
-     * If set to true, blobs with zero bytes will be ignored.
-     */
     @InputImport(name="ignoreEmptyBlobs")
     private final @Nullable Boolean ignoreEmptyBlobs;
 
@@ -81,9 +60,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.ignoreEmptyBlobs == null ? Optional.empty() : Optional.ofNullable(this.ignoreEmptyBlobs);
     }
 
-    /**
-     * Pipelines that need to be started.
-     */
     @InputImport(name="pipelines")
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
@@ -91,9 +67,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
-    /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -101,9 +74,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.runtimeState;
     }
 
-    /**
-     * The ARM resource ID of the Storage Account.
-     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -111,10 +81,6 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
         return this.scope;
     }
 
-    /**
-     * Trigger type.
-Expected value is 'BlobEventsTrigger'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -10,25 +10,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class QueueStatsResponse {
-/**
- * The number of requests that the queue has dispatched but has not received a reply for yet.
- */
     private final String concurrentDispatchesCount;
-/**
- * The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.
- */
     private final Double effectiveExecutionRate;
-/**
- * The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.
- */
     private final String executedLastMinuteCount;
-/**
- * An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.
- */
     private final String oldestEstimatedArrivalTime;
-/**
- * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
- */
     private final String tasksCount;
 
     @OutputCustomType.Constructor({"concurrentDispatchesCount","effectiveExecutionRate","executedLastMinuteCount","oldestEstimatedArrivalTime","tasksCount"})
@@ -45,33 +30,18 @@ public final class QueueStatsResponse {
         this.tasksCount = Objects.requireNonNull(tasksCount);
     }
 
-/**
- * The number of requests that the queue has dispatched but has not received a reply for yet.
- */
     public String getConcurrentDispatchesCount() {
         return this.concurrentDispatchesCount;
     }
-/**
- * The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.
- */
     public Double getEffectiveExecutionRate() {
         return this.effectiveExecutionRate;
     }
-/**
- * The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.
- */
     public String getExecutedLastMinuteCount() {
         return this.executedLastMinuteCount;
     }
-/**
- * An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.
- */
     public String getOldestEstimatedArrivalTime() {
         return this.oldestEstimatedArrivalTime;
     }
-/**
- * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
- */
     public String getTasksCount() {
         return this.tasksCount;
     }

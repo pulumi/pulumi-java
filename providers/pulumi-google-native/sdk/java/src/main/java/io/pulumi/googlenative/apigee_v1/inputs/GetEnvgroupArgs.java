@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class GetEnvgroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEnvgroupArgs Empty = new GetEnvgroupArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="envgroupId", required=true)
     private final String envgroupId;
 
@@ -25,9 +19,6 @@ public final class GetEnvgroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.envgroupId;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

@@ -8,58 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Describes operator to be matched
- */
     @EnumType
     public enum Operator {
-/**
- * 
- */
         Any("Any"),
-/**
- * 
- */
         IPMatch("IPMatch"),
-/**
- * 
- */
         GeoMatch("GeoMatch"),
-/**
- * 
- */
         Equal("Equal"),
-/**
- * 
- */
         Contains("Contains"),
-/**
- * 
- */
         LessThan("LessThan"),
-/**
- * 
- */
         GreaterThan("GreaterThan"),
-/**
- * 
- */
         LessThanOrEqual("LessThanOrEqual"),
-/**
- * 
- */
         GreaterThanOrEqual("GreaterThanOrEqual"),
-/**
- * 
- */
         BeginsWith("BeginsWith"),
-/**
- * 
- */
         EndsWith("EndsWith"),
-/**
- * 
- */
         RegEx("RegEx");
 
         private final String value;

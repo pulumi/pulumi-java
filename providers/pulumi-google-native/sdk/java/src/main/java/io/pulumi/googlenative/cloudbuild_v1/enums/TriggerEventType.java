@@ -8,30 +8,12 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * EventType allows the user to explicitly set the type of event to which this BuildTrigger should respond. This field will be validated against the rest of the configuration if it is set.
- */
     @EnumType
     public enum TriggerEventType {
-/**
- * EVENT_TYPE_UNSPECIFIED event_types are ignored.
- */
         EventTypeUnspecified("EVENT_TYPE_UNSPECIFIED"),
-/**
- * REPO corresponds to the supported VCS integrations.
- */
         Repo("REPO"),
-/**
- * WEBHOOK corresponds to webhook triggers.
- */
         Webhook("WEBHOOK"),
-/**
- * PUBSUB corresponds to pubsub triggers.
- */
         Pubsub("PUBSUB"),
-/**
- * MANUAL corresponds to manual-only invoked triggers.
- */
         Manual("MANUAL");
 
         private final String value;

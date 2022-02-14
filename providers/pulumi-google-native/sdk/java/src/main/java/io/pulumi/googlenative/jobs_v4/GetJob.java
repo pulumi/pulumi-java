@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJob {
-/**
- * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
- */
     public static CompletableFuture<GetJobResult> invokeAsync(GetJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v4:getJob", TypeShape.of(GetJobResult.class), args == null ? GetJobArgs.Empty : args, Utilities.withVersion(options));
     }

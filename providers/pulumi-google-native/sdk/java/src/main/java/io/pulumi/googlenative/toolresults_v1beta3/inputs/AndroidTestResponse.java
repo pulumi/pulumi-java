@@ -12,16 +12,10 @@ import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import java.util.Objects;
 
 
-/**
- * An Android mobile test specification.
- */
 public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AndroidTestResponse Empty = new AndroidTestResponse();
 
-    /**
-     * Information about the application under test.
-     */
     @InputImport(name="androidAppInfo", required=true)
     private final AndroidAppInfoResponse androidAppInfo;
 
@@ -29,9 +23,6 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.androidAppInfo;
     }
 
-    /**
-     * An Android instrumentation test.
-     */
     @InputImport(name="androidInstrumentationTest", required=true)
     private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
@@ -39,9 +30,6 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.androidInstrumentationTest;
     }
 
-    /**
-     * An Android robo test.
-     */
     @InputImport(name="androidRoboTest", required=true)
     private final AndroidRoboTestResponse androidRoboTest;
 
@@ -49,9 +37,6 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.androidRoboTest;
     }
 
-    /**
-     * An Android test loop.
-     */
     @InputImport(name="androidTestLoop", required=true)
     private final AndroidTestLoopResponse androidTestLoop;
 
@@ -59,9 +44,6 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.androidTestLoop;
     }
 
-    /**
-     * Max time a test is allowed to run before it is automatically cancelled.
-     */
     @InputImport(name="testTimeout", required=true)
     private final DurationResponse testTimeout;
 

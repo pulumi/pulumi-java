@@ -11,16 +11,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Additional information on Azure Workload for SQL specific backup item.
- */
 public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureVmWorkloadProtectedItemExtendedInfoResponse Empty = new AzureVmWorkloadProtectedItemExtendedInfoResponse();
 
-    /**
-     * The oldest backup copy available for this backup item.
-     */
     @InputImport(name="oldestRecoveryPoint")
     private final @Nullable String oldestRecoveryPoint;
 
@@ -28,9 +22,6 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.p
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
-    /**
-     * Indicates consistency of policy object and policy applied to this backup item.
-     */
     @InputImport(name="policyState")
     private final @Nullable String policyState;
 
@@ -38,9 +29,6 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse extends io.p
         return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
     }
 
-    /**
-     * Number of backup copies available for this backup item.
-     */
     @InputImport(name="recoveryPointCount")
     private final @Nullable Integer recoveryPointCount;
 

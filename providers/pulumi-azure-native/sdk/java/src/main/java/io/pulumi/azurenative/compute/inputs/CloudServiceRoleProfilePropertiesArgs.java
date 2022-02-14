@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes the role properties.
- */
 public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudServiceRoleProfilePropertiesArgs Empty = new CloudServiceRoleProfilePropertiesArgs();
 
-    /**
-     * Resource name.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,9 +22,6 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * Describes the cloud service role sku.
-     */
     @InputImport(name="sku")
     private final @Nullable Input<CloudServiceRoleSkuArgs> sku;
 

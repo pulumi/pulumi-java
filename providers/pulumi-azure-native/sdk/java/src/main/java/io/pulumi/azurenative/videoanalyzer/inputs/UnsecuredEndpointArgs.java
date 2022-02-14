@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Unsecured endpoint describes an endpoint that the pipeline can connect to over clear transport (no encryption in transit).
- */
 public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UnsecuredEndpointArgs Empty = new UnsecuredEndpointArgs();
 
-    /**
-     * Credentials to be presented to the endpoint.
-     */
     @InputImport(name="credentials", required=true)
     private final Input<UsernamePasswordCredentialsArgs> credentials;
 
@@ -29,9 +23,6 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.credentials;
     }
 
-    /**
-     * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
-     */
     @InputImport(name="tunnel")
     private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
@@ -39,10 +30,6 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.tunnel == null ? Input.empty() : this.tunnel;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
-     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -50,9 +37,6 @@ Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
         return this.type;
     }
 
-    /**
-     * The endpoint URL for Video Analyzer to connect to.
-     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

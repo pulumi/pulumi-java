@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class RestorePointCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestorePointCollectionArgs Empty = new RestorePointCollectionArgs();
 
-    /**
-     * Resource location
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,9 +23,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,9 +30,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the restore point collection.
-     */
     @InputImport(name="restorePointCollectionName")
     private final @Nullable Input<String> restorePointCollectionName;
 
@@ -49,9 +37,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
         return this.restorePointCollectionName == null ? Input.empty() : this.restorePointCollectionName;
     }
 
-    /**
-     * The properties of the source resource that this restore point collection is created from.
-     */
     @InputImport(name="source")
     private final @Nullable Input<RestorePointCollectionSourcePropertiesArgs> source;
 
@@ -59,9 +44,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
         return this.source == null ? Input.empty() : this.source;
     }
 
-    /**
-     * Resource tags
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

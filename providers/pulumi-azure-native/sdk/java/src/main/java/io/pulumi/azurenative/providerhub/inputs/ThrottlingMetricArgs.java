@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThrottlingMetricArgs Empty = new ThrottlingMetricArgs();
 
-    /**
-     * 
-     */
     @InputImport(name="interval")
     private final @Nullable Input<String> interval;
 
@@ -30,9 +24,6 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
         return this.interval == null ? Input.empty() : this.interval;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="limit", required=true)
     private final Input<Double> limit;
 
@@ -40,9 +31,6 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
         return this.limit;
     }
 
-    /**
-     * 
-     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ThrottlingMetricType>> type;
 

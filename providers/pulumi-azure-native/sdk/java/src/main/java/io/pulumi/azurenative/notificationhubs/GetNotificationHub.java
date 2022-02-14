@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationHub {
-/**
- * Description of a NotificationHub Resource.
-API Version: 2017-04-01.
- *
- * Description of a NotificationHub Resource.
- */
     public static CompletableFuture<GetNotificationHubResult> invokeAsync(GetNotificationHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHub", TypeShape.of(GetNotificationHubResult.class), args == null ? GetNotificationHubArgs.Empty : args, Utilities.withVersion(options));
     }

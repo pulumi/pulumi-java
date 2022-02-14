@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Describes the policy to be used for placement of a Service Fabric service.
- */
 public final class ServicePlacementPolicyDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServicePlacementPolicyDescriptionResponse Empty = new ServicePlacementPolicyDescriptionResponse();
 
-    /**
-     * The type of placement policy for a service fabric service. Following are the possible values.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

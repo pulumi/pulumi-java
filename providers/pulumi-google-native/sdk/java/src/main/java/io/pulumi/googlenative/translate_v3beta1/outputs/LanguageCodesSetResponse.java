@@ -10,9 +10,6 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LanguageCodesSetResponse {
-/**
- * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
- */
     private final List<String> languageCodes;
 
     @OutputCustomType.Constructor({"languageCodes"})
@@ -20,9 +17,6 @@ public final class LanguageCodesSetResponse {
         this.languageCodes = Objects.requireNonNull(languageCodes);
     }
 
-/**
- * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
- */
     public List<String> getLanguageCodes() {
         return this.languageCodes;
     }

@@ -11,16 +11,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The related metadata items for the function.
- */
 public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogAnalyticsQueryPackQueryPropertiesRelatedArgs Empty = new LogAnalyticsQueryPackQueryPropertiesRelatedArgs();
 
-    /**
-     * The related categories for the function.
-     */
     @InputImport(name="categories")
     private final @Nullable Input<List<String>> categories;
 
@@ -28,9 +22,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
         return this.categories == null ? Input.empty() : this.categories;
     }
 
-    /**
-     * The related resource types for the function.
-     */
     @InputImport(name="resourceTypes")
     private final @Nullable Input<List<String>> resourceTypes;
 
@@ -38,9 +29,6 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
     }
 
-    /**
-     * The related Log Analytics solutions for the function.
-     */
     @InputImport(name="solutions")
     private final @Nullable Input<List<String>> solutions;
 

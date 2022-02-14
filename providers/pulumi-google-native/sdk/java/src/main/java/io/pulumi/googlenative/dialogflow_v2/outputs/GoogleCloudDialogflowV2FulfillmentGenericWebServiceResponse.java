@@ -11,25 +11,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
-/**
- * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
- */
     private final Boolean isCloudFunction;
-/**
- * Optional. The password for HTTP Basic authentication.
- */
     private final String password;
-/**
- * Optional. The HTTP request headers to send together with fulfillment requests.
- */
     private final Map<String,String> requestHeaders;
-/**
- * The fulfillment URI for receiving POST requests. It must use https protocol.
- */
     private final String uri;
-/**
- * Optional. The user name for HTTP Basic authentication.
- */
     private final String username;
 
     @OutputCustomType.Constructor({"isCloudFunction","password","requestHeaders","uri","username"})
@@ -46,33 +31,18 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
         this.username = Objects.requireNonNull(username);
     }
 
-/**
- * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
- */
     public Boolean getIsCloudFunction() {
         return this.isCloudFunction;
     }
-/**
- * Optional. The password for HTTP Basic authentication.
- */
     public String getPassword() {
         return this.password;
     }
-/**
- * Optional. The HTTP request headers to send together with fulfillment requests.
- */
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders;
     }
-/**
- * The fulfillment URI for receiving POST requests. It must use https protocol.
- */
     public String getUri() {
         return this.uri;
     }
-/**
- * Optional. The user name for HTTP Basic authentication.
- */
     public String getUsername() {
         return this.username;
     }

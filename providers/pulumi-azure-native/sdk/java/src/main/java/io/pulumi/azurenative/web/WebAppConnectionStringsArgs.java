@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class WebAppConnectionStringsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppConnectionStringsArgs Empty = new WebAppConnectionStringsArgs();
 
-    /**
-     * Kind of resource.
-     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -29,9 +23,6 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
-    /**
-     * Name of the app.
-     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -39,9 +30,6 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
-    /**
-     * Connection strings.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties;
 
@@ -49,9 +37,6 @@ public final class WebAppConnectionStringsArgs extends io.pulumi.resources.Resou
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Name of the resource group to which the resource belongs.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

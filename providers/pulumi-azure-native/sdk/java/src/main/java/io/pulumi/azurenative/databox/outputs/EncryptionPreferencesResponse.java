@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionPreferencesResponse {
-/**
- * Defines secondary layer of software-based encryption enablement.
- */
     private final @Nullable String doubleEncryption;
 
     @OutputCustomType.Constructor({"doubleEncryption"})
@@ -21,9 +18,6 @@ public final class EncryptionPreferencesResponse {
         this.doubleEncryption = doubleEncryption;
     }
 
-/**
- * Defines secondary layer of software-based encryption enablement.
- */
     public Optional<String> getDoubleEncryption() {
         return Optional.ofNullable(this.doubleEncryption);
     }

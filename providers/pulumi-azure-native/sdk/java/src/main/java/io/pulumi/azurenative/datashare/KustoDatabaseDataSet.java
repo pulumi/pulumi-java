@@ -15,582 +15,57 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
-/**
- * A kusto database data set.
-API Version: 2020-09-01.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### DataSets_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var kustoDatabaseDataSet = new AzureNative.DataShare.KustoDatabaseDataSet("kustoDatabaseDataSet", new AzureNative.DataShare.KustoDatabaseDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewKustoDatabaseDataSet(ctx, "kustoDatabaseDataSet", &datashare.KustoDatabaseDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const kustoDatabaseDataSet = new azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-kusto_database_data_set = azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_KustoCluster_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var kustoDatabaseDataSet = new AzureNative.DataShare.KustoDatabaseDataSet("kustoDatabaseDataSet", new AzureNative.DataShare.KustoDatabaseDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewKustoDatabaseDataSet(ctx, "kustoDatabaseDataSet", &datashare.KustoDatabaseDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const kustoDatabaseDataSet = new azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-kusto_database_data_set = azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_KustoDatabase_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var kustoDatabaseDataSet = new AzureNative.DataShare.KustoDatabaseDataSet("kustoDatabaseDataSet", new AzureNative.DataShare.KustoDatabaseDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            Kind = "KustoDatabase",
-            KustoDatabaseResourceId = "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1/databases/Database1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewKustoDatabaseDataSet(ctx, "kustoDatabaseDataSet", &datashare.KustoDatabaseDataSetArgs{
-			AccountName:             pulumi.String("Account1"),
-			DataSetName:             pulumi.String("Dataset1"),
-			Kind:                    pulumi.String("KustoDatabase"),
-			KustoDatabaseResourceId: pulumi.String("/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1/databases/Database1"),
-			ResourceGroupName:       pulumi.String("SampleResourceGroup"),
-			ShareName:               pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const kustoDatabaseDataSet = new azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    kind: "KustoDatabase",
-    kustoDatabaseResourceId: "/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1/databases/Database1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-kusto_database_data_set = azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    kind="KustoDatabase",
-    kusto_database_resource_id="/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1/databases/Database1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_SqlDBTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var kustoDatabaseDataSet = new AzureNative.DataShare.KustoDatabaseDataSet("kustoDatabaseDataSet", new AzureNative.DataShare.KustoDatabaseDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewKustoDatabaseDataSet(ctx, "kustoDatabaseDataSet", &datashare.KustoDatabaseDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const kustoDatabaseDataSet = new azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-kusto_database_data_set = azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_SqlDWTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var kustoDatabaseDataSet = new AzureNative.DataShare.KustoDatabaseDataSet("kustoDatabaseDataSet", new AzureNative.DataShare.KustoDatabaseDataSetArgs
-        {
-            AccountName = "Account1",
-            DataSetName = "Dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "Share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewKustoDatabaseDataSet(ctx, "kustoDatabaseDataSet", &datashare.KustoDatabaseDataSetArgs{
-			AccountName:       pulumi.String("Account1"),
-			DataSetName:       pulumi.String("Dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("Share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const kustoDatabaseDataSet = new azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet", {
-    accountName: "Account1",
-    dataSetName: "Dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "Share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-kusto_database_data_set = azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet",
-    account_name="Account1",
-    data_set_name="Dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="Share1")
-
-```
-
-{{% /example %}}
-{{% example %}}
-### DataSets_SynapseWorkspaceSqlPoolTable_Create
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var kustoDatabaseDataSet = new AzureNative.DataShare.KustoDatabaseDataSet("kustoDatabaseDataSet", new AzureNative.DataShare.KustoDatabaseDataSetArgs
-        {
-            AccountName = "sourceAccount",
-            DataSetName = "dataset1",
-            ResourceGroupName = "SampleResourceGroup",
-            ShareName = "share1",
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := datashare.NewKustoDatabaseDataSet(ctx, "kustoDatabaseDataSet", &datashare.KustoDatabaseDataSetArgs{
-			AccountName:       pulumi.String("sourceAccount"),
-			DataSetName:       pulumi.String("dataset1"),
-			ResourceGroupName: pulumi.String("SampleResourceGroup"),
-			ShareName:         pulumi.String("share1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const kustoDatabaseDataSet = new azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet", {
-    accountName: "sourceAccount",
-    dataSetName: "dataset1",
-    resourceGroupName: "SampleResourceGroup",
-    shareName: "share1",
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-kusto_database_data_set = azure_native.datashare.KustoDatabaseDataSet("kustoDatabaseDataSet",
-    account_name="sourceAccount",
-    data_set_name="dataset1",
-    resource_group_name="SampleResourceGroup",
-    share_name="share1")
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:datashare:KustoDatabaseDataSet dataset1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/sourceAccount/shares/share1/dataSets/dataset1 
-```
-
- */
 @ResourceType(type="azure-native:datashare:KustoDatabaseDataSet")
 public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
-    /**
-     * Unique id for identifying a data set resource
-     */
     @OutputExport(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
-    /**
-     * @return Unique id for identifying a data set resource
-     */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
-    /**
-     * Kind of data set.
-Expected value is 'KustoDatabase'.
-     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    /**
-     * @return Kind of data set.
-Expected value is 'KustoDatabase'.
-     */
     public Output<String> getKind() {
         return this.kind;
     }
-    /**
-     * Resource id of the kusto database.
-     */
     @OutputExport(name="kustoDatabaseResourceId", type=String.class, parameters={})
     private Output<String> kustoDatabaseResourceId;
 
-    /**
-     * @return Resource id of the kusto database.
-     */
     public Output<String> getKustoDatabaseResourceId() {
         return this.kustoDatabaseResourceId;
     }
-    /**
-     * Location of the kusto cluster.
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return Location of the kusto cluster.
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * Name of the azure resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return Name of the azure resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * Provisioning state of the kusto database data set.
-     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    /**
-     * @return Provisioning state of the kusto database data set.
-     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    /**
-     * System Data of the Azure resource.
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return System Data of the Azure resource.
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Type of the azure resource
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return Type of the azure resource
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public KustoDatabaseDataSet(String name, KustoDatabaseDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:KustoDatabaseDataSet", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -620,14 +95,6 @@ Expected value is 'KustoDatabase'.
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static KustoDatabaseDataSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KustoDatabaseDataSet(name, id, options);
     }

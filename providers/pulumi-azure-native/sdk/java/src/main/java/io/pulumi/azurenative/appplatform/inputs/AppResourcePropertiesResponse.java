@@ -13,16 +13,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * App resource properties payload
- */
 public final class AppResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppResourcePropertiesResponse Empty = new AppResourcePropertiesResponse();
 
-    /**
-     * Name of the active deployment of the App
-     */
     @InputImport(name="activeDeploymentName")
     private final @Nullable String activeDeploymentName;
 
@@ -30,9 +24,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.activeDeploymentName == null ? Optional.empty() : Optional.ofNullable(this.activeDeploymentName);
     }
 
-    /**
-     * Date time when the resource is created
-     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -40,9 +31,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.createdTime;
     }
 
-    /**
-     * Fully qualified dns Name.
-     */
     @InputImport(name="fqdn")
     private final @Nullable String fqdn;
 
@@ -50,9 +38,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
-    /**
-     * Indicate if only https is allowed.
-     */
     @InputImport(name="httpsOnly")
     private final @Nullable Boolean httpsOnly;
 
@@ -60,9 +45,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
     }
 
-    /**
-     * Persistent disk settings
-     */
     @InputImport(name="persistentDisk")
     private final @Nullable PersistentDiskResponse persistentDisk;
 
@@ -70,9 +52,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.persistentDisk == null ? Optional.empty() : Optional.ofNullable(this.persistentDisk);
     }
 
-    /**
-     * Provisioning state of the App
-     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -80,9 +59,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.provisioningState;
     }
 
-    /**
-     * Indicates whether the App exposes public endpoint
-     */
     @InputImport(name="public")
     private final @Nullable Boolean $public;
 
@@ -90,9 +66,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
     }
 
-    /**
-     * Temporary disk settings
-     */
     @InputImport(name="temporaryDisk")
     private final @Nullable TemporaryDiskResponse temporaryDisk;
 
@@ -100,9 +73,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
         return this.temporaryDisk == null ? Optional.empty() : Optional.ofNullable(this.temporaryDisk);
     }
 
-    /**
-     * URL of the App
-     */
     @InputImport(name="url", required=true)
     private final String url;
 

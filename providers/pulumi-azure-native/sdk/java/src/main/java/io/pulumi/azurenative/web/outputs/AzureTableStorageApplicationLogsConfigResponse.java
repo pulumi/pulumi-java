@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureTableStorageApplicationLogsConfigResponse {
-/**
- * Log level.
- */
     private final @Nullable String level;
-/**
- * SAS URL to an Azure table with add/query/delete permissions.
- */
     private final String sasUrl;
 
     @OutputCustomType.Constructor({"level","sasUrl"})
@@ -28,15 +22,9 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
         this.sasUrl = Objects.requireNonNull(sasUrl);
     }
 
-/**
- * Log level.
- */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
-/**
- * SAS URL to an Azure table with add/query/delete permissions.
- */
     public String getSasUrl() {
         return this.sasUrl;
     }

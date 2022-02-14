@@ -9,17 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * Defines the UrlFileName condition for the delivery rule.
- */
 public final class DeliveryRuleUrlFileNameConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleUrlFileNameConditionResponse Empty = new DeliveryRuleUrlFileNameConditionResponse();
 
-    /**
-     * The name of the condition for the delivery rule.
-Expected value is 'UrlFileName'.
-     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,9 +20,6 @@ Expected value is 'UrlFileName'.
         return this.name;
     }
 
-    /**
-     * Defines the parameters for the condition.
-     */
     @InputImport(name="parameters", required=true)
     private final UrlFileNameMatchConditionParametersResponse parameters;
 

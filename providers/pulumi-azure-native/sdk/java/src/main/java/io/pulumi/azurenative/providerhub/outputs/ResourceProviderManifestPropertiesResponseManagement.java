@@ -14,37 +14,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceProviderManifestPropertiesResponseManagement {
-/**
- * 
- */
     private final @Nullable String incidentContactEmail;
-/**
- * 
- */
     private final @Nullable String incidentRoutingService;
-/**
- * 
- */
     private final @Nullable String incidentRoutingTeam;
-/**
- * 
- */
     private final @Nullable List<String> manifestOwners;
-/**
- * 
- */
     private final @Nullable String resourceAccessPolicy;
-/**
- * 
- */
     private final @Nullable List<Object> resourceAccessRoles;
-/**
- * 
- */
     private final @Nullable List<String> schemaOwners;
-/**
- * 
- */
     private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
     @OutputCustomType.Constructor({"incidentContactEmail","incidentRoutingService","incidentRoutingTeam","manifestOwners","resourceAccessPolicy","resourceAccessRoles","schemaOwners","serviceTreeInfos"})
@@ -67,51 +43,27 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
         this.serviceTreeInfos = serviceTreeInfos;
     }
 
-/**
- * 
- */
     public Optional<String> getIncidentContactEmail() {
         return Optional.ofNullable(this.incidentContactEmail);
     }
-/**
- * 
- */
     public Optional<String> getIncidentRoutingService() {
         return Optional.ofNullable(this.incidentRoutingService);
     }
-/**
- * 
- */
     public Optional<String> getIncidentRoutingTeam() {
         return Optional.ofNullable(this.incidentRoutingTeam);
     }
-/**
- * 
- */
     public List<String> getManifestOwners() {
         return this.manifestOwners == null ? List.of() : this.manifestOwners;
     }
-/**
- * 
- */
     public Optional<String> getResourceAccessPolicy() {
         return Optional.ofNullable(this.resourceAccessPolicy);
     }
-/**
- * 
- */
     public List<Object> getResourceAccessRoles() {
         return this.resourceAccessRoles == null ? List.of() : this.resourceAccessRoles;
     }
-/**
- * 
- */
     public List<String> getSchemaOwners() {
         return this.schemaOwners == null ? List.of() : this.schemaOwners;
     }
-/**
- * 
- */
     public List<ServiceTreeInfoResponse> getServiceTreeInfos() {
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;
     }

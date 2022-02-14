@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration options for Cloud Armor.
- */
 public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyCloudArmorConfigArgs Empty = new SecurityPolicyCloudArmorConfigArgs();
 
-    /**
-     * If set to true, enables Cloud Armor Machine Learning.
-     */
     @InputImport(name="enableMl")
     private final @Nullable Input<Boolean> enableMl;
 

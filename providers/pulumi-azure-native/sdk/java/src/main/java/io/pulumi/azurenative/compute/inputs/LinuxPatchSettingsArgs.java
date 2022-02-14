@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specifies settings related to VM Guest Patching on Linux.
- */
 public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinuxPatchSettingsArgs Empty = new LinuxPatchSettingsArgs();
 
-    /**
-     * Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
-     */
     @InputImport(name="assessmentMode")
     private final @Nullable Input<Either<String,LinuxPatchAssessmentMode>> assessmentMode;
 
@@ -30,9 +24,6 @@ public final class LinuxPatchSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.assessmentMode == null ? Input.empty() : this.assessmentMode;
     }
 
-    /**
-     * Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
-     */
     @InputImport(name="patchMode")
     private final @Nullable Input<Either<String,LinuxVMGuestPatchMode>> patchMode;
 

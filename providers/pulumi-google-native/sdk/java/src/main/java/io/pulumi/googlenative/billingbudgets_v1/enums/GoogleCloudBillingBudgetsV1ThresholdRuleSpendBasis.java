@@ -8,22 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set.
- */
     @EnumType
     public enum GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasis {
-/**
- * Unspecified threshold basis.
- */
         BasisUnspecified("BASIS_UNSPECIFIED"),
-/**
- * Use current spend as the basis for comparison against the threshold.
- */
         CurrentSpend("CURRENT_SPEND"),
-/**
- * Use forecasted spend for the period as the basis for comparison against the threshold. FORECASTED_SPEND can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
- */
         ForecastedSpend("FORECASTED_SPEND");
 
         private final String value;

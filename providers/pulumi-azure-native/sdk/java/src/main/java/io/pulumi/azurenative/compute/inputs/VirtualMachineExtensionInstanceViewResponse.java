@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * The instance view of a virtual machine extension.
- */
 public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineExtensionInstanceViewResponse Empty = new VirtualMachineExtensionInstanceViewResponse();
 
-    /**
-     * The virtual machine extension name.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,9 +23,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * The resource status information.
-     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
@@ -39,9 +30,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
         return this.statuses == null ? List.of() : this.statuses;
     }
 
-    /**
-     * The resource status information.
-     */
     @InputImport(name="substatuses")
     private final @Nullable List<InstanceViewStatusResponse> substatuses;
 
@@ -49,9 +37,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
         return this.substatuses == null ? List.of() : this.substatuses;
     }
 
-    /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -59,9 +44,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    /**
-     * Specifies the version of the script handler.
-     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable String typeHandlerVersion;
 

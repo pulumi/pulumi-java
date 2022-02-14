@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Config for image classification human labeling task.
- */
 public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs Empty = new GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs();
 
-    /**
-     * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
-     */
     @InputImport(name="allowMultiLabel")
     private final @Nullable Input<Boolean> allowMultiLabel;
 
@@ -29,9 +23,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
         return this.allowMultiLabel == null ? Input.empty() : this.allowMultiLabel;
     }
 
-    /**
-     * Annotation spec set resource name.
-     */
     @InputImport(name="annotationSpecSet", required=true)
     private final Input<String> annotationSpecSet;
 
@@ -39,9 +30,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
         return this.annotationSpecSet;
     }
 
-    /**
-     * Optional. The type of how to aggregate answers.
-     */
     @InputImport(name="answerAggregationType")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 

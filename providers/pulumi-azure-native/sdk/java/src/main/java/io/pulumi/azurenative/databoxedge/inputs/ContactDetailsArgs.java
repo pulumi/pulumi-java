@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Contains all the contact details of the customer.
- */
 public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactDetailsArgs Empty = new ContactDetailsArgs();
 
-    /**
-     * The name of the company.
-     */
     @InputImport(name="companyName", required=true)
     private final Input<String> companyName;
 
@@ -27,9 +21,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.companyName;
     }
 
-    /**
-     * The contact person name.
-     */
     @InputImport(name="contactPerson", required=true)
     private final Input<String> contactPerson;
 
@@ -37,9 +28,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactPerson;
     }
 
-    /**
-     * The email list.
-     */
     @InputImport(name="emailList", required=true)
     private final Input<List<String>> emailList;
 
@@ -47,9 +35,6 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailList;
     }
 
-    /**
-     * The phone number.
-     */
     @InputImport(name="phone", required=true)
     private final Input<String> phone;
 

@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class ExtendedLocationOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtendedLocationOptionsResponse Empty = new ExtendedLocationOptionsResponse();
 
-    /**
-     * 
-     */
     @InputImport(name="supportedPolicy")
     private final @Nullable String supportedPolicy;
 
@@ -27,9 +21,6 @@ public final class ExtendedLocationOptionsResponse extends io.pulumi.resources.I
         return this.supportedPolicy == null ? Optional.empty() : Optional.ofNullable(this.supportedPolicy);
     }
 
-    /**
-     * 
-     */
     @InputImport(name="type")
     private final @Nullable String type;
 

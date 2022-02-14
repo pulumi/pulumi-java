@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * AutoUpgradeOptions defines the set of options for the user to control how the Auto Upgrades will proceed.
- */
 public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoUpgradeOptionsResponse Empty = new AutoUpgradeOptionsResponse();
 
-    /**
-     * [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
-     */
     @InputImport(name="autoUpgradeStartTime", required=true)
     private final String autoUpgradeStartTime;
 
@@ -25,9 +19,6 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
         return this.autoUpgradeStartTime;
     }
 
-    /**
-     * [Output only] This field is set when upgrades are about to commence with the description of the upgrade.
-     */
     @InputImport(name="description", required=true)
     private final String description;
 

@@ -12,17 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Defines the NSG resource settings.
- */
 public final class NetworkSecurityGroupResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkSecurityGroupResourceSettingsArgs Empty = new NetworkSecurityGroupResourceSettingsArgs();
 
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-Expected value is 'Microsoft.Network/networkSecurityGroups'.
-     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -30,9 +23,6 @@ Expected value is 'Microsoft.Network/networkSecurityGroups'.
         return this.resourceType;
     }
 
-    /**
-     * Gets or sets Security rules of network security group.
-     */
     @InputImport(name="securityRules")
     private final @Nullable Input<List<NsgSecurityRuleArgs>> securityRules;
 
@@ -40,9 +30,6 @@ Expected value is 'Microsoft.Network/networkSecurityGroups'.
         return this.securityRules == null ? Input.empty() : this.securityRules;
     }
 
-    /**
-     * Gets or sets the target Resource name.
-     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 

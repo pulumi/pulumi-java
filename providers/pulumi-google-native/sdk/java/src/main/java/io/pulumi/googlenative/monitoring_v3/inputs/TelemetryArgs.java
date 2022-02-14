@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Configuration for how to query telemetry on a Service.
- */
 public final class TelemetryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TelemetryArgs Empty = new TelemetryArgs();
 
-    /**
-     * The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
-     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 

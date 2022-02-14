@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateAtlasPropertiesResponse {
-/**
- * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
- */
     private final @Nullable String provisioningState;
 
     @OutputCustomType.Constructor({"provisioningState"})
@@ -21,9 +18,6 @@ public final class PrivateAtlasPropertiesResponse {
         this.provisioningState = provisioningState;
     }
 
-/**
- * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
- */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

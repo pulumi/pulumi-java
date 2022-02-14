@@ -18,16 +18,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * HBase server linked service.
- */
 public final class HBaseLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HBaseLinkedServiceResponse Empty = new HBaseLinkedServiceResponse();
 
-    /**
-     * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     */
     @InputImport(name="allowHostNameCNMismatch")
     private final @Nullable Object allowHostNameCNMismatch;
 
@@ -35,9 +29,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.allowHostNameCNMismatch == null ? Optional.empty() : Optional.ofNullable(this.allowHostNameCNMismatch);
     }
 
-    /**
-     * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     */
     @InputImport(name="allowSelfSignedServerCert")
     private final @Nullable Object allowSelfSignedServerCert;
 
@@ -45,9 +36,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
-    /**
-     * List of tags that can be used for describing the linked service.
-     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -55,9 +43,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.annotations == null ? List.of() : this.annotations;
     }
 
-    /**
-     * The authentication mechanism to use to connect to the HBase server.
-     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -65,9 +50,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.authenticationType;
     }
 
-    /**
-     * The integration runtime reference.
-     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -75,9 +57,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
-    /**
-     * Linked service description.
-     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -85,9 +64,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    /**
-     * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     */
     @InputImport(name="enableSsl")
     private final @Nullable Object enableSsl;
 
@@ -95,9 +71,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
     }
 
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -105,9 +78,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
-    /**
-     * The IP address or host name of the HBase server. (i.e. 192.168.222.160)
-     */
     @InputImport(name="host", required=true)
     private final Object host;
 
@@ -115,9 +85,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.host;
     }
 
-    /**
-     * The partial URL corresponding to the HBase server. (i.e. /gateway/sandbox/hbase/version)
-     */
     @InputImport(name="httpPath")
     private final @Nullable Object httpPath;
 
@@ -125,9 +92,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.httpPath == null ? Optional.empty() : Optional.ofNullable(this.httpPath);
     }
 
-    /**
-     * Parameters for linked service.
-     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -135,9 +99,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
-    /**
-     * The password corresponding to the user name.
-     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -145,9 +106,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.password == null ? null : this.password;
     }
 
-    /**
-     * The TCP port that the HBase instance uses to listen for client connections. The default value is 9090.
-     */
     @InputImport(name="port")
     private final @Nullable Object port;
 
@@ -155,9 +113,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     */
     @InputImport(name="trustedCertPath")
     private final @Nullable Object trustedCertPath;
 
@@ -165,10 +120,6 @@ public final class HBaseLinkedServiceResponse extends io.pulumi.resources.Invoke
         return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
     }
 
-    /**
-     * Type of linked service.
-Expected value is 'HBase'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -176,9 +127,6 @@ Expected value is 'HBase'.
         return this.type;
     }
 
-    /**
-     * The user name used to connect to the HBase instance.
-     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

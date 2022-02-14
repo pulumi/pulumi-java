@@ -10,16 +10,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * [Deprecated] gRPC config to access the SDS server. gRPC config to access the SDS server.
- */
 public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrpcServiceConfigResponse Empty = new GrpcServiceConfigResponse();
 
-    /**
-     * The call credentials to access the SDS server.
-     */
     @InputImport(name="callCredentials", required=true)
     private final CallCredentialsResponse callCredentials;
 
@@ -27,9 +21,6 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
         return this.callCredentials;
     }
 
-    /**
-     * The channel credentials to access the SDS server.
-     */
     @InputImport(name="channelCredentials", required=true)
     private final ChannelCredentialsResponse channelCredentials;
 
@@ -37,9 +28,6 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
         return this.channelCredentials;
     }
 
-    /**
-     * The target URI of the SDS server.
-     */
     @InputImport(name="targetUri", required=true)
     private final String targetUri;
 

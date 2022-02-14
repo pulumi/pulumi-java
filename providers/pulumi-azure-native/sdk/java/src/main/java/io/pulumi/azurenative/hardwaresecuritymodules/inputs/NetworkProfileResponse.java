@@ -12,16 +12,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkProfileResponse Empty = new NetworkProfileResponse();
 
-    /**
-     * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-     */
     @InputImport(name="networkInterfaces")
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -29,9 +23,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
-    /**
-     * Specifies the identifier of the subnet.
-     */
     @InputImport(name="subnet")
     private final @Nullable ApiEntityReferenceResponse subnet;
 

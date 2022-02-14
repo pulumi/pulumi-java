@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    /**
-     * The account's data-plane ID
-     */
     @InputImport(name="accountId")
     private final @Nullable Input<String> accountId;
 
@@ -30,9 +24,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountId == null ? Input.empty() : this.accountId;
     }
 
-    /**
-     * The name of the Azure Video Analyzer for Media account.
-     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -40,9 +31,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
-    /**
-     * Managed service identity (system assigned and/or user assigned identities)
-     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -50,9 +38,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * The geo-location where the resource lives
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,9 +45,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The media services details
-     */
     @InputImport(name="mediaServices")
     private final @Nullable Input<MediaServicesForPutRequestArgs> mediaServices;
 
@@ -70,9 +52,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.mediaServices == null ? Input.empty() : this.mediaServices;
     }
 
-    /**
-     * The name of the resource group. The name is case insensitive.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -80,9 +59,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Resource tags.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

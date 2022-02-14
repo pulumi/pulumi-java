@@ -11,17 +11,8 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AADBasedSecurityPrincipalResponse {
-/**
- * LedgerRole associated with the Security Principal of Ledger
- */
     private final @Nullable String ledgerRoleName;
-/**
- * UUID/GUID based Principal Id of the Security Principal
- */
     private final @Nullable String principalId;
-/**
- * UUID/GUID based Tenant Id of the Security Principal
- */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"ledgerRoleName","principalId","tenantId"})
@@ -34,21 +25,12 @@ public final class AADBasedSecurityPrincipalResponse {
         this.tenantId = tenantId;
     }
 
-/**
- * LedgerRole associated with the Security Principal of Ledger
- */
     public Optional<String> getLedgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
-/**
- * UUID/GUID based Principal Id of the Security Principal
- */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
-/**
- * UUID/GUID based Tenant Id of the Security Principal
- */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

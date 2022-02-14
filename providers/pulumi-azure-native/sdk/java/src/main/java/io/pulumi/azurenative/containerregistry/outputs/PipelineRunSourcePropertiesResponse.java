@@ -11,13 +11,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineRunSourcePropertiesResponse {
-/**
- * The name of the source.
- */
     private final @Nullable String name;
-/**
- * The type of the source.
- */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"name","type"})
@@ -28,15 +22,9 @@ public final class PipelineRunSourcePropertiesResponse {
         this.type = type;
     }
 
-/**
- * The name of the source.
- */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
-/**
- * The type of the source.
- */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoscaleSettingsResponse {
-/**
- * Represents maximum throughput, the resource can scale up to.
- */
     private final @Nullable Integer maxThroughput;
 
     @OutputCustomType.Constructor({"maxThroughput"})
@@ -21,9 +18,6 @@ public final class AutoscaleSettingsResponse {
         this.maxThroughput = maxThroughput;
     }
 
-/**
- * Represents maximum throughput, the resource can scale up to.
- */
     public Optional<Integer> getMaxThroughput() {
         return Optional.ofNullable(this.maxThroughput);
     }

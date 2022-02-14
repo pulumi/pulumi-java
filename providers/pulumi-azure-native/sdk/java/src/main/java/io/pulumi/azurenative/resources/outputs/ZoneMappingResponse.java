@@ -12,13 +12,7 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ZoneMappingResponse {
-/**
- * The location of the zone mapping.
- */
     private final @Nullable String location;
-/**
- * 
- */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"location","zones"})
@@ -29,15 +23,9 @@ public final class ZoneMappingResponse {
         this.zones = zones;
     }
 
-/**
- * The location of the zone mapping.
- */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
-/**
- * 
- */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

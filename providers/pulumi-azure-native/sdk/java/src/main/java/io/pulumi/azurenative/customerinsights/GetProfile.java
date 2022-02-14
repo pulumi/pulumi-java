@@ -13,12 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfile {
-/**
- * The profile resource format.
-API Version: 2017-04-26.
- *
- * The profile resource format.
- */
     public static CompletableFuture<GetProfileResult> invokeAsync(GetProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getProfile", TypeShape.of(GetProfileResult.class), args == null ? GetProfileArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,16 +13,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Model asset version details.
- */
 public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelVersionArgs Empty = new ModelVersionArgs();
 
-    /**
-     * ARM resource ID of the datastore where the asset is located.
-     */
     @InputImport(name="datastoreId")
     private final @Nullable Input<String> datastoreId;
 
@@ -30,9 +24,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
     }
 
-    /**
-     * The asset description text.
-     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,9 +31,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
-    /**
-     * Mapping of model flavors to their properties.
-     */
     @InputImport(name="flavors")
     private final @Nullable Input<Map<String,FlavorDataArgs>> flavors;
 
@@ -50,9 +38,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.flavors == null ? Input.empty() : this.flavors;
     }
 
-    /**
-     * If the name version are system generated (anonymous registration).
-     */
     @InputImport(name="isAnonymous")
     private final @Nullable Input<Boolean> isAnonymous;
 
@@ -60,9 +45,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.isAnonymous == null ? Input.empty() : this.isAnonymous;
     }
 
-    /**
-     * The path of the file/directory in the datastore.
-     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -70,9 +52,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.path;
     }
 
-    /**
-     * The asset property dictionary.
-     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -80,9 +59,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -9,16 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
- */
 public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiagnosticsResponse Empty = new DiagnosticsResponse();
 
-    /**
-     * A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
-     */
     @InputImport(name="conditions", required=true)
     private final List<DiagnosticConditionResponse> conditions;
 

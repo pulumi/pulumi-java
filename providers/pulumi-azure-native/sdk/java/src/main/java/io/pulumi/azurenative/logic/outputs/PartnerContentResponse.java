@@ -11,9 +11,6 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PartnerContentResponse {
-/**
- * The B2B partner content.
- */
     private final @Nullable B2BPartnerContentResponse b2b;
 
     @OutputCustomType.Constructor({"b2b"})
@@ -21,9 +18,6 @@ public final class PartnerContentResponse {
         this.b2b = b2b;
     }
 
-/**
- * The B2B partner content.
- */
     public Optional<B2BPartnerContentResponse> getB2b() {
         return Optional.ofNullable(this.b2b);
     }

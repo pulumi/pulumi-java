@@ -16,16 +16,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a list of inputs to a Job.
- */
 public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobInputsResponse Empty = new JobInputsResponse();
 
-    /**
-     * List of inputs to a Job.
-     */
     @InputImport(name="inputs")
     private final @Nullable List<Object> inputs;
 
@@ -33,10 +27,6 @@ public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
         return this.inputs == null ? List.of() : this.inputs;
     }
 
-    /**
-     * The discriminator for derived types.
-Expected value is '#Microsoft.Media.JobInputs'.
-     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

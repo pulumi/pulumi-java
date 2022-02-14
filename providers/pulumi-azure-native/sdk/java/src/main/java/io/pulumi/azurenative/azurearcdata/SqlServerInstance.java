@@ -17,248 +17,45 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
-/**
- * A SqlServerInstance.
-API Version: 2021-06-01-preview.
-
-{{% examples %}}
-## Example Usage
-{{% example %}}
-### Updates a SQL Server Instance tags.
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sqlServerInstance = new AzureNative.AzureArcData.SqlServerInstance("sqlServerInstance", new AzureNative.AzureArcData.SqlServerInstanceArgs
-        {
-            Location = "northeurope",
-            Properties = new AzureNative.AzureArcData.Inputs.SqlServerInstancePropertiesArgs
-            {
-                Collation = "collation",
-                ContainerResourceId = "Arc Machine Name",
-                CurrentVersion = "2008 R2",
-                Edition = "Developer",
-                InstanceName = "name of instance",
-                LicenseType = "Free",
-                PatchLevel = "patchlevel",
-                ProductId = "sql id",
-                Status = "Connected",
-                TcpDynamicPorts = "1433",
-                TcpStaticPorts = "1433",
-                VCore = "4",
-                Version = "SQL Server 2017",
-            },
-            ResourceGroupName = "testrg",
-            SqlServerInstanceName = "testsqlServerInstance",
-            Tags = 
-            {
-                { "mytag", "myval" },
-            },
-        });
-    }
-
-}
-
-```
-
-```go
-package main
-
-import (
-	azurearcdata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurearcdata"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := azurearcdata.NewSqlServerInstance(ctx, "sqlServerInstance", &azurearcdata.SqlServerInstanceArgs{
-			Location: pulumi.String("northeurope"),
-			Properties: &azurearcdata.SqlServerInstancePropertiesArgs{
-				Collation:           pulumi.String("collation"),
-				ContainerResourceId: pulumi.String("Arc Machine Name"),
-				CurrentVersion:      pulumi.String("2008 R2"),
-				Edition:             pulumi.String("Developer"),
-				InstanceName:        pulumi.String("name of instance"),
-				LicenseType:         pulumi.String("Free"),
-				PatchLevel:          pulumi.String("patchlevel"),
-				ProductId:           pulumi.String("sql id"),
-				Status:              pulumi.String("Connected"),
-				TcpDynamicPorts:     pulumi.String("1433"),
-				TcpStaticPorts:      pulumi.String("1433"),
-				VCore:               pulumi.String("4"),
-				Version:             pulumi.String("SQL Server 2017"),
-			},
-			ResourceGroupName:     pulumi.String("testrg"),
-			SqlServerInstanceName: pulumi.String("testsqlServerInstance"),
-			Tags: pulumi.StringMap{
-				"mytag": pulumi.String("myval"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const sqlServerInstance = new azure_native.azurearcdata.SqlServerInstance("sqlServerInstance", {
-    location: "northeurope",
-    properties: {
-        collation: "collation",
-        containerResourceId: "Arc Machine Name",
-        currentVersion: "2008 R2",
-        edition: "Developer",
-        instanceName: "name of instance",
-        licenseType: "Free",
-        patchLevel: "patchlevel",
-        productId: "sql id",
-        status: "Connected",
-        tcpDynamicPorts: "1433",
-        tcpStaticPorts: "1433",
-        vCore: "4",
-        version: "SQL Server 2017",
-    },
-    resourceGroupName: "testrg",
-    sqlServerInstanceName: "testsqlServerInstance",
-    tags: {
-        mytag: "myval",
-    },
-});
-
-```
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-sql_server_instance = azure_native.azurearcdata.SqlServerInstance("sqlServerInstance",
-    location="northeurope",
-    properties=azure_native.azurearcdata.SqlServerInstancePropertiesArgs(
-        collation="collation",
-        container_resource_id="Arc Machine Name",
-        current_version="2008 R2",
-        edition="Developer",
-        instance_name="name of instance",
-        license_type="Free",
-        patch_level="patchlevel",
-        product_id="sql id",
-        status="Connected",
-        tcp_dynamic_ports="1433",
-        tcp_static_ports="1433",
-        v_core="4",
-        version="SQL Server 2017",
-    ),
-    resource_group_name="testrg",
-    sql_server_instance_name="testsqlServerInstance",
-    tags={
-        "mytag": "myval",
-    })
-
-```
-
-{{% /example %}}
-{{% /examples %}}
-
-## Import
-
-An existing resource can be imported using its type token, name, and identifier, e.g.
-
-```sh
-$ pulumi import azure-native:azurearcdata:SqlServerInstance testsqlServerInstance /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureArcData/SqlServerInstances/testsqlServerInstance 
-```
-
- */
 @ResourceType(type="azure-native:azurearcdata:SqlServerInstance")
 public class SqlServerInstance extends io.pulumi.resources.CustomResource {
-    /**
-     * The geo-location where the resource lives
-     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
-    /**
-     * @return The geo-location where the resource lives
-     */
     public Output<String> getLocation() {
         return this.location;
     }
-    /**
-     * The name of the resource
-     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the resource
-     */
     public Output<String> getName() {
         return this.name;
     }
-    /**
-     * null
-     */
     @OutputExport(name="properties", type=SqlServerInstancePropertiesResponse.class, parameters={})
     private Output<SqlServerInstancePropertiesResponse> properties;
 
-    /**
-     * @return null
-     */
     public Output<SqlServerInstancePropertiesResponse> getProperties() {
         return this.properties;
     }
-    /**
-     * Read only system data
-     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
-    /**
-     * @return Read only system data
-     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    /**
-     * Resource tags.
-     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return Resource tags.
-     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    /**
-     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
-    /**
-     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     */
     public Output<String> getType() {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param args The arguments to use to populate this resource's properties.
-     * @param options A bag of options that control this resource's behavior.
-     */
     public SqlServerInstance(String name, SqlServerInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azurearcdata:SqlServerInstance", name, args == null ? SqlServerInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -280,14 +77,6 @@ public class SqlServerInstance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
-    /**
-     * Get an existing Host resource's state with the given name, ID, and optional extra
-     * properties used to qualify the lookup.
-     *
-     * @param name The _unique_ name of the resulting resource.
-     * @param id The _unique_ provider ID of the resource to lookup.
-     * @param options Optional settings to control the behavior of the CustomResource.
-     */
     public static SqlServerInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlServerInstance(name, id, options);
     }

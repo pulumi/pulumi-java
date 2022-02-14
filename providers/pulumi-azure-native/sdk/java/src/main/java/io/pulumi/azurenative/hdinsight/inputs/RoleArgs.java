@@ -19,16 +19,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes a role on the cluster.
- */
 public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleArgs Empty = new RoleArgs();
 
-    /**
-     * The autoscale configurations.
-     */
     @InputImport(name="autoscaleConfiguration")
     private final @Nullable Input<AutoscaleArgs> autoscaleConfiguration;
 
@@ -36,9 +30,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscaleConfiguration == null ? Input.empty() : this.autoscaleConfiguration;
     }
 
-    /**
-     * The data disks groups for the role.
-     */
     @InputImport(name="dataDisksGroups")
     private final @Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups;
 
@@ -46,9 +37,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDisksGroups == null ? Input.empty() : this.dataDisksGroups;
     }
 
-    /**
-     * Indicates whether encrypt the data disks.
-     */
     @InputImport(name="encryptDataDisks")
     private final @Nullable Input<Boolean> encryptDataDisks;
 
@@ -56,9 +44,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptDataDisks == null ? Input.empty() : this.encryptDataDisks;
     }
 
-    /**
-     * The hardware profile.
-     */
     @InputImport(name="hardwareProfile")
     private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
 
@@ -66,9 +51,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
     }
 
-    /**
-     * The minimum instance count of the cluster.
-     */
     @InputImport(name="minInstanceCount")
     private final @Nullable Input<Integer> minInstanceCount;
 
@@ -76,9 +58,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.minInstanceCount == null ? Input.empty() : this.minInstanceCount;
     }
 
-    /**
-     * The name of the role.
-     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -86,9 +65,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
-    /**
-     * The operating system profile.
-     */
     @InputImport(name="osProfile")
     private final @Nullable Input<OsProfileArgs> osProfile;
 
@@ -96,9 +72,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.osProfile == null ? Input.empty() : this.osProfile;
     }
 
-    /**
-     * The list of script actions on the role.
-     */
     @InputImport(name="scriptActions")
     private final @Nullable Input<List<ScriptActionArgs>> scriptActions;
 
@@ -106,9 +79,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.scriptActions == null ? Input.empty() : this.scriptActions;
     }
 
-    /**
-     * The instance count of the cluster.
-     */
     @InputImport(name="targetInstanceCount")
     private final @Nullable Input<Integer> targetInstanceCount;
 
@@ -116,9 +86,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetInstanceCount == null ? Input.empty() : this.targetInstanceCount;
     }
 
-    /**
-     * The name of the virtual machine group.
-     */
     @InputImport(name="vMGroupName")
     private final @Nullable Input<String> vMGroupName;
 
@@ -126,9 +93,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.vMGroupName == null ? Input.empty() : this.vMGroupName;
     }
 
-    /**
-     * The virtual network profile.
-     */
     @InputImport(name="virtualNetworkProfile")
     private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
 

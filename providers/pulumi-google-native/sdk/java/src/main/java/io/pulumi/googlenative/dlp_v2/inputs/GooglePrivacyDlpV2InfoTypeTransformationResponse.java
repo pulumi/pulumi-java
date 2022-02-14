@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * A transformation to apply to text that is identified as a specific info_type.
- */
 public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeTransformationResponse Empty = new GooglePrivacyDlpV2InfoTypeTransformationResponse();
 
-    /**
-     * InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
-     */
     @InputImport(name="infoTypes", required=true)
     private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
@@ -27,9 +21,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends io.p
         return this.infoTypes;
     }
 
-    /**
-     * Primitive transformation to apply to the infoType.
-     */
     @InputImport(name="primitiveTransformation", required=true)
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 

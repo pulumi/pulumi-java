@@ -10,16 +10,10 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-/**
- * Dynamic delivery attribute mapping details.
- */
 public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DynamicDeliveryAttributeMappingResponse Empty = new DynamicDeliveryAttributeMappingResponse();
 
-    /**
-     * Name of the delivery attribute or header.
-     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -27,9 +21,6 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    /**
-     * JSON path in the event which contains attribute value.
-     */
     @InputImport(name="sourceField")
     private final @Nullable String sourceField;
 
@@ -37,10 +28,6 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
         return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
     }
 
-    /**
-     * Type of the delivery attribute or header name.
-Expected value is 'Dynamic'.
-     */
     @InputImport(name="type", required=true)
     private final String type;
 

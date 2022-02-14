@@ -8,16 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * 
- */
 public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListQueryKeyBySearchServiceArgs Empty = new ListQueryKeyBySearchServiceArgs();
 
-    /**
-     * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -25,9 +19,6 @@ public final class ListQueryKeyBySearchServiceArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
-    /**
-     * The name of the Azure Cognitive Search service associated with the specified resource group.
-     */
     @InputImport(name="searchServiceName", required=true)
     private final String searchServiceName;
 

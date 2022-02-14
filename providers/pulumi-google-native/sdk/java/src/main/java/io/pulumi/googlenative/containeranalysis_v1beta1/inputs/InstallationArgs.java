@@ -10,16 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 
-/**
- * This represents how a particular software package may be installed on a system.
- */
 public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstallationArgs Empty = new InstallationArgs();
 
-    /**
-     * All of the places within the filesystem versions of this package have been found.
-     */
     @InputImport(name="location", required=true)
     private final Input<List<LocationArgs>> location;
 

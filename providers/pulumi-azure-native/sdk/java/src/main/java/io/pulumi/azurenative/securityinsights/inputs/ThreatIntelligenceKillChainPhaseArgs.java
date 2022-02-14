@@ -10,16 +10,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Describes threat kill chain phase entity
- */
 public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThreatIntelligenceKillChainPhaseArgs Empty = new ThreatIntelligenceKillChainPhaseArgs();
 
-    /**
-     * Kill chainName name
-     */
     @InputImport(name="killChainName")
     private final @Nullable Input<String> killChainName;
 
@@ -27,9 +21,6 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
         return this.killChainName == null ? Input.empty() : this.killChainName;
     }
 
-    /**
-     * Phase name
-     */
     @InputImport(name="phaseName")
     private final @Nullable Input<String> phaseName;
 

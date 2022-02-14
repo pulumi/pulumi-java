@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * 
- */
 public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SystemTopicArgs Empty = new SystemTopicArgs();
 
-    /**
-     * Identity information for the resource.
-     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityInfoArgs> identity;
 
@@ -29,9 +23,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
-    /**
-     * Location of the resource.
-     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,9 +30,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
-    /**
-     * The name of the resource group within the user's subscription.
-     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,9 +37,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
-    /**
-     * Source for the system topic.
-     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -59,9 +44,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
-    /**
-     * Name of the system topic.
-     */
     @InputImport(name="systemTopicName")
     private final @Nullable Input<String> systemTopicName;
 
@@ -69,9 +51,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.systemTopicName == null ? Input.empty() : this.systemTopicName;
     }
 
-    /**
-     * Tags of the resource.
-     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -79,9 +58,6 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
-    /**
-     * TopicType for the system topic.
-     */
     @InputImport(name="topicType")
     private final @Nullable Input<String> topicType;
 

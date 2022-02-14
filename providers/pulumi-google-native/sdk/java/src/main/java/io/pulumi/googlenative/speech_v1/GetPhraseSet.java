@@ -13,9 +13,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPhraseSet {
-/**
- * Get a phrase set.
- */
     public static CompletableFuture<GetPhraseSetResult> invokeAsync(GetPhraseSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getPhraseSet", TypeShape.of(GetPhraseSetResult.class), args == null ? GetPhraseSetArgs.Empty : args, Utilities.withVersion(options));
     }

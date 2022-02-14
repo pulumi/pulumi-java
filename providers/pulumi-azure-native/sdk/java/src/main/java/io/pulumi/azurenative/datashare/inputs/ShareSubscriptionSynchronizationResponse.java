@@ -9,16 +9,10 @@ import java.lang.String;
 import java.util.Objects;
 
 
-/**
- * A ShareSubscriptionSynchronization data transfer object.
- */
 public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShareSubscriptionSynchronizationResponse Empty = new ShareSubscriptionSynchronizationResponse();
 
-    /**
-     * Synchronization duration
-     */
     @InputImport(name="durationMs", required=true)
     private final Integer durationMs;
 
@@ -26,9 +20,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
         return this.durationMs;
     }
 
-    /**
-     * End time of synchronization
-     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -36,9 +27,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
         return this.endTime;
     }
 
-    /**
-     * message of Synchronization
-     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -46,9 +34,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
         return this.message;
     }
 
-    /**
-     * start time of synchronization
-     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -56,9 +41,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
         return this.startTime;
     }
 
-    /**
-     * Raw Status
-     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -66,9 +48,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
         return this.status;
     }
 
-    /**
-     * Synchronization id
-     */
     @InputImport(name="synchronizationId", required=true)
     private final String synchronizationId;
 
@@ -76,9 +55,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
         return this.synchronizationId;
     }
 
-    /**
-     * Synchronization Mode
-     */
     @InputImport(name="synchronizationMode", required=true)
     private final String synchronizationMode;
 

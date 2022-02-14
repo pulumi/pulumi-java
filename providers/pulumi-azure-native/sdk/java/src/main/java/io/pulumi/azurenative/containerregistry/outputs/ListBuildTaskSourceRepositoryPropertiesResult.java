@@ -13,21 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListBuildTaskSourceRepositoryPropertiesResult {
-/**
- * The value of this property indicates whether the source control commit trigger is enabled or not.
- */
     private final @Nullable Boolean isCommitTriggerEnabled;
-/**
- * The full URL to the source code repository
- */
     private final String repositoryUrl;
-/**
- * The authorization properties for accessing the source code repository.
- */
     private final @Nullable SourceControlAuthInfoResponse sourceControlAuthProperties;
-/**
- * The type of source control service.
- */
     private final String sourceControlType;
 
     @OutputCustomType.Constructor({"isCommitTriggerEnabled","repositoryUrl","sourceControlAuthProperties","sourceControlType"})
@@ -42,27 +30,15 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
         this.sourceControlType = Objects.requireNonNull(sourceControlType);
     }
 
-/**
- * The value of this property indicates whether the source control commit trigger is enabled or not.
- */
     public Optional<Boolean> getIsCommitTriggerEnabled() {
         return Optional.ofNullable(this.isCommitTriggerEnabled);
     }
-/**
- * The full URL to the source code repository
- */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
-/**
- * The authorization properties for accessing the source code repository.
- */
     public Optional<SourceControlAuthInfoResponse> getSourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
-/**
- * The type of source control service.
- */
     public String getSourceControlType() {
         return this.sourceControlType;
     }

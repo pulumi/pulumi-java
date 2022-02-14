@@ -14,16 +14,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * Specification that applies to a routine. Valid only for entries with the `ROUTINE` type.
- */
 public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1RoutineSpecArgs Empty = new GoogleCloudDatacatalogV1RoutineSpecArgs();
 
-    /**
-     * Fields specific for BigQuery routines.
-     */
     @InputImport(name="bigqueryRoutineSpec")
     private final @Nullable Input<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
 
@@ -31,9 +25,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
         return this.bigqueryRoutineSpec == null ? Input.empty() : this.bigqueryRoutineSpec;
     }
 
-    /**
-     * The body of the routine.
-     */
     @InputImport(name="definitionBody")
     private final @Nullable Input<String> definitionBody;
 
@@ -41,9 +32,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
         return this.definitionBody == null ? Input.empty() : this.definitionBody;
     }
 
-    /**
-     * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
-     */
     @InputImport(name="language")
     private final @Nullable Input<String> language;
 
@@ -51,9 +39,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
         return this.language == null ? Input.empty() : this.language;
     }
 
-    /**
-     * Return type of the argument. The exact value depends on the source system and the language.
-     */
     @InputImport(name="returnType")
     private final @Nullable Input<String> returnType;
 
@@ -61,9 +46,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
         return this.returnType == null ? Input.empty() : this.returnType;
     }
 
-    /**
-     * Arguments of the routine.
-     */
     @InputImport(name="routineArguments")
     private final @Nullable Input<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
 
@@ -71,9 +53,6 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
         return this.routineArguments == null ? Input.empty() : this.routineArguments;
     }
 
-    /**
-     * The type of the routine.
-     */
     @InputImport(name="routineType")
     private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
 

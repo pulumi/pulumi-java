@@ -12,16 +12,10 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
-/**
- * The properties that make up the expected REST response
- */
 public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestResponseArgs Empty = new RestResponseArgs();
 
-    /**
-     * The regular expressions to match the response content with.
-     */
     @InputImport(name="regex")
     private final @Nullable Input<RestResponseRegexArgs> regex;
 
@@ -29,9 +23,6 @@ public final class RestResponseArgs extends io.pulumi.resources.ResourceArgs {
         return this.regex == null ? Input.empty() : this.regex;
     }
 
-    /**
-     * The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
-     */
     @InputImport(name="successStatusCodes")
     private final @Nullable Input<List<String>> successStatusCodes;
 
